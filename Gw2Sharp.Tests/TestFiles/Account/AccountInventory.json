@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "count": 1,
+    "charges": 5,
+    "binding": "Account"
+  },
+  {
+    "id": 2,
+    "count": 200
+  },
+  null,
+  {
+    "id": 10,
+    "count": 1,
+    "infusions": [
+      100
+    ],
+    "binding": "Account"
+  },
+  {
+    "id": 11,
+    "count": 1,
+    "upgrades": [
+      101,
+      102
+    ],
+    "binding": "Account"
+  },
+  {
+    "id": 15,
+    "count": 1,
+    "skin": 100
+  }
+]

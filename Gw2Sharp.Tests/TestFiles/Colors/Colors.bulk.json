@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "name": "Dye Remover",
+    "base_rgb": [
+      128,
+      26,
+      26
+    ],
+    "cloth": {
+      "brightness": 15,
+      "contrast": 1.25,
+      "hue": 38,
+      "saturation": 0.28125,
+      "lightness": 1.44531,
+      "rgb": [
+        124,
+        108,
+        83
+      ]
+    },
+    "leather": {
+      "brightness": -8,
+      "contrast": 1,
+      "hue": 34,
+      "saturation": 0.3125,
+      "lightness": 1.09375,
+      "rgb": [
+        65,
+        49,
+        29
+      ]
+    },
+    "metal": {
+      "brightness": 5,
+      "contrast": 1.05469,
+      "hue": 38,
+      "saturation": 0.101563,
+      "lightness": 1.36719,
+      "rgb": [
+        96,
+        91,
+        83
+      ]
+    },
+    "categories": [
+
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Black",
+    "base_rgb": [
+      128,
+      26,
+      26
+    ],
+    "cloth": {
+      "brightness": -13,
+      "contrast": 1,
+      "hue": 275,
+      "saturation": 0.0234375,
+      "lightness": 1.09375,
+      "rgb": [
+        37,
+        35,
+        38
+      ]
+    },
+    "leather": {
+      "brightness": -13,
+      "contrast": 1,
+      "hue": 275,
+      "saturation": 0.0234375,
+      "lightness": 1.09375,
+      "rgb": [
+        37,
+        35,
+        38
+      ]
+    },
+    "metal": {
+      "brightness": -13,
+      "contrast": 1,
+      "hue": 275,
+      "saturation": 0.0234375,
+      "lightness": 1.09375,
+      "rgb": [
+        37,
+        35,
+        38
+      ]
+    },
+    "item": 20358,
+    "categories": [
+      "Gray",
+      "Metal",
+      "Rare"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Chalk",
+    "base_rgb": [
+      128,
+      26,
+      26
+    ],
+    "cloth": {
+      "brightness": 12,
+      "contrast": 1.13281,
+      "hue": 5,
+      "saturation": 0.0234375,
+      "lightness": 1.25,
+      "rgb": [
+        95,
+        92,
+        92
+      ]
+    },
+    "leather": {
+      "brightness": 12,
+      "contrast": 1.13281,
+      "hue": 5,
+      "saturation": 0.0234375,
+      "lightness": 1.25,
+      "rgb": [
+        95,
+        92,
+        92
+      ]
+    },
+    "metal": {
+      "brightness": 10,
+      "contrast": 1.28906,
+      "hue": 5,
+      "saturation": 0.0234375,
+      "lightness": 1.36719,
+      "rgb": [
+        84,
+        81,
+        81
+      ]
+    },
+    "item": 20360,
+    "categories": [
+      "Gray",
+      "Metal",
+      "Uncommon"
+    ]
+  }
+]

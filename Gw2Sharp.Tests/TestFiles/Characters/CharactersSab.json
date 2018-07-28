@@ -1,0 +1,68 @@
+{
+  "zones": [
+    {
+      "id": 1,
+      "mode": "normal",
+      "world": 1,
+      "zone": 1
+    },
+    {
+      "id": 5,
+      "mode": "normal",
+      "world": 2,
+      "zone": 2
+    },
+    {
+      "id": 15,
+      "mode": "infantile",
+      "world": 1,
+      "zone": 3
+    },
+    {
+      "id": 16,
+      "mode": "infantile",
+      "world": 2,
+      "zone": 1
+    },
+    {
+      "id": 26,
+      "mode": "tribulation",
+      "world": 1,
+      "zone": 2
+    },
+    {
+      "id": 30,
+      "mode": "tribulation",
+      "world": 2,
+      "zone": 3
+    }
+  ],
+  "unlocks": [
+    {
+      "id": 1,
+      "name": "chain_stick"
+    },
+    {
+      "id": 3,
+      "name": "slingshot"
+    },
+    {
+      "id": 6,
+      "name": "whip"
+    }
+  ],
+  "songs": [
+    {
+      "id": 1,
+      "name": "secret_song"
+    },
+    {
+      "id": 2,
+      "name": "gatekeeper_lullaby"
+    },
+    {
+      "id": 3,
+      "name": "shatter_serenade"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+﻿using Gw2Sharp.WebApi.Http;
+using NSubstitute;
+using System;
+using System.Collections.Generic;
+using System.Net;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using Xunit;
+
+namespace Gw2Sharp.Tests.WebApi.Http
+{
+    public class HttpClientTests
+    {
+        protected const string Url = "http://localhost:12345/";
+
+        protected HttpListener CreateOneTimeListener(Func<HttpListenerContext, bool> func)
+        {
+            HttpListener listener = new HttpListener();
+            new Thread(() =>
+            {
+                listener.Prefixes.Add(Url);
+                listener.Start();
+                var context = listener.GetContext();
+                // This is here to provide test methods the option to "cancel" the response
+                if (func(context))
+                    context.Response.Close();
+            }).Start();
+            return listener;
+        }
+
+        [Fact]
+        public async Task RequestTest()
+        {
+            var message = "Hello world";
+            var (headerKey, headerValue) = ("X-Test", "Hello world");
+
+            using (var listener = CreateOneTimeListener(context =>
+            {
+                var buf = Encoding.UTF8.GetBytes(message);
+                context.Response.AddHeader(headerKey, headerValue);
+                context.Response.OutputStream.Write(buf, 0, buf.Length);
+                return true;
+            }))
+            {
+                var client = new HttpClient();
+                var request = Substitute.For<IHttpRequest>();
+                request.RequestHeaders.Returns(new Dictionary<string, string>() { { headerKey, headerValue } });
+                request.Url.Returns(new Uri(Url));
+
+                var result = await client.Request(request, CancellationToken.None);
+
+                Assert.Equal(message, result.Content);
+                Assert.Contains(new KeyValuePair<string, string>(headerKey, headerValue), result.ResponseHeaders);
+            }
+        }
+
+        [Fact]
+        public async Task RequestCanceledTest()
+        {
+            ManualResetEvent reset = new ManualResetEvent(false);
+
+            using (var listener = CreateOneTimeListener(context => { reset.WaitOne(); return false; }))
+            {
+                var client = new HttpClient();
+                var request = Substitute.For<IHttpRequest>();
+                request.RequestHeaders.Returns(new Dictionary<string, string>());
+                request.Url.Returns(new Uri(Url));
+
+                CancellationTokenSource tokenSource = new CancellationTokenSource(1000);
+                await Assert.ThrowsAsync<RequestCanceledException>(() => client.Request(request, tokenSource.Token));
+                reset.Set();
+            }
+        }
+
+        [Fact]
+        public async Task RequestUnexpectedStatusTest()
+        {
+            using (var listener = CreateOneTimeListener(context =>
+            {
+                context.Response.StatusCode = 404;
+                return true;
+            }))
+            {
+                var client = new HttpClient();
+                var request = Substitute.For<IHttpRequest>();
+                request.RequestHeaders.Returns(new Dictionary<string, string>());
+                request.Url.Returns(new Uri(Url));
+
+                var ex = await Assert.ThrowsAsync<UnexpectedStatusException>(() => client.Request(request, CancellationToken.None));
+                Assert.Equal(HttpStatusCode.NotFound, ex.Response.StatusCode);
+            }
+        }
+    }
+}

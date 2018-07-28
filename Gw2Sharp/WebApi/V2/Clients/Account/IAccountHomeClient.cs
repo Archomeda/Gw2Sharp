@@ -1,0 +1,21 @@
+namespace Gw2Sharp.WebApi.V2.Clients
+{
+    /// <summary>
+    /// A client of the Guild Wars 2 API v2 account home endpoint.
+    /// </summary>
+    public interface IAccountHomeClient : IClient
+    {
+        /// <summary>
+        /// Gets the unlocked home cats.
+        /// Requires scopes: account, progression.
+        /// </summary>
+        IAccountHomeCatsClient Cats { get; }
+
+        /// <summary>
+        /// Gets the unlocked home nodes.
+        /// Each element can be resolved against <see cref="IGw2WebApiV2Client.Nodes"/>.
+        /// Requires scopes: account, progression.
+        /// </summary>
+        IAccountHomeNodesClient Nodes { get; }
+    }
+}

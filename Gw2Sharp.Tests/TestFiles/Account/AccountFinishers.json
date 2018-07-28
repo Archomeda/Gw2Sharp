@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "permanent": true
+  },
+  {
+    "id": 2,
+    "permanent": false,
+    "quantity": 100
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "id": "7-54",
+    "title": "Dignity",
+    "description": "I'm dignified even when up to my ears in mud. It's what makes people respect me. A serious, thoughtful demeanor is the route to success.",
+    "journal": "Though trouble may follow me, I overcome it with dignity.",
+    "question": 7
+  },
+  {
+    "id": "188-189",
+    "title": "Fanged Dread",
+    "description": "I'm a whisper in the night, eyes that glow in darkness. I stand in shadow, and my mask is the monster you fear.",
+    "journal": "<br><br>I look out from behind a mask of fanged dread.<br><br>This is my story.<br>",
+    "question": 188,
+    "professions": [
+      "Mesmer"
+    ]
+  },
+  {
+    "id": "22-109",
+    "title": "Dead Sister",
+    "description": "My sister was a Seraph. Centaurs killed her while she was out on patrol. They never recovered her body, and it has always bothered me.",
+    "journal": "I've made something of myself, and the only thing I regret is that I never recovered my sister's body.",
+    "question": 22,
+    "races": [
+      "Human"
+    ]
+  }
+]

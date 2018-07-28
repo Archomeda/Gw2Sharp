@@ -1,0 +1,48 @@
+{
+  "id": 1,
+  "name": "Dye Remover",
+  "base_rgb": [
+    128,
+    26,
+    26
+  ],
+  "cloth": {
+    "brightness": 15,
+    "contrast": 1.25,
+    "hue": 38,
+    "saturation": 0.28125,
+    "lightness": 1.44531,
+    "rgb": [
+      124,
+      108,
+      83
+    ]
+  },
+  "leather": {
+    "brightness": -8,
+    "contrast": 1,
+    "hue": 34,
+    "saturation": 0.3125,
+    "lightness": 1.09375,
+    "rgb": [
+      65,
+      49,
+      29
+    ]
+  },
+  "metal": {
+    "brightness": 5,
+    "contrast": 1.05469,
+    "hue": 38,
+    "saturation": 0.101563,
+    "lightness": 1.36719,
+    "rgb": [
+      96,
+      91,
+      83
+    ]
+  },
+  "categories": [
+
+  ]
+}

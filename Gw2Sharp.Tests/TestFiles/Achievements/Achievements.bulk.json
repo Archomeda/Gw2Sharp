@@ -1,0 +1,469 @@
+[
+  {
+    "id": 728,
+    "name": "Frequent Sprinter",
+    "description": "Just one more lap...",
+    "requirement": "Run  races of Sanctum Sprint.",
+    "locked_text": "",
+    "type": "Default",
+    "flags": [
+      "Pvp",
+      "Repeatable",
+      "Permanent"
+    ],
+    "tiers": [
+      {
+        "count": 15,
+        "points": 5
+      }
+    ],
+    "point_cap": 50,
+    "rewards": [
+      {
+        "type": "Item",
+        "id": 43913,
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": 1634,
+    "name": "Coin Collector: Prospect Valley",
+    "description": "",
+    "requirement": "Find all of the lost coins hidden in Prospect Valley.",
+    "locked_text": "",
+    "type": "Default",
+    "flags": [
+      "Permanent"
+    ],
+    "bits": [
+      {
+        "type": "Text",
+        "text": "Lost Coin #1"
+      },
+      {
+        "type": "Text",
+        "text": "Lost Coin #2"
+      },
+      {
+        "type": "Text",
+        "text": "Lost Coin #3"
+      },
+      {
+        "type": "Text",
+        "text": "Lost Coin #4"
+      },
+      {
+        "type": "Text",
+        "text": "Lost Coin #5"
+      },
+      {
+        "type": "Text",
+        "text": "Lost Coin #6"
+      },
+      {
+        "type": "Text",
+        "text": "Lost Coin #7"
+      },
+      {
+        "type": "Text",
+        "text": "Lost Coin #8"
+      },
+      {
+        "type": "Text",
+        "text": "Lost Coin #9"
+      },
+      {
+        "type": "Text",
+        "text": "Lost Coin #10"
+      },
+      {
+        "type": "Text",
+        "text": "Lost Coin #11"
+      },
+      {
+        "type": "Text",
+        "text": "Lost Coin #12"
+      },
+      {
+        "type": "Text",
+        "text": "Lost Coin #13"
+      },
+      {
+        "type": "Text",
+        "text": "Lost Coin #14"
+      },
+      {
+        "type": "Text",
+        "text": "Lost Coin #15"
+      },
+      {
+        "type": "Text",
+        "text": "Lost Coin #16"
+      },
+      {
+        "type": "Text",
+        "text": "Lost Coin #17"
+      },
+      {
+        "type": "Text",
+        "text": "Lost Coin #18"
+      },
+      {
+        "type": "Text",
+        "text": "Lost Coin #19"
+      },
+      {
+        "type": "Text",
+        "text": "Lost Coin #20"
+      },
+      {
+        "type": "Text",
+        "text": "Lost Coin #21"
+      },
+      {
+        "type": "Text",
+        "text": "Lost Coin #22"
+      },
+      {
+        "type": "Text",
+        "text": "Lost Coin #23"
+      },
+      {
+        "type": "Text",
+        "text": "Lost Coin #24"
+      },
+      {
+        "type": "Text",
+        "text": "Lost Coin #25"
+      },
+      {
+        "type": "Text",
+        "text": "Lost Coin #26"
+      },
+      {
+        "type": "Text",
+        "text": "Lost Coin #27"
+      },
+      {
+        "type": "Text",
+        "text": "Lost Coin #28"
+      },
+      {
+        "type": "Text",
+        "text": "Lost Coin #29"
+      },
+      {
+        "type": "Text",
+        "text": "Lost Coin #30"
+      }
+    ],
+    "tiers": [
+      {
+        "count": 1,
+        "points": 2
+      },
+      {
+        "count": 5,
+        "points": 2
+      },
+      {
+        "count": 10,
+        "points": 2
+      },
+      {
+        "count": 15,
+        "points": 2
+      },
+      {
+        "count": 20,
+        "points": 2
+      },
+      {
+        "count": 25,
+        "points": 2
+      },
+      {
+        "count": 30,
+        "points": 3
+      }
+    ]
+  },
+  {
+    "id": 1640,
+    "name": "Zephyr's Ascent",
+    "description": "Story Instance: Fallen Hopes",
+    "requirement": "Climb to the highest point in Prospect Valley.",
+    "locked_text": "",
+    "type": "Default",
+    "flags": [
+      "Permanent"
+    ],
+    "tiers": [
+      {
+        "count": 1,
+        "points": 1
+      }
+    ],
+    "prerequisites": [
+      1641
+    ],
+    "rewards": [
+      {
+        "type": "Item",
+        "id": 66605,
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": 3324,
+    "name": "Skyhammer Technician",
+    "description": "Did I hit anything?",
+    "requirement": "Earn glory in Skyhammer by completing these achievements.",
+    "locked_text": "",
+    "type": "Default",
+    "flags": [
+      "Pvp",
+      "CategoryDisplay",
+      "Permanent"
+    ],
+    "tiers": [
+      {
+        "count": 5,
+        "points": 10
+      }
+    ],
+    "rewards": [
+      {
+        "type": "Title",
+        "id": 263
+      },
+      {
+        "type": "Coins",
+        "count": 50000
+      }
+    ]
+  },
+  {
+    "id": 3499,
+    "name": "Bitterfrost Frontier Master",
+    "description": "",
+    "requirement": "Collect all  items to prove your mastery over Bitterfrost Frontier.",
+    "locked_text": "Acquire a Sentient Seed by combining the four sentient creations from Season 3. Misplaced items can be obtained from Grandmaster Craftsman Hobbs in Lion's Arch.",
+    "type": "ItemSet",
+    "flags": [
+      "Pvp",
+      "RepairOnLogin",
+      "RequiresUnlock",
+      "Permanent"
+    ],
+    "bits": [
+      {
+        "type": "Skin",
+        "id": 7006
+      },
+      {
+        "type": "Item",
+        "id": 81772
+      },
+      {
+        "type": "Item",
+        "id": 81640
+      },
+      {
+        "type": "Item",
+        "id": 81926
+      },
+      {
+        "type": "Item",
+        "id": 81868
+      },
+      {
+        "type": "Item",
+        "id": 81921
+      },
+      {
+        "type": "Item",
+        "id": 81904
+      },
+      {
+        "type": "Minipet",
+        "id": 424
+      },
+      {
+        "type": "Item",
+        "id": 81710
+      },
+      {
+        "type": "Item",
+        "id": 81649
+      },
+      {
+        "type": "Item",
+        "id": 81694
+      },
+      {
+        "type": "Item",
+        "id": 81657
+      },
+      {
+        "type": "Item",
+        "id": 81648
+      },
+      {
+        "type": "Item",
+        "id": 82050
+      }
+    ],
+    "tiers": [
+      {
+        "count": 14,
+        "points": 3
+      }
+    ],
+    "rewards": [
+      {
+        "type": "Item",
+        "id": 81635,
+        "count": 1
+      }
+    ]
+  },
+  {
+    "id": 4265,
+    "icon": "https://render.guildwars2.com/file/4477BAA7620C4C3B0826E70F1843E0D9DDF4214B/1999734.png",
+    "name": "Beetle Juice",
+    "description": "Acquire the enhancements necessary to pump your roller beetle to the max!",
+    "requirement": "Collect  \"medicines\" for Petey.",
+    "locked_text": "",
+    "type": "ItemSet",
+    "flags": [
+      "Pvp",
+      "RepairOnLogin",
+      "RequiresUnlock",
+      "Permanent"
+    ],
+    "bits": [
+      {
+        "type": "Item",
+        "id": 87914
+      },
+      {
+        "type": "Item",
+        "id": 87961
+      },
+      {
+        "type": "Item",
+        "id": 87607
+      },
+      {
+        "type": "Item",
+        "id": 87878
+      },
+      {
+        "type": "Item",
+        "id": 87840
+      },
+      {
+        "type": "Item",
+        "id": 87908
+      },
+      {
+        "type": "Item",
+        "id": 87714
+      },
+      {
+        "type": "Item",
+        "id": 87676
+      },
+      {
+        "type": "Item",
+        "id": 87649
+      },
+      {
+        "type": "Item",
+        "id": 87583
+      }
+    ],
+    "tiers": [
+      {
+        "count": 10,
+        "points": 3
+      }
+    ],
+    "prerequisites": [
+      4271
+    ]
+  },
+  {
+    "id": 4270,
+    "icon": "https://render.guildwars2.com/file/4477BAA7620C4C3B0826E70F1843E0D9DDF4214B/1999734.png",
+    "name": "Beetle Feed",
+    "description": "The fastest way to a roller beetle's heart is through its proventriculus. —Gorrik",
+    "requirement": "Collect  roller beetle foods and feed Petey the perfect meal.",
+    "locked_text": "",
+    "type": "ItemSet",
+    "flags": [
+      "Pvp",
+      "RepairOnLogin",
+      "RequiresUnlock",
+      "Permanent"
+    ],
+    "bits": [
+      {
+        "type": "Item",
+        "id": 88017
+      },
+      {
+        "type": "Item",
+        "id": 87929
+      },
+      {
+        "type": "Item",
+        "id": 87640
+      },
+      {
+        "type": "Item",
+        "id": 87967
+      },
+      {
+        "type": "Item",
+        "id": 87880
+      },
+      {
+        "type": "Item",
+        "id": 87874
+      },
+      {
+        "type": "Item",
+        "id": 87990
+      },
+      {
+        "type": "Item",
+        "id": 87876
+      }
+    ],
+    "tiers": [
+      {
+        "count": 8,
+        "points": 5
+      }
+    ],
+    "prerequisites": [
+      4205
+    ],
+    "rewards": [
+      {
+        "type": "Item",
+        "id": 88079,
+        "count": 1
+      },
+      {
+        "type": "Mastery",
+        "region": "Desert",
+        "id": 431
+      }
+    ]
+  }
+]

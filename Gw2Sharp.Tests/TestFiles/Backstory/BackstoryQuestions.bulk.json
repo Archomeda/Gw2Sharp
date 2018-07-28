@@ -1,0 +1,41 @@
+[
+  {
+    "id": 7,
+    "title": "My Personality",
+    "description": "Trouble may follow me, but I use my ______ to overcome it.",
+    "answers": [
+      "7-53",
+      "7-54",
+      "7-55"
+    ],
+    "order": 1
+  },
+  {
+    "id": 10,
+    "title": "My college",
+    "description": "I'm a member of the College of ______.",
+    "answers": [
+      "10-67",
+      "10-68",
+      "10-69"
+    ],
+    "order": 2,
+    "races": [
+      "Asura"
+    ]
+  },
+  {
+    "id": 189,
+    "title": "Blindfold",
+    "description": "I fight with my ______ blindfold on to shut out the distractions of the physical world and focus my magical inner sight.",
+    "answers": [
+      "189-187",
+      "189-188",
+      "189-189"
+    ],
+    "order": 0,
+    "professions": [
+      "Revenant"
+    ]
+  }
+]

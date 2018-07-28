@@ -1,0 +1,57 @@
+{
+  "pve": [
+    {
+      "id": 1837,
+      "level": {
+        "min": 1,
+        "max": 80
+      },
+      "required_access": [
+        "GuildWars2",
+        "HeartOfThorns",
+        "PathOfFire"
+      ]
+    },
+    {
+      "id": 2983,
+      "level": {
+        "min": 80,
+        "max": 80
+      },
+      "required_access": [
+        "GuildWars2",
+        "HeartOfThorns"
+      ]
+    },
+    {
+      "id": 1839,
+      "level": {
+        "min": 80,
+        "max": 80
+      },
+      "required_access": [
+        "GuildWars2",
+        "PathOfFire"
+      ]
+    },
+    {
+      "id": 1839,
+      "level": {
+        "min": 11,
+        "max": 79
+      },
+      "required_access": [
+        "GuildWars2",
+        "PathOfFire"
+      ]
+    }
+  ],
+  "pvp": [
+  ],
+  "wvw": [
+  ],
+  "fractals": [
+  ],
+  "special": [
+  ]
+}

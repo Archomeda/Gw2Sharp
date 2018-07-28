@@ -1,0 +1,113 @@
+[
+  {
+    "id": 24,
+    "buys": [
+      {
+        "listings": 1,
+        "unit_price": 114,
+        "quantity": 193
+      },
+      {
+        "listings": 17,
+        "unit_price": 112,
+        "quantity": 4233
+      },
+      {
+        "listings": 2,
+        "unit_price": 101,
+        "quantity": 358
+      }
+    ],
+    "sells": [
+      {
+        "listings": 2,
+        "unit_price": 188,
+        "quantity": 2
+      },
+      {
+        "listings": 1,
+        "unit_price": 189,
+        "quantity": 1
+      },
+      {
+        "listings": 1,
+        "unit_price": 191,
+        "quantity": 8
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "buys": [
+      {
+        "listings": 1,
+        "unit_price": 69,
+        "quantity": 1
+      },
+      {
+        "listings": 1,
+        "unit_price": 68,
+        "quantity": 5
+      },
+      {
+        "listings": 1,
+        "unit_price": 67,
+        "quantity": 30
+      }
+    ],
+    "sells": [
+      {
+        "listings": 1,
+        "unit_price": 258,
+        "quantity": 1
+      },
+      {
+        "listings": 1,
+        "unit_price": 260,
+        "quantity": 1
+      },
+      {
+        "listings": 4,
+        "unit_price": 262,
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "buys": [
+      {
+        "listings": 1,
+        "unit_price": 85,
+        "quantity": 113
+      },
+      {
+        "listings": 1,
+        "unit_price": 84,
+        "quantity": 160
+      },
+      {
+        "listings": 2,
+        "unit_price": 83,
+        "quantity": 51
+      }
+    ],
+    "sells": [
+      {
+        "listings": 2,
+        "unit_price": 200,
+        "quantity": 2
+      },
+      {
+        "listings": 1,
+        "unit_price": 236,
+        "quantity": 1
+      },
+      {
+        "listings": 1,
+        "unit_price": 237,
+        "quantity": 1
+      }
+    ]
+  }
+]

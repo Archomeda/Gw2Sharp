@@ -1,0 +1,78 @@
+[
+  {
+    "id": "A4ED8379-5B6B-4ECC-B6E1-70C350C902D2",
+    "name": "Story Journal",
+    "description": "Achievements related to the story journal.",
+    "order": 3,
+    "categories": [
+      147,
+      196,
+      203,
+      171,
+      183,
+      187,
+      188,
+      121,
+      122,
+      123,
+      104,
+      68,
+      100,
+      81,
+      83,
+      82,
+      71,
+      72,
+      70,
+      209,
+      144,
+      164,
+      139,
+      154
+    ]
+  },
+  {
+    "id": "56A82BB9-6B07-4AB0-89EE-E4A6D68F5C47",
+    "name": "General",
+    "description": "Achievements for accomplishments throughout Central Tyria.",
+    "order": 4,
+    "categories": [
+      169,
+      10,
+      1,
+      133,
+      5,
+      2,
+      27,
+      58,
+      7,
+      51,
+      47,
+      14,
+      6,
+      11,
+      16,
+      4,
+      80,
+      69,
+      206
+    ]
+  },
+  {
+    "id": "B42E2379-9599-46CA-9D4A-40A27E192BBE",
+    "name": "Path of Fire",
+    "description": "Achievements for accomplishments throughout the desert.",
+    "order": 5,
+    "categories": [
+      174,
+      176,
+      178,
+      179,
+      181,
+      182,
+      185,
+      189,
+      190
+    ]
+  }
+]

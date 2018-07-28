@@ -1,0 +1,14 @@
+{
+  "crafting": [
+    {
+      "discipline": "Armorsmith",
+      "rating": 500,
+      "active": true
+    },
+    {
+      "discipline": "Weaponsmith",
+      "rating": 500,
+      "active": true
+    }
+  ]
+}

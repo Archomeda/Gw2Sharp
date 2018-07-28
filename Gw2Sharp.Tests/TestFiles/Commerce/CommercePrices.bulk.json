@@ -1,0 +1,38 @@
+[
+  {
+    "id": 24,
+    "whitelisted": false,
+    "buys": {
+      "quantity": 48164,
+      "unit_price": 114
+    },
+    "sells": {
+      "quantity": 64113,
+      "unit_price": 188
+    }
+  },
+  {
+    "id": 68,
+    "whitelisted": false,
+    "buys": {
+      "quantity": 1365,
+      "unit_price": 69
+    },
+    "sells": {
+      "quantity": 339,
+      "unit_price": 258
+    }
+  },
+  {
+    "id": 69,
+    "whitelisted": false,
+    "buys": {
+      "quantity": 1673,
+      "unit_price": 85
+    },
+    "sells": {
+      "quantity": 684,
+      "unit_price": 200
+    }
+  }
+]

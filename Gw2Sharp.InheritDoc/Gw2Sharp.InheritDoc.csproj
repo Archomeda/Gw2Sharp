@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net461</TargetFramework>
+    <AssemblyName>Gw2Sharp.InheritDoc</AssemblyName>
+    <PackageId>Gw2Sharp.InheritDoc</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="InheritDoc" Version="1.2.0.1" />
+  </ItemGroup>
+
+  <Target Name="InheritDoc" AfterTargets="PostBuildEvent">
+    <Exec Command="$(NuGetPackageRoot)\inheritdoc\1.2.0.1\tools\InheritDoc.exe -b $(SolutionDir)Gw2Sharp\bin\ -o" />
+  </Target>
+
+</Project>

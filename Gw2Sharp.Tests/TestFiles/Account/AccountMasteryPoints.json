@@ -1,0 +1,24 @@
+{
+  "totals": [
+    {
+      "region": "Tyria",
+      "spent": 5,
+      "earned": 10
+    },
+    {
+      "region": "Maguuma",
+      "spent": 10,
+      "earned": 15
+    },
+    {
+      "region": "Desert",
+      "spent": 15,
+      "earned": 20
+    }
+  ],
+  "unlocked": [
+    1,
+    2,
+    3
+  ]
+}

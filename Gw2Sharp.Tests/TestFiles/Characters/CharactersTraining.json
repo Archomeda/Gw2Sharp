@@ -1,0 +1,49 @@
+{
+  "training": [
+    {
+      "id": 72,
+      "spent": 22,
+      "done": true
+    },
+    {
+      "id": 76,
+      "spent": 24,
+      "done": true
+    },
+    {
+      "id": 50,
+      "spent": 15,
+      "done": true
+    },
+    {
+      "id": 64,
+      "spent": 15,
+      "done": true
+    },
+    {
+      "id": 117,
+      "spent": 22,
+      "done": true
+    },
+    {
+      "id": 27,
+      "spent": 60,
+      "done": true
+    },
+    {
+      "id": 87,
+      "spent": 60,
+      "done": true
+    },
+    {
+      "id": 109,
+      "spent": 10,
+      "done": false
+    },
+    {
+      "id": 55,
+      "spent": 60,
+      "done": true
+    }
+  ]
+}

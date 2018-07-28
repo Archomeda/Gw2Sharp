@@ -1,0 +1,37 @@
+{
+  "id": 24,
+  "buys": [
+    {
+      "listings": 1,
+      "unit_price": 114,
+      "quantity": 193
+    },
+    {
+      "listings": 17,
+      "unit_price": 112,
+      "quantity": 4233
+    },
+    {
+      "listings": 2,
+      "unit_price": 101,
+      "quantity": 358
+    }
+  ],
+  "sells": [
+    {
+      "listings": 2,
+      "unit_price": 188,
+      "quantity": 2
+    },
+    {
+      "listings": 1,
+      "unit_price": 189,
+      "quantity": 1
+    },
+    {
+      "listings": 1,
+      "unit_price": 191,
+      "quantity": 8
+    }
+  ]
+}

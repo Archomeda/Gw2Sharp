@@ -1,0 +1,81 @@
+[
+  {
+    "name": "Bob",
+    "race": "Human",
+    "gender": "Male",
+    "flags": [
+
+    ],
+    "profession": "Warrior",
+    "level": 80,
+    "guild": "F00FF00F-F00F-F00F-F00F-F00FF00FF00F",
+    "age": 7441000,
+    "created": "2014-01-31T18:00:00Z",
+    "deaths": 4100,
+    "crafting": [
+      {
+        "discipline": "Armorsmith",
+        "rating": 500,
+        "active": true
+      },
+      {
+        "discipline": "Weaponsmith",
+        "rating": 500,
+        "active": true
+      }
+    ],
+    "title": 225,
+    "backstory": [
+      "1-2",
+      "3-4",
+      "5-6",
+      "7-8",
+      "9-10"
+    ],
+    "wvw_abilities": [
+      {
+        "id": 1,
+        "rank": 4
+      },
+      {
+        "id": 2,
+        "rank": 5
+      }
+    ]
+  },
+  {
+    "name": "Bob 2",
+    "race": "Human",
+    "gender": "Female",
+    "flags": [
+
+    ],
+    "profession": "Necromancer",
+    "level": 80,
+    "guild": "F00FF00F-F00F-F00F-F00F-F00FF00FF00F",
+    "age": 744100,
+    "created": "2016-01-11T14:00:00Z",
+    "deaths": 1400,
+    "crafting": [
+
+    ],
+    "title": 212,
+    "backstory": [
+      "11-12",
+      "13-14",
+      "15-16",
+      "17-18",
+      "19-20"
+    ],
+    "wvw_abilities": [
+      {
+        "id": 3,
+        "rank": 1
+      },
+      {
+        "id": 4,
+        "rank": 2
+      }
+    ]
+  }
+]

@@ -1,0 +1,243 @@
+{
+  "bags": [
+    {
+      "id": 8932,
+      "size": 20,
+      "inventory": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 48715,
+      "size": 20,
+      "inventory": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "id": 19620,
+          "count": 1,
+          "binding": "Character",
+          "bound_to": "Bob"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 48715,
+      "size": 20,
+      "inventory": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 48715,
+      "size": 20,
+      "inventory": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 9594,
+      "size": 20,
+      "inventory": [
+        {
+          "id": 85016,
+          "count": 250
+        },
+        null,
+        {
+          "id": 85016,
+          "count": 93
+        },
+        null,
+        {
+          "id": 84731,
+          "count": 98
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "id": 73653,
+          "count": 6,
+          "binding": "Account"
+        },
+        null,
+        {
+          "id": 24836,
+          "count": 6
+        },
+        null,
+        null,
+        null,
+        null,
+        {
+          "id": 78963,
+          "count": 1,
+          "skin": 5871,
+          "upgrades": [
+            24615
+          ],
+          "binding": "Account",
+          "stats": {
+            "id": 161,
+            "attributes": {
+              "Power": 125,
+              "Precision": 90,
+              "CritDamage": 90
+            }
+          }
+        },
+        {
+          "id": 46759,
+          "count": 1,
+          "skin": 5871,
+          "upgrades": [
+            24618
+          ],
+          "binding": "Account"
+        }
+      ]
+    },
+    {
+      "id": 87225,
+      "size": 32,
+      "inventory": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "id": 87695,
+          "count": 1,
+          "binding": "Character",
+          "bound_to": "Bob"
+        },
+        {
+          "id": 88023,
+          "count": 1,
+          "binding": "Account"
+        },
+        {
+          "id": 87630,
+          "count": 72,
+          "binding": "Account"
+        },
+        {
+          "id": 86793,
+          "count": 1,
+          "binding": "Account"
+        },
+        {
+          "id": 87517,
+          "count": 8,
+          "binding": "Account"
+        },
+        {
+          "id": 79626,
+          "count": 1,
+          "binding": "Character",
+          "bound_to": "Bob"
+        }
+      ]
+    }
+  ]
+}
