@@ -9,5 +9,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
         IAuthenticatedClient<IReadOnlyList<string>>,
         IBlobClient<IReadOnlyList<string>>
     {
+        /// <summary>
+        /// The character name.
+        /// </summary>
+        string CharacterName { get; }
     }
 }

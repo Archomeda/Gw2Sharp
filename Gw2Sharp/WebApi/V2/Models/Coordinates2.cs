@@ -1,6 +1,8 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using Gw2Sharp.WebApi.V2.Models.Converters;
 using Newtonsoft.Json;
-using System;
 
 namespace Gw2Sharp.WebApi.V2.Models
 {
@@ -8,7 +10,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// Represents a coordinates object in 2D space.
     /// </summary>
     [JsonConverter(typeof(Coordinates2Converter))]
-    public struct Coordinates2 : IEquatable<Coordinates2>
+    public struct Coordinates2 : IEquatable<Coordinates2>, IEnumerable<int>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Coordinates2"/> struct.
@@ -30,6 +32,16 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// The y-coordinate.
         /// </summary>
         public int Y { get; }
+
+        /// <inheritdoc />
+        public IEnumerator<int> GetEnumerator()
+        {
+            yield return this.X;
+            yield return this.Y;
+        }
+
+        /// <inheritdoc />
+        IEnumerator IEnumerable.GetEnumerator() => this.GetEnumerator();
 
         /// <inheritdoc />
         public override string ToString() => $"({this.X},{this.Y})";

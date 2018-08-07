@@ -10,5 +10,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
         IAuthenticatedClient<CharactersRecipes>,
         IBlobClient<CharactersRecipes>
     {
+        /// <summary>
+        /// The character name.
+        /// </summary>
+        string CharacterName { get; }
     }
 }

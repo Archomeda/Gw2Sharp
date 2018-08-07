@@ -6,7 +6,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// An attribute for specifying an endpoint path segment replacement on clients. Optional.
     /// </summary>
     /// <seealso cref="Attribute" />
-    [AttributeUsage(AttributeTargets.Class, Inherited = true)]
+    [AttributeUsage(AttributeTargets.Class, Inherited = true, AllowMultiple = true)]
     public class EndpointPathSegmentAttribute : Attribute
     {
         /// <summary>

@@ -6,7 +6,6 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
 {
     public abstract class BaseCharactersSubEndpointClientTests : BaseEndpointClientTests
     {
-
         #region ArgumentNullException tests
 
         [Fact]

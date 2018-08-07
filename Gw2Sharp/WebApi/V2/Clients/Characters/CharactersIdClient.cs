@@ -32,7 +32,6 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <inheritdoc />
         public virtual string CharacterName { get; protected set; }
 
-
         /// <inheritdoc />
         public virtual ICharactersBackstoryClient Backstory { get; protected set; }
 

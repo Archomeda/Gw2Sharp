@@ -1,4 +1,4 @@
-﻿using Gw2Sharp.WebApi.V2.Models;
+using Gw2Sharp.WebApi.V2.Models;
 using Newtonsoft.Json;
 using Xunit;
 
@@ -12,6 +12,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Models
             var coordinates = new Coordinates2(4, 2);
             Assert.Equal(4, coordinates.X);
             Assert.Equal(2, coordinates.Y);
+            Assert.Equal(new[] { 4, 2 }, coordinates);
         }
 
         [Fact]
@@ -21,6 +22,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Models
             var coordinates = JsonConvert.DeserializeObject<Coordinates2>(json);
             Assert.Equal(4, coordinates.X);
             Assert.Equal(2, coordinates.Y);
+            Assert.Equal(new[] { 4, 2 }, coordinates);
         }
 
         [Fact]

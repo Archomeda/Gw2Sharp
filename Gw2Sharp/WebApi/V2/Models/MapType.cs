@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel;
 
@@ -7,7 +7,6 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents a map type.
     /// </summary>
-    [JsonConverter(typeof(StringEnumConverter))]
     [DefaultValue(Unknown)]
     public enum MapType
     {

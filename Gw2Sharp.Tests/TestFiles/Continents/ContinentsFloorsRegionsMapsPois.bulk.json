@@ -1,0 +1,46 @@
+[
+  {
+    "name": "Leaning Grade",
+    "type": "landmark",
+    "floor": 1,
+    "coord": [
+      19889.7,
+      16594.8
+    ],
+    "id": 554,
+    "chat_link": "[&BCoCAAA=]"
+  },
+  {
+    "name": "Frostland Waypoint",
+    "type": "waypoint",
+    "floor": 1,
+    "coord": [
+      20659.1,
+      17906.6
+    ],
+    "id": 599,
+    "chat_link": "[&BFcCAAA=]"
+  },
+  {
+    "type": "vista",
+    "floor": 1,
+    "coord": [
+      20675.2,
+      15258.4
+    ],
+    "id": 1570,
+    "chat_link": "[&BCIGAAA=]"
+  },
+  {
+    "name": "Sorrow's Embrace",
+    "type": "unlock",
+    "floor": 1,
+    "coord": [
+      19676.3,
+      17719.4
+    ],
+    "id": 1732,
+    "chat_link": "[&BMQGAAA=]",
+    "icon": "https://render.guildwars2.com/file/943538394A94A491C8632FBEF6203C2013443555/102478.png"
+  }
+]

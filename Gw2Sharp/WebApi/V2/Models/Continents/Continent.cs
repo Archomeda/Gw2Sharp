@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Gw2Sharp.WebApi.V2.Clients;
 
 namespace Gw2Sharp.WebApi.V2.Models
 {
@@ -8,6 +9,11 @@ namespace Gw2Sharp.WebApi.V2.Models
     public class Continent : IIdentifiable<int>
     {
         /// <summary>
+        /// The continent id.
+        /// </summary>
+        public int Id { get; set; }
+
+        /// <summary>
         /// The continent name.
         /// </summary>
         public string Name { get; set; }
@@ -15,7 +21,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The continent dimensions.
         /// </summary>
-        public Size ContinentDims { get; set; }
+        public Coordinates2 ContinentDims { get; set; }
 
         /// <summary>
         /// The minimum zoom level.
@@ -28,13 +34,9 @@ namespace Gw2Sharp.WebApi.V2.Models
         public int MaxZoom { get; set; }
 
         /// <summary>
-        /// The available continent floors.
+        /// The continent floors.
+        /// Each element can be resolved against <see cref="IContinentsIdClient.Floors"/>.
         /// </summary>
         public IReadOnlyList<int> Floors { get; set; }
-
-        /// <summary>
-        /// The continent id.
-        /// </summary>
-        public int Id { get; set; }
     }
 }

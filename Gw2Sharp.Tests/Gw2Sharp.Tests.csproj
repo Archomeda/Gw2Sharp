@@ -85,6 +85,27 @@
     <None Remove="TestFiles\Commerce\CommercePrices.single.json" />
     <None Remove="TestFiles\Commerce\CommerceTransactionsCurrent.json" />
     <None Remove="TestFiles\Commerce\CommerceTransactionsHistory.json" />
+    <None Remove="TestFiles\Continents\Continents.bulk.json" />
+    <None Remove="TestFiles\Continents\Continents.ids.json" />
+    <None Remove="TestFiles\Continents\Continents.single.json" />
+    <None Remove="TestFiles\Continents\ContinentsFloors.bulk.json" />
+    <None Remove="TestFiles\Continents\ContinentsFloors.ids.json" />
+    <None Remove="TestFiles\Continents\ContinentsFloors.single.json" />
+    <None Remove="TestFiles\Continents\ContinentsFloorsRegions.bulk.json" />
+    <None Remove="TestFiles\Continents\ContinentsFloorsRegions.ids.json" />
+    <None Remove="TestFiles\Continents\ContinentsFloorsRegions.single.json" />
+    <None Remove="TestFiles\Continents\ContinentsFloorsRegionsMaps.bulk.json" />
+    <None Remove="TestFiles\Continents\ContinentsFloorsRegionsMaps.ids.json" />
+    <None Remove="TestFiles\Continents\ContinentsFloorsRegionsMaps.single.json" />
+    <None Remove="TestFiles\Continents\ContinentsFloorsRegionsMapsPois.bulk.json" />
+    <None Remove="TestFiles\Continents\ContinentsFloorsRegionsMapsPois.ids.json" />
+    <None Remove="TestFiles\Continents\ContinentsFloorsRegionsMapsPois.single.json" />
+    <None Remove="TestFiles\Continents\ContinentsFloorsRegionsMapsSectors.bulk.json" />
+    <None Remove="TestFiles\Continents\ContinentsFloorsRegionsMapsSectors.ids.json" />
+    <None Remove="TestFiles\Continents\ContinentsFloorsRegionsMapsSectors.single.json" />
+    <None Remove="TestFiles\Continents\ContinentsFloorsRegionsMapsTasks.bulk.json" />
+    <None Remove="TestFiles\Continents\ContinentsFloorsRegionsMapsTasks.ids.json" />
+    <None Remove="TestFiles\Continents\ContinentsFloorsRegionsMapsTasks.single.json" />
   </ItemGroup>
 
   <ItemGroup>
@@ -159,6 +180,27 @@
     <EmbeddedResource Include="TestFiles\Commerce\CommerceExchangeGems.json" />
     <EmbeddedResource Include="TestFiles\Commerce\CommerceExchangeCoins.json" />
     <EmbeddedResource Include="TestFiles\Commerce\CommerceDelivery.json" />
+    <EmbeddedResource Include="TestFiles\Continents\ContinentsFloorsRegionsMapsSectors.single.json" />
+    <EmbeddedResource Include="TestFiles\Continents\ContinentsFloorsRegionsMapsSectors.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Continents\ContinentsFloorsRegionsMapsSectors.ids.json" />
+    <EmbeddedResource Include="TestFiles\Continents\ContinentsFloorsRegionsMapsTasks.ids.json" />
+    <EmbeddedResource Include="TestFiles\Continents\ContinentsFloorsRegionsMapsTasks.single.json" />
+    <EmbeddedResource Include="TestFiles\Continents\ContinentsFloorsRegionsMapsTasks.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Continents\ContinentsFloorsRegionsMapsPois.ids.json" />
+    <EmbeddedResource Include="TestFiles\Continents\ContinentsFloorsRegionsMapsPois.single.json" />
+    <EmbeddedResource Include="TestFiles\Continents\ContinentsFloorsRegionsMapsPois.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Continents\ContinentsFloorsRegionsMaps.single.json" />
+    <EmbeddedResource Include="TestFiles\Continents\ContinentsFloorsRegionsMaps.ids.json" />
+    <EmbeddedResource Include="TestFiles\Continents\ContinentsFloorsRegionsMaps.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Continents\ContinentsFloorsRegions.ids.json" />
+    <EmbeddedResource Include="TestFiles\Continents\ContinentsFloorsRegions.single.json" />
+    <EmbeddedResource Include="TestFiles\Continents\ContinentsFloorsRegions.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Continents\ContinentsFloors.ids.json" />
+    <EmbeddedResource Include="TestFiles\Continents\ContinentsFloors.single.json" />
+    <EmbeddedResource Include="TestFiles\Continents\ContinentsFloors.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Continents\Continents.ids.json" />
+    <EmbeddedResource Include="TestFiles\Continents\Continents.single.json" />
+    <EmbeddedResource Include="TestFiles\Continents\Continents.bulk.json" />
   </ItemGroup>
 
   <ItemGroup>

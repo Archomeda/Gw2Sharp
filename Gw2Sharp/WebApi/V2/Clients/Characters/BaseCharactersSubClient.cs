@@ -16,8 +16,12 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="characterName">The character name.</param>
         public BaseCharactersSubClient(IConnection connection, string characterName) : base(connection, characterName)
         {
-            if (characterName == null)
-                throw new ArgumentNullException(nameof(characterName));
+            this.CharacterName = characterName ?? throw new ArgumentNullException(nameof(characterName));
         }
+
+        /// <summary>
+        /// The character name.
+        /// </summary>
+        public virtual string CharacterName { get; protected set; }
     }
 }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -127,7 +128,13 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
         protected virtual async Task AssertBulkData<TObject, TId>(IBulkExpandableClient<TObject, TId> client, string file, string idName = "id") where TObject : IIdentifiable<TId>
         {
             var (data, expected) = this.GetTestData(file);
-            var ids = this.GetIds<TId>(expected.Select(i => i[idName]));
+            var ids = this.GetIds<TId>(expected.Select(i =>
+            {
+                if (i is JProperty prop)
+                    return prop.Value[idName];
+                else
+                    return i[idName];
+            }));
 
             var httpRequest = Substitute.For<IHttpRequest>();
             this.Client.Connection.HttpClient.Request(Arg.Any<IHttpRequest>(), CancellationToken.None).Returns(callInfo =>
@@ -243,16 +250,37 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
         protected void AssertJsonObject(JObject expected, object actual)
         {
             var type = actual.GetType();
-            foreach (var kvp in expected)
+            if (type.IsGenericType && type.GetGenericTypeDefinition() == typeof(ReadOnlyDictionary<,>))
             {
-                var key = string.Concat(kvp.Key.Split('_').Select(s => string.Concat(
-                    s[0].ToString().ToUpper(),
-                    s.Substring(1))));
-                var property = type.GetProperty(key);
-                if (property == null)
-                    throw new InvalidOperationException($"Property {key} does not exist");
-                var actualValue = property.GetValue(actual);
-                this.AssertJsonObject(kvp.Value, actualValue);
+                // Dictionary
+                var keyType = type.GetGenericArguments()[0];
+                var dic = (dynamic)actual;
+                foreach (var kvp in expected)
+                {
+                    var key = string.Concat(kvp.Key.Split('_').Select(s => string.Concat(
+                        s[0].ToString().ToUpper(),
+                        s.Substring(1))));
+                    dynamic property = Convert.ChangeType(key, keyType);
+                    if (property == null)
+                        throw new InvalidOperationException($"Property {key} does not exist");
+                    var actualValue = dic[property];
+                    this.AssertJsonObject(kvp.Value, actualValue);
+                }
+            }
+            else
+            {
+                // Specific object
+                foreach (var kvp in expected)
+                {
+                    var key = string.Concat(kvp.Key.Split('_').Select(s => string.Concat(
+                        s[0].ToString().ToUpper(),
+                        s.Substring(1))));
+                    var property = type.GetProperty(key);
+                    if (property == null)
+                        throw new InvalidOperationException($"Property {key} does not exist");
+                    var actualValue = property.GetValue(actual);
+                    this.AssertJsonObject(kvp.Value, actualValue);
+                }
             }
         }
 
@@ -260,7 +288,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
         {
             var actualList = (actual as IEnumerable)?.Cast<object>().ToList();
             if (actualList == null)
-                throw new InvalidOperationException($"Expected an enumerable");
+                throw new InvalidOperationException($"Expected an object that's castable to an enumerable for {expected}");
             for (int i = 0; i < expected.Count; i++)
                 this.AssertJsonObject(expected[i], actualList[i]);
         }
@@ -284,7 +312,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                     if (typeInfo.IsGenericType && typeInfo.GenericTypeArguments.Length > 0)
                     {
                         Type enumType = typeInfo.GenericTypeArguments[0];
-                        Assert.Equal(Enum.Parse(enumType, expected.Value<string>()), @enum.Value);
+                        Assert.Equal(Enum.Parse(enumType, expected.Value<string>(), true), @enum.Value);
                     }
                     else
                         throw new InvalidOperationException("Expected a generic ApiEnum");

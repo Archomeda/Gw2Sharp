@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Models
@@ -6,7 +7,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents a rectangle object.
     /// </summary>
-    public struct Rectangle : IEquatable<Rectangle>
+    public struct Rectangle : IEquatable<Rectangle>, IEnumerable<IEnumerable<int>>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Rectangle"/> struct.
@@ -16,6 +17,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <param name="directionType">The rectangle direction type.</param>
         public Rectangle(Coordinates2 coords1, Coordinates2 coords2, RectangleDirectionType directionType)
         {
+            this.Direction = directionType;
             if (directionType == RectangleDirectionType.BottomUp)
             {
                 this.TopLeft = new Coordinates2(coords1.X, coords2.Y);
@@ -53,6 +55,11 @@ namespace Gw2Sharp.WebApi.V2.Models
         public Coordinates2 BottomRight { get; private set; }
 
         /// <summary>
+        /// Gets the rectangle direction type.
+        /// </summary>
+        public RectangleDirectionType Direction { get; private set; }
+
+        /// <summary>
         /// Gets the width.
         /// </summary>
         public int Width => Math.Abs(this.TopRight.X - this.TopLeft.X);
@@ -61,6 +68,24 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// Gets the height.
         /// </summary>
         public int Height => Math.Abs(this.BottomLeft.Y - this.TopLeft.Y);
+
+        /// <inheritdoc />
+        public IEnumerator<IEnumerable<int>> GetEnumerator()
+        {
+            if (this.Direction == RectangleDirectionType.BottomUp)
+            {
+                yield return new[] { this.BottomLeft.X, this.BottomLeft.Y };
+                yield return new[] { this.TopRight.X, this.TopRight.Y };
+            }
+            else // TopDown
+            {
+                yield return new[] { this.TopLeft.X, this.TopLeft.Y };
+                yield return new[] { this.BottomRight.X, this.BottomRight.Y };
+            }
+        }
+
+        /// <inheritdoc />
+        IEnumerator IEnumerable.GetEnumerator() => this.GetEnumerator();
 
         /// <inheritdoc />
         public override string ToString() => $"({this.TopLeft},{this.TopRight},{this.BottomLeft},{this.BottomRight})";

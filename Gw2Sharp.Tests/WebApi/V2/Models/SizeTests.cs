@@ -1,4 +1,4 @@
-﻿using Gw2Sharp.WebApi.V2.Models;
+using Gw2Sharp.WebApi.V2.Models;
 using Newtonsoft.Json;
 using Xunit;
 
@@ -12,6 +12,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Models
             var size = new Size(4, 2);
             Assert.Equal(4, size.Width);
             Assert.Equal(2, size.Height);
+            Assert.Equal(new[] { 4, 2 }, size);
         }
 
         [Fact]
@@ -21,6 +22,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Models
             var size = JsonConvert.DeserializeObject<Size>(json);
             Assert.Equal(4, size.Width);
             Assert.Equal(2, size.Height);
+            Assert.Equal(new[] { 4, 2 }, size);
         }
 
         [Fact]

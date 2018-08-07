@@ -34,7 +34,7 @@ namespace Gw2Sharp.WebApi.V2.Models.Converters
             Enum value = null;
             try
             {
-                value = (Enum)Enum.Parse(enumType, rawValue);
+                value = (Enum)Enum.Parse(enumType, rawValue, true);
             }
             catch (ArgumentException)
             {

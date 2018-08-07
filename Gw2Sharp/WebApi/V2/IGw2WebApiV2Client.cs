@@ -53,5 +53,10 @@ namespace Gw2Sharp.WebApi.V2
         /// Gets the commerce.
         /// </summary>
         ICommerceClient Commerce { get; }
+
+        /// <summary>
+        /// Gets the continents.
+        /// </summary>
+        IContinentsClient Continents { get; }
     }
 }

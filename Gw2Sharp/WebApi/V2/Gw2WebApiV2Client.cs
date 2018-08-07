@@ -33,6 +33,7 @@ namespace Gw2Sharp.WebApi.V2
             this.Characters = new CharactersClient(connection);
             this.Colors = new ColorsClient(connection);
             this.Commerce = new CommerceClient(connection);
+            this.Continents = new ContinentsClient(connection);
         }
 
         /// <inheritdoc />
@@ -61,5 +62,8 @@ namespace Gw2Sharp.WebApi.V2
 
         /// <inheritdoc />
         public virtual ICommerceClient Commerce { get; protected set; }
+
+        /// <inheritdoc />
+        public virtual IContinentsClient Continents { get; protected set; }
     }
 }

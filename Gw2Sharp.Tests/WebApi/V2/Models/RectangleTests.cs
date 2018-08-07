@@ -1,4 +1,4 @@
-﻿using Gw2Sharp.WebApi.V2.Models;
+using Gw2Sharp.WebApi.V2.Models;
 using Gw2Sharp.WebApi.V2.Models.Converters;
 using Newtonsoft.Json;
 using System;
@@ -16,12 +16,14 @@ namespace Gw2Sharp.Tests.WebApi.V2.Models
             Assert.Equal(new Coordinates2(6, 4), rectangle.TopRight);
             Assert.Equal(new Coordinates2(2, 8), rectangle.BottomLeft);
             Assert.Equal(new Coordinates2(6, 8), rectangle.BottomRight);
+            Assert.Equal(new[] { new[] { 2, 4 }, new[] { 6, 8 } }, rectangle);
 
             rectangle = new Rectangle(new Coordinates2(2, 4), new Coordinates2(6, 8), RectangleDirectionType.BottomUp);
             Assert.Equal(new Coordinates2(2, 8), rectangle.TopLeft);
             Assert.Equal(new Coordinates2(6, 8), rectangle.TopRight);
             Assert.Equal(new Coordinates2(2, 4), rectangle.BottomLeft);
             Assert.Equal(new Coordinates2(6, 4), rectangle.BottomRight);
+            Assert.Equal(new[] { new[] { 2, 4 }, new[] { 6, 8 } }, rectangle);
         }
 
         [Fact]
@@ -33,6 +35,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Models
             Assert.Equal(new Coordinates2(6, 4), rectangle.TopRight);
             Assert.Equal(new Coordinates2(2, 8), rectangle.BottomLeft);
             Assert.Equal(new Coordinates2(6, 8), rectangle.BottomRight);
+            Assert.Equal(new[] { new[] { 2, 4 }, new[] { 6, 8 } }, rectangle);
 
             json = "[[2,4],[6,8]]";
             rectangle = JsonConvert.DeserializeObject<Rectangle>(json, new BottomUpRectangleConverter());
@@ -40,6 +43,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Models
             Assert.Equal(new Coordinates2(6, 8), rectangle.TopRight);
             Assert.Equal(new Coordinates2(2, 4), rectangle.BottomLeft);
             Assert.Equal(new Coordinates2(6, 4), rectangle.BottomRight);
+            Assert.Equal(new[] { new[] { 2, 4 }, new[] { 6, 8 } }, rectangle);
         }
 
         [Fact]
