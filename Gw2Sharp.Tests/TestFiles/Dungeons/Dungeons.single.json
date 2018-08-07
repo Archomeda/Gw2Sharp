@@ -1,0 +1,21 @@
+{
+  "id": "ascalonian_catacombs",
+  "paths": [
+    {
+      "id": "ac_story",
+      "type": "Story"
+    },
+    {
+      "id": "hodgins",
+      "type": "Explorable"
+    },
+    {
+      "id": "detha",
+      "type": "Explorable"
+    },
+    {
+      "id": "tzark",
+      "type": "Explorable"
+    }
+  ]
+}

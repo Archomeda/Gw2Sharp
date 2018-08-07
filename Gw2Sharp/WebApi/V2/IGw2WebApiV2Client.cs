@@ -58,5 +58,20 @@ namespace Gw2Sharp.WebApi.V2
         /// Gets the continents.
         /// </summary>
         IContinentsClient Continents { get; }
+
+        /// <summary>
+        /// Gets the currencies.
+        /// </summary>
+        ICurrenciesClient Currencies { get; }
+
+        /// <summary>
+        /// Gets the dungeons.
+        /// </summary>
+        IDungeonsClient Dungeons { get; }
+
+        /// <summary>
+        /// Gets the emblems.
+        /// </summary>
+        IEmblemClient Emblem { get; }
     }
 }

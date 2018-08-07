@@ -1,0 +1,25 @@
+namespace Gw2Sharp.WebApi.V2.Clients
+{
+    /// <summary>
+    /// A client of the Guild Wars 2 API v2 emblem endpoint.
+    /// </summary>
+    [EndpointPath("emblem")]
+    public class EmblemClient : BaseClient, IEmblemClient
+    {
+        /// <summary>
+        /// Creates a new <see cref="EmblemClient"/> that is used for the API v2 emblem endpoint.
+        /// </summary>
+        /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
+        public EmblemClient(IConnection connection) : base(connection)
+        {
+            this.Foregrounds = new EmblemForegroundsClient(connection);
+            this.Backgrounds = new EmblemBackgroundsClient(connection);
+        }
+
+        /// <inheritdoc />
+        public virtual IEmblemForegroundsClient Foregrounds { get; protected set; }
+
+        /// <inheritdoc />
+        public virtual IEmblemBackgroundsClient Backgrounds { get; protected set; }
+    }
+}

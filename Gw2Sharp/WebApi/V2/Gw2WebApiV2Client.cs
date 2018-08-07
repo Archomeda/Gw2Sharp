@@ -34,6 +34,9 @@ namespace Gw2Sharp.WebApi.V2
             this.Colors = new ColorsClient(connection);
             this.Commerce = new CommerceClient(connection);
             this.Continents = new ContinentsClient(connection);
+            this.Currencies = new CurrenciesClient(connection);
+            this.Dungeons = new DungeonsClient(connection);
+            this.Emblem = new EmblemClient(connection);
         }
 
         /// <inheritdoc />
@@ -65,5 +68,14 @@ namespace Gw2Sharp.WebApi.V2
 
         /// <inheritdoc />
         public virtual IContinentsClient Continents { get; protected set; }
+
+        /// <inheritdoc />
+        public virtual ICurrenciesClient Currencies { get; protected set; }
+
+        /// <inheritdoc />
+        public virtual IDungeonsClient Dungeons { get; protected set; }
+
+        /// <inheritdoc />
+        public virtual IEmblemClient Emblem { get; protected set; }
     }
 }

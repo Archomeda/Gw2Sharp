@@ -106,6 +106,18 @@
     <None Remove="TestFiles\Continents\ContinentsFloorsRegionsMapsTasks.bulk.json" />
     <None Remove="TestFiles\Continents\ContinentsFloorsRegionsMapsTasks.ids.json" />
     <None Remove="TestFiles\Continents\ContinentsFloorsRegionsMapsTasks.single.json" />
+    <None Remove="TestFiles\Currencies\Currencies.bulk.json" />
+    <None Remove="TestFiles\Currencies\Currencies.ids.json" />
+    <None Remove="TestFiles\Currencies\Currencies.single.json" />
+    <None Remove="TestFiles\Dungeons\Dungeons.bulk.json" />
+    <None Remove="TestFiles\Dungeons\Dungeons.ids.json" />
+    <None Remove="TestFiles\Dungeons\Dungeons.single.json" />
+    <None Remove="TestFiles\Emblem\EmblemBackgrounds.bulk.json" />
+    <None Remove="TestFiles\Emblem\EmblemBackgrounds.ids.json" />
+    <None Remove="TestFiles\Emblem\EmblemBackgrounds.single.json" />
+    <None Remove="TestFiles\Emblem\EmblemForegrounds.bulk.json" />
+    <None Remove="TestFiles\Emblem\EmblemForegrounds.ids.json" />
+    <None Remove="TestFiles\Emblem\EmblemForegrounds.single.json" />
   </ItemGroup>
 
   <ItemGroup>
@@ -166,6 +178,18 @@
     <EmbeddedResource Include="TestFiles\Account\AccountBank.json" />
     <EmbeddedResource Include="TestFiles\Account\AccountAchievements.json" />
     <EmbeddedResource Include="TestFiles\Account\Account.1.json" />
+    <EmbeddedResource Include="TestFiles\Emblem\EmblemBackgrounds.single.json" />
+    <EmbeddedResource Include="TestFiles\Emblem\EmblemBackgrounds.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Emblem\EmblemBackgrounds.ids.json" />
+    <EmbeddedResource Include="TestFiles\Emblem\EmblemForegrounds.single.json" />
+    <EmbeddedResource Include="TestFiles\Emblem\EmblemForegrounds.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Emblem\EmblemForegrounds.ids.json" />
+    <EmbeddedResource Include="TestFiles\Dungeons\Dungeons.single.json" />
+    <EmbeddedResource Include="TestFiles\Dungeons\Dungeons.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Dungeons\Dungeons.ids.json" />
+    <EmbeddedResource Include="TestFiles\Currencies\Currencies.single.json" />
+    <EmbeddedResource Include="TestFiles\Currencies\Currencies.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Currencies\Currencies.ids.json" />
     <EmbeddedResource Include="TestFiles\Colors\Colors.bulk.json" />
     <EmbeddedResource Include="TestFiles\Colors\Colors.ids.json" />
     <EmbeddedResource Include="TestFiles\Colors\Colors.single.json" />

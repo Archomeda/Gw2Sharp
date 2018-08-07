@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Coin",
+    "description": "The primary currency of Tyria. Spent at vendors throughout the world.",
+    "order": 101,
+    "icon": "https://render.guildwars2.com/file/98457F504BA2FAC8457F532C4B30EDC23929ACF9/619316.png"
+  },
+  {
+    "id": 2,
+    "name": "Karma",
+    "description": "Earned through various activities. Spent at vendors throughout the world.",
+    "order": 102,
+    "icon": "https://render.guildwars2.com/file/94953FA23D3E0D23559624015DFEA4CFAA07F0E5/155026.png"
+  },
+  {
+    "id": 3,
+    "name": "Laurel",
+    "description": "Earned through the Log-in Reward Chest. Spent in major cities. Used to purchase various rewards.",
+    "order": 104,
+    "icon": "https://render.guildwars2.com/file/A1BD345AD9192C3A585BE2F6CB0617C5A797A1E2/619317.png"
+  }
+]
