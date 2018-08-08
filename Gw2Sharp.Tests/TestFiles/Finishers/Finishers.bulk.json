@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "unlock_details": "<c=@reminder>Unlock this PvP rank finisher by earning rank points and increasing your PvP rank.</c>",
+    "unlock_items": [
+
+    ],
+    "order": 18,
+    "icon": "https://render.guildwars2.com/file/807516C20D08B908946167EADD57980163EECA4E/620101.png",
+    "name": "Rabbit Rank Finisher"
+  },
+  {
+    "id": 2,
+    "unlock_details": "<c=@reminder>Unlock this PvP rank finisher by earning rank points and increasing your PvP rank.</c>",
+    "unlock_items": [
+
+    ],
+    "order": 17,
+    "icon": "https://render.guildwars2.com/file/6A68492F14AB3AFC5A95BCE008BDE8B50EB82CAF/620104.png",
+    "name": "Deer Rank Finisher"
+  },
+  {
+    "id": 14,
+    "unlock_details": "<c=@reminder>Unlock this finisher by discovering it in Black Lion Chests.</c>",
+    "unlock_items": [
+      44881
+    ],
+    "order": 56,
+    "icon": "https://render.guildwars2.com/file/676537A6AC2F9F4BB23EEA5B9BA24F165016D40B/620140.png",
+    "name": "Sanctified Finisher"
+  }
+]

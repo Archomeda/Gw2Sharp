@@ -73,5 +73,20 @@ namespace Gw2Sharp.WebApi.V2
         /// Gets the emblems.
         /// </summary>
         IEmblemClient Emblem { get; }
+
+        /// <summary>
+        /// Gets the files.
+        /// </summary>
+        IFilesClient Files { get; }
+
+        /// <summary>
+        /// Gets the finishers.
+        /// </summary>
+        IFinishersClient Finishers { get; }
+
+        /// <summary>
+        /// Gets the gliders.
+        /// </summary>
+        IGlidersClient Gliders { get; }
     }
 }

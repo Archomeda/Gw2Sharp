@@ -118,6 +118,15 @@
     <None Remove="TestFiles\Emblem\EmblemForegrounds.bulk.json" />
     <None Remove="TestFiles\Emblem\EmblemForegrounds.ids.json" />
     <None Remove="TestFiles\Emblem\EmblemForegrounds.single.json" />
+    <None Remove="TestFiles\Files\Files.bulk.json" />
+    <None Remove="TestFiles\Files\Files.ids.json" />
+    <None Remove="TestFiles\Files\Files.single.json" />
+    <None Remove="TestFiles\Finishers\Finishers.bulk.json" />
+    <None Remove="TestFiles\Finishers\Finishers.ids.json" />
+    <None Remove="TestFiles\Finishers\Finishers.single.json" />
+    <None Remove="TestFiles\Gliders\Gliders.bulk.json" />
+    <None Remove="TestFiles\Gliders\Gliders.ids.json" />
+    <None Remove="TestFiles\Gliders\Gliders.single.json" />
   </ItemGroup>
 
   <ItemGroup>
@@ -178,6 +187,15 @@
     <EmbeddedResource Include="TestFiles\Account\AccountBank.json" />
     <EmbeddedResource Include="TestFiles\Account\AccountAchievements.json" />
     <EmbeddedResource Include="TestFiles\Account\Account.1.json" />
+    <EmbeddedResource Include="TestFiles\Gliders\Gliders.single.json" />
+    <EmbeddedResource Include="TestFiles\Gliders\Gliders.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Gliders\Gliders.ids.json" />
+    <EmbeddedResource Include="TestFiles\Finishers\Finishers.single.json" />
+    <EmbeddedResource Include="TestFiles\Finishers\Finishers.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Finishers\Finishers.ids.json" />
+    <EmbeddedResource Include="TestFiles\Files\Files.single.json" />
+    <EmbeddedResource Include="TestFiles\Files\Files.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Files\Files.ids.json" />
     <EmbeddedResource Include="TestFiles\Emblem\EmblemBackgrounds.single.json" />
     <EmbeddedResource Include="TestFiles\Emblem\EmblemBackgrounds.bulk.json" />
     <EmbeddedResource Include="TestFiles\Emblem\EmblemBackgrounds.ids.json" />

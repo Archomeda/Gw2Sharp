@@ -37,6 +37,9 @@ namespace Gw2Sharp.WebApi.V2
             this.Currencies = new CurrenciesClient(connection);
             this.Dungeons = new DungeonsClient(connection);
             this.Emblem = new EmblemClient(connection);
+            this.Files = new FilesClient(connection);
+            this.Finishers = new FinishersClient(connection);
+            this.Gliders = new GlidersClient(connection);
         }
 
         /// <inheritdoc />
@@ -77,5 +80,14 @@ namespace Gw2Sharp.WebApi.V2
 
         /// <inheritdoc />
         public virtual IEmblemClient Emblem { get; protected set; }
+
+        /// <inheritdoc />
+        public virtual IFilesClient Files { get; protected set; }
+
+        /// <inheritdoc />
+        public virtual IFinishersClient Finishers { get; protected set; }
+
+        /// <inheritdoc />
+        public virtual IGlidersClient Gliders { get; protected set; }
     }
 }

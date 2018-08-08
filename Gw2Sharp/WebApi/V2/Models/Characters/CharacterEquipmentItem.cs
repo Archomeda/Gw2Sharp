@@ -64,6 +64,7 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <summary>
         /// The selected dyes for the equipped item.
+        /// Each element can be resolved against <see cref="IGw2WebApiV2Client.Colors"/>.
         /// If the item does not support dyeing, this value is <c>null</c>.
         /// If no dye is chosen for an element in this list, the element is <c>null</c>.
         /// </summary>

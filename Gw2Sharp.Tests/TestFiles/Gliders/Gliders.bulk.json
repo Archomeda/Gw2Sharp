@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "unlock_items": [
+      70048
+    ],
+    "order": 3,
+    "icon": "https://render.guildwars2.com/file/5978F84C08E69460B7FD34346745E7183562A35A/951784.png",
+    "name": "Black Feather Wings Glider",
+    "description": "<c=@reminder>This is only available from the Black Lion Trading Company during limited-time sales.</c>\n\nIf you wear the Black Feather Wings Backpack, speak to a scout in Verdant Brink to receive a free matching Glider.",
+    "default_dyes": [
+
+    ]
+  },
+  {
+    "id": 3,
+    "unlock_items": [
+      70009
+    ],
+    "order": 3,
+    "icon": "https://render.guildwars2.com/file/FB9A14C04510096F4E33205AC2DE15BB07ADA0FF/1010543.png",
+    "name": "White Feather Wings Glider",
+    "description": "<c=@reminder>This is only available from the Black Lion Trading Company during limited-time sales.</c>\n\nIf you wear the White Feather Wings Backpack, speak to a scout in Verdant Brink to receive a free matching glider.",
+    "default_dyes": [
+
+    ]
+  },
+  {
+    "id": 60,
+    "unlock_items": [
+      87750
+    ],
+    "order": 55,
+    "icon": "https://render.guildwars2.com/file/D16854BFEF62066113C8447A18D105CDE9C7B39E/1998932.png",
+    "name": "Jeweled Scarab Glider",
+    "description": "This glider is dyeable.\n\n<c=@reminder>Found only in Black Lion Chests during specific times of the year.</c>",
+    "default_dyes": [
+      67,
+      134
+    ]
+  }
+]
