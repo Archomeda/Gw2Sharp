@@ -1,10 +1,15 @@
 namespace Gw2Sharp.WebApi.V2.Models
 {
     /// <summary>
-    /// The item binding
+    /// The item binding.
     /// </summary>
     public enum ItemBinding
     {
+        /// <summary>
+        /// Unknown binding.
+        /// </summary>
+        Unknown,
+
         /// <summary>
         /// The item is account bound.
         /// </summary>

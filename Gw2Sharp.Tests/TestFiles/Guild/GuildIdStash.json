@@ -1,0 +1,44 @@
+[
+  {
+    "upgrade_id": 1,
+    "size": 10,
+    "coins": 100000,
+    "note": "Take it all!",
+    "inventory": [
+      {
+        "id": 1,
+        "count": 1
+      },
+      {
+        "id": 2,
+        "count": 10
+      },
+      {
+        "id": 3,
+        "count": 100
+      },
+      {
+        "id": 4,
+        "count": 200
+      },
+      {
+        "id": 5,
+        "count": 250
+      },
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "upgrade_id": 2,
+    "size": 1,
+    "coins": 10000000,
+    "note": "Take it all!",
+    "inventory": [
+      null
+    ]
+  }
+]

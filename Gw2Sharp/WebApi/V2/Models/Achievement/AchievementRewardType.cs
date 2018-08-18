@@ -6,6 +6,11 @@ namespace Gw2Sharp.WebApi.V2.Models
     public enum AchievementRewardType
     {
         /// <summary>
+        /// Unknown type.
+        /// </summary>
+        Unknown,
+
+        /// <summary>
         /// Coin reward type.
         /// </summary>
         Coins,

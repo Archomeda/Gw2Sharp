@@ -1,3 +1,4 @@
+using Gw2Sharp.Extensions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
@@ -31,17 +32,7 @@ namespace Gw2Sharp.WebApi.V2.Models.Converters
                 return null;
 
             var rawValue = jValue.ToObject<string>();
-            Enum value = null;
-            try
-            {
-                value = (Enum)Enum.Parse(enumType, rawValue, true);
-            }
-            catch (ArgumentException)
-            {
-                var attribute = enumType.GetTypeInfo().GetCustomAttribute(typeof(DefaultValueAttribute)) as DefaultValueAttribute;
-                if (attribute != null)
-                    value = (Enum)attribute.Value;
-            }
+            Enum value = rawValue.ParseEnum(enumType);
             return (ApiEnum)Activator.CreateInstance(objectType, value, rawValue);
         }
 

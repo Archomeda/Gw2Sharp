@@ -1,5 +1,3 @@
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
 using System.ComponentModel;
 
 namespace Gw2Sharp.WebApi.V2.Models

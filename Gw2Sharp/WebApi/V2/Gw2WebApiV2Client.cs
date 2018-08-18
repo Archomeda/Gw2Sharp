@@ -40,6 +40,7 @@ namespace Gw2Sharp.WebApi.V2
             this.Files = new FilesClient(connection);
             this.Finishers = new FinishersClient(connection);
             this.Gliders = new GlidersClient(connection);
+            this.Guild = new GuildClient(connection);
         }
 
         /// <inheritdoc />
@@ -89,5 +90,8 @@ namespace Gw2Sharp.WebApi.V2
 
         /// <inheritdoc />
         public virtual IGlidersClient Gliders { get; protected set; }
+
+        /// <inheritdoc />
+        public virtual IGuildClient Guild { get; protected set; }
     }
 }

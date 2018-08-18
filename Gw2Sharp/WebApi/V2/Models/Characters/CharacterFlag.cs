@@ -6,6 +6,11 @@ namespace Gw2Sharp.WebApi.V2.Models
     public enum CharacterFlag
     {
         /// <summary>
+        /// Unknown flag.
+        /// </summary>
+        Unknown,
+
+        /// <summary>
         /// The character is a beta character.
         /// </summary>
         Beta

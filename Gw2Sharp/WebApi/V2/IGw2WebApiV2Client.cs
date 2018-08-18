@@ -88,5 +88,10 @@ namespace Gw2Sharp.WebApi.V2
         /// Gets the gliders.
         /// </summary>
         IGlidersClient Gliders { get; }
+
+        /// <summary>
+        /// Gets the guild.
+        /// </summary>
+        IGuildClient Guild { get; }
     }
 }

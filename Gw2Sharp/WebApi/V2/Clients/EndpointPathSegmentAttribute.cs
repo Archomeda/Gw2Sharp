@@ -10,7 +10,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public class EndpointPathSegmentAttribute : Attribute
     {
         /// <summary>
-        /// Creates a new instance of the <see cref="EndpointPathAttribute"/> class.
+        /// Creates a new instance of the <see cref="EndpointPathSegmentAttribute"/> class.
         /// </summary>
         /// <param name="pathSegment">The path segment to replace.</param>
         /// <param name="order">The order of the passed parameter that is used when replacing the path segment.</param>

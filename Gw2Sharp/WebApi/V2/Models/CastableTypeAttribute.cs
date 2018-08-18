@@ -15,6 +15,8 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// </summary>
         public CastableTypeAttribute(object value, Type objectType)
         {
+            if (!value.GetType().IsEnum)
+                throw new ArgumentException("An enum value is required", nameof(value));
             this.Value = value;
             this.ObjectType = objectType;
         }

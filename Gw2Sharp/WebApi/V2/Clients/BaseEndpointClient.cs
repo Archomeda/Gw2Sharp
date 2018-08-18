@@ -107,7 +107,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         protected async Task<IApiV2Response<IReadOnlyList<TIdentifiableObject>>> RequestAllWithResponse<TIdentifiableObject, TId>(CancellationToken cancellationToken)
             where TIdentifiableObject : IIdentifiable<TId>
         {
-            var (response, cacheAll) = await GetOrUpdate<IReadOnlyList<TIdentifiableObject>>(this.UrlFormatQueryAll(this.EndpointPath), "_all", cancellationToken).ConfigureAwait(false);
+            var (response, cacheAll) = await GetOrUpdate<IReadOnlyList<TIdentifiableObject>>(this.FormatUrlQueryAll(this.EndpointPath), "_all", cancellationToken).ConfigureAwait(false);
             var cacheIndividuals = await UpdateIndividuals<TIdentifiableObject, TId>(cacheAll).ConfigureAwait(false);
             response.Content = cacheIndividuals.Select(x => x.Item).ToList();
             return response;
@@ -138,7 +138,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <returns>Entry ids.</returns>
         protected async Task<IApiV2Response<IReadOnlyList<TId>>> RequestIdsWithResponse<TId>(CancellationToken cancellationToken)
         {
-            var (response, cache) = await GetOrUpdate<IReadOnlyList<TId>>(this.UrlFormatQueryIds(this.EndpointPath), "_ids", cancellationToken).ConfigureAwait(false);
+            var (response, cache) = await GetOrUpdate<IReadOnlyList<TId>>(this.FormatUrlQueryIds(this.EndpointPath), "_ids", cancellationToken).ConfigureAwait(false);
             response.Content = cache.Item;
             return response;
         }
@@ -165,7 +165,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <returns>The blob data.</returns>
         protected async Task<IApiV2Response<TObject>> RequestGetWithResponse(CancellationToken cancellationToken)
         {
-            var (response, cache) = await GetOrUpdate<TObject>(this.UrlFormatQueryBlob(this.EndpointPath), "_index", cancellationToken).ConfigureAwait(false);
+            var (response, cache) = await GetOrUpdate<TObject>(this.FormatUrlQueryBlob(this.EndpointPath), "_index", cancellationToken).ConfigureAwait(false);
             response.Content = cache.Item;
             return response;
         }
@@ -202,7 +202,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         protected async Task<IApiV2Response<TIdentifiableObject>> RequestGetWithResponse<TIdentifiableObject, TId>(TId id, CancellationToken cancellationToken)
             where TIdentifiableObject : IIdentifiable<TId>
         {
-            var (response, cache) = await this.GetOrUpdate<TIdentifiableObject>(this.UrlFormatQueryItem(this.EndpointPath, id), id, cancellationToken).ConfigureAwait(false);
+            var (response, cache) = await this.GetOrUpdate<TIdentifiableObject>(this.FormatUrlQueryItem(this.EndpointPath, id), id, cancellationToken).ConfigureAwait(false);
             response.Content = cache.Item;
             return response;
         }
@@ -252,7 +252,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
                     var latestCacheTime = DateTime.Now;
                     var result = await Task.WhenAll(requestIds.Select(async innerIds =>
                     {
-                        Uri uri = new Uri(Gw2WebApiV2Client.UrlBase, this.UrlFormatQueryMany(this.EndpointPath, innerIds));
+                        Uri uri = this.AppendUrlParameters(new Uri(Gw2WebApiV2Client.UrlBase, this.FormatUrlQueryMany(this.EndpointPath, innerIds)));
                         var httpResponse = await this.Connection.Request<IReadOnlyList<TIdentifiableObject>>(uri, cancellationToken).ConfigureAwait(false);
                         var response = new ApiV2Response<IReadOnlyList<TIdentifiableObject>>(httpResponse);
                         lock (responsesLock)
@@ -311,7 +311,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         {
             pageSize = pageSize.Clamp(1, 200);
 
-            var (response, cache) = await GetOrUpdate<IReadOnlyList<TIdentifiableObject>>(this.UrlFormatQueryPage(this.EndpointPath, page, pageSize), $"_page{page}-{pageSize}", cancellationToken).ConfigureAwait(false);
+            var (response, cache) = await GetOrUpdate<IReadOnlyList<TIdentifiableObject>>(this.FormatUrlQueryPage(this.EndpointPath, page, pageSize), $"_page{page}-{pageSize}", cancellationToken).ConfigureAwait(false);
             await this.UpdateIndividuals<TIdentifiableObject, TId>(cache).ConfigureAwait(false);
 
             return new ApiV2Response<IReadOnlyList<TIdentifiableObject>>(response) { Content = cache.Item };
@@ -347,7 +347,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         {
             pageSize = pageSize.Clamp(1, 200);
 
-            var (response, cache) = await GetOrUpdate<TObject>(this.UrlFormatQueryPage(this.EndpointPath, page, pageSize), $"_page{page}-{pageSize}", cancellationToken).ConfigureAwait(false);
+            var (response, cache) = await GetOrUpdate<TObject>(this.FormatUrlQueryPage(this.EndpointPath, page, pageSize), $"_page{page}-{pageSize}", cancellationToken).ConfigureAwait(false);
 
             return new ApiV2Response<TObject>(response) { Content = cache.Item };
         }
@@ -366,7 +366,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
             ApiV2Response<TIdentifiableObject> response = new ApiV2Response<TIdentifiableObject>();
             var result = await this.Connection.CacheMethod.GetOrUpdate(this.EndpointPath, cacheId,
                 async () => {
-                    Uri uri = new Uri(Gw2WebApiV2Client.UrlBase, url);
+                    Uri uri = this.AppendUrlParameters(new Uri(Gw2WebApiV2Client.UrlBase, url));
                     var httpResponse = await this.Connection.Request<TIdentifiableObject>(uri, cancellationToken).ConfigureAwait(false);
                     response = new ApiV2Response<TIdentifiableObject>(httpResponse);
                     return (httpResponse.Content, response.Expires ?? DateTime.Now);
@@ -400,21 +400,21 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// </summary>
         /// <param name="endpointPath">The endpoint path.</param>
         /// <returns>The formatted URL.</returns>
-        private string UrlFormatQueryAll(string endpointPath) => $"{endpointPath}{QueryAll}";
+        protected virtual string FormatUrlQueryAll(string endpointPath) => $"{endpointPath}{QueryAll}";
 
         /// <summary>
         /// Formats a URL with querying ids.
         /// </summary>
         /// <param name="endpointPath">The endpoint path.</param>
         /// <returns>The formatted URL.</returns>
-        private string UrlFormatQueryIds(string endpointPath) => endpointPath;
+        protected virtual string FormatUrlQueryIds(string endpointPath) => endpointPath;
 
         /// <summary>
         /// Formats a URL with querying a blob of data.
         /// </summary>
         /// <param name="endpointPath">The endpoint path.</param>
         /// <returns>The formatted URL.</returns>
-        private string UrlFormatQueryBlob(string endpointPath) => endpointPath;
+        protected virtual string FormatUrlQueryBlob(string endpointPath) => endpointPath;
 
         /// <summary>
         /// Formats a URL with querying an item.
@@ -422,7 +422,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="endpointPath">The endpoint path.</param>
         /// <param name="id">The item id.</param>
         /// <returns>The formatted URL.</returns>
-        private string UrlFormatQueryItem<T>(string endpointPath, T id) => $"{endpointPath}{string.Format(QueryItem, id)}";
+        protected virtual string FormatUrlQueryItem<T>(string endpointPath, T id) => $"{endpointPath}{string.Format(QueryItem, id)}";
 
         /// <summary>
         /// Formats a URL with querying many items.
@@ -430,7 +430,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="endpointPath">The endpoint path.</param>
         /// <param name="ids">The item ids.</param>
         /// <returns>The formatted URL.</returns>
-        private string UrlFormatQueryMany<T>(string endpointPath, IEnumerable<T> ids) => $"{endpointPath}{string.Format(QueryMany, string.Join(",", ids))}";
+        protected virtual string FormatUrlQueryMany<T>(string endpointPath, IEnumerable<T> ids) => $"{endpointPath}{string.Format(QueryMany, string.Join(",", ids))}";
 
         /// <summary>
         /// Formats a URL with querying a page of items.
@@ -439,7 +439,39 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="page">The page.</param>
         /// <param name="pageSize">The page size.</param>
         /// <returns>The formatted URL.</returns>
-        private string UrlFormatQueryPage(string endpointPath, int page, int pageSize) => $"{endpointPath}{string.Format(QueryPage, page, pageSize)}";
+        protected virtual string FormatUrlQueryPage(string endpointPath, int page, int pageSize) => $"{endpointPath}{string.Format(QueryPage, page, pageSize)}";
+
+        /// <summary>
+        /// Appends the parameters to the URI.
+        /// The implementer is responsible for getting the parameters from the current this object.
+        /// </summary>
+        /// <param name="uri">The base URI.</param>
+        /// <returns>The formatted URL.</returns>
+        protected virtual Uri AppendUrlParameters(Uri uri)
+        {
+            var parameterProperties = this.GetType()
+                .GetProperties(BindingFlags.Public | BindingFlags.Instance)
+                .Where(p => p.GetCustomAttribute<EndpointPathParameterAttribute>() != null);
+
+            if (parameterProperties.Count() == 0)
+                return uri;
+
+            UriBuilder builder = new UriBuilder(uri);
+            foreach (var parameter in parameterProperties)
+            {
+                var attr = parameter.GetCustomAttribute<EndpointPathParameterAttribute>();
+                var value = parameter.GetValue(this);
+                if (value == null)
+                    continue;
+
+                var toAppend = attr.ParameterName + "=" + value;
+                if (builder.Query != null && builder.Query.Length > 1)
+                    builder.Query = builder.Query.Substring(1) + "&" + toAppend;
+                else
+                    builder.Query = toAppend;
+            }
+            return builder.Uri;
+        }
 
 
         private bool ImplementsInterface(Type interfaceType) =>

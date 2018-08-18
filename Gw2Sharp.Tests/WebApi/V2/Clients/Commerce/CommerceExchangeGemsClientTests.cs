@@ -13,7 +13,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
         public CommerceExchangeGemsClientTests()
         {
             var connection = new Connection(null, Locale.English, Substitute.For<IHttpClient>(), new NullCacheMethod());
-            this.client = new Gw2WebApiClient(connection).V2.Commerce.Exchange.Gems[10];
+            this.client = new Gw2WebApiClient(connection).V2.Commerce.Exchange.Gems.Quantity(10);
             this.Client = this.client;
         }
 

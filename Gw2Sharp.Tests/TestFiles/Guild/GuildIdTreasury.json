@@ -1,0 +1,32 @@
+[
+  {
+    "item_id": 1,
+    "count": 75,
+    "needed_by": [
+      {
+        "upgrade_id": 2,
+        "count": 75
+      }
+    ]
+  },
+  {
+    "item_id": 2,
+    "count": 120,
+    "needed_by": [
+      {
+        "upgrade_id": 3,
+        "count": 250
+      }
+    ]
+  },
+  {
+    "item_id": 4,
+    "count": 500,
+    "needed_by": [
+      {
+        "upgrade_id": 7,
+        "count": 9000
+      }
+    ]
+  }
+]

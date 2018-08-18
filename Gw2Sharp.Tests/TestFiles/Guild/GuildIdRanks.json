@@ -1,0 +1,53 @@
+[
+  {
+    "id": "Leader",
+    "order": 1,
+    "permissions": [
+      "Admin",
+      "EditRoles",
+      "ClaimableEditOptions",
+      "EditBGM",
+      "ActivatePlaceables",
+      "DepositItemsTrove",
+      "WithdrawItemsStash",
+      "WithdrawItemsTrove",
+      "EditAssemblyQueue",
+      "WithdrawCoinsStash",
+      "ActivateWorldEvent",
+      "PlaceArenaDecoration",
+      "DepositItemsStash",
+      "EditMonument",
+      "SpendFuel",
+      "TeamAdmin",
+      "WithdrawCoinsTrove",
+      "DepositCoinsTrove",
+      "PurchaseUpgrades",
+      "EditEmblem",
+      "ClaimableActivate",
+      "MissionControl",
+      "OpenPortal",
+      "SetGuildHall",
+      "DepositCoinsStash",
+      "PlaceDecoration",
+      "ClaimableSpend",
+      "EditMOTD",
+      "EditAnthem",
+      "DecorationAdmin",
+      "ClaimableClaim"
+    ],
+    "icon": "https://render.guildwars2.com/file/30EB1BDA3850EF59AFEFAA005DA19605250D3620/156373.png"
+  },
+  {
+    "id": "Member",
+    "order": 5,
+    "permissions": [
+      "WithdrawItemsTrove",
+      "WithdrawCoinsTrove",
+      "DepositItemsTrove",
+      "DepositCoinsTrove",
+      "DepositItemsStash",
+      "DepositCoinsStash"
+    ],
+    "icon": "https://render.guildwars2.com/file/5D416AF8469C2080EB7D95E9806FD8E57F480466/156380.png"
+  }
+]

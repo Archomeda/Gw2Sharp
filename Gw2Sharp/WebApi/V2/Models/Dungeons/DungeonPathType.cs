@@ -6,6 +6,11 @@ namespace Gw2Sharp.WebApi.V2.Models
     public enum DungeonPathType
     {
         /// <summary>
+        /// Unknown type.
+        /// </summary>
+        Unknown,
+
+        /// <summary>
         /// A story dungeon path.
         /// </summary>
         Story,

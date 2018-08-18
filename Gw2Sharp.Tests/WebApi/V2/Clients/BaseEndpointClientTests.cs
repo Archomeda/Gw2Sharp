@@ -8,6 +8,7 @@ using System.Net;
 using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
+using Gw2Sharp.Extensions;
 using Gw2Sharp.Tests.Helpers;
 using Gw2Sharp.WebApi;
 using Gw2Sharp.WebApi.Http;
@@ -176,7 +177,31 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
 
         protected virtual void AssertRequest(CallInfo callInfo, IEndpointClient client, string pathAndQuery)
         {
-            Assert.Equal(new Uri(Gw2WebApiV2Client.UrlBase, $"{client.EndpointPath}{pathAndQuery}"), callInfo.ArgAt<IHttpRequest>(0).Url);
+            // Format the URI to how it's supposed to be
+            var uri = new Uri(Gw2WebApiV2Client.UrlBase, $"{client.EndpointPath}{pathAndQuery}");
+            var parameterProperties = client.GetType()
+                .GetProperties(BindingFlags.Public | BindingFlags.Instance)
+                .Where(p => p.GetCustomAttribute<EndpointPathParameterAttribute>() != null);
+            if (parameterProperties.Count() > 0)
+            {
+                UriBuilder builder = new UriBuilder(uri);
+                foreach (var parameter in parameterProperties)
+                {
+                    var attr = parameter.GetCustomAttribute<EndpointPathParameterAttribute>();
+                    var value = parameter.GetValue(client);
+                    if (value == null)
+                        continue;
+
+                    var toAppend = attr.ParameterName + "=" + value;
+                    if (builder.Query != null && builder.Query.Length > 1)
+                        builder.Query = builder.Query.Substring(1) + "&" + toAppend;
+                    else
+                        builder.Query = toAppend;
+                }
+                uri = builder.Uri;
+            }
+
+            Assert.Equal(uri, callInfo.ArgAt<IHttpRequest>(0).Url);
             var requestHeaders = callInfo.ArgAt<IHttpRequest>(0).RequestHeaders;
             Assert.Contains(new KeyValuePair<string, string>("Accept", "application/json"), requestHeaders);
             Assert.Contains(new KeyValuePair<string, string>("User-Agent", client.Connection.UserAgent), requestHeaders);
@@ -308,20 +333,21 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                     break;
                 case ApiEnum @enum:
                     Assert.Equal(expected.Value<string>(), @enum.RawValue);
+                    Assert.False(@enum.Value.ToString() == "Unknown", $"Expected {expected} to be a value in enumerator {@enum.Value.GetType().Name}");
                     TypeInfo typeInfo = @enum.GetType().GetTypeInfo();
                     if (typeInfo.IsGenericType && typeInfo.GenericTypeArguments.Length > 0)
                     {
                         Type enumType = typeInfo.GenericTypeArguments[0];
-                        Assert.Equal(Enum.Parse(enumType, expected.Value<string>(), true), @enum.Value);
+                        Assert.Equal(expected.Value<string>().ParseEnum(enumType), @enum.Value);
                     }
                     else
                         throw new InvalidOperationException("Expected a generic ApiEnum");
                     break;
-                case int int32:
-                    Assert.Equal(Convert.ToInt32(expected.Value), int32);
+                case int @int:
+                    Assert.Equal(Convert.ToInt32(expected.Value), @int);
                     break;
-                case double dble:
-                    Assert.Equal(Convert.ToDouble(expected.Value), dble, 10);
+                case double @double:
+                    Assert.Equal(Convert.ToDouble(expected.Value), @double, 10);
                     break;
                 default:
                     Assert.Equal(expected.Value, actual);

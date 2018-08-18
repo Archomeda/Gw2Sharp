@@ -1,0 +1,183 @@
+[
+  {
+    "id": 1,
+    "members": [
+      {
+        "name": "Bob.1234",
+        "role": "Captain"
+      },
+      {
+        "name": "Bob.2345",
+        "role": "Member"
+      }
+    ],
+    "name": "A Team",
+    "state": "Active",
+    "aggregate": {
+      "wins": 2,
+      "losses": 1,
+      "desertions": 0,
+      "byes": 0,
+      "forfeits": 0
+    },
+    "ladders": {
+      "ranked": {
+        "wins": 1,
+        "losses": 1,
+        "desertions": 0,
+        "byes": 0,
+        "forfeits": 0
+      },
+      "unranked": {
+        "wins": 1,
+        "losses": 0,
+        "desertions": 0,
+        "byes": 0,
+        "forfeits": 0
+      }
+    },
+    "games": [
+      {
+        "id": "11112222-3333-4444-5555-666677778888",
+        "map_id": 12,
+        "started": "2018-01-29T12:00:00.000Z",
+        "ended": "2018-01-29T12:04:00.000Z",
+        "result": "Victory",
+        "team": "Blue",
+        "scores": {
+          "red": 344,
+          "blue": 500
+        },
+        "rating_type": "Ranked"
+      },
+      {
+        "id": "22223333-4444-5555-6666-777788889999",
+        "map_id": 12,
+        "started": "2018-01-28T12:00:00.000Z",
+        "ended": "2018-01-28T12:04:00.000Z",
+        "result": "Defeat",
+        "team": "Red",
+        "scores": {
+          "red": 213,
+          "blue": 500
+        },
+        "rating_type": "Ranked"
+      },
+      {
+        "id": "33334444-5555-6666-7777-888899990000",
+        "map_id": 12,
+        "started": "2018-01-27T12:00:00.000Z",
+        "ended": "2018-01-27T12:04:00.000Z",
+        "result": "Victory",
+        "team": "Blue",
+        "scores": {
+          "red": 444,
+          "blue": 500
+        },
+        "rating_type": "Unranked"
+      }
+    ],
+    "seasons": [
+      {
+        "id": "11112222-3333-4444-5555-666677778888",
+        "wins": 2,
+        "losses": 0,
+        "rating": 1233
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "members": [
+
+    ],
+    "name": "B Team",
+    "state": "Active",
+    "aggregate": {
+      "wins": 2,
+      "losses": 1,
+      "desertions": 0,
+      "byes": 0,
+      "forfeits": 0
+    },
+    "ladders": {
+      "ranked": {
+        "wins": 2,
+        "losses": 1,
+        "desertions": 0,
+        "byes": 0,
+        "forfeits": 0
+      }
+    },
+    "games": [
+      {
+        "id": "11112222-3333-4444-5555-666677778888",
+        "map_id": 12,
+        "started": "2018-01-29T12:00:00.000Z",
+        "ended": "2018-01-29T12:04:00.000Z",
+        "result": "Victory",
+        "team": "Blue",
+        "scores": {
+          "red": 344,
+          "blue": 500
+        },
+        "rating_type": "Ranked"
+      },
+      {
+        "id": "22223333-4444-5555-6666-777788889999",
+        "map_id": 12,
+        "started": "2018-01-28T12:00:00.000Z",
+        "ended": "2018-01-28T12:04:00.000Z",
+        "result": "Defeat",
+        "team": "Red",
+        "scores": {
+          "red": 213,
+          "blue": 500
+        },
+        "rating_type": "Ranked"
+      },
+      {
+        "id": "33334444-5555-6666-7777-888899990000",
+        "map_id": 12,
+        "started": "2018-01-27T12:00:00.000Z",
+        "ended": "2018-01-27T12:04:00.000Z",
+        "result": "Victory",
+        "team": "Blue",
+        "scores": {
+          "red": 444,
+          "blue": 500
+        },
+        "rating_type": "Ranked"
+      }
+    ],
+    "seasons": [
+      {
+        "id": "11112222-3333-4444-5555-666677778888",
+        "wins": 2,
+        "losses": 0,
+        "rating": 1233
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "members": [
+
+    ],
+    "name": "C Team",
+    "state": "Active",
+    "aggregate": {
+      "wins": 0,
+      "losses": 0,
+      "desertions": 0,
+      "byes": 0,
+      "forfeits": 0
+    },
+    "ladders": {
+
+    },
+    "games": [
+
+    ]
+  }
+]

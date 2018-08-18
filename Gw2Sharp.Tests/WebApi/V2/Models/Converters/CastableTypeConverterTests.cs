@@ -7,9 +7,25 @@ namespace Gw2Sharp.Tests.WebApi.V2.Models.Converters
 {
     public class CastableTypeConverterTests
     {
-        private class TestCastableType : ICastableType<string, Enum>
+        private enum TestCastableEnum
         {
-            public ApiEnum<Enum> Type => throw new NotImplementedException();
+            SomeValue
+        }
+
+        [CastableType(TestCastableEnum.SomeValue, null)]
+        private class TestCastableType : ICastableType<string, TestCastableEnum>
+        {
+            public ApiEnum<TestCastableEnum> Type => throw new NotImplementedException();
+        }
+
+        private class TestNotCastableType1 : ICastableType<string, TestCastableEnum>
+        {
+            public ApiEnum<TestCastableEnum> Type => throw new NotImplementedException();
+        }
+
+        private class TestNotCastableType2
+        {
+            public ApiEnum<TestCastableEnum> Type => throw new NotImplementedException();
         }
 
         [Fact]
@@ -25,6 +41,14 @@ namespace Gw2Sharp.Tests.WebApi.V2.Models.Converters
         {
             var converter = new CastableTypeConverter();
             Assert.True(converter.CanConvert(typeof(TestCastableType)));
+        }
+
+        [Fact]
+        public void CanNotConvertTest()
+        {
+            var converter = new CastableTypeConverter();
+            Assert.False(converter.CanConvert(typeof(TestNotCastableType1)));
+            Assert.False(converter.CanConvert(typeof(TestNotCastableType2)));
         }
     }
 }

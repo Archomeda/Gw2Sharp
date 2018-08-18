@@ -6,6 +6,11 @@ namespace Gw2Sharp.WebApi.V2.Models
     public enum GameAccess
     {
         /// <summary>
+        /// Unknown access.
+        /// </summary>
+        Unknown,
+
+        /// <summary>
         /// No access.
         /// </summary>
         None,

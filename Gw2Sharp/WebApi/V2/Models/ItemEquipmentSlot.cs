@@ -6,6 +6,11 @@ namespace Gw2Sharp.WebApi.V2.Models
     public enum ItemEquipmentSlot
     {
         /// <summary>
+        /// Unknown slot.
+        /// </summary>
+        Unknown,
+
+        /// <summary>
         /// The aquatic helm.
         /// </summary>
         HelmAquatic,

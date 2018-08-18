@@ -1,0 +1,106 @@
+[
+  {
+    "id": 38,
+    "name": "Guild Armorer 1",
+    "description": "Add a guild armorer to the market, from whom basic guild armor skins can be purchased.",
+    "build_time": 0,
+    "icon": "https://render.guildwars2.com/file/0321165D23EAA60D9831456BEC0095C0EB1D501F/1228499.png",
+    "type": "Unlock",
+    "required_level": 10,
+    "experience": 35,
+    "prerequisites": [
+
+    ],
+    "costs": [
+      {
+        "type": "Collectible",
+        "count": 200,
+        "name": "Guild Favor",
+        "item_id": 70701
+      },
+      {
+        "type": "Item",
+        "count": 150,
+        "name": "Orichalcum Ingot",
+        "item_id": 19685
+      },
+      {
+        "type": "Item",
+        "count": 150,
+        "name": "Bolt of Gossamer",
+        "item_id": 19746
+      },
+      {
+        "type": "Item",
+        "count": 150,
+        "name": "Cured Hardened Leather Square",
+        "item_id": 19737
+      },
+      {
+        "type": "Item",
+        "count": 4,
+        "name": "Celestial Intricate Gossamer Insignia",
+        "item_id": 43774
+      },
+      {
+        "type": "Currency",
+        "count": 3000,
+        "name": "Aetherium"
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "name": "Guild Treasure Trove",
+    "description": "Gain access to a 100-slot guild vault.",
+    "build_time": 0,
+    "icon": "https://render.guildwars2.com/file/072502CEDCD72BF84E59280B46C5CFDEE6011FE1/1228510.png",
+    "type": "BankBag",
+    "required_level": 20,
+    "experience": 35,
+    "prerequisites": [
+      58,
+      350
+    ],
+    "bag_max_items": 100,
+    "bag_max_coins": 10000000,
+    "costs": [
+      {
+        "type": "Collectible",
+        "count": 1500,
+        "name": "Guild Favor",
+        "item_id": 70701
+      },
+      {
+        "type": "Currency",
+        "count": 3000,
+        "name": "Aetherium"
+      }
+    ]
+  },
+  {
+    "id": 127,
+    "name": "General Merchant",
+    "description": "Adds a merchant with harvesting and salvage tools to the guild's private locations.",
+    "build_time": 0,
+    "icon": "https://render.guildwars2.com/file/55F3B1AC4A5E2B962140F02A3F0338402DC0F168/1228537.png",
+    "type": "Unlock",
+    "required_level": 0,
+    "experience": 10,
+    "prerequisites": [
+
+    ],
+    "costs": [
+      {
+        "type": "Collectible",
+        "count": 25,
+        "name": "Guild Favor",
+        "item_id": 70701
+      },
+      {
+        "type": "Coins",
+        "count": 300000
+      }
+    ]
+  }
+]

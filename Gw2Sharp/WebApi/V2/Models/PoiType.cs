@@ -1,12 +1,12 @@
 namespace Gw2Sharp.WebApi.V2.Models
 {
     /// <summary>
-    /// Represents a point of interest type
+    /// Represents a point of interest type.
     /// </summary>
     public enum PoiType
     {
         /// <summary>
-        /// An unknown point of interest type. Used as fallback.
+        /// Unknown type.
         /// </summary>
         Unknown,
 

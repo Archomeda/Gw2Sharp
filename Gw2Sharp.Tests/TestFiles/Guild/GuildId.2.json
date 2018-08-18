@@ -1,0 +1,30 @@
+{
+  "level": 42,
+  "motd": "The message of the day",
+  "influence": 120000,
+  "aetherium": 2000,
+  "resonance": 5000,
+  "favor": 1000,
+  "id": "11111111-2222-3333-4444-555555555555",
+  "name": "Awesome guild",
+  "tag": "AG",
+  "emblem": {
+    "background": {
+      "id": 1,
+      "colors": [
+        10
+      ]
+    },
+    "foreground": {
+      "id": 18,
+      "colors": [
+        123,
+        234
+      ]
+    },
+    "flags": [
+      "FlipBackgroundHorizontal",
+      "FlipForegroundHorizontal"
+    ]
+  }
+}

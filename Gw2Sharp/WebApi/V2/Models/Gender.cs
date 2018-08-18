@@ -6,6 +6,11 @@ namespace Gw2Sharp.WebApi.V2.Models
     public enum Gender
     {
         /// <summary>
+        /// Unknown gender.
+        /// </summary>
+        Unknown,
+
+        /// <summary>
         /// The male gender.
         /// </summary>
         Male,

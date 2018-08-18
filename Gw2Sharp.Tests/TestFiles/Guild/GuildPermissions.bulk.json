@@ -1,0 +1,17 @@
+[
+  {
+    "id": "ClaimableEditOptions",
+    "name": "Edit Claimable Options",
+    "description": "Allowed to edit options at guild-owned claimables."
+  },
+  {
+    "id": "EditBGM",
+    "name": "Change Guild Hall Music",
+    "description": "Change the guild hall's background music."
+  },
+  {
+    "id": "ActivatePlaceables",
+    "name": "Use Placeables",
+    "description": "Utilize consumable placeables created via the workshop."
+  }
+]

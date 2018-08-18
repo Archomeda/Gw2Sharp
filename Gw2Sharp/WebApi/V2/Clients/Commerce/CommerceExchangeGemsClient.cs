@@ -15,6 +15,6 @@ namespace Gw2Sharp.WebApi.V2.Clients
         public CommerceExchangeGemsClient(IConnection connection) : base(connection) { }
 
         /// <inheritdoc />
-        public ICommerceExchangeGemsQuantityClient this[int quantity] => new CommerceExchangeGemsQuantityClient(this.Connection, quantity);
+        public ICommerceExchangeGemsQuantityClient Quantity(int quantity) => new CommerceExchangeGemsQuantityClient(this.Connection, quantity);
     }
 }

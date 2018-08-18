@@ -14,67 +14,67 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Gets a character's backstory information.
         /// Requires scopes: account, characters.
         /// </summary>
-        ICharactersBackstoryClient Backstory { get; }
+        ICharactersIdBackstoryClient Backstory { get; }
 
         /// <summary>
         /// Gets a character's core information.
         /// Requires scopes: account, characters.
         /// </summary>
-        ICharactersCoreClient Core { get; }
+        ICharactersIdCoreClient Core { get; }
 
         /// <summary>
         /// Gets a character's crafting information.
         /// Requires scopes: account, characters.
         /// </summary>
-        ICharactersCraftingClient Crafting { get; }
+        ICharactersIdCraftingClient Crafting { get; }
 
         /// <summary>
         /// Gets a character's equipment.
         /// Requires scopes: account, characters, and builds and/or inventories.
         /// </summary>
-        ICharactersEquipmentClient Equipment { get; }
+        ICharactersIdEquipmentClient Equipment { get; }
 
         /// <summary>
         /// Gets a character's hero points information.
         /// Requires scopes: account, characters, progression.
         /// </summary>
-        ICharactersHeroPointsClient HeroPoints { get; }
+        ICharactersIdHeroPointsClient HeroPoints { get; }
 
         /// <summary>
         /// Gets a character's inventory.
         /// Requires scopes: account, characters, inventory.
         /// </summary>
-        ICharactersInventoryClient Inventory { get; }
+        ICharactersIdInventoryClient Inventory { get; }
 
         /// <summary>
         /// Gets a character's learned recipes.
         /// Requires scopes: account, characters, inventories.
         /// Each element can be resolved against <see cref="IGw2WebApiV2Client.Recipes"/>.
         /// </summary>
-        ICharactersRecipesClient Recipes { get; }
+        ICharactersIdRecipesClient Recipes { get; }
 
         /// <summary>
         /// Gets a character's Super Adventure Box information.
         /// Requires scopes: account, characters, progression.
         /// </summary>
-        ICharactersSabClient Sab { get; }
+        ICharactersIdSabClient Sab { get; }
 
         /// <summary>
         /// Gets a character's skills.
         /// Requires scopes: account, builds, characters.
         /// </summary>
-        ICharactersSkillsClient Skills { get; }
+        ICharactersIdSkillsClient Skills { get; }
 
         /// <summary>
         /// Gets a character's specializations.
         /// Requires scopes: account, builds, characters.
         /// </summary>
-        ICharactersSpecializationsClient Specializations { get; }
+        ICharactersIdSpecializationsClient Specializations { get; }
 
         /// <summary>
         /// Gets a character's training information.
         /// Requires scopes: account, characters, progression.
         /// </summary>
-        ICharactersTrainingClient Training { get; }
+        ICharactersIdTrainingClient Training { get; }
     }
 }

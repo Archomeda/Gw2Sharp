@@ -6,6 +6,11 @@ namespace Gw2Sharp.WebApi.V2.Models
     public enum AchievementFlag
     {
         /// <summary>
+        /// Unknown type.
+        /// </summary>
+        Unknown,
+
+        /// <summary>
         /// The achievement will only progress in PvP or WvW.
         /// </summary>
         Pvp,

@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Bob.1234",
+    "rank": "Leader",
+    "joined": null
+  },
+  {
+    "name": "Bob.2345",
+    "rank": "Member",
+    "joined": "2015-01-01T14:00:00.000Z"
+  }
+]

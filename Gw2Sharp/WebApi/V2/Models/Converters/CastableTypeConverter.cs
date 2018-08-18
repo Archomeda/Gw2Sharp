@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using System.Reflection;
+using Gw2Sharp.Extensions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
@@ -28,11 +29,11 @@ namespace Gw2Sharp.WebApi.V2.Models.Converters
                 throw new JsonSerializationException($"Expected JSON data to have a string property Type");
 
             // Get the castable type
-            var targetType = objectType.GetCustomAttributes<CastableTypeAttribute>().FirstOrDefault(a => a.Value.ToString() == type)?.ObjectType;
+            var targetType = objectType.GetCustomAttributes<CastableTypeAttribute>().FirstOrDefault(a => a.Value.Equals(type.ParseEnum(a.Value.GetType())))?.ObjectType;
             if (targetType == null)
                 return jObject.ToObject(objectType);
 
-            return jObject.ToObject(targetType);
+            return jObject.ToObject(targetType, serializer);
         }
 
         /// <inheritdoc />
@@ -40,8 +41,13 @@ namespace Gw2Sharp.WebApi.V2.Models.Converters
             throw new NotImplementedException("TODO: This should generally not be used since we only deserialize stuff from the API, and not serialize to it. Might add support later.");
 
         /// <inheritdoc />
-        public override bool CanConvert(Type objectType) => objectType.GetInterfaces()
-            .Where(i => i.IsGenericType)
-            .Any(i => i.GetGenericTypeDefinition() == typeof(ICastableType<,>));
+        public override bool CanConvert(Type objectType)
+        {
+            var hasInterface = objectType.GetInterfaces()
+                .Where(i => i.IsGenericType)
+                .Any(i => i.GetGenericTypeDefinition() == typeof(ICastableType<,>));
+            var hasAttributes = objectType.GetCustomAttributes<CastableTypeAttribute>().Count() > 0;
+            return hasInterface && hasAttributes;
+        }
     }
 }

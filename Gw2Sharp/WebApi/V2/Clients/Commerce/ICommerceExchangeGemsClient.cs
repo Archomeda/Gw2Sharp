@@ -6,8 +6,10 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public interface ICommerceExchangeGemsClient : IClient
     {
         /// <summary>
-        /// Gets the commerce exchange gems endpoint with the specified quantity.
+        /// Requests commerce exchange information with the specified gems quantity.
         /// </summary>
-        ICommerceExchangeGemsQuantityClient this[int quantity] { get; }
+        /// <param name="quantity">The gems quantity.</param>
+        /// <returns>The commerce exchange coins quantity client.</returns>
+        ICommerceExchangeGemsQuantityClient Quantity(int quantity);
     }
 }

@@ -1,0 +1,50 @@
+{
+  "id": 38,
+  "name": "Guild Armorer 1",
+  "description": "Add a guild armorer to the market, from whom basic guild armor skins can be purchased.",
+  "build_time": 0,
+  "icon": "https://render.guildwars2.com/file/0321165D23EAA60D9831456BEC0095C0EB1D501F/1228499.png",
+  "type": "Unlock",
+  "required_level": 10,
+  "experience": 35,
+  "prerequisites": [
+
+  ],
+  "costs": [
+    {
+      "type": "Collectible",
+      "count": 200,
+      "name": "Guild Favor",
+      "item_id": 70701
+    },
+    {
+      "type": "Item",
+      "count": 150,
+      "name": "Orichalcum Ingot",
+      "item_id": 19685
+    },
+    {
+      "type": "Item",
+      "count": 150,
+      "name": "Bolt of Gossamer",
+      "item_id": 19746
+    },
+    {
+      "type": "Item",
+      "count": 150,
+      "name": "Cured Hardened Leather Square",
+      "item_id": 19737
+    },
+    {
+      "type": "Item",
+      "count": 4,
+      "name": "Celestial Intricate Gossamer Insignia",
+      "item_id": 43774
+    },
+    {
+      "type": "Currency",
+      "count": 3000,
+      "name": "Aetherium"
+    }
+  ]
+}

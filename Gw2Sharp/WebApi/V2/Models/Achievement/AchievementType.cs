@@ -6,6 +6,11 @@ namespace Gw2Sharp.WebApi.V2.Models
     public enum AchievementType
     {
         /// <summary>
+        /// Unknown type.
+        /// </summary>
+        Unknown,
+
+        /// <summary>
         /// Default achievement type.
         /// </summary>
         Default,

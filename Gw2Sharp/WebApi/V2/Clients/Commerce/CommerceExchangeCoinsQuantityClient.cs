@@ -19,6 +19,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         }
 
         /// <inheritdoc />
+        [EndpointPathParameter("quantity")]
         public virtual int Quantity { get; protected set; }
     }
 }

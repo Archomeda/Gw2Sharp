@@ -6,6 +6,11 @@ namespace Gw2Sharp.WebApi.V2.Models
     public enum AchievementBitType
     {
         /// <summary>
+        /// Unknown type.
+        /// </summary>
+        Unknown,
+
+        /// <summary>
         /// Item bit type.
         /// </summary>
         Item,
