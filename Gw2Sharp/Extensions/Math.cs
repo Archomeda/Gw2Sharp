@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Gw2Sharp.Extensions
 {
@@ -19,7 +19,7 @@ namespace Gw2Sharp.Extensions
         {
             if (value.CompareTo(min) < 0)
                 return min;
-            if (value.CompareTo(max) > 0)
+            else if (value.CompareTo(max) > 0)
                 return max;
             return value;
         }
@@ -32,9 +32,7 @@ namespace Gw2Sharp.Extensions
         /// <param name="min">The lower boundary.</param>
         /// <param name="max">The upper boundary.</param>
         /// <returns>True if the value is clamped; false otherwise.</returns>
-        public static bool IsClampedIn<T>(this T value, T min, T max) where T : IComparable<T>
-        {
-            return value.CompareTo(min) >= 0 && value.CompareTo(max) <= 0;
-        }
+        public static bool IsClampedIn<T>(this T value, T min, T max) where T : IComparable<T> =>
+            value.CompareTo(min) >= 0 && value.CompareTo(max) <= 0;
     }
 }

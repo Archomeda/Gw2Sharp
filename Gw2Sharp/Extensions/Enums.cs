@@ -19,7 +19,7 @@ namespace Gw2Sharp.Extensions
         public static Enum ParseEnum(this string enumString, Type enumType)
         {
             // Try looking for custom enum serialization names with EnumMemberAttribute
-            var enumNames = Enum.GetNames(enumType);
+            string[] enumNames = Enum.GetNames(enumType);
             var enumValues = Enum.GetValues(enumType);
             for (int i = 0; i < enumNames.Length; i++)
             {

@@ -22,7 +22,7 @@ namespace Gw2Sharp.WebApi.Http
             using (var cancellationTimeout = new CancellationTokenSource(this.Timeout))
             using (var linkedCancellation = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken, cancellationTimeout.Token))
             {
-                HttpRequestMessage message = new HttpRequestMessage(HttpMethod.Get, request.Url);
+                var message = new HttpRequestMessage(HttpMethod.Get, request.Url);
                 message.Headers.AddRange(request.RequestHeaders);
 
                 Task<HttpResponseMessage> task = null;
@@ -39,7 +39,7 @@ namespace Gw2Sharp.WebApi.Http
                     throw new RequestException(request, $"Request error: {task.Exception?.Message}", ex);
                 }
 
-                HttpResponse response = new HttpResponse
+                var response = new HttpResponse
                 {
                     Content = await responseMessage.Content.ReadAsStringAsync().ConfigureAwait(false),
                     StatusCode = responseMessage.StatusCode,

@@ -54,7 +54,7 @@ namespace Gw2Sharp.WebApi.Caching
         {
             if (items == null) throw new ArgumentNullException(nameof(items));
 
-            foreach (CacheItem<T> item in items)
+            foreach (var item in items)
                 await this.Set(item).ConfigureAwait(false);
         }
 
@@ -63,7 +63,7 @@ namespace Gw2Sharp.WebApi.Caching
         {
             if (updateFunc == null)
                 throw new ArgumentNullException(nameof(updateFunc));
-            return GetOrUpdate(category, id, async () => (await updateFunc().ConfigureAwait(false), expiryTime));
+            return this.GetOrUpdate(category, id, async () => (await updateFunc().ConfigureAwait(false), expiryTime));
         }
 
         /// <inheritdoc />
@@ -76,7 +76,7 @@ namespace Gw2Sharp.WebApi.Caching
             if (updateFunc == null)
                 throw new ArgumentNullException(nameof(updateFunc));
 
-            CacheItem<T> cache = await this.Get<T>(category, id).ConfigureAwait(false);
+            var cache = await this.Get<T>(category, id).ConfigureAwait(false);
             if (cache != null)
                 return cache;
 
@@ -95,7 +95,7 @@ namespace Gw2Sharp.WebApi.Caching
         {
             if (updateFunc == null)
                 throw new ArgumentNullException(nameof(updateFunc));
-            return GetOrUpdateMany(category, ids, async list => (await updateFunc(list).ConfigureAwait(false), expiryTime));
+            return this.GetOrUpdateMany(category, ids, async list => (await updateFunc(list).ConfigureAwait(false), expiryTime));
         }
 
         /// <inheritdoc />
@@ -111,9 +111,9 @@ namespace Gw2Sharp.WebApi.Caching
             if (updateFunc == null)
                 throw new ArgumentNullException(nameof(updateFunc));
 
-            IList<object> idsList = ids as IList<object> ?? ids.ToList();
+            var idsList = ids as IList<object> ?? ids.ToList();
 
-            IDictionary<object, CacheItem<T>> cache = await this.GetMany<T>(category, idsList).ConfigureAwait(false) ?? new Dictionary<object, CacheItem<T>>();
+            var cache = await this.GetMany<T>(category, idsList).ConfigureAwait(false) ?? new Dictionary<object, CacheItem<T>>();
             IList<object> missing = idsList.Except(cache.Keys).ToList();
 
             if (missing.Count > 0)
@@ -121,7 +121,7 @@ namespace Gw2Sharp.WebApi.Caching
                 var (newItems, expiryTime) = await updateFunc(missing).ConfigureAwait(false);
                 IList<CacheItem<T>> newCacheItems = newItems.Select(x => new CacheItem<T>(category, x.Key, x.Value, expiryTime)).ToList();
                 await this.SetMany(newCacheItems).ConfigureAwait(false);
-                foreach (CacheItem<T> item in newCacheItems)
+                foreach (var item in newCacheItems)
                     cache[item.Id] = item;
             }
 

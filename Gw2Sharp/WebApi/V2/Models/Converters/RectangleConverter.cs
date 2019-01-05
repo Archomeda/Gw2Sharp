@@ -25,8 +25,7 @@ namespace Gw2Sharp.WebApi.V2.Models.Converters
         /// <returns>The object value.</returns>
         public Rectangle ReadJson(JsonReader reader, Type objectType, Rectangle existingValue, bool hasExistingValue, JsonSerializer serializer, RectangleDirectionType directionType = RectangleDirectionType.TopDown)
         {
-            var jArray = serializer.Deserialize<JToken>(reader) as JArray;
-            if (jArray == null)
+            if (!(serializer.Deserialize<JToken>(reader) is JArray jArray))
                 throw new JsonSerializationException($"Expected {nameof(jArray)} to be an array");
 
             return new Rectangle(jArray[0].ToObject<Coordinates2>(serializer), jArray[1].ToObject<Coordinates2>(serializer), directionType);

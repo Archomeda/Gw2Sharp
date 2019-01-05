@@ -47,7 +47,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         public override string ToString() => $"({this.X},{this.Y})";
 
         /// <inheritdoc />
-        public override bool Equals(object obj) => obj is Coordinates2 && Equals((Coordinates2)obj);
+        public override bool Equals(object obj) => obj is Coordinates2 && this.Equals((Coordinates2)obj);
 
         /// <summary>
         /// Indicates whether the current object is equal to another object of the same type.
@@ -61,9 +61,9 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <inheritdoc />
         public override int GetHashCode()
         {
-            var hashCode = 1861411795;
-            hashCode = hashCode * -1521134295 + this.X.GetHashCode();
-            hashCode = hashCode * -1521134295 + this.Y.GetHashCode();
+            int hashCode = 1861411795;
+            hashCode = (hashCode * -1521134295) + this.X.GetHashCode();
+            hashCode = (hashCode * -1521134295) + this.Y.GetHashCode();
             return hashCode;
         }
 

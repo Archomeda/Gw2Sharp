@@ -1,4 +1,4 @@
-﻿using Gw2Sharp.Tests.Helpers;
+using Gw2Sharp.Tests.Helpers;
 using Gw2Sharp.WebApi.V2.Models;
 using Newtonsoft.Json;
 using System;
@@ -72,7 +72,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Models
         [Fact]
         public void ImplicitConversionToStringTest()
         {
-            var expected = "SomeRawEnumValue";
+            string expected = "SomeRawEnumValue";
             string actual = new ApiEnum<TestEnum>(TestEnum.EnumValue2, expected);
             Assert.Equal(expected, actual);
         }
@@ -81,15 +81,19 @@ namespace Gw2Sharp.Tests.WebApi.V2.Models
         public void EqualsTest()
         {
             var item = new ApiEnum<TestEnum>(TestEnum.EnumValue1, TestEnum.EnumValue1.ToString());
-            Assert.True(item.Equals(item));
+            var item2 = new ApiEnum<TestEnum>(TestEnum.EnumValue1, TestEnum.EnumValue1.ToString());
+            Assert.True(item.Equals(item2));
         }
 
         [Fact]
         public void NotEqualsTest()
         {
             var item = new ApiEnum<TestEnum>(TestEnum.EnumValue1, TestEnum.EnumValue1.ToString());
-            var item2 = new ApiEnum<TestEnum>(TestEnum.EnumValue2, TestEnum.EnumValue2.ToString());
+            var item2 = new ApiEnum<TestEnum>(TestEnum.EnumValue1, TestEnum.EnumValue2.ToString());
+            var item3 = new ApiEnum<TestEnum>(TestEnum.EnumValue2, TestEnum.EnumValue2.ToString());
             Assert.False(item.Equals(item2));
+            Assert.False(item.Equals(item3));
+            Assert.False(item2.Equals(item3));
             Assert.False(item.Equals(new object()));
             Assert.False(item.Equals(null));
         }

@@ -31,7 +31,7 @@ namespace Gw2Sharp.WebApi.Caching
 
         private void CollectGarbage()
         {
-            DateTime now = DateTime.Now;
+            var now = DateTime.Now;
             foreach (string category in this.cachedItems.Keys.ToArray())
             {
                 foreach (string key in this.cachedItems[category].Keys.ToArray())

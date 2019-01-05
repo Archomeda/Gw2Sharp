@@ -16,7 +16,7 @@ namespace Gw2Sharp.Tests.WebApi.Http
 
         protected HttpListener CreateOneTimeListener(Func<HttpListenerContext, bool> func)
         {
-            HttpListener listener = new HttpListener();
+            var listener = new HttpListener();
             new Thread(() =>
             {
                 listener.Prefixes.Add(Url);
@@ -32,12 +32,12 @@ namespace Gw2Sharp.Tests.WebApi.Http
         [Fact]
         public async Task RequestTest()
         {
-            var message = "Hello world";
+            string message = "Hello world";
             var (headerKey, headerValue) = ("X-Test", "Hello world");
 
-            using (var listener = CreateOneTimeListener(context =>
+            using (var listener = this.CreateOneTimeListener(context =>
             {
-                var buf = Encoding.UTF8.GetBytes(message);
+                byte[] buf = Encoding.UTF8.GetBytes(message);
                 context.Response.AddHeader(headerKey, headerValue);
                 context.Response.OutputStream.Write(buf, 0, buf.Length);
                 return true;
@@ -58,16 +58,16 @@ namespace Gw2Sharp.Tests.WebApi.Http
         [Fact]
         public async Task RequestCanceledTest()
         {
-            ManualResetEvent reset = new ManualResetEvent(false);
+            var reset = new ManualResetEvent(false);
 
-            using (var listener = CreateOneTimeListener(context => { reset.WaitOne(); return false; }))
+            using (var listener = this.CreateOneTimeListener(context => { reset.WaitOne(); return false; }))
             {
                 var client = new HttpClient();
                 var request = Substitute.For<IHttpRequest>();
                 request.RequestHeaders.Returns(new Dictionary<string, string>());
                 request.Url.Returns(new Uri(Url));
 
-                CancellationTokenSource tokenSource = new CancellationTokenSource(1000);
+                var tokenSource = new CancellationTokenSource(1000);
                 await Assert.ThrowsAsync<RequestCanceledException>(() => client.Request(request, tokenSource.Token));
                 reset.Set();
             }
@@ -76,7 +76,7 @@ namespace Gw2Sharp.Tests.WebApi.Http
         [Fact]
         public async Task RequestUnexpectedStatusTest()
         {
-            using (var listener = CreateOneTimeListener(context =>
+            using (var listener = this.CreateOneTimeListener(context =>
             {
                 context.Response.StatusCode = 404;
                 return true;

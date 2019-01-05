@@ -47,7 +47,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         public override string ToString() => $"({this.Width},{this.Height})";
 
         /// <inheritdoc />
-        public override bool Equals(object obj) => obj is Size && Equals((Size)obj);
+        public override bool Equals(object obj) => obj is Size && this.Equals((Size)obj);
 
         /// <summary>
         /// Indicates whether the current object is equal to another object of the same type.
@@ -61,9 +61,9 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <inheritdoc />
         public override int GetHashCode()
         {
-            var hashCode = 859600377;
-            hashCode = hashCode * -1521134295 + this.Width.GetHashCode();
-            hashCode = hashCode * -1521134295 + this.Height.GetHashCode();
+            int hashCode = 859600377;
+            hashCode = (hashCode * -1521134295) + this.Width.GetHashCode();
+            hashCode = (hashCode * -1521134295) + this.Height.GetHashCode();
             return hashCode;
         }
 

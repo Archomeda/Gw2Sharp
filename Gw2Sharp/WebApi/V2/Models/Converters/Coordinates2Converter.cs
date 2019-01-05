@@ -16,8 +16,7 @@ namespace Gw2Sharp.WebApi.V2.Models.Converters
         /// <inheritdoc />
         public override Coordinates2 ReadJson(JsonReader reader, Type objectType, Coordinates2 existingValue, bool hasExistingValue, JsonSerializer serializer)
         {
-            var jArray = serializer.Deserialize<JToken>(reader) as JArray;
-            if (jArray == null)
+            if (!(serializer.Deserialize<JToken>(reader) is JArray jArray))
                 throw new JsonSerializationException($"Expected {nameof(jArray)} to be an array");
 
             return new Coordinates2(jArray[0].ToObject<int>(serializer), jArray[1].ToObject<int>(serializer));

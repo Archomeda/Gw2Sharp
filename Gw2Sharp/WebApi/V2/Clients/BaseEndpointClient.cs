@@ -107,8 +107,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
         protected async Task<IApiV2Response<IReadOnlyList<TIdentifiableObject>>> RequestAllWithResponse<TIdentifiableObject, TId>(CancellationToken cancellationToken)
             where TIdentifiableObject : IIdentifiable<TId>
         {
-            var (response, cacheAll) = await GetOrUpdate<IReadOnlyList<TIdentifiableObject>>(this.FormatUrlQueryAll(this.EndpointPath), "_all", cancellationToken).ConfigureAwait(false);
-            var cacheIndividuals = await UpdateIndividuals<TIdentifiableObject, TId>(cacheAll).ConfigureAwait(false);
+            var (response, cacheAll) = await this.GetOrUpdate<IReadOnlyList<TIdentifiableObject>>(this.FormatUrlQueryAll(this.EndpointPath), "_all", cancellationToken).ConfigureAwait(false);
+            var cacheIndividuals = await this.UpdateIndividuals<TIdentifiableObject, TId>(cacheAll).ConfigureAwait(false);
             response.Content = cacheIndividuals.Select(x => x.Item).ToList();
             return response;
         }
@@ -138,7 +138,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <returns>Entry ids.</returns>
         protected async Task<IApiV2Response<IReadOnlyList<TId>>> RequestIdsWithResponse<TId>(CancellationToken cancellationToken)
         {
-            var (response, cache) = await GetOrUpdate<IReadOnlyList<TId>>(this.FormatUrlQueryIds(this.EndpointPath), "_ids", cancellationToken).ConfigureAwait(false);
+            var (response, cache) = await this.GetOrUpdate<IReadOnlyList<TId>>(this.FormatUrlQueryIds(this.EndpointPath), "_ids", cancellationToken).ConfigureAwait(false);
             response.Content = cache.Item;
             return response;
         }
@@ -165,7 +165,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <returns>The blob data.</returns>
         protected async Task<IApiV2Response<TObject>> RequestGetWithResponse(CancellationToken cancellationToken)
         {
-            var (response, cache) = await GetOrUpdate<TObject>(this.FormatUrlQueryBlob(this.EndpointPath), "_index", cancellationToken).ConfigureAwait(false);
+            var (response, cache) = await this.GetOrUpdate<TObject>(this.FormatUrlQueryBlob(this.EndpointPath), "_index", cancellationToken).ConfigureAwait(false);
             response.Content = cache.Item;
             return response;
         }
@@ -252,7 +252,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
                     var latestCacheTime = DateTime.Now;
                     var result = await Task.WhenAll(requestIds.Select(async innerIds =>
                     {
-                        Uri uri = this.AppendUrlParameters(new Uri(Gw2WebApiV2Client.UrlBase, this.FormatUrlQueryMany(this.EndpointPath, innerIds)));
+                        var uri = this.AppendUrlParameters(new Uri(Gw2WebApiV2Client.UrlBase, this.FormatUrlQueryMany(this.EndpointPath, innerIds)));
                         var httpResponse = await this.Connection.Request<IReadOnlyList<TIdentifiableObject>>(uri, cancellationToken).ConfigureAwait(false);
                         var response = new ApiV2Response<IReadOnlyList<TIdentifiableObject>>(httpResponse);
                         lock (responsesLock)
@@ -311,7 +311,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         {
             pageSize = pageSize.Clamp(1, 200);
 
-            var (response, cache) = await GetOrUpdate<IReadOnlyList<TIdentifiableObject>>(this.FormatUrlQueryPage(this.EndpointPath, page, pageSize), $"_page{page}-{pageSize}", cancellationToken).ConfigureAwait(false);
+            var (response, cache) = await this.GetOrUpdate<IReadOnlyList<TIdentifiableObject>>(this.FormatUrlQueryPage(this.EndpointPath, page, pageSize), $"_page{page}-{pageSize}", cancellationToken).ConfigureAwait(false);
             await this.UpdateIndividuals<TIdentifiableObject, TId>(cache).ConfigureAwait(false);
 
             return new ApiV2Response<IReadOnlyList<TIdentifiableObject>>(response) { Content = cache.Item };
@@ -347,7 +347,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         {
             pageSize = pageSize.Clamp(1, 200);
 
-            var (response, cache) = await GetOrUpdate<TObject>(this.FormatUrlQueryPage(this.EndpointPath, page, pageSize), $"_page{page}-{pageSize}", cancellationToken).ConfigureAwait(false);
+            var (response, cache) = await this.GetOrUpdate<TObject>(this.FormatUrlQueryPage(this.EndpointPath, page, pageSize), $"_page{page}-{pageSize}", cancellationToken).ConfigureAwait(false);
 
             return new ApiV2Response<TObject>(response) { Content = cache.Item };
         }
@@ -363,10 +363,10 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <returns>A two-tuple that contains the <see cref="IHttpResponse{TIdentifiableObject}"/> and <see cref="CacheItem{TIdentifiableObject}"/> items.</returns>
         protected async Task<(ApiV2Response<TIdentifiableObject>, CacheItem<TIdentifiableObject>)> GetOrUpdate<TIdentifiableObject>(string url, object cacheId, CancellationToken cancellationToken)
         {
-            ApiV2Response<TIdentifiableObject> response = new ApiV2Response<TIdentifiableObject>();
+            var response = new ApiV2Response<TIdentifiableObject>();
             var result = await this.Connection.CacheMethod.GetOrUpdate(this.EndpointPath, cacheId,
                 async () => {
-                    Uri uri = this.AppendUrlParameters(new Uri(Gw2WebApiV2Client.UrlBase, url));
+                    var uri = this.AppendUrlParameters(new Uri(Gw2WebApiV2Client.UrlBase, url));
                     var httpResponse = await this.Connection.Request<TIdentifiableObject>(uri, cancellationToken).ConfigureAwait(false);
                     response = new ApiV2Response<TIdentifiableObject>(httpResponse);
                     return (httpResponse.Content, response.Expires ?? DateTime.Now);
@@ -456,19 +456,18 @@ namespace Gw2Sharp.WebApi.V2.Clients
             if (parameterProperties.Count() == 0)
                 return uri;
 
-            UriBuilder builder = new UriBuilder(uri);
+            var builder = new UriBuilder(uri);
             foreach (var parameter in parameterProperties)
             {
                 var attr = parameter.GetCustomAttribute<EndpointPathParameterAttribute>();
-                var value = parameter.GetValue(this);
+                object value = parameter.GetValue(this);
                 if (value == null)
                     continue;
 
-                var toAppend = attr.ParameterName + "=" + value;
-                if (builder.Query != null && builder.Query.Length > 1)
-                    builder.Query = builder.Query.Substring(1) + "&" + toAppend;
-                else
-                    builder.Query = toAppend;
+                string toAppend = $"{attr.ParameterName}={value}";
+                builder.Query = builder.Query != null && builder.Query.Length > 1
+                    ? $"{builder.Query.Substring(1)}&{toAppend}"
+                    : toAppend;
             }
             return builder.Uri;
         }

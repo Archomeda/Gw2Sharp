@@ -19,21 +19,17 @@ namespace Gw2Sharp.WebApi.V2.Models.Converters
         /// <inheritdoc />
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
         {
-            var jObject = serializer.Deserialize<JToken>(reader) as JObject;
-            if (jObject == null)
+            if (!(serializer.Deserialize<JToken>(reader) is JObject jObject))
                 throw new JsonSerializationException($"Expected an object");
 
             // Get the castable type in string
-            var type = jObject["type"].Value<string>();
+            string type = jObject["type"].Value<string>();
             if (string.IsNullOrEmpty(type))
                 throw new JsonSerializationException($"Expected JSON data to have a string property Type");
 
             // Get the castable type
             var targetType = objectType.GetCustomAttributes<CastableTypeAttribute>().FirstOrDefault(a => a.Value.Equals(type.ParseEnum(a.Value.GetType())))?.ObjectType;
-            if (targetType == null)
-                return jObject.ToObject(objectType);
-
-            return jObject.ToObject(targetType, serializer);
+            return targetType == null ? jObject.ToObject(objectType) : jObject.ToObject(targetType, serializer);
         }
 
         /// <inheritdoc />
@@ -43,10 +39,10 @@ namespace Gw2Sharp.WebApi.V2.Models.Converters
         /// <inheritdoc />
         public override bool CanConvert(Type objectType)
         {
-            var hasInterface = objectType.GetInterfaces()
+            bool hasInterface = objectType.GetInterfaces()
                 .Where(i => i.IsGenericType)
                 .Any(i => i.GetGenericTypeDefinition() == typeof(ICastableType<,>));
-            var hasAttributes = objectType.GetCustomAttributes<CastableTypeAttribute>().Count() > 0;
+            bool hasAttributes = objectType.GetCustomAttributes<CastableTypeAttribute>().Count() > 0;
             return hasInterface && hasAttributes;
         }
     }

@@ -91,7 +91,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         public override string ToString() => $"({this.TopLeft},{this.TopRight},{this.BottomLeft},{this.BottomRight})";
 
         /// <inheritdoc />
-        public override bool Equals(object obj) => obj is Rectangle && Equals((Rectangle)obj);
+        public override bool Equals(object obj) => obj is Rectangle && this.Equals((Rectangle)obj);
 
         /// <summary>
         /// Indicates whether the current object is equal to another object of the same type.
@@ -111,11 +111,11 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <inheritdoc />
         public override int GetHashCode()
         {
-            var hashCode = -505697310;
-            hashCode = hashCode * -1521134295 + EqualityComparer<Coordinates2>.Default.GetHashCode(this.TopLeft);
-            hashCode = hashCode * -1521134295 + EqualityComparer<Coordinates2>.Default.GetHashCode(this.TopRight);
-            hashCode = hashCode * -1521134295 + EqualityComparer<Coordinates2>.Default.GetHashCode(this.BottomLeft);
-            hashCode = hashCode * -1521134295 + EqualityComparer<Coordinates2>.Default.GetHashCode(this.BottomRight);
+            int hashCode = -505697310;
+            hashCode = (hashCode * -1521134295) + EqualityComparer<Coordinates2>.Default.GetHashCode(this.TopLeft);
+            hashCode = (hashCode * -1521134295) + EqualityComparer<Coordinates2>.Default.GetHashCode(this.TopRight);
+            hashCode = (hashCode * -1521134295) + EqualityComparer<Coordinates2>.Default.GetHashCode(this.BottomLeft);
+            hashCode = (hashCode * -1521134295) + EqualityComparer<Coordinates2>.Default.GetHashCode(this.BottomRight);
             return hashCode;
         }
 

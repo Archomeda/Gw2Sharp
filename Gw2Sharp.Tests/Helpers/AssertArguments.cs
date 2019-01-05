@@ -117,7 +117,7 @@ namespace Gw2Sharp.Tests.Helpers
                 if (!paramsNull[i])
                     continue;
 
-                var args = callArgs.ToArray();
+                object[] args = callArgs.ToArray();
                 args[i] = null;
                 Assert.Throws<ArgumentNullException>(constructorInfo.GetParameters()[i].Name, () =>
                 {

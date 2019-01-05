@@ -1,14 +1,14 @@
-using Gw2Sharp.WebApi.V2.Models.Converters;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using Gw2Sharp.WebApi.V2.Models.Converters;
+using Newtonsoft.Json;
 
 namespace Gw2Sharp.WebApi.V2.Models
 {
     /// <summary>
     /// Wraps an API enum to allow unsupported and/or future enum values.
     /// </summary>
-    public abstract class ApiEnum
+    public abstract class ApiEnum : IEquatable<ApiEnum>
     {
         /// <summary>
         /// Creates a new API enum.
@@ -42,20 +42,37 @@ namespace Gw2Sharp.WebApi.V2.Models
         public override bool Equals(object obj)
         {
             var other = obj as ApiEnum;
-            if (other == null)
-                return false;
+            return other == null ? false : this.Equals(other);
+        }
 
-            return Equals(this.RawValue, other.RawValue) && Equals(this.Value, other.Value);
+        /// <inheritdoc />
+        public bool Equals(ApiEnum other)
+        {
+            return other != null &&
+                EqualityComparer<Enum>.Default.Equals(this.Value, other.Value) &&
+                this.RawValue == other.RawValue;
         }
 
         /// <inheritdoc />
         public override int GetHashCode()
         {
-            var hashCode = -1730349647;
-            hashCode = hashCode * -1521134295 + EqualityComparer<Enum>.Default.GetHashCode(this.Value);
-            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(this.RawValue);
+            int hashCode = -1730349647;
+            hashCode = (hashCode * -1521134295) + EqualityComparer<Enum>.Default.GetHashCode(this.Value);
+            hashCode = (hashCode * -1521134295) + EqualityComparer<string>.Default.GetHashCode(this.RawValue);
             return hashCode;
         }
+
+        /// <inheritdoc />
+        public override string ToString() =>
+            this.RawValue;
+
+        /// <inheritdoc />
+        public static bool operator ==(ApiEnum enum1, ApiEnum enum2) =>
+            EqualityComparer<ApiEnum>.Default.Equals(enum1, enum2);
+
+        /// <inheritdoc />
+        public static bool operator !=(ApiEnum enum1, ApiEnum enum2) =>
+            !(enum1 == enum2);
     }
 
     /// <summary>
@@ -102,6 +119,35 @@ namespace Gw2Sharp.WebApi.V2.Models
         public static implicit operator string(ApiEnum<T> e) => e.RawValue;
 
         /// <inheritdoc />
-        public bool Equals(ApiEnum<T> other) => other != null && base.Equals(other);
+        public override bool Equals(object obj)
+        {
+            var other = obj as ApiEnum<T>;
+            return other == null ? false : this.Equals(other);
+        }
+
+        /// <inheritdoc />
+        public bool Equals(ApiEnum<T> other)
+        {
+            return other != null &&
+                base.Equals(other) &&
+                EqualityComparer<T>.Default.Equals(this.Value, other.Value);
+        }
+
+        /// <inheritdoc />
+        public override int GetHashCode()
+        {
+            int hashCode = -159790080;
+            hashCode = (hashCode * -1521134295) + base.GetHashCode();
+            hashCode = (hashCode * -1521134295) + EqualityComparer<T>.Default.GetHashCode(this.Value);
+            return hashCode;
+        }
+
+        /// <inheritdoc />
+        public static bool operator ==(ApiEnum<T> enum1, ApiEnum<T> enum2) =>
+            EqualityComparer<ApiEnum<T>>.Default.Equals(enum1, enum2);
+
+        /// <inheritdoc />
+        public static bool operator !=(ApiEnum<T> enum1, ApiEnum<T> enum2) =>
+            !(enum1 == enum2);
     }
 }

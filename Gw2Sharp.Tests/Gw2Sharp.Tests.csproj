@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netcoreapp2.0;net451</TargetFrameworks>
+    <TargetFrameworks>netcoreapp2.0;net452</TargetFrameworks>
     <LangVersion>7.3</LangVersion>
     <AssemblyName>Gw2Sharp.Tests</AssemblyName>
     <PackageId>Gw2Sharp.Tests</PackageId>
@@ -144,6 +144,9 @@
     <None Remove="TestFiles\Guild\GuildUpgrades.bulk.json" />
     <None Remove="TestFiles\Guild\GuildUpgrades.ids.json" />
     <None Remove="TestFiles\Guild\GuildUpgrades.single.json" />
+    <None Remove="TestFiles\Items\Items.bulk.json" />
+    <None Remove="TestFiles\Items\Items.ids.json" />
+    <None Remove="TestFiles\Items\Items.single.json" />
   </ItemGroup>
 
   <ItemGroup>
@@ -277,6 +280,9 @@
     <EmbeddedResource Include="TestFiles\Continents\Continents.ids.json" />
     <EmbeddedResource Include="TestFiles\Continents\Continents.single.json" />
     <EmbeddedResource Include="TestFiles\Continents\Continents.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Items\Items.ids.json" />
+    <EmbeddedResource Include="TestFiles\Items\Items.single.json" />
+    <EmbeddedResource Include="TestFiles\Items\Items.bulk.json" />
   </ItemGroup>
 
   <ItemGroup>
@@ -291,7 +297,7 @@
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
   </ItemGroup>
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net451' ">
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net452' ">
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Net.Http" />

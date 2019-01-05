@@ -1,0 +1,32 @@
+{
+  "name": "Reinforced Olmakhan Bandolier",
+  "description": "32 slots. If possible, containers and consumable items will fill this box before other empty spaces. The contents of this box will not move when inventory is sorted.",
+  "type": "Bag",
+  "level": 0,
+  "rarity": "Ascended",
+  "vendor_value": 320,
+  "game_types": [
+    "Pvp",
+    "PvpLobby",
+    "Activity",
+    "Wvw",
+    "Dungeon",
+    "Pve"
+  ],
+  "flags": [
+    "AccountBound",
+    "NoSalvage",
+    "DeleteWarning",
+    "AccountBindOnUse"
+  ],
+  "restrictions": [
+
+  ],
+  "id": 87225,
+  "chat_link": "[&AgG5VAEA]",
+  "icon": "https://render.guildwars2.com/file/FC337DDC25A72FBC0470FCC3973332B098C9F70C/1947050.png",
+  "details": {
+    "no_sell_or_sort": false,
+    "size": 32
+  }
+}

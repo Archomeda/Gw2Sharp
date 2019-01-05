@@ -44,9 +44,9 @@ namespace Gw2Sharp.WebApi.V2
                         if (!rel.Success || rel.Groups.Count != 2)
                             return null;
                         var uri = LinkUriRegex.Match(link);
-                        if (!uri.Success || uri.Groups.Count != 2)
-                            return null;
-                        return Tuple.Create(rel.Groups[1].Value, new Uri(uri.Groups[1].Value, UriKind.RelativeOrAbsolute));
+                        return uri.Success && uri.Groups.Count == 2
+                            ? Tuple.Create(rel.Groups[1].Value, new Uri(uri.Groups[1].Value, UriKind.RelativeOrAbsolute))
+                            : null;
                     })
                     .Where(link => link != null)
                     .ToDictionary(kvp => kvp.Item1, kvp => kvp.Item2)

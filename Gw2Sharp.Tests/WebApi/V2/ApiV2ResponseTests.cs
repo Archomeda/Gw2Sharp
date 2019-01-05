@@ -13,7 +13,7 @@ namespace Gw2Sharp.Tests.WebApi.V2
         [Fact]
         public void ConstructorTest()
         {
-            var content = "content";
+            string content = "content";
             var statusCode = HttpStatusCode.OK;
             var requestHeaders = new Dictionary<string, string>
             {
@@ -105,7 +105,7 @@ namespace Gw2Sharp.Tests.WebApi.V2
         [Fact]
         public void ImplicitConversionToContentType()
         {
-            var expected = "content";
+            string expected = "content";
             var response = new ApiV2Response<string>
             {
                 Content = expected

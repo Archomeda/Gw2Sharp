@@ -93,5 +93,10 @@ namespace Gw2Sharp.WebApi.V2
         /// Gets the guild.
         /// </summary>
         IGuildClient Guild { get; }
+
+        /// <summary>
+        /// Gets the items.
+        /// </summary>
+        IItemsClient Items { get; }
     }
 }

@@ -46,11 +46,11 @@ namespace Gw2Sharp.WebApi.Caching
         /// <inheritdoc />
         public override int GetHashCode()
         {
-            var hashCode = 212114582;
-            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(this.Category);
-            hashCode = hashCode * -1521134295 + EqualityComparer<object>.Default.GetHashCode(this.Id);
-            hashCode = hashCode * -1521134295 + EqualityComparer<object>.Default.GetHashCode(this.Item);
-            hashCode = hashCode * -1521134295 + this.ExpiryTime.GetHashCode();
+            int hashCode = 212114582;
+            hashCode = (hashCode * -1521134295) + EqualityComparer<string>.Default.GetHashCode(this.Category);
+            hashCode = (hashCode * -1521134295) + EqualityComparer<object>.Default.GetHashCode(this.Id);
+            hashCode = (hashCode * -1521134295) + EqualityComparer<object>.Default.GetHashCode(this.Item);
+            hashCode = (hashCode * -1521134295) + this.ExpiryTime.GetHashCode();
             return hashCode;
         }
 

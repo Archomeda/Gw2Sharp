@@ -15,7 +15,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The equipment slot.
         /// </summary>
-        public ApiEnum<ItemEquipmentSlot> Slot { get; set; }
+        public ApiEnum<ItemEquipmentSlotType> Slot { get; set; }
 
         /// <summary>
         /// The list of upgrades applied to the equipped item.

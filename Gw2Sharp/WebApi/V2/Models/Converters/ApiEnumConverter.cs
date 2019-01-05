@@ -1,9 +1,8 @@
+using System;
+using System.Reflection;
 using Gw2Sharp.Extensions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using System;
-using System.ComponentModel;
-using System.Reflection;
 
 namespace Gw2Sharp.WebApi.V2.Models.Converters
 {
@@ -19,20 +18,19 @@ namespace Gw2Sharp.WebApi.V2.Models.Converters
         /// <inheritdoc />
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
         {
-            var jValue = serializer.Deserialize<JToken>(reader) as JValue;
-            if (jValue == null)
+            if (!(serializer.Deserialize<JToken>(reader) is JValue jValue))
                 throw new JsonSerializationException($"Expected a value for {nameof(jValue)}");
 
             // Get generic type information and some sanity checks
-            TypeInfo typeInfo = objectType.GetTypeInfo();
+            var typeInfo = objectType.GetTypeInfo();
             Type enumType;
             if (typeInfo.IsGenericType && typeInfo.GenericTypeArguments.Length > 0)
                 enumType = typeInfo.GenericTypeArguments[0];
             else
                 return null;
 
-            var rawValue = jValue.ToObject<string>();
-            Enum value = rawValue.ParseEnum(enumType);
+            string rawValue = jValue.ToObject<string>();
+            var value = rawValue.ParseEnum(enumType);
             return (ApiEnum)Activator.CreateInstance(objectType, value, rawValue);
         }
 

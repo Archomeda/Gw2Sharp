@@ -19,7 +19,7 @@ namespace Gw2Sharp.Tests.WebApi
         public void ConstructorTest()
         {
             string key = "test key";
-            Locale locale = Locale.German;
+            var locale = Locale.German;
             var httpClient = Substitute.For<IHttpClient>();
             var cacheMethod = Substitute.For<ICacheMethod>();
 
@@ -117,7 +117,7 @@ namespace Gw2Sharp.Tests.WebApi
         [Fact]
         public async Task UnexpectedStatusExceptionRequestTest()
         {
-            var message = "{\"error\":\"Some nice error message\"}";
+            string message = "{\"error\":\"Some nice error message\"}";
             var httpClient = Substitute.For<IHttpClient>();
             var httpResponse = Substitute.For<IHttpResponse>();
             httpResponse.Content.Returns(message);

@@ -1,9 +1,9 @@
 namespace Gw2Sharp.WebApi.V2.Models
 {
     /// <summary>
-    /// The item equipment slot.
+    /// The item equipment slot type.
     /// </summary>
-    public enum ItemEquipmentSlot
+    public enum ItemEquipmentSlotType
     {
         /// <summary>
         /// Unknown slot.

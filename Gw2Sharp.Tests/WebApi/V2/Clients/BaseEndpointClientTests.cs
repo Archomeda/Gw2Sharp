@@ -131,10 +131,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
             var (data, expected) = this.GetTestData(file);
             var ids = this.GetIds<TId>(expected.Select(i =>
             {
-                if (i is JProperty prop)
-                    return prop.Value[idName];
-                else
-                    return i[idName];
+                return i is JProperty prop ? prop.Value[idName] : i[idName];
             }));
 
             var httpRequest = Substitute.For<IHttpRequest>();
@@ -184,19 +181,18 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                 .Where(p => p.GetCustomAttribute<EndpointPathParameterAttribute>() != null);
             if (parameterProperties.Count() > 0)
             {
-                UriBuilder builder = new UriBuilder(uri);
+                var builder = new UriBuilder(uri);
                 foreach (var parameter in parameterProperties)
                 {
                     var attr = parameter.GetCustomAttribute<EndpointPathParameterAttribute>();
-                    var value = parameter.GetValue(client);
+                    object value = parameter.GetValue(client);
                     if (value == null)
                         continue;
 
-                    var toAppend = attr.ParameterName + "=" + value;
-                    if (builder.Query != null && builder.Query.Length > 1)
-                        builder.Query = builder.Query.Substring(1) + "&" + toAppend;
-                    else
-                        builder.Query = toAppend;
+                    string toAppend = $"{attr.ParameterName}={value}";
+                    builder.Query = builder.Query != null && builder.Query.Length > 1
+                        ? $"{builder.Query.Substring(1)}&{toAppend}"
+                        : toAppend;
                 }
                 uri = builder.Uri;
             }
@@ -231,27 +227,17 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                     throw new FileNotFoundException($"Resource {fileResourceName} does not exist");
                 using (var reader = new StreamReader(stream))
                 {
-                    var data = reader.ReadToEnd();
+                    string data = reader.ReadToEnd();
                     return (data, JToken.Parse(data));
                 }
             }
         }
 
-        protected T GetId<T>(JToken id)
-        {
-            if (typeof(T) == typeof(Guid))
-                return (T)(object)Guid.Parse(id.Value<string>());
+        protected T GetId<T>(JToken id) =>
+            typeof(T) == typeof(Guid) ? (T)(object)Guid.Parse(id.Value<string>()) : id.Value<T>();
 
-            return id.Value<T>();
-        }
-
-        protected IEnumerable<T> GetIds<T>(IEnumerable<JToken> ids)
-        {
-            if (typeof(T) == typeof(Guid))
-                return ids.Select(i => Guid.Parse(i.Value<string>())).Cast<T>();
-
-            return ids.Select(i => i.Value<T>());
-        }
+        protected IEnumerable<T> GetIds<T>(IEnumerable<JToken> ids) =>
+            typeof(T) == typeof(Guid) ? ids.Select(i => Guid.Parse(i.Value<string>())).Cast<T>() : ids.Select(i => i.Value<T>());
 
 
         protected void AssertJsonObject(object expected, object actual)
@@ -282,7 +268,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                 var dic = (dynamic)actual;
                 foreach (var kvp in expected)
                 {
-                    var key = string.Concat(kvp.Key.Split('_').Select(s => string.Concat(
+                    string key = string.Concat(kvp.Key.Split('_').Select(s => string.Concat(
                         s[0].ToString().ToUpper(),
                         s.Substring(1))));
                     dynamic property = Convert.ChangeType(key, keyType);
@@ -297,13 +283,13 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                 // Specific object
                 foreach (var kvp in expected)
                 {
-                    var key = string.Concat(kvp.Key.Split('_').Select(s => string.Concat(
+                    string key = string.Concat(kvp.Key.Split('_').Select(s => string.Concat(
                         s[0].ToString().ToUpper(),
                         s.Substring(1))));
                     var property = type.GetProperty(key);
                     if (property == null)
                         throw new InvalidOperationException($"Property {key} does not exist");
-                    var actualValue = property.GetValue(actual);
+                    object actualValue = property.GetValue(actual);
                     this.AssertJsonObject(kvp.Value, actualValue);
                 }
             }
@@ -334,10 +320,10 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                 case ApiEnum @enum:
                     Assert.Equal(expected.Value<string>(), @enum.RawValue);
                     Assert.False(@enum.Value.ToString() == "Unknown", $"Expected {expected} to be a value in enumerator {@enum.Value.GetType().Name}");
-                    TypeInfo typeInfo = @enum.GetType().GetTypeInfo();
+                    var typeInfo = @enum.GetType().GetTypeInfo();
                     if (typeInfo.IsGenericType && typeInfo.GenericTypeArguments.Length > 0)
                     {
-                        Type enumType = typeInfo.GenericTypeArguments[0];
+                        var enumType = typeInfo.GenericTypeArguments[0];
                         Assert.Equal(expected.Value<string>().ParseEnum(enumType), @enum.Value);
                     }
                     else
@@ -350,7 +336,15 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                     Assert.Equal(Convert.ToDouble(expected.Value), @double, 10);
                     break;
                 default:
-                    Assert.Equal(expected.Value, actual);
+                    if (((actual != null && actual.GetType() != typeof(string)) || actual == null) &&
+                        expected.Type == JTokenType.String)
+                    {
+                        // Special case where the resulting value has been auto deserialized into something else than a string,
+                        // while the original is a string.
+                        Assert.Equal(expected.Value, actual?.ToString() ?? "");
+                    }
+                    else
+                        Assert.Equal(expected.Value, actual);
                     break;
             }
         }

@@ -11,6 +11,6 @@ namespace Gw2Sharp.WebApi.V2.Models.Converters
     {
         /// <inheritdoc />
         public override Rectangle ReadJson(JsonReader reader, Type objectType, Rectangle existingValue, bool hasExistingValue, JsonSerializer serializer) =>
-            ReadJson(reader, objectType, existingValue, hasExistingValue, serializer, RectangleDirectionType.BottomUp);
+            this.ReadJson(reader, objectType, existingValue, hasExistingValue, serializer, RectangleDirectionType.BottomUp);
     }
 }
