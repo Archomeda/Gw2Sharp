@@ -45,7 +45,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The achievement flags.
         /// </summary>
-        public IReadOnlyList<ApiEnum<AchievementFlag>> Flags { get; set; } = new List<ApiEnum<AchievementFlag>>();
+        public ApiFlags<AchievementFlag> Flags { get; set; } = new ApiFlags<AchievementFlag>();
 
         /// <summary>
         /// Gets the achievement bits.

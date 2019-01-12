@@ -34,7 +34,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The character flags.
         /// </summary>
-        public IReadOnlyList<ApiEnum<CharacterFlag>> Flags { get; set; } = new List<ApiEnum<CharacterFlag>>();
+        public ApiFlags<CharacterFlag> Flags { get; set; } = new ApiFlags<CharacterFlag>();
 
         /// <summary>
         /// The character's profession.

@@ -48,9 +48,9 @@ namespace Gw2Sharp.WebApi.V2.Models
         public DateTime Created { get; set; }
 
         /// <summary>
-        /// The list of content that this account has access to.
+        /// The content flags that this account has access to.
         /// </summary>
-        public IReadOnlyList<ApiEnum<GameAccess>> Access { get; set; } = new List<ApiEnum<GameAccess>>();
+        public ApiFlags<GameAccess> Access { get; set; } = new ApiFlags<GameAccess>();
 
         /// <summary>
         /// Whether this account has a commander tag unlocked or not.

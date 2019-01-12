@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 namespace Gw2Sharp.WebApi.V2.Models
 {
     /// <summary>
@@ -21,6 +19,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The daily achievement access requirement.
         /// </summary>
-        public IReadOnlyList<ApiEnum<GameAccess>> RequiredAccess { get; set; } = new List<ApiEnum<GameAccess>>();
+        public ApiFlags<GameAccess> RequiredAccess { get; set; } = new ApiFlags<GameAccess>();
     }
 }

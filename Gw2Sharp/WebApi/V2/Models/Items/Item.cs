@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 namespace Gw2Sharp.WebApi.V2.Models
 {
     /// <summary>
@@ -78,17 +76,17 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The item game types.
         /// </summary>
-        public IReadOnlyList<ApiEnum<ItemGameType>> GameTypes { get; set; } = new List<ApiEnum<ItemGameType>>();
+        public ApiFlags<ItemGameType> GameTypes { get; set; } = new ApiFlags<ItemGameType>();
 
         /// <summary>
         /// The item flags.
         /// </summary>
-        public IReadOnlyList<ApiEnum<ItemFlag>> Flags { get; set; } = new List<ApiEnum<ItemFlag>>();
+        public ApiFlags<ItemFlag> Flags { get; set; } = new ApiFlags<ItemFlag>();
 
         /// <summary>
         /// The item restrictions.
         /// </summary>
-        public IReadOnlyList<ApiEnum<ItemRestriction>> Restrictions { get; set; } = new List<ApiEnum<ItemRestriction>>();
+        public ApiFlags<ItemRestriction> Restrictions { get; set; } = new ApiFlags<ItemRestriction>();
 
         /// <summary>
         /// The item id.

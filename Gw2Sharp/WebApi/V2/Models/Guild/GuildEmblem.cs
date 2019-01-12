@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 namespace Gw2Sharp.WebApi.V2.Models
 {
     /// <summary>
@@ -20,6 +18,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The emblem flags.
         /// </summary>
-        public IReadOnlyList<ApiEnum<GuildEmblemFlag>> Flags { get; set; } = new List<ApiEnum<GuildEmblemFlag>>();
+        public ApiFlags<GuildEmblemFlag> Flags { get; set; } = new ApiFlags<GuildEmblemFlag>();
     }
 }

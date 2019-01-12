@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 namespace Gw2Sharp.WebApi.V2.Models
 {
     /// <summary>
@@ -10,7 +8,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The infusion type flags.
         /// </summary>
-        public IReadOnlyList<ApiEnum<ItemInfusionFlag>> Flags { get; set; } = new List<ApiEnum<ItemInfusionFlag>>();
+        public ApiFlags<ItemInfusionFlag> Flags { get; set; } = new ApiFlags<ItemInfusionFlag>();
 
         /// <summary>
         /// The infusion item id.
