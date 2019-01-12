@@ -18,6 +18,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gw2Sharp.Build.InheritDoc",
 		{3DDEB6A7-EBD6-4526-AD81-2547E303E049} = {3DDEB6A7-EBD6-4526-AD81-2547E303E049}
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{A871C3AF-CF2E-4434-ADA4-8A81F68B566E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9078947F-B799-424D-966C-70E7C468E22A} = {A871C3AF-CF2E-4434-ADA4-8A81F68B566E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8B8A5E20-6F96-48B3-9D15-FB65362F9966}
