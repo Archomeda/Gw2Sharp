@@ -15,6 +15,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The items.
         /// </summary>
-        public IReadOnlyList<CommerceDeliveryItem> Items { get; set; }
+        public IReadOnlyList<CommerceDeliveryItem> Items { get; set; } = new List<CommerceDeliveryItem>();
     }
 }

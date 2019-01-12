@@ -10,24 +10,24 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The character name.
         /// </summary>
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
         /// <summary>
         /// The character's race.
         /// Can be resolved against <see cref="IGw2WebApiV2Client.Races"/>.
         /// </summary>
-        public string Race { get; set; }
+        public string Race { get; set; } = string.Empty;
 
         /// <summary>
         /// The character's gender.
         /// </summary>
-        public ApiEnum<Gender> Gender { get; set; }
+        public ApiEnum<Gender> Gender { get; set; } = new ApiEnum<Gender>();
 
         /// <summary>
         /// The character's profession.
         /// Can be resolved against <see cref="IGw2WebApiV2Client.Professions"/>.
         /// </summary>
-        public string Profession { get; set; }
+        public string Profession { get; set; } = string.Empty;
 
         /// <summary>
         /// The character's level.

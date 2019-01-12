@@ -55,11 +55,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                 this.AssertRequest(callInfo, client, "?page=2&page_size=100");
                 this.AssertAuthenticatedRequest(callInfo, client);
                 this.AssertLocalizedRequest(callInfo, client);
-                return new HttpResponse
-                {
-                    Content = data,
-                    StatusCode = HttpStatusCode.OK
-                };
+                return new HttpResponse(data, HttpStatusCode.OK, null, null);
             });
 
             var actual = await client.Page(2, 100);
@@ -74,11 +70,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                 this.AssertRequest(callInfo, client, null);
                 this.AssertAuthenticatedRequest(callInfo, client);
                 this.AssertLocalizedRequest(callInfo, client);
-                return new HttpResponse
-                {
-                    Content = data,
-                    StatusCode = HttpStatusCode.OK
-                };
+                return new HttpResponse(data, HttpStatusCode.OK, null, null);
             });
 
             var actual = await client.Get();
@@ -96,11 +88,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                 this.AssertRequest(callInfo, client, $"/{id.ToString()}");
                 this.AssertAuthenticatedRequest(callInfo, client);
                 this.AssertLocalizedRequest(callInfo, client);
-                return new HttpResponse
-                {
-                    Content = data,
-                    StatusCode = HttpStatusCode.OK
-                };
+                return new HttpResponse(data, HttpStatusCode.OK, null, null);
             });
 
             var actual = await client.Get(id);
@@ -115,11 +103,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                 this.AssertRequest(callInfo, client, "?ids=all");
                 this.AssertAuthenticatedRequest(callInfo, client);
                 this.AssertLocalizedRequest(callInfo, client);
-                return new HttpResponse
-                {
-                    Content = data,
-                    StatusCode = HttpStatusCode.OK
-                };
+                return new HttpResponse(data, HttpStatusCode.OK, null, null);
             });
 
             var actual = await client.All();
@@ -140,11 +124,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                 this.AssertRequest(callInfo, client, $"?ids={string.Join(",", ids.Select(i => i.ToString()))}");
                 this.AssertAuthenticatedRequest(callInfo, client);
                 this.AssertLocalizedRequest(callInfo, client);
-                return new HttpResponse
-                {
-                    Content = data,
-                    StatusCode = HttpStatusCode.OK
-                };
+                return new HttpResponse(data, HttpStatusCode.OK, null, null);
             });
 
             var actual = await client.Many(ids);
@@ -161,11 +141,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                 this.AssertRequest(callInfo, client, null);
                 this.AssertAuthenticatedRequest(callInfo, client);
                 this.AssertLocalizedRequest(callInfo, client);
-                return new HttpResponse
-                {
-                    Content = data,
-                    StatusCode = HttpStatusCode.OK
-                };
+                return new HttpResponse(data, HttpStatusCode.OK, null, null);
             });
 
             var actual = await client.Ids();
@@ -261,7 +237,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
         protected void AssertJsonObject(JObject expected, object actual)
         {
             var type = actual.GetType();
-            if (type.IsGenericType && type.GetGenericTypeDefinition() == typeof(ReadOnlyDictionary<,>))
+            if (type.IsGenericType && (type.GetGenericTypeDefinition() == typeof(ReadOnlyDictionary<,>) || type.GetGenericTypeDefinition() == typeof(Dictionary<,>)))
             {
                 // Dictionary
                 var keyType = type.GetGenericArguments()[0];

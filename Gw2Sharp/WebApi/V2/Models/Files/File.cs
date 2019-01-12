@@ -8,11 +8,11 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The file id.
         /// </summary>
-        public string Id { get; set; }
+        public string Id { get; set; } = string.Empty;
 
         /// <summary>
         /// The file icon.
         /// </summary>
-        public string Icon { get; set; }
+        public string Icon { get; set; } = string.Empty;
     }
 }

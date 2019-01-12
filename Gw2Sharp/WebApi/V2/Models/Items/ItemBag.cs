@@ -8,6 +8,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The bag details.
         /// </summary>
-        public ItemBagDetails Details { get; set; }
+        public ItemBagDetails Details { get; set; } = new ItemBagDetails();
     }
 }

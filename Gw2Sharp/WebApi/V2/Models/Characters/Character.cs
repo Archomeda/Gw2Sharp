@@ -18,29 +18,29 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The character name.
         /// </summary>
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
         /// <summary>
         /// The character's race.
         /// Can be resolved against <see cref="IGw2WebApiV2Client.Races"/>.
         /// </summary>
-        public string Race { get; set; }
+        public string Race { get; set; } = string.Empty;
 
         /// <summary>
         /// The character's gender.
         /// </summary>
-        public ApiEnum<Gender> Gender { get; set; }
+        public ApiEnum<Gender> Gender { get; set; } = new ApiEnum<Gender>();
 
         /// <summary>
         /// The character flags.
         /// </summary>
-        public IReadOnlyList<ApiEnum<CharacterFlag>> Flags { get; set; }
+        public IReadOnlyList<ApiEnum<CharacterFlag>> Flags { get; set; } = new List<ApiEnum<CharacterFlag>>();
 
         /// <summary>
         /// The character's profession.
         /// Can be resolved against <see cref="IGw2WebApiV2Client.Professions"/>.
         /// </summary>
-        public string Profession { get; set; }
+        public string Profession { get; set; } = string.Empty;
 
         /// <summary>
         /// The character's level.
@@ -71,7 +71,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The list of the character crafting disciplines.
         /// </summary>
-        public IReadOnlyList<CharacterCraftingDiscipline> Crafting { get; set; }
+        public IReadOnlyList<CharacterCraftingDiscipline> Crafting { get; set; } = new List<CharacterCraftingDiscipline>();
 
         /// <summary>
         /// The character's current active title.
@@ -83,55 +83,63 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// The character backstory answers.
         /// Each element can be resolved against <see cref="IBackstoryClient.Answers"/>.
         /// </summary>
-        public IReadOnlyList<string> Backstory { get; set; }
+        public IReadOnlyList<string> Backstory { get; set; } = new List<string>();
 
         /// <summary>
         /// The character's WvW abilities.
         /// Additionally requires scopes: progression.
+        /// If the required scopes are not met, this value is <c>null</c>.
         /// </summary>
-        public IReadOnlyList<CharacterWvwAbility> WvwAbilities { get; set; }
+        public IReadOnlyList<CharacterWvwAbility>? WvwAbilities { get; set; }
 
         /// <summary>
         /// The character specializations.
         /// Additionally requires scopes: builds.
+        /// If the required scopes are not met, this value is <c>null</c>.
         /// </summary>
-        public CharacterSpecializations Specializations { get; set; }
+        public CharacterSpecializations? Specializations { get; set; }
 
         /// <summary>
         /// The character skills.
         /// Additionally requires scopes: builds.
+        /// If the required scopes are not met, this value is <c>null</c>.
         /// </summary>
-        public CharacterSkills Skills { get; set; }
+        public CharacterSkills? Skills { get; set; }
 
         /// <summary>
         /// The list of the character equipment.
         /// Additionally requires scopes: builds and/or inventories.
+        /// If the required scopes are not met, this value is <c>null</c>.
         /// </summary>
-        public IReadOnlyList<CharacterEquipmentItem> Equipment { get; set; }
+        public IReadOnlyList<CharacterEquipmentItem>? Equipment { get; set; }
 
         /// <summary>
         /// The list of learned recipes.
         /// Additionally requires scopes: inventories.
+        /// If the required scopes are not met, this value is <c>null</c>.
         /// Each element can be resolved against <see cref="IGw2WebApiV2Client.Recipes"/>.
         /// </summary>
-        public IReadOnlyList<int> Recipes { get; set; }
+        public IReadOnlyList<int>? Recipes { get; set; }
 
         /// <summary>
         /// The character PvP equipment.
         /// Additionally requires scopes: builds.
+        /// If the required scopes are not met, this value is <c>null</c>.
         /// </summary>
-        public CharacterEquipmentPvp EquipmentPvp { get; set; }
+        public CharacterEquipmentPvp? EquipmentPvp { get; set; }
 
         /// <summary>
         /// The list of character trainings.
         /// Additionally requires scopes: builds.
+        /// If the required scopes are not met, this value is <c>null</c>.
         /// </summary>
-        public IReadOnlyList<CharacterTraining> Training { get; set; }
+        public IReadOnlyList<CharacterTraining>? Training { get; set; }
 
         /// <summary>
         /// The list of the character inventory bags.
         /// Additionally requires scopes: inventories.
+        /// If the required scopes are not met, this value is <c>null</c>.
         /// </summary>
-        public IReadOnlyList<CharacterInventoryBag> Bags { get; set; }
+        public IReadOnlyList<CharacterInventoryBag>? Bags { get; set; }
     }
 }

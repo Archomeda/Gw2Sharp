@@ -8,6 +8,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The gathering item type.
         /// </summary>
-        public ApiEnum<ItemGatheringType> Type { get; set; }
+        public ApiEnum<ItemGatheringType> Type { get; set; } = new ApiEnum<ItemGatheringType>();
     }
 }

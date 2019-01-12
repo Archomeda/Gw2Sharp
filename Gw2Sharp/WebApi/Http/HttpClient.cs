@@ -25,27 +25,30 @@ namespace Gw2Sharp.WebApi.Http
                 var message = new HttpRequestMessage(HttpMethod.Get, request.Url);
                 message.Headers.AddRange(request.RequestHeaders);
 
-                Task<HttpResponseMessage> task = null;
-                HttpResponseMessage responseMessage = null;
+                Task<HttpResponseMessage>? task = null;
+                HttpResponseMessage responseMessage;
+                HttpResponse response;
                 try
                 {
                     task = client.SendAsync(message, linkedCancellation.Token);
                     responseMessage = await task.ConfigureAwait(false);
+
+                    response = new HttpResponse(
+                        await responseMessage.Content.ReadAsStringAsync().ConfigureAwait(false),
+                        responseMessage.StatusCode,
+                        request.RequestHeaders.ToDictionary(kvp => kvp.Key, kvp => kvp.Value),
+                        responseMessage.Headers.ToDictionary(kvp => kvp.Key, kvp => kvp.Value.First())
+                    );
+
                 }
                 catch (Exception ex)
                 {
-                    if (task.IsCanceled)
+                    if (task == null)
+                        throw new RequestException(request, $"Failed to create task", ex);
+                    else if (task.IsCanceled)
                         throw new RequestCanceledException(request);
-                    throw new RequestException(request, $"Request error: {task.Exception?.Message}", ex);
+                    throw new RequestException(request, $"Request error: {task?.Exception?.Message}", ex);
                 }
-
-                var response = new HttpResponse
-                {
-                    Content = await responseMessage.Content.ReadAsStringAsync().ConfigureAwait(false),
-                    StatusCode = responseMessage.StatusCode,
-                    RequestHeaders = request.RequestHeaders.ToDictionary(kvp => kvp.Key, kvp => kvp.Value),
-                    ResponseHeaders = responseMessage.Headers.ToDictionary(kvp => kvp.Key, kvp => kvp.Value.First())
-                };
 
                 if (!responseMessage.IsSuccessStatusCode)
                     throw new UnexpectedStatusException(request, response);

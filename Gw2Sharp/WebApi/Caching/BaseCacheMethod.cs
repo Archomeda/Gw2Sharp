@@ -20,28 +20,36 @@ namespace Gw2Sharp.WebApi.Caching
         public void Dispose() => this.Dispose(true);
 
         /// <inheritdoc />
-        public abstract Task<bool> Has<T>(string category, object id);
+        public abstract Task<bool> Has<T>(string category, object id) where T : object;
 
         /// <inheritdoc />
-        public abstract Task<CacheItem<T>> Get<T>(string category, object id);
+        public virtual async Task<CacheItem<T>> Get<T>(string category, object id) where T : object =>
+            await this.GetOrNull<T>(category, id) ?? throw new KeyNotFoundException($"Cache item '{id}' in category '{category}' doesn't exist.");
 
         /// <inheritdoc />
-        public abstract Task Set<T>(CacheItem<T> item);
+        public abstract Task<CacheItem<T>?> GetOrNull<T>(string category, object id) where T : object;
 
         /// <inheritdoc />
-        public virtual Task Set<T>(string category, object id, T item, DateTime expiryTime)
+        public abstract Task Set<T>(CacheItem<T> item) where T : object;
+
+        /// <inheritdoc />
+        public virtual Task Set<T>(string category, object id, T item, DateTime expiryTime) where T : object
         {
-            if (category == null) throw new ArgumentNullException(nameof(category));
-            if (id == null) throw new ArgumentNullException(nameof(id));
+            if (category == null)
+                throw new ArgumentNullException(nameof(category));
+            if (id == null)
+                throw new ArgumentNullException(nameof(id));
 
             return this.Set(new CacheItem<T>(category, id, item, expiryTime));
         }
 
         /// <inheritdoc />
-        public virtual async Task<IDictionary<object, CacheItem<T>>> GetMany<T>(string category, IEnumerable<object> ids)
+        public virtual async Task<IDictionary<object, CacheItem<T>>> GetMany<T>(string category, IEnumerable<object> ids) where T : object
         {
-            if (category == null) throw new ArgumentNullException(nameof(category));
-            if (ids == null) throw new ArgumentNullException(nameof(ids));
+            if (category == null)
+                throw new ArgumentNullException(nameof(category));
+            if (ids == null)
+                throw new ArgumentNullException(nameof(ids));
 
             var cache = new Dictionary<object, CacheItem<T>>();
             foreach (object id in ids)
@@ -50,24 +58,26 @@ namespace Gw2Sharp.WebApi.Caching
         }
 
         /// <inheritdoc />
-        public virtual async Task SetMany<T>(IEnumerable<CacheItem<T>> items)
+        public virtual async Task SetMany<T>(IEnumerable<CacheItem<T>> items) where T : object
         {
-            if (items == null) throw new ArgumentNullException(nameof(items));
+            if (items == null)
+                throw new ArgumentNullException(nameof(items));
 
             foreach (var item in items)
                 await this.Set(item).ConfigureAwait(false);
         }
 
         /// <inheritdoc />
-        public virtual Task<CacheItem<T>> GetOrUpdate<T>(string category, object id, DateTime expiryTime, Func<Task<T>> updateFunc)
+        public virtual Task<CacheItem<T>> GetOrUpdate<T>(string category, object id, DateTime expiryTime, Func<Task<T>> updateFunc) where T : object
         {
             if (updateFunc == null)
                 throw new ArgumentNullException(nameof(updateFunc));
+
             return this.GetOrUpdate(category, id, async () => (await updateFunc().ConfigureAwait(false), expiryTime));
         }
 
         /// <inheritdoc />
-        public virtual async Task<CacheItem<T>> GetOrUpdate<T>(string category, object id, Func<Task<(T, DateTime)>> updateFunc)
+        public virtual async Task<CacheItem<T>> GetOrUpdate<T>(string category, object id, Func<Task<(T, DateTime)>> updateFunc) where T : object
         {
             if (category == null)
                 throw new ArgumentNullException(nameof(category));
@@ -76,25 +86,29 @@ namespace Gw2Sharp.WebApi.Caching
             if (updateFunc == null)
                 throw new ArgumentNullException(nameof(updateFunc));
 
-            var cache = await this.Get<T>(category, id).ConfigureAwait(false);
-            if (cache != null)
+            try
+            {
+                return await this.Get<T>(category, id).ConfigureAwait(false);
+            }
+            catch (KeyNotFoundException)
+            {
+                var (item, expiryTime) = await updateFunc().ConfigureAwait(false);
+                var cache = new CacheItem<T>(category, id, item, expiryTime);
+                await this.Set(cache).ConfigureAwait(false);
                 return cache;
-
-            var (item, expiryTime) = await updateFunc().ConfigureAwait(false);
-            cache = new CacheItem<T>(category, id, item, expiryTime);
-            await this.Set(cache).ConfigureAwait(false);
-            return cache;
+            }
         }
 
         /// <inheritdoc />
         public virtual Task<IList<CacheItem<T>>> GetOrUpdateMany<T>(
-            string category, 
-            IEnumerable<object> ids, 
+            string category,
+            IEnumerable<object> ids,
             DateTime expiryTime,
-            Func<IList<object>, Task<IDictionary<object, T>>> updateFunc)
+            Func<IList<object>, Task<IDictionary<object, T>>> updateFunc) where T : object
         {
             if (updateFunc == null)
                 throw new ArgumentNullException(nameof(updateFunc));
+
             return this.GetOrUpdateMany(category, ids, async list => (await updateFunc(list).ConfigureAwait(false), expiryTime));
         }
 
@@ -102,7 +116,7 @@ namespace Gw2Sharp.WebApi.Caching
         public virtual async Task<IList<CacheItem<T>>> GetOrUpdateMany<T>(
             string category,
             IEnumerable<object> ids,
-            Func<IList<object>, Task<(IDictionary<object, T>, DateTime)>> updateFunc)
+            Func<IList<object>, Task<(IDictionary<object, T>, DateTime)>> updateFunc) where T : object
         {
             if (category == null)
                 throw new ArgumentNullException(nameof(category));

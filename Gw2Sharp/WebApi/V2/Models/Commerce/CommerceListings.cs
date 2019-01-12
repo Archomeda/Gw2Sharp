@@ -16,11 +16,11 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The buy listings.
         /// </summary>
-        public IReadOnlyList<CommerceListing> Buys { get; set; }
+        public IReadOnlyList<CommerceListing> Buys { get; set; } = new List<CommerceListing>();
 
         /// <summary>
         /// The sell listings.
         /// </summary>
-        public IReadOnlyList<CommerceListing> Sells { get; set; }
+        public IReadOnlyList<CommerceListing> Sells { get; set; } = new List<CommerceListing>();
     }
 }

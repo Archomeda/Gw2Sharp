@@ -15,6 +15,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The emblem layer images.
         /// </summary>
-        public IReadOnlyList<string> Layers { get; set; }
+        public IReadOnlyList<string> Layers { get; set; } = new List<string>();
     }
 }

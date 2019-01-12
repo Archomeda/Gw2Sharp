@@ -10,6 +10,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// </summary>
     /// <typeparam name="TObject">The response object type.</typeparam>
     public abstract class BaseEndpointPaginatedBlobClient<TObject> : BaseEndpointClient<IReadOnlyList<TObject>>, IBlobClient<IReadOnlyList<TObject>>, IPaginatedClient<TObject>
+        where TObject : object
     {
         /// <summary>
         /// Creates a new base endpoint bulk with pagination support client.

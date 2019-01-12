@@ -14,6 +14,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The item attributes.
         /// </summary>
-        public ItemAttributes Attributes { get; set; }
+        public ItemAttributes Attributes { get; set; } = new ItemAttributes();
     }
 }

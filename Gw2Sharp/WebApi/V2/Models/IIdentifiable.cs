@@ -1,4 +1,4 @@
-﻿namespace Gw2Sharp.WebApi.V2.Models
+namespace Gw2Sharp.WebApi.V2.Models
 {
     /// <summary>
     /// An interface for usage with a type that is identifiable with a unique id.

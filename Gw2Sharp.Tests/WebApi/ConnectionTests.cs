@@ -1,14 +1,14 @@
+using System;
+using System.Collections.Generic;
+using System.Net;
+using System.Threading;
+using System.Threading.Tasks;
 using Gw2Sharp.WebApi;
 using Gw2Sharp.WebApi.Caching;
 using Gw2Sharp.WebApi.Http;
 using Gw2Sharp.WebApi.V2.Models;
 using NSubstitute;
 using NSubstitute.ExceptionExtensions;
-using System;
-using System.Collections.Generic;
-using System.Net;
-using System.Threading;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace Gw2Sharp.Tests.WebApi
@@ -29,7 +29,7 @@ namespace Gw2Sharp.Tests.WebApi
             var connection4 = new Connection(key, locale);
             var connection5 = new Connection(key, locale, httpClient, cacheMethod);
 
-            Assert.Null(connection1.AccessToken);
+            Assert.Equal(string.Empty, connection1.AccessToken);
             Assert.Equal(Locale.English, connection1.Locale);
             Assert.IsType<HttpClient>(connection1.HttpClient);
             Assert.IsType<MemoryCacheMethod>(connection1.CacheMethod);
@@ -39,7 +39,7 @@ namespace Gw2Sharp.Tests.WebApi
             Assert.IsType<HttpClient>(connection2.HttpClient);
             Assert.IsType<MemoryCacheMethod>(connection2.CacheMethod);
 
-            Assert.Null(connection3.AccessToken);
+            Assert.Equal(string.Empty, connection3.AccessToken);
             Assert.Equal(locale, connection3.Locale);
             Assert.IsType<HttpClient>(connection3.HttpClient);
             Assert.IsType<MemoryCacheMethod>(connection3.CacheMethod);

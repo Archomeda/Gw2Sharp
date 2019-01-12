@@ -8,6 +8,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The upgrade component details.
         /// </summary>
-        public ItemUpgradeComponentDetails Details { get; set; }
+        public ItemUpgradeComponentDetails Details { get; set; } = new ItemUpgradeComponentDetails();
     }
 }

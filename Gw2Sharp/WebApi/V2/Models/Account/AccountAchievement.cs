@@ -17,7 +17,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// Gets the unlocked achievement bits.
         /// If the achievement does not support bits, this value is <c>null</c>.
         /// </summary>
-        public IReadOnlyList<int> Bits { get; set; }
+        public IReadOnlyList<int>? Bits { get; set; }
 
         /// <summary>
         /// The current achievement progression.

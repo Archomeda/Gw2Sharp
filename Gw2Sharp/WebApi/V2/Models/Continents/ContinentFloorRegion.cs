@@ -17,7 +17,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The region name.
         /// </summary>
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
         /// <summary>
         /// The region label coordinates.
@@ -33,6 +33,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The region maps.
         /// </summary>
-        public IReadOnlyDictionary<int, ContinentFloorRegionMap> Maps { get; set; }
+        public IReadOnlyDictionary<int, ContinentFloorRegionMap> Maps { get; set; } = new Dictionary<int, ContinentFloorRegionMap>();
     }
 }

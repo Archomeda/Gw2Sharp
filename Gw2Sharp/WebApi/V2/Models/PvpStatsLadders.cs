@@ -7,14 +7,14 @@ namespace Gw2Sharp.WebApi.V2.Models
     {
         /// <summary>
         /// The unranked ladder.
-        /// If no unranked ladder is available, this value is null.
+        /// If no unranked ladder is available, this value is <c>null</c>.
         /// </summary>
-        public PvpStatsAggregate Unranked { get; set; }
+        public PvpStatsAggregate? Unranked { get; set; }
 
         /// <summary>
         /// The ranked ladder.
-        /// If no ranked ladder is available, this value is null.
+        /// If no ranked ladder is available, this value is <c>null</c>.
         /// </summary>
-        public PvpStatsAggregate Ranked { get; set; }
+        public PvpStatsAggregate? Ranked { get; set; }
     }
 }

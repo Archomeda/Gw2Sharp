@@ -17,7 +17,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The account name.
         /// </summary>
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
         /// <summary>
         /// Total play time of the account.
@@ -34,13 +34,13 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// The list of guilds that this account is a member of.
         /// Each element can be resolved against <see cref="IGw2WebApiV2Client.Guild"/>.
         /// </summary>
-        public IReadOnlyList<Guid> Guilds { get; set; }
+        public IReadOnlyList<Guid> Guilds { get; set; } = new List<Guid>();
 
         /// <summary>
         /// The list of guilds that this account is a leader of.
         /// Each element can be resolved against <see cref="IGw2WebApiV2Client.Guild"/>.
         /// </summary>
-        public IReadOnlyList<Guid> GuildLeader { get; set; }
+        public IReadOnlyList<Guid> GuildLeader { get; set; } = new List<Guid>();
 
         /// <summary>
         /// The account creation date.
@@ -50,7 +50,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The list of content that this account has access to.
         /// </summary>
-        public IReadOnlyList<ApiEnum<GameAccess>> Access { get; set; }
+        public IReadOnlyList<ApiEnum<GameAccess>> Access { get; set; } = new List<ApiEnum<GameAccess>>();
 
         /// <summary>
         /// Whether this account has a commander tag unlocked or not.

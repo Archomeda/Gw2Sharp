@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using Gw2Sharp.WebApi.V2.Clients;
 
@@ -12,7 +11,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The guild rank id.
         /// </summary>
-        public string Id { get; set; }
+        public string Id { get; set; } = string.Empty;
 
         /// <summary>
         /// The guild rank order.
@@ -23,11 +22,11 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// The guild rank permissions.
         /// Each element can be resolved against <see cref="IGuildClient.Permissions"/>.
         /// </summary>
-        public IReadOnlyList<string> Permissions { get; set; }
+        public IReadOnlyList<string> Permissions { get; set; } = new List<string>();
 
         /// <summary>
         /// The guild rank icon.
         /// </summary>
-        public string Icon { get; set; }
+        public string Icon { get; set; } = string.Empty;
     }
 }

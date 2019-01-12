@@ -8,6 +8,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The armor details.
         /// </summary>
-        public ItemArmorDetails Details { get; set; }
+        public ItemArmorDetails Details { get; set; } = new ItemArmorDetails();
     }
 }

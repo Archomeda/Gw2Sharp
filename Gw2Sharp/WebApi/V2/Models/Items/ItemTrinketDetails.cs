@@ -10,18 +10,18 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The item trinket type.
         /// </summary>
-        public ApiEnum<ItemTrinketType> Type { get; set; }
+        public ApiEnum<ItemTrinketType> Type { get; set; } = new ApiEnum<ItemTrinketType>();
 
         /// <summary>
         /// The item infusion slots.
         /// </summary>
-        public IReadOnlyList<ItemInfusionSlot> InfusionSlots { get; set; }
+        public IReadOnlyList<ItemInfusionSlot> InfusionSlots { get; set; } = new List<ItemInfusionSlot>();
 
         /// <summary>
         /// The item infix upgrade.
         /// If the item does not have a infix upgrade, this value is <c>null</c>.
         /// </summary>
-        public ItemInfixUpgrade InfixUpgrade { get; set; }
+        public ItemInfixUpgrade? InfixUpgrade { get; set; }
 
         /// <summary>
         /// The id of the suffix item.
@@ -39,6 +39,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// The item stat choices.
         /// Each element can be resolved against <see cref="IGw2WebApiV2Client.ItemStats"/>.
         /// </summary>
-        public IReadOnlyList<int> StatChoices { get; set; }
+        public IReadOnlyList<int> StatChoices { get; set; } = new List<int>();
     }
 }

@@ -15,27 +15,27 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The color name.
         /// </summary>
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
         /// <summary>
         /// The color base RGB.
         /// </summary>
-        public IReadOnlyList<int> BaseRgb { get; set; }
+        public IReadOnlyList<int> BaseRgb { get; set; } = new List<int>();
 
         /// <summary>
         /// The color cloth material.
         /// </summary>
-        public ColorMaterial Cloth { get; set; }
+        public ColorMaterial Cloth { get; set; } = new ColorMaterial();
 
         /// <summary>
         /// The color leather material.
         /// </summary>
-        public ColorMaterial Leather { get; set; }
+        public ColorMaterial Leather { get; set; } = new ColorMaterial();
 
         /// <summary>
         /// The color metal meterial.
         /// </summary>
-        public ColorMaterial Metal { get; set; }
+        public ColorMaterial Metal { get; set; } = new ColorMaterial();
 
         /// <summary>
         /// The dye item that unlocks this color.
@@ -46,6 +46,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The list of color categories.
         /// </summary>
-        public IReadOnlyList<string> Categories { get; set; }
+        public IReadOnlyList<string> Categories { get; set; } = new List<string>();
     }
 }

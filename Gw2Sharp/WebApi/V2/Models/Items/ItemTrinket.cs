@@ -8,6 +8,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The trinket details.
         /// </summary>
-        public ItemTrinketDetails Details { get; set; }
+        public ItemTrinketDetails Details { get; set; } = new ItemTrinketDetails();
     }
 }

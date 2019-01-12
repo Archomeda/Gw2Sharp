@@ -35,6 +35,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The precalculated RGB values.
         /// </summary>
-        public IReadOnlyList<int> Rgb { get; set; }
+        public IReadOnlyList<int> Rgb { get; set; } = new List<int>();
     }
 }

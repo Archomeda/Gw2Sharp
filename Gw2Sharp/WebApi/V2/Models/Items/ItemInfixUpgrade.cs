@@ -17,11 +17,11 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The infix upgrade item attributes.
         /// </summary>
-        public IReadOnlyList<ItemUpgradeAttribute> Attributes { get; set; }
+        public IReadOnlyList<ItemUpgradeAttribute> Attributes { get; set; } = new List<ItemUpgradeAttribute>();
 
         /// <summary>
         /// The infix upgrade buff.
         /// </summary>
-        public ItemBuff Buff { get; set; }
+        public ItemBuff Buff { get; set; } = new ItemBuff();
     }
 }

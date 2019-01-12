@@ -8,6 +8,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The new message of the day.
         /// </summary>
-        public string Motd { get; set; }
+        public string Motd { get; set; } = string.Empty;
     }
 }

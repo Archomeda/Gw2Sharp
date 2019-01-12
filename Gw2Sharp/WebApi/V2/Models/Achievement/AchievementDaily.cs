@@ -16,11 +16,11 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The daily achievement level requirement.
         /// </summary>
-        public AchievementDailyLevel Level { get; set; }
+        public AchievementDailyLevel Level { get; set; } = new AchievementDailyLevel();
 
         /// <summary>
         /// The daily achievement access requirement.
         /// </summary>
-        public IReadOnlyList<ApiEnum<GameAccess>> RequiredAccess { get; set; }
+        public IReadOnlyList<ApiEnum<GameAccess>> RequiredAccess { get; set; } = new List<ApiEnum<GameAccess>>();
     }
 }

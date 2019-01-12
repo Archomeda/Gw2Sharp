@@ -21,7 +21,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// The material binding.
         /// If the material is not bound, this value is <c>null</c>.
         /// </summary>
-        public ApiEnum<ItemBinding> Binding { get; set; }
+        public ApiEnum<ItemBinding>? Binding { get; set; }
 
         /// <summary>
         /// The stored amount of this material.

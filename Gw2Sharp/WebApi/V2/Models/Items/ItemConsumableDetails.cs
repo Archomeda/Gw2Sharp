@@ -11,12 +11,12 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The consumable item type.
         /// </summary>
-        public ApiEnum<ItemConsumableType> Type { get; set; }
+        public ApiEnum<ItemConsumableType> Type { get; set; } = new ApiEnum<ItemConsumableType>();
 
         /// <summary>
         /// The item description.
         /// </summary>
-        public string Description { get; set; }
+        public string Description { get; set; } = string.Empty;
 
         /// <summary>
         /// The item duration in milliseconds.
@@ -28,7 +28,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// The item unlock type for unlock consumables, check <see cref="Type"/>.
         /// If the item is not an unlock consumable, this value is <c>null</c>.
         /// </summary>
-        public ApiEnum<ItemUnlockType> UnlockType { get; set; }
+        public ApiEnum<ItemUnlockType>? UnlockType { get; set; }
 
         /// <summary>
         /// The dye id for dye unlocks, check <see cref="UnlockType"/>.
@@ -61,13 +61,13 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// The effect tyype name of the item.
         /// If the item does not apply an effect, this value is <c>null</c>.
         /// </summary>
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         /// <summary>
         /// The list of skin ids which the item unlocks.
         /// If the item does not unlock skins, this value is <c>null</c>.
         /// Each element can be resolved against <see cref="IGw2WebApiV2Client.Skins"/>.
         /// </summary>
-        public IReadOnlyList<int> Skins { get; set; }
+        public IReadOnlyList<int>? Skins { get; set; }
     }
 }

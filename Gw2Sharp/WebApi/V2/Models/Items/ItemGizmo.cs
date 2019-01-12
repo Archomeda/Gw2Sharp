@@ -8,6 +8,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The gizmo details.
         /// </summary>
-        public ItemGizmoDetails Details { get; set; }
+        public ItemGizmoDetails Details { get; set; } = new ItemGizmoDetails();
     }
 }

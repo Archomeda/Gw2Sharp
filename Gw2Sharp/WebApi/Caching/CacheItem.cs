@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.Caching
@@ -55,17 +55,15 @@ namespace Gw2Sharp.WebApi.Caching
         }
 
         /// <inheritdoc />
-        public override bool Equals(object obj)
-        {
-            return this.Equals(obj as CacheItem);
-        }
+        public override bool Equals(object obj) =>
+            obj is CacheItem ? this.Equals((CacheItem)obj) : false;
 
         /// <summary>
         /// Indicates whether the current object is equal to another object of the same type.
         /// </summary>
         /// <param name="other">An object to compare with this object.</param>
         /// <returns>
-        /// true if the current object is equal to the <paramref name="other" /> parameter; otherwise, false.
+        /// <c>true</c> if the current object is equal to the <paramref name="other" /> parameter; otherwise, <c>false</c>.
         /// </returns>
         public bool Equals(CacheItem other)
         {
@@ -80,7 +78,7 @@ namespace Gw2Sharp.WebApi.Caching
     /// <summary>
     /// A generic cache item.
     /// </summary>
-    public class CacheItem<T> : CacheItem, IEquatable<CacheItem<T>>
+    public class CacheItem<T> : CacheItem, IEquatable<CacheItem<T>> where T : object
     {
         /// <summary>
         /// Creates a new cache item.
@@ -94,12 +92,10 @@ namespace Gw2Sharp.WebApi.Caching
         /// <summary>
         /// The cache item.
         /// </summary>
-        public new T Item { get => (T)base.Item; }
+        public new T Item => (T)base.Item;
 
         /// <inheritdoc />
-        public bool Equals(CacheItem<T> other)
-        {
-            return this.Equals(other as CacheItem);
-        }
+        public bool Equals(CacheItem<T> other) =>
+            this.Equals(other as CacheItem);
     }
 }

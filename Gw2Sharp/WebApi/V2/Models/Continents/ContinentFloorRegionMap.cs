@@ -17,7 +17,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The map name.
         /// </summary>
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
         /// <summary>
         /// The map minimum level.
@@ -54,32 +54,32 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The map points of interest.
         /// </summary>
-        public IReadOnlyDictionary<int, ContinentFloorRegionMapPoi> PointsOfInterest { get; set; }
+        public IReadOnlyDictionary<int, ContinentFloorRegionMapPoi> PointsOfInterest { get; set; } = new Dictionary<int, ContinentFloorRegionMapPoi>();
 
         /// <summary>
         /// The map tasks.
         /// </summary>
-        public IReadOnlyDictionary<int, ContinentFloorRegionMapTask> Tasks { get; set; }
+        public IReadOnlyDictionary<int, ContinentFloorRegionMapTask> Tasks { get; set; } = new Dictionary<int, ContinentFloorRegionMapTask>();
 
         /// <summary>
         /// The map skill challenges (a.k.a. hero points).
         /// </summary>
-        public IReadOnlyList<ContinentFloorRegionMapSkillChallenge> SkillChallenges { get; set; }
+        public IReadOnlyList<ContinentFloorRegionMapSkillChallenge> SkillChallenges { get; set; } = new List<ContinentFloorRegionMapSkillChallenge>();
 
         /// <summary>
         /// The map sectors.
         /// </summary>
-        public IReadOnlyDictionary<int, ContinentFloorRegionMapSector> Sectors { get; set; }
+        public IReadOnlyDictionary<int, ContinentFloorRegionMapSector> Sectors { get; set; } = new Dictionary<int, ContinentFloorRegionMapSector>();
 
         // Adventures are listed as an array on the API, but are always empty...
         ///// <summary>
         ///// The map adventures.
         ///// </summary>
-        //public IReadOnlyList<int, ContinentFloorRegionMapAdventure> Adventures { get; set; }
+        //public IReadOnlyList<ContinentFloorRegionMapAdventure> Adventures { get; set; } = new List<ContinentFloorRegionMapAdventure>();
 
         /// <summary>
         /// The map mastery points.
         /// </summary>
-        public IReadOnlyList<ContinentFloorRegionMapMasteryPoint> MasteryPoints { get; set; }
+        public IReadOnlyList<ContinentFloorRegionMapMasteryPoint> MasteryPoints { get; set; } = new List<ContinentFloorRegionMapMasteryPoint>();
     }
 }

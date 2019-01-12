@@ -8,6 +8,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The container details.
         /// </summary>
-        public ItemContainerDetails Details { get; set; }
+        public ItemContainerDetails Details { get; set; } = new ItemContainerDetails();
     }
 }

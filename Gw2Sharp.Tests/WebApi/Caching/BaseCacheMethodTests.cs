@@ -1,9 +1,9 @@
-﻿using Gw2Sharp.Tests.Helpers;
-using Gw2Sharp.WebApi.Caching;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Gw2Sharp.Tests.Helpers;
+using Gw2Sharp.WebApi.Caching;
 using Xunit;
 
 namespace Gw2Sharp.Tests.WebApi.Caching
@@ -16,7 +16,8 @@ namespace Gw2Sharp.Tests.WebApi.Caching
         public async Task CategoryDoesNotExistTest()
         {
             Assert.False(await this.cacheMethod.Has<int>("unknown", "unknown"));
-            Assert.Null(await this.cacheMethod.Get<int>("unknown", "unknown"));
+            Assert.Null(await this.cacheMethod.GetOrNull<int>("unknown", "unknown"));
+            await Assert.ThrowsAsync<KeyNotFoundException>(() => this.cacheMethod.Get<int>("unknown", "unknown"));
         }
 
         [Fact]
@@ -30,7 +31,8 @@ namespace Gw2Sharp.Tests.WebApi.Caching
 
             await this.cacheMethod.Flush();
             Assert.False(await this.cacheMethod.Has<int>(cacheItem.Category, cacheItem.Id));
-            Assert.Null(await this.cacheMethod.Get<int>(cacheItem.Category, cacheItem.Id));
+            Assert.Null(await this.cacheMethod.GetOrNull<int>(cacheItem.Category, cacheItem.Id));
+            await Assert.ThrowsAsync<KeyNotFoundException>(() => this.cacheMethod.Get<int>(cacheItem.Category, cacheItem.Id));
         }
 
         [Fact]
@@ -108,7 +110,8 @@ namespace Gw2Sharp.Tests.WebApi.Caching
 
             await this.cacheMethod.Set(new CacheItem<int>(category, "test", 42, DateTime.Now.AddMinutes(30)));
             Assert.False(await this.cacheMethod.Has<int>(category, "unknown"));
-            Assert.Null(await this.cacheMethod.Get<int>(category, "unknown"));
+            Assert.Null(await this.cacheMethod.GetOrNull<int>(category, "unknown"));
+            await Assert.ThrowsAsync<KeyNotFoundException>(() => this.cacheMethod.Get<int>(category, "unknown"));
         }
 
         [Fact]
@@ -118,7 +121,8 @@ namespace Gw2Sharp.Tests.WebApi.Caching
 
             await this.cacheMethod.Set(cacheItem);
             Assert.False(await this.cacheMethod.Has<int>(cacheItem.Category, cacheItem.Id));
-            Assert.Null(await this.cacheMethod.Get<int>(cacheItem.Category, cacheItem.Id));
+            Assert.Null(await this.cacheMethod.GetOrNull<int>(cacheItem.Category, cacheItem.Id));
+            await Assert.ThrowsAsync<KeyNotFoundException>(() => this.cacheMethod.Get<int>(cacheItem.Category, cacheItem.Id));
         }
 
         [Fact]
@@ -133,7 +137,8 @@ namespace Gw2Sharp.Tests.WebApi.Caching
             await Task.Delay(2000);
 
             Assert.False(await this.cacheMethod.Has<int>(cacheItem.Category, cacheItem.Id));
-            Assert.Null(await this.cacheMethod.Get<int>(cacheItem.Category, cacheItem.Id));
+            Assert.Null(await this.cacheMethod.GetOrNull<int>(cacheItem.Category, cacheItem.Id));
+            await Assert.ThrowsAsync<KeyNotFoundException>(() => this.cacheMethod.Get<int>(cacheItem.Category, cacheItem.Id));
         }
 
         [Fact]

@@ -8,6 +8,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The consumable details.
         /// </summary>
-        public ItemConsumableDetails Details { get; set; }
+        public ItemConsumableDetails Details { get; set; } = new ItemConsumableDetails();
     }
 }

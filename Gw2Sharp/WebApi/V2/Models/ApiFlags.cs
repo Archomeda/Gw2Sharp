@@ -16,6 +16,11 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// Creates new API flags.
         /// </summary>
+        protected ApiFlags() { }
+
+        /// <summary>
+        /// Creates new API flags.
+        /// </summary>
         /// <param name="list">The list of enum values.</param>
         protected ApiFlags(IReadOnlyList<ApiEnum> list)
         {
@@ -32,23 +37,20 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The actual flags as interpreted by the library.
         /// </summary>
-        public IReadOnlyList<ApiEnum> List { get; protected set; }
+        public IReadOnlyList<ApiEnum> List { get; protected set; } = new List<ApiEnum>();
 
         /// <summary>
         /// Gets the list of unknown enum values.
         /// </summary>
-        public IReadOnlyList<ApiEnum> UnknownList { get; protected set; }
+        public IReadOnlyList<ApiEnum> UnknownList { get; protected set; } = new List<ApiEnum>();
 
         /// <inheritdoc />
         public override bool Equals(object obj) =>
-            obj is ApiFlags other ? this.List.SequenceEqual(other.List) : false;
+            obj is ApiFlags other ? this.Equals(other) : false;
 
         /// <inheritdoc />
-        public bool Equals(ApiFlags other)
-        {
-            return other != null &&
-                EqualityComparer<IReadOnlyList<ApiEnum>>.Default.Equals(this.List, other.List);
-        }
+        public bool Equals(ApiFlags other) =>
+            !(other is null) && this.List.SequenceEqual(other.List);
 
         /// <inheritdoc />
         public override int GetHashCode()
@@ -81,6 +83,11 @@ namespace Gw2Sharp.WebApi.V2.Models
     [JsonConverter(typeof(ApiFlagsConverter))]
     public class ApiFlags<T> : ApiFlags, IEquatable<ApiFlags<T>>, IEnumerable<ApiEnum<T>> where T : Enum
     {
+        /// <summary>
+        /// Creates new API flags.
+        /// </summary>
+        public ApiFlags() : base() { }
+
         /// <summary>
         /// Creates new API flags.
         /// </summary>
@@ -128,19 +135,12 @@ namespace Gw2Sharp.WebApi.V2.Models
         public static implicit operator List<ApiEnum<T>>(ApiFlags<T> e) => e.List.ToList();
 
         /// <inheritdoc />
-        public override bool Equals(object obj)
-        {
-            var other = obj as ApiFlags<T>;
-            return other == null ? false : this.Equals(other);
-        }
+        public override bool Equals(object obj) =>
+            obj is ApiFlags<T> other ? this.Equals(other) : false;
 
         /// <inheritdoc />
-        public bool Equals(ApiFlags<T> other)
-        {
-            return other != null &&
-                base.Equals(other) &&
-                EqualityComparer<IReadOnlyList<ApiEnum<T>>>.Default.Equals(this.List, other.List);
-        }
+        public bool Equals(ApiFlags<T> other) =>
+            !(other is null) && this.List.SequenceEqual(other.List);
 
         /// <inheritdoc />
         public override int GetHashCode()

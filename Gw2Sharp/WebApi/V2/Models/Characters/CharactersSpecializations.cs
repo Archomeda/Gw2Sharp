@@ -8,6 +8,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The character specializations.
         /// </summary>
-        public CharacterSpecializations Specializations { get; set; }
+        public CharacterSpecializations Specializations { get; set; } = new CharacterSpecializations();
     }
 }

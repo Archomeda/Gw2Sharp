@@ -14,6 +14,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The cat hint.
         /// </summary>
-        public string Hint { get; set; }
+        public string Hint { get; set; } = string.Empty;
     }
 }

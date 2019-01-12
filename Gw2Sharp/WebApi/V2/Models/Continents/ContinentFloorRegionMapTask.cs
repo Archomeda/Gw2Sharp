@@ -15,7 +15,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The task objective.
         /// </summary>
-        public string Objective { get; set; }
+        public string Objective { get; set; } = string.Empty;
 
         /// <summary>
         /// The task level.
@@ -30,11 +30,11 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The task bounds.
         /// </summary>
-        public IReadOnlyList<Coordinates2> Bounds { get; set; }
+        public IReadOnlyList<Coordinates2> Bounds { get; set; } = new List<Coordinates2>();
 
         /// <summary>
         /// The sector chat link.
         /// </summary>
-        public string ChatLink { get; set; }
+        public string ChatLink { get; set; } = string.Empty;
     }
 }

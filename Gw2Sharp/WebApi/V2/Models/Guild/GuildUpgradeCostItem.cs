@@ -8,7 +8,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The cost name.
         /// </summary>
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
         /// <summary>
         /// The cost item id.

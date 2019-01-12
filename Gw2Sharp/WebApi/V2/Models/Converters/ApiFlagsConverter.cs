@@ -29,7 +29,7 @@ namespace Gw2Sharp.WebApi.V2.Models.Converters
             if (typeInfo.IsGenericType && typeInfo.GenericTypeArguments.Length > 0)
                 enumType = typeInfo.GenericTypeArguments[0];
             else
-                return null;
+                return null!;
             var apiEnumType = typeof(ApiEnum<>).MakeGenericType(enumType);
 
             var flags = jArray.Select(e =>

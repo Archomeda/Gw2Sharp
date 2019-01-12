@@ -1,8 +1,8 @@
-using Gw2Sharp.WebApi.Caching;
-using Gw2Sharp.WebApi.Http;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Gw2Sharp.WebApi.Caching;
+using Gw2Sharp.WebApi.Http;
 
 namespace Gw2Sharp.WebApi
 {
@@ -51,6 +51,6 @@ namespace Gw2Sharp.WebApi
         /// <exception cref="RequestException">Thrown when a generic request error occurs (<seealso cref="IHttpClient.Request"/>).</exception>
         /// <exception cref="RequestCanceledException">Thrown when the request is canceled by the user or because of a timeout (<seealso cref="IHttpClient.Request"/>).</exception>
         /// <exception cref="UnexpectedStatusException">Thrown when the server returns a non-successful HTTP status code (<seealso cref="IHttpClient.Request"/>).</exception>
-        Task<IHttpResponse<TResponse>> Request<TResponse>(Uri requestUri, CancellationToken cancellationToken);
+        Task<IHttpResponse<TResponse>> Request<TResponse>(Uri requestUri, CancellationToken cancellationToken) where TResponse : object;
     }
 }

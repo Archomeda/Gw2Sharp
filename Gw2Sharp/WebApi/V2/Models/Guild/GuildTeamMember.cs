@@ -8,11 +8,11 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The member name.
         /// </summary>
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
         /// <summary>
         /// The member role.
         /// </summary>
-        public ApiEnum<GuildTeamMemberRole> Role { get; set; }
+        public ApiEnum<GuildTeamMemberRole> Role { get; set; } = new ApiEnum<GuildTeamMemberRole>();
     }
 }

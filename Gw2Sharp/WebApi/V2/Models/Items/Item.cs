@@ -40,18 +40,18 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The item name.
         /// </summary>
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
         /// <summary>
         /// The item description.
         /// If the item does not have a description, this value is <c>null</c>.
         /// </summary>
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
         /// <summary>
         /// The item type.
         /// </summary>
-        public ApiEnum<ItemType> Type { get; set; }
+        public ApiEnum<ItemType> Type { get; set; } = new ApiEnum<ItemType>();
 
         /// <summary>
         /// The required minimum level.
@@ -61,7 +61,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The item rarity.
         /// </summary>
-        public ApiEnum<ItemRarity> Rarity { get; set; }
+        public ApiEnum<ItemRarity> Rarity { get; set; } = new ApiEnum<ItemRarity>();
 
         /// <summary>
         /// The item vendor value.
@@ -78,17 +78,17 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The item game types.
         /// </summary>
-        public IReadOnlyList<ApiEnum<ItemGameType>> GameTypes { get; set; }
+        public IReadOnlyList<ApiEnum<ItemGameType>> GameTypes { get; set; } = new List<ApiEnum<ItemGameType>>();
 
         /// <summary>
         /// The item flags.
         /// </summary>
-        public IReadOnlyList<ApiEnum<ItemFlag>> Flags { get; set; }
+        public IReadOnlyList<ApiEnum<ItemFlag>> Flags { get; set; } = new List<ApiEnum<ItemFlag>>();
 
         /// <summary>
         /// The item restrictions.
         /// </summary>
-        public IReadOnlyList<ApiEnum<ItemRestriction>> Restrictions { get; set; }
+        public IReadOnlyList<ApiEnum<ItemRestriction>> Restrictions { get; set; } = new List<ApiEnum<ItemRestriction>>();
 
         /// <summary>
         /// The item id.
@@ -98,11 +98,11 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The item chat link.
         /// </summary>
-        public string ChatLink { get; set; }
+        public string ChatLink { get; set; } = string.Empty;
 
         /// <summary>
         /// The item icon.
         /// </summary>
-        public string Icon { get; set; }
+        public string Icon { get; set; } = string.Empty;
     }
 }

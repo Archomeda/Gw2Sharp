@@ -8,7 +8,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The region id.
         /// </summary>
-        public string Region { get; set; }
+        public string Region { get; set; } = string.Empty;
 
         /// <summary>
         /// The total amount of mastery points spent for this region.

@@ -8,16 +8,16 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The guild permission id.
         /// </summary>
-        public string Id { get; set; }
+        public string Id { get; set; } = string.Empty;
 
         /// <summary>
         /// The guild permission name.
         /// </summary>
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
         /// <summary>
         /// The guild permission description.
         /// </summary>
-        public string Description { get; set; }
+        public string Description { get; set; } = string.Empty;
     }
 }

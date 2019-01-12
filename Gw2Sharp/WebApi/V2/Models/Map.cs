@@ -1,6 +1,6 @@
+using System.Collections.Generic;
 using Gw2Sharp.WebApi.V2.Models.Converters;
 using Newtonsoft.Json;
-using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Models
 {
@@ -12,7 +12,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The map name.
         /// </summary>
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
         /// <summary>
         /// The minimum level.
@@ -32,12 +32,12 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The map type.
         /// </summary>
-        public ApiEnum<MapType> Type { get; set; }
+        public ApiEnum<MapType> Type { get; set; } = new ApiEnum<MapType>();
 
         /// <summary>
         /// The available map floors.
         /// </summary>
-        public IReadOnlyList<int> Floors { get; set; }
+        public IReadOnlyList<int> Floors { get; set; } = new List<int>();
 
         /// <summary>
         /// The region id.
@@ -47,7 +47,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The region name.
         /// </summary>
-        public string RegionName { get; set; }
+        public string RegionName { get; set; } = string.Empty;
 
         /// <summary>
         /// The continent id.
@@ -57,7 +57,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The continent name.
         /// </summary>
-        public string ContinentName { get; set; }
+        public string ContinentName { get; set; } = string.Empty;
 
         /// <summary>
         /// The map rectangle.

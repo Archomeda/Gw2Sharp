@@ -13,6 +13,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The achievement reward type.
         /// </summary>
-        public ApiEnum<AchievementRewardType> Type { get; set; }
+        public ApiEnum<AchievementRewardType> Type { get; set; } = new ApiEnum<AchievementRewardType>();
     }
 }

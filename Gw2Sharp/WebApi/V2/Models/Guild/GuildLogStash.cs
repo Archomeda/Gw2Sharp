@@ -8,7 +8,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The stash operation.
         /// </summary>
-        public ApiEnum<GuildLogStashOperation> Operation { get; set; }
+        public ApiEnum<GuildLogStashOperation> Operation { get; set; } = new ApiEnum<GuildLogStashOperation>();
 
         /// <summary>
         /// The item id.

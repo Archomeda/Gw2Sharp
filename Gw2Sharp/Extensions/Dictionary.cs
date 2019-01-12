@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 
@@ -17,10 +17,8 @@ namespace Gw2Sharp.Extensions
         /// <typeparam name="TValue">The type of values in the dictionary.</typeparam>
         /// <param name="enumerable">The enumerable.</param>
         /// <returns>A shallow copy in the form of a dictionary.</returns>
-        public static IDictionary<TKey, TValue> ShallowCopy<TKey, TValue>(this IEnumerable<KeyValuePair<TKey, TValue>> enumerable) 
-        {
-            return enumerable.ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
-        }
+        public static IDictionary<TKey, TValue> ShallowCopy<TKey, TValue>(this IEnumerable<KeyValuePair<TKey, TValue>> enumerable) =>
+            enumerable.ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
 
         /// <summary>
         /// Wraps a dictionary into a read-only dictionary by calling the <see cref="ReadOnlyDictionary{TKey, TValue}"/> constructor.
@@ -29,9 +27,7 @@ namespace Gw2Sharp.Extensions
         /// <typeparam name="TValue">The type of values in the dictionary.</typeparam>
         /// <param name="dict">The dictionary.</param>
         /// <returns>The read-only dictionary.</returns>
-        public static IReadOnlyDictionary<TKey, TValue> AsReadOnly<TKey, TValue>(this IDictionary<TKey, TValue> dict)
-        {
-            return new ReadOnlyDictionary<TKey, TValue>(dict);
-        }
+        public static IReadOnlyDictionary<TKey, TValue> AsReadOnly<TKey, TValue>(this IDictionary<TKey, TValue> dict) =>
+            new ReadOnlyDictionary<TKey, TValue>(dict);
     }
 }

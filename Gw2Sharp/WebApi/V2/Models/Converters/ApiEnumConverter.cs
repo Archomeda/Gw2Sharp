@@ -27,7 +27,7 @@ namespace Gw2Sharp.WebApi.V2.Models.Converters
             if (typeInfo.IsGenericType && typeInfo.GenericTypeArguments.Length > 0)
                 enumType = typeInfo.GenericTypeArguments[0];
             else
-                return null;
+                return null!;
 
             string rawValue = jValue.ToObject<string>();
             var value = rawValue.ParseEnum(enumType);

@@ -13,7 +13,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The cost type.
         /// </summary>
-        public ApiEnum<GuildUpgradeCostType> Type { get; set; }
+        public ApiEnum<GuildUpgradeCostType> Type { get; set; } = new ApiEnum<GuildUpgradeCostType>();
 
         /// <summary>
         /// The amount needed.

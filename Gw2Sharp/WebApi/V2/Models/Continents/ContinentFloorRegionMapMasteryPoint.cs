@@ -18,6 +18,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The mastery point region.
         /// </summary>
-        public string Region { get; set; }
+        public string Region { get; set; } = string.Empty;
     }
 }

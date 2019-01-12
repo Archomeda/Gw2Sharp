@@ -8,7 +8,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The item upgrade attribute type.
         /// </summary>
-        public ApiEnum<ItemAttributeType> Attribute { get; set; }
+        public ApiEnum<ItemAttributeType> Attribute { get; set; } = new ApiEnum<ItemAttributeType>();
 
         /// <summary>
         /// The modifier value.

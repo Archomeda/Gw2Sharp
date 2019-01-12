@@ -1,10 +1,10 @@
-using Gw2Sharp.Extensions;
-using Gw2Sharp.WebApi.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http.Headers;
 using System.Text.RegularExpressions;
+using Gw2Sharp.Extensions;
+using Gw2Sharp.WebApi.Http;
 
 namespace Gw2Sharp.WebApi.V2
 {
@@ -17,20 +17,11 @@ namespace Gw2Sharp.WebApi.V2
         private static readonly Regex LinkUriRegex = new Regex("<(.+)>", RegexOptions.IgnoreCase);
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ApiV2Response{T}"/> class.
-        /// </summary>
-        public ApiV2Response() { }
-
-        /// <summary>
         /// Initializes a new instance of the <see cref="ApiV2Response{T}"/> class with a <see cref="IHttpResponse{T}"/> as base.
         /// </summary>
         /// <param name="response">The base response.</param>
-        public ApiV2Response(IHttpResponse<T> response)
+        public ApiV2Response(IHttpResponse<T> response) : base(response.Content, response.StatusCode, response.RequestHeaders, response.ResponseHeaders)
         {
-            this.Content = response.Content;
-            this.StatusCode = response.StatusCode;
-            this.RequestHeaders = response.RequestHeaders?.ShallowCopy().AsReadOnly();
-            this.ResponseHeaders = response.ResponseHeaders?.ShallowCopy().AsReadOnly();
             this.CacheMaxAge = this.ParseResponseHeader(response.ResponseHeaders, "Cache-Control", value => CacheControlHeaderValue.Parse(value).MaxAge);
             this.Expires = this.ParseResponseHeader(response.ResponseHeaders, "Expires", value => DateTime.Parse(value));
             this.RateLimitLimit = this.ParseResponseHeader(response.ResponseHeaders, "X-Rate-Limit-Limit", ParseNullableInt);
@@ -49,7 +40,7 @@ namespace Gw2Sharp.WebApi.V2
                             : null;
                     })
                     .Where(link => link != null)
-                    .ToDictionary(kvp => kvp.Item1, kvp => kvp.Item2)
+                    .ToDictionary(kvp => kvp!.Item1, kvp => kvp!.Item2)
                     .AsReadOnly());
             this.PageSize = this.ParseResponseHeader(response.ResponseHeaders, "X-Page-Size", ParseNullableInt);
             this.PageTotal = this.ParseResponseHeader(response.ResponseHeaders, "X-Page-Total", ParseNullableInt);
@@ -93,7 +84,7 @@ namespace Gw2Sharp.WebApi.V2
         private TResult ParseResponseHeader<TResult>(IReadOnlyDictionary<string, string> headers, string key, Func<string, TResult> parser)
         {
             if (headers == null)
-                return default;
+                return default!;
 
             headers.TryGetValue(key, out string header);
             try
@@ -103,7 +94,7 @@ namespace Gw2Sharp.WebApi.V2
             catch (Exception ex)
             {
                 if (ex is NullReferenceException || ex is ArgumentNullException || ex is FormatException || ex is OverflowException)
-                    return default;
+                    return default!;
                 throw;
             }
         }

@@ -10,6 +10,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The list of character trainings.
         /// </summary>
-        public IReadOnlyList<CharacterTraining> Training { get; set; }
+        public IReadOnlyList<CharacterTraining> Training { get; set; } = new List<CharacterTraining>();
     }
 }

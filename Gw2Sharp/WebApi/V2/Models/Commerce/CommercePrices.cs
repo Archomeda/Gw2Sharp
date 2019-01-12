@@ -19,11 +19,11 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The buy price information.
         /// </summary>
-        public CommercePrice Buys { get; set; }
+        public CommercePrice Buys { get; set; } = new CommercePrice();
 
         /// <summary>
         /// The sell price information
         /// </summary>
-        public CommercePrice Sells { get; set; }
+        public CommercePrice Sells { get; set; } = new CommercePrice();
     }
 }

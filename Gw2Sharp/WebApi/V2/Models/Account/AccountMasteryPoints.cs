@@ -10,11 +10,11 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The mastery points totals separated by region.
         /// </summary>
-        public IReadOnlyList<AccountMasteryPointsRegion> Totals { get; set; }
+        public IReadOnlyList<AccountMasteryPointsRegion> Totals { get; set; } = new List<AccountMasteryPointsRegion>();
 
         /// <summary>
         /// The ids of the unlocked mastery points.
         /// </summary>
-        public IReadOnlyList<int> Unlocked { get; set; }
+        public IReadOnlyList<int> Unlocked { get; set; } = new List<int>();
     }
 }

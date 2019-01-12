@@ -16,7 +16,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// The items that unlock this glider.
         /// Each element can be resolved against <see cref="IGw2WebApiV2Client.Items"/>.
         /// </summary>
-        public IReadOnlyList<int> UnlockItems { get; set; }
+        public IReadOnlyList<int> UnlockItems { get; set; } = new List<int>();
 
         /// <summary>
         /// The glider order.
@@ -26,22 +26,22 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The glider icon.
         /// </summary>
-        public string Icon { get; set; }
+        public string Icon { get; set; } = string.Empty;
 
         /// <summary>
         /// The glider name.
         /// </summary>
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
         /// <summary>
         /// The glider unlock details.
         /// </summary>
-        public string Description { get; set; }
+        public string Description { get; set; } = string.Empty;
 
         /// <summary>
         /// The glider default dyes.
         /// Each element can be resolved against <see cref="IGw2WebApiV2Client.Colors"/>.
         /// </summary>
-        public IReadOnlyList<int> DefaultDyes { get; set; }
+        public IReadOnlyList<int> DefaultDyes { get; set; } = new List<int>();
     }
 }

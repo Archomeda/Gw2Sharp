@@ -21,6 +21,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The upgrades that require this item.
         /// </summary>
-        public IReadOnlyList<GuildTreasuryItemUpgrade> NeededBy { get; set; }
+        public IReadOnlyList<GuildTreasuryItemUpgrade> NeededBy { get; set; } = new List<GuildTreasuryItemUpgrade>();
     }
 }

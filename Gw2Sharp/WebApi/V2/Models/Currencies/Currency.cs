@@ -13,12 +13,12 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The currency name.
         /// </summary>
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
         /// <summary>
         /// The currency description.
         /// </summary>
-        public string Description { get; set; }
+        public string Description { get; set; } = string.Empty;
 
         /// <summary>
         /// The currency order.
@@ -28,6 +28,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The currency icon.
         /// </summary>
-        public string Icon { get; set; }
+        public string Icon { get; set; } = string.Empty;
     }
 }

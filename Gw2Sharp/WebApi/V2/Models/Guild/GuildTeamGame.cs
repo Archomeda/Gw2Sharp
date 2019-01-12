@@ -33,21 +33,21 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The result.
         /// </summary>
-        public ApiEnum<PvpResult> Result { get; set; }
+        public ApiEnum<PvpResult> Result { get; set; } = new ApiEnum<PvpResult>();
 
         /// <summary>
         /// The team.
         /// </summary>
-        public ApiEnum<PvpTeam> Team { get; set; }
+        public ApiEnum<PvpTeam> Team { get; set; } = new ApiEnum<PvpTeam>();
 
         /// <summary>
         /// The team scores.
         /// </summary>
-        public PvpTeamScores Scores { get; set; }
+        public PvpTeamScores Scores { get; set; } = new PvpTeamScores();
 
         /// <summary>
         /// The rating type.
         /// </summary>
-        public ApiEnum<PvpRatingType> RatingType { get; set; }
+        public ApiEnum<PvpRatingType> RatingType { get; set; } = new ApiEnum<PvpRatingType>();
     }
 }

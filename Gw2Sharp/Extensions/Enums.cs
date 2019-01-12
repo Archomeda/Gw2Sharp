@@ -15,8 +15,8 @@ namespace Gw2Sharp.Extensions
         /// </summary>
         /// <param name="enumString">The enum string.</param>
         /// <param name="enumType">The enum type.</param>
-        /// <returns>The enum value.</returns>
-        public static Enum ParseEnum(this string enumString, Type enumType)
+        /// <returns>The enum value, or <c>null</c> if parsing failed.</returns>
+        public static Enum? ParseEnum(this string enumString, Type enumType)
         {
             // Try looking for custom enum serialization names with EnumMemberAttribute
             string[] enumNames = Enum.GetNames(enumType);
@@ -30,18 +30,17 @@ namespace Gw2Sharp.Extensions
             }
 
             // Just parse normally
-            Enum value = null;
             try
             {
-                value = (Enum)Enum.Parse(enumType, enumString, true);
+                return (Enum)Enum.Parse(enumType, enumString, true);
             }
             catch (ArgumentException)
             {
                 // Not found, set to custom default if available
                 if (enumType.GetTypeInfo().GetCustomAttribute(typeof(DefaultValueAttribute)) is DefaultValueAttribute attribute)
-                    value = (Enum)attribute.Value;
+                    return (Enum)attribute.Value;
             }
-            return value;
+            return null;
         }
     }
 }

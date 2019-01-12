@@ -14,17 +14,17 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The error message.
         /// </summary>
-        public string Text { get; set; }
+        public string? Text { get; set; }
 
         /// <summary>
         /// The error message.
         /// </summary>
-        public string Error { get; set; }
+        public string? Error { get; set; }
 
         /// <summary>
         /// The generalized error message.
         /// </summary>
         [JsonIgnore]
-        public string Message => this.Text ?? this.Error;
+        public string Message => this.Text ?? this.Error ?? string.Empty;
     }
 }

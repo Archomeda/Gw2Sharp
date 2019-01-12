@@ -11,22 +11,22 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The backstory answer id.
         /// </summary>
-        public string Id { get; set; }
+        public string Id { get; set; } = string.Empty;
 
         /// <summary>
         /// The backstory answer title.
         /// </summary>
-        public string Title { get; set; }
+        public string Title { get; set; } = string.Empty;
 
         /// <summary>
         /// The backstory answer description.
         /// </summary>
-        public string Description { get; set; }
+        public string Description { get; set; } = string.Empty;
 
         /// <summary>
         /// The backstory answer journal entry.
         /// </summary>
-        public string Journal { get; set; }
+        public string Journal { get; set; } = string.Empty;
 
         /// <summary>
         /// The backstory answer question id.
@@ -39,13 +39,13 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// If the backstory answer applies to all races, this value is <c>null</c>.
         /// Each element can be resolved against <see cref="IGw2WebApiV2Client.Races"/>.
         /// </summary>
-        public IReadOnlyList<string> Races { get; set; }
+        public IReadOnlyList<string>? Races { get; set; }
 
         /// <summary>
         /// The list of professions to which the backstory answer applies to.
         /// If the backstory answer applies to all professions, this value is <c>null</c>.
         /// Each element can be resolved against <see cref="IGw2WebApiV2Client.Professions"/>.
         /// </summary>
-        public IReadOnlyList<string> Professions { get; set; }
+        public IReadOnlyList<string>? Professions { get; set; }
     }
 }

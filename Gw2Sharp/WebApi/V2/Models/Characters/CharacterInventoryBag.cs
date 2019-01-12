@@ -19,8 +19,8 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <summary>
         /// The bag inventory with a list of items.
-        /// A slot that is empty, is <c>null</c>.
+        /// If a slot is empty, that element is <c>null</c>.
         /// </summary>
-        public IReadOnlyList<AccountItem> Inventory { get; set; }
+        public IReadOnlyList<AccountItem?> Inventory { get; set; } = new List<AccountItem?>();
     }
 }

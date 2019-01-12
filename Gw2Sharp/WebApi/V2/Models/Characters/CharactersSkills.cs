@@ -8,6 +8,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The character skills.
         /// </summary>
-        public CharacterSkills Skills { get; set; }
+        public CharacterSkills Skills { get; set; } = new CharacterSkills();
     }
 }

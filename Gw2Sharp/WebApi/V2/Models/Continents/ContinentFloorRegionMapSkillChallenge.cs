@@ -8,7 +8,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The skill challenge id.
         /// </summary>
-        public string Id { get; set; }
+        public string Id { get; set; } = string.Empty;
 
         /// <summary>
         /// The skill challenge coordinates.

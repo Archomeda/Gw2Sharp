@@ -40,12 +40,12 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The guild log type.
         /// </summary>
-        public ApiEnum<GuildLogType> Type { get; set; }
+        public ApiEnum<GuildLogType> Type { get; set; } = new ApiEnum<GuildLogType>();
 
         /// <summary>
         /// The guild log originating user.
-        /// If no user is associated with this log, this value is null.
+        /// If no user is associated with this log, this value is <c>null</c>.
         /// </summary>
-        public string User { get; set; }
+        public string? User { get; set; }
     }
 }

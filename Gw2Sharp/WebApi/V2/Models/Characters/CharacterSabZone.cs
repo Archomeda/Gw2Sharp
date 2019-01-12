@@ -13,7 +13,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The zone mode.
         /// </summary>
-        public string Mode { get; set; }
+        public string Mode { get; set; } = string.Empty;
 
         /// <summary>
         /// The zone's world number.

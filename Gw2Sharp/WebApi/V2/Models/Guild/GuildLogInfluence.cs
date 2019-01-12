@@ -10,7 +10,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The influence activity.
         /// </summary>
-        public ApiEnum<GuildLogInfluenceActivity> Activity { get; set; }
+        public ApiEnum<GuildLogInfluenceActivity> Activity { get; set; } = new ApiEnum<GuildLogInfluenceActivity>();
 
         /// <summary>
         /// The total amount of participants.
@@ -20,6 +20,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The participating users.
         /// </summary>
-        public IReadOnlyList<string> Participants { get; set; }
+        public IReadOnlyList<string> Participants { get; set; } = new List<string>();
     }
 }

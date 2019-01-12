@@ -8,6 +8,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The container item type.
         /// </summary>
-        public ApiEnum<ItemContainerType> Type { get; set; }
+        public ApiEnum<ItemContainerType> Type { get; set; } = new ApiEnum<ItemContainerType>();
     }
 }

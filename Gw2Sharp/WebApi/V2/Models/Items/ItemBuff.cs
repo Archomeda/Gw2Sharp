@@ -14,6 +14,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The buff description.
         /// </summary>
-        public string Description { get; set; }
+        public string Description { get; set; } = string.Empty;
     }
 }

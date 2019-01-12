@@ -12,9 +12,9 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <summary>
         /// The point of interest name.
-        /// If it has no name, this value is null.
+        /// If it has no name, this value is <c>null</c>.
         /// </summary>
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         /// <summary>
         /// The floor this point of interest is on.
@@ -29,17 +29,17 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The point of interest type.
         /// </summary>
-        public ApiEnum<PoiType> Type { get; set; }
+        public ApiEnum<PoiType> Type { get; set; } = new ApiEnum<PoiType>();
 
         /// <summary>
         /// The point of interest chat link.
         /// </summary>
-        public string ChatLink { get; set; }
+        public string ChatLink { get; set; } = string.Empty;
 
         /// <summary>
         /// The point of interest icon.
-        /// If the point of interest has no icon, this value is null.
+        /// If the point of interest has no icon, this value is <c>null</c>.
         /// </summary>
-        public string Icon { get; set; }
+        public string? Icon { get; set; }
     }
 }

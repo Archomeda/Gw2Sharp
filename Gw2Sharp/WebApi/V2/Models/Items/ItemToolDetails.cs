@@ -8,7 +8,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The tool item type.
         /// </summary>
-        public ApiEnum<ItemToolType> Type { get; set; }
+        public ApiEnum<ItemToolType> Type { get; set; } = new ApiEnum<ItemToolType>();
 
         /// <summary>
         /// The remaining charges.

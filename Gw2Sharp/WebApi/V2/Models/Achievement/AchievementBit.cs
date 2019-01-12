@@ -13,6 +13,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The achievement bit type.
         /// </summary>
-        public ApiEnum<AchievementBitType> Type { get; set; }
+        public ApiEnum<AchievementBitType> Type { get; set; } = new ApiEnum<AchievementBitType>();
     }
 }

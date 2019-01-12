@@ -8,6 +8,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The user who sent the invitation.
         /// </summary>
-        public string InvitedBy { get; set; }
+        public string InvitedBy { get; set; } = string.Empty;
     }
 }

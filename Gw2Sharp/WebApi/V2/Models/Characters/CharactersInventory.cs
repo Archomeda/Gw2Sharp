@@ -10,6 +10,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The list of the character inventory bags.
         /// </summary>
-        public IReadOnlyList<CharacterInventoryBag> Bags { get; set; }
+        public IReadOnlyList<CharacterInventoryBag> Bags { get; set; } = new List<CharacterInventoryBag>();
     }
 }

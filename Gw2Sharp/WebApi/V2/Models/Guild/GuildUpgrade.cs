@@ -38,12 +38,12 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The guild upgrade name.
         /// </summary>
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
         /// <summary>
         /// The guild upgrade description.
         /// </summary>
-        public string Description { get; set; }
+        public string Description { get; set; } = string.Empty;
 
         /// <summary>
         /// The guild upgrade build time.
@@ -53,12 +53,12 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The guild upgrade icon.
         /// </summary>
-        public string Icon { get; set; }
+        public string Icon { get; set; } = string.Empty;
 
         /// <summary>
         /// The guild upgrade type.
         /// </summary>
-        public ApiEnum<GuildUpgradeType> Type { get; set; }
+        public ApiEnum<GuildUpgradeType> Type { get; set; } = new ApiEnum<GuildUpgradeType>();
 
         /// <summary>
         /// The guild upgrade required level.
@@ -74,11 +74,11 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// The guild upgrade prerequisites.
         /// Each element can be resolved against <see cref="IGuildClient.Upgrades"/>.
         /// </summary>
-        public IReadOnlyList<int> Prerequisites { get; set; }
+        public IReadOnlyList<int> Prerequisites { get; set; } = new List<int>();
 
         /// <summary>
         /// The guild upgrade costs.
         /// </summary>
-        public IReadOnlyList<GuildUpgradeCost> Costs { get; set; }
+        public IReadOnlyList<GuildUpgradeCost> Costs { get; set; } = new List<GuildUpgradeCost>();
     }
 }

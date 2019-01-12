@@ -15,12 +15,12 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The achievement category name.
         /// </summary>
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
         /// <summary>
         /// The achievement category description.
         /// </summary>
-        public string Description { get; set; }
+        public string Description { get; set; } = string.Empty;
 
         /// <summary>
         /// The achievement category order.
@@ -30,12 +30,12 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The achievement category icon.
         /// </summary>
-        public string Icon { get; set; }
+        public string Icon { get; set; } = string.Empty;
 
         /// <summary>
         /// The achievements in the achievement category.
         /// Each element can be resolved against <see cref="IGw2WebApiV2Client.Achievements"/>.
         /// </summary>
-        public IReadOnlyList<int> Achievements { get; set; }
+        public IReadOnlyList<int> Achievements { get; set; } = new List<int>();
     }
 }

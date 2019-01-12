@@ -8,16 +8,16 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The user who changed the rank.
         /// </summary>
-        public string ChangedBy { get; set; }
+        public string ChangedBy { get; set; } = string.Empty;
 
         /// <summary>
         /// The old rank.
         /// </summary>
-        public string OldRank { get; set; }
+        public string OldRank { get; set; } = string.Empty;
 
         /// <summary>
         /// The new rank.
         /// </summary>
-        public string NewRank { get; set; }
+        public string NewRank { get; set; } = string.Empty;
     }
 }

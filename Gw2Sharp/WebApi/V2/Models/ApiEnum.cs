@@ -39,16 +39,13 @@ namespace Gw2Sharp.WebApi.V2.Models
         public string RawValue { get; }
 
         /// <inheritdoc />
-        public override bool Equals(object obj)
-        {
-            var other = obj as ApiEnum;
-            return other == null ? false : this.Equals(other);
-        }
+        public override bool Equals(object obj) =>
+            obj is ApiEnum other ? this.Equals(other) : false;
 
         /// <inheritdoc />
         public bool Equals(ApiEnum other)
         {
-            return other != null &&
+            return !(other is null) &&
                 EqualityComparer<Enum>.Default.Equals(this.Value, other.Value) &&
                 this.RawValue == other.RawValue;
         }
@@ -85,6 +82,11 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// Creates a new API enum.
         /// </summary>
+        public ApiEnum() : this(default!, null) { }
+
+        /// <summary>
+        /// Creates a new API enum.
+        /// </summary>
         /// <param name="value">The enum value.</param>
         public ApiEnum(T value) : this(value, null) { }
 
@@ -93,7 +95,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// </summary>
         /// <param name="value">The enum value.</param>
         /// <param name="rawValue">The raw value.</param>
-        public ApiEnum(T value, string rawValue) : base(value, rawValue ?? Enum.GetName(typeof(T), value)) { }
+        public ApiEnum(T value, string? rawValue) : base(value, rawValue ?? Enum.GetName(typeof(T), value)) { }
 
         /// <summary>
         /// The actual enum value as interpreted by the library.
@@ -119,16 +121,13 @@ namespace Gw2Sharp.WebApi.V2.Models
         public static implicit operator string(ApiEnum<T> e) => e.RawValue;
 
         /// <inheritdoc />
-        public override bool Equals(object obj)
-        {
-            var other = obj as ApiEnum<T>;
-            return other == null ? false : this.Equals(other);
-        }
+        public override bool Equals(object obj) =>
+            obj is ApiEnum<T> other ? this.Equals(other) : false;
 
         /// <inheritdoc />
         public bool Equals(ApiEnum<T> other)
         {
-            return other != null &&
+            return !(other is null) &&
                 base.Equals(other) &&
                 EqualityComparer<T>.Default.Equals(this.Value, other.Value);
         }

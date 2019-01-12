@@ -10,26 +10,26 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The daily PvE achievements.
         /// </summary>
-        public IReadOnlyList<AchievementDaily> Pve { get; set; }
+        public IReadOnlyList<AchievementDaily> Pve { get; set; } = new List<AchievementDaily>();
 
         /// <summary>
         /// The daily PvP achievements.
         /// </summary>
-        public IReadOnlyList<AchievementDaily> Pvp { get; set; }
+        public IReadOnlyList<AchievementDaily> Pvp { get; set; } = new List<AchievementDaily>();
 
         /// <summary>
         /// The daily WvW achievements.
         /// </summary>
-        public IReadOnlyList<AchievementDaily> Wvw { get; set; }
+        public IReadOnlyList<AchievementDaily> Wvw { get; set; } = new List<AchievementDaily>();
 
         /// <summary>
         /// The daily fractals achievements.
         /// </summary>
-        public IReadOnlyList<AchievementDaily> Fractals { get; set; }
+        public IReadOnlyList<AchievementDaily> Fractals { get; set; } = new List<AchievementDaily>();
 
         /// <summary>
         /// The daily special achievements.
         /// </summary>
-        public IReadOnlyList<AchievementDaily> Special { get; set; }
+        public IReadOnlyList<AchievementDaily> Special { get; set; } = new List<AchievementDaily>();
     }
 }

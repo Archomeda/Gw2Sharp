@@ -16,7 +16,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The continent name.
         /// </summary>
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
         /// <summary>
         /// The continent dimensions.
@@ -37,6 +37,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// The continent floors.
         /// Each element can be resolved against <see cref="IContinentsIdClient.Floors"/>.
         /// </summary>
-        public IReadOnlyList<int> Floors { get; set; }
+        public IReadOnlyList<int> Floors { get; set; } = new List<int>();
     }
 }

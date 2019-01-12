@@ -16,8 +16,7 @@ namespace Gw2Sharp.WebApi.Caching
         /// <param name="category">The cache category.</param>
         /// <param name="id">The id.</param>
         /// <returns>The task for this operation with the result whether the cached item exists and has not expired.</returns>
-        /// <exception cref="ArgumentNullException">Thrown when category or id is <c>null</c>.</exception>
-        Task<bool> Has<T>(string category, object id);
+        Task<bool> Has<T>(string category, object id) where T : object;
 
         /// <summary>
         /// Gets a cached item.
@@ -25,9 +24,18 @@ namespace Gw2Sharp.WebApi.Caching
         /// <typeparam name="T">The cache type.</typeparam>
         /// <param name="category">The cache category.</param>
         /// <param name="id">The id.</param>
-        /// <returns>The task for this operation with the cached item if it exists and is not expired; <c>null</c> otherwise.</returns>
-        /// <exception cref="ArgumentNullException">Thrown when category or id is <c>null</c>.</exception>
-        Task<CacheItem<T>> Get<T>(string category, object id);
+        /// <returns>The task for this operation with the cached item if it exists.</returns>
+        /// <exception cref="KeyNotFoundException">Thrown when the cache does not contain the cached item.</exception>
+        Task<CacheItem<T>> Get<T>(string category, object id) where T : object;
+
+        /// <summary>
+        /// Tries to get a cached item.
+        /// </summary>
+        /// <typeparam name="T">The cache type.</typeparam>
+        /// <param name="category">The cache category.</param>
+        /// <param name="id">The id.</param>
+        /// <returns>The task for this operation with a returned cached item if it exists and is not expired; <c>null</c> otherwise.</returns>
+        Task<CacheItem<T>?> GetOrNull<T>(string category, object id) where T : object;
 
         /// <summary>
         /// Sets a cached item.
@@ -35,8 +43,7 @@ namespace Gw2Sharp.WebApi.Caching
         /// <typeparam name="T">The cache type.</typeparam>
         /// <param name="item">The item to cache.</param>
         /// <returns>The task for this operation.</returns>
-        /// <exception cref="ArgumentNullException">Thrown when item is <c>null</c>.</exception>
-        Task Set<T>(CacheItem<T> item);
+        Task Set<T>(CacheItem<T> item) where T : object;
 
         /// <summary>
         /// Sets a cached item.
@@ -47,8 +54,7 @@ namespace Gw2Sharp.WebApi.Caching
         /// <param name="item">The item to cache.</param>
         /// <param name="expiryTime">The expiry time.</param>
         /// <returns>The task for this operation.</returns>
-        /// <exception cref="ArgumentNullException">Thrown when category, id or item is <c>null</c>.</exception>
-        Task Set<T>(string category, object id, T item, DateTime expiryTime);
+        Task Set<T>(string category, object id, T item, DateTime expiryTime) where T : object;
 
         /// <summary>
         /// Gets many cached items of a given type at once.
@@ -56,9 +62,11 @@ namespace Gw2Sharp.WebApi.Caching
         /// <typeparam name="T">The cache type.</typeparam>
         /// <param name="category">The cache category.</param>
         /// <param name="ids">The ids.</param>
-        /// <returns>The task for this operation with the cached items if they exist and are not expired.</returns>
-        /// <exception cref="ArgumentNullException">Thrown when category or ids is <c>null</c>.</exception>
-        Task<IDictionary<object, CacheItem<T>>> GetMany<T>(string category, IEnumerable<object> ids);
+        /// <returns>
+        /// The task for this operation with the cached items if they exist and have not expired.
+        /// Only items that exist are included in the returned dictionary.
+        /// </returns>
+        Task<IDictionary<object, CacheItem<T>>> GetMany<T>(string category, IEnumerable<object> ids) where T : object;
 
         /// <summary>
         /// Sets many cached items of a given type at once.
@@ -66,8 +74,7 @@ namespace Gw2Sharp.WebApi.Caching
         /// <typeparam name="T">The cache type.</typeparam>
         /// <param name="items">The items.</param>
         /// <returns>The task for this operation.</returns>
-        /// <exception cref="ArgumentNullException">Thrown when items is <c>null</c>.</exception>
-        Task SetMany<T>(IEnumerable<CacheItem<T>> items);
+        Task SetMany<T>(IEnumerable<CacheItem<T>> items) where T : object;
 
         /// <summary>
         /// Gets a cached item if it exists. If it doesn't exist, it calls updateFunc to provide an updated value,
@@ -79,8 +86,7 @@ namespace Gw2Sharp.WebApi.Caching
         /// <param name="expiryTime">The expiry date.</param>
         /// <param name="updateFunc">The method that is called when no cache has been found.</param>
         /// <returns>The item.</returns>
-        /// <exception cref="ArgumentNullException">Thrown when category, id or updateFunc is <c>null</c>.</exception>
-        Task<CacheItem<T>> GetOrUpdate<T>(string category, object id, DateTime expiryTime, Func<Task<T>> updateFunc);
+        Task<CacheItem<T>> GetOrUpdate<T>(string category, object id, DateTime expiryTime, Func<Task<T>> updateFunc) where T : object;
 
         /// <summary>
         /// Gets a cached item if it exists. If it doesn't exist, it calls updateFunc to provide an updated value and its expiry date,
@@ -91,8 +97,7 @@ namespace Gw2Sharp.WebApi.Caching
         /// <param name="id">The cache id.</param>
         /// <param name="updateFunc">The method that is called when no cache has been found.</param>
         /// <returns>The item.</returns>
-        /// <exception cref="ArgumentNullException">Thrown when category, id or updateFunc is <c>null</c>.</exception>
-        Task<CacheItem<T>> GetOrUpdate<T>(string category, object id, Func<Task<(T, DateTime)>> updateFunc);
+        Task<CacheItem<T>> GetOrUpdate<T>(string category, object id, Func<Task<(T, DateTime)>> updateFunc) where T : object;
 
         /// <summary>
         /// Gets cached items if they exist. If one or more don't exist, updateFunc will be called to provide updated values and their expiry date,
@@ -103,11 +108,11 @@ namespace Gw2Sharp.WebApi.Caching
         /// <param name="ids">The list of cache ids.</param>
         /// <param name="updateFunc">The method that is called for items that are not cached, with as parameter the missing ids.</param>
         /// <returns>The items.</returns>
-        /// <exception cref="ArgumentNullException">Thrown when category, ids or updateFunc is <c>null</c>.</exception>
         Task<IList<CacheItem<T>>> GetOrUpdateMany<T>(
             string category,
             IEnumerable<object> ids,
-            Func<IList<object>, Task<(IDictionary<object, T>, DateTime)>> updateFunc);
+            Func<IList<object>, Task<(IDictionary<object, T>, DateTime)>> updateFunc)
+            where T : object;
 
         /// <summary>
         /// Gets cached items if they exist. If one or more don't exist, updateFunc will be called to provide updated values
@@ -119,12 +124,12 @@ namespace Gw2Sharp.WebApi.Caching
         /// <param name="expiryTime">The expiry date.</param>
         /// <param name="updateFunc">The method that is called for items that are not cached, with as parameter the missing ids.</param>
         /// <returns>The items.</returns>
-        /// <exception cref="ArgumentNullException">Thrown when category, ids or updateFunc is <c>null</c>.</exception>
         Task<IList<CacheItem<T>>> GetOrUpdateMany<T>(
             string category,
             IEnumerable<object> ids,
             DateTime expiryTime,
-            Func<IList<object>, Task<IDictionary<object, T>>> updateFunc);
+            Func<IList<object>, Task<IDictionary<object, T>>> updateFunc)
+            where T : object;
 
         /// <summary>
         /// Flushes the cache, a.k.a. empties the cache.

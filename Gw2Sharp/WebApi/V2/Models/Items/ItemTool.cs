@@ -8,6 +8,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The tool details.
         /// </summary>
-        public ItemToolDetails Details { get; set; }
+        public ItemToolDetails Details { get; set; } = new ItemToolDetails();
     }
 }

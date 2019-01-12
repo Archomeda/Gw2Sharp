@@ -13,6 +13,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The song id in text form.
         /// </summary>
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
     }
 }

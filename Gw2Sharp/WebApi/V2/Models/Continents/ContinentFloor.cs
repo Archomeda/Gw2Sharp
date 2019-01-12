@@ -28,6 +28,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The floor regions.
         /// </summary>
-        public IReadOnlyDictionary<int, ContinentFloorRegion> Regions { get; set; }
+        public IReadOnlyDictionary<int, ContinentFloorRegion> Regions { get; set; } = new Dictionary<int, ContinentFloorRegion>();
     }
 }

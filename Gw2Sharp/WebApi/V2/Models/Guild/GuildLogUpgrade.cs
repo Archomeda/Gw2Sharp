@@ -10,7 +10,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The upgrade action.
         /// </summary>
-        public ApiEnum<GuildLogUpgradeAction> Action { get; set; }
+        public ApiEnum<GuildLogUpgradeAction> Action { get; set; } = new ApiEnum<GuildLogUpgradeAction>();
 
         /// <summary>
         /// The upgrade id.
@@ -21,20 +21,20 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The item id.
         /// Can be resolved against <see cref="IGw2WebApiV2Client.Items"/>.
-        /// If no item is associated with this upgrade, this value is null.
+        /// If no item is associated with this upgrade, this value is <c>null</c>.
         /// </summary>
         public int? ItemId { get; set; }
 
         /// <summary>
         /// The recipe id.
         /// Can be resolved against <see cref="IGw2WebApiV2Client.Recipes"/>.
-        /// If no recipe is associated with this upgrade, this value is null.
+        /// If no recipe is associated with this upgrade, this value is <c>null</c>.
         /// </summary>
         public int? RecipeId { get; set; }
 
         /// <summary>
         /// The amount of items.
-        /// If no item is associated with this upgrade, this value is null.
+        /// If no item is associated with this upgrade, this value is <c>null</c>.
         /// </summary>
         public int? Count { get; set; }
 

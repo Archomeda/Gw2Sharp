@@ -8,6 +8,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The user who declined the invitation.
         /// </summary>
-        public string DeclinedBy { get; set; }
+        public string DeclinedBy { get; set; } = string.Empty;
     }
 }

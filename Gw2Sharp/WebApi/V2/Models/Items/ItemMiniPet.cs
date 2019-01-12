@@ -8,6 +8,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The mini pet details.
         /// </summary>
-        public ItemMiniPetDetails Details { get; set; }
+        public ItemMiniPetDetails Details { get; set; } = new ItemMiniPetDetails();
     }
 }

@@ -8,6 +8,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The gizmo item type.
         /// </summary>
-        public ApiEnum<ItemGizmoType> Type { get; set; }
+        public ApiEnum<ItemGizmoType> Type { get; set; } = new ApiEnum<ItemGizmoType>();
     }
 }

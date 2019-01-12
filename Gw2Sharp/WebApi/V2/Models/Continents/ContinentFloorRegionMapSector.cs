@@ -15,7 +15,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The sector name.
         /// </summary>
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
         /// <summary>
         /// The sector level.
@@ -30,11 +30,11 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The sector bounds.
         /// </summary>
-        public IReadOnlyList<Coordinates2> Bounds { get; set; }
+        public IReadOnlyList<Coordinates2> Bounds { get; set; } = new List<Coordinates2>();
 
         /// <summary>
         /// The sector chat link.
         /// </summary>
-        public string ChatLink { get; set; }
+        public string ChatLink { get; set; } = string.Empty;
     }
 }

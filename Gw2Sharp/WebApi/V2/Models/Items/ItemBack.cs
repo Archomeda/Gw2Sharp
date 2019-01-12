@@ -8,6 +8,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The backpiece details.
         /// </summary>
-        public ItemBackDetails Details { get; set; }
+        public ItemBackDetails Details { get; set; } = new ItemBackDetails();
     }
 }

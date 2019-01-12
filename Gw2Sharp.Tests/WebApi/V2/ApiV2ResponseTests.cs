@@ -1,9 +1,9 @@
-﻿using Gw2Sharp.WebApi.Http;
-using Gw2Sharp.WebApi.V2;
-using NSubstitute;
 using System;
 using System.Collections.Generic;
 using System.Net;
+using Gw2Sharp.WebApi.Http;
+using Gw2Sharp.WebApi.V2;
+using NSubstitute;
 using Xunit;
 
 namespace Gw2Sharp.Tests.WebApi.V2
@@ -106,10 +106,14 @@ namespace Gw2Sharp.Tests.WebApi.V2
         public void ImplicitConversionToContentType()
         {
             string expected = "content";
-            var response = new ApiV2Response<string>
-            {
-                Content = expected
-            };
+
+            var httpResponse = Substitute.For<IHttpResponse>();
+            httpResponse.Content.Returns(expected);
+            httpResponse.StatusCode.Returns(HttpStatusCode.OK);
+            httpResponse.RequestHeaders.Returns(new Dictionary<string, string>());
+            httpResponse.ResponseHeaders.Returns(new Dictionary<string, string>());
+
+            var response = new ApiV2Response<string>(httpResponse);
             string actual = response;
             Assert.Equal(expected, actual);
         }

@@ -10,11 +10,11 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The dungeon id.
         /// </summary>
-        public string Id { get; set; }
+        public string Id { get; set; } = string.Empty;
 
         /// <summary>
         /// The dungeon paths.
         /// </summary>
-        public IReadOnlyList<DungeonPath> Paths { get; set; }
+        public IReadOnlyList<DungeonPath> Paths { get; set; } = new List<DungeonPath>();
     }
 }

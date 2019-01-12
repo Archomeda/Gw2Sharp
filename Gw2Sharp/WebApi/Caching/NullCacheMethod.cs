@@ -1,6 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+
+#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
 
 namespace Gw2Sharp.WebApi.Caching
 {
@@ -12,46 +14,28 @@ namespace Gw2Sharp.WebApi.Caching
         #region ICacheController members
 
         /// <inheritdoc />
-        public override Task<bool> Has<T>(string category, object id)
-        {
-            return Task.FromResult(false);
-        }
+        public override async Task<bool> Has<T>(string category, object id) =>
+            false;
 
         /// <inheritdoc />
-        public override Task<CacheItem<T>> Get<T>(string category, object id)
-        {
-            return Task.FromResult<CacheItem<T>>(null);
-        }
+        public override async Task<CacheItem<T>?> GetOrNull<T>(string category, object id) =>
+            null;
 
         /// <inheritdoc />
-        public override Task Set<T>(CacheItem<T> item)
-        {
-            return Task.FromResult<object>(null);
-        }
+        public override async Task Set<T>(CacheItem<T> item) { }
 
         /// <inheritdoc />
-        public override Task Set<T>(string category, object id, T item, DateTime expiryTime)
-        {
-            return Task.FromResult<object>(null);
-        }
+        public override async Task Set<T>(string category, object id, T item, DateTime expiryTime) { }
 
         /// <inheritdoc />
-        public override Task<IDictionary<object, CacheItem<T>>> GetMany<T>(string category, IEnumerable<object> ids)
-        {
-            return Task.FromResult<IDictionary<object, CacheItem<T>>>(new Dictionary<object, CacheItem<T>>());
-        }
+        public override async Task<IDictionary<object, CacheItem<T>>> GetMany<T>(string category, IEnumerable<object> ids) =>
+            new Dictionary<object, CacheItem<T>>();
 
         /// <inheritdoc />
-        public override Task SetMany<T>(IEnumerable<CacheItem<T>> items)
-        {
-            return Task.FromResult<object>(null);
-        }
+        public override async Task SetMany<T>(IEnumerable<CacheItem<T>> items) { }
 
         /// <inheritdoc />
-        public override Task Flush()
-        {
-            return Task.FromResult<object>(null);
-        }
+        public override async Task Flush() { }
 
         #endregion
     }

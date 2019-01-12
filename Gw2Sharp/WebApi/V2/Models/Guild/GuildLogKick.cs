@@ -8,6 +8,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The user who did the kicking.
         /// </summary>
-        public string KickedBy { get; set; }
+        public string KickedBy { get; set; } = string.Empty;
     }
 }

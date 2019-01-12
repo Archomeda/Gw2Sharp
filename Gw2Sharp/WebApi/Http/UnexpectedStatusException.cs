@@ -11,7 +11,8 @@ namespace Gw2Sharp.WebApi.Http
         /// <param name="request">The original request.</param>
         /// <param name="response">The response.</param>
         public UnexpectedStatusException(IHttpRequest request, IHttpResponse<string> response) :
-            this(request, response, $"Unexpected HTTP status code: {(int)response.StatusCode}") { }
+            this(request, response, $"Unexpected HTTP status code: {(int)response.StatusCode}")
+        { }
 
         /// <summary>
         /// Creates a new <see cref="UnexpectedStatusException" />.
@@ -19,8 +20,9 @@ namespace Gw2Sharp.WebApi.Http
         /// <param name="request">The original request.</param>
         /// <param name="response">The response.</param>
         /// <param name="message">The message.</param>
-        public UnexpectedStatusException(IHttpRequest request, IHttpResponse<string> response, string message) :
-            base(request, response, message) { }
+        public UnexpectedStatusException(IHttpRequest request, IHttpResponse<string>? response, string message) :
+            base(request, response, message)
+        { }
     }
 
     /// <summary>
@@ -34,7 +36,8 @@ namespace Gw2Sharp.WebApi.Http
         /// <param name="request">The original request.</param>
         /// <param name="response">The response.</param>
         public UnexpectedStatusException(IHttpRequest request, IHttpResponse<T> response) :
-            this(request, response, $"Unexpected HTTP status code: {(int)response.StatusCode}") { }
+            this(request, response, $"Unexpected HTTP status code: {(int)response.StatusCode}")
+        { }
 
         /// <summary>
         /// Creates a new <see cref="UnexpectedStatusException" />.
@@ -42,7 +45,8 @@ namespace Gw2Sharp.WebApi.Http
         /// <param name="request">The original request.</param>
         /// <param name="response">The response.</param>
         /// <param name="message">The message.</param>
-        public UnexpectedStatusException(IHttpRequest request, IHttpResponse<T> response, string message) :
-            base(request, response, message) { }
+        public UnexpectedStatusException(IHttpRequest request, IHttpResponse<T>? response, string message) :
+            base(request, response, message)
+        { }
     }
 }

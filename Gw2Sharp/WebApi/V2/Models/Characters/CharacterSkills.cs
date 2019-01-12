@@ -8,16 +8,16 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The PvE character skills.
         /// </summary>
-        public CharacterGameModeSkills Pve { get; set; }
+        public CharacterGameModeSkills Pve { get; set; } = new CharacterGameModeSkills();
 
         /// <summary>
         /// The PvP character skills.
         /// </summary>
-        public CharacterGameModeSkills Pvp { get; set; }
+        public CharacterGameModeSkills Pvp { get; set; } = new CharacterGameModeSkills();
 
         /// <summary>
         /// The WvW character skills.
         /// </summary>
-        public CharacterGameModeSkills Wvw { get; set; }
+        public CharacterGameModeSkills Wvw { get; set; } = new CharacterGameModeSkills();
     }
 }

@@ -15,7 +15,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// An abstract base class for implementing endpoint clients.
     /// </summary>
     /// <typeparam name="TObject">The response object type.</typeparam>
-    public abstract class BaseEndpointClient<TObject> : BaseClient, IEndpointClient
+    public abstract class BaseEndpointClient<TObject> : BaseClient, IEndpointClient where TObject : object
     {
         private const int MaxPageSize = 200;
 
@@ -84,7 +84,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <typeparam name="TIdentifiableObject">The endpoint return value type.</typeparam>
         /// <typeparam name="TId">The entry id type.</typeparam>
         /// <returns>All entries.</returns>
-        protected Task<IReadOnlyList<TIdentifiableObject>> RequestAll<TIdentifiableObject, TId>() where TIdentifiableObject : IIdentifiable<TId> =>
+        protected Task<IReadOnlyList<TIdentifiableObject>> RequestAll<TIdentifiableObject, TId>()
+            where TIdentifiableObject : object, IIdentifiable<TId>
+            where TId : object =>
             this.RequestAll<TIdentifiableObject, TId>(CancellationToken.None);
 
         /// <summary>
@@ -94,7 +96,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <typeparam name="TId">The entry id type.</typeparam>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>All entries.</returns>
-        protected async Task<IReadOnlyList<TIdentifiableObject>> RequestAll<TIdentifiableObject, TId>(CancellationToken cancellationToken) where TIdentifiableObject : IIdentifiable<TId> =>
+        protected async Task<IReadOnlyList<TIdentifiableObject>> RequestAll<TIdentifiableObject, TId>(CancellationToken cancellationToken)
+            where TIdentifiableObject : object, IIdentifiable<TId>
+            where TId : object =>
             (await this.RequestAllWithResponse<TIdentifiableObject, TId>(cancellationToken).ConfigureAwait(false)).Content;
 
         /// <summary>
@@ -105,7 +109,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>All entries.</returns>
         protected async Task<IApiV2Response<IReadOnlyList<TIdentifiableObject>>> RequestAllWithResponse<TIdentifiableObject, TId>(CancellationToken cancellationToken)
-            where TIdentifiableObject : IIdentifiable<TId>
+            where TIdentifiableObject : object, IIdentifiable<TId>
+            where TId : object
         {
             var (response, cacheAll) = await this.GetOrUpdate<IReadOnlyList<TIdentifiableObject>>(this.FormatUrlQueryAll(this.EndpointPath), "_all", cancellationToken).ConfigureAwait(false);
             var cacheIndividuals = await this.UpdateIndividuals<TIdentifiableObject, TId>(cacheAll).ConfigureAwait(false);
@@ -177,7 +182,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <typeparam name="TId">The id value type.</typeparam>
         /// <param name="id">The entry id.</param>
         /// <returns>The entry.</returns>
-        protected Task<TIdentifiableObject> RequestGet<TIdentifiableObject, TId>(TId id) where TIdentifiableObject : IIdentifiable<TId> =>
+        protected Task<TIdentifiableObject> RequestGet<TIdentifiableObject, TId>(TId id)
+            where TIdentifiableObject : object, IIdentifiable<TId>
+            where TId : object =>
             this.RequestGet<TIdentifiableObject, TId>(id, CancellationToken.None);
 
         /// <summary>
@@ -188,7 +195,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="id">The entry id.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The entry.</returns>
-        protected async Task<TIdentifiableObject> RequestGet<TIdentifiableObject, TId>(TId id, CancellationToken cancellationToken) where TIdentifiableObject : IIdentifiable<TId> =>
+        protected async Task<TIdentifiableObject> RequestGet<TIdentifiableObject, TId>(TId id, CancellationToken cancellationToken)
+            where TIdentifiableObject : object, IIdentifiable<TId>
+            where TId : object =>
             (await this.RequestGetWithResponse<TIdentifiableObject, TId>(id, cancellationToken).ConfigureAwait(false)).Content;
 
         /// <summary>
@@ -200,7 +209,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The entry.</returns>
         protected async Task<IApiV2Response<TIdentifiableObject>> RequestGetWithResponse<TIdentifiableObject, TId>(TId id, CancellationToken cancellationToken)
-            where TIdentifiableObject : IIdentifiable<TId>
+            where TIdentifiableObject : object, IIdentifiable<TId>
+            where TId : object
         {
             var (response, cache) = await this.GetOrUpdate<TIdentifiableObject>(this.FormatUrlQueryItem(this.EndpointPath, id), id, cancellationToken).ConfigureAwait(false);
             response.Content = cache.Item;
@@ -214,7 +224,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <typeparam name="TId">The id value type.</typeparam>
         /// <param name="ids">The entry ids.</param>
         /// <returns>The entries.</returns>
-        protected Task<IReadOnlyList<TIdentifiableObject>> RequestMany<TIdentifiableObject, TId>(IEnumerable<TId> ids) where TIdentifiableObject : IIdentifiable<TId> =>
+        protected Task<IReadOnlyList<TIdentifiableObject>> RequestMany<TIdentifiableObject, TId>(IEnumerable<TId> ids)
+            where TIdentifiableObject : object, IIdentifiable<TId>
+            where TId : object =>
             this.RequestMany<TIdentifiableObject, TId>(ids, CancellationToken.None);
 
         /// <summary>
@@ -225,7 +237,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="ids">The entry ids.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The entries.</returns>
-        protected async Task<IReadOnlyList<TIdentifiableObject>> RequestMany<TIdentifiableObject, TId>(IEnumerable<TId> ids, CancellationToken cancellationToken) where TIdentifiableObject : IIdentifiable<TId> =>
+        protected async Task<IReadOnlyList<TIdentifiableObject>> RequestMany<TIdentifiableObject, TId>(IEnumerable<TId> ids, CancellationToken cancellationToken)
+            where TIdentifiableObject : object, IIdentifiable<TId>
+            where TId : object =>
             (await this.RequestManyWithResponse<TIdentifiableObject, TId>(ids, cancellationToken).ConfigureAwait(false)).SelectMany(x => x.Content).ToList();
 
         /// <summary>
@@ -237,7 +251,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The entries.</returns>
         protected async Task<IReadOnlyList<IApiV2Response<IReadOnlyList<TIdentifiableObject>>>> RequestManyWithResponse<TIdentifiableObject, TId>(IEnumerable<TId> ids, CancellationToken cancellationToken)
-            where TIdentifiableObject : IIdentifiable<TId>
+            where TIdentifiableObject : object, IIdentifiable<TId>
+            where TId : object
         {
             var responses = new List<ApiV2Response<IReadOnlyList<TIdentifiableObject>>>();
             object responsesLock = new object();
@@ -261,10 +276,10 @@ namespace Gw2Sharp.WebApi.V2.Clients
                             if (response.Expires.HasValue && latestCacheTime < response.Expires)
                                 latestCacheTime = response.Expires.Value;
                         }
-                        return response.Content.ToDictionary(x => (object)x.Id, x => x);
+                        return response.Content.ToDictionary(x => x.Id, x => x);
                     })).ConfigureAwait(false);
 
-                    return (result.SelectMany(x => x).ToDictionary(kvp => kvp.Key, kvp => kvp.Value), latestCacheTime);
+                    return (result.SelectMany(x => x).ToDictionary(kvp => (object)kvp.Key, kvp => kvp.Value), latestCacheTime);
                 }
             ).ConfigureAwait(false);
 
@@ -282,7 +297,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="page">The page number (zero-indexed).</param>
         /// <param name="pageSize">The page size (maximum 200).</param>
         /// <returns>The entries.</returns>
-        protected Task<IReadOnlyList<TIdentifiableObject>> RequestPage<TIdentifiableObject, TId>(int page, int pageSize = MaxPageSize) where TIdentifiableObject : IIdentifiable<TId> =>
+        protected Task<IReadOnlyList<TIdentifiableObject>> RequestPage<TIdentifiableObject, TId>(int page, int pageSize = MaxPageSize)
+            where TIdentifiableObject : object, IIdentifiable<TId>
+            where TId : object =>
             this.RequestPage<TIdentifiableObject, TId>(page, CancellationToken.None, pageSize);
 
         /// <summary>
@@ -294,7 +311,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <param name="pageSize">The page size (maximum 200).</param>
         /// <returns>The entries.</returns>
-        protected async Task<IReadOnlyList<TIdentifiableObject>> RequestPage<TIdentifiableObject, TId>(int page, CancellationToken cancellationToken, int pageSize = MaxPageSize) where TIdentifiableObject : IIdentifiable<TId> =>
+        protected async Task<IReadOnlyList<TIdentifiableObject>> RequestPage<TIdentifiableObject, TId>(int page, CancellationToken cancellationToken, int pageSize = MaxPageSize)
+            where TIdentifiableObject : object, IIdentifiable<TId>
+            where TId : object =>
             (await this.RequestPageWithResponse<TIdentifiableObject, TId>(page, cancellationToken, pageSize).ConfigureAwait(false)).Content;
 
         /// <summary>
@@ -307,7 +326,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="pageSize">The page size (maximum 200).</param>
         /// <returns>The entries.</returns>
         protected async Task<IApiV2Response<IReadOnlyList<TIdentifiableObject>>> RequestPageWithResponse<TIdentifiableObject, TId>(int page, CancellationToken cancellationToken, int pageSize = MaxPageSize)
-            where TIdentifiableObject : IIdentifiable<TId>
+            where TIdentifiableObject : object, IIdentifiable<TId>
+            where TId : object
         {
             pageSize = pageSize.Clamp(1, 200);
 
@@ -361,11 +381,13 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="cacheId">The cache identifier.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>A two-tuple that contains the <see cref="IHttpResponse{TIdentifiableObject}"/> and <see cref="CacheItem{TIdentifiableObject}"/> items.</returns>
-        protected async Task<(ApiV2Response<TIdentifiableObject>, CacheItem<TIdentifiableObject>)> GetOrUpdate<TIdentifiableObject>(string url, object cacheId, CancellationToken cancellationToken)
+        protected async Task<(ApiV2Response<TIdentifiableObject>?, CacheItem<TIdentifiableObject>)> GetOrUpdate<TIdentifiableObject>(string url, object cacheId, CancellationToken cancellationToken)
+            where TIdentifiableObject : object
         {
-            var response = new ApiV2Response<TIdentifiableObject>();
+            ApiV2Response<TIdentifiableObject>? response = null;
             var result = await this.Connection.CacheMethod.GetOrUpdate(this.EndpointPath, cacheId,
-                async () => {
+                async () =>
+                {
                     var uri = this.AppendUrlParameters(new Uri(Gw2WebApiV2Client.UrlBase, url));
                     var httpResponse = await this.Connection.Request<TIdentifiableObject>(uri, cancellationToken).ConfigureAwait(false);
                     response = new ApiV2Response<TIdentifiableObject>(httpResponse);
@@ -382,7 +404,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="cache">The cache.</param>
         /// <returns>The list of cached items.</returns>
         protected async Task<IReadOnlyList<CacheItem<TIdentifiableObject>>> UpdateIndividuals<TIdentifiableObject, TId>(CacheItem<IReadOnlyList<TIdentifiableObject>> cache)
-            where TIdentifiableObject : IIdentifiable<TId>
+            where TIdentifiableObject : object, IIdentifiable<TId>
+            where TId : object
         {
             var cacheList = cache.Item.Select(x => new CacheItem<TIdentifiableObject>(this.EndpointPath, x.Id, x, cache.ExpiryTime)).ToList();
             await this.Connection.CacheMethod.SetMany(cacheList).ConfigureAwait(false);

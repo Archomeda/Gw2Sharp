@@ -19,7 +19,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// If a utility skill is not selected in a specific slot, that element is <c>null</c>.
         /// Each element can be resolved against <see cref="IGw2WebApiV2Client.Skills"/>.
         /// </summary>
-        public IReadOnlyList<int?> Utilities { get; set; }
+        public IReadOnlyList<int?> Utilities { get; set; } = new List<int?>();
 
         /// <summary>
         /// The elite skill.
@@ -34,6 +34,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// If a legend is not selected in a specific slot, that element is <c>null</c>.
         /// Each element can be resolved against <see cref="IGw2WebApiV2Client.Legends"/>.
         /// </summary>
-        public IReadOnlyList<string> Legends { get; set; }
+        public IReadOnlyList<string>? Legends { get; set; }
     }
 }

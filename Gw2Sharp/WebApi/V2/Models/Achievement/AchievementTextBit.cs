@@ -8,6 +8,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The text bit description.
         /// </summary>
-        public string Text { get; set; }
+        public string Text { get; set; } = string.Empty;
     }
 }

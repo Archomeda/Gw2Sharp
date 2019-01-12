@@ -8,6 +8,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The gathering tool details.
         /// </summary>
-        public ItemGatheringDetails Details { get; set; }
+        public ItemGatheringDetails Details { get; set; } = new ItemGatheringDetails();
     }
 }

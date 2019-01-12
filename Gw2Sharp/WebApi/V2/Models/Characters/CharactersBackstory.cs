@@ -12,6 +12,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// The character backstory answers.
         /// Each element can be resolved against <see cref="IBackstoryClient.Answers"/>.
         /// </summary>
-        public IReadOnlyList<string> Backstory { get; set; }
+        public IReadOnlyList<string> Backstory { get; set; } = new List<string>();
     }
 }

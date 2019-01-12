@@ -8,7 +8,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// An abstract base class for implementing endpoint blob clients.
     /// </summary>
     /// <typeparam name="TObject">The response object type.</typeparam>
-    public abstract class BaseEndpointBlobClient<TObject> : BaseEndpointClient<TObject>, IBlobClient<TObject>
+    public abstract class BaseEndpointBlobClient<TObject> : BaseEndpointClient<TObject>, IBlobClient<TObject> where TObject : object
     {
         /// <summary>
         /// Creates a new base endpoint blob client.

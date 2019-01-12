@@ -27,11 +27,11 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The stash storage note.
         /// </summary>
-        public string Note { get; set; }
+        public string Note { get; set; } = string.Empty;
 
         /// <summary>
         /// The stash storage inventory.
         /// </summary>
-        public IReadOnlyList<GuildStashItem> Inventory { get; set; }
+        public IReadOnlyList<GuildStashItem> Inventory { get; set; } = new List<GuildStashItem>();
     }
 }

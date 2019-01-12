@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 namespace Gw2Sharp.WebApi.V2.Models
 {
     /// <summary>
@@ -10,11 +8,11 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The dungeon path id.
         /// </summary>
-        public string Id { get; set; }
+        public string Id { get; set; } = string.Empty;
 
         /// <summary>
         /// The dungeon path type.
         /// </summary>
-        public ApiEnum<DungeonPathType> Type { get; set; }
+        public ApiEnum<DungeonPathType> Type { get; set; } = new ApiEnum<DungeonPathType>();
     }
 }

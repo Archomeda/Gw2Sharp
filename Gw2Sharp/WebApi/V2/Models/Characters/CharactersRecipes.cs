@@ -11,6 +11,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// The list of character recipes.
         /// Each element can be resolved against <see cref="IGw2WebApiV2Client.Recipes"/>.
         /// </summary>
-        public IReadOnlyList<int> Recipes { get; set; }
+        public IReadOnlyList<int> Recipes { get; set; } = new List<int>();
     }
 }

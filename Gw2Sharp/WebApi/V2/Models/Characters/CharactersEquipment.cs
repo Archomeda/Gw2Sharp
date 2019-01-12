@@ -10,6 +10,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The list of the character equipment.
         /// </summary>
-        public IReadOnlyList<CharacterEquipmentItem> Equipment { get; set; }
+        public IReadOnlyList<CharacterEquipmentItem> Equipment { get; set; } = new List<CharacterEquipmentItem>();
     }
 }

@@ -1,6 +1,7 @@
-﻿using Gw2Sharp.WebApi.Caching;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
+using Gw2Sharp.WebApi.Caching;
 using Xunit;
 
 namespace Gw2Sharp.Tests.WebApi.Caching
@@ -25,7 +26,8 @@ namespace Gw2Sharp.Tests.WebApi.Caching
             await Task.Delay(5000);
 
             Assert.False(await this.cacheMethod.Has<int>(cacheItem.Category, cacheItem.Id));
-            Assert.Null(await this.cacheMethod.Get<int>(cacheItem.Category, cacheItem.Id));
+            Assert.Null(await this.cacheMethod.GetOrNull<int>(cacheItem.Category, cacheItem.Id));
+            await Assert.ThrowsAsync<KeyNotFoundException>(() => this.cacheMethod.Get<int>(cacheItem.Category, cacheItem.Id));
         }
     }
 }

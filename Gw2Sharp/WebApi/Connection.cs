@@ -47,7 +47,7 @@ namespace Gw2Sharp.WebApi
         /// <summary>
         /// Creates a new <see cref="Connection"/> without an API key, English locale and default HTTP client and caching method.
         /// </summary>
-        public Connection() : this(null, Locale.English) { }
+        public Connection() : this(string.Empty, Locale.English) { }
 
         /// <summary>
         /// Creates a new <see cref="Connection"/> with a specified API key and the default English locale.
@@ -59,7 +59,7 @@ namespace Gw2Sharp.WebApi
         /// Creates a new <see cref="Connection"/> with a specified locale.
         /// </summary>
         /// <param name="locale">The locale.</param>
-        public Connection(Locale locale) : this(null, locale) { }
+        public Connection(Locale locale) : this(string.Empty, locale) { }
 
         /// <summary>
         /// Creates a new <see cref="Connection"/> with a specified API key and locale.
@@ -76,7 +76,8 @@ namespace Gw2Sharp.WebApi
         /// <param name="httpClient">The HTTP client.</param>
         /// <param name="cacheMethod">The cache method.</param>
         public Connection(string accessToken, Locale locale, IHttpClient httpClient, ICacheMethod cacheMethod) :
-            this(accessToken, locale, null, httpClient, cacheMethod) { }
+            this(accessToken, locale, string.Empty, httpClient, cacheMethod)
+        { }
 
         /// <summary>
         /// Creates a new <see cref="Connection"/>.
@@ -149,7 +150,7 @@ namespace Gw2Sharp.WebApi
 
 
         /// <inheritdoc />
-        public async Task<IHttpResponse<TResponse>> Request<TResponse>(Uri requestUri, CancellationToken cancellationToken)
+        public async Task<IHttpResponse<TResponse>> Request<TResponse>(Uri requestUri, CancellationToken cancellationToken) where TResponse : object
         {
             var request = new HttpRequest
             {
@@ -160,36 +161,26 @@ namespace Gw2Sharp.WebApi
             try
             {
                 var r = await this.HttpClient.Request(request, cancellationToken).ConfigureAwait(false);
-                return new HttpResponse<TResponse>
-                {
-                    Content = JsonConvert.DeserializeObject<TResponse>(r.Content, DeserializerSettings),
-                    StatusCode = r.StatusCode,
-                    RequestHeaders = r.RequestHeaders,
-                    ResponseHeaders = r.ResponseHeaders
-                };
+                var obj = JsonConvert.DeserializeObject<TResponse>(r.Content, DeserializerSettings);
+                return new HttpResponse<TResponse>(obj, r.StatusCode, r.RequestHeaders, r.ResponseHeaders);
             }
             catch (UnexpectedStatusException ex)
             {
-                ErrorObject error;
+                var error = new ErrorObject();
                 try
                 {
-                    error = JsonConvert.DeserializeObject<ErrorObject>(ex.Response.Content, DeserializerSettings);
+                    if (ex.Response != null)
+                        error = JsonConvert.DeserializeObject<ErrorObject>(ex.Response.Content, DeserializerSettings);
                 }
                 catch (JsonSerializationException)
                 {
                     // Fallback message
-                    throw new UnexpectedStatusException(ex.Request, ex.Response, ex.Response.Content);
+                    throw new UnexpectedStatusException(ex.Request, ex.Response, ex.Response?.Content ?? string.Empty);
                 }
 
-                var errorResponse = new HttpResponse<ErrorObject>
-                {
-                    Content = error,
-                    StatusCode = ex.Response.StatusCode,
-                    RequestHeaders = ex.Response.RequestHeaders,
-                    ResponseHeaders = ex.Response.ResponseHeaders
-                };
+                var errorResponse = new HttpResponse<ErrorObject>(error, ex.Response?.StatusCode, ex.Response?.RequestHeaders, ex.Response?.RequestHeaders);
 
-                switch (ex.Response.StatusCode)
+                switch (ex.Response?.StatusCode)
                 {
                     case HttpStatusCode.BadRequest:
                         // 400
@@ -207,7 +198,7 @@ namespace Gw2Sharp.WebApi
                         // 503
                         throw new ServiceUnavailableException(ex.Request, errorResponse);
                     default:
-                        throw new UnexpectedStatusException(ex.Request, ex.Response, ex.Response.Content);
+                        throw new UnexpectedStatusException(ex.Request, ex.Response, ex.Response?.Content ?? string.Empty);
                 }
             }
         }
