@@ -92,11 +92,9 @@ namespace Gw2Sharp.WebApi
             this.AccessToken = accessToken;
             this.Locale = locale;
             this.UserAgent = $"{userAgent}{(string.IsNullOrWhiteSpace(userAgent) ? " " : "")}" +
-                $"Gw2Sharp/{typeof(Connection).GetType().Assembly.GetName().Version.ToString(2)} (https://github.com/Archomeda/Gw2Sharp)";
+                $"Gw2Sharp/{typeof(Connection).GetTypeInfo().Assembly.GetName().Version.ToString(2)} (https://github.com/Archomeda/Gw2Sharp)";
             this.HttpClient = httpClient;
             this.CacheMethod = cacheMethod;
-
-            var version = typeof(Connection).GetTypeInfo().Assembly.GetName().Version;
 
             this.requestHeaders = new Dictionary<string, string>()
             {

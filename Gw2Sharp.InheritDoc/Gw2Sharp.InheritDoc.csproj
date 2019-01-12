@@ -7,11 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="InheritDoc" Version="1.2.0.1" />
+    <PackageReference Include="InheritDoc" Version="2.0.2" />
   </ItemGroup>
 
   <Target Name="InheritDoc" AfterTargets="PostBuildEvent">
-    <Exec Command="$(NuGetPackageRoot)\inheritdoc\1.2.0.1\tools\InheritDoc.exe -b $(SolutionDir)Gw2Sharp\bin\ -o" />
+    <Exec Command="$(NuGetPackageRoot)\inheritdoc\2.0.2\tools\InheritDoc.exe -b $(SolutionDir)Gw2Sharp\bin\ -o" />
   </Target>
 
 </Project>
