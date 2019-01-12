@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net461</TargetFramework>
-    <AssemblyName>Gw2Sharp.InheritDoc</AssemblyName>
+    <AssemblyName>Gw2Sharp.Build.InheritDoc</AssemblyName>
     <PackageId>Gw2Sharp.InheritDoc</PackageId>
   </PropertyGroup>
 
