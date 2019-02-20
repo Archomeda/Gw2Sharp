@@ -1,3 +1,4 @@
+using System;
 using Gw2Sharp.WebApi.V2.Models;
 
 namespace Gw2Sharp.WebApi.V2.Clients
@@ -20,6 +21,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="floorId">The floor id.</param>
         /// <param name="regionId">The region id.</param>
         /// <param name="mapId">The map id.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
         public ContinentsFloorsRegionsMapsTasksClient(IConnection connection, int continentId, int floorId, int regionId, int mapId) :
             base(connection, continentId.ToString(), floorId.ToString(), regionId.ToString(), mapId.ToString())
         {

@@ -1,3 +1,5 @@
+using System;
+
 namespace Gw2Sharp.WebApi.V2.Clients
 {
     /// <summary>
@@ -11,7 +13,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
         /// <param name="continentId">The continent id.</param>
-        public ContinentsIdClient(IConnection connection, int continentId) : base(connection)
+        /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
+        public ContinentsIdClient(IConnection connection, int continentId) :
+            base(connection)
         {
             this.ContinentId = continentId;
             this.Floors = new ContinentsFloorsClient(connection, continentId);

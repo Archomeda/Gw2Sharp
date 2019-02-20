@@ -25,7 +25,7 @@ namespace Gw2Sharp.WebApi.Caching
         /// <param name="category">The cache category.</param>
         /// <param name="id">The id.</param>
         /// <returns>The task for this operation with the cached item if it exists.</returns>
-        /// <exception cref="KeyNotFoundException">Thrown when the cache does not contain the cached item.</exception>
+        /// <exception cref="KeyNotFoundException">The cache does not contain the cached item.</exception>
         Task<CacheItem<T>> Get<T>(string category, object id) where T : object;
 
         /// <summary>

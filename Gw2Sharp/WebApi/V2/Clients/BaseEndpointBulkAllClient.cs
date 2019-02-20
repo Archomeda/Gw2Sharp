@@ -19,16 +19,22 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Creates a new base endpoint bulk with support for all client.
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
         /// <exception cref="InvalidOperationException">Thrown when the client implements an invalid combination of <see cref="IEndpointClient"/> interfaces.</exception>
-        public BaseEndpointBulkAllClient(IConnection connection) : base(connection) { }
+        public BaseEndpointBulkAllClient(IConnection connection) :
+            base(connection)
+        { }
 
         /// <summary>
         /// Creates a new base endpoint bulk with support for all client.
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
         /// <param name="replaceSegments">The path segments to replace.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
         /// <exception cref="InvalidOperationException">Thrown when the client implements an invalid combination of <see cref="IEndpointClient"/> interfaces.</exception>
-        public BaseEndpointBulkAllClient(IConnection connection, params string[] replaceSegments) : base(connection, replaceSegments) { }
+        public BaseEndpointBulkAllClient(IConnection connection, params string[] replaceSegments) :
+            base(connection, replaceSegments)
+        { }
 
         /// <inheritdoc />
         public virtual Task<IReadOnlyList<TObject>> All() =>

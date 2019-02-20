@@ -10,7 +10,7 @@ namespace Gw2Sharp.Tests.WebApi.Caching
 {
     public abstract class BaseCacheMethodTests
     {
-        protected ICacheMethod cacheMethod;
+        protected ICacheMethod cacheMethod = null!;
 
         [Fact]
         public async Task CategoryDoesNotExistTest()
@@ -128,7 +128,7 @@ namespace Gw2Sharp.Tests.WebApi.Caching
         [Fact]
         public async Task StoreExpiresSoonTest()
         {
-            var cacheItem = new CacheItem<int>("Test category", "test", 42, DateTime.Now.AddSeconds(2));
+            var cacheItem = new CacheItem<int>("Test category", "test", 42, DateTime.Now.AddSeconds(1.5));
 
             await this.cacheMethod.Set(cacheItem);
             Assert.True(await this.cacheMethod.Has<int>(cacheItem.Category, cacheItem.Id));

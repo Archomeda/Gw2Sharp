@@ -1,4 +1,4 @@
-﻿using Gw2Sharp.WebApi.V2.Models;
+using Gw2Sharp.WebApi.V2.Models;
 using Newtonsoft.Json;
 using Xunit;
 
@@ -8,7 +8,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Models
     {
         private class JsonObject
         {
-            public ApiEnum<MapType> MapType { get; set; }
+            public ApiEnum<MapType> MapType { get; set; } = default!;
         }
 
         [Fact]

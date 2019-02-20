@@ -12,7 +12,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Models.Converters
             SomeValue
         }
 
-        [CastableType(TestCastableEnum.SomeValue, null)]
+        [CastableType(TestCastableEnum.SomeValue, typeof(object))]
         private class TestCastableType : ICastableType<string, TestCastableEnum>
         {
             public ApiEnum<TestCastableEnum> Type => throw new NotImplementedException();
@@ -33,7 +33,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Models.Converters
         {
             var converter = new CastableTypeConverter();
             Assert.False(converter.CanWrite);
-            Assert.Throws<NotImplementedException>(() => converter.WriteJson(null, null, null));
+            Assert.Throws<NotImplementedException>(() => converter.WriteJson(default!, default!, default!));
         }
 
         [Fact]

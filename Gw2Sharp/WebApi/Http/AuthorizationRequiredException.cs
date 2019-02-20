@@ -1,4 +1,4 @@
-using System.Text.RegularExpressions;
+using System;
 using Gw2Sharp.WebApi.V2.Models;
 
 namespace Gw2Sharp.WebApi.Http
@@ -15,8 +15,9 @@ namespace Gw2Sharp.WebApi.Http
         /// <param name="request">The original request.</param>
         /// <param name="response">The response.</param>
         /// <param name="error">The error.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="request"/>, <paramref name="response"/> or <paramref name="error"/> is <c>null</c>.</exception>
         public AuthorizationRequiredException(IHttpRequest request, IHttpResponse<ErrorObject> response, AuthorizationError error) :
-            base(request, response, response.Content.Message)
+            base(request, response, response?.Content?.Message)
         {
             this.AuthorizationError = error;
         }
@@ -32,8 +33,14 @@ namespace Gw2Sharp.WebApi.Http
         /// <param name="request">The request.</param>
         /// <param name="response">The response.</param>
         /// <returns>The exception.</returns>
+        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="response"/> is <c>null</c>.</exception>
         public static AuthorizationRequiredException CreateFromResponse(IHttpRequest request, IHttpResponse<ErrorObject> response)
         {
+            if (request == null)
+                throw new ArgumentNullException(nameof(request));
+            if (response == null)
+                throw new ArgumentNullException(nameof(response));
+
             switch (response.Content.Message)
             {
                 case "invalid key":

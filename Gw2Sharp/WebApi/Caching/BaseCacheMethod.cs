@@ -10,15 +10,6 @@ namespace Gw2Sharp.WebApi.Caching
     /// </summary>
     public abstract class BaseCacheMethod : ICacheMethod
     {
-        /// <summary>
-        /// Disposes the object.
-        /// </summary>
-        /// <param name="isDisposing">Dispose unmanaged resources.</param>
-        protected virtual void Dispose(bool isDisposing) { }
-
-        /// <inheritdoc />
-        public void Dispose() => this.Dispose(true);
-
         /// <inheritdoc />
         public abstract Task<bool> Has<T>(string category, object id) where T : object;
 
@@ -145,5 +136,14 @@ namespace Gw2Sharp.WebApi.Caching
 
         /// <inheritdoc />
         public abstract Task Flush();
+
+        /// <inheritdoc />
+        public void Dispose() => this.Dispose(true);
+
+        /// <summary>
+        /// Disposes the object.
+        /// </summary>
+        /// <param name="isDisposing">Dispose unmanaged resources.</param>
+        protected virtual void Dispose(bool isDisposing) { }
     }
 }

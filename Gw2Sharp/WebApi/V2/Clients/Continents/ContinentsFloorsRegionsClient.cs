@@ -1,3 +1,4 @@
+using System;
 using Gw2Sharp.WebApi.V2.Models;
 
 namespace Gw2Sharp.WebApi.V2.Clients
@@ -16,7 +17,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
         /// <param name="continentId">The continent id.</param>
         /// <param name="floorId">The floor id.</param>
-        public ContinentsFloorsRegionsClient(IConnection connection, int continentId, int floorId) : base(connection, continentId.ToString(), floorId.ToString())
+        /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
+        public ContinentsFloorsRegionsClient(IConnection connection, int continentId, int floorId) :
+            base(connection, continentId.ToString(), floorId.ToString())
         {
             this.ContinentId = continentId;
             this.FloorId = floorId;

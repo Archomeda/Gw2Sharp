@@ -1,3 +1,5 @@
+using System;
+
 namespace Gw2Sharp.WebApi.Http
 {
     /// <summary>
@@ -10,8 +12,9 @@ namespace Gw2Sharp.WebApi.Http
         /// </summary>
         /// <param name="request">The original request.</param>
         /// <param name="response">The response.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="response"/> is <c>null</c>.</exception>
         public UnexpectedStatusException(IHttpRequest request, IHttpResponse<string> response) :
-            this(request, response, $"Unexpected HTTP status code: {(int)response.StatusCode}")
+            this(request, response, $"Unexpected HTTP status code: {(int?)response?.StatusCode ?? 0}")
         { }
 
         /// <summary>
@@ -20,6 +23,7 @@ namespace Gw2Sharp.WebApi.Http
         /// <param name="request">The original request.</param>
         /// <param name="response">The response.</param>
         /// <param name="message">The message.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="message"/> is <c>null</c>.</exception>
         public UnexpectedStatusException(IHttpRequest request, IHttpResponse<string>? response, string message) :
             base(request, response, message)
         { }
@@ -35,9 +39,13 @@ namespace Gw2Sharp.WebApi.Http
         /// </summary>
         /// <param name="request">The original request.</param>
         /// <param name="response">The response.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="response"/> is <c>null</c>.</exception>
         public UnexpectedStatusException(IHttpRequest request, IHttpResponse<T> response) :
-            this(request, response, $"Unexpected HTTP status code: {(int)response.StatusCode}")
-        { }
+            this(request, response, $"Unexpected HTTP status code: {(int?)response?.StatusCode ?? 0}")
+        {
+            if (response == null)
+                throw new ArgumentNullException(nameof(response));
+        }
 
         /// <summary>
         /// Creates a new <see cref="UnexpectedStatusException" />.
@@ -45,6 +53,7 @@ namespace Gw2Sharp.WebApi.Http
         /// <param name="request">The original request.</param>
         /// <param name="response">The response.</param>
         /// <param name="message">The message.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="message"/> is <c>null</c>.</exception>
         public UnexpectedStatusException(IHttpRequest request, IHttpResponse<T>? response, string message) :
             base(request, response, message)
         { }

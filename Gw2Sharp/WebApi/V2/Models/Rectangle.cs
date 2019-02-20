@@ -91,7 +91,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         public override string ToString() => $"({this.TopLeft},{this.TopRight},{this.BottomLeft},{this.BottomRight})";
 
         /// <inheritdoc />
-        public override bool Equals(object obj) => obj is Rectangle && this.Equals((Rectangle)obj);
+        public override bool Equals(object? obj) => obj is Rectangle && this.Equals((Rectangle)obj);
 
         /// <summary>
         /// Indicates whether the current object is equal to another object of the same type.

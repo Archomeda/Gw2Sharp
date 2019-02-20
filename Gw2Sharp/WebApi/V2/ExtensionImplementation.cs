@@ -16,10 +16,16 @@ namespace Gw2Sharp.WebApi.V2
         /// <typeparam name="TEnum">The enum type.</typeparam>
         /// <param name="typableObject">The typable object.</param>
         /// <returns><c>true</c> if the object is an instance of the given object type; <c>false</c> otherwise.</returns>
+        /// <exception cref="NullReferenceException"><paramref name="typableObject"/> is <c>null</c>.</exception>
         public static bool IsType<T, TParent, TEnum>(this ICastableType<TParent, TEnum> typableObject)
             where T : TParent
             where TEnum : Enum
-            => typableObject is T;
+        {
+            if (typableObject == null)
+                throw new ArgumentNullException(nameof(typableObject));
+
+            return typableObject is T;
+        }
 
         /// <summary>
         /// Cast the object to another type.
@@ -28,9 +34,15 @@ namespace Gw2Sharp.WebApi.V2
         /// <typeparam name="TParent">The parent type.</typeparam>
         /// <typeparam name="TEnum">The enum type.</typeparam>
         /// <returns>The object in the given type.</returns>
+        /// <exception cref="NullReferenceException"><paramref name="typableObject"/> is <c>null</c>.</exception>
         public static T AsType<T, TParent, TEnum>(this ICastableType<TParent, TEnum> typableObject)
             where T : TParent
             where TEnum : Enum
-            => (T)typableObject;
+        {
+            if (typableObject == null)
+                throw new ArgumentNullException(nameof(typableObject));
+
+            return (T)typableObject;
+        }
     }
 }

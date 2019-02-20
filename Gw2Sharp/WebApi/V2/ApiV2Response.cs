@@ -20,8 +20,13 @@ namespace Gw2Sharp.WebApi.V2
         /// Initializes a new instance of the <see cref="ApiV2Response{T}"/> class with a <see cref="IHttpResponse{T}"/> as base.
         /// </summary>
         /// <param name="response">The base response.</param>
-        public ApiV2Response(IHttpResponse<T> response) : base(response.Content, response.StatusCode, response.RequestHeaders, response.ResponseHeaders)
+        /// <exception cref="ArgumentNullException"><paramref name="response"/> is <c>null</c>.</exception>
+        public ApiV2Response(IHttpResponse<T> response) :
+            base(response.Content, response.StatusCode, response.RequestHeaders, response.ResponseHeaders)
         {
+            if (response == null)
+                throw new ArgumentNullException(nameof(response));
+
             this.CacheMaxAge = this.ParseResponseHeader(response.ResponseHeaders, "Cache-Control", value => CacheControlHeaderValue.Parse(value).MaxAge);
             this.Expires = this.ParseResponseHeader(response.ResponseHeaders, "Expires", value => DateTime.Parse(value));
             this.RateLimitLimit = this.ParseResponseHeader(response.ResponseHeaders, "X-Rate-Limit-Limit", ParseNullableInt);

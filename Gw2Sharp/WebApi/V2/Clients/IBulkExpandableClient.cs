@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -17,6 +18,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// </summary>
         /// <param name="id">The entry id.</param>
         /// <returns>The entry.</returns>
+        /// <exception cref="ArgumentNullException"><paramref name="id"/> is <c>null</c>.</exception>
         Task<TObject> Get(TId id);
 
         /// <summary>
@@ -25,6 +27,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="id">The entry id.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The entry.</returns>
+        /// <exception cref="ArgumentNullException"><paramref name="id"/> is <c>null</c>.</exception>
         Task<TObject> Get(TId id, CancellationToken cancellationToken);
 
         /// <summary>
@@ -33,6 +36,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="id">The entry id.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The entry.</returns>
+        /// <exception cref="ArgumentNullException"><paramref name="id"/> is <c>null</c>.</exception>
         Task<IApiV2Response<TObject>> GetWithResponse(TId id, CancellationToken cancellationToken);
 
         /// <summary>
@@ -60,6 +64,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// </summary>
         /// <param name="ids">The entry ids.</param>
         /// <returns>The entries.</returns>
+        /// <exception cref="ArgumentNullException"><paramref name="ids"/> is <c>null</c>.</exception>
         Task<IReadOnlyList<TObject>> Many(IEnumerable<TId> ids);
 
         /// <summary>
@@ -68,6 +73,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="ids">The entry ids.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The entries.</returns>
+        /// <exception cref="ArgumentNullException"><paramref name="ids"/> is <c>null</c>.</exception>
         Task<IReadOnlyList<TObject>> Many(IEnumerable<TId> ids, CancellationToken cancellationToken);
 
         /// <summary>
@@ -76,6 +82,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="ids">The entry ids.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The entries.</returns>
+        /// <exception cref="ArgumentNullException"><paramref name="ids"/> is <c>null</c>.</exception>
         Task<IReadOnlyList<IApiV2Response<IReadOnlyList<TObject>>>> ManyWithResponse(IEnumerable<TId> ids, CancellationToken cancellationToken);
     }
 }

@@ -12,6 +12,7 @@ namespace Gw2Sharp.WebApi.Http
         /// </summary>
         /// <param name="request">The original request.</param>
         /// <param name="message">The message.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="message"/> is <c>null</c>.</exception>
         public RequestException(IHttpRequest request, string message) :
             base(request, message)
         { }
@@ -22,6 +23,7 @@ namespace Gw2Sharp.WebApi.Http
         /// <param name="request">The original request.</param>
         /// <param name="response">The response.</param>
         /// <param name="message">The message.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="message"/> is <c>null</c>.</exception>
         public RequestException(IHttpRequest request, IHttpResponse<string>? response, string message) :
             base(request, response, message)
         { }
@@ -32,6 +34,7 @@ namespace Gw2Sharp.WebApi.Http
         /// <param name="request">The original request.</param>
         /// <param name="message">The message.</param>
         /// <param name="innerException">The inner exception.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="message"/> is <c>null</c>.</exception>
         public RequestException(IHttpRequest request, string message, Exception? innerException) :
             base(request, message, innerException)
         { }
@@ -43,6 +46,7 @@ namespace Gw2Sharp.WebApi.Http
         /// <param name="response">The response.</param>
         /// <param name="message">The message.</param>
         /// <param name="innerException">The inner exception.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="message"/> is <c>null</c>.</exception>
         public RequestException(IHttpRequest request, IHttpResponse<string>? response, string message, Exception innerException) :
             base(request, response, message, innerException)
         { }
@@ -60,6 +64,7 @@ namespace Gw2Sharp.WebApi.Http
         /// </summary>
         /// <param name="request">The original request.</param>
         /// <param name="message">The message.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="message"/> is <c>null</c>.</exception>
         public RequestException(IHttpRequest request, string message) :
             this(request, null, message, null)
         { }
@@ -70,6 +75,7 @@ namespace Gw2Sharp.WebApi.Http
         /// <param name="request">The original request.</param>
         /// <param name="response">The response.</param>
         /// <param name="message">The message.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="message"/> is <c>null</c>.</exception>
         public RequestException(IHttpRequest request, IHttpResponse<TResponse>? response, string message) :
             this(request, response, message, null)
         { }
@@ -80,6 +86,7 @@ namespace Gw2Sharp.WebApi.Http
         /// <param name="request">The original request.</param>
         /// <param name="message">The message.</param>
         /// <param name="innerException">The inner exception.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="message"/> is <c>null</c>.</exception>
         public RequestException(IHttpRequest request, string message, Exception? innerException) :
             this(request, null, message, innerException)
         { }
@@ -91,10 +98,14 @@ namespace Gw2Sharp.WebApi.Http
         /// <param name="response">The response.</param>
         /// <param name="message">The message.</param>
         /// <param name="innerException">The inner exception.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="message"/> is <c>null</c>.</exception>
         public RequestException(IHttpRequest request, IHttpResponse<TResponse>? response, string message, Exception? innerException) :
             base(message, innerException)
         {
-            this.Request = request;
+            if (message == null)
+                throw new ArgumentNullException(nameof(message));
+
+            this.Request = request ?? throw new ArgumentNullException(nameof(request));
             this.Response = response;
         }
 

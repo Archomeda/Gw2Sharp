@@ -1,10 +1,8 @@
-using System;
 using System.Threading.Tasks;
 using Gw2Sharp.WebApi;
 using Gw2Sharp.WebApi.Caching;
 using Gw2Sharp.WebApi.Http;
 using Gw2Sharp.WebApi.V2.Clients;
-using Gw2Sharp.WebApi.V2.Models;
 using NSubstitute;
 using Xunit;
 
@@ -14,7 +12,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
     {
         public AchievementsGroupsClientTests()
         {
-            var connection = new Connection(null, Locale.English, Substitute.For<IHttpClient>(), new NullCacheMethod());
+            var connection = new Connection(string.Empty, Locale.English, Substitute.For<IHttpClient>(), new NullCacheMethod());
             this.client = new Gw2WebApiClient(connection).V2.Achievements.Groups;
             this.Client = this.client;
         }

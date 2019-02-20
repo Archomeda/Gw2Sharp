@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using Gw2Sharp.WebApi.V2.Models;
 
 namespace Gw2Sharp.WebApi.V2.Clients
 {
@@ -16,7 +15,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
         /// <param name="guildId">The guild id.</param>
-        public GuildIdUpgradesClient(IConnection connection, Guid guildId) : base(connection)
+        /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
+        public GuildIdUpgradesClient(IConnection connection, Guid guildId) :
+            base(connection)
         {
             this.GuildId = guildId;
         }

@@ -14,7 +14,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
         /// <param name="name">The guild name.</param>
-        public GuildSearchNameClient(IConnection connection, string name) : base(connection)
+        /// <exception cref="ArgumentNullException"><paramref name="connection"/> or <paramref name="name"/> is <c>null</c>.</exception>
+        public GuildSearchNameClient(IConnection connection, string name) :
+            base(connection)
         {
             this.Name = name ?? throw new ArgumentNullException(nameof(name));
         }

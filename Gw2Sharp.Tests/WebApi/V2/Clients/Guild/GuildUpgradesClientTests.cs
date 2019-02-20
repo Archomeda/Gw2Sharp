@@ -12,7 +12,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
     {
         public GuildUpgradesClientTests()
         {
-            var connection = new Connection(null, Locale.English, Substitute.For<IHttpClient>(), new NullCacheMethod());
+            var connection = new Connection(string.Empty, Locale.English, Substitute.For<IHttpClient>(), new NullCacheMethod());
             this.client = new Gw2WebApiClient(connection).V2.Guild.Upgrades;
             this.Client = this.client;
         }

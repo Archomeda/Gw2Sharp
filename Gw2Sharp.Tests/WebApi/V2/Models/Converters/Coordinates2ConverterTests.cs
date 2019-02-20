@@ -12,7 +12,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Models.Converters
         {
             var converter = new Coordinates2Converter();
             Assert.False(converter.CanWrite);
-            Assert.Throws<NotImplementedException>(() => converter.WriteJson(null, new Coordinates2(), null));
+            Assert.Throws<NotImplementedException>(() => converter.WriteJson(default!, new Coordinates2(), default!));
         }
 
         [Fact]

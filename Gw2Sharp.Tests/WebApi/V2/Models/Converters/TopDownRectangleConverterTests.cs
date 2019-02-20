@@ -12,7 +12,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Models.Converters
         {
             var converter = new TopDownRectangleConverter();
             Assert.False(converter.CanWrite);
-            Assert.Throws<NotImplementedException>(() => converter.WriteJson(null, new Rectangle(), null));
+            Assert.Throws<NotImplementedException>(() => converter.WriteJson(default!, new Rectangle(), default!));
         }
 
         [Fact]

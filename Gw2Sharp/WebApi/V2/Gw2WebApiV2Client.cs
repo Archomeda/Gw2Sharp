@@ -16,15 +16,16 @@ namespace Gw2Sharp.WebApi.V2
         /// <summary>
         /// Creates a new <see cref="Gw2WebApiV2Client"/>.
         /// </summary>
-        public Gw2WebApiV2Client() : this(new Connection()) { } 
+        public Gw2WebApiV2Client() : this(new Connection()) { }
 
         /// <summary>
         /// Creates a new <see cref="Gw2WebApiV2Client"/>.
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
+        /// <exception cref="NullReferenceException"><paramref name="connection"/> is <c>null</c>.</exception>
         public Gw2WebApiV2Client(IConnection connection)
         {
-            this.Connection = connection;
+            this.Connection = connection ?? throw new ArgumentNullException(nameof(connection));
             this.Account = new AccountClient(connection);
             this.Achievements = new AchievementsClient(connection);
             this.Backstory = new BackstoryClient(connection);

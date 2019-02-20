@@ -51,10 +51,6 @@ namespace Gw2Sharp.WebApi.Caching
         #region BaseCacheController overrides
 
         /// <inheritdoc />
-        protected override void Dispose(bool disposing) =>
-            this.gcTimer.Dispose();
-
-        /// <inheritdoc />
         public override async Task<bool> Has<T>(string category, object id)
         {
             if (category == null)
@@ -114,6 +110,10 @@ namespace Gw2Sharp.WebApi.Caching
         /// <inheritdoc />
         public override async Task Flush() =>
             this.cachedItems.Clear();
+
+        /// <inheritdoc />
+        protected override void Dispose(bool disposing) =>
+            this.gcTimer.Dispose();
 
         #endregion
     }

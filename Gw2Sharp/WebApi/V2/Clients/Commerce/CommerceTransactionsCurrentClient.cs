@@ -1,3 +1,5 @@
+using System;
+
 namespace Gw2Sharp.WebApi.V2.Clients
 {
     /// <summary>
@@ -10,7 +12,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Creates a new <see cref="CommerceTransactionsCurrentClient"/> that is used for the API v2 commerce transactions current endpoint.
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
-        public CommerceTransactionsCurrentClient(IConnection connection) : base(connection)
+        /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
+        public CommerceTransactionsCurrentClient(IConnection connection) :
+            base(connection)
         {
             this.Buys = new CommerceTransactionsCurrentBuysClient(connection);
             this.Sells = new CommerceTransactionsCurrentSellsClient(connection);

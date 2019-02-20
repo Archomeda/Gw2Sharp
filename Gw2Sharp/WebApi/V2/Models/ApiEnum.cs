@@ -15,6 +15,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// </summary>
         /// <param name="value">The enum value.</param>
         /// <param name="rawValue">The raw value.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="value"/> or <paramref name="rawValue"/> is <c>null</c>.</exception>
         protected ApiEnum(Enum value, string rawValue)
         {
             this.Value = value ?? throw new ArgumentNullException(nameof(value));
@@ -39,7 +40,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         public string RawValue { get; }
 
         /// <inheritdoc />
-        public override bool Equals(object obj) =>
+        public override bool Equals(object? obj) =>
             obj is ApiEnum other ? this.Equals(other) : false;
 
         /// <inheritdoc />
@@ -88,6 +89,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// Creates a new API enum.
         /// </summary>
         /// <param name="value">The enum value.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="value"/> is <c>null</c>.</exception>
         public ApiEnum(T value) : this(value, null) { }
 
         /// <summary>
@@ -95,6 +97,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// </summary>
         /// <param name="value">The enum value.</param>
         /// <param name="rawValue">The raw value.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="value"/> is <c>null</c>.</exception>
         public ApiEnum(T value, string? rawValue) : base(value, rawValue ?? Enum.GetName(typeof(T), value)) { }
 
         /// <summary>
@@ -121,7 +124,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         public static implicit operator string(ApiEnum<T> e) => e.RawValue;
 
         /// <inheritdoc />
-        public override bool Equals(object obj) =>
+        public override bool Equals(object? obj) =>
             obj is ApiEnum<T> other ? this.Equals(other) : false;
 
         /// <inheritdoc />

@@ -13,12 +13,13 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// Creates a new instance of the <see cref="CastableTypeAttribute"/> class.
         /// </summary>
+        /// <exception cref="ArgumentNullException"><paramref name="value"/> or <paramref name="objectType"/> is <c>null</c>.</exception>
         public CastableTypeAttribute(object value, Type objectType)
         {
+            this.Value = value ?? throw new ArgumentNullException(nameof(value));
             if (!value.GetType().IsEnum)
                 throw new ArgumentException("An enum value is required", nameof(value));
-            this.Value = value;
-            this.ObjectType = objectType;
+            this.ObjectType = objectType ?? throw new ArgumentNullException(nameof(objectType));
         }
 
         /// <summary>

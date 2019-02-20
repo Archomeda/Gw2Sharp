@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Gw2Sharp.WebApi.V2.Clients
 {
@@ -13,9 +13,10 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Creates a new instance of the <see cref="EndpointPathAttribute"/> class.
         /// </summary>
         /// <param name="endpointPath">The endpoint path.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="endpointPath"/> is <c>null</c>.</exception>
         public EndpointPathAttribute(string endpointPath)
         {
-            this.EndpointPath = endpointPath;
+            this.EndpointPath = endpointPath ?? throw new ArgumentNullException(nameof(endpointPath));
         }
 
         /// <summary>

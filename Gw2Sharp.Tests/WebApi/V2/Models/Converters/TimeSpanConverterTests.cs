@@ -11,7 +11,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Models.Converters
         {
             var converter = new TimeSpanConverter();
             Assert.False(converter.CanWrite);
-            Assert.Throws<NotImplementedException>(() => converter.WriteJson(null, new TimeSpan(), null));
+            Assert.Throws<NotImplementedException>(() => converter.WriteJson(default!, new TimeSpan(), default!));
         }
 
         [Fact]

@@ -12,7 +12,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Creates a new <see cref="GuildClient"/> that is used for the API v2 guild endpoint.
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
-        public GuildClient(IConnection connection) : base(connection)
+        /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
+        public GuildClient(IConnection connection) :
+            base(connection)
         {
             this.Permissions = new GuildPermissionsClient(connection);
             this.Search = new GuildSearchClient(connection);

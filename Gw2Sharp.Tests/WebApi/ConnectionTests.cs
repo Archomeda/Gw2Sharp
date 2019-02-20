@@ -82,8 +82,8 @@ namespace Gw2Sharp.Tests.WebApi
             httpClient.Request(Arg.Any<IHttpRequest>(), CancellationToken.None).Returns(Task.FromResult(httpResponse));
             var content = new TestContentClass { Testkey = "testvalue" };
 
-            var connection = new Connection(null, default, httpClient, new NullCacheMethod());
-            var response = await connection.Request<TestContentClass>(null, CancellationToken.None);
+            var connection = new Connection(string.Empty, default, httpClient, new NullCacheMethod());
+            var response = await connection.Request<TestContentClass>(new Uri("http://localhost"), CancellationToken.None);
 
             Assert.Equal(content.Testkey, response.Content.Testkey);
             Assert.Equal(httpResponse.StatusCode, response.StatusCode);
@@ -104,14 +104,15 @@ namespace Gw2Sharp.Tests.WebApi
         public async Task ExceptionRequestTest(string errorText, HttpStatusCode statusCode, Type exceptionType)
         {
             var httpClient = Substitute.For<IHttpClient>();
+            var httpRequest = Substitute.For<IHttpRequest>();
             var httpResponse = Substitute.For<IHttpResponse>();
             httpResponse.Content.Returns($"{{\"text\":\"{errorText}\"}}");
             httpResponse.StatusCode.Returns(statusCode);
-            httpClient.Request(Arg.Any<IHttpRequest>(), CancellationToken.None).Throws(_ => new UnexpectedStatusException(null, httpResponse));
+            httpClient.Request(Arg.Any<IHttpRequest>(), CancellationToken.None).Throws(_ => new UnexpectedStatusException(httpRequest, httpResponse));
 
-            var connection = new Connection(null, default, httpClient, new NullCacheMethod());
-            var exception = await Assert.ThrowsAsync(exceptionType, () => connection.Request<TestContentClass>(null, CancellationToken.None)) as UnexpectedStatusException<ErrorObject>;
-            Assert.Equal(errorText, exception.Response.Content.Text);
+            var connection = new Connection(string.Empty, default, httpClient, new NullCacheMethod());
+            var exception = (UnexpectedStatusException<ErrorObject>)await Assert.ThrowsAsync(exceptionType, () => connection.Request<TestContentClass>(new Uri("http://localhost"), CancellationToken.None));
+            Assert.Equal(errorText, exception.Response?.Content.Text);
         }
 
         [Fact]
@@ -119,19 +120,20 @@ namespace Gw2Sharp.Tests.WebApi
         {
             string message = "{\"error\":\"Some nice error message\"}";
             var httpClient = Substitute.For<IHttpClient>();
+            var httpRequest = Substitute.For<IHttpRequest>();
             var httpResponse = Substitute.For<IHttpResponse>();
             httpResponse.Content.Returns(message);
             httpResponse.StatusCode.Returns((HttpStatusCode)499);
-            httpClient.Request(Arg.Any<IHttpRequest>(), CancellationToken.None).Throws(_ => new UnexpectedStatusException(null, httpResponse));
+            httpClient.Request(Arg.Any<IHttpRequest>(), CancellationToken.None).Throws(_ => new UnexpectedStatusException(httpRequest, httpResponse));
 
-            var connection = new Connection(null, default, httpClient, new NullCacheMethod());
-            var exception = await Assert.ThrowsAsync<UnexpectedStatusException>(() => connection.Request<TestContentClass>(null, CancellationToken.None));
-            Assert.Equal(message, exception.Response.Content);
+            var connection = new Connection(string.Empty, default, httpClient, new NullCacheMethod());
+            var exception = await Assert.ThrowsAsync<UnexpectedStatusException>(() => connection.Request<TestContentClass>(new Uri("http://localhost"), CancellationToken.None));
+            Assert.Equal(message, exception.Response?.Content);
         }
 
         public class TestContentClass
         {
-            public string Testkey { get; set; }
+            public string Testkey { get; set; } = string.Empty;
         }
     }
 }

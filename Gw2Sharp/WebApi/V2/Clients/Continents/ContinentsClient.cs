@@ -1,3 +1,4 @@
+using System;
 using Gw2Sharp.WebApi.V2.Models;
 
 namespace Gw2Sharp.WebApi.V2.Clients
@@ -12,7 +13,10 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Creates a new <see cref="ContinentsClient"/> that is used for the API v2 characters endpoint.
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
-        public ContinentsClient(IConnection connection) : base(connection) { }
+        /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
+        public ContinentsClient(IConnection connection) :
+            base(connection)
+        { }
 
         /// <inheritdoc />
         public virtual IContinentsIdClient this[int continentId] => new ContinentsIdClient(this.Connection, continentId);

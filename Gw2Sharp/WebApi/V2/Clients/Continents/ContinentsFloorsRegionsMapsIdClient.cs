@@ -1,3 +1,5 @@
+using System;
+
 namespace Gw2Sharp.WebApi.V2.Clients
 {
     /// <summary>
@@ -14,7 +16,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="floorId">The floor id.</param>
         /// <param name="regionId">The region id.</param>
         /// <param name="mapId">The map id.</param>
-        public ContinentsFloorsRegionsMapsIdClient(IConnection connection, int continentId, int floorId, int regionId, int mapId) : base(connection)
+        /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
+        public ContinentsFloorsRegionsMapsIdClient(IConnection connection, int continentId, int floorId, int regionId, int mapId) :
+            base(connection)
         {
             this.ContinentId = continentId;
             this.FloorId = floorId;

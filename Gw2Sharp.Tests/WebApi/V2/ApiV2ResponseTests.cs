@@ -85,7 +85,7 @@ namespace Gw2Sharp.Tests.WebApi.V2
             var responseHeaders = new Dictionary<string, string>
             {
                 { "Cache-Control", "public,max-age=NaN" },
-                { "X-Rate-Limit-Limit", null },
+                { "X-Rate-Limit-Limit", string.Empty },
                 { "X-Result-Count", "2147483648" } // Int32.MaxValue + 1
             };
 

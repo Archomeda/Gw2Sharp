@@ -1,3 +1,4 @@
+using System;
 using Gw2Sharp.WebApi.V2.Models;
 
 namespace Gw2Sharp.WebApi.Http
@@ -13,7 +14,9 @@ namespace Gw2Sharp.WebApi.Http
         /// </summary>
         /// <param name="request">The original request.</param>
         /// <param name="response">The response.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="response"/> is <c>null</c>.</exception>
         public ServerErrorException(IHttpRequest request, IHttpResponse<ErrorObject> response) :
-            base(request, response, response.Content.Message) { }
+            base(request, response, response.Content.Message)
+        { }
     }
 }

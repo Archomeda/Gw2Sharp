@@ -24,7 +24,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
 {
     public abstract class BaseEndpointClientTests
     {
-        public IEndpointClient Client { get; protected set; }
+        public IEndpointClient Client { get; protected set; } = default!;
 
         [Fact]
         public void InterfaceConsistencyTest()
@@ -67,14 +67,14 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
             var (data, expected) = this.GetTestData(file);
             this.Client.Connection.HttpClient.Request(Arg.Any<IHttpRequest>(), CancellationToken.None).Returns(callInfo =>
             {
-                this.AssertRequest(callInfo, client, null);
+                this.AssertRequest(callInfo, client, string.Empty);
                 this.AssertAuthenticatedRequest(callInfo, client);
                 this.AssertLocalizedRequest(callInfo, client);
                 return new HttpResponse(data, HttpStatusCode.OK, null, null);
             });
 
             var actual = await client.Get();
-            this.AssertJsonObject(expected, actual);
+            this.AssertJsonObject(expected, actual!);
         }
 
         protected virtual async Task AssertGetData<TObject, TId>(IBulkExpandableClient<TObject, TId> client, string file, string idName = "id") where TObject : IIdentifiable<TId>
@@ -121,7 +121,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
             var httpRequest = Substitute.For<IHttpRequest>();
             this.Client.Connection.HttpClient.Request(Arg.Any<IHttpRequest>(), CancellationToken.None).Returns(callInfo =>
             {
-                this.AssertRequest(callInfo, client, $"?ids={string.Join(",", ids.Select(i => i.ToString()))}");
+                this.AssertRequest(callInfo, client, $"?ids={string.Join(",", ids.Select(i => i?.ToString()))}");
                 this.AssertAuthenticatedRequest(callInfo, client);
                 this.AssertLocalizedRequest(callInfo, client);
                 return new HttpResponse(data, HttpStatusCode.OK, null, null);
@@ -138,7 +138,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
             var httpRequest = Substitute.For<IHttpRequest>();
             this.Client.Connection.HttpClient.Request(Arg.Any<IHttpRequest>(), CancellationToken.None).Returns(callInfo =>
             {
-                this.AssertRequest(callInfo, client, null);
+                this.AssertRequest(callInfo, client, string.Empty);
                 this.AssertAuthenticatedRequest(callInfo, client);
                 this.AssertLocalizedRequest(callInfo, client);
                 return new HttpResponse(data, HttpStatusCode.OK, null, null);

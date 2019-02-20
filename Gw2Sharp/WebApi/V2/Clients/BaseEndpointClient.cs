@@ -23,8 +23,10 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Creates a new base endpoint client.
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
         /// <exception cref="InvalidOperationException">Thrown when the client implements an invalid combination of <see cref="IEndpointClient"/> interfaces.</exception>
-        public BaseEndpointClient(IConnection connection) : base(connection)
+        public BaseEndpointClient(IConnection connection) :
+            base(connection)
         {
             this.EndpointPath = this.GetRequiredAttribute<EndpointPathAttribute>().EndpointPath;
 
@@ -44,8 +46,10 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
         /// <param name="replaceSegments">The path segments to replace.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
         /// <exception cref="InvalidOperationException">Thrown when the client implements an invalid combination of <see cref="IEndpointClient"/> interfaces.</exception>
-        public BaseEndpointClient(IConnection connection, params string[] replaceSegments) : this(connection)
+        public BaseEndpointClient(IConnection connection, params string[] replaceSegments) :
+            this(connection)
         {
             var segments = this.GetRequiredAttributes<EndpointPathSegmentAttribute>().OrderBy(a => a.Order).ToList();
             if (segments.Count != replaceSegments.Length)
@@ -182,6 +186,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <typeparam name="TId">The id value type.</typeparam>
         /// <param name="id">The entry id.</param>
         /// <returns>The entry.</returns>
+        /// <exception cref="ArgumentNullException"><paramref name="id"/> is <c>null</c>.</exception>
         protected Task<TIdentifiableObject> RequestGet<TIdentifiableObject, TId>(TId id)
             where TIdentifiableObject : object, IIdentifiable<TId>
             where TId : object =>
@@ -195,6 +200,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="id">The entry id.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The entry.</returns>
+        /// <exception cref="ArgumentNullException"><paramref name="id"/> is <c>null</c>.</exception>
         protected async Task<TIdentifiableObject> RequestGet<TIdentifiableObject, TId>(TId id, CancellationToken cancellationToken)
             where TIdentifiableObject : object, IIdentifiable<TId>
             where TId : object =>
@@ -208,10 +214,14 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="id">The entry id.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The entry.</returns>
+        /// <exception cref="ArgumentNullException"><paramref name="id"/> is <c>null</c>.</exception>
         protected async Task<IApiV2Response<TIdentifiableObject>> RequestGetWithResponse<TIdentifiableObject, TId>(TId id, CancellationToken cancellationToken)
             where TIdentifiableObject : object, IIdentifiable<TId>
             where TId : object
         {
+            if (id == null)
+                throw new ArgumentNullException(nameof(id));
+
             var (response, cache) = await this.GetOrUpdate<TIdentifiableObject>(this.FormatUrlQueryItem(this.EndpointPath, id), id, cancellationToken).ConfigureAwait(false);
             response.Content = cache.Item;
             return response;
@@ -224,6 +234,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <typeparam name="TId">The id value type.</typeparam>
         /// <param name="ids">The entry ids.</param>
         /// <returns>The entries.</returns>
+        /// <exception cref="ArgumentNullException"><paramref name="ids"/> is <c>null</c>.</exception>
         protected Task<IReadOnlyList<TIdentifiableObject>> RequestMany<TIdentifiableObject, TId>(IEnumerable<TId> ids)
             where TIdentifiableObject : object, IIdentifiable<TId>
             where TId : object =>
@@ -237,6 +248,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="ids">The entry ids.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The entries.</returns>
+        /// <exception cref="ArgumentNullException"><paramref name="ids"/> is <c>null</c>.</exception>
         protected async Task<IReadOnlyList<TIdentifiableObject>> RequestMany<TIdentifiableObject, TId>(IEnumerable<TId> ids, CancellationToken cancellationToken)
             where TIdentifiableObject : object, IIdentifiable<TId>
             where TId : object =>
@@ -250,10 +262,14 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="ids">The entry ids.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The entries.</returns>
+        /// <exception cref="ArgumentNullException"><paramref name="ids"/> is <c>null</c>.</exception>
         protected async Task<IReadOnlyList<IApiV2Response<IReadOnlyList<TIdentifiableObject>>>> RequestManyWithResponse<TIdentifiableObject, TId>(IEnumerable<TId> ids, CancellationToken cancellationToken)
             where TIdentifiableObject : object, IIdentifiable<TId>
             where TId : object
         {
+            if (ids == null)
+                throw new ArgumentNullException(nameof(ids));
+
             var responses = new List<ApiV2Response<IReadOnlyList<TIdentifiableObject>>>();
             object responsesLock = new object();
 
@@ -381,9 +397,15 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="cacheId">The cache identifier.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>A two-tuple that contains the <see cref="IHttpResponse{TIdentifiableObject}"/> and <see cref="CacheItem{TIdentifiableObject}"/> items.</returns>
+        /// <exception cref="ArgumentNullException"><paramref name="url"/> or <paramref name="cacheId"/> is <c>null</c>.</exception>
         protected async Task<(ApiV2Response<TIdentifiableObject>?, CacheItem<TIdentifiableObject>)> GetOrUpdate<TIdentifiableObject>(string url, object cacheId, CancellationToken cancellationToken)
             where TIdentifiableObject : object
         {
+            if (url == null)
+                throw new ArgumentNullException(nameof(url));
+            if (cacheId == null)
+                throw new ArgumentNullException(nameof(cacheId));
+
             ApiV2Response<TIdentifiableObject>? response = null;
             var result = await this.Connection.CacheMethod.GetOrUpdate(this.EndpointPath, cacheId,
                 async () =>
@@ -403,10 +425,14 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <typeparam name="TId">The id value type.</typeparam>
         /// <param name="cache">The cache.</param>
         /// <returns>The list of cached items.</returns>
+        /// <exception cref="ArgumentNullException"><paramref name="cache"/> is <c>null</c>.</exception>
         protected async Task<IReadOnlyList<CacheItem<TIdentifiableObject>>> UpdateIndividuals<TIdentifiableObject, TId>(CacheItem<IReadOnlyList<TIdentifiableObject>> cache)
             where TIdentifiableObject : object, IIdentifiable<TId>
             where TId : object
         {
+            if (cache == null)
+                throw new ArgumentNullException(nameof(cache));
+
             var cacheList = cache.Item.Select(x => new CacheItem<TIdentifiableObject>(this.EndpointPath, x.Id, x, cache.ExpiryTime)).ToList();
             await this.Connection.CacheMethod.SetMany(cacheList).ConfigureAwait(false);
             return cacheList;
@@ -470,8 +496,12 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// </summary>
         /// <param name="uri">The base URI.</param>
         /// <returns>The formatted URL.</returns>
+        /// <exception cref="ArgumentNullException"><paramref name="uri"/> is <c>null</c>.</exception>
         protected virtual Uri AppendUrlParameters(Uri uri)
         {
+            if (uri == null)
+                throw new ArgumentNullException(nameof(uri));
+
             var parameterProperties = this.GetType()
                 .GetProperties(BindingFlags.Public | BindingFlags.Instance)
                 .Where(p => p.GetCustomAttribute<EndpointPathParameterAttribute>() != null);

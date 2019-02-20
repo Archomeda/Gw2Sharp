@@ -14,9 +14,10 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// </summary>
         /// <param name="pathSegment">The path segment to replace.</param>
         /// <param name="order">The order of the passed parameter that is used when replacing the path segment.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="pathSegment"/> is <c>null</c>.</exception>
         public EndpointPathSegmentAttribute(string pathSegment, int order)
         {
-            this.PathSegment = pathSegment;
+            this.PathSegment = pathSegment ?? throw new ArgumentNullException(nameof(pathSegment));
             this.Order = order;
         }
 

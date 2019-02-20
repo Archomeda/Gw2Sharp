@@ -13,7 +13,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
         /// <param name="characterName">The character name that's used for all character requests.</param>
-        public CharactersIdClient(IConnection connection, string characterName) : base(connection)
+        /// <exception cref="ArgumentNullException"><paramref name="connection"/> or <paramref name="characterName"/> is <c>null</c>.</exception>
+        public CharactersIdClient(IConnection connection, string characterName) :
+            base(connection)
         {
             this.CharacterName = characterName ?? throw new ArgumentNullException(nameof(characterName));
             this.Backstory = new CharactersIdBackstoryClient(connection, characterName);

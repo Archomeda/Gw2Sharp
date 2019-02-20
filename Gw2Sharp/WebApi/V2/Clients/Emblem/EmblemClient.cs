@@ -1,3 +1,5 @@
+using System;
+
 namespace Gw2Sharp.WebApi.V2.Clients
 {
     /// <summary>
@@ -10,7 +12,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Creates a new <see cref="EmblemClient"/> that is used for the API v2 emblem endpoint.
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
-        public EmblemClient(IConnection connection) : base(connection)
+        /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
+        public EmblemClient(IConnection connection) :
+            base(connection)
         {
             this.Foregrounds = new EmblemForegroundsClient(connection);
             this.Backgrounds = new EmblemBackgroundsClient(connection);

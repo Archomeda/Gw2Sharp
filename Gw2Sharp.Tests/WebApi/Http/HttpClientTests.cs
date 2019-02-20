@@ -1,11 +1,11 @@
-﻿using Gw2Sharp.WebApi.Http;
-using NSubstitute;
 using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Gw2Sharp.WebApi.Http;
+using NSubstitute;
 using Xunit;
 
 namespace Gw2Sharp.Tests.WebApi.Http
@@ -88,7 +88,7 @@ namespace Gw2Sharp.Tests.WebApi.Http
                 request.Url.Returns(new Uri(Url));
 
                 var ex = await Assert.ThrowsAsync<UnexpectedStatusException>(() => client.Request(request, CancellationToken.None));
-                Assert.Equal(HttpStatusCode.NotFound, ex.Response.StatusCode);
+                Assert.Equal(HttpStatusCode.NotFound, ex.Response?.StatusCode);
             }
         }
     }

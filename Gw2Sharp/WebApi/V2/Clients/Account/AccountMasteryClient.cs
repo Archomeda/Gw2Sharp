@@ -1,3 +1,5 @@
+using System;
+
 namespace Gw2Sharp.WebApi.V2.Clients
 {
     /// <summary>
@@ -10,7 +12,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Creates a new <see cref="AccountMasteriesClient"/> that is used for the API v2 account masteries endpoint.
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
-        public AccountMasteryClient(IConnection connection) : base(connection)
+        /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
+        public AccountMasteryClient(IConnection connection) :
+            base(connection)
         {
             this.Points = new AccountMasteryPointsClient(connection);
         }

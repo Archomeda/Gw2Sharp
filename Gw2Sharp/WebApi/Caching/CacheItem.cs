@@ -55,7 +55,7 @@ namespace Gw2Sharp.WebApi.Caching
         }
 
         /// <inheritdoc />
-        public override bool Equals(object obj) =>
+        public override bool Equals(object? obj) =>
             obj is CacheItem ? this.Equals((CacheItem)obj) : false;
 
         /// <summary>

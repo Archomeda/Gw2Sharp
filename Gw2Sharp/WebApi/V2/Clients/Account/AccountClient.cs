@@ -1,3 +1,4 @@
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Gw2Sharp.WebApi.V2.Models;
@@ -14,8 +15,13 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Creates a new <see cref="AccountClient"/> that is used for the API v2 account endpoint.
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
-        public AccountClient(IConnection connection) : base(connection)
+        /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
+        public AccountClient(IConnection connection) :
+            base(connection)
         {
+            if (connection == null)
+                throw new ArgumentNullException(nameof(connection));
+
             this.Achievements = new AccountAchievementsClient(connection);
             this.Bank = new AccountBankClient(connection);
             this.Dungeons = new AccountDungeonsClient(connection);

@@ -47,7 +47,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         public override string ToString() => $"({this.X},{this.Y})";
 
         /// <inheritdoc />
-        public override bool Equals(object obj) => obj is Coordinates2 && this.Equals((Coordinates2)obj);
+        public override bool Equals(object? obj) => obj is Coordinates2 && this.Equals((Coordinates2)obj);
 
         /// <summary>
         /// Indicates whether the current object is equal to another object of the same type.

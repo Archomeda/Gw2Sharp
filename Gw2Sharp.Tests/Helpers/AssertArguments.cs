@@ -14,10 +14,11 @@ namespace Gw2Sharp.Tests.Helpers
         {
             // Original: https://www.thomaslevesque.com/2014/11/02/easy-unit-testing-of-null-argument-validation/
 
-            MemberInfo callMethod = null;
-            ParameterInfo[] callParams = null;
-            IReadOnlyCollection<Expression> callArgs = null;
-            Expression callObj = null;
+            MemberInfo callMethod;
+            ParameterInfo[] callParams;
+            IReadOnlyCollection<Expression> callArgs;
+            Expression? callObj = null;
+
             switch (expression.Body.NodeType)
             {
                 case ExpressionType.Call:
@@ -42,7 +43,7 @@ namespace Gw2Sharp.Tests.Helpers
 
                 var args = callArgs.ToArray();
                 args[i] = Expression.Constant(null, callParams[i].ParameterType);
-                Expression callExpr = null;
+                Expression? callExpr = null;
                 switch (expression.Body.NodeType)
                 {
                     case ExpressionType.Call:
@@ -61,10 +62,11 @@ namespace Gw2Sharp.Tests.Helpers
         {
             // Original: https://www.thomaslevesque.com/2014/11/02/easy-unit-testing-of-null-argument-validation/
 
-            MemberInfo callMethod = null;
-            ParameterInfo[] callParams = null;
-            IReadOnlyCollection<Expression> callArgs = null;
-            Expression callObj = null;
+            MemberInfo callMethod;
+            ParameterInfo[] callParams;
+            IReadOnlyCollection<Expression> callArgs;
+            Expression? callObj = null;
+
             switch (expression.Body.NodeType)
             {
                 case ExpressionType.Call:
@@ -90,7 +92,7 @@ namespace Gw2Sharp.Tests.Helpers
 
                 var args = callArgs.ToArray();
                 args[i] = Expression.Constant(null, callParams[i].ParameterType);
-                Expression callExpr = null;
+                Expression? callExpr = null;
                 switch (expression.Body.NodeType)
                 {
                     case ExpressionType.Call:
@@ -117,7 +119,7 @@ namespace Gw2Sharp.Tests.Helpers
                 if (!paramsNull[i])
                     continue;
 
-                object[] args = callArgs.ToArray();
+                object?[] args = callArgs.ToArray();
                 args[i] = null;
                 Assert.Throws<ArgumentNullException>(constructorInfo.GetParameters()[i].Name, () =>
                 {

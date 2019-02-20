@@ -1,3 +1,4 @@
+using System;
 using Gw2Sharp.WebApi.V2.Models;
 
 namespace Gw2Sharp.WebApi.V2.Clients
@@ -13,7 +14,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
         /// <param name="quantity">The amount of gems to exchange.</param>
-        public CommerceExchangeGemsQuantityClient(IConnection connection, int quantity) : base(connection)
+        /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
+        public CommerceExchangeGemsQuantityClient(IConnection connection, int quantity) :
+            base(connection)
         {
             this.Quantity = quantity;
         }

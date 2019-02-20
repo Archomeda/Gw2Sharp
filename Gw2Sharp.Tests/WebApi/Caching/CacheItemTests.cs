@@ -1,6 +1,6 @@
-﻿using Gw2Sharp.Tests.Helpers;
-using Gw2Sharp.WebApi.Caching;
 using System;
+using Gw2Sharp.Tests.Helpers;
+using Gw2Sharp.WebApi.Caching;
 using Xunit;
 
 namespace Gw2Sharp.Tests.WebApi.Caching
@@ -21,7 +21,7 @@ namespace Gw2Sharp.Tests.WebApi.Caching
             var item2 = new CacheItem<string>("test category 2", "test id 2", "test item 2", DateTime.Now);
             Assert.False(item.Equals(item2));
             Assert.False(item.Equals(new object()));
-            Assert.False(item.Equals(null));
+            Assert.False(item.Equals(null!));
         }
 
         [Fact]

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Clients
@@ -13,6 +14,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
         /// <param name="characterName">The character name.</param>
-        public CharactersIdHeroPointsClient(IConnection connection, string characterName) : base(connection, characterName) { }
+        /// <exception cref="ArgumentNullException"><paramref name="connection"/> or <paramref name="characterName"/> is <c>null</c>.</exception>
+        public CharactersIdHeroPointsClient(IConnection connection, string characterName) :
+            base(connection, characterName)
+        { }
     }
 }

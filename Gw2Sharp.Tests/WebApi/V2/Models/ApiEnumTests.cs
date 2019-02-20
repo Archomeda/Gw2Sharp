@@ -1,8 +1,8 @@
+using System;
+using System.ComponentModel;
 using Gw2Sharp.Tests.Helpers;
 using Gw2Sharp.WebApi.V2.Models;
 using Newtonsoft.Json;
-using System;
-using System.ComponentModel;
 using Xunit;
 
 namespace Gw2Sharp.Tests.WebApi.V2.Models
@@ -19,7 +19,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Models
 
         private class JsonObject
         {
-            public ApiEnum<TestEnum> Enum { get; set; }
+            public ApiEnum<TestEnum> Enum { get; set; } = default!;
         }
 
         [Fact]
@@ -95,7 +95,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Models
             Assert.False(item.Equals(item3));
             Assert.False(item2.Equals(item3));
             Assert.False(item.Equals(new object()));
-            Assert.False(item.Equals(null));
+            Assert.False(item.Equals(null!));
         }
 
         [Fact]

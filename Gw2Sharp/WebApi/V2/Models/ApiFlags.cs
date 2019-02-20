@@ -22,9 +22,10 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// Creates new API flags.
         /// </summary>
         /// <param name="list">The list of enum values.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="list"/> is <c>null</c>.</exception>
         protected ApiFlags(IReadOnlyList<ApiEnum> list)
         {
-            this.List = list;
+            this.List = list ?? throw new ArgumentNullException(nameof(list));
             this.UnknownList = list.Where(e => e.IsUnknown).ToList().AsReadOnly();
         }
 
@@ -45,7 +46,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         public IReadOnlyList<ApiEnum> UnknownList { get; protected set; } = new List<ApiEnum>();
 
         /// <inheritdoc />
-        public override bool Equals(object obj) =>
+        public override bool Equals(object? obj) =>
             obj is ApiFlags other ? this.Equals(other) : false;
 
         /// <inheritdoc />
@@ -92,13 +93,19 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// Creates new API flags.
         /// </summary>
         /// <param name="list">The list of enum values.</param>
-        public ApiFlags(IReadOnlyList<ApiEnum> list) : this(list.Select(e => new ApiEnum<T>((T)e.Value, e.RawValue)).ToList()) { }
+        /// <exception cref="ArgumentNullException"><paramref name="list"/> is <c>null</c>.</exception>
+        public ApiFlags(IReadOnlyList<ApiEnum> list) :
+            this(list.Select(e => new ApiEnum<T>((T)e.Value, e.RawValue)).ToList())
+        { }
 
         /// <summary>
         /// Creates new API flags.
         /// </summary>
         /// <param name="list">The list of enum values.</param>
-        public ApiFlags(IReadOnlyList<ApiEnum<T>> list) : base(list) { }
+        /// <exception cref="ArgumentNullException"><paramref name="list"/> is <c>null</c>.</exception>
+        public ApiFlags(IReadOnlyList<ApiEnum<T>> list) :
+            base(list)
+        { }
 
         /// <summary>
         /// The actual flags as interpreted by the library.
@@ -135,7 +142,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         public static implicit operator List<ApiEnum<T>>(ApiFlags<T> e) => e.List.ToList();
 
         /// <inheritdoc />
-        public override bool Equals(object obj) =>
+        public override bool Equals(object? obj) =>
             obj is ApiFlags<T> other ? this.Equals(other) : false;
 
         /// <inheritdoc />
