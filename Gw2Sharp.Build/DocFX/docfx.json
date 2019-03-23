@@ -30,7 +30,10 @@
       {
         "files": [
           "api/*.md",
-          "articles/**.md",
+          "faq/**.md",
+          "faq/**/toc.yml",
+          "guides/**.md",
+          "guides/**/toc.yml",
           "toc.yml",
           "*.md"
         ],
@@ -64,7 +67,10 @@
     ],
     "dest": "_site",
     "template": [
-      "default"
+      "statictoc"
     ]
-  }
+  },
+  "xrefService": [
+    "https://xref.docs.microsoft.com/query?uid={uid}"
+  ]
 }

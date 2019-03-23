@@ -1,3 +1,7 @@
+---
+uid: API.Index
+title: API Documentation
+---
 
-# PLACEHOLDER
-TODO: Add .NET projects to *src* folder and run `docfx` to generate a **REAL** *API Documentation*!
+# API Documentation
+On the left you can find all exposed members.

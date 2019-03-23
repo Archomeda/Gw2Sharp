@@ -1,0 +1,29 @@
+image: Visual Studio 2019
+version: '{build}'
+skip_branch_with_pr: true
+skip_commits:
+  message: /\[(ci skip|skip ci|docs)\]/
+
+configuration: Release
+
+build:
+  project: Gw2Sharp.sln
+  parallel: true
+  verbosity: minimal
+
+after_build:
+  - 7z a "Gw2Sharp_%APPVEYOR_BUILD_VERSION%_%PLATFORM%.zip" -r "%APPVEYOR_BUILD_FOLDER%\bin\%PLATFORM%\%CONFIGURATION%\*.dll"
+
+artifacts:
+  - path: Gw2Sharp_$(appveyor_build_version)_$(platform).zip
+    name: Gw2Sharp_$(appveyor_build_version)_$(platform)
+
+deploy:
+  provider: GitHub
+  description: "New release: $(appveyor_build_version)"
+  auth_token:
+    secure: /93cJH0TEPlM829Tak7dyn/tHJDBR3dxPtU5gQdU3kbTYlSq+FELMLsxHTcuhJ2D
+  artifact: Gw2Sharp_$(appveyor_build_version)_$(platform).zip
+  draft: true
+  on:
+    appveyor_repo_tag: true
