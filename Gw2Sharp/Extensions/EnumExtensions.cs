@@ -8,7 +8,7 @@ namespace Gw2Sharp.Extensions
     /// <summary>
     /// Provides enum-based extensions.
     /// </summary>
-    internal static class Enums
+    internal static class EnumExtensions
     {
         /// <summary>
         /// Parses a string into an enum.

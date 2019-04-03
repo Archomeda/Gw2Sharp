@@ -8,7 +8,7 @@ namespace Gw2Sharp.Extensions
     /// <summary>
     /// Provides extensions for dictionaries.
     /// </summary>
-    internal static class Dictionary
+    internal static class DictionaryExtensions
     {
         /// <summary>
         /// Creates a shallow copy of a <see cref="IEnumerable{T}"/> that contains <see cref="KeyValuePair{TKey, TValue}"/> items

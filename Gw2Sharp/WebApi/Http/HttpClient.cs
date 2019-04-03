@@ -3,15 +3,16 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
+using SysHttpClient = System.Net.Http.HttpClient;
 
 namespace Gw2Sharp.WebApi.Http
 {
     /// <summary>
-    /// A basic web client that uses .NET's <see cref="System.Net.Http.HttpClient" />.
+    /// A basic web client that uses .NET's <see cref="SysHttpClient" />.
     /// </summary>
     public class HttpClient : IHttpClient
     {
-        private static readonly System.Net.Http.HttpClient NetHttpClient = new System.Net.Http.HttpClient();
+        private static readonly SysHttpClient NetHttpClient = new SysHttpClient();
 
         /// <inheritdoc />
         public TimeSpan Timeout { get; set; } = TimeSpan.FromSeconds(30);

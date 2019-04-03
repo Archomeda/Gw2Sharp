@@ -1,10 +1,10 @@
-﻿using Gw2Sharp.Extensions;
 using System.Collections.Generic;
+using Gw2Sharp.Extensions;
 using Xunit;
 
 namespace Gw2Sharp.Tests.Extensions
 {
-    public class DictionaryTests
+    public class DictionaryExtensionsTests
     {
         [Fact]
         public void ShallowCopyTest()

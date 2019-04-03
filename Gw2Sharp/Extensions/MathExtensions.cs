@@ -5,7 +5,7 @@ namespace Gw2Sharp.Extensions
     /// <summary>
     /// Provides math-based extensions.
     /// </summary>
-    internal static class Math
+    internal static class MathExtensions
     {
         /// <summary>
         /// Clamps a value between the given boundaries.
