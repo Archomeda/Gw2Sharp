@@ -48,7 +48,7 @@ namespace Gw2Sharp.Tests.WebApi.Http
                 request.RequestHeaders.Returns(new Dictionary<string, string>() { { headerKey, headerValue } });
                 request.Url.Returns(new Uri(Url));
 
-                var result = await client.Request(request, CancellationToken.None);
+                var result = await client.RequestAsync(request, CancellationToken.None);
 
                 Assert.Equal(message, result.Content);
                 Assert.Contains(new KeyValuePair<string, string>(headerKey, headerValue), result.ResponseHeaders);
@@ -68,7 +68,7 @@ namespace Gw2Sharp.Tests.WebApi.Http
                 request.Url.Returns(new Uri(Url));
 
                 var tokenSource = new CancellationTokenSource(1000);
-                await Assert.ThrowsAsync<RequestCanceledException>(() => client.Request(request, tokenSource.Token));
+                await Assert.ThrowsAsync<RequestCanceledException>(() => client.RequestAsync(request, tokenSource.Token));
                 reset.Set();
             }
         }
@@ -87,7 +87,7 @@ namespace Gw2Sharp.Tests.WebApi.Http
                 request.RequestHeaders.Returns(new Dictionary<string, string>());
                 request.Url.Returns(new Uri(Url));
 
-                var ex = await Assert.ThrowsAsync<UnexpectedStatusException>(() => client.Request(request, CancellationToken.None));
+                var ex = await Assert.ThrowsAsync<UnexpectedStatusException>(() => client.RequestAsync(request, CancellationToken.None));
                 Assert.Equal(HttpStatusCode.NotFound, ex.Response?.StatusCode);
             }
         }

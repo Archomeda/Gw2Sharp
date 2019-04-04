@@ -32,15 +32,15 @@ namespace Gw2Sharp.WebApi.V2.Clients
         { }
 
         /// <inheritdoc />
-        public virtual Task<TObject> Get() =>
-            this.RequestGet();
+        public virtual Task<TObject> GetAsync() =>
+            this.RequestGetAsync();
 
         /// <inheritdoc />
-        public virtual Task<TObject> Get(CancellationToken cancellationToken) =>
-            this.RequestGet(cancellationToken);
+        public virtual Task<TObject> GetAsync(CancellationToken cancellationToken) =>
+            this.RequestGetAsync(cancellationToken);
 
         /// <inheritdoc />
-        public virtual Task<IApiV2Response<TObject>> GetWithResponse(CancellationToken cancellationToken) =>
-            this.RequestGetWithResponse(cancellationToken);
+        public virtual Task<IApiV2Response<TObject>> GetWithResponseAsync(CancellationToken cancellationToken) =>
+            this.RequestGetWithResponseAsync(cancellationToken);
     }
 }

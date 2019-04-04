@@ -51,7 +51,7 @@ namespace Gw2Sharp.WebApi.Caching
         #region BaseCacheController overrides
 
         /// <inheritdoc />
-        public override async Task<bool> Has<T>(string category, object id)
+        public override async Task<bool> HasAsync<T>(string category, object id)
         {
             if (category == null)
                 throw new ArgumentNullException(nameof(category));
@@ -65,18 +65,18 @@ namespace Gw2Sharp.WebApi.Caching
         }
 
         /// <inheritdoc />
-        public override async Task<CacheItem<T>?> GetOrNull<T>(string category, object id)
+        public override async Task<CacheItem<T>?> GetOrNullAsync<T>(string category, object id)
         {
             if (category == null)
                 throw new ArgumentNullException(nameof(category));
             if (id == null)
                 throw new ArgumentNullException(nameof(id));
 
-            return await this.Has<T>(category, id) ? (CacheItem<T>)this.cachedItems[category][id] : null;
+            return await this.HasAsync<T>(category, id) ? (CacheItem<T>)this.cachedItems[category][id] : null;
         }
 
         /// <inheritdoc />
-        public override async Task Set<T>(CacheItem<T> item)
+        public override async Task SetAsync<T>(CacheItem<T> item)
         {
             if (item == null)
                 throw new ArgumentNullException(nameof(item));
@@ -90,7 +90,7 @@ namespace Gw2Sharp.WebApi.Caching
         }
 
         /// <inheritdoc />
-        public override async Task<IDictionary<object, CacheItem<T>>> GetMany<T>(string category, IEnumerable<object> ids)
+        public override async Task<IDictionary<object, CacheItem<T>>> GetManyAsync<T>(string category, IEnumerable<object> ids)
         {
             if (category == null)
                 throw new ArgumentNullException(nameof(category));
@@ -101,14 +101,14 @@ namespace Gw2Sharp.WebApi.Caching
             if (this.cachedItems.ContainsKey(category))
             {
                 foreach (object id in ids)
-                    if (await this.Has<T>(category, id))
+                    if (await this.HasAsync<T>(category, id))
                         items.Add(id, (CacheItem<T>)this.cachedItems[category][id]);
             }
             return items;
         }
 
         /// <inheritdoc />
-        public override async Task Flush() =>
+        public override async Task FlushAsync() =>
             this.cachedItems.Clear();
 
         /// <inheritdoc />

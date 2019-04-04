@@ -30,39 +30,39 @@ namespace Gw2Sharp.WebApi.V2.Clients
         public BaseEndpointPaginatedBlobClient(IConnection connection, params string[] replaceSegments) : base(connection, replaceSegments) { }
 
         /// <inheritdoc />
-        public virtual Task<IReadOnlyList<TObject>> Get() =>
-            this.RequestGet();
+        public virtual Task<IReadOnlyList<TObject>> GetAsync() =>
+            this.RequestGetAsync();
 
         /// <inheritdoc />
-        public virtual Task<IReadOnlyList<TObject>> Get(CancellationToken cancellationToken) =>
-            this.RequestGet(cancellationToken);
+        public virtual Task<IReadOnlyList<TObject>> GetAsync(CancellationToken cancellationToken) =>
+            this.RequestGetAsync(cancellationToken);
 
         /// <inheritdoc />
-        public virtual Task<IApiV2Response<IReadOnlyList<TObject>>> GetWithResponse(CancellationToken cancellationToken) =>
-            this.RequestGetWithResponse(cancellationToken);
+        public virtual Task<IApiV2Response<IReadOnlyList<TObject>>> GetWithResponseAsync(CancellationToken cancellationToken) =>
+            this.RequestGetWithResponseAsync(cancellationToken);
 
         /// <inheritdoc />
-        public virtual Task<IReadOnlyList<TObject>> Page(int page) =>
-            this.RequestPage(page);
+        public virtual Task<IReadOnlyList<TObject>> PageAsync(int page) =>
+            this.RequestPageAsync(page);
 
         /// <inheritdoc />
-        public virtual Task<IReadOnlyList<TObject>> Page(int page, int pageSize) =>
-            this.RequestPage(page, pageSize);
+        public virtual Task<IReadOnlyList<TObject>> PageAsync(int page, int pageSize) =>
+            this.RequestPageAsync(page, pageSize);
 
         /// <inheritdoc />
-        public virtual Task<IReadOnlyList<TObject>> Page(int page, CancellationToken cancellationToken) =>
-            this.RequestPage(page, cancellationToken);
+        public virtual Task<IReadOnlyList<TObject>> PageAsync(int page, CancellationToken cancellationToken) =>
+            this.RequestPageAsync(page, cancellationToken);
 
         /// <inheritdoc />
-        public virtual Task<IReadOnlyList<TObject>> Page(int page, CancellationToken cancellationToken, int pageSize) =>
-            this.RequestPage(page, cancellationToken, pageSize);
+        public virtual Task<IReadOnlyList<TObject>> PageAsync(int page, CancellationToken cancellationToken, int pageSize) =>
+            this.RequestPageAsync(page, cancellationToken, pageSize);
 
         /// <inheritdoc />
-        public virtual Task<IApiV2Response<IReadOnlyList<TObject>>> PageWithResponse(int page, CancellationToken cancellationToken) =>
-            this.RequestPageWithResponse(page, cancellationToken);
+        public virtual Task<IApiV2Response<IReadOnlyList<TObject>>> PageWithResponseAsync(int page, CancellationToken cancellationToken) =>
+            this.RequestPageWithResponseAsync(page, cancellationToken);
 
         /// <inheritdoc />
-        public virtual Task<IApiV2Response<IReadOnlyList<TObject>>> PageWithResponse(int page, CancellationToken cancellationToken, int pageSize) =>
-            this.RequestPageWithResponse(page, cancellationToken, pageSize);
+        public virtual Task<IApiV2Response<IReadOnlyList<TObject>>> PageWithResponseAsync(int page, CancellationToken cancellationToken, int pageSize) =>
+            this.RequestPageWithResponseAsync(page, cancellationToken, pageSize);
     }
 }

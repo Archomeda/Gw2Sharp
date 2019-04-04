@@ -11,7 +11,7 @@ namespace Gw2Sharp.WebApi.Http
         /// <summary>
         /// The URL.
         /// </summary>
-        Uri? Url { get; set; }
+        Uri Url { get; set; }
 
         /// <summary>
         /// The request headers to use in the web request.

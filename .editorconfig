@@ -101,7 +101,7 @@ dotnet_naming_rule.interfaces_must_start_with_an_i.severity = warning
 
 dotnet_naming_rule.async_methods_require_suffix.symbols = async_methods
 dotnet_naming_rule.async_methods_require_suffix.style = async_suffix
-dotnet_naming_rule.async_methods_require_suffix.symbols = warning
+dotnet_naming_rule.async_methods_require_suffix.severity = warning
 
 
 dotnet_naming_symbols.public_symbols.applicable_kinds = class,struct,interface,enum,property,method,field,event,delegate

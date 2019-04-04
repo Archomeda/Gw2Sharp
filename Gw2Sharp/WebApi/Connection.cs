@@ -155,20 +155,16 @@ namespace Gw2Sharp.WebApi
 
 
         /// <inheritdoc />
-        public async Task<IHttpResponse<TResponse>> Request<TResponse>(Uri requestUri, CancellationToken cancellationToken) where TResponse : object
+        public async Task<IHttpResponse<TResponse>> RequestAsync<TResponse>(Uri requestUri, CancellationToken cancellationToken) where TResponse : object
         {
             if (requestUri == null)
                 throw new ArgumentNullException(nameof(requestUri));
 
-            var request = new HttpRequest
-            {
-                Url = requestUri,
-                RequestHeaders = this.requestHeaders
-            };
+            var request = new HttpRequest(requestUri, this.requestHeaders);
 
             try
             {
-                var r = await this.HttpClient.Request(request, cancellationToken).ConfigureAwait(false);
+                var r = await this.HttpClient.RequestAsync(request, cancellationToken).ConfigureAwait(false);
                 var obj = JsonConvert.DeserializeObject<TResponse>(r.Content, DeserializerSettings);
                 return new HttpResponse<TResponse>(obj, r.StatusCode, r.RequestHeaders, r.ResponseHeaders);
             }

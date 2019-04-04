@@ -17,6 +17,19 @@ namespace Gw2Sharp.WebApi.V2
         private static readonly Regex LinkUriRegex = new Regex("<(.+)>", RegexOptions.IgnoreCase);
 
         /// <summary>
+        /// Initializes a new instance of the <see cref="ApiV2Response{T}"/> class with just cached content.
+        /// </summary>
+        /// <param name="content">The content.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="content"/> is <c>null</c>.</exception>
+        public ApiV2Response(T content) : base(content)
+        {
+            if (content == null)
+                throw new ArgumentNullException(nameof(content));
+
+            this.Cached = true;
+        }
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="ApiV2Response{T}"/> class with a <see cref="IHttpResponse{T}"/> as base.
         /// </summary>
         /// <param name="response">The base response.</param>
@@ -27,6 +40,7 @@ namespace Gw2Sharp.WebApi.V2
             if (response == null)
                 throw new ArgumentNullException(nameof(response));
 
+            this.Cached = false;
             this.CacheMaxAge = this.ParseResponseHeader(response.ResponseHeaders, "Cache-Control", value => CacheControlHeaderValue.Parse(value).MaxAge);
             this.Expires = this.ParseResponseHeader(response.ResponseHeaders, "Expires", value => DateTime.Parse(value));
             this.RateLimitLimit = this.ParseResponseHeader(response.ResponseHeaders, "X-Rate-Limit-Limit", ParseNullableInt);
@@ -54,6 +68,9 @@ namespace Gw2Sharp.WebApi.V2
         }
 
         /// <inheritdoc />
+        public bool Cached { get; set; }
+
+        /// <inheritdoc />
         public TimeSpan? CacheMaxAge { get; set; }
 
         /// <inheritdoc />
@@ -69,7 +86,7 @@ namespace Gw2Sharp.WebApi.V2
         public int? ResultTotal { get; set; }
 
         /// <inheritdoc />
-        public IReadOnlyDictionary<string, Uri> Links { get; set; }
+        public IReadOnlyDictionary<string, Uri> Links { get; set; } = new Dictionary<string, Uri>();
 
         /// <inheritdoc />
         public int? PageSize { get; set; }

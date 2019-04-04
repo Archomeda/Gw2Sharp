@@ -14,28 +14,28 @@ namespace Gw2Sharp.WebApi.Caching
         #region ICacheController members
 
         /// <inheritdoc />
-        public override async Task<bool> Has<T>(string category, object id) =>
+        public override async Task<bool> HasAsync<T>(string category, object id) =>
             false;
 
         /// <inheritdoc />
-        public override async Task<CacheItem<T>?> GetOrNull<T>(string category, object id) =>
+        public override async Task<CacheItem<T>?> GetOrNullAsync<T>(string category, object id) =>
             null;
 
         /// <inheritdoc />
-        public override async Task Set<T>(CacheItem<T> item) { }
+        public override async Task SetAsync<T>(CacheItem<T> item) { }
 
         /// <inheritdoc />
-        public override async Task Set<T>(string category, object id, T item, DateTime expiryTime) { }
+        public override async Task SetAsync<T>(string category, object id, T item, DateTime expiryTime) { }
 
         /// <inheritdoc />
-        public override async Task<IDictionary<object, CacheItem<T>>> GetMany<T>(string category, IEnumerable<object> ids) =>
+        public override async Task<IDictionary<object, CacheItem<T>>> GetManyAsync<T>(string category, IEnumerable<object> ids) =>
             new Dictionary<object, CacheItem<T>>();
 
         /// <inheritdoc />
-        public override async Task SetMany<T>(IEnumerable<CacheItem<T>> items) { }
+        public override async Task SetManyAsync<T>(IEnumerable<CacheItem<T>> items) { }
 
         /// <inheritdoc />
-        public override async Task Flush() { }
+        public override async Task FlushAsync() { }
 
         #endregion
     }

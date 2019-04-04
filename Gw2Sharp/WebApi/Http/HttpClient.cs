@@ -8,17 +8,17 @@ using SysHttpClient = System.Net.Http.HttpClient;
 namespace Gw2Sharp.WebApi.Http
 {
     /// <summary>
-    /// A basic web client that uses .NET's <see cref="SysHttpClient" />.
+    /// A basic web client that uses .NET's <see cref="System.Net.Http.HttpClient" />.
     /// </summary>
     public class HttpClient : IHttpClient
     {
-        private static readonly SysHttpClient NetHttpClient = new SysHttpClient();
+        private static readonly SysHttpClient SysHttpClient = new SysHttpClient();
 
         /// <inheritdoc />
         public TimeSpan Timeout { get; set; } = TimeSpan.FromSeconds(30);
 
         /// <inheritdoc />
-        public async Task<IHttpResponse> Request(IHttpRequest request, CancellationToken cancellationToken)
+        public async Task<IHttpResponse> RequestAsync(IHttpRequest request, CancellationToken cancellationToken)
         {
             using (var cancellationTimeout = new CancellationTokenSource(this.Timeout))
             using (var linkedCancellation = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken, cancellationTimeout.Token))
@@ -31,7 +31,7 @@ namespace Gw2Sharp.WebApi.Http
                 HttpResponse response;
                 try
                 {
-                    task = NetHttpClient.SendAsync(message, linkedCancellation.Token);
+                    task = SysHttpClient.SendAsync(message, linkedCancellation.Token);
                     responseMessage = await task.ConfigureAwait(false);
 
                     response = new HttpResponse(

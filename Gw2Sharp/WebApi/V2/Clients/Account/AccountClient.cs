@@ -106,15 +106,15 @@ namespace Gw2Sharp.WebApi.V2.Clients
 
 
         /// <inheritdoc />
-        public Task<Account> Get() =>
-            this.RequestGet();
+        public Task<Account> GetAsync() =>
+            this.RequestGetAsync();
 
         /// <inheritdoc />
-        public Task<Account> Get(CancellationToken cancellationToken) =>
-            this.RequestGet(cancellationToken);
+        public Task<Account> GetAsync(CancellationToken cancellationToken) =>
+            this.RequestGetAsync(cancellationToken);
 
         /// <inheritdoc />
-        public Task<IApiV2Response<Account>> GetWithResponse(CancellationToken cancellationToken) =>
-            this.RequestGetWithResponse(cancellationToken);
+        public Task<IApiV2Response<Account>> GetWithResponseAsync(CancellationToken cancellationToken) =>
+            this.RequestGetWithResponseAsync(cancellationToken);
     }
 }

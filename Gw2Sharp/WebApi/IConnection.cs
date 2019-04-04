@@ -49,9 +49,9 @@ namespace Gw2Sharp.WebApi
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The response with the object as the requested response type.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="requestUri"/> is <c>null</c>.</exception>
-        /// <exception cref="RequestException">A generic request error occurs (<seealso cref="IHttpClient.Request"/>).</exception>
-        /// <exception cref="RequestCanceledException">The request is canceled by the user or because of a timeout (<seealso cref="IHttpClient.Request"/>).</exception>
-        /// <exception cref="UnexpectedStatusException">The server returns a non-successful HTTP status code (<seealso cref="IHttpClient.Request"/>).</exception>
-        Task<IHttpResponse<TResponse>> Request<TResponse>(Uri requestUri, CancellationToken cancellationToken) where TResponse : object;
+        /// <exception cref="RequestException">A generic request error occurs (<seealso cref="IHttpClient.RequestAsync"/>).</exception>
+        /// <exception cref="RequestCanceledException">The request is canceled by the user or because of a timeout (<seealso cref="IHttpClient.RequestAsync"/>).</exception>
+        /// <exception cref="UnexpectedStatusException">The server returns a non-successful HTTP status code (<seealso cref="IHttpClient.RequestAsync"/>).</exception>
+        Task<IHttpResponse<TResponse>> RequestAsync<TResponse>(Uri requestUri, CancellationToken cancellationToken) where TResponse : object;
     }
 }

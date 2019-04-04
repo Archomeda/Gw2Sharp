@@ -13,20 +13,20 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Requests the main blob data from this endpoint.
         /// </summary>
         /// <returns>The blob data.</returns>
-        Task<TObject> Get();
+        Task<TObject> GetAsync();
 
         /// <summary>
         /// Requests the main blob data from this endpoint.
         /// </summary>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The blob data.</returns>
-        Task<TObject> Get(CancellationToken cancellationToken);
+        Task<TObject> GetAsync(CancellationToken cancellationToken);
 
         /// <summary>
         /// Requests the main blob data from this endpoint with the detailed response info.
         /// </summary>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The blob data.</returns>
-        Task<IApiV2Response<TObject>> GetWithResponse(CancellationToken cancellationToken);
+        Task<IApiV2Response<TObject>> GetWithResponseAsync(CancellationToken cancellationToken);
     }
 }

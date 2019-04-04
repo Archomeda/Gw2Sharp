@@ -19,7 +19,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="id">The entry id.</param>
         /// <returns>The entry.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="id"/> is <c>null</c>.</exception>
-        Task<TObject> Get(TId id);
+        Task<TObject> GetAsync(TId id);
 
         /// <summary>
         /// Requests a single entry by id.
@@ -28,7 +28,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The entry.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="id"/> is <c>null</c>.</exception>
-        Task<TObject> Get(TId id, CancellationToken cancellationToken);
+        Task<TObject> GetAsync(TId id, CancellationToken cancellationToken);
 
         /// <summary>
         /// Requests a single entry by id with the detailed response info.
@@ -37,27 +37,27 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The entry.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="id"/> is <c>null</c>.</exception>
-        Task<IApiV2Response<TObject>> GetWithResponse(TId id, CancellationToken cancellationToken);
+        Task<IApiV2Response<TObject>> GetWithResponseAsync(TId id, CancellationToken cancellationToken);
 
         /// <summary>
         /// Requests all ids.
         /// </summary>
         /// <returns>The list of available ids.</returns>
-        Task<IReadOnlyList<TId>> Ids();
+        Task<IReadOnlyList<TId>> IdsAsync();
 
         /// <summary>
         /// Requests all ids.
         /// </summary>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The list of available ids.</returns>
-        Task<IReadOnlyList<TId>> Ids(CancellationToken cancellationToken);
+        Task<IReadOnlyList<TId>> IdsAsync(CancellationToken cancellationToken);
 
         /// <summary>
         /// Requests all ids with the detailed response info.
         /// </summary>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The list of available ids.</returns>
-        Task<IApiV2Response<IReadOnlyList<TId>>> IdsWithResponse(CancellationToken cancellationToken);
+        Task<IApiV2Response<IReadOnlyList<TId>>> IdsWithResponseAsync(CancellationToken cancellationToken);
 
         /// <summary>
         /// Requests many entries by their id (a.k.a. bulk expansion).
@@ -65,7 +65,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="ids">The entry ids.</param>
         /// <returns>The entries.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="ids"/> is <c>null</c>.</exception>
-        Task<IReadOnlyList<TObject>> Many(IEnumerable<TId> ids);
+        Task<IReadOnlyList<TObject>> ManyAsync(IEnumerable<TId> ids);
 
         /// <summary>
         /// Requests many entries by their id (a.k.a. bulk expansion).
@@ -74,7 +74,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The entries.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="ids"/> is <c>null</c>.</exception>
-        Task<IReadOnlyList<TObject>> Many(IEnumerable<TId> ids, CancellationToken cancellationToken);
+        Task<IReadOnlyList<TObject>> ManyAsync(IEnumerable<TId> ids, CancellationToken cancellationToken);
 
         /// <summary>
         /// Requests many entries by their id (a.k.a. bulk expansion) with the detailed response info.
@@ -83,6 +83,6 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The entries.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="ids"/> is <c>null</c>.</exception>
-        Task<IReadOnlyList<IApiV2Response<IReadOnlyList<TObject>>>> ManyWithResponse(IEnumerable<TId> ids, CancellationToken cancellationToken);
+        Task<IReadOnlyList<IApiV2Response<IReadOnlyList<TObject>>>> ManyWithResponseAsync(IEnumerable<TId> ids, CancellationToken cancellationToken);
     }
 }
