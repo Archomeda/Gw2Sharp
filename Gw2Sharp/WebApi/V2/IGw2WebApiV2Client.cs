@@ -103,5 +103,10 @@ namespace Gw2Sharp.WebApi.V2
         /// Gets the itemstats.
         /// </summary>
         IItemstatsClient Itemstats { get; }
+
+        /// <summary>
+        /// Gets the legends.
+        /// </summary>
+        ILegendsClient Legends { get; }
     }
 }

@@ -143,6 +143,9 @@
     <EmbeddedResource Include="TestFiles\Itemstats\Itemstats.bulk.json" />
     <EmbeddedResource Include="TestFiles\Itemstats\Itemstats.ids.json" />
     <EmbeddedResource Include="TestFiles\Itemstats\Itemstats.single.json" />
+    <EmbeddedResource Include="TestFiles\Legends\Legends.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Legends\Legends.ids.json" />
+    <EmbeddedResource Include="TestFiles\Legends\Legends.single.json" />
   </ItemGroup>
 
   <ItemGroup>

@@ -44,6 +44,7 @@ namespace Gw2Sharp.WebApi.V2
             this.Guild = new GuildClient(connection);
             this.Items = new ItemsClient(connection);
             this.Itemstats = new ItemstatsClient(connection);
+            this.Legends = new LegendsClient(connection);
         }
 
         /// <inheritdoc />
@@ -102,5 +103,8 @@ namespace Gw2Sharp.WebApi.V2
 
         /// <inheritdoc />
         public virtual IItemstatsClient Itemstats { get; protected set; }
+
+        /// <inheritdoc />
+        public virtual ILegendsClient Legends { get; protected set; }
     }
 }
