@@ -1,0 +1,70 @@
+[
+  {
+    "id": 600,
+    "name": "Berserker's and Valkyrie",
+    "attributes": [
+      {
+        "attribute": "Power",
+        "multiplier": 0.35,
+        "value": 32
+      },
+      {
+        "attribute": "Precision",
+        "multiplier": 0.25,
+        "value": 0
+      },
+      {
+        "attribute": "Vitality",
+        "multiplier": 0,
+        "value": 18
+      },
+      {
+        "attribute": "CritDamage",
+        "multiplier": 0.25,
+        "value": 18
+      }
+    ]
+  },
+  {
+    "id": 601,
+    "name": "Soldier's",
+    "attributes": [
+      {
+        "attribute": "Power",
+        "multiplier": 0.35,
+        "value": 32
+      },
+      {
+        "attribute": "Toughness",
+        "multiplier": 0.25,
+        "value": 18
+      },
+      {
+        "attribute": "Vitality",
+        "multiplier": 0.25,
+        "value": 18
+      }
+    ]
+  },
+  {
+    "id": 602,
+    "name": "Cavalier's",
+    "attributes": [
+      {
+        "attribute": "Power",
+        "multiplier": 0.25,
+        "value": 18
+      },
+      {
+        "attribute": "Toughness",
+        "multiplier": 0.35,
+        "value": 32
+      },
+      {
+        "attribute": "CritDamage",
+        "multiplier": 0.25,
+        "value": 18
+      }
+    ]
+  }
+]

@@ -98,5 +98,10 @@ namespace Gw2Sharp.WebApi.V2
         /// Gets the items.
         /// </summary>
         IItemsClient Items { get; }
+
+        /// <summary>
+        /// Gets the itemstats.
+        /// </summary>
+        IItemstatsClient Itemstats { get; }
     }
 }

@@ -140,6 +140,9 @@
     <EmbeddedResource Include="TestFiles\Items\Items.bulk.json" />
     <EmbeddedResource Include="TestFiles\Items\Items.ids.json" />
     <EmbeddedResource Include="TestFiles\Items\Items.single.json" />
+    <EmbeddedResource Include="TestFiles\Itemstats\Itemstats.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Itemstats\Itemstats.ids.json" />
+    <EmbeddedResource Include="TestFiles\Itemstats\Itemstats.single.json" />
   </ItemGroup>
 
   <ItemGroup>

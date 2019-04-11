@@ -43,6 +43,7 @@ namespace Gw2Sharp.WebApi.V2
             this.Gliders = new GlidersClient(connection);
             this.Guild = new GuildClient(connection);
             this.Items = new ItemsClient(connection);
+            this.Itemstats = new ItemstatsClient(connection);
         }
 
         /// <inheritdoc />
@@ -98,5 +99,8 @@ namespace Gw2Sharp.WebApi.V2
 
         /// <inheritdoc />
         public virtual IItemsClient Items { get; protected set; }
+
+        /// <inheritdoc />
+        public virtual IItemstatsClient Itemstats { get; protected set; }
     }
 }
