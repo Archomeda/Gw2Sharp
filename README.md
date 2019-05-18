@@ -46,12 +46,10 @@ There are two cache methods provided in `Gw2Sharp.WebApi.Caching`: `NullCacheMet
 You can create your own cache method by implementing the `ICacheMethod` interface or by inheriting from the abstract `BaseCacheMethod` class.
 
 ## Compiling
-Visual Studio 2019 Preview 3 or later is required.
+Visual Studio 2019 or later is required.
 There are no specific build instructions.
 
 ## Contributing
-I'm open for any contributions you can make. If you find a bug, create an issue
-here on GitHub. GitHub is very nice with maintaining a list of issues.
-Submitting a bug report on the Steam Workshop is also appreciated, but it might
-take a little longer for me to respond, because I prefer GitHub. If you know C#,
-you can try to fix it yourself and submit a pull request.
+Contributing is always welcome, but please keep them in scope of this project.
+I'm looking for all contributions that fixes bugs.
+But regarding implementing new features, it's better to raise an issue first explaining why that new feature should be added.
