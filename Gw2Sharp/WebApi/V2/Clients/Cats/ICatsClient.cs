@@ -9,7 +9,6 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public interface ICatsClient :
         IAllExpandableClient<Cat>,
         IBulkExpandableClient<Cat, int>,
-        ILocalizedClient<Cat>,
         IPaginatedClient<Cat>
     {
     }

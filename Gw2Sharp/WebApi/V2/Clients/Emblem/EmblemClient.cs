@@ -16,14 +16,14 @@ namespace Gw2Sharp.WebApi.V2.Clients
         public EmblemClient(IConnection connection) :
             base(connection)
         {
-            this.Foregrounds = new EmblemForegroundsClient(connection);
             this.Backgrounds = new EmblemBackgroundsClient(connection);
+            this.Foregrounds = new EmblemForegroundsClient(connection);
         }
 
         /// <inheritdoc />
-        public virtual IEmblemForegroundsClient Foregrounds { get; protected set; }
+        public virtual IEmblemBackgroundsClient Backgrounds { get; protected set; }
 
         /// <inheritdoc />
-        public virtual IEmblemBackgroundsClient Backgrounds { get; protected set; }
+        public virtual IEmblemForegroundsClient Foregrounds { get; protected set; }
     }
 }

@@ -5,6 +5,9 @@ It's asynchronous and multi-platform thanks to .NET Standard.
 At the moment this documention site is a work in progress.
 You can already view the automatically generator docs, however there are no examples yet.
 
+### Features
+For the list of supported endpoints, check the [Endpoint Feature List](features.md).
+
 ### Additional resources
 - [GW2 Development Community Discord]() - Discussions about Gw2Sharp and other projects
 - [Guild Wars 2 Wiki](https://wiki.guildwars2.com/wiki/API) - Community Wiki articles about the API

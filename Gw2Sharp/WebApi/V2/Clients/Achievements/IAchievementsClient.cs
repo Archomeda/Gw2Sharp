@@ -16,13 +16,13 @@ namespace Gw2Sharp.WebApi.V2.Clients
         IAchievementsCategoriesClient Categories { get; }
 
         /// <summary>
-        /// Gets the achievement groups.
-        /// </summary>
-        IAchievementsGroupsClient Groups { get; }
-
-        /// <summary>
         /// Gets the daily achievements.
         /// </summary>
         IAchievementsDailyClient Daily { get; }
+
+        /// <summary>
+        /// Gets the achievement groups.
+        /// </summary>
+        IAchievementsGroupsClient Groups { get; }
     }
 }
