@@ -85,8 +85,11 @@ deploy:docs:
     - cp -rf out_doc/* doc/${CI_COMMIT_REF_NAME}
     - cd doc
     - git add -A
-    - git commit -m "Update documentation for ${CI_COMMIT_REF_NAME} (${CI_COMMIT_SHORT_SHA})"
-    - git push origin gh-pages
+    - |
+      if [[ `git status --porcelain` ]]; then
+        git commit -m "Update documentation for ${CI_COMMIT_REF_NAME} (${CI_COMMIT_SHORT_SHA})"
+        git push origin gh-pages
+      fi
 
 deploy:github:
   <<: *task
