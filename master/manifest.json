@@ -1,0 +1,6116 @@
+{
+  "homepages": [],
+  "source_base_path": "/builds/Archomeda/Gw2Sharp/Gw2Sharp.Build/DocFX",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "p/xuz5enNNG8wu48Y1Fv1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "faq/overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "faq/overview.html",
+          "hash": "7aoF+KTvJADLXinuityhsw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "features.md",
+      "output": {
+        ".html": {
+          "relative_path": "features.html",
+          "hash": "jJ29esj8mM0QUS8HPyYS5g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "guides/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "guides/introduction.html",
+          "hash": "hJOPfxMxT1YJ3uYhsXjVrQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "D8QR0NpQGxn/KIm7lp/yEQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.Caching.BaseCacheMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.Caching.BaseCacheMethod.html",
+          "hash": "xKnJNWmP0ZzIjyPRPPjwtw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.Caching.CacheItem-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.Caching.CacheItem-1.html",
+          "hash": "RnvcE5ENZMjLJ11Gdl9+sA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.Caching.CacheItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.Caching.CacheItem.html",
+          "hash": "OKlpuCDao0xc9OmqP+zaBg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.Caching.ICacheMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.Caching.ICacheMethod.html",
+          "hash": "anadlsIThnn2gj+kmosTww=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.Caching.MemoryCacheMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.Caching.MemoryCacheMethod.html",
+          "hash": "8lDMhi9+YQRPbLGiS6WGdg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.Caching.NullCacheMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.Caching.NullCacheMethod.html",
+          "hash": "Y7hHNBDgfaGujLiveTsb4A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.Caching.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.Caching.html",
+          "hash": "VWoCEzFgjH51Ldiv705GwA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.Connection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.Connection.html",
+          "hash": "iW0Nqax2z5iwb2y9uLKsVw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.Gw2WebApiClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.Gw2WebApiClient.html",
+          "hash": "CUID0wp6vj2Oz5bmndo4CQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.Http.AuthorizationError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.Http.AuthorizationError.html",
+          "hash": "QQiMlfDaFKXPflaDx3O+9Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.Http.AuthorizationRequiredException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.Http.AuthorizationRequiredException.html",
+          "hash": "b41AZoxaHH/0V+u0Nq0hOA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.Http.BadRequestException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.Http.BadRequestException.html",
+          "hash": "YFFni+efBfvPMsIsdHFRLw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.Http.HttpClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.Http.HttpClient.html",
+          "hash": "Swo/bIjEF8/iTa52ytLzLQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.Http.HttpRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.Http.HttpRequest.html",
+          "hash": "6gTHmzHOli9zSqBq2++R+g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.Http.HttpResponse-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.Http.HttpResponse-1.html",
+          "hash": "GaIyUi7vJfdF8yxgV3mdaQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.Http.HttpResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.Http.HttpResponse.html",
+          "hash": "d2a+41HIRerkAryd8K51Nw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.Http.IHttpClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.Http.IHttpClient.html",
+          "hash": "oGnigt9k+SdEsUkoxL9+IQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.Http.IHttpRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.Http.IHttpRequest.html",
+          "hash": "GLzE2fwO3FbxmtgeWmDgZw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.Http.IHttpResponse-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.Http.IHttpResponse-1.html",
+          "hash": "eV/U9yaKB534zg3RiChaEA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.Http.IHttpResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.Http.IHttpResponse.html",
+          "hash": "lmuF4UI78JrFu69Nk3/roA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.Http.InvalidAccessTokenException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.Http.InvalidAccessTokenException.html",
+          "hash": "RJJHZIbPmfnD+rjpn7Cppg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.Http.MembershipRequiredException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.Http.MembershipRequiredException.html",
+          "hash": "H4L7aHgbWTQWFhvDdV+OEw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.Http.MissingScopesException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.Http.MissingScopesException.html",
+          "hash": "ffkrK2LJfCh9caLTrOHDTg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.Http.NotFoundException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.Http.NotFoundException.html",
+          "hash": "NTgBmydxv9zk+NWe5UxswA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.Http.RequestCanceledException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.Http.RequestCanceledException.html",
+          "hash": "lgL66O+hqPG8LhgJ3lbLlg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.Http.RequestException-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.Http.RequestException-1.html",
+          "hash": "8u1uWRJSSdyLMmNiHvYtBw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.Http.RequestException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.Http.RequestException.html",
+          "hash": "Gr3w8CPuQ6BQ3zpwMkeKLA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.Http.RestrictedToGuildLeadersException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.Http.RestrictedToGuildLeadersException.html",
+          "hash": "udQbTUIqg73sysSwOMxR8w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.Http.ServerErrorException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.Http.ServerErrorException.html",
+          "hash": "jATuzaPY+V5tZJqg/J/Hgg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.Http.ServiceUnavailableException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.Http.ServiceUnavailableException.html",
+          "hash": "A3KOr+PDSPEfBEKMM7HtJw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.Http.UnexpectedStatusException-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.Http.UnexpectedStatusException-1.html",
+          "hash": "i39Xpznxiz7euerPNBm+LQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.Http.UnexpectedStatusException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.Http.UnexpectedStatusException.html",
+          "hash": "3E/iAC6lJHqljPt1iF2LNw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.Http.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.Http.html",
+          "hash": "MBsosqEQK6V+dVNZ240Eww=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.IConnection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.IConnection.html",
+          "hash": "NVlvUUeyf+oKrW2JjFkNhg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.IGw2WebApiClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.IGw2WebApiClient.html",
+          "hash": "zY57LjoqH2omoIskxSOkcw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.Locale.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.Locale.html",
+          "hash": "bOYWsz0gV0HOTPSKmSPUFQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.ApiV2Response-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.ApiV2Response-1.html",
+          "hash": "FLORdMYlzu/1QwTMDUr3cg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.AccountAchievementsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.AccountAchievementsClient.html",
+          "hash": "KWFFmEhgFz6+JWnEGMlJlA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.AccountBankClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.AccountBankClient.html",
+          "hash": "0K60twwL7X26jWQwUiDyhQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.AccountClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.AccountClient.html",
+          "hash": "qnbETzP41JE5F0FqV+oNhA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.AccountDungeonsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.AccountDungeonsClient.html",
+          "hash": "Q0Ku+FFbsZHz6DfhX0xzlw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.AccountDyesClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.AccountDyesClient.html",
+          "hash": "RNXKmUZqfmToZkym95X4Gw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.AccountFinishersClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.AccountFinishersClient.html",
+          "hash": "L2+23BZjvKjHAVeJWUUing=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.AccountGlidersClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.AccountGlidersClient.html",
+          "hash": "E5xNCnZfwL08T7aCLaM4MA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.AccountHomeCatsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.AccountHomeCatsClient.html",
+          "hash": "GyWnx990LXX+kz6QvKGVpg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.AccountHomeClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.AccountHomeClient.html",
+          "hash": "FsgH95wjmoW1BRfzIbT87A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.AccountHomeNodesClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.AccountHomeNodesClient.html",
+          "hash": "bt9jnYurp2T1xc/REZdyWQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.AccountInventoryClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.AccountInventoryClient.html",
+          "hash": "W2wh7LMx0amnPxlbV1lKog=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.AccountMailCarriersClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.AccountMailCarriersClient.html",
+          "hash": "geIQmdYuuRHhHMfkZ+piXA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.AccountMasteriesClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.AccountMasteriesClient.html",
+          "hash": "arnT4fWvoqyXlixLzOAQlg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.AccountMasteryClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.AccountMasteryClient.html",
+          "hash": "au1R12xT9uXJjuA7UHP0MA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.AccountMasteryPointsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.AccountMasteryPointsClient.html",
+          "hash": "PV/VSZk3ANkjRkzaMnuJyA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.AccountMaterialsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.AccountMaterialsClient.html",
+          "hash": "7WKKqp4OdC2s5W8wSFNejg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.AccountMinisClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.AccountMinisClient.html",
+          "hash": "ai5lVy51IJvf9jmF3ofBlw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.AccountOutfitsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.AccountOutfitsClient.html",
+          "hash": "uiYsldAxfI6Pm3ogo7Y/ow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.AccountPvpClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.AccountPvpClient.html",
+          "hash": "nhbudpm/sbVcpPcP2ZKvWg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.AccountPvpHeroesClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.AccountPvpHeroesClient.html",
+          "hash": "GUDhkWyGjCZkH1jA48B8bg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.AccountRaidsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.AccountRaidsClient.html",
+          "hash": "UHeV85AF0VhfAJHgS+aqYw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.AccountRecipesClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.AccountRecipesClient.html",
+          "hash": "azkl2WChG9STy70dFws22A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.AccountSkinsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.AccountSkinsClient.html",
+          "hash": "+Uqdgw3hpgu5g+dVtBhu1w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.AccountTitlesClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.AccountTitlesClient.html",
+          "hash": "deW7xsKsjH01ra604pSZ6w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.AccountWalletClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.AccountWalletClient.html",
+          "hash": "DxYQuxZpoysjM9Y4XRmG+w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.AchievementsCategoriesClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.AchievementsCategoriesClient.html",
+          "hash": "ah+KvGKy5v+sr/Ro7Y0NnQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.AchievementsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.AchievementsClient.html",
+          "hash": "Zisoufye1HgadN+WI6IRDA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.AchievementsDailyClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.AchievementsDailyClient.html",
+          "hash": "4P4+z69nBUXCpfkOj5P9bQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.AchievementsDailyTomorrowClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.AchievementsDailyTomorrowClient.html",
+          "hash": "zz+lMNL9WeP6pfIUTs9/1Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.AchievementsGroupsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.AchievementsGroupsClient.html",
+          "hash": "p8LCVOOf+h4ScLBV6vpvhA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.BackstoryAnswersClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.BackstoryAnswersClient.html",
+          "hash": "dqrAPLpkdelarUxupZpTcg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.BackstoryClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.BackstoryClient.html",
+          "hash": "NIW02SNOCv76iyuJfkd65w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.BackstoryQuestionsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.BackstoryQuestionsClient.html",
+          "hash": "rZXdSPH6L5fW252ASrtHBQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubClient-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubClient-1.html",
+          "hash": "P+gX+7oc2g1aEf50dLNR/A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.BaseClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.BaseClient.html",
+          "hash": "qVblBmdVMbyqNFd/+wp/fA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBlobClient-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBlobClient-1.html",
+          "hash": "1x+NJbe+wmpTN1lW/4Gbug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient-2.html",
+          "hash": "yRseEVCdU0zg+seJhf3RYA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient-2.html",
+          "hash": "dBl14MEn0nJaiDSzyniO9g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html",
+          "hash": "8UN7ZAneZ8nAHUxiLzoZhg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient-1.html",
+          "hash": "AtViwhXeWxZnaGmPokdlPA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.BuildClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.BuildClient.html",
+          "hash": "slPe9MRRbrBnIITRA5JI0g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.CatsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.CatsClient.html",
+          "hash": "J67Bz9FDfOZK/zWdgXWKDg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.CharactersClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.CharactersClient.html",
+          "hash": "HWOy+t57JTIGYdKKFGHThQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.CharactersIdBackstoryClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.CharactersIdBackstoryClient.html",
+          "hash": "KIIRzGMRTvunxwRLgI+m+g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.html",
+          "hash": "C1N7SA6nx527fFBNyNvk5Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.CharactersIdCoreClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.CharactersIdCoreClient.html",
+          "hash": "tBi8xzzfBNxv5IAmmyw9MA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.CharactersIdCraftingClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.CharactersIdCraftingClient.html",
+          "hash": "Ok/3dQWY2UFaTEqWwDkNmw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentClient.html",
+          "hash": "F+/o+9WFSoKByyFru5uJRQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.CharactersIdHeroPointsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.CharactersIdHeroPointsClient.html",
+          "hash": "aaQ66hFhrXbakyhq15uPbA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.CharactersIdInventoryClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.CharactersIdInventoryClient.html",
+          "hash": "A144Q8Fwa90LleKfCGuM6w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.CharactersIdRecipesClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.CharactersIdRecipesClient.html",
+          "hash": "kw9XWw0jrTn6ro3+fYCinQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.CharactersIdSabClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.CharactersIdSabClient.html",
+          "hash": "NR7FYVvdMgrQliVA4aQoTQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.CharactersIdSkillsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.CharactersIdSkillsClient.html",
+          "hash": "NwxWl4x2RvZ3l6jQMOcISA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.CharactersIdSpecializationsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.CharactersIdSpecializationsClient.html",
+          "hash": "L6WSa3/kQVJeeGLOgVVrDw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.CharactersIdTrainingClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.CharactersIdTrainingClient.html",
+          "hash": "ATEW7K0tuUaaehHvqTxEdw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ColorsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ColorsClient.html",
+          "hash": "wzfzIEZAWD4KUM88SuaRgA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.CommerceClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.CommerceClient.html",
+          "hash": "HRzEgPFifp/Xow7rWj3XXw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.CommerceDeliveryClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.CommerceDeliveryClient.html",
+          "hash": "suubwHQk6tYaXtkD1naN6w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.CommerceExchangeClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.CommerceExchangeClient.html",
+          "hash": "PoSpYYwE6tLkA+9adwnIiA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.CommerceExchangeCoinsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.CommerceExchangeCoinsClient.html",
+          "hash": "ogLateX1UkW+Ld/3v9ajFA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.CommerceExchangeCoinsQuantityClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.CommerceExchangeCoinsQuantityClient.html",
+          "hash": "Vmq7ipgVrlYyG+gQ7Gs7Cw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.CommerceExchangeGemsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.CommerceExchangeGemsClient.html",
+          "hash": "CxhZkXwgFoCPPV1PBEYAsg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.CommerceExchangeGemsQuantityClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.CommerceExchangeGemsQuantityClient.html",
+          "hash": "Mn4XJKpFi/dh0V2CQfdApg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.CommerceListingsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.CommerceListingsClient.html",
+          "hash": "CX31ZC52sqfJvo+GkeMPZQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.CommercePricesClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.CommercePricesClient.html",
+          "hash": "BhO4xc3uQWabKIg59ERswQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.CommerceTransactionsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.CommerceTransactionsClient.html",
+          "hash": "hebx+GAqZvu0CZZVMW9Aqg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.CommerceTransactionsCurrentBuysClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.CommerceTransactionsCurrentBuysClient.html",
+          "hash": "2rdoYXxRT6qVBdMWfqISDA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.CommerceTransactionsCurrentClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.CommerceTransactionsCurrentClient.html",
+          "hash": "atT8H/9uZy4Ns2ic89scmA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.CommerceTransactionsCurrentSellsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.CommerceTransactionsCurrentSellsClient.html",
+          "hash": "TClGxfvCVvwnrQ6FNdUx0Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.CommerceTransactionsHistoryBuysClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.CommerceTransactionsHistoryBuysClient.html",
+          "hash": "rUzrHfHyAlLlmwDRU6VLRg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.CommerceTransactionsHistoryClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.CommerceTransactionsHistoryClient.html",
+          "hash": "A7bYfBsnWrygsus/dNJZfg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.CommerceTransactionsHistorySellsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.CommerceTransactionsHistorySellsClient.html",
+          "hash": "FZzP122E3fKf0A3/UkUKEA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ContinentsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ContinentsClient.html",
+          "hash": "kZTlwEPYGEd5u4UGODneNg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ContinentsFloorsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ContinentsFloorsClient.html",
+          "hash": "4+VVO3tFyKwP8PpYpKOu4A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ContinentsFloorsIdClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ContinentsFloorsIdClient.html",
+          "hash": "ue/c9HAGByAD/3nwEW5OVQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ContinentsFloorsRegionsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ContinentsFloorsRegionsClient.html",
+          "hash": "7cxgJyEhXtIGNkGWAE5pjw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ContinentsFloorsRegionsIdClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ContinentsFloorsRegionsIdClient.html",
+          "hash": "17p5CCQhsPYHuCxgbXwXog=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ContinentsFloorsRegionsMapsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ContinentsFloorsRegionsMapsClient.html",
+          "hash": "rhhHPXZvRX/LulGEU5gvdw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ContinentsFloorsRegionsMapsIdClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ContinentsFloorsRegionsMapsIdClient.html",
+          "hash": "YsnnG/JOafmMWSOXPidzOA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ContinentsFloorsRegionsMapsPoisClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ContinentsFloorsRegionsMapsPoisClient.html",
+          "hash": "hhOSkscPXO0YXzmNJcr6yw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ContinentsFloorsRegionsMapsSectorsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ContinentsFloorsRegionsMapsSectorsClient.html",
+          "hash": "bxqCYJbqcnLRP6hiwEfL7g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ContinentsFloorsRegionsMapsTasksClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ContinentsFloorsRegionsMapsTasksClient.html",
+          "hash": "8pA3vj+4LwmcM+w1I5bZ7g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ContinentsIdClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ContinentsIdClient.html",
+          "hash": "kgKRTtSK0OAk4gMAeGl/Zg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.CurrenciesClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.CurrenciesClient.html",
+          "hash": "2xelCWeCTbKocRwXsX/pEQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.DungeonsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.DungeonsClient.html",
+          "hash": "dxkEXZbjoZvKlFaPbE6IiA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.EmblemBackgroundsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.EmblemBackgroundsClient.html",
+          "hash": "GLhbp7vhtVQv0LuNp97HkA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.EmblemClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.EmblemClient.html",
+          "hash": "VMtH9ONox+JdvlCNWsqcyw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.EmblemForegroundsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.EmblemForegroundsClient.html",
+          "hash": "6gWbGype/m7FjzbUF2Dj9w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.EndpointPathAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.EndpointPathAttribute.html",
+          "hash": "70MEag1b/p0q8CJPA38Rbw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.EndpointPathParameterAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.EndpointPathParameterAttribute.html",
+          "hash": "JIecnOostZe4gJFBBfd0pQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.EndpointPathSegmentAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.EndpointPathSegmentAttribute.html",
+          "hash": "2flfMim5ePs3jUXVoahW+Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.FilesClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.FilesClient.html",
+          "hash": "XSvnCefm6tQ1S0fECxVeWg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.FinishersClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.FinishersClient.html",
+          "hash": "YnEXlFEfFPYvmZgX8Z43Yg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.GlidersClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.GlidersClient.html",
+          "hash": "j2W/2OXN8gtOibJv/GrCGA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.GuildClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.GuildClient.html",
+          "hash": "uOTBm6lvJGFmjVGe8Vczzg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.GuildIdClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.GuildIdClient.html",
+          "hash": "z2C/TrKPKnpyk3HXdrXSzw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.GuildIdLogClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.GuildIdLogClient.html",
+          "hash": "zKJgCwNhwBylJyiAm/+dcQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.GuildIdMembersClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.GuildIdMembersClient.html",
+          "hash": "tNhhy77ebWWZqa0vbHZx9g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.GuildIdRanksClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.GuildIdRanksClient.html",
+          "hash": "XNadmUmRGodke4KVMecpYw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.GuildIdStashClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.GuildIdStashClient.html",
+          "hash": "uR6xAL6fY0yGl/xhejnIKQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.GuildIdStorageClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.GuildIdStorageClient.html",
+          "hash": "CM7XE1WDZs/4CncqUtv2DA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.GuildIdTeamsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.GuildIdTeamsClient.html",
+          "hash": "nAoeixiIi3fs9OQ0+L4ZCw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.GuildIdTreasuryClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.GuildIdTreasuryClient.html",
+          "hash": "M/Xm7GJuco4wGRd+00cNcQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.GuildIdUpgradesClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.GuildIdUpgradesClient.html",
+          "hash": "YN9qUpYzhr5146e+yYOKtw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.GuildPermissionsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.GuildPermissionsClient.html",
+          "hash": "osWwB3ozgMNB4oG/VrwUag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.GuildSearchClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.GuildSearchClient.html",
+          "hash": "XOPgfCrbIQ+Pfj3DfAkrGQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.GuildSearchNameClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.GuildSearchNameClient.html",
+          "hash": "TWvpXeITZvoLVa4kfJzxRA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.GuildUpgradesClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.GuildUpgradesClient.html",
+          "hash": "kwCZX6t7fIiSzVU5XvXF2w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IAccountAchievementsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IAccountAchievementsClient.html",
+          "hash": "iqXpRv8/8reEFo6lFow+mw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IAccountBankClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IAccountBankClient.html",
+          "hash": "loPEk76+0rL6+M1p+LHSmQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IAccountClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IAccountClient.html",
+          "hash": "O+UYgOpXni8uPcJb+b/w6w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IAccountDungeonsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IAccountDungeonsClient.html",
+          "hash": "htNtzzYDYeNXr5Ogl5i2uA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IAccountDyesClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IAccountDyesClient.html",
+          "hash": "xkbRGfIoGINT9K9TzocbvA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IAccountFinishersClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IAccountFinishersClient.html",
+          "hash": "kNX5Rqh8YTJ/+gPDuJw3Eg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IAccountGlidersClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IAccountGlidersClient.html",
+          "hash": "TWt49bE/mzUHjcCt7K5LXw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IAccountHomeCatsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IAccountHomeCatsClient.html",
+          "hash": "DZq99VplgG9LIP+eqb2U7g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IAccountHomeClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IAccountHomeClient.html",
+          "hash": "YUrczIoyCQ+Cgs5DJieAxQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IAccountHomeNodesClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IAccountHomeNodesClient.html",
+          "hash": "scdDNElWLIEmioLl/pGVEQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IAccountInventoryClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IAccountInventoryClient.html",
+          "hash": "hGB/PW0EdMDQSWbC4ZQa/Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IAccountMailCarriersClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IAccountMailCarriersClient.html",
+          "hash": "Pn7J+2THIiwv53g75AbuRg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IAccountMasteriesClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IAccountMasteriesClient.html",
+          "hash": "edcMvhwzAfmzs/stvWMsUQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IAccountMasteryClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IAccountMasteryClient.html",
+          "hash": "fTPChaZ+v7s9EDKpFO73wA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IAccountMasteryPointsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IAccountMasteryPointsClient.html",
+          "hash": "hRyL54DBRpUX+KUjz//xqw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IAccountMaterialsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IAccountMaterialsClient.html",
+          "hash": "Z7mf0kEIKSeu9pmVXAqShA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IAccountMinisClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IAccountMinisClient.html",
+          "hash": "+01HRgQgy02OONCE1/JH4Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IAccountOutfitsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IAccountOutfitsClient.html",
+          "hash": "ypiNeS4cOctRa0qnoeQLbg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IAccountPvpClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IAccountPvpClient.html",
+          "hash": "e0aeY3maGbve72/gUlcarQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IAccountPvpHeroesClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IAccountPvpHeroesClient.html",
+          "hash": "vbhuYMOib9Rs4ZsZo7oR/w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IAccountRaidsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IAccountRaidsClient.html",
+          "hash": "nYhsk9kJ6JwKB+t6QGP+7g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IAccountRecipesClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IAccountRecipesClient.html",
+          "hash": "7aDxBpZUwoDTZkOS+0zbJg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IAccountSkinsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IAccountSkinsClient.html",
+          "hash": "dF5kElQFSSD7OEqcM5RyFQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IAccountTitlesClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IAccountTitlesClient.html",
+          "hash": "Xh0SlIzoAj+Hc2+m1bz93A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IAccountWalletClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IAccountWalletClient.html",
+          "hash": "xnyKlIWcrYDZJ0HuviWKjg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IAchievementsCategoriesClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IAchievementsCategoriesClient.html",
+          "hash": "xe4KK7PjLsUu+nMO7TimQA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IAchievementsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IAchievementsClient.html",
+          "hash": "F5PRePiDV7tLFclPngg2zA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IAchievementsDailyClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IAchievementsDailyClient.html",
+          "hash": "1z/HUHNKc+aPaOgbYMzj0Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IAchievementsDailyTomorrowClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IAchievementsDailyTomorrowClient.html",
+          "hash": "4T8dqzYLO8l6G1dJO7VlBQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IAchievementsGroupsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IAchievementsGroupsClient.html",
+          "hash": "OMBw/BD5thxFJ9OeejlNLQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IAllExpandableClient-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IAllExpandableClient-1.html",
+          "hash": "5aes9fm2b3p43C7CTDHTmw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IAuthenticatedClient-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IAuthenticatedClient-1.html",
+          "hash": "h3cKOaw5wwXSBahEbXnfZA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IBackstoryAnswersClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IBackstoryAnswersClient.html",
+          "hash": "FrHJyPCVMUZhvpmbjoCiTA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IBackstoryClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IBackstoryClient.html",
+          "hash": "O3iGj7SMyS9LaQ1YTwyQFg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IBackstoryQuestionsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IBackstoryQuestionsClient.html",
+          "hash": "F7fgvMwkqeFdiF6n2oVYfg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IBlobClient-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IBlobClient-1.html",
+          "hash": "L1zIT8Dz7Axbpk4wFPe8NQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IBuildClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IBuildClient.html",
+          "hash": "WNsu/OMRIVfiLywv2VtdRw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient-2.html",
+          "hash": "HCu4aw8TQXXx5aNN33Hr+Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ICatsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ICatsClient.html",
+          "hash": "TpWVJZy/yuTqKJ0DPAmsLg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ICharactersClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ICharactersClient.html",
+          "hash": "yjYKunST+GwIeNmtl5rq5A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdBackstoryClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdBackstoryClient.html",
+          "hash": "YPpTjWAcGZ3u5NFk3NxHwg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.html",
+          "hash": "fi1JkHeWW0Sq3g97DjeLnQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdCoreClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdCoreClient.html",
+          "hash": "W57eGNys7m2j8TNQ48eiaQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdCraftingClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdCraftingClient.html",
+          "hash": "MyGC8Wowcy/ZOHAqDgeNIw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdEquipmentClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdEquipmentClient.html",
+          "hash": "ULNNeLN4geIZBzECys/MYw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdHeroPointsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdHeroPointsClient.html",
+          "hash": "TFtTzNbI9ovkFIezeVom7g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdInventoryClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdInventoryClient.html",
+          "hash": "rIhQJ9ZThQ8n1DH9Mc8jPg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdRecipesClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdRecipesClient.html",
+          "hash": "AtK3Kiiqry5eAykDhadFPQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdSabClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdSabClient.html",
+          "hash": "OHBw2sYBTXiAiqs/ePmqRA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdSkillsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdSkillsClient.html",
+          "hash": "f6nzUTvRCc7qR0vokABpCw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdSpecializationsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdSpecializationsClient.html",
+          "hash": "7xw1nTlk2n68natkVtpXqA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdTrainingClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdTrainingClient.html",
+          "hash": "hYjTR2T8BX6G8xv9mHs8cw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IClient.html",
+          "hash": "VR50VnBdW7Rlbe9jZPI1TQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IColorsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IColorsClient.html",
+          "hash": "qe8kIwIlNFiBfBuv+bCROA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ICommerceClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ICommerceClient.html",
+          "hash": "+kTB6MQsPMUUIEghA9SBIw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ICommerceDeliveryClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ICommerceDeliveryClient.html",
+          "hash": "GlQ7KfDJWlvF2y7HipBJ/g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ICommerceExchangeClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ICommerceExchangeClient.html",
+          "hash": "ApCfOASTEGUH/axDUDfCVw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ICommerceExchangeCoinsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ICommerceExchangeCoinsClient.html",
+          "hash": "tzfWcCt+0OzHbUcDVGM+Pw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ICommerceExchangeCoinsQuantityClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ICommerceExchangeCoinsQuantityClient.html",
+          "hash": "q8+zOKE2ssht+Mbi6l1SvQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ICommerceExchangeGemsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ICommerceExchangeGemsClient.html",
+          "hash": "jC+pH2esO9Es7N1lsu0lGQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ICommerceExchangeGemsQuantityClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ICommerceExchangeGemsQuantityClient.html",
+          "hash": "vgeDKsoDEYaO0+Z/ckqi4Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ICommerceListingsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ICommerceListingsClient.html",
+          "hash": "/GcyrNq0oyddwtbUzd8kjg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ICommercePricesClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ICommercePricesClient.html",
+          "hash": "zaT97mPvwvPlcWbpkxdoXw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ICommerceTransactionsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ICommerceTransactionsClient.html",
+          "hash": "9qgc0CWENMEN086lTtvjYA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ICommerceTransactionsCurrentBuysClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ICommerceTransactionsCurrentBuysClient.html",
+          "hash": "0nAgXEEE2/b8+NphyW51Sw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ICommerceTransactionsCurrentClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ICommerceTransactionsCurrentClient.html",
+          "hash": "VAZAYXd8L3gVoxTnylOi2g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ICommerceTransactionsCurrentSellsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ICommerceTransactionsCurrentSellsClient.html",
+          "hash": "7LC8vWnKHQTpxgtv0q3LGw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ICommerceTransactionsHistoryBuysClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ICommerceTransactionsHistoryBuysClient.html",
+          "hash": "F8KZaCRD0GN8QErBy7GUDw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ICommerceTransactionsHistoryClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ICommerceTransactionsHistoryClient.html",
+          "hash": "HVxxh6TqxXmrGJrGGz4eOA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ICommerceTransactionsHistorySellsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ICommerceTransactionsHistorySellsClient.html",
+          "hash": "z/qwO6PKf8s5qckVWl0IfQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IContinentsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IContinentsClient.html",
+          "hash": "PlHUO7pMRTHULxU62Kldaw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IContinentsFloorsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IContinentsFloorsClient.html",
+          "hash": "yoOQtCtEKQs4zmkcY9q2lw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IContinentsFloorsIdClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IContinentsFloorsIdClient.html",
+          "hash": "eL9vSlUpUImsa1geDQGOEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IContinentsFloorsRegionsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IContinentsFloorsRegionsClient.html",
+          "hash": "tTia+uObWzVBaeRyblKrcQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IContinentsFloorsRegionsIdClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IContinentsFloorsRegionsIdClient.html",
+          "hash": "U5+o/frS6tWb47G7RTI09w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IContinentsFloorsRegionsMapsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IContinentsFloorsRegionsMapsClient.html",
+          "hash": "Udg/d0OibW/AQaRsxdwifA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IContinentsFloorsRegionsMapsIdClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IContinentsFloorsRegionsMapsIdClient.html",
+          "hash": "SAPR+3MUZMiKwuvO/dxHUg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IContinentsFloorsRegionsMapsPoisClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IContinentsFloorsRegionsMapsPoisClient.html",
+          "hash": "ioNeOFSQvRZX73i6T4mphg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IContinentsFloorsRegionsMapsSectorsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IContinentsFloorsRegionsMapsSectorsClient.html",
+          "hash": "94W7pgwJttRZsUxCzVR24w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IContinentsFloorsRegionsMapsTasksClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IContinentsFloorsRegionsMapsTasksClient.html",
+          "hash": "lNJbjcKKsjTHe5wPgksrLw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IContinentsIdClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IContinentsIdClient.html",
+          "hash": "VJjHSwoGmIHiqWA08zrIgQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ICurrenciesClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ICurrenciesClient.html",
+          "hash": "/bfaIQwXYBYNWkoYD2WbbQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IDungeonsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IDungeonsClient.html",
+          "hash": "NfDQB+xa8bA35ZRhbF5IeA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IEmblemBackgroundsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IEmblemBackgroundsClient.html",
+          "hash": "mxwyXmnzwbUB2sXuHwZDcA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IEmblemClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IEmblemClient.html",
+          "hash": "5l8SozdWaoEceoS+c4/IEQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IEmblemForegroundsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IEmblemForegroundsClient.html",
+          "hash": "wGVFQ0025ZaFhNDNGyi8BQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IEndpointClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IEndpointClient.html",
+          "hash": "odjlD/t7AIdZruKkleToew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IFilesClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IFilesClient.html",
+          "hash": "L3kFOy99uO4Zcyn89XLN1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IFinishersClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IFinishersClient.html",
+          "hash": "4kCoYTiJBh6Rxu9U8KNw4w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IGlidersClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IGlidersClient.html",
+          "hash": "ltBOF9QvsUejfXZlLc7r5w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IGuildClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IGuildClient.html",
+          "hash": "Mv4BowAALDIfZznsDKQtgg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IGuildIdClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IGuildIdClient.html",
+          "hash": "kTIBhlB5c0Pa51nu4Y7tpg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IGuildIdLogClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IGuildIdLogClient.html",
+          "hash": "GgaDxzst0kyqcJVLUfbuPg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IGuildIdMembersClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IGuildIdMembersClient.html",
+          "hash": "zJc5YEFEowGIABRtaso2Vw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IGuildIdRanksClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IGuildIdRanksClient.html",
+          "hash": "gb0QJ67HjmIIkGuERscvbQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IGuildIdStashClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IGuildIdStashClient.html",
+          "hash": "jToRhTc2ZeZR5xEacbYImQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IGuildIdStorageClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IGuildIdStorageClient.html",
+          "hash": "4jd2YY1zZcgvIjMoTRDjUw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IGuildIdTeamsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IGuildIdTeamsClient.html",
+          "hash": "Z96WjRPW+o8wwL9y2BBxjw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IGuildIdTreasuryClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IGuildIdTreasuryClient.html",
+          "hash": "vGngSB+nyE8+dHH0p/Dbvw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IGuildIdUpgradesClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IGuildIdUpgradesClient.html",
+          "hash": "uC/dLGlp8T9dzbOu1ftH7A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IGuildPermissionsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IGuildPermissionsClient.html",
+          "hash": "RqH+Q7l/0UiCkTdksRDfOQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IGuildSearchClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IGuildSearchClient.html",
+          "hash": "iHq3N1YAt5qa2DOdSAUPSQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IGuildSearchNameClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IGuildSearchNameClient.html",
+          "hash": "9Mup7up8+Q52YJeuIAK8RA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IGuildUpgradesClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IGuildUpgradesClient.html",
+          "hash": "fx8cz8WpghQZI/LcSWpEhA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IItemsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IItemsClient.html",
+          "hash": "B1fkhV+ZTon79/88elUwqA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IItemstatsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IItemstatsClient.html",
+          "hash": "7ei0mKxO07W8MGJjIENS2g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ILegendsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ILegendsClient.html",
+          "hash": "OG4kEvQFtfdXuDHRCJHokA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ILocalizedClient-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ILocalizedClient-1.html",
+          "hash": "K53v+o9vWU3NO2pCICBPRA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.IPaginatedClient-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.IPaginatedClient-1.html",
+          "hash": "22eSotp98+LinZ8mFkG1NA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ItemsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ItemsClient.html",
+          "hash": "D228Veq2mDzBiv4IjoYh+Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.ItemstatsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.ItemstatsClient.html",
+          "hash": "9AuCDERx4VcgYOqt96vzdw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.LegendsClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.LegendsClient.html",
+          "hash": "OMnoowkTLoiiIyC5ChHV7w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Clients.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Clients.html",
+          "hash": "bbcUTrXj/bgrpqb1nHc+ig=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.ExtensionImplementation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.ExtensionImplementation.html",
+          "hash": "EYO1gnSFHMSG1NeSI+mOpQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html",
+          "hash": "S91XmqwNkMZWHJvh33tizg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.IApiV2Response-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.IApiV2Response-1.html",
+          "hash": "zJundDnm3XOFLltoC9sKLQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html",
+          "hash": "LxXEhes25dWlJ/4z1qyVzw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.Account.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.Account.html",
+          "hash": "T6FWkeRSZDA+ikSXnxNvcw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.AccountAchievement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.AccountAchievement.html",
+          "hash": "ztMSHj96LCioW4AvU1n5xQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.AccountCurrency.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.AccountCurrency.html",
+          "hash": "oiJOuTLMY+bKdb1apu+saw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.AccountFinisher.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.AccountFinisher.html",
+          "hash": "GcRSVvsIIr4MXMd0K6CcuA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.AccountHomeCat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.AccountHomeCat.html",
+          "hash": "9+xgsnXLjWPlxXM+KmvKug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.AccountItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.AccountItem.html",
+          "hash": "I2bTDh5I5XC3KfsD+B4quw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.AccountMastery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.AccountMastery.html",
+          "hash": "ufPsxRTfczNEPk3yr+j06g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.AccountMasteryPoints.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.AccountMasteryPoints.html",
+          "hash": "e/FvivV+451i6AdrhSNQWg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.AccountMasteryPointsRegion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.AccountMasteryPointsRegion.html",
+          "hash": "+p0ksFrugmDnbjvAGqqikw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.AccountMaterial.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.AccountMaterial.html",
+          "hash": "bOn5uaaqbsVaiHkLWd0qpw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.Achievement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.Achievement.html",
+          "hash": "NU6Wtua2pesicB11Y6fSEA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.AchievementBit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.AchievementBit.html",
+          "hash": "46fW1p1lSgydu2jeabCT5A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.AchievementBitType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.AchievementBitType.html",
+          "hash": "EJ5vlBlRcT/htJfLz0JtEQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.AchievementCategory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.AchievementCategory.html",
+          "hash": "KsnS9CPPLtFVIq/MFaZamw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.AchievementCoinsReward.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.AchievementCoinsReward.html",
+          "hash": "QSo4qs10d/GkdsNyMIMjtQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.AchievementDaily.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.AchievementDaily.html",
+          "hash": "d8GQjGCvoZPC0ehtluDSjQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.AchievementDailyLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.AchievementDailyLevel.html",
+          "hash": "Ovt4jG34QImCm2h1T4zuYA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.AchievementFlag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.AchievementFlag.html",
+          "hash": "7HHCKmwcfjfhXQeAen6eBw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.AchievementGroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.AchievementGroup.html",
+          "hash": "2i79ZlAi9R3+xeDbFJ6QPA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.AchievementItemBit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.AchievementItemBit.html",
+          "hash": "HEkfrkBWpSf2YVU0agqKBQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.AchievementItemReward.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.AchievementItemReward.html",
+          "hash": "x/XHjVLHGzADW0vib1gCnQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.AchievementMasteryReward.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.AchievementMasteryReward.html",
+          "hash": "Zg1gQSgcE8WHDafK8H4MCA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.AchievementMinipetBit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.AchievementMinipetBit.html",
+          "hash": "0+5lI2B6jXmQi3kDJiUAMw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.AchievementReward.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.AchievementReward.html",
+          "hash": "WCk62fUwhsBwgjQrQOcMVA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.AchievementRewardType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.AchievementRewardType.html",
+          "hash": "YfRwejgip1SexXgjvytWzA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.AchievementSkinBit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.AchievementSkinBit.html",
+          "hash": "9xeWD3w+cZtGApKuvoHueA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.AchievementTextBit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.AchievementTextBit.html",
+          "hash": "hmWhyGYvb6/eK80cqFwsNg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.AchievementTier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.AchievementTier.html",
+          "hash": "GQ2yaRcdpCCR5ZD3TI1Jpg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.AchievementTitleReward.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.AchievementTitleReward.html",
+          "hash": "QFVzMZMQtn+F8S93uEB6Lw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.AchievementType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.AchievementType.html",
+          "hash": "IRC4Dct3WnPuIFJmQ53Zkg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.AchievementsDaily.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.AchievementsDaily.html",
+          "hash": "a3yp1NW8p5EwiNSf6akwyA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ApiEnum-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ApiEnum-1.html",
+          "hash": "HAxKRHzQvQgK71Ecc8r+xw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ApiEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ApiEnum.html",
+          "hash": "jhyydB2cYzWpBoRSJlqxRQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ApiFlags-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ApiFlags-1.html",
+          "hash": "hjMx6y+ltAYhW7ebTXB49A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ApiFlags.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ApiFlags.html",
+          "hash": "GhRnA3BwG5lrtK+GzUzVJA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.BackstoryAnswer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.BackstoryAnswer.html",
+          "hash": "wbkxzSZmqVuTekPIkDJmnw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.BackstoryQuestion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.BackstoryQuestion.html",
+          "hash": "8n+MVs76Bn1eNqI1FAsW5w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.Build.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.Build.html",
+          "hash": "ne0kvzzrA7+ywYU1B5j7mQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.CastableTypeAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.CastableTypeAttribute.html",
+          "hash": "Mpn4VcnuuAL2KNxzT6J/eg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.Cat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.Cat.html",
+          "hash": "VxTExZldOUA4OlS5ChrNNw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.Character.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.Character.html",
+          "hash": "fViHoVvPeDEefwacLMNK1Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.CharacterCraftingDiscipline.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.CharacterCraftingDiscipline.html",
+          "hash": "90NUhbz+EfWS/J9YF/6IqA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.CharacterEquipmentItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.CharacterEquipmentItem.html",
+          "hash": "eaOsITqTcWNBv38gvt/t4g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.CharacterEquipmentPvp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.CharacterEquipmentPvp.html",
+          "hash": "mXbaqcM1r39NHoSFbE7alw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.CharacterFlag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.CharacterFlag.html",
+          "hash": "Swd4NH+N5pqE9wB0qKLk0w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.CharacterGameModeSkills.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.CharacterGameModeSkills.html",
+          "hash": "rFjesRnRmKQ+MOSoOi71Ag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.CharacterGameModeSpecialization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.CharacterGameModeSpecialization.html",
+          "hash": "80vgIJDr4XkevUBH8frSdg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.CharacterInventoryBag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.CharacterInventoryBag.html",
+          "hash": "7t8fsM5WLQZxDgFmmWE2vg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.CharacterSabSong.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.CharacterSabSong.html",
+          "hash": "a+U4pXHbzkO6tVtL/OAi2w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.CharacterSabUnlock.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.CharacterSabUnlock.html",
+          "hash": "kqF8E8tUpkCjsblDiUU0JQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.CharacterSabZone.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.CharacterSabZone.html",
+          "hash": "YrFO3RBNfxcBhLjvaXRV6g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.CharacterSkills.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.CharacterSkills.html",
+          "hash": "LLB5+DE1YGiBfDVhvGxyyA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.CharacterSpecializations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.CharacterSpecializations.html",
+          "hash": "KOSjE+oDcpuv3n6AZTG1bg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.CharacterTraining.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.CharacterTraining.html",
+          "hash": "1iGKWtDNOQvuL2wMDieGOw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.CharacterWvwAbility.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.CharacterWvwAbility.html",
+          "hash": "bV9uXg0hatsq6jvt4KsgtQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.CharactersBackstory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.CharactersBackstory.html",
+          "hash": "o/3dMTnc94Eeg2gt2xjWPQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.CharactersCore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.CharactersCore.html",
+          "hash": "IiFrdaV289ZYshFfyIwx+Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.CharactersCrafting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.CharactersCrafting.html",
+          "hash": "XarQng+pmvM9glqrYsgH9A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.CharactersEquipment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.CharactersEquipment.html",
+          "hash": "tnkVMxV5L9EbWH2Tx886wQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.CharactersInventory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.CharactersInventory.html",
+          "hash": "xUNPcFn9svoJe3hx8osS+Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.CharactersRecipes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.CharactersRecipes.html",
+          "hash": "AmvrcsiKCPa+zDO0LpvdPw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.CharactersSab.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.CharactersSab.html",
+          "hash": "yP8VlZ7XE7ywA0rFHeXJAQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.CharactersSkills.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.CharactersSkills.html",
+          "hash": "CwRx+a5O2YVRGDr9Fj2LTw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.CharactersSpecializations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.CharactersSpecializations.html",
+          "hash": "DXBZgRCgO8DJnc2AqLvFLA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.CharactersTraining.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.CharactersTraining.html",
+          "hash": "RAGc/by9ScCmty40CzX5FQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.Color.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.Color.html",
+          "hash": "XO/Lx2e45MOxkbOMivWk8w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ColorMaterial.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ColorMaterial.html",
+          "hash": "CBHzWEz8oJj7uKMPgSYY3Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.CommerceDelivery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.CommerceDelivery.html",
+          "hash": "urkqm7UknC6AWoM0YlebZw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.CommerceDeliveryItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.CommerceDeliveryItem.html",
+          "hash": "zEDb4W2exEMg38t24VJ10g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.CommerceExchangeCoins.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.CommerceExchangeCoins.html",
+          "hash": "OCGJEvqp78H43Sot0UVoHw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.CommerceExchangeGems.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.CommerceExchangeGems.html",
+          "hash": "84baHRiLX2+kDzwprtbDNQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.CommerceListing.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.CommerceListing.html",
+          "hash": "A0xZO4YylZOBTMZg10RVNg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.CommerceListings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.CommerceListings.html",
+          "hash": "MEQc+sf+PIZ70OGfZUOlYQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.CommercePrice.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.CommercePrice.html",
+          "hash": "TytsWpBTyyNOXXzjTVtgKA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.CommercePrices.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.CommercePrices.html",
+          "hash": "584v3RlWMZnmm+9i6hZWqg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.CommerceTransactionCurrent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.CommerceTransactionCurrent.html",
+          "hash": "p/veW+U13CcGIO1U9I83Gw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.CommerceTransactionHistory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.CommerceTransactionHistory.html",
+          "hash": "xvPduCxpTpvai9546ncKkQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.Continent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.Continent.html",
+          "hash": "BbVzOJ4dd/Wo5NpSvHuZXA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ContinentFloor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ContinentFloor.html",
+          "hash": "v/F1VBlgeadG25wHQP87lQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ContinentFloorRegion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ContinentFloorRegion.html",
+          "hash": "BWNpLxP1b/KohqYXXsVbDA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ContinentFloorRegionMap.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ContinentFloorRegionMap.html",
+          "hash": "KgCTqfRbx9UMYoDFMJ5z1Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ContinentFloorRegionMapMasteryPoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ContinentFloorRegionMapMasteryPoint.html",
+          "hash": "nYGr4dXSu0cCwThuOZZsjA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ContinentFloorRegionMapPoi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ContinentFloorRegionMapPoi.html",
+          "hash": "mjnNadefHtG3W0aGYss9Mw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ContinentFloorRegionMapSector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ContinentFloorRegionMapSector.html",
+          "hash": "mSl9YTLBF4UrQmyxJYggow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ContinentFloorRegionMapSkillChallenge.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ContinentFloorRegionMapSkillChallenge.html",
+          "hash": "8XduHOcH9yYjrjop7SJu/Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ContinentFloorRegionMapTask.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ContinentFloorRegionMapTask.html",
+          "hash": "dPfJV0ntnFBfsgujaFu2yA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.Converters.ApiEnumConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.Converters.ApiEnumConverter.html",
+          "hash": "tU4kHGG/mqEjboFwDHwtXw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.Converters.ApiFlagsConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.Converters.ApiFlagsConverter.html",
+          "hash": "8jeGADGW/0pB1e0JWw6Xcg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.Converters.BottomUpRectangleConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.Converters.BottomUpRectangleConverter.html",
+          "hash": "Fe+a7Egl79M8Yze3e4vQxQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.Converters.CastableTypeConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.Converters.CastableTypeConverter.html",
+          "hash": "y36xS/n1JkXfDsQfnBzEDw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.Converters.Coordinates2Converter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.Converters.Coordinates2Converter.html",
+          "hash": "8w8EvJVQpxjIds03i35k4A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.Converters.GuidConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.Converters.GuidConverter.html",
+          "hash": "tWSxzdjfuEHj2LcK44k9SA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.Converters.RectangleConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.Converters.RectangleConverter.html",
+          "hash": "iiTZ6DOdj0WzltYWv8E5Jw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.Converters.SizeConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.Converters.SizeConverter.html",
+          "hash": "OlBWj/mooD3T4QODioQGjQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.Converters.TimeSpanConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.Converters.TimeSpanConverter.html",
+          "hash": "WI8B18mDAVHxGAjgDA610w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.Converters.TopDownRectangleConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.Converters.TopDownRectangleConverter.html",
+          "hash": "V79ZnkD2dqsTb0Jl7rXgJA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.Converters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.Converters.html",
+          "hash": "8/llAosLIc5aJgCufDO1uQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.Coordinates2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.Coordinates2.html",
+          "hash": "PQ8PJe2iuohfY23J0pDCkg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.Currency.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.Currency.html",
+          "hash": "9qgzcUnpi4RnDW4P0yUk2A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.Dungeon.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.Dungeon.html",
+          "hash": "h8nPTXhYvY9uTjhlhq/6ow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.DungeonPath.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.DungeonPath.html",
+          "hash": "YRc8J8KYgoo2NQnqGJ11yg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.DungeonPathType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.DungeonPathType.html",
+          "hash": "NxUvrhEMm66AVyAzD9ihtw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.Emblem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.Emblem.html",
+          "hash": "QGSLflLvl0s0lZ9w+27LtQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.EquipmentItemStats.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.EquipmentItemStats.html",
+          "hash": "Hlg1jN30Aq1Pt9BNmaRLNA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ErrorObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ErrorObject.html",
+          "hash": "QF0olgpryn5jZfVUlvc9ng=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.File.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.File.html",
+          "hash": "Hf791LIp2gZrNYjex32SUw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.Finisher.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.Finisher.html",
+          "hash": "sltk3uT9vI5PL3zrzeBEPg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GameAccess.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GameAccess.html",
+          "hash": "/2ycI9AUWvDSKvoDI+LS5g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.Gender.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.Gender.html",
+          "hash": "OOBeoM0XUZ0EpM1uDHT6bQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.Glider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.Glider.html",
+          "hash": "h70yCq7mpDBIzk4NGbHxHg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.Guild.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.Guild.html",
+          "hash": "BHp9sbtfe6nT/yMiUbRklw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildEmblem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildEmblem.html",
+          "hash": "9b0UEA1ZYv8odjffuCjaXg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildEmblemBackground.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildEmblemBackground.html",
+          "hash": "/iaqbb7IvgdIPudnNa/EBg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildEmblemFlag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildEmblemFlag.html",
+          "hash": "3RU0LOn3er7RjuKJVoDBFw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildEmblemForeground.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildEmblemForeground.html",
+          "hash": "62EB0ahYYU+8aRWc2ZPDmQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildLog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildLog.html",
+          "hash": "fCo+A92G8I1bJexxW0ieww=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildLogInfluence.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildLogInfluence.html",
+          "hash": "lDX15qtJDc18J2p5xjAaeQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildLogInfluenceActivity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildLogInfluenceActivity.html",
+          "hash": "GPtelsjirFQ4I2jwBm1eJQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildLogInviteDeclined.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildLogInviteDeclined.html",
+          "hash": "Bqcy3EEWXRDqH7OFZHNEmg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildLogInvited.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildLogInvited.html",
+          "hash": "it+u2FTKhuxPQL012vHohg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildLogJoined.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildLogJoined.html",
+          "hash": "AXf9bB045WQveFgajXiGEA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildLogKick.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildLogKick.html",
+          "hash": "xPCZybkt5OyPj0keTzAfNw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildLogMotd.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildLogMotd.html",
+          "hash": "NrGo7W2ul9RBfVGstUsuQg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildLogRankChange.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildLogRankChange.html",
+          "hash": "wMYKvPjNphBhemhtdbXXNQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildLogStash.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildLogStash.html",
+          "hash": "Re+FE90x8QViJuoFnM9vhQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildLogStashOperation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildLogStashOperation.html",
+          "hash": "Q2e0jAvxN8t67mukP9yc+w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildLogTreasury.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildLogTreasury.html",
+          "hash": "+4IRDsTJSmARmMwD3y4YnA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildLogType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildLogType.html",
+          "hash": "SqZzHW+Eh4y8aNLTTPQieA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildLogUpgrade.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildLogUpgrade.html",
+          "hash": "LdlyWwC9G5HFEjKqKQrLYQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildLogUpgradeAction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildLogUpgradeAction.html",
+          "hash": "/PZnCTFRo+EVhJX8z2wPcw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildMember.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildMember.html",
+          "hash": "GpK4cTso6wq4e9dVFa6zhQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildPermission.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildPermission.html",
+          "hash": "OacIUpvHOFUPf5Y3tuLqKw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildRank.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildRank.html",
+          "hash": "HLc2PEnbHt+NDfIEjzWL6w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildStashItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildStashItem.html",
+          "hash": "Dt19ToWz5HFEii6RQasmlg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildStashStorage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildStashStorage.html",
+          "hash": "2ZWcMkipwAYgVJL/In/wOw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildStorageItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildStorageItem.html",
+          "hash": "i8va+t9vmN1ZKsCpm4LQ2g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildTeam.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildTeam.html",
+          "hash": "tvq/ge2TZA+j2f4LaYsaVA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildTeamGame.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildTeamGame.html",
+          "hash": "koEx0pEK3os4vleNFYbzKA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildTeamMember.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildTeamMember.html",
+          "hash": "dxVDY+7VVIKKQLz0MkJTBg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildTeamMemberRole.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildTeamMemberRole.html",
+          "hash": "LalFxKzbfoDkGE3ue5Dyzw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildTeamSeason.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildTeamSeason.html",
+          "hash": "dsQzyzEvgj7qO3jPMi3RTw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildTeamState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildTeamState.html",
+          "hash": "FIL1TEhedf7BXtnZRB+Hpw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildTreasuryItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildTreasuryItem.html",
+          "hash": "f7gn0pgi7xjMCLWpX6TWsA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildTreasuryItemUpgrade.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildTreasuryItemUpgrade.html",
+          "hash": "3eMw7lkddBbjCv+FFnNhQg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildUpgrade.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildUpgrade.html",
+          "hash": "MFwJnvZFq+ACEfdsIzRHIg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildUpgradeAccumulatingCurrency.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildUpgradeAccumulatingCurrency.html",
+          "hash": "7nry1rOmKv8ROEvRoWYv0A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildUpgradeBankBag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildUpgradeBankBag.html",
+          "hash": "8KiF3CAbMpQIXXvv/3aEyA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildUpgradeBoost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildUpgradeBoost.html",
+          "hash": "dyG3pOQJy9p7juJK5h+2Ag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildUpgradeClaimable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildUpgradeClaimable.html",
+          "hash": "8MbC0UccTDnmuiVWVa/xtQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildUpgradeConsumable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildUpgradeConsumable.html",
+          "hash": "ijUOvpuoj4QYE0Ms0L5Mng=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildUpgradeCost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildUpgradeCost.html",
+          "hash": "x0nJU3Yq/nnINHsWwXbnXQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildUpgradeCostCoins.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildUpgradeCostCoins.html",
+          "hash": "7WjkztHrpF4ulFBqceF7/Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildUpgradeCostCollectible.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildUpgradeCostCollectible.html",
+          "hash": "hgITnPc7jq2LBiofra6o4Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildUpgradeCostCurrency.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildUpgradeCostCurrency.html",
+          "hash": "SfFPlN2Y0PiHdRv4a1wnmQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildUpgradeCostItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildUpgradeCostItem.html",
+          "hash": "lYe3qDtg5GNMshdHTvuIvA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildUpgradeCostType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildUpgradeCostType.html",
+          "hash": "sDtFx3GP3w+jVaexsmGqHQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildUpgradeDecoration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildUpgradeDecoration.html",
+          "hash": "4gMAVD1HdvNwX4BRfHEc3g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildUpgradeGuildHall.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildUpgradeGuildHall.html",
+          "hash": "rPRUw7XchLxvyuDe/4wt3g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildUpgradeGuildHallExpedition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildUpgradeGuildHallExpedition.html",
+          "hash": "snxA3Rq24wzyNodGmPAPSA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildUpgradeHub.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildUpgradeHub.html",
+          "hash": "8yR0bmH35qEUUBKYxwvf3Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildUpgradeQueue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildUpgradeQueue.html",
+          "hash": "uSzVM+lgA/3vGy1EZE3mJg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildUpgradeType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildUpgradeType.html",
+          "hash": "EuS2zhfRsqp2VVqfVHr2bQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.GuildUpgradeUnlock.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.GuildUpgradeUnlock.html",
+          "hash": "v+YlN8Ngzw22V+wh//SBsw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ICastableType-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ICastableType-2.html",
+          "hash": "VPc+DHzRO7hksG1f3TS0TQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.IIdentifiable-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.IIdentifiable-1.html",
+          "hash": "v4/kH8GlZxJwOUJLUi51MQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.Item.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.Item.html",
+          "hash": "D3dBwSbZjRAeh2tFxStt8A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemArmor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemArmor.html",
+          "hash": "l3NTEdNtgAdjwqDm92a9LQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemArmorDetails.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemArmorDetails.html",
+          "hash": "uifO8Toy1OOZvf75YzRAZA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemArmorSlotType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemArmorSlotType.html",
+          "hash": "eM8PnaR6mq7I52Piuw6bNg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemAttributeType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemAttributeType.html",
+          "hash": "OaX2PLG5W6rcdTw2tQb1ig=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemAttributes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemAttributes.html",
+          "hash": "YvuvELqi7KdapigEJpc66g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemBack.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemBack.html",
+          "hash": "NhsxxvKu6UzOj/PUEkebYA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemBackDetails.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemBackDetails.html",
+          "hash": "1a2sU3vdXXyNIvCGfBrqyA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemBag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemBag.html",
+          "hash": "/3DQas7Kct9+76BGrJXhSA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemBagDetails.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemBagDetails.html",
+          "hash": "6Ptg8NyyQaSXuw3vEnbeuQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemBinding.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemBinding.html",
+          "hash": "O+1ieDpeS8Xda8aKdaH7GA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemBuff.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemBuff.html",
+          "hash": "4bTHdrI3R86hTeQuWbr/Gg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemConsumable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemConsumable.html",
+          "hash": "9C7hPMeepqUenHU08QVgLg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemConsumableDetails.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemConsumableDetails.html",
+          "hash": "WKSCpRJYXG657pEmIRWAWw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemConsumableType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemConsumableType.html",
+          "hash": "uvp3yGEb0f9YkHI8uvBbQQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemContainer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemContainer.html",
+          "hash": "KjMlO7H0bPp9J1amH1C6UQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemContainerDetails.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemContainerDetails.html",
+          "hash": "18sO956o1mVg3aFg+ni0Sg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemContainerType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemContainerType.html",
+          "hash": "0xIQSsBpb9TFtbd+4BkPHQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemCraftingMaterial.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemCraftingMaterial.html",
+          "hash": "Ej7C9HwKfVv3A2uhzlCA2w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemEquipmentSlotType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemEquipmentSlotType.html",
+          "hash": "GcrfQX2r9uXNWEzkv8iTiQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemFlag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemFlag.html",
+          "hash": "NpkS1BvdHPnHLBJY2AQmKw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemGameType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemGameType.html",
+          "hash": "kaQz3Gt5Uy4/fKIYnrXAfA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemGathering.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemGathering.html",
+          "hash": "BR6x1t8BJYQiHn6M3l4c/g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemGatheringDetails.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemGatheringDetails.html",
+          "hash": "qg2Hvyp2O5M598n9RtG63g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemGatheringType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemGatheringType.html",
+          "hash": "AIij3IGe8sfGl3kHCVdmXA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemGizmo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemGizmo.html",
+          "hash": "LCT/7NqLZdiQ5qoHWELh/g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemGizmoDetails.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemGizmoDetails.html",
+          "hash": "2siROkydWkMUl+kgkz8EDw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemGizmoType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemGizmoType.html",
+          "hash": "v/h3il7Ek3v1kqOoacph1w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemInfixUpgrade.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemInfixUpgrade.html",
+          "hash": "fd+C97xfIYPgPExxU1XZLQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemInfusionFlag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemInfusionFlag.html",
+          "hash": "Duqc1eHRSfoa5rydiGTTMQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemInfusionSlot.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemInfusionSlot.html",
+          "hash": "j+tP7/U385NtSMjvdhIasw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemMiniPet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemMiniPet.html",
+          "hash": "vN1hjlDRJ4Tajg99xtQazQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemMiniPetDetails.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemMiniPetDetails.html",
+          "hash": "Ba+2yv5bsE4Ugg70N46WCg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemRarity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemRarity.html",
+          "hash": "mk+JQM2kNaBG0cBWxUxCZA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemRestriction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemRestriction.html",
+          "hash": "2F9hK7jZRc4V/q7EICSpEw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemTool.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemTool.html",
+          "hash": "botmrE8EUwCtes5Bd8rzHQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemToolDetails.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemToolDetails.html",
+          "hash": "RZ0nu6GVswrkWucVfcOq5g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemToolType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemToolType.html",
+          "hash": "xc36fQS1k3nhMtRh33++MA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemTrait.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemTrait.html",
+          "hash": "5a4smzDDsvo3IH35RrZmIg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemTrinket.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemTrinket.html",
+          "hash": "/GEkqpVuJqiwbbJNkGaJEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemTrinketDetails.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemTrinketDetails.html",
+          "hash": "pTGJliyvyK0DwsZ8sQsj0g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemTrinketType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemTrinketType.html",
+          "hash": "8s4dTncK5kV5+vUzwmyicw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemTrophy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemTrophy.html",
+          "hash": "b7Lvjgdcvic1+5zfStTSGg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemType.html",
+          "hash": "q3VewEMBpxEsuV79ysT7Ng=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemUnlockType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemUnlockType.html",
+          "hash": "WHsq6amhBLiH/6aP8MLu1Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemUpgradeAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemUpgradeAttribute.html",
+          "hash": "MkXJRQDm/0zokjFT8IFNjA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemUpgradeComponent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemUpgradeComponent.html",
+          "hash": "XN1d9f50H4kIrE0HMSxGrQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemUpgradeComponentDetails.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemUpgradeComponentDetails.html",
+          "hash": "fGib2mqxQow7kTJjo/yKjQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemUpgradeComponentFlag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemUpgradeComponentFlag.html",
+          "hash": "pOjfLMh98dklWQhG0dtBlg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemUpgradeComponentType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemUpgradeComponentType.html",
+          "hash": "Ld/nOmKg/j8RwFkQnWotxg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemWeapon.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemWeapon.html",
+          "hash": "hmgoYT/De2kKNT5DtjudJA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemWeaponDetails.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemWeaponDetails.html",
+          "hash": "8ucpMPby7t2FyDw+cWnP5w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemWeaponType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemWeaponType.html",
+          "hash": "yuK1oJZ6yoYF5bizQo0CUA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemWeightType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemWeightType.html",
+          "hash": "1e8vs/ij7d6Y+0aOn2QxpA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.Itemstat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.Itemstat.html",
+          "hash": "LIVb2aIM/VAqvMJgS6PSMg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.ItemstatAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.ItemstatAttribute.html",
+          "hash": "oMB18xVMQ713UMnSrU00Cw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.Legend.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.Legend.html",
+          "hash": "lGGqtigON1Tip7xDoxQdWA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.Map.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.Map.html",
+          "hash": "bTBqKHaoGJWxA4MD0g4qWg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.MapType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.MapType.html",
+          "hash": "ozxUJmiw6HuaTDQ2cFBEhg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.PoiType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.PoiType.html",
+          "hash": "zq11v14RgydnS3qHUP3reg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.PvpRatingType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.PvpRatingType.html",
+          "hash": "Jb7OpchQze4jmVaBp37OaA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.PvpResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.PvpResult.html",
+          "hash": "X66I+1ziQutcr/vizTylzQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.PvpStatsAggregate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.PvpStatsAggregate.html",
+          "hash": "3YcttSJT/34cikzGYjATog=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.PvpStatsLadders.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.PvpStatsLadders.html",
+          "hash": "z+pFTnq7ZBYOxns9k6NO5A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.PvpTeam.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.PvpTeam.html",
+          "hash": "H3HwJNycBO56pVYv9RPeYw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.PvpTeamScores.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.PvpTeamScores.html",
+          "hash": "6mkNHHtQKOh5iZw3CcFBGg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.Rectangle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.Rectangle.html",
+          "hash": "MEQarnwcqDgdcSrjuyAIqg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.RectangleDirectionType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.RectangleDirectionType.html",
+          "hash": "BrR5CiFYhcN+Yql8OmCmpA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.Size.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.Size.html",
+          "hash": "OyOceM7xogH0C9Bpc92wYw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.WeaponDamageType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.WeaponDamageType.html",
+          "hash": "NVP+GDBQkmufBQlSGo0Rdg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.Models.html",
+          "hash": "x24TFgrF6IHOGMT4qrBSWg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.V2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.V2.html",
+          "hash": "g9fJy9KF4jRu9W3jyySo3A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Gw2Sharp.WebApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Gw2Sharp.WebApi.html",
+          "hash": "K9tTwjZE8eV8FWdVx0q/3Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 5,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 500,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
