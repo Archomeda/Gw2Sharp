@@ -1,0 +1,107 @@
+image: mcr.microsoft.com/dotnet/core/sdk:3.0
+
+variables:
+  CONFIGURATION: Release
+
+stages:
+  - versioning
+  - build
+  - test
+  - pack
+  - deploy
+
+.task: &task
+  except:
+    - gh-pages
+
+versioning:
+  <<: *task
+  stage: versioning
+  image: docker:stable
+  services:
+    - docker:dind
+  script: docker run --rm -v "$(pwd):/repo" gittools/gitversion:5.0.0-linux /repo /updateassemblyinfo Gw2Sharp/Properties/AssemblyVersionInfo.cs /ensureassemblyinfo
+  artifacts:
+    paths:
+      - Gw2Sharp/Properties/AssemblyVersionInfo.cs
+    expire_in: 1 day
+
+build:binaries:
+  <<: *task
+  stage: build
+  dependencies:
+    - versioning
+  script: dotnet build Gw2Sharp -c $CONFIGURATION -f netstandard2.0 -o out_bin
+  artifacts:
+    paths:
+      - out_bin/
+    expire_in: 1 month
+
+build:docs:
+  <<: *task
+  stage: build
+  image: mono
+  script:
+    - apt update && apt install wget unzip -y
+    - wget -q https://github.com/dotnet/docfx/releases/latest/download/docfx.zip
+    - unzip docfx.zip
+    - mono docfx.exe Gw2Sharp.Build/DocFX/docfx.json
+    - mv Gw2Sharp.Build/DocFX/_site out_doc
+  artifacts:
+    paths:
+      - out_doc/
+    expire_in: 1 month
+
+test:
+  <<: *task
+  stage: test
+  script: dotnet test Gw2Sharp.Tests -c $CONFIGURATION -f netstandard2.0
+
+pack:
+  <<: *task
+  stage: pack
+  script: dotnet pack Gw2Sharp -c $CONFIGURATION --include-symbols -o out_pack
+  artifacts:
+    paths:
+      - out_pack/
+    expire_in: 1 month
+
+deploy:docs:
+  <<: *task
+  stage: deploy
+  image: ubuntu
+  dependencies:
+    - build:docs
+  script:
+    - apt update && apt install -y git
+    - git config --global credential.helper store
+    - git config --global user.name $GITLAB_USER_NAME
+    - git config --global user.email $GITLAB_USER_EMAIL
+    - git clone https://${GITHUB_PAGES_TOKEN}@github.com/Archomeda/Gw2Sharp.git --branch gh-pages doc
+    - mkdir -p doc/${CI_COMMIT_REF_NAME}
+    - cp -rf out_doc/* doc/${CI_COMMIT_REF_NAME}
+    - cd doc
+    - git add -A
+    - git commit -m "Update documentation for ${CI_COMMIT_REF_NAME} (${CI_COMMIT_SHORT_SHA})"
+    - git push origin gh-pages
+
+.deploy:github:
+  # TODO
+  <<: *task
+  stage: deploy
+  image: ubuntu
+  dependencies:
+    - build:binaries
+    - pack
+  only:
+    - tags
+
+.deploy:nuget:
+  # TODO
+  <<: *task
+  stage: deploy
+  image: ubuntu
+  dependencies:
+    - pack
+  only:
+    - tags

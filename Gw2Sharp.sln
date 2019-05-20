@@ -29,22 +29,29 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gw2Sharp.Build.DocFX", "Gw2
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		AppVeyor|Any CPU = AppVeyor|Any CPU
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3DDEB6A7-EBD6-4526-AD81-2547E303E049}.AppVeyor|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DDEB6A7-EBD6-4526-AD81-2547E303E049}.AppVeyor|Any CPU.Build.0 = Debug|Any CPU
 		{3DDEB6A7-EBD6-4526-AD81-2547E303E049}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3DDEB6A7-EBD6-4526-AD81-2547E303E049}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DDEB6A7-EBD6-4526-AD81-2547E303E049}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DDEB6A7-EBD6-4526-AD81-2547E303E049}.Release|Any CPU.Build.0 = Release|Any CPU
+		{294A1638-27F3-4508-8109-A52ED00145F7}.AppVeyor|Any CPU.ActiveCfg = Debug|Any CPU
+		{294A1638-27F3-4508-8109-A52ED00145F7}.AppVeyor|Any CPU.Build.0 = Debug|Any CPU
 		{294A1638-27F3-4508-8109-A52ED00145F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{294A1638-27F3-4508-8109-A52ED00145F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{294A1638-27F3-4508-8109-A52ED00145F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{294A1638-27F3-4508-8109-A52ED00145F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9078947F-B799-424D-966C-70E7C468E22A}.AppVeyor|Any CPU.ActiveCfg = Debug|Any CPU
 		{9078947F-B799-424D-966C-70E7C468E22A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9078947F-B799-424D-966C-70E7C468E22A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9078947F-B799-424D-966C-70E7C468E22A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9078947F-B799-424D-966C-70E7C468E22A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2730018-70A5-47E9-BDE1-06D83AD41198}.AppVeyor|Any CPU.ActiveCfg = Debug|Any CPU
 		{C2730018-70A5-47E9-BDE1-06D83AD41198}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C2730018-70A5-47E9-BDE1-06D83AD41198}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2730018-70A5-47E9-BDE1-06D83AD41198}.Release|Any CPU.ActiveCfg = Release|Any CPU
