@@ -1,5 +1,4 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <Import Project="../Gw2Sharp.Build/netfx.props" />
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -8,6 +7,7 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
 
     <PackageId>Gw2Sharp</PackageId>
+    <Version>0.1.0</Version>
     <Authors>Archomeda</Authors>
     <Description>Gw2Sharp is an client API wrapper around the official Guild Wars 2 API for .NET. It's asynchronous and multi-platform thanks to .NET Standard.</Description>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>

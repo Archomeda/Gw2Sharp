@@ -58,6 +58,7 @@ test:
   script: dotnet test Gw2Sharp.Tests -c $CONFIGURATION -f netstandard2.0
 
 pack:
+  # TODO: Make this autoversioned
   <<: *task
   stage: pack
   script: dotnet pack Gw2Sharp -c $CONFIGURATION --include-symbols -o out_pack
@@ -72,6 +73,8 @@ deploy:docs:
   image: ubuntu
   dependencies:
     - build:docs
+  only:
+    - master
   script:
     - apt update && apt install -y git
     - git config --global credential.helper store
@@ -85,8 +88,7 @@ deploy:docs:
     - git commit -m "Update documentation for ${CI_COMMIT_REF_NAME} (${CI_COMMIT_SHORT_SHA})"
     - git push origin gh-pages
 
-.deploy:github:
-  # TODO
+deploy:github:
   <<: *task
   stage: deploy
   image: ubuntu
@@ -94,7 +96,17 @@ deploy:docs:
     - build:binaries
     - pack
   only:
+    - master
     - tags
+  script:
+    - apt update && apt install -y tar wget zip
+    - wget https://github.com/tcnksm/ghr/releases/download/v0.12.1/ghr_v0.12.1_linux_amd64.tar.gz
+    - tar -zxf ghr_v0.12.1_linux_amd64.tar.gz
+    - mv ghr_v0.12.1_linux_amd64/ghr ./
+    - mkdir artifacts
+    - zip -r artifacts/Gw2Sharp.zip out_bin/*
+    - cp out_pack/* artifacts/
+    - ./ghr -t ${GITHUB_RELEASE_TOKEN} -draft ${CI_COMMIT_REF_NAME} artifacts
 
 .deploy:nuget:
   # TODO
