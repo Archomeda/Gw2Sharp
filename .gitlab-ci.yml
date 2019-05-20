@@ -96,7 +96,6 @@ deploy:github:
     - build:binaries
     - pack
   only:
-    - master
     - tags
   script:
     - apt update && apt install -y tar wget zip
