@@ -75,6 +75,7 @@ deploy:docs:
     - build:docs
   only:
     - master
+    - tags
   script:
     - apt update && apt install -y git
     - git config --global credential.helper store
