@@ -103,13 +103,13 @@ deploy:github:
     - tags
   script:
     - apt update && apt install -y tar wget zip
-    - wget https://github.com/tcnksm/ghr/releases/download/v0.12.1/ghr_v0.12.1_linux_amd64.tar.gz
+    - wget -q https://github.com/tcnksm/ghr/releases/download/v0.12.1/ghr_v0.12.1_linux_amd64.tar.gz
     - tar -zxf ghr_v0.12.1_linux_amd64.tar.gz
     - mv ghr_v0.12.1_linux_amd64/ghr ./
     - mkdir artifacts
     - zip -r artifacts/Gw2Sharp.zip out_bin/*
     - cp out_pack/* artifacts/
-    - ./ghr -t ${GITHUB_RELEASE_TOKEN} -draft ${CI_COMMIT_REF_NAME} artifacts
+    - ./ghr -t ${GITHUB_RELEASE_TOKEN} -u Archomeda -r Gw2Sharp -n ${CI_COMMIT_REF_NAME} -draft ${CI_COMMIT_REF_NAME} artifacts
 
 .deploy:nuget:
   # TODO
