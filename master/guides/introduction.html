@@ -104,8 +104,43 @@
             <article class="content wrap" id="_content" data-uid="Guides.Introduction">
 <h1 id="introduction">Introduction</h1>
 
-<p>TODO</p>
-</article>
+<p>The library is written to be as close as possible with the API endpoints.
+This means that the basic functionality is easy to understand.</p>
+<p>You start with creating a <code>Connection</code>:</p>
+<pre><code class="lang-cs">// The constructor also accepts overloads with an access token and locale
+var connection = new Gw2Sharp.WebApi.Connection();
+</code></pre><p>Then you&#39;ll need to create the <code>Gw2WebApiClient</code>:</p>
+<pre><code class="lang-cs">var client = new Gw2Sharp.WebApi.Gw2WebApiClient(connection);
+</code></pre><p>Now you&#39;re ready!<br>Keep in mind that all API calls are done asynchronously.
+Depending on the API endpoint, you&#39;ll find that the following methods are available:</p>
+<ul>
+<li><code>Ids()</code> - Gets the full list of ids</li>
+<li><code>Get()</code> - Gets a single item or an API blob object</li>
+<li><code>Many()</code> - Gets multiple items at once (bulk)</li>
+<li><code>Page()</code> - Gets a page</li>
+<li><code>All()</code> - Gets all items at once (bulk all)</li>
+</ul>
+<p>Check the <a href="../features.html">features</a> for the full list of supported endpoint operations.</p>
+<p>If an endpoint has sub-endpoints, you can access them as a property.</p>
+<p>For example, you can do the following:</p>
+<pre><code class="lang-cs">// Get all item ids
+var ids = await client.V2.Items.Ids();
+
+// Get a single achievement
+var item = await client.V2.Achievements.Get(123);
+
+// Get multiple gliders
+var items = await client.V2.Gliders.Many(new[] { 123, 456 });
+
+// Get itemstats by page
+var page = await client.V2.Itemstats.Page(5);
+
+// Get all colors
+var all = await client.V2.Colors.All();
+
+// Access account sub-endpoints (e.g. account/home/cats that contains blob data)
+var accountCats = await client.V2.Account.Home.Cats.Get();
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

@@ -28,12 +28,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "features.md",
       "output": {
         ".html": {
           "relative_path": "features.html",
-          "hash": "jJ29esj8mM0QUS8HPyYS5g=="
+          "hash": "h5hOHji2Us8zWocKu/EuJg=="
         }
       },
       "is_incremental": false,
@@ -45,7 +48,7 @@
       "output": {
         ".html": {
           "relative_path": "guides/introduction.html",
-          "hash": "hJOPfxMxT1YJ3uYhsXjVrQ=="
+          "hash": "qUfKR/xmteg8vBB7E0vRGA=="
         }
       },
       "is_incremental": false,
@@ -57,7 +60,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "D8QR0NpQGxn/KIm7lp/yEQ=="
+          "hash": "JBv3vrDX+6+4v4/N+2eyXA=="
         }
       },
       "is_incremental": false,
