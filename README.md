@@ -6,7 +6,7 @@ Gw2Sharp is a .NET wrapper library for the [official Guild Wars 2 API](https://w
 It uses the latest C# 8.0 features like Nullable Reference Types because they're awesome.
 
 This library has been written to be as close as possible to the official API structure, with a few exceptions to make life easier.
-*Make sure to read the [introductory guide](https://archomeda.github.io/Gw2Sharp/master/guide/introduction.html) to get started.*
+*Make sure to read the [introductory guide](https://archomeda.github.io/Gw2Sharp/master/guides/introduction.html) to get started.*
 
 ## Endpoints
 Check the [list of endpoints](https://archomeda.github.io/Gw2Sharp/master/faq/endpoints.html) for the supported endpoints.
