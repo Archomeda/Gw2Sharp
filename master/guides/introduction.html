@@ -114,32 +114,32 @@ var connection = new Gw2Sharp.WebApi.Connection();
 </code></pre><p>Now you&#39;re ready!<br>Keep in mind that all API calls are done asynchronously.
 Depending on the API endpoint, you&#39;ll find that the following methods are available:</p>
 <ul>
-<li><code>Ids()</code> - Gets the full list of ids</li>
-<li><code>Get()</code> - Gets a single item or an API blob object</li>
-<li><code>Many()</code> - Gets multiple items at once (bulk)</li>
-<li><code>Page()</code> - Gets a page</li>
-<li><code>All()</code> - Gets all items at once (bulk all)</li>
+<li><code>IdsAsync()</code> - Gets the full list of ids</li>
+<li><code>GetAsync()</code> - Gets a single item or an API blob object</li>
+<li><code>ManyAsync()</code> - Gets multiple items at once (bulk)</li>
+<li><code>PageAsync()</code> - Gets a page</li>
+<li><code>AllAsync()</code> - Gets all items at once (bulk all)</li>
 </ul>
-<p>Check the <a href="../features.html">features</a> for the full list of supported endpoint operations.</p>
+<p>Check the <a href="../features.md">features</a> for the full list of supported endpoint operations.</p>
 <p>If an endpoint has sub-endpoints, you can access them as a property.</p>
 <p>For example, you can do the following:</p>
 <pre><code class="lang-cs">// Get all item ids
-var ids = await client.V2.Items.Ids();
+var ids = await client.V2.Items.IdsAsync();
 
 // Get a single achievement
-var item = await client.V2.Achievements.Get(123);
+var item = await client.V2.Achievements.GetAsync(123);
 
 // Get multiple gliders
-var items = await client.V2.Gliders.Many(new[] { 123, 456 });
+var items = await client.V2.Gliders.ManyAsync(new[] { 123, 456 });
 
 // Get itemstats by page
-var page = await client.V2.Itemstats.Page(5);
+var page = await client.V2.Itemstats.PageAsync(5);
 
 // Get all colors
-var all = await client.V2.Colors.All();
+var all = await client.V2.Colors.AllAsync();
 
 // Access account sub-endpoints (e.g. account/home/cats that contains blob data)
-var accountCats = await client.V2.Account.Home.Cats.Get();
+var accountCats = await client.V2.Account.Home.Cats.GetAsync();
 </code></pre></article>
           </div>
           

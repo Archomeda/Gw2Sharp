@@ -4,12 +4,18 @@ references:
 - uid: API.Index
   name: API Documentation
   href: api/index.html
+- uid: FAQ.Endpoints
+  name: Endpoints
+  href: faq/endpoints.html
 - uid: FAQ.Overview
   name: FAQ
   href: faq/overview.html
 - uid: Guides.Introduction
   name: Gw2Sharp Introduction
   href: guides/introduction.html
+- uid: Guides.Subtokens
+  name: Creating and using subtokens
+  href: guides/subtokens.html
 - uid: Gw2Sharp.WebApi
   name: Gw2Sharp.WebApi
   href: api/Gw2Sharp.WebApi.html
@@ -6416,6 +6422,118 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.ContinentsIdClient.Floors
   nameWithType: ContinentsIdClient.Floors
+- uid: Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient
+  name: CreateSubtokenClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient
+  nameWithType: CreateSubtokenClient
+- uid: Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  name: CreateSubtokenClient(IConnection)
+  href: api/Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.html#Gw2Sharp_WebApi_V2_Clients_CreateSubtokenClient__ctor_Gw2Sharp_WebApi_IConnection_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  fullName: Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.CreateSubtokenClient(Gw2Sharp.WebApi.IConnection)
+  nameWithType: CreateSubtokenClient.CreateSubtokenClient(IConnection)
+- uid: Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.#ctor*
+  name: CreateSubtokenClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.html#Gw2Sharp_WebApi_V2_Clients_CreateSubtokenClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.CreateSubtokenClient
+  nameWithType: CreateSubtokenClient.CreateSubtokenClient
+- uid: Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.Expires(DateTime)
+  name: Expires(DateTime)
+  href: api/Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.html#Gw2Sharp_WebApi_V2_Clients_CreateSubtokenClient_Expires_DateTime_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.Expires(DateTime)
+  fullName: Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.Expires(DateTime)
+  nameWithType: CreateSubtokenClient.Expires(DateTime)
+- uid: Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.Expires*
+  name: Expires
+  href: api/Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.html#Gw2Sharp_WebApi_V2_Clients_CreateSubtokenClient_Expires_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.Expires
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.Expires
+  nameWithType: CreateSubtokenClient.Expires
+- uid: Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.ParamExpire
+  name: ParamExpire
+  href: api/Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.html#Gw2Sharp_WebApi_V2_Clients_CreateSubtokenClient_ParamExpire
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.ParamExpire
+  fullName: Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.ParamExpire
+  nameWithType: CreateSubtokenClient.ParamExpire
+- uid: Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.ParamExpire*
+  name: ParamExpire
+  href: api/Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.html#Gw2Sharp_WebApi_V2_Clients_CreateSubtokenClient_ParamExpire_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.ParamExpire
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.ParamExpire
+  nameWithType: CreateSubtokenClient.ParamExpire
+- uid: Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.ParamPermissions
+  name: ParamPermissions
+  href: api/Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.html#Gw2Sharp_WebApi_V2_Clients_CreateSubtokenClient_ParamPermissions
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.ParamPermissions
+  fullName: Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.ParamPermissions
+  nameWithType: CreateSubtokenClient.ParamPermissions
+- uid: Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.ParamPermissions*
+  name: ParamPermissions
+  href: api/Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.html#Gw2Sharp_WebApi_V2_Clients_CreateSubtokenClient_ParamPermissions_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.ParamPermissions
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.ParamPermissions
+  nameWithType: CreateSubtokenClient.ParamPermissions
+- uid: Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.ParamUrls
+  name: ParamUrls
+  href: api/Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.html#Gw2Sharp_WebApi_V2_Clients_CreateSubtokenClient_ParamUrls
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.ParamUrls
+  fullName: Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.ParamUrls
+  nameWithType: CreateSubtokenClient.ParamUrls
+- uid: Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.ParamUrls*
+  name: ParamUrls
+  href: api/Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.html#Gw2Sharp_WebApi_V2_Clients_CreateSubtokenClient_ParamUrls_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.ParamUrls
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.ParamUrls
+  nameWithType: CreateSubtokenClient.ParamUrls
+- uid: Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.WithPermissions(IEnumerable{Gw2Sharp.WebApi.V2.Models.TokenPermission})
+  name: WithPermissions(IEnumerable<TokenPermission>)
+  href: api/Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.html#Gw2Sharp_WebApi_V2_Clients_CreateSubtokenClient_WithPermissions_IEnumerable_Gw2Sharp_WebApi_V2_Models_TokenPermission__
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.WithPermissions(IEnumerable{Gw2Sharp.WebApi.V2.Models.TokenPermission})
+  name.vb: WithPermissions(IEnumerable(Of TokenPermission))
+  fullName: Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.WithPermissions(IEnumerable<Gw2Sharp.WebApi.V2.Models.TokenPermission>)
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.WithPermissions(IEnumerable(Of Gw2Sharp.WebApi.V2.Models.TokenPermission))
+  nameWithType: CreateSubtokenClient.WithPermissions(IEnumerable<TokenPermission>)
+  nameWithType.vb: CreateSubtokenClient.WithPermissions(IEnumerable(Of TokenPermission))
+- uid: Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.WithPermissions(IEnumerable{System.String})
+  name: WithPermissions(IEnumerable<String>)
+  href: api/Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.html#Gw2Sharp_WebApi_V2_Clients_CreateSubtokenClient_WithPermissions_IEnumerable_System_String__
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.WithPermissions(IEnumerable{System.String})
+  name.vb: WithPermissions(IEnumerable(Of String))
+  fullName: Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.WithPermissions(IEnumerable<System.String>)
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.WithPermissions(IEnumerable(Of System.String))
+  nameWithType: CreateSubtokenClient.WithPermissions(IEnumerable<String>)
+  nameWithType.vb: CreateSubtokenClient.WithPermissions(IEnumerable(Of String))
+- uid: Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.WithPermissions*
+  name: WithPermissions
+  href: api/Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.html#Gw2Sharp_WebApi_V2_Clients_CreateSubtokenClient_WithPermissions_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.WithPermissions
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.WithPermissions
+  nameWithType: CreateSubtokenClient.WithPermissions
+- uid: Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.WithUrls(IList{System.String})
+  name: WithUrls(IList<String>)
+  href: api/Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.html#Gw2Sharp_WebApi_V2_Clients_CreateSubtokenClient_WithUrls_IList_System_String__
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.WithUrls(IList{System.String})
+  name.vb: WithUrls(IList(Of String))
+  fullName: Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.WithUrls(IList<System.String>)
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.WithUrls(IList(Of System.String))
+  nameWithType: CreateSubtokenClient.WithUrls(IList<String>)
+  nameWithType.vb: CreateSubtokenClient.WithUrls(IList(Of String))
+- uid: Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.WithUrls*
+  name: WithUrls
+  href: api/Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.html#Gw2Sharp_WebApi_V2_Clients_CreateSubtokenClient_WithUrls_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.WithUrls
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.WithUrls
+  nameWithType: CreateSubtokenClient.WithUrls
 - uid: Gw2Sharp.WebApi.V2.Clients.CurrenciesClient
   name: CurrenciesClient
   href: api/Gw2Sharp.WebApi.V2.Clients.CurrenciesClient.html
@@ -9465,6 +9583,105 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.IContinentsIdClient.Floors
   nameWithType: IContinentsIdClient.Floors
+- uid: Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient
+  name: ICreateSubtokenClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient
+  nameWithType: ICreateSubtokenClient
+- uid: Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.Expires(DateTime)
+  name: Expires(DateTime)
+  href: api/Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.html#Gw2Sharp_WebApi_V2_Clients_ICreateSubtokenClient_Expires_DateTime_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.Expires(DateTime)
+  fullName: Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.Expires(DateTime)
+  nameWithType: ICreateSubtokenClient.Expires(DateTime)
+- uid: Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.Expires*
+  name: Expires
+  href: api/Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.html#Gw2Sharp_WebApi_V2_Clients_ICreateSubtokenClient_Expires_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.Expires
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.Expires
+  nameWithType: ICreateSubtokenClient.Expires
+- uid: Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.ParamExpire
+  name: ParamExpire
+  href: api/Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.html#Gw2Sharp_WebApi_V2_Clients_ICreateSubtokenClient_ParamExpire
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.ParamExpire
+  fullName: Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.ParamExpire
+  nameWithType: ICreateSubtokenClient.ParamExpire
+- uid: Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.ParamExpire*
+  name: ParamExpire
+  href: api/Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.html#Gw2Sharp_WebApi_V2_Clients_ICreateSubtokenClient_ParamExpire_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.ParamExpire
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.ParamExpire
+  nameWithType: ICreateSubtokenClient.ParamExpire
+- uid: Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.ParamPermissions
+  name: ParamPermissions
+  href: api/Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.html#Gw2Sharp_WebApi_V2_Clients_ICreateSubtokenClient_ParamPermissions
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.ParamPermissions
+  fullName: Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.ParamPermissions
+  nameWithType: ICreateSubtokenClient.ParamPermissions
+- uid: Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.ParamPermissions*
+  name: ParamPermissions
+  href: api/Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.html#Gw2Sharp_WebApi_V2_Clients_ICreateSubtokenClient_ParamPermissions_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.ParamPermissions
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.ParamPermissions
+  nameWithType: ICreateSubtokenClient.ParamPermissions
+- uid: Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.ParamUrls
+  name: ParamUrls
+  href: api/Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.html#Gw2Sharp_WebApi_V2_Clients_ICreateSubtokenClient_ParamUrls
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.ParamUrls
+  fullName: Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.ParamUrls
+  nameWithType: ICreateSubtokenClient.ParamUrls
+- uid: Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.ParamUrls*
+  name: ParamUrls
+  href: api/Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.html#Gw2Sharp_WebApi_V2_Clients_ICreateSubtokenClient_ParamUrls_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.ParamUrls
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.ParamUrls
+  nameWithType: ICreateSubtokenClient.ParamUrls
+- uid: Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.WithPermissions(IEnumerable{Gw2Sharp.WebApi.V2.Models.TokenPermission})
+  name: WithPermissions(IEnumerable<TokenPermission>)
+  href: api/Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.html#Gw2Sharp_WebApi_V2_Clients_ICreateSubtokenClient_WithPermissions_IEnumerable_Gw2Sharp_WebApi_V2_Models_TokenPermission__
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.WithPermissions(IEnumerable{Gw2Sharp.WebApi.V2.Models.TokenPermission})
+  name.vb: WithPermissions(IEnumerable(Of TokenPermission))
+  fullName: Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.WithPermissions(IEnumerable<Gw2Sharp.WebApi.V2.Models.TokenPermission>)
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.WithPermissions(IEnumerable(Of Gw2Sharp.WebApi.V2.Models.TokenPermission))
+  nameWithType: ICreateSubtokenClient.WithPermissions(IEnumerable<TokenPermission>)
+  nameWithType.vb: ICreateSubtokenClient.WithPermissions(IEnumerable(Of TokenPermission))
+- uid: Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.WithPermissions(IEnumerable{System.String})
+  name: WithPermissions(IEnumerable<String>)
+  href: api/Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.html#Gw2Sharp_WebApi_V2_Clients_ICreateSubtokenClient_WithPermissions_IEnumerable_System_String__
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.WithPermissions(IEnumerable{System.String})
+  name.vb: WithPermissions(IEnumerable(Of String))
+  fullName: Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.WithPermissions(IEnumerable<System.String>)
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.WithPermissions(IEnumerable(Of System.String))
+  nameWithType: ICreateSubtokenClient.WithPermissions(IEnumerable<String>)
+  nameWithType.vb: ICreateSubtokenClient.WithPermissions(IEnumerable(Of String))
+- uid: Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.WithPermissions*
+  name: WithPermissions
+  href: api/Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.html#Gw2Sharp_WebApi_V2_Clients_ICreateSubtokenClient_WithPermissions_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.WithPermissions
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.WithPermissions
+  nameWithType: ICreateSubtokenClient.WithPermissions
+- uid: Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.WithUrls(IList{System.String})
+  name: WithUrls(IList<String>)
+  href: api/Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.html#Gw2Sharp_WebApi_V2_Clients_ICreateSubtokenClient_WithUrls_IList_System_String__
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.WithUrls(IList{System.String})
+  name.vb: WithUrls(IList(Of String))
+  fullName: Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.WithUrls(IList<System.String>)
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.WithUrls(IList(Of System.String))
+  nameWithType: ICreateSubtokenClient.WithUrls(IList<String>)
+  nameWithType.vb: ICreateSubtokenClient.WithUrls(IList(Of String))
+- uid: Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.WithUrls*
+  name: WithUrls
+  href: api/Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.html#Gw2Sharp_WebApi_V2_Clients_ICreateSubtokenClient_WithUrls_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.WithUrls
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.WithUrls
+  nameWithType: ICreateSubtokenClient.WithUrls
 - uid: Gw2Sharp.WebApi.V2.Clients.ICurrenciesClient
   name: ICurrenciesClient
   href: api/Gw2Sharp.WebApi.V2.Clients.ICurrenciesClient.html
@@ -10200,6 +10417,12 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.ItemstatsClient.ItemstatsClient
   nameWithType: ItemstatsClient.ItemstatsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.ITokenInfoClient
+  name: ITokenInfoClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.ITokenInfoClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.ITokenInfoClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.ITokenInfoClient
+  nameWithType: ITokenInfoClient
 - uid: Gw2Sharp.WebApi.V2.Clients.LegendsClient
   name: LegendsClient
   href: api/Gw2Sharp.WebApi.V2.Clients.LegendsClient.html
@@ -10219,6 +10442,25 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.LegendsClient.LegendsClient
   nameWithType: LegendsClient.LegendsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.TokenInfoClient
+  name: TokenInfoClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.TokenInfoClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.TokenInfoClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.TokenInfoClient
+  nameWithType: TokenInfoClient
+- uid: Gw2Sharp.WebApi.V2.Clients.TokenInfoClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  name: TokenInfoClient(IConnection)
+  href: api/Gw2Sharp.WebApi.V2.Clients.TokenInfoClient.html#Gw2Sharp_WebApi_V2_Clients_TokenInfoClient__ctor_Gw2Sharp_WebApi_IConnection_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.TokenInfoClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  fullName: Gw2Sharp.WebApi.V2.Clients.TokenInfoClient.TokenInfoClient(Gw2Sharp.WebApi.IConnection)
+  nameWithType: TokenInfoClient.TokenInfoClient(IConnection)
+- uid: Gw2Sharp.WebApi.V2.Clients.TokenInfoClient.#ctor*
+  name: TokenInfoClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.TokenInfoClient.html#Gw2Sharp_WebApi_V2_Clients_TokenInfoClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.TokenInfoClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.TokenInfoClient.TokenInfoClient
+  nameWithType: TokenInfoClient.TokenInfoClient
 - uid: Gw2Sharp.WebApi.V2.ExtensionImplementation
   name: ExtensionImplementation
   href: api/Gw2Sharp.WebApi.V2.ExtensionImplementation.html
@@ -10412,6 +10654,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Continents
   nameWithType: Gw2WebApiV2Client.Continents
+- uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.CreateSubtoken
+  name: CreateSubtoken
+  href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_CreateSubtoken
+  commentId: P:Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.CreateSubtoken
+  fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.CreateSubtoken
+  nameWithType: Gw2WebApiV2Client.CreateSubtoken
+- uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.CreateSubtoken*
+  name: CreateSubtoken
+  href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_CreateSubtoken_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.CreateSubtoken
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.CreateSubtoken
+  nameWithType: Gw2WebApiV2Client.CreateSubtoken
 - uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Currencies
   name: Currencies
   href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_Currencies
@@ -10542,6 +10797,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Legends
   nameWithType: Gw2WebApiV2Client.Legends
+- uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.TokenInfo
+  name: TokenInfo
+  href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_TokenInfo
+  commentId: P:Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.TokenInfo
+  fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.TokenInfo
+  nameWithType: Gw2WebApiV2Client.TokenInfo
+- uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.TokenInfo*
+  name: TokenInfo
+  href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_TokenInfo_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.TokenInfo
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.TokenInfo
+  nameWithType: Gw2WebApiV2Client.TokenInfo
 - uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.UrlBase
   name: UrlBase
   href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_UrlBase
@@ -10846,6 +11114,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Continents
   nameWithType: IGw2WebApiV2Client.Continents
+- uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.CreateSubtoken
+  name: CreateSubtoken
+  href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_CreateSubtoken
+  commentId: P:Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.CreateSubtoken
+  fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.CreateSubtoken
+  nameWithType: IGw2WebApiV2Client.CreateSubtoken
+- uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.CreateSubtoken*
+  name: CreateSubtoken
+  href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_CreateSubtoken_
+  commentId: Overload:Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.CreateSubtoken
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.CreateSubtoken
+  nameWithType: IGw2WebApiV2Client.CreateSubtoken
 - uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Currencies
   name: Currencies
   href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_Currencies
@@ -10976,6 +11257,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Legends
   nameWithType: IGw2WebApiV2Client.Legends
+- uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.TokenInfo
+  name: TokenInfo
+  href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_TokenInfo
+  commentId: P:Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.TokenInfo
+  fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.TokenInfo
+  nameWithType: IGw2WebApiV2Client.TokenInfo
+- uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.TokenInfo*
+  name: TokenInfo
+  href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_TokenInfo_
+  commentId: Overload:Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.TokenInfo
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.TokenInfo
+  nameWithType: IGw2WebApiV2Client.TokenInfo
 - uid: Gw2Sharp.WebApi.V2.Models
   name: Gw2Sharp.WebApi.V2.Models
   href: api/Gw2Sharp.WebApi.V2.Models.html
@@ -16779,6 +17073,25 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.Coordinates2.Y
   nameWithType: Coordinates2.Y
+- uid: Gw2Sharp.WebApi.V2.Models.CreateSubtoken
+  name: CreateSubtoken
+  href: api/Gw2Sharp.WebApi.V2.Models.CreateSubtoken.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.CreateSubtoken
+  fullName: Gw2Sharp.WebApi.V2.Models.CreateSubtoken
+  nameWithType: CreateSubtoken
+- uid: Gw2Sharp.WebApi.V2.Models.CreateSubtoken.Subtoken
+  name: Subtoken
+  href: api/Gw2Sharp.WebApi.V2.Models.CreateSubtoken.html#Gw2Sharp_WebApi_V2_Models_CreateSubtoken_Subtoken
+  commentId: P:Gw2Sharp.WebApi.V2.Models.CreateSubtoken.Subtoken
+  fullName: Gw2Sharp.WebApi.V2.Models.CreateSubtoken.Subtoken
+  nameWithType: CreateSubtoken.Subtoken
+- uid: Gw2Sharp.WebApi.V2.Models.CreateSubtoken.Subtoken*
+  name: Subtoken
+  href: api/Gw2Sharp.WebApi.V2.Models.CreateSubtoken.html#Gw2Sharp_WebApi_V2_Models_CreateSubtoken_Subtoken_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.CreateSubtoken.Subtoken
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.CreateSubtoken.Subtoken
+  nameWithType: CreateSubtoken.Subtoken
 - uid: Gw2Sharp.WebApi.V2.Models.Currency
   name: Currency
   href: api/Gw2Sharp.WebApi.V2.Models.Currency.html
@@ -23376,6 +23689,123 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.Size.Width
   nameWithType: Size.Width
+- uid: Gw2Sharp.WebApi.V2.Models.TokenInfo
+  name: TokenInfo
+  href: api/Gw2Sharp.WebApi.V2.Models.TokenInfo.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.TokenInfo
+  fullName: Gw2Sharp.WebApi.V2.Models.TokenInfo
+  nameWithType: TokenInfo
+- uid: Gw2Sharp.WebApi.V2.Models.TokenInfo.Id
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.TokenInfo.html#Gw2Sharp_WebApi_V2_Models_TokenInfo_Id
+  commentId: P:Gw2Sharp.WebApi.V2.Models.TokenInfo.Id
+  fullName: Gw2Sharp.WebApi.V2.Models.TokenInfo.Id
+  nameWithType: TokenInfo.Id
+- uid: Gw2Sharp.WebApi.V2.Models.TokenInfo.Id*
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.TokenInfo.html#Gw2Sharp_WebApi_V2_Models_TokenInfo_Id_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.TokenInfo.Id
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.TokenInfo.Id
+  nameWithType: TokenInfo.Id
+- uid: Gw2Sharp.WebApi.V2.Models.TokenInfo.Name
+  name: Name
+  href: api/Gw2Sharp.WebApi.V2.Models.TokenInfo.html#Gw2Sharp_WebApi_V2_Models_TokenInfo_Name
+  commentId: P:Gw2Sharp.WebApi.V2.Models.TokenInfo.Name
+  fullName: Gw2Sharp.WebApi.V2.Models.TokenInfo.Name
+  nameWithType: TokenInfo.Name
+- uid: Gw2Sharp.WebApi.V2.Models.TokenInfo.Name*
+  name: Name
+  href: api/Gw2Sharp.WebApi.V2.Models.TokenInfo.html#Gw2Sharp_WebApi_V2_Models_TokenInfo_Name_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.TokenInfo.Name
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.TokenInfo.Name
+  nameWithType: TokenInfo.Name
+- uid: Gw2Sharp.WebApi.V2.Models.TokenInfo.Permissions
+  name: Permissions
+  href: api/Gw2Sharp.WebApi.V2.Models.TokenInfo.html#Gw2Sharp_WebApi_V2_Models_TokenInfo_Permissions
+  commentId: P:Gw2Sharp.WebApi.V2.Models.TokenInfo.Permissions
+  fullName: Gw2Sharp.WebApi.V2.Models.TokenInfo.Permissions
+  nameWithType: TokenInfo.Permissions
+- uid: Gw2Sharp.WebApi.V2.Models.TokenInfo.Permissions*
+  name: Permissions
+  href: api/Gw2Sharp.WebApi.V2.Models.TokenInfo.html#Gw2Sharp_WebApi_V2_Models_TokenInfo_Permissions_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.TokenInfo.Permissions
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.TokenInfo.Permissions
+  nameWithType: TokenInfo.Permissions
+- uid: Gw2Sharp.WebApi.V2.Models.TokenPermission
+  name: TokenPermission
+  href: api/Gw2Sharp.WebApi.V2.Models.TokenPermission.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.TokenPermission
+  fullName: Gw2Sharp.WebApi.V2.Models.TokenPermission
+  nameWithType: TokenPermission
+- uid: Gw2Sharp.WebApi.V2.Models.TokenPermission.Account
+  name: Account
+  href: api/Gw2Sharp.WebApi.V2.Models.TokenPermission.html#Gw2Sharp_WebApi_V2_Models_TokenPermission_Account
+  commentId: F:Gw2Sharp.WebApi.V2.Models.TokenPermission.Account
+  fullName: Gw2Sharp.WebApi.V2.Models.TokenPermission.Account
+  nameWithType: TokenPermission.Account
+- uid: Gw2Sharp.WebApi.V2.Models.TokenPermission.Builds
+  name: Builds
+  href: api/Gw2Sharp.WebApi.V2.Models.TokenPermission.html#Gw2Sharp_WebApi_V2_Models_TokenPermission_Builds
+  commentId: F:Gw2Sharp.WebApi.V2.Models.TokenPermission.Builds
+  fullName: Gw2Sharp.WebApi.V2.Models.TokenPermission.Builds
+  nameWithType: TokenPermission.Builds
+- uid: Gw2Sharp.WebApi.V2.Models.TokenPermission.Characters
+  name: Characters
+  href: api/Gw2Sharp.WebApi.V2.Models.TokenPermission.html#Gw2Sharp_WebApi_V2_Models_TokenPermission_Characters
+  commentId: F:Gw2Sharp.WebApi.V2.Models.TokenPermission.Characters
+  fullName: Gw2Sharp.WebApi.V2.Models.TokenPermission.Characters
+  nameWithType: TokenPermission.Characters
+- uid: Gw2Sharp.WebApi.V2.Models.TokenPermission.Guilds
+  name: Guilds
+  href: api/Gw2Sharp.WebApi.V2.Models.TokenPermission.html#Gw2Sharp_WebApi_V2_Models_TokenPermission_Guilds
+  commentId: F:Gw2Sharp.WebApi.V2.Models.TokenPermission.Guilds
+  fullName: Gw2Sharp.WebApi.V2.Models.TokenPermission.Guilds
+  nameWithType: TokenPermission.Guilds
+- uid: Gw2Sharp.WebApi.V2.Models.TokenPermission.Inventories
+  name: Inventories
+  href: api/Gw2Sharp.WebApi.V2.Models.TokenPermission.html#Gw2Sharp_WebApi_V2_Models_TokenPermission_Inventories
+  commentId: F:Gw2Sharp.WebApi.V2.Models.TokenPermission.Inventories
+  fullName: Gw2Sharp.WebApi.V2.Models.TokenPermission.Inventories
+  nameWithType: TokenPermission.Inventories
+- uid: Gw2Sharp.WebApi.V2.Models.TokenPermission.Progression
+  name: Progression
+  href: api/Gw2Sharp.WebApi.V2.Models.TokenPermission.html#Gw2Sharp_WebApi_V2_Models_TokenPermission_Progression
+  commentId: F:Gw2Sharp.WebApi.V2.Models.TokenPermission.Progression
+  fullName: Gw2Sharp.WebApi.V2.Models.TokenPermission.Progression
+  nameWithType: TokenPermission.Progression
+- uid: Gw2Sharp.WebApi.V2.Models.TokenPermission.Pvp
+  name: Pvp
+  href: api/Gw2Sharp.WebApi.V2.Models.TokenPermission.html#Gw2Sharp_WebApi_V2_Models_TokenPermission_Pvp
+  commentId: F:Gw2Sharp.WebApi.V2.Models.TokenPermission.Pvp
+  fullName: Gw2Sharp.WebApi.V2.Models.TokenPermission.Pvp
+  nameWithType: TokenPermission.Pvp
+- uid: Gw2Sharp.WebApi.V2.Models.TokenPermission.Tradingpost
+  name: Tradingpost
+  href: api/Gw2Sharp.WebApi.V2.Models.TokenPermission.html#Gw2Sharp_WebApi_V2_Models_TokenPermission_Tradingpost
+  commentId: F:Gw2Sharp.WebApi.V2.Models.TokenPermission.Tradingpost
+  fullName: Gw2Sharp.WebApi.V2.Models.TokenPermission.Tradingpost
+  nameWithType: TokenPermission.Tradingpost
+- uid: Gw2Sharp.WebApi.V2.Models.TokenPermission.Unknown
+  name: Unknown
+  href: api/Gw2Sharp.WebApi.V2.Models.TokenPermission.html#Gw2Sharp_WebApi_V2_Models_TokenPermission_Unknown
+  commentId: F:Gw2Sharp.WebApi.V2.Models.TokenPermission.Unknown
+  fullName: Gw2Sharp.WebApi.V2.Models.TokenPermission.Unknown
+  nameWithType: TokenPermission.Unknown
+- uid: Gw2Sharp.WebApi.V2.Models.TokenPermission.Unlocks
+  name: Unlocks
+  href: api/Gw2Sharp.WebApi.V2.Models.TokenPermission.html#Gw2Sharp_WebApi_V2_Models_TokenPermission_Unlocks
+  commentId: F:Gw2Sharp.WebApi.V2.Models.TokenPermission.Unlocks
+  fullName: Gw2Sharp.WebApi.V2.Models.TokenPermission.Unlocks
+  nameWithType: TokenPermission.Unlocks
+- uid: Gw2Sharp.WebApi.V2.Models.TokenPermission.Wallet
+  name: Wallet
+  href: api/Gw2Sharp.WebApi.V2.Models.TokenPermission.html#Gw2Sharp_WebApi_V2_Models_TokenPermission_Wallet
+  commentId: F:Gw2Sharp.WebApi.V2.Models.TokenPermission.Wallet
+  fullName: Gw2Sharp.WebApi.V2.Models.TokenPermission.Wallet
+  nameWithType: TokenPermission.Wallet
 - uid: Gw2Sharp.WebApi.V2.Models.WeaponDamageType
   name: WeaponDamageType
   href: api/Gw2Sharp.WebApi.V2.Models.WeaponDamageType.html

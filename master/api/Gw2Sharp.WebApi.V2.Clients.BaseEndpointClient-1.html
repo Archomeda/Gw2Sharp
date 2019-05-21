@@ -483,6 +483,9 @@
                             <a href="Gw2Sharp.WebApi.V2.Clients.ContinentsIdClient.html" title="ContinentsIdClient" class="">ContinentsIdClient</a>
                           </li>
                           <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.html" title="CreateSubtokenClient" class="">CreateSubtokenClient</a>
+                          </li>
+                          <li class="">
                             <a href="Gw2Sharp.WebApi.V2.Clients.CurrenciesClient.html" title="CurrenciesClient" class="">CurrenciesClient</a>
                           </li>
                           <li class="">
@@ -801,6 +804,9 @@
                             <a href="Gw2Sharp.WebApi.V2.Clients.IContinentsIdClient.html" title="IContinentsIdClient" class="">IContinentsIdClient</a>
                           </li>
                           <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.html" title="ICreateSubtokenClient" class="">ICreateSubtokenClient</a>
+                          </li>
+                          <li class="">
                             <a href="Gw2Sharp.WebApi.V2.Clients.ICurrenciesClient.html" title="ICurrenciesClient" class="">ICurrenciesClient</a>
                           </li>
                           <li class="">
@@ -891,7 +897,13 @@
                             <a href="Gw2Sharp.WebApi.V2.Clients.ItemstatsClient.html" title="ItemstatsClient" class="">ItemstatsClient</a>
                           </li>
                           <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.Clients.ITokenInfoClient.html" title="ITokenInfoClient" class="">ITokenInfoClient</a>
+                          </li>
+                          <li class="">
                             <a href="Gw2Sharp.WebApi.V2.Clients.LegendsClient.html" title="LegendsClient" class="">LegendsClient</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.Clients.TokenInfoClient.html" title="TokenInfoClient" class="">TokenInfoClient</a>
                           </li>
                         </ul>  </li>
                     <li class="">
@@ -1159,6 +1171,9 @@
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.WebApi.V2.Models.Coordinates2.html" title="Coordinates2" class="">Coordinates2</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.Models.CreateSubtoken.html" title="CreateSubtoken" class="">CreateSubtoken</a>
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.WebApi.V2.Models.Currency.html" title="Currency" class="">Currency</a>
@@ -1569,6 +1584,12 @@
                             <a href="Gw2Sharp.WebApi.V2.Models.Size.html" title="Size" class="">Size</a>
                           </li>
                           <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.Models.TokenInfo.html" title="TokenInfo" class="">TokenInfo</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.Models.TokenPermission.html" title="TokenPermission" class="">TokenPermission</a>
+                          </li>
+                          <li class="">
                             <a href="Gw2Sharp.WebApi.V2.Models.WeaponDamageType.html" title="WeaponDamageType" class="">WeaponDamageType</a>
                           </li>
                         </ul>  </li>
@@ -1770,7 +1791,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool HasBlobData { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool HasBlobData { get; protected set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1796,7 +1817,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsAllExpandable { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsAllExpandable { get; protected set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1822,7 +1843,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsAuthenticated { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsAuthenticated { get; protected set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1848,7 +1869,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsBulkExpandable { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsBulkExpandable { get; protected set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1874,7 +1895,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsLocalized { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsLocalized { get; protected set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1900,7 +1921,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsPaginated { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsPaginated { get; protected set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
