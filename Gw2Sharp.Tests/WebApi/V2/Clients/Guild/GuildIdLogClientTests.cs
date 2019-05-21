@@ -22,14 +22,14 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
 
         [Theory]
         [InlineData("TestFiles.Guild.GuildIdLog.json")]
-        public Task BlobTest(string file) => this.AssertBlobData(this.client, file);
+        public Task BlobTest(string file) => this.AssertBlobDataAsync(this.client, file);
 
         [Theory]
         [InlineData("TestFiles.Guild.GuildIdLog.json")]
         public Task BlobSinceTest(string file)
         {
             this.client = this.client.Since(5);
-            return this.AssertBlobData(this.client, file);
+            return this.AssertBlobDataAsync(this.client, file);
         }
     }
 }

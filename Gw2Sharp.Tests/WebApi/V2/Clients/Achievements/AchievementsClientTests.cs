@@ -21,18 +21,18 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
 
         [Theory]
         [InlineData("TestFiles.Achievements.Achievements.bulk.json")]
-        public Task PaginatedTestAsync(string file) => this.AssertPaginatedData(this.client, file);
+        public Task PaginatedTestAsync(string file) => this.AssertPaginatedDataAsync(this.client, file);
 
         [Theory]
         [InlineData("TestFiles.Achievements.Achievements.single.json")]
-        public Task GetTestAsync(string file) => this.AssertGetData(this.client, file);
+        public Task GetTestAsync(string file) => this.AssertGetDataAsync(this.client, file);
 
         [Theory]
         [InlineData("TestFiles.Achievements.Achievements.bulk.json")]
-        public Task BulkTestAsync(string file) => this.AssertBulkData(this.client, file);
+        public Task BulkTestAsync(string file) => this.AssertBulkDataAsync(this.client, file);
 
         [Theory]
         [InlineData("TestFiles.Achievements.Achievements.ids.json")]
-        public Task IdsTestAsync(string file) => this.AssertIdsData(this.client, file);
+        public Task IdsTestAsync(string file) => this.AssertIdsDataAsync(this.client, file);
     }
 }

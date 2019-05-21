@@ -1,0 +1,13 @@
+namespace Gw2Sharp.WebApi.V2.Models
+{
+    /// <summary>
+    /// Represents a subtoken creation.
+    /// </summary>
+    public class CreateSubtoken
+    {
+        /// <summary>
+        /// The subtoken.
+        /// </summary>
+        public string Subtoken { get; set; } = string.Empty;
+    }
+}

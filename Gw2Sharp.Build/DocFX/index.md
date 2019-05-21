@@ -6,7 +6,7 @@ At the moment this documention site is a work in progress.
 Be sure to check the [introduction](guides/introduction.md)!
 
 ### Features
-For the list of supported endpoints, check the [endpoint feature list](features.md).
+For the list of supported endpoints, check the [list of endpoints](faq/endpoints.md).
 
 ### Additional resources
 - [GW2 Development Community Discord](https://discord.gg/hNcpDT3) - Discussions about Gw2Sharp and other API related projects

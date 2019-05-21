@@ -35,6 +35,7 @@ namespace Gw2Sharp.WebApi.V2
             this.Colors = new ColorsClient(connection);
             this.Commerce = new CommerceClient(connection);
             this.Continents = new ContinentsClient(connection);
+            this.CreateSubtoken = new CreateSubtokenClient(connection);
             this.Currencies = new CurrenciesClient(connection);
             this.Dungeons = new DungeonsClient(connection);
             this.Emblem = new EmblemClient(connection);
@@ -45,6 +46,7 @@ namespace Gw2Sharp.WebApi.V2
             this.Items = new ItemsClient(connection);
             this.Itemstats = new ItemstatsClient(connection);
             this.Legends = new LegendsClient(connection);
+            this.TokenInfo = new TokenInfoClient(connection);
         }
 
         /// <inheritdoc />
@@ -78,6 +80,9 @@ namespace Gw2Sharp.WebApi.V2
         public virtual IContinentsClient Continents { get; protected set; }
 
         /// <inheritdoc />
+        public virtual ICreateSubtokenClient CreateSubtoken { get; protected set; }
+
+        /// <inheritdoc />
         public virtual ICurrenciesClient Currencies { get; protected set; }
 
         /// <inheritdoc />
@@ -106,5 +111,8 @@ namespace Gw2Sharp.WebApi.V2
 
         /// <inheritdoc />
         public virtual ILegendsClient Legends { get; protected set; }
+
+        /// <inheritdoc />
+        public virtual ITokenInfoClient TokenInfo { get; protected set; }
     }
 }

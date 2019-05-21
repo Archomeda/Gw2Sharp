@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="TestFiles\Colors\Colors.bulk.json" />
+    <None Remove="TestFiles\Colors\Colors.ids.json" />
+    <None Remove="TestFiles\Colors\Colors.single.json" />
+    <None Remove="TestFiles\TokenInfo\TokenInfo.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <EmbeddedResource Include="TestFiles\Account\Account.1.json" />
     <EmbeddedResource Include="TestFiles\Account\Account.2.json" />
     <EmbeddedResource Include="TestFiles\Account\AccountAchievements.json" />
@@ -67,6 +74,7 @@
     <EmbeddedResource Include="TestFiles\Colors\Colors.bulk.json" />
     <EmbeddedResource Include="TestFiles\Colors\Colors.ids.json" />
     <EmbeddedResource Include="TestFiles\Colors\Colors.single.json" />
+    <EmbeddedResource Include="TestFiles\CreateSubtoken\CreateSubtoken.json" />
     <EmbeddedResource Include="TestFiles\Commerce\CommerceDelivery.json" />
     <EmbeddedResource Include="TestFiles\Commerce\CommerceExchangeCoins.json" />
     <EmbeddedResource Include="TestFiles\Commerce\CommerceExchangeGems.json" />
@@ -143,6 +151,7 @@
     <EmbeddedResource Include="TestFiles\Itemstats\Itemstats.bulk.json" />
     <EmbeddedResource Include="TestFiles\Itemstats\Itemstats.ids.json" />
     <EmbeddedResource Include="TestFiles\Itemstats\Itemstats.single.json" />
+    <EmbeddedResource Include="TestFiles\TokenInfo\TokenInfo.json" />
     <EmbeddedResource Include="TestFiles\Legends\Legends.bulk.json" />
     <EmbeddedResource Include="TestFiles\Legends\Legends.ids.json" />
     <EmbeddedResource Include="TestFiles\Legends\Legends.single.json" />

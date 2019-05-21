@@ -60,6 +60,11 @@ namespace Gw2Sharp.WebApi.V2
         IContinentsClient Continents { get; }
 
         /// <summary>
+        /// Gets the create subtoken.
+        /// </summary>
+        ICreateSubtokenClient CreateSubtoken { get; }
+
+        /// <summary>
         /// Gets the currencies.
         /// </summary>
         ICurrenciesClient Currencies { get; }
@@ -108,5 +113,10 @@ namespace Gw2Sharp.WebApi.V2
         /// Gets the legends.
         /// </summary>
         ILegendsClient Legends { get; }
+
+        /// <summary>
+        /// Gets the token info.
+        /// </summary>
+        ITokenInfoClient TokenInfo { get; }
     }
 }

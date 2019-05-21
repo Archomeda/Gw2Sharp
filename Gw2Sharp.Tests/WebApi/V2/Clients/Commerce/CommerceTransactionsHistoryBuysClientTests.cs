@@ -21,10 +21,10 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
 
         [Theory]
         [InlineData("TestFiles.Commerce.CommerceTransactionsHistory.json")]
-        public Task BlobTest(string file) => this.AssertBlobData(this.client, file);
+        public Task BlobTest(string file) => this.AssertBlobDataAsync(this.client, file);
 
         [Theory]
         [InlineData("TestFiles.Commerce.CommerceTransactionsHistory.json")]
-        public Task PaginatedTestAsync(string file) => this.AssertPaginatedData(this.client, file);
+        public Task PaginatedTestAsync(string file) => this.AssertPaginatedDataAsync(this.client, file);
     }
 }

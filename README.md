@@ -6,9 +6,10 @@ Gw2Sharp is a .NET wrapper library for the [official Guild Wars 2 API](https://w
 It uses the latest C# 8.0 features like Nullable Reference Types because they're awesome.
 
 This library has been written to be as close as possible to the official API structure, with a few exceptions to make life easier.
+*Make sure to read the [introductory guide](https://archomeda.github.io/Gw2Sharp/master/guide/introduction.html) to get started.*
 
-## Features
-Check the [features on GitHub pages](https://archomeda.github.io/Gw2Sharp/master/features.html) for the list of features.
+## Endpoints
+Check the [list of endpoints](https://archomeda.github.io/Gw2Sharp/master/faq/endpoints.html) for the supported endpoints.
 
 ## Requirements
 This project targets .NET Standard 2.0.
@@ -25,7 +26,6 @@ Install-Package Gw2Sharp
 ### Basic usage
 ```cs
 using Gw2Sharp.WebApi;
-using Gw2Sharp.WebApi.V2;
 
 // Make a connection with optionally: an access token, language.
 var connection = new Connection("optional-access-token", Locale.English);
@@ -34,20 +34,20 @@ var connection = new Connection("optional-access-token", Locale.English);
 var client = new Gw2WebApiClient(connection);
 
 // Get all item ids
-var ids = await client.V2.Items.Ids();
+var ids = await client.V2.Items.IdsAsync();
 
 // Get a single item
-var item = await client.V2.Items.Get(123);
+var item = await client.V2.Items.GetAsync(123);
 
 // Get multiple items
-var items = await client.V2.Items.Many(new[] { 123, 456 });
+var items = await client.V2.Items.ManyAsync(new[] { 123, 456 });
 
 // Get items by page
-var page = await client.V2.Items.Page(5);
+var page = await client.V2.Items.PageAsync(5);
 
 // Getting all items is not supported by the API.
 // Any other endpoint that does support it, it will work as follows:
-var all = await client.V2.Colors.All();
+var all = await client.V2.Colors.AllAsync();
 ```
 
 For more information, check out the [guides](https://archomeda.github.io/Gw2Sharp/master/guides/introduction.html).

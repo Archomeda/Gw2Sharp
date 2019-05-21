@@ -53,7 +53,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         {
             var segments = this.GetRequiredAttributes<EndpointPathSegmentAttribute>().OrderBy(a => a.Order).ToList();
             if (segments.Count != replaceSegments.Length)
-                throw new InvalidOperationException($"The defined amount of path segments ({segments.Count}) does not equal to the passed amount of replacment segments ({replaceSegments.Length})");
+                throw new InvalidOperationException($"The defined amount of path segments ({segments.Count}) does not equal to the passed amount of replacement segments ({replaceSegments.Length})");
 
             for (int i = 0; i < segments.Count; i++)
                 this.EndpointPath = this.EndpointPath.Replace($":{segments[i].PathSegment}", replaceSegments[i]);
@@ -64,22 +64,22 @@ namespace Gw2Sharp.WebApi.V2.Clients
 
 
         /// <inheritdoc />
-        public bool IsPaginated { get; }
+        public bool IsPaginated { get; protected set; }
 
         /// <inheritdoc />
-        public bool IsAuthenticated { get; }
+        public bool IsAuthenticated { get; protected set; }
 
         /// <inheritdoc />
-        public bool IsLocalized { get; }
+        public bool IsLocalized { get; protected set; }
 
         /// <inheritdoc />
-        public bool HasBlobData { get; }
+        public bool HasBlobData { get; protected set; }
 
         /// <inheritdoc />
-        public bool IsAllExpandable { get; }
+        public bool IsAllExpandable { get; protected set; }
 
         /// <inheritdoc />
-        public bool IsBulkExpandable { get; }
+        public bool IsBulkExpandable { get; protected set; }
 
 
         /// <summary>
@@ -517,7 +517,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
                 if (value == null)
                     continue;
 
-                string toAppend = $"{attr.ParameterName}={value}";
+                string toAppend = $"{attr.ParameterName}={Uri.EscapeDataString(value.ToString())}";
                 builder.Query = builder.Query != null && builder.Query.Length > 1
                     ? $"{builder.Query.Substring(1)}&{toAppend}"
                     : toAppend;

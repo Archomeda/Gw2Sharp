@@ -22,7 +22,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
 
         [Theory]
         [InlineData("TestFiles.Guild.GuildSearch.json")]
-        public Task BlobTest(string file) => this.AssertBlobData(this.client, file);
+        public Task BlobTest(string file) => this.AssertBlobDataAsync(this.client, file);
 
         #region ArgumentNullException tests
 

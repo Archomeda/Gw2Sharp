@@ -22,23 +22,23 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
 
         [Theory]
         [InlineData("TestFiles.Continents.ContinentsFloorsRegionsMaps.bulk.json")]
-        public Task PaginatedTestAsync(string file) => this.AssertPaginatedData(this.client, file);
+        public Task PaginatedTestAsync(string file) => this.AssertPaginatedDataAsync(this.client, file);
 
         [Theory]
         [InlineData("TestFiles.Continents.ContinentsFloorsRegionsMaps.single.json")]
-        public Task GetTestAsync(string file) => this.AssertGetData(this.client, file);
+        public Task GetTestAsync(string file) => this.AssertGetDataAsync(this.client, file);
 
         [Theory]
         [InlineData("TestFiles.Continents.ContinentsFloorsRegionsMaps.bulk.json")]
-        public Task BulkTestAsync(string file) => this.AssertBulkData(this.client, file);
+        public Task BulkTestAsync(string file) => this.AssertBulkDataAsync(this.client, file);
 
         [Theory]
         [InlineData("TestFiles.Continents.ContinentsFloorsRegionsMaps.bulk.json")]
-        public Task AllTestAsync(string file) => this.AssertAllData(this.client, file);
+        public Task AllTestAsync(string file) => this.AssertAllDataAsync(this.client, file);
 
         [Theory]
         [InlineData("TestFiles.Continents.ContinentsFloorsRegionsMaps.ids.json")]
-        public Task IdsTestAsync(string file) => this.AssertIdsData(this.client, file);
+        public Task IdsTestAsync(string file) => this.AssertIdsDataAsync(this.client, file);
 
 
         #region ArgumentNullException tests

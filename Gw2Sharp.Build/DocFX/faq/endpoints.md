@@ -1,4 +1,9 @@
-# Endpoint Feature List
+---
+uid: FAQ.Endpoints
+title: Endpoints
+---
+
+# Endpoints
 Gw2Sharp is not finished yet, and development is being done whenever I have spare time.
 For your convenience, the following list gives an overview of the endpoints that are already available in this library:
 
@@ -94,7 +99,7 @@ For your convenience, the following list gives an overview of the endpoints that
  /v2/continents/`:continent`/<br>floors/`:floor`/<br>regions/`:region`/<br>maps/`:map`/<br>pois  | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Continents[continent]`<br>`.Floors[floor]`<br>`.Regions[region]`<br>`.Maps[map]`<br>`.Pois`](api/Gw2Sharp.WebApi.V2.Clients.ContinentsFloorsRegionsMapsPoisClient.html)
  /v2/continents/`:continent`/<br>floors/`:floor`/<br>regions/`:region`/<br>maps/`:map`/<br>sectors  | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Continents[continent]`<br>`.Floors[floor]`<br>`.Regions[region]`<br>`.Maps[map]`<br>`.Sectors`](api/Gw2Sharp.WebApi.V2.Clients.ContinentsFloorsRegionsMapsSectorsClient.html)
  /v2/continents/`:continent`/<br>floors/`:floor`/<br>regions/`:region`/<br>maps/`:map`/<br>tasks  | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Continents[continent]`<br>`.Floors[floor]`<br>`.Regions[region]`<br>`.Maps[map]`<br>`.Tasks`](api/Gw2Sharp.WebApi.V2.Clients.ContinentsFloorsRegionsMapsTasksClient.html)
- /v2/createsubtoken | ❌✨ | 
+ /v2/createsubtoken | ✔️🔑 | [`Gw2WebApiClient.V2.CreateSubtoken`](api/Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.html)
  /v2/currencies | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Currencies`](api/Gw2Sharp.WebApi.V2.Clients.CurrenciesClient.html)
  /v2/dailycrafting | ❌✨ | 
  /v2/dungeons | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Dungeons`](api/Gw2Sharp.WebApi.V2.Clients.DungeonsClient.html)
@@ -120,7 +125,7 @@ For your convenience, the following list gives an overview of the endpoints that
  /v2/guild/search | ✔️ | [`Gw2WebApiClient.V2.Guild.Search`](api/Gw2Sharp.WebApi.V2.Clients.GuildSearchClient.html)
  /v2/guild/upgrades | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Guild.Upgrades`](api/Gw2Sharp.WebApi.V2.Clients.GuildUpgradesClient.html)
  /v2/home | ❌ | 
- /v2/home/cats | ✔️📄📚📦 | [`Gw2WebApiClient.V2.Cats` ➡️
+ /v2/home/cats | ✔️📄📚📦 | [`Gw2WebApiClient.V2.Cats`](api/Gw2Sharp.WebApi.V2.Clients.CatsClient.html) ➡️
  /v2/home/nodes | ❌ | 
  /v2/items | ✔️🌐📄📚 | [`Gw2WebApiClient.V2.Items`](api/Gw2Sharp.WebApi.V2.Clients.ItemsClient.html)
  /v2/itemstats | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Itemstats`](api/Gw2Sharp.WebApi.V2.Clients.ItemstatsClient.html)
@@ -160,7 +165,7 @@ For your convenience, the following list gives an overview of the endpoints that
  /v2/stories | ❌ | 
  /v2/stories/seasons | ❌ | 
  /v2/titles | ❌ | 
- /v2/tokeninfo | ❌ | 
+ /v2/tokeninfo | ✔️🔑 | [`Gw2WebApiClient.V2.TokenInfo`](api/Gw2Sharp.WebApi.V2.Clients.TokenInfoClient.html)
  /v2/traits | ❌ | 
  ~~/v2/vendors~~ | ✖️ | 
  /v2/worldbosses | ❌✨ | 
