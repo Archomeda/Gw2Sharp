@@ -99,7 +99,7 @@ namespace Gw2Sharp.WebApi
             this.AccessToken = accessToken ?? throw new ArgumentNullException(nameof(accessToken));
             this.Locale = locale;
             this.UserAgent = $"{userAgent}{(string.IsNullOrWhiteSpace(userAgent) ? " " : "")}" +
-                $"Gw2Sharp/{typeof(Connection).GetTypeInfo().Assembly.GetName().Version.ToString(2)} (https://github.com/Archomeda/Gw2Sharp)";
+                $"Gw2Sharp/{typeof(Connection).GetTypeInfo().Assembly.GetName().Version.ToString(3)} (https://github.com/Archomeda/Gw2Sharp)";
             this.HttpClient = httpClient;
             this.CacheMethod = cacheMethod;
 
