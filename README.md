@@ -8,14 +8,18 @@ It uses the latest C# 8.0 features like Nullable Reference Types because they're
 This library has been written to be as close as possible to the official API structure, with a few exceptions to make life easier.
 
 ## Features
-Check the [features on GitHub pages](https://archomeda.github.io/Gw2Sharp#features) for the list of features.
+Check the [features on GitHub pages](https://archomeda.github.io/Gw2Sharp/master/features.html) for the list of features.
 
 ## Requirements
 This project targets .NET Standard 2.0.
-It supports the C# 8.0 Nullable Reference Types feature for your convenience (which is available since Visual Studio 2019).
+It supports the C# 8.0 Nullable Reference Types feature for your convenience (which is available since Visual Studio 2019), but it's not required when consuming the library.
 
 ## Installing
-TODO: NuGet
+You can find the library on [NuGet](https://www.nuget.org/packages/Gw2Sharp/), or you can install it by running the following command in the package manager:
+
+```powershell
+Install-Package Gw2Sharp
+```
 
 ## Usage
 ### Basic usage
@@ -46,6 +50,8 @@ var page = await client.V2.Items.Page(5);
 var all = await client.V2.Colors.All();
 ```
 
+For more information, check out the [guides](https://archomeda.github.io/Gw2Sharp/master/guides/introduction.html).
+
 ### Caching
 By default, API requests are cached in memory.
 You can override this by passing it to the `Connection` constructor.
@@ -60,3 +66,6 @@ There are no specific build instructions.
 Contributing is always welcome, but please keep them in scope of this project.
 I'm looking for all contributions that fixes bugs.
 But regarding implementing new features, it's better to raise an issue first explaining why that new feature should be added.
+
+If you're adding something new, do add some tests for it as well.
+I'm aiming for this project to be as stable as possible.

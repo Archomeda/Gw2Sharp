@@ -18,112 +18,113 @@ For your convenience, the following list gives an overview of the endpoints that
 
  Endpoint | Availability | Class
 ----------|----------------------|-------
- /v2/account | ✔️🔑 | `Gw2WebApiClient.V2.Account`
- /v2/account/achievements | ✔️🔑 | `Gw2WebApiClient.V2.Account.Achievements`
- /v2/account/bank | ✔️🔑 | `Gw2WebApiClient.V2.Account.Bank`
- /v2/account/dungeons | ✔️🔑 | `Gw2WebApiClient.V2.Account.Dungeons`
- /v2/account/dyes | ✔️🔑 | `Gw2WebApiClient.V2.Account.Dyes`
- /v2/account/finishers | ✔️🔑 | `Gw2WebApiClient.V2.Account.Finishers`
- /v2/account/gliders | ✔️🔑 | `Gw2WebApiClient.V2.Account.Gliders`
- /v2/account/home | ✔️🔑 | `Gw2WebApiClient.V2.Account.Home`
- /v2/account/home/cats | ✔️🔑 | `Gw2WebApiClient.V2.Account.Home.Cats`
- /v2/account/home/nodes | ✔️🔑 | `Gw2WebApiClient.V2.Account.Home.Nodes`
- /v2/account/inventory | ✔️🔑 | `Gw2WebApiClient.V2.Account.Inventory`
+ /v2/account | ✔️🔑 | [`Gw2WebApiClient.V2.Account`](api/Gw2Sharp.WebApi.V2.Clients.AccountClient.html)
+ /v2/account/achievements | ✔️🔑 | [`Gw2WebApiClient.V2.Account.Achievements`](api/Gw2Sharp.WebApi.V2.Clients.AccountAchievementsClient.html)
+ /v2/account/bank | ✔️🔑 | [`Gw2WebApiClient.V2.Account.Bank`](api/Gw2Sharp.WebApi.V2.Clients.AccountBankClient.html)
+ /v2/account/dungeons | ✔️🔑 | [`Gw2WebApiClient.V2.Account.Dungeons`](api/Gw2Sharp.WebApi.V2.Clients.AccountDungeonsClient.html)
+ /v2/account/dyes | ✔️🔑 | [`Gw2WebApiClient.V2.Account.Dyes`](api/Gw2Sharp.WebApi.V2.Clients.AccountDyesClient.html)
+ /v2/account/finishers | ✔️🔑 | [`Gw2WebApiClient.V2.Account.Finishers`](api/Gw2Sharp.WebApi.V2.Clients.AccountFinishersClient.html)
+ /v2/account/gliders | ✔️🔑 | [`Gw2WebApiClient.V2.Account.Gliders`](api/Gw2Sharp.WebApi.V2.Clients.AccountGlidersClient.html)
+ /v2/account/home | ✔️🔑 | [`Gw2WebApiClient.V2.Account.Home`](api/Gw2Sharp.WebApi.V2.Clients.AccountHomeClient.html)
+ /v2/account/home/cats | ✔️🔑 | [`Gw2WebApiClient.V2.Account.Home.Cats`](api/Gw2Sharp.WebApi.V2.Clients.AccountHomeCatsClient.html)
+ /v2/account/home/nodes | ✔️🔑 | [`Gw2WebApiClient.V2.Account.Home.Nodes`](api/Gw2Sharp.WebApi.V2.Clients.AccountHomeNodesClient.html)
+ /v2/account/inventory | ✔️🔑 | [`Gw2WebApiClient.V2.Account.Inventory`](api/Gw2Sharp.WebApi.V2.Clients.AccountInventoryClient.html)
  /v2/account/luck | ❌✨ | 
  ~~/v2/account/mail~~ | ✖️ | 
- /v2/account/mailcarriers | ✔️🔑 | `Gw2WebApiClient.V2.Account.MailCarriers`
+ /v2/account/mailcarriers | ✔️🔑 | [`Gw2WebApiClient.V2.Account.MailCarriers`](api/Gw2Sharp.WebApi.V2.Clients.AccountMailCarriersClient.html)
  /v2/account/mapchests | ❌✨ | 
- /v2/account/masteries | ✔️🔑 | `Gw2WebApiClient.V2.Account.Masteries`
- /v2/account/mastery/points | ✔️🔑 | `Gw2WebApiClient.V2.Account.Mastery.Points`
- /v2/account/materials | ✔️🔑 | `Gw2WebApiClient.V2.Account.Materials`
- /v2/account/minis | ✔️🔑 | `Gw2WebApiClient.V2.Account.Minis`
+ /v2/account/masteries | ✔️🔑 | [`Gw2WebApiClient.V2.Account.Masteries`](api/Gw2Sharp.WebApi.V2.Clients.AccountMasteriesClient.html)
+ /v2/account/mastery/points | ✔️🔑 | [`Gw2WebApiClient.V2.Account.Mastery.Points`](api/Gw2Sharp.WebApi.V2.Clients.AccountMasteryPointsClient.html)
+ /v2/account/materials | ✔️🔑 | [`Gw2WebApiClient.V2.Account.Materials`](api/Gw2Sharp.WebApi.V2.Clients.AccountMaterialsClient.html)
+ /v2/account/minis | ✔️🔑 | [`Gw2WebApiClient.V2.Account.Minis`](api/Gw2Sharp.WebApi.V2.Clients.AccountMinisClient.html)
  /v2/account/mounts | ❌✨ | 
  /v2/account/mounts/skins | ❌✨ | 
  /v2/account/mounts/types | ❌✨ | 
- /v2/account/outfits | ✔️🔑 | `Gw2WebApiClient.V2.Account.Outfits`
- /v2/account/pvp/heroes | ✔️🔑 | `Gw2WebApiClient.V2.Account.Pvp.Heroes`
- /v2/account/raids | ✔️🔑 | `Gw2WebApiClient.V2.Account.Raids`
- /v2/account/recipes | ✔️🔑 | `Gw2WebApiClient.V2.Account.Recipes`
- /v2/account/skins | ✔️🔑 | `Gw2WebApiClient.V2.Account.Skins`
- /v2/account/titles | ✔️🔑 | `Gw2WebApiClient.V2.Account.Titles`
- /v2/account/wallet | ✔️🔑 | `Gw2WebApiClient.V2.Account.Wallet`
+ /v2/account/outfits | ✔️🔑 | [`Gw2WebApiClient.V2.Account.Outfits`](api/Gw2Sharp.WebApi.V2.Clients.AccountOutfitsClient.html)
+ /v2/account/pvp/heroes | ✔️🔑 | [`Gw2WebApiClient.V2.Account.Pvp.Heroes`](api/Gw2Sharp.WebApi.V2.Clients.AccountPvpHeroesClient.html)
+ /v2/account/raids | ✔️🔑 | [`Gw2WebApiClient.V2.Account.Raids`](api/Gw2Sharp.WebApi.V2.Clients.AccountRaidsClient.html)
+ /v2/account/recipes | ✔️🔑 | [`Gw2WebApiClient.V2.Account.Recipes`](api/Gw2Sharp.WebApi.V2.Clients.AccountRecipesClient.html)
+ /v2/account/skins | ✔️🔑 | [`Gw2WebApiClient.V2.Account.Skins`](api/Gw2Sharp.WebApi.V2.Clients.AccountSkinsClient.html)
+ /v2/account/titles | ✔️🔑 | [`Gw2WebApiClient.V2.Account.Titles`](api/Gw2Sharp.WebApi.V2.Clients.AccountTitlesClient.html)
+ /v2/account/wallet | ✔️🔑 | [`Gw2WebApiClient.V2.Account.Wallet`](api/Gw2Sharp.WebApi.V2.Clients.AccountWalletClient.html)
  /v2/account/worldbosses | ❌✨ | 
- /v2/achievements | ✔️🌐📄📚 | `Gw2WebApiClient.V2.Achievements`
- /v2/achievements/categories | ✔️🌐📄📚📦 | `Gw2WebApiClient.V2.Achievements.Categories`
- /v2/achievements/daily | ✔️ | `Gw2WebApiClient.V2.Achievements.Daily`
- /v2/achievements/daily/tomorrow | ✔️ | `Gw2WebApiClient.V2.Achievements.Daily.Tomorrow`
- /v2/achievements/groups | ✔️🌐📄📚📦 | `Gw2WebApiClient.V2.Achievements.Groups`
+ /v2/achievements | ✔️🌐📄📚 | [`Gw2WebApiClient.V2.Achievements`](api/Gw2Sharp.WebApi.V2.Clients.AchievementsClient.html)
+ /v2/achievements/categories | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Achievements.Categories`](api/Gw2Sharp.WebApi.V2.Clients.AchievementsCategoriesClient.html)
+ /v2/achievements/daily | ✔️ | [`Gw2WebApiClient.V2.Achievements.Daily`](api/Gw2Sharp.WebApi.V2.Clients.AchievementsDailyClient.html)
+ /v2/achievements/daily/tomorrow | ✔️ | [`Gw2WebApiClient.V2.Achievements.Daily.Tomorrow`](api/Gw2Sharp.WebApi.V2.Clients.AchievementsDailyTomorrowClient.html)
+ /v2/achievements/groups | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Achievements.Groups`](api/Gw2Sharp.WebApi.V2.Clients.AchievementsGroupsClient.html)
  ~~/v2/adventures~~ | ✖️ | 
  ~~/v2/adventures/`:id`/leaderboards~~ | ✖️ | 
  ~~/v2/adventures/`:id`/leaderboards/:board/:region~~ | ✖️ | 
- /v2/backstory/answers | ✔️🌐📄📚📦 | `Gw2WebApiClient.V2.Backstory.Answers`
- /v2/backstory/questions | ✔️🌐📄📚📦 | `Gw2WebApiClient.V2.Backstory.Questions`
- /v2/build | ✔️ | `Gw2WebApiClient.V2.Build`
- /v2/cats | ✔️📄📚📦➡️ | `Gw2WebApiClient.V2.Cats`
- /v2/characters | ✔️🔑📄📚📦 | `Gw2WebApiClient.V2.Characters`
- /v2/characters/`:id`/backstory | ✔️🔑 | `Gw2WebApiClient.V2.Characters[id].Backstory`
- /v2/characters/`:id`/core | ✔️🔑 | `Gw2WebApiClient.V2.Characters[id].Core`
- /v2/characters/`:id`/crafting | ✔️🔑 | `Gw2WebApiClient.V2.Characters[id].Crafting`
+ /v2/backstory/answers | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Backstory.Answers`](api/Gw2Sharp.WebApi.V2.Clients.BackstoryAnswersClient.html)
+ /v2/backstory/questions | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Backstory.Questions`](api/Gw2Sharp.WebApi.V2.Clients.BackstoryQuestionsClient.html)
+ /v2/build | ✔️ | [`Gw2WebApiClient.V2.Build`](api/Gw2Sharp.WebApi.V2.Clients.BuildClient.html)
+ /v2/cats | ✔️📄📚📦➡️ | [`Gw2WebApiClient.V2.Cats`](api/Gw2Sharp.WebApi.V2.Clients.CatsClient.html)
+ /v2/characters | ✔️🔑📄📚📦 | [`Gw2WebApiClient.V2.Characters`](api/Gw2Sharp.WebApi.V2.Clients.CharactersClient.html)
+ /v2/characters/`:id`/backstory | ✔️🔑 | [`Gw2WebApiClient.V2.Characters[id].Backstory`](api/Gw2Sharp.WebApi.V2.Clients.CharactersIdBackstoryClient.html)
+ /v2/characters/`:id`/core | ✔️🔑 | [`Gw2WebApiClient.V2.Characters[id].Core`](api/Gw2Sharp.WebApi.V2.Clients.CharactersIdCoreClient.html)
+ /v2/characters/`:id`/crafting | ✔️🔑 | [`Gw2WebApiClient.V2.Characters[id].Crafting`](api/Gw2Sharp.WebApi.V2.Clients.CharactersIdCraftingClient.html)
  ~~/v2/characters/`:id`/dungeons~~ | ✖️ | 
- /v2/characters/`:id`/equipment | ✔️🔑 | `Gw2WebApiClient.V2.Characters[id].Equipment`
- /v2/characters/`:id`/heropoints | ✔️🔑 | `Gw2WebApiClient.V2.Characters[id].HeroPoints`
- /v2/characters/`:id`/inventory | ✔️🔑 | `Gw2WebApiClient.V2.Characters[id].Inventory`
- /v2/characters/`:id`/recipes | ✔️🔑 | `Gw2WebApiClient.V2.Characters[id].Recipes`
- /v2/characters/`:id`/sab | ✔️🔑 | `Gw2WebApiClient.V2.Characters[id].Sab`
- /v2/characters/`:id`/skills | ✔️🔑 | `Gw2WebApiClient.V2.Characters[id].Skills`
- /v2/characters/`:id`/specializations | ✔️🔑 | `Gw2WebApiClient.V2.Characters[id].Specializations`
- /v2/characters/`:id`/training | ✔️🔑 | `Gw2WebApiClient.V2.Characters[id].Training`
- /v2/colors | ✔️🌐📄📚📦 | `Gw2WebApiClient.V2.Colors`
- /v2/commerce/delivery | ✔️🔑 | `Gw2WebApiClient.V2.Commerce.Delivery`
- /v2/commerce/exchange | ✔️ | `Gw2WebApiClient.V2.Commerce.Exchange`
- /v2/commerce/exchange/coins | ✔️ | `Gw2WebApiClient.V2.Commerce.Exchange.Coins`
- /v2/commerce/exchange/gems | ✔️ | `Gw2WebApiClient.V2.Commerce.Exchange.Gems`
- /v2/commerce/listings | ✔️📄📚 | `Gw2WebApiClient.V2.Commerce.Listings`
- /v2/commerce/prices | ✔️📄📚 | `Gw2WebApiClient.V2.Commerce.Prices`
- /v2/commerce/transactions  | ✔️🔑 | `Gw2WebApiClient.V2.Commerce.Transactions`
- /v2/commerce/transactions/current  | ✔️🔑 | `Gw2WebApiClient.V2.Commerce.Transactions.Current`
- /v2/commerce/transactions/current/buys  | ✔️🔑📄 | `Gw2WebApiClient.V2.Commerce.Transactions.Current.Buys`
- /v2/commerce/transactions/current/sells  | ✔️🔑📄 | `Gw2WebApiClient.V2.Commerce.Transactions.Current.Sells`
- /v2/commerce/transactions/history  | ✔️🔑 | `Gw2WebApiClient.V2.Commerce.Transactions.History`
- /v2/commerce/transactions/history/buys  | ✔️🔑📄 | `Gw2WebApiClient.V2.Commerce.Transactions.History.Buys`
- /v2/commerce/transactions/history/sells  | ✔️🔑📄 | `Gw2WebApiClient.V2.Commerce.Transactions.History.Sells`
- /v2/continents  | ✔️🌐📄📚📦 | `Gw2WebApiClient.V2.Continents`
- /v2/continents/`:continent`/<br>floors  | ✔️🌐📄📚📦 | `Gw2WebApiClient.V2.Continents[continent]`<br>`.Floors`
- /v2/continents/`:continent`/<br>floors/`:floor`/<br>regions  | ✔️🌐📄📚📦 | `Gw2WebApiClient.V2.Continents[continent]`<br>`.Floors[floor]`<br>`.Regions`
- /v2/continents/`:continent`/<br>floors/`:floor`/<br>regions/`:region`/<br>maps  | ✔️🌐📄📚📦 | `Gw2WebApiClient.V2.Continents[continent]`<br>`.Floors[floor]`<br>`.Regions[region]`<br>`.Maps`
- /v2/continents/`:continent`/<br>floors/`:floor`/<br>regions/`:region`/<br>maps/`:map`/<br>pois  | ✔️🌐📄📚📦 | `Gw2WebApiClient.V2.Continents[continent]`<br>`.Floors[floor]`<br>`.Regions[region]`<br>`.Maps[map]`<br>`.Pois`
- /v2/continents/`:continent`/<br>floors/`:floor`/<br>regions/`:region`/<br>maps/`:map`/<br>sectors  | ✔️🌐📄📚📦 | `Gw2WebApiClient.V2.Continents[continent]`<br>`.Floors[floor]`<br>`.Regions[region]`<br>`.Maps[map]`<br>`.Sectors`
- /v2/continents/`:continent`/<br>floors/`:floor`/<br>regions/`:region`/<br>maps/`:map`/<br>tasks  | ✔️🌐📄📚📦 | `Gw2WebApiClient.V2.Continents[continent]`<br>`.Floors[floor]`<br>`.Regions[region]`<br>`.Maps[map]`<br>`.Tasks`
- /v2/currencies | ✔️🌐📄📚📦 | `Gw2WebApiClient.V2.Currencies`
+ /v2/characters/`:id`/equipment | ✔️🔑 | [`Gw2WebApiClient.V2.Characters[id].Equipment`](api/Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentClient.html)
+ /v2/characters/`:id`/heropoints | ✔️🔑 | [`Gw2WebApiClient.V2.Characters[id].HeroPoints`](api/Gw2Sharp.WebApi.V2.Clients.CharactersIdHeroPointsClient.html)
+ /v2/characters/`:id`/inventory | ✔️🔑 | [`Gw2WebApiClient.V2.Characters[id].Inventory`](api/Gw2Sharp.WebApi.V2.Clients.CharactersIdInventoryClient.html)
+ /v2/characters/`:id`/recipes | ✔️🔑 | [`Gw2WebApiClient.V2.Characters[id].Recipes`](api/Gw2Sharp.WebApi.V2.Clients.CharactersIdRecipesClient.html)
+ /v2/characters/`:id`/sab | ✔️🔑 | [`Gw2WebApiClient.V2.Characters[id].Sab`](api/Gw2Sharp.WebApi.V2.Clients.CharactersIdSabClient.html)
+ /v2/characters/`:id`/skills | ✔️🔑 | [`Gw2WebApiClient.V2.Characters[id].Skills`](api/Gw2Sharp.WebApi.V2.Clients.CharactersIdSkillsClient.html)
+ /v2/characters/`:id`/specializations | ✔️🔑 | [`Gw2WebApiClient.V2.Characters[id].Specializations`](api/Gw2Sharp.WebApi.V2.Clients.CharactersIdSpecializationsClient.html)
+ /v2/characters/`:id`/training | ✔️🔑 | [`Gw2WebApiClient.V2.Characters[id].Training`](api/Gw2Sharp.WebApi.V2.Clients.CharactersIdTrainingClient.html)
+ /v2/colors | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Colors`](api/Gw2Sharp.WebApi.V2.Clients.ColorsClient.html)
+ /v2/commerce/delivery | ✔️🔑 | [`Gw2WebApiClient.V2.Commerce.Delivery`](api/Gw2Sharp.WebApi.V2.Clients.CommerceDeliveryClient.html)
+ /v2/commerce/exchange | ✔️ | [`Gw2WebApiClient.V2.Commerce.Exchange`](api/Gw2Sharp.WebApi.V2.Clients.CommerceExchangeClient.html)
+ /v2/commerce/exchange/coins | ✔️ | [`Gw2WebApiClient.V2.Commerce.Exchange.Coins`](api/Gw2Sharp.WebApi.V2.Clients.CommerceExchangeCoinsClient.html)
+ /v2/commerce/exchange/gems | ✔️ | [`Gw2WebApiClient.V2.Commerce.Exchange.Gems`](api/Gw2Sharp.WebApi.V2.Clients.CommerceExchangeGemsClient.html)
+ /v2/commerce/listings | ✔️📄📚 | [`Gw2WebApiClient.V2.Commerce.Listings`](api/Gw2Sharp.WebApi.V2.Clients.CommerceListingsClient.html)
+ /v2/commerce/prices | ✔️📄📚 | [`Gw2WebApiClient.V2.Commerce.Prices`](api/Gw2Sharp.WebApi.V2.Clients.CommercePricesClient.html)
+ /v2/commerce/transactions  | ✔️🔑 | [`Gw2WebApiClient.V2.Commerce.Transactions`](api/Gw2Sharp.WebApi.V2.Clients.CommerceTransactionsClient.html)
+ /v2/commerce/transactions/current  | ✔️🔑 | [`Gw2WebApiClient.V2.Commerce.Transactions.Current`](api/Gw2Sharp.WebApi.V2.Clients.CommerceTransactionsCurrentClient.html)
+ /v2/commerce/transactions/current/buys  | ✔️🔑📄 | [`Gw2WebApiClient.V2.Commerce.Transactions.Current.Buys`](api/Gw2Sharp.WebApi.V2.Clients.CommerceTransactionsCurrentBuysClient.html)
+ /v2/commerce/transactions/current/sells  | ✔️🔑📄 | [`Gw2WebApiClient.V2.Commerce.Transactions.Current.Sells`](api/Gw2Sharp.WebApi.V2.Clients.CommerceTransactionsCurrentSellsClient.html)
+ /v2/commerce/transactions/history  | ✔️🔑 | [`Gw2WebApiClient.V2.Commerce.Transactions.History`](api/Gw2Sharp.WebApi.V2.Clients.CommerceTransactionsHistoryClient.html)
+ /v2/commerce/transactions/history/buys  | ✔️🔑📄 | [`Gw2WebApiClient.V2.Commerce.Transactions.History.Buys`](api/Gw2Sharp.WebApi.V2.Clients.CommerceTransactionsHistoryBuysClient.html)
+ /v2/commerce/transactions/history/sells  | ✔️🔑📄 | [`Gw2WebApiClient.V2.Commerce.Transactions.History.Sells`](api/Gw2Sharp.WebApi.V2.Clients.CommerceTransactionsHistorySellsClient.html)
+ /v2/continents  | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Continents`](api/Gw2Sharp.WebApi.V2.Clients.ContinentsClient.html)
+ /v2/continents/`:continent`/<br>floors  | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Continents[continent]`<br>`.Floors`](api/Gw2Sharp.WebApi.V2.Clients.ContinentsFloorsClient.html)
+ /v2/continents/`:continent`/<br>floors/`:floor`/<br>regions  | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Continents[continent]`<br>`.Floors[floor]`<br>`.Regions`](api/Gw2Sharp.WebApi.V2.Clients.ContinentsFloorsRegionsClient.html)
+ /v2/continents/`:continent`/<br>floors/`:floor`/<br>regions/`:region`/<br>maps  | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Continents[continent]`<br>`.Floors[floor]`<br>`.Regions[region]`<br>`.Maps`](api/Gw2Sharp.WebApi.V2.Clients.ContinentsFloorsRegionsMapsClient.html)
+ /v2/continents/`:continent`/<br>floors/`:floor`/<br>regions/`:region`/<br>maps/`:map`/<br>pois  | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Continents[continent]`<br>`.Floors[floor]`<br>`.Regions[region]`<br>`.Maps[map]`<br>`.Pois`](api/Gw2Sharp.WebApi.V2.Clients.ContinentsFloorsRegionsMapsPoisClient.html)
+ /v2/continents/`:continent`/<br>floors/`:floor`/<br>regions/`:region`/<br>maps/`:map`/<br>sectors  | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Continents[continent]`<br>`.Floors[floor]`<br>`.Regions[region]`<br>`.Maps[map]`<br>`.Sectors`](api/Gw2Sharp.WebApi.V2.Clients.ContinentsFloorsRegionsMapsSectorsClient.html)
+ /v2/continents/`:continent`/<br>floors/`:floor`/<br>regions/`:region`/<br>maps/`:map`/<br>tasks  | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Continents[continent]`<br>`.Floors[floor]`<br>`.Regions[region]`<br>`.Maps[map]`<br>`.Tasks`](api/Gw2Sharp.WebApi.V2.Clients.ContinentsFloorsRegionsMapsTasksClient.html)
+ /v2/createsubtoken | ❌✨ | 
+ /v2/currencies | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Currencies`](api/Gw2Sharp.WebApi.V2.Clients.CurrenciesClient.html)
  /v2/dailycrafting | ❌✨ | 
- /v2/dungeons | ✔️🌐📄📚📦 | `Gw2WebApiClient.V2.Dungeons`
- /v2/emblem | ✔️ | `Gw2WebApiClient.V2.Emblem`
- /v2/emblem/backgrounds | ✔️📄📚📦 | `Gw2WebApiClient.V2.Emblem.Backgrounds`
- /v2/emblem/foregrounds | ✔️📄📚📦 | `Gw2WebApiClient.V2.Emblem.Foregrounds`
+ /v2/dungeons | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Dungeons`](api/Gw2Sharp.WebApi.V2.Clients.DungeonsClient.html)
+ /v2/emblem | ✔️ | [`Gw2WebApiClient.V2.Emblem`](api/Gw2Sharp.WebApi.V2.Clients.EmblemClient.html)
+ /v2/emblem/backgrounds | ✔️📄📚📦 | [`Gw2WebApiClient.V2.Emblem.Backgrounds`](api/Gw2Sharp.WebApi.V2.Clients.EmblemBackgroundsClient.html)
+ /v2/emblem/foregrounds | ✔️📄📚📦 | [`Gw2WebApiClient.V2.Emblem.Foregrounds`](api/Gw2Sharp.WebApi.V2.Clients.EmblemForegroundsClient.html)
  ~~/v2/events~~ | ✖️ | 
  ~~/v2/events-state~~ | ✖️ | 
- /v2/files | ✔️📄📚📦 | `Gw2WebApiClient.V2.Files`
- /v2/finishers | ✔️🌐📄📚📦 | `Gw2WebApiClient.V2.Finishers`
+ /v2/files | ✔️📄📚📦 | [`Gw2WebApiClient.V2.Files`](api/Gw2Sharp.WebApi.V2.Clients.FilesClient.html)
+ /v2/finishers | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Finishers`](api/Gw2Sharp.WebApi.V2.Clients.FinishersClient.html)
  ~~/v2/gemstore/catalog~~ | ✖️ | 
- /v2/gliders | ✔️🌐📄📚📦 | `Gw2WebApiClient.V2.Gliders`
- /v2/guild/`:id` | ✔️🔑 | `Gw2WebApiClient.V2.Guild[id]`
- /v2/guild/`:id`/log | ✔️🔑 | `Gw2WebApiClient.V2.Guild[id].Log`
- /v2/guild/`:id`/members | ✔️🔑 | `Gw2WebApiClient.V2.Guild[id].Members`
- /v2/guild/`:id`/ranks | ✔️🔑 | `Gw2WebApiClient.V2.Guild[id].Ranks`
- /v2/guild/`:id`/stash | ✔️🔑 | `Gw2WebApiClient.V2.Guild[id].Stash`
- /v2/guild/`:id`/storage | ✔️🔑 | `Gw2WebApiClient.V2.Guild[id].Storage`
- /v2/guild/`:id`/teams | ✔️🔑 | `Gw2WebApiClient.V2.Guild[id].Teams`
- /v2/guild/`:id`/treasury | ✔️🔑 | `Gw2WebApiClient.V2.Guild[id].Treasury`
- /v2/guild/`:id`/upgrades | ✔️🔑 | `Gw2WebApiClient.V2.Guild[id].Upgrades`
- /v2/guild/permissions | ✔️🌐📄📚📦 | `Gw2WebApiClient.V2.Guild.Permissions`
- /v2/guild/search | ✔️ | `Gw2WebApiClient.V2.Guild.Search`
- /v2/guild/upgrades | ✔️🌐📄📚📦 | `Gw2WebApiClient.V2.Guild.Upgrades`
+ /v2/gliders | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Gliders`](api/Gw2Sharp.WebApi.V2.Clients.GlidersClient.html)
+ /v2/guild/`:id` | ✔️🔑 | [`Gw2WebApiClient.V2.Guild[id]`](api/Gw2Sharp.WebApi.V2.Clients.GuildIdClient.html)
+ /v2/guild/`:id`/log | ✔️🔑 | [`Gw2WebApiClient.V2.Guild[id].Log`](api/Gw2Sharp.WebApi.V2.Clients.GuildIdClient.html)
+ /v2/guild/`:id`/members | ✔️🔑 | [`Gw2WebApiClient.V2.Guild[id].Members`](api/Gw2Sharp.WebApi.V2.Clients.GuildIdMembersClient.html)
+ /v2/guild/`:id`/ranks | ✔️🔑 | [`Gw2WebApiClient.V2.Guild[id].Ranks`](api/Gw2Sharp.WebApi.V2.Clients.GuildIdRanksClient.html)
+ /v2/guild/`:id`/stash | ✔️🔑 | [`Gw2WebApiClient.V2.Guild[id].Stash`](api/Gw2Sharp.WebApi.V2.Clients.GuildIdStashClient.html)
+ /v2/guild/`:id`/storage | ✔️🔑 | [`Gw2WebApiClient.V2.Guild[id].Storage`](api/Gw2Sharp.WebApi.V2.Clients.GuildIdStorageClient.html)
+ /v2/guild/`:id`/teams | ✔️🔑 | [`Gw2WebApiClient.V2.Guild[id].Teams`](api/Gw2Sharp.WebApi.V2.Clients.GuildIdTeamsClient.html)
+ /v2/guild/`:id`/treasury | ✔️🔑 | [`Gw2WebApiClient.V2.Guild[id].Treasury`](api/Gw2Sharp.WebApi.V2.Clients.GuildIdTreasuryClient.html)
+ /v2/guild/`:id`/upgrades | ✔️🔑 | [`Gw2WebApiClient.V2.Guild[id].Upgrades`](api/Gw2Sharp.WebApi.V2.Clients.GuildIdUpgradesClient.html)
+ /v2/guild/permissions | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Guild.Permissions`](api/Gw2Sharp.WebApi.V2.Clients.GuildPermissionsClient.html)
+ /v2/guild/search | ✔️ | [`Gw2WebApiClient.V2.Guild.Search`](api/Gw2Sharp.WebApi.V2.Clients.GuildSearchClient.html)
+ /v2/guild/upgrades | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Guild.Upgrades`](api/Gw2Sharp.WebApi.V2.Clients.GuildUpgradesClient.html)
  /v2/home | ❌ | 
- /v2/home/cats | ✔️📄📚📦 | `Gw2WebApiClient.V2.Cats` ➡️
+ /v2/home/cats | ✔️📄📚📦 | [`Gw2WebApiClient.V2.Cats` ➡️
  /v2/home/nodes | ❌ | 
- /v2/items | ✔️🌐📄📚 | `Gw2WebApiClient.V2.Items`
- /v2/itemstats | ✔️🌐📄📚📦 | `Gw2WebApiClient.V2.Itemstats`
- /v2/legends | ✔️📄📚📦 | `Gw2WebApiClient.V2.Legends`
+ /v2/items | ✔️🌐📄📚 | [`Gw2WebApiClient.V2.Items`](api/Gw2Sharp.WebApi.V2.Clients.ItemsClient.html)
+ /v2/itemstats | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Itemstats`](api/Gw2Sharp.WebApi.V2.Clients.ItemstatsClient.html)
+ /v2/legends | ✔️📄📚📦 | [`Gw2WebApiClient.V2.Legends`](api/Gw2Sharp.WebApi.V2.Clients.LegendsClient.html)
  /v2/mailcarriers | ❌ | 
  /v2/mapchests | ❌✨ | 
  /v2/maps | ❌ | 
