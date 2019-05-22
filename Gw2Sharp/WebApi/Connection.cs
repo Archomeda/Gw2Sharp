@@ -4,6 +4,7 @@ using System.Net;
 using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
+using Gw2Sharp.Extensions;
 using Gw2Sharp.WebApi.Caching;
 using Gw2Sharp.WebApi.Http;
 using Gw2Sharp.WebApi.V2.Models;
@@ -106,7 +107,7 @@ namespace Gw2Sharp.WebApi
             this.requestHeaders = new Dictionary<string, string>()
             {
                 { "Accept", "application/json" },
-                { "Accept-Language", this.LocaleString },
+                { "Accept-Language", this.LocaleString }
             };
             if (!string.IsNullOrWhiteSpace(this.AccessToken))
                 this.requestHeaders.Add("Authorization", $"Bearer {this.AccessToken}");
@@ -155,12 +156,19 @@ namespace Gw2Sharp.WebApi
 
 
         /// <inheritdoc />
-        public async Task<IHttpResponse<TResponse>> RequestAsync<TResponse>(Uri requestUri, CancellationToken cancellationToken) where TResponse : object
+        public async Task<IHttpResponse<TResponse>> RequestAsync<TResponse>(Uri requestUri, IEnumerable<KeyValuePair<string, string>>? additionalHeaders, CancellationToken cancellationToken) where TResponse : object
         {
             if (requestUri == null)
                 throw new ArgumentNullException(nameof(requestUri));
 
-            var request = new HttpRequest(requestUri, this.requestHeaders);
+            IDictionary<string, string> headers = this.requestHeaders;
+            if (additionalHeaders != null)
+            {
+                headers = headers.ShallowCopy();
+                headers.AddRange(additionalHeaders);
+            }
+
+            var request = new HttpRequest(requestUri, headers);
 
             try
             {

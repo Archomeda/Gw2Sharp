@@ -29,6 +29,26 @@ namespace Gw2Sharp.Extensions
         }
 
         /// <summary>
+        /// Adds multiple values to a <see cref="IDictionary{TKey, TValue}"/>.
+        /// </summary>
+        /// <typeparam name="TKey">The type of keys in the dictionary.</typeparam>
+        /// <typeparam name="TValue">The type of values in the dictionary.</typeparam>
+        /// <param name="dictionary">The dictionary.</param>
+        /// <param name="values">The values to add.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="dictionary"/> is <c>null</c>.</exception>
+        public static void AddRange<TKey, TValue>(this IDictionary<TKey, TValue> dictionary, IEnumerable<KeyValuePair<TKey, TValue>> values)
+        {
+            if (dictionary == null)
+                throw new ArgumentNullException(nameof(dictionary));
+
+            if (values == null)
+                return;
+
+            foreach (var kvp in values)
+                dictionary[kvp.Key] = kvp.Value;
+        }
+
+        /// <summary>
         /// Wraps a dictionary into a read-only dictionary by calling the <see cref="ReadOnlyDictionary{TKey, TValue}"/> constructor.
         /// </summary>
         /// <typeparam name="TKey">The type of keys in the dictionary.</typeparam>

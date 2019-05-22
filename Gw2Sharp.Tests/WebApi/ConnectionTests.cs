@@ -83,7 +83,7 @@ namespace Gw2Sharp.Tests.WebApi
             var content = new TestContentClass { Testkey = "testvalue" };
 
             var connection = new Connection(string.Empty, default, httpClient, new NullCacheMethod());
-            var response = await connection.RequestAsync<TestContentClass>(new Uri("http://localhost"), CancellationToken.None);
+            var response = await connection.RequestAsync<TestContentClass>(new Uri("http://localhost"), null, CancellationToken.None);
 
             Assert.Equal(content.Testkey, response.Content.Testkey);
             Assert.Equal(httpResponse.StatusCode, response.StatusCode);
@@ -111,7 +111,7 @@ namespace Gw2Sharp.Tests.WebApi
             httpClient.RequestAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Throws(_ => new UnexpectedStatusException(httpRequest, httpResponse));
 
             var connection = new Connection(string.Empty, default, httpClient, new NullCacheMethod());
-            var exception = (UnexpectedStatusException<ErrorObject>)await Assert.ThrowsAsync(exceptionType, () => connection.RequestAsync<TestContentClass>(new Uri("http://localhost"), CancellationToken.None));
+            var exception = (UnexpectedStatusException<ErrorObject>)await Assert.ThrowsAsync(exceptionType, () => connection.RequestAsync<TestContentClass>(new Uri("http://localhost"), null, CancellationToken.None));
             Assert.Equal(errorText, exception.Response?.Content.Text);
         }
 
@@ -127,7 +127,7 @@ namespace Gw2Sharp.Tests.WebApi
             httpClient.RequestAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Throws(_ => new UnexpectedStatusException(httpRequest, httpResponse));
 
             var connection = new Connection(string.Empty, default, httpClient, new NullCacheMethod());
-            var exception = await Assert.ThrowsAsync<UnexpectedStatusException>(() => connection.RequestAsync<TestContentClass>(new Uri("http://localhost"), CancellationToken.None));
+            var exception = await Assert.ThrowsAsync<UnexpectedStatusException>(() => connection.RequestAsync<TestContentClass>(new Uri("http://localhost"), null, CancellationToken.None));
             Assert.Equal(message, exception.Response?.Content);
         }
 

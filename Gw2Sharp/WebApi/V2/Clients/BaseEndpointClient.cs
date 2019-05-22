@@ -29,6 +29,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
             base(connection)
         {
             this.EndpointPath = this.GetRequiredAttribute<EndpointPathAttribute>().EndpointPath;
+            this.SchemaVersion = this.GetAttribute<EndpointSchemaVersionAttribute>()?.SchemaVersion;
 
             this.IsLocalized = this.ImplementsInterface(typeof(ILocalizedClient<>));
             this.IsAuthenticated = this.ImplementsInterface(typeof(IAuthenticatedClient<>));
@@ -61,6 +62,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
 
         /// <inheritdoc />
         public string EndpointPath { get; }
+
+        /// <inheritdoc />
+        public string? SchemaVersion { get; }
 
 
         /// <inheritdoc />
@@ -284,7 +288,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
                     var result = await Task.WhenAll(requestIds.Select(async innerIds =>
                     {
                         var uri = this.AppendUrlParameters(new Uri(Gw2WebApiV2Client.UrlBase, this.FormatUrlQueryMany(this.EndpointPath, innerIds)));
-                        var httpResponse = await this.Connection.RequestAsync<IReadOnlyList<TIdentifiableObject>>(uri, cancellationToken).ConfigureAwait(false);
+                        var headers = this.BuildRequestHeaders();
+                        var httpResponse = await this.Connection.RequestAsync<IReadOnlyList<TIdentifiableObject>>(uri, headers, cancellationToken).ConfigureAwait(false);
                         var response = new ApiV2Response<IReadOnlyList<TIdentifiableObject>>(httpResponse);
                         lock (responsesLock)
                         {
@@ -410,7 +415,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
                 async () =>
                 {
                     var uri = this.AppendUrlParameters(new Uri(Gw2WebApiV2Client.UrlBase, url));
-                    var httpResponse = await this.Connection.RequestAsync<TIdentifiableObject>(uri, cancellationToken).ConfigureAwait(false);
+                    var headers = this.BuildRequestHeaders();
+                    var httpResponse = await this.Connection.RequestAsync<TIdentifiableObject>(uri, headers, cancellationToken).ConfigureAwait(false);
                     response = new ApiV2Response<TIdentifiableObject>(httpResponse);
                     return (httpResponse.Content, response.Expires ?? DateTime.Now);
                 }).ConfigureAwait(false);
@@ -449,21 +455,24 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// </summary>
         /// <param name="endpointPath">The endpoint path.</param>
         /// <returns>The formatted URL.</returns>
-        protected virtual string FormatUrlQueryAll(string endpointPath) => $"{endpointPath}{QueryAll}";
+        protected virtual string FormatUrlQueryAll(string endpointPath) =>
+            $"{endpointPath}{QueryAll}";
 
         /// <summary>
         /// Formats a URL with querying ids.
         /// </summary>
         /// <param name="endpointPath">The endpoint path.</param>
         /// <returns>The formatted URL.</returns>
-        protected virtual string FormatUrlQueryIds(string endpointPath) => endpointPath;
+        protected virtual string FormatUrlQueryIds(string endpointPath) =>
+            endpointPath;
 
         /// <summary>
         /// Formats a URL with querying a blob of data.
         /// </summary>
         /// <param name="endpointPath">The endpoint path.</param>
         /// <returns>The formatted URL.</returns>
-        protected virtual string FormatUrlQueryBlob(string endpointPath) => endpointPath;
+        protected virtual string FormatUrlQueryBlob(string endpointPath) =>
+            endpointPath;
 
         /// <summary>
         /// Formats a URL with querying an item.
@@ -471,7 +480,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="endpointPath">The endpoint path.</param>
         /// <param name="id">The item id.</param>
         /// <returns>The formatted URL.</returns>
-        protected virtual string FormatUrlQueryItem<T>(string endpointPath, T id) => $"{endpointPath}{string.Format(QueryItem, id)}";
+        protected virtual string FormatUrlQueryItem<T>(string endpointPath, T id) =>
+            $"{endpointPath}{string.Format(QueryItem, id)}";
 
         /// <summary>
         /// Formats a URL with querying many items.
@@ -479,7 +489,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="endpointPath">The endpoint path.</param>
         /// <param name="ids">The item ids.</param>
         /// <returns>The formatted URL.</returns>
-        protected virtual string FormatUrlQueryMany<T>(string endpointPath, IEnumerable<T> ids) => $"{endpointPath}{string.Format(QueryMany, string.Join(",", ids))}";
+        protected virtual string FormatUrlQueryMany<T>(string endpointPath, IEnumerable<T> ids) =>
+            $"{endpointPath}{string.Format(QueryMany, string.Join(",", ids))}";
 
         /// <summary>
         /// Formats a URL with querying a page of items.
@@ -488,7 +499,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="page">The page.</param>
         /// <param name="pageSize">The page size.</param>
         /// <returns>The formatted URL.</returns>
-        protected virtual string FormatUrlQueryPage(string endpointPath, int page, int pageSize) => $"{endpointPath}{string.Format(QueryPage, page, pageSize)}";
+        protected virtual string FormatUrlQueryPage(string endpointPath, int page, int pageSize) =>
+            $"{endpointPath}{string.Format(QueryPage, page, pageSize)}";
 
         /// <summary>
         /// Appends the parameters to the URI.
@@ -526,6 +538,19 @@ namespace Gw2Sharp.WebApi.V2.Clients
         }
 
 
+        /// <summary>
+        /// Builds additional request headers for this endpoint.
+        /// </summary>
+        /// <returns>The request headers.</returns>
+        protected virtual IDictionary<string, string> BuildRequestHeaders()
+        {
+            var headers = new Dictionary<string, string>();
+            if (!string.IsNullOrWhiteSpace(this.SchemaVersion))
+                headers.Add("X-Schema-Version", this.SchemaVersion);
+            return headers;
+        }
+
+
         private bool ImplementsInterface(Type interfaceType) =>
             this.GetType().GetInterfaces()
                 .Where(i => i.IsGenericType)
@@ -536,10 +561,16 @@ namespace Gw2Sharp.WebApi.V2.Clients
 
         private IReadOnlyList<T> GetRequiredAttributes<T>() where T : Attribute
         {
-            var attrs = this.GetType().GetCustomAttributes<T>().ToList();
+            var attrs = this.GetAttributes<T>();
             if (attrs.Count == 0)
                 throw new InvalidOperationException($"{this.GetType().FullName} is required to define one or more attributes of {typeof(T).FullName}");
             return attrs;
         }
+
+        private T? GetAttribute<T>() where T : Attribute =>
+            this.GetAttributes<T>().FirstOrDefault();
+
+        private IReadOnlyList<T> GetAttributes<T>() where T : Attribute =>
+            this.GetType().GetCustomAttributes<T>().ToList();
     }
 }

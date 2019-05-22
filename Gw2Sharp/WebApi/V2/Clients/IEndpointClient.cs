@@ -10,6 +10,11 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// </summary>
         string EndpointPath { get; }
 
+        /// <summary>
+        /// The endpoint schema version override.
+        /// </summary>
+        string? SchemaVersion { get; }
+
 
         /// <summary>
         /// Gets whether this endpoint supports localization.

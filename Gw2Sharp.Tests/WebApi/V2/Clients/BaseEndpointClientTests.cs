@@ -55,6 +55,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                 this.AssertRequest(callInfo, client, "?page=2&page_size=100");
                 this.AssertAuthenticatedRequest(callInfo, client);
                 this.AssertLocalizedRequest(callInfo, client);
+                this.AssertSchemaVersionRequest(callInfo, client);
                 return new HttpResponse(data, HttpStatusCode.OK, null, null);
             });
 
@@ -70,6 +71,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                 this.AssertRequest(callInfo, client, string.Empty);
                 this.AssertAuthenticatedRequest(callInfo, client);
                 this.AssertLocalizedRequest(callInfo, client);
+                this.AssertSchemaVersionRequest(callInfo, client);
                 return new HttpResponse(data, HttpStatusCode.OK, null, null);
             });
 
@@ -88,6 +90,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                 this.AssertRequest(callInfo, client, $"/{id.ToString()}");
                 this.AssertAuthenticatedRequest(callInfo, client);
                 this.AssertLocalizedRequest(callInfo, client);
+                this.AssertSchemaVersionRequest(callInfo, client);
                 return new HttpResponse(data, HttpStatusCode.OK, null, null);
             });
 
@@ -103,6 +106,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                 this.AssertRequest(callInfo, client, "?ids=all");
                 this.AssertAuthenticatedRequest(callInfo, client);
                 this.AssertLocalizedRequest(callInfo, client);
+                this.AssertSchemaVersionRequest(callInfo, client);
                 return new HttpResponse(data, HttpStatusCode.OK, null, null);
             });
 
@@ -124,6 +128,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                 this.AssertRequest(callInfo, client, $"?ids={string.Join(",", ids.Select(i => i?.ToString()))}");
                 this.AssertAuthenticatedRequest(callInfo, client);
                 this.AssertLocalizedRequest(callInfo, client);
+                this.AssertSchemaVersionRequest(callInfo, client);
                 return new HttpResponse(data, HttpStatusCode.OK, null, null);
             });
 
@@ -141,6 +146,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                 this.AssertRequest(callInfo, client, string.Empty);
                 this.AssertAuthenticatedRequest(callInfo, client);
                 this.AssertLocalizedRequest(callInfo, client);
+                this.AssertSchemaVersionRequest(callInfo, client);
                 return new HttpResponse(data, HttpStatusCode.OK, null, null);
             });
 
@@ -192,6 +198,15 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
         {
             var requestHeaders = callInfo.ArgAt<IHttpRequest>(0).RequestHeaders;
             Assert.Contains(new KeyValuePair<string, string>("Accept-Language", client.Connection.LocaleString), requestHeaders);
+        }
+
+        protected virtual void AssertSchemaVersionRequest(CallInfo callInfo, IEndpointClient client)
+        {
+            var requestHeaders = callInfo.ArgAt<IHttpRequest>(0).RequestHeaders;
+            if (!string.IsNullOrWhiteSpace(client.SchemaVersion))
+                Assert.Contains(new KeyValuePair<string, string>("X-Schema-Version", client.SchemaVersion), requestHeaders);
+            else
+                Assert.DoesNotContain(requestHeaders, h => h.Key == "X-Schema-Version");
         }
 
 
