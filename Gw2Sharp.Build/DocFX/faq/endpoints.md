@@ -64,7 +64,6 @@ For your convenience, the following list gives an overview of the endpoints that
  /v2/backstory/answers | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Backstory.Answers`](../api/Gw2Sharp.WebApi.V2.Clients.BackstoryAnswersClient.html)
  /v2/backstory/questions | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Backstory.Questions`](../api/Gw2Sharp.WebApi.V2.Clients.BackstoryQuestionsClient.html)
  /v2/build | ✔️ | [`Gw2WebApiClient.V2.Build`](../api/Gw2Sharp.WebApi.V2.Clients.BuildClient.html)
- /v2/cats | ✔️📄📚📦➡️ | [`Gw2WebApiClient.V2.Cats`](../api/Gw2Sharp.WebApi.V2.Clients.CatsClient.html)
  /v2/characters | ✔️🔑📄📚📦 | [`Gw2WebApiClient.V2.Characters`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersClient.html)
  /v2/characters/`:id`/backstory | ✔️🔑 | [`Gw2WebApiClient.V2.Characters[id].Backstory`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdBackstoryClient.html)
  /v2/characters/`:id`/core | ✔️🔑 | [`Gw2WebApiClient.V2.Characters[id].Core`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdCoreClient.html)
@@ -124,8 +123,8 @@ For your convenience, the following list gives an overview of the endpoints that
  /v2/guild/permissions | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Guild.Permissions`](../api/Gw2Sharp.WebApi.V2.Clients.GuildPermissionsClient.html)
  /v2/guild/search | ✔️ | [`Gw2WebApiClient.V2.Guild.Search`](../api/Gw2Sharp.WebApi.V2.Clients.GuildSearchClient.html)
  /v2/guild/upgrades | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Guild.Upgrades`](../api/Gw2Sharp.WebApi.V2.Clients.GuildUpgradesClient.html)
- /v2/home | ❌ | 
- /v2/home/cats | ✔️📄📚📦 | [`Gw2WebApiClient.V2.Cats`](../api/Gw2Sharp.WebApi.V2.Clients.CatsClient.html) ➡️
+ /v2/home | ✔️ | [`Gw2WebApiClient.V2.Home`](../api/Gw2Sharp.WebApi.V2.Clients.HomeClient.html)
+ /v2/home/cats | ✔️📄📚📦 | [`Gw2WebApiClient.V2.Home.Cats`](../api/Gw2Sharp.WebApi.V2.Clients.HomeCatsClient.html)
  /v2/home/nodes | ❌ | 
  /v2/items | ✔️🌐📄📚 | [`Gw2WebApiClient.V2.Items`](../api/Gw2Sharp.WebApi.V2.Clients.ItemsClient.html)
  /v2/itemstats | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Itemstats`](../api/Gw2Sharp.WebApi.V2.Clients.ItemstatsClient.html)

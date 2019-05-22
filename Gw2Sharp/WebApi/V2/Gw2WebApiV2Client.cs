@@ -30,7 +30,6 @@ namespace Gw2Sharp.WebApi.V2
             this.Achievements = new AchievementsClient(connection);
             this.Backstory = new BackstoryClient(connection);
             this.Build = new BuildClient(connection);
-            this.Cats = new CatsClient(connection);
             this.Characters = new CharactersClient(connection);
             this.Colors = new ColorsClient(connection);
             this.Commerce = new CommerceClient(connection);
@@ -43,6 +42,7 @@ namespace Gw2Sharp.WebApi.V2
             this.Finishers = new FinishersClient(connection);
             this.Gliders = new GlidersClient(connection);
             this.Guild = new GuildClient(connection);
+            this.Home = new HomeClient(connection);
             this.Items = new ItemsClient(connection);
             this.Itemstats = new ItemstatsClient(connection);
             this.Legends = new LegendsClient(connection);
@@ -63,9 +63,6 @@ namespace Gw2Sharp.WebApi.V2
 
         /// <inheritdoc />
         public virtual IBuildClient Build { get; protected set; }
-
-        /// <inheritdoc />
-        public virtual ICatsClient Cats { get; protected set; }
 
         /// <inheritdoc />
         public virtual ICharactersClient Characters { get; protected set; }
@@ -102,6 +99,9 @@ namespace Gw2Sharp.WebApi.V2
 
         /// <inheritdoc />
         public virtual IGuildClient Guild { get; protected set; }
+
+        /// <inheritdoc />
+        public virtual IHomeClient Home { get; protected set; }
 
         /// <inheritdoc />
         public virtual IItemsClient Items { get; protected set; }

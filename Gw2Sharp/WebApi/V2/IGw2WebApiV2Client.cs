@@ -34,11 +34,6 @@ namespace Gw2Sharp.WebApi.V2
         IBuildClient Build { get; }
 
         /// <summary>
-        /// Gets the cats.
-        /// </summary>
-        ICatsClient Cats { get; }
-
-        /// <summary>
         /// Gets the characters.
         /// Requires scopes: account, characters.
         /// </summary>
@@ -98,6 +93,11 @@ namespace Gw2Sharp.WebApi.V2
         /// Gets the guild.
         /// </summary>
         IGuildClient Guild { get; }
+
+        /// <summary>
+        /// Gets the home.
+        /// </summary>
+        IHomeClient Home { get; }
 
         /// <summary>
         /// Gets the items.

@@ -55,9 +55,9 @@
     <EmbeddedResource Include="TestFiles\Backstory\BackstoryQuestions.ids.json" />
     <EmbeddedResource Include="TestFiles\Backstory\BackstoryQuestions.single.json" />
     <EmbeddedResource Include="TestFiles\Build\Build.json" />
-    <EmbeddedResource Include="TestFiles\Cats\Cats.bulk.json" />
-    <EmbeddedResource Include="TestFiles\Cats\Cats.ids.json" />
-    <EmbeddedResource Include="TestFiles\Cats\Cats.single.json" />
+    <EmbeddedResource Include="TestFiles\Home\HomeCats.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Home\HomeCats.ids.json" />
+    <EmbeddedResource Include="TestFiles\Home\HomeCats.single.json" />
     <EmbeddedResource Include="TestFiles\Characters\Characters.bulk.json" />
     <EmbeddedResource Include="TestFiles\Characters\Characters.ids.json" />
     <EmbeddedResource Include="TestFiles\Characters\Characters.single.json" />
