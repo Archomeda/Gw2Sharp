@@ -912,15 +912,15 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.Connection.RequestAsync
   nameWithType: Connection.RequestAsync
-- uid: Gw2Sharp.WebApi.Connection.RequestAsync``1(Uri,CancellationToken)
-  name: RequestAsync<TResponse>(Uri, CancellationToken)
-  href: api/Gw2Sharp.WebApi.Connection.html#Gw2Sharp_WebApi_Connection_RequestAsync__1_Uri_CancellationToken_
-  commentId: M:Gw2Sharp.WebApi.Connection.RequestAsync``1(Uri,CancellationToken)
-  name.vb: RequestAsync(Of TResponse)(Uri, CancellationToken)
-  fullName: Gw2Sharp.WebApi.Connection.RequestAsync<TResponse>(Uri, CancellationToken)
-  fullName.vb: Gw2Sharp.WebApi.Connection.RequestAsync(Of TResponse)(Uri, CancellationToken)
-  nameWithType: Connection.RequestAsync<TResponse>(Uri, CancellationToken)
-  nameWithType.vb: Connection.RequestAsync(Of TResponse)(Uri, CancellationToken)
+- uid: Gw2Sharp.WebApi.Connection.RequestAsync``1(Uri,System.Nullable{IEnumerable{KeyValuePair{System.String,System.String}}},CancellationToken)
+  name: RequestAsync<TResponse>(Uri, Nullable<IEnumerable<KeyValuePair<String, String>>>, CancellationToken)
+  href: api/Gw2Sharp.WebApi.Connection.html#Gw2Sharp_WebApi_Connection_RequestAsync__1_Uri_System_Nullable_IEnumerable_KeyValuePair_System_String_System_String____CancellationToken_
+  commentId: M:Gw2Sharp.WebApi.Connection.RequestAsync``1(Uri,System.Nullable{IEnumerable{KeyValuePair{System.String,System.String}}},CancellationToken)
+  name.vb: RequestAsync(Of TResponse)(Uri, Nullable(Of IEnumerable(Of KeyValuePair(Of String, String))), CancellationToken)
+  fullName: Gw2Sharp.WebApi.Connection.RequestAsync<TResponse>(Uri, System.Nullable<IEnumerable<KeyValuePair<System.String, System.String>>>, CancellationToken)
+  fullName.vb: Gw2Sharp.WebApi.Connection.RequestAsync(Of TResponse)(Uri, System.Nullable(Of IEnumerable(Of KeyValuePair(Of System.String, System.String))), CancellationToken)
+  nameWithType: Connection.RequestAsync<TResponse>(Uri, Nullable<IEnumerable<KeyValuePair<String, String>>>, CancellationToken)
+  nameWithType.vb: Connection.RequestAsync(Of TResponse)(Uri, Nullable(Of IEnumerable(Of KeyValuePair(Of String, String))), CancellationToken)
 - uid: Gw2Sharp.WebApi.Connection.UserAgent
   name: UserAgent
   href: api/Gw2Sharp.WebApi.Connection.html#Gw2Sharp_WebApi_Connection_UserAgent
@@ -1961,15 +1961,15 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.IConnection.RequestAsync
   nameWithType: IConnection.RequestAsync
-- uid: Gw2Sharp.WebApi.IConnection.RequestAsync``1(Uri,CancellationToken)
-  name: RequestAsync<TResponse>(Uri, CancellationToken)
-  href: api/Gw2Sharp.WebApi.IConnection.html#Gw2Sharp_WebApi_IConnection_RequestAsync__1_Uri_CancellationToken_
-  commentId: M:Gw2Sharp.WebApi.IConnection.RequestAsync``1(Uri,CancellationToken)
-  name.vb: RequestAsync(Of TResponse)(Uri, CancellationToken)
-  fullName: Gw2Sharp.WebApi.IConnection.RequestAsync<TResponse>(Uri, CancellationToken)
-  fullName.vb: Gw2Sharp.WebApi.IConnection.RequestAsync(Of TResponse)(Uri, CancellationToken)
-  nameWithType: IConnection.RequestAsync<TResponse>(Uri, CancellationToken)
-  nameWithType.vb: IConnection.RequestAsync(Of TResponse)(Uri, CancellationToken)
+- uid: Gw2Sharp.WebApi.IConnection.RequestAsync``1(Uri,System.Nullable{IEnumerable{KeyValuePair{System.String,System.String}}},CancellationToken)
+  name: RequestAsync<TResponse>(Uri, Nullable<IEnumerable<KeyValuePair<String, String>>>, CancellationToken)
+  href: api/Gw2Sharp.WebApi.IConnection.html#Gw2Sharp_WebApi_IConnection_RequestAsync__1_Uri_System_Nullable_IEnumerable_KeyValuePair_System_String_System_String____CancellationToken_
+  commentId: M:Gw2Sharp.WebApi.IConnection.RequestAsync``1(Uri,System.Nullable{IEnumerable{KeyValuePair{System.String,System.String}}},CancellationToken)
+  name.vb: RequestAsync(Of TResponse)(Uri, Nullable(Of IEnumerable(Of KeyValuePair(Of String, String))), CancellationToken)
+  fullName: Gw2Sharp.WebApi.IConnection.RequestAsync<TResponse>(Uri, System.Nullable<IEnumerable<KeyValuePair<System.String, System.String>>>, CancellationToken)
+  fullName.vb: Gw2Sharp.WebApi.IConnection.RequestAsync(Of TResponse)(Uri, System.Nullable(Of IEnumerable(Of KeyValuePair(Of System.String, System.String))), CancellationToken)
+  nameWithType: IConnection.RequestAsync<TResponse>(Uri, Nullable<IEnumerable<KeyValuePair<String, String>>>, CancellationToken)
+  nameWithType.vb: IConnection.RequestAsync(Of TResponse)(Uri, Nullable(Of IEnumerable(Of KeyValuePair(Of String, String))), CancellationToken)
 - uid: Gw2Sharp.WebApi.IConnection.UserAgent
   name: UserAgent
   href: api/Gw2Sharp.WebApi.IConnection.html#Gw2Sharp_WebApi_IConnection_UserAgent
@@ -4031,6 +4031,23 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).AppendUrlParameters
   nameWithType: BaseEndpointClient<TObject>.AppendUrlParameters
   nameWithType.vb: BaseEndpointClient(Of TObject).AppendUrlParameters
+- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.BuildRequestHeaders
+  name: BuildRequestHeaders()
+  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_BuildRequestHeaders
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.BuildRequestHeaders
+  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient<TObject>.BuildRequestHeaders()
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).BuildRequestHeaders()
+  nameWithType: BaseEndpointClient<TObject>.BuildRequestHeaders()
+  nameWithType.vb: BaseEndpointClient(Of TObject).BuildRequestHeaders()
+- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.BuildRequestHeaders*
+  name: BuildRequestHeaders
+  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_BuildRequestHeaders_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.BuildRequestHeaders
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient<TObject>.BuildRequestHeaders
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).BuildRequestHeaders
+  nameWithType: BaseEndpointClient<TObject>.BuildRequestHeaders
+  nameWithType.vb: BaseEndpointClient(Of TObject).BuildRequestHeaders
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.EndpointPath
   name: EndpointPath
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_EndpointPath
@@ -4545,6 +4562,23 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).RequestPageWithResponseAsync(Of TIdentifiableObject, TId)(System.Int32, CancellationToken, System.Int32)
   nameWithType: BaseEndpointClient<TObject>.RequestPageWithResponseAsync<TIdentifiableObject, TId>(Int32, CancellationToken, Int32)
   nameWithType.vb: BaseEndpointClient(Of TObject).RequestPageWithResponseAsync(Of TIdentifiableObject, TId)(Int32, CancellationToken, Int32)
+- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.SchemaVersion
+  name: SchemaVersion
+  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_SchemaVersion
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.SchemaVersion
+  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient<TObject>.SchemaVersion
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).SchemaVersion
+  nameWithType: BaseEndpointClient<TObject>.SchemaVersion
+  nameWithType.vb: BaseEndpointClient(Of TObject).SchemaVersion
+- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.SchemaVersion*
+  name: SchemaVersion
+  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_SchemaVersion_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.SchemaVersion
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient<TObject>.SchemaVersion
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).SchemaVersion
+  nameWithType: BaseEndpointClient<TObject>.SchemaVersion
+  nameWithType.vb: BaseEndpointClient(Of TObject).SchemaVersion
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.UpdateIndividualsAsync*
   name: UpdateIndividualsAsync
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_UpdateIndividualsAsync_
@@ -4725,25 +4759,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.BuildClient.BuildClient
   nameWithType: BuildClient.BuildClient
-- uid: Gw2Sharp.WebApi.V2.Clients.CatsClient
-  name: CatsClient
-  href: api/Gw2Sharp.WebApi.V2.Clients.CatsClient.html
-  commentId: T:Gw2Sharp.WebApi.V2.Clients.CatsClient
-  fullName: Gw2Sharp.WebApi.V2.Clients.CatsClient
-  nameWithType: CatsClient
-- uid: Gw2Sharp.WebApi.V2.Clients.CatsClient.#ctor(Gw2Sharp.WebApi.IConnection)
-  name: CatsClient(IConnection)
-  href: api/Gw2Sharp.WebApi.V2.Clients.CatsClient.html#Gw2Sharp_WebApi_V2_Clients_CatsClient__ctor_Gw2Sharp_WebApi_IConnection_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.CatsClient.#ctor(Gw2Sharp.WebApi.IConnection)
-  fullName: Gw2Sharp.WebApi.V2.Clients.CatsClient.CatsClient(Gw2Sharp.WebApi.IConnection)
-  nameWithType: CatsClient.CatsClient(IConnection)
-- uid: Gw2Sharp.WebApi.V2.Clients.CatsClient.#ctor*
-  name: CatsClient
-  href: api/Gw2Sharp.WebApi.V2.Clients.CatsClient.html#Gw2Sharp_WebApi_V2_Clients_CatsClient__ctor_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.CatsClient.#ctor
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.CatsClient.CatsClient
-  nameWithType: CatsClient.CatsClient
 - uid: Gw2Sharp.WebApi.V2.Clients.CharactersClient
   name: CharactersClient
   href: api/Gw2Sharp.WebApi.V2.Clients.CharactersClient.html
@@ -6764,6 +6779,38 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.EndpointPathSegmentAttribute.PathSegment
   nameWithType: EndpointPathSegmentAttribute.PathSegment
+- uid: Gw2Sharp.WebApi.V2.Clients.EndpointSchemaVersionAttribute
+  name: EndpointSchemaVersionAttribute
+  href: api/Gw2Sharp.WebApi.V2.Clients.EndpointSchemaVersionAttribute.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.EndpointSchemaVersionAttribute
+  fullName: Gw2Sharp.WebApi.V2.Clients.EndpointSchemaVersionAttribute
+  nameWithType: EndpointSchemaVersionAttribute
+- uid: Gw2Sharp.WebApi.V2.Clients.EndpointSchemaVersionAttribute.#ctor(System.String)
+  name: EndpointSchemaVersionAttribute(String)
+  href: api/Gw2Sharp.WebApi.V2.Clients.EndpointSchemaVersionAttribute.html#Gw2Sharp_WebApi_V2_Clients_EndpointSchemaVersionAttribute__ctor_System_String_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.EndpointSchemaVersionAttribute.#ctor(System.String)
+  fullName: Gw2Sharp.WebApi.V2.Clients.EndpointSchemaVersionAttribute.EndpointSchemaVersionAttribute(System.String)
+  nameWithType: EndpointSchemaVersionAttribute.EndpointSchemaVersionAttribute(String)
+- uid: Gw2Sharp.WebApi.V2.Clients.EndpointSchemaVersionAttribute.#ctor*
+  name: EndpointSchemaVersionAttribute
+  href: api/Gw2Sharp.WebApi.V2.Clients.EndpointSchemaVersionAttribute.html#Gw2Sharp_WebApi_V2_Clients_EndpointSchemaVersionAttribute__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.EndpointSchemaVersionAttribute.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.EndpointSchemaVersionAttribute.EndpointSchemaVersionAttribute
+  nameWithType: EndpointSchemaVersionAttribute.EndpointSchemaVersionAttribute
+- uid: Gw2Sharp.WebApi.V2.Clients.EndpointSchemaVersionAttribute.SchemaVersion
+  name: SchemaVersion
+  href: api/Gw2Sharp.WebApi.V2.Clients.EndpointSchemaVersionAttribute.html#Gw2Sharp_WebApi_V2_Clients_EndpointSchemaVersionAttribute_SchemaVersion
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.EndpointSchemaVersionAttribute.SchemaVersion
+  fullName: Gw2Sharp.WebApi.V2.Clients.EndpointSchemaVersionAttribute.SchemaVersion
+  nameWithType: EndpointSchemaVersionAttribute.SchemaVersion
+- uid: Gw2Sharp.WebApi.V2.Clients.EndpointSchemaVersionAttribute.SchemaVersion*
+  name: SchemaVersion
+  href: api/Gw2Sharp.WebApi.V2.Clients.EndpointSchemaVersionAttribute.html#Gw2Sharp_WebApi_V2_Clients_EndpointSchemaVersionAttribute_SchemaVersion_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.EndpointSchemaVersionAttribute.SchemaVersion
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.EndpointSchemaVersionAttribute.SchemaVersion
+  nameWithType: EndpointSchemaVersionAttribute.SchemaVersion
 - uid: Gw2Sharp.WebApi.V2.Clients.FilesClient
   name: FilesClient
   href: api/Gw2Sharp.WebApi.V2.Clients.FilesClient.html
@@ -7427,6 +7474,57 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.GuildUpgradesClient.GuildUpgradesClient
   nameWithType: GuildUpgradesClient.GuildUpgradesClient
+- uid: Gw2Sharp.WebApi.V2.Clients.HomeCatsClient
+  name: HomeCatsClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.HomeCatsClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.HomeCatsClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.HomeCatsClient
+  nameWithType: HomeCatsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.HomeCatsClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  name: HomeCatsClient(IConnection)
+  href: api/Gw2Sharp.WebApi.V2.Clients.HomeCatsClient.html#Gw2Sharp_WebApi_V2_Clients_HomeCatsClient__ctor_Gw2Sharp_WebApi_IConnection_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.HomeCatsClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  fullName: Gw2Sharp.WebApi.V2.Clients.HomeCatsClient.HomeCatsClient(Gw2Sharp.WebApi.IConnection)
+  nameWithType: HomeCatsClient.HomeCatsClient(IConnection)
+- uid: Gw2Sharp.WebApi.V2.Clients.HomeCatsClient.#ctor*
+  name: HomeCatsClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.HomeCatsClient.html#Gw2Sharp_WebApi_V2_Clients_HomeCatsClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.HomeCatsClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.HomeCatsClient.HomeCatsClient
+  nameWithType: HomeCatsClient.HomeCatsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.HomeClient
+  name: HomeClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.HomeClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.HomeClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.HomeClient
+  nameWithType: HomeClient
+- uid: Gw2Sharp.WebApi.V2.Clients.HomeClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  name: HomeClient(IConnection)
+  href: api/Gw2Sharp.WebApi.V2.Clients.HomeClient.html#Gw2Sharp_WebApi_V2_Clients_HomeClient__ctor_Gw2Sharp_WebApi_IConnection_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.HomeClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  fullName: Gw2Sharp.WebApi.V2.Clients.HomeClient.HomeClient(Gw2Sharp.WebApi.IConnection)
+  nameWithType: HomeClient.HomeClient(IConnection)
+- uid: Gw2Sharp.WebApi.V2.Clients.HomeClient.#ctor*
+  name: HomeClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.HomeClient.html#Gw2Sharp_WebApi_V2_Clients_HomeClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.HomeClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.HomeClient.HomeClient
+  nameWithType: HomeClient.HomeClient
+- uid: Gw2Sharp.WebApi.V2.Clients.HomeClient.Cats
+  name: Cats
+  href: api/Gw2Sharp.WebApi.V2.Clients.HomeClient.html#Gw2Sharp_WebApi_V2_Clients_HomeClient_Cats
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.HomeClient.Cats
+  fullName: Gw2Sharp.WebApi.V2.Clients.HomeClient.Cats
+  nameWithType: HomeClient.Cats
+- uid: Gw2Sharp.WebApi.V2.Clients.HomeClient.Cats*
+  name: Cats
+  href: api/Gw2Sharp.WebApi.V2.Clients.HomeClient.html#Gw2Sharp_WebApi_V2_Clients_HomeClient_Cats_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.HomeClient.Cats
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.HomeClient.Cats
+  nameWithType: HomeClient.Cats
 - uid: Gw2Sharp.WebApi.V2.Clients.IAccountAchievementsClient
   name: IAccountAchievementsClient
   href: api/Gw2Sharp.WebApi.V2.Clients.IAccountAchievementsClient.html
@@ -8270,12 +8368,6 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient(Of TObject, TId).ManyWithResponseAsync
   nameWithType: IBulkExpandableClient<TObject, TId>.ManyWithResponseAsync
   nameWithType.vb: IBulkExpandableClient(Of TObject, TId).ManyWithResponseAsync
-- uid: Gw2Sharp.WebApi.V2.Clients.ICatsClient
-  name: ICatsClient
-  href: api/Gw2Sharp.WebApi.V2.Clients.ICatsClient.html
-  commentId: T:Gw2Sharp.WebApi.V2.Clients.ICatsClient
-  fullName: Gw2Sharp.WebApi.V2.Clients.ICatsClient
-  nameWithType: ICatsClient
 - uid: Gw2Sharp.WebApi.V2.Clients.ICharactersClient
   name: ICharactersClient
   href: api/Gw2Sharp.WebApi.V2.Clients.ICharactersClient.html
@@ -9835,6 +9927,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.IEndpointClient.IsPaginated
   nameWithType: IEndpointClient.IsPaginated
+- uid: Gw2Sharp.WebApi.V2.Clients.IEndpointClient.SchemaVersion
+  name: SchemaVersion
+  href: api/Gw2Sharp.WebApi.V2.Clients.IEndpointClient.html#Gw2Sharp_WebApi_V2_Clients_IEndpointClient_SchemaVersion
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.IEndpointClient.SchemaVersion
+  fullName: Gw2Sharp.WebApi.V2.Clients.IEndpointClient.SchemaVersion
+  nameWithType: IEndpointClient.SchemaVersion
+- uid: Gw2Sharp.WebApi.V2.Clients.IEndpointClient.SchemaVersion*
+  name: SchemaVersion
+  href: api/Gw2Sharp.WebApi.V2.Clients.IEndpointClient.html#Gw2Sharp_WebApi_V2_Clients_IEndpointClient_SchemaVersion_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.IEndpointClient.SchemaVersion
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.IEndpointClient.SchemaVersion
+  nameWithType: IEndpointClient.SchemaVersion
 - uid: Gw2Sharp.WebApi.V2.Clients.IFilesClient
   name: IFilesClient
   href: api/Gw2Sharp.WebApi.V2.Clients.IFilesClient.html
@@ -10277,6 +10382,31 @@ references:
   commentId: T:Gw2Sharp.WebApi.V2.Clients.IGuildUpgradesClient
   fullName: Gw2Sharp.WebApi.V2.Clients.IGuildUpgradesClient
   nameWithType: IGuildUpgradesClient
+- uid: Gw2Sharp.WebApi.V2.Clients.IHomeCatsClient
+  name: IHomeCatsClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.IHomeCatsClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.IHomeCatsClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.IHomeCatsClient
+  nameWithType: IHomeCatsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.IHomeClient
+  name: IHomeClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.IHomeClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.IHomeClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.IHomeClient
+  nameWithType: IHomeClient
+- uid: Gw2Sharp.WebApi.V2.Clients.IHomeClient.Cats
+  name: Cats
+  href: api/Gw2Sharp.WebApi.V2.Clients.IHomeClient.html#Gw2Sharp_WebApi_V2_Clients_IHomeClient_Cats
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.IHomeClient.Cats
+  fullName: Gw2Sharp.WebApi.V2.Clients.IHomeClient.Cats
+  nameWithType: IHomeClient.Cats
+- uid: Gw2Sharp.WebApi.V2.Clients.IHomeClient.Cats*
+  name: Cats
+  href: api/Gw2Sharp.WebApi.V2.Clients.IHomeClient.html#Gw2Sharp_WebApi_V2_Clients_IHomeClient_Cats_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.IHomeClient.Cats
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.IHomeClient.Cats
+  nameWithType: IHomeClient.Cats
 - uid: Gw2Sharp.WebApi.V2.Clients.IItemsClient
   name: IItemsClient
   href: api/Gw2Sharp.WebApi.V2.Clients.IItemsClient.html
@@ -10576,19 +10706,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Build
   nameWithType: Gw2WebApiV2Client.Build
-- uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Cats
-  name: Cats
-  href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_Cats
-  commentId: P:Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Cats
-  fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Cats
-  nameWithType: Gw2WebApiV2Client.Cats
-- uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Cats*
-  name: Cats
-  href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_Cats_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Cats
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Cats
-  nameWithType: Gw2WebApiV2Client.Cats
 - uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Characters
   name: Characters
   href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_Characters
@@ -10758,6 +10875,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Guild
   nameWithType: Gw2WebApiV2Client.Guild
+- uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Home
+  name: Home
+  href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_Home
+  commentId: P:Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Home
+  fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Home
+  nameWithType: Gw2WebApiV2Client.Home
+- uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Home*
+  name: Home
+  href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_Home_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Home
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Home
+  nameWithType: Gw2WebApiV2Client.Home
 - uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Items
   name: Items
   href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_Items
@@ -11036,19 +11166,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Build
   nameWithType: IGw2WebApiV2Client.Build
-- uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Cats
-  name: Cats
-  href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_Cats
-  commentId: P:Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Cats
-  fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Cats
-  nameWithType: IGw2WebApiV2Client.Cats
-- uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Cats*
-  name: Cats
-  href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_Cats_
-  commentId: Overload:Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Cats
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Cats
-  nameWithType: IGw2WebApiV2Client.Cats
 - uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Characters
   name: Characters
   href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_Characters
@@ -11218,6 +11335,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Guild
   nameWithType: IGw2WebApiV2Client.Guild
+- uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Home
+  name: Home
+  href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_Home
+  commentId: P:Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Home
+  fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Home
+  nameWithType: IGw2WebApiV2Client.Home
+- uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Home*
+  name: Home
+  href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_Home_
+  commentId: Overload:Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Home
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Home
+  nameWithType: IGw2WebApiV2Client.Home
 - uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Items
   name: Items
   href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_Items
@@ -11276,6 +11406,30 @@ references:
   commentId: N:Gw2Sharp.WebApi.V2.Models
   fullName: Gw2Sharp.WebApi.V2.Models
   nameWithType: Gw2Sharp.WebApi.V2.Models
+- uid: Gw2Sharp.WebApi.V2.Models.AccessCondition
+  name: AccessCondition
+  href: api/Gw2Sharp.WebApi.V2.Models.AccessCondition.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.AccessCondition
+  fullName: Gw2Sharp.WebApi.V2.Models.AccessCondition
+  nameWithType: AccessCondition
+- uid: Gw2Sharp.WebApi.V2.Models.AccessCondition.HasAccess
+  name: HasAccess
+  href: api/Gw2Sharp.WebApi.V2.Models.AccessCondition.html#Gw2Sharp_WebApi_V2_Models_AccessCondition_HasAccess
+  commentId: F:Gw2Sharp.WebApi.V2.Models.AccessCondition.HasAccess
+  fullName: Gw2Sharp.WebApi.V2.Models.AccessCondition.HasAccess
+  nameWithType: AccessCondition.HasAccess
+- uid: Gw2Sharp.WebApi.V2.Models.AccessCondition.NoAccess
+  name: NoAccess
+  href: api/Gw2Sharp.WebApi.V2.Models.AccessCondition.html#Gw2Sharp_WebApi_V2_Models_AccessCondition_NoAccess
+  commentId: F:Gw2Sharp.WebApi.V2.Models.AccessCondition.NoAccess
+  fullName: Gw2Sharp.WebApi.V2.Models.AccessCondition.NoAccess
+  nameWithType: AccessCondition.NoAccess
+- uid: Gw2Sharp.WebApi.V2.Models.AccessCondition.Unknown
+  name: Unknown
+  href: api/Gw2Sharp.WebApi.V2.Models.AccessCondition.html#Gw2Sharp_WebApi_V2_Models_AccessCondition_Unknown
+  commentId: F:Gw2Sharp.WebApi.V2.Models.AccessCondition.Unknown
+  fullName: Gw2Sharp.WebApi.V2.Models.AccessCondition.Unknown
+  nameWithType: AccessCondition.Unknown
 - uid: Gw2Sharp.WebApi.V2.Models.Account
   name: Account
   href: api/Gw2Sharp.WebApi.V2.Models.Account.html
@@ -11625,38 +11779,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.AccountFinisher.Quantity
   nameWithType: AccountFinisher.Quantity
-- uid: Gw2Sharp.WebApi.V2.Models.AccountHomeCat
-  name: AccountHomeCat
-  href: api/Gw2Sharp.WebApi.V2.Models.AccountHomeCat.html
-  commentId: T:Gw2Sharp.WebApi.V2.Models.AccountHomeCat
-  fullName: Gw2Sharp.WebApi.V2.Models.AccountHomeCat
-  nameWithType: AccountHomeCat
-- uid: Gw2Sharp.WebApi.V2.Models.AccountHomeCat.Hint
-  name: Hint
-  href: api/Gw2Sharp.WebApi.V2.Models.AccountHomeCat.html#Gw2Sharp_WebApi_V2_Models_AccountHomeCat_Hint
-  commentId: P:Gw2Sharp.WebApi.V2.Models.AccountHomeCat.Hint
-  fullName: Gw2Sharp.WebApi.V2.Models.AccountHomeCat.Hint
-  nameWithType: AccountHomeCat.Hint
-- uid: Gw2Sharp.WebApi.V2.Models.AccountHomeCat.Hint*
-  name: Hint
-  href: api/Gw2Sharp.WebApi.V2.Models.AccountHomeCat.html#Gw2Sharp_WebApi_V2_Models_AccountHomeCat_Hint_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Models.AccountHomeCat.Hint
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Models.AccountHomeCat.Hint
-  nameWithType: AccountHomeCat.Hint
-- uid: Gw2Sharp.WebApi.V2.Models.AccountHomeCat.Id
-  name: Id
-  href: api/Gw2Sharp.WebApi.V2.Models.AccountHomeCat.html#Gw2Sharp_WebApi_V2_Models_AccountHomeCat_Id
-  commentId: P:Gw2Sharp.WebApi.V2.Models.AccountHomeCat.Id
-  fullName: Gw2Sharp.WebApi.V2.Models.AccountHomeCat.Id
-  nameWithType: AccountHomeCat.Id
-- uid: Gw2Sharp.WebApi.V2.Models.AccountHomeCat.Id*
-  name: Id
-  href: api/Gw2Sharp.WebApi.V2.Models.AccountHomeCat.html#Gw2Sharp_WebApi_V2_Models_AccountHomeCat_Id_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Models.AccountHomeCat.Id
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Models.AccountHomeCat.Id
-  nameWithType: AccountHomeCat.Id
 - uid: Gw2Sharp.WebApi.V2.Models.AccountItem
   name: AccountItem
   href: api/Gw2Sharp.WebApi.V2.Models.AccountItem.html
@@ -12325,6 +12447,38 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.AchievementDaily.RequiredAccess
   nameWithType: AchievementDaily.RequiredAccess
+- uid: Gw2Sharp.WebApi.V2.Models.AchievementDailyAccess
+  name: AchievementDailyAccess
+  href: api/Gw2Sharp.WebApi.V2.Models.AchievementDailyAccess.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.AchievementDailyAccess
+  fullName: Gw2Sharp.WebApi.V2.Models.AchievementDailyAccess
+  nameWithType: AchievementDailyAccess
+- uid: Gw2Sharp.WebApi.V2.Models.AchievementDailyAccess.Condition
+  name: Condition
+  href: api/Gw2Sharp.WebApi.V2.Models.AchievementDailyAccess.html#Gw2Sharp_WebApi_V2_Models_AchievementDailyAccess_Condition
+  commentId: P:Gw2Sharp.WebApi.V2.Models.AchievementDailyAccess.Condition
+  fullName: Gw2Sharp.WebApi.V2.Models.AchievementDailyAccess.Condition
+  nameWithType: AchievementDailyAccess.Condition
+- uid: Gw2Sharp.WebApi.V2.Models.AchievementDailyAccess.Condition*
+  name: Condition
+  href: api/Gw2Sharp.WebApi.V2.Models.AchievementDailyAccess.html#Gw2Sharp_WebApi_V2_Models_AchievementDailyAccess_Condition_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.AchievementDailyAccess.Condition
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.AchievementDailyAccess.Condition
+  nameWithType: AchievementDailyAccess.Condition
+- uid: Gw2Sharp.WebApi.V2.Models.AchievementDailyAccess.Product
+  name: Product
+  href: api/Gw2Sharp.WebApi.V2.Models.AchievementDailyAccess.html#Gw2Sharp_WebApi_V2_Models_AchievementDailyAccess_Product
+  commentId: P:Gw2Sharp.WebApi.V2.Models.AchievementDailyAccess.Product
+  fullName: Gw2Sharp.WebApi.V2.Models.AchievementDailyAccess.Product
+  nameWithType: AchievementDailyAccess.Product
+- uid: Gw2Sharp.WebApi.V2.Models.AchievementDailyAccess.Product*
+  name: Product
+  href: api/Gw2Sharp.WebApi.V2.Models.AchievementDailyAccess.html#Gw2Sharp_WebApi_V2_Models_AchievementDailyAccess_Product_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.AchievementDailyAccess.Product
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.AchievementDailyAccess.Product
+  nameWithType: AchievementDailyAccess.Product
 - uid: Gw2Sharp.WebApi.V2.Models.AchievementDailyLevel
   name: AchievementDailyLevel
   href: api/Gw2Sharp.WebApi.V2.Models.AchievementDailyLevel.html
@@ -13524,6 +13678,12 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Models.ApiFlags(Of T).UnknownList
   nameWithType: ApiFlags<T>.UnknownList
   nameWithType.vb: ApiFlags(Of T).UnknownList
+- uid: Gw2Sharp.WebApi.V2.Models.ApiTokenInfo
+  name: ApiTokenInfo
+  href: api/Gw2Sharp.WebApi.V2.Models.ApiTokenInfo.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.ApiTokenInfo
+  fullName: Gw2Sharp.WebApi.V2.Models.ApiTokenInfo
+  nameWithType: ApiTokenInfo
 - uid: Gw2Sharp.WebApi.V2.Models.BackstoryAnswer
   name: BackstoryAnswer
   href: api/Gw2Sharp.WebApi.V2.Models.BackstoryAnswer.html
@@ -23689,6 +23849,51 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.Size.Width
   nameWithType: Size.Width
+- uid: Gw2Sharp.WebApi.V2.Models.SubTokenInfo
+  name: SubTokenInfo
+  href: api/Gw2Sharp.WebApi.V2.Models.SubTokenInfo.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.SubTokenInfo
+  fullName: Gw2Sharp.WebApi.V2.Models.SubTokenInfo
+  nameWithType: SubTokenInfo
+- uid: Gw2Sharp.WebApi.V2.Models.SubTokenInfo.ExpiresAt
+  name: ExpiresAt
+  href: api/Gw2Sharp.WebApi.V2.Models.SubTokenInfo.html#Gw2Sharp_WebApi_V2_Models_SubTokenInfo_ExpiresAt
+  commentId: P:Gw2Sharp.WebApi.V2.Models.SubTokenInfo.ExpiresAt
+  fullName: Gw2Sharp.WebApi.V2.Models.SubTokenInfo.ExpiresAt
+  nameWithType: SubTokenInfo.ExpiresAt
+- uid: Gw2Sharp.WebApi.V2.Models.SubTokenInfo.ExpiresAt*
+  name: ExpiresAt
+  href: api/Gw2Sharp.WebApi.V2.Models.SubTokenInfo.html#Gw2Sharp_WebApi_V2_Models_SubTokenInfo_ExpiresAt_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.SubTokenInfo.ExpiresAt
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.SubTokenInfo.ExpiresAt
+  nameWithType: SubTokenInfo.ExpiresAt
+- uid: Gw2Sharp.WebApi.V2.Models.SubTokenInfo.IssuedAt
+  name: IssuedAt
+  href: api/Gw2Sharp.WebApi.V2.Models.SubTokenInfo.html#Gw2Sharp_WebApi_V2_Models_SubTokenInfo_IssuedAt
+  commentId: P:Gw2Sharp.WebApi.V2.Models.SubTokenInfo.IssuedAt
+  fullName: Gw2Sharp.WebApi.V2.Models.SubTokenInfo.IssuedAt
+  nameWithType: SubTokenInfo.IssuedAt
+- uid: Gw2Sharp.WebApi.V2.Models.SubTokenInfo.IssuedAt*
+  name: IssuedAt
+  href: api/Gw2Sharp.WebApi.V2.Models.SubTokenInfo.html#Gw2Sharp_WebApi_V2_Models_SubTokenInfo_IssuedAt_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.SubTokenInfo.IssuedAt
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.SubTokenInfo.IssuedAt
+  nameWithType: SubTokenInfo.IssuedAt
+- uid: Gw2Sharp.WebApi.V2.Models.SubTokenInfo.Urls
+  name: Urls
+  href: api/Gw2Sharp.WebApi.V2.Models.SubTokenInfo.html#Gw2Sharp_WebApi_V2_Models_SubTokenInfo_Urls
+  commentId: P:Gw2Sharp.WebApi.V2.Models.SubTokenInfo.Urls
+  fullName: Gw2Sharp.WebApi.V2.Models.SubTokenInfo.Urls
+  nameWithType: SubTokenInfo.Urls
+- uid: Gw2Sharp.WebApi.V2.Models.SubTokenInfo.Urls*
+  name: Urls
+  href: api/Gw2Sharp.WebApi.V2.Models.SubTokenInfo.html#Gw2Sharp_WebApi_V2_Models_SubTokenInfo_Urls_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.SubTokenInfo.Urls
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.SubTokenInfo.Urls
+  nameWithType: SubTokenInfo.Urls
 - uid: Gw2Sharp.WebApi.V2.Models.TokenInfo
   name: TokenInfo
   href: api/Gw2Sharp.WebApi.V2.Models.TokenInfo.html
@@ -23734,6 +23939,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.TokenInfo.Permissions
   nameWithType: TokenInfo.Permissions
+- uid: Gw2Sharp.WebApi.V2.Models.TokenInfo.Type
+  name: Type
+  href: api/Gw2Sharp.WebApi.V2.Models.TokenInfo.html#Gw2Sharp_WebApi_V2_Models_TokenInfo_Type
+  commentId: P:Gw2Sharp.WebApi.V2.Models.TokenInfo.Type
+  fullName: Gw2Sharp.WebApi.V2.Models.TokenInfo.Type
+  nameWithType: TokenInfo.Type
+- uid: Gw2Sharp.WebApi.V2.Models.TokenInfo.Type*
+  name: Type
+  href: api/Gw2Sharp.WebApi.V2.Models.TokenInfo.html#Gw2Sharp_WebApi_V2_Models_TokenInfo_Type_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.TokenInfo.Type
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.TokenInfo.Type
+  nameWithType: TokenInfo.Type
 - uid: Gw2Sharp.WebApi.V2.Models.TokenPermission
   name: TokenPermission
   href: api/Gw2Sharp.WebApi.V2.Models.TokenPermission.html
@@ -23806,6 +24024,30 @@ references:
   commentId: F:Gw2Sharp.WebApi.V2.Models.TokenPermission.Wallet
   fullName: Gw2Sharp.WebApi.V2.Models.TokenPermission.Wallet
   nameWithType: TokenPermission.Wallet
+- uid: Gw2Sharp.WebApi.V2.Models.TokenType
+  name: TokenType
+  href: api/Gw2Sharp.WebApi.V2.Models.TokenType.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.TokenType
+  fullName: Gw2Sharp.WebApi.V2.Models.TokenType
+  nameWithType: TokenType
+- uid: Gw2Sharp.WebApi.V2.Models.TokenType.APIKey
+  name: APIKey
+  href: api/Gw2Sharp.WebApi.V2.Models.TokenType.html#Gw2Sharp_WebApi_V2_Models_TokenType_APIKey
+  commentId: F:Gw2Sharp.WebApi.V2.Models.TokenType.APIKey
+  fullName: Gw2Sharp.WebApi.V2.Models.TokenType.APIKey
+  nameWithType: TokenType.APIKey
+- uid: Gw2Sharp.WebApi.V2.Models.TokenType.Subtoken
+  name: Subtoken
+  href: api/Gw2Sharp.WebApi.V2.Models.TokenType.html#Gw2Sharp_WebApi_V2_Models_TokenType_Subtoken
+  commentId: F:Gw2Sharp.WebApi.V2.Models.TokenType.Subtoken
+  fullName: Gw2Sharp.WebApi.V2.Models.TokenType.Subtoken
+  nameWithType: TokenType.Subtoken
+- uid: Gw2Sharp.WebApi.V2.Models.TokenType.Unknown
+  name: Unknown
+  href: api/Gw2Sharp.WebApi.V2.Models.TokenType.html#Gw2Sharp_WebApi_V2_Models_TokenType_Unknown
+  commentId: F:Gw2Sharp.WebApi.V2.Models.TokenType.Unknown
+  fullName: Gw2Sharp.WebApi.V2.Models.TokenType.Unknown
+  nameWithType: TokenType.Unknown
 - uid: Gw2Sharp.WebApi.V2.Models.WeaponDamageType
   name: WeaponDamageType
   href: api/Gw2Sharp.WebApi.V2.Models.WeaponDamageType.html
