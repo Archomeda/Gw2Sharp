@@ -2,8 +2,11 @@ namespace Gw2Sharp.WebApi.V2.Models
 {
     /// <summary>
     /// Represents a token info.
+    /// The token info can be <see cref="ApiTokenInfo"/> or <see cref="SubTokenInfo"/>.
     /// </summary>
-    public class TokenInfo
+    [CastableType(TokenType.APIKey, typeof(ApiTokenInfo))]
+    [CastableType(TokenType.Subtoken, typeof(SubTokenInfo))]
+    public class TokenInfo : ICastableType<TokenInfo, TokenType>
     {
         /// <summary>
         /// The token id.
@@ -19,5 +22,10 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// The token permissions.
         /// </summary>
         public ApiFlags<TokenPermission> Permissions { get; set; } = new ApiFlags<TokenPermission>();
+
+        /// <summary>
+        /// The token type.
+        /// </summary>
+        public ApiEnum<TokenType> Type { get; set; } = new ApiEnum<TokenType>();
     }
 }

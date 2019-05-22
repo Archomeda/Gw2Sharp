@@ -12,5 +12,13 @@
     "account",
     "inventories",
     "unlocks"
+  ],
+  "type": "Subtoken",
+  "expires_at": "2019-06-20T20:26:35.000Z",
+  "issued_at": "2019-05-21T20:26:35.000Z",
+  "urls": [
+    "/v2/account",
+    "/v2/characters/Test%20Char/inventory",
+    "/v2/tokeninfo"
   ]
 }

@@ -1,7 +1,7 @@
 namespace Gw2Sharp.WebApi.V2.Models
 {
     /// <summary>
-    /// Represents the an armor item.
+    /// Represents an armor item.
     /// </summary>
     public class ItemArmor : Item
     {

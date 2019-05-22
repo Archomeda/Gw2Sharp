@@ -20,7 +20,8 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
         private readonly ITokenInfoClient client;
 
         [Theory]
-        [InlineData("TestFiles.TokenInfo.TokenInfo.json")]
+        [InlineData("TestFiles.TokenInfo.TokenInfo.ApiToken.json")]
+        [InlineData("TestFiles.TokenInfo.TokenInfo.SubToken.json")]
         public Task BlobTest(string file) => this.AssertBlobDataAsync(this.client, file);
     }
 }

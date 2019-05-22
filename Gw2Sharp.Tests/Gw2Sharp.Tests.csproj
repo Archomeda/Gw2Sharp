@@ -10,7 +10,8 @@
     <None Remove="TestFiles\Colors\Colors.bulk.json" />
     <None Remove="TestFiles\Colors\Colors.ids.json" />
     <None Remove="TestFiles\Colors\Colors.single.json" />
-    <None Remove="TestFiles\TokenInfo\TokenInfo.json" />
+    <None Remove="TestFiles\TokenInfo\TokenInfo.ApiToken.json" />
+    <None Remove="TestFiles\TokenInfo\TokenInfo.SubToken.json" />
   </ItemGroup>
 
   <ItemGroup>
@@ -151,7 +152,8 @@
     <EmbeddedResource Include="TestFiles\Itemstats\Itemstats.bulk.json" />
     <EmbeddedResource Include="TestFiles\Itemstats\Itemstats.ids.json" />
     <EmbeddedResource Include="TestFiles\Itemstats\Itemstats.single.json" />
-    <EmbeddedResource Include="TestFiles\TokenInfo\TokenInfo.json" />
+    <EmbeddedResource Include="TestFiles\TokenInfo\TokenInfo.ApiToken.json" />
+    <EmbeddedResource Include="TestFiles\TokenInfo\TokenInfo.SubToken.json" />
     <EmbeddedResource Include="TestFiles\Legends\Legends.bulk.json" />
     <EmbeddedResource Include="TestFiles\Legends\Legends.ids.json" />
     <EmbeddedResource Include="TestFiles\Legends\Legends.single.json" />
