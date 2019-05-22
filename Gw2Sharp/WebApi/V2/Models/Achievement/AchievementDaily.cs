@@ -17,8 +17,9 @@ namespace Gw2Sharp.WebApi.V2.Models
         public AchievementDailyLevel Level { get; set; } = new AchievementDailyLevel();
 
         /// <summary>
-        /// The daily achievement access requirement.
+        /// The daily achievement game access requirement.
+        /// If there are no game access requirements, this value is <c>null</c>.
         /// </summary>
-        public ApiFlags<GameAccess> RequiredAccess { get; set; } = new ApiFlags<GameAccess>();
+        public AchievementDailyAccess? RequiredAccess { get; set; }
     }
 }

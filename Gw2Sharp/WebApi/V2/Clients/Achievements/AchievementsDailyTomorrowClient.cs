@@ -7,6 +7,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 achievements daily tomorrow endpoint.
     /// </summary>
     [EndpointPath("achievements/daily/tomorrow")]
+    [EndpointSchemaVersion("2019-05-16T00:00:00.000Z")]
     public class AchievementsDailyTomorrowClient : BaseEndpointBlobClient<AchievementsDaily>, IAchievementsDailyTomorrowClient
     {
         /// <summary>

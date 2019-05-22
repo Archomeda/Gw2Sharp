@@ -6,11 +6,10 @@
         "min": 1,
         "max": 80
       },
-      "required_access": [
-        "GuildWars2",
-        "HeartOfThorns",
-        "PathOfFire"
-      ]
+      "required_access": {
+        "product": "PathOfFire",
+        "condition": "HasAccess"
+      }
     },
     {
       "id": 2983,
@@ -18,10 +17,10 @@
         "min": 80,
         "max": 80
       },
-      "required_access": [
-        "GuildWars2",
-        "HeartOfThorns"
-      ]
+      "required_access": {
+        "product": "PathOfFire",
+        "condition": "NoAccess"
+      }
     },
     {
       "id": 1839,
@@ -29,21 +28,13 @@
         "min": 80,
         "max": 80
       },
-      "required_access": [
-        "GuildWars2",
-        "PathOfFire"
-      ]
     },
     {
       "id": 1839,
       "level": {
         "min": 11,
         "max": 79
-      },
-      "required_access": [
-        "GuildWars2",
-        "PathOfFire"
-      ]
+      }
     }
   ],
   "pvp": [
