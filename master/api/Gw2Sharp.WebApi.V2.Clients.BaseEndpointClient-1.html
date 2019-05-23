@@ -213,7 +213,13 @@
                         
                         <ul class="nav level2">
                           <li class="">
-                            <a href="Gw2Sharp.WebApi.V2.ApiV2Response-1.html" title="ApiV2Response&lt;T&gt;" class="">ApiV2Response&lt;T&gt;</a>
+                            <a href="Gw2Sharp.WebApi.V2.ApiV2BaseObject.html" title="ApiV2BaseObject" class="">ApiV2BaseObject</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.ApiV2BaseObjectList-1.html" title="ApiV2BaseObjectList&lt;T&gt;" class="">ApiV2BaseObjectList&lt;T&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.html" title="ApiV2HttpResponseInfo" class="">ApiV2HttpResponseInfo</a>
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.WebApi.V2.ExtensionImplementation.html" title="ExtensionImplementation" class="">ExtensionImplementation</a>
@@ -222,7 +228,10 @@
                             <a href="Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html" title="Gw2WebApiV2Client" class="">Gw2WebApiV2Client</a>
                           </li>
                           <li class="">
-                            <a href="Gw2Sharp.WebApi.V2.IApiV2Response-1.html" title="IApiV2Response&lt;T&gt;" class="">IApiV2Response&lt;T&gt;</a>
+                            <a href="Gw2Sharp.WebApi.V2.IApiV2Object.html" title="IApiV2Object" class="">IApiV2Object</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.IApiV2ObjectList-1.html" title="IApiV2ObjectList&lt;T&gt;" class="">IApiV2ObjectList&lt;T&gt;</a>
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html" title="IGw2WebApiV2Client" class="">IGw2WebApiV2Client</a>
@@ -1626,6 +1635,12 @@
                             <a href="Gw2Sharp.WebApi.V2.Models.Converters.ApiFlagsConverter.html" title="ApiFlagsConverter" class="">ApiFlagsConverter</a>
                           </li>
                           <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectConverter.html" title="ApiObjectConverter" class="">ApiObjectConverter</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectListConverter.html" title="ApiObjectListConverter" class="">ApiObjectListConverter</a>
+                          </li>
+                          <li class="">
                             <a href="Gw2Sharp.WebApi.V2.Models.Converters.BottomUpRectangleConverter.html" title="BottomUpRectangleConverter" class="">BottomUpRectangleConverter</a>
                           </li>
                           <li class="">
@@ -1691,7 +1706,7 @@
   <h6><strong>Assembly</strong>: Gw2Sharp.dll</h6>
   <h5 id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class BaseEndpointClient&lt;TObject&gt; : BaseClient, IEndpointClient, IClient</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class BaseEndpointClient&lt;TObject&gt; : BaseClient, IEndpointClient, IClient where TObject : IApiV2Object</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2387,14 +2402,15 @@ The implementer is responsible for getting the parameters from the current this 
   
   
   <a id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_GetOrUpdateAsync_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.GetOrUpdateAsync*"></a>
-  <h4 id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_GetOrUpdateAsync__1_System_String_System_Object_CancellationToken_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.GetOrUpdateAsync``1(System.String,System.Object,CancellationToken)">GetOrUpdateAsync&lt;TIdentifiableObject&gt;(String, Object, CancellationToken)</h4>
+  <h4 id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_GetOrUpdateAsync__1_System_String_System_Object_CancellationToken_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.GetOrUpdateAsync``1(System.String,System.Object,CancellationToken)">GetOrUpdateAsync&lt;TEndpointObject&gt;(String, Object, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>A helper function that makes an API request for items that do not exist in the cache.
 Non-expired items in the cache are skipped for requests and are taken from the cache instead.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Task&lt;(ApiV2Response&lt;TIdentifiableObject&gt;, CacheItem&lt;TIdentifiableObject&gt;)&gt; GetOrUpdateAsync&lt;TIdentifiableObject&gt;(string url, object cacheId, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">protected Task&lt;CacheItem&lt;TEndpointObject&gt;&gt; GetOrUpdateAsync&lt;TEndpointObject&gt;(string url, object cacheId, CancellationToken cancellationToken)
+    where TEndpointObject : IApiV2Object</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2436,8 +2452,8 @@ Non-expired items in the cache are skipped for requests and are taken from the c
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">System.ValueTuple</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.ApiV2Response-1.html">ApiV2Response</a>&lt;TIdentifiableObject&gt;, <a class="xref" href="Gw2Sharp.WebApi.Caching.CacheItem-1.html">CacheItem</a>&lt;TIdentifiableObject&gt;&gt;&gt;</td>
-        <td><p>A two-tuple that contains the <a class="xref" href="Gw2Sharp.WebApi.Http.IHttpResponse-1.html">IHttpResponse&lt;T&gt;</a> and <a class="xref" href="Gw2Sharp.WebApi.Caching.CacheItem-1.html">CacheItem&lt;T&gt;</a> items.</p>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.Caching.CacheItem-1.html">CacheItem</a>&lt;TEndpointObject&gt;&gt;</td>
+        <td><p>The previously cached response, or a newly requested response that&apos;s been cached.</p>
 </td>
       </tr>
     </tbody>
@@ -2452,7 +2468,7 @@ Non-expired items in the cache are skipped for requests and are taken from the c
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">TIdentifiableObject</span></td>
+        <td><span class="parametername">TEndpointObject</span></td>
         <td><p>The endpoint return value type.</p>
 </td>
       </tr>
@@ -2461,14 +2477,14 @@ Non-expired items in the cache are skipped for requests and are taken from the c
   
   
   <a id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestAllAsync_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestAllAsync*"></a>
-  <h4 id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestAllAsync__2" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestAllAsync``2">RequestAllAsync&lt;TIdentifiableObject, TId&gt;()</h4>
+  <h4 id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestAllAsync__2" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestAllAsync``2">RequestAllAsync&lt;TEndpointObject, TId&gt;()</h4>
   <div class="markdown level1 summary"><p>Requests all entries from this endpoint.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Task&lt;IReadOnlyList&lt;TIdentifiableObject&gt;&gt; RequestAllAsync&lt;TIdentifiableObject, TId&gt;()
-    where TIdentifiableObject : IIdentifiable&lt;TId&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">protected Task&lt;IApiV2ObjectList&lt;TEndpointObject&gt;&gt; RequestAllAsync&lt;TEndpointObject, TId&gt;()
+    where TEndpointObject : IApiV2Object, IIdentifiable&lt;TId&gt;</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2480,7 +2496,7 @@ Non-expired items in the cache are skipped for requests and are taken from the c
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">IReadOnlyList</span>&lt;TIdentifiableObject&gt;&gt;</td>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.IApiV2ObjectList-1.html">IApiV2ObjectList</a>&lt;TEndpointObject&gt;&gt;</td>
         <td><p>All entries.</p>
 </td>
       </tr>
@@ -2496,7 +2512,7 @@ Non-expired items in the cache are skipped for requests and are taken from the c
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">TIdentifiableObject</span></td>
+        <td><span class="parametername">TEndpointObject</span></td>
         <td><p>The endpoint return value type.</p>
 </td>
       </tr>
@@ -2510,14 +2526,14 @@ Non-expired items in the cache are skipped for requests and are taken from the c
   
   
   <a id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestAllAsync_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestAllAsync*"></a>
-  <h4 id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestAllAsync__2_CancellationToken_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestAllAsync``2(CancellationToken)">RequestAllAsync&lt;TIdentifiableObject, TId&gt;(CancellationToken)</h4>
+  <h4 id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestAllAsync__2_CancellationToken_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestAllAsync``2(CancellationToken)">RequestAllAsync&lt;TEndpointObject, TId&gt;(CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Requests all entries from this endpoint.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Task&lt;IReadOnlyList&lt;TIdentifiableObject&gt;&gt; RequestAllAsync&lt;TIdentifiableObject, TId&gt;(CancellationToken cancellationToken)
-    where TIdentifiableObject : IIdentifiable&lt;TId&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">protected Task&lt;IApiV2ObjectList&lt;TEndpointObject&gt;&gt; RequestAllAsync&lt;TEndpointObject, TId&gt;(CancellationToken cancellationToken)
+    where TEndpointObject : IApiV2Object, IIdentifiable&lt;TId&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2547,7 +2563,7 @@ Non-expired items in the cache are skipped for requests and are taken from the c
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">IReadOnlyList</span>&lt;TIdentifiableObject&gt;&gt;</td>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.IApiV2ObjectList-1.html">IApiV2ObjectList</a>&lt;TEndpointObject&gt;&gt;</td>
         <td><p>All entries.</p>
 </td>
       </tr>
@@ -2563,74 +2579,7 @@ Non-expired items in the cache are skipped for requests and are taken from the c
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">TIdentifiableObject</span></td>
-        <td><p>The endpoint return value type.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="parametername">TId</span></td>
-        <td><p>The entry id type.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestAllWithResponseAsync_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestAllWithResponseAsync*"></a>
-  <h4 id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestAllWithResponseAsync__2_CancellationToken_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestAllWithResponseAsync``2(CancellationToken)">RequestAllWithResponseAsync&lt;TIdentifiableObject, TId&gt;(CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Requests all entries from this endpoint with the detailed response info.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Task&lt;IApiV2Response&lt;IReadOnlyList&lt;TIdentifiableObject&gt;&gt;&gt; RequestAllWithResponseAsync&lt;TIdentifiableObject, TId&gt;(CancellationToken cancellationToken)
-    where TIdentifiableObject : IIdentifiable&lt;TId&gt;</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">CancellationToken</span></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td><p>The cancellation token.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.IApiV2Response-1.html">IApiV2Response</a>&lt;<span class="xref">IReadOnlyList</span>&lt;TIdentifiableObject&gt;&gt;&gt;</td>
-        <td><p>All entries.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TIdentifiableObject</span></td>
+        <td><span class="parametername">TEndpointObject</span></td>
         <td><p>The endpoint return value type.</p>
 </td>
       </tr>
@@ -2716,14 +2665,14 @@ Non-expired items in the cache are skipped for requests and are taken from the c
   
   
   <a id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestGetAsync_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestGetAsync*"></a>
-  <h4 id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestGetAsync__2___1_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestGetAsync``2(``1)">RequestGetAsync&lt;TIdentifiableObject, TId&gt;(TId)</h4>
+  <h4 id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestGetAsync__2___1_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestGetAsync``2(``1)">RequestGetAsync&lt;TEndpointObject, TId&gt;(TId)</h4>
   <div class="markdown level1 summary"><p>Requests a single entry by id.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Task&lt;TIdentifiableObject&gt; RequestGetAsync&lt;TIdentifiableObject, TId&gt;(TId id)
-    where TIdentifiableObject : IIdentifiable&lt;TId&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">protected Task&lt;TEndpointObject&gt; RequestGetAsync&lt;TEndpointObject, TId&gt;(TId id)
+    where TEndpointObject : IApiV2Object, IIdentifiable&lt;TId&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2753,7 +2702,7 @@ Non-expired items in the cache are skipped for requests and are taken from the c
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;TIdentifiableObject&gt;</td>
+        <td><span class="xref">Task</span>&lt;TEndpointObject&gt;</td>
         <td><p>The entry.</p>
 </td>
       </tr>
@@ -2769,7 +2718,7 @@ Non-expired items in the cache are skipped for requests and are taken from the c
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">TIdentifiableObject</span></td>
+        <td><span class="parametername">TEndpointObject</span></td>
         <td><p>The endpoint return value type.</p>
 </td>
       </tr>
@@ -2783,14 +2732,14 @@ Non-expired items in the cache are skipped for requests and are taken from the c
   
   
   <a id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestGetAsync_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestGetAsync*"></a>
-  <h4 id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestGetAsync__2___1_CancellationToken_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestGetAsync``2(``1,CancellationToken)">RequestGetAsync&lt;TIdentifiableObject, TId&gt;(TId, CancellationToken)</h4>
+  <h4 id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestGetAsync__2___1_CancellationToken_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestGetAsync``2(``1,CancellationToken)">RequestGetAsync&lt;TEndpointObject, TId&gt;(TId, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Requests a single entry by id.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Task&lt;TIdentifiableObject&gt; RequestGetAsync&lt;TIdentifiableObject, TId&gt;(TId id, CancellationToken cancellationToken)
-    where TIdentifiableObject : IIdentifiable&lt;TId&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">protected Task&lt;TEndpointObject&gt; RequestGetAsync&lt;TEndpointObject, TId&gt;(TId id, CancellationToken cancellationToken)
+    where TEndpointObject : IApiV2Object, IIdentifiable&lt;TId&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2826,7 +2775,7 @@ Non-expired items in the cache are skipped for requests and are taken from the c
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;TIdentifiableObject&gt;</td>
+        <td><span class="xref">Task</span>&lt;TEndpointObject&gt;</td>
         <td><p>The entry.</p>
 </td>
       </tr>
@@ -2842,125 +2791,7 @@ Non-expired items in the cache are skipped for requests and are taken from the c
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">TIdentifiableObject</span></td>
-        <td><p>The endpoint return value type.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="parametername">TId</span></td>
-        <td><p>The id value type.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestGetWithResponseAsync_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestGetWithResponseAsync*"></a>
-  <h4 id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestGetWithResponseAsync_CancellationToken_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestGetWithResponseAsync(CancellationToken)">RequestGetWithResponseAsync(CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Requests the main blob data from this endpoint with the detailed response info.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Task&lt;IApiV2Response&lt;TObject&gt;&gt; RequestGetWithResponseAsync(CancellationToken cancellationToken)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">CancellationToken</span></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td><p>The cancellation token.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.IApiV2Response-1.html">IApiV2Response</a>&lt;TObject&gt;&gt;</td>
-        <td><p>The blob data.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestGetWithResponseAsync_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestGetWithResponseAsync*"></a>
-  <h4 id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestGetWithResponseAsync__2___1_CancellationToken_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestGetWithResponseAsync``2(``1,CancellationToken)">RequestGetWithResponseAsync&lt;TIdentifiableObject, TId&gt;(TId, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Requests a single entry by id with the detailed response info.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Task&lt;IApiV2Response&lt;TIdentifiableObject&gt;&gt; RequestGetWithResponseAsync&lt;TIdentifiableObject, TId&gt;(TId id, CancellationToken cancellationToken)
-    where TIdentifiableObject : IIdentifiable&lt;TId&gt;</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">TId</span></td>
-        <td><span class="parametername">id</span></td>
-        <td><p>The entry id.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">CancellationToken</span></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td><p>The cancellation token.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.IApiV2Response-1.html">IApiV2Response</a>&lt;TIdentifiableObject&gt;&gt;</td>
-        <td><p>The entry.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TIdentifiableObject</span></td>
+        <td><span class="parametername">TEndpointObject</span></td>
         <td><p>The endpoint return value type.</p>
 </td>
       </tr>
@@ -2980,7 +2811,7 @@ Non-expired items in the cache are skipped for requests and are taken from the c
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Task&lt;IReadOnlyList&lt;TId&gt;&gt; RequestIdsAsync&lt;TId&gt;()</code></pre>
+    <pre><code class="lang-csharp hljs">protected Task&lt;IApiV2ObjectList&lt;TId&gt;&gt; RequestIdsAsync&lt;TId&gt;()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2992,7 +2823,7 @@ Non-expired items in the cache are skipped for requests and are taken from the c
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">IReadOnlyList</span>&lt;TId&gt;&gt;</td>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.IApiV2ObjectList-1.html">IApiV2ObjectList</a>&lt;TId&gt;&gt;</td>
         <td><p>Entry ids.</p>
 </td>
       </tr>
@@ -3023,7 +2854,7 @@ Non-expired items in the cache are skipped for requests and are taken from the c
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Task&lt;IReadOnlyList&lt;TId&gt;&gt; RequestIdsAsync&lt;TId&gt;(CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">protected Task&lt;IApiV2ObjectList&lt;TId&gt;&gt; RequestIdsAsync&lt;TId&gt;(CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3053,68 +2884,7 @@ Non-expired items in the cache are skipped for requests and are taken from the c
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">IReadOnlyList</span>&lt;TId&gt;&gt;</td>
-        <td><p>Entry ids.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TId</span></td>
-        <td><p>The entry id type.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestIdsWithResponseAsync_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestIdsWithResponseAsync*"></a>
-  <h4 id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestIdsWithResponseAsync__1_CancellationToken_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestIdsWithResponseAsync``1(CancellationToken)">RequestIdsWithResponseAsync&lt;TId&gt;(CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Requests the list of entry ids from this endpoint with the detailed response info.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Task&lt;IApiV2Response&lt;IReadOnlyList&lt;TId&gt;&gt;&gt; RequestIdsWithResponseAsync&lt;TId&gt;(CancellationToken cancellationToken)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">CancellationToken</span></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td><p>The cancellation token.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.IApiV2Response-1.html">IApiV2Response</a>&lt;<span class="xref">IReadOnlyList</span>&lt;TId&gt;&gt;&gt;</td>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.IApiV2ObjectList-1.html">IApiV2ObjectList</a>&lt;TId&gt;&gt;</td>
         <td><p>Entry ids.</p>
 </td>
       </tr>
@@ -3139,14 +2909,14 @@ Non-expired items in the cache are skipped for requests and are taken from the c
   
   
   <a id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestManyAsync_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestManyAsync*"></a>
-  <h4 id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestManyAsync__2_IEnumerable___1__" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestManyAsync``2(IEnumerable{``1})">RequestManyAsync&lt;TIdentifiableObject, TId&gt;(IEnumerable&lt;TId&gt;)</h4>
+  <h4 id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestManyAsync__2_IEnumerable___1__" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestManyAsync``2(IEnumerable{``1})">RequestManyAsync&lt;TEndpointObject, TId&gt;(IEnumerable&lt;TId&gt;)</h4>
   <div class="markdown level1 summary"><p>Requests many entries by their id (a.k.a. bulk expansion).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Task&lt;IReadOnlyList&lt;TIdentifiableObject&gt;&gt; RequestManyAsync&lt;TIdentifiableObject, TId&gt;(IEnumerable&lt;TId&gt; ids)
-    where TIdentifiableObject : IIdentifiable&lt;TId&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">protected Task&lt;IReadOnlyList&lt;TEndpointObject&gt;&gt; RequestManyAsync&lt;TEndpointObject, TId&gt;(IEnumerable&lt;TId&gt; ids)
+    where TEndpointObject : IApiV2Object, IIdentifiable&lt;TId&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3176,7 +2946,7 @@ Non-expired items in the cache are skipped for requests and are taken from the c
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">IReadOnlyList</span>&lt;TIdentifiableObject&gt;&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">IReadOnlyList</span>&lt;TEndpointObject&gt;&gt;</td>
         <td><p>The entries.</p>
 </td>
       </tr>
@@ -3192,7 +2962,7 @@ Non-expired items in the cache are skipped for requests and are taken from the c
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">TIdentifiableObject</span></td>
+        <td><span class="parametername">TEndpointObject</span></td>
         <td><p>The endpoint return value type.</p>
 </td>
       </tr>
@@ -3206,14 +2976,14 @@ Non-expired items in the cache are skipped for requests and are taken from the c
   
   
   <a id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestManyAsync_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestManyAsync*"></a>
-  <h4 id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestManyAsync__2_IEnumerable___1__CancellationToken_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestManyAsync``2(IEnumerable{``1},CancellationToken)">RequestManyAsync&lt;TIdentifiableObject, TId&gt;(IEnumerable&lt;TId&gt;, CancellationToken)</h4>
+  <h4 id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestManyAsync__2_IEnumerable___1__CancellationToken_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestManyAsync``2(IEnumerable{``1},CancellationToken)">RequestManyAsync&lt;TEndpointObject, TId&gt;(IEnumerable&lt;TId&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Requests many entries by their id (a.k.a. bulk expansion).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Task&lt;IReadOnlyList&lt;TIdentifiableObject&gt;&gt; RequestManyAsync&lt;TIdentifiableObject, TId&gt;(IEnumerable&lt;TId&gt; ids, CancellationToken cancellationToken)
-    where TIdentifiableObject : IIdentifiable&lt;TId&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">protected Task&lt;IReadOnlyList&lt;TEndpointObject&gt;&gt; RequestManyAsync&lt;TEndpointObject, TId&gt;(IEnumerable&lt;TId&gt; ids, CancellationToken cancellationToken)
+    where TEndpointObject : IApiV2Object, IIdentifiable&lt;TId&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3249,7 +3019,7 @@ Non-expired items in the cache are skipped for requests and are taken from the c
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">IReadOnlyList</span>&lt;TIdentifiableObject&gt;&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">IReadOnlyList</span>&lt;TEndpointObject&gt;&gt;</td>
         <td><p>The entries.</p>
 </td>
       </tr>
@@ -3265,80 +3035,7 @@ Non-expired items in the cache are skipped for requests and are taken from the c
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">TIdentifiableObject</span></td>
-        <td><p>The endpoint return value type.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="parametername">TId</span></td>
-        <td><p>The id value type.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestManyWithResponseAsync_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestManyWithResponseAsync*"></a>
-  <h4 id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestManyWithResponseAsync__2_IEnumerable___1__CancellationToken_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestManyWithResponseAsync``2(IEnumerable{``1},CancellationToken)">RequestManyWithResponseAsync&lt;TIdentifiableObject, TId&gt;(IEnumerable&lt;TId&gt;, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Requests many entries by their id (a.k.a. bulk expansion).</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Task&lt;IReadOnlyList&lt;IApiV2Response&lt;IReadOnlyList&lt;TIdentifiableObject&gt;&gt;&gt;&gt; RequestManyWithResponseAsync&lt;TIdentifiableObject, TId&gt;(IEnumerable&lt;TId&gt; ids, CancellationToken cancellationToken)
-    where TIdentifiableObject : IIdentifiable&lt;TId&gt;</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">IEnumerable</span>&lt;TId&gt;</td>
-        <td><span class="parametername">ids</span></td>
-        <td><p>The entry ids.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">CancellationToken</span></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td><p>The cancellation token.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">IReadOnlyList</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.IApiV2Response-1.html">IApiV2Response</a>&lt;<span class="xref">IReadOnlyList</span>&lt;TIdentifiableObject&gt;&gt;&gt;&gt;</td>
-        <td><p>The entries.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TIdentifiableObject</span></td>
+        <td><span class="parametername">TEndpointObject</span></td>
         <td><p>The endpoint return value type.</p>
 </td>
       </tr>
@@ -3460,14 +3157,14 @@ Non-expired items in the cache are skipped for requests and are taken from the c
   
   
   <a id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestPageAsync_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestPageAsync*"></a>
-  <h4 id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestPageAsync__2_System_Int32_CancellationToken_System_Int32_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestPageAsync``2(System.Int32,CancellationToken,System.Int32)">RequestPageAsync&lt;TIdentifiableObject, TId&gt;(Int32, CancellationToken, Int32)</h4>
+  <h4 id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestPageAsync__2_System_Int32_CancellationToken_System_Int32_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestPageAsync``2(System.Int32,CancellationToken,System.Int32)">RequestPageAsync&lt;TEndpointObject, TId&gt;(Int32, CancellationToken, Int32)</h4>
   <div class="markdown level1 summary"><p>Requests a page of entries with a specific page size.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Task&lt;IReadOnlyList&lt;TIdentifiableObject&gt;&gt; RequestPageAsync&lt;TIdentifiableObject, TId&gt;(int page, CancellationToken cancellationToken, int pageSize = null)
-    where TIdentifiableObject : IIdentifiable&lt;TId&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">protected Task&lt;IApiV2ObjectList&lt;TEndpointObject&gt;&gt; RequestPageAsync&lt;TEndpointObject, TId&gt;(int page, CancellationToken cancellationToken, int pageSize = null)
+    where TEndpointObject : IApiV2Object, IIdentifiable&lt;TId&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3509,7 +3206,7 @@ Non-expired items in the cache are skipped for requests and are taken from the c
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">IReadOnlyList</span>&lt;TIdentifiableObject&gt;&gt;</td>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.IApiV2ObjectList-1.html">IApiV2ObjectList</a>&lt;TEndpointObject&gt;&gt;</td>
         <td><p>The entries.</p>
 </td>
       </tr>
@@ -3525,7 +3222,7 @@ Non-expired items in the cache are skipped for requests and are taken from the c
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">TIdentifiableObject</span></td>
+        <td><span class="parametername">TEndpointObject</span></td>
         <td><p>The endpoint return value type.</p>
 </td>
       </tr>
@@ -3539,14 +3236,14 @@ Non-expired items in the cache are skipped for requests and are taken from the c
   
   
   <a id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestPageAsync_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestPageAsync*"></a>
-  <h4 id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestPageAsync__2_System_Int32_System_Int32_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestPageAsync``2(System.Int32,System.Int32)">RequestPageAsync&lt;TIdentifiableObject, TId&gt;(Int32, Int32)</h4>
+  <h4 id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestPageAsync__2_System_Int32_System_Int32_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestPageAsync``2(System.Int32,System.Int32)">RequestPageAsync&lt;TEndpointObject, TId&gt;(Int32, Int32)</h4>
   <div class="markdown level1 summary"><p>Requests a page of entries with a specific page size.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Task&lt;IReadOnlyList&lt;TIdentifiableObject&gt;&gt; RequestPageAsync&lt;TIdentifiableObject, TId&gt;(int page, int pageSize = null)
-    where TIdentifiableObject : IIdentifiable&lt;TId&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">protected Task&lt;IApiV2ObjectList&lt;TEndpointObject&gt;&gt; RequestPageAsync&lt;TEndpointObject, TId&gt;(int page, int pageSize = null)
+    where TEndpointObject : IApiV2Object, IIdentifiable&lt;TId&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3582,7 +3279,7 @@ Non-expired items in the cache are skipped for requests and are taken from the c
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">IReadOnlyList</span>&lt;TIdentifiableObject&gt;&gt;</td>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.IApiV2ObjectList-1.html">IApiV2ObjectList</a>&lt;TEndpointObject&gt;&gt;</td>
         <td><p>The entries.</p>
 </td>
       </tr>
@@ -3598,143 +3295,7 @@ Non-expired items in the cache are skipped for requests and are taken from the c
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">TIdentifiableObject</span></td>
-        <td><p>The endpoint return value type.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="parametername">TId</span></td>
-        <td><p>The id value type.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestPageWithResponseAsync_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestPageWithResponseAsync*"></a>
-  <h4 id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestPageWithResponseAsync_System_Int32_CancellationToken_System_Int32_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestPageWithResponseAsync(System.Int32,CancellationToken,System.Int32)">RequestPageWithResponseAsync(Int32, CancellationToken, Int32)</h4>
-  <div class="markdown level1 summary"><p>Requests a page of blob data with a specific page size.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Task&lt;IApiV2Response&lt;TObject&gt;&gt; RequestPageWithResponseAsync(int page, CancellationToken cancellationToken, int pageSize = null)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">page</span></td>
-        <td><p>The page number (zero-indexed).</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">CancellationToken</span></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td><p>The cancellation token.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">pageSize</span></td>
-        <td><p>The page size (maximum 200).</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.IApiV2Response-1.html">IApiV2Response</a>&lt;TObject&gt;&gt;</td>
-        <td><p>The entries.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestPageWithResponseAsync_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestPageWithResponseAsync*"></a>
-  <h4 id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestPageWithResponseAsync__2_System_Int32_CancellationToken_System_Int32_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestPageWithResponseAsync``2(System.Int32,CancellationToken,System.Int32)">RequestPageWithResponseAsync&lt;TIdentifiableObject, TId&gt;(Int32, CancellationToken, Int32)</h4>
-  <div class="markdown level1 summary"><p>Requests a page of entries with a specific page size.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Task&lt;IApiV2Response&lt;IReadOnlyList&lt;TIdentifiableObject&gt;&gt;&gt; RequestPageWithResponseAsync&lt;TIdentifiableObject, TId&gt;(int page, CancellationToken cancellationToken, int pageSize = null)
-    where TIdentifiableObject : IIdentifiable&lt;TId&gt;</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">page</span></td>
-        <td><p>The page number (zero-indexed).</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">CancellationToken</span></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td><p>The cancellation token.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">pageSize</span></td>
-        <td><p>The page size (maximum 200).</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.IApiV2Response-1.html">IApiV2Response</a>&lt;<span class="xref">IReadOnlyList</span>&lt;TIdentifiableObject&gt;&gt;&gt;</td>
-        <td><p>The entries.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TIdentifiableObject</span></td>
+        <td><span class="parametername">TEndpointObject</span></td>
         <td><p>The endpoint return value type.</p>
 </td>
       </tr>
@@ -3748,14 +3309,14 @@ Non-expired items in the cache are skipped for requests and are taken from the c
   
   
   <a id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_UpdateIndividualsAsync_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.UpdateIndividualsAsync*"></a>
-  <h4 id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_UpdateIndividualsAsync__2_Gw2Sharp_WebApi_Caching_CacheItem_IReadOnlyList___0___" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.UpdateIndividualsAsync``2(Gw2Sharp.WebApi.Caching.CacheItem{IReadOnlyList{``0}})">UpdateIndividualsAsync&lt;TIdentifiableObject, TId&gt;(CacheItem&lt;IReadOnlyList&lt;TIdentifiableObject&gt;&gt;)</h4>
+  <h4 id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_UpdateIndividualsAsync__2_Gw2Sharp_WebApi_Caching_CacheItem_Gw2Sharp_WebApi_V2_IApiV2ObjectList___0___" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.UpdateIndividualsAsync``2(Gw2Sharp.WebApi.Caching.CacheItem{Gw2Sharp.WebApi.V2.IApiV2ObjectList{``0}})">UpdateIndividualsAsync&lt;TEndpointObject, TId&gt;(CacheItem&lt;IApiV2ObjectList&lt;TEndpointObject&gt;&gt;)</h4>
   <div class="markdown level1 summary"><p>Helper function to update individual cache items from a many API request.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Task&lt;IReadOnlyList&lt;CacheItem&lt;TIdentifiableObject&gt;&gt;&gt; UpdateIndividualsAsync&lt;TIdentifiableObject, TId&gt;(CacheItem&lt;IReadOnlyList&lt;TIdentifiableObject&gt;&gt; cache)
-    where TIdentifiableObject : IIdentifiable&lt;TId&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">protected Task&lt;IReadOnlyList&lt;CacheItem&lt;TEndpointObject&gt;&gt;&gt; UpdateIndividualsAsync&lt;TEndpointObject, TId&gt;(CacheItem&lt;IApiV2ObjectList&lt;TEndpointObject&gt;&gt; cache)
+    where TEndpointObject : IApiV2Object, IIdentifiable&lt;TId&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3768,7 +3329,7 @@ Non-expired items in the cache are skipped for requests and are taken from the c
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Gw2Sharp.WebApi.Caching.CacheItem-1.html">CacheItem</a>&lt;<span class="xref">IReadOnlyList</span>&lt;TIdentifiableObject&gt;&gt;</td>
+        <td><a class="xref" href="Gw2Sharp.WebApi.Caching.CacheItem-1.html">CacheItem</a>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.IApiV2ObjectList-1.html">IApiV2ObjectList</a>&lt;TEndpointObject&gt;&gt;</td>
         <td><span class="parametername">cache</span></td>
         <td><p>The cache.</p>
 </td>
@@ -3785,7 +3346,7 @@ Non-expired items in the cache are skipped for requests and are taken from the c
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">IReadOnlyList</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.Caching.CacheItem-1.html">CacheItem</a>&lt;TIdentifiableObject&gt;&gt;&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">IReadOnlyList</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.Caching.CacheItem-1.html">CacheItem</a>&lt;TEndpointObject&gt;&gt;&gt;</td>
         <td><p>The list of cached items.</p>
 </td>
       </tr>
@@ -3801,7 +3362,7 @@ Non-expired items in the cache are skipped for requests and are taken from the c
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">TIdentifiableObject</span></td>
+        <td><span class="parametername">TEndpointObject</span></td>
         <td><p>The endpoint return value type.</p>
 </td>
       </tr>

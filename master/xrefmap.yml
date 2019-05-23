@@ -2063,213 +2063,242 @@ references:
   commentId: N:Gw2Sharp.WebApi.V2
   fullName: Gw2Sharp.WebApi.V2
   nameWithType: Gw2Sharp.WebApi.V2
-- uid: Gw2Sharp.WebApi.V2.ApiV2Response`1
-  name: ApiV2Response<T>
-  href: api/Gw2Sharp.WebApi.V2.ApiV2Response-1.html
-  commentId: T:Gw2Sharp.WebApi.V2.ApiV2Response`1
-  name.vb: ApiV2Response(Of T)
-  fullName: Gw2Sharp.WebApi.V2.ApiV2Response<T>
-  fullName.vb: Gw2Sharp.WebApi.V2.ApiV2Response(Of T)
-  nameWithType: ApiV2Response<T>
-  nameWithType.vb: ApiV2Response(Of T)
-- uid: Gw2Sharp.WebApi.V2.ApiV2Response`1.#ctor(`0)
-  name: ApiV2Response(T)
-  href: api/Gw2Sharp.WebApi.V2.ApiV2Response-1.html#Gw2Sharp_WebApi_V2_ApiV2Response_1__ctor__0_
-  commentId: M:Gw2Sharp.WebApi.V2.ApiV2Response`1.#ctor(`0)
-  fullName: Gw2Sharp.WebApi.V2.ApiV2Response<T>.ApiV2Response(T)
-  fullName.vb: Gw2Sharp.WebApi.V2.ApiV2Response(Of T).ApiV2Response(T)
-  nameWithType: ApiV2Response<T>.ApiV2Response(T)
-  nameWithType.vb: ApiV2Response(Of T).ApiV2Response(T)
-- uid: Gw2Sharp.WebApi.V2.ApiV2Response`1.#ctor(Gw2Sharp.WebApi.Http.IHttpResponse{`0})
-  name: ApiV2Response(IHttpResponse<T>)
-  href: api/Gw2Sharp.WebApi.V2.ApiV2Response-1.html#Gw2Sharp_WebApi_V2_ApiV2Response_1__ctor_Gw2Sharp_WebApi_Http_IHttpResponse__0__
-  commentId: M:Gw2Sharp.WebApi.V2.ApiV2Response`1.#ctor(Gw2Sharp.WebApi.Http.IHttpResponse{`0})
-  name.vb: ApiV2Response(IHttpResponse(Of T))
-  fullName: Gw2Sharp.WebApi.V2.ApiV2Response<T>.ApiV2Response(Gw2Sharp.WebApi.Http.IHttpResponse<T>)
-  fullName.vb: Gw2Sharp.WebApi.V2.ApiV2Response(Of T).ApiV2Response(Gw2Sharp.WebApi.Http.IHttpResponse(Of T))
-  nameWithType: ApiV2Response<T>.ApiV2Response(IHttpResponse<T>)
-  nameWithType.vb: ApiV2Response(Of T).ApiV2Response(IHttpResponse(Of T))
-- uid: Gw2Sharp.WebApi.V2.ApiV2Response`1.#ctor*
-  name: ApiV2Response
-  href: api/Gw2Sharp.WebApi.V2.ApiV2Response-1.html#Gw2Sharp_WebApi_V2_ApiV2Response_1__ctor_
-  commentId: Overload:Gw2Sharp.WebApi.V2.ApiV2Response`1.#ctor
+- uid: Gw2Sharp.WebApi.V2.ApiV2BaseObject
+  name: ApiV2BaseObject
+  href: api/Gw2Sharp.WebApi.V2.ApiV2BaseObject.html
+  commentId: T:Gw2Sharp.WebApi.V2.ApiV2BaseObject
+  fullName: Gw2Sharp.WebApi.V2.ApiV2BaseObject
+  nameWithType: ApiV2BaseObject
+- uid: Gw2Sharp.WebApi.V2.ApiV2BaseObject.HttpResponseInfo
+  name: HttpResponseInfo
+  href: api/Gw2Sharp.WebApi.V2.ApiV2BaseObject.html#Gw2Sharp_WebApi_V2_ApiV2BaseObject_HttpResponseInfo
+  commentId: P:Gw2Sharp.WebApi.V2.ApiV2BaseObject.HttpResponseInfo
+  fullName: Gw2Sharp.WebApi.V2.ApiV2BaseObject.HttpResponseInfo
+  nameWithType: ApiV2BaseObject.HttpResponseInfo
+- uid: Gw2Sharp.WebApi.V2.ApiV2BaseObject.HttpResponseInfo*
+  name: HttpResponseInfo
+  href: api/Gw2Sharp.WebApi.V2.ApiV2BaseObject.html#Gw2Sharp_WebApi_V2_ApiV2BaseObject_HttpResponseInfo_
+  commentId: Overload:Gw2Sharp.WebApi.V2.ApiV2BaseObject.HttpResponseInfo
   isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.ApiV2Response<T>.ApiV2Response
-  fullName.vb: Gw2Sharp.WebApi.V2.ApiV2Response(Of T).ApiV2Response
-  nameWithType: ApiV2Response<T>.ApiV2Response
-  nameWithType.vb: ApiV2Response(Of T).ApiV2Response
-- uid: Gw2Sharp.WebApi.V2.ApiV2Response`1.Cached
-  name: Cached
-  href: api/Gw2Sharp.WebApi.V2.ApiV2Response-1.html#Gw2Sharp_WebApi_V2_ApiV2Response_1_Cached
-  commentId: P:Gw2Sharp.WebApi.V2.ApiV2Response`1.Cached
-  fullName: Gw2Sharp.WebApi.V2.ApiV2Response<T>.Cached
-  fullName.vb: Gw2Sharp.WebApi.V2.ApiV2Response(Of T).Cached
-  nameWithType: ApiV2Response<T>.Cached
-  nameWithType.vb: ApiV2Response(Of T).Cached
-- uid: Gw2Sharp.WebApi.V2.ApiV2Response`1.Cached*
-  name: Cached
-  href: api/Gw2Sharp.WebApi.V2.ApiV2Response-1.html#Gw2Sharp_WebApi_V2_ApiV2Response_1_Cached_
-  commentId: Overload:Gw2Sharp.WebApi.V2.ApiV2Response`1.Cached
+  fullName: Gw2Sharp.WebApi.V2.ApiV2BaseObject.HttpResponseInfo
+  nameWithType: ApiV2BaseObject.HttpResponseInfo
+- uid: Gw2Sharp.WebApi.V2.ApiV2BaseObjectList`1
+  name: ApiV2BaseObjectList<T>
+  href: api/Gw2Sharp.WebApi.V2.ApiV2BaseObjectList-1.html
+  commentId: T:Gw2Sharp.WebApi.V2.ApiV2BaseObjectList`1
+  name.vb: ApiV2BaseObjectList(Of T)
+  fullName: Gw2Sharp.WebApi.V2.ApiV2BaseObjectList<T>
+  fullName.vb: Gw2Sharp.WebApi.V2.ApiV2BaseObjectList(Of T)
+  nameWithType: ApiV2BaseObjectList<T>
+  nameWithType.vb: ApiV2BaseObjectList(Of T)
+- uid: Gw2Sharp.WebApi.V2.ApiV2BaseObjectList`1.HttpResponseInfo
+  name: HttpResponseInfo
+  href: api/Gw2Sharp.WebApi.V2.ApiV2BaseObjectList-1.html#Gw2Sharp_WebApi_V2_ApiV2BaseObjectList_1_HttpResponseInfo
+  commentId: P:Gw2Sharp.WebApi.V2.ApiV2BaseObjectList`1.HttpResponseInfo
+  fullName: Gw2Sharp.WebApi.V2.ApiV2BaseObjectList<T>.HttpResponseInfo
+  fullName.vb: Gw2Sharp.WebApi.V2.ApiV2BaseObjectList(Of T).HttpResponseInfo
+  nameWithType: ApiV2BaseObjectList<T>.HttpResponseInfo
+  nameWithType.vb: ApiV2BaseObjectList(Of T).HttpResponseInfo
+- uid: Gw2Sharp.WebApi.V2.ApiV2BaseObjectList`1.HttpResponseInfo*
+  name: HttpResponseInfo
+  href: api/Gw2Sharp.WebApi.V2.ApiV2BaseObjectList-1.html#Gw2Sharp_WebApi_V2_ApiV2BaseObjectList_1_HttpResponseInfo_
+  commentId: Overload:Gw2Sharp.WebApi.V2.ApiV2BaseObjectList`1.HttpResponseInfo
   isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.ApiV2Response<T>.Cached
-  fullName.vb: Gw2Sharp.WebApi.V2.ApiV2Response(Of T).Cached
-  nameWithType: ApiV2Response<T>.Cached
-  nameWithType.vb: ApiV2Response(Of T).Cached
-- uid: Gw2Sharp.WebApi.V2.ApiV2Response`1.CacheMaxAge
+  fullName: Gw2Sharp.WebApi.V2.ApiV2BaseObjectList<T>.HttpResponseInfo
+  fullName.vb: Gw2Sharp.WebApi.V2.ApiV2BaseObjectList(Of T).HttpResponseInfo
+  nameWithType: ApiV2BaseObjectList<T>.HttpResponseInfo
+  nameWithType.vb: ApiV2BaseObjectList(Of T).HttpResponseInfo
+- uid: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo
+  name: ApiV2HttpResponseInfo
+  href: api/Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.html
+  commentId: T:Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo
+  fullName: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo
+  nameWithType: ApiV2HttpResponseInfo
+- uid: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.#ctor(HttpStatusCode,System.Nullable{IReadOnlyDictionary{System.String,System.String}},System.Nullable{IReadOnlyDictionary{System.String,System.String}})
+  name: ApiV2HttpResponseInfo(HttpStatusCode, Nullable<IReadOnlyDictionary<String, String>>, Nullable<IReadOnlyDictionary<String, String>>)
+  href: api/Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.html#Gw2Sharp_WebApi_V2_ApiV2HttpResponseInfo__ctor_HttpStatusCode_System_Nullable_IReadOnlyDictionary_System_String_System_String___System_Nullable_IReadOnlyDictionary_System_String_System_String___
+  commentId: M:Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.#ctor(HttpStatusCode,System.Nullable{IReadOnlyDictionary{System.String,System.String}},System.Nullable{IReadOnlyDictionary{System.String,System.String}})
+  name.vb: ApiV2HttpResponseInfo(HttpStatusCode, Nullable(Of IReadOnlyDictionary(Of String, String)), Nullable(Of IReadOnlyDictionary(Of String, String)))
+  fullName: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.ApiV2HttpResponseInfo(HttpStatusCode, System.Nullable<IReadOnlyDictionary<System.String, System.String>>, System.Nullable<IReadOnlyDictionary<System.String, System.String>>)
+  fullName.vb: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.ApiV2HttpResponseInfo(HttpStatusCode, System.Nullable(Of IReadOnlyDictionary(Of System.String, System.String)), System.Nullable(Of IReadOnlyDictionary(Of System.String, System.String)))
+  nameWithType: ApiV2HttpResponseInfo.ApiV2HttpResponseInfo(HttpStatusCode, Nullable<IReadOnlyDictionary<String, String>>, Nullable<IReadOnlyDictionary<String, String>>)
+  nameWithType.vb: ApiV2HttpResponseInfo.ApiV2HttpResponseInfo(HttpStatusCode, Nullable(Of IReadOnlyDictionary(Of String, String)), Nullable(Of IReadOnlyDictionary(Of String, String)))
+- uid: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.#ctor*
+  name: ApiV2HttpResponseInfo
+  href: api/Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.html#Gw2Sharp_WebApi_V2_ApiV2HttpResponseInfo__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.ApiV2HttpResponseInfo
+  nameWithType: ApiV2HttpResponseInfo.ApiV2HttpResponseInfo
+- uid: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.CacheMaxAge
   name: CacheMaxAge
-  href: api/Gw2Sharp.WebApi.V2.ApiV2Response-1.html#Gw2Sharp_WebApi_V2_ApiV2Response_1_CacheMaxAge
-  commentId: P:Gw2Sharp.WebApi.V2.ApiV2Response`1.CacheMaxAge
-  fullName: Gw2Sharp.WebApi.V2.ApiV2Response<T>.CacheMaxAge
-  fullName.vb: Gw2Sharp.WebApi.V2.ApiV2Response(Of T).CacheMaxAge
-  nameWithType: ApiV2Response<T>.CacheMaxAge
-  nameWithType.vb: ApiV2Response(Of T).CacheMaxAge
-- uid: Gw2Sharp.WebApi.V2.ApiV2Response`1.CacheMaxAge*
+  href: api/Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.html#Gw2Sharp_WebApi_V2_ApiV2HttpResponseInfo_CacheMaxAge
+  commentId: P:Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.CacheMaxAge
+  fullName: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.CacheMaxAge
+  nameWithType: ApiV2HttpResponseInfo.CacheMaxAge
+- uid: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.CacheMaxAge*
   name: CacheMaxAge
-  href: api/Gw2Sharp.WebApi.V2.ApiV2Response-1.html#Gw2Sharp_WebApi_V2_ApiV2Response_1_CacheMaxAge_
-  commentId: Overload:Gw2Sharp.WebApi.V2.ApiV2Response`1.CacheMaxAge
+  href: api/Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.html#Gw2Sharp_WebApi_V2_ApiV2HttpResponseInfo_CacheMaxAge_
+  commentId: Overload:Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.CacheMaxAge
   isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.ApiV2Response<T>.CacheMaxAge
-  fullName.vb: Gw2Sharp.WebApi.V2.ApiV2Response(Of T).CacheMaxAge
-  nameWithType: ApiV2Response<T>.CacheMaxAge
-  nameWithType.vb: ApiV2Response(Of T).CacheMaxAge
-- uid: Gw2Sharp.WebApi.V2.ApiV2Response`1.Expires
+  fullName: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.CacheMaxAge
+  nameWithType: ApiV2HttpResponseInfo.CacheMaxAge
+- uid: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.Date
+  name: Date
+  href: api/Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.html#Gw2Sharp_WebApi_V2_ApiV2HttpResponseInfo_Date
+  commentId: P:Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.Date
+  fullName: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.Date
+  nameWithType: ApiV2HttpResponseInfo.Date
+- uid: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.Date*
+  name: Date
+  href: api/Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.html#Gw2Sharp_WebApi_V2_ApiV2HttpResponseInfo_Date_
+  commentId: Overload:Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.Date
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.Date
+  nameWithType: ApiV2HttpResponseInfo.Date
+- uid: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.Expires
   name: Expires
-  href: api/Gw2Sharp.WebApi.V2.ApiV2Response-1.html#Gw2Sharp_WebApi_V2_ApiV2Response_1_Expires
-  commentId: P:Gw2Sharp.WebApi.V2.ApiV2Response`1.Expires
-  fullName: Gw2Sharp.WebApi.V2.ApiV2Response<T>.Expires
-  fullName.vb: Gw2Sharp.WebApi.V2.ApiV2Response(Of T).Expires
-  nameWithType: ApiV2Response<T>.Expires
-  nameWithType.vb: ApiV2Response(Of T).Expires
-- uid: Gw2Sharp.WebApi.V2.ApiV2Response`1.Expires*
+  href: api/Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.html#Gw2Sharp_WebApi_V2_ApiV2HttpResponseInfo_Expires
+  commentId: P:Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.Expires
+  fullName: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.Expires
+  nameWithType: ApiV2HttpResponseInfo.Expires
+- uid: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.Expires*
   name: Expires
-  href: api/Gw2Sharp.WebApi.V2.ApiV2Response-1.html#Gw2Sharp_WebApi_V2_ApiV2Response_1_Expires_
-  commentId: Overload:Gw2Sharp.WebApi.V2.ApiV2Response`1.Expires
+  href: api/Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.html#Gw2Sharp_WebApi_V2_ApiV2HttpResponseInfo_Expires_
+  commentId: Overload:Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.Expires
   isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.ApiV2Response<T>.Expires
-  fullName.vb: Gw2Sharp.WebApi.V2.ApiV2Response(Of T).Expires
-  nameWithType: ApiV2Response<T>.Expires
-  nameWithType.vb: ApiV2Response(Of T).Expires
-- uid: Gw2Sharp.WebApi.V2.ApiV2Response`1.Links
+  fullName: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.Expires
+  nameWithType: ApiV2HttpResponseInfo.Expires
+- uid: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.LastModified
+  name: LastModified
+  href: api/Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.html#Gw2Sharp_WebApi_V2_ApiV2HttpResponseInfo_LastModified
+  commentId: P:Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.LastModified
+  fullName: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.LastModified
+  nameWithType: ApiV2HttpResponseInfo.LastModified
+- uid: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.LastModified*
+  name: LastModified
+  href: api/Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.html#Gw2Sharp_WebApi_V2_ApiV2HttpResponseInfo_LastModified_
+  commentId: Overload:Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.LastModified
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.LastModified
+  nameWithType: ApiV2HttpResponseInfo.LastModified
+- uid: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.Links
   name: Links
-  href: api/Gw2Sharp.WebApi.V2.ApiV2Response-1.html#Gw2Sharp_WebApi_V2_ApiV2Response_1_Links
-  commentId: P:Gw2Sharp.WebApi.V2.ApiV2Response`1.Links
-  fullName: Gw2Sharp.WebApi.V2.ApiV2Response<T>.Links
-  fullName.vb: Gw2Sharp.WebApi.V2.ApiV2Response(Of T).Links
-  nameWithType: ApiV2Response<T>.Links
-  nameWithType.vb: ApiV2Response(Of T).Links
-- uid: Gw2Sharp.WebApi.V2.ApiV2Response`1.Links*
+  href: api/Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.html#Gw2Sharp_WebApi_V2_ApiV2HttpResponseInfo_Links
+  commentId: P:Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.Links
+  fullName: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.Links
+  nameWithType: ApiV2HttpResponseInfo.Links
+- uid: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.Links*
   name: Links
-  href: api/Gw2Sharp.WebApi.V2.ApiV2Response-1.html#Gw2Sharp_WebApi_V2_ApiV2Response_1_Links_
-  commentId: Overload:Gw2Sharp.WebApi.V2.ApiV2Response`1.Links
+  href: api/Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.html#Gw2Sharp_WebApi_V2_ApiV2HttpResponseInfo_Links_
+  commentId: Overload:Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.Links
   isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.ApiV2Response<T>.Links
-  fullName.vb: Gw2Sharp.WebApi.V2.ApiV2Response(Of T).Links
-  nameWithType: ApiV2Response<T>.Links
-  nameWithType.vb: ApiV2Response(Of T).Links
-- uid: Gw2Sharp.WebApi.V2.ApiV2Response`1.op_Implicit(Gw2Sharp.WebApi.V2.ApiV2Response{`0})~`0
-  name: Implicit(ApiV2Response<T> to T)
-  href: api/Gw2Sharp.WebApi.V2.ApiV2Response-1.html#Gw2Sharp_WebApi_V2_ApiV2Response_1_op_Implicit_Gw2Sharp_WebApi_V2_ApiV2Response__0____0
-  commentId: M:Gw2Sharp.WebApi.V2.ApiV2Response`1.op_Implicit(Gw2Sharp.WebApi.V2.ApiV2Response{`0})~`0
-  name.vb: Widening(ApiV2Response(Of T) to T)
-  fullName: Gw2Sharp.WebApi.V2.ApiV2Response<T>.Implicit(Gw2Sharp.WebApi.V2.ApiV2Response<T> to T)
-  fullName.vb: Gw2Sharp.WebApi.V2.ApiV2Response(Of T).Widening(Gw2Sharp.WebApi.V2.ApiV2Response(Of T) to T)
-  nameWithType: ApiV2Response<T>.Implicit(ApiV2Response<T> to T)
-  nameWithType.vb: ApiV2Response(Of T).Widening(ApiV2Response(Of T) to T)
-- uid: Gw2Sharp.WebApi.V2.ApiV2Response`1.op_Implicit*
-  name: Implicit
-  href: api/Gw2Sharp.WebApi.V2.ApiV2Response-1.html#Gw2Sharp_WebApi_V2_ApiV2Response_1_op_Implicit_
-  commentId: Overload:Gw2Sharp.WebApi.V2.ApiV2Response`1.op_Implicit
-  isSpec: "True"
-  name.vb: Widening
-  fullName: Gw2Sharp.WebApi.V2.ApiV2Response<T>.Implicit
-  fullName.vb: Gw2Sharp.WebApi.V2.ApiV2Response(Of T).Widening
-  nameWithType: ApiV2Response<T>.Implicit
-  nameWithType.vb: ApiV2Response(Of T).Widening
-- uid: Gw2Sharp.WebApi.V2.ApiV2Response`1.PageSize
+  fullName: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.Links
+  nameWithType: ApiV2HttpResponseInfo.Links
+- uid: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.PageSize
   name: PageSize
-  href: api/Gw2Sharp.WebApi.V2.ApiV2Response-1.html#Gw2Sharp_WebApi_V2_ApiV2Response_1_PageSize
-  commentId: P:Gw2Sharp.WebApi.V2.ApiV2Response`1.PageSize
-  fullName: Gw2Sharp.WebApi.V2.ApiV2Response<T>.PageSize
-  fullName.vb: Gw2Sharp.WebApi.V2.ApiV2Response(Of T).PageSize
-  nameWithType: ApiV2Response<T>.PageSize
-  nameWithType.vb: ApiV2Response(Of T).PageSize
-- uid: Gw2Sharp.WebApi.V2.ApiV2Response`1.PageSize*
+  href: api/Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.html#Gw2Sharp_WebApi_V2_ApiV2HttpResponseInfo_PageSize
+  commentId: P:Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.PageSize
+  fullName: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.PageSize
+  nameWithType: ApiV2HttpResponseInfo.PageSize
+- uid: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.PageSize*
   name: PageSize
-  href: api/Gw2Sharp.WebApi.V2.ApiV2Response-1.html#Gw2Sharp_WebApi_V2_ApiV2Response_1_PageSize_
-  commentId: Overload:Gw2Sharp.WebApi.V2.ApiV2Response`1.PageSize
+  href: api/Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.html#Gw2Sharp_WebApi_V2_ApiV2HttpResponseInfo_PageSize_
+  commentId: Overload:Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.PageSize
   isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.ApiV2Response<T>.PageSize
-  fullName.vb: Gw2Sharp.WebApi.V2.ApiV2Response(Of T).PageSize
-  nameWithType: ApiV2Response<T>.PageSize
-  nameWithType.vb: ApiV2Response(Of T).PageSize
-- uid: Gw2Sharp.WebApi.V2.ApiV2Response`1.PageTotal
+  fullName: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.PageSize
+  nameWithType: ApiV2HttpResponseInfo.PageSize
+- uid: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.PageTotal
   name: PageTotal
-  href: api/Gw2Sharp.WebApi.V2.ApiV2Response-1.html#Gw2Sharp_WebApi_V2_ApiV2Response_1_PageTotal
-  commentId: P:Gw2Sharp.WebApi.V2.ApiV2Response`1.PageTotal
-  fullName: Gw2Sharp.WebApi.V2.ApiV2Response<T>.PageTotal
-  fullName.vb: Gw2Sharp.WebApi.V2.ApiV2Response(Of T).PageTotal
-  nameWithType: ApiV2Response<T>.PageTotal
-  nameWithType.vb: ApiV2Response(Of T).PageTotal
-- uid: Gw2Sharp.WebApi.V2.ApiV2Response`1.PageTotal*
+  href: api/Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.html#Gw2Sharp_WebApi_V2_ApiV2HttpResponseInfo_PageTotal
+  commentId: P:Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.PageTotal
+  fullName: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.PageTotal
+  nameWithType: ApiV2HttpResponseInfo.PageTotal
+- uid: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.PageTotal*
   name: PageTotal
-  href: api/Gw2Sharp.WebApi.V2.ApiV2Response-1.html#Gw2Sharp_WebApi_V2_ApiV2Response_1_PageTotal_
-  commentId: Overload:Gw2Sharp.WebApi.V2.ApiV2Response`1.PageTotal
+  href: api/Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.html#Gw2Sharp_WebApi_V2_ApiV2HttpResponseInfo_PageTotal_
+  commentId: Overload:Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.PageTotal
   isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.ApiV2Response<T>.PageTotal
-  fullName.vb: Gw2Sharp.WebApi.V2.ApiV2Response(Of T).PageTotal
-  nameWithType: ApiV2Response<T>.PageTotal
-  nameWithType.vb: ApiV2Response(Of T).PageTotal
-- uid: Gw2Sharp.WebApi.V2.ApiV2Response`1.RateLimitLimit
+  fullName: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.PageTotal
+  nameWithType: ApiV2HttpResponseInfo.PageTotal
+- uid: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.RateLimitLimit
   name: RateLimitLimit
-  href: api/Gw2Sharp.WebApi.V2.ApiV2Response-1.html#Gw2Sharp_WebApi_V2_ApiV2Response_1_RateLimitLimit
-  commentId: P:Gw2Sharp.WebApi.V2.ApiV2Response`1.RateLimitLimit
-  fullName: Gw2Sharp.WebApi.V2.ApiV2Response<T>.RateLimitLimit
-  fullName.vb: Gw2Sharp.WebApi.V2.ApiV2Response(Of T).RateLimitLimit
-  nameWithType: ApiV2Response<T>.RateLimitLimit
-  nameWithType.vb: ApiV2Response(Of T).RateLimitLimit
-- uid: Gw2Sharp.WebApi.V2.ApiV2Response`1.RateLimitLimit*
+  href: api/Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.html#Gw2Sharp_WebApi_V2_ApiV2HttpResponseInfo_RateLimitLimit
+  commentId: P:Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.RateLimitLimit
+  fullName: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.RateLimitLimit
+  nameWithType: ApiV2HttpResponseInfo.RateLimitLimit
+- uid: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.RateLimitLimit*
   name: RateLimitLimit
-  href: api/Gw2Sharp.WebApi.V2.ApiV2Response-1.html#Gw2Sharp_WebApi_V2_ApiV2Response_1_RateLimitLimit_
-  commentId: Overload:Gw2Sharp.WebApi.V2.ApiV2Response`1.RateLimitLimit
+  href: api/Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.html#Gw2Sharp_WebApi_V2_ApiV2HttpResponseInfo_RateLimitLimit_
+  commentId: Overload:Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.RateLimitLimit
   isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.ApiV2Response<T>.RateLimitLimit
-  fullName.vb: Gw2Sharp.WebApi.V2.ApiV2Response(Of T).RateLimitLimit
-  nameWithType: ApiV2Response<T>.RateLimitLimit
-  nameWithType.vb: ApiV2Response(Of T).RateLimitLimit
-- uid: Gw2Sharp.WebApi.V2.ApiV2Response`1.ResultCount
+  fullName: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.RateLimitLimit
+  nameWithType: ApiV2HttpResponseInfo.RateLimitLimit
+- uid: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.RawRequestHeaders
+  name: RawRequestHeaders
+  href: api/Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.html#Gw2Sharp_WebApi_V2_ApiV2HttpResponseInfo_RawRequestHeaders
+  commentId: P:Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.RawRequestHeaders
+  fullName: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.RawRequestHeaders
+  nameWithType: ApiV2HttpResponseInfo.RawRequestHeaders
+- uid: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.RawRequestHeaders*
+  name: RawRequestHeaders
+  href: api/Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.html#Gw2Sharp_WebApi_V2_ApiV2HttpResponseInfo_RawRequestHeaders_
+  commentId: Overload:Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.RawRequestHeaders
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.RawRequestHeaders
+  nameWithType: ApiV2HttpResponseInfo.RawRequestHeaders
+- uid: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.RawResponseHeaders
+  name: RawResponseHeaders
+  href: api/Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.html#Gw2Sharp_WebApi_V2_ApiV2HttpResponseInfo_RawResponseHeaders
+  commentId: P:Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.RawResponseHeaders
+  fullName: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.RawResponseHeaders
+  nameWithType: ApiV2HttpResponseInfo.RawResponseHeaders
+- uid: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.RawResponseHeaders*
+  name: RawResponseHeaders
+  href: api/Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.html#Gw2Sharp_WebApi_V2_ApiV2HttpResponseInfo_RawResponseHeaders_
+  commentId: Overload:Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.RawResponseHeaders
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.RawResponseHeaders
+  nameWithType: ApiV2HttpResponseInfo.RawResponseHeaders
+- uid: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.ResponseStatusCode
+  name: ResponseStatusCode
+  href: api/Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.html#Gw2Sharp_WebApi_V2_ApiV2HttpResponseInfo_ResponseStatusCode
+  commentId: P:Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.ResponseStatusCode
+  fullName: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.ResponseStatusCode
+  nameWithType: ApiV2HttpResponseInfo.ResponseStatusCode
+- uid: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.ResponseStatusCode*
+  name: ResponseStatusCode
+  href: api/Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.html#Gw2Sharp_WebApi_V2_ApiV2HttpResponseInfo_ResponseStatusCode_
+  commentId: Overload:Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.ResponseStatusCode
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.ResponseStatusCode
+  nameWithType: ApiV2HttpResponseInfo.ResponseStatusCode
+- uid: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.ResultCount
   name: ResultCount
-  href: api/Gw2Sharp.WebApi.V2.ApiV2Response-1.html#Gw2Sharp_WebApi_V2_ApiV2Response_1_ResultCount
-  commentId: P:Gw2Sharp.WebApi.V2.ApiV2Response`1.ResultCount
-  fullName: Gw2Sharp.WebApi.V2.ApiV2Response<T>.ResultCount
-  fullName.vb: Gw2Sharp.WebApi.V2.ApiV2Response(Of T).ResultCount
-  nameWithType: ApiV2Response<T>.ResultCount
-  nameWithType.vb: ApiV2Response(Of T).ResultCount
-- uid: Gw2Sharp.WebApi.V2.ApiV2Response`1.ResultCount*
+  href: api/Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.html#Gw2Sharp_WebApi_V2_ApiV2HttpResponseInfo_ResultCount
+  commentId: P:Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.ResultCount
+  fullName: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.ResultCount
+  nameWithType: ApiV2HttpResponseInfo.ResultCount
+- uid: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.ResultCount*
   name: ResultCount
-  href: api/Gw2Sharp.WebApi.V2.ApiV2Response-1.html#Gw2Sharp_WebApi_V2_ApiV2Response_1_ResultCount_
-  commentId: Overload:Gw2Sharp.WebApi.V2.ApiV2Response`1.ResultCount
+  href: api/Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.html#Gw2Sharp_WebApi_V2_ApiV2HttpResponseInfo_ResultCount_
+  commentId: Overload:Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.ResultCount
   isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.ApiV2Response<T>.ResultCount
-  fullName.vb: Gw2Sharp.WebApi.V2.ApiV2Response(Of T).ResultCount
-  nameWithType: ApiV2Response<T>.ResultCount
-  nameWithType.vb: ApiV2Response(Of T).ResultCount
-- uid: Gw2Sharp.WebApi.V2.ApiV2Response`1.ResultTotal
+  fullName: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.ResultCount
+  nameWithType: ApiV2HttpResponseInfo.ResultCount
+- uid: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.ResultTotal
   name: ResultTotal
-  href: api/Gw2Sharp.WebApi.V2.ApiV2Response-1.html#Gw2Sharp_WebApi_V2_ApiV2Response_1_ResultTotal
-  commentId: P:Gw2Sharp.WebApi.V2.ApiV2Response`1.ResultTotal
-  fullName: Gw2Sharp.WebApi.V2.ApiV2Response<T>.ResultTotal
-  fullName.vb: Gw2Sharp.WebApi.V2.ApiV2Response(Of T).ResultTotal
-  nameWithType: ApiV2Response<T>.ResultTotal
-  nameWithType.vb: ApiV2Response(Of T).ResultTotal
-- uid: Gw2Sharp.WebApi.V2.ApiV2Response`1.ResultTotal*
+  href: api/Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.html#Gw2Sharp_WebApi_V2_ApiV2HttpResponseInfo_ResultTotal
+  commentId: P:Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.ResultTotal
+  fullName: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.ResultTotal
+  nameWithType: ApiV2HttpResponseInfo.ResultTotal
+- uid: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.ResultTotal*
   name: ResultTotal
-  href: api/Gw2Sharp.WebApi.V2.ApiV2Response-1.html#Gw2Sharp_WebApi_V2_ApiV2Response_1_ResultTotal_
-  commentId: Overload:Gw2Sharp.WebApi.V2.ApiV2Response`1.ResultTotal
+  href: api/Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.html#Gw2Sharp_WebApi_V2_ApiV2HttpResponseInfo_ResultTotal_
+  commentId: Overload:Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.ResultTotal
   isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.ApiV2Response<T>.ResultTotal
-  fullName.vb: Gw2Sharp.WebApi.V2.ApiV2Response(Of T).ResultTotal
-  nameWithType: ApiV2Response<T>.ResultTotal
-  nameWithType.vb: ApiV2Response(Of T).ResultTotal
+  fullName: Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.ResultTotal
+  nameWithType: ApiV2HttpResponseInfo.ResultTotal
 - uid: Gw2Sharp.WebApi.V2.Clients
   name: Gw2Sharp.WebApi.V2.Clients
   href: api/Gw2Sharp.WebApi.V2.Clients.html
@@ -2417,19 +2446,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.AccountClient.GetAsync
   nameWithType: AccountClient.GetAsync
-- uid: Gw2Sharp.WebApi.V2.Clients.AccountClient.GetWithResponseAsync(CancellationToken)
-  name: GetWithResponseAsync(CancellationToken)
-  href: api/Gw2Sharp.WebApi.V2.Clients.AccountClient.html#Gw2Sharp_WebApi_V2_Clients_AccountClient_GetWithResponseAsync_CancellationToken_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.AccountClient.GetWithResponseAsync(CancellationToken)
-  fullName: Gw2Sharp.WebApi.V2.Clients.AccountClient.GetWithResponseAsync(CancellationToken)
-  nameWithType: AccountClient.GetWithResponseAsync(CancellationToken)
-- uid: Gw2Sharp.WebApi.V2.Clients.AccountClient.GetWithResponseAsync*
-  name: GetWithResponseAsync
-  href: api/Gw2Sharp.WebApi.V2.Clients.AccountClient.html#Gw2Sharp_WebApi_V2_Clients_AccountClient_GetWithResponseAsync_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.AccountClient.GetWithResponseAsync
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.AccountClient.GetWithResponseAsync
-  nameWithType: AccountClient.GetWithResponseAsync
 - uid: Gw2Sharp.WebApi.V2.Clients.AccountClient.Gliders
   name: Gliders
   href: api/Gw2Sharp.WebApi.V2.Clients.AccountClient.html#Gw2Sharp_WebApi_V2_Clients_AccountClient_Gliders
@@ -3460,23 +3476,6 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBlobClient(Of TObject).GetAsync
   nameWithType: BaseEndpointBlobClient<TObject>.GetAsync
   nameWithType.vb: BaseEndpointBlobClient(Of TObject).GetAsync
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBlobClient`1.GetWithResponseAsync(CancellationToken)
-  name: GetWithResponseAsync(CancellationToken)
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBlobClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBlobClient_1_GetWithResponseAsync_CancellationToken_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointBlobClient`1.GetWithResponseAsync(CancellationToken)
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBlobClient<TObject>.GetWithResponseAsync(CancellationToken)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBlobClient(Of TObject).GetWithResponseAsync(CancellationToken)
-  nameWithType: BaseEndpointBlobClient<TObject>.GetWithResponseAsync(CancellationToken)
-  nameWithType.vb: BaseEndpointBlobClient(Of TObject).GetWithResponseAsync(CancellationToken)
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBlobClient`1.GetWithResponseAsync*
-  name: GetWithResponseAsync
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBlobClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBlobClient_1_GetWithResponseAsync_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.BaseEndpointBlobClient`1.GetWithResponseAsync
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBlobClient<TObject>.GetWithResponseAsync
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBlobClient(Of TObject).GetWithResponseAsync
-  nameWithType: BaseEndpointBlobClient<TObject>.GetWithResponseAsync
-  nameWithType.vb: BaseEndpointBlobClient(Of TObject).GetWithResponseAsync
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2
   name: BaseEndpointBulkAllClient<TObject, TId>
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient-2.html
@@ -3537,23 +3536,6 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient(Of TObject, TId).AllAsync
   nameWithType: BaseEndpointBulkAllClient<TObject, TId>.AllAsync
   nameWithType.vb: BaseEndpointBulkAllClient(Of TObject, TId).AllAsync
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.AllWithResponseAsync(CancellationToken)
-  name: AllWithResponseAsync(CancellationToken)
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkAllClient_2_AllWithResponseAsync_CancellationToken_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.AllWithResponseAsync(CancellationToken)
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient<TObject, TId>.AllWithResponseAsync(CancellationToken)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient(Of TObject, TId).AllWithResponseAsync(CancellationToken)
-  nameWithType: BaseEndpointBulkAllClient<TObject, TId>.AllWithResponseAsync(CancellationToken)
-  nameWithType.vb: BaseEndpointBulkAllClient(Of TObject, TId).AllWithResponseAsync(CancellationToken)
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.AllWithResponseAsync*
-  name: AllWithResponseAsync
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkAllClient_2_AllWithResponseAsync_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.AllWithResponseAsync
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient<TObject, TId>.AllWithResponseAsync
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient(Of TObject, TId).AllWithResponseAsync
-  nameWithType: BaseEndpointBulkAllClient<TObject, TId>.AllWithResponseAsync
-  nameWithType.vb: BaseEndpointBulkAllClient(Of TObject, TId).AllWithResponseAsync
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.GetAsync(`1)
   name: GetAsync(TId)
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkAllClient_2_GetAsync__1_
@@ -3579,23 +3561,6 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient(Of TObject, TId).GetAsync
   nameWithType: BaseEndpointBulkAllClient<TObject, TId>.GetAsync
   nameWithType.vb: BaseEndpointBulkAllClient(Of TObject, TId).GetAsync
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.GetWithResponseAsync(`1,CancellationToken)
-  name: GetWithResponseAsync(TId, CancellationToken)
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkAllClient_2_GetWithResponseAsync__1_CancellationToken_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.GetWithResponseAsync(`1,CancellationToken)
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient<TObject, TId>.GetWithResponseAsync(TId, CancellationToken)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient(Of TObject, TId).GetWithResponseAsync(TId, CancellationToken)
-  nameWithType: BaseEndpointBulkAllClient<TObject, TId>.GetWithResponseAsync(TId, CancellationToken)
-  nameWithType.vb: BaseEndpointBulkAllClient(Of TObject, TId).GetWithResponseAsync(TId, CancellationToken)
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.GetWithResponseAsync*
-  name: GetWithResponseAsync
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkAllClient_2_GetWithResponseAsync_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.GetWithResponseAsync
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient<TObject, TId>.GetWithResponseAsync
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient(Of TObject, TId).GetWithResponseAsync
-  nameWithType: BaseEndpointBulkAllClient<TObject, TId>.GetWithResponseAsync
-  nameWithType.vb: BaseEndpointBulkAllClient(Of TObject, TId).GetWithResponseAsync
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.IdsAsync
   name: IdsAsync()
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkAllClient_2_IdsAsync
@@ -3621,23 +3586,6 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient(Of TObject, TId).IdsAsync
   nameWithType: BaseEndpointBulkAllClient<TObject, TId>.IdsAsync
   nameWithType.vb: BaseEndpointBulkAllClient(Of TObject, TId).IdsAsync
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.IdsWithResponseAsync(CancellationToken)
-  name: IdsWithResponseAsync(CancellationToken)
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkAllClient_2_IdsWithResponseAsync_CancellationToken_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.IdsWithResponseAsync(CancellationToken)
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient<TObject, TId>.IdsWithResponseAsync(CancellationToken)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient(Of TObject, TId).IdsWithResponseAsync(CancellationToken)
-  nameWithType: BaseEndpointBulkAllClient<TObject, TId>.IdsWithResponseAsync(CancellationToken)
-  nameWithType.vb: BaseEndpointBulkAllClient(Of TObject, TId).IdsWithResponseAsync(CancellationToken)
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.IdsWithResponseAsync*
-  name: IdsWithResponseAsync
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkAllClient_2_IdsWithResponseAsync_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.IdsWithResponseAsync
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient<TObject, TId>.IdsWithResponseAsync
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient(Of TObject, TId).IdsWithResponseAsync
-  nameWithType: BaseEndpointBulkAllClient<TObject, TId>.IdsWithResponseAsync
-  nameWithType.vb: BaseEndpointBulkAllClient(Of TObject, TId).IdsWithResponseAsync
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.ManyAsync(IEnumerable{`1})
   name: ManyAsync(IEnumerable<TId>)
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkAllClient_2_ManyAsync_IEnumerable__1__
@@ -3665,24 +3613,6 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient(Of TObject, TId).ManyAsync
   nameWithType: BaseEndpointBulkAllClient<TObject, TId>.ManyAsync
   nameWithType.vb: BaseEndpointBulkAllClient(Of TObject, TId).ManyAsync
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.ManyWithResponseAsync(IEnumerable{`1},CancellationToken)
-  name: ManyWithResponseAsync(IEnumerable<TId>, CancellationToken)
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkAllClient_2_ManyWithResponseAsync_IEnumerable__1__CancellationToken_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.ManyWithResponseAsync(IEnumerable{`1},CancellationToken)
-  name.vb: ManyWithResponseAsync(IEnumerable(Of TId), CancellationToken)
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient<TObject, TId>.ManyWithResponseAsync(IEnumerable<TId>, CancellationToken)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient(Of TObject, TId).ManyWithResponseAsync(IEnumerable(Of TId), CancellationToken)
-  nameWithType: BaseEndpointBulkAllClient<TObject, TId>.ManyWithResponseAsync(IEnumerable<TId>, CancellationToken)
-  nameWithType.vb: BaseEndpointBulkAllClient(Of TObject, TId).ManyWithResponseAsync(IEnumerable(Of TId), CancellationToken)
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.ManyWithResponseAsync*
-  name: ManyWithResponseAsync
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkAllClient_2_ManyWithResponseAsync_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.ManyWithResponseAsync
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient<TObject, TId>.ManyWithResponseAsync
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient(Of TObject, TId).ManyWithResponseAsync
-  nameWithType: BaseEndpointBulkAllClient<TObject, TId>.ManyWithResponseAsync
-  nameWithType.vb: BaseEndpointBulkAllClient(Of TObject, TId).ManyWithResponseAsync
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.PageAsync(System.Int32)
   name: PageAsync(Int32)
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkAllClient_2_PageAsync_System_Int32_
@@ -3724,31 +3654,6 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient(Of TObject, TId).PageAsync
   nameWithType: BaseEndpointBulkAllClient<TObject, TId>.PageAsync
   nameWithType.vb: BaseEndpointBulkAllClient(Of TObject, TId).PageAsync
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.PageWithResponseAsync(System.Int32,CancellationToken)
-  name: PageWithResponseAsync(Int32, CancellationToken)
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkAllClient_2_PageWithResponseAsync_System_Int32_CancellationToken_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.PageWithResponseAsync(System.Int32,CancellationToken)
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient<TObject, TId>.PageWithResponseAsync(System.Int32, CancellationToken)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient(Of TObject, TId).PageWithResponseAsync(System.Int32, CancellationToken)
-  nameWithType: BaseEndpointBulkAllClient<TObject, TId>.PageWithResponseAsync(Int32, CancellationToken)
-  nameWithType.vb: BaseEndpointBulkAllClient(Of TObject, TId).PageWithResponseAsync(Int32, CancellationToken)
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.PageWithResponseAsync(System.Int32,CancellationToken,System.Int32)
-  name: PageWithResponseAsync(Int32, CancellationToken, Int32)
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkAllClient_2_PageWithResponseAsync_System_Int32_CancellationToken_System_Int32_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.PageWithResponseAsync(System.Int32,CancellationToken,System.Int32)
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient<TObject, TId>.PageWithResponseAsync(System.Int32, CancellationToken, System.Int32)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient(Of TObject, TId).PageWithResponseAsync(System.Int32, CancellationToken, System.Int32)
-  nameWithType: BaseEndpointBulkAllClient<TObject, TId>.PageWithResponseAsync(Int32, CancellationToken, Int32)
-  nameWithType.vb: BaseEndpointBulkAllClient(Of TObject, TId).PageWithResponseAsync(Int32, CancellationToken, Int32)
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.PageWithResponseAsync*
-  name: PageWithResponseAsync
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkAllClient_2_PageWithResponseAsync_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.PageWithResponseAsync
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient<TObject, TId>.PageWithResponseAsync
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient(Of TObject, TId).PageWithResponseAsync
-  nameWithType: BaseEndpointBulkAllClient<TObject, TId>.PageWithResponseAsync
-  nameWithType.vb: BaseEndpointBulkAllClient(Of TObject, TId).PageWithResponseAsync
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient`2
   name: BaseEndpointBulkClient<TObject, TId>
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient-2.html
@@ -3809,23 +3714,6 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient(Of TObject, TId).GetAsync
   nameWithType: BaseEndpointBulkClient<TObject, TId>.GetAsync
   nameWithType.vb: BaseEndpointBulkClient(Of TObject, TId).GetAsync
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient`2.GetWithResponseAsync(`1,CancellationToken)
-  name: GetWithResponseAsync(TId, CancellationToken)
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkClient_2_GetWithResponseAsync__1_CancellationToken_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient`2.GetWithResponseAsync(`1,CancellationToken)
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient<TObject, TId>.GetWithResponseAsync(TId, CancellationToken)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient(Of TObject, TId).GetWithResponseAsync(TId, CancellationToken)
-  nameWithType: BaseEndpointBulkClient<TObject, TId>.GetWithResponseAsync(TId, CancellationToken)
-  nameWithType.vb: BaseEndpointBulkClient(Of TObject, TId).GetWithResponseAsync(TId, CancellationToken)
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient`2.GetWithResponseAsync*
-  name: GetWithResponseAsync
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkClient_2_GetWithResponseAsync_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient`2.GetWithResponseAsync
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient<TObject, TId>.GetWithResponseAsync
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient(Of TObject, TId).GetWithResponseAsync
-  nameWithType: BaseEndpointBulkClient<TObject, TId>.GetWithResponseAsync
-  nameWithType.vb: BaseEndpointBulkClient(Of TObject, TId).GetWithResponseAsync
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient`2.IdsAsync
   name: IdsAsync()
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkClient_2_IdsAsync
@@ -3851,23 +3739,6 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient(Of TObject, TId).IdsAsync
   nameWithType: BaseEndpointBulkClient<TObject, TId>.IdsAsync
   nameWithType.vb: BaseEndpointBulkClient(Of TObject, TId).IdsAsync
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient`2.IdsWithResponseAsync(CancellationToken)
-  name: IdsWithResponseAsync(CancellationToken)
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkClient_2_IdsWithResponseAsync_CancellationToken_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient`2.IdsWithResponseAsync(CancellationToken)
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient<TObject, TId>.IdsWithResponseAsync(CancellationToken)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient(Of TObject, TId).IdsWithResponseAsync(CancellationToken)
-  nameWithType: BaseEndpointBulkClient<TObject, TId>.IdsWithResponseAsync(CancellationToken)
-  nameWithType.vb: BaseEndpointBulkClient(Of TObject, TId).IdsWithResponseAsync(CancellationToken)
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient`2.IdsWithResponseAsync*
-  name: IdsWithResponseAsync
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkClient_2_IdsWithResponseAsync_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient`2.IdsWithResponseAsync
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient<TObject, TId>.IdsWithResponseAsync
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient(Of TObject, TId).IdsWithResponseAsync
-  nameWithType: BaseEndpointBulkClient<TObject, TId>.IdsWithResponseAsync
-  nameWithType.vb: BaseEndpointBulkClient(Of TObject, TId).IdsWithResponseAsync
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient`2.ManyAsync(IEnumerable{`1})
   name: ManyAsync(IEnumerable<TId>)
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkClient_2_ManyAsync_IEnumerable__1__
@@ -3895,24 +3766,6 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient(Of TObject, TId).ManyAsync
   nameWithType: BaseEndpointBulkClient<TObject, TId>.ManyAsync
   nameWithType.vb: BaseEndpointBulkClient(Of TObject, TId).ManyAsync
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient`2.ManyWithResponseAsync(IEnumerable{`1},CancellationToken)
-  name: ManyWithResponseAsync(IEnumerable<TId>, CancellationToken)
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkClient_2_ManyWithResponseAsync_IEnumerable__1__CancellationToken_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient`2.ManyWithResponseAsync(IEnumerable{`1},CancellationToken)
-  name.vb: ManyWithResponseAsync(IEnumerable(Of TId), CancellationToken)
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient<TObject, TId>.ManyWithResponseAsync(IEnumerable<TId>, CancellationToken)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient(Of TObject, TId).ManyWithResponseAsync(IEnumerable(Of TId), CancellationToken)
-  nameWithType: BaseEndpointBulkClient<TObject, TId>.ManyWithResponseAsync(IEnumerable<TId>, CancellationToken)
-  nameWithType.vb: BaseEndpointBulkClient(Of TObject, TId).ManyWithResponseAsync(IEnumerable(Of TId), CancellationToken)
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient`2.ManyWithResponseAsync*
-  name: ManyWithResponseAsync
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkClient_2_ManyWithResponseAsync_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient`2.ManyWithResponseAsync
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient<TObject, TId>.ManyWithResponseAsync
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient(Of TObject, TId).ManyWithResponseAsync
-  nameWithType: BaseEndpointBulkClient<TObject, TId>.ManyWithResponseAsync
-  nameWithType.vb: BaseEndpointBulkClient(Of TObject, TId).ManyWithResponseAsync
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient`2.PageAsync(System.Int32)
   name: PageAsync(Int32)
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkClient_2_PageAsync_System_Int32_
@@ -3954,31 +3807,6 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient(Of TObject, TId).PageAsync
   nameWithType: BaseEndpointBulkClient<TObject, TId>.PageAsync
   nameWithType.vb: BaseEndpointBulkClient(Of TObject, TId).PageAsync
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient`2.PageWithResponseAsync(System.Int32,CancellationToken)
-  name: PageWithResponseAsync(Int32, CancellationToken)
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkClient_2_PageWithResponseAsync_System_Int32_CancellationToken_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient`2.PageWithResponseAsync(System.Int32,CancellationToken)
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient<TObject, TId>.PageWithResponseAsync(System.Int32, CancellationToken)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient(Of TObject, TId).PageWithResponseAsync(System.Int32, CancellationToken)
-  nameWithType: BaseEndpointBulkClient<TObject, TId>.PageWithResponseAsync(Int32, CancellationToken)
-  nameWithType.vb: BaseEndpointBulkClient(Of TObject, TId).PageWithResponseAsync(Int32, CancellationToken)
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient`2.PageWithResponseAsync(System.Int32,CancellationToken,System.Int32)
-  name: PageWithResponseAsync(Int32, CancellationToken, Int32)
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkClient_2_PageWithResponseAsync_System_Int32_CancellationToken_System_Int32_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient`2.PageWithResponseAsync(System.Int32,CancellationToken,System.Int32)
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient<TObject, TId>.PageWithResponseAsync(System.Int32, CancellationToken, System.Int32)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient(Of TObject, TId).PageWithResponseAsync(System.Int32, CancellationToken, System.Int32)
-  nameWithType: BaseEndpointBulkClient<TObject, TId>.PageWithResponseAsync(Int32, CancellationToken, Int32)
-  nameWithType.vb: BaseEndpointBulkClient(Of TObject, TId).PageWithResponseAsync(Int32, CancellationToken, Int32)
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient`2.PageWithResponseAsync*
-  name: PageWithResponseAsync
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkClient_2_PageWithResponseAsync_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient`2.PageWithResponseAsync
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient<TObject, TId>.PageWithResponseAsync
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient(Of TObject, TId).PageWithResponseAsync
-  nameWithType: BaseEndpointBulkClient<TObject, TId>.PageWithResponseAsync
-  nameWithType.vb: BaseEndpointBulkClient(Of TObject, TId).PageWithResponseAsync
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1
   name: BaseEndpointClient<TObject>
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html
@@ -4179,14 +4007,14 @@ references:
   nameWithType: BaseEndpointClient<TObject>.GetOrUpdateAsync
   nameWithType.vb: BaseEndpointClient(Of TObject).GetOrUpdateAsync
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.GetOrUpdateAsync``1(System.String,System.Object,CancellationToken)
-  name: GetOrUpdateAsync<TIdentifiableObject>(String, Object, CancellationToken)
+  name: GetOrUpdateAsync<TEndpointObject>(String, Object, CancellationToken)
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_GetOrUpdateAsync__1_System_String_System_Object_CancellationToken_
   commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.GetOrUpdateAsync``1(System.String,System.Object,CancellationToken)
-  name.vb: GetOrUpdateAsync(Of TIdentifiableObject)(String, Object, CancellationToken)
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient<TObject>.GetOrUpdateAsync<TIdentifiableObject>(System.String, System.Object, CancellationToken)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).GetOrUpdateAsync(Of TIdentifiableObject)(System.String, System.Object, CancellationToken)
-  nameWithType: BaseEndpointClient<TObject>.GetOrUpdateAsync<TIdentifiableObject>(String, Object, CancellationToken)
-  nameWithType.vb: BaseEndpointClient(Of TObject).GetOrUpdateAsync(Of TIdentifiableObject)(String, Object, CancellationToken)
+  name.vb: GetOrUpdateAsync(Of TEndpointObject)(String, Object, CancellationToken)
+  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient<TObject>.GetOrUpdateAsync<TEndpointObject>(System.String, System.Object, CancellationToken)
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).GetOrUpdateAsync(Of TEndpointObject)(System.String, System.Object, CancellationToken)
+  nameWithType: BaseEndpointClient<TObject>.GetOrUpdateAsync<TEndpointObject>(String, Object, CancellationToken)
+  nameWithType.vb: BaseEndpointClient(Of TObject).GetOrUpdateAsync(Of TEndpointObject)(String, Object, CancellationToken)
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.HasBlobData
   name: HasBlobData
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_HasBlobData
@@ -4299,41 +4127,23 @@ references:
   nameWithType: BaseEndpointClient<TObject>.RequestAllAsync
   nameWithType.vb: BaseEndpointClient(Of TObject).RequestAllAsync
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestAllAsync``2
-  name: RequestAllAsync<TIdentifiableObject, TId>()
+  name: RequestAllAsync<TEndpointObject, TId>()
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestAllAsync__2
   commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestAllAsync``2
-  name.vb: RequestAllAsync(Of TIdentifiableObject, TId)()
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient<TObject>.RequestAllAsync<TIdentifiableObject, TId>()
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).RequestAllAsync(Of TIdentifiableObject, TId)()
-  nameWithType: BaseEndpointClient<TObject>.RequestAllAsync<TIdentifiableObject, TId>()
-  nameWithType.vb: BaseEndpointClient(Of TObject).RequestAllAsync(Of TIdentifiableObject, TId)()
+  name.vb: RequestAllAsync(Of TEndpointObject, TId)()
+  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient<TObject>.RequestAllAsync<TEndpointObject, TId>()
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).RequestAllAsync(Of TEndpointObject, TId)()
+  nameWithType: BaseEndpointClient<TObject>.RequestAllAsync<TEndpointObject, TId>()
+  nameWithType.vb: BaseEndpointClient(Of TObject).RequestAllAsync(Of TEndpointObject, TId)()
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestAllAsync``2(CancellationToken)
-  name: RequestAllAsync<TIdentifiableObject, TId>(CancellationToken)
+  name: RequestAllAsync<TEndpointObject, TId>(CancellationToken)
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestAllAsync__2_CancellationToken_
   commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestAllAsync``2(CancellationToken)
-  name.vb: RequestAllAsync(Of TIdentifiableObject, TId)(CancellationToken)
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient<TObject>.RequestAllAsync<TIdentifiableObject, TId>(CancellationToken)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).RequestAllAsync(Of TIdentifiableObject, TId)(CancellationToken)
-  nameWithType: BaseEndpointClient<TObject>.RequestAllAsync<TIdentifiableObject, TId>(CancellationToken)
-  nameWithType.vb: BaseEndpointClient(Of TObject).RequestAllAsync(Of TIdentifiableObject, TId)(CancellationToken)
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestAllWithResponseAsync*
-  name: RequestAllWithResponseAsync
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestAllWithResponseAsync_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestAllWithResponseAsync
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient<TObject>.RequestAllWithResponseAsync
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).RequestAllWithResponseAsync
-  nameWithType: BaseEndpointClient<TObject>.RequestAllWithResponseAsync
-  nameWithType.vb: BaseEndpointClient(Of TObject).RequestAllWithResponseAsync
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestAllWithResponseAsync``2(CancellationToken)
-  name: RequestAllWithResponseAsync<TIdentifiableObject, TId>(CancellationToken)
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestAllWithResponseAsync__2_CancellationToken_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestAllWithResponseAsync``2(CancellationToken)
-  name.vb: RequestAllWithResponseAsync(Of TIdentifiableObject, TId)(CancellationToken)
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient<TObject>.RequestAllWithResponseAsync<TIdentifiableObject, TId>(CancellationToken)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).RequestAllWithResponseAsync(Of TIdentifiableObject, TId)(CancellationToken)
-  nameWithType: BaseEndpointClient<TObject>.RequestAllWithResponseAsync<TIdentifiableObject, TId>(CancellationToken)
-  nameWithType.vb: BaseEndpointClient(Of TObject).RequestAllWithResponseAsync(Of TIdentifiableObject, TId)(CancellationToken)
+  name.vb: RequestAllAsync(Of TEndpointObject, TId)(CancellationToken)
+  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient<TObject>.RequestAllAsync<TEndpointObject, TId>(CancellationToken)
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).RequestAllAsync(Of TEndpointObject, TId)(CancellationToken)
+  nameWithType: BaseEndpointClient<TObject>.RequestAllAsync<TEndpointObject, TId>(CancellationToken)
+  nameWithType.vb: BaseEndpointClient(Of TObject).RequestAllAsync(Of TEndpointObject, TId)(CancellationToken)
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestGetAsync
   name: RequestGetAsync()
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestGetAsync
@@ -4360,49 +4170,23 @@ references:
   nameWithType: BaseEndpointClient<TObject>.RequestGetAsync
   nameWithType.vb: BaseEndpointClient(Of TObject).RequestGetAsync
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestGetAsync``2(``1)
-  name: RequestGetAsync<TIdentifiableObject, TId>(TId)
+  name: RequestGetAsync<TEndpointObject, TId>(TId)
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestGetAsync__2___1_
   commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestGetAsync``2(``1)
-  name.vb: RequestGetAsync(Of TIdentifiableObject, TId)(TId)
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient<TObject>.RequestGetAsync<TIdentifiableObject, TId>(TId)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).RequestGetAsync(Of TIdentifiableObject, TId)(TId)
-  nameWithType: BaseEndpointClient<TObject>.RequestGetAsync<TIdentifiableObject, TId>(TId)
-  nameWithType.vb: BaseEndpointClient(Of TObject).RequestGetAsync(Of TIdentifiableObject, TId)(TId)
+  name.vb: RequestGetAsync(Of TEndpointObject, TId)(TId)
+  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient<TObject>.RequestGetAsync<TEndpointObject, TId>(TId)
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).RequestGetAsync(Of TEndpointObject, TId)(TId)
+  nameWithType: BaseEndpointClient<TObject>.RequestGetAsync<TEndpointObject, TId>(TId)
+  nameWithType.vb: BaseEndpointClient(Of TObject).RequestGetAsync(Of TEndpointObject, TId)(TId)
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestGetAsync``2(``1,CancellationToken)
-  name: RequestGetAsync<TIdentifiableObject, TId>(TId, CancellationToken)
+  name: RequestGetAsync<TEndpointObject, TId>(TId, CancellationToken)
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestGetAsync__2___1_CancellationToken_
   commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestGetAsync``2(``1,CancellationToken)
-  name.vb: RequestGetAsync(Of TIdentifiableObject, TId)(TId, CancellationToken)
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient<TObject>.RequestGetAsync<TIdentifiableObject, TId>(TId, CancellationToken)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).RequestGetAsync(Of TIdentifiableObject, TId)(TId, CancellationToken)
-  nameWithType: BaseEndpointClient<TObject>.RequestGetAsync<TIdentifiableObject, TId>(TId, CancellationToken)
-  nameWithType.vb: BaseEndpointClient(Of TObject).RequestGetAsync(Of TIdentifiableObject, TId)(TId, CancellationToken)
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestGetWithResponseAsync(CancellationToken)
-  name: RequestGetWithResponseAsync(CancellationToken)
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestGetWithResponseAsync_CancellationToken_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestGetWithResponseAsync(CancellationToken)
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient<TObject>.RequestGetWithResponseAsync(CancellationToken)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).RequestGetWithResponseAsync(CancellationToken)
-  nameWithType: BaseEndpointClient<TObject>.RequestGetWithResponseAsync(CancellationToken)
-  nameWithType.vb: BaseEndpointClient(Of TObject).RequestGetWithResponseAsync(CancellationToken)
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestGetWithResponseAsync*
-  name: RequestGetWithResponseAsync
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestGetWithResponseAsync_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestGetWithResponseAsync
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient<TObject>.RequestGetWithResponseAsync
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).RequestGetWithResponseAsync
-  nameWithType: BaseEndpointClient<TObject>.RequestGetWithResponseAsync
-  nameWithType.vb: BaseEndpointClient(Of TObject).RequestGetWithResponseAsync
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestGetWithResponseAsync``2(``1,CancellationToken)
-  name: RequestGetWithResponseAsync<TIdentifiableObject, TId>(TId, CancellationToken)
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestGetWithResponseAsync__2___1_CancellationToken_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestGetWithResponseAsync``2(``1,CancellationToken)
-  name.vb: RequestGetWithResponseAsync(Of TIdentifiableObject, TId)(TId, CancellationToken)
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient<TObject>.RequestGetWithResponseAsync<TIdentifiableObject, TId>(TId, CancellationToken)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).RequestGetWithResponseAsync(Of TIdentifiableObject, TId)(TId, CancellationToken)
-  nameWithType: BaseEndpointClient<TObject>.RequestGetWithResponseAsync<TIdentifiableObject, TId>(TId, CancellationToken)
-  nameWithType.vb: BaseEndpointClient(Of TObject).RequestGetWithResponseAsync(Of TIdentifiableObject, TId)(TId, CancellationToken)
+  name.vb: RequestGetAsync(Of TEndpointObject, TId)(TId, CancellationToken)
+  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient<TObject>.RequestGetAsync<TEndpointObject, TId>(TId, CancellationToken)
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).RequestGetAsync(Of TEndpointObject, TId)(TId, CancellationToken)
+  nameWithType: BaseEndpointClient<TObject>.RequestGetAsync<TEndpointObject, TId>(TId, CancellationToken)
+  nameWithType.vb: BaseEndpointClient(Of TObject).RequestGetAsync(Of TEndpointObject, TId)(TId, CancellationToken)
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestIdsAsync*
   name: RequestIdsAsync
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestIdsAsync_
@@ -4430,24 +4214,6 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).RequestIdsAsync(Of TId)(CancellationToken)
   nameWithType: BaseEndpointClient<TObject>.RequestIdsAsync<TId>(CancellationToken)
   nameWithType.vb: BaseEndpointClient(Of TObject).RequestIdsAsync(Of TId)(CancellationToken)
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestIdsWithResponseAsync*
-  name: RequestIdsWithResponseAsync
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestIdsWithResponseAsync_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestIdsWithResponseAsync
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient<TObject>.RequestIdsWithResponseAsync
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).RequestIdsWithResponseAsync
-  nameWithType: BaseEndpointClient<TObject>.RequestIdsWithResponseAsync
-  nameWithType.vb: BaseEndpointClient(Of TObject).RequestIdsWithResponseAsync
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestIdsWithResponseAsync``1(CancellationToken)
-  name: RequestIdsWithResponseAsync<TId>(CancellationToken)
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestIdsWithResponseAsync__1_CancellationToken_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestIdsWithResponseAsync``1(CancellationToken)
-  name.vb: RequestIdsWithResponseAsync(Of TId)(CancellationToken)
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient<TObject>.RequestIdsWithResponseAsync<TId>(CancellationToken)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).RequestIdsWithResponseAsync(Of TId)(CancellationToken)
-  nameWithType: BaseEndpointClient<TObject>.RequestIdsWithResponseAsync<TId>(CancellationToken)
-  nameWithType.vb: BaseEndpointClient(Of TObject).RequestIdsWithResponseAsync(Of TId)(CancellationToken)
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestManyAsync*
   name: RequestManyAsync
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestManyAsync_
@@ -4458,41 +4224,23 @@ references:
   nameWithType: BaseEndpointClient<TObject>.RequestManyAsync
   nameWithType.vb: BaseEndpointClient(Of TObject).RequestManyAsync
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestManyAsync``2(IEnumerable{``1})
-  name: RequestManyAsync<TIdentifiableObject, TId>(IEnumerable<TId>)
+  name: RequestManyAsync<TEndpointObject, TId>(IEnumerable<TId>)
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestManyAsync__2_IEnumerable___1__
   commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestManyAsync``2(IEnumerable{``1})
-  name.vb: RequestManyAsync(Of TIdentifiableObject, TId)(IEnumerable(Of TId))
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient<TObject>.RequestManyAsync<TIdentifiableObject, TId>(IEnumerable<TId>)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).RequestManyAsync(Of TIdentifiableObject, TId)(IEnumerable(Of TId))
-  nameWithType: BaseEndpointClient<TObject>.RequestManyAsync<TIdentifiableObject, TId>(IEnumerable<TId>)
-  nameWithType.vb: BaseEndpointClient(Of TObject).RequestManyAsync(Of TIdentifiableObject, TId)(IEnumerable(Of TId))
+  name.vb: RequestManyAsync(Of TEndpointObject, TId)(IEnumerable(Of TId))
+  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient<TObject>.RequestManyAsync<TEndpointObject, TId>(IEnumerable<TId>)
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).RequestManyAsync(Of TEndpointObject, TId)(IEnumerable(Of TId))
+  nameWithType: BaseEndpointClient<TObject>.RequestManyAsync<TEndpointObject, TId>(IEnumerable<TId>)
+  nameWithType.vb: BaseEndpointClient(Of TObject).RequestManyAsync(Of TEndpointObject, TId)(IEnumerable(Of TId))
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestManyAsync``2(IEnumerable{``1},CancellationToken)
-  name: RequestManyAsync<TIdentifiableObject, TId>(IEnumerable<TId>, CancellationToken)
+  name: RequestManyAsync<TEndpointObject, TId>(IEnumerable<TId>, CancellationToken)
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestManyAsync__2_IEnumerable___1__CancellationToken_
   commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestManyAsync``2(IEnumerable{``1},CancellationToken)
-  name.vb: RequestManyAsync(Of TIdentifiableObject, TId)(IEnumerable(Of TId), CancellationToken)
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient<TObject>.RequestManyAsync<TIdentifiableObject, TId>(IEnumerable<TId>, CancellationToken)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).RequestManyAsync(Of TIdentifiableObject, TId)(IEnumerable(Of TId), CancellationToken)
-  nameWithType: BaseEndpointClient<TObject>.RequestManyAsync<TIdentifiableObject, TId>(IEnumerable<TId>, CancellationToken)
-  nameWithType.vb: BaseEndpointClient(Of TObject).RequestManyAsync(Of TIdentifiableObject, TId)(IEnumerable(Of TId), CancellationToken)
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestManyWithResponseAsync*
-  name: RequestManyWithResponseAsync
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestManyWithResponseAsync_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestManyWithResponseAsync
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient<TObject>.RequestManyWithResponseAsync
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).RequestManyWithResponseAsync
-  nameWithType: BaseEndpointClient<TObject>.RequestManyWithResponseAsync
-  nameWithType.vb: BaseEndpointClient(Of TObject).RequestManyWithResponseAsync
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestManyWithResponseAsync``2(IEnumerable{``1},CancellationToken)
-  name: RequestManyWithResponseAsync<TIdentifiableObject, TId>(IEnumerable<TId>, CancellationToken)
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestManyWithResponseAsync__2_IEnumerable___1__CancellationToken_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestManyWithResponseAsync``2(IEnumerable{``1},CancellationToken)
-  name.vb: RequestManyWithResponseAsync(Of TIdentifiableObject, TId)(IEnumerable(Of TId), CancellationToken)
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient<TObject>.RequestManyWithResponseAsync<TIdentifiableObject, TId>(IEnumerable<TId>, CancellationToken)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).RequestManyWithResponseAsync(Of TIdentifiableObject, TId)(IEnumerable(Of TId), CancellationToken)
-  nameWithType: BaseEndpointClient<TObject>.RequestManyWithResponseAsync<TIdentifiableObject, TId>(IEnumerable<TId>, CancellationToken)
-  nameWithType.vb: BaseEndpointClient(Of TObject).RequestManyWithResponseAsync(Of TIdentifiableObject, TId)(IEnumerable(Of TId), CancellationToken)
+  name.vb: RequestManyAsync(Of TEndpointObject, TId)(IEnumerable(Of TId), CancellationToken)
+  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient<TObject>.RequestManyAsync<TEndpointObject, TId>(IEnumerable<TId>, CancellationToken)
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).RequestManyAsync(Of TEndpointObject, TId)(IEnumerable(Of TId), CancellationToken)
+  nameWithType: BaseEndpointClient<TObject>.RequestManyAsync<TEndpointObject, TId>(IEnumerable<TId>, CancellationToken)
+  nameWithType.vb: BaseEndpointClient(Of TObject).RequestManyAsync(Of TEndpointObject, TId)(IEnumerable(Of TId), CancellationToken)
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestPageAsync(System.Int32,CancellationToken,System.Int32)
   name: RequestPageAsync(Int32, CancellationToken, Int32)
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestPageAsync_System_Int32_CancellationToken_System_Int32_
@@ -4519,49 +4267,23 @@ references:
   nameWithType: BaseEndpointClient<TObject>.RequestPageAsync
   nameWithType.vb: BaseEndpointClient(Of TObject).RequestPageAsync
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestPageAsync``2(System.Int32,CancellationToken,System.Int32)
-  name: RequestPageAsync<TIdentifiableObject, TId>(Int32, CancellationToken, Int32)
+  name: RequestPageAsync<TEndpointObject, TId>(Int32, CancellationToken, Int32)
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestPageAsync__2_System_Int32_CancellationToken_System_Int32_
   commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestPageAsync``2(System.Int32,CancellationToken,System.Int32)
-  name.vb: RequestPageAsync(Of TIdentifiableObject, TId)(Int32, CancellationToken, Int32)
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient<TObject>.RequestPageAsync<TIdentifiableObject, TId>(System.Int32, CancellationToken, System.Int32)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).RequestPageAsync(Of TIdentifiableObject, TId)(System.Int32, CancellationToken, System.Int32)
-  nameWithType: BaseEndpointClient<TObject>.RequestPageAsync<TIdentifiableObject, TId>(Int32, CancellationToken, Int32)
-  nameWithType.vb: BaseEndpointClient(Of TObject).RequestPageAsync(Of TIdentifiableObject, TId)(Int32, CancellationToken, Int32)
+  name.vb: RequestPageAsync(Of TEndpointObject, TId)(Int32, CancellationToken, Int32)
+  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient<TObject>.RequestPageAsync<TEndpointObject, TId>(System.Int32, CancellationToken, System.Int32)
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).RequestPageAsync(Of TEndpointObject, TId)(System.Int32, CancellationToken, System.Int32)
+  nameWithType: BaseEndpointClient<TObject>.RequestPageAsync<TEndpointObject, TId>(Int32, CancellationToken, Int32)
+  nameWithType.vb: BaseEndpointClient(Of TObject).RequestPageAsync(Of TEndpointObject, TId)(Int32, CancellationToken, Int32)
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestPageAsync``2(System.Int32,System.Int32)
-  name: RequestPageAsync<TIdentifiableObject, TId>(Int32, Int32)
+  name: RequestPageAsync<TEndpointObject, TId>(Int32, Int32)
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestPageAsync__2_System_Int32_System_Int32_
   commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestPageAsync``2(System.Int32,System.Int32)
-  name.vb: RequestPageAsync(Of TIdentifiableObject, TId)(Int32, Int32)
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient<TObject>.RequestPageAsync<TIdentifiableObject, TId>(System.Int32, System.Int32)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).RequestPageAsync(Of TIdentifiableObject, TId)(System.Int32, System.Int32)
-  nameWithType: BaseEndpointClient<TObject>.RequestPageAsync<TIdentifiableObject, TId>(Int32, Int32)
-  nameWithType.vb: BaseEndpointClient(Of TObject).RequestPageAsync(Of TIdentifiableObject, TId)(Int32, Int32)
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestPageWithResponseAsync(System.Int32,CancellationToken,System.Int32)
-  name: RequestPageWithResponseAsync(Int32, CancellationToken, Int32)
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestPageWithResponseAsync_System_Int32_CancellationToken_System_Int32_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestPageWithResponseAsync(System.Int32,CancellationToken,System.Int32)
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient<TObject>.RequestPageWithResponseAsync(System.Int32, CancellationToken, System.Int32)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).RequestPageWithResponseAsync(System.Int32, CancellationToken, System.Int32)
-  nameWithType: BaseEndpointClient<TObject>.RequestPageWithResponseAsync(Int32, CancellationToken, Int32)
-  nameWithType.vb: BaseEndpointClient(Of TObject).RequestPageWithResponseAsync(Int32, CancellationToken, Int32)
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestPageWithResponseAsync*
-  name: RequestPageWithResponseAsync
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestPageWithResponseAsync_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestPageWithResponseAsync
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient<TObject>.RequestPageWithResponseAsync
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).RequestPageWithResponseAsync
-  nameWithType: BaseEndpointClient<TObject>.RequestPageWithResponseAsync
-  nameWithType.vb: BaseEndpointClient(Of TObject).RequestPageWithResponseAsync
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestPageWithResponseAsync``2(System.Int32,CancellationToken,System.Int32)
-  name: RequestPageWithResponseAsync<TIdentifiableObject, TId>(Int32, CancellationToken, Int32)
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_RequestPageWithResponseAsync__2_System_Int32_CancellationToken_System_Int32_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.RequestPageWithResponseAsync``2(System.Int32,CancellationToken,System.Int32)
-  name.vb: RequestPageWithResponseAsync(Of TIdentifiableObject, TId)(Int32, CancellationToken, Int32)
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient<TObject>.RequestPageWithResponseAsync<TIdentifiableObject, TId>(System.Int32, CancellationToken, System.Int32)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).RequestPageWithResponseAsync(Of TIdentifiableObject, TId)(System.Int32, CancellationToken, System.Int32)
-  nameWithType: BaseEndpointClient<TObject>.RequestPageWithResponseAsync<TIdentifiableObject, TId>(Int32, CancellationToken, Int32)
-  nameWithType.vb: BaseEndpointClient(Of TObject).RequestPageWithResponseAsync(Of TIdentifiableObject, TId)(Int32, CancellationToken, Int32)
+  name.vb: RequestPageAsync(Of TEndpointObject, TId)(Int32, Int32)
+  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient<TObject>.RequestPageAsync<TEndpointObject, TId>(System.Int32, System.Int32)
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).RequestPageAsync(Of TEndpointObject, TId)(System.Int32, System.Int32)
+  nameWithType: BaseEndpointClient<TObject>.RequestPageAsync<TEndpointObject, TId>(Int32, Int32)
+  nameWithType.vb: BaseEndpointClient(Of TObject).RequestPageAsync(Of TEndpointObject, TId)(Int32, Int32)
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.SchemaVersion
   name: SchemaVersion
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_SchemaVersion
@@ -4588,15 +4310,15 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).UpdateIndividualsAsync
   nameWithType: BaseEndpointClient<TObject>.UpdateIndividualsAsync
   nameWithType.vb: BaseEndpointClient(Of TObject).UpdateIndividualsAsync
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.UpdateIndividualsAsync``2(Gw2Sharp.WebApi.Caching.CacheItem{IReadOnlyList{``0}})
-  name: UpdateIndividualsAsync<TIdentifiableObject, TId>(CacheItem<IReadOnlyList<TIdentifiableObject>>)
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_UpdateIndividualsAsync__2_Gw2Sharp_WebApi_Caching_CacheItem_IReadOnlyList___0___
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.UpdateIndividualsAsync``2(Gw2Sharp.WebApi.Caching.CacheItem{IReadOnlyList{``0}})
-  name.vb: UpdateIndividualsAsync(Of TIdentifiableObject, TId)(CacheItem(Of IReadOnlyList(Of TIdentifiableObject)))
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient<TObject>.UpdateIndividualsAsync<TIdentifiableObject, TId>(Gw2Sharp.WebApi.Caching.CacheItem<IReadOnlyList<TIdentifiableObject>>)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).UpdateIndividualsAsync(Of TIdentifiableObject, TId)(Gw2Sharp.WebApi.Caching.CacheItem(Of IReadOnlyList(Of TIdentifiableObject)))
-  nameWithType: BaseEndpointClient<TObject>.UpdateIndividualsAsync<TIdentifiableObject, TId>(CacheItem<IReadOnlyList<TIdentifiableObject>>)
-  nameWithType.vb: BaseEndpointClient(Of TObject).UpdateIndividualsAsync(Of TIdentifiableObject, TId)(CacheItem(Of IReadOnlyList(Of TIdentifiableObject)))
+- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.UpdateIndividualsAsync``2(Gw2Sharp.WebApi.Caching.CacheItem{Gw2Sharp.WebApi.V2.IApiV2ObjectList{``0}})
+  name: UpdateIndividualsAsync<TEndpointObject, TId>(CacheItem<IApiV2ObjectList<TEndpointObject>>)
+  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_UpdateIndividualsAsync__2_Gw2Sharp_WebApi_Caching_CacheItem_Gw2Sharp_WebApi_V2_IApiV2ObjectList___0___
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.UpdateIndividualsAsync``2(Gw2Sharp.WebApi.Caching.CacheItem{Gw2Sharp.WebApi.V2.IApiV2ObjectList{``0}})
+  name.vb: UpdateIndividualsAsync(Of TEndpointObject, TId)(CacheItem(Of IApiV2ObjectList(Of TEndpointObject)))
+  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient<TObject>.UpdateIndividualsAsync<TEndpointObject, TId>(Gw2Sharp.WebApi.Caching.CacheItem<Gw2Sharp.WebApi.V2.IApiV2ObjectList<TEndpointObject>>)
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).UpdateIndividualsAsync(Of TEndpointObject, TId)(Gw2Sharp.WebApi.Caching.CacheItem(Of Gw2Sharp.WebApi.V2.IApiV2ObjectList(Of TEndpointObject)))
+  nameWithType: BaseEndpointClient<TObject>.UpdateIndividualsAsync<TEndpointObject, TId>(CacheItem<IApiV2ObjectList<TEndpointObject>>)
+  nameWithType.vb: BaseEndpointClient(Of TObject).UpdateIndividualsAsync(Of TEndpointObject, TId)(CacheItem(Of IApiV2ObjectList(Of TEndpointObject)))
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient`1
   name: BaseEndpointPaginatedBlobClient<TObject>
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient-1.html
@@ -4657,23 +4379,6 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient(Of TObject).GetAsync
   nameWithType: BaseEndpointPaginatedBlobClient<TObject>.GetAsync
   nameWithType.vb: BaseEndpointPaginatedBlobClient(Of TObject).GetAsync
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient`1.GetWithResponseAsync(CancellationToken)
-  name: GetWithResponseAsync(CancellationToken)
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointPaginatedBlobClient_1_GetWithResponseAsync_CancellationToken_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient`1.GetWithResponseAsync(CancellationToken)
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient<TObject>.GetWithResponseAsync(CancellationToken)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient(Of TObject).GetWithResponseAsync(CancellationToken)
-  nameWithType: BaseEndpointPaginatedBlobClient<TObject>.GetWithResponseAsync(CancellationToken)
-  nameWithType.vb: BaseEndpointPaginatedBlobClient(Of TObject).GetWithResponseAsync(CancellationToken)
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient`1.GetWithResponseAsync*
-  name: GetWithResponseAsync
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointPaginatedBlobClient_1_GetWithResponseAsync_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient`1.GetWithResponseAsync
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient<TObject>.GetWithResponseAsync
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient(Of TObject).GetWithResponseAsync
-  nameWithType: BaseEndpointPaginatedBlobClient<TObject>.GetWithResponseAsync
-  nameWithType.vb: BaseEndpointPaginatedBlobClient(Of TObject).GetWithResponseAsync
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient`1.PageAsync(System.Int32)
   name: PageAsync(Int32)
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointPaginatedBlobClient_1_PageAsync_System_Int32_
@@ -4715,31 +4420,6 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient(Of TObject).PageAsync
   nameWithType: BaseEndpointPaginatedBlobClient<TObject>.PageAsync
   nameWithType.vb: BaseEndpointPaginatedBlobClient(Of TObject).PageAsync
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient`1.PageWithResponseAsync(System.Int32,CancellationToken)
-  name: PageWithResponseAsync(Int32, CancellationToken)
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointPaginatedBlobClient_1_PageWithResponseAsync_System_Int32_CancellationToken_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient`1.PageWithResponseAsync(System.Int32,CancellationToken)
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient<TObject>.PageWithResponseAsync(System.Int32, CancellationToken)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient(Of TObject).PageWithResponseAsync(System.Int32, CancellationToken)
-  nameWithType: BaseEndpointPaginatedBlobClient<TObject>.PageWithResponseAsync(Int32, CancellationToken)
-  nameWithType.vb: BaseEndpointPaginatedBlobClient(Of TObject).PageWithResponseAsync(Int32, CancellationToken)
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient`1.PageWithResponseAsync(System.Int32,CancellationToken,System.Int32)
-  name: PageWithResponseAsync(Int32, CancellationToken, Int32)
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointPaginatedBlobClient_1_PageWithResponseAsync_System_Int32_CancellationToken_System_Int32_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient`1.PageWithResponseAsync(System.Int32,CancellationToken,System.Int32)
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient<TObject>.PageWithResponseAsync(System.Int32, CancellationToken, System.Int32)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient(Of TObject).PageWithResponseAsync(System.Int32, CancellationToken, System.Int32)
-  nameWithType: BaseEndpointPaginatedBlobClient<TObject>.PageWithResponseAsync(Int32, CancellationToken, Int32)
-  nameWithType.vb: BaseEndpointPaginatedBlobClient(Of TObject).PageWithResponseAsync(Int32, CancellationToken, Int32)
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient`1.PageWithResponseAsync*
-  name: PageWithResponseAsync
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointPaginatedBlobClient_1_PageWithResponseAsync_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient`1.PageWithResponseAsync
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient<TObject>.PageWithResponseAsync
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient(Of TObject).PageWithResponseAsync
-  nameWithType: BaseEndpointPaginatedBlobClient<TObject>.PageWithResponseAsync
-  nameWithType.vb: BaseEndpointPaginatedBlobClient(Of TObject).PageWithResponseAsync
 - uid: Gw2Sharp.WebApi.V2.Clients.BuildClient
   name: BuildClient
   href: api/Gw2Sharp.WebApi.V2.Clients.BuildClient.html
@@ -8103,23 +7783,6 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.IAllExpandableClient(Of TObject).AllAsync
   nameWithType: IAllExpandableClient<TObject>.AllAsync
   nameWithType.vb: IAllExpandableClient(Of TObject).AllAsync
-- uid: Gw2Sharp.WebApi.V2.Clients.IAllExpandableClient`1.AllWithResponseAsync(CancellationToken)
-  name: AllWithResponseAsync(CancellationToken)
-  href: api/Gw2Sharp.WebApi.V2.Clients.IAllExpandableClient-1.html#Gw2Sharp_WebApi_V2_Clients_IAllExpandableClient_1_AllWithResponseAsync_CancellationToken_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.IAllExpandableClient`1.AllWithResponseAsync(CancellationToken)
-  fullName: Gw2Sharp.WebApi.V2.Clients.IAllExpandableClient<TObject>.AllWithResponseAsync(CancellationToken)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.IAllExpandableClient(Of TObject).AllWithResponseAsync(CancellationToken)
-  nameWithType: IAllExpandableClient<TObject>.AllWithResponseAsync(CancellationToken)
-  nameWithType.vb: IAllExpandableClient(Of TObject).AllWithResponseAsync(CancellationToken)
-- uid: Gw2Sharp.WebApi.V2.Clients.IAllExpandableClient`1.AllWithResponseAsync*
-  name: AllWithResponseAsync
-  href: api/Gw2Sharp.WebApi.V2.Clients.IAllExpandableClient-1.html#Gw2Sharp_WebApi_V2_Clients_IAllExpandableClient_1_AllWithResponseAsync_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.IAllExpandableClient`1.AllWithResponseAsync
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.IAllExpandableClient<TObject>.AllWithResponseAsync
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.IAllExpandableClient(Of TObject).AllWithResponseAsync
-  nameWithType: IAllExpandableClient<TObject>.AllWithResponseAsync
-  nameWithType.vb: IAllExpandableClient(Of TObject).AllWithResponseAsync
 - uid: Gw2Sharp.WebApi.V2.Clients.IAuthenticatedClient`1
   name: IAuthenticatedClient<TObject>
   href: api/Gw2Sharp.WebApi.V2.Clients.IAuthenticatedClient-1.html
@@ -8207,23 +7870,6 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.IBlobClient(Of TObject).GetAsync
   nameWithType: IBlobClient<TObject>.GetAsync
   nameWithType.vb: IBlobClient(Of TObject).GetAsync
-- uid: Gw2Sharp.WebApi.V2.Clients.IBlobClient`1.GetWithResponseAsync(CancellationToken)
-  name: GetWithResponseAsync(CancellationToken)
-  href: api/Gw2Sharp.WebApi.V2.Clients.IBlobClient-1.html#Gw2Sharp_WebApi_V2_Clients_IBlobClient_1_GetWithResponseAsync_CancellationToken_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.IBlobClient`1.GetWithResponseAsync(CancellationToken)
-  fullName: Gw2Sharp.WebApi.V2.Clients.IBlobClient<TObject>.GetWithResponseAsync(CancellationToken)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.IBlobClient(Of TObject).GetWithResponseAsync(CancellationToken)
-  nameWithType: IBlobClient<TObject>.GetWithResponseAsync(CancellationToken)
-  nameWithType.vb: IBlobClient(Of TObject).GetWithResponseAsync(CancellationToken)
-- uid: Gw2Sharp.WebApi.V2.Clients.IBlobClient`1.GetWithResponseAsync*
-  name: GetWithResponseAsync
-  href: api/Gw2Sharp.WebApi.V2.Clients.IBlobClient-1.html#Gw2Sharp_WebApi_V2_Clients_IBlobClient_1_GetWithResponseAsync_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.IBlobClient`1.GetWithResponseAsync
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.IBlobClient<TObject>.GetWithResponseAsync
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.IBlobClient(Of TObject).GetWithResponseAsync
-  nameWithType: IBlobClient<TObject>.GetWithResponseAsync
-  nameWithType.vb: IBlobClient(Of TObject).GetWithResponseAsync
 - uid: Gw2Sharp.WebApi.V2.Clients.IBuildClient
   name: IBuildClient
   href: api/Gw2Sharp.WebApi.V2.Clients.IBuildClient.html
@@ -8264,23 +7910,6 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient(Of TObject, TId).GetAsync
   nameWithType: IBulkExpandableClient<TObject, TId>.GetAsync
   nameWithType.vb: IBulkExpandableClient(Of TObject, TId).GetAsync
-- uid: Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient`2.GetWithResponseAsync(`1,CancellationToken)
-  name: GetWithResponseAsync(TId, CancellationToken)
-  href: api/Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient-2.html#Gw2Sharp_WebApi_V2_Clients_IBulkExpandableClient_2_GetWithResponseAsync__1_CancellationToken_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient`2.GetWithResponseAsync(`1,CancellationToken)
-  fullName: Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient<TObject, TId>.GetWithResponseAsync(TId, CancellationToken)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient(Of TObject, TId).GetWithResponseAsync(TId, CancellationToken)
-  nameWithType: IBulkExpandableClient<TObject, TId>.GetWithResponseAsync(TId, CancellationToken)
-  nameWithType.vb: IBulkExpandableClient(Of TObject, TId).GetWithResponseAsync(TId, CancellationToken)
-- uid: Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient`2.GetWithResponseAsync*
-  name: GetWithResponseAsync
-  href: api/Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient-2.html#Gw2Sharp_WebApi_V2_Clients_IBulkExpandableClient_2_GetWithResponseAsync_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient`2.GetWithResponseAsync
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient<TObject, TId>.GetWithResponseAsync
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient(Of TObject, TId).GetWithResponseAsync
-  nameWithType: IBulkExpandableClient<TObject, TId>.GetWithResponseAsync
-  nameWithType.vb: IBulkExpandableClient(Of TObject, TId).GetWithResponseAsync
 - uid: Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient`2.IdsAsync
   name: IdsAsync()
   href: api/Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient-2.html#Gw2Sharp_WebApi_V2_Clients_IBulkExpandableClient_2_IdsAsync
@@ -8306,23 +7935,6 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient(Of TObject, TId).IdsAsync
   nameWithType: IBulkExpandableClient<TObject, TId>.IdsAsync
   nameWithType.vb: IBulkExpandableClient(Of TObject, TId).IdsAsync
-- uid: Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient`2.IdsWithResponseAsync(CancellationToken)
-  name: IdsWithResponseAsync(CancellationToken)
-  href: api/Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient-2.html#Gw2Sharp_WebApi_V2_Clients_IBulkExpandableClient_2_IdsWithResponseAsync_CancellationToken_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient`2.IdsWithResponseAsync(CancellationToken)
-  fullName: Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient<TObject, TId>.IdsWithResponseAsync(CancellationToken)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient(Of TObject, TId).IdsWithResponseAsync(CancellationToken)
-  nameWithType: IBulkExpandableClient<TObject, TId>.IdsWithResponseAsync(CancellationToken)
-  nameWithType.vb: IBulkExpandableClient(Of TObject, TId).IdsWithResponseAsync(CancellationToken)
-- uid: Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient`2.IdsWithResponseAsync*
-  name: IdsWithResponseAsync
-  href: api/Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient-2.html#Gw2Sharp_WebApi_V2_Clients_IBulkExpandableClient_2_IdsWithResponseAsync_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient`2.IdsWithResponseAsync
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient<TObject, TId>.IdsWithResponseAsync
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient(Of TObject, TId).IdsWithResponseAsync
-  nameWithType: IBulkExpandableClient<TObject, TId>.IdsWithResponseAsync
-  nameWithType.vb: IBulkExpandableClient(Of TObject, TId).IdsWithResponseAsync
 - uid: Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient`2.ManyAsync(IEnumerable{`1})
   name: ManyAsync(IEnumerable<TId>)
   href: api/Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient-2.html#Gw2Sharp_WebApi_V2_Clients_IBulkExpandableClient_2_ManyAsync_IEnumerable__1__
@@ -8350,24 +7962,6 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient(Of TObject, TId).ManyAsync
   nameWithType: IBulkExpandableClient<TObject, TId>.ManyAsync
   nameWithType.vb: IBulkExpandableClient(Of TObject, TId).ManyAsync
-- uid: Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient`2.ManyWithResponseAsync(IEnumerable{`1},CancellationToken)
-  name: ManyWithResponseAsync(IEnumerable<TId>, CancellationToken)
-  href: api/Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient-2.html#Gw2Sharp_WebApi_V2_Clients_IBulkExpandableClient_2_ManyWithResponseAsync_IEnumerable__1__CancellationToken_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient`2.ManyWithResponseAsync(IEnumerable{`1},CancellationToken)
-  name.vb: ManyWithResponseAsync(IEnumerable(Of TId), CancellationToken)
-  fullName: Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient<TObject, TId>.ManyWithResponseAsync(IEnumerable<TId>, CancellationToken)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient(Of TObject, TId).ManyWithResponseAsync(IEnumerable(Of TId), CancellationToken)
-  nameWithType: IBulkExpandableClient<TObject, TId>.ManyWithResponseAsync(IEnumerable<TId>, CancellationToken)
-  nameWithType.vb: IBulkExpandableClient(Of TObject, TId).ManyWithResponseAsync(IEnumerable(Of TId), CancellationToken)
-- uid: Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient`2.ManyWithResponseAsync*
-  name: ManyWithResponseAsync
-  href: api/Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient-2.html#Gw2Sharp_WebApi_V2_Clients_IBulkExpandableClient_2_ManyWithResponseAsync_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient`2.ManyWithResponseAsync
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient<TObject, TId>.ManyWithResponseAsync
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient(Of TObject, TId).ManyWithResponseAsync
-  nameWithType: IBulkExpandableClient<TObject, TId>.ManyWithResponseAsync
-  nameWithType.vb: IBulkExpandableClient(Of TObject, TId).ManyWithResponseAsync
 - uid: Gw2Sharp.WebApi.V2.Clients.ICharactersClient
   name: ICharactersClient
   href: api/Gw2Sharp.WebApi.V2.Clients.ICharactersClient.html
@@ -10484,31 +10078,6 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.IPaginatedClient(Of TObject).PageAsync
   nameWithType: IPaginatedClient<TObject>.PageAsync
   nameWithType.vb: IPaginatedClient(Of TObject).PageAsync
-- uid: Gw2Sharp.WebApi.V2.Clients.IPaginatedClient`1.PageWithResponseAsync(System.Int32,CancellationToken)
-  name: PageWithResponseAsync(Int32, CancellationToken)
-  href: api/Gw2Sharp.WebApi.V2.Clients.IPaginatedClient-1.html#Gw2Sharp_WebApi_V2_Clients_IPaginatedClient_1_PageWithResponseAsync_System_Int32_CancellationToken_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.IPaginatedClient`1.PageWithResponseAsync(System.Int32,CancellationToken)
-  fullName: Gw2Sharp.WebApi.V2.Clients.IPaginatedClient<TObject>.PageWithResponseAsync(System.Int32, CancellationToken)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.IPaginatedClient(Of TObject).PageWithResponseAsync(System.Int32, CancellationToken)
-  nameWithType: IPaginatedClient<TObject>.PageWithResponseAsync(Int32, CancellationToken)
-  nameWithType.vb: IPaginatedClient(Of TObject).PageWithResponseAsync(Int32, CancellationToken)
-- uid: Gw2Sharp.WebApi.V2.Clients.IPaginatedClient`1.PageWithResponseAsync(System.Int32,CancellationToken,System.Int32)
-  name: PageWithResponseAsync(Int32, CancellationToken, Int32)
-  href: api/Gw2Sharp.WebApi.V2.Clients.IPaginatedClient-1.html#Gw2Sharp_WebApi_V2_Clients_IPaginatedClient_1_PageWithResponseAsync_System_Int32_CancellationToken_System_Int32_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.IPaginatedClient`1.PageWithResponseAsync(System.Int32,CancellationToken,System.Int32)
-  fullName: Gw2Sharp.WebApi.V2.Clients.IPaginatedClient<TObject>.PageWithResponseAsync(System.Int32, CancellationToken, System.Int32)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.IPaginatedClient(Of TObject).PageWithResponseAsync(System.Int32, CancellationToken, System.Int32)
-  nameWithType: IPaginatedClient<TObject>.PageWithResponseAsync(Int32, CancellationToken, Int32)
-  nameWithType.vb: IPaginatedClient(Of TObject).PageWithResponseAsync(Int32, CancellationToken, Int32)
-- uid: Gw2Sharp.WebApi.V2.Clients.IPaginatedClient`1.PageWithResponseAsync*
-  name: PageWithResponseAsync
-  href: api/Gw2Sharp.WebApi.V2.Clients.IPaginatedClient-1.html#Gw2Sharp_WebApi_V2_Clients_IPaginatedClient_1_PageWithResponseAsync_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.IPaginatedClient`1.PageWithResponseAsync
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.IPaginatedClient<TObject>.PageWithResponseAsync
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.IPaginatedClient(Of TObject).PageWithResponseAsync
-  nameWithType: IPaginatedClient<TObject>.PageWithResponseAsync
-  nameWithType.vb: IPaginatedClient(Of TObject).PageWithResponseAsync
 - uid: Gw2Sharp.WebApi.V2.Clients.ItemsClient
   name: ItemsClient
   href: api/Gw2Sharp.WebApi.V2.Clients.ItemsClient.html
@@ -10946,168 +10515,34 @@ references:
   commentId: F:Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.UrlBase
   fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.UrlBase
   nameWithType: Gw2WebApiV2Client.UrlBase
-- uid: Gw2Sharp.WebApi.V2.IApiV2Response`1
-  name: IApiV2Response<T>
-  href: api/Gw2Sharp.WebApi.V2.IApiV2Response-1.html
-  commentId: T:Gw2Sharp.WebApi.V2.IApiV2Response`1
-  name.vb: IApiV2Response(Of T)
-  fullName: Gw2Sharp.WebApi.V2.IApiV2Response<T>
-  fullName.vb: Gw2Sharp.WebApi.V2.IApiV2Response(Of T)
-  nameWithType: IApiV2Response<T>
-  nameWithType.vb: IApiV2Response(Of T)
-- uid: Gw2Sharp.WebApi.V2.IApiV2Response`1.Cached
-  name: Cached
-  href: api/Gw2Sharp.WebApi.V2.IApiV2Response-1.html#Gw2Sharp_WebApi_V2_IApiV2Response_1_Cached
-  commentId: P:Gw2Sharp.WebApi.V2.IApiV2Response`1.Cached
-  fullName: Gw2Sharp.WebApi.V2.IApiV2Response<T>.Cached
-  fullName.vb: Gw2Sharp.WebApi.V2.IApiV2Response(Of T).Cached
-  nameWithType: IApiV2Response<T>.Cached
-  nameWithType.vb: IApiV2Response(Of T).Cached
-- uid: Gw2Sharp.WebApi.V2.IApiV2Response`1.Cached*
-  name: Cached
-  href: api/Gw2Sharp.WebApi.V2.IApiV2Response-1.html#Gw2Sharp_WebApi_V2_IApiV2Response_1_Cached_
-  commentId: Overload:Gw2Sharp.WebApi.V2.IApiV2Response`1.Cached
+- uid: Gw2Sharp.WebApi.V2.IApiV2Object
+  name: IApiV2Object
+  href: api/Gw2Sharp.WebApi.V2.IApiV2Object.html
+  commentId: T:Gw2Sharp.WebApi.V2.IApiV2Object
+  fullName: Gw2Sharp.WebApi.V2.IApiV2Object
+  nameWithType: IApiV2Object
+- uid: Gw2Sharp.WebApi.V2.IApiV2Object.HttpResponseInfo
+  name: HttpResponseInfo
+  href: api/Gw2Sharp.WebApi.V2.IApiV2Object.html#Gw2Sharp_WebApi_V2_IApiV2Object_HttpResponseInfo
+  commentId: P:Gw2Sharp.WebApi.V2.IApiV2Object.HttpResponseInfo
+  fullName: Gw2Sharp.WebApi.V2.IApiV2Object.HttpResponseInfo
+  nameWithType: IApiV2Object.HttpResponseInfo
+- uid: Gw2Sharp.WebApi.V2.IApiV2Object.HttpResponseInfo*
+  name: HttpResponseInfo
+  href: api/Gw2Sharp.WebApi.V2.IApiV2Object.html#Gw2Sharp_WebApi_V2_IApiV2Object_HttpResponseInfo_
+  commentId: Overload:Gw2Sharp.WebApi.V2.IApiV2Object.HttpResponseInfo
   isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.IApiV2Response<T>.Cached
-  fullName.vb: Gw2Sharp.WebApi.V2.IApiV2Response(Of T).Cached
-  nameWithType: IApiV2Response<T>.Cached
-  nameWithType.vb: IApiV2Response(Of T).Cached
-- uid: Gw2Sharp.WebApi.V2.IApiV2Response`1.CacheMaxAge
-  name: CacheMaxAge
-  href: api/Gw2Sharp.WebApi.V2.IApiV2Response-1.html#Gw2Sharp_WebApi_V2_IApiV2Response_1_CacheMaxAge
-  commentId: P:Gw2Sharp.WebApi.V2.IApiV2Response`1.CacheMaxAge
-  fullName: Gw2Sharp.WebApi.V2.IApiV2Response<T>.CacheMaxAge
-  fullName.vb: Gw2Sharp.WebApi.V2.IApiV2Response(Of T).CacheMaxAge
-  nameWithType: IApiV2Response<T>.CacheMaxAge
-  nameWithType.vb: IApiV2Response(Of T).CacheMaxAge
-- uid: Gw2Sharp.WebApi.V2.IApiV2Response`1.CacheMaxAge*
-  name: CacheMaxAge
-  href: api/Gw2Sharp.WebApi.V2.IApiV2Response-1.html#Gw2Sharp_WebApi_V2_IApiV2Response_1_CacheMaxAge_
-  commentId: Overload:Gw2Sharp.WebApi.V2.IApiV2Response`1.CacheMaxAge
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.IApiV2Response<T>.CacheMaxAge
-  fullName.vb: Gw2Sharp.WebApi.V2.IApiV2Response(Of T).CacheMaxAge
-  nameWithType: IApiV2Response<T>.CacheMaxAge
-  nameWithType.vb: IApiV2Response(Of T).CacheMaxAge
-- uid: Gw2Sharp.WebApi.V2.IApiV2Response`1.Expires
-  name: Expires
-  href: api/Gw2Sharp.WebApi.V2.IApiV2Response-1.html#Gw2Sharp_WebApi_V2_IApiV2Response_1_Expires
-  commentId: P:Gw2Sharp.WebApi.V2.IApiV2Response`1.Expires
-  fullName: Gw2Sharp.WebApi.V2.IApiV2Response<T>.Expires
-  fullName.vb: Gw2Sharp.WebApi.V2.IApiV2Response(Of T).Expires
-  nameWithType: IApiV2Response<T>.Expires
-  nameWithType.vb: IApiV2Response(Of T).Expires
-- uid: Gw2Sharp.WebApi.V2.IApiV2Response`1.Expires*
-  name: Expires
-  href: api/Gw2Sharp.WebApi.V2.IApiV2Response-1.html#Gw2Sharp_WebApi_V2_IApiV2Response_1_Expires_
-  commentId: Overload:Gw2Sharp.WebApi.V2.IApiV2Response`1.Expires
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.IApiV2Response<T>.Expires
-  fullName.vb: Gw2Sharp.WebApi.V2.IApiV2Response(Of T).Expires
-  nameWithType: IApiV2Response<T>.Expires
-  nameWithType.vb: IApiV2Response(Of T).Expires
-- uid: Gw2Sharp.WebApi.V2.IApiV2Response`1.Links
-  name: Links
-  href: api/Gw2Sharp.WebApi.V2.IApiV2Response-1.html#Gw2Sharp_WebApi_V2_IApiV2Response_1_Links
-  commentId: P:Gw2Sharp.WebApi.V2.IApiV2Response`1.Links
-  fullName: Gw2Sharp.WebApi.V2.IApiV2Response<T>.Links
-  fullName.vb: Gw2Sharp.WebApi.V2.IApiV2Response(Of T).Links
-  nameWithType: IApiV2Response<T>.Links
-  nameWithType.vb: IApiV2Response(Of T).Links
-- uid: Gw2Sharp.WebApi.V2.IApiV2Response`1.Links*
-  name: Links
-  href: api/Gw2Sharp.WebApi.V2.IApiV2Response-1.html#Gw2Sharp_WebApi_V2_IApiV2Response_1_Links_
-  commentId: Overload:Gw2Sharp.WebApi.V2.IApiV2Response`1.Links
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.IApiV2Response<T>.Links
-  fullName.vb: Gw2Sharp.WebApi.V2.IApiV2Response(Of T).Links
-  nameWithType: IApiV2Response<T>.Links
-  nameWithType.vb: IApiV2Response(Of T).Links
-- uid: Gw2Sharp.WebApi.V2.IApiV2Response`1.PageSize
-  name: PageSize
-  href: api/Gw2Sharp.WebApi.V2.IApiV2Response-1.html#Gw2Sharp_WebApi_V2_IApiV2Response_1_PageSize
-  commentId: P:Gw2Sharp.WebApi.V2.IApiV2Response`1.PageSize
-  fullName: Gw2Sharp.WebApi.V2.IApiV2Response<T>.PageSize
-  fullName.vb: Gw2Sharp.WebApi.V2.IApiV2Response(Of T).PageSize
-  nameWithType: IApiV2Response<T>.PageSize
-  nameWithType.vb: IApiV2Response(Of T).PageSize
-- uid: Gw2Sharp.WebApi.V2.IApiV2Response`1.PageSize*
-  name: PageSize
-  href: api/Gw2Sharp.WebApi.V2.IApiV2Response-1.html#Gw2Sharp_WebApi_V2_IApiV2Response_1_PageSize_
-  commentId: Overload:Gw2Sharp.WebApi.V2.IApiV2Response`1.PageSize
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.IApiV2Response<T>.PageSize
-  fullName.vb: Gw2Sharp.WebApi.V2.IApiV2Response(Of T).PageSize
-  nameWithType: IApiV2Response<T>.PageSize
-  nameWithType.vb: IApiV2Response(Of T).PageSize
-- uid: Gw2Sharp.WebApi.V2.IApiV2Response`1.PageTotal
-  name: PageTotal
-  href: api/Gw2Sharp.WebApi.V2.IApiV2Response-1.html#Gw2Sharp_WebApi_V2_IApiV2Response_1_PageTotal
-  commentId: P:Gw2Sharp.WebApi.V2.IApiV2Response`1.PageTotal
-  fullName: Gw2Sharp.WebApi.V2.IApiV2Response<T>.PageTotal
-  fullName.vb: Gw2Sharp.WebApi.V2.IApiV2Response(Of T).PageTotal
-  nameWithType: IApiV2Response<T>.PageTotal
-  nameWithType.vb: IApiV2Response(Of T).PageTotal
-- uid: Gw2Sharp.WebApi.V2.IApiV2Response`1.PageTotal*
-  name: PageTotal
-  href: api/Gw2Sharp.WebApi.V2.IApiV2Response-1.html#Gw2Sharp_WebApi_V2_IApiV2Response_1_PageTotal_
-  commentId: Overload:Gw2Sharp.WebApi.V2.IApiV2Response`1.PageTotal
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.IApiV2Response<T>.PageTotal
-  fullName.vb: Gw2Sharp.WebApi.V2.IApiV2Response(Of T).PageTotal
-  nameWithType: IApiV2Response<T>.PageTotal
-  nameWithType.vb: IApiV2Response(Of T).PageTotal
-- uid: Gw2Sharp.WebApi.V2.IApiV2Response`1.RateLimitLimit
-  name: RateLimitLimit
-  href: api/Gw2Sharp.WebApi.V2.IApiV2Response-1.html#Gw2Sharp_WebApi_V2_IApiV2Response_1_RateLimitLimit
-  commentId: P:Gw2Sharp.WebApi.V2.IApiV2Response`1.RateLimitLimit
-  fullName: Gw2Sharp.WebApi.V2.IApiV2Response<T>.RateLimitLimit
-  fullName.vb: Gw2Sharp.WebApi.V2.IApiV2Response(Of T).RateLimitLimit
-  nameWithType: IApiV2Response<T>.RateLimitLimit
-  nameWithType.vb: IApiV2Response(Of T).RateLimitLimit
-- uid: Gw2Sharp.WebApi.V2.IApiV2Response`1.RateLimitLimit*
-  name: RateLimitLimit
-  href: api/Gw2Sharp.WebApi.V2.IApiV2Response-1.html#Gw2Sharp_WebApi_V2_IApiV2Response_1_RateLimitLimit_
-  commentId: Overload:Gw2Sharp.WebApi.V2.IApiV2Response`1.RateLimitLimit
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.IApiV2Response<T>.RateLimitLimit
-  fullName.vb: Gw2Sharp.WebApi.V2.IApiV2Response(Of T).RateLimitLimit
-  nameWithType: IApiV2Response<T>.RateLimitLimit
-  nameWithType.vb: IApiV2Response(Of T).RateLimitLimit
-- uid: Gw2Sharp.WebApi.V2.IApiV2Response`1.ResultCount
-  name: ResultCount
-  href: api/Gw2Sharp.WebApi.V2.IApiV2Response-1.html#Gw2Sharp_WebApi_V2_IApiV2Response_1_ResultCount
-  commentId: P:Gw2Sharp.WebApi.V2.IApiV2Response`1.ResultCount
-  fullName: Gw2Sharp.WebApi.V2.IApiV2Response<T>.ResultCount
-  fullName.vb: Gw2Sharp.WebApi.V2.IApiV2Response(Of T).ResultCount
-  nameWithType: IApiV2Response<T>.ResultCount
-  nameWithType.vb: IApiV2Response(Of T).ResultCount
-- uid: Gw2Sharp.WebApi.V2.IApiV2Response`1.ResultCount*
-  name: ResultCount
-  href: api/Gw2Sharp.WebApi.V2.IApiV2Response-1.html#Gw2Sharp_WebApi_V2_IApiV2Response_1_ResultCount_
-  commentId: Overload:Gw2Sharp.WebApi.V2.IApiV2Response`1.ResultCount
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.IApiV2Response<T>.ResultCount
-  fullName.vb: Gw2Sharp.WebApi.V2.IApiV2Response(Of T).ResultCount
-  nameWithType: IApiV2Response<T>.ResultCount
-  nameWithType.vb: IApiV2Response(Of T).ResultCount
-- uid: Gw2Sharp.WebApi.V2.IApiV2Response`1.ResultTotal
-  name: ResultTotal
-  href: api/Gw2Sharp.WebApi.V2.IApiV2Response-1.html#Gw2Sharp_WebApi_V2_IApiV2Response_1_ResultTotal
-  commentId: P:Gw2Sharp.WebApi.V2.IApiV2Response`1.ResultTotal
-  fullName: Gw2Sharp.WebApi.V2.IApiV2Response<T>.ResultTotal
-  fullName.vb: Gw2Sharp.WebApi.V2.IApiV2Response(Of T).ResultTotal
-  nameWithType: IApiV2Response<T>.ResultTotal
-  nameWithType.vb: IApiV2Response(Of T).ResultTotal
-- uid: Gw2Sharp.WebApi.V2.IApiV2Response`1.ResultTotal*
-  name: ResultTotal
-  href: api/Gw2Sharp.WebApi.V2.IApiV2Response-1.html#Gw2Sharp_WebApi_V2_IApiV2Response_1_ResultTotal_
-  commentId: Overload:Gw2Sharp.WebApi.V2.IApiV2Response`1.ResultTotal
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.IApiV2Response<T>.ResultTotal
-  fullName.vb: Gw2Sharp.WebApi.V2.IApiV2Response(Of T).ResultTotal
-  nameWithType: IApiV2Response<T>.ResultTotal
-  nameWithType.vb: IApiV2Response(Of T).ResultTotal
+  fullName: Gw2Sharp.WebApi.V2.IApiV2Object.HttpResponseInfo
+  nameWithType: IApiV2Object.HttpResponseInfo
+- uid: Gw2Sharp.WebApi.V2.IApiV2ObjectList`1
+  name: IApiV2ObjectList<T>
+  href: api/Gw2Sharp.WebApi.V2.IApiV2ObjectList-1.html
+  commentId: T:Gw2Sharp.WebApi.V2.IApiV2ObjectList`1
+  name.vb: IApiV2ObjectList(Of T)
+  fullName: Gw2Sharp.WebApi.V2.IApiV2ObjectList<T>
+  fullName.vb: Gw2Sharp.WebApi.V2.IApiV2ObjectList(Of T)
+  nameWithType: IApiV2ObjectList<T>
+  nameWithType.vb: IApiV2ObjectList(Of T)
 - uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client
   name: IGw2WebApiV2Client
   href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html
@@ -11553,6 +10988,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.Account.Id
   nameWithType: Account.Id
+- uid: Gw2Sharp.WebApi.V2.Models.Account.LastModified
+  name: LastModified
+  href: api/Gw2Sharp.WebApi.V2.Models.Account.html#Gw2Sharp_WebApi_V2_Models_Account_LastModified
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Account.LastModified
+  fullName: Gw2Sharp.WebApi.V2.Models.Account.LastModified
+  nameWithType: Account.LastModified
+- uid: Gw2Sharp.WebApi.V2.Models.Account.LastModified*
+  name: LastModified
+  href: api/Gw2Sharp.WebApi.V2.Models.Account.html#Gw2Sharp_WebApi_V2_Models_Account_LastModified_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Account.LastModified
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Account.LastModified
+  nameWithType: Account.LastModified
 - uid: Gw2Sharp.WebApi.V2.Models.Account.MonthlyAp
   name: MonthlyAp
   href: api/Gw2Sharp.WebApi.V2.Models.Account.html#Gw2Sharp_WebApi_V2_Models_Account_MonthlyAp
@@ -14140,6 +13588,19 @@ references:
   fullName: Gw2Sharp.WebApi.V2.Models.Character.Gw2Sharp.WebApi.V2.Models.IIdentifiable<System.String>.Id
   nameWithType: Character.IIdentifiable<String>.Id
   nameWithType.vb: Character.Gw2Sharp.WebApi.V2.Models.IIdentifiable<System.String>.Id
+- uid: Gw2Sharp.WebApi.V2.Models.Character.LastModified
+  name: LastModified
+  href: api/Gw2Sharp.WebApi.V2.Models.Character.html#Gw2Sharp_WebApi_V2_Models_Character_LastModified
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Character.LastModified
+  fullName: Gw2Sharp.WebApi.V2.Models.Character.LastModified
+  nameWithType: Character.LastModified
+- uid: Gw2Sharp.WebApi.V2.Models.Character.LastModified*
+  name: LastModified
+  href: api/Gw2Sharp.WebApi.V2.Models.Character.html#Gw2Sharp_WebApi_V2_Models_Character_LastModified_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Character.LastModified
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Character.LastModified
+  nameWithType: Character.LastModified
 - uid: Gw2Sharp.WebApi.V2.Models.Character.Level
   name: Level
   href: api/Gw2Sharp.WebApi.V2.Models.Character.html#Gw2Sharp_WebApi_V2_Models_Character_Level
@@ -14861,6 +14322,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.CharactersCore.Guild
   nameWithType: CharactersCore.Guild
+- uid: Gw2Sharp.WebApi.V2.Models.CharactersCore.LastModified
+  name: LastModified
+  href: api/Gw2Sharp.WebApi.V2.Models.CharactersCore.html#Gw2Sharp_WebApi_V2_Models_CharactersCore_LastModified
+  commentId: P:Gw2Sharp.WebApi.V2.Models.CharactersCore.LastModified
+  fullName: Gw2Sharp.WebApi.V2.Models.CharactersCore.LastModified
+  nameWithType: CharactersCore.LastModified
+- uid: Gw2Sharp.WebApi.V2.Models.CharactersCore.LastModified*
+  name: LastModified
+  href: api/Gw2Sharp.WebApi.V2.Models.CharactersCore.html#Gw2Sharp_WebApi_V2_Models_CharactersCore_LastModified_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.CharactersCore.LastModified
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.CharactersCore.LastModified
+  nameWithType: CharactersCore.LastModified
 - uid: Gw2Sharp.WebApi.V2.Models.CharactersCore.Level
   name: Level
   href: api/Gw2Sharp.WebApi.V2.Models.CharactersCore.html#Gw2Sharp_WebApi_V2_Models_CharactersCore_Level
@@ -16780,6 +16254,122 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.Converters.ApiFlagsConverter.WriteJson
   nameWithType: ApiFlagsConverter.WriteJson
+- uid: Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectConverter
+  name: ApiObjectConverter
+  href: api/Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectConverter.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectConverter
+  fullName: Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectConverter
+  nameWithType: ApiObjectConverter
+- uid: Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectConverter.CanConvert(Type)
+  name: CanConvert(Type)
+  href: api/Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectConverter.html#Gw2Sharp_WebApi_V2_Models_Converters_ApiObjectConverter_CanConvert_Type_
+  commentId: M:Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectConverter.CanConvert(Type)
+  fullName: Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectConverter.CanConvert(Type)
+  nameWithType: ApiObjectConverter.CanConvert(Type)
+- uid: Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectConverter.CanConvert*
+  name: CanConvert
+  href: api/Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectConverter.html#Gw2Sharp_WebApi_V2_Models_Converters_ApiObjectConverter_CanConvert_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectConverter.CanConvert
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectConverter.CanConvert
+  nameWithType: ApiObjectConverter.CanConvert
+- uid: Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectConverter.CanWrite
+  name: CanWrite
+  href: api/Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectConverter.html#Gw2Sharp_WebApi_V2_Models_Converters_ApiObjectConverter_CanWrite
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectConverter.CanWrite
+  fullName: Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectConverter.CanWrite
+  nameWithType: ApiObjectConverter.CanWrite
+- uid: Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectConverter.CanWrite*
+  name: CanWrite
+  href: api/Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectConverter.html#Gw2Sharp_WebApi_V2_Models_Converters_ApiObjectConverter_CanWrite_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectConverter.CanWrite
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectConverter.CanWrite
+  nameWithType: ApiObjectConverter.CanWrite
+- uid: Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectConverter.ReadJson(JsonReader,Type,System.Object,JsonSerializer)
+  name: ReadJson(JsonReader, Type, Object, JsonSerializer)
+  href: api/Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectConverter.html#Gw2Sharp_WebApi_V2_Models_Converters_ApiObjectConverter_ReadJson_JsonReader_Type_System_Object_JsonSerializer_
+  commentId: M:Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectConverter.ReadJson(JsonReader,Type,System.Object,JsonSerializer)
+  fullName: Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectConverter.ReadJson(JsonReader, Type, System.Object, JsonSerializer)
+  nameWithType: ApiObjectConverter.ReadJson(JsonReader, Type, Object, JsonSerializer)
+- uid: Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectConverter.ReadJson*
+  name: ReadJson
+  href: api/Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectConverter.html#Gw2Sharp_WebApi_V2_Models_Converters_ApiObjectConverter_ReadJson_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectConverter.ReadJson
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectConverter.ReadJson
+  nameWithType: ApiObjectConverter.ReadJson
+- uid: Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectConverter.WriteJson(JsonWriter,System.Object,JsonSerializer)
+  name: WriteJson(JsonWriter, Object, JsonSerializer)
+  href: api/Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectConverter.html#Gw2Sharp_WebApi_V2_Models_Converters_ApiObjectConverter_WriteJson_JsonWriter_System_Object_JsonSerializer_
+  commentId: M:Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectConverter.WriteJson(JsonWriter,System.Object,JsonSerializer)
+  fullName: Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectConverter.WriteJson(JsonWriter, System.Object, JsonSerializer)
+  nameWithType: ApiObjectConverter.WriteJson(JsonWriter, Object, JsonSerializer)
+- uid: Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectConverter.WriteJson*
+  name: WriteJson
+  href: api/Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectConverter.html#Gw2Sharp_WebApi_V2_Models_Converters_ApiObjectConverter_WriteJson_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectConverter.WriteJson
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectConverter.WriteJson
+  nameWithType: ApiObjectConverter.WriteJson
+- uid: Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectListConverter
+  name: ApiObjectListConverter
+  href: api/Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectListConverter.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectListConverter
+  fullName: Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectListConverter
+  nameWithType: ApiObjectListConverter
+- uid: Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectListConverter.CanConvert(Type)
+  name: CanConvert(Type)
+  href: api/Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectListConverter.html#Gw2Sharp_WebApi_V2_Models_Converters_ApiObjectListConverter_CanConvert_Type_
+  commentId: M:Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectListConverter.CanConvert(Type)
+  fullName: Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectListConverter.CanConvert(Type)
+  nameWithType: ApiObjectListConverter.CanConvert(Type)
+- uid: Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectListConverter.CanConvert*
+  name: CanConvert
+  href: api/Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectListConverter.html#Gw2Sharp_WebApi_V2_Models_Converters_ApiObjectListConverter_CanConvert_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectListConverter.CanConvert
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectListConverter.CanConvert
+  nameWithType: ApiObjectListConverter.CanConvert
+- uid: Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectListConverter.CanWrite
+  name: CanWrite
+  href: api/Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectListConverter.html#Gw2Sharp_WebApi_V2_Models_Converters_ApiObjectListConverter_CanWrite
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectListConverter.CanWrite
+  fullName: Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectListConverter.CanWrite
+  nameWithType: ApiObjectListConverter.CanWrite
+- uid: Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectListConverter.CanWrite*
+  name: CanWrite
+  href: api/Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectListConverter.html#Gw2Sharp_WebApi_V2_Models_Converters_ApiObjectListConverter_CanWrite_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectListConverter.CanWrite
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectListConverter.CanWrite
+  nameWithType: ApiObjectListConverter.CanWrite
+- uid: Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectListConverter.ReadJson(JsonReader,Type,System.Object,JsonSerializer)
+  name: ReadJson(JsonReader, Type, Object, JsonSerializer)
+  href: api/Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectListConverter.html#Gw2Sharp_WebApi_V2_Models_Converters_ApiObjectListConverter_ReadJson_JsonReader_Type_System_Object_JsonSerializer_
+  commentId: M:Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectListConverter.ReadJson(JsonReader,Type,System.Object,JsonSerializer)
+  fullName: Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectListConverter.ReadJson(JsonReader, Type, System.Object, JsonSerializer)
+  nameWithType: ApiObjectListConverter.ReadJson(JsonReader, Type, Object, JsonSerializer)
+- uid: Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectListConverter.ReadJson*
+  name: ReadJson
+  href: api/Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectListConverter.html#Gw2Sharp_WebApi_V2_Models_Converters_ApiObjectListConverter_ReadJson_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectListConverter.ReadJson
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectListConverter.ReadJson
+  nameWithType: ApiObjectListConverter.ReadJson
+- uid: Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectListConverter.WriteJson(JsonWriter,System.Object,JsonSerializer)
+  name: WriteJson(JsonWriter, Object, JsonSerializer)
+  href: api/Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectListConverter.html#Gw2Sharp_WebApi_V2_Models_Converters_ApiObjectListConverter_WriteJson_JsonWriter_System_Object_JsonSerializer_
+  commentId: M:Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectListConverter.WriteJson(JsonWriter,System.Object,JsonSerializer)
+  fullName: Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectListConverter.WriteJson(JsonWriter, System.Object, JsonSerializer)
+  nameWithType: ApiObjectListConverter.WriteJson(JsonWriter, Object, JsonSerializer)
+- uid: Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectListConverter.WriteJson*
+  name: WriteJson
+  href: api/Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectListConverter.html#Gw2Sharp_WebApi_V2_Models_Converters_ApiObjectListConverter_WriteJson_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectListConverter.WriteJson
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectListConverter.WriteJson
+  nameWithType: ApiObjectListConverter.WriteJson
 - uid: Gw2Sharp.WebApi.V2.Models.Converters.BottomUpRectangleConverter
   name: BottomUpRectangleConverter
   href: api/Gw2Sharp.WebApi.V2.Models.Converters.BottomUpRectangleConverter.html

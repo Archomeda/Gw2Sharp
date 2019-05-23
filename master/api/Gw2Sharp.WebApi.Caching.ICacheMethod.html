@@ -213,7 +213,13 @@
                         
                         <ul class="nav level2">
                           <li class="">
-                            <a href="Gw2Sharp.WebApi.V2.ApiV2Response-1.html" title="ApiV2Response&lt;T&gt;" class="">ApiV2Response&lt;T&gt;</a>
+                            <a href="Gw2Sharp.WebApi.V2.ApiV2BaseObject.html" title="ApiV2BaseObject" class="">ApiV2BaseObject</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.ApiV2BaseObjectList-1.html" title="ApiV2BaseObjectList&lt;T&gt;" class="">ApiV2BaseObjectList&lt;T&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.html" title="ApiV2HttpResponseInfo" class="">ApiV2HttpResponseInfo</a>
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.WebApi.V2.ExtensionImplementation.html" title="ExtensionImplementation" class="">ExtensionImplementation</a>
@@ -222,7 +228,10 @@
                             <a href="Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html" title="Gw2WebApiV2Client" class="">Gw2WebApiV2Client</a>
                           </li>
                           <li class="">
-                            <a href="Gw2Sharp.WebApi.V2.IApiV2Response-1.html" title="IApiV2Response&lt;T&gt;" class="">IApiV2Response&lt;T&gt;</a>
+                            <a href="Gw2Sharp.WebApi.V2.IApiV2Object.html" title="IApiV2Object" class="">IApiV2Object</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.IApiV2ObjectList-1.html" title="IApiV2ObjectList&lt;T&gt;" class="">IApiV2ObjectList&lt;T&gt;</a>
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html" title="IGw2WebApiV2Client" class="">IGw2WebApiV2Client</a>
@@ -1626,6 +1635,12 @@
                             <a href="Gw2Sharp.WebApi.V2.Models.Converters.ApiFlagsConverter.html" title="ApiFlagsConverter" class="">ApiFlagsConverter</a>
                           </li>
                           <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectConverter.html" title="ApiObjectConverter" class="">ApiObjectConverter</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectListConverter.html" title="ApiObjectListConverter" class="">ApiObjectListConverter</a>
+                          </li>
+                          <li class="">
                             <a href="Gw2Sharp.WebApi.V2.Models.Converters.BottomUpRectangleConverter.html" title="BottomUpRectangleConverter" class="">BottomUpRectangleConverter</a>
                           </li>
                           <li class="">
@@ -1906,7 +1921,7 @@ Only items that exist are included in the returned dictionary.</p>
   
   <a id="Gw2Sharp_WebApi_Caching_ICacheMethod_GetOrUpdateAsync_" data-uid="Gw2Sharp.WebApi.Caching.ICacheMethod.GetOrUpdateAsync*"></a>
   <h4 id="Gw2Sharp_WebApi_Caching_ICacheMethod_GetOrUpdateAsync__1_System_String_System_Object_DateTime_Func_Task___0___" data-uid="Gw2Sharp.WebApi.Caching.ICacheMethod.GetOrUpdateAsync``1(System.String,System.Object,DateTime,Func{Task{``0}})">GetOrUpdateAsync&lt;T&gt;(String, Object, DateTime, Func&lt;Task&lt;T&gt;&gt;)</h4>
-  <div class="markdown level1 summary"><p>Gets a cached item if it exists. If it doesn&apos;t exist, it calls updateFunc to provide an updated value,
+  <div class="markdown level1 summary"><p>Gets a cached item if it exists. If it doesn&apos;t exist, it calls <code data-dev-comment-type="paramref" class="paramref">updateFunc</code> to provide an updated value,
 stores this in the cache, and returns it.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1986,7 +2001,7 @@ stores this in the cache, and returns it.</p>
   
   <a id="Gw2Sharp_WebApi_Caching_ICacheMethod_GetOrUpdateAsync_" data-uid="Gw2Sharp.WebApi.Caching.ICacheMethod.GetOrUpdateAsync*"></a>
   <h4 id="Gw2Sharp_WebApi_Caching_ICacheMethod_GetOrUpdateAsync__1_System_String_System_Object_Func_Task_System_ValueTuple___0_DateTime____" data-uid="Gw2Sharp.WebApi.Caching.ICacheMethod.GetOrUpdateAsync``1(System.String,System.Object,Func{Task{System.ValueTuple{``0,DateTime}}})">GetOrUpdateAsync&lt;T&gt;(String, Object, Func&lt;Task&lt;(T, DateTime)&gt;&gt;)</h4>
-  <div class="markdown level1 summary"><p>Gets a cached item if it exists. If it doesn&apos;t exist, it calls updateFunc to provide an updated value and its expiry date,
+  <div class="markdown level1 summary"><p>Gets a cached item if it exists. If it doesn&apos;t exist, it calls <code data-dev-comment-type="paramref" class="paramref">updateFunc</code> to provide an updated value and its expiry date,
 stores this in the cache, and returns it.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -2060,7 +2075,7 @@ stores this in the cache, and returns it.</p>
   
   <a id="Gw2Sharp_WebApi_Caching_ICacheMethod_GetOrUpdateManyAsync_" data-uid="Gw2Sharp.WebApi.Caching.ICacheMethod.GetOrUpdateManyAsync*"></a>
   <h4 id="Gw2Sharp_WebApi_Caching_ICacheMethod_GetOrUpdateManyAsync__1_System_String_IEnumerable_System_Object__DateTime_Func_IList_System_Object__Task_IDictionary_System_Object___0____" data-uid="Gw2Sharp.WebApi.Caching.ICacheMethod.GetOrUpdateManyAsync``1(System.String,IEnumerable{System.Object},DateTime,Func{IList{System.Object},Task{IDictionary{System.Object,``0}}})">GetOrUpdateManyAsync&lt;T&gt;(String, IEnumerable&lt;Object&gt;, DateTime, Func&lt;IList&lt;Object&gt;, Task&lt;IDictionary&lt;Object, T&gt;&gt;&gt;)</h4>
-  <div class="markdown level1 summary"><p>Gets cached items if they exist. If one or more don&apos;t exist, updateFunc will be called to provide updated values
+  <div class="markdown level1 summary"><p>Gets cached items if they exist. If one or more don&apos;t exist, <code data-dev-comment-type="paramref" class="paramref">updateFunc</code> will be called to provide updated values
 and stores them in the cache. Returns all cached items.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -2140,7 +2155,7 @@ and stores them in the cache. Returns all cached items.</p>
   
   <a id="Gw2Sharp_WebApi_Caching_ICacheMethod_GetOrUpdateManyAsync_" data-uid="Gw2Sharp.WebApi.Caching.ICacheMethod.GetOrUpdateManyAsync*"></a>
   <h4 id="Gw2Sharp_WebApi_Caching_ICacheMethod_GetOrUpdateManyAsync__1_System_String_IEnumerable_System_Object__Func_IList_System_Object__Task_System_ValueTuple_IDictionary_System_Object___0__DateTime____" data-uid="Gw2Sharp.WebApi.Caching.ICacheMethod.GetOrUpdateManyAsync``1(System.String,IEnumerable{System.Object},Func{IList{System.Object},Task{System.ValueTuple{IDictionary{System.Object,``0},DateTime}}})">GetOrUpdateManyAsync&lt;T&gt;(String, IEnumerable&lt;Object&gt;, Func&lt;IList&lt;Object&gt;, Task&lt;(IDictionary&lt;Object, T&gt;, DateTime)&gt;&gt;)</h4>
-  <div class="markdown level1 summary"><p>Gets cached items if they exist. If one or more don&apos;t exist, updateFunc will be called to provide updated values and their expiry date,
+  <div class="markdown level1 summary"><p>Gets cached items if they exist. If one or more don&apos;t exist, <code data-dev-comment-type="paramref" class="paramref">updateFunc</code> will be called to provide updated values and their expiry date,
 and stores them in the cache. Returns all cached items.</p>
 </div>
   <div class="markdown level1 conceptual"></div>

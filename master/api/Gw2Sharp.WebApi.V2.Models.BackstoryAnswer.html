@@ -213,7 +213,13 @@
                         
                         <ul class="nav level2">
                           <li class="">
-                            <a href="Gw2Sharp.WebApi.V2.ApiV2Response-1.html" title="ApiV2Response&lt;T&gt;" class="">ApiV2Response&lt;T&gt;</a>
+                            <a href="Gw2Sharp.WebApi.V2.ApiV2BaseObject.html" title="ApiV2BaseObject" class="">ApiV2BaseObject</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.ApiV2BaseObjectList-1.html" title="ApiV2BaseObjectList&lt;T&gt;" class="">ApiV2BaseObjectList&lt;T&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.html" title="ApiV2HttpResponseInfo" class="">ApiV2HttpResponseInfo</a>
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.WebApi.V2.ExtensionImplementation.html" title="ExtensionImplementation" class="">ExtensionImplementation</a>
@@ -222,7 +228,10 @@
                             <a href="Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html" title="Gw2WebApiV2Client" class="">Gw2WebApiV2Client</a>
                           </li>
                           <li class="">
-                            <a href="Gw2Sharp.WebApi.V2.IApiV2Response-1.html" title="IApiV2Response&lt;T&gt;" class="">IApiV2Response&lt;T&gt;</a>
+                            <a href="Gw2Sharp.WebApi.V2.IApiV2Object.html" title="IApiV2Object" class="">IApiV2Object</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.IApiV2ObjectList-1.html" title="IApiV2ObjectList&lt;T&gt;" class="">IApiV2ObjectList&lt;T&gt;</a>
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html" title="IGw2WebApiV2Client" class="">IGw2WebApiV2Client</a>
@@ -1626,6 +1635,12 @@
                             <a href="Gw2Sharp.WebApi.V2.Models.Converters.ApiFlagsConverter.html" title="ApiFlagsConverter" class="">ApiFlagsConverter</a>
                           </li>
                           <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectConverter.html" title="ApiObjectConverter" class="">ApiObjectConverter</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectListConverter.html" title="ApiObjectListConverter" class="">ApiObjectListConverter</a>
+                          </li>
+                          <li class="">
                             <a href="Gw2Sharp.WebApi.V2.Models.Converters.BottomUpRectangleConverter.html" title="BottomUpRectangleConverter" class="">BottomUpRectangleConverter</a>
                           </li>
                           <li class="">
@@ -1668,17 +1683,25 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">BackstoryAnswer</span></div>
+    <div class="level1"><a class="xref" href="Gw2Sharp.WebApi.V2.ApiV2BaseObject.html">ApiV2BaseObject</a></div>
+    <div class="level2"><span class="xref">BackstoryAnswer</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
+    <div><a class="xref" href="Gw2Sharp.WebApi.V2.IApiV2Object.html">IApiV2Object</a></div>
     <div><a class="xref" href="Gw2Sharp.WebApi.V2.Models.IIdentifiable-1.html">IIdentifiable</a>&lt;<span class="xref">System.String</span>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Gw2Sharp.WebApi.V2.ApiV2BaseObject.html#Gw2Sharp_WebApi_V2_ApiV2BaseObject_HttpResponseInfo">ApiV2BaseObject.HttpResponseInfo</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Gw2Sharp.WebApi.V2.Models.html">Gw2Sharp.WebApi.V2.Models</a></h6>
   <h6><strong>Assembly</strong>: Gw2Sharp.dll</h6>
   <h5 id="Gw2Sharp_WebApi_V2_Models_BackstoryAnswer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class BackstoryAnswer : object, IIdentifiable&lt;string&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class BackstoryAnswer : ApiV2BaseObject, IApiV2Object, IIdentifiable&lt;string&gt;</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -1870,6 +1893,9 @@ Each element can be resolved against <see cref="!:IGw2WebApiV2Client.Races"></se
     </tbody>
   </table>
   <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Gw2Sharp.WebApi.V2.IApiV2Object.html">IApiV2Object</a>
+  </div>
   <div>
       <a class="xref" href="Gw2Sharp.WebApi.V2.Models.IIdentifiable-1.html">IIdentifiable&lt;T&gt;</a>
   </div>

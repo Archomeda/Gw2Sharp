@@ -213,7 +213,13 @@
                         
                         <ul class="nav level2">
                           <li class="">
-                            <a href="Gw2Sharp.WebApi.V2.ApiV2Response-1.html" title="ApiV2Response&lt;T&gt;" class="">ApiV2Response&lt;T&gt;</a>
+                            <a href="Gw2Sharp.WebApi.V2.ApiV2BaseObject.html" title="ApiV2BaseObject" class="">ApiV2BaseObject</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.ApiV2BaseObjectList-1.html" title="ApiV2BaseObjectList&lt;T&gt;" class="">ApiV2BaseObjectList&lt;T&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.html" title="ApiV2HttpResponseInfo" class="">ApiV2HttpResponseInfo</a>
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.WebApi.V2.ExtensionImplementation.html" title="ExtensionImplementation" class="">ExtensionImplementation</a>
@@ -222,7 +228,10 @@
                             <a href="Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html" title="Gw2WebApiV2Client" class="">Gw2WebApiV2Client</a>
                           </li>
                           <li class="">
-                            <a href="Gw2Sharp.WebApi.V2.IApiV2Response-1.html" title="IApiV2Response&lt;T&gt;" class="">IApiV2Response&lt;T&gt;</a>
+                            <a href="Gw2Sharp.WebApi.V2.IApiV2Object.html" title="IApiV2Object" class="">IApiV2Object</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.IApiV2ObjectList-1.html" title="IApiV2ObjectList&lt;T&gt;" class="">IApiV2ObjectList&lt;T&gt;</a>
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html" title="IGw2WebApiV2Client" class="">IGw2WebApiV2Client</a>
@@ -1626,6 +1635,12 @@
                             <a href="Gw2Sharp.WebApi.V2.Models.Converters.ApiFlagsConverter.html" title="ApiFlagsConverter" class="">ApiFlagsConverter</a>
                           </li>
                           <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectConverter.html" title="ApiObjectConverter" class="">ApiObjectConverter</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectListConverter.html" title="ApiObjectListConverter" class="">ApiObjectListConverter</a>
+                          </li>
+                          <li class="">
                             <a href="Gw2Sharp.WebApi.V2.Models.Converters.BottomUpRectangleConverter.html" title="BottomUpRectangleConverter" class="">BottomUpRectangleConverter</a>
                           </li>
                           <li class="">
@@ -1699,7 +1714,7 @@
   <h6><strong>Assembly</strong>: Gw2Sharp.dll</h6>
   <h5 id="Gw2Sharp_WebApi_V2_Clients_IBulkExpandableClient_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IBulkExpandableClient&lt;TObject, TId&gt; : IEndpointClient, IClient where TObject : IIdentifiable&lt;TId&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IBulkExpandableClient&lt;TObject, TId&gt; : IEndpointClient, IClient where TObject : IApiV2Object, IIdentifiable&lt;TId&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1822,57 +1837,6 @@
   </table>
   
   
-  <a id="Gw2Sharp_WebApi_V2_Clients_IBulkExpandableClient_2_GetWithResponseAsync_" data-uid="Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient`2.GetWithResponseAsync*"></a>
-  <h4 id="Gw2Sharp_WebApi_V2_Clients_IBulkExpandableClient_2_GetWithResponseAsync__1_CancellationToken_" data-uid="Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient`2.GetWithResponseAsync(`1,CancellationToken)">GetWithResponseAsync(TId, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Requests a single entry by id with the detailed response info.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IApiV2Response&lt;TObject&gt;&gt; GetWithResponseAsync(TId id, CancellationToken cancellationToken)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">TId</span></td>
-        <td><span class="parametername">id</span></td>
-        <td><p>The entry id.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">CancellationToken</span></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td><p>The cancellation token.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.IApiV2Response-1.html">IApiV2Response</a>&lt;TObject&gt;&gt;</td>
-        <td><p>The entry.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="Gw2Sharp_WebApi_V2_Clients_IBulkExpandableClient_2_IdsAsync_" data-uid="Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient`2.IdsAsync*"></a>
   <h4 id="Gw2Sharp_WebApi_V2_Clients_IBulkExpandableClient_2_IdsAsync" data-uid="Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient`2.IdsAsync">IdsAsync()</h4>
   <div class="markdown level1 summary"><p>Requests all ids.</p>
@@ -1880,7 +1844,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyList&lt;TId&gt;&gt; IdsAsync()</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IApiV2ObjectList&lt;TId&gt;&gt; IdsAsync()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1892,7 +1856,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">IReadOnlyList</span>&lt;TId&gt;&gt;</td>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.IApiV2ObjectList-1.html">IApiV2ObjectList</a>&lt;TId&gt;&gt;</td>
         <td><p>The list of available ids.</p>
 </td>
       </tr>
@@ -1907,7 +1871,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyList&lt;TId&gt;&gt; IdsAsync(CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IApiV2ObjectList&lt;TId&gt;&gt; IdsAsync(CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1937,52 +1901,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">IReadOnlyList</span>&lt;TId&gt;&gt;</td>
-        <td><p>The list of available ids.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Gw2Sharp_WebApi_V2_Clients_IBulkExpandableClient_2_IdsWithResponseAsync_" data-uid="Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient`2.IdsWithResponseAsync*"></a>
-  <h4 id="Gw2Sharp_WebApi_V2_Clients_IBulkExpandableClient_2_IdsWithResponseAsync_CancellationToken_" data-uid="Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient`2.IdsWithResponseAsync(CancellationToken)">IdsWithResponseAsync(CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Requests all ids with the detailed response info.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IApiV2Response&lt;IReadOnlyList&lt;TId&gt;&gt;&gt; IdsWithResponseAsync(CancellationToken cancellationToken)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">CancellationToken</span></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td><p>The cancellation token.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.IApiV2Response-1.html">IApiV2Response</a>&lt;<span class="xref">IReadOnlyList</span>&lt;TId&gt;&gt;&gt;</td>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.IApiV2ObjectList-1.html">IApiV2ObjectList</a>&lt;TId&gt;&gt;</td>
         <td><p>The list of available ids.</p>
 </td>
       </tr>
@@ -2079,57 +1998,6 @@
     <tbody>
       <tr>
         <td><span class="xref">Task</span>&lt;<span class="xref">IReadOnlyList</span>&lt;TObject&gt;&gt;</td>
-        <td><p>The entries.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Gw2Sharp_WebApi_V2_Clients_IBulkExpandableClient_2_ManyWithResponseAsync_" data-uid="Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient`2.ManyWithResponseAsync*"></a>
-  <h4 id="Gw2Sharp_WebApi_V2_Clients_IBulkExpandableClient_2_ManyWithResponseAsync_IEnumerable__1__CancellationToken_" data-uid="Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient`2.ManyWithResponseAsync(IEnumerable{`1},CancellationToken)">ManyWithResponseAsync(IEnumerable&lt;TId&gt;, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Requests many entries by their id (a.k.a. bulk expansion) with the detailed response info.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyList&lt;IApiV2Response&lt;IReadOnlyList&lt;TObject&gt;&gt;&gt;&gt; ManyWithResponseAsync(IEnumerable&lt;TId&gt; ids, CancellationToken cancellationToken)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">IEnumerable</span>&lt;TId&gt;</td>
-        <td><span class="parametername">ids</span></td>
-        <td><p>The entry ids.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">CancellationToken</span></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td><p>The cancellation token.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">IReadOnlyList</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.IApiV2Response-1.html">IApiV2Response</a>&lt;<span class="xref">IReadOnlyList</span>&lt;TObject&gt;&gt;&gt;&gt;</td>
         <td><p>The entries.</p>
 </td>
       </tr>

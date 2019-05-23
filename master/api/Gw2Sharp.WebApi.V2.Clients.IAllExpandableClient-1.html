@@ -213,7 +213,13 @@
                         
                         <ul class="nav level2">
                           <li class="">
-                            <a href="Gw2Sharp.WebApi.V2.ApiV2Response-1.html" title="ApiV2Response&lt;T&gt;" class="">ApiV2Response&lt;T&gt;</a>
+                            <a href="Gw2Sharp.WebApi.V2.ApiV2BaseObject.html" title="ApiV2BaseObject" class="">ApiV2BaseObject</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.ApiV2BaseObjectList-1.html" title="ApiV2BaseObjectList&lt;T&gt;" class="">ApiV2BaseObjectList&lt;T&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.html" title="ApiV2HttpResponseInfo" class="">ApiV2HttpResponseInfo</a>
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.WebApi.V2.ExtensionImplementation.html" title="ExtensionImplementation" class="">ExtensionImplementation</a>
@@ -222,7 +228,10 @@
                             <a href="Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html" title="Gw2WebApiV2Client" class="">Gw2WebApiV2Client</a>
                           </li>
                           <li class="">
-                            <a href="Gw2Sharp.WebApi.V2.IApiV2Response-1.html" title="IApiV2Response&lt;T&gt;" class="">IApiV2Response&lt;T&gt;</a>
+                            <a href="Gw2Sharp.WebApi.V2.IApiV2Object.html" title="IApiV2Object" class="">IApiV2Object</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.IApiV2ObjectList-1.html" title="IApiV2ObjectList&lt;T&gt;" class="">IApiV2ObjectList&lt;T&gt;</a>
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html" title="IGw2WebApiV2Client" class="">IGw2WebApiV2Client</a>
@@ -1626,6 +1635,12 @@
                             <a href="Gw2Sharp.WebApi.V2.Models.Converters.ApiFlagsConverter.html" title="ApiFlagsConverter" class="">ApiFlagsConverter</a>
                           </li>
                           <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectConverter.html" title="ApiObjectConverter" class="">ApiObjectConverter</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.Models.Converters.ApiObjectListConverter.html" title="ApiObjectListConverter" class="">ApiObjectListConverter</a>
+                          </li>
+                          <li class="">
                             <a href="Gw2Sharp.WebApi.V2.Models.Converters.BottomUpRectangleConverter.html" title="BottomUpRectangleConverter" class="">BottomUpRectangleConverter</a>
                           </li>
                           <li class="">
@@ -1699,7 +1714,7 @@
   <h6><strong>Assembly</strong>: Gw2Sharp.dll</h6>
   <h5 id="Gw2Sharp_WebApi_V2_Clients_IAllExpandableClient_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IAllExpandableClient&lt;TObject&gt; : IEndpointClient, IClient</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IAllExpandableClient&lt;TObject&gt; : IEndpointClient, IClient where TObject : IApiV2Object</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1728,7 +1743,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyList&lt;TObject&gt;&gt; AllAsync()</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IApiV2ObjectList&lt;TObject&gt;&gt; AllAsync()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1740,7 +1755,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">IReadOnlyList</span>&lt;TObject&gt;&gt;</td>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.IApiV2ObjectList-1.html">IApiV2ObjectList</a>&lt;TObject&gt;&gt;</td>
         <td><p>All entries.</p>
 </td>
       </tr>
@@ -1755,7 +1770,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyList&lt;TObject&gt;&gt; AllAsync(CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IApiV2ObjectList&lt;TObject&gt;&gt; AllAsync(CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1785,52 +1800,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">IReadOnlyList</span>&lt;TObject&gt;&gt;</td>
-        <td><p>All entries.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Gw2Sharp_WebApi_V2_Clients_IAllExpandableClient_1_AllWithResponseAsync_" data-uid="Gw2Sharp.WebApi.V2.Clients.IAllExpandableClient`1.AllWithResponseAsync*"></a>
-  <h4 id="Gw2Sharp_WebApi_V2_Clients_IAllExpandableClient_1_AllWithResponseAsync_CancellationToken_" data-uid="Gw2Sharp.WebApi.V2.Clients.IAllExpandableClient`1.AllWithResponseAsync(CancellationToken)">AllWithResponseAsync(CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Requests all entries with the detailed response info.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IApiV2Response&lt;IReadOnlyList&lt;TObject&gt;&gt;&gt; AllWithResponseAsync(CancellationToken cancellationToken)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">CancellationToken</span></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td><p>The cancellation token.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.IApiV2Response-1.html">IApiV2Response</a>&lt;<span class="xref">IReadOnlyList</span>&lt;TObject&gt;&gt;&gt;</td>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.IApiV2ObjectList-1.html">IApiV2ObjectList</a>&lt;TObject&gt;&gt;</td>
         <td><p>All entries.</p>
 </td>
       </tr>
