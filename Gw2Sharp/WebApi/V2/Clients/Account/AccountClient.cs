@@ -9,6 +9,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 account endpoint.
     /// </summary>
     [EndpointPath("account")]
+    [EndpointSchemaVersion("2019-02-21T00:00:00.000Z")]
     public class AccountClient : BaseEndpointClient<Account>, IAccountClient
     {
         /// <summary>

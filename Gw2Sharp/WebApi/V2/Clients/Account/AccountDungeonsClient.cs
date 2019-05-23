@@ -6,6 +6,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 account dungeons endpoint.
     /// </summary>
     [EndpointPath("account/dungeons")]
+    [EndpointSchemaVersion("2019-02-21T00:00:00.000Z")]
     public class AccountDungeonsClient : BaseEndpointBlobClient<IApiV2ObjectList<string>>, IAccountDungeonsClient
     {
         /// <summary>

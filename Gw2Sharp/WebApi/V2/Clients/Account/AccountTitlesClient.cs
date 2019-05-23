@@ -6,6 +6,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 account titles endpoint.
     /// </summary>
     [EndpointPath("account/titles")]
+    [EndpointSchemaVersion("2019-02-21T00:00:00.000Z")]
     public class AccountTitlesClient : BaseEndpointBlobClient<IApiV2ObjectList<int>>, IAccountTitlesClient
     {
         /// <summary>

@@ -43,6 +43,11 @@ namespace Gw2Sharp.WebApi.V2.Models
         public IReadOnlyList<Guid> GuildLeader { get; set; } = new List<Guid>();
 
         /// <summary>
+        /// The last modification date for this data.
+        /// </summary>
+        public DateTime LastModified { get; set; }
+
+        /// <summary>
         /// The account creation date.
         /// </summary>
         public DateTime Created { get; set; }

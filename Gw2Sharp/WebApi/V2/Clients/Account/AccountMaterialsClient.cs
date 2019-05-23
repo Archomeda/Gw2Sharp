@@ -7,6 +7,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 account materials endpoint.
     /// </summary>
     [EndpointPath("account/materials")]
+    [EndpointSchemaVersion("2019-02-21T00:00:00.000Z")]
     public class AccountMaterialsClient : BaseEndpointBlobClient<IApiV2ObjectList<AccountMaterial>>, IAccountMaterialsClient
     {
         /// <summary>

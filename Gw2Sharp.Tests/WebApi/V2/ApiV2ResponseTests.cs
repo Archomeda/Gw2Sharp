@@ -34,7 +34,7 @@ namespace Gw2Sharp.Tests.WebApi.V2
             Assert.Equal(statusCode, response.ResponseStatusCode);
             Assert.Equal(new DateTime(2019, 5, 23, 22, 0, 0, DateTimeKind.Utc), response.Date.ToUniversalTime());
             Assert.Equal(new DateTime(2019, 5, 24, 0, 0, 0, DateTimeKind.Utc), response.Expires!.Value.ToUniversalTime());
-            Assert.Equal(new DateTime(2019, 5, 23, 20, 0, 0, DateTimeKind.Utc), response.LastModified.ToUniversalTime());
+            Assert.Equal(new DateTime(2019, 5, 23, 20, 0, 0, DateTimeKind.Utc), response.LastModified!.Value.ToUniversalTime());
             Assert.Equal(requestHeaders, response.RawRequestHeaders);
             Assert.Equal(responseHeaders, response.RawResponseHeaders);
             Assert.Equal(TimeSpan.FromSeconds(60), response.CacheMaxAge);

@@ -46,6 +46,11 @@ namespace Gw2Sharp.WebApi.V2.Models
         public TimeSpan Age { get; set; }
 
         /// <summary>
+        /// The last modification date for this data.
+        /// </summary>
+        public DateTime LastModified { get; set; }
+
+        /// <summary>
         /// The date the character was created.
         /// </summary>
         public DateTime Created { get; set; }
