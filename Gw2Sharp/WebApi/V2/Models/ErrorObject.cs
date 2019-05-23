@@ -9,7 +9,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// Because of how the API works, either <see cref="Text"/> or <see cref="Error"/> is set.
     /// You can use <see cref="Message"/> to prioritize <see cref="Text"/> above <see cref="Error"/>.
     /// </remarks>
-    public class ErrorObject
+    public class ErrorObject : ApiV2BaseObject
     {
         /// <summary>
         /// The error message.

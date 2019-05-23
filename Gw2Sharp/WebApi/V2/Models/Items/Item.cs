@@ -33,7 +33,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     [CastableType(ItemType.Trophy, typeof(ItemTrophy))]
     [CastableType(ItemType.UpgradeComponent, typeof(ItemUpgradeComponent))]
     [CastableType(ItemType.Weapon, typeof(ItemWeapon))]
-    public class Item : IIdentifiable<int>, ICastableType<Item, ItemType>
+    public class Item : ApiV2BaseObject, IIdentifiable<int>, ICastableType<Item, ItemType>
     {
         /// <summary>
         /// The item name.

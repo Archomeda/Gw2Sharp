@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using Gw2Sharp.WebApi.V2.Models;
 
 namespace Gw2Sharp.WebApi.V2.Clients
@@ -9,7 +8,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// </summary>
     [EndpointPath("guild/:id/members")]
     [EndpointPathSegment("id", 0)]
-    public class GuildIdMembersClient : BaseEndpointBlobClient<IReadOnlyList<GuildMember>>, IGuildIdMembersClient
+    public class GuildIdMembersClient : BaseEndpointBlobClient<IApiV2ObjectList<GuildMember>>, IGuildIdMembersClient
     {
         /// <summary>
         /// Creates a new <see cref="GuildIdMembersClient"/> that is used for the API v2 guild id members endpoint.

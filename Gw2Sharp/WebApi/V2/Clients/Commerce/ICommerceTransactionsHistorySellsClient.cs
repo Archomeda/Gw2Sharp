@@ -1,5 +1,3 @@
-
-using System.Collections.Generic;
 using Gw2Sharp.WebApi.V2.Models;
 
 namespace Gw2Sharp.WebApi.V2.Clients
@@ -8,8 +6,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 commerce transactions history sells endpoint.
     /// </summary>
     public interface ICommerceTransactionsHistorySellsClient :
-        IAuthenticatedClient<IReadOnlyList<CommerceTransactionHistory>>,
-        IBlobClient<IReadOnlyList<CommerceTransactionHistory>>,
+        IAuthenticatedClient<IApiV2ObjectList<CommerceTransactionHistory>>,
+        IBlobClient<IApiV2ObjectList<CommerceTransactionHistory>>,
         IPaginatedClient<CommerceTransactionHistory>
     {
     }

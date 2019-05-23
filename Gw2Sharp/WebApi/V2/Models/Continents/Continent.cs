@@ -6,7 +6,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents a continent.
     /// </summary>
-    public class Continent : IIdentifiable<int>
+    public class Continent : ApiV2BaseObject, IIdentifiable<int>
     {
         /// <summary>
         /// The continent id.

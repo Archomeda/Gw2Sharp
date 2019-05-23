@@ -7,7 +7,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// Represents generic account data.
     /// Requires scope: account.
     /// </summary>
-    public class Account
+    public class Account : ApiV2BaseObject
     {
         /// <summary>
         /// The account id.

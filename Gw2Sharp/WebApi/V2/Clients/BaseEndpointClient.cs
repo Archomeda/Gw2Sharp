@@ -1,12 +1,11 @@
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
-using Gw2Sharp.Extensions;
 using Gw2Sharp.WebApi.Caching;
-using Gw2Sharp.WebApi.Http;
 using Gw2Sharp.WebApi.V2.Models;
 
 namespace Gw2Sharp.WebApi.V2.Clients
@@ -15,9 +14,10 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// An abstract base class for implementing endpoint clients.
     /// </summary>
     /// <typeparam name="TObject">The response object type.</typeparam>
-    public abstract class BaseEndpointClient<TObject> : BaseClient, IEndpointClient where TObject : object
+    public abstract class BaseEndpointClient<TObject> : BaseClient, IEndpointClient
+        where TObject : IApiV2Object
     {
-        private const int MaxPageSize = 200;
+        private const int MAX_PAGE_SIZE = 200;
 
         /// <summary>
         /// Creates a new base endpoint client.
@@ -60,6 +60,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
                 this.EndpointPath = this.EndpointPath.Replace($":{segments[i].PathSegment}", replaceSegments[i]);
         }
 
+
+        #region Properties
+
         /// <inheritdoc />
         public string EndpointPath { get; }
 
@@ -85,45 +88,36 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <inheritdoc />
         public bool IsBulkExpandable { get; protected set; }
 
+        #endregion
+
+
+        #region Request Methods
 
         /// <summary>
         /// Requests all entries from this endpoint.
         /// </summary>
-        /// <typeparam name="TIdentifiableObject">The endpoint return value type.</typeparam>
+        /// <typeparam name="TEndpointObject">The endpoint return value type.</typeparam>
         /// <typeparam name="TId">The entry id type.</typeparam>
         /// <returns>All entries.</returns>
-        protected Task<IReadOnlyList<TIdentifiableObject>> RequestAllAsync<TIdentifiableObject, TId>()
-            where TIdentifiableObject : object, IIdentifiable<TId>
+        protected Task<IApiV2ObjectList<TEndpointObject>> RequestAllAsync<TEndpointObject, TId>()
+            where TEndpointObject : IApiV2Object, IIdentifiable<TId>
             where TId : object =>
-            this.RequestAllAsync<TIdentifiableObject, TId>(CancellationToken.None);
+            this.RequestAllAsync<TEndpointObject, TId>(CancellationToken.None);
 
         /// <summary>
         /// Requests all entries from this endpoint.
         /// </summary>
-        /// <typeparam name="TIdentifiableObject">The endpoint return value type.</typeparam>
+        /// <typeparam name="TEndpointObject">The endpoint return value type.</typeparam>
         /// <typeparam name="TId">The entry id type.</typeparam>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>All entries.</returns>
-        protected async Task<IReadOnlyList<TIdentifiableObject>> RequestAllAsync<TIdentifiableObject, TId>(CancellationToken cancellationToken)
-            where TIdentifiableObject : object, IIdentifiable<TId>
-            where TId : object =>
-            (await this.RequestAllWithResponseAsync<TIdentifiableObject, TId>(cancellationToken).ConfigureAwait(false)).Content;
-
-        /// <summary>
-        /// Requests all entries from this endpoint with the detailed response info.
-        /// </summary>
-        /// <typeparam name="TIdentifiableObject">The endpoint return value type.</typeparam>
-        /// <typeparam name="TId">The entry id type.</typeparam>
-        /// <param name="cancellationToken">The cancellation token.</param>
-        /// <returns>All entries.</returns>
-        protected async Task<IApiV2Response<IReadOnlyList<TIdentifiableObject>>> RequestAllWithResponseAsync<TIdentifiableObject, TId>(CancellationToken cancellationToken)
-            where TIdentifiableObject : object, IIdentifiable<TId>
+        protected async Task<IApiV2ObjectList<TEndpointObject>> RequestAllAsync<TEndpointObject, TId>(CancellationToken cancellationToken)
+            where TEndpointObject : IApiV2Object, IIdentifiable<TId>
             where TId : object
         {
-            var (response, cacheAll) = await this.GetOrUpdateAsync<IReadOnlyList<TIdentifiableObject>>(this.FormatUrlQueryAll(this.EndpointPath), "_all", cancellationToken).ConfigureAwait(false);
-            var cacheIndividuals = await this.UpdateIndividualsAsync<TIdentifiableObject, TId>(cacheAll).ConfigureAwait(false);
-            response.Content = cacheIndividuals.Select(x => x.Item).ToList();
-            return response;
+            var items = await this.GetOrUpdateAsync<IApiV2ObjectList<TEndpointObject>>(this.FormatUrlQueryAll(this.EndpointPath), "_all", cancellationToken).ConfigureAwait(false);
+            await this.UpdateIndividualsAsync<TEndpointObject, TId>(items).ConfigureAwait(false);
+            return items.Item;
         }
 
         /// <summary>
@@ -131,7 +125,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// </summary>
         /// <typeparam name="TId">The entry id type.</typeparam>
         /// <returns>Entry ids.</returns>
-        protected Task<IReadOnlyList<TId>> RequestIdsAsync<TId>() =>
+        protected Task<IApiV2ObjectList<TId>> RequestIdsAsync<TId>() =>
             this.RequestIdsAsync<TId>(CancellationToken.None);
 
         /// <summary>
@@ -140,20 +134,10 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <typeparam name="TId">The entry id type.</typeparam>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>Entry ids.</returns>
-        protected async Task<IReadOnlyList<TId>> RequestIdsAsync<TId>(CancellationToken cancellationToken) =>
-            (await this.RequestIdsWithResponseAsync<TId>(cancellationToken).ConfigureAwait(false)).Content;
-
-        /// <summary>
-        /// Requests the list of entry ids from this endpoint with the detailed response info.
-        /// </summary>
-        /// <typeparam name="TId">The entry id type.</typeparam>
-        /// <param name="cancellationToken">The cancellation token.</param>
-        /// <returns>Entry ids.</returns>
-        protected async Task<IApiV2Response<IReadOnlyList<TId>>> RequestIdsWithResponseAsync<TId>(CancellationToken cancellationToken)
+        protected async Task<IApiV2ObjectList<TId>> RequestIdsAsync<TId>(CancellationToken cancellationToken)
         {
-            var (response, cache) = await this.GetOrUpdateAsync<IReadOnlyList<TId>>(this.FormatUrlQueryIds(this.EndpointPath), "_ids", cancellationToken).ConfigureAwait(false);
-            response.Content = cache.Item;
-            return response;
+            var ids = await this.GetOrUpdateAsync<IApiV2ObjectList<TId>>(this.FormatUrlQueryIds(this.EndpointPath), "_ids", cancellationToken).ConfigureAwait(false);
+            return ids.Item;
         }
 
         /// <summary>
@@ -168,194 +152,143 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// </summary>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The blob data.</returns>
-        protected async Task<TObject> RequestGetAsync(CancellationToken cancellationToken) =>
-            (await this.RequestGetWithResponseAsync(cancellationToken).ConfigureAwait(false)).Content;
-
-        /// <summary>
-        /// Requests the main blob data from this endpoint with the detailed response info.
-        /// </summary>
-        /// <param name="cancellationToken">The cancellation token.</param>
-        /// <returns>The blob data.</returns>
-        protected async Task<IApiV2Response<TObject>> RequestGetWithResponseAsync(CancellationToken cancellationToken)
+        protected async Task<TObject> RequestGetAsync(CancellationToken cancellationToken)
         {
-            var (response, cache) = await this.GetOrUpdateAsync<TObject>(this.FormatUrlQueryBlob(this.EndpointPath), "_index", cancellationToken).ConfigureAwait(false);
-            response.Content = cache.Item;
-            return response;
+            var @object = await this.GetOrUpdateAsync<TObject>(this.FormatUrlQueryBlob(this.EndpointPath), "_index", cancellationToken).ConfigureAwait(false);
+            return @object.Item;
         }
 
         /// <summary>
         /// Requests a single entry by id.
         /// </summary>
-        /// <typeparam name="TIdentifiableObject">The endpoint return value type.</typeparam>
+        /// <typeparam name="TEndpointObject">The endpoint return value type.</typeparam>
         /// <typeparam name="TId">The id value type.</typeparam>
         /// <param name="id">The entry id.</param>
         /// <returns>The entry.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="id"/> is <c>null</c>.</exception>
-        protected Task<TIdentifiableObject> RequestGetAsync<TIdentifiableObject, TId>(TId id)
-            where TIdentifiableObject : object, IIdentifiable<TId>
+        protected Task<TEndpointObject> RequestGetAsync<TEndpointObject, TId>(TId id)
+            where TEndpointObject : IApiV2Object, IIdentifiable<TId>
             where TId : object =>
-            this.RequestGetAsync<TIdentifiableObject, TId>(id, CancellationToken.None);
+            this.RequestGetAsync<TEndpointObject, TId>(id, CancellationToken.None);
 
         /// <summary>
         /// Requests a single entry by id.
         /// </summary>
-        /// <typeparam name="TIdentifiableObject">The endpoint return value type.</typeparam>
+        /// <typeparam name="TEndpointObject">The endpoint return value type.</typeparam>
         /// <typeparam name="TId">The id value type.</typeparam>
         /// <param name="id">The entry id.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The entry.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="id"/> is <c>null</c>.</exception>
-        protected async Task<TIdentifiableObject> RequestGetAsync<TIdentifiableObject, TId>(TId id, CancellationToken cancellationToken)
-            where TIdentifiableObject : object, IIdentifiable<TId>
-            where TId : object =>
-            (await this.RequestGetWithResponseAsync<TIdentifiableObject, TId>(id, cancellationToken).ConfigureAwait(false)).Content;
-
-        /// <summary>
-        /// Requests a single entry by id with the detailed response info.
-        /// </summary>
-        /// <typeparam name="TIdentifiableObject">The endpoint return value type.</typeparam>
-        /// <typeparam name="TId">The id value type.</typeparam>
-        /// <param name="id">The entry id.</param>
-        /// <param name="cancellationToken">The cancellation token.</param>
-        /// <returns>The entry.</returns>
-        /// <exception cref="ArgumentNullException"><paramref name="id"/> is <c>null</c>.</exception>
-        protected async Task<IApiV2Response<TIdentifiableObject>> RequestGetWithResponseAsync<TIdentifiableObject, TId>(TId id, CancellationToken cancellationToken)
-            where TIdentifiableObject : object, IIdentifiable<TId>
+        protected async Task<TEndpointObject> RequestGetAsync<TEndpointObject, TId>(TId id, CancellationToken cancellationToken)
+            where TEndpointObject : IApiV2Object, IIdentifiable<TId>
             where TId : object
         {
             if (id == null)
                 throw new ArgumentNullException(nameof(id));
 
-            var (response, cache) = await this.GetOrUpdateAsync<TIdentifiableObject>(this.FormatUrlQueryItem(this.EndpointPath, id), id, cancellationToken).ConfigureAwait(false);
-            response.Content = cache.Item;
-            return response;
+            var @object = await this.GetOrUpdateAsync<TEndpointObject>(this.FormatUrlQueryItem(this.EndpointPath, id), id, cancellationToken).ConfigureAwait(false);
+            return @object.Item;
         }
 
         /// <summary>
         /// Requests many entries by their id (a.k.a. bulk expansion).
         /// </summary>
-        /// <typeparam name="TIdentifiableObject">The endpoint return value type.</typeparam>
+        /// <typeparam name="TEndpointObject">The endpoint return value type.</typeparam>
         /// <typeparam name="TId">The id value type.</typeparam>
         /// <param name="ids">The entry ids.</param>
         /// <returns>The entries.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="ids"/> is <c>null</c>.</exception>
-        protected Task<IReadOnlyList<TIdentifiableObject>> RequestManyAsync<TIdentifiableObject, TId>(IEnumerable<TId> ids)
-            where TIdentifiableObject : object, IIdentifiable<TId>
+        protected Task<IReadOnlyList<TEndpointObject>> RequestManyAsync<TEndpointObject, TId>(IEnumerable<TId> ids)
+            where TEndpointObject : IApiV2Object, IIdentifiable<TId>
             where TId : object =>
-            this.RequestManyAsync<TIdentifiableObject, TId>(ids, CancellationToken.None);
+            this.RequestManyAsync<TEndpointObject, TId>(ids, CancellationToken.None);
 
         /// <summary>
         /// Requests many entries by their id (a.k.a. bulk expansion).
         /// </summary>
-        /// <typeparam name="TIdentifiableObject">The endpoint return value type.</typeparam>
+        /// <typeparam name="TEndpointObject">The endpoint return value type.</typeparam>
         /// <typeparam name="TId">The id value type.</typeparam>
         /// <param name="ids">The entry ids.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The entries.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="ids"/> is <c>null</c>.</exception>
-        protected async Task<IReadOnlyList<TIdentifiableObject>> RequestManyAsync<TIdentifiableObject, TId>(IEnumerable<TId> ids, CancellationToken cancellationToken)
-            where TIdentifiableObject : object, IIdentifiable<TId>
-            where TId : object =>
-            (await this.RequestManyWithResponseAsync<TIdentifiableObject, TId>(ids, cancellationToken).ConfigureAwait(false)).SelectMany(x => x.Content).ToList();
-
-        /// <summary>
-        /// Requests many entries by their id (a.k.a. bulk expansion).
-        /// </summary>
-        /// <typeparam name="TIdentifiableObject">The endpoint return value type.</typeparam>
-        /// <typeparam name="TId">The id value type.</typeparam>
-        /// <param name="ids">The entry ids.</param>
-        /// <param name="cancellationToken">The cancellation token.</param>
-        /// <returns>The entries.</returns>
-        /// <exception cref="ArgumentNullException"><paramref name="ids"/> is <c>null</c>.</exception>
-        protected async Task<IReadOnlyList<IApiV2Response<IReadOnlyList<TIdentifiableObject>>>> RequestManyWithResponseAsync<TIdentifiableObject, TId>(IEnumerable<TId> ids, CancellationToken cancellationToken)
-            where TIdentifiableObject : object, IIdentifiable<TId>
+        protected async Task<IReadOnlyList<TEndpointObject>> RequestManyAsync<TEndpointObject, TId>(IEnumerable<TId> ids, CancellationToken cancellationToken)
+            where TEndpointObject : IApiV2Object, IIdentifiable<TId>
             where TId : object
         {
             if (ids == null)
                 throw new ArgumentNullException(nameof(ids));
 
-            var responses = new List<ApiV2Response<IReadOnlyList<TIdentifiableObject>>>();
-            object responsesLock = new object();
+            object lockObject = new object();
 
-            var cache = await this.Connection.CacheMethod.GetOrUpdateManyAsync<TIdentifiableObject>(this.EndpointPath, ids.Cast<object>(),
-                async missingIds =>
+            var cache = await this.Connection.CacheMethod.GetOrUpdateManyAsync<TEndpointObject>(this.EndpointPath, ids.Cast<object>(), async missingIds =>
+            {
+                var partitions = Partitioner.Create(0, missingIds.Count, MAX_PAGE_SIZE).GetDynamicPartitions();
+                var latestCacheTime = DateTime.Now;
+
+                var result = await Task.WhenAll(partitions.Select(async partition =>
                 {
-                    var requestIds = new List<IEnumerable<object>>();
-                    for (int i = 0; i < missingIds.Count; i += MaxPageSize)
-                        requestIds.Add(missingIds.Skip(i).Take(MaxPageSize));
+                    var (start, end) = partition;
+                    var pageIds = missingIds.Skip(start).Take(end - start);
 
-                    var latestCacheTime = DateTime.Now;
-                    var result = await Task.WhenAll(requestIds.Select(async innerIds =>
+                    var uri = this.AppendUrlParameters(new Uri(Gw2WebApiV2Client.UrlBase, this.FormatUrlQueryMany(this.EndpointPath, pageIds)));
+                    var headers = this.BuildRequestHeaders();
+                    var httpResponse = await this.Connection.RequestAsync<IApiV2ObjectList<TEndpointObject>>(uri, headers, cancellationToken).ConfigureAwait(false);
+
+                    var @object = httpResponse.Content;
+                    @object.HttpResponseInfo = new ApiV2HttpResponseInfo(httpResponse.StatusCode, httpResponse.RequestHeaders, httpResponse.ResponseHeaders);
+
+                    lock (lockObject)
                     {
-                        var uri = this.AppendUrlParameters(new Uri(Gw2WebApiV2Client.UrlBase, this.FormatUrlQueryMany(this.EndpointPath, innerIds)));
-                        var headers = this.BuildRequestHeaders();
-                        var httpResponse = await this.Connection.RequestAsync<IReadOnlyList<TIdentifiableObject>>(uri, headers, cancellationToken).ConfigureAwait(false);
-                        var response = new ApiV2Response<IReadOnlyList<TIdentifiableObject>>(httpResponse);
-                        lock (responsesLock)
-                        {
-                            responses.Add(response);
-                            if (response.Expires.HasValue && latestCacheTime < response.Expires)
-                                latestCacheTime = response.Expires.Value;
-                        }
-                        return response.Content.ToDictionary(x => x.Id, x => x);
-                    })).ConfigureAwait(false);
+                        if (@object.HttpResponseInfo.Expires.HasValue && latestCacheTime < @object.HttpResponseInfo.Expires)
+                            latestCacheTime = @object.HttpResponseInfo.Expires.Value;
+                    }
 
-                    return (result.SelectMany(x => x).ToDictionary(kvp => (object)kvp.Key, kvp => kvp.Value), latestCacheTime);
-                }
-            ).ConfigureAwait(false);
+                    return @object.ToDictionary(x => x.Id, x => x);
+                })).ConfigureAwait(false);
 
-            // We just include the full list of items in every separate response, because
-            // it's too complicated to put them into their respective responses.
+                return (result.SelectMany(x => x).ToDictionary(kvp => (object)kvp.Key, kvp => kvp.Value), latestCacheTime);
+            }).ConfigureAwait(false);
+
             var items = cache.Select(x => x.Item).ToList();
-            return responses.Select(r => (IApiV2Response<IReadOnlyList<TIdentifiableObject>>)new ApiV2Response<IReadOnlyList<TIdentifiableObject>>(r) { Content = items }).ToList();
+            return items.AsReadOnly();
         }
 
         /// <summary>
         /// Requests a page of entries with a specific page size.
         /// </summary>
-        /// <typeparam name="TIdentifiableObject">The endpoint return value type.</typeparam>
+        /// <typeparam name="TEndpointObject">The endpoint return value type.</typeparam>
         /// <typeparam name="TId">The id value type.</typeparam>
         /// <param name="page">The page number (zero-indexed).</param>
         /// <param name="pageSize">The page size (maximum 200).</param>
         /// <returns>The entries.</returns>
-        protected Task<IReadOnlyList<TIdentifiableObject>> RequestPageAsync<TIdentifiableObject, TId>(int page, int pageSize = MaxPageSize)
-            where TIdentifiableObject : object, IIdentifiable<TId>
+        /// <exception cref="ArgumentOutOfRangeException"><paramref name="pageSize"/> is not within the accepted boundaries (1 - 200).</exception>
+        protected Task<IApiV2ObjectList<TEndpointObject>> RequestPageAsync<TEndpointObject, TId>(int page, int pageSize = MAX_PAGE_SIZE)
+            where TEndpointObject : IApiV2Object, IIdentifiable<TId>
             where TId : object =>
-            this.RequestPageAsync<TIdentifiableObject, TId>(page, CancellationToken.None, pageSize);
+            this.RequestPageAsync<TEndpointObject, TId>(page, CancellationToken.None, pageSize);
 
         /// <summary>
         /// Requests a page of entries with a specific page size.
         /// </summary>
-        /// <typeparam name="TIdentifiableObject">The endpoint return value type.</typeparam>
+        /// <typeparam name="TEndpointObject">The endpoint return value type.</typeparam>
         /// <typeparam name="TId">The id value type.</typeparam>
         /// <param name="page">The page number (zero-indexed).</param>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <param name="pageSize">The page size (maximum 200).</param>
         /// <returns>The entries.</returns>
-        protected async Task<IReadOnlyList<TIdentifiableObject>> RequestPageAsync<TIdentifiableObject, TId>(int page, CancellationToken cancellationToken, int pageSize = MaxPageSize)
-            where TIdentifiableObject : object, IIdentifiable<TId>
-            where TId : object =>
-            (await this.RequestPageWithResponseAsync<TIdentifiableObject, TId>(page, cancellationToken, pageSize).ConfigureAwait(false)).Content;
-
-        /// <summary>
-        /// Requests a page of entries with a specific page size.
-        /// </summary>
-        /// <typeparam name="TIdentifiableObject">The endpoint return value type.</typeparam>
-        /// <typeparam name="TId">The id value type.</typeparam>
-        /// <param name="page">The page number (zero-indexed).</param>
-        /// <param name="cancellationToken">The cancellation token.</param>
-        /// <param name="pageSize">The page size (maximum 200).</param>
-        /// <returns>The entries.</returns>
-        protected async Task<IApiV2Response<IReadOnlyList<TIdentifiableObject>>> RequestPageWithResponseAsync<TIdentifiableObject, TId>(int page, CancellationToken cancellationToken, int pageSize = MaxPageSize)
-            where TIdentifiableObject : object, IIdentifiable<TId>
+        /// <exception cref="ArgumentOutOfRangeException"><paramref name="pageSize"/> is not within the accepted boundaries (1 - 200).</exception>
+        protected async Task<IApiV2ObjectList<TEndpointObject>> RequestPageAsync<TEndpointObject, TId>(int page, CancellationToken cancellationToken, int pageSize = MAX_PAGE_SIZE)
+            where TEndpointObject : IApiV2Object, IIdentifiable<TId>
             where TId : object
         {
-            pageSize = pageSize.Clamp(1, 200);
+            if (pageSize < 1 || pageSize > 200)
+                throw new ArgumentOutOfRangeException(nameof(pageSize), pageSize, "Page size cannot be smaller than 1 or bigger than 200");
 
-            var (response, cache) = await this.GetOrUpdateAsync<IReadOnlyList<TIdentifiableObject>>(this.FormatUrlQueryPage(this.EndpointPath, page, pageSize), $"_page{page}-{pageSize}", cancellationToken).ConfigureAwait(false);
-            await this.UpdateIndividualsAsync<TIdentifiableObject, TId>(cache).ConfigureAwait(false);
-
-            return new ApiV2Response<IReadOnlyList<TIdentifiableObject>>(response) { Content = cache.Item };
+            var items = await this.GetOrUpdateAsync<IApiV2ObjectList<TEndpointObject>>(this.FormatUrlQueryPage(this.EndpointPath, page, pageSize), $"_page{page}-{pageSize}", cancellationToken).ConfigureAwait(false);
+            await this.UpdateIndividualsAsync<TEndpointObject, TId>(items).ConfigureAwait(false);
+            return items.Item;
         }
 
         /// <summary>
@@ -364,7 +297,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="page">The page number (zero-indexed).</param>
         /// <param name="pageSize">The page size (maximum 200).</param>
         /// <returns>The entries.</returns>
-        protected Task<TObject> RequestPageAsync(int page, int pageSize = MaxPageSize) =>
+        /// <exception cref="ArgumentOutOfRangeException"><paramref name="pageSize"/> is not within the accepted boundaries (1 - 200).</exception>
+        protected Task<TObject> RequestPageAsync(int page, int pageSize = MAX_PAGE_SIZE) =>
             this.RequestPageAsync(page, CancellationToken.None, pageSize);
 
         /// <summary>
@@ -374,81 +308,82 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <param name="pageSize">The page size (maximum 200).</param>
         /// <returns>The entries.</returns>
-        protected async Task<TObject> RequestPageAsync(int page, CancellationToken cancellationToken, int pageSize = MaxPageSize) =>
-            (await this.RequestPageWithResponseAsync(page, cancellationToken, pageSize).ConfigureAwait(false)).Content;
-
-        /// <summary>
-        /// Requests a page of blob data with a specific page size.
-        /// </summary>
-        /// <param name="page">The page number (zero-indexed).</param>
-        /// <param name="cancellationToken">The cancellation token.</param>
-        /// <param name="pageSize">The page size (maximum 200).</param>
-        /// <returns>The entries.</returns>
-        protected async Task<IApiV2Response<TObject>> RequestPageWithResponseAsync(int page, CancellationToken cancellationToken, int pageSize = MaxPageSize)
+        /// <exception cref="ArgumentOutOfRangeException"><paramref name="pageSize"/> is not within the accepted boundaries (1 - 200).</exception>
+        protected async Task<TObject> RequestPageAsync(int page, CancellationToken cancellationToken, int pageSize = MAX_PAGE_SIZE)
         {
-            pageSize = pageSize.Clamp(1, 200);
+            if (pageSize < 1 || pageSize > 200)
+                throw new ArgumentOutOfRangeException(nameof(pageSize), pageSize, "Page size cannot be smaller than 1 or bigger than 200");
 
-            var (response, _) = await this.GetOrUpdateAsync<TObject>(this.FormatUrlQueryPage(this.EndpointPath, page, pageSize), $"_page{page}-{pageSize}", cancellationToken).ConfigureAwait(false);
-            return response;
+            var items = await this.GetOrUpdateAsync<TObject>(this.FormatUrlQueryPage(this.EndpointPath, page, pageSize), $"_page{page}-{pageSize}", cancellationToken).ConfigureAwait(false);
+            return items.Item;
         }
+
+        #endregion
+
+
+        #region Protected Request Methods
 
         /// <summary>
         /// A helper function that makes an API request for items that do not exist in the cache.
         /// Non-expired items in the cache are skipped for requests and are taken from the cache instead.
         /// </summary>
-        /// <typeparam name="TIdentifiableObject">The endpoint return value type.</typeparam>
+        /// <typeparam name="TEndpointObject">The endpoint return value type.</typeparam>
         /// <param name="url">The request URL.</param>
         /// <param name="cacheId">The cache identifier.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
-        /// <returns>A two-tuple that contains the <see cref="IHttpResponse{TIdentifiableObject}"/> and <see cref="CacheItem{TIdentifiableObject}"/> items.</returns>
+        /// <returns>The previously cached response, or a newly requested response that's been cached.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="url"/> or <paramref name="cacheId"/> is <c>null</c>.</exception>
-        protected async Task<(ApiV2Response<TIdentifiableObject>, CacheItem<TIdentifiableObject>)> GetOrUpdateAsync<TIdentifiableObject>(string url, object cacheId, CancellationToken cancellationToken)
-            where TIdentifiableObject : object
+        protected async Task<CacheItem<TEndpointObject>> GetOrUpdateAsync<TEndpointObject>(string url, object cacheId, CancellationToken cancellationToken)
+            where TEndpointObject : IApiV2Object
         {
             if (url == null)
                 throw new ArgumentNullException(nameof(url));
             if (cacheId == null)
                 throw new ArgumentNullException(nameof(cacheId));
 
-            ApiV2Response<TIdentifiableObject>? response = null;
-            var result = await this.Connection.CacheMethod.GetOrUpdateAsync(this.EndpointPath, cacheId,
-                async () =>
-                {
-                    var uri = this.AppendUrlParameters(new Uri(Gw2WebApiV2Client.UrlBase, url));
-                    var headers = this.BuildRequestHeaders();
-                    var httpResponse = await this.Connection.RequestAsync<TIdentifiableObject>(uri, headers, cancellationToken).ConfigureAwait(false);
-                    response = new ApiV2Response<TIdentifiableObject>(httpResponse);
-                    return (httpResponse.Content, response.Expires ?? DateTime.Now);
-                }).ConfigureAwait(false);
-            response ??= new ApiV2Response<TIdentifiableObject>(result.Item);
-            return (response, result);
+            var result = await this.Connection.CacheMethod.GetOrUpdateAsync(this.EndpointPath, cacheId, async () =>
+            {
+                var uri = this.AppendUrlParameters(new Uri(Gw2WebApiV2Client.UrlBase, url));
+                var headers = this.BuildRequestHeaders();
+                var httpResponse = await this.Connection.RequestAsync<TEndpointObject>(uri, headers, cancellationToken).ConfigureAwait(false);
+
+                var @object = httpResponse.Content;
+                @object.HttpResponseInfo = new ApiV2HttpResponseInfo(httpResponse.StatusCode, httpResponse.RequestHeaders, httpResponse.ResponseHeaders);
+                return (@object, @object.HttpResponseInfo.Expires ?? DateTime.Now);
+            }).ConfigureAwait(false);
+
+            return result;
         }
 
         /// <summary>
         /// Helper function to update individual cache items from a many API request.
         /// </summary>
-        /// <typeparam name="TIdentifiableObject">The endpoint return value type.</typeparam>
+        /// <typeparam name="TEndpointObject">The endpoint return value type.</typeparam>
         /// <typeparam name="TId">The id value type.</typeparam>
         /// <param name="cache">The cache.</param>
         /// <returns>The list of cached items.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="cache"/> is <c>null</c>.</exception>
-        protected async Task<IReadOnlyList<CacheItem<TIdentifiableObject>>> UpdateIndividualsAsync<TIdentifiableObject, TId>(CacheItem<IReadOnlyList<TIdentifiableObject>> cache)
-            where TIdentifiableObject : object, IIdentifiable<TId>
+        protected async Task<IReadOnlyList<CacheItem<TEndpointObject>>> UpdateIndividualsAsync<TEndpointObject, TId>(CacheItem<IApiV2ObjectList<TEndpointObject>> cache)
+            where TEndpointObject : IApiV2Object, IIdentifiable<TId>
             where TId : object
         {
             if (cache == null)
                 throw new ArgumentNullException(nameof(cache));
 
-            var cacheList = cache.Item.Select(x => new CacheItem<TIdentifiableObject>(this.EndpointPath, x.Id, x, cache.ExpiryTime)).ToList();
+            var cacheList = cache.Item.Select(x => new CacheItem<TEndpointObject>(this.EndpointPath, x.Id, x, cache.ExpiryTime)).ToList();
             await this.Connection.CacheMethod.SetManyAsync(cacheList).ConfigureAwait(false);
             return cacheList;
         }
 
+        #endregion
 
-        private const string QueryAll = "?ids=all";
-        private const string QueryItem = "/{0}";
-        private const string QueryMany = "?ids={0}";
-        private const string QueryPage = "?page={0}&page_size={1}";
+
+        #region Formatters
+
+        private const string QUERY_ALL = "?ids=all";
+        private const string QUERY_ITEM = "/{0}";
+        private const string QUERY_MANY = "?ids={0}";
+        private const string QUERY_PAGE = "?page={0}&page_size={1}";
 
         /// <summary>
         /// Formats a URL with querying all items.
@@ -456,7 +391,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="endpointPath">The endpoint path.</param>
         /// <returns>The formatted URL.</returns>
         protected virtual string FormatUrlQueryAll(string endpointPath) =>
-            $"{endpointPath}{QueryAll}";
+            $"{endpointPath}{QUERY_ALL}";
 
         /// <summary>
         /// Formats a URL with querying ids.
@@ -481,7 +416,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="id">The item id.</param>
         /// <returns>The formatted URL.</returns>
         protected virtual string FormatUrlQueryItem<T>(string endpointPath, T id) =>
-            $"{endpointPath}{string.Format(QueryItem, id)}";
+            $"{endpointPath}{string.Format(QUERY_ITEM, id)}";
 
         /// <summary>
         /// Formats a URL with querying many items.
@@ -490,7 +425,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="ids">The item ids.</param>
         /// <returns>The formatted URL.</returns>
         protected virtual string FormatUrlQueryMany<T>(string endpointPath, IEnumerable<T> ids) =>
-            $"{endpointPath}{string.Format(QueryMany, string.Join(",", ids))}";
+            $"{endpointPath}{string.Format(QUERY_MANY, string.Join(",", ids))}";
 
         /// <summary>
         /// Formats a URL with querying a page of items.
@@ -500,7 +435,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="pageSize">The page size.</param>
         /// <returns>The formatted URL.</returns>
         protected virtual string FormatUrlQueryPage(string endpointPath, int page, int pageSize) =>
-            $"{endpointPath}{string.Format(QueryPage, page, pageSize)}";
+            $"{endpointPath}{string.Format(QUERY_PAGE, page, pageSize)}";
 
         /// <summary>
         /// Appends the parameters to the URI.
@@ -550,6 +485,10 @@ namespace Gw2Sharp.WebApi.V2.Clients
             return headers;
         }
 
+        #endregion
+
+
+        #region Reflection Helpers
 
         private bool ImplementsInterface(Type interfaceType) =>
             this.GetType().GetInterfaces()
@@ -572,5 +511,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
 
         private IReadOnlyList<T> GetAttributes<T>() where T : Attribute =>
             this.GetType().GetCustomAttributes<T>().ToList();
+
+        #endregion
     }
 }

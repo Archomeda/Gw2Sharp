@@ -5,7 +5,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents a historic commerce transaction.
     /// </summary>
-    public class CommerceTransactionHistory : IIdentifiable<long>
+    public class CommerceTransactionHistory : ApiV2BaseObject, IIdentifiable<long>
     {
         /// <summary>
         /// The transaction id.

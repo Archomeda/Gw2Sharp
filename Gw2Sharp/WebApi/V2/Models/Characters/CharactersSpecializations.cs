@@ -3,7 +3,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents the response from the characters specializations endpoint.
     /// </summary>
-    public class CharactersSpecializations
+    public class CharactersSpecializations : ApiV2BaseObject
     {
         /// <summary>
         /// The character specializations.

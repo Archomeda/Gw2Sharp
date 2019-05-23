@@ -1,6 +1,5 @@
 
 using System;
-using System.Collections.Generic;
 using Gw2Sharp.WebApi.V2.Models;
 
 namespace Gw2Sharp.WebApi.V2.Clients
@@ -9,8 +8,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 guild id ranks endpoint.
     /// </summary>
     public interface IGuildIdRanksClient :
-        IAuthenticatedClient<IReadOnlyList<GuildRank>>,
-        IBlobClient<IReadOnlyList<GuildRank>>
+        IAuthenticatedClient<IApiV2ObjectList<GuildRank>>,
+        IBlobClient<IApiV2ObjectList<GuildRank>>
     {
         /// <summary>
         /// The guild id.

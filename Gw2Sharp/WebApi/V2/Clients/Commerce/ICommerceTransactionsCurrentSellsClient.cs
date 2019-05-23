@@ -8,8 +8,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 commerce transactions current sells endpoint.
     /// </summary>
     public interface ICommerceTransactionsCurrentSellsClient :
-        IAuthenticatedClient<IReadOnlyList<CommerceTransactionCurrent>>,
-        IBlobClient<IReadOnlyList<CommerceTransactionCurrent>>,
+        IAuthenticatedClient<IApiV2ObjectList<CommerceTransactionCurrent>>,
+        IBlobClient<IApiV2ObjectList<CommerceTransactionCurrent>>,
         IPaginatedClient<CommerceTransactionCurrent>
     {
     }

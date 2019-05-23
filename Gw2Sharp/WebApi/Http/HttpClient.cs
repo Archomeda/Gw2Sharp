@@ -3,6 +3,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
+using Gw2Sharp.Extensions;
 using SysHttpClient = System.Net.Http.HttpClient;
 
 namespace Gw2Sharp.WebApi.Http
@@ -66,12 +67,12 @@ namespace Gw2Sharp.WebApi.Http
                     task = httpClient.SendAsync(message, linkedCancellation.Token);
                     responseMessage = await task.ConfigureAwait(false);
 
-                    response = new HttpResponse(
-                        await responseMessage.Content.ReadAsStringAsync().ConfigureAwait(false),
-                        responseMessage.StatusCode,
-                        request.RequestHeaders.ToDictionary(kvp => kvp.Key, kvp => kvp.Value),
-                        responseMessage.Headers.ToDictionary(kvp => kvp.Key, kvp => kvp.Value.First())
-                    );
+                    string content = await responseMessage.Content.ReadAsStringAsync().ConfigureAwait(false);
+                    var requestHeaders = request.RequestHeaders.ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
+                    var responseHeaders = responseMessage.Headers.ToDictionary(kvp => kvp.Key, kvp => kvp.Value.First());
+                    responseHeaders.AddRange(responseMessage.Content.Headers.ToDictionary(kvp => kvp.Key, kvp => kvp.Value.First()));
+
+                    response = new HttpResponse(content, responseMessage.StatusCode, requestHeaders, responseHeaders);
                 }
                 catch (Exception ex)
                 {

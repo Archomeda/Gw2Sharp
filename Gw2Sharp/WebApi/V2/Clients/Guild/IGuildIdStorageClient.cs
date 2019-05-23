@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using Gw2Sharp.WebApi.V2.Models;
 
 namespace Gw2Sharp.WebApi.V2.Clients
@@ -8,8 +7,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 guild id storage endpoint.
     /// </summary>
     public interface IGuildIdStorageClient :
-        IAuthenticatedClient<IReadOnlyList<GuildStorageItem>>,
-        IBlobClient<IReadOnlyList<GuildStorageItem>>
+        IAuthenticatedClient<IApiV2ObjectList<GuildStorageItem>>,
+        IBlobClient<IApiV2ObjectList<GuildStorageItem>>
     {
         /// <summary>
         /// The guild id.

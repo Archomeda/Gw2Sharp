@@ -3,7 +3,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents a cat.
     /// </summary>
-    public class Cat : IIdentifiable<int>
+    public class Cat : ApiV2BaseObject, IIdentifiable<int>
     {
         /// <summary>
         /// The cat id.

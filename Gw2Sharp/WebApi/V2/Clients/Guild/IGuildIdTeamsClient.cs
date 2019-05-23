@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using Gw2Sharp.WebApi.V2.Models;
 
 namespace Gw2Sharp.WebApi.V2.Clients
@@ -8,8 +7,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 guild id teams endpoint.
     /// </summary>
     public interface IGuildIdTeamsClient :
-        IAuthenticatedClient<IReadOnlyList<GuildTeam>>,
-        IBlobClient<IReadOnlyList<GuildTeam>>
+        IAuthenticatedClient<IApiV2ObjectList<GuildTeam>>,
+        IBlobClient<IApiV2ObjectList<GuildTeam>>
     {
         /// <summary>
         /// The guild id.

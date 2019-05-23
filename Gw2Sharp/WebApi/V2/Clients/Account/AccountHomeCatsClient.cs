@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Clients
 {
@@ -8,7 +7,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// </summary>
     [EndpointPath("account/home/cats")]
     [EndpointSchemaVersion("2019-03-22T00:00:00.000Z")]
-    public class AccountHomeCatsClient : BaseEndpointBlobClient<IReadOnlyList<int>>, IAccountHomeCatsClient
+    public class AccountHomeCatsClient : BaseEndpointBlobClient<IApiV2ObjectList<int>>, IAccountHomeCatsClient
     {
         /// <summary>
         /// Creates a new <see cref="AccountHomeCatsClient"/> that is used for the API v2 account home cats endpoint.

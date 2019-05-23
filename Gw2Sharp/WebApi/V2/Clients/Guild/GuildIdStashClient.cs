@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using Gw2Sharp.WebApi.V2.Models;
 
 namespace Gw2Sharp.WebApi.V2.Clients
@@ -9,7 +8,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// </summary>
     [EndpointPath("guild/:id/stash")]
     [EndpointPathSegment("id", 0)]
-    public class GuildIdStashClient : BaseEndpointBlobClient<IReadOnlyList<GuildStashStorage>>, IGuildIdStashClient
+    public class GuildIdStashClient : BaseEndpointBlobClient<IApiV2ObjectList<GuildStashStorage>>, IGuildIdStashClient
     {
         /// <summary>
         /// Creates a new <see cref="GuildIdStashClient"/> that is used for the API v2 guild id stash endpoint.

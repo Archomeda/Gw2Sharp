@@ -5,7 +5,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents the response from the characters crafting endpoint.
     /// </summary>
-    public class CharactersCrafting
+    public class CharactersCrafting : ApiV2BaseObject
     {
         /// <summary>
         /// The list of the character crafting disciplines.

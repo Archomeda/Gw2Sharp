@@ -6,7 +6,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// </summary>
     [CastableType(TokenType.APIKey, typeof(ApiTokenInfo))]
     [CastableType(TokenType.Subtoken, typeof(SubTokenInfo))]
-    public class TokenInfo : ICastableType<TokenInfo, TokenType>
+    public class TokenInfo : ApiV2BaseObject, ICastableType<TokenInfo, TokenType>
     {
         /// <summary>
         /// The token id.

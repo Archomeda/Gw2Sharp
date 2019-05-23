@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using Gw2Sharp.WebApi.V2.Models;
 
 namespace Gw2Sharp.WebApi.V2.Clients
@@ -7,8 +6,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 account achievements endpoint.
     /// </summary>
     public interface IAccountAchievementsClient :
-        IAuthenticatedClient<IReadOnlyList<AccountAchievement>>,
-        IBlobClient<IReadOnlyList<AccountAchievement>>
+        IAuthenticatedClient<IApiV2ObjectList<AccountAchievement>>,
+        IBlobClient<IApiV2ObjectList<AccountAchievement>>
     {
     }
 }

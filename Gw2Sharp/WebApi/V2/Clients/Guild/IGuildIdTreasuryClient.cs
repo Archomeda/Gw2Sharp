@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using Gw2Sharp.WebApi.V2.Models;
 
 namespace Gw2Sharp.WebApi.V2.Clients
@@ -8,8 +7,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 guild id treasury endpoint.
     /// </summary>
     public interface IGuildIdTreasuryClient :
-        IAuthenticatedClient<IReadOnlyList<GuildTreasuryItem>>,
-        IBlobClient<IReadOnlyList<GuildTreasuryItem>>
+        IAuthenticatedClient<IApiV2ObjectList<GuildTreasuryItem>>,
+        IBlobClient<IApiV2ObjectList<GuildTreasuryItem>>
     {
         /// <summary>
         /// The guild id.

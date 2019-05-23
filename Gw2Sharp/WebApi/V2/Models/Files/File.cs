@@ -3,7 +3,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents a file.
     /// </summary>
-    public class File : IIdentifiable<string>
+    public class File : ApiV2BaseObject, IIdentifiable<string>
     {
         /// <summary>
         /// The file id.

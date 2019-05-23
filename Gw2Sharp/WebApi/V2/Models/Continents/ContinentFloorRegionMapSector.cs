@@ -5,7 +5,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents a continent floor region map sector.
     /// </summary>
-    public class ContinentFloorRegionMapSector : IIdentifiable<int>
+    public class ContinentFloorRegionMapSector : ApiV2BaseObject, IIdentifiable<int>
     {
         /// <summary>
         /// The sector id.

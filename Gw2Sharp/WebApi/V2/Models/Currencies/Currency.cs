@@ -3,7 +3,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents a currency.
     /// </summary>
-    public class Currency : IIdentifiable<int>
+    public class Currency : ApiV2BaseObject, IIdentifiable<int>
     {
         /// <summary>
         /// The currency id.

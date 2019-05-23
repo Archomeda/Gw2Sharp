@@ -5,7 +5,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents a dungeon.
     /// </summary>
-    public class Dungeon : IIdentifiable<string>
+    public class Dungeon : ApiV2BaseObject, IIdentifiable<string>
     {
         /// <summary>
         /// The dungeon id.

@@ -3,7 +3,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents the commerce prices of an item.
     /// </summary>
-    public class CommercePrices : IIdentifiable<int>
+    public class CommercePrices : ApiV2BaseObject, IIdentifiable<int>
     {
         /// <summary>
         /// The item id.

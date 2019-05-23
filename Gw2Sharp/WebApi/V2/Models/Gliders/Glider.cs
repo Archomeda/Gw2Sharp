@@ -5,7 +5,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents a glider.
     /// </summary>
-    public class Glider : IIdentifiable<int>
+    public class Glider : ApiV2BaseObject, IIdentifiable<int>
     {
         /// <summary>
         /// The glider id.

@@ -5,7 +5,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents an achievement.
     /// </summary>
-    public class Achievement : IIdentifiable<int>
+    public class Achievement : ApiV2BaseObject, IIdentifiable<int>
     {
         /// <summary>
         /// The achievement id.

@@ -6,7 +6,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents a backstory answer.
     /// </summary>
-    public class BackstoryAnswer : IIdentifiable<string>
+    public class BackstoryAnswer : ApiV2BaseObject, IIdentifiable<string>
     {
         /// <summary>
         /// The backstory answer id.

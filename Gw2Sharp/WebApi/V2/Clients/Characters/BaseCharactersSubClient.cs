@@ -8,6 +8,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// <typeparam name="TObject">The response object type.</typeparam>
     [EndpointPathSegment("id", 0)]
     public abstract class BaseCharactersSubClient<TObject> : BaseEndpointBlobClient<TObject>
+        where TObject : IApiV2Object
     {
         /// <summary>
         /// Creates a new base character subendpoint client.

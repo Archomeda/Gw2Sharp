@@ -46,6 +46,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
         #region Request Assertions
 
         protected virtual async Task AssertPaginatedDataAsync<TObject>(IPaginatedClient<TObject> client, string file)
+            where TObject : IApiV2Object
         {
             var (data, expected) = this.GetTestData(file);
 
@@ -64,6 +65,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
         }
 
         protected virtual async Task AssertBlobDataAsync<TObject>(IBlobClient<TObject> client, string file)
+            where TObject : IApiV2Object
         {
             var (data, expected) = this.GetTestData(file);
             this.Client.Connection.HttpClient.RequestAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Returns(callInfo =>
@@ -79,7 +81,8 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
             this.AssertJsonObject(expected, actual!);
         }
 
-        protected virtual async Task AssertGetDataAsync<TObject, TId>(IBulkExpandableClient<TObject, TId> client, string file, string idName = "id") where TObject : IIdentifiable<TId>
+        protected virtual async Task AssertGetDataAsync<TObject, TId>(IBulkExpandableClient<TObject, TId> client, string file, string idName = "id")
+            where TObject : IApiV2Object, IIdentifiable<TId>
         {
             var (data, expected) = this.GetTestData(file);
             var id = this.GetId<TId>(expected[idName]);
@@ -99,6 +102,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
         }
 
         protected virtual async Task AssertAllDataAsync<TObject>(IAllExpandableClient<TObject> client, string file)
+            where TObject : IApiV2Object
         {
             var (data, expected) = this.GetTestData(file);
             this.Client.Connection.HttpClient.RequestAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Returns(callInfo =>
@@ -114,7 +118,8 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
             this.AssertJsonObject(expected, actual);
         }
 
-        protected virtual async Task AssertBulkDataAsync<TObject, TId>(IBulkExpandableClient<TObject, TId> client, string file, string idName = "id") where TObject : IIdentifiable<TId>
+        protected virtual async Task AssertBulkDataAsync<TObject, TId>(IBulkExpandableClient<TObject, TId> client, string file, string idName = "id")
+            where TObject : IApiV2Object, IIdentifiable<TId>
         {
             var (data, expected) = this.GetTestData(file);
             var ids = this.GetIds<TId>(expected.Select(i =>
@@ -136,7 +141,8 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
             this.AssertJsonObject(expected, actual);
         }
 
-        protected virtual async Task AssertIdsDataAsync<TObject, TId>(IBulkExpandableClient<TObject, TId> client, string file) where TObject : IIdentifiable<TId>
+        protected virtual async Task AssertIdsDataAsync<TObject, TId>(IBulkExpandableClient<TObject, TId> client, string file)
+            where TObject : IApiV2Object, IIdentifiable<TId>
         {
             var (data, expected) = this.GetTestData(file);
 

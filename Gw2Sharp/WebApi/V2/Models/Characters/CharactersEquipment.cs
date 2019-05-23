@@ -5,7 +5,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents the response from the characters equipment endpoint.
     /// </summary>
-    public class CharactersEquipment
+    public class CharactersEquipment : ApiV2BaseObject
     {
         /// <summary>
         /// The list of the character equipment.

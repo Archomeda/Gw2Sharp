@@ -5,7 +5,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents the commerce listings of an item.
     /// </summary>
-    public class CommerceListings : IIdentifiable<int>
+    public class CommerceListings : ApiV2BaseObject, IIdentifiable<int>
     {
         /// <summary>
         /// The item id.

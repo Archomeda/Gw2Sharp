@@ -5,7 +5,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents a legend.
     /// </summary>
-    public class Legend : IIdentifiable<string>
+    public class Legend : ApiV2BaseObject, IIdentifiable<string>
     {
         /// <summary>
         /// The legend id.

@@ -5,7 +5,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents a current commerce transaction.
     /// </summary>
-    public class CommerceTransactionCurrent : IIdentifiable<long>
+    public class CommerceTransactionCurrent : ApiV2BaseObject, IIdentifiable<long>
     {
         /// <summary>
         /// The transaction id.

@@ -5,7 +5,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents the daily achievements.
     /// </summary>
-    public class AchievementsDaily
+    public class AchievementsDaily : ApiV2BaseObject
     {
         /// <summary>
         /// The daily PvE achievements.

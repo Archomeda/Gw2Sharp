@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Clients
 {
@@ -7,7 +6,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 guild search by name endpoint.
     /// </summary>
     [EndpointPath("guild/search")]
-    public class GuildSearchNameClient : BaseEndpointBlobClient<IReadOnlyList<Guid>>, IGuildSearchNameClient
+    public class GuildSearchNameClient : BaseEndpointBlobClient<IApiV2ObjectList<Guid>>, IGuildSearchNameClient
     {
         /// <summary>
         /// Creates a new <see cref="GuildSearchNameClient"/> that is used for the API v2 guild search by name endpoint.

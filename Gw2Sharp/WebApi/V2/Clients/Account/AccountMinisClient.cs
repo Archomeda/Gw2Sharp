@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Clients
 {
@@ -7,7 +6,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 account minis endpoint.
     /// </summary>
     [EndpointPath("account/minis")]
-    public class AccountMinisClient : BaseEndpointBlobClient<IReadOnlyList<int>>, IAccountMinisClient
+    public class AccountMinisClient : BaseEndpointBlobClient<IApiV2ObjectList<int>>, IAccountMinisClient
     {
         /// <summary>
         /// Creates a new <see cref="AccountMinisClient"/> that is used for the API v2 account minis endpoint.

@@ -5,7 +5,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents the response from the characters recipes endpoint.
     /// </summary>
-    public class CharactersRecipes
+    public class CharactersRecipes : ApiV2BaseObject
     {
         /// <summary>
         /// The list of character recipes.

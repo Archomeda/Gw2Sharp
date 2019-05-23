@@ -5,7 +5,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents a finisher.
     /// </summary>
-    public class Finisher : IIdentifiable<int>
+    public class Finisher : ApiV2BaseObject, IIdentifiable<int>
     {
         /// <summary>
         /// The finisher id.

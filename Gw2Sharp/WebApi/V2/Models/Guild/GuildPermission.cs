@@ -3,7 +3,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents a guild permission.
     /// </summary>
-    public class GuildPermission : IIdentifiable<string>
+    public class GuildPermission : ApiV2BaseObject, IIdentifiable<string>
     {
         /// <summary>
         /// The guild permission id.

@@ -5,7 +5,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents the object returned from the account mastery points endpoint.
     /// </summary>
-    public class AccountMasteryPoints
+    public class AccountMasteryPoints : ApiV2BaseObject
     {
         /// <summary>
         /// The mastery points totals separated by region.

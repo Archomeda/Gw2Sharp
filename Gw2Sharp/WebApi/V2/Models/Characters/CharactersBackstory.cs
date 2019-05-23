@@ -6,7 +6,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents the response from the characters backstory endpoint.
     /// </summary>
-    public class CharactersBackstory
+    public class CharactersBackstory : ApiV2BaseObject
     {
         /// <summary>
         /// The character backstory answers.

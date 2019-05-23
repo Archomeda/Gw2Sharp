@@ -5,7 +5,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents a color.
     /// </summary>
-    public class Color : IIdentifiable<int>
+    public class Color : ApiV2BaseObject, IIdentifiable<int>
     {
         /// <summary>
         /// The color id.

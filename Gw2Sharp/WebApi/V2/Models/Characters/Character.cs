@@ -7,7 +7,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents a character.
     /// </summary>
-    public class Character : IIdentifiable<string>
+    public class Character : ApiV2BaseObject, IIdentifiable<string>
     {
         string IIdentifiable<string>.Id
         {

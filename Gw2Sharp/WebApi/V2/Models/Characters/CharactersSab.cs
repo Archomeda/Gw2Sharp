@@ -5,7 +5,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents the response from the characters Super Adventure Box endpoint.
     /// </summary>
-    public class CharactersSab
+    public class CharactersSab : ApiV2BaseObject
     {
         /// <summary>
         /// The list of Super Adventure Box zones.

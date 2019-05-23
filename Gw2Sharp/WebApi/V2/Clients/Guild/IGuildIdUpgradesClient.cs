@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Clients
 {
@@ -7,8 +6,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 guild id upgrades endpoint.
     /// </summary>
     public interface IGuildIdUpgradesClient :
-        IAuthenticatedClient<IReadOnlyList<int>>,
-        IBlobClient<IReadOnlyList<int>>
+        IAuthenticatedClient<IApiV2ObjectList<int>>,
+        IBlobClient<IApiV2ObjectList<int>>
     {
         /// <summary>
         /// The guild id.

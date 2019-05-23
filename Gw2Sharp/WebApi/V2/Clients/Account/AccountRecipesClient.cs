@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Clients
 {
@@ -7,7 +6,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 account recipes endpoint.
     /// </summary>
     [EndpointPath("account/recipes")]
-    public class AccountRecipesClient : BaseEndpointBlobClient<IReadOnlyList<int>>, IAccountRecipesClient
+    public class AccountRecipesClient : BaseEndpointBlobClient<IApiV2ObjectList<int>>, IAccountRecipesClient
     {
         /// <summary>
         /// Creates a new <see cref="AccountRecipesClient"/> that is used for the API v2 account recipes endpoint.

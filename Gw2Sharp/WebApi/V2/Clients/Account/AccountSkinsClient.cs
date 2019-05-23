@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Clients
 {
@@ -7,7 +6,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 account skins endpoint.
     /// </summary>
     [EndpointPath("account/skins")]
-    public class AccountSkinsClient : BaseEndpointBlobClient<IReadOnlyList<int>>, IAccountSkinsClient
+    public class AccountSkinsClient : BaseEndpointBlobClient<IApiV2ObjectList<int>>, IAccountSkinsClient
     {
         /// <summary>
         /// Creates a new <see cref="AccountSkinsClient"/> that is used for the API v2 account skins endpoint.

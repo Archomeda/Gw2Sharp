@@ -28,7 +28,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     [CastableType(GuildUpgradeType.Hub, typeof(GuildUpgradeHub))]
     [CastableType(GuildUpgradeType.Unlock, typeof(GuildUpgradeUnlock))]
     [CastableType(GuildUpgradeType.Queue, typeof(GuildUpgradeQueue))]
-    public class GuildUpgrade : ICastableType<GuildUpgrade, GuildUpgradeType>, IIdentifiable<int>
+    public class GuildUpgrade : ApiV2BaseObject, ICastableType<GuildUpgrade, GuildUpgradeType>, IIdentifiable<int>
     {
         /// <summary>
         /// The guild upgrade id.

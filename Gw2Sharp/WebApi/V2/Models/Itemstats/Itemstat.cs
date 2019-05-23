@@ -5,7 +5,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents an itemstat.
     /// </summary>
-    public class Itemstat : IIdentifiable<int>
+    public class Itemstat : ApiV2BaseObject, IIdentifiable<int>
     {
         /// <summary>
         /// The itemstat id.

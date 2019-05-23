@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Clients
 {
@@ -7,7 +6,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 account mail carriers endpoint.
     /// </summary>
     [EndpointPath("account/mailcarriers")]
-    public class AccountMailCarriersClient : BaseEndpointBlobClient<IReadOnlyList<int>>, IAccountMailCarriersClient
+    public class AccountMailCarriersClient : BaseEndpointBlobClient<IApiV2ObjectList<int>>, IAccountMailCarriersClient
     {
         /// <summary>
         /// Creates a new <see cref="AccountMailCarriersClient"/> that is used for the API v2 account mail carriers endpoint.

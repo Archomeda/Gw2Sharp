@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using Gw2Sharp.WebApi.V2.Models;
 
 namespace Gw2Sharp.WebApi.V2.Clients
@@ -7,8 +6,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 account finishers endpoint.
     /// </summary>
     public interface IAccountFinishersClient :
-        IAuthenticatedClient<IReadOnlyList<AccountFinisher>>,
-        IBlobClient<IReadOnlyList<AccountFinisher>>
+        IAuthenticatedClient<IApiV2ObjectList<AccountFinisher>>,
+        IBlobClient<IApiV2ObjectList<AccountFinisher>>
     {
     }
 }

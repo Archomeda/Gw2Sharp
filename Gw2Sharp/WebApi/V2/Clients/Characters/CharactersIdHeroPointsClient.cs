@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Clients
 {
@@ -7,7 +6,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 characters id hero points endpoint.
     /// </summary>
     [EndpointPath("characters/:id/heropoints")]
-    public class CharactersIdHeroPointsClient : BaseCharactersSubClient<IReadOnlyList<string>>, ICharactersIdHeroPointsClient
+    public class CharactersIdHeroPointsClient : BaseCharactersSubClient<IApiV2ObjectList<string>>, ICharactersIdHeroPointsClient
     {
         /// <summary>
         /// Creates a new <see cref="CharactersIdHeroPointsClient"/> that is used for the API v2 characters id hero points endpoint.

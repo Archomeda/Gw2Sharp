@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using Gw2Sharp.WebApi.V2.Models;
 
 namespace Gw2Sharp.WebApi.V2.Clients
@@ -8,7 +7,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 account masteries endpoint.
     /// </summary>
     [EndpointPath("account/masteries")]
-    public class AccountMasteriesClient : BaseEndpointBlobClient<IReadOnlyList<AccountMastery>>, IAccountMasteriesClient
+    public class AccountMasteriesClient : BaseEndpointBlobClient<IApiV2ObjectList<AccountMastery>>, IAccountMasteriesClient
     {
         /// <summary>
         /// Creates a new <see cref="AccountMasteriesClient"/> that is used for the API v2 account masteries endpoint.

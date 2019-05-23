@@ -77,7 +77,7 @@ namespace Gw2Sharp.WebApi.Caching
         Task SetManyAsync<T>(IEnumerable<CacheItem<T>> items) where T : object;
 
         /// <summary>
-        /// Gets a cached item if it exists. If it doesn't exist, it calls updateFunc to provide an updated value,
+        /// Gets a cached item if it exists. If it doesn't exist, it calls <paramref name="updateFunc"/> to provide an updated value,
         /// stores this in the cache, and returns it.
         /// </summary>
         /// <typeparam name="T">The cache type.</typeparam>
@@ -89,7 +89,7 @@ namespace Gw2Sharp.WebApi.Caching
         Task<CacheItem<T>> GetOrUpdateAsync<T>(string category, object id, DateTime expiryTime, Func<Task<T>> updateFunc) where T : object;
 
         /// <summary>
-        /// Gets a cached item if it exists. If it doesn't exist, it calls updateFunc to provide an updated value and its expiry date,
+        /// Gets a cached item if it exists. If it doesn't exist, it calls <paramref name="updateFunc"/> to provide an updated value and its expiry date,
         /// stores this in the cache, and returns it.
         /// </summary>
         /// <typeparam name="T">The cache type.</typeparam>
@@ -100,7 +100,7 @@ namespace Gw2Sharp.WebApi.Caching
         Task<CacheItem<T>> GetOrUpdateAsync<T>(string category, object id, Func<Task<(T, DateTime)>> updateFunc) where T : object;
 
         /// <summary>
-        /// Gets cached items if they exist. If one or more don't exist, updateFunc will be called to provide updated values and their expiry date,
+        /// Gets cached items if they exist. If one or more don't exist, <paramref name="updateFunc"/> will be called to provide updated values and their expiry date,
         /// and stores them in the cache. Returns all cached items.
         /// </summary>
         /// <typeparam name="T">The cache type.</typeparam>
@@ -115,7 +115,7 @@ namespace Gw2Sharp.WebApi.Caching
             where T : object;
 
         /// <summary>
-        /// Gets cached items if they exist. If one or more don't exist, updateFunc will be called to provide updated values
+        /// Gets cached items if they exist. If one or more don't exist, <paramref name="updateFunc"/> will be called to provide updated values
         /// and stores them in the cache. Returns all cached items.
         /// </summary>
         /// <typeparam name="T">The cache type.</typeparam>

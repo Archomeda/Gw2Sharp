@@ -1,5 +1,3 @@
-
-using System.Collections.Generic;
 using Gw2Sharp.WebApi.V2.Models;
 
 namespace Gw2Sharp.WebApi.V2.Clients
@@ -8,8 +6,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 commerce transactions current buys endpoint.
     /// </summary>
     public interface ICommerceTransactionsCurrentBuysClient :
-        IAuthenticatedClient<IReadOnlyList<CommerceTransactionCurrent>>,
-        IBlobClient<IReadOnlyList<CommerceTransactionCurrent>>,
+        IAuthenticatedClient<IApiV2ObjectList<CommerceTransactionCurrent>>,
+        IBlobClient<IApiV2ObjectList<CommerceTransactionCurrent>>,
         IPaginatedClient<CommerceTransactionCurrent>
     {
     }

@@ -5,7 +5,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents a continent floor region map task.
     /// </summary>
-    public class ContinentFloorRegionMapTask : IIdentifiable<int>
+    public class ContinentFloorRegionMapTask : ApiV2BaseObject, IIdentifiable<int>
     {
         /// <summary>
         /// The task id.

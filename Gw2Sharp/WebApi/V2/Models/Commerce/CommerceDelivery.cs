@@ -5,7 +5,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents a commerce delivery.
     /// </summary>
-    public class CommerceDelivery
+    public class CommerceDelivery : ApiV2BaseObject
     {
         /// <summary>
         /// The amount of coin.

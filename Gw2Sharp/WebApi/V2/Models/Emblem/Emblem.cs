@@ -5,7 +5,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents an emblem.
     /// </summary>
-    public class Emblem : IIdentifiable<int>
+    public class Emblem : ApiV2BaseObject, IIdentifiable<int>
     {
         /// <summary>
         /// The emblem id.

@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Clients
 {
@@ -7,7 +6,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 account PvP heroes endpoint.
     /// </summary>
     [EndpointPath("account/pvp/heroes")]
-    public class AccountPvpHeroesClient : BaseEndpointBlobClient<IReadOnlyList<int>>, IAccountPvpHeroesClient
+    public class AccountPvpHeroesClient : BaseEndpointBlobClient<IApiV2ObjectList<int>>, IAccountPvpHeroesClient
     {
         /// <summary>
         /// Creates a new <see cref="AccountPvpHeroesClient"/> that is used for the API v2 account PvP heroes endpoint.

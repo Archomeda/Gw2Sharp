@@ -5,7 +5,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents a guild.
     /// </summary>
-    public class Guild
+    public class Guild : ApiV2BaseObject
     {
         /// <summary>
         /// The guild level.

@@ -3,7 +3,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents a continent floor region map point of interest.
     /// </summary>
-    public class ContinentFloorRegionMapPoi : IIdentifiable<int>
+    public class ContinentFloorRegionMapPoi : ApiV2BaseObject, IIdentifiable<int>
     {
         /// <summary>
         /// The point of interest id.

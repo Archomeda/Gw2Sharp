@@ -8,6 +8,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// </summary>
     /// <typeparam name="TObject">The response object type.</typeparam>
     public interface IBlobClient<TObject> : IEndpointClient
+        where TObject : IApiV2Object
     {
         /// <summary>
         /// Requests the main blob data from this endpoint.
@@ -21,12 +22,5 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The blob data.</returns>
         Task<TObject> GetAsync(CancellationToken cancellationToken);
-
-        /// <summary>
-        /// Requests the main blob data from this endpoint with the detailed response info.
-        /// </summary>
-        /// <param name="cancellationToken">The cancellation token.</param>
-        /// <returns>The blob data.</returns>
-        Task<IApiV2Response<TObject>> GetWithResponseAsync(CancellationToken cancellationToken);
     }
 }

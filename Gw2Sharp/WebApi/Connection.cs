@@ -33,6 +33,8 @@ namespace Gw2Sharp.WebApi
             },
             Converters = new JsonConverter[]
             {
+                new ApiObjectConverter(),
+                new ApiObjectListConverter(),
                 new ApiEnumConverter(),
                 new CastableTypeConverter(),
                 new Coordinates2Converter(),

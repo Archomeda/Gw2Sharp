@@ -7,7 +7,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents an achievement group.
     /// </summary>
-    public class AchievementGroup : IIdentifiable<Guid>
+    public class AchievementGroup : ApiV2BaseObject, IIdentifiable<Guid>
     {
         /// <summary>
         /// The achievement group id.

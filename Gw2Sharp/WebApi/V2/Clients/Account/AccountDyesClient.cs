@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Clients
 {
@@ -7,7 +6,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 account dyes endpoint.
     /// </summary>
     [EndpointPath("account/dyes")]
-    public class AccountDyesClient : BaseEndpointBlobClient<IReadOnlyList<int>>, IAccountDyesClient
+    public class AccountDyesClient : BaseEndpointBlobClient<IApiV2ObjectList<int>>, IAccountDyesClient
     {
         /// <summary>
         /// Creates a new <see cref="AccountDyesClient"/> that is used for the API v2 account dyes endpoint.

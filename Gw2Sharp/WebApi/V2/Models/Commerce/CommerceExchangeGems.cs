@@ -3,7 +3,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents the commerce exchange rate for gems.
     /// </summary>
-    public class CommerceExchangeGems
+    public class CommerceExchangeGems : ApiV2BaseObject
     {
         /// <summary>
         /// The amount of coins required for one gem.

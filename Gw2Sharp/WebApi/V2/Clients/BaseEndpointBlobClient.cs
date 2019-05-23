@@ -8,7 +8,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// An abstract base class for implementing endpoint blob clients.
     /// </summary>
     /// <typeparam name="TObject">The response object type.</typeparam>
-    public abstract class BaseEndpointBlobClient<TObject> : BaseEndpointClient<TObject>, IBlobClient<TObject> where TObject : object
+    public abstract class BaseEndpointBlobClient<TObject> : BaseEndpointClient<TObject>, IBlobClient<TObject>
+        where TObject : IApiV2Object
     {
         /// <summary>
         /// Creates a new base endpoint blob client.
@@ -38,9 +39,5 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <inheritdoc />
         public virtual Task<TObject> GetAsync(CancellationToken cancellationToken) =>
             this.RequestGetAsync(cancellationToken);
-
-        /// <inheritdoc />
-        public virtual Task<IApiV2Response<TObject>> GetWithResponseAsync(CancellationToken cancellationToken) =>
-            this.RequestGetWithResponseAsync(cancellationToken);
     }
 }

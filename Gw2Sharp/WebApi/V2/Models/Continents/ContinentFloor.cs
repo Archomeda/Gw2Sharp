@@ -7,7 +7,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents a continent floor.
     /// </summary>
-    public class ContinentFloor : IIdentifiable<int>
+    public class ContinentFloor : ApiV2BaseObject, IIdentifiable<int>
     {
         /// <summary>
         /// The floor id.

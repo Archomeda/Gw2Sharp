@@ -5,7 +5,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents the response from the characters core endpoint.
     /// </summary>
-    public class CharactersCore
+    public class CharactersCore : ApiV2BaseObject
     {
         /// <summary>
         /// The character name.
