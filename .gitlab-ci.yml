@@ -70,7 +70,6 @@ pack:
 deploy:docs:
   <<: *task
   stage: deploy
-  environment: deploy/docs
   image: ubuntu
   dependencies:
     - build:docs
@@ -96,7 +95,6 @@ deploy:docs:
 deploy:github:
   <<: *task
   stage: deploy
-  environment: deploy/github
   image: ubuntu
   dependencies:
     - build:binaries
@@ -117,7 +115,6 @@ deploy:github:
   # TODO
   <<: *task
   stage: deploy
-  environment: deploy/nuget
   image: ubuntu
   dependencies:
     - pack
