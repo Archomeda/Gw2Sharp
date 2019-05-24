@@ -25,17 +25,21 @@ namespace Gw2Sharp.WebApi.V2.Clients
 
             this.Achievements = new AccountAchievementsClient(connection);
             this.Bank = new AccountBankClient(connection);
+            this.DailyCrafting = new AccountDailyCraftingClient(connection);
             this.Dungeons = new AccountDungeonsClient(connection);
             this.Dyes = new AccountDyesClient(connection);
             this.Finishers = new AccountFinishersClient(connection);
             this.Gliders = new AccountGlidersClient(connection);
             this.Home = new AccountHomeClient(connection);
             this.Inventory = new AccountInventoryClient(connection);
+            this.Luck = new AccountLuckClient(connection);
             this.MailCarriers = new AccountMailCarriersClient(connection);
+            this.MapChests = new AccountMapChestsClient(connection);
             this.Masteries = new AccountMasteriesClient(connection);
             this.Mastery = new AccountMasteryClient(connection);
             this.Materials = new AccountMaterialsClient(connection);
             this.Minis = new AccountMinisClient(connection);
+            this.Mounts = new AccountMountsClient(connection);
             this.Outfits = new AccountOutfitsClient(connection);
             this.Pvp = new AccountPvpClient(connection);
             this.Raids = new AccountRaidsClient(connection);
@@ -43,6 +47,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
             this.Skins = new AccountSkinsClient(connection);
             this.Titles = new AccountTitlesClient(connection);
             this.Wallet = new AccountWalletClient(connection);
+            this.WorldBosses = new AccountWorldBossesClient(connection);
         }
 
         /// <inheritdoc />
@@ -50,6 +55,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
 
         /// <inheritdoc />
         public virtual IAccountBankClient Bank { get; protected set; }
+
+        /// <inheritdoc />
+        public virtual IAccountDailyCraftingClient DailyCrafting { get; protected set; }
 
         /// <inheritdoc />
         public virtual IAccountDungeonsClient Dungeons { get; protected set; }
@@ -70,7 +78,13 @@ namespace Gw2Sharp.WebApi.V2.Clients
         public virtual IAccountInventoryClient Inventory { get; protected set; }
 
         /// <inheritdoc />
+        public virtual IAccountLuckClient Luck { get; protected set; }
+
+        /// <inheritdoc />
         public virtual IAccountMailCarriersClient MailCarriers { get; protected set; }
+
+        /// <inheritdoc />
+        public virtual IAccountMapChestsClient MapChests { get; protected set; }
 
         /// <inheritdoc />
         public virtual IAccountMasteriesClient Masteries { get; protected set; }
@@ -83,6 +97,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
 
         /// <inheritdoc />
         public virtual IAccountMinisClient Minis { get; protected set; }
+
+        /// <inheritdoc />
+        public virtual IAccountMountsClient Mounts { get; protected set; }
 
         /// <inheritdoc />
         public virtual IAccountOutfitsClient Outfits { get; protected set; }
@@ -104,6 +121,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
 
         /// <inheritdoc />
         public virtual IAccountWalletClient Wallet { get; protected set; }
+
+        /// <inheritdoc />
+        public virtual IAccountWorldBossesClient WorldBosses { get; protected set; }
 
 
         /// <inheritdoc />

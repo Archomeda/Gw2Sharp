@@ -26,6 +26,7 @@ For your convenience, the following list gives an overview of the endpoints that
  /v2/account | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account`](../api/Gw2Sharp.WebApi.V2.Clients.AccountClient.html)
  /v2/account/achievements | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.Achievements`](../api/Gw2Sharp.WebApi.V2.Clients.AccountAchievementsClient.html)
  /v2/account/bank | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.Bank`](../api/Gw2Sharp.WebApi.V2.Clients.AccountBankClient.html)
+ /v2/account/dailycrafting | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.DailyCrafting`](../api/Gw2Sharp.WebApi.V2.Clients.AccountDailyCraftingClient.html)
  /v2/account/dungeons | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.Dungeons`](../api/Gw2Sharp.WebApi.V2.Clients.AccountDungeonsClient.html)
  /v2/account/dyes | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.Dyes`](../api/Gw2Sharp.WebApi.V2.Clients.AccountDyesClient.html)
  /v2/account/finishers | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.Finishers`](../api/Gw2Sharp.WebApi.V2.Clients.AccountFinishersClient.html)
@@ -34,17 +35,17 @@ For your convenience, the following list gives an overview of the endpoints that
  /v2/account/home/cats | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.Home.Cats`](../api/Gw2Sharp.WebApi.V2.Clients.AccountHomeCatsClient.html)
  /v2/account/home/nodes | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.Home.Nodes`](../api/Gw2Sharp.WebApi.V2.Clients.AccountHomeNodesClient.html)
  /v2/account/inventory | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.Inventory`](../api/Gw2Sharp.WebApi.V2.Clients.AccountInventoryClient.html)
- /v2/account/luck | ❌✨ | 
+ /v2/account/luck | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.Luck`](../api/Gw2Sharp.WebApi.V2.Clients.AccountLuckClient.html)
  ~~/v2/account/mail~~ | ✖️ | 
  /v2/account/mailcarriers | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.MailCarriers`](../api/Gw2Sharp.WebApi.V2.Clients.AccountMailCarriersClient.html)
- /v2/account/mapchests | ❌✨ | 
+ /v2/account/mapchests | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.MapChests`](../api/Gw2Sharp.WebApi.V2.Clients.AccountMapChestsClient.html)
  /v2/account/masteries | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.Masteries`](../api/Gw2Sharp.WebApi.V2.Clients.AccountMasteriesClient.html)
  /v2/account/mastery/points | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.Mastery.Points`](../api/Gw2Sharp.WebApi.V2.Clients.AccountMasteryPointsClient.html)
  /v2/account/materials | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.Materials`](../api/Gw2Sharp.WebApi.V2.Clients.AccountMaterialsClient.html)
  /v2/account/minis | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.Minis`](../api/Gw2Sharp.WebApi.V2.Clients.AccountMinisClient.html)
- /v2/account/mounts | ❌✨ | 
- /v2/account/mounts/skins | ❌✨ | 
- /v2/account/mounts/types | ❌✨ | 
+ /v2/account/mounts | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.Mounts`](../api/Gw2Sharp.WebApi.V2.Clients.AccountMountsClient.html)
+ /v2/account/mounts/skins | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.Mounts.Skins`](../api/Gw2Sharp.WebApi.V2.Clients.AccountMountsSkinsClient.html)
+ /v2/account/mounts/types | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.Mounts.Types`](../api/Gw2Sharp.WebApi.V2.Clients.AccountMountsTypesClient.html)
  /v2/account/outfits | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.Outfits`](../api/Gw2Sharp.WebApi.V2.Clients.AccountOutfitsClient.html)
  /v2/account/pvp/heroes | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.Pvp.Heroes`](../api/Gw2Sharp.WebApi.V2.Clients.AccountPvpHeroesClient.html)
  /v2/account/raids | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.Raids`](../api/Gw2Sharp.WebApi.V2.Clients.AccountRaidsClient.html)
@@ -52,7 +53,7 @@ For your convenience, the following list gives an overview of the endpoints that
  /v2/account/skins | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.Skins`](../api/Gw2Sharp.WebApi.V2.Clients.AccountSkinsClient.html)
  /v2/account/titles | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.Titles`](../api/Gw2Sharp.WebApi.V2.Clients.AccountTitlesClient.html)
  /v2/account/wallet | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.Wallet`](../api/Gw2Sharp.WebApi.V2.Clients.AccountWalletClient.html)
- /v2/account/worldbosses | ❌✨ | 
+ /v2/account/worldbosses | ❌✨ | [`Gw2WebApiClient.V2.Account.WorldBosses`](../api/Gw2Sharp.WebApi.V2.Clients.AccountWorldBossesClient.html)
  /v2/achievements | ✔️🌐📄📚 | [`Gw2WebApiClient.V2.Achievements`](../api/Gw2Sharp.WebApi.V2.Clients.AchievementsClient.html)
  /v2/achievements/categories | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Achievements.Categories`](../api/Gw2Sharp.WebApi.V2.Clients.AchievementsCategoriesClient.html)
  /v2/achievements/daily | ✔️ | [`Gw2WebApiClient.V2.Achievements.Daily`](../api/Gw2Sharp.WebApi.V2.Clients.AchievementsDailyClient.html)

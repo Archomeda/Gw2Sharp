@@ -22,6 +22,13 @@ namespace Gw2Sharp.WebApi.V2.Clients
         IAccountBankClient Bank { get; }
 
         /// <summary>
+        /// Gets the daily crafting progression.
+        /// Each element can be resolved against <see cref="IGw2WebApiV2Client.DailyCrafting"/>.
+        /// Requires scopes: account, progression.
+        /// </summary>
+        IAccountDailyCraftingClient DailyCrafting { get; }
+
+        /// <summary>
         /// Gets the daily completed dungeons.
         /// Each element can be resolved against <see cref="IGw2WebApiV2Client.Dungeons"/> as path ids.
         /// Requires scopes: account, progression.
@@ -60,11 +67,24 @@ namespace Gw2Sharp.WebApi.V2.Clients
         IAccountInventoryClient Inventory { get; }
 
         /// <summary>
+        /// Gets the luck progression.
+        /// Requires scores: account, progression, unlocks.
+        /// </summary>
+        IAccountLuckClient Luck { get; }
+
+        /// <summary>
         /// Gets the unlocked mail carriers.
-        /// Each element can be resolved against <see cref="IGw2WebApiV2Client.Mailcarriers"/>.
+        /// Each element can be resolved against <see cref="IGw2WebApiV2Client.MailCarriers"/>.
         /// Requires scopes: account, unlocks.
         /// </summary>
         IAccountMailCarriersClient MailCarriers { get; }
+
+        /// <summary>
+        /// Gets the map chests progression.
+        /// Each element can be resolved against <see cref="IGw2WebApiV2Client.MapChests"/>.
+        /// Requires scopes: account, progression.
+        /// </summary>
+        IAccountMapChestsClient MapChests { get; }
 
         /// <summary>
         /// Gets the mastery progression.
@@ -89,6 +109,11 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Requires scopes: account, unlocks.
         /// </summary>
         IAccountMinisClient Minis { get; }
+
+        /// <summary>
+        /// Gets the mounts.
+        /// </summary>
+        IAccountMountsClient Mounts { get; }
 
         /// <summary>
         /// Gets the unlocked outfits.
@@ -134,5 +159,12 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Requires scopes: account, wallet.
         /// </summary>
         IAccountWalletClient Wallet { get; }
+
+        /// <summary>
+        /// Gets the daily world bosses progression.
+        /// Each element can be resolved against <see cref="IGw2WebApiV2Client.WorldBosses"/>.
+        /// Requires scopes: account, progression.
+        /// </summary>
+        IAccountWorldBossesClient WorldBosses { get; }
     }
 }

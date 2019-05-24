@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="TestFiles\Account\AccountDailycrafting.json" />
+    <None Remove="TestFiles\Account\AccountLuck.json" />
+    <None Remove="TestFiles\Account\AccountMapchests.json" />
+    <None Remove="TestFiles\Account\AccountMountsSkins.json" />
+    <None Remove="TestFiles\Account\AccountMountsTypes.json" />
+    <None Remove="TestFiles\Account\AccountWorldBosses.json" />
     <None Remove="TestFiles\Colors\Colors.bulk.json" />
     <None Remove="TestFiles\Colors\Colors.ids.json" />
     <None Remove="TestFiles\Colors\Colors.single.json" />
@@ -19,8 +25,14 @@
     <EmbeddedResource Include="TestFiles\Account\Account.2.json" />
     <EmbeddedResource Include="TestFiles\Account\AccountAchievements.json" />
     <EmbeddedResource Include="TestFiles\Account\AccountBank.json" />
+    <EmbeddedResource Include="TestFiles\Account\AccountWorldBosses.json" />
+    <EmbeddedResource Include="TestFiles\Account\AccountMapChests.json" />
     <EmbeddedResource Include="TestFiles\Account\AccountDungeons.json" />
     <EmbeddedResource Include="TestFiles\Account\AccountDyes.json" />
+    <EmbeddedResource Include="TestFiles\Account\AccountDailyCrafting.json" />
+    <EmbeddedResource Include="TestFiles\Account\AccountMountsTypes.json" />
+    <EmbeddedResource Include="TestFiles\Account\AccountMountsSkins.json" />
+    <EmbeddedResource Include="TestFiles\Account\AccountLuck.json" />
     <EmbeddedResource Include="TestFiles\Account\AccountFinishers.json" />
     <EmbeddedResource Include="TestFiles\Account\AccountGliders.json" />
     <EmbeddedResource Include="TestFiles\Account\AccountHomeCats.json" />
