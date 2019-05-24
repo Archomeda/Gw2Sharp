@@ -6,6 +6,7 @@ variables:
 stages:
   - versioning
   - build
+  - post-build
   - test
   - pack
   - deploy
@@ -13,23 +14,6 @@ stages:
 .task:
   except:
     - gh-pages
-
-.task-with-doc:
-  extends: .task
-  before_script:
-    - apt update
-    - apt install -y wget
-    - wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.asc.gpg
-    - mv microsoft.asc.gpg /etc/apt/trusted.gpg.d/
-    - wget -q https://packages.microsoft.com/config/debian/9/prod.list
-    - mv prod.list /etc/apt/sources.list.d/microsoft-prod.list
-    - chown root:root /etc/apt/trusted.gpg.d/microsoft.asc.gpg
-    - chown root:root /etc/apt/sources.list.d/microsoft-prod.list
-    - apt-get install apt-transport-https
-    - apt-get update
-    - apt-get install -y aspnetcore-runtime-2.1
-    - dotnet tool install -g InheritDocTool
-    - export PATH="$PATH:/root/.dotnet/tools"
 
 versioning:
   extends: .task
@@ -44,17 +28,15 @@ versioning:
     expire_in: 1 day
 
 build:binaries:
-  extends: .task-with-doc
+  extends: .task
   stage: build
   dependencies:
     - versioning
-  script:
-    - dotnet build Gw2Sharp -c $CONFIGURATION -o bin
-    - InheritDoc
+  script: dotnet build Gw2Sharp -c $CONFIGURATION -o bin
   artifacts:
     paths:
       - bin/
-    expire_in: 1 month
+    expire_in: 1 day
 
 build:docs:
   extends: .task
@@ -73,6 +55,22 @@ build:docs:
       - doc/
     expire_in: 1 month
 
+post-build:binaries-with-docs:
+  extends: .task
+  stage: post-build
+  image: mcr.microsoft.com/dotnet/core/runtime:2.1
+  dependencies:
+    - build:binaries
+  before_script:
+    - dotnet tool install -g InheritDocTool
+    - export PATH="$PATH:/root/.dotnet/tools"
+  script:
+    - InheritDoc
+  artifacts:
+    paths:
+      - bin/
+    expire_in: 1 month
+
 test:
   extends: .task
   stage: test
@@ -80,11 +78,13 @@ test:
 
 pack:
   # TODO: Make this autoversioned
-  extends: .task-with-doc
+  extends: .task
   stage: pack
+  dependencies:
+    - post-build:binaries-with-docs
   script: 
     - dotnet build Gw2Sharp -c $CONFIGURATION
-    - InheritDoc
+    - cp bin/Gw2Sharp.xml Gw2Sharp/bin/$CONFIGURATION/netstandard2.0/
     - dotnet pack Gw2Sharp -c $CONFIGURATION --no-build --include-symbols -o pack
   artifacts:
     paths:
@@ -123,7 +123,7 @@ deploy:github:
   stage: deploy
   image: ubuntu
   dependencies:
-    - build:binaries
+    - post-build:binaries-with-docs
     - pack
   only:
     - tags
