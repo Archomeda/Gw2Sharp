@@ -18,11 +18,11 @@ stages:
   extends: .task
   before_script:
     - apt update
-    - apt install -y lsb-release software-properties-common wget
+    - apt install -y software-properties-common wget
     - wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
     - dpkg -i packages-microsoft-prod.deb
     - apt-get install -y apt-transport-https
-    - add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) universe"
+    - add-apt-repository "deb http://archive.ubuntu.com/ubuntu bionic universe"
     - apt-get update
     - apt-get install -y aspnetcore-runtime-2.1
     - dotnet tool install -g InheritDocTool
