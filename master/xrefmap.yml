@@ -2388,6 +2388,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.AccountClient.Bank
   nameWithType: AccountClient.Bank
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountClient.DailyCrafting
+  name: DailyCrafting
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountClient.html#Gw2Sharp_WebApi_V2_Clients_AccountClient_DailyCrafting
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.AccountClient.DailyCrafting
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountClient.DailyCrafting
+  nameWithType: AccountClient.DailyCrafting
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountClient.DailyCrafting*
+  name: DailyCrafting
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountClient.html#Gw2Sharp_WebApi_V2_Clients_AccountClient_DailyCrafting_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.AccountClient.DailyCrafting
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountClient.DailyCrafting
+  nameWithType: AccountClient.DailyCrafting
 - uid: Gw2Sharp.WebApi.V2.Clients.AccountClient.Dungeons
   name: Dungeons
   href: api/Gw2Sharp.WebApi.V2.Clients.AccountClient.html#Gw2Sharp_WebApi_V2_Clients_AccountClient_Dungeons
@@ -2485,6 +2498,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.AccountClient.Inventory
   nameWithType: AccountClient.Inventory
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountClient.Luck
+  name: Luck
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountClient.html#Gw2Sharp_WebApi_V2_Clients_AccountClient_Luck
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.AccountClient.Luck
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountClient.Luck
+  nameWithType: AccountClient.Luck
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountClient.Luck*
+  name: Luck
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountClient.html#Gw2Sharp_WebApi_V2_Clients_AccountClient_Luck_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.AccountClient.Luck
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountClient.Luck
+  nameWithType: AccountClient.Luck
 - uid: Gw2Sharp.WebApi.V2.Clients.AccountClient.MailCarriers
   name: MailCarriers
   href: api/Gw2Sharp.WebApi.V2.Clients.AccountClient.html#Gw2Sharp_WebApi_V2_Clients_AccountClient_MailCarriers
@@ -2498,6 +2524,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.AccountClient.MailCarriers
   nameWithType: AccountClient.MailCarriers
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountClient.MapChests
+  name: MapChests
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountClient.html#Gw2Sharp_WebApi_V2_Clients_AccountClient_MapChests
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.AccountClient.MapChests
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountClient.MapChests
+  nameWithType: AccountClient.MapChests
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountClient.MapChests*
+  name: MapChests
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountClient.html#Gw2Sharp_WebApi_V2_Clients_AccountClient_MapChests_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.AccountClient.MapChests
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountClient.MapChests
+  nameWithType: AccountClient.MapChests
 - uid: Gw2Sharp.WebApi.V2.Clients.AccountClient.Masteries
   name: Masteries
   href: api/Gw2Sharp.WebApi.V2.Clients.AccountClient.html#Gw2Sharp_WebApi_V2_Clients_AccountClient_Masteries
@@ -2550,6 +2589,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.AccountClient.Minis
   nameWithType: AccountClient.Minis
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountClient.Mounts
+  name: Mounts
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountClient.html#Gw2Sharp_WebApi_V2_Clients_AccountClient_Mounts
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.AccountClient.Mounts
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountClient.Mounts
+  nameWithType: AccountClient.Mounts
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountClient.Mounts*
+  name: Mounts
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountClient.html#Gw2Sharp_WebApi_V2_Clients_AccountClient_Mounts_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.AccountClient.Mounts
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountClient.Mounts
+  nameWithType: AccountClient.Mounts
 - uid: Gw2Sharp.WebApi.V2.Clients.AccountClient.Outfits
   name: Outfits
   href: api/Gw2Sharp.WebApi.V2.Clients.AccountClient.html#Gw2Sharp_WebApi_V2_Clients_AccountClient_Outfits
@@ -2641,6 +2693,38 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.AccountClient.Wallet
   nameWithType: AccountClient.Wallet
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountClient.WorldBosses
+  name: WorldBosses
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountClient.html#Gw2Sharp_WebApi_V2_Clients_AccountClient_WorldBosses
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.AccountClient.WorldBosses
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountClient.WorldBosses
+  nameWithType: AccountClient.WorldBosses
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountClient.WorldBosses*
+  name: WorldBosses
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountClient.html#Gw2Sharp_WebApi_V2_Clients_AccountClient_WorldBosses_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.AccountClient.WorldBosses
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountClient.WorldBosses
+  nameWithType: AccountClient.WorldBosses
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountDailyCraftingClient
+  name: AccountDailyCraftingClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountDailyCraftingClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.AccountDailyCraftingClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountDailyCraftingClient
+  nameWithType: AccountDailyCraftingClient
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountDailyCraftingClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  name: AccountDailyCraftingClient(IConnection)
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountDailyCraftingClient.html#Gw2Sharp_WebApi_V2_Clients_AccountDailyCraftingClient__ctor_Gw2Sharp_WebApi_IConnection_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.AccountDailyCraftingClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountDailyCraftingClient.AccountDailyCraftingClient(Gw2Sharp.WebApi.IConnection)
+  nameWithType: AccountDailyCraftingClient.AccountDailyCraftingClient(IConnection)
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountDailyCraftingClient.#ctor*
+  name: AccountDailyCraftingClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountDailyCraftingClient.html#Gw2Sharp_WebApi_V2_Clients_AccountDailyCraftingClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.AccountDailyCraftingClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountDailyCraftingClient.AccountDailyCraftingClient
+  nameWithType: AccountDailyCraftingClient.AccountDailyCraftingClient
 - uid: Gw2Sharp.WebApi.V2.Clients.AccountDungeonsClient
   name: AccountDungeonsClient
   href: api/Gw2Sharp.WebApi.V2.Clients.AccountDungeonsClient.html
@@ -2819,6 +2903,25 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.AccountInventoryClient.AccountInventoryClient
   nameWithType: AccountInventoryClient.AccountInventoryClient
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountLuckClient
+  name: AccountLuckClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountLuckClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.AccountLuckClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountLuckClient
+  nameWithType: AccountLuckClient
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountLuckClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  name: AccountLuckClient(IConnection)
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountLuckClient.html#Gw2Sharp_WebApi_V2_Clients_AccountLuckClient__ctor_Gw2Sharp_WebApi_IConnection_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.AccountLuckClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountLuckClient.AccountLuckClient(Gw2Sharp.WebApi.IConnection)
+  nameWithType: AccountLuckClient.AccountLuckClient(IConnection)
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountLuckClient.#ctor*
+  name: AccountLuckClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountLuckClient.html#Gw2Sharp_WebApi_V2_Clients_AccountLuckClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.AccountLuckClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountLuckClient.AccountLuckClient
+  nameWithType: AccountLuckClient.AccountLuckClient
 - uid: Gw2Sharp.WebApi.V2.Clients.AccountMailCarriersClient
   name: AccountMailCarriersClient
   href: api/Gw2Sharp.WebApi.V2.Clients.AccountMailCarriersClient.html
@@ -2838,6 +2941,25 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.AccountMailCarriersClient.AccountMailCarriersClient
   nameWithType: AccountMailCarriersClient.AccountMailCarriersClient
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountMapChestsClient
+  name: AccountMapChestsClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountMapChestsClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.AccountMapChestsClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountMapChestsClient
+  nameWithType: AccountMapChestsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountMapChestsClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  name: AccountMapChestsClient(IConnection)
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountMapChestsClient.html#Gw2Sharp_WebApi_V2_Clients_AccountMapChestsClient__ctor_Gw2Sharp_WebApi_IConnection_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.AccountMapChestsClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountMapChestsClient.AccountMapChestsClient(Gw2Sharp.WebApi.IConnection)
+  nameWithType: AccountMapChestsClient.AccountMapChestsClient(IConnection)
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountMapChestsClient.#ctor*
+  name: AccountMapChestsClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountMapChestsClient.html#Gw2Sharp_WebApi_V2_Clients_AccountMapChestsClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.AccountMapChestsClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountMapChestsClient.AccountMapChestsClient
+  nameWithType: AccountMapChestsClient.AccountMapChestsClient
 - uid: Gw2Sharp.WebApi.V2.Clients.AccountMasteriesClient
   name: AccountMasteriesClient
   href: api/Gw2Sharp.WebApi.V2.Clients.AccountMasteriesClient.html
@@ -2946,6 +3068,89 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.AccountMinisClient.AccountMinisClient
   nameWithType: AccountMinisClient.AccountMinisClient
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountMountsClient
+  name: AccountMountsClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountMountsClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.AccountMountsClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountMountsClient
+  nameWithType: AccountMountsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountMountsClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  name: AccountMountsClient(IConnection)
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountMountsClient.html#Gw2Sharp_WebApi_V2_Clients_AccountMountsClient__ctor_Gw2Sharp_WebApi_IConnection_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.AccountMountsClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountMountsClient.AccountMountsClient(Gw2Sharp.WebApi.IConnection)
+  nameWithType: AccountMountsClient.AccountMountsClient(IConnection)
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountMountsClient.#ctor*
+  name: AccountMountsClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountMountsClient.html#Gw2Sharp_WebApi_V2_Clients_AccountMountsClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.AccountMountsClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountMountsClient.AccountMountsClient
+  nameWithType: AccountMountsClient.AccountMountsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountMountsClient.Skins
+  name: Skins
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountMountsClient.html#Gw2Sharp_WebApi_V2_Clients_AccountMountsClient_Skins
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.AccountMountsClient.Skins
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountMountsClient.Skins
+  nameWithType: AccountMountsClient.Skins
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountMountsClient.Skins*
+  name: Skins
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountMountsClient.html#Gw2Sharp_WebApi_V2_Clients_AccountMountsClient_Skins_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.AccountMountsClient.Skins
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountMountsClient.Skins
+  nameWithType: AccountMountsClient.Skins
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountMountsClient.Types
+  name: Types
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountMountsClient.html#Gw2Sharp_WebApi_V2_Clients_AccountMountsClient_Types
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.AccountMountsClient.Types
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountMountsClient.Types
+  nameWithType: AccountMountsClient.Types
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountMountsClient.Types*
+  name: Types
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountMountsClient.html#Gw2Sharp_WebApi_V2_Clients_AccountMountsClient_Types_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.AccountMountsClient.Types
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountMountsClient.Types
+  nameWithType: AccountMountsClient.Types
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountMountsSkinsClient
+  name: AccountMountsSkinsClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountMountsSkinsClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.AccountMountsSkinsClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountMountsSkinsClient
+  nameWithType: AccountMountsSkinsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountMountsSkinsClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  name: AccountMountsSkinsClient(IConnection)
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountMountsSkinsClient.html#Gw2Sharp_WebApi_V2_Clients_AccountMountsSkinsClient__ctor_Gw2Sharp_WebApi_IConnection_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.AccountMountsSkinsClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountMountsSkinsClient.AccountMountsSkinsClient(Gw2Sharp.WebApi.IConnection)
+  nameWithType: AccountMountsSkinsClient.AccountMountsSkinsClient(IConnection)
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountMountsSkinsClient.#ctor*
+  name: AccountMountsSkinsClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountMountsSkinsClient.html#Gw2Sharp_WebApi_V2_Clients_AccountMountsSkinsClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.AccountMountsSkinsClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountMountsSkinsClient.AccountMountsSkinsClient
+  nameWithType: AccountMountsSkinsClient.AccountMountsSkinsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountMountsTypesClient
+  name: AccountMountsTypesClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountMountsTypesClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.AccountMountsTypesClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountMountsTypesClient
+  nameWithType: AccountMountsTypesClient
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountMountsTypesClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  name: AccountMountsTypesClient(IConnection)
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountMountsTypesClient.html#Gw2Sharp_WebApi_V2_Clients_AccountMountsTypesClient__ctor_Gw2Sharp_WebApi_IConnection_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.AccountMountsTypesClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountMountsTypesClient.AccountMountsTypesClient(Gw2Sharp.WebApi.IConnection)
+  nameWithType: AccountMountsTypesClient.AccountMountsTypesClient(IConnection)
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountMountsTypesClient.#ctor*
+  name: AccountMountsTypesClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountMountsTypesClient.html#Gw2Sharp_WebApi_V2_Clients_AccountMountsTypesClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.AccountMountsTypesClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountMountsTypesClient.AccountMountsTypesClient
+  nameWithType: AccountMountsTypesClient.AccountMountsTypesClient
 - uid: Gw2Sharp.WebApi.V2.Clients.AccountOutfitsClient
   name: AccountOutfitsClient
   href: api/Gw2Sharp.WebApi.V2.Clients.AccountOutfitsClient.html
@@ -3111,6 +3316,25 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.AccountWalletClient.AccountWalletClient
   nameWithType: AccountWalletClient.AccountWalletClient
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountWorldBossesClient
+  name: AccountWorldBossesClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountWorldBossesClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.AccountWorldBossesClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountWorldBossesClient
+  nameWithType: AccountWorldBossesClient
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountWorldBossesClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  name: AccountWorldBossesClient(IConnection)
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountWorldBossesClient.html#Gw2Sharp_WebApi_V2_Clients_AccountWorldBossesClient__ctor_Gw2Sharp_WebApi_IConnection_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.AccountWorldBossesClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountWorldBossesClient.AccountWorldBossesClient(Gw2Sharp.WebApi.IConnection)
+  nameWithType: AccountWorldBossesClient.AccountWorldBossesClient(IConnection)
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountWorldBossesClient.#ctor*
+  name: AccountWorldBossesClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountWorldBossesClient.html#Gw2Sharp_WebApi_V2_Clients_AccountWorldBossesClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.AccountWorldBossesClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountWorldBossesClient.AccountWorldBossesClient
+  nameWithType: AccountWorldBossesClient.AccountWorldBossesClient
 - uid: Gw2Sharp.WebApi.V2.Clients.AchievementsCategoriesClient
   name: AchievementsCategoriesClient
   href: api/Gw2Sharp.WebApi.V2.Clients.AchievementsCategoriesClient.html
@@ -7249,6 +7473,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.IAccountClient.Bank
   nameWithType: IAccountClient.Bank
+- uid: Gw2Sharp.WebApi.V2.Clients.IAccountClient.DailyCrafting
+  name: DailyCrafting
+  href: api/Gw2Sharp.WebApi.V2.Clients.IAccountClient.html#Gw2Sharp_WebApi_V2_Clients_IAccountClient_DailyCrafting
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.IAccountClient.DailyCrafting
+  fullName: Gw2Sharp.WebApi.V2.Clients.IAccountClient.DailyCrafting
+  nameWithType: IAccountClient.DailyCrafting
+- uid: Gw2Sharp.WebApi.V2.Clients.IAccountClient.DailyCrafting*
+  name: DailyCrafting
+  href: api/Gw2Sharp.WebApi.V2.Clients.IAccountClient.html#Gw2Sharp_WebApi_V2_Clients_IAccountClient_DailyCrafting_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.IAccountClient.DailyCrafting
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.IAccountClient.DailyCrafting
+  nameWithType: IAccountClient.DailyCrafting
 - uid: Gw2Sharp.WebApi.V2.Clients.IAccountClient.Dungeons
   name: Dungeons
   href: api/Gw2Sharp.WebApi.V2.Clients.IAccountClient.html#Gw2Sharp_WebApi_V2_Clients_IAccountClient_Dungeons
@@ -7327,6 +7564,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.IAccountClient.Inventory
   nameWithType: IAccountClient.Inventory
+- uid: Gw2Sharp.WebApi.V2.Clients.IAccountClient.Luck
+  name: Luck
+  href: api/Gw2Sharp.WebApi.V2.Clients.IAccountClient.html#Gw2Sharp_WebApi_V2_Clients_IAccountClient_Luck
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.IAccountClient.Luck
+  fullName: Gw2Sharp.WebApi.V2.Clients.IAccountClient.Luck
+  nameWithType: IAccountClient.Luck
+- uid: Gw2Sharp.WebApi.V2.Clients.IAccountClient.Luck*
+  name: Luck
+  href: api/Gw2Sharp.WebApi.V2.Clients.IAccountClient.html#Gw2Sharp_WebApi_V2_Clients_IAccountClient_Luck_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.IAccountClient.Luck
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.IAccountClient.Luck
+  nameWithType: IAccountClient.Luck
 - uid: Gw2Sharp.WebApi.V2.Clients.IAccountClient.MailCarriers
   name: MailCarriers
   href: api/Gw2Sharp.WebApi.V2.Clients.IAccountClient.html#Gw2Sharp_WebApi_V2_Clients_IAccountClient_MailCarriers
@@ -7340,6 +7590,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.IAccountClient.MailCarriers
   nameWithType: IAccountClient.MailCarriers
+- uid: Gw2Sharp.WebApi.V2.Clients.IAccountClient.MapChests
+  name: MapChests
+  href: api/Gw2Sharp.WebApi.V2.Clients.IAccountClient.html#Gw2Sharp_WebApi_V2_Clients_IAccountClient_MapChests
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.IAccountClient.MapChests
+  fullName: Gw2Sharp.WebApi.V2.Clients.IAccountClient.MapChests
+  nameWithType: IAccountClient.MapChests
+- uid: Gw2Sharp.WebApi.V2.Clients.IAccountClient.MapChests*
+  name: MapChests
+  href: api/Gw2Sharp.WebApi.V2.Clients.IAccountClient.html#Gw2Sharp_WebApi_V2_Clients_IAccountClient_MapChests_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.IAccountClient.MapChests
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.IAccountClient.MapChests
+  nameWithType: IAccountClient.MapChests
 - uid: Gw2Sharp.WebApi.V2.Clients.IAccountClient.Masteries
   name: Masteries
   href: api/Gw2Sharp.WebApi.V2.Clients.IAccountClient.html#Gw2Sharp_WebApi_V2_Clients_IAccountClient_Masteries
@@ -7392,6 +7655,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.IAccountClient.Minis
   nameWithType: IAccountClient.Minis
+- uid: Gw2Sharp.WebApi.V2.Clients.IAccountClient.Mounts
+  name: Mounts
+  href: api/Gw2Sharp.WebApi.V2.Clients.IAccountClient.html#Gw2Sharp_WebApi_V2_Clients_IAccountClient_Mounts
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.IAccountClient.Mounts
+  fullName: Gw2Sharp.WebApi.V2.Clients.IAccountClient.Mounts
+  nameWithType: IAccountClient.Mounts
+- uid: Gw2Sharp.WebApi.V2.Clients.IAccountClient.Mounts*
+  name: Mounts
+  href: api/Gw2Sharp.WebApi.V2.Clients.IAccountClient.html#Gw2Sharp_WebApi_V2_Clients_IAccountClient_Mounts_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.IAccountClient.Mounts
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.IAccountClient.Mounts
+  nameWithType: IAccountClient.Mounts
 - uid: Gw2Sharp.WebApi.V2.Clients.IAccountClient.Outfits
   name: Outfits
   href: api/Gw2Sharp.WebApi.V2.Clients.IAccountClient.html#Gw2Sharp_WebApi_V2_Clients_IAccountClient_Outfits
@@ -7483,6 +7759,25 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.IAccountClient.Wallet
   nameWithType: IAccountClient.Wallet
+- uid: Gw2Sharp.WebApi.V2.Clients.IAccountClient.WorldBosses
+  name: WorldBosses
+  href: api/Gw2Sharp.WebApi.V2.Clients.IAccountClient.html#Gw2Sharp_WebApi_V2_Clients_IAccountClient_WorldBosses
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.IAccountClient.WorldBosses
+  fullName: Gw2Sharp.WebApi.V2.Clients.IAccountClient.WorldBosses
+  nameWithType: IAccountClient.WorldBosses
+- uid: Gw2Sharp.WebApi.V2.Clients.IAccountClient.WorldBosses*
+  name: WorldBosses
+  href: api/Gw2Sharp.WebApi.V2.Clients.IAccountClient.html#Gw2Sharp_WebApi_V2_Clients_IAccountClient_WorldBosses_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.IAccountClient.WorldBosses
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.IAccountClient.WorldBosses
+  nameWithType: IAccountClient.WorldBosses
+- uid: Gw2Sharp.WebApi.V2.Clients.IAccountDailyCraftingClient
+  name: IAccountDailyCraftingClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.IAccountDailyCraftingClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.IAccountDailyCraftingClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.IAccountDailyCraftingClient
+  nameWithType: IAccountDailyCraftingClient
 - uid: Gw2Sharp.WebApi.V2.Clients.IAccountDungeonsClient
   name: IAccountDungeonsClient
   href: api/Gw2Sharp.WebApi.V2.Clients.IAccountDungeonsClient.html
@@ -7557,12 +7852,24 @@ references:
   commentId: T:Gw2Sharp.WebApi.V2.Clients.IAccountInventoryClient
   fullName: Gw2Sharp.WebApi.V2.Clients.IAccountInventoryClient
   nameWithType: IAccountInventoryClient
+- uid: Gw2Sharp.WebApi.V2.Clients.IAccountLuckClient
+  name: IAccountLuckClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.IAccountLuckClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.IAccountLuckClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.IAccountLuckClient
+  nameWithType: IAccountLuckClient
 - uid: Gw2Sharp.WebApi.V2.Clients.IAccountMailCarriersClient
   name: IAccountMailCarriersClient
   href: api/Gw2Sharp.WebApi.V2.Clients.IAccountMailCarriersClient.html
   commentId: T:Gw2Sharp.WebApi.V2.Clients.IAccountMailCarriersClient
   fullName: Gw2Sharp.WebApi.V2.Clients.IAccountMailCarriersClient
   nameWithType: IAccountMailCarriersClient
+- uid: Gw2Sharp.WebApi.V2.Clients.IAccountMapChestsClient
+  name: IAccountMapChestsClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.IAccountMapChestsClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.IAccountMapChestsClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.IAccountMapChestsClient
+  nameWithType: IAccountMapChestsClient
 - uid: Gw2Sharp.WebApi.V2.Clients.IAccountMasteriesClient
   name: IAccountMasteriesClient
   href: api/Gw2Sharp.WebApi.V2.Clients.IAccountMasteriesClient.html
@@ -7606,6 +7913,50 @@ references:
   commentId: T:Gw2Sharp.WebApi.V2.Clients.IAccountMinisClient
   fullName: Gw2Sharp.WebApi.V2.Clients.IAccountMinisClient
   nameWithType: IAccountMinisClient
+- uid: Gw2Sharp.WebApi.V2.Clients.IAccountMountsClient
+  name: IAccountMountsClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.IAccountMountsClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.IAccountMountsClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.IAccountMountsClient
+  nameWithType: IAccountMountsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.IAccountMountsClient.Skins
+  name: Skins
+  href: api/Gw2Sharp.WebApi.V2.Clients.IAccountMountsClient.html#Gw2Sharp_WebApi_V2_Clients_IAccountMountsClient_Skins
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.IAccountMountsClient.Skins
+  fullName: Gw2Sharp.WebApi.V2.Clients.IAccountMountsClient.Skins
+  nameWithType: IAccountMountsClient.Skins
+- uid: Gw2Sharp.WebApi.V2.Clients.IAccountMountsClient.Skins*
+  name: Skins
+  href: api/Gw2Sharp.WebApi.V2.Clients.IAccountMountsClient.html#Gw2Sharp_WebApi_V2_Clients_IAccountMountsClient_Skins_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.IAccountMountsClient.Skins
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.IAccountMountsClient.Skins
+  nameWithType: IAccountMountsClient.Skins
+- uid: Gw2Sharp.WebApi.V2.Clients.IAccountMountsClient.Types
+  name: Types
+  href: api/Gw2Sharp.WebApi.V2.Clients.IAccountMountsClient.html#Gw2Sharp_WebApi_V2_Clients_IAccountMountsClient_Types
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.IAccountMountsClient.Types
+  fullName: Gw2Sharp.WebApi.V2.Clients.IAccountMountsClient.Types
+  nameWithType: IAccountMountsClient.Types
+- uid: Gw2Sharp.WebApi.V2.Clients.IAccountMountsClient.Types*
+  name: Types
+  href: api/Gw2Sharp.WebApi.V2.Clients.IAccountMountsClient.html#Gw2Sharp_WebApi_V2_Clients_IAccountMountsClient_Types_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.IAccountMountsClient.Types
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.IAccountMountsClient.Types
+  nameWithType: IAccountMountsClient.Types
+- uid: Gw2Sharp.WebApi.V2.Clients.IAccountMountsSkinsClient
+  name: IAccountMountsSkinsClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.IAccountMountsSkinsClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.IAccountMountsSkinsClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.IAccountMountsSkinsClient
+  nameWithType: IAccountMountsSkinsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.IAccountMountsTypesClient
+  name: IAccountMountsTypesClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.IAccountMountsTypesClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.IAccountMountsTypesClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.IAccountMountsTypesClient
+  nameWithType: IAccountMountsTypesClient
 - uid: Gw2Sharp.WebApi.V2.Clients.IAccountOutfitsClient
   name: IAccountOutfitsClient
   href: api/Gw2Sharp.WebApi.V2.Clients.IAccountOutfitsClient.html
@@ -7667,6 +8018,12 @@ references:
   commentId: T:Gw2Sharp.WebApi.V2.Clients.IAccountWalletClient
   fullName: Gw2Sharp.WebApi.V2.Clients.IAccountWalletClient
   nameWithType: IAccountWalletClient
+- uid: Gw2Sharp.WebApi.V2.Clients.IAccountWorldBossesClient
+  name: IAccountWorldBossesClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.IAccountWorldBossesClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.IAccountWorldBossesClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.IAccountWorldBossesClient
+  nameWithType: IAccountWorldBossesClient
 - uid: Gw2Sharp.WebApi.V2.Clients.IAchievementsCategoriesClient
   name: IAchievementsCategoriesClient
   href: api/Gw2Sharp.WebApi.V2.Clients.IAchievementsCategoriesClient.html
@@ -11350,6 +11707,38 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.AccountItem.Upgrades
   nameWithType: AccountItem.Upgrades
+- uid: Gw2Sharp.WebApi.V2.Models.AccountLuck
+  name: AccountLuck
+  href: api/Gw2Sharp.WebApi.V2.Models.AccountLuck.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.AccountLuck
+  fullName: Gw2Sharp.WebApi.V2.Models.AccountLuck
+  nameWithType: AccountLuck
+- uid: Gw2Sharp.WebApi.V2.Models.AccountLuck.Id
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.AccountLuck.html#Gw2Sharp_WebApi_V2_Models_AccountLuck_Id
+  commentId: P:Gw2Sharp.WebApi.V2.Models.AccountLuck.Id
+  fullName: Gw2Sharp.WebApi.V2.Models.AccountLuck.Id
+  nameWithType: AccountLuck.Id
+- uid: Gw2Sharp.WebApi.V2.Models.AccountLuck.Id*
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.AccountLuck.html#Gw2Sharp_WebApi_V2_Models_AccountLuck_Id_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.AccountLuck.Id
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.AccountLuck.Id
+  nameWithType: AccountLuck.Id
+- uid: Gw2Sharp.WebApi.V2.Models.AccountLuck.Value
+  name: Value
+  href: api/Gw2Sharp.WebApi.V2.Models.AccountLuck.html#Gw2Sharp_WebApi_V2_Models_AccountLuck_Value
+  commentId: P:Gw2Sharp.WebApi.V2.Models.AccountLuck.Value
+  fullName: Gw2Sharp.WebApi.V2.Models.AccountLuck.Value
+  nameWithType: AccountLuck.Value
+- uid: Gw2Sharp.WebApi.V2.Models.AccountLuck.Value*
+  name: Value
+  href: api/Gw2Sharp.WebApi.V2.Models.AccountLuck.html#Gw2Sharp_WebApi_V2_Models_AccountLuck_Value_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.AccountLuck.Value
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.AccountLuck.Value
+  nameWithType: AccountLuck.Value
 - uid: Gw2Sharp.WebApi.V2.Models.AccountMastery
   name: AccountMastery
   href: api/Gw2Sharp.WebApi.V2.Models.AccountMastery.html
