@@ -181,7 +181,7 @@ dotnet_naming_style.camel_case.capitalization = camel_case
 dotnet_naming_style.upper.capitalization = all_upper
 
 
-[*.json]
+[*.{csproj,json,md,yml}]
 # Formatting
 indent_style = space
 indent_size = 2

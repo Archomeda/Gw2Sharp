@@ -1,0 +1,14 @@
+path_classifiers:
+  library:
+    - Gw2Sharp
+  test:
+    - Gw2Sharp.Tests
+
+queries:
+  - include: "*"
+
+extraction:
+  csharp:
+    index:
+      dotnet:
+        version: "3.0"
