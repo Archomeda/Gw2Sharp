@@ -65,7 +65,7 @@ post-build:binaries-with-docs:
     - dotnet tool install -g InheritDocTool
     - export PATH="$PATH:/root/.dotnet/tools"
   script:
-    - InheritDoc
+    - InheritDoc -o
   artifacts:
     paths:
       - bin/
