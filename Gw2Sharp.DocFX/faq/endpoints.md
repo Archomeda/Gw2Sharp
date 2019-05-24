@@ -53,7 +53,7 @@ For your convenience, the following list gives an overview of the endpoints that
  /v2/account/skins | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.Skins`](../api/Gw2Sharp.WebApi.V2.Clients.AccountSkinsClient.html)
  /v2/account/titles | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.Titles`](../api/Gw2Sharp.WebApi.V2.Clients.AccountTitlesClient.html)
  /v2/account/wallet | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.Wallet`](../api/Gw2Sharp.WebApi.V2.Clients.AccountWalletClient.html)
- /v2/account/worldbosses | ❌✨ | [`Gw2WebApiClient.V2.Account.WorldBosses`](../api/Gw2Sharp.WebApi.V2.Clients.AccountWorldBossesClient.html)
+ /v2/account/worldbosses | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.WorldBosses`](../api/Gw2Sharp.WebApi.V2.Clients.AccountWorldBossesClient.html)
  /v2/achievements | ✔️🌐📄📚 | [`Gw2WebApiClient.V2.Achievements`](../api/Gw2Sharp.WebApi.V2.Clients.AchievementsClient.html)
  /v2/achievements/categories | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Achievements.Categories`](../api/Gw2Sharp.WebApi.V2.Clients.AchievementsCategoriesClient.html)
  /v2/achievements/daily | ✔️ | [`Gw2WebApiClient.V2.Achievements.Daily`](../api/Gw2Sharp.WebApi.V2.Clients.AchievementsDailyClient.html)
