@@ -58,7 +58,7 @@ build:docs:
 post-build:binaries-with-docs:
   extends: .task
   stage: post-build
-  image: mcr.microsoft.com/dotnet/core/runtime:2.1
+  image: mcr.microsoft.com/dotnet/core/sdk:2.1
   dependencies:
     - build:binaries
   before_script:
