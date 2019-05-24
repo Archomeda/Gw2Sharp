@@ -4,7 +4,7 @@ variables:
   CONFIGURATION: Release
 
 stages:
-  - versioning
+  - pre-build
   - build
   - post-build
   - test
@@ -15,9 +15,9 @@ stages:
   except:
     - gh-pages
 
-versioning:
+pre-build:versioning:
   extends: .task
-  stage: versioning
+  stage: pre-build
   image: docker:stable
   services:
     - docker:dind
@@ -31,7 +31,7 @@ build:binaries:
   extends: .task
   stage: build
   dependencies:
-    - versioning
+    - pre-build:versioning
   script: dotnet build Gw2Sharp -c $CONFIGURATION -o bin
   artifacts:
     paths:
