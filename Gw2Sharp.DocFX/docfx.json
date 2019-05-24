@@ -3,7 +3,7 @@
     {
       "src": [
         {
-          "src": "../../Gw2Sharp",
+          "src": "../Gw2Sharp",
           "files": [
             "*.csproj"
           ],
