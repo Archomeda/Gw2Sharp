@@ -44,7 +44,7 @@ build:docs:
   image: mono
   before_script:
     - apt update
-    - apt install -y wget unzip
+    - apt install -y git wget unzip
   script:
     - wget -q https://github.com/dotnet/docfx/releases/latest/download/docfx.zip
     - unzip docfx.zip
