@@ -10,12 +10,26 @@ stages:
   - pack
   - deploy
 
-.task: &task
+.task:
   except:
     - gh-pages
 
+.task-with-doc:
+  extends: .task
+  before_script:
+    - apt update
+    - apt install -y wget
+    - wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
+    - dpkg -i packages-microsoft-prod.deb
+    - add-apt-repository universe
+    - apt-get install -y apt-transport-https
+    - apt-get update
+    - install aspnetcore-runtime-2.1
+    - dotnet tool install -g InheritDocTool
+    - export PATH="$PATH:/root/.dotnet/tools"
+
 versioning:
-  <<: *task
+  extends: .task
   stage: versioning
   image: docker:stable
   services:
@@ -27,57 +41,55 @@ versioning:
     expire_in: 1 day
 
 build:binaries:
-  <<: *task
+  extends: .task-with-doc
   stage: build
   dependencies:
     - versioning
   script:
-    - dotnet tool install -g InheritDocTool
-    - export PATH="$PATH:/root/.dotnet/tools"
-    - dotnet build Gw2Sharp -c $CONFIGURATION -o out_bin
+    - dotnet build Gw2Sharp -c $CONFIGURATION -o bin
     - InheritDoc
   artifacts:
     paths:
-      - out_bin/
+      - bin/
     expire_in: 1 month
 
 build:docs:
-  <<: *task
+  extends: .task
   stage: build
   image: mono
+  before_script:
+    - apt update
+    - apt install -y wget unzip
   script:
-    - apt update && apt install wget unzip -y
     - wget -q https://github.com/dotnet/docfx/releases/latest/download/docfx.zip
     - unzip docfx.zip
     - mono docfx.exe Gw2Sharp.DocFX/docfx.json
-    - mv Gw2Sharp.DocFX/_site out_doc
+    - mv Gw2Sharp.DocFX/_site doc
   artifacts:
     paths:
-      - out_doc/
+      - doc/
     expire_in: 1 month
 
 test:
-  <<: *task
+  extends: .task
   stage: test
   script: dotnet test Gw2Sharp.Tests -c $CONFIGURATION
 
 pack:
   # TODO: Make this autoversioned
-  <<: *task
+  extends: .task-with-doc
   stage: pack
   script: 
-    - dotnet tool install -g InheritDocTool
-    - export PATH="$PATH:/root/.dotnet/tools"
     - dotnet build Gw2Sharp -c $CONFIGURATION
     - InheritDoc
-    - dotnet pack Gw2Sharp -c $CONFIGURATION --no-build --include-symbols -o out_pack
+    - dotnet pack Gw2Sharp -c $CONFIGURATION --no-build --include-symbols -o pack
   artifacts:
     paths:
-      - out_pack/
+      - pack/
     expire_in: 1 month
 
 deploy:docs:
-  <<: *task
+  extends: .task
   stage: deploy
   image: ubuntu
   dependencies:
@@ -85,15 +97,17 @@ deploy:docs:
   only:
     - master
     - tags
+  before_script:
+    - apt update
+    - apt install -y git
   script:
-    - apt update && apt install -y git
     - git config --global credential.helper store
     - git config --global user.name $GITLAB_USER_NAME
     - git config --global user.email $GITLAB_USER_EMAIL
-    - git clone https://${GITHUB_PAGES_TOKEN}@github.com/Archomeda/Gw2Sharp.git --branch gh-pages doc
-    - mkdir -p doc/${CI_COMMIT_REF_NAME}
-    - cp -rf out_doc/* doc/${CI_COMMIT_REF_NAME}
-    - cd doc
+    - git clone https://${GITHUB_PAGES_TOKEN}@github.com/Archomeda/Gw2Sharp.git --branch gh-pages repo_doc
+    - mkdir -p repo_doc/${CI_COMMIT_REF_NAME}
+    - cp -rf doc/* repo_doc/${CI_COMMIT_REF_NAME}
+    - cd repo_doc
     - git add -A
     - |
       if [[ `git status --porcelain` ]]; then
@@ -102,7 +116,7 @@ deploy:docs:
       fi
 
 deploy:github:
-  <<: *task
+  extends: .task
   stage: deploy
   image: ubuntu
   dependencies:
@@ -110,19 +124,21 @@ deploy:github:
     - pack
   only:
     - tags
+  before_script:
+    - apt update
+    - apt install -y tar wget zip
   script:
-    - apt update && apt install -y tar wget zip
     - wget -q https://github.com/tcnksm/ghr/releases/download/v0.12.1/ghr_v0.12.1_linux_amd64.tar.gz
     - tar -zxf ghr_v0.12.1_linux_amd64.tar.gz
     - mv ghr_v0.12.1_linux_amd64/ghr ./
     - mkdir artifacts
-    - zip -r artifacts/Gw2Sharp.zip out_bin/*
-    - cp out_pack/* artifacts/
+    - zip -r artifacts/Gw2Sharp.zip bin/*
+    - cp pack/* artifacts/
     - ./ghr -t ${GITHUB_RELEASE_TOKEN} -u Archomeda -r Gw2Sharp -n ${CI_COMMIT_REF_NAME} -draft ${CI_COMMIT_REF_NAME} artifacts
 
 .deploy:nuget:
   # TODO
-  <<: *task
+  extends: .task
   stage: deploy
   image: ubuntu
   dependencies:
