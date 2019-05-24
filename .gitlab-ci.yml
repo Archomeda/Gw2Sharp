@@ -33,6 +33,7 @@ build:binaries:
     - versioning
   script:
     - dotnet tool install -g InheritDocTool
+    - export PATH="$PATH:/root/.dotnet/tools"
     - dotnet build Gw2Sharp -c $CONFIGURATION -o out_bin
     - InheritDoc
   artifacts:
@@ -66,6 +67,7 @@ pack:
   stage: pack
   script: 
     - dotnet tool install -g InheritDocTool
+    - export PATH="$PATH:/root/.dotnet/tools"
     - dotnet build Gw2Sharp -c $CONFIGURATION
     - InheritDoc
     - dotnet pack Gw2Sharp -c $CONFIGURATION --no-build --include-symbols -o out_pack
