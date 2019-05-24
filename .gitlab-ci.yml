@@ -23,7 +23,7 @@ stages:
     - dpkg -i packages-microsoft-prod.deb
     - apt-get install -y apt-transport-https
     - apt-get update
-    - install aspnetcore-runtime-2.1
+    - apt-get install -y aspnetcore-runtime-2.1
     - dotnet tool install -g InheritDocTool
     - export PATH="$PATH:/root/.dotnet/tools"
 
