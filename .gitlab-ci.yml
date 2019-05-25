@@ -82,6 +82,8 @@ pack:
   stage: pack
   dependencies:
     - post-build:binaries-with-docs
+  only:
+    - tags
   script: 
     - dotnet build Gw2Sharp -c $CONFIGURATION
     - cp bin/Gw2Sharp.xml Gw2Sharp/bin/$CONFIGURATION/netstandard2.0/
