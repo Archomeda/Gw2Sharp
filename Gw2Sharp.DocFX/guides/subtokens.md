@@ -3,7 +3,7 @@ uid: Guides.Subtokens
 title: Creating and using subtokens
 ---
 
-# Subtokens
+# Creating and using subtokens
 Support for subtokens has been added to the API on May 20th, 2019.
 You can read up on it [on the forums](https://en-forum.guildwars2.com/discussion/77211/api-update-may-20-2019).
 

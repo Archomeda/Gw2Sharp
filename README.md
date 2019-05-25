@@ -11,7 +11,7 @@ This library has been written to be as close as possible to the official API str
 *Make sure to read the [introductory guide](https://archomeda.github.io/Gw2Sharp/master/guides/introduction.html) to get started.*
 
 ## Endpoints
-Check the [list of endpoints](https://archomeda.github.io/Gw2Sharp/master/faq/endpoints.html) for the supported endpoints.
+Check the [list of endpoints](https://archomeda.github.io/Gw2Sharp/master/guides/endpoints.html) for the supported endpoints.
 
 ## Requirements
 This project targets .NET Standard 2.0.

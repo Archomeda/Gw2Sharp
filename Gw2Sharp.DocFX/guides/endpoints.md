@@ -1,9 +1,9 @@
 ---
-uid: FAQ.Endpoints
-title: Endpoints
+uid: Guides.Endpoints
+title: Supported endpoints
 ---
 
-# Endpoints
+# Supported endpoints
 Gw2Sharp is not finished yet, and development is being done whenever I have spare time.
 For your convenience, the following list gives an overview of the endpoints that are already available in this library:
 

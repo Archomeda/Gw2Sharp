@@ -1,6 +1,10 @@
-﻿- name: Guides
+- name: Guides
   items:
     - name: Introduction
       topicUid: Guides.Introduction
+    - name: Endpoints
+      topicUid: Guides.Endpoints
+    - name: Parameterized endpoints
+      topicUid: Guides.ParameterizedEndpoints
     - name: Subtokens
       topicUid: Guides.Subtokens

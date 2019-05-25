@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -9,7 +9,11 @@
     <PackageId>Gw2Sharp</PackageId>
     <Version>0.3.0</Version>
     <Authors>Archomeda</Authors>
-    <Description>Gw2Sharp is a client API wrapper around the official Guild Wars 2 API for .NET. It's asynchronous and crossplatform thanks to .NET Standard.</Description>
+    <Description>
+      Gw2Sharp is a .NET wrapper library for the official Guild Wars 2 API written in C#. It uses the latest C# 8.0 features like Nullable Reference Types because they're awesome.
+
+      This library has been written to be as close as possible to the official API structure, with a few exceptions to make life easier.
+    </Description>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <IncludeSymbols>true</IncludeSymbols>

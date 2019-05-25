@@ -1,12 +1,23 @@
 # Gw2Sharp Documentation
-Gw2Sharp is an client API wrapper around the [official Guild Wars 2 API](https://api.guildwars2.com/) for .NET.
-It's asynchronous and multi-platform thanks to .NET Standard.
+Gw2Sharp is a .NET wrapper library for the [official Guild Wars 2 API](https://wiki.guildwars2.com/wiki/API) written in C#.
+It uses the latest C# 8.0 features like Nullable Reference Types because they're awesome.
 
-At the moment this documention site is a work in progress.
-Be sure to check the [introduction](guides/introduction.md)!
+This library has been written to be as close as possible to the official API structure, with a few exceptions to make life easier.
+*Make sure to read the [introductory guide](guides/introduction.md) to get started.*
 
-### Features
-For the list of supported endpoints, check the [list of endpoints](faq/endpoints.md).
+### Endpoints
+Check the [list of endpoints](guides/endpoints.md) for the supported endpoints.
+
+### Requirements
+This project targets .NET Standard 2.0.
+It supports the C# 8.0 Nullable Reference Types feature for your convenience (which is available since Visual Studio 2019), but it's not required when consuming the library.
+
+### Installing
+You can find the library on [NuGet](https://www.nuget.org/packages/Gw2Sharp/), or you can install it by running the following command in the package manager:
+
+```powershell
+Install-Package Gw2Sharp
+```
 
 ### Additional resources
 - [GW2 Development Community Discord](https://discord.gg/hNcpDT3) - Discussions about Gw2Sharp and other API related projects
