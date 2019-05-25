@@ -50,9 +50,6 @@
                           <a href="guides/introduction.html" title="Guides">Guides</a>
                       </li>
                       <li>
-                          <a href="faq/overview.html" title="FAQ">FAQ</a>
-                      </li>
-                      <li>
                           <a href="api/index.html" title="API Documentation">API Documentation</a>
                       </li>
                       <li>
@@ -76,13 +73,19 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="gw2sharp-documentation">Gw2Sharp Documentation</h1>
 
-<p>Gw2Sharp is an client API wrapper around the <a href="https://api.guildwars2.com/">official Guild Wars 2 API</a> for .NET.
-It&#39;s asynchronous and multi-platform thanks to .NET Standard.</p>
-<p>At the moment this documention site is a work in progress.
-Be sure to check the <a href="guides/introduction.html">introduction</a>!</p>
-<h3 id="features">Features</h3>
-<p>For the list of supported endpoints, check the <a href="faq/endpoints.html">list of endpoints</a>.</p>
-<h3 id="additional-resources">Additional resources</h3>
+<p>Gw2Sharp is a .NET wrapper library for the <a href="https://wiki.guildwars2.com/wiki/API">official Guild Wars 2 API</a> written in C#.
+It uses the latest C# 8.0 features like Nullable Reference Types because they&#39;re awesome.</p>
+<p>This library has been written to be as close as possible to the official API structure, with a few exceptions to make life easier.
+<em>Make sure to read the <a href="guides/introduction.html">introductory guide</a> to get started.</em></p>
+<h3 id="endpoints">Endpoints</h3>
+<p>Check the <a href="guides/endpoints.html">list of endpoints</a> for the supported endpoints.</p>
+<h3 id="requirements">Requirements</h3>
+<p>This project targets .NET Standard 2.0.
+It supports the C# 8.0 Nullable Reference Types feature for your convenience (which is available since Visual Studio 2019), but it&#39;s not required when consuming the library.</p>
+<h3 id="installing">Installing</h3>
+<p>You can find the library on <a href="https://www.nuget.org/packages/Gw2Sharp/">NuGet</a>, or you can install it by running the following command in the package manager:</p>
+<pre><code class="lang-powershell">Install-Package Gw2Sharp
+</code></pre><h3 id="additional-resources">Additional resources</h3>
 <ul>
 <li><a href="https://discord.gg/hNcpDT3">GW2 Development Community Discord</a> - Discussions about Gw2Sharp and other API related projects</li>
 <li><a href="https://wiki.guildwars2.com/wiki/API">Guild Wars 2 Wiki</a> - Community Wiki articles about the API</li>

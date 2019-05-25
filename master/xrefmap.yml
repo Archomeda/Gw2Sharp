@@ -4,15 +4,15 @@ references:
 - uid: API.Index
   name: API Documentation
   href: api/index.html
-- uid: FAQ.Endpoints
-  name: Endpoints
-  href: faq/endpoints.html
-- uid: FAQ.Overview
-  name: FAQ
-  href: faq/overview.html
+- uid: Guides.Endpoints
+  name: Supported endpoints
+  href: guides/endpoints.html
 - uid: Guides.Introduction
   name: Gw2Sharp Introduction
   href: guides/introduction.html
+- uid: Guides.ParameterizedEndpoints
+  name: Accessing parameterized endpoints
+  href: guides/parameterized-endpoints.html
 - uid: Guides.Subtokens
   name: Creating and using subtokens
   href: guides/subtokens.html
