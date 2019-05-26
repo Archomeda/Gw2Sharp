@@ -40,6 +40,6 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <param name="pageSize">The page size.</param>
         /// <returns>The entries.</returns>
-        Task<IApiV2ObjectList<TObject>> PageAsync(int page, CancellationToken cancellationToken, int pageSize);
+        Task<IApiV2ObjectList<TObject>> PageAsync(int page, int pageSize, CancellationToken cancellationToken);
     }
 }

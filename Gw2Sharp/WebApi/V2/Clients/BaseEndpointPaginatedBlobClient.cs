@@ -49,7 +49,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
             this.RequestPageAsync(page, cancellationToken);
 
         /// <inheritdoc />
-        public virtual Task<IApiV2ObjectList<TObject>> PageAsync(int page, CancellationToken cancellationToken, int pageSize) =>
+        public virtual Task<IApiV2ObjectList<TObject>> PageAsync(int page, int pageSize, CancellationToken cancellationToken) =>
             this.RequestPageAsync(page, cancellationToken, pageSize);
     }
 }
