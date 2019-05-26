@@ -8,3 +8,7 @@
       topicUid: Guides.ParameterizedEndpoints
     - name: Subtokens
       topicUid: Guides.Subtokens
+    - name: HTTP headers
+      topicUid: Guides.HttpHeaders
+    - name: Last-Modified
+      topicUid: Guides.LastModified
