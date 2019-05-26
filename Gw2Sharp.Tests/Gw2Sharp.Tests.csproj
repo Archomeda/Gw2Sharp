@@ -16,6 +16,9 @@
     <None Remove="TestFiles\Colors\Colors.bulk.json" />
     <None Remove="TestFiles\Colors\Colors.ids.json" />
     <None Remove="TestFiles\Colors\Colors.single.json" />
+    <None Remove="TestFiles\DailyCrafting\DailyCrafting.bulk.json" />
+    <None Remove="TestFiles\DailyCrafting\DailyCrafting.ids.json" />
+    <None Remove="TestFiles\DailyCrafting\DailyCrafting.single.json" />
     <None Remove="TestFiles\TokenInfo\TokenInfo.ApiToken.json" />
     <None Remove="TestFiles\TokenInfo\TokenInfo.SubToken.json" />
   </ItemGroup>
@@ -67,6 +70,9 @@
     <EmbeddedResource Include="TestFiles\Backstory\BackstoryQuestions.ids.json" />
     <EmbeddedResource Include="TestFiles\Backstory\BackstoryQuestions.single.json" />
     <EmbeddedResource Include="TestFiles\Build\Build.json" />
+    <EmbeddedResource Include="TestFiles\DailyCrafting\DailyCrafting.bulk.json" />
+    <EmbeddedResource Include="TestFiles\DailyCrafting\DailyCrafting.ids.json" />
+    <EmbeddedResource Include="TestFiles\DailyCrafting\DailyCrafting.single.json" />
     <EmbeddedResource Include="TestFiles\Home\HomeCats.bulk.json" />
     <EmbeddedResource Include="TestFiles\Home\HomeCats.ids.json" />
     <EmbeddedResource Include="TestFiles\Home\HomeCats.single.json" />

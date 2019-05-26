@@ -65,6 +65,11 @@ namespace Gw2Sharp.WebApi.V2
         ICurrenciesClient Currencies { get; }
 
         /// <summary>
+        /// Gets the daily craftings.
+        /// </summary>
+        IDailyCraftingClient DailyCrafting { get; }
+
+        /// <summary>
         /// Gets the dungeons.
         /// </summary>
         IDungeonsClient Dungeons { get; }

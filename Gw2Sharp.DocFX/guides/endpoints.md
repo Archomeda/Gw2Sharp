@@ -101,7 +101,7 @@ For your convenience, the following list gives an overview of the endpoints that
  /v2/continents/`:continent`/<br>floors/`:floor`/<br>regions/`:region`/<br>maps/`:map`/<br>tasks  | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Continents[continent]`<br>`.Floors[floor]`<br>`.Regions[region]`<br>`.Maps[map]`<br>`.Tasks`](../api/Gw2Sharp.WebApi.V2.Clients.ContinentsFloorsRegionsMapsTasksClient.html)
  /v2/createsubtoken | ✔️🔑 | [`Gw2WebApiClient.V2.CreateSubtoken`](../api/Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.html)
  /v2/currencies | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Currencies`](../api/Gw2Sharp.WebApi.V2.Clients.CurrenciesClient.html)
- /v2/dailycrafting | ❌✨ | 
+ /v2/dailycrafting | ✔️📄📚📦 | [`Gw2WebApiClient.V2.DailyCrafting`](../api/Gw2Sharp.WebApi.V2.Clients.DailyCraftingClient.html)
  /v2/dungeons | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Dungeons`](../api/Gw2Sharp.WebApi.V2.Clients.DungeonsClient.html)
  /v2/emblem | ✔️ | [`Gw2WebApiClient.V2.Emblem`](../api/Gw2Sharp.WebApi.V2.Clients.EmblemClient.html)
  /v2/emblem/backgrounds | ✔️📄📚📦 | [`Gw2WebApiClient.V2.Emblem.Backgrounds`](../api/Gw2Sharp.WebApi.V2.Clients.EmblemBackgroundsClient.html)

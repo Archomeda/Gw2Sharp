@@ -36,6 +36,7 @@ namespace Gw2Sharp.WebApi.V2
             this.Continents = new ContinentsClient(connection);
             this.CreateSubtoken = new CreateSubtokenClient(connection);
             this.Currencies = new CurrenciesClient(connection);
+            this.DailyCrafting = new DailyCraftingClient(connection);
             this.Dungeons = new DungeonsClient(connection);
             this.Emblem = new EmblemClient(connection);
             this.Files = new FilesClient(connection);
@@ -81,6 +82,9 @@ namespace Gw2Sharp.WebApi.V2
 
         /// <inheritdoc />
         public virtual ICurrenciesClient Currencies { get; protected set; }
+
+        /// <inheritdoc />
+        public virtual IDailyCraftingClient DailyCrafting { get; protected set; }
 
         /// <inheritdoc />
         public virtual IDungeonsClient Dungeons { get; protected set; }
