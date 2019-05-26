@@ -219,9 +219,6 @@
                             <a href="Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo.html" title="ApiV2HttpResponseInfo" class="">ApiV2HttpResponseInfo</a>
                           </li>
                           <li class="">
-                            <a href="Gw2Sharp.WebApi.V2.ExtensionImplementation.html" title="ExtensionImplementation" class="">ExtensionImplementation</a>
-                          </li>
-                          <li class="">
                             <a href="Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html" title="Gw2WebApiV2Client" class="">Gw2WebApiV2Client</a>
                           </li>
                           <li class="">
@@ -1875,13 +1872,13 @@
   
   
   <a id="Gw2Sharp_WebApi_V2_Clients_IPaginatedClient_1_PageAsync_" data-uid="Gw2Sharp.WebApi.V2.Clients.IPaginatedClient`1.PageAsync*"></a>
-  <h4 id="Gw2Sharp_WebApi_V2_Clients_IPaginatedClient_1_PageAsync_System_Int32_CancellationToken_System_Int32_" data-uid="Gw2Sharp.WebApi.V2.Clients.IPaginatedClient`1.PageAsync(System.Int32,CancellationToken,System.Int32)">PageAsync(Int32, CancellationToken, Int32)</h4>
+  <h4 id="Gw2Sharp_WebApi_V2_Clients_IPaginatedClient_1_PageAsync_System_Int32_System_Int32_" data-uid="Gw2Sharp.WebApi.V2.Clients.IPaginatedClient`1.PageAsync(System.Int32,System.Int32)">PageAsync(Int32, Int32)</h4>
   <div class="markdown level1 summary"><p>Requests a page of entries with a specific page size.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IApiV2ObjectList&lt;TObject&gt;&gt; PageAsync(int page, CancellationToken cancellationToken, int pageSize)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IApiV2ObjectList&lt;TObject&gt;&gt; PageAsync(int page, int pageSize)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1897,12 +1894,6 @@
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">page</span></td>
         <td><p>The page number (zero-indexed).</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">CancellationToken</span></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td><p>The cancellation token.</p>
 </td>
       </tr>
       <tr>
@@ -1932,13 +1923,13 @@
   
   
   <a id="Gw2Sharp_WebApi_V2_Clients_IPaginatedClient_1_PageAsync_" data-uid="Gw2Sharp.WebApi.V2.Clients.IPaginatedClient`1.PageAsync*"></a>
-  <h4 id="Gw2Sharp_WebApi_V2_Clients_IPaginatedClient_1_PageAsync_System_Int32_System_Int32_" data-uid="Gw2Sharp.WebApi.V2.Clients.IPaginatedClient`1.PageAsync(System.Int32,System.Int32)">PageAsync(Int32, Int32)</h4>
+  <h4 id="Gw2Sharp_WebApi_V2_Clients_IPaginatedClient_1_PageAsync_System_Int32_System_Int32_CancellationToken_" data-uid="Gw2Sharp.WebApi.V2.Clients.IPaginatedClient`1.PageAsync(System.Int32,System.Int32,CancellationToken)">PageAsync(Int32, Int32, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Requests a page of entries with a specific page size.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IApiV2ObjectList&lt;TObject&gt;&gt; PageAsync(int page, int pageSize)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IApiV2ObjectList&lt;TObject&gt;&gt; PageAsync(int page, int pageSize, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1960,6 +1951,12 @@
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">pageSize</span></td>
         <td><p>The page size.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token.</p>
 </td>
       </tr>
     </tbody>

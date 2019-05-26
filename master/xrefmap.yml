@@ -7,9 +7,15 @@ references:
 - uid: Guides.Endpoints
   name: Supported endpoints
   href: guides/endpoints.html
+- uid: Guides.HttpHeaders
+  name: Checking the HTTP headers
+  href: guides/http-headers.html
 - uid: Guides.Introduction
   name: Gw2Sharp Introduction
   href: guides/introduction.html
+- uid: Guides.LastModified
+  name: Checking the Last-Modified header
+  href: guides/last-modified.html
 - uid: Guides.ParameterizedEndpoints
   name: Accessing parameterized endpoints
   href: guides/parameterized-endpoints.html
@@ -3853,14 +3859,6 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient(Of TObject, TId).PageAsync(System.Int32, CancellationToken)
   nameWithType: BaseEndpointBulkAllClient<TObject, TId>.PageAsync(Int32, CancellationToken)
   nameWithType.vb: BaseEndpointBulkAllClient(Of TObject, TId).PageAsync(Int32, CancellationToken)
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.PageAsync(System.Int32,CancellationToken,System.Int32)
-  name: PageAsync(Int32, CancellationToken, Int32)
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkAllClient_2_PageAsync_System_Int32_CancellationToken_System_Int32_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.PageAsync(System.Int32,CancellationToken,System.Int32)
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient<TObject, TId>.PageAsync(System.Int32, CancellationToken, System.Int32)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient(Of TObject, TId).PageAsync(System.Int32, CancellationToken, System.Int32)
-  nameWithType: BaseEndpointBulkAllClient<TObject, TId>.PageAsync(Int32, CancellationToken, Int32)
-  nameWithType.vb: BaseEndpointBulkAllClient(Of TObject, TId).PageAsync(Int32, CancellationToken, Int32)
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.PageAsync(System.Int32,System.Int32)
   name: PageAsync(Int32, Int32)
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkAllClient_2_PageAsync_System_Int32_System_Int32_
@@ -3869,6 +3867,14 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient(Of TObject, TId).PageAsync(System.Int32, System.Int32)
   nameWithType: BaseEndpointBulkAllClient<TObject, TId>.PageAsync(Int32, Int32)
   nameWithType.vb: BaseEndpointBulkAllClient(Of TObject, TId).PageAsync(Int32, Int32)
+- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.PageAsync(System.Int32,System.Int32,CancellationToken)
+  name: PageAsync(Int32, Int32, CancellationToken)
+  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkAllClient_2_PageAsync_System_Int32_System_Int32_CancellationToken_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.PageAsync(System.Int32,System.Int32,CancellationToken)
+  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient<TObject, TId>.PageAsync(System.Int32, System.Int32, CancellationToken)
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient(Of TObject, TId).PageAsync(System.Int32, System.Int32, CancellationToken)
+  nameWithType: BaseEndpointBulkAllClient<TObject, TId>.PageAsync(Int32, Int32, CancellationToken)
+  nameWithType.vb: BaseEndpointBulkAllClient(Of TObject, TId).PageAsync(Int32, Int32, CancellationToken)
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.PageAsync*
   name: PageAsync
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkAllClient_2_PageAsync_
@@ -4006,14 +4012,6 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient(Of TObject, TId).PageAsync(System.Int32, CancellationToken)
   nameWithType: BaseEndpointBulkClient<TObject, TId>.PageAsync(Int32, CancellationToken)
   nameWithType.vb: BaseEndpointBulkClient(Of TObject, TId).PageAsync(Int32, CancellationToken)
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient`2.PageAsync(System.Int32,CancellationToken,System.Int32)
-  name: PageAsync(Int32, CancellationToken, Int32)
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkClient_2_PageAsync_System_Int32_CancellationToken_System_Int32_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient`2.PageAsync(System.Int32,CancellationToken,System.Int32)
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient<TObject, TId>.PageAsync(System.Int32, CancellationToken, System.Int32)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient(Of TObject, TId).PageAsync(System.Int32, CancellationToken, System.Int32)
-  nameWithType: BaseEndpointBulkClient<TObject, TId>.PageAsync(Int32, CancellationToken, Int32)
-  nameWithType.vb: BaseEndpointBulkClient(Of TObject, TId).PageAsync(Int32, CancellationToken, Int32)
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient`2.PageAsync(System.Int32,System.Int32)
   name: PageAsync(Int32, Int32)
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkClient_2_PageAsync_System_Int32_System_Int32_
@@ -4022,6 +4020,14 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient(Of TObject, TId).PageAsync(System.Int32, System.Int32)
   nameWithType: BaseEndpointBulkClient<TObject, TId>.PageAsync(Int32, Int32)
   nameWithType.vb: BaseEndpointBulkClient(Of TObject, TId).PageAsync(Int32, Int32)
+- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient`2.PageAsync(System.Int32,System.Int32,CancellationToken)
+  name: PageAsync(Int32, Int32, CancellationToken)
+  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkClient_2_PageAsync_System_Int32_System_Int32_CancellationToken_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient`2.PageAsync(System.Int32,System.Int32,CancellationToken)
+  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient<TObject, TId>.PageAsync(System.Int32, System.Int32, CancellationToken)
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient(Of TObject, TId).PageAsync(System.Int32, System.Int32, CancellationToken)
+  nameWithType: BaseEndpointBulkClient<TObject, TId>.PageAsync(Int32, Int32, CancellationToken)
+  nameWithType.vb: BaseEndpointBulkClient(Of TObject, TId).PageAsync(Int32, Int32, CancellationToken)
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient`2.PageAsync*
   name: PageAsync
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkClient_2_PageAsync_
@@ -4619,14 +4625,6 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient(Of TObject).PageAsync(System.Int32, CancellationToken)
   nameWithType: BaseEndpointPaginatedBlobClient<TObject>.PageAsync(Int32, CancellationToken)
   nameWithType.vb: BaseEndpointPaginatedBlobClient(Of TObject).PageAsync(Int32, CancellationToken)
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient`1.PageAsync(System.Int32,CancellationToken,System.Int32)
-  name: PageAsync(Int32, CancellationToken, Int32)
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointPaginatedBlobClient_1_PageAsync_System_Int32_CancellationToken_System_Int32_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient`1.PageAsync(System.Int32,CancellationToken,System.Int32)
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient<TObject>.PageAsync(System.Int32, CancellationToken, System.Int32)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient(Of TObject).PageAsync(System.Int32, CancellationToken, System.Int32)
-  nameWithType: BaseEndpointPaginatedBlobClient<TObject>.PageAsync(Int32, CancellationToken, Int32)
-  nameWithType.vb: BaseEndpointPaginatedBlobClient(Of TObject).PageAsync(Int32, CancellationToken, Int32)
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient`1.PageAsync(System.Int32,System.Int32)
   name: PageAsync(Int32, Int32)
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointPaginatedBlobClient_1_PageAsync_System_Int32_System_Int32_
@@ -4635,6 +4633,14 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient(Of TObject).PageAsync(System.Int32, System.Int32)
   nameWithType: BaseEndpointPaginatedBlobClient<TObject>.PageAsync(Int32, Int32)
   nameWithType.vb: BaseEndpointPaginatedBlobClient(Of TObject).PageAsync(Int32, Int32)
+- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient`1.PageAsync(System.Int32,System.Int32,CancellationToken)
+  name: PageAsync(Int32, Int32, CancellationToken)
+  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointPaginatedBlobClient_1_PageAsync_System_Int32_System_Int32_CancellationToken_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient`1.PageAsync(System.Int32,System.Int32,CancellationToken)
+  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient<TObject>.PageAsync(System.Int32, System.Int32, CancellationToken)
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient(Of TObject).PageAsync(System.Int32, System.Int32, CancellationToken)
+  nameWithType: BaseEndpointPaginatedBlobClient<TObject>.PageAsync(Int32, Int32, CancellationToken)
+  nameWithType.vb: BaseEndpointPaginatedBlobClient(Of TObject).PageAsync(Int32, Int32, CancellationToken)
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient`1.PageAsync*
   name: PageAsync
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointPaginatedBlobClient_1_PageAsync_
@@ -10410,14 +10416,6 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.IPaginatedClient(Of TObject).PageAsync(System.Int32, CancellationToken)
   nameWithType: IPaginatedClient<TObject>.PageAsync(Int32, CancellationToken)
   nameWithType.vb: IPaginatedClient(Of TObject).PageAsync(Int32, CancellationToken)
-- uid: Gw2Sharp.WebApi.V2.Clients.IPaginatedClient`1.PageAsync(System.Int32,CancellationToken,System.Int32)
-  name: PageAsync(Int32, CancellationToken, Int32)
-  href: api/Gw2Sharp.WebApi.V2.Clients.IPaginatedClient-1.html#Gw2Sharp_WebApi_V2_Clients_IPaginatedClient_1_PageAsync_System_Int32_CancellationToken_System_Int32_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.IPaginatedClient`1.PageAsync(System.Int32,CancellationToken,System.Int32)
-  fullName: Gw2Sharp.WebApi.V2.Clients.IPaginatedClient<TObject>.PageAsync(System.Int32, CancellationToken, System.Int32)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.IPaginatedClient(Of TObject).PageAsync(System.Int32, CancellationToken, System.Int32)
-  nameWithType: IPaginatedClient<TObject>.PageAsync(Int32, CancellationToken, Int32)
-  nameWithType.vb: IPaginatedClient(Of TObject).PageAsync(Int32, CancellationToken, Int32)
 - uid: Gw2Sharp.WebApi.V2.Clients.IPaginatedClient`1.PageAsync(System.Int32,System.Int32)
   name: PageAsync(Int32, Int32)
   href: api/Gw2Sharp.WebApi.V2.Clients.IPaginatedClient-1.html#Gw2Sharp_WebApi_V2_Clients_IPaginatedClient_1_PageAsync_System_Int32_System_Int32_
@@ -10426,6 +10424,14 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.IPaginatedClient(Of TObject).PageAsync(System.Int32, System.Int32)
   nameWithType: IPaginatedClient<TObject>.PageAsync(Int32, Int32)
   nameWithType.vb: IPaginatedClient(Of TObject).PageAsync(Int32, Int32)
+- uid: Gw2Sharp.WebApi.V2.Clients.IPaginatedClient`1.PageAsync(System.Int32,System.Int32,CancellationToken)
+  name: PageAsync(Int32, Int32, CancellationToken)
+  href: api/Gw2Sharp.WebApi.V2.Clients.IPaginatedClient-1.html#Gw2Sharp_WebApi_V2_Clients_IPaginatedClient_1_PageAsync_System_Int32_System_Int32_CancellationToken_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.IPaginatedClient`1.PageAsync(System.Int32,System.Int32,CancellationToken)
+  fullName: Gw2Sharp.WebApi.V2.Clients.IPaginatedClient<TObject>.PageAsync(System.Int32, System.Int32, CancellationToken)
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.IPaginatedClient(Of TObject).PageAsync(System.Int32, System.Int32, CancellationToken)
+  nameWithType: IPaginatedClient<TObject>.PageAsync(Int32, Int32, CancellationToken)
+  nameWithType.vb: IPaginatedClient(Of TObject).PageAsync(Int32, Int32, CancellationToken)
 - uid: Gw2Sharp.WebApi.V2.Clients.IPaginatedClient`1.PageAsync*
   name: PageAsync
   href: api/Gw2Sharp.WebApi.V2.Clients.IPaginatedClient-1.html#Gw2Sharp_WebApi_V2_Clients_IPaginatedClient_1_PageAsync_
@@ -10517,44 +10523,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.TokenInfoClient.TokenInfoClient
   nameWithType: TokenInfoClient.TokenInfoClient
-- uid: Gw2Sharp.WebApi.V2.ExtensionImplementation
-  name: ExtensionImplementation
-  href: api/Gw2Sharp.WebApi.V2.ExtensionImplementation.html
-  commentId: T:Gw2Sharp.WebApi.V2.ExtensionImplementation
-  fullName: Gw2Sharp.WebApi.V2.ExtensionImplementation
-  nameWithType: ExtensionImplementation
-- uid: Gw2Sharp.WebApi.V2.ExtensionImplementation.AsType*
-  name: AsType
-  href: api/Gw2Sharp.WebApi.V2.ExtensionImplementation.html#Gw2Sharp_WebApi_V2_ExtensionImplementation_AsType_
-  commentId: Overload:Gw2Sharp.WebApi.V2.ExtensionImplementation.AsType
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.ExtensionImplementation.AsType
-  nameWithType: ExtensionImplementation.AsType
-- uid: Gw2Sharp.WebApi.V2.ExtensionImplementation.AsType``3(Gw2Sharp.WebApi.V2.Models.ICastableType{``1,``2})
-  name: AsType<T, TParent, TEnum>(ICastableType<TParent, TEnum>)
-  href: api/Gw2Sharp.WebApi.V2.ExtensionImplementation.html#Gw2Sharp_WebApi_V2_ExtensionImplementation_AsType__3_Gw2Sharp_WebApi_V2_Models_ICastableType___1___2__
-  commentId: M:Gw2Sharp.WebApi.V2.ExtensionImplementation.AsType``3(Gw2Sharp.WebApi.V2.Models.ICastableType{``1,``2})
-  name.vb: AsType(Of T, TParent, TEnum)(ICastableType(Of TParent, TEnum))
-  fullName: Gw2Sharp.WebApi.V2.ExtensionImplementation.AsType<T, TParent, TEnum>(Gw2Sharp.WebApi.V2.Models.ICastableType<TParent, TEnum>)
-  fullName.vb: Gw2Sharp.WebApi.V2.ExtensionImplementation.AsType(Of T, TParent, TEnum)(Gw2Sharp.WebApi.V2.Models.ICastableType(Of TParent, TEnum))
-  nameWithType: ExtensionImplementation.AsType<T, TParent, TEnum>(ICastableType<TParent, TEnum>)
-  nameWithType.vb: ExtensionImplementation.AsType(Of T, TParent, TEnum)(ICastableType(Of TParent, TEnum))
-- uid: Gw2Sharp.WebApi.V2.ExtensionImplementation.IsType*
-  name: IsType
-  href: api/Gw2Sharp.WebApi.V2.ExtensionImplementation.html#Gw2Sharp_WebApi_V2_ExtensionImplementation_IsType_
-  commentId: Overload:Gw2Sharp.WebApi.V2.ExtensionImplementation.IsType
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.ExtensionImplementation.IsType
-  nameWithType: ExtensionImplementation.IsType
-- uid: Gw2Sharp.WebApi.V2.ExtensionImplementation.IsType``3(Gw2Sharp.WebApi.V2.Models.ICastableType{``1,``2})
-  name: IsType<T, TParent, TEnum>(ICastableType<TParent, TEnum>)
-  href: api/Gw2Sharp.WebApi.V2.ExtensionImplementation.html#Gw2Sharp_WebApi_V2_ExtensionImplementation_IsType__3_Gw2Sharp_WebApi_V2_Models_ICastableType___1___2__
-  commentId: M:Gw2Sharp.WebApi.V2.ExtensionImplementation.IsType``3(Gw2Sharp.WebApi.V2.Models.ICastableType{``1,``2})
-  name.vb: IsType(Of T, TParent, TEnum)(ICastableType(Of TParent, TEnum))
-  fullName: Gw2Sharp.WebApi.V2.ExtensionImplementation.IsType<T, TParent, TEnum>(Gw2Sharp.WebApi.V2.Models.ICastableType<TParent, TEnum>)
-  fullName.vb: Gw2Sharp.WebApi.V2.ExtensionImplementation.IsType(Of T, TParent, TEnum)(Gw2Sharp.WebApi.V2.Models.ICastableType(Of TParent, TEnum))
-  nameWithType: ExtensionImplementation.IsType<T, TParent, TEnum>(ICastableType<TParent, TEnum>)
-  nameWithType.vb: ExtensionImplementation.IsType(Of T, TParent, TEnum)(ICastableType(Of TParent, TEnum))
 - uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client
   name: Gw2WebApiV2Client
   href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html
