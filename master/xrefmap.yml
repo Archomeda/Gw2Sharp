@@ -7454,6 +7454,38 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.HomeClient.Cats
   nameWithType: HomeClient.Cats
+- uid: Gw2Sharp.WebApi.V2.Clients.HomeClient.Nodes
+  name: Nodes
+  href: api/Gw2Sharp.WebApi.V2.Clients.HomeClient.html#Gw2Sharp_WebApi_V2_Clients_HomeClient_Nodes
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.HomeClient.Nodes
+  fullName: Gw2Sharp.WebApi.V2.Clients.HomeClient.Nodes
+  nameWithType: HomeClient.Nodes
+- uid: Gw2Sharp.WebApi.V2.Clients.HomeClient.Nodes*
+  name: Nodes
+  href: api/Gw2Sharp.WebApi.V2.Clients.HomeClient.html#Gw2Sharp_WebApi_V2_Clients_HomeClient_Nodes_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.HomeClient.Nodes
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.HomeClient.Nodes
+  nameWithType: HomeClient.Nodes
+- uid: Gw2Sharp.WebApi.V2.Clients.HomeNodesClient
+  name: HomeNodesClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.HomeNodesClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.HomeNodesClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.HomeNodesClient
+  nameWithType: HomeNodesClient
+- uid: Gw2Sharp.WebApi.V2.Clients.HomeNodesClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  name: HomeNodesClient(IConnection)
+  href: api/Gw2Sharp.WebApi.V2.Clients.HomeNodesClient.html#Gw2Sharp_WebApi_V2_Clients_HomeNodesClient__ctor_Gw2Sharp_WebApi_IConnection_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.HomeNodesClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  fullName: Gw2Sharp.WebApi.V2.Clients.HomeNodesClient.HomeNodesClient(Gw2Sharp.WebApi.IConnection)
+  nameWithType: HomeNodesClient.HomeNodesClient(IConnection)
+- uid: Gw2Sharp.WebApi.V2.Clients.HomeNodesClient.#ctor*
+  name: HomeNodesClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.HomeNodesClient.html#Gw2Sharp_WebApi_V2_Clients_HomeNodesClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.HomeNodesClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.HomeNodesClient.HomeNodesClient
+  nameWithType: HomeNodesClient.HomeNodesClient
 - uid: Gw2Sharp.WebApi.V2.Clients.IAccountAchievementsClient
   name: IAccountAchievementsClient
   href: api/Gw2Sharp.WebApi.V2.Clients.IAccountAchievementsClient.html
@@ -10389,6 +10421,25 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.IHomeClient.Cats
   nameWithType: IHomeClient.Cats
+- uid: Gw2Sharp.WebApi.V2.Clients.IHomeClient.Nodes
+  name: Nodes
+  href: api/Gw2Sharp.WebApi.V2.Clients.IHomeClient.html#Gw2Sharp_WebApi_V2_Clients_IHomeClient_Nodes
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.IHomeClient.Nodes
+  fullName: Gw2Sharp.WebApi.V2.Clients.IHomeClient.Nodes
+  nameWithType: IHomeClient.Nodes
+- uid: Gw2Sharp.WebApi.V2.Clients.IHomeClient.Nodes*
+  name: Nodes
+  href: api/Gw2Sharp.WebApi.V2.Clients.IHomeClient.html#Gw2Sharp_WebApi_V2_Clients_IHomeClient_Nodes_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.IHomeClient.Nodes
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.IHomeClient.Nodes
+  nameWithType: IHomeClient.Nodes
+- uid: Gw2Sharp.WebApi.V2.Clients.IHomeNodesClient
+  name: IHomeNodesClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.IHomeNodesClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.IHomeNodesClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.IHomeNodesClient
+  nameWithType: IHomeNodesClient
 - uid: Gw2Sharp.WebApi.V2.Clients.IItemsClient
   name: IItemsClient
   href: api/Gw2Sharp.WebApi.V2.Clients.IItemsClient.html
@@ -23270,6 +23321,25 @@ references:
   commentId: F:Gw2Sharp.WebApi.V2.Models.MapType.UserTournament
   fullName: Gw2Sharp.WebApi.V2.Models.MapType.UserTournament
   nameWithType: MapType.UserTournament
+- uid: Gw2Sharp.WebApi.V2.Models.Node
+  name: Node
+  href: api/Gw2Sharp.WebApi.V2.Models.Node.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.Node
+  fullName: Gw2Sharp.WebApi.V2.Models.Node
+  nameWithType: Node
+- uid: Gw2Sharp.WebApi.V2.Models.Node.Id
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.Node.html#Gw2Sharp_WebApi_V2_Models_Node_Id
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Node.Id
+  fullName: Gw2Sharp.WebApi.V2.Models.Node.Id
+  nameWithType: Node.Id
+- uid: Gw2Sharp.WebApi.V2.Models.Node.Id*
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.Node.html#Gw2Sharp_WebApi_V2_Models_Node_Id_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Node.Id
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Node.Id
+  nameWithType: Node.Id
 - uid: Gw2Sharp.WebApi.V2.Models.PoiType
   name: PoiType
   href: api/Gw2Sharp.WebApi.V2.Models.PoiType.html
