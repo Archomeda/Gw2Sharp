@@ -126,7 +126,7 @@ For your convenience, the following list gives an overview of the endpoints that
  /v2/guild/upgrades | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Guild.Upgrades`](../api/Gw2Sharp.WebApi.V2.Clients.GuildUpgradesClient.html)
  /v2/home | ✔️ | [`Gw2WebApiClient.V2.Home`](../api/Gw2Sharp.WebApi.V2.Clients.HomeClient.html)
  /v2/home/cats | ✔️📄📚📦 | [`Gw2WebApiClient.V2.Home.Cats`](../api/Gw2Sharp.WebApi.V2.Clients.HomeCatsClient.html)
- /v2/home/nodes | ❌ | 
+ /v2/home/nodes | ✔️📄📚📦 | [`Gw2WebApiClient.V2.Home.Nodes`](../api/Gw2Sharp.WebApi.V2.Clients.HomeNodesClient.html)
  /v2/items | ✔️🌐📄📚 | [`Gw2WebApiClient.V2.Items`](../api/Gw2Sharp.WebApi.V2.Clients.ItemsClient.html)
  /v2/itemstats | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Itemstats`](../api/Gw2Sharp.WebApi.V2.Clients.ItemstatsClient.html)
  /v2/legends | ✔️📄📚📦 | [`Gw2WebApiClient.V2.Legends`](../api/Gw2Sharp.WebApi.V2.Clients.LegendsClient.html)

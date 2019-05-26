@@ -17,9 +17,13 @@ namespace Gw2Sharp.WebApi.V2.Clients
             base(connection)
         {
             this.Cats = new HomeCatsClient(connection);
+            this.Nodes = new HomeNodesClient(Connection);
         }
 
         /// <inheritdoc />
         public virtual IHomeCatsClient Cats { get; protected set; }
+
+        /// <inheritdoc />
+        public virtual IHomeNodesClient Nodes { get; protected set; }
     }
 }

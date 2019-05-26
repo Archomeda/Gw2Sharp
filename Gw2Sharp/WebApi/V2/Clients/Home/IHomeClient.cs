@@ -9,5 +9,10 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Gets the cats.
         /// </summary>
         IHomeCatsClient Cats { get; }
+
+        /// <summary>
+        /// Gets the nodes.
+        /// </summary>
+        IHomeNodesClient Nodes { get; }
     }
 }

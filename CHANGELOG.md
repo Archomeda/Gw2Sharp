@@ -18,6 +18,8 @@
 - Add `/v2/account/mounts/skins`
 - Add `/v2/account/mounts/types`
 - Add `/v2/account/worldbosses`
+- Add `/v2/dailycrafting`
+- Add `/v2/home/nodes`
 
 ## 0.2.0
 ### Endpoints
