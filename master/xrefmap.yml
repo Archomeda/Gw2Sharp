@@ -6478,6 +6478,25 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.CurrenciesClient.CurrenciesClient
   nameWithType: CurrenciesClient.CurrenciesClient
+- uid: Gw2Sharp.WebApi.V2.Clients.DailyCraftingClient
+  name: DailyCraftingClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.DailyCraftingClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.DailyCraftingClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.DailyCraftingClient
+  nameWithType: DailyCraftingClient
+- uid: Gw2Sharp.WebApi.V2.Clients.DailyCraftingClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  name: DailyCraftingClient(IConnection)
+  href: api/Gw2Sharp.WebApi.V2.Clients.DailyCraftingClient.html#Gw2Sharp_WebApi_V2_Clients_DailyCraftingClient__ctor_Gw2Sharp_WebApi_IConnection_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.DailyCraftingClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  fullName: Gw2Sharp.WebApi.V2.Clients.DailyCraftingClient.DailyCraftingClient(Gw2Sharp.WebApi.IConnection)
+  nameWithType: DailyCraftingClient.DailyCraftingClient(IConnection)
+- uid: Gw2Sharp.WebApi.V2.Clients.DailyCraftingClient.#ctor*
+  name: DailyCraftingClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.DailyCraftingClient.html#Gw2Sharp_WebApi_V2_Clients_DailyCraftingClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.DailyCraftingClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.DailyCraftingClient.DailyCraftingClient
+  nameWithType: DailyCraftingClient.DailyCraftingClient
 - uid: Gw2Sharp.WebApi.V2.Clients.DungeonsClient
   name: DungeonsClient
   href: api/Gw2Sharp.WebApi.V2.Clients.DungeonsClient.html
@@ -9737,6 +9756,12 @@ references:
   commentId: T:Gw2Sharp.WebApi.V2.Clients.ICurrenciesClient
   fullName: Gw2Sharp.WebApi.V2.Clients.ICurrenciesClient
   nameWithType: ICurrenciesClient
+- uid: Gw2Sharp.WebApi.V2.Clients.IDailyCraftingClient
+  name: IDailyCraftingClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.IDailyCraftingClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.IDailyCraftingClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.IDailyCraftingClient
+  nameWithType: IDailyCraftingClient
 - uid: Gw2Sharp.WebApi.V2.Clients.IDungeonsClient
   name: IDungeonsClient
   href: api/Gw2Sharp.WebApi.V2.Clients.IDungeonsClient.html
@@ -10691,6 +10716,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Currencies
   nameWithType: Gw2WebApiV2Client.Currencies
+- uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.DailyCrafting
+  name: DailyCrafting
+  href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_DailyCrafting
+  commentId: P:Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.DailyCrafting
+  fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.DailyCrafting
+  nameWithType: Gw2WebApiV2Client.DailyCrafting
+- uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.DailyCrafting*
+  name: DailyCrafting
+  href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_DailyCrafting_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.DailyCrafting
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.DailyCrafting
+  nameWithType: Gw2WebApiV2Client.DailyCrafting
 - uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Dungeons
   name: Dungeons
   href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_Dungeons
@@ -11017,6 +11055,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Currencies
   nameWithType: IGw2WebApiV2Client.Currencies
+- uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.DailyCrafting
+  name: DailyCrafting
+  href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_DailyCrafting
+  commentId: P:Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.DailyCrafting
+  fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.DailyCrafting
+  nameWithType: IGw2WebApiV2Client.DailyCrafting
+- uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.DailyCrafting*
+  name: DailyCrafting
+  href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_DailyCrafting_
+  commentId: Overload:Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.DailyCrafting
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.DailyCrafting
+  nameWithType: IGw2WebApiV2Client.DailyCrafting
 - uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Dungeons
   name: Dungeons
   href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_Dungeons
@@ -17270,6 +17321,25 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.Currency.Order
   nameWithType: Currency.Order
+- uid: Gw2Sharp.WebApi.V2.Models.DailyCrafting
+  name: DailyCrafting
+  href: api/Gw2Sharp.WebApi.V2.Models.DailyCrafting.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.DailyCrafting
+  fullName: Gw2Sharp.WebApi.V2.Models.DailyCrafting
+  nameWithType: DailyCrafting
+- uid: Gw2Sharp.WebApi.V2.Models.DailyCrafting.Id
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.DailyCrafting.html#Gw2Sharp_WebApi_V2_Models_DailyCrafting_Id
+  commentId: P:Gw2Sharp.WebApi.V2.Models.DailyCrafting.Id
+  fullName: Gw2Sharp.WebApi.V2.Models.DailyCrafting.Id
+  nameWithType: DailyCrafting.Id
+- uid: Gw2Sharp.WebApi.V2.Models.DailyCrafting.Id*
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.DailyCrafting.html#Gw2Sharp_WebApi_V2_Models_DailyCrafting_Id_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.DailyCrafting.Id
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.DailyCrafting.Id
+  nameWithType: DailyCrafting.Id
 - uid: Gw2Sharp.WebApi.V2.Models.Dungeon
   name: Dungeon
   href: api/Gw2Sharp.WebApi.V2.Models.Dungeon.html
