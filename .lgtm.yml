@@ -1,6 +1,4 @@
 path_classifiers:
-  library:
-    - Gw2Sharp
   test:
     - Gw2Sharp.Tests
 
