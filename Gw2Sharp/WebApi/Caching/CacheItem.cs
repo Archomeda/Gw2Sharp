@@ -95,6 +95,21 @@ namespace Gw2Sharp.WebApi.Caching
         public new T Item => (T)base.Item;
 
         /// <inheritdoc />
+        public override int GetHashCode()
+        {
+            int hashCode = 1150702236;
+            hashCode = (hashCode * -1521134295) + EqualityComparer<string>.Default.GetHashCode(this.Category);
+            hashCode = (hashCode * -1521134295) + EqualityComparer<object>.Default.GetHashCode(this.Id);
+            hashCode = (hashCode * -1521134295) + EqualityComparer<object>.Default.GetHashCode(this.Item);
+            hashCode = (hashCode * -1521134295) + this.ExpiryTime.GetHashCode();
+            return hashCode;
+        }
+
+        /// <inheritdoc />
+        public override bool Equals(object? obj) =>
+            obj is CacheItem<T> ? this.Equals((CacheItem<T>)obj) : false;
+
+        /// <inheritdoc />
         public bool Equals(CacheItem<T> other) =>
             this.Equals(other as CacheItem);
     }
