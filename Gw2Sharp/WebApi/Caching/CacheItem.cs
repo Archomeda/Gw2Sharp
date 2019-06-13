@@ -56,7 +56,7 @@ namespace Gw2Sharp.WebApi.Caching
 
         /// <inheritdoc />
         public override bool Equals(object? obj) =>
-            obj is CacheItem ? this.Equals((CacheItem)obj) : false;
+            obj != null && obj.GetType() == typeof(CacheItem) ? this.Equals((CacheItem)obj) : false;
 
         /// <summary>
         /// Indicates whether the current object is equal to another object of the same type.
@@ -107,7 +107,7 @@ namespace Gw2Sharp.WebApi.Caching
 
         /// <inheritdoc />
         public override bool Equals(object? obj) =>
-            obj is CacheItem<T> ? this.Equals((CacheItem<T>)obj) : false;
+            obj != null && obj.GetType() == typeof(CacheItem<T>) ? this.Equals((CacheItem<T>)obj) : false;
 
         /// <inheritdoc />
         public bool Equals(CacheItem<T> other) =>

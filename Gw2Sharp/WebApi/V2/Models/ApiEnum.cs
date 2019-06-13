@@ -41,7 +41,7 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <inheritdoc />
         public override bool Equals(object? obj) =>
-            obj is ApiEnum other ? this.Equals(other) : false;
+            obj != null && obj.GetType() == typeof(ApiEnum) ? this.Equals((ApiEnum)obj) : false;
 
         /// <inheritdoc />
         public bool Equals(ApiEnum other)
@@ -125,7 +125,7 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <inheritdoc />
         public override bool Equals(object? obj) =>
-            obj is ApiEnum<T> other ? this.Equals(other) : false;
+            obj != null && obj.GetType() == typeof(ApiEnum<T>) ? this.Equals((ApiEnum<T>)obj) : false;
 
         /// <inheritdoc />
         public bool Equals(ApiEnum<T> other)
