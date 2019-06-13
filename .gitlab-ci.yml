@@ -46,7 +46,7 @@ build:docs:
     - apt update
     - apt install -y git wget unzip
   script:
-    - wget -q https://github.com/dotnet/docfx/releases/latest/download/docfx.zip
+    - wget -q https://github.com/dotnet/docfx/releases/download/v2.43/docfx.zip
     - unzip docfx.zip
     - mono docfx.exe Gw2Sharp.DocFX/docfx.json
     - mv Gw2Sharp.DocFX/_site doc
@@ -84,7 +84,7 @@ pack:
     - post-build:binaries-with-docs
   only:
     - tags
-  script: 
+  script:
     - dotnet build Gw2Sharp -c $CONFIGURATION
     - cp bin/Gw2Sharp.xml Gw2Sharp/bin/$CONFIGURATION/netstandard2.0/
     - dotnet pack Gw2Sharp -c $CONFIGURATION --no-build --include-symbols -o pack
