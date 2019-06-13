@@ -345,7 +345,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
             if (this.IsAuthenticated)
             {
                 // Prepend the cache id with a hash of the access token to make sure that different access tokens will get separately cached
-                cacheId = $"{cacheId.ToString().GetSha1Hash()}_{cacheId}";
+                cacheId = $"{this.Connection.AccessToken.GetSha1Hash()}_{cacheId}";
             }
 
             var result = await this.Connection.CacheMethod.GetOrUpdateAsync(this.EndpointPath, cacheId, async () =>
