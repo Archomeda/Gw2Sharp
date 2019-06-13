@@ -368,6 +368,15 @@ references:
   fullName.vb: Gw2Sharp.WebApi.Caching.CacheItem(Of T).Equals(Gw2Sharp.WebApi.Caching.CacheItem(Of T))
   nameWithType: CacheItem<T>.Equals(CacheItem<T>)
   nameWithType.vb: CacheItem(Of T).Equals(CacheItem(Of T))
+- uid: Gw2Sharp.WebApi.Caching.CacheItem`1.Equals(System.Nullable{System.Object})
+  name: Equals(Nullable<Object>)
+  href: api/Gw2Sharp.WebApi.Caching.CacheItem-1.html#Gw2Sharp_WebApi_Caching_CacheItem_1_Equals_System_Nullable_System_Object__
+  commentId: M:Gw2Sharp.WebApi.Caching.CacheItem`1.Equals(System.Nullable{System.Object})
+  name.vb: Equals(Nullable(Of Object))
+  fullName: Gw2Sharp.WebApi.Caching.CacheItem<T>.Equals(System.Nullable<System.Object>)
+  fullName.vb: Gw2Sharp.WebApi.Caching.CacheItem(Of T).Equals(System.Nullable(Of System.Object))
+  nameWithType: CacheItem<T>.Equals(Nullable<Object>)
+  nameWithType.vb: CacheItem(Of T).Equals(Nullable(Of Object))
 - uid: Gw2Sharp.WebApi.Caching.CacheItem`1.Equals*
   name: Equals
   href: api/Gw2Sharp.WebApi.Caching.CacheItem-1.html#Gw2Sharp_WebApi_Caching_CacheItem_1_Equals_
@@ -377,6 +386,23 @@ references:
   fullName.vb: Gw2Sharp.WebApi.Caching.CacheItem(Of T).Equals
   nameWithType: CacheItem<T>.Equals
   nameWithType.vb: CacheItem(Of T).Equals
+- uid: Gw2Sharp.WebApi.Caching.CacheItem`1.GetHashCode
+  name: GetHashCode()
+  href: api/Gw2Sharp.WebApi.Caching.CacheItem-1.html#Gw2Sharp_WebApi_Caching_CacheItem_1_GetHashCode
+  commentId: M:Gw2Sharp.WebApi.Caching.CacheItem`1.GetHashCode
+  fullName: Gw2Sharp.WebApi.Caching.CacheItem<T>.GetHashCode()
+  fullName.vb: Gw2Sharp.WebApi.Caching.CacheItem(Of T).GetHashCode()
+  nameWithType: CacheItem<T>.GetHashCode()
+  nameWithType.vb: CacheItem(Of T).GetHashCode()
+- uid: Gw2Sharp.WebApi.Caching.CacheItem`1.GetHashCode*
+  name: GetHashCode
+  href: api/Gw2Sharp.WebApi.Caching.CacheItem-1.html#Gw2Sharp_WebApi_Caching_CacheItem_1_GetHashCode_
+  commentId: Overload:Gw2Sharp.WebApi.Caching.CacheItem`1.GetHashCode
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.Caching.CacheItem<T>.GetHashCode
+  fullName.vb: Gw2Sharp.WebApi.Caching.CacheItem(Of T).GetHashCode
+  nameWithType: CacheItem<T>.GetHashCode
+  nameWithType.vb: CacheItem(Of T).GetHashCode
 - uid: Gw2Sharp.WebApi.Caching.CacheItem`1.Item
   name: Item
   href: api/Gw2Sharp.WebApi.Caching.CacheItem-1.html#Gw2Sharp_WebApi_Caching_CacheItem_1_Item
