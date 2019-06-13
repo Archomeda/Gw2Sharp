@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using Gw2Sharp.Extensions;
@@ -38,7 +37,7 @@ namespace Gw2Sharp.WebApi.V2.Models.Converters
                 var value = rawValue.ParseEnum(enumType);
                 return (ApiEnum)Activator.CreateInstance(apiEnumType, value, rawValue);
             }).ToList();
-            return (ApiFlags)Activator.CreateInstance(objectType, (IReadOnlyList<ApiEnum>)flags);
+            return (ApiFlags)Activator.CreateInstance(objectType, flags);
         }
 
         /// <inheritdoc />
