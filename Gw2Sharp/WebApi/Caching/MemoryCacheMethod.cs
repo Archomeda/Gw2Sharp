@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
@@ -13,7 +14,7 @@ namespace Gw2Sharp.WebApi.Caching
     /// </summary>
     public class MemoryCacheMethod : BaseCacheMethod
     {
-        private readonly Dictionary<string, Dictionary<object, object>> cachedItems = new Dictionary<string, Dictionary<object, object>>();
+        private readonly ConcurrentDictionary<string, ConcurrentDictionary<object, object>> cachedItems = new ConcurrentDictionary<string, ConcurrentDictionary<object, object>>();
 
         private readonly Timer gcTimer;
 
@@ -36,15 +37,27 @@ namespace Gw2Sharp.WebApi.Caching
             var now = DateTime.Now;
             foreach (string category in this.cachedItems.Keys.ToArray())
             {
-                foreach (string key in this.cachedItems[category].Keys.ToArray())
+                if (!this.cachedItems.TryGetValue(category, out var cache))
+                    continue;
+
+                foreach (string key in cache.Keys.ToArray())
                 {
-                    var item = (CacheItem)this.cachedItems[category][key];
+                    if (!cache.TryGetValue(key, out object obj))
+                        continue;
+
+                    var item = (CacheItem)obj;
                     if (item.ExpiryTime <= now)
-                        this.cachedItems[category].Remove(key);
+                    {
+                        while (!cache.TryRemove(key, out _))
+                            Thread.Sleep(TimeSpan.FromMilliseconds(10));
+                    }
                 }
 
-                if (this.cachedItems[category].Count == 0)
-                    this.cachedItems.Remove(category);
+                if (cache.Count == 0)
+                {
+                    while (!this.cachedItems.TryRemove(category, out _))
+                        Thread.Sleep(TimeSpan.FromMilliseconds(10));
+                }
             }
         }
 
@@ -58,9 +71,9 @@ namespace Gw2Sharp.WebApi.Caching
             if (id == null)
                 throw new ArgumentNullException(nameof(id));
 
-            return this.cachedItems.ContainsKey(category) &&
-                this.cachedItems[category].ContainsKey(id) &&
-                this.cachedItems[category][id] is CacheItem<T> item &&
+            return this.cachedItems.TryGetValue(category, out var cache) &&
+                cache.TryGetValue(id, out object obj) &&
+                obj is CacheItem<T> item &&
                 item.ExpiryTime > DateTime.Now;
         }
 
@@ -72,7 +85,11 @@ namespace Gw2Sharp.WebApi.Caching
             if (id == null)
                 throw new ArgumentNullException(nameof(id));
 
-            return await this.HasAsync<T>(category, id) ? (CacheItem<T>)this.cachedItems[category][id] : null;
+            return this.cachedItems.TryGetValue(category, out var cache) &&
+                cache.TryGetValue(id, out object obj) &&
+                obj is CacheItem<T> item &&
+                item.ExpiryTime > DateTime.Now
+                ? item : null;
         }
 
         /// <inheritdoc />
@@ -83,10 +100,8 @@ namespace Gw2Sharp.WebApi.Caching
             if (item.ExpiryTime <= DateTime.Now)
                 return;
 
-            if (!this.cachedItems.ContainsKey(item.Category))
-                this.cachedItems.Add(item.Category, new Dictionary<object, object>());
-
-            this.cachedItems[item.Category][item.Id] = item;
+            var cache = this.cachedItems.GetOrAdd(item.Category, new ConcurrentDictionary<object, object>());
+            cache[item.Id] = item;
         }
 
         /// <inheritdoc />
@@ -98,11 +113,13 @@ namespace Gw2Sharp.WebApi.Caching
                 throw new ArgumentNullException(nameof(ids));
 
             var items = new Dictionary<object, CacheItem<T>>();
-            if (this.cachedItems.ContainsKey(category))
+            if (this.cachedItems.TryGetValue(category, out var cache))
             {
                 foreach (object id in ids)
-                    if (await this.HasAsync<T>(category, id))
-                        items.Add(id, (CacheItem<T>)this.cachedItems[category][id]);
+                {
+                    if (await this.HasAsync<T>(category, id) && cache.TryGetValue(id, out object obj) && obj is CacheItem<T> item)
+                        items.Add(id, item);
+                }
             }
             return items;
         }
