@@ -46,7 +46,7 @@ build:docs:
     - apt update
     - apt install -y git wget unzip
   script:
-    - wget -q https://github.com/dotnet/docfx/releases/download/v2.43/docfx.zip
+    - wget -q https://github.com/dotnet/docfx/releases/download/v2.42.4/docfx.zip
     - unzip docfx.zip
     - mono docfx.exe Gw2Sharp.DocFX/docfx.json
     - mv Gw2Sharp.DocFX/_site doc
