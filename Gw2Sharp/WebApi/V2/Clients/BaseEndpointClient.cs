@@ -5,6 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
+using Gw2Sharp.Extensions;
 using Gw2Sharp.WebApi.Caching;
 using Gw2Sharp.WebApi.V2.Models;
 
@@ -340,6 +341,12 @@ namespace Gw2Sharp.WebApi.V2.Clients
                 throw new ArgumentNullException(nameof(url));
             if (cacheId == null)
                 throw new ArgumentNullException(nameof(cacheId));
+
+            if (this.IsAuthenticated)
+            {
+                // Prepend the cache id with a hash of the access token to make sure that different access tokens will get separately cached
+                cacheId = $"{cacheId.ToString().GetSha1Hash()}_{cacheId}";
+            }
 
             var result = await this.Connection.CacheMethod.GetOrUpdateAsync(this.EndpointPath, cacheId, async () =>
             {
