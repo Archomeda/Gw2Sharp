@@ -50,8 +50,8 @@ namespace Gw2Sharp.WebApi.Http
         {
             using (var cancellationTimeout = new CancellationTokenSource(this.Timeout))
             using (var linkedCancellation = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken, cancellationTimeout.Token))
+            using (var message = new HttpRequestMessage(HttpMethod.Get, request.Url))
             {
-                var message = new HttpRequestMessage(HttpMethod.Get, request.Url);
                 message.Headers.AddRange(request.RequestHeaders);
 
                 Task<HttpResponseMessage>? task = null;
