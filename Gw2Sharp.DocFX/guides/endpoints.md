@@ -11,7 +11,7 @@ For your convenience, the following list gives an overview of the endpoints that
 ------|-------------
 ✔️   | Implemented
 ❌   | Not implemented yet, but is available on API
-❌✨ | Not implemented yet, because it uses the new API versioning system
+❌✨ | Not implemented yet, recent addition to the API
 ✖️   | Missing on API
 ➡️   | Endpoint has moved, will deprecate in the future
 🔑   | Endpoint with authentication
@@ -46,6 +46,7 @@ For your convenience, the following list gives an overview of the endpoints that
  /v2/account/mounts | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.Mounts`](../api/Gw2Sharp.WebApi.V2.Clients.AccountMountsClient.html)
  /v2/account/mounts/skins | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.Mounts.Skins`](../api/Gw2Sharp.WebApi.V2.Clients.AccountMountsSkinsClient.html)
  /v2/account/mounts/types | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.Mounts.Types`](../api/Gw2Sharp.WebApi.V2.Clients.AccountMountsTypesClient.html)
+ /v2/account/novelties | ❌✨ | 
  /v2/account/outfits | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.Outfits`](../api/Gw2Sharp.WebApi.V2.Clients.AccountOutfitsClient.html)
  /v2/account/pvp/heroes | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.Pvp.Heroes`](../api/Gw2Sharp.WebApi.V2.Clients.AccountPvpHeroesClient.html)
  /v2/account/raids | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.Raids`](../api/Gw2Sharp.WebApi.V2.Clients.AccountRaidsClient.html)
@@ -73,6 +74,7 @@ For your convenience, the following list gives an overview of the endpoints that
  /v2/characters/`:id`/equipment | ✔️🔑📆 | [`Gw2WebApiClient.V2.Characters[id].Equipment`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentClient.html)
  /v2/characters/`:id`/heropoints | ✔️🔑📆 | [`Gw2WebApiClient.V2.Characters[id].HeroPoints`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdHeroPointsClient.html)
  /v2/characters/`:id`/inventory | ✔️🔑📆 | [`Gw2WebApiClient.V2.Characters[id].Inventory`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdInventoryClient.html)
+ /v2/characters/`:id`/quests | ❌✨ | 
  /v2/characters/`:id`/recipes | ✔️🔑📆 | [`Gw2WebApiClient.V2.Characters[id].Recipes`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdRecipesClient.html)
  /v2/characters/`:id`/sab | ✔️🔑📆 | [`Gw2WebApiClient.V2.Characters[id].Sab`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdSabClient.html)
  /v2/characters/`:id`/skills | ✔️🔑📆 | [`Gw2WebApiClient.V2.Characters[id].Skills`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdSkillsClient.html)
@@ -139,6 +141,7 @@ For your convenience, the following list gives an overview of the endpoints that
  /v2/mounts | ❌✨ | 
  /v2/mounts/skins | ❌✨ | 
  /v2/mounts/types | ❌✨ | 
+ /v2/novelties | ❌✨ | 
  /v2/outfits | ❌ | 
  /v2/pets | ❌ | 
  /v2/professions | ❌ | 
@@ -155,6 +158,7 @@ For your convenience, the following list gives an overview of the endpoints that
  /v2/pvp/standings | ❌ | 
  /v2/pvp/stats | ❌ | 
  /v2/quaggans | ❌ | 
+ /v2/quests | ❌✨ | 
  /v2/races | ❌✨ | 
  /v2/raids | ❌ | 
  /v2/recipes | ❌ | 
