@@ -25,6 +25,9 @@
     <None Remove="TestFiles\MapChests\MapChests.bulk.json" />
     <None Remove="TestFiles\MapChests\MapChests.ids.json" />
     <None Remove="TestFiles\MapChests\MapChests.single.json" />
+    <None Remove="TestFiles\Maps\Maps.bulk.json" />
+    <None Remove="TestFiles\Maps\Maps.ids.json" />
+    <None Remove="TestFiles\Maps\Maps.single.json" />
     <None Remove="TestFiles\TokenInfo\TokenInfo.ApiToken.json" />
     <None Remove="TestFiles\TokenInfo\TokenInfo.SubToken.json" />
   </ItemGroup>
@@ -76,6 +79,9 @@
     <EmbeddedResource Include="TestFiles\Backstory\BackstoryQuestions.ids.json" />
     <EmbeddedResource Include="TestFiles\Backstory\BackstoryQuestions.single.json" />
     <EmbeddedResource Include="TestFiles\Build\Build.json" />
+    <EmbeddedResource Include="TestFiles\Maps\Maps.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Maps\Maps.ids.json" />
+    <EmbeddedResource Include="TestFiles\Maps\Maps.single.json" />
     <EmbeddedResource Include="TestFiles\MapChests\MapChests.bulk.json" />
     <EmbeddedResource Include="TestFiles\MapChests\MapChests.ids.json" />
     <EmbeddedResource Include="TestFiles\MapChests\MapChests.single.json" />

@@ -1,5 +1,5 @@
-using Gw2Sharp.WebApi.V2;
 using System;
+using Gw2Sharp.WebApi.V2;
 
 namespace Gw2Sharp.WebApi
 {
@@ -11,7 +11,9 @@ namespace Gw2Sharp.WebApi
         /// <summary>
         /// The base URL for making Guild Wars 2 API requests.
         /// </summary>
-        public static readonly Uri UrlBase = new Uri("https://api.guildwars2.com");
+        internal static Uri UrlBase => new Uri("https://api.guildwars2.com");
+
+        private readonly IGw2WebApiV2Client v2;
 
         /// <summary>
         /// Creates a new <see cref="Gw2WebApiClient"/>.
@@ -25,13 +27,13 @@ namespace Gw2Sharp.WebApi
         public Gw2WebApiClient(IConnection connection)
         {
             this.Connection = connection;
-            this.V2 = new Gw2WebApiV2Client(connection);
+            this.v2 = new Gw2WebApiV2Client(connection);
         }
 
         /// <inheritdoc />
         public IConnection Connection { get; private set; }
 
         /// <inheritdoc />
-        public virtual IGw2WebApiV2Client V2 { get; protected set; }
+        public virtual IGw2WebApiV2Client V2 => this.v2;
     }
 }

@@ -1,0 +1,35 @@
+{
+  "id": 1315,
+  "name": "Armistice Bastion",
+  "min_level": 80,
+  "max_level": 80,
+  "default_floor": 3,
+  "type": "Unknown",
+  "floors": [
+    3
+  ],
+  "region_id": 7,
+  "region_name": "World vs. World",
+  "continent_id": 2,
+  "continent_name": "Mists",
+  "map_rect": [
+    [
+      -21504,
+      -21504
+    ],
+    [
+      21504,
+      21504
+    ]
+  ],
+  "continent_rect": [
+    [
+      13798,
+      8646
+    ],
+    [
+      15590,
+      10438
+    ]
+  ]
+}

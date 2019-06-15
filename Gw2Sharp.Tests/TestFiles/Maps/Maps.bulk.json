@@ -1,0 +1,473 @@
+[
+  {
+    "id": 15,
+    "name": "Queensdale",
+    "min_level": 1,
+    "max_level": 15,
+    "default_floor": 1,
+    "type": "Public",
+    "floors": [
+      1,
+      3,
+      2,
+      0
+    ],
+    "region_id": 4,
+    "region_name": "Kryta",
+    "continent_id": 1,
+    "continent_name": "Tyria",
+    "map_rect": [
+      [
+        -43008,
+        -27648
+      ],
+      [
+        43008,
+        30720
+      ]
+    ],
+    "continent_rect": [
+      [
+        9856,
+        11648
+      ],
+      [
+        13440,
+        14080
+      ]
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Eternal Battlegrounds",
+    "min_level": 80,
+    "max_level": 80,
+    "default_floor": 3,
+    "type": "Center",
+    "floors": [
+      1,
+      3
+    ],
+    "region_id": 7,
+    "region_name": "World vs. World",
+    "continent_id": 2,
+    "continent_name": "Mists",
+    "map_rect": [
+      [
+        -36864,
+        -36864
+      ],
+      [
+        36864,
+        36864
+      ]
+    ],
+    "continent_rect": [
+      [
+        8958,
+        12798
+      ],
+      [
+        12030,
+        15870
+      ]
+    ]
+  },
+  {
+    "id": 95,
+    "name": " Alpine Borderlands",
+    "min_level": 80,
+    "max_level": 80,
+    "default_floor": 3,
+    "type": "GreenHome",
+    "floors": [
+      1,
+      3
+    ],
+    "region_id": 7,
+    "region_name": "World vs. World",
+    "continent_id": 2,
+    "continent_name": "Mists",
+    "map_rect": [
+      [
+        -30720,
+        -43008
+      ],
+      [
+        30720,
+        43008
+      ]
+    ],
+    "continent_rect": [
+      [
+        5630,
+        11518
+      ],
+      [
+        8190,
+        15102
+      ]
+    ]
+  },
+  {
+    "id": 96,
+    "name": " Alpine Borderlands",
+    "min_level": 80,
+    "max_level": 80,
+    "default_floor": 3,
+    "type": "BlueHome",
+    "floors": [
+      1,
+      3
+    ],
+    "region_id": 7,
+    "region_name": "World vs. World",
+    "continent_id": 2,
+    "continent_name": "Mists",
+    "map_rect": [
+      [
+        -30720,
+        -43008
+      ],
+      [
+        30720,
+        43008
+      ]
+    ],
+    "continent_rect": [
+      [
+        12798,
+        10878
+      ],
+      [
+        15358,
+        14462
+      ]
+    ]
+  },
+  {
+    "id": 899,
+    "name": "Obsidian Sanctum",
+    "min_level": 80,
+    "max_level": 80,
+    "default_floor": 3,
+    "type": "JumpPuzzle",
+    "floors": [
+      3
+    ],
+    "region_id": 7,
+    "region_name": "World vs. World",
+    "continent_id": 2,
+    "continent_name": "Mists",
+    "map_rect": [
+      [
+        -36864,
+        -36864
+      ],
+      [
+        36864,
+        36864
+      ]
+    ],
+    "continent_rect": [
+      [
+        8958,
+        12798
+      ],
+      [
+        12030,
+        15870
+      ]
+    ]
+  },
+  {
+    "id": 968,
+    "name": "Edge of the Mists",
+    "min_level": 80,
+    "max_level": 80,
+    "default_floor": 3,
+    "type": "EdgeOfTheMists",
+    "floors": [
+      1,
+      3
+    ],
+    "region_id": 7,
+    "region_name": "World vs. World",
+    "continent_id": 2,
+    "continent_name": "Mists",
+    "map_rect": [
+      [
+        -36864,
+        -36864
+      ],
+      [
+        36864,
+        36864
+      ]
+    ],
+    "continent_rect": [
+      [
+        5994,
+        8446
+      ],
+      [
+        9066,
+        11518
+      ]
+    ]
+  },
+  {
+    "id": 1058,
+    "name": "Prologue: Rally to Maguuma",
+    "min_level": 80,
+    "max_level": 80,
+    "default_floor": 1,
+    "type": "Tutorial",
+    "floors": [
+      1
+    ],
+    "region_id": 11,
+    "region_name": "Maguuma Wastes",
+    "continent_id": 1,
+    "continent_name": "Tyria",
+    "map_rect": [
+      [
+        -24576,
+        -18432
+      ],
+      [
+        24576,
+        18432
+      ]
+    ],
+    "continent_rect": [
+      [
+        3840,
+        14208
+      ],
+      [
+        5888,
+        15744
+      ]
+    ]
+  },
+  {
+    "id": 1099,
+    "name": " Desert Borderlands",
+    "min_level": 80,
+    "max_level": 80,
+    "default_floor": 3,
+    "type": "RedHome",
+    "floors": [
+      1,
+      3
+    ],
+    "region_id": 7,
+    "region_name": "World vs. World",
+    "continent_id": 2,
+    "continent_name": "Mists",
+    "map_rect": [
+      [
+        -36864,
+        -36864
+      ],
+      [
+        36864,
+        36864
+      ]
+    ],
+    "continent_rect": [
+      [
+        9214,
+        8958
+      ],
+      [
+        12286,
+        12030
+      ]
+    ]
+  },
+  {
+    "id": 1305,
+    "name": "Beta Djinn's Dominion",
+    "min_level": 0,
+    "max_level": 0,
+    "default_floor": 44,
+    "type": "Pvp",
+    "floors": [
+      1,
+      44
+    ],
+    "region_id": 6,
+    "region_name": "Player vs. Player",
+    "continent_id": 2,
+    "continent_name": "Mists",
+    "map_rect": [
+      [
+        -24576,
+        -12288
+      ],
+      [
+        24576,
+        12288
+      ]
+    ],
+    "continent_rect": [
+      [
+        11812,
+        5488
+      ],
+      [
+        13860,
+        6512
+      ]
+    ]
+  },
+  {
+    "id": 1315,
+    "name": "Armistice Bastion",
+    "min_level": 80,
+    "max_level": 80,
+    "default_floor": 3,
+    "type": "Unknown",
+    "floors": [
+      3
+    ],
+    "region_id": 7,
+    "region_name": "World vs. World",
+    "continent_id": 2,
+    "continent_name": "Mists",
+    "map_rect": [
+      [
+        -21504,
+        -21504
+      ],
+      [
+        21504,
+        21504
+      ]
+    ],
+    "continent_rect": [
+      [
+        13798,
+        8646
+      ],
+      [
+        15590,
+        10438
+      ]
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Blazeridge Steppes",
+    "min_level": 40,
+    "max_level": 50,
+    "default_floor": 1,
+    "type": "Public",
+    "floors": [
+      1,
+      3,
+      2,
+      0
+    ],
+    "region_id": 2,
+    "region_name": "Ascalon",
+    "continent_id": 1,
+    "continent_name": "Tyria",
+    "map_rect": [
+      [
+        -24576,
+        -49152
+      ],
+      [
+        24576,
+        49152
+      ]
+    ],
+    "continent_rect": [
+      [
+        29184,
+        12160
+      ],
+      [
+        31232,
+        16256
+      ]
+    ]
+  },
+  {
+    "id": 1322,
+    "name": "Epilogue",
+    "min_level": 80,
+    "max_level": 80,
+    "default_floor": 54,
+    "type": "Instance",
+    "floors": [
+      54
+    ],
+    "region_id": 12,
+    "region_name": "Crystal Desert",
+    "continent_id": 1,
+    "continent_name": "Tyria",
+    "map_rect": [
+      [
+        -9216,
+        -9216
+      ],
+      [
+        9216,
+        9216
+      ]
+    ],
+    "continent_rect": [
+      [
+        12870,
+        30751
+      ],
+      [
+        13638,
+        31519
+      ]
+    ]
+  },
+  {
+    "id": 1323,
+    "name": "The Key of Ahdashim",
+    "min_level": 80,
+    "max_level": 80,
+    "default_floor": 1,
+    "type": "Instance",
+    "floors": [
+      1,
+      3,
+      49,
+      2,
+      0
+    ],
+    "region_id": 12,
+    "region_name": "Crystal Desert",
+    "continent_id": 1,
+    "continent_name": "Tyria",
+    "map_rect": [
+      [
+        -21504,
+        -21504
+      ],
+      [
+        24576,
+        24576
+      ]
+    ],
+    "continent_rect": [
+      [
+        33530,
+        34050
+      ],
+      [
+        35450,
+        35970
+      ]
+    ]
+  }
+]

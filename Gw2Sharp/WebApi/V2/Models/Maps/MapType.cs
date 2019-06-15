@@ -50,7 +50,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         Tournament = 6,
 
         /// <summary>
-        /// Tutorial map type. Probably unused.
+        /// Tutorial map type.
         /// </summary>
         Tutorial = 7,
 
@@ -67,7 +67,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// Eternal Battlegrounds (WvW) map type.
         /// </summary>
-        EternalBattlegrouns = Center,
+        EternalBattlegrounds = Center,
 
         /// <summary>
         /// Blue Borderlands (WvW) map type.

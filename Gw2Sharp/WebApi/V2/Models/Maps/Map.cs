@@ -7,8 +7,13 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents a map.
     /// </summary>
-    public class Map : IIdentifiable<int>
+    public class Map : ApiV2BaseObject, IIdentifiable<int>
     {
+        /// <summary>
+        /// The map id.
+        /// </summary>
+        public int Id { get; set; }
+
         /// <summary>
         /// The map name.
         /// </summary>
@@ -70,10 +75,5 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// </summary>
         [JsonConverter(typeof(TopDownRectangleConverter))]
         public Rectangle ContinentRect { get; set; }
-
-        /// <summary>
-        /// The map id.
-        /// </summary>
-        public int Id { get; set; }
     }
 }

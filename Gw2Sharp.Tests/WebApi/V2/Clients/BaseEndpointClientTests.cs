@@ -316,11 +316,12 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                     break;
                 case ApiEnum @enum:
                     Assert.Equal(expected.Value<string>(), @enum.RawValue);
-                    Assert.False(@enum.Value.ToString() == "Unknown", $"Expected {expected} to be a value in enumerator {@enum.Value.GetType().Name}");
                     var typeInfo = @enum.GetType().GetTypeInfo();
                     if (typeInfo.IsGenericType && typeInfo.GenericTypeArguments.Length > 0)
                     {
                         var enumType = typeInfo.GenericTypeArguments[0];
+                        string[] enumNames = Enum.GetNames(enumType);
+                        Assert.True(enumNames.Contains(@enum.RawValue), $"Expected {expected} to be a value in enumerator {@enum.Value.GetType().Name}");
                         Assert.Equal(expected.Value<string>().ParseEnum(enumType), @enum.Value);
                     }
                     else
