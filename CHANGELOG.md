@@ -6,6 +6,9 @@
 - Add `/v2/maps`
 - Add `/v2/worldbosses`
 
+### Fixes
+- Fix `ApiEnum<T>.IsUnknown` detection when the API uses snake_case or camelCase enums instead of PascalCase
+
 ### Refactoring
 - **Breaking:** Various endpoint clients with child endpoint clients and/or extra parameters have had their virtual property setters removed; you can still override the property for customization however
   (reason: it's discouraged to call virtual methods or set virtual properties from a constructor in a non-sealed class)

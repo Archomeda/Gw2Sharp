@@ -27,7 +27,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// If true, <see cref="RawValue" /> will contain the actual value whereas <see cref="Value" /> will have the default
         /// value.
         /// </summary>
-        public bool IsUnknown => !string.Equals(this.Value.ToString(), this.RawValue);
+        public bool IsUnknown => !string.Equals(this.Value.ToString(), this.RawValue.Replace("_", ""), StringComparison.OrdinalIgnoreCase);
 
         /// <summary>
         /// The actual enum value as interpreted by the library.

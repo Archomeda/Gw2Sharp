@@ -51,6 +51,12 @@ namespace Gw2Sharp.Tests.WebApi.V2.Models
 
             wrapper = new ApiEnum<TestEnum>(TestEnum.EnumValue1, TestEnum.EnumValue1.ToString());
             Assert.False(wrapper.IsUnknown);
+
+            wrapper = new ApiEnum<TestEnum>(TestEnum.EnumValue1, "enumValue1");
+            Assert.False(wrapper.IsUnknown);
+
+            wrapper = new ApiEnum<TestEnum>(TestEnum.EnumValue1, "enum_value_1");
+            Assert.False(wrapper.IsUnknown);
         }
 
         [Fact]
