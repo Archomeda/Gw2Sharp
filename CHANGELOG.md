@@ -2,6 +2,7 @@
 
 ## 0.4.0
 ### Endpoints
+- Add `/v2/account/novelties`
 - Add `/v2/mapchests`
 - Add `/v2/maps`
 - Add `/v2/worldbosses`

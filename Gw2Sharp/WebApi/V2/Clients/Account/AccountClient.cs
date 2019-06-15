@@ -29,6 +29,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         private readonly IAccountMaterialsClient materials;
         private readonly IAccountMinisClient minis;
         private readonly IAccountMountsClient mounts;
+        private readonly IAccountNoveltiesClient novelties;
         private readonly IAccountOutfitsClient outfits;
         private readonly IAccountPvpClient pvp;
         private readonly IAccountRaidsClient raids;
@@ -66,6 +67,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
             this.materials = new AccountMaterialsClient(connection);
             this.minis = new AccountMinisClient(connection);
             this.mounts = new AccountMountsClient(connection);
+            this.novelties = new AccountNoveltiesClient(connection);
             this.outfits = new AccountOutfitsClient(connection);
             this.pvp = new AccountPvpClient(connection);
             this.raids = new AccountRaidsClient(connection);
@@ -126,6 +128,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
 
         /// <inheritdoc />
         public virtual IAccountMountsClient Mounts => this.mounts;
+
+        /// <inheritdoc />
+        public virtual IAccountNoveltiesClient Novelties => this.novelties;
 
         /// <inheritdoc />
         public virtual IAccountOutfitsClient Outfits => this.outfits;

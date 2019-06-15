@@ -46,7 +46,7 @@ For your convenience, the following list gives an overview of the endpoints that
  /v2/account/mounts | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.Mounts`](../api/Gw2Sharp.WebApi.V2.Clients.AccountMountsClient.html)
  /v2/account/mounts/skins | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.Mounts.Skins`](../api/Gw2Sharp.WebApi.V2.Clients.AccountMountsSkinsClient.html)
  /v2/account/mounts/types | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.Mounts.Types`](../api/Gw2Sharp.WebApi.V2.Clients.AccountMountsTypesClient.html)
- /v2/account/novelties | ❌✨ |
+ /v2/account/novelties | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.Novelties.Types`](../api/Gw2Sharp.WebApi.V2.Clients.AccountNoveltiesClient.html)
  /v2/account/outfits | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.Outfits`](../api/Gw2Sharp.WebApi.V2.Clients.AccountOutfitsClient.html)
  /v2/account/pvp/heroes | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.Pvp.Heroes`](../api/Gw2Sharp.WebApi.V2.Clients.AccountPvpHeroesClient.html)
  /v2/account/raids | ✔️🔑📆 | [`Gw2WebApiClient.V2.Account.Raids`](../api/Gw2Sharp.WebApi.V2.Clients.AccountRaidsClient.html)

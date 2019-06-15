@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFrameworks>netcoreapp3.0</TargetFrameworks>
@@ -28,6 +28,7 @@
     <None Remove="TestFiles\Account\AccountMinis.json" />
     <None Remove="TestFiles\Account\AccountMountsSkins.json" />
     <None Remove="TestFiles\Account\AccountMountsTypes.json" />
+    <None Remove="TestFiles\Account\AccountNovelties.json" />
     <None Remove="TestFiles\Account\AccountOutfits.json" />
     <None Remove="TestFiles\Account\AccountPvpHeroes.json" />
     <None Remove="TestFiles\Account\AccountRaids.json" />
@@ -194,6 +195,7 @@
     <EmbeddedResource Include="TestFiles\Account\AccountMinis.json" />
     <EmbeddedResource Include="TestFiles\Account\AccountMountsSkins.json" />
     <EmbeddedResource Include="TestFiles\Account\AccountMountsTypes.json" />
+    <EmbeddedResource Include="TestFiles\Account\AccountNovelties.json" />
     <EmbeddedResource Include="TestFiles\Account\AccountOutfits.json" />
     <EmbeddedResource Include="TestFiles\Account\AccountPvpHeroes.json" />
     <EmbeddedResource Include="TestFiles\Account\AccountRaids.json" />

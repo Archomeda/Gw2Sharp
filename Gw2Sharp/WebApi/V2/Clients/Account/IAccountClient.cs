@@ -116,6 +116,13 @@ namespace Gw2Sharp.WebApi.V2.Clients
         IAccountMountsClient Mounts { get; }
 
         /// <summary>
+        /// Gets the novelties.
+        /// Each element can be resolved against <see cref="IGw2WebApiV2Client.Novelties"/>.
+        /// Requires scopes: account, unlocks.
+        /// </summary>
+        IAccountNoveltiesClient Novelties { get; }
+
+        /// <summary>
         /// Gets the unlocked outfits.
         /// Each element can be resolved against <see cref="IGw2WebApiV2Client.Outfits"/>.
         /// Requires scopes: account, unlocks.
