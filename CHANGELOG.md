@@ -3,6 +3,7 @@
 ## 0.4.0
 ### Endpoints
 - Add `/v2/mapchests`
+- Add `/v2/maps`
 
 ### Refactoring
 - **Breaking:** Various endpoint clients with child endpoint clients and/or extra parameters have had their virtual property setters removed; you can still override the property for customization however
