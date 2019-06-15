@@ -47,6 +47,7 @@ namespace Gw2Sharp.WebApi.V2
             this.Items = new ItemsClient(connection);
             this.Itemstats = new ItemstatsClient(connection);
             this.Legends = new LegendsClient(connection);
+            this.MapChests = new MapChestsClient(connection);
             this.TokenInfo = new TokenInfoClient(connection);
         }
 
@@ -115,6 +116,9 @@ namespace Gw2Sharp.WebApi.V2
 
         /// <inheritdoc />
         public virtual ILegendsClient Legends { get; protected set; }
+
+        /// <inheritdoc />
+        public virtual IMapChestsClient MapChests { get; protected set; }
 
         /// <inheritdoc />
         public virtual ITokenInfoClient TokenInfo { get; protected set; }

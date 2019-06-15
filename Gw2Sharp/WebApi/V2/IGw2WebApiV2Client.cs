@@ -120,6 +120,11 @@ namespace Gw2Sharp.WebApi.V2
         ILegendsClient Legends { get; }
 
         /// <summary>
+        /// Gets the map chests.
+        /// </summary>
+        IMapChestsClient MapChests { get; }
+
+        /// <summary>
         /// Gets the token info.
         /// </summary>
         ITokenInfoClient TokenInfo { get; }

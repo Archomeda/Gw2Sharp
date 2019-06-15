@@ -1,5 +1,9 @@
 # Gw2Sharp History
 
+## 0.3.2
+### Endpoints
+- Add `/v2/mapchests`
+
 ## 0.3.1
 ### Fixes
 - Don't leak cached authenticated requests ([#1](https://github.com/Archomeda/Gw2Sharp/issues/1))
