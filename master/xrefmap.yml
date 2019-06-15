@@ -10593,6 +10593,12 @@ references:
   commentId: T:Gw2Sharp.WebApi.V2.Clients.ITokenInfoClient
   fullName: Gw2Sharp.WebApi.V2.Clients.ITokenInfoClient
   nameWithType: ITokenInfoClient
+- uid: Gw2Sharp.WebApi.V2.Clients.IWorldBossesClient
+  name: IWorldBossesClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.IWorldBossesClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.IWorldBossesClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.IWorldBossesClient
+  nameWithType: IWorldBossesClient
 - uid: Gw2Sharp.WebApi.V2.Clients.LegendsClient
   name: LegendsClient
   href: api/Gw2Sharp.WebApi.V2.Clients.LegendsClient.html
@@ -10669,6 +10675,25 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.TokenInfoClient.TokenInfoClient
   nameWithType: TokenInfoClient.TokenInfoClient
+- uid: Gw2Sharp.WebApi.V2.Clients.WorldBossesClient
+  name: WorldBossesClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.WorldBossesClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.WorldBossesClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.WorldBossesClient
+  nameWithType: WorldBossesClient
+- uid: Gw2Sharp.WebApi.V2.Clients.WorldBossesClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  name: WorldBossesClient(IConnection)
+  href: api/Gw2Sharp.WebApi.V2.Clients.WorldBossesClient.html#Gw2Sharp_WebApi_V2_Clients_WorldBossesClient__ctor_Gw2Sharp_WebApi_IConnection_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.WorldBossesClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  fullName: Gw2Sharp.WebApi.V2.Clients.WorldBossesClient.WorldBossesClient(Gw2Sharp.WebApi.IConnection)
+  nameWithType: WorldBossesClient.WorldBossesClient(IConnection)
+- uid: Gw2Sharp.WebApi.V2.Clients.WorldBossesClient.#ctor*
+  name: WorldBossesClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.WorldBossesClient.html#Gw2Sharp_WebApi_V2_Clients_WorldBossesClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.WorldBossesClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.WorldBossesClient.WorldBossesClient
+  nameWithType: WorldBossesClient.WorldBossesClient
 - uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client
   name: Gw2WebApiV2Client
   href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html
@@ -11019,6 +11044,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.TokenInfo
   nameWithType: Gw2WebApiV2Client.TokenInfo
+- uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.WorldBosses
+  name: WorldBosses
+  href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_WorldBosses
+  commentId: P:Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.WorldBosses
+  fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.WorldBosses
+  nameWithType: Gw2WebApiV2Client.WorldBosses
+- uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.WorldBosses*
+  name: WorldBosses
+  href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_WorldBosses_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.WorldBosses
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.WorldBosses
+  nameWithType: Gw2WebApiV2Client.WorldBosses
 - uid: Gw2Sharp.WebApi.V2.IApiV2Object
   name: IApiV2Object
   href: api/Gw2Sharp.WebApi.V2.IApiV2Object.html
@@ -11378,6 +11416,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.TokenInfo
   nameWithType: IGw2WebApiV2Client.TokenInfo
+- uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.WorldBosses
+  name: WorldBosses
+  href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_WorldBosses
+  commentId: P:Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.WorldBosses
+  fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.WorldBosses
+  nameWithType: IGw2WebApiV2Client.WorldBosses
+- uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.WorldBosses*
+  name: WorldBosses
+  href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_WorldBosses_
+  commentId: Overload:Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.WorldBosses
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.WorldBosses
+  nameWithType: IGw2WebApiV2Client.WorldBosses
 - uid: Gw2Sharp.WebApi.V2.Models
   name: Gw2Sharp.WebApi.V2.Models
   href: api/Gw2Sharp.WebApi.V2.Models.html
@@ -24312,3 +24363,22 @@ references:
   commentId: F:Gw2Sharp.WebApi.V2.Models.WeaponDamageType.Unknown
   fullName: Gw2Sharp.WebApi.V2.Models.WeaponDamageType.Unknown
   nameWithType: WeaponDamageType.Unknown
+- uid: Gw2Sharp.WebApi.V2.Models.WorldBoss
+  name: WorldBoss
+  href: api/Gw2Sharp.WebApi.V2.Models.WorldBoss.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.WorldBoss
+  fullName: Gw2Sharp.WebApi.V2.Models.WorldBoss
+  nameWithType: WorldBoss
+- uid: Gw2Sharp.WebApi.V2.Models.WorldBoss.Id
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.WorldBoss.html#Gw2Sharp_WebApi_V2_Models_WorldBoss_Id
+  commentId: P:Gw2Sharp.WebApi.V2.Models.WorldBoss.Id
+  fullName: Gw2Sharp.WebApi.V2.Models.WorldBoss.Id
+  nameWithType: WorldBoss.Id
+- uid: Gw2Sharp.WebApi.V2.Models.WorldBoss.Id*
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.WorldBoss.html#Gw2Sharp_WebApi_V2_Models_WorldBoss_Id_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.WorldBoss.Id
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.WorldBoss.Id
+  nameWithType: WorldBoss.Id
