@@ -12,6 +12,32 @@ namespace Gw2Sharp.WebApi.V2.Clients
     [EndpointSchemaVersion("2019-02-21T00:00:00.000Z")]
     public class AccountClient : BaseEndpointClient<Account>, IAccountClient
     {
+        private readonly IAccountAchievementsClient achievements;
+        private readonly IAccountBankClient bank;
+        private readonly IAccountDailyCraftingClient dailyCrafting;
+        private readonly IAccountDungeonsClient dungeons;
+        private readonly IAccountDyesClient dyes;
+        private readonly IAccountFinishersClient finishers;
+        private readonly IAccountGlidersClient gliders;
+        private readonly IAccountHomeClient home;
+        private readonly IAccountInventoryClient inventory;
+        private readonly IAccountLuckClient luck;
+        private readonly IAccountMailCarriersClient mailCarriers;
+        private readonly IAccountMapChestsClient mapChests;
+        private readonly IAccountMasteriesClient masteries;
+        private readonly IAccountMasteryClient mastery;
+        private readonly IAccountMaterialsClient materials;
+        private readonly IAccountMinisClient minis;
+        private readonly IAccountMountsClient mounts;
+        private readonly IAccountOutfitsClient outfits;
+        private readonly IAccountPvpClient pvp;
+        private readonly IAccountRaidsClient raids;
+        private readonly IAccountRecipesClient recipes;
+        private readonly IAccountSkinsClient skins;
+        private readonly IAccountTitlesClient titles;
+        private readonly IAccountWalletClient wallet;
+        private readonly IAccountWorldBossesClient worldBosses;
+
         /// <summary>
         /// Creates a new <see cref="AccountClient"/> that is used for the API v2 account endpoint.
         /// </summary>
@@ -23,107 +49,107 @@ namespace Gw2Sharp.WebApi.V2.Clients
             if (connection == null)
                 throw new ArgumentNullException(nameof(connection));
 
-            this.Achievements = new AccountAchievementsClient(connection);
-            this.Bank = new AccountBankClient(connection);
-            this.DailyCrafting = new AccountDailyCraftingClient(connection);
-            this.Dungeons = new AccountDungeonsClient(connection);
-            this.Dyes = new AccountDyesClient(connection);
-            this.Finishers = new AccountFinishersClient(connection);
-            this.Gliders = new AccountGlidersClient(connection);
-            this.Home = new AccountHomeClient(connection);
-            this.Inventory = new AccountInventoryClient(connection);
-            this.Luck = new AccountLuckClient(connection);
-            this.MailCarriers = new AccountMailCarriersClient(connection);
-            this.MapChests = new AccountMapChestsClient(connection);
-            this.Masteries = new AccountMasteriesClient(connection);
-            this.Mastery = new AccountMasteryClient(connection);
-            this.Materials = new AccountMaterialsClient(connection);
-            this.Minis = new AccountMinisClient(connection);
-            this.Mounts = new AccountMountsClient(connection);
-            this.Outfits = new AccountOutfitsClient(connection);
-            this.Pvp = new AccountPvpClient(connection);
-            this.Raids = new AccountRaidsClient(connection);
-            this.Recipes = new AccountRecipesClient(connection);
-            this.Skins = new AccountSkinsClient(connection);
-            this.Titles = new AccountTitlesClient(connection);
-            this.Wallet = new AccountWalletClient(connection);
-            this.WorldBosses = new AccountWorldBossesClient(connection);
+            this.achievements = new AccountAchievementsClient(connection);
+            this.bank = new AccountBankClient(connection);
+            this.dailyCrafting = new AccountDailyCraftingClient(connection);
+            this.dungeons = new AccountDungeonsClient(connection);
+            this.dyes = new AccountDyesClient(connection);
+            this.finishers = new AccountFinishersClient(connection);
+            this.gliders = new AccountGlidersClient(connection);
+            this.home = new AccountHomeClient(connection);
+            this.inventory = new AccountInventoryClient(connection);
+            this.luck = new AccountLuckClient(connection);
+            this.mailCarriers = new AccountMailCarriersClient(connection);
+            this.mapChests = new AccountMapChestsClient(connection);
+            this.masteries = new AccountMasteriesClient(connection);
+            this.mastery = new AccountMasteryClient(connection);
+            this.materials = new AccountMaterialsClient(connection);
+            this.minis = new AccountMinisClient(connection);
+            this.mounts = new AccountMountsClient(connection);
+            this.outfits = new AccountOutfitsClient(connection);
+            this.pvp = new AccountPvpClient(connection);
+            this.raids = new AccountRaidsClient(connection);
+            this.recipes = new AccountRecipesClient(connection);
+            this.skins = new AccountSkinsClient(connection);
+            this.titles = new AccountTitlesClient(connection);
+            this.wallet = new AccountWalletClient(connection);
+            this.worldBosses = new AccountWorldBossesClient(connection);
         }
 
         /// <inheritdoc />
-        public virtual IAccountAchievementsClient Achievements { get; protected set; }
+        public virtual IAccountAchievementsClient Achievements => this.achievements;
 
         /// <inheritdoc />
-        public virtual IAccountBankClient Bank { get; protected set; }
+        public virtual IAccountBankClient Bank => this.bank;
 
         /// <inheritdoc />
-        public virtual IAccountDailyCraftingClient DailyCrafting { get; protected set; }
+        public virtual IAccountDailyCraftingClient DailyCrafting => this.dailyCrafting;
 
         /// <inheritdoc />
-        public virtual IAccountDungeonsClient Dungeons { get; protected set; }
+        public virtual IAccountDungeonsClient Dungeons => this.dungeons;
 
         /// <inheritdoc />
-        public virtual IAccountDyesClient Dyes { get; protected set; }
+        public virtual IAccountDyesClient Dyes => this.dyes;
 
         /// <inheritdoc />
-        public virtual IAccountFinishersClient Finishers { get; protected set; }
+        public virtual IAccountFinishersClient Finishers => this.finishers;
 
         /// <inheritdoc />
-        public virtual IAccountGlidersClient Gliders { get; protected set; }
+        public virtual IAccountGlidersClient Gliders => this.gliders;
 
         /// <inheritdoc />
-        public virtual IAccountHomeClient Home { get; protected set; }
+        public virtual IAccountHomeClient Home => this.home;
 
         /// <inheritdoc />
-        public virtual IAccountInventoryClient Inventory { get; protected set; }
+        public virtual IAccountInventoryClient Inventory => this.inventory;
 
         /// <inheritdoc />
-        public virtual IAccountLuckClient Luck { get; protected set; }
+        public virtual IAccountLuckClient Luck => this.luck;
 
         /// <inheritdoc />
-        public virtual IAccountMailCarriersClient MailCarriers { get; protected set; }
+        public virtual IAccountMailCarriersClient MailCarriers => this.mailCarriers;
 
         /// <inheritdoc />
-        public virtual IAccountMapChestsClient MapChests { get; protected set; }
+        public virtual IAccountMapChestsClient MapChests => this.mapChests;
 
         /// <inheritdoc />
-        public virtual IAccountMasteriesClient Masteries { get; protected set; }
+        public virtual IAccountMasteriesClient Masteries => this.masteries;
 
         /// <inheritdoc />
-        public virtual IAccountMasteryClient Mastery { get; protected set; }
+        public virtual IAccountMasteryClient Mastery => this.mastery;
 
         /// <inheritdoc />
-        public virtual IAccountMaterialsClient Materials { get; protected set; }
+        public virtual IAccountMaterialsClient Materials => this.materials;
 
         /// <inheritdoc />
-        public virtual IAccountMinisClient Minis { get; protected set; }
+        public virtual IAccountMinisClient Minis => this.minis;
 
         /// <inheritdoc />
-        public virtual IAccountMountsClient Mounts { get; protected set; }
+        public virtual IAccountMountsClient Mounts => this.mounts;
 
         /// <inheritdoc />
-        public virtual IAccountOutfitsClient Outfits { get; protected set; }
+        public virtual IAccountOutfitsClient Outfits => this.outfits;
 
         /// <inheritdoc />
-        public virtual IAccountPvpClient Pvp { get; protected set; }
+        public virtual IAccountPvpClient Pvp => this.pvp;
 
         /// <inheritdoc />
-        public virtual IAccountRaidsClient Raids { get; protected set; }
+        public virtual IAccountRaidsClient Raids => this.raids;
 
         /// <inheritdoc />
-        public virtual IAccountRecipesClient Recipes { get; protected set; }
+        public virtual IAccountRecipesClient Recipes => this.recipes;
 
         /// <inheritdoc />
-        public virtual IAccountSkinsClient Skins { get; protected set; }
+        public virtual IAccountSkinsClient Skins => this.skins;
 
         /// <inheritdoc />
-        public virtual IAccountTitlesClient Titles { get; protected set; }
+        public virtual IAccountTitlesClient Titles => this.titles;
 
         /// <inheritdoc />
-        public virtual IAccountWalletClient Wallet { get; protected set; }
+        public virtual IAccountWalletClient Wallet => this.wallet;
 
         /// <inheritdoc />
-        public virtual IAccountWorldBossesClient WorldBosses { get; protected set; }
+        public virtual IAccountWorldBossesClient WorldBosses => this.worldBosses;
 
 
         /// <inheritdoc />

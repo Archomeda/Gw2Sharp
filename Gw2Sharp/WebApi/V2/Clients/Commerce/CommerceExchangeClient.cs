@@ -8,6 +8,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
     [EndpointPath("commerce/exchange")]
     public class CommerceExchangeClient : BaseClient, ICommerceExchangeClient
     {
+        private readonly ICommerceExchangeCoinsClient coins;
+        private readonly ICommerceExchangeGemsClient gems;
+
         /// <summary>
         /// Creates a new <see cref="CommerceExchangeClient"/> that is used for the API v2 commerce exchange endpoint.
         /// </summary>
@@ -16,14 +19,14 @@ namespace Gw2Sharp.WebApi.V2.Clients
         public CommerceExchangeClient(IConnection connection) :
             base(connection)
         {
-            this.Coins = new CommerceExchangeCoinsClient(connection);
-            this.Gems = new CommerceExchangeGemsClient(connection);
+            this.coins = new CommerceExchangeCoinsClient(connection);
+            this.gems = new CommerceExchangeGemsClient(connection);
         }
 
         /// <inheritdoc />
-        public virtual ICommerceExchangeCoinsClient Coins { get; protected set; }
+        public virtual ICommerceExchangeCoinsClient Coins => this.coins;
 
         /// <inheritdoc />
-        public virtual ICommerceExchangeGemsClient Gems { get; protected set; }
+        public virtual ICommerceExchangeGemsClient Gems => this.gems;
     }
 }

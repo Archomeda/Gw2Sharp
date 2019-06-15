@@ -8,6 +8,12 @@ namespace Gw2Sharp.WebApi.V2.Clients
     [EndpointPath("commerce")]
     public class CommerceClient : BaseClient, ICommerceClient
     {
+        private readonly ICommerceDeliveryClient delivery;
+        private readonly ICommerceExchangeClient exchange;
+        private readonly ICommerceListingsClient listings;
+        private readonly ICommercePricesClient prices;
+        private readonly ICommerceTransactionsClient transactions;
+
         /// <summary>
         /// Creates a new <see cref="CommerceClient"/> that is used for the API v2 commerce endpoint.
         /// </summary>
@@ -16,26 +22,26 @@ namespace Gw2Sharp.WebApi.V2.Clients
         public CommerceClient(IConnection connection) :
             base(connection)
         {
-            this.Delivery = new CommerceDeliveryClient(connection);
-            this.Exchange = new CommerceExchangeClient(connection);
-            this.Listings = new CommerceListingsClient(connection);
-            this.Prices = new CommercePricesClient(connection);
-            this.Transactions = new CommerceTransactionsClient(connection);
+            this.delivery = new CommerceDeliveryClient(connection);
+            this.exchange = new CommerceExchangeClient(connection);
+            this.listings = new CommerceListingsClient(connection);
+            this.prices = new CommercePricesClient(connection);
+            this.transactions = new CommerceTransactionsClient(connection);
         }
 
         /// <inheritdoc />
-        public virtual ICommerceDeliveryClient Delivery { get; protected set; }
+        public virtual ICommerceDeliveryClient Delivery => this.delivery;
 
         /// <inheritdoc />
-        public virtual ICommerceExchangeClient Exchange { get; protected set; }
+        public virtual ICommerceExchangeClient Exchange => this.exchange;
 
         /// <inheritdoc />
-        public virtual ICommerceListingsClient Listings { get; protected set; }
+        public virtual ICommerceListingsClient Listings => this.listings;
 
         /// <inheritdoc />
-        public virtual ICommercePricesClient Prices { get; protected set; }
+        public virtual ICommercePricesClient Prices => this.prices;
 
         /// <inheritdoc />
-        public virtual ICommerceTransactionsClient Transactions { get; protected set; }
+        public virtual ICommerceTransactionsClient Transactions => this.transactions;
     }
 }

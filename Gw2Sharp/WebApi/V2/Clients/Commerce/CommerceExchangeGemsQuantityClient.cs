@@ -9,6 +9,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
     [EndpointPath("commerce/exchange/gems")]
     public class CommerceExchangeGemsQuantityClient : BaseEndpointBlobClient<CommerceExchangeGems>, ICommerceExchangeGemsQuantityClient
     {
+        private readonly int quantity;
+
         /// <summary>
         /// Creates a new <see cref="CommerceExchangeGemsQuantityClient"/> that is used for the API v2 commerce exchange gems with quantity endpoint.
         /// </summary>
@@ -18,11 +20,11 @@ namespace Gw2Sharp.WebApi.V2.Clients
         public CommerceExchangeGemsQuantityClient(IConnection connection, int quantity) :
             base(connection)
         {
-            this.Quantity = quantity;
+            this.quantity = quantity;
         }
 
         /// <inheritdoc />
         [EndpointPathParameter("quantity")]
-        public virtual int Quantity { get; protected set; }
+        public virtual int Quantity => this.quantity;
     }
 }

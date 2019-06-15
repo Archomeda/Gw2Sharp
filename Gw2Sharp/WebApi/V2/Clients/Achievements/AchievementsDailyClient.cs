@@ -10,6 +10,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
     [EndpointSchemaVersion("2019-05-16T00:00:00.000Z")]
     public class AchievementsDailyClient : BaseEndpointBlobClient<AchievementsDaily>, IAchievementsDailyClient
     {
+        private readonly IAchievementsDailyTomorrowClient tomorrow;
+
         /// <summary>
         /// Creates a new <see cref="AchievementsDailyClient"/> that is used for the API v2 achievements daily endpoint.
         /// </summary>
@@ -18,10 +20,10 @@ namespace Gw2Sharp.WebApi.V2.Clients
         public AchievementsDailyClient(IConnection connection) :
             base(connection)
         {
-            this.Tomorrow = new AchievementsDailyTomorrowClient(connection);
+            this.tomorrow = new AchievementsDailyTomorrowClient(connection);
         }
 
         /// <inheritdoc />
-        public virtual IAchievementsDailyTomorrowClient Tomorrow { get; protected set; }
+        public virtual IAchievementsDailyTomorrowClient Tomorrow => this.tomorrow;
     }
 }

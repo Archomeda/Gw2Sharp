@@ -8,6 +8,11 @@ namespace Gw2Sharp.WebApi.V2.Clients
     [EndpointPath("continents/:continent_id/floors/:floor_id/regions/:region_id")]
     public class ContinentsFloorsRegionsIdClient : BaseClient, IContinentsFloorsRegionsIdClient
     {
+        private readonly int continentId;
+        private readonly int floorId;
+        private readonly int regionId;
+        private readonly IContinentsFloorsRegionsMapsClient maps;
+
         /// <summary>
         /// Creates a new <see cref="ContinentsFloorsRegionsIdClient"/> that is used for the API v2 continents floors regions id endpoint.
         /// </summary>
@@ -19,22 +24,22 @@ namespace Gw2Sharp.WebApi.V2.Clients
         public ContinentsFloorsRegionsIdClient(IConnection connection, int continentId, int floorId, int regionId) :
             base(connection)
         {
-            this.ContinentId = continentId;
-            this.FloorId = floorId;
-            this.RegionId = regionId;
-            this.Maps = new ContinentsFloorsRegionsMapsClient(connection, continentId, floorId, regionId);
+            this.continentId = continentId;
+            this.floorId = floorId;
+            this.regionId = regionId;
+            this.maps = new ContinentsFloorsRegionsMapsClient(connection, continentId, floorId, regionId);
         }
 
         /// <inheritdoc />
-        public virtual int ContinentId { get; protected set; }
+        public virtual int ContinentId => this.continentId;
 
         /// <inheritdoc />
-        public virtual int FloorId { get; protected set; }
+        public virtual int FloorId => this.floorId;
 
         /// <inheritdoc />
-        public virtual int RegionId { get; protected set; }
+        public virtual int RegionId => this.regionId;
 
         /// <inheritdoc />
-        public virtual IContinentsFloorsRegionsMapsClient Maps { get; protected set; }
+        public virtual IContinentsFloorsRegionsMapsClient Maps => this.maps;
     }
 }

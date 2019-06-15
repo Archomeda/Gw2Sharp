@@ -8,6 +8,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
     [EndpointPath("account/mastery")]
     public class AccountMasteryClient : BaseClient, IAccountMasteryClient
     {
+        private readonly IAccountMasteryPointsClient points;
+
         /// <summary>
         /// Creates a new <see cref="AccountMasteriesClient"/> that is used for the API v2 account masteries endpoint.
         /// </summary>
@@ -16,10 +18,10 @@ namespace Gw2Sharp.WebApi.V2.Clients
         public AccountMasteryClient(IConnection connection) :
             base(connection)
         {
-            this.Points = new AccountMasteryPointsClient(connection);
+            this.points = new AccountMasteryPointsClient(connection);
         }
 
         /// <inheritdoc />
-        public virtual IAccountMasteryPointsClient Points { get; protected set; }
+        public virtual IAccountMasteryPointsClient Points => this.points;
     }
 }

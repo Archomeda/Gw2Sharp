@@ -10,6 +10,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
     [EndpointPathSegment("id", 0)]
     public class GuildIdLogClient : BaseEndpointBlobClient<IApiV2ObjectList<GuildLog>>, IGuildIdLogClient
     {
+        private readonly Guid guildId;
+
         /// <summary>
         /// Creates a new <see cref="GuildIdLogClient"/> that is used for the API v2 guild id log endpoint.
         /// </summary>
@@ -19,15 +21,15 @@ namespace Gw2Sharp.WebApi.V2.Clients
         public GuildIdLogClient(IConnection connection, Guid guildId) :
             base(connection)
         {
-            this.GuildId = guildId;
+            this.guildId = guildId;
         }
 
         /// <inheritdoc />
-        public virtual Guid GuildId { get; protected set; }
+        public virtual Guid GuildId => this.guildId;
 
         /// <inheritdoc />
         [EndpointPathParameter("since")]
-        public virtual int? ParamSince { get; set; }
+        public int? ParamSince { get; protected set; }
 
         /// <inheritdoc />
         public virtual IGuildIdLogClient Since(int? since)

@@ -8,6 +8,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
     [EndpointPath("commerce/transactions")]
     public class CommerceTransactionsClient : BaseClient, ICommerceTransactionsClient
     {
+        private readonly ICommerceTransactionsCurrentClient current;
+        private readonly ICommerceTransactionsHistoryClient history;
+
         /// <summary>
         /// Creates a new <see cref="CommerceTransactionsClient"/> that is used for the API v2 commerce transactions endpoint.
         /// </summary>
@@ -16,14 +19,14 @@ namespace Gw2Sharp.WebApi.V2.Clients
         public CommerceTransactionsClient(IConnection connection) :
             base(connection)
         {
-            this.Current = new CommerceTransactionsCurrentClient(connection);
-            this.History = new CommerceTransactionsHistoryClient(connection);
+            this.current = new CommerceTransactionsCurrentClient(connection);
+            this.history = new CommerceTransactionsHistoryClient(connection);
         }
 
         /// <inheritdoc />
-        public virtual ICommerceTransactionsCurrentClient Current { get; protected set; }
+        public virtual ICommerceTransactionsCurrentClient Current => this.current;
 
         /// <inheritdoc />
-        public virtual ICommerceTransactionsHistoryClient History { get; protected set; }
+        public virtual ICommerceTransactionsHistoryClient History => this.history;
     }
 }

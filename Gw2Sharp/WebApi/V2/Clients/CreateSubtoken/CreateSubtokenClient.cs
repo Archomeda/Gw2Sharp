@@ -33,25 +33,25 @@ namespace Gw2Sharp.WebApi.V2.Clients
         public string? ParamUrls { get; protected set; }
 
         /// <inheritdoc />
-        public ICreateSubtokenClient Expires(DateTime expire)
+        public virtual ICreateSubtokenClient Expires(DateTime expire)
         {
             this.ParamExpire = expire.ToString("o");
             return this;
         }
 
         /// <inheritdoc />
-        public ICreateSubtokenClient WithPermissions(IEnumerable<string> permissions)
+        public virtual ICreateSubtokenClient WithPermissions(IEnumerable<string> permissions)
         {
             this.ParamPermissions = string.Join(",", permissions);
             return this;
         }
 
         /// <inheritdoc />
-        public ICreateSubtokenClient WithPermissions(IEnumerable<TokenPermission> permissions) =>
+        public virtual ICreateSubtokenClient WithPermissions(IEnumerable<TokenPermission> permissions) =>
             this.WithPermissions(permissions.Select(x => x.ToString().ToLowerInvariant()));
 
         /// <inheritdoc />
-        public ICreateSubtokenClient WithUrls(IList<string> urls)
+        public virtual ICreateSubtokenClient WithUrls(IList<string> urls)
         {
             this.ParamUrls = string.Join(",", urls);
             return this;

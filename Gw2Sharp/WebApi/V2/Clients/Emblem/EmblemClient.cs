@@ -8,6 +8,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
     [EndpointPath("emblem")]
     public class EmblemClient : BaseClient, IEmblemClient
     {
+        private readonly IEmblemBackgroundsClient backgrounds;
+        private readonly IEmblemForegroundsClient foregrounds;
+
         /// <summary>
         /// Creates a new <see cref="EmblemClient"/> that is used for the API v2 emblem endpoint.
         /// </summary>
@@ -16,14 +19,14 @@ namespace Gw2Sharp.WebApi.V2.Clients
         public EmblemClient(IConnection connection) :
             base(connection)
         {
-            this.Backgrounds = new EmblemBackgroundsClient(connection);
-            this.Foregrounds = new EmblemForegroundsClient(connection);
+            this.backgrounds = new EmblemBackgroundsClient(connection);
+            this.foregrounds = new EmblemForegroundsClient(connection);
         }
 
         /// <inheritdoc />
-        public virtual IEmblemBackgroundsClient Backgrounds { get; protected set; }
+        public virtual IEmblemBackgroundsClient Backgrounds => this.backgrounds;
 
         /// <inheritdoc />
-        public virtual IEmblemForegroundsClient Foregrounds { get; protected set; }
+        public virtual IEmblemForegroundsClient Foregrounds => this.foregrounds;
     }
 }

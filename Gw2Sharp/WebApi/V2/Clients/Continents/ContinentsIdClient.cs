@@ -8,6 +8,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
     [EndpointPath("continents/:continent_id")]
     public class ContinentsIdClient : BaseClient, IContinentsIdClient
     {
+        private readonly int continentId;
+        private readonly IContinentsFloorsClient floors;
+
         /// <summary>
         /// Creates a new <see cref="ContinentsIdClient"/> that is used for the API v2 continents id endpoint.
         /// </summary>
@@ -17,14 +20,14 @@ namespace Gw2Sharp.WebApi.V2.Clients
         public ContinentsIdClient(IConnection connection, int continentId) :
             base(connection)
         {
-            this.ContinentId = continentId;
-            this.Floors = new ContinentsFloorsClient(connection, continentId);
+            this.continentId = continentId;
+            this.floors = new ContinentsFloorsClient(connection, continentId);
         }
 
         /// <inheritdoc />
-        public int ContinentId { get; protected set; }
+        public virtual int ContinentId => this.continentId;
 
         /// <inheritdoc />
-        public IContinentsFloorsClient Floors { get; protected set; }
+        public virtual IContinentsFloorsClient Floors => this.floors;
     }
 }

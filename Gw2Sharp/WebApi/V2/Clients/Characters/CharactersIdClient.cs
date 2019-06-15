@@ -8,6 +8,19 @@ namespace Gw2Sharp.WebApi.V2.Clients
     [EndpointPath("characters/:id")]
     public class CharactersIdClient : BaseClient, ICharactersIdClient
     {
+        private readonly string characterName;
+        private readonly ICharactersIdBackstoryClient backstory;
+        private readonly ICharactersIdCoreClient core;
+        private readonly ICharactersIdCraftingClient crafting;
+        private readonly ICharactersIdEquipmentClient equipment;
+        private readonly ICharactersIdHeroPointsClient heroPoints;
+        private readonly ICharactersIdInventoryClient inventory;
+        private readonly ICharactersIdRecipesClient recipes;
+        private readonly ICharactersIdSabClient sab;
+        private readonly ICharactersIdSkillsClient skills;
+        private readonly ICharactersIdSpecializationsClient specializations;
+        private readonly ICharactersIdTrainingClient training;
+
         /// <summary>
         /// Creates a new <see cref="CharactersIdClient"/> that is used for the API v2 characters id endpoint.
         /// </summary>
@@ -17,54 +30,54 @@ namespace Gw2Sharp.WebApi.V2.Clients
         public CharactersIdClient(IConnection connection, string characterName) :
             base(connection)
         {
-            this.CharacterName = characterName ?? throw new ArgumentNullException(nameof(characterName));
-            this.Backstory = new CharactersIdBackstoryClient(connection, characterName);
-            this.Core = new CharactersIdCoreClient(connection, characterName);
-            this.Crafting = new CharactersIdCraftingClient(connection, characterName);
-            this.Equipment = new CharactersIdEquipmentClient(connection, characterName);
-            this.HeroPoints = new CharactersIdHeroPointsClient(connection, characterName);
-            this.Inventory = new CharactersIdInventoryClient(connection, characterName);
-            this.Recipes = new CharactersIdRecipesClient(connection, characterName);
-            this.Sab = new CharactersIdSabClient(connection, characterName);
-            this.Skills = new CharactersIdSkillsClient(connection, characterName);
-            this.Specializations = new CharactersIdSpecializationsClient(connection, characterName);
-            this.Training = new CharactersIdTrainingClient(connection, characterName);
+            this.characterName = characterName ?? throw new ArgumentNullException(nameof(characterName));
+            this.backstory = new CharactersIdBackstoryClient(connection, characterName);
+            this.core = new CharactersIdCoreClient(connection, characterName);
+            this.crafting = new CharactersIdCraftingClient(connection, characterName);
+            this.equipment = new CharactersIdEquipmentClient(connection, characterName);
+            this.heroPoints = new CharactersIdHeroPointsClient(connection, characterName);
+            this.inventory = new CharactersIdInventoryClient(connection, characterName);
+            this.recipes = new CharactersIdRecipesClient(connection, characterName);
+            this.sab = new CharactersIdSabClient(connection, characterName);
+            this.skills = new CharactersIdSkillsClient(connection, characterName);
+            this.specializations = new CharactersIdSpecializationsClient(connection, characterName);
+            this.training = new CharactersIdTrainingClient(connection, characterName);
         }
 
         /// <inheritdoc />
-        public virtual string CharacterName { get; protected set; }
+        public virtual string CharacterName => this.characterName;
 
         /// <inheritdoc />
-        public virtual ICharactersIdBackstoryClient Backstory { get; protected set; }
+        public virtual ICharactersIdBackstoryClient Backstory => this.backstory;
 
         /// <inheritdoc />
-        public virtual ICharactersIdCoreClient Core { get; protected set; }
+        public virtual ICharactersIdCoreClient Core => this.core;
 
         /// <inheritdoc />
-        public virtual ICharactersIdCraftingClient Crafting { get; protected set; }
+        public virtual ICharactersIdCraftingClient Crafting => this.crafting;
 
         /// <inheritdoc />
-        public virtual ICharactersIdEquipmentClient Equipment { get; protected set; }
+        public virtual ICharactersIdEquipmentClient Equipment => this.equipment;
 
         /// <inheritdoc />
-        public virtual ICharactersIdHeroPointsClient HeroPoints { get; protected set; }
+        public virtual ICharactersIdHeroPointsClient HeroPoints => this.heroPoints;
 
         /// <inheritdoc />
-        public virtual ICharactersIdInventoryClient Inventory { get; protected set; }
+        public virtual ICharactersIdInventoryClient Inventory => this.inventory;
 
         /// <inheritdoc />
-        public virtual ICharactersIdRecipesClient Recipes { get; protected set; }
+        public virtual ICharactersIdRecipesClient Recipes => this.recipes;
 
         /// <inheritdoc />
-        public virtual ICharactersIdSabClient Sab { get; protected set; }
+        public virtual ICharactersIdSabClient Sab => this.sab;
 
         /// <inheritdoc />
-        public virtual ICharactersIdSkillsClient Skills { get; protected set; }
+        public virtual ICharactersIdSkillsClient Skills => this.skills;
 
         /// <inheritdoc />
-        public virtual ICharactersIdSpecializationsClient Specializations { get; protected set; }
+        public virtual ICharactersIdSpecializationsClient Specializations => this.specializations;
 
         /// <inheritdoc />
-        public virtual ICharactersIdTrainingClient Training { get; protected set; }
+        public virtual ICharactersIdTrainingClient Training => this.training;
     }
 }

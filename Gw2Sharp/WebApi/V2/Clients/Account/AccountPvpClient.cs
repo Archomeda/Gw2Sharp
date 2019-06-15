@@ -9,6 +9,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
     [EndpointSchemaVersion("2019-02-21T00:00:00.000Z")]
     public class AccountPvpClient : BaseClient, IAccountPvpClient
     {
+        private readonly IAccountPvpHeroesClient heroes;
+
         /// <summary>
         /// Creates a new <see cref="AccountPvpClient"/> that is used for the API v2 account PvP endpoint.
         /// </summary>
@@ -17,10 +19,10 @@ namespace Gw2Sharp.WebApi.V2.Clients
         public AccountPvpClient(IConnection connection) :
             base(connection)
         {
-            this.Heroes = new AccountPvpHeroesClient(connection);
+            this.heroes = new AccountPvpHeroesClient(connection);
         }
 
         /// <inheritdoc />
-        public virtual IAccountPvpHeroesClient Heroes { get; protected set; }
+        public virtual IAccountPvpHeroesClient Heroes { get => this.heroes; }
     }
 }

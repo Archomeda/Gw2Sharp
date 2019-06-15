@@ -9,6 +9,10 @@ namespace Gw2Sharp.WebApi.V2.Clients
     [EndpointPath("achievements")]
     public class AchievementsClient : BaseEndpointBulkClient<Achievement, int>, IAchievementsClient
     {
+        private readonly IAchievementsCategoriesClient categories;
+        private readonly IAchievementsGroupsClient groups;
+        private readonly IAchievementsDailyClient daily;
+
         /// <summary>
         /// Creates a new <see cref="AchievementsClient"/> that is used for the API v2 achievements endpoint.
         /// </summary>
@@ -17,18 +21,18 @@ namespace Gw2Sharp.WebApi.V2.Clients
         public AchievementsClient(IConnection connection) :
             base(connection)
         {
-            this.Categories = new AchievementsCategoriesClient(connection);
-            this.Groups = new AchievementsGroupsClient(connection);
-            this.Daily = new AchievementsDailyClient(connection);
+            this.categories = new AchievementsCategoriesClient(connection);
+            this.groups = new AchievementsGroupsClient(connection);
+            this.daily = new AchievementsDailyClient(connection);
         }
 
         /// <inheritdoc />
-        public virtual IAchievementsCategoriesClient Categories { get; protected set; }
+        public virtual IAchievementsCategoriesClient Categories => this.categories;
 
         /// <inheritdoc />
-        public virtual IAchievementsGroupsClient Groups { get; protected set; }
+        public virtual IAchievementsGroupsClient Groups => this.groups;
 
         /// <inheritdoc />
-        public virtual IAchievementsDailyClient Daily { get; protected set; }
+        public virtual IAchievementsDailyClient Daily => this.daily;
     }
 }

@@ -8,6 +8,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
     [EndpointPath("guild/search")]
     public class GuildSearchNameClient : BaseEndpointBlobClient<IApiV2ObjectList<Guid>>, IGuildSearchNameClient
     {
+        private readonly string name;
+
         /// <summary>
         /// Creates a new <see cref="GuildSearchNameClient"/> that is used for the API v2 guild search by name endpoint.
         /// </summary>
@@ -17,11 +19,11 @@ namespace Gw2Sharp.WebApi.V2.Clients
         public GuildSearchNameClient(IConnection connection, string name) :
             base(connection)
         {
-            this.Name = name ?? throw new ArgumentNullException(nameof(name));
+            this.name = name ?? throw new ArgumentNullException(nameof(name));
         }
 
         /// <inheritdoc />
         [EndpointPathParameter("name")]
-        public virtual string Name { get; protected set; }
+        public virtual string Name => this.name;
     }
 }

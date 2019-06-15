@@ -8,6 +8,10 @@ namespace Gw2Sharp.WebApi.V2.Clients
     [EndpointPath("guild")]
     public class GuildClient : BaseClient, IGuildClient
     {
+        private readonly IGuildPermissionsClient permissions;
+        private readonly IGuildSearchClient search;
+        private readonly IGuildUpgradesClient upgrades;
+
         /// <summary>
         /// Creates a new <see cref="GuildClient"/> that is used for the API v2 guild endpoint.
         /// </summary>
@@ -16,9 +20,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
         public GuildClient(IConnection connection) :
             base(connection)
         {
-            this.Permissions = new GuildPermissionsClient(connection);
-            this.Search = new GuildSearchClient(connection);
-            this.Upgrades = new GuildUpgradesClient(connection);
+            this.permissions = new GuildPermissionsClient(connection);
+            this.search = new GuildSearchClient(connection);
+            this.upgrades = new GuildUpgradesClient(connection);
         }
 
         /// <inheritdoc />
@@ -28,12 +32,12 @@ namespace Gw2Sharp.WebApi.V2.Clients
         public virtual IGuildIdClient this[string guildId] => this[Guid.Parse(guildId)];
 
         /// <inheritdoc />
-        public virtual IGuildPermissionsClient Permissions { get; protected set; }
+        public virtual IGuildPermissionsClient Permissions => this.permissions;
 
         /// <inheritdoc />
-        public virtual IGuildSearchClient Search { get; protected set; }
+        public virtual IGuildSearchClient Search => this.search;
 
         /// <inheritdoc />
-        public virtual IGuildUpgradesClient Upgrades { get; protected set; }
+        public virtual IGuildUpgradesClient Upgrades => this.upgrades;
     }
 }

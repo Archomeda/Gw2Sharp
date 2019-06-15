@@ -8,6 +8,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
     [EndpointPath("account/mounts")]
     public class AccountMountsClient : BaseClient, IAccountMountsClient
     {
+        private readonly IAccountMountsSkinsClient skins;
+        private readonly IAccountMountsTypesClient types;
+
         /// <summary>
         /// Creates a new <see cref="AccountMountsClient"/> that is used for the API v2 account home endpoint.
         /// </summary>
@@ -16,14 +19,14 @@ namespace Gw2Sharp.WebApi.V2.Clients
         public AccountMountsClient(IConnection connection) :
             base(connection)
         {
-            this.Skins = new AccountMountsSkinsClient(connection);
-            this.Types = new AccountMountsTypesClient(connection);
+            this.skins = new AccountMountsSkinsClient(connection);
+            this.types = new AccountMountsTypesClient(connection);
         }
 
         /// <inheritdoc />
-        public virtual IAccountMountsSkinsClient Skins { get; protected set; }
+        public virtual IAccountMountsSkinsClient Skins => this.skins;
 
         /// <inheritdoc />
-        public virtual IAccountMountsTypesClient Types { get; protected set; }
+        public virtual IAccountMountsTypesClient Types => this.types;
     }
 }

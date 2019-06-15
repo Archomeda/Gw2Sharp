@@ -11,6 +11,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
     [EndpointPathSegment("floor_id", 1)]
     public class ContinentsFloorsRegionsClient : BaseEndpointBulkAllClient<ContinentFloorRegion, int>, IContinentsFloorsRegionsClient
     {
+        private readonly int continentId;
+        private readonly int floorId;
+
         /// <summary>
         /// Creates a new <see cref="ContinentsFloorsRegionsClient"/> that is used for the API v2 characters floors regions endpoint.
         /// </summary>
@@ -21,15 +24,15 @@ namespace Gw2Sharp.WebApi.V2.Clients
         public ContinentsFloorsRegionsClient(IConnection connection, int continentId, int floorId) :
             base(connection, continentId.ToString(), floorId.ToString())
         {
-            this.ContinentId = continentId;
-            this.FloorId = floorId;
+            this.continentId = continentId;
+            this.floorId = floorId;
         }
 
         /// <inheritdoc />
-        public virtual int ContinentId { get; protected set; }
+        public virtual int ContinentId => this.continentId;
 
         /// <inheritdoc />
-        public virtual int FloorId { get; protected set; }
+        public virtual int FloorId => this.floorId;
 
         /// <inheritdoc />
         public virtual IContinentsFloorsRegionsIdClient this[int regionId] => new ContinentsFloorsRegionsIdClient(this.Connection, this.ContinentId, this.FloorId, regionId);

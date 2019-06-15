@@ -19,7 +19,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// The parameter for requesting logs with an id higher than the given id.
         /// Use <c>null</c> to unset the parameter.
         /// </summary>
-        int? ParamSince { get; set; }
+        int? ParamSince { get; }
 
         /// <summary>
         /// Sets the parameter for requesting logs with an id higher than the given id.

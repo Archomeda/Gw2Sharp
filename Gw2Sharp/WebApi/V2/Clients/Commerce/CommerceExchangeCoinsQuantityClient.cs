@@ -9,6 +9,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
     [EndpointPath("commerce/exchange/coins")]
     public class CommerceExchangeCoinsQuantityClient : BaseEndpointBlobClient<CommerceExchangeCoins>, ICommerceExchangeCoinsQuantityClient
     {
+        private readonly int quantity;
+
         /// <summary>
         /// Creates a new <see cref="CommerceExchangeCoinsQuantityClient"/> that is used for the API v2 commerce exchange coins with quantity endpoint.
         /// </summary>
@@ -18,11 +20,11 @@ namespace Gw2Sharp.WebApi.V2.Clients
         public CommerceExchangeCoinsQuantityClient(IConnection connection, int quantity) :
             base(connection)
         {
-            this.Quantity = quantity;
+            this.quantity = quantity;
         }
 
         /// <inheritdoc />
         [EndpointPathParameter("quantity")]
-        public virtual int Quantity { get; protected set; }
+        public virtual int Quantity => this.quantity;
     }
 }

@@ -9,6 +9,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
     [EndpointPathSegment("id", 0)]
     public class GuildIdUpgradesClient : BaseEndpointBlobClient<IApiV2ObjectList<int>>, IGuildIdUpgradesClient
     {
+        private readonly Guid guildId;
+
         /// <summary>
         /// Creates a new <see cref="GuildIdUpgradesClient"/> that is used for the API v2 guild id upgrades endpoint.
         /// </summary>
@@ -18,10 +20,10 @@ namespace Gw2Sharp.WebApi.V2.Clients
         public GuildIdUpgradesClient(IConnection connection, Guid guildId) :
             base(connection)
         {
-            this.GuildId = guildId;
+            this.guildId = guildId;
         }
 
         /// <inheritdoc />
-        public virtual Guid GuildId { get; protected set; }
+        public virtual Guid GuildId => this.guildId;
     }
 }

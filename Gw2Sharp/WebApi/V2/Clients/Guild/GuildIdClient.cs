@@ -10,6 +10,16 @@ namespace Gw2Sharp.WebApi.V2.Clients
     [EndpointPathSegment("id", 0)]
     public class GuildIdClient : BaseEndpointBlobClient<Guild>, IGuildIdClient
     {
+        private readonly Guid guildId;
+        private readonly IGuildIdLogClient log;
+        private readonly IGuildIdMembersClient members;
+        private readonly IGuildIdRanksClient ranks;
+        private readonly IGuildIdStashClient stash;
+        private readonly IGuildIdStorageClient storage;
+        private readonly IGuildIdTeamsClient teams;
+        private readonly IGuildIdTreasuryClient treasury;
+        private readonly IGuildIdUpgradesClient upgrades;
+
         /// <summary>
         /// Creates a new <see cref="GuildIdClient"/> that is used for the API v2 guild id endpoint.
         /// </summary>
@@ -19,42 +29,42 @@ namespace Gw2Sharp.WebApi.V2.Clients
         public GuildIdClient(IConnection connection, Guid guildId) :
             base(connection)
         {
-            this.GuildId = guildId;
-            this.Log = new GuildIdLogClient(connection, guildId);
-            this.Members = new GuildIdMembersClient(connection, guildId);
-            this.Ranks = new GuildIdRanksClient(connection, guildId);
-            this.Stash = new GuildIdStashClient(connection, guildId);
-            this.Storage = new GuildIdStorageClient(connection, guildId);
-            this.Teams = new GuildIdTeamsClient(connection, guildId);
-            this.Treasury = new GuildIdTreasuryClient(connection, guildId);
-            this.Upgrades = new GuildIdUpgradesClient(connection, guildId);
+            this.guildId = guildId;
+            this.log = new GuildIdLogClient(connection, guildId);
+            this.members = new GuildIdMembersClient(connection, guildId);
+            this.ranks = new GuildIdRanksClient(connection, guildId);
+            this.stash = new GuildIdStashClient(connection, guildId);
+            this.storage = new GuildIdStorageClient(connection, guildId);
+            this.teams = new GuildIdTeamsClient(connection, guildId);
+            this.treasury = new GuildIdTreasuryClient(connection, guildId);
+            this.upgrades = new GuildIdUpgradesClient(connection, guildId);
         }
 
         /// <inheritdoc />
-        public virtual Guid GuildId { get; protected set; }
+        public virtual Guid GuildId => this.guildId;
 
         /// <inheritdoc />
-        public virtual IGuildIdLogClient Log { get; protected set; }
+        public virtual IGuildIdLogClient Log => this.log;
 
         /// <inheritdoc />
-        public virtual IGuildIdMembersClient Members { get; protected set; }
+        public virtual IGuildIdMembersClient Members => this.members;
 
         /// <inheritdoc />
-        public virtual IGuildIdRanksClient Ranks { get; protected set; }
+        public virtual IGuildIdRanksClient Ranks => this.ranks;
 
         /// <inheritdoc />
-        public virtual IGuildIdStashClient Stash { get; protected set; }
+        public virtual IGuildIdStashClient Stash => this.stash;
 
         /// <inheritdoc />
-        public virtual IGuildIdStorageClient Storage { get; protected set; }
+        public virtual IGuildIdStorageClient Storage => this.storage;
 
         /// <inheritdoc />
-        public virtual IGuildIdTeamsClient Teams { get; protected set; }
+        public virtual IGuildIdTeamsClient Teams => this.teams;
 
         /// <inheritdoc />
-        public virtual IGuildIdTreasuryClient Treasury { get; protected set; }
+        public virtual IGuildIdTreasuryClient Treasury => this.treasury;
 
         /// <inheritdoc />
-        public virtual IGuildIdUpgradesClient Upgrades { get; protected set; }
+        public virtual IGuildIdUpgradesClient Upgrades => this.upgrades;
     }
 }

@@ -1,8 +1,13 @@
 # Gw2Sharp History
 
-## 0.3.2
+## 0.4.0
 ### Endpoints
 - Add `/v2/mapchests`
+
+### Refactoring
+- **Breaking:** Various endpoint clients with child endpoint clients and/or extra parameters have had their virtual property setters removed; you can still override the property for customization however
+  (reason: it's discouraged to call virtual methods or set virtual properties from a constructor in a non-sealed class)
+- **Breaking:** `IGuildIdLogClient.ParamSince` and its implementation `GuildIdLogClient.ParamSince` are no longer virtual and no longer have a public setter to follow convention of e.g. `CreateSubtokenClient` (use `IGuildIdLogClient.Since(int? since)` to set this parameter with the fluent design pattern)
 
 ## 0.3.1
 ### Fixes

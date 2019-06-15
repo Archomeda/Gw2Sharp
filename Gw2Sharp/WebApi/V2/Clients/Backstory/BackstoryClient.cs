@@ -8,6 +8,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
     [EndpointPath("backstory")]
     public class BackstoryClient : BaseClient, IBackstoryClient
     {
+        private readonly IBackstoryAnswersClient answers;
+        private readonly IBackstoryQuestionsClient questions;
+
         /// <summary>
         /// Creates a new <see cref="BackstoryClient"/> that is used for the API v2 backstory endpoint.
         /// </summary>
@@ -16,14 +19,14 @@ namespace Gw2Sharp.WebApi.V2.Clients
         public BackstoryClient(IConnection connection) :
             base(connection)
         {
-            this.Answers = new BackstoryAnswersClient(connection);
-            this.Questions = new BackstoryQuestionsClient(connection);
+            this.answers = new BackstoryAnswersClient(connection);
+            this.questions = new BackstoryQuestionsClient(connection);
         }
 
         /// <inheritdoc />
-        public virtual IBackstoryAnswersClient Answers { get; protected set; }
+        public virtual IBackstoryAnswersClient Answers => this.answers;
 
         /// <inheritdoc />
-        public virtual IBackstoryQuestionsClient Questions { get; protected set; }
+        public virtual IBackstoryQuestionsClient Questions => this.questions;
     }
 }

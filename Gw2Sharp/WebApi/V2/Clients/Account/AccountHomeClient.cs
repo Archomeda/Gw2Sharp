@@ -8,6 +8,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
     [EndpointPath("account/home")]
     public class AccountHomeClient : BaseClient, IAccountHomeClient
     {
+        private readonly IAccountHomeCatsClient cats;
+        private readonly IAccountHomeNodesClient nodes;
+
         /// <summary>
         /// Creates a new <see cref="AccountHomeClient"/> that is used for the API v2 account home endpoint.
         /// </summary>
@@ -16,14 +19,14 @@ namespace Gw2Sharp.WebApi.V2.Clients
         public AccountHomeClient(IConnection connection) :
             base(connection)
         {
-            this.Cats = new AccountHomeCatsClient(connection);
-            this.Nodes = new AccountHomeNodesClient(connection);
+            this.cats = new AccountHomeCatsClient(connection);
+            this.nodes = new AccountHomeNodesClient(connection);
         }
 
         /// <inheritdoc />
-        public virtual IAccountHomeCatsClient Cats { get; protected set; }
+        public virtual IAccountHomeCatsClient Cats => this.cats;
 
         /// <inheritdoc />
-        public virtual IAccountHomeNodesClient Nodes { get; protected set; }
+        public virtual IAccountHomeNodesClient Nodes => this.nodes;
     }
 }
