@@ -74,7 +74,7 @@ post-build:binaries-with-docs:
 test:
   extends: .task
   stage: test
-  script: dotnet test Gw2Sharp.Tests -c $CONFIGURATION -f netstandard2.0
+  script: dotnet test -c $CONFIGURATION -f netstandard2.0
 
 pack:
   # TODO: Make this autoversioned
