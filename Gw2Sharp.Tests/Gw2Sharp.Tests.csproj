@@ -30,6 +30,9 @@
     <None Remove="TestFiles\Maps\Maps.single.json" />
     <None Remove="TestFiles\TokenInfo\TokenInfo.ApiToken.json" />
     <None Remove="TestFiles\TokenInfo\TokenInfo.SubToken.json" />
+    <None Remove="TestFiles\WorldBosses\WorldBosses.bulk.json" />
+    <None Remove="TestFiles\WorldBosses\WorldBosses.ids.json" />
+    <None Remove="TestFiles\WorldBosses\WorldBosses.single.json" />
   </ItemGroup>
 
   <ItemGroup>
@@ -79,6 +82,9 @@
     <EmbeddedResource Include="TestFiles\Backstory\BackstoryQuestions.ids.json" />
     <EmbeddedResource Include="TestFiles\Backstory\BackstoryQuestions.single.json" />
     <EmbeddedResource Include="TestFiles\Build\Build.json" />
+    <EmbeddedResource Include="TestFiles\WorldBosses\WorldBosses.bulk.json" />
+    <EmbeddedResource Include="TestFiles\WorldBosses\WorldBosses.ids.json" />
+    <EmbeddedResource Include="TestFiles\WorldBosses\WorldBosses.single.json" />
     <EmbeddedResource Include="TestFiles\Maps\Maps.bulk.json" />
     <EmbeddedResource Include="TestFiles\Maps\Maps.ids.json" />
     <EmbeddedResource Include="TestFiles\Maps\Maps.single.json" />

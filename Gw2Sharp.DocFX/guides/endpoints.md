@@ -172,7 +172,7 @@ For your convenience, the following list gives an overview of the endpoints that
  /v2/tokeninfo | ✔️🔑 | [`Gw2WebApiClient.V2.TokenInfo`](../api/Gw2Sharp.WebApi.V2.Clients.TokenInfoClient.html)
  /v2/traits | ❌ |
  ~~/v2/vendors~~ | ✖️ |
- /v2/worldbosses | ❌✨ |
+ /v2/worldbosses | ✔️📄📚📦 | [`Gw2WebApiClient.V2.WorldBosses`](../api/Gw2Sharp.WebApi.V2.Clients.WorldBossesClient.html)
  /v2/worlds | ❌ |
  /v2/wvw/abilities | ❌ |
  /v2/wvw/matches | ❌ |

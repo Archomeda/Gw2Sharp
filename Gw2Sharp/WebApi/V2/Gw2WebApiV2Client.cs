@@ -37,6 +37,7 @@ namespace Gw2Sharp.WebApi.V2
         private readonly IMapChestsClient mapChests;
         private readonly IMapsClient maps;
         private readonly ITokenInfoClient tokenInfo;
+        private readonly IWorldBossesClient worldBosses;
 
         /// <summary>
         /// Creates a new <see cref="Gw2WebApiV2Client"/>.
@@ -75,6 +76,7 @@ namespace Gw2Sharp.WebApi.V2
             this.mapChests = new MapChestsClient(connection);
             this.maps = new MapsClient(connection);
             this.tokenInfo = new TokenInfoClient(connection);
+            this.worldBosses = new WorldBossesClient(connection);
         }
 
         /// <inheritdoc />
@@ -151,5 +153,8 @@ namespace Gw2Sharp.WebApi.V2
 
         /// <inheritdoc />
         public virtual ITokenInfoClient TokenInfo => this.tokenInfo;
+
+        /// <inheritdoc />
+        public virtual IWorldBossesClient WorldBosses => this.worldBosses;
     }
 }

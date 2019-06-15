@@ -4,6 +4,7 @@
 ### Endpoints
 - Add `/v2/mapchests`
 - Add `/v2/maps`
+- Add `/v2/worldbosses`
 
 ### Refactoring
 - **Breaking:** Various endpoint clients with child endpoint clients and/or extra parameters have had their virtual property setters removed; you can still override the property for customization however

@@ -133,5 +133,10 @@ namespace Gw2Sharp.WebApi.V2
         /// Gets the token info.
         /// </summary>
         ITokenInfoClient TokenInfo { get; }
+
+        /// <summary>
+        /// Gets the world bosses.
+        /// </summary>
+        IWorldBossesClient WorldBosses { get; }
     }
 }
