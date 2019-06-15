@@ -159,7 +159,7 @@ For your convenience, the following list gives an overview of the endpoints that
  /v2/pvp/stats | ❌ |
  /v2/quaggans | ❌ |
  /v2/quests | ❌✨ |
- /v2/races | ❌✨ |
+ /v2/races | ❌ |
  /v2/raids | ❌ |
  /v2/recipes | ❌ |
  /v2/recipes/search | ❌ |
