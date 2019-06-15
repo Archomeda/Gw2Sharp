@@ -2628,6 +2628,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.AccountClient.Mounts
   nameWithType: AccountClient.Mounts
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountClient.Novelties
+  name: Novelties
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountClient.html#Gw2Sharp_WebApi_V2_Clients_AccountClient_Novelties
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.AccountClient.Novelties
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountClient.Novelties
+  nameWithType: AccountClient.Novelties
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountClient.Novelties*
+  name: Novelties
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountClient.html#Gw2Sharp_WebApi_V2_Clients_AccountClient_Novelties_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.AccountClient.Novelties
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountClient.Novelties
+  nameWithType: AccountClient.Novelties
 - uid: Gw2Sharp.WebApi.V2.Clients.AccountClient.Outfits
   name: Outfits
   href: api/Gw2Sharp.WebApi.V2.Clients.AccountClient.html#Gw2Sharp_WebApi_V2_Clients_AccountClient_Outfits
@@ -3177,6 +3190,25 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.AccountMountsTypesClient.AccountMountsTypesClient
   nameWithType: AccountMountsTypesClient.AccountMountsTypesClient
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountNoveltiesClient
+  name: AccountNoveltiesClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountNoveltiesClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.AccountNoveltiesClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountNoveltiesClient
+  nameWithType: AccountNoveltiesClient
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountNoveltiesClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  name: AccountNoveltiesClient(IConnection)
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountNoveltiesClient.html#Gw2Sharp_WebApi_V2_Clients_AccountNoveltiesClient__ctor_Gw2Sharp_WebApi_IConnection_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.AccountNoveltiesClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountNoveltiesClient.AccountNoveltiesClient(Gw2Sharp.WebApi.IConnection)
+  nameWithType: AccountNoveltiesClient.AccountNoveltiesClient(IConnection)
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountNoveltiesClient.#ctor*
+  name: AccountNoveltiesClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountNoveltiesClient.html#Gw2Sharp_WebApi_V2_Clients_AccountNoveltiesClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.AccountNoveltiesClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountNoveltiesClient.AccountNoveltiesClient
+  nameWithType: AccountNoveltiesClient.AccountNoveltiesClient
 - uid: Gw2Sharp.WebApi.V2.Clients.AccountOutfitsClient
   name: AccountOutfitsClient
   href: api/Gw2Sharp.WebApi.V2.Clients.AccountOutfitsClient.html
@@ -4853,6 +4885,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.Inventory
   nameWithType: CharactersIdClient.Inventory
+- uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.Quests
+  name: Quests
+  href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.html#Gw2Sharp_WebApi_V2_Clients_CharactersIdClient_Quests
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.Quests
+  fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.Quests
+  nameWithType: CharactersIdClient.Quests
+- uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.Quests*
+  name: Quests
+  href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.html#Gw2Sharp_WebApi_V2_Clients_CharactersIdClient_Quests_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.Quests
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.Quests
+  nameWithType: CharactersIdClient.Quests
 - uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.Recipes
   name: Recipes
   href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.html#Gw2Sharp_WebApi_V2_Clients_CharactersIdClient_Recipes
@@ -5013,6 +5058,25 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdInventoryClient.CharactersIdInventoryClient
   nameWithType: CharactersIdInventoryClient.CharactersIdInventoryClient
+- uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdQuestsClient
+  name: CharactersIdQuestsClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdQuestsClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.CharactersIdQuestsClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdQuestsClient
+  nameWithType: CharactersIdQuestsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdQuestsClient.#ctor(Gw2Sharp.WebApi.IConnection,System.String)
+  name: CharactersIdQuestsClient(IConnection, String)
+  href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdQuestsClient.html#Gw2Sharp_WebApi_V2_Clients_CharactersIdQuestsClient__ctor_Gw2Sharp_WebApi_IConnection_System_String_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.CharactersIdQuestsClient.#ctor(Gw2Sharp.WebApi.IConnection,System.String)
+  fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdQuestsClient.CharactersIdQuestsClient(Gw2Sharp.WebApi.IConnection, System.String)
+  nameWithType: CharactersIdQuestsClient.CharactersIdQuestsClient(IConnection, String)
+- uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdQuestsClient.#ctor*
+  name: CharactersIdQuestsClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdQuestsClient.html#Gw2Sharp_WebApi_V2_Clients_CharactersIdQuestsClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.CharactersIdQuestsClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdQuestsClient.CharactersIdQuestsClient
+  nameWithType: CharactersIdQuestsClient.CharactersIdQuestsClient
 - uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdRecipesClient
   name: CharactersIdRecipesClient
   href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdRecipesClient.html
@@ -7745,6 +7809,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.IAccountClient.Mounts
   nameWithType: IAccountClient.Mounts
+- uid: Gw2Sharp.WebApi.V2.Clients.IAccountClient.Novelties
+  name: Novelties
+  href: api/Gw2Sharp.WebApi.V2.Clients.IAccountClient.html#Gw2Sharp_WebApi_V2_Clients_IAccountClient_Novelties
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.IAccountClient.Novelties
+  fullName: Gw2Sharp.WebApi.V2.Clients.IAccountClient.Novelties
+  nameWithType: IAccountClient.Novelties
+- uid: Gw2Sharp.WebApi.V2.Clients.IAccountClient.Novelties*
+  name: Novelties
+  href: api/Gw2Sharp.WebApi.V2.Clients.IAccountClient.html#Gw2Sharp_WebApi_V2_Clients_IAccountClient_Novelties_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.IAccountClient.Novelties
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.IAccountClient.Novelties
+  nameWithType: IAccountClient.Novelties
 - uid: Gw2Sharp.WebApi.V2.Clients.IAccountClient.Outfits
   name: Outfits
   href: api/Gw2Sharp.WebApi.V2.Clients.IAccountClient.html#Gw2Sharp_WebApi_V2_Clients_IAccountClient_Outfits
@@ -8034,6 +8111,12 @@ references:
   commentId: T:Gw2Sharp.WebApi.V2.Clients.IAccountMountsTypesClient
   fullName: Gw2Sharp.WebApi.V2.Clients.IAccountMountsTypesClient
   nameWithType: IAccountMountsTypesClient
+- uid: Gw2Sharp.WebApi.V2.Clients.IAccountNoveltiesClient
+  name: IAccountNoveltiesClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.IAccountNoveltiesClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.IAccountNoveltiesClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.IAccountNoveltiesClient
+  nameWithType: IAccountNoveltiesClient
 - uid: Gw2Sharp.WebApi.V2.Clients.IAccountOutfitsClient
   name: IAccountOutfitsClient
   href: api/Gw2Sharp.WebApi.V2.Clients.IAccountOutfitsClient.html
@@ -8534,6 +8617,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.Inventory
   nameWithType: ICharactersIdClient.Inventory
+- uid: Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.Quests
+  name: Quests
+  href: api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.html#Gw2Sharp_WebApi_V2_Clients_ICharactersIdClient_Quests
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.Quests
+  fullName: Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.Quests
+  nameWithType: ICharactersIdClient.Quests
+- uid: Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.Quests*
+  name: Quests
+  href: api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.html#Gw2Sharp_WebApi_V2_Clients_ICharactersIdClient_Quests_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.Quests
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.Quests
+  nameWithType: ICharactersIdClient.Quests
 - uid: Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.Recipes
   name: Recipes
   href: api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.html#Gw2Sharp_WebApi_V2_Clients_ICharactersIdClient_Recipes
@@ -8694,6 +8790,25 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.ICharactersIdInventoryClient.CharacterName
   nameWithType: ICharactersIdInventoryClient.CharacterName
+- uid: Gw2Sharp.WebApi.V2.Clients.ICharactersIdQuestsClient
+  name: ICharactersIdQuestsClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdQuestsClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.ICharactersIdQuestsClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.ICharactersIdQuestsClient
+  nameWithType: ICharactersIdQuestsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.ICharactersIdQuestsClient.CharacterName
+  name: CharacterName
+  href: api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdQuestsClient.html#Gw2Sharp_WebApi_V2_Clients_ICharactersIdQuestsClient_CharacterName
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.ICharactersIdQuestsClient.CharacterName
+  fullName: Gw2Sharp.WebApi.V2.Clients.ICharactersIdQuestsClient.CharacterName
+  nameWithType: ICharactersIdQuestsClient.CharacterName
+- uid: Gw2Sharp.WebApi.V2.Clients.ICharactersIdQuestsClient.CharacterName*
+  name: CharacterName
+  href: api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdQuestsClient.html#Gw2Sharp_WebApi_V2_Clients_ICharactersIdQuestsClient_CharacterName_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.ICharactersIdQuestsClient.CharacterName
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.ICharactersIdQuestsClient.CharacterName
+  nameWithType: ICharactersIdQuestsClient.CharacterName
 - uid: Gw2Sharp.WebApi.V2.Clients.ICharactersIdRecipesClient
   name: ICharactersIdRecipesClient
   href: api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdRecipesClient.html
@@ -10487,6 +10602,12 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.ILocalizedClient(Of TObject)
   nameWithType: ILocalizedClient<TObject>
   nameWithType.vb: ILocalizedClient(Of TObject)
+- uid: Gw2Sharp.WebApi.V2.Clients.IMailCarriersClient
+  name: IMailCarriersClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.IMailCarriersClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.IMailCarriersClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.IMailCarriersClient
+  nameWithType: IMailCarriersClient
 - uid: Gw2Sharp.WebApi.V2.Clients.IMapChestsClient
   name: IMapChestsClient
   href: api/Gw2Sharp.WebApi.V2.Clients.IMapChestsClient.html
@@ -10618,6 +10739,25 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.LegendsClient.LegendsClient
   nameWithType: LegendsClient.LegendsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.MailCarriersClient
+  name: MailCarriersClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.MailCarriersClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.MailCarriersClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.MailCarriersClient
+  nameWithType: MailCarriersClient
+- uid: Gw2Sharp.WebApi.V2.Clients.MailCarriersClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  name: MailCarriersClient(IConnection)
+  href: api/Gw2Sharp.WebApi.V2.Clients.MailCarriersClient.html#Gw2Sharp_WebApi_V2_Clients_MailCarriersClient__ctor_Gw2Sharp_WebApi_IConnection_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.MailCarriersClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  fullName: Gw2Sharp.WebApi.V2.Clients.MailCarriersClient.MailCarriersClient(Gw2Sharp.WebApi.IConnection)
+  nameWithType: MailCarriersClient.MailCarriersClient(IConnection)
+- uid: Gw2Sharp.WebApi.V2.Clients.MailCarriersClient.#ctor*
+  name: MailCarriersClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.MailCarriersClient.html#Gw2Sharp_WebApi_V2_Clients_MailCarriersClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.MailCarriersClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.MailCarriersClient.MailCarriersClient
+  nameWithType: MailCarriersClient.MailCarriersClient
 - uid: Gw2Sharp.WebApi.V2.Clients.MapChestsClient
   name: MapChestsClient
   href: api/Gw2Sharp.WebApi.V2.Clients.MapChestsClient.html
@@ -11005,6 +11145,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Legends
   nameWithType: Gw2WebApiV2Client.Legends
+- uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.MailCarriers
+  name: MailCarriers
+  href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_MailCarriers
+  commentId: P:Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.MailCarriers
+  fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.MailCarriers
+  nameWithType: Gw2WebApiV2Client.MailCarriers
+- uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.MailCarriers*
+  name: MailCarriers
+  href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_MailCarriers_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.MailCarriers
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.MailCarriers
+  nameWithType: Gw2WebApiV2Client.MailCarriers
 - uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.MapChests
   name: MapChests
   href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_MapChests
@@ -11377,6 +11530,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Legends
   nameWithType: IGw2WebApiV2Client.Legends
+- uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.MailCarriers
+  name: MailCarriers
+  href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_MailCarriers
+  commentId: P:Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.MailCarriers
+  fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.MailCarriers
+  nameWithType: IGw2WebApiV2Client.MailCarriers
+- uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.MailCarriers*
+  name: MailCarriers
+  href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_MailCarriers_
+  commentId: Overload:Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.MailCarriers
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.MailCarriers
+  nameWithType: IGw2WebApiV2Client.MailCarriers
 - uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.MapChests
   name: MapChests
   href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_MapChests
@@ -23169,6 +23335,108 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.Legend.Utilities
   nameWithType: Legend.Utilities
+- uid: Gw2Sharp.WebApi.V2.Models.MailCarrier
+  name: MailCarrier
+  href: api/Gw2Sharp.WebApi.V2.Models.MailCarrier.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.MailCarrier
+  fullName: Gw2Sharp.WebApi.V2.Models.MailCarrier
+  nameWithType: MailCarrier
+- uid: Gw2Sharp.WebApi.V2.Models.MailCarrier.Flags
+  name: Flags
+  href: api/Gw2Sharp.WebApi.V2.Models.MailCarrier.html#Gw2Sharp_WebApi_V2_Models_MailCarrier_Flags
+  commentId: P:Gw2Sharp.WebApi.V2.Models.MailCarrier.Flags
+  fullName: Gw2Sharp.WebApi.V2.Models.MailCarrier.Flags
+  nameWithType: MailCarrier.Flags
+- uid: Gw2Sharp.WebApi.V2.Models.MailCarrier.Flags*
+  name: Flags
+  href: api/Gw2Sharp.WebApi.V2.Models.MailCarrier.html#Gw2Sharp_WebApi_V2_Models_MailCarrier_Flags_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.MailCarrier.Flags
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.MailCarrier.Flags
+  nameWithType: MailCarrier.Flags
+- uid: Gw2Sharp.WebApi.V2.Models.MailCarrier.Icon
+  name: Icon
+  href: api/Gw2Sharp.WebApi.V2.Models.MailCarrier.html#Gw2Sharp_WebApi_V2_Models_MailCarrier_Icon
+  commentId: P:Gw2Sharp.WebApi.V2.Models.MailCarrier.Icon
+  fullName: Gw2Sharp.WebApi.V2.Models.MailCarrier.Icon
+  nameWithType: MailCarrier.Icon
+- uid: Gw2Sharp.WebApi.V2.Models.MailCarrier.Icon*
+  name: Icon
+  href: api/Gw2Sharp.WebApi.V2.Models.MailCarrier.html#Gw2Sharp_WebApi_V2_Models_MailCarrier_Icon_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.MailCarrier.Icon
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.MailCarrier.Icon
+  nameWithType: MailCarrier.Icon
+- uid: Gw2Sharp.WebApi.V2.Models.MailCarrier.Id
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.MailCarrier.html#Gw2Sharp_WebApi_V2_Models_MailCarrier_Id
+  commentId: P:Gw2Sharp.WebApi.V2.Models.MailCarrier.Id
+  fullName: Gw2Sharp.WebApi.V2.Models.MailCarrier.Id
+  nameWithType: MailCarrier.Id
+- uid: Gw2Sharp.WebApi.V2.Models.MailCarrier.Id*
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.MailCarrier.html#Gw2Sharp_WebApi_V2_Models_MailCarrier_Id_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.MailCarrier.Id
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.MailCarrier.Id
+  nameWithType: MailCarrier.Id
+- uid: Gw2Sharp.WebApi.V2.Models.MailCarrier.Name
+  name: Name
+  href: api/Gw2Sharp.WebApi.V2.Models.MailCarrier.html#Gw2Sharp_WebApi_V2_Models_MailCarrier_Name
+  commentId: P:Gw2Sharp.WebApi.V2.Models.MailCarrier.Name
+  fullName: Gw2Sharp.WebApi.V2.Models.MailCarrier.Name
+  nameWithType: MailCarrier.Name
+- uid: Gw2Sharp.WebApi.V2.Models.MailCarrier.Name*
+  name: Name
+  href: api/Gw2Sharp.WebApi.V2.Models.MailCarrier.html#Gw2Sharp_WebApi_V2_Models_MailCarrier_Name_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.MailCarrier.Name
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.MailCarrier.Name
+  nameWithType: MailCarrier.Name
+- uid: Gw2Sharp.WebApi.V2.Models.MailCarrier.Order
+  name: Order
+  href: api/Gw2Sharp.WebApi.V2.Models.MailCarrier.html#Gw2Sharp_WebApi_V2_Models_MailCarrier_Order
+  commentId: P:Gw2Sharp.WebApi.V2.Models.MailCarrier.Order
+  fullName: Gw2Sharp.WebApi.V2.Models.MailCarrier.Order
+  nameWithType: MailCarrier.Order
+- uid: Gw2Sharp.WebApi.V2.Models.MailCarrier.Order*
+  name: Order
+  href: api/Gw2Sharp.WebApi.V2.Models.MailCarrier.html#Gw2Sharp_WebApi_V2_Models_MailCarrier_Order_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.MailCarrier.Order
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.MailCarrier.Order
+  nameWithType: MailCarrier.Order
+- uid: Gw2Sharp.WebApi.V2.Models.MailCarrier.UnlockItems
+  name: UnlockItems
+  href: api/Gw2Sharp.WebApi.V2.Models.MailCarrier.html#Gw2Sharp_WebApi_V2_Models_MailCarrier_UnlockItems
+  commentId: P:Gw2Sharp.WebApi.V2.Models.MailCarrier.UnlockItems
+  fullName: Gw2Sharp.WebApi.V2.Models.MailCarrier.UnlockItems
+  nameWithType: MailCarrier.UnlockItems
+- uid: Gw2Sharp.WebApi.V2.Models.MailCarrier.UnlockItems*
+  name: UnlockItems
+  href: api/Gw2Sharp.WebApi.V2.Models.MailCarrier.html#Gw2Sharp_WebApi_V2_Models_MailCarrier_UnlockItems_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.MailCarrier.UnlockItems
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.MailCarrier.UnlockItems
+  nameWithType: MailCarrier.UnlockItems
+- uid: Gw2Sharp.WebApi.V2.Models.MailCarrierFlag
+  name: MailCarrierFlag
+  href: api/Gw2Sharp.WebApi.V2.Models.MailCarrierFlag.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.MailCarrierFlag
+  fullName: Gw2Sharp.WebApi.V2.Models.MailCarrierFlag
+  nameWithType: MailCarrierFlag
+- uid: Gw2Sharp.WebApi.V2.Models.MailCarrierFlag.Default
+  name: Default
+  href: api/Gw2Sharp.WebApi.V2.Models.MailCarrierFlag.html#Gw2Sharp_WebApi_V2_Models_MailCarrierFlag_Default
+  commentId: F:Gw2Sharp.WebApi.V2.Models.MailCarrierFlag.Default
+  fullName: Gw2Sharp.WebApi.V2.Models.MailCarrierFlag.Default
+  nameWithType: MailCarrierFlag.Default
+- uid: Gw2Sharp.WebApi.V2.Models.MailCarrierFlag.Unknown
+  name: Unknown
+  href: api/Gw2Sharp.WebApi.V2.Models.MailCarrierFlag.html#Gw2Sharp_WebApi_V2_Models_MailCarrierFlag_Unknown
+  commentId: F:Gw2Sharp.WebApi.V2.Models.MailCarrierFlag.Unknown
+  fullName: Gw2Sharp.WebApi.V2.Models.MailCarrierFlag.Unknown
+  nameWithType: MailCarrierFlag.Unknown
 - uid: Gw2Sharp.WebApi.V2.Models.Map
   name: Map
   href: api/Gw2Sharp.WebApi.V2.Models.Map.html
