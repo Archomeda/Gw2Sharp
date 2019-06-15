@@ -161,6 +161,9 @@
     <None Remove="TestFiles\Legends\Legends.bulk.json" />
     <None Remove="TestFiles\Legends\Legends.ids.json" />
     <None Remove="TestFiles\Legends\Legends.single.json" />
+    <None Remove="TestFiles\MailCarriers\MailCarriers.bulk.json" />
+    <None Remove="TestFiles\MailCarriers\MailCarriers.ids.json" />
+    <None Remove="TestFiles\MailCarriers\MailCarriers.single.json" />
     <None Remove="TestFiles\MapChests\MapChests.bulk.json" />
     <None Remove="TestFiles\MapChests\MapChests.ids.json" />
     <None Remove="TestFiles\MapChests\MapChests.single.json" />
@@ -329,6 +332,9 @@
     <EmbeddedResource Include="TestFiles\Legends\Legends.bulk.json" />
     <EmbeddedResource Include="TestFiles\Legends\Legends.ids.json" />
     <EmbeddedResource Include="TestFiles\Legends\Legends.single.json" />
+    <EmbeddedResource Include="TestFiles\MailCarriers\MailCarriers.bulk.json" />
+    <EmbeddedResource Include="TestFiles\MailCarriers\MailCarriers.ids.json" />
+    <EmbeddedResource Include="TestFiles\MailCarriers\MailCarriers.single.json" />
     <EmbeddedResource Include="TestFiles\MapChests\MapChests.bulk.json" />
     <EmbeddedResource Include="TestFiles\MapChests\MapChests.ids.json" />
     <EmbeddedResource Include="TestFiles\MapChests\MapChests.single.json" />

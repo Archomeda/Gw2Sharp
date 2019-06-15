@@ -132,7 +132,7 @@ For your convenience, the following list gives an overview of the endpoints that
  /v2/items | ✔️🌐📄📚 | [`Gw2WebApiClient.V2.Items`](../api/Gw2Sharp.WebApi.V2.Clients.ItemsClient.html)
  /v2/itemstats | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Itemstats`](../api/Gw2Sharp.WebApi.V2.Clients.ItemstatsClient.html)
  /v2/legends | ✔️📄📚📦 | [`Gw2WebApiClient.V2.Legends`](../api/Gw2Sharp.WebApi.V2.Clients.LegendsClient.html)
- /v2/mailcarriers | ❌ |
+ /v2/mailcarriers | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.MailCarriers`](../api/Gw2Sharp.WebApi.V2.Clients.MailCarriersClient.html)
  /v2/mapchests | ✔️📄📚📦 | [`Gw2WebApiClient.V2.MapChests`](../api/Gw2Sharp.WebApi.V2.Clients.MapChestsClient.html)
  /v2/maps | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Maps`](../api/Gw2Sharp.WebApi.V2.Clients.MapsClient.html)
  /v2/masteries | ❌ |

@@ -4,6 +4,7 @@
 ### Endpoints
 - Add `/v2/account/novelties`
 - Add `/v2/characters/:id/quests`
+- Add `/v2/mailcarriers`
 - Add `/v2/mapchests`
 - Add `/v2/maps`
 - Add `/v2/worldbosses`

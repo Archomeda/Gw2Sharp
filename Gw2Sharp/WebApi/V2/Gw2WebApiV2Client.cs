@@ -35,6 +35,7 @@ namespace Gw2Sharp.WebApi.V2
         private readonly IItemstatsClient itemstats;
         private readonly ILegendsClient legends;
         private readonly IMapChestsClient mapChests;
+        private readonly IMailCarriersClient mailCarriers;
         private readonly IMapsClient maps;
         private readonly ITokenInfoClient tokenInfo;
         private readonly IWorldBossesClient worldBosses;
@@ -73,6 +74,7 @@ namespace Gw2Sharp.WebApi.V2
             this.items = new ItemsClient(connection);
             this.itemstats = new ItemstatsClient(connection);
             this.legends = new LegendsClient(connection);
+            this.mailCarriers = new MailCarriersClient(connection);
             this.mapChests = new MapChestsClient(connection);
             this.maps = new MapsClient(connection);
             this.tokenInfo = new TokenInfoClient(connection);
@@ -144,6 +146,9 @@ namespace Gw2Sharp.WebApi.V2
 
         /// <inheritdoc />
         public virtual ILegendsClient Legends => this.legends;
+
+        /// <inheritdoc />
+        public virtual IMailCarriersClient MailCarriers => this.mailCarriers;
 
         /// <inheritdoc />
         public virtual IMapChestsClient MapChests => this.mapChests;

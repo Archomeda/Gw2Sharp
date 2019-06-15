@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "unlock_items": [
+      68102
+    ],
+    "order": 4,
+    "icon": "https://render.guildwars2.com/file/DC800626B873260155C528297325C07635FFD41E/924620.png",
+    "name": "Confetti Mail Delivery",
+    "flags": []
+  },
+  {
+    "id": 2,
+    "unlock_items": [
+      68682
+    ],
+    "order": 10,
+    "icon": "https://render.guildwars2.com/file/E7D86E3AD54E64AEDD9493E5D86C6919019C02B5/1001225.png",
+    "name": "Sylvari Seed Pod Mail Carrier",
+    "flags": []
+  },
+  {
+    "id": 3,
+    "unlock_items": [
+      68104
+    ],
+    "order": 2,
+    "icon": "https://render.guildwars2.com/file/2A18167F02E75F1C49EB0C9ABC357E0A593FB573/919383.png",
+    "name": "Gifts Mail Delivery",
+    "flags": []
+  },
+  {
+    "id": 4,
+    "unlock_items": [],
+    "order": 0,
+    "icon": "https://render.guildwars2.com/file/2364A16ED4095005A090712A4910BF2701B77A0C/919381.png",
+    "name": "Mail-Carrier Pigeon",
+    "flags": [
+      "Default"
+    ]
+  }
+]
