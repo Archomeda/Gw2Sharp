@@ -4,6 +4,12 @@ path_classifiers:
 
 queries:
   - include: "*"
+  - exclude:
+      tags:
+        - cs/catch-of-all-exceptions
+        - cs/missed-using-statement
+        - cs/similar-file
+        - cs/useless-gethashcode-call
 
 extraction:
   csharp:
