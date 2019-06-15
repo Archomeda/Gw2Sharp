@@ -1,0 +1,45 @@
+[
+  {
+    "id": 5,
+    "name": "Cooking Materials",
+    "items": [
+      12134,
+      12238,
+      12147,
+      12142,
+      12135,
+      12246,
+      12255
+    ],
+    "order": 6
+  },
+  {
+    "id": 6,
+    "name": "Basic Crafting Materials",
+    "items": [
+      19704,
+      19679,
+      19697,
+      19718,
+      19720,
+      19792,
+      19719,
+      19738
+    ],
+    "order": 1
+  },
+  {
+    "id": 29,
+    "name": "Intermediate Crafting Materials",
+    "items": [
+      24290,
+      24342,
+      24346,
+      24272,
+      24352,
+      24284,
+      24296
+    ],
+    "order": 2
+  }
+]

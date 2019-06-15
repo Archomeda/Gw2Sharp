@@ -136,7 +136,7 @@ For your convenience, the following list gives an overview of the endpoints that
  /v2/mapchests | ✔️📄📚📦 | [`Gw2WebApiClient.V2.MapChests`](../api/Gw2Sharp.WebApi.V2.Clients.MapChestsClient.html)
  /v2/maps | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Maps`](../api/Gw2Sharp.WebApi.V2.Clients.MapsClient.html)
  /v2/masteries | ❌ |
- /v2/materials | ❌ |
+ /v2/materials | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Materials`](../api/Gw2Sharp.WebApi.V2.Clients.MaterialsClient.html)
  /v2/minis | ❌ |
  /v2/mounts | ❌✨ |
  /v2/mounts/skins | ❌✨ |

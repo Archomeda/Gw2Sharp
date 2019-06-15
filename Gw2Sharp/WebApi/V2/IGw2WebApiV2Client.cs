@@ -130,6 +130,11 @@ namespace Gw2Sharp.WebApi.V2
         IMapChestsClient MapChests { get; }
 
         /// <summary>
+        /// Gets the materials.
+        /// </summary>
+        IMaterialsClient Materials { get; }
+
+        /// <summary>
         /// Gets the maps.
         /// </summary>
         IMapsClient Maps { get; }

@@ -170,6 +170,9 @@
     <None Remove="TestFiles\Maps\Maps.bulk.json" />
     <None Remove="TestFiles\Maps\Maps.ids.json" />
     <None Remove="TestFiles\Maps\Maps.single.json" />
+    <None Remove="TestFiles\Materials\Materials.bulk.json" />
+    <None Remove="TestFiles\Materials\Materials.ids.json" />
+    <None Remove="TestFiles\Materials\Materials.single.json" />
     <None Remove="TestFiles\TokenInfo\TokenInfo.ApiToken.json" />
     <None Remove="TestFiles\TokenInfo\TokenInfo.SubToken.json" />
     <None Remove="TestFiles\WorldBosses\WorldBosses.bulk.json" />
@@ -341,6 +344,9 @@
     <EmbeddedResource Include="TestFiles\Maps\Maps.bulk.json" />
     <EmbeddedResource Include="TestFiles\Maps\Maps.ids.json" />
     <EmbeddedResource Include="TestFiles\Maps\Maps.single.json" />
+    <EmbeddedResource Include="TestFiles\Materials\Materials.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Materials\Materials.ids.json" />
+    <EmbeddedResource Include="TestFiles\Materials\Materials.single.json" />
     <EmbeddedResource Include="TestFiles\TokenInfo\TokenInfo.ApiToken.json" />
     <EmbeddedResource Include="TestFiles\TokenInfo\TokenInfo.SubToken.json" />
     <EmbeddedResource Include="TestFiles\WorldBosses\WorldBosses.bulk.json" />
