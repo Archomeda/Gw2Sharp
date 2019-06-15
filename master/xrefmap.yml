@@ -1004,12 +1004,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.Gw2WebApiClient.Connection
   nameWithType: Gw2WebApiClient.Connection
-- uid: Gw2Sharp.WebApi.Gw2WebApiClient.UrlBase
-  name: UrlBase
-  href: api/Gw2Sharp.WebApi.Gw2WebApiClient.html#Gw2Sharp_WebApi_Gw2WebApiClient_UrlBase
-  commentId: F:Gw2Sharp.WebApi.Gw2WebApiClient.UrlBase
-  fullName: Gw2Sharp.WebApi.Gw2WebApiClient.UrlBase
-  nameWithType: Gw2WebApiClient.UrlBase
 - uid: Gw2Sharp.WebApi.Gw2WebApiClient.V2
   name: V2
   href: api/Gw2Sharp.WebApi.Gw2WebApiClient.html#Gw2Sharp_WebApi_Gw2WebApiClient_V2
@@ -10499,6 +10493,12 @@ references:
   commentId: T:Gw2Sharp.WebApi.V2.Clients.IMapChestsClient
   fullName: Gw2Sharp.WebApi.V2.Clients.IMapChestsClient
   nameWithType: IMapChestsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.IMapsClient
+  name: IMapsClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.IMapsClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.IMapsClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.IMapsClient
+  nameWithType: IMapsClient
 - uid: Gw2Sharp.WebApi.V2.Clients.IPaginatedClient`1
   name: IPaginatedClient<TObject>
   href: api/Gw2Sharp.WebApi.V2.Clients.IPaginatedClient-1.html
@@ -10631,6 +10631,25 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.MapChestsClient.MapChestsClient
   nameWithType: MapChestsClient.MapChestsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.MapsClient
+  name: MapsClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.MapsClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.MapsClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.MapsClient
+  nameWithType: MapsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.MapsClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  name: MapsClient(IConnection)
+  href: api/Gw2Sharp.WebApi.V2.Clients.MapsClient.html#Gw2Sharp_WebApi_V2_Clients_MapsClient__ctor_Gw2Sharp_WebApi_IConnection_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.MapsClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  fullName: Gw2Sharp.WebApi.V2.Clients.MapsClient.MapsClient(Gw2Sharp.WebApi.IConnection)
+  nameWithType: MapsClient.MapsClient(IConnection)
+- uid: Gw2Sharp.WebApi.V2.Clients.MapsClient.#ctor*
+  name: MapsClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.MapsClient.html#Gw2Sharp_WebApi_V2_Clients_MapsClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.MapsClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.MapsClient.MapsClient
+  nameWithType: MapsClient.MapsClient
 - uid: Gw2Sharp.WebApi.V2.Clients.TokenInfoClient
   name: TokenInfoClient
   href: api/Gw2Sharp.WebApi.V2.Clients.TokenInfoClient.html
@@ -10974,6 +10993,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.MapChests
   nameWithType: Gw2WebApiV2Client.MapChests
+- uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Maps
+  name: Maps
+  href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_Maps
+  commentId: P:Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Maps
+  fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Maps
+  nameWithType: Gw2WebApiV2Client.Maps
+- uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Maps*
+  name: Maps
+  href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_Maps_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Maps
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Maps
+  nameWithType: Gw2WebApiV2Client.Maps
 - uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.TokenInfo
   name: TokenInfo
   href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_TokenInfo
@@ -10987,12 +11019,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.TokenInfo
   nameWithType: Gw2WebApiV2Client.TokenInfo
-- uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.UrlBase
-  name: UrlBase
-  href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_UrlBase
-  commentId: F:Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.UrlBase
-  fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.UrlBase
-  nameWithType: Gw2WebApiV2Client.UrlBase
 - uid: Gw2Sharp.WebApi.V2.IApiV2Object
   name: IApiV2Object
   href: api/Gw2Sharp.WebApi.V2.IApiV2Object.html
@@ -11326,6 +11352,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.MapChests
   nameWithType: IGw2WebApiV2Client.MapChests
+- uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Maps
+  name: Maps
+  href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_Maps
+  commentId: P:Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Maps
+  fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Maps
+  nameWithType: IGw2WebApiV2Client.Maps
+- uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Maps*
+  name: Maps
+  href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_Maps_
+  commentId: Overload:Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Maps
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Maps
+  nameWithType: IGw2WebApiV2Client.Maps
 - uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.TokenInfo
   name: TokenInfo
   href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_TokenInfo
@@ -23309,12 +23348,12 @@ references:
   commentId: F:Gw2Sharp.WebApi.V2.Models.MapType.EdgeOfTheMists
   fullName: Gw2Sharp.WebApi.V2.Models.MapType.EdgeOfTheMists
   nameWithType: MapType.EdgeOfTheMists
-- uid: Gw2Sharp.WebApi.V2.Models.MapType.EternalBattlegrouns
-  name: EternalBattlegrouns
-  href: api/Gw2Sharp.WebApi.V2.Models.MapType.html#Gw2Sharp_WebApi_V2_Models_MapType_EternalBattlegrouns
-  commentId: F:Gw2Sharp.WebApi.V2.Models.MapType.EternalBattlegrouns
-  fullName: Gw2Sharp.WebApi.V2.Models.MapType.EternalBattlegrouns
-  nameWithType: MapType.EternalBattlegrouns
+- uid: Gw2Sharp.WebApi.V2.Models.MapType.EternalBattlegrounds
+  name: EternalBattlegrounds
+  href: api/Gw2Sharp.WebApi.V2.Models.MapType.html#Gw2Sharp_WebApi_V2_Models_MapType_EternalBattlegrounds
+  commentId: F:Gw2Sharp.WebApi.V2.Models.MapType.EternalBattlegrounds
+  fullName: Gw2Sharp.WebApi.V2.Models.MapType.EternalBattlegrounds
+  nameWithType: MapType.EternalBattlegrounds
 - uid: Gw2Sharp.WebApi.V2.Models.MapType.FortunesVale
   name: FortunesVale
   href: api/Gw2Sharp.WebApi.V2.Models.MapType.html#Gw2Sharp_WebApi_V2_Models_MapType_FortunesVale
