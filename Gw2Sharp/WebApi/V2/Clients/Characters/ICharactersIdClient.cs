@@ -47,6 +47,13 @@ namespace Gw2Sharp.WebApi.V2.Clients
         ICharactersIdInventoryClient Inventory { get; }
 
         /// <summary>
+        /// Gets a character's quests.
+        /// Requires scopes: account, characters, progression.
+        /// Each element can be resolved against <see cref="IGw2WebApiV2Client.Quests"/>.
+        /// </summary>
+        ICharactersIdQuestsClient Quests { get; }
+
+        /// <summary>
         /// Gets a character's learned recipes.
         /// Requires scopes: account, characters, inventories.
         /// Each element can be resolved against <see cref="IGw2WebApiV2Client.Recipes"/>.

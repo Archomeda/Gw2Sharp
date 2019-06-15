@@ -3,6 +3,7 @@
 ## 0.4.0
 ### Endpoints
 - Add `/v2/account/novelties`
+- Add `/v2/characters/:id/quests`
 - Add `/v2/mapchests`
 - Add `/v2/maps`
 - Add `/v2/worldbosses`
@@ -21,14 +22,6 @@
 - Use ConcurrentDictionary for MemoryCacheMethod for thread-safety ([#2](https://github.com/Archomeda/Gw2Sharp/issues/2))
 
 ## 0.3.0
-### Features
-- **Breaking:** Remove `.GetWithResponseAsync()`, `.AllWithResponseAsync()`, `.IdsWithResponseAsync()`, `.ManyWithResponseAsync()` and `.PageWithResponseAsync()` of all decendants of `IClient`.
-  Response information is now returned in the `IApiV2Object.HttpResponseInfo` property of the return objects of all respective `*Async()` methods).
-- Add support for the `Last-Modified` header (can be accessed in `IApiV2Object.HttpResponseInfo`)
-
-### Refactoring
-- **Breaking:** In `IPaginatedClient<TObject>`, the `PageAsync(int page, CancellationToken cancellationToken, int pageSize)` method has had its order of parameters changed to `PageAsync(int page, int pageSize, CancellationToken cancellationToken)`.
-
 ### Endpoints
 - **Breaking:** Update `/v2/account` and all subendpoints to a minimum schema version of `2019-02-21T00:00:00.000Z`
 - **Breaking:** Update `/v2/characters` and all subendpoints to schema version `2019-02-21T00:00:00.000Z`
@@ -40,6 +33,14 @@
 - Add `/v2/account/worldbosses`
 - Add `/v2/dailycrafting`
 - Add `/v2/home/nodes`
+
+### Features
+- **Breaking:** Remove `.GetWithResponseAsync()`, `.AllWithResponseAsync()`, `.IdsWithResponseAsync()`, `.ManyWithResponseAsync()` and `.PageWithResponseAsync()` of all decendants of `IClient`.
+  Response information is now returned in the `IApiV2Object.HttpResponseInfo` property of the return objects of all respective `*Async()` methods).
+- Add support for the `Last-Modified` header (can be accessed in `IApiV2Object.HttpResponseInfo`)
+
+### Refactoring
+- **Breaking:** In `IPaginatedClient<TObject>`, the `PageAsync(int page, CancellationToken cancellationToken, int pageSize)` method has had its order of parameters changed to `PageAsync(int page, int pageSize, CancellationToken cancellationToken)`.
 
 ## 0.2.0
 ### Endpoints

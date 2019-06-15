@@ -74,7 +74,7 @@ For your convenience, the following list gives an overview of the endpoints that
  /v2/characters/`:id`/equipment | ✔️🔑📆 | [`Gw2WebApiClient.V2.Characters[id].Equipment`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentClient.html)
  /v2/characters/`:id`/heropoints | ✔️🔑📆 | [`Gw2WebApiClient.V2.Characters[id].HeroPoints`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdHeroPointsClient.html)
  /v2/characters/`:id`/inventory | ✔️🔑📆 | [`Gw2WebApiClient.V2.Characters[id].Inventory`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdInventoryClient.html)
- /v2/characters/`:id`/quests | ❌✨ |
+ /v2/characters/`:id`/quests | ✔️🔑📆 | [`Gw2WebApiClient.V2.Characters[id].Quests`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdQuestsClient.html)
  /v2/characters/`:id`/recipes | ✔️🔑📆 | [`Gw2WebApiClient.V2.Characters[id].Recipes`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdRecipesClient.html)
  /v2/characters/`:id`/sab | ✔️🔑📆 | [`Gw2WebApiClient.V2.Characters[id].Sab`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdSabClient.html)
  /v2/characters/`:id`/skills | ✔️🔑📆 | [`Gw2WebApiClient.V2.Characters[id].Skills`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdSkillsClient.html)

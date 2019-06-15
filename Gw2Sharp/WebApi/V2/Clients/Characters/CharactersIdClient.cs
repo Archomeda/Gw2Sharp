@@ -15,6 +15,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         private readonly ICharactersIdEquipmentClient equipment;
         private readonly ICharactersIdHeroPointsClient heroPoints;
         private readonly ICharactersIdInventoryClient inventory;
+        private readonly ICharactersIdQuestsClient quests;
         private readonly ICharactersIdRecipesClient recipes;
         private readonly ICharactersIdSabClient sab;
         private readonly ICharactersIdSkillsClient skills;
@@ -37,6 +38,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
             this.equipment = new CharactersIdEquipmentClient(connection, characterName);
             this.heroPoints = new CharactersIdHeroPointsClient(connection, characterName);
             this.inventory = new CharactersIdInventoryClient(connection, characterName);
+            this.quests = new CharactersIdQuestsClient(connection, characterName);
             this.recipes = new CharactersIdRecipesClient(connection, characterName);
             this.sab = new CharactersIdSabClient(connection, characterName);
             this.skills = new CharactersIdSkillsClient(connection, characterName);
@@ -64,6 +66,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
 
         /// <inheritdoc />
         public virtual ICharactersIdInventoryClient Inventory => this.inventory;
+
+        /// <inheritdoc />
+        public virtual ICharactersIdQuestsClient Quests => this.quests;
 
         /// <inheritdoc />
         public virtual ICharactersIdRecipesClient Recipes => this.recipes;

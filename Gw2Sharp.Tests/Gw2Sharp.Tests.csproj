@@ -63,6 +63,7 @@
     <None Remove="TestFiles\Characters\CharactersIdEquipment.json" />
     <None Remove="TestFiles\Characters\CharactersIdHeroPoints.json" />
     <None Remove="TestFiles\Characters\CharactersIdInventory.json" />
+    <None Remove="TestFiles\Characters\CharactersIdQuests.json" />
     <None Remove="TestFiles\Characters\CharactersIdRecipes.json" />
     <None Remove="TestFiles\Characters\CharactersIdSab.json" />
     <None Remove="TestFiles\Characters\CharactersIdSkills.json" />
@@ -230,6 +231,7 @@
     <EmbeddedResource Include="TestFiles\Characters\CharactersIdEquipment.json" />
     <EmbeddedResource Include="TestFiles\Characters\CharactersIdHeroPoints.json" />
     <EmbeddedResource Include="TestFiles\Characters\CharactersIdInventory.json" />
+    <EmbeddedResource Include="TestFiles\Characters\CharactersIdQuests.json" />
     <EmbeddedResource Include="TestFiles\Characters\CharactersIdRecipes.json" />
     <EmbeddedResource Include="TestFiles\Characters\CharactersIdSab.json" />
     <EmbeddedResource Include="TestFiles\Characters\CharactersIdSkills.json" />
