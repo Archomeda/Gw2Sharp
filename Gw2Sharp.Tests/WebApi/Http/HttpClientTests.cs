@@ -21,13 +21,15 @@ namespace Gw2Sharp.Tests.WebApi.Http
             {
                 listener.Prefixes.Add(Url);
                 listener.Start();
-                while (!listener.IsListening)
-                    Thread.Sleep(TimeSpan.FromSeconds(1));
                 var context = listener.GetContext();
                 // This is here to provide test methods the option to "cancel" the response
                 if (func(context))
                     context.Response.Close();
             }).Start();
+
+            while (!listener.IsListening)
+                Thread.Sleep(TimeSpan.FromMilliseconds(100));
+
             return listener;
         }
 
