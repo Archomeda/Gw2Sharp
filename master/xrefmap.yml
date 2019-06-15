@@ -10493,6 +10493,12 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.ILocalizedClient(Of TObject)
   nameWithType: ILocalizedClient<TObject>
   nameWithType.vb: ILocalizedClient(Of TObject)
+- uid: Gw2Sharp.WebApi.V2.Clients.IMapChestsClient
+  name: IMapChestsClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.IMapChestsClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.IMapChestsClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.IMapChestsClient
+  nameWithType: IMapChestsClient
 - uid: Gw2Sharp.WebApi.V2.Clients.IPaginatedClient`1
   name: IPaginatedClient<TObject>
   href: api/Gw2Sharp.WebApi.V2.Clients.IPaginatedClient-1.html
@@ -10606,6 +10612,25 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.LegendsClient.LegendsClient
   nameWithType: LegendsClient.LegendsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.MapChestsClient
+  name: MapChestsClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.MapChestsClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.MapChestsClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.MapChestsClient
+  nameWithType: MapChestsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.MapChestsClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  name: MapChestsClient(IConnection)
+  href: api/Gw2Sharp.WebApi.V2.Clients.MapChestsClient.html#Gw2Sharp_WebApi_V2_Clients_MapChestsClient__ctor_Gw2Sharp_WebApi_IConnection_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.MapChestsClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  fullName: Gw2Sharp.WebApi.V2.Clients.MapChestsClient.MapChestsClient(Gw2Sharp.WebApi.IConnection)
+  nameWithType: MapChestsClient.MapChestsClient(IConnection)
+- uid: Gw2Sharp.WebApi.V2.Clients.MapChestsClient.#ctor*
+  name: MapChestsClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.MapChestsClient.html#Gw2Sharp_WebApi_V2_Clients_MapChestsClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.MapChestsClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.MapChestsClient.MapChestsClient
+  nameWithType: MapChestsClient.MapChestsClient
 - uid: Gw2Sharp.WebApi.V2.Clients.TokenInfoClient
   name: TokenInfoClient
   href: api/Gw2Sharp.WebApi.V2.Clients.TokenInfoClient.html
@@ -10936,6 +10961,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Legends
   nameWithType: Gw2WebApiV2Client.Legends
+- uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.MapChests
+  name: MapChests
+  href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_MapChests
+  commentId: P:Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.MapChests
+  fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.MapChests
+  nameWithType: Gw2WebApiV2Client.MapChests
+- uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.MapChests*
+  name: MapChests
+  href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_MapChests_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.MapChests
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.MapChests
+  nameWithType: Gw2WebApiV2Client.MapChests
 - uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.TokenInfo
   name: TokenInfo
   href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_TokenInfo
@@ -11275,6 +11313,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Legends
   nameWithType: IGw2WebApiV2Client.Legends
+- uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.MapChests
+  name: MapChests
+  href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_MapChests
+  commentId: P:Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.MapChests
+  fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.MapChests
+  nameWithType: IGw2WebApiV2Client.MapChests
+- uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.MapChests*
+  name: MapChests
+  href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_MapChests_
+  commentId: Overload:Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.MapChests
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.MapChests
+  nameWithType: IGw2WebApiV2Client.MapChests
 - uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.TokenInfo
   name: TokenInfo
   href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_TokenInfo
@@ -23203,6 +23254,25 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.Map.Type
   nameWithType: Map.Type
+- uid: Gw2Sharp.WebApi.V2.Models.MapChest
+  name: MapChest
+  href: api/Gw2Sharp.WebApi.V2.Models.MapChest.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.MapChest
+  fullName: Gw2Sharp.WebApi.V2.Models.MapChest
+  nameWithType: MapChest
+- uid: Gw2Sharp.WebApi.V2.Models.MapChest.Id
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.MapChest.html#Gw2Sharp_WebApi_V2_Models_MapChest_Id
+  commentId: P:Gw2Sharp.WebApi.V2.Models.MapChest.Id
+  fullName: Gw2Sharp.WebApi.V2.Models.MapChest.Id
+  nameWithType: MapChest.Id
+- uid: Gw2Sharp.WebApi.V2.Models.MapChest.Id*
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.MapChest.html#Gw2Sharp_WebApi_V2_Models_MapChest_Id_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.MapChest.Id
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.MapChest.Id
+  nameWithType: MapChest.Id
 - uid: Gw2Sharp.WebApi.V2.Models.MapType
   name: MapType
   href: api/Gw2Sharp.WebApi.V2.Models.MapType.html
