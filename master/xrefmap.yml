@@ -10620,6 +10620,12 @@ references:
   commentId: T:Gw2Sharp.WebApi.V2.Clients.IMapsClient
   fullName: Gw2Sharp.WebApi.V2.Clients.IMapsClient
   nameWithType: IMapsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.IMaterialsClient
+  name: IMaterialsClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.IMaterialsClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.IMaterialsClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.IMaterialsClient
+  nameWithType: IMaterialsClient
 - uid: Gw2Sharp.WebApi.V2.Clients.IPaginatedClient`1
   name: IPaginatedClient<TObject>
   href: api/Gw2Sharp.WebApi.V2.Clients.IPaginatedClient-1.html
@@ -10796,6 +10802,25 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.MapsClient.MapsClient
   nameWithType: MapsClient.MapsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.MaterialsClient
+  name: MaterialsClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.MaterialsClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.MaterialsClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.MaterialsClient
+  nameWithType: MaterialsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.MaterialsClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  name: MaterialsClient(IConnection)
+  href: api/Gw2Sharp.WebApi.V2.Clients.MaterialsClient.html#Gw2Sharp_WebApi_V2_Clients_MaterialsClient__ctor_Gw2Sharp_WebApi_IConnection_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.MaterialsClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  fullName: Gw2Sharp.WebApi.V2.Clients.MaterialsClient.MaterialsClient(Gw2Sharp.WebApi.IConnection)
+  nameWithType: MaterialsClient.MaterialsClient(IConnection)
+- uid: Gw2Sharp.WebApi.V2.Clients.MaterialsClient.#ctor*
+  name: MaterialsClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.MaterialsClient.html#Gw2Sharp_WebApi_V2_Clients_MaterialsClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.MaterialsClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.MaterialsClient.MaterialsClient
+  nameWithType: MaterialsClient.MaterialsClient
 - uid: Gw2Sharp.WebApi.V2.Clients.TokenInfoClient
   name: TokenInfoClient
   href: api/Gw2Sharp.WebApi.V2.Clients.TokenInfoClient.html
@@ -11184,6 +11209,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Maps
   nameWithType: Gw2WebApiV2Client.Maps
+- uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Materials
+  name: Materials
+  href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_Materials
+  commentId: P:Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Materials
+  fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Materials
+  nameWithType: Gw2WebApiV2Client.Materials
+- uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Materials*
+  name: Materials
+  href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_Materials_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Materials
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Materials
+  nameWithType: Gw2WebApiV2Client.Materials
 - uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.TokenInfo
   name: TokenInfo
   href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_TokenInfo
@@ -11569,6 +11607,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Maps
   nameWithType: IGw2WebApiV2Client.Maps
+- uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Materials
+  name: Materials
+  href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_Materials
+  commentId: P:Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Materials
+  fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Materials
+  nameWithType: IGw2WebApiV2Client.Materials
+- uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Materials*
+  name: Materials
+  href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_Materials_
+  commentId: Overload:Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Materials
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Materials
+  nameWithType: IGw2WebApiV2Client.Materials
 - uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.TokenInfo
   name: TokenInfo
   href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_TokenInfo
@@ -23775,6 +23826,64 @@ references:
   commentId: F:Gw2Sharp.WebApi.V2.Models.MapType.UserTournament
   fullName: Gw2Sharp.WebApi.V2.Models.MapType.UserTournament
   nameWithType: MapType.UserTournament
+- uid: Gw2Sharp.WebApi.V2.Models.MaterialCategory
+  name: MaterialCategory
+  href: api/Gw2Sharp.WebApi.V2.Models.MaterialCategory.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.MaterialCategory
+  fullName: Gw2Sharp.WebApi.V2.Models.MaterialCategory
+  nameWithType: MaterialCategory
+- uid: Gw2Sharp.WebApi.V2.Models.MaterialCategory.Id
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.MaterialCategory.html#Gw2Sharp_WebApi_V2_Models_MaterialCategory_Id
+  commentId: P:Gw2Sharp.WebApi.V2.Models.MaterialCategory.Id
+  fullName: Gw2Sharp.WebApi.V2.Models.MaterialCategory.Id
+  nameWithType: MaterialCategory.Id
+- uid: Gw2Sharp.WebApi.V2.Models.MaterialCategory.Id*
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.MaterialCategory.html#Gw2Sharp_WebApi_V2_Models_MaterialCategory_Id_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.MaterialCategory.Id
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.MaterialCategory.Id
+  nameWithType: MaterialCategory.Id
+- uid: Gw2Sharp.WebApi.V2.Models.MaterialCategory.Items
+  name: Items
+  href: api/Gw2Sharp.WebApi.V2.Models.MaterialCategory.html#Gw2Sharp_WebApi_V2_Models_MaterialCategory_Items
+  commentId: P:Gw2Sharp.WebApi.V2.Models.MaterialCategory.Items
+  fullName: Gw2Sharp.WebApi.V2.Models.MaterialCategory.Items
+  nameWithType: MaterialCategory.Items
+- uid: Gw2Sharp.WebApi.V2.Models.MaterialCategory.Items*
+  name: Items
+  href: api/Gw2Sharp.WebApi.V2.Models.MaterialCategory.html#Gw2Sharp_WebApi_V2_Models_MaterialCategory_Items_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.MaterialCategory.Items
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.MaterialCategory.Items
+  nameWithType: MaterialCategory.Items
+- uid: Gw2Sharp.WebApi.V2.Models.MaterialCategory.Name
+  name: Name
+  href: api/Gw2Sharp.WebApi.V2.Models.MaterialCategory.html#Gw2Sharp_WebApi_V2_Models_MaterialCategory_Name
+  commentId: P:Gw2Sharp.WebApi.V2.Models.MaterialCategory.Name
+  fullName: Gw2Sharp.WebApi.V2.Models.MaterialCategory.Name
+  nameWithType: MaterialCategory.Name
+- uid: Gw2Sharp.WebApi.V2.Models.MaterialCategory.Name*
+  name: Name
+  href: api/Gw2Sharp.WebApi.V2.Models.MaterialCategory.html#Gw2Sharp_WebApi_V2_Models_MaterialCategory_Name_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.MaterialCategory.Name
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.MaterialCategory.Name
+  nameWithType: MaterialCategory.Name
+- uid: Gw2Sharp.WebApi.V2.Models.MaterialCategory.Order
+  name: Order
+  href: api/Gw2Sharp.WebApi.V2.Models.MaterialCategory.html#Gw2Sharp_WebApi_V2_Models_MaterialCategory_Order
+  commentId: P:Gw2Sharp.WebApi.V2.Models.MaterialCategory.Order
+  fullName: Gw2Sharp.WebApi.V2.Models.MaterialCategory.Order
+  nameWithType: MaterialCategory.Order
+- uid: Gw2Sharp.WebApi.V2.Models.MaterialCategory.Order*
+  name: Order
+  href: api/Gw2Sharp.WebApi.V2.Models.MaterialCategory.html#Gw2Sharp_WebApi_V2_Models_MaterialCategory_Order_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.MaterialCategory.Order
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.MaterialCategory.Order
+  nameWithType: MaterialCategory.Order
 - uid: Gw2Sharp.WebApi.V2.Models.Node
   name: Node
   href: api/Gw2Sharp.WebApi.V2.Models.Node.html
