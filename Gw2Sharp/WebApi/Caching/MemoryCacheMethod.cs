@@ -40,22 +40,27 @@ namespace Gw2Sharp.WebApi.Caching
                 if (!this.cachedItems.TryGetValue(category, out var cache))
                     continue;
 
-                foreach (string key in cache.Keys.ToArray())
-                {
-                    if (!cache.TryGetValue(key, out object obj))
-                        continue;
-
-                    var item = (CacheItem)obj;
-                    if (item.ExpiryTime <= now)
-                    {
-                        while (!cache.TryRemove(key, out _))
-                            Thread.Sleep(TimeSpan.FromMilliseconds(10));
-                    }
-                }
+                this.CollectInnerGarbage(now, cache);
 
                 if (cache.Count == 0)
                 {
                     while (!this.cachedItems.TryRemove(category, out _))
+                        Thread.Sleep(TimeSpan.FromMilliseconds(10));
+                }
+            }
+        }
+
+        private void CollectInnerGarbage(DateTime now, ConcurrentDictionary<object, object> cache)
+        {
+            foreach (string key in cache.Keys.ToArray())
+            {
+                if (!cache.TryGetValue(key, out object obj))
+                    continue;
+
+                var item = (CacheItem)obj;
+                if (item.ExpiryTime <= now)
+                {
+                    while (!cache.TryRemove(key, out _))
                         Thread.Sleep(TimeSpan.FromMilliseconds(10));
                 }
             }
@@ -129,7 +134,7 @@ namespace Gw2Sharp.WebApi.Caching
             this.cachedItems.Clear();
 
         /// <inheritdoc />
-        protected override void Dispose(bool disposing) =>
+        protected override void Dispose(bool isDisposing) =>
             this.gcTimer.Dispose();
 
         #endregion

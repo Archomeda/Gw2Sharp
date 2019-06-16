@@ -22,20 +22,32 @@ namespace Gw2Sharp.WebApi.Caching
             null;
 
         /// <inheritdoc />
-        public override async Task SetAsync<T>(CacheItem<T> item) { }
+        public override async Task SetAsync<T>(CacheItem<T> item)
+        {
+            // Nothing to do
+        }
 
         /// <inheritdoc />
-        public override async Task SetAsync<T>(string category, object id, T item, DateTime expiryTime) { }
+        public override async Task SetAsync<T>(string category, object id, T item, DateTime expiryTime)
+        {
+            // Nothing to do
+        }
 
         /// <inheritdoc />
         public override async Task<IDictionary<object, CacheItem<T>>> GetManyAsync<T>(string category, IEnumerable<object> ids) =>
             new Dictionary<object, CacheItem<T>>();
 
         /// <inheritdoc />
-        public override async Task SetManyAsync<T>(IEnumerable<CacheItem<T>> items) { }
+        public override async Task SetManyAsync<T>(IEnumerable<CacheItem<T>> items)
+        {
+            // Nothing to do
+        }
 
         /// <inheritdoc />
-        public override async Task FlushAsync() { }
+        public override async Task FlushAsync()
+        {
+            // Nothing to do
+        }
 
         #endregion
     }
