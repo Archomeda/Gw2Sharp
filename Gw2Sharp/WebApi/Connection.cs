@@ -158,11 +158,16 @@ namespace Gw2Sharp.WebApi
 
 
         /// <inheritdoc />
-        public async Task<IHttpResponse<TResponse>> RequestAsync<TResponse>(Uri requestUri, IEnumerable<KeyValuePair<string, string>>? additionalHeaders, CancellationToken cancellationToken) where TResponse : object
+        public Task<IHttpResponse<TResponse>> RequestAsync<TResponse>(Uri requestUri, IEnumerable<KeyValuePair<string, string>>? additionalHeaders, CancellationToken cancellationToken) where TResponse : object
         {
             if (requestUri == null)
                 throw new ArgumentNullException(nameof(requestUri));
 
+            return this.RequestInternalAsync<TResponse>(requestUri, additionalHeaders, cancellationToken);
+        }
+
+        private async Task<IHttpResponse<TResponse>> RequestInternalAsync<TResponse>(Uri requestUri, IEnumerable<KeyValuePair<string, string>>? additionalHeaders, CancellationToken cancellationToken) where TResponse : object
+        {
             IDictionary<string, string> headers = this.requestHeaders;
             if (additionalHeaders != null)
             {

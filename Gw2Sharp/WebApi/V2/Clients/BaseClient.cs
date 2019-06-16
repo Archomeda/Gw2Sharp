@@ -12,7 +12,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
         /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
-        public BaseClient(IConnection connection)
+        protected BaseClient(IConnection connection)
         {
             this.Connection = connection ?? throw new ArgumentNullException(nameof(connection));
         }

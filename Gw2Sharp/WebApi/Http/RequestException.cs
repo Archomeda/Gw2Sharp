@@ -120,7 +120,7 @@ namespace Gw2Sharp.WebApi.Http
         /// </summary>
         /// <param name="info">The serialization info.</param>
         /// <param name="context">The streaming context.</param>
-        protected RequestException(SerializationInfo info, StreamingContext context)
+        protected RequestException(SerializationInfo info, StreamingContext context) : base(info, context)
         {
             this.Request = (IHttpRequest)info.GetValue(nameof(this.Request), typeof(IHttpRequest));
             this.Response = (IHttpResponse<TResponse>?)info.GetValue(nameof(this.Response), typeof(IHttpResponse<TResponse>?));

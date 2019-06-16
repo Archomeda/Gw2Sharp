@@ -26,7 +26,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
         /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
         /// <exception cref="InvalidOperationException">Thrown when the client implements an invalid combination of <see cref="IEndpointClient"/> interfaces.</exception>
-        public BaseEndpointClient(IConnection connection) :
+        protected BaseEndpointClient(IConnection connection) :
             base(connection)
         {
             this.EndpointPath = this.GetRequiredAttribute<EndpointPathAttribute>().EndpointPath;
@@ -50,7 +50,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="replaceSegments">The path segments to replace.</param>
         /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
         /// <exception cref="InvalidOperationException">Thrown when the client implements an invalid combination of <see cref="IEndpointClient"/> interfaces.</exception>
-        public BaseEndpointClient(IConnection connection, params string[] replaceSegments) :
+        protected BaseEndpointClient(IConnection connection, params string[] replaceSegments) :
             this(connection)
         {
             var segments = this.GetRequiredAttributes<EndpointPathSegmentAttribute>().OrderBy(a => a.Order).ToList();
@@ -181,13 +181,20 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The entry.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="id"/> is <c>null</c>.</exception>
-        protected async Task<TEndpointObject> RequestGetAsync<TEndpointObject, TId>(TId id, CancellationToken cancellationToken)
+        protected Task<TEndpointObject> RequestGetAsync<TEndpointObject, TId>(TId id, CancellationToken cancellationToken)
             where TEndpointObject : IApiV2Object, IIdentifiable<TId>
             where TId : object
         {
             if (id == null)
                 throw new ArgumentNullException(nameof(id));
 
+            return this.RequestGetInternalAsync<TEndpointObject, TId>(id, cancellationToken);
+        }
+
+        private async Task<TEndpointObject> RequestGetInternalAsync<TEndpointObject, TId>(TId id, CancellationToken cancellationToken)
+            where TEndpointObject : IApiV2Object, IIdentifiable<TId>
+            where TId : object
+        {
             var @object = await this.GetOrUpdateAsync<TEndpointObject>(this.FormatUrlQueryItem(this.EndpointPath, id), id, cancellationToken).ConfigureAwait(false);
             return @object.Item;
         }
@@ -214,13 +221,20 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The entries.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="ids"/> is <c>null</c>.</exception>
-        protected async Task<IReadOnlyList<TEndpointObject>> RequestManyAsync<TEndpointObject, TId>(IEnumerable<TId> ids, CancellationToken cancellationToken)
+        protected Task<IReadOnlyList<TEndpointObject>> RequestManyAsync<TEndpointObject, TId>(IEnumerable<TId> ids, CancellationToken cancellationToken)
             where TEndpointObject : IApiV2Object, IIdentifiable<TId>
             where TId : object
         {
             if (ids == null)
                 throw new ArgumentNullException(nameof(ids));
 
+            return this.RequestManyInternalAsync<TEndpointObject, TId>(ids, cancellationToken);
+        }
+
+        private async Task<IReadOnlyList<TEndpointObject>> RequestManyInternalAsync<TEndpointObject, TId>(IEnumerable<TId> ids, CancellationToken cancellationToken)
+            where TEndpointObject : IApiV2Object, IIdentifiable<TId>
+            where TId : object
+        {
             object lockObject = new object();
 
             var cache = await this.Connection.CacheMethod.GetOrUpdateManyAsync<TEndpointObject>(this.EndpointPath, ids.Cast<object>(), async missingIds =>
@@ -280,13 +294,20 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="pageSize">The page size (maximum 200).</param>
         /// <returns>The entries.</returns>
         /// <exception cref="ArgumentOutOfRangeException"><paramref name="pageSize"/> is not within the accepted boundaries (1 - 200).</exception>
-        protected async Task<IApiV2ObjectList<TEndpointObject>> RequestPageAsync<TEndpointObject, TId>(int page, CancellationToken cancellationToken, int pageSize = MAX_PAGE_SIZE)
+        protected Task<IApiV2ObjectList<TEndpointObject>> RequestPageAsync<TEndpointObject, TId>(int page, CancellationToken cancellationToken, int pageSize = MAX_PAGE_SIZE)
             where TEndpointObject : IApiV2Object, IIdentifiable<TId>
             where TId : object
         {
             if (pageSize < 1 || pageSize > 200)
                 throw new ArgumentOutOfRangeException(nameof(pageSize), pageSize, "Page size cannot be smaller than 1 or bigger than 200");
 
+            return this.RequestPageInternalAsync<TEndpointObject, TId>(page, cancellationToken, pageSize);
+        }
+
+        private async Task<IApiV2ObjectList<TEndpointObject>> RequestPageInternalAsync<TEndpointObject, TId>(int page, CancellationToken cancellationToken, int pageSize = MAX_PAGE_SIZE)
+            where TEndpointObject : IApiV2Object, IIdentifiable<TId>
+            where TId : object
+        {
             var items = await this.GetOrUpdateAsync<IApiV2ObjectList<TEndpointObject>>(this.FormatUrlQueryPage(this.EndpointPath, page, pageSize), $"_page{page}-{pageSize}", cancellationToken).ConfigureAwait(false);
             await this.UpdateIndividualsAsync<TEndpointObject, TId>(items).ConfigureAwait(false);
             return items.Item;
@@ -310,11 +331,16 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="pageSize">The page size (maximum 200).</param>
         /// <returns>The entries.</returns>
         /// <exception cref="ArgumentOutOfRangeException"><paramref name="pageSize"/> is not within the accepted boundaries (1 - 200).</exception>
-        protected async Task<TObject> RequestPageAsync(int page, CancellationToken cancellationToken, int pageSize = MAX_PAGE_SIZE)
+        protected Task<TObject> RequestPageAsync(int page, CancellationToken cancellationToken, int pageSize = MAX_PAGE_SIZE)
         {
             if (pageSize < 1 || pageSize > 200)
                 throw new ArgumentOutOfRangeException(nameof(pageSize), pageSize, "Page size cannot be smaller than 1 or bigger than 200");
 
+            return this.RequestPageInternalAsync(page, cancellationToken, pageSize);
+        }
+
+        private async Task<TObject> RequestPageInternalAsync(int page, CancellationToken cancellationToken, int pageSize = MAX_PAGE_SIZE)
+        {
             var items = await this.GetOrUpdateAsync<TObject>(this.FormatUrlQueryPage(this.EndpointPath, page, pageSize), $"_page{page}-{pageSize}", cancellationToken).ConfigureAwait(false);
             return items.Item;
         }
@@ -334,7 +360,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The previously cached response, or a newly requested response that's been cached.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="url"/> or <paramref name="cacheId"/> is <c>null</c>.</exception>
-        protected async Task<CacheItem<TEndpointObject>> GetOrUpdateAsync<TEndpointObject>(string url, object cacheId, CancellationToken cancellationToken)
+        protected Task<CacheItem<TEndpointObject>> GetOrUpdateAsync<TEndpointObject>(string url, object cacheId, CancellationToken cancellationToken)
             where TEndpointObject : IApiV2Object
         {
             if (url == null)
@@ -342,6 +368,12 @@ namespace Gw2Sharp.WebApi.V2.Clients
             if (cacheId == null)
                 throw new ArgumentNullException(nameof(cacheId));
 
+            return this.GetOrUpdateInternalAsync<TEndpointObject>(url, cacheId, cancellationToken);
+        }
+
+        private async Task<CacheItem<TEndpointObject>> GetOrUpdateInternalAsync<TEndpointObject>(string url, object cacheId, CancellationToken cancellationToken)
+            where TEndpointObject : IApiV2Object
+        {
             if (this.IsAuthenticated)
             {
                 // Prepend the cache id with a hash of the access token to make sure that different access tokens will get separately cached
@@ -370,7 +402,17 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="cache">The cache.</param>
         /// <returns>The list of cached items.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="cache"/> is <c>null</c>.</exception>
-        protected async Task<IReadOnlyList<CacheItem<TEndpointObject>>> UpdateIndividualsAsync<TEndpointObject, TId>(CacheItem<IApiV2ObjectList<TEndpointObject>> cache)
+        protected Task<IReadOnlyList<CacheItem<TEndpointObject>>> UpdateIndividualsAsync<TEndpointObject, TId>(CacheItem<IApiV2ObjectList<TEndpointObject>> cache)
+            where TEndpointObject : IApiV2Object, IIdentifiable<TId>
+            where TId : object
+        {
+            if (cache == null)
+                throw new ArgumentNullException(nameof(cache));
+
+            return this.UpdateIndividualsInternalAsync<TEndpointObject, TId>(cache);
+        }
+
+        private async Task<IReadOnlyList<CacheItem<TEndpointObject>>> UpdateIndividualsInternalAsync<TEndpointObject, TId>(CacheItem<IApiV2ObjectList<TEndpointObject>> cache)
             where TEndpointObject : IApiV2Object, IIdentifiable<TId>
             where TId : object
         {

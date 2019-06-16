@@ -41,10 +41,10 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <inheritdoc />
         public override bool Equals(object? obj) =>
-            obj != null && obj.GetType() == typeof(ApiEnum) ? this.Equals((ApiEnum)obj) : false;
+            obj != null && obj.GetType() == typeof(ApiEnum) && this.Equals((ApiEnum)obj);
 
         /// <inheritdoc />
-        public bool Equals(ApiEnum other)
+        public virtual bool Equals(ApiEnum other)
         {
             return !(other is null) &&
                 EqualityComparer<Enum>.Default.Equals(this.Value, other.Value) &&
@@ -125,10 +125,10 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <inheritdoc />
         public override bool Equals(object? obj) =>
-            obj != null && obj.GetType() == typeof(ApiEnum<T>) ? this.Equals((ApiEnum<T>)obj) : false;
+            obj != null && obj.GetType() == typeof(ApiEnum<T>) && this.Equals((ApiEnum<T>)obj);
 
         /// <inheritdoc />
-        public bool Equals(ApiEnum<T> other)
+        public virtual bool Equals(ApiEnum<T> other)
         {
             return !(other is null) &&
                 base.Equals(other) &&

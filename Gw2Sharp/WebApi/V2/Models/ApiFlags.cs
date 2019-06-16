@@ -47,10 +47,10 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <inheritdoc />
         public override bool Equals(object? obj) =>
-            obj != null && obj.GetType() == typeof(ApiFlags) ? this.Equals((ApiFlags)obj) : false;
+            obj != null && obj.GetType() == typeof(ApiFlags) && this.Equals((ApiFlags)obj);
 
         /// <inheritdoc />
-        public bool Equals(ApiFlags other) =>
+        public virtual bool Equals(ApiFlags other) =>
             !(other is null) && this.List.SequenceEqual(other.List);
 
         /// <inheritdoc />
@@ -143,10 +143,10 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <inheritdoc />
         public override bool Equals(object? obj) =>
-            obj != null && obj.GetType() == typeof(ApiFlags<T>) ? this.Equals((ApiFlags<T>)obj) : false;
+            obj != null && obj.GetType() == typeof(ApiFlags<T>) && this.Equals((ApiFlags<T>)obj);
 
         /// <inheritdoc />
-        public bool Equals(ApiFlags<T> other) =>
+        public virtual bool Equals(ApiFlags<T> other) =>
             !(other is null) && this.List.SequenceEqual(other.List);
 
         /// <inheritdoc />

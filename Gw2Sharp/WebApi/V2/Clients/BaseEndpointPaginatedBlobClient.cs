@@ -17,7 +17,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
         /// <exception cref="InvalidOperationException">Thrown when the client implements an invalid combination of <see cref="IEndpointClient"/> interfaces.</exception>
         /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
-        public BaseEndpointPaginatedBlobClient(IConnection connection) : base(connection) { }
+        protected BaseEndpointPaginatedBlobClient(IConnection connection) : base(connection) { }
 
         /// <summary>
         /// Creates a new base endpoint bulk with pagination support client.
@@ -26,7 +26,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="replaceSegments">The path segments to replace.</param>
         /// <exception cref="InvalidOperationException">Thrown when the client implements an invalid combination of <see cref="IEndpointClient"/> interfaces.</exception>
         /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
-        public BaseEndpointPaginatedBlobClient(IConnection connection, params string[] replaceSegments) : base(connection, replaceSegments) { }
+        protected BaseEndpointPaginatedBlobClient(IConnection connection, params string[] replaceSegments) : base(connection, replaceSegments) { }
 
         /// <inheritdoc />
         public virtual Task<IApiV2ObjectList<TObject>> GetAsync() =>

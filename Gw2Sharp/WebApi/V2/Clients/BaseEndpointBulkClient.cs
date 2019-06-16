@@ -21,7 +21,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
         /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
         /// <exception cref="InvalidOperationException">Thrown when the client implements an invalid combination of <see cref="IEndpointClient"/> interfaces.</exception>
-        public BaseEndpointBulkClient(IConnection connection) : base(connection) { }
+        protected BaseEndpointBulkClient(IConnection connection) : base(connection) { }
 
         /// <summary>
         /// Creates a new base endpoint bulk client.
@@ -30,7 +30,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="replaceSegments">The path segments to replace.</param>
         /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
         /// <exception cref="InvalidOperationException">Thrown when the client implements an invalid combination of <see cref="IEndpointClient"/> interfaces.</exception>
-        public BaseEndpointBulkClient(IConnection connection, params string[] replaceSegments) : base(connection, replaceSegments) { }
+        protected BaseEndpointBulkClient(IConnection connection, params string[] replaceSegments) : base(connection, replaceSegments) { }
 
         /// <inheritdoc />
         public virtual Task<TObject> GetAsync(TId id) =>

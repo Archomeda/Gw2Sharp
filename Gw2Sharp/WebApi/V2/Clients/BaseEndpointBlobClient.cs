@@ -17,7 +17,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
         /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
         /// <exception cref="InvalidOperationException">The client implements an invalid combination of <see cref="IEndpointClient"/> interfaces.</exception>
-        public BaseEndpointBlobClient(IConnection connection) :
+        protected BaseEndpointBlobClient(IConnection connection) :
             base(connection)
         { }
 
@@ -28,7 +28,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="replaceSegments">The path segments to replace.</param>
         /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
         /// <exception cref="InvalidOperationException">The client implements an invalid combination of <see cref="IEndpointClient"/> interfaces.</exception>
-        public BaseEndpointBlobClient(IConnection connection, params string[] replaceSegments) :
+        protected BaseEndpointBlobClient(IConnection connection, params string[] replaceSegments) :
             base(connection, replaceSegments)
         { }
 

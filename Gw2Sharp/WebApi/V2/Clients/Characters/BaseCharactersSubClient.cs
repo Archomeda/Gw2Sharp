@@ -16,7 +16,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
         /// <param name="characterName">The character name.</param>
         /// <exception cref="ArgumentNullException"><paramref name="connection"/> or <paramref name="characterName"/> is <c>null</c>.</exception>
-        public BaseCharactersSubClient(IConnection connection, string characterName) :
+        protected BaseCharactersSubClient(IConnection connection, string characterName) :
             base(connection, characterName)
         {
             this.CharacterName = characterName ?? throw new ArgumentNullException(nameof(characterName));
