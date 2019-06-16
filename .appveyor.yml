@@ -29,7 +29,7 @@ before_build:
 build:
   project: Gw2Sharp.sln
 
-test:
+test_script:
   - OpenCover.Console.exe -register:user -target:"C:\Program Files\dotnet\dotnet.exe" -targetargs:"test Gw2Sharp.Tests/Gw2Sharp.Tests.csproj --configuration %CONFIGURATION% --no-build" -output:"coverage.xml" -oldStyle
 
 after_test:
