@@ -416,9 +416,6 @@ namespace Gw2Sharp.WebApi.V2.Clients
             where TEndpointObject : IApiV2Object, IIdentifiable<TId>
             where TId : object
         {
-            if (cache == null)
-                throw new ArgumentNullException(nameof(cache));
-
             var cacheList = cache.Item.Select(x => new CacheItem<TEndpointObject>(this.EndpointPath, x.Id, x, cache.ExpiryTime)).ToList();
             await this.Connection.CacheMethod.SetManyAsync(cacheList).ConfigureAwait(false);
             return cacheList;
