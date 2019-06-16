@@ -19,12 +19,12 @@ before_build:
   - ps: >-
       if (!(Test-Path env:APPVEYOR_PULL_REQUEST_NUMBER)) {
         if ($env:APPVEYOR_REPO_TAG -eq "true") {
-          dotnet sonarscanner begin /k:"Archomeda_Gw2Sharp" /o:"archomeda-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="$env:sonar_login" /d:sonar.branch.name:"$env:APPVEYOR_REPO_BRANCH" /v:"$env:APPVEYOR_REPO_TAG_NAME"
+          dotnet sonarscanner begin /k:"Archomeda_Gw2Sharp" /o:"archomeda-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="$env:sonar_login" /d:sonar.branch.name="$env:APPVEYOR_REPO_BRANCH" /v:"$env:APPVEYOR_REPO_TAG_NAME"
         } else {
-          dotnet sonarscanner begin /k:"Archomeda_Gw2Sharp" /o:"archomeda-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="$env:sonar_login" /d:sonar.branch.name:"$env:APPVEYOR_REPO_BRANCH"
+          dotnet sonarscanner begin /k:"Archomeda_Gw2Sharp" /o:"archomeda-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="$env:sonar_login" /d:sonar.branch.name="$env:APPVEYOR_REPO_BRANCH"
         }
       } else {
-        dotnet sonarscanner begin /k:"Archomeda_Gw2Sharp" /o:"archomeda-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="$env:sonar_login" /d:sonar.pullrequest.key:"$env:APPVEYOR_PULL_REQUEST_NUMBER" /d:sonar.pullrequest.branch:"$env:APPVEYOR_PULL_REQUEST_HEAD_REPO_BRANCH" /d:sonar.pullrequest.base:"$env:APPVEYOR_REPO_BRANCH"
+        dotnet sonarscanner begin /k:"Archomeda_Gw2Sharp" /o:"archomeda-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="$env:sonar_login" /d:sonar.pullrequest.key="$env:APPVEYOR_PULL_REQUEST_NUMBER" /d:sonar.pullrequest.branch="$env:APPVEYOR_PULL_REQUEST_HEAD_REPO_BRANCH" /d:sonar.pullrequest.base="$env:APPVEYOR_REPO_BRANCH"
       }
 
 build:
