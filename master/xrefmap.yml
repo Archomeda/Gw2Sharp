@@ -10620,6 +10620,12 @@ references:
   commentId: T:Gw2Sharp.WebApi.V2.Clients.IMapsClient
   fullName: Gw2Sharp.WebApi.V2.Clients.IMapsClient
   nameWithType: IMapsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.IMasteriesClient
+  name: IMasteriesClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.IMasteriesClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.IMasteriesClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.IMasteriesClient
+  nameWithType: IMasteriesClient
 - uid: Gw2Sharp.WebApi.V2.Clients.IMaterialsClient
   name: IMaterialsClient
   href: api/Gw2Sharp.WebApi.V2.Clients.IMaterialsClient.html
@@ -10802,6 +10808,25 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.MapsClient.MapsClient
   nameWithType: MapsClient.MapsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.MasteriesClient
+  name: MasteriesClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.MasteriesClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.MasteriesClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.MasteriesClient
+  nameWithType: MasteriesClient
+- uid: Gw2Sharp.WebApi.V2.Clients.MasteriesClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  name: MasteriesClient(IConnection)
+  href: api/Gw2Sharp.WebApi.V2.Clients.MasteriesClient.html#Gw2Sharp_WebApi_V2_Clients_MasteriesClient__ctor_Gw2Sharp_WebApi_IConnection_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.MasteriesClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  fullName: Gw2Sharp.WebApi.V2.Clients.MasteriesClient.MasteriesClient(Gw2Sharp.WebApi.IConnection)
+  nameWithType: MasteriesClient.MasteriesClient(IConnection)
+- uid: Gw2Sharp.WebApi.V2.Clients.MasteriesClient.#ctor*
+  name: MasteriesClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.MasteriesClient.html#Gw2Sharp_WebApi_V2_Clients_MasteriesClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.MasteriesClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.MasteriesClient.MasteriesClient
+  nameWithType: MasteriesClient.MasteriesClient
 - uid: Gw2Sharp.WebApi.V2.Clients.MaterialsClient
   name: MaterialsClient
   href: api/Gw2Sharp.WebApi.V2.Clients.MaterialsClient.html
@@ -11209,6 +11234,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Maps
   nameWithType: Gw2WebApiV2Client.Maps
+- uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Masteries
+  name: Masteries
+  href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_Masteries
+  commentId: P:Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Masteries
+  fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Masteries
+  nameWithType: Gw2WebApiV2Client.Masteries
+- uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Masteries*
+  name: Masteries
+  href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_Masteries_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Masteries
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Masteries
+  nameWithType: Gw2WebApiV2Client.Masteries
 - uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Materials
   name: Materials
   href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_Materials
@@ -11607,6 +11645,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Maps
   nameWithType: IGw2WebApiV2Client.Maps
+- uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Masteries
+  name: Masteries
+  href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_Masteries
+  commentId: P:Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Masteries
+  fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Masteries
+  nameWithType: IGw2WebApiV2Client.Masteries
+- uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Masteries*
+  name: Masteries
+  href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_Masteries_
+  commentId: Overload:Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Masteries
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Masteries
+  nameWithType: IGw2WebApiV2Client.Masteries
 - uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Materials
   name: Materials
   href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_Materials
@@ -23826,6 +23877,187 @@ references:
   commentId: F:Gw2Sharp.WebApi.V2.Models.MapType.UserTournament
   fullName: Gw2Sharp.WebApi.V2.Models.MapType.UserTournament
   nameWithType: MapType.UserTournament
+- uid: Gw2Sharp.WebApi.V2.Models.Mastery
+  name: Mastery
+  href: api/Gw2Sharp.WebApi.V2.Models.Mastery.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.Mastery
+  fullName: Gw2Sharp.WebApi.V2.Models.Mastery
+  nameWithType: Mastery
+- uid: Gw2Sharp.WebApi.V2.Models.Mastery.Background
+  name: Background
+  href: api/Gw2Sharp.WebApi.V2.Models.Mastery.html#Gw2Sharp_WebApi_V2_Models_Mastery_Background
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Mastery.Background
+  fullName: Gw2Sharp.WebApi.V2.Models.Mastery.Background
+  nameWithType: Mastery.Background
+- uid: Gw2Sharp.WebApi.V2.Models.Mastery.Background*
+  name: Background
+  href: api/Gw2Sharp.WebApi.V2.Models.Mastery.html#Gw2Sharp_WebApi_V2_Models_Mastery_Background_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Mastery.Background
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Mastery.Background
+  nameWithType: Mastery.Background
+- uid: Gw2Sharp.WebApi.V2.Models.Mastery.Id
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.Mastery.html#Gw2Sharp_WebApi_V2_Models_Mastery_Id
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Mastery.Id
+  fullName: Gw2Sharp.WebApi.V2.Models.Mastery.Id
+  nameWithType: Mastery.Id
+- uid: Gw2Sharp.WebApi.V2.Models.Mastery.Id*
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.Mastery.html#Gw2Sharp_WebApi_V2_Models_Mastery_Id_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Mastery.Id
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Mastery.Id
+  nameWithType: Mastery.Id
+- uid: Gw2Sharp.WebApi.V2.Models.Mastery.Levels
+  name: Levels
+  href: api/Gw2Sharp.WebApi.V2.Models.Mastery.html#Gw2Sharp_WebApi_V2_Models_Mastery_Levels
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Mastery.Levels
+  fullName: Gw2Sharp.WebApi.V2.Models.Mastery.Levels
+  nameWithType: Mastery.Levels
+- uid: Gw2Sharp.WebApi.V2.Models.Mastery.Levels*
+  name: Levels
+  href: api/Gw2Sharp.WebApi.V2.Models.Mastery.html#Gw2Sharp_WebApi_V2_Models_Mastery_Levels_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Mastery.Levels
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Mastery.Levels
+  nameWithType: Mastery.Levels
+- uid: Gw2Sharp.WebApi.V2.Models.Mastery.Name
+  name: Name
+  href: api/Gw2Sharp.WebApi.V2.Models.Mastery.html#Gw2Sharp_WebApi_V2_Models_Mastery_Name
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Mastery.Name
+  fullName: Gw2Sharp.WebApi.V2.Models.Mastery.Name
+  nameWithType: Mastery.Name
+- uid: Gw2Sharp.WebApi.V2.Models.Mastery.Name*
+  name: Name
+  href: api/Gw2Sharp.WebApi.V2.Models.Mastery.html#Gw2Sharp_WebApi_V2_Models_Mastery_Name_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Mastery.Name
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Mastery.Name
+  nameWithType: Mastery.Name
+- uid: Gw2Sharp.WebApi.V2.Models.Mastery.Order
+  name: Order
+  href: api/Gw2Sharp.WebApi.V2.Models.Mastery.html#Gw2Sharp_WebApi_V2_Models_Mastery_Order
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Mastery.Order
+  fullName: Gw2Sharp.WebApi.V2.Models.Mastery.Order
+  nameWithType: Mastery.Order
+- uid: Gw2Sharp.WebApi.V2.Models.Mastery.Order*
+  name: Order
+  href: api/Gw2Sharp.WebApi.V2.Models.Mastery.html#Gw2Sharp_WebApi_V2_Models_Mastery_Order_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Mastery.Order
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Mastery.Order
+  nameWithType: Mastery.Order
+- uid: Gw2Sharp.WebApi.V2.Models.Mastery.Region
+  name: Region
+  href: api/Gw2Sharp.WebApi.V2.Models.Mastery.html#Gw2Sharp_WebApi_V2_Models_Mastery_Region
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Mastery.Region
+  fullName: Gw2Sharp.WebApi.V2.Models.Mastery.Region
+  nameWithType: Mastery.Region
+- uid: Gw2Sharp.WebApi.V2.Models.Mastery.Region*
+  name: Region
+  href: api/Gw2Sharp.WebApi.V2.Models.Mastery.html#Gw2Sharp_WebApi_V2_Models_Mastery_Region_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Mastery.Region
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Mastery.Region
+  nameWithType: Mastery.Region
+- uid: Gw2Sharp.WebApi.V2.Models.Mastery.Requirement
+  name: Requirement
+  href: api/Gw2Sharp.WebApi.V2.Models.Mastery.html#Gw2Sharp_WebApi_V2_Models_Mastery_Requirement
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Mastery.Requirement
+  fullName: Gw2Sharp.WebApi.V2.Models.Mastery.Requirement
+  nameWithType: Mastery.Requirement
+- uid: Gw2Sharp.WebApi.V2.Models.Mastery.Requirement*
+  name: Requirement
+  href: api/Gw2Sharp.WebApi.V2.Models.Mastery.html#Gw2Sharp_WebApi_V2_Models_Mastery_Requirement_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Mastery.Requirement
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Mastery.Requirement
+  nameWithType: Mastery.Requirement
+- uid: Gw2Sharp.WebApi.V2.Models.MasteryLevel
+  name: MasteryLevel
+  href: api/Gw2Sharp.WebApi.V2.Models.MasteryLevel.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.MasteryLevel
+  fullName: Gw2Sharp.WebApi.V2.Models.MasteryLevel
+  nameWithType: MasteryLevel
+- uid: Gw2Sharp.WebApi.V2.Models.MasteryLevel.Description
+  name: Description
+  href: api/Gw2Sharp.WebApi.V2.Models.MasteryLevel.html#Gw2Sharp_WebApi_V2_Models_MasteryLevel_Description
+  commentId: P:Gw2Sharp.WebApi.V2.Models.MasteryLevel.Description
+  fullName: Gw2Sharp.WebApi.V2.Models.MasteryLevel.Description
+  nameWithType: MasteryLevel.Description
+- uid: Gw2Sharp.WebApi.V2.Models.MasteryLevel.Description*
+  name: Description
+  href: api/Gw2Sharp.WebApi.V2.Models.MasteryLevel.html#Gw2Sharp_WebApi_V2_Models_MasteryLevel_Description_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.MasteryLevel.Description
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.MasteryLevel.Description
+  nameWithType: MasteryLevel.Description
+- uid: Gw2Sharp.WebApi.V2.Models.MasteryLevel.ExpCost
+  name: ExpCost
+  href: api/Gw2Sharp.WebApi.V2.Models.MasteryLevel.html#Gw2Sharp_WebApi_V2_Models_MasteryLevel_ExpCost
+  commentId: P:Gw2Sharp.WebApi.V2.Models.MasteryLevel.ExpCost
+  fullName: Gw2Sharp.WebApi.V2.Models.MasteryLevel.ExpCost
+  nameWithType: MasteryLevel.ExpCost
+- uid: Gw2Sharp.WebApi.V2.Models.MasteryLevel.ExpCost*
+  name: ExpCost
+  href: api/Gw2Sharp.WebApi.V2.Models.MasteryLevel.html#Gw2Sharp_WebApi_V2_Models_MasteryLevel_ExpCost_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.MasteryLevel.ExpCost
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.MasteryLevel.ExpCost
+  nameWithType: MasteryLevel.ExpCost
+- uid: Gw2Sharp.WebApi.V2.Models.MasteryLevel.Icon
+  name: Icon
+  href: api/Gw2Sharp.WebApi.V2.Models.MasteryLevel.html#Gw2Sharp_WebApi_V2_Models_MasteryLevel_Icon
+  commentId: P:Gw2Sharp.WebApi.V2.Models.MasteryLevel.Icon
+  fullName: Gw2Sharp.WebApi.V2.Models.MasteryLevel.Icon
+  nameWithType: MasteryLevel.Icon
+- uid: Gw2Sharp.WebApi.V2.Models.MasteryLevel.Icon*
+  name: Icon
+  href: api/Gw2Sharp.WebApi.V2.Models.MasteryLevel.html#Gw2Sharp_WebApi_V2_Models_MasteryLevel_Icon_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.MasteryLevel.Icon
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.MasteryLevel.Icon
+  nameWithType: MasteryLevel.Icon
+- uid: Gw2Sharp.WebApi.V2.Models.MasteryLevel.Instruction
+  name: Instruction
+  href: api/Gw2Sharp.WebApi.V2.Models.MasteryLevel.html#Gw2Sharp_WebApi_V2_Models_MasteryLevel_Instruction
+  commentId: P:Gw2Sharp.WebApi.V2.Models.MasteryLevel.Instruction
+  fullName: Gw2Sharp.WebApi.V2.Models.MasteryLevel.Instruction
+  nameWithType: MasteryLevel.Instruction
+- uid: Gw2Sharp.WebApi.V2.Models.MasteryLevel.Instruction*
+  name: Instruction
+  href: api/Gw2Sharp.WebApi.V2.Models.MasteryLevel.html#Gw2Sharp_WebApi_V2_Models_MasteryLevel_Instruction_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.MasteryLevel.Instruction
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.MasteryLevel.Instruction
+  nameWithType: MasteryLevel.Instruction
+- uid: Gw2Sharp.WebApi.V2.Models.MasteryLevel.Name
+  name: Name
+  href: api/Gw2Sharp.WebApi.V2.Models.MasteryLevel.html#Gw2Sharp_WebApi_V2_Models_MasteryLevel_Name
+  commentId: P:Gw2Sharp.WebApi.V2.Models.MasteryLevel.Name
+  fullName: Gw2Sharp.WebApi.V2.Models.MasteryLevel.Name
+  nameWithType: MasteryLevel.Name
+- uid: Gw2Sharp.WebApi.V2.Models.MasteryLevel.Name*
+  name: Name
+  href: api/Gw2Sharp.WebApi.V2.Models.MasteryLevel.html#Gw2Sharp_WebApi_V2_Models_MasteryLevel_Name_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.MasteryLevel.Name
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.MasteryLevel.Name
+  nameWithType: MasteryLevel.Name
+- uid: Gw2Sharp.WebApi.V2.Models.MasteryLevel.PointCost
+  name: PointCost
+  href: api/Gw2Sharp.WebApi.V2.Models.MasteryLevel.html#Gw2Sharp_WebApi_V2_Models_MasteryLevel_PointCost
+  commentId: P:Gw2Sharp.WebApi.V2.Models.MasteryLevel.PointCost
+  fullName: Gw2Sharp.WebApi.V2.Models.MasteryLevel.PointCost
+  nameWithType: MasteryLevel.PointCost
+- uid: Gw2Sharp.WebApi.V2.Models.MasteryLevel.PointCost*
+  name: PointCost
+  href: api/Gw2Sharp.WebApi.V2.Models.MasteryLevel.html#Gw2Sharp_WebApi_V2_Models_MasteryLevel_PointCost_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.MasteryLevel.PointCost
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.MasteryLevel.PointCost
+  nameWithType: MasteryLevel.PointCost
 - uid: Gw2Sharp.WebApi.V2.Models.MaterialCategory
   name: MaterialCategory
   href: api/Gw2Sharp.WebApi.V2.Models.MaterialCategory.html
