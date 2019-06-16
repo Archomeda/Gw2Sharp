@@ -56,7 +56,7 @@ namespace Gw2Sharp.WebApi.Caching
 
         /// <inheritdoc />
         public override bool Equals(object? obj) =>
-            obj != null && obj.GetType() == typeof(CacheItem) ? this.Equals((CacheItem)obj) : false;
+            obj != null && obj.GetType() == typeof(CacheItem) && this.Equals((CacheItem)obj);
 
         /// <summary>
         /// Indicates whether the current object is equal to another object of the same type.
@@ -65,7 +65,7 @@ namespace Gw2Sharp.WebApi.Caching
         /// <returns>
         /// <c>true</c> if the current object is equal to the <paramref name="other" /> parameter; otherwise, <c>false</c>.
         /// </returns>
-        public bool Equals(CacheItem other)
+        public virtual bool Equals(CacheItem other)
         {
             return other != null &&
                 Equals(this.Category, other.Category) &&
@@ -98,19 +98,16 @@ namespace Gw2Sharp.WebApi.Caching
         public override int GetHashCode()
         {
             int hashCode = 1150702236;
-            hashCode = (hashCode * -1521134295) + EqualityComparer<string>.Default.GetHashCode(this.Category);
-            hashCode = (hashCode * -1521134295) + EqualityComparer<object>.Default.GetHashCode(this.Id);
-            hashCode = (hashCode * -1521134295) + EqualityComparer<object>.Default.GetHashCode(this.Item);
-            hashCode = (hashCode * -1521134295) + this.ExpiryTime.GetHashCode();
+            hashCode = (hashCode * -1521134295) + base.GetHashCode();
             return hashCode;
         }
 
         /// <inheritdoc />
         public override bool Equals(object? obj) =>
-            obj != null && obj.GetType() == typeof(CacheItem<T>) ? this.Equals((CacheItem<T>)obj) : false;
+            obj != null && obj.GetType() == typeof(CacheItem<T>) && this.Equals((CacheItem<T>)obj);
 
         /// <inheritdoc />
-        public bool Equals(CacheItem<T> other) =>
+        public virtual bool Equals(CacheItem<T> other) =>
             this.Equals(other as CacheItem);
     }
 }

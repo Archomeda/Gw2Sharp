@@ -35,13 +35,18 @@ namespace Gw2Sharp.WebApi.Caching
         }
 
         /// <inheritdoc />
-        public virtual async Task<IDictionary<object, CacheItem<T>>> GetManyAsync<T>(string category, IEnumerable<object> ids) where T : object
+        public virtual Task<IDictionary<object, CacheItem<T>>> GetManyAsync<T>(string category, IEnumerable<object> ids) where T : object
         {
             if (category == null)
                 throw new ArgumentNullException(nameof(category));
             if (ids == null)
                 throw new ArgumentNullException(nameof(ids));
 
+            return this.GetManyInternalAsync<T>(category, ids);
+        }
+
+        private async Task<IDictionary<object, CacheItem<T>>> GetManyInternalAsync<T>(string category, IEnumerable<object> ids) where T : object
+        {
             var cache = new Dictionary<object, CacheItem<T>>();
             foreach (object id in ids)
                 cache[id] = await this.GetAsync<T>(category, id).ConfigureAwait(false);
@@ -49,11 +54,16 @@ namespace Gw2Sharp.WebApi.Caching
         }
 
         /// <inheritdoc />
-        public virtual async Task SetManyAsync<T>(IEnumerable<CacheItem<T>> items) where T : object
+        public virtual Task SetManyAsync<T>(IEnumerable<CacheItem<T>> items) where T : object
         {
             if (items == null)
                 throw new ArgumentNullException(nameof(items));
 
+            return this.SetManyInternalAsync(items);
+        }
+
+        private async Task SetManyInternalAsync<T>(IEnumerable<CacheItem<T>> items) where T : object
+        {
             foreach (var item in items)
                 await this.SetAsync(item).ConfigureAwait(false);
         }
@@ -68,7 +78,7 @@ namespace Gw2Sharp.WebApi.Caching
         }
 
         /// <inheritdoc />
-        public virtual async Task<CacheItem<T>> GetOrUpdateAsync<T>(string category, object id, Func<Task<(T, DateTime)>> updateFunc) where T : object
+        public virtual Task<CacheItem<T>> GetOrUpdateAsync<T>(string category, object id, Func<Task<(T, DateTime)>> updateFunc) where T : object
         {
             if (category == null)
                 throw new ArgumentNullException(nameof(category));
@@ -77,6 +87,11 @@ namespace Gw2Sharp.WebApi.Caching
             if (updateFunc == null)
                 throw new ArgumentNullException(nameof(updateFunc));
 
+            return this.GetOrUpdateInternalAsync(category, id, updateFunc);
+        }
+
+        private async Task<CacheItem<T>> GetOrUpdateInternalAsync<T>(string category, object id, Func<Task<(T, DateTime)>> updateFunc) where T : object
+        {
             try
             {
                 return await this.GetAsync<T>(category, id).ConfigureAwait(false);
@@ -104,7 +119,7 @@ namespace Gw2Sharp.WebApi.Caching
         }
 
         /// <inheritdoc />
-        public virtual async Task<IList<CacheItem<T>>> GetOrUpdateManyAsync<T>(
+        public virtual Task<IList<CacheItem<T>>> GetOrUpdateManyAsync<T>(
             string category,
             IEnumerable<object> ids,
             Func<IList<object>, Task<(IDictionary<object, T>, DateTime)>> updateFunc) where T : object
@@ -116,6 +131,14 @@ namespace Gw2Sharp.WebApi.Caching
             if (updateFunc == null)
                 throw new ArgumentNullException(nameof(updateFunc));
 
+            return this.GetOrUpdateManyInternalAsync(category, ids, updateFunc);
+        }
+
+        private async Task<IList<CacheItem<T>>> GetOrUpdateManyInternalAsync<T>(
+            string category,
+            IEnumerable<object> ids,
+            Func<IList<object>, Task<(IDictionary<object, T>, DateTime)>> updateFunc) where T : object
+        {
             var idsList = ids as IList<object> ?? ids.ToList();
 
             var cache = await this.GetManyAsync<T>(category, idsList).ConfigureAwait(false) ?? new Dictionary<object, CacheItem<T>>();
@@ -138,7 +161,11 @@ namespace Gw2Sharp.WebApi.Caching
         public abstract Task FlushAsync();
 
         /// <inheritdoc />
-        public void Dispose() => this.Dispose(true);
+        public void Dispose()
+        {
+            this.Dispose(true);
+            GC.SuppressFinalize(this);
+        }
 
         /// <summary>
         /// Disposes the object.

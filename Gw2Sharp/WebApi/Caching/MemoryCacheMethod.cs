@@ -69,54 +69,72 @@ namespace Gw2Sharp.WebApi.Caching
         #region BaseCacheController overrides
 
         /// <inheritdoc />
-        public override async Task<bool> HasAsync<T>(string category, object id)
+        public override Task<bool> HasAsync<T>(string category, object id)
         {
             if (category == null)
                 throw new ArgumentNullException(nameof(category));
             if (id == null)
                 throw new ArgumentNullException(nameof(id));
 
+            return this.HasInternalAsync<T>(category, id);
+        }
+
+        private async Task<bool> HasInternalAsync<T>(string category, object id) where T : object
+        {
             return this.cachedItems.TryGetValue(category, out var cache) &&
-                cache.TryGetValue(id, out object obj) &&
-                obj is CacheItem<T> item &&
-                item.ExpiryTime > DateTime.Now;
+                 cache.TryGetValue(id, out object obj) &&
+                 obj is CacheItem<T> item &&
+                 item.ExpiryTime > DateTime.Now;
         }
 
         /// <inheritdoc />
-        public override async Task<CacheItem<T>?> GetOrNullAsync<T>(string category, object id)
+        public override Task<CacheItem<T>?> GetOrNullAsync<T>(string category, object id)
         {
             if (category == null)
                 throw new ArgumentNullException(nameof(category));
             if (id == null)
                 throw new ArgumentNullException(nameof(id));
 
+            return this.GetOrNullInternalAsync<T>(category, id);
+        }
+
+        private async Task<CacheItem<T>?> GetOrNullInternalAsync<T>(string category, object id) where T : object
+        {
             return this.cachedItems.TryGetValue(category, out var cache) &&
-                cache.TryGetValue(id, out object obj) &&
-                obj is CacheItem<T> item &&
-                item.ExpiryTime > DateTime.Now
-                ? item : null;
+                 cache.TryGetValue(id, out object obj) &&
+                 obj is CacheItem<T> item &&
+                 item.ExpiryTime > DateTime.Now
+                 ? item : null;
         }
 
         /// <inheritdoc />
-        public override async Task SetAsync<T>(CacheItem<T> item)
+        public override Task SetAsync<T>(CacheItem<T> item)
         {
             if (item == null)
                 throw new ArgumentNullException(nameof(item));
-            if (item.ExpiryTime <= DateTime.Now)
-                return;
 
+            return item.ExpiryTime <= DateTime.Now ? Task.CompletedTask : this.SetInternalAsync(item);
+        }
+
+        private async Task SetInternalAsync<T>(CacheItem<T> item) where T : object
+        {
             var cache = this.cachedItems.GetOrAdd(item.Category, new ConcurrentDictionary<object, object>());
             cache[item.Id] = item;
         }
 
         /// <inheritdoc />
-        public override async Task<IDictionary<object, CacheItem<T>>> GetManyAsync<T>(string category, IEnumerable<object> ids)
+        public override Task<IDictionary<object, CacheItem<T>>> GetManyAsync<T>(string category, IEnumerable<object> ids)
         {
             if (category == null)
                 throw new ArgumentNullException(nameof(category));
             if (ids == null)
                 throw new ArgumentNullException(nameof(ids));
 
+            return this.GetManyInternalAsync<T>(category, ids);
+        }
+
+        private async Task<IDictionary<object, CacheItem<T>>> GetManyInternalAsync<T>(string category, IEnumerable<object> ids) where T : object
+        {
             var items = new Dictionary<object, CacheItem<T>>();
             if (this.cachedItems.TryGetValue(category, out var cache))
             {
@@ -134,8 +152,11 @@ namespace Gw2Sharp.WebApi.Caching
             this.cachedItems.Clear();
 
         /// <inheritdoc />
-        protected override void Dispose(bool isDisposing) =>
+        protected override void Dispose(bool isDisposing)
+        {
             this.gcTimer.Dispose();
+            base.Dispose(isDisposing);
+        }
 
         #endregion
     }
