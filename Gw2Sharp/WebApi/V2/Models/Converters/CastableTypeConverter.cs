@@ -42,7 +42,7 @@ namespace Gw2Sharp.WebApi.V2.Models.Converters
             bool hasInterface = objectType.GetInterfaces()
                 .Where(i => i.IsGenericType)
                 .Any(i => i.GetGenericTypeDefinition() == typeof(ICastableType<,>));
-            bool hasAttributes = objectType.GetCustomAttributes<CastableTypeAttribute>().Count() > 0;
+            bool hasAttributes = objectType.GetCustomAttributes<CastableTypeAttribute>().Any();
             return hasInterface && hasAttributes;
         }
     }

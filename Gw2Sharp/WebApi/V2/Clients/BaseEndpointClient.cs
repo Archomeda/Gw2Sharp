@@ -502,7 +502,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
                 .GetProperties(BindingFlags.Public | BindingFlags.Instance)
                 .Where(p => p.GetCustomAttribute<EndpointPathParameterAttribute>() != null);
 
-            if (parameterProperties.Count() == 0)
+            if (parameterProperties.Any())
                 return uri;
 
             var builder = new UriBuilder(uri);
