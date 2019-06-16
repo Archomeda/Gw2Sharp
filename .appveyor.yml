@@ -32,5 +32,5 @@ build:
   project: Gw2Sharp.sln
 
 after_test:
-  - OpenCover.Console.exe -register:user -target:"C:\Program Files\dotnet\dotnet.exe" -targetargs:"test" -output:"coverage.xml"
+  - OpenCover.Console.exe -register:user -target:"C:\Program Files\dotnet\dotnet.exe" -targetargs:"test Gw2Sharp.Tests/Gw2Sharp.Tests.csproj --configuration %CONFIGURATION% --no-build" -output:"coverage.xml"
   - dotnet sonarscanner end /d:sonar.login="%SONAR_TOKEN%"
