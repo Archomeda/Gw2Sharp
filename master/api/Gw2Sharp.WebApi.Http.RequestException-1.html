@@ -1841,7 +1841,7 @@
   
   <a id="Gw2Sharp_WebApi_Http_RequestException_1__ctor_" data-uid="Gw2Sharp.WebApi.Http.RequestException`1.#ctor*"></a>
   <h4 id="Gw2Sharp_WebApi_Http_RequestException_1__ctor_Gw2Sharp_WebApi_Http_IHttpRequest_System_Nullable_Gw2Sharp_WebApi_Http_IHttpResponse__0___System_String_" data-uid="Gw2Sharp.WebApi.Http.RequestException`1.#ctor(Gw2Sharp.WebApi.Http.IHttpRequest,System.Nullable{Gw2Sharp.WebApi.Http.IHttpResponse{`0}},System.String)">RequestException(IHttpRequest, Nullable&lt;IHttpResponse&lt;TResponse&gt;&gt;, String)</h4>
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Gw2Sharp.WebApi.Http.RequestException.html">RequestException</a>.</p>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Gw2Sharp.WebApi.Http.RequestException-1.html">RequestException&lt;TResponse&gt;</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1882,7 +1882,7 @@
   
   <a id="Gw2Sharp_WebApi_Http_RequestException_1__ctor_" data-uid="Gw2Sharp.WebApi.Http.RequestException`1.#ctor*"></a>
   <h4 id="Gw2Sharp_WebApi_Http_RequestException_1__ctor_Gw2Sharp_WebApi_Http_IHttpRequest_System_Nullable_Gw2Sharp_WebApi_Http_IHttpResponse__0___System_String_System_Nullable_Exception__" data-uid="Gw2Sharp.WebApi.Http.RequestException`1.#ctor(Gw2Sharp.WebApi.Http.IHttpRequest,System.Nullable{Gw2Sharp.WebApi.Http.IHttpResponse{`0}},System.String,System.Nullable{Exception})">RequestException(IHttpRequest, Nullable&lt;IHttpResponse&lt;TResponse&gt;&gt;, String, Nullable&lt;Exception&gt;)</h4>
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Gw2Sharp.WebApi.Http.RequestException.html">RequestException</a>.</p>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Gw2Sharp.WebApi.Http.RequestException-1.html">RequestException&lt;TResponse&gt;</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1929,7 +1929,7 @@
   
   <a id="Gw2Sharp_WebApi_Http_RequestException_1__ctor_" data-uid="Gw2Sharp.WebApi.Http.RequestException`1.#ctor*"></a>
   <h4 id="Gw2Sharp_WebApi_Http_RequestException_1__ctor_Gw2Sharp_WebApi_Http_IHttpRequest_System_String_" data-uid="Gw2Sharp.WebApi.Http.RequestException`1.#ctor(Gw2Sharp.WebApi.Http.IHttpRequest,System.String)">RequestException(IHttpRequest, String)</h4>
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Gw2Sharp.WebApi.Http.RequestException.html">RequestException</a>.</p>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Gw2Sharp.WebApi.Http.RequestException-1.html">RequestException&lt;TResponse&gt;</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1964,7 +1964,7 @@
   
   <a id="Gw2Sharp_WebApi_Http_RequestException_1__ctor_" data-uid="Gw2Sharp.WebApi.Http.RequestException`1.#ctor*"></a>
   <h4 id="Gw2Sharp_WebApi_Http_RequestException_1__ctor_Gw2Sharp_WebApi_Http_IHttpRequest_System_String_System_Nullable_Exception__" data-uid="Gw2Sharp.WebApi.Http.RequestException`1.#ctor(Gw2Sharp.WebApi.Http.IHttpRequest,System.String,System.Nullable{Exception})">RequestException(IHttpRequest, String, Nullable&lt;Exception&gt;)</h4>
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Gw2Sharp.WebApi.Http.RequestException.html">RequestException</a>.</p>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Gw2Sharp.WebApi.Http.RequestException-1.html">RequestException&lt;TResponse&gt;</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1997,6 +1997,41 @@
         <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Exception</span>&gt;</td>
         <td><span class="parametername">innerException</span></td>
         <td><p>The inner exception.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Gw2Sharp_WebApi_Http_RequestException_1__ctor_" data-uid="Gw2Sharp.WebApi.Http.RequestException`1.#ctor*"></a>
+  <h4 id="Gw2Sharp_WebApi_Http_RequestException_1__ctor_SerializationInfo_StreamingContext_" data-uid="Gw2Sharp.WebApi.Http.RequestException`1.#ctor(SerializationInfo,StreamingContext)">RequestException(SerializationInfo, StreamingContext)</h4>
+  <div class="markdown level1 summary"><p>Deserialization constructor for <a class="xref" href="Gw2Sharp.WebApi.Http.RequestException-1.html">RequestException&lt;TResponse&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected RequestException(SerializationInfo info, StreamingContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">SerializationInfo</span></td>
+        <td><span class="parametername">info</span></td>
+        <td><p>The serialization info.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">StreamingContext</span></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The streaming context.</p>
 </td>
       </tr>
     </tbody>
@@ -2051,6 +2086,40 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.Http.IHttpResponse-1.html">IHttpResponse</a>&lt;TResponse&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Gw2Sharp_WebApi_Http_RequestException_1_GetObjectData_" data-uid="Gw2Sharp.WebApi.Http.RequestException`1.GetObjectData*"></a>
+  <h4 id="Gw2Sharp_WebApi_Http_RequestException_1_GetObjectData_SerializationInfo_StreamingContext_" data-uid="Gw2Sharp.WebApi.Http.RequestException`1.GetObjectData(SerializationInfo,StreamingContext)">GetObjectData(SerializationInfo, StreamingContext)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void GetObjectData(SerializationInfo info, StreamingContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">SerializationInfo</span></td>
+        <td><span class="parametername">info</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">StreamingContext</span></td>
+        <td><span class="parametername">context</span></td>
         <td></td>
       </tr>
     </tbody>

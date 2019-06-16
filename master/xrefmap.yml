@@ -1074,6 +1074,12 @@ references:
   fullName.vb: Gw2Sharp.WebApi.Http.AuthorizationRequiredException.AuthorizationRequiredException(Gw2Sharp.WebApi.Http.IHttpRequest, Gw2Sharp.WebApi.Http.IHttpResponse(Of Gw2Sharp.WebApi.V2.Models.ErrorObject), Gw2Sharp.WebApi.Http.AuthorizationError)
   nameWithType: AuthorizationRequiredException.AuthorizationRequiredException(IHttpRequest, IHttpResponse<ErrorObject>, AuthorizationError)
   nameWithType.vb: AuthorizationRequiredException.AuthorizationRequiredException(IHttpRequest, IHttpResponse(Of ErrorObject), AuthorizationError)
+- uid: Gw2Sharp.WebApi.Http.AuthorizationRequiredException.#ctor(SerializationInfo,StreamingContext)
+  name: AuthorizationRequiredException(SerializationInfo, StreamingContext)
+  href: api/Gw2Sharp.WebApi.Http.AuthorizationRequiredException.html#Gw2Sharp_WebApi_Http_AuthorizationRequiredException__ctor_SerializationInfo_StreamingContext_
+  commentId: M:Gw2Sharp.WebApi.Http.AuthorizationRequiredException.#ctor(SerializationInfo,StreamingContext)
+  fullName: Gw2Sharp.WebApi.Http.AuthorizationRequiredException.AuthorizationRequiredException(SerializationInfo, StreamingContext)
+  nameWithType: AuthorizationRequiredException.AuthorizationRequiredException(SerializationInfo, StreamingContext)
 - uid: Gw2Sharp.WebApi.Http.AuthorizationRequiredException.#ctor*
   name: AuthorizationRequiredException
   href: api/Gw2Sharp.WebApi.Http.AuthorizationRequiredException.html#Gw2Sharp_WebApi_Http_AuthorizationRequiredException__ctor_
@@ -1110,6 +1116,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.Http.AuthorizationRequiredException.CreateFromResponse
   nameWithType: AuthorizationRequiredException.CreateFromResponse
+- uid: Gw2Sharp.WebApi.Http.AuthorizationRequiredException.GetObjectData(SerializationInfo,StreamingContext)
+  name: GetObjectData(SerializationInfo, StreamingContext)
+  href: api/Gw2Sharp.WebApi.Http.AuthorizationRequiredException.html#Gw2Sharp_WebApi_Http_AuthorizationRequiredException_GetObjectData_SerializationInfo_StreamingContext_
+  commentId: M:Gw2Sharp.WebApi.Http.AuthorizationRequiredException.GetObjectData(SerializationInfo,StreamingContext)
+  fullName: Gw2Sharp.WebApi.Http.AuthorizationRequiredException.GetObjectData(SerializationInfo, StreamingContext)
+  nameWithType: AuthorizationRequiredException.GetObjectData(SerializationInfo, StreamingContext)
+- uid: Gw2Sharp.WebApi.Http.AuthorizationRequiredException.GetObjectData*
+  name: GetObjectData
+  href: api/Gw2Sharp.WebApi.Http.AuthorizationRequiredException.html#Gw2Sharp_WebApi_Http_AuthorizationRequiredException_GetObjectData_
+  commentId: Overload:Gw2Sharp.WebApi.Http.AuthorizationRequiredException.GetObjectData
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.Http.AuthorizationRequiredException.GetObjectData
+  nameWithType: AuthorizationRequiredException.GetObjectData
 - uid: Gw2Sharp.WebApi.Http.BadRequestException
   name: BadRequestException
   href: api/Gw2Sharp.WebApi.Http.BadRequestException.html
@@ -1125,6 +1144,12 @@ references:
   fullName.vb: Gw2Sharp.WebApi.Http.BadRequestException.BadRequestException(Gw2Sharp.WebApi.Http.IHttpRequest, Gw2Sharp.WebApi.Http.IHttpResponse(Of Gw2Sharp.WebApi.V2.Models.ErrorObject))
   nameWithType: BadRequestException.BadRequestException(IHttpRequest, IHttpResponse<ErrorObject>)
   nameWithType.vb: BadRequestException.BadRequestException(IHttpRequest, IHttpResponse(Of ErrorObject))
+- uid: Gw2Sharp.WebApi.Http.BadRequestException.#ctor(SerializationInfo,StreamingContext)
+  name: BadRequestException(SerializationInfo, StreamingContext)
+  href: api/Gw2Sharp.WebApi.Http.BadRequestException.html#Gw2Sharp_WebApi_Http_BadRequestException__ctor_SerializationInfo_StreamingContext_
+  commentId: M:Gw2Sharp.WebApi.Http.BadRequestException.#ctor(SerializationInfo,StreamingContext)
+  fullName: Gw2Sharp.WebApi.Http.BadRequestException.BadRequestException(SerializationInfo, StreamingContext)
+  nameWithType: BadRequestException.BadRequestException(SerializationInfo, StreamingContext)
 - uid: Gw2Sharp.WebApi.Http.BadRequestException.#ctor*
   name: BadRequestException
   href: api/Gw2Sharp.WebApi.Http.BadRequestException.html#Gw2Sharp_WebApi_Http_BadRequestException__ctor_
@@ -1198,6 +1223,12 @@ references:
   commentId: T:Gw2Sharp.WebApi.Http.HttpRequest
   fullName: Gw2Sharp.WebApi.Http.HttpRequest
   nameWithType: HttpRequest
+- uid: Gw2Sharp.WebApi.Http.HttpRequest.#ctor(SerializationInfo,StreamingContext)
+  name: HttpRequest(SerializationInfo, StreamingContext)
+  href: api/Gw2Sharp.WebApi.Http.HttpRequest.html#Gw2Sharp_WebApi_Http_HttpRequest__ctor_SerializationInfo_StreamingContext_
+  commentId: M:Gw2Sharp.WebApi.Http.HttpRequest.#ctor(SerializationInfo,StreamingContext)
+  fullName: Gw2Sharp.WebApi.Http.HttpRequest.HttpRequest(SerializationInfo, StreamingContext)
+  nameWithType: HttpRequest.HttpRequest(SerializationInfo, StreamingContext)
 - uid: Gw2Sharp.WebApi.Http.HttpRequest.#ctor(Uri,System.Nullable{IDictionary{System.String,System.String}})
   name: HttpRequest(Uri, Nullable<IDictionary<String, String>>)
   href: api/Gw2Sharp.WebApi.Http.HttpRequest.html#Gw2Sharp_WebApi_Http_HttpRequest__ctor_Uri_System_Nullable_IDictionary_System_String_System_String___
@@ -1223,6 +1254,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.Http.HttpRequest.HttpRequest
   nameWithType: HttpRequest.HttpRequest
+- uid: Gw2Sharp.WebApi.Http.HttpRequest.GetObjectData(SerializationInfo,StreamingContext)
+  name: GetObjectData(SerializationInfo, StreamingContext)
+  href: api/Gw2Sharp.WebApi.Http.HttpRequest.html#Gw2Sharp_WebApi_Http_HttpRequest_GetObjectData_SerializationInfo_StreamingContext_
+  commentId: M:Gw2Sharp.WebApi.Http.HttpRequest.GetObjectData(SerializationInfo,StreamingContext)
+  fullName: Gw2Sharp.WebApi.Http.HttpRequest.GetObjectData(SerializationInfo, StreamingContext)
+  nameWithType: HttpRequest.GetObjectData(SerializationInfo, StreamingContext)
+- uid: Gw2Sharp.WebApi.Http.HttpRequest.GetObjectData*
+  name: GetObjectData
+  href: api/Gw2Sharp.WebApi.Http.HttpRequest.html#Gw2Sharp_WebApi_Http_HttpRequest_GetObjectData_
+  commentId: Overload:Gw2Sharp.WebApi.Http.HttpRequest.GetObjectData
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.Http.HttpRequest.GetObjectData
+  nameWithType: HttpRequest.GetObjectData
 - uid: Gw2Sharp.WebApi.Http.HttpRequest.RequestHeaders
   name: RequestHeaders
   href: api/Gw2Sharp.WebApi.Http.HttpRequest.html#Gw2Sharp_WebApi_Http_HttpRequest_RequestHeaders
@@ -1255,6 +1299,12 @@ references:
   commentId: T:Gw2Sharp.WebApi.Http.HttpResponse
   fullName: Gw2Sharp.WebApi.Http.HttpResponse
   nameWithType: HttpResponse
+- uid: Gw2Sharp.WebApi.Http.HttpResponse.#ctor(SerializationInfo,StreamingContext)
+  name: HttpResponse(SerializationInfo, StreamingContext)
+  href: api/Gw2Sharp.WebApi.Http.HttpResponse.html#Gw2Sharp_WebApi_Http_HttpResponse__ctor_SerializationInfo_StreamingContext_
+  commentId: M:Gw2Sharp.WebApi.Http.HttpResponse.#ctor(SerializationInfo,StreamingContext)
+  fullName: Gw2Sharp.WebApi.Http.HttpResponse.HttpResponse(SerializationInfo, StreamingContext)
+  nameWithType: HttpResponse.HttpResponse(SerializationInfo, StreamingContext)
 - uid: Gw2Sharp.WebApi.Http.HttpResponse.#ctor(System.String)
   name: HttpResponse(String)
   href: api/Gw2Sharp.WebApi.Http.HttpResponse.html#Gw2Sharp_WebApi_Http_HttpResponse__ctor_System_String_
@@ -1312,6 +1362,14 @@ references:
   fullName.vb: Gw2Sharp.WebApi.Http.HttpResponse(Of T).HttpResponse(T, System.Nullable(Of HttpStatusCode), System.Nullable(Of IEnumerable(Of KeyValuePair(Of System.String, System.String))), System.Nullable(Of IEnumerable(Of KeyValuePair(Of System.String, System.String))))
   nameWithType: HttpResponse<T>.HttpResponse(T, Nullable<HttpStatusCode>, Nullable<IEnumerable<KeyValuePair<String, String>>>, Nullable<IEnumerable<KeyValuePair<String, String>>>)
   nameWithType.vb: HttpResponse(Of T).HttpResponse(T, Nullable(Of HttpStatusCode), Nullable(Of IEnumerable(Of KeyValuePair(Of String, String))), Nullable(Of IEnumerable(Of KeyValuePair(Of String, String))))
+- uid: Gw2Sharp.WebApi.Http.HttpResponse`1.#ctor(SerializationInfo,StreamingContext)
+  name: HttpResponse(SerializationInfo, StreamingContext)
+  href: api/Gw2Sharp.WebApi.Http.HttpResponse-1.html#Gw2Sharp_WebApi_Http_HttpResponse_1__ctor_SerializationInfo_StreamingContext_
+  commentId: M:Gw2Sharp.WebApi.Http.HttpResponse`1.#ctor(SerializationInfo,StreamingContext)
+  fullName: Gw2Sharp.WebApi.Http.HttpResponse<T>.HttpResponse(SerializationInfo, StreamingContext)
+  fullName.vb: Gw2Sharp.WebApi.Http.HttpResponse(Of T).HttpResponse(SerializationInfo, StreamingContext)
+  nameWithType: HttpResponse<T>.HttpResponse(SerializationInfo, StreamingContext)
+  nameWithType.vb: HttpResponse(Of T).HttpResponse(SerializationInfo, StreamingContext)
 - uid: Gw2Sharp.WebApi.Http.HttpResponse`1.#ctor*
   name: HttpResponse
   href: api/Gw2Sharp.WebApi.Http.HttpResponse-1.html#Gw2Sharp_WebApi_Http_HttpResponse_1__ctor_
@@ -1338,6 +1396,23 @@ references:
   fullName.vb: Gw2Sharp.WebApi.Http.HttpResponse(Of T).Content
   nameWithType: HttpResponse<T>.Content
   nameWithType.vb: HttpResponse(Of T).Content
+- uid: Gw2Sharp.WebApi.Http.HttpResponse`1.GetObjectData(SerializationInfo,StreamingContext)
+  name: GetObjectData(SerializationInfo, StreamingContext)
+  href: api/Gw2Sharp.WebApi.Http.HttpResponse-1.html#Gw2Sharp_WebApi_Http_HttpResponse_1_GetObjectData_SerializationInfo_StreamingContext_
+  commentId: M:Gw2Sharp.WebApi.Http.HttpResponse`1.GetObjectData(SerializationInfo,StreamingContext)
+  fullName: Gw2Sharp.WebApi.Http.HttpResponse<T>.GetObjectData(SerializationInfo, StreamingContext)
+  fullName.vb: Gw2Sharp.WebApi.Http.HttpResponse(Of T).GetObjectData(SerializationInfo, StreamingContext)
+  nameWithType: HttpResponse<T>.GetObjectData(SerializationInfo, StreamingContext)
+  nameWithType.vb: HttpResponse(Of T).GetObjectData(SerializationInfo, StreamingContext)
+- uid: Gw2Sharp.WebApi.Http.HttpResponse`1.GetObjectData*
+  name: GetObjectData
+  href: api/Gw2Sharp.WebApi.Http.HttpResponse-1.html#Gw2Sharp_WebApi_Http_HttpResponse_1_GetObjectData_
+  commentId: Overload:Gw2Sharp.WebApi.Http.HttpResponse`1.GetObjectData
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.Http.HttpResponse<T>.GetObjectData
+  fullName.vb: Gw2Sharp.WebApi.Http.HttpResponse(Of T).GetObjectData
+  nameWithType: HttpResponse<T>.GetObjectData
+  nameWithType.vb: HttpResponse(Of T).GetObjectData
 - uid: Gw2Sharp.WebApi.Http.HttpResponse`1.RequestHeaders
   name: RequestHeaders
   href: api/Gw2Sharp.WebApi.Http.HttpResponse-1.html#Gw2Sharp_WebApi_Http_HttpResponse_1_RequestHeaders
@@ -1551,6 +1626,12 @@ references:
   fullName.vb: Gw2Sharp.WebApi.Http.InvalidAccessTokenException.InvalidAccessTokenException(Gw2Sharp.WebApi.Http.IHttpRequest, Gw2Sharp.WebApi.Http.IHttpResponse(Of Gw2Sharp.WebApi.V2.Models.ErrorObject))
   nameWithType: InvalidAccessTokenException.InvalidAccessTokenException(IHttpRequest, IHttpResponse<ErrorObject>)
   nameWithType.vb: InvalidAccessTokenException.InvalidAccessTokenException(IHttpRequest, IHttpResponse(Of ErrorObject))
+- uid: Gw2Sharp.WebApi.Http.InvalidAccessTokenException.#ctor(SerializationInfo,StreamingContext)
+  name: InvalidAccessTokenException(SerializationInfo, StreamingContext)
+  href: api/Gw2Sharp.WebApi.Http.InvalidAccessTokenException.html#Gw2Sharp_WebApi_Http_InvalidAccessTokenException__ctor_SerializationInfo_StreamingContext_
+  commentId: M:Gw2Sharp.WebApi.Http.InvalidAccessTokenException.#ctor(SerializationInfo,StreamingContext)
+  fullName: Gw2Sharp.WebApi.Http.InvalidAccessTokenException.InvalidAccessTokenException(SerializationInfo, StreamingContext)
+  nameWithType: InvalidAccessTokenException.InvalidAccessTokenException(SerializationInfo, StreamingContext)
 - uid: Gw2Sharp.WebApi.Http.InvalidAccessTokenException.#ctor*
   name: InvalidAccessTokenException
   href: api/Gw2Sharp.WebApi.Http.InvalidAccessTokenException.html#Gw2Sharp_WebApi_Http_InvalidAccessTokenException__ctor_
@@ -1573,6 +1654,12 @@ references:
   fullName.vb: Gw2Sharp.WebApi.Http.MembershipRequiredException.MembershipRequiredException(Gw2Sharp.WebApi.Http.IHttpRequest, Gw2Sharp.WebApi.Http.IHttpResponse(Of Gw2Sharp.WebApi.V2.Models.ErrorObject))
   nameWithType: MembershipRequiredException.MembershipRequiredException(IHttpRequest, IHttpResponse<ErrorObject>)
   nameWithType.vb: MembershipRequiredException.MembershipRequiredException(IHttpRequest, IHttpResponse(Of ErrorObject))
+- uid: Gw2Sharp.WebApi.Http.MembershipRequiredException.#ctor(SerializationInfo,StreamingContext)
+  name: MembershipRequiredException(SerializationInfo, StreamingContext)
+  href: api/Gw2Sharp.WebApi.Http.MembershipRequiredException.html#Gw2Sharp_WebApi_Http_MembershipRequiredException__ctor_SerializationInfo_StreamingContext_
+  commentId: M:Gw2Sharp.WebApi.Http.MembershipRequiredException.#ctor(SerializationInfo,StreamingContext)
+  fullName: Gw2Sharp.WebApi.Http.MembershipRequiredException.MembershipRequiredException(SerializationInfo, StreamingContext)
+  nameWithType: MembershipRequiredException.MembershipRequiredException(SerializationInfo, StreamingContext)
 - uid: Gw2Sharp.WebApi.Http.MembershipRequiredException.#ctor*
   name: MembershipRequiredException
   href: api/Gw2Sharp.WebApi.Http.MembershipRequiredException.html#Gw2Sharp_WebApi_Http_MembershipRequiredException__ctor_
@@ -1595,6 +1682,12 @@ references:
   fullName.vb: Gw2Sharp.WebApi.Http.MissingScopesException.MissingScopesException(Gw2Sharp.WebApi.Http.IHttpRequest, Gw2Sharp.WebApi.Http.IHttpResponse(Of Gw2Sharp.WebApi.V2.Models.ErrorObject))
   nameWithType: MissingScopesException.MissingScopesException(IHttpRequest, IHttpResponse<ErrorObject>)
   nameWithType.vb: MissingScopesException.MissingScopesException(IHttpRequest, IHttpResponse(Of ErrorObject))
+- uid: Gw2Sharp.WebApi.Http.MissingScopesException.#ctor(SerializationInfo,StreamingContext)
+  name: MissingScopesException(SerializationInfo, StreamingContext)
+  href: api/Gw2Sharp.WebApi.Http.MissingScopesException.html#Gw2Sharp_WebApi_Http_MissingScopesException__ctor_SerializationInfo_StreamingContext_
+  commentId: M:Gw2Sharp.WebApi.Http.MissingScopesException.#ctor(SerializationInfo,StreamingContext)
+  fullName: Gw2Sharp.WebApi.Http.MissingScopesException.MissingScopesException(SerializationInfo, StreamingContext)
+  nameWithType: MissingScopesException.MissingScopesException(SerializationInfo, StreamingContext)
 - uid: Gw2Sharp.WebApi.Http.MissingScopesException.#ctor*
   name: MissingScopesException
   href: api/Gw2Sharp.WebApi.Http.MissingScopesException.html#Gw2Sharp_WebApi_Http_MissingScopesException__ctor_
@@ -1617,6 +1710,12 @@ references:
   fullName.vb: Gw2Sharp.WebApi.Http.NotFoundException.NotFoundException(Gw2Sharp.WebApi.Http.IHttpRequest, Gw2Sharp.WebApi.Http.IHttpResponse(Of Gw2Sharp.WebApi.V2.Models.ErrorObject))
   nameWithType: NotFoundException.NotFoundException(IHttpRequest, IHttpResponse<ErrorObject>)
   nameWithType.vb: NotFoundException.NotFoundException(IHttpRequest, IHttpResponse(Of ErrorObject))
+- uid: Gw2Sharp.WebApi.Http.NotFoundException.#ctor(SerializationInfo,StreamingContext)
+  name: NotFoundException(SerializationInfo, StreamingContext)
+  href: api/Gw2Sharp.WebApi.Http.NotFoundException.html#Gw2Sharp_WebApi_Http_NotFoundException__ctor_SerializationInfo_StreamingContext_
+  commentId: M:Gw2Sharp.WebApi.Http.NotFoundException.#ctor(SerializationInfo,StreamingContext)
+  fullName: Gw2Sharp.WebApi.Http.NotFoundException.NotFoundException(SerializationInfo, StreamingContext)
+  nameWithType: NotFoundException.NotFoundException(SerializationInfo, StreamingContext)
 - uid: Gw2Sharp.WebApi.Http.NotFoundException.#ctor*
   name: NotFoundException
   href: api/Gw2Sharp.WebApi.Http.NotFoundException.html#Gw2Sharp_WebApi_Http_NotFoundException__ctor_
@@ -1636,6 +1735,12 @@ references:
   commentId: M:Gw2Sharp.WebApi.Http.RequestCanceledException.#ctor(Gw2Sharp.WebApi.Http.IHttpRequest)
   fullName: Gw2Sharp.WebApi.Http.RequestCanceledException.RequestCanceledException(Gw2Sharp.WebApi.Http.IHttpRequest)
   nameWithType: RequestCanceledException.RequestCanceledException(IHttpRequest)
+- uid: Gw2Sharp.WebApi.Http.RequestCanceledException.#ctor(SerializationInfo,StreamingContext)
+  name: RequestCanceledException(SerializationInfo, StreamingContext)
+  href: api/Gw2Sharp.WebApi.Http.RequestCanceledException.html#Gw2Sharp_WebApi_Http_RequestCanceledException__ctor_SerializationInfo_StreamingContext_
+  commentId: M:Gw2Sharp.WebApi.Http.RequestCanceledException.#ctor(SerializationInfo,StreamingContext)
+  fullName: Gw2Sharp.WebApi.Http.RequestCanceledException.RequestCanceledException(SerializationInfo, StreamingContext)
+  nameWithType: RequestCanceledException.RequestCanceledException(SerializationInfo, StreamingContext)
 - uid: Gw2Sharp.WebApi.Http.RequestCanceledException.#ctor*
   name: RequestCanceledException
   href: api/Gw2Sharp.WebApi.Http.RequestCanceledException.html#Gw2Sharp_WebApi_Http_RequestCanceledException__ctor_
@@ -1682,6 +1787,12 @@ references:
   fullName.vb: Gw2Sharp.WebApi.Http.RequestException.RequestException(Gw2Sharp.WebApi.Http.IHttpRequest, System.String, System.Nullable(Of Exception))
   nameWithType: RequestException.RequestException(IHttpRequest, String, Nullable<Exception>)
   nameWithType.vb: RequestException.RequestException(IHttpRequest, String, Nullable(Of Exception))
+- uid: Gw2Sharp.WebApi.Http.RequestException.#ctor(SerializationInfo,StreamingContext)
+  name: RequestException(SerializationInfo, StreamingContext)
+  href: api/Gw2Sharp.WebApi.Http.RequestException.html#Gw2Sharp_WebApi_Http_RequestException__ctor_SerializationInfo_StreamingContext_
+  commentId: M:Gw2Sharp.WebApi.Http.RequestException.#ctor(SerializationInfo,StreamingContext)
+  fullName: Gw2Sharp.WebApi.Http.RequestException.RequestException(SerializationInfo, StreamingContext)
+  nameWithType: RequestException.RequestException(SerializationInfo, StreamingContext)
 - uid: Gw2Sharp.WebApi.Http.RequestException.#ctor*
   name: RequestException
   href: api/Gw2Sharp.WebApi.Http.RequestException.html#Gw2Sharp_WebApi_Http_RequestException__ctor_
@@ -1733,6 +1844,14 @@ references:
   fullName.vb: Gw2Sharp.WebApi.Http.RequestException(Of TResponse).RequestException(Gw2Sharp.WebApi.Http.IHttpRequest, System.String, System.Nullable(Of Exception))
   nameWithType: RequestException<TResponse>.RequestException(IHttpRequest, String, Nullable<Exception>)
   nameWithType.vb: RequestException(Of TResponse).RequestException(IHttpRequest, String, Nullable(Of Exception))
+- uid: Gw2Sharp.WebApi.Http.RequestException`1.#ctor(SerializationInfo,StreamingContext)
+  name: RequestException(SerializationInfo, StreamingContext)
+  href: api/Gw2Sharp.WebApi.Http.RequestException-1.html#Gw2Sharp_WebApi_Http_RequestException_1__ctor_SerializationInfo_StreamingContext_
+  commentId: M:Gw2Sharp.WebApi.Http.RequestException`1.#ctor(SerializationInfo,StreamingContext)
+  fullName: Gw2Sharp.WebApi.Http.RequestException<TResponse>.RequestException(SerializationInfo, StreamingContext)
+  fullName.vb: Gw2Sharp.WebApi.Http.RequestException(Of TResponse).RequestException(SerializationInfo, StreamingContext)
+  nameWithType: RequestException<TResponse>.RequestException(SerializationInfo, StreamingContext)
+  nameWithType.vb: RequestException(Of TResponse).RequestException(SerializationInfo, StreamingContext)
 - uid: Gw2Sharp.WebApi.Http.RequestException`1.#ctor*
   name: RequestException
   href: api/Gw2Sharp.WebApi.Http.RequestException-1.html#Gw2Sharp_WebApi_Http_RequestException_1__ctor_
@@ -1742,6 +1861,23 @@ references:
   fullName.vb: Gw2Sharp.WebApi.Http.RequestException(Of TResponse).RequestException
   nameWithType: RequestException<TResponse>.RequestException
   nameWithType.vb: RequestException(Of TResponse).RequestException
+- uid: Gw2Sharp.WebApi.Http.RequestException`1.GetObjectData(SerializationInfo,StreamingContext)
+  name: GetObjectData(SerializationInfo, StreamingContext)
+  href: api/Gw2Sharp.WebApi.Http.RequestException-1.html#Gw2Sharp_WebApi_Http_RequestException_1_GetObjectData_SerializationInfo_StreamingContext_
+  commentId: M:Gw2Sharp.WebApi.Http.RequestException`1.GetObjectData(SerializationInfo,StreamingContext)
+  fullName: Gw2Sharp.WebApi.Http.RequestException<TResponse>.GetObjectData(SerializationInfo, StreamingContext)
+  fullName.vb: Gw2Sharp.WebApi.Http.RequestException(Of TResponse).GetObjectData(SerializationInfo, StreamingContext)
+  nameWithType: RequestException<TResponse>.GetObjectData(SerializationInfo, StreamingContext)
+  nameWithType.vb: RequestException(Of TResponse).GetObjectData(SerializationInfo, StreamingContext)
+- uid: Gw2Sharp.WebApi.Http.RequestException`1.GetObjectData*
+  name: GetObjectData
+  href: api/Gw2Sharp.WebApi.Http.RequestException-1.html#Gw2Sharp_WebApi_Http_RequestException_1_GetObjectData_
+  commentId: Overload:Gw2Sharp.WebApi.Http.RequestException`1.GetObjectData
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.Http.RequestException<TResponse>.GetObjectData
+  fullName.vb: Gw2Sharp.WebApi.Http.RequestException(Of TResponse).GetObjectData
+  nameWithType: RequestException<TResponse>.GetObjectData
+  nameWithType.vb: RequestException(Of TResponse).GetObjectData
 - uid: Gw2Sharp.WebApi.Http.RequestException`1.Request
   name: Request
   href: api/Gw2Sharp.WebApi.Http.RequestException-1.html#Gw2Sharp_WebApi_Http_RequestException_1_Request
@@ -1791,6 +1927,12 @@ references:
   fullName.vb: Gw2Sharp.WebApi.Http.RestrictedToGuildLeadersException.RestrictedToGuildLeadersException(Gw2Sharp.WebApi.Http.IHttpRequest, Gw2Sharp.WebApi.Http.IHttpResponse(Of Gw2Sharp.WebApi.V2.Models.ErrorObject))
   nameWithType: RestrictedToGuildLeadersException.RestrictedToGuildLeadersException(IHttpRequest, IHttpResponse<ErrorObject>)
   nameWithType.vb: RestrictedToGuildLeadersException.RestrictedToGuildLeadersException(IHttpRequest, IHttpResponse(Of ErrorObject))
+- uid: Gw2Sharp.WebApi.Http.RestrictedToGuildLeadersException.#ctor(SerializationInfo,StreamingContext)
+  name: RestrictedToGuildLeadersException(SerializationInfo, StreamingContext)
+  href: api/Gw2Sharp.WebApi.Http.RestrictedToGuildLeadersException.html#Gw2Sharp_WebApi_Http_RestrictedToGuildLeadersException__ctor_SerializationInfo_StreamingContext_
+  commentId: M:Gw2Sharp.WebApi.Http.RestrictedToGuildLeadersException.#ctor(SerializationInfo,StreamingContext)
+  fullName: Gw2Sharp.WebApi.Http.RestrictedToGuildLeadersException.RestrictedToGuildLeadersException(SerializationInfo, StreamingContext)
+  nameWithType: RestrictedToGuildLeadersException.RestrictedToGuildLeadersException(SerializationInfo, StreamingContext)
 - uid: Gw2Sharp.WebApi.Http.RestrictedToGuildLeadersException.#ctor*
   name: RestrictedToGuildLeadersException
   href: api/Gw2Sharp.WebApi.Http.RestrictedToGuildLeadersException.html#Gw2Sharp_WebApi_Http_RestrictedToGuildLeadersException__ctor_
@@ -1813,6 +1955,12 @@ references:
   fullName.vb: Gw2Sharp.WebApi.Http.ServerErrorException.ServerErrorException(Gw2Sharp.WebApi.Http.IHttpRequest, Gw2Sharp.WebApi.Http.IHttpResponse(Of Gw2Sharp.WebApi.V2.Models.ErrorObject))
   nameWithType: ServerErrorException.ServerErrorException(IHttpRequest, IHttpResponse<ErrorObject>)
   nameWithType.vb: ServerErrorException.ServerErrorException(IHttpRequest, IHttpResponse(Of ErrorObject))
+- uid: Gw2Sharp.WebApi.Http.ServerErrorException.#ctor(SerializationInfo,StreamingContext)
+  name: ServerErrorException(SerializationInfo, StreamingContext)
+  href: api/Gw2Sharp.WebApi.Http.ServerErrorException.html#Gw2Sharp_WebApi_Http_ServerErrorException__ctor_SerializationInfo_StreamingContext_
+  commentId: M:Gw2Sharp.WebApi.Http.ServerErrorException.#ctor(SerializationInfo,StreamingContext)
+  fullName: Gw2Sharp.WebApi.Http.ServerErrorException.ServerErrorException(SerializationInfo, StreamingContext)
+  nameWithType: ServerErrorException.ServerErrorException(SerializationInfo, StreamingContext)
 - uid: Gw2Sharp.WebApi.Http.ServerErrorException.#ctor*
   name: ServerErrorException
   href: api/Gw2Sharp.WebApi.Http.ServerErrorException.html#Gw2Sharp_WebApi_Http_ServerErrorException__ctor_
@@ -1835,6 +1983,12 @@ references:
   fullName.vb: Gw2Sharp.WebApi.Http.ServiceUnavailableException.ServiceUnavailableException(Gw2Sharp.WebApi.Http.IHttpRequest, Gw2Sharp.WebApi.Http.IHttpResponse(Of Gw2Sharp.WebApi.V2.Models.ErrorObject))
   nameWithType: ServiceUnavailableException.ServiceUnavailableException(IHttpRequest, IHttpResponse<ErrorObject>)
   nameWithType.vb: ServiceUnavailableException.ServiceUnavailableException(IHttpRequest, IHttpResponse(Of ErrorObject))
+- uid: Gw2Sharp.WebApi.Http.ServiceUnavailableException.#ctor(SerializationInfo,StreamingContext)
+  name: ServiceUnavailableException(SerializationInfo, StreamingContext)
+  href: api/Gw2Sharp.WebApi.Http.ServiceUnavailableException.html#Gw2Sharp_WebApi_Http_ServiceUnavailableException__ctor_SerializationInfo_StreamingContext_
+  commentId: M:Gw2Sharp.WebApi.Http.ServiceUnavailableException.#ctor(SerializationInfo,StreamingContext)
+  fullName: Gw2Sharp.WebApi.Http.ServiceUnavailableException.ServiceUnavailableException(SerializationInfo, StreamingContext)
+  nameWithType: ServiceUnavailableException.ServiceUnavailableException(SerializationInfo, StreamingContext)
 - uid: Gw2Sharp.WebApi.Http.ServiceUnavailableException.#ctor*
   name: ServiceUnavailableException
   href: api/Gw2Sharp.WebApi.Http.ServiceUnavailableException.html#Gw2Sharp_WebApi_Http_ServiceUnavailableException__ctor_
@@ -1866,6 +2020,12 @@ references:
   fullName.vb: Gw2Sharp.WebApi.Http.UnexpectedStatusException.UnexpectedStatusException(Gw2Sharp.WebApi.Http.IHttpRequest, System.Nullable(Of Gw2Sharp.WebApi.Http.IHttpResponse(Of System.String)), System.String)
   nameWithType: UnexpectedStatusException.UnexpectedStatusException(IHttpRequest, Nullable<IHttpResponse<String>>, String)
   nameWithType.vb: UnexpectedStatusException.UnexpectedStatusException(IHttpRequest, Nullable(Of IHttpResponse(Of String)), String)
+- uid: Gw2Sharp.WebApi.Http.UnexpectedStatusException.#ctor(SerializationInfo,StreamingContext)
+  name: UnexpectedStatusException(SerializationInfo, StreamingContext)
+  href: api/Gw2Sharp.WebApi.Http.UnexpectedStatusException.html#Gw2Sharp_WebApi_Http_UnexpectedStatusException__ctor_SerializationInfo_StreamingContext_
+  commentId: M:Gw2Sharp.WebApi.Http.UnexpectedStatusException.#ctor(SerializationInfo,StreamingContext)
+  fullName: Gw2Sharp.WebApi.Http.UnexpectedStatusException.UnexpectedStatusException(SerializationInfo, StreamingContext)
+  nameWithType: UnexpectedStatusException.UnexpectedStatusException(SerializationInfo, StreamingContext)
 - uid: Gw2Sharp.WebApi.Http.UnexpectedStatusException.#ctor*
   name: UnexpectedStatusException
   href: api/Gw2Sharp.WebApi.Http.UnexpectedStatusException.html#Gw2Sharp_WebApi_Http_UnexpectedStatusException__ctor_
@@ -1900,6 +2060,14 @@ references:
   fullName.vb: Gw2Sharp.WebApi.Http.UnexpectedStatusException(Of T).UnexpectedStatusException(Gw2Sharp.WebApi.Http.IHttpRequest, System.Nullable(Of Gw2Sharp.WebApi.Http.IHttpResponse(Of T)), System.String)
   nameWithType: UnexpectedStatusException<T>.UnexpectedStatusException(IHttpRequest, Nullable<IHttpResponse<T>>, String)
   nameWithType.vb: UnexpectedStatusException(Of T).UnexpectedStatusException(IHttpRequest, Nullable(Of IHttpResponse(Of T)), String)
+- uid: Gw2Sharp.WebApi.Http.UnexpectedStatusException`1.#ctor(SerializationInfo,StreamingContext)
+  name: UnexpectedStatusException(SerializationInfo, StreamingContext)
+  href: api/Gw2Sharp.WebApi.Http.UnexpectedStatusException-1.html#Gw2Sharp_WebApi_Http_UnexpectedStatusException_1__ctor_SerializationInfo_StreamingContext_
+  commentId: M:Gw2Sharp.WebApi.Http.UnexpectedStatusException`1.#ctor(SerializationInfo,StreamingContext)
+  fullName: Gw2Sharp.WebApi.Http.UnexpectedStatusException<T>.UnexpectedStatusException(SerializationInfo, StreamingContext)
+  fullName.vb: Gw2Sharp.WebApi.Http.UnexpectedStatusException(Of T).UnexpectedStatusException(SerializationInfo, StreamingContext)
+  nameWithType: UnexpectedStatusException<T>.UnexpectedStatusException(SerializationInfo, StreamingContext)
+  nameWithType.vb: UnexpectedStatusException(Of T).UnexpectedStatusException(SerializationInfo, StreamingContext)
 - uid: Gw2Sharp.WebApi.Http.UnexpectedStatusException`1.#ctor*
   name: UnexpectedStatusException
   href: api/Gw2Sharp.WebApi.Http.UnexpectedStatusException-1.html#Gw2Sharp_WebApi_Http_UnexpectedStatusException_1__ctor_

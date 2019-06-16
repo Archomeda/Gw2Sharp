@@ -1816,6 +1816,7 @@
     <h5>Implements</h5>
     <div><a class="xref" href="Gw2Sharp.WebApi.Http.IHttpResponse.html">IHttpResponse</a></div>
     <div><a class="xref" href="Gw2Sharp.WebApi.Http.IHttpResponse-1.html">IHttpResponse</a>&lt;<span class="xref">System.String</span>&gt;</div>
+    <div><span class="xref">ISerializable</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -1831,15 +1832,53 @@
     <div>
       <a class="xref" href="Gw2Sharp.WebApi.Http.HttpResponse-1.html#Gw2Sharp_WebApi_Http_HttpResponse_1_ResponseHeaders">HttpResponse&lt;String&gt;.ResponseHeaders</a>
     </div>
+    <div>
+      <a class="xref" href="Gw2Sharp.WebApi.Http.HttpResponse-1.html#Gw2Sharp_WebApi_Http_HttpResponse_1_GetObjectData_SerializationInfo_StreamingContext_">HttpResponse&lt;String&gt;.GetObjectData(SerializationInfo, StreamingContext)</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Gw2Sharp.WebApi.Http.html">Gw2Sharp.WebApi.Http</a></h6>
   <h6><strong>Assembly</strong>: Gw2Sharp.dll</h6>
   <h5 id="Gw2Sharp_WebApi_Http_HttpResponse_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class HttpResponse : HttpResponse&lt;string&gt;, IHttpResponse, IHttpResponse&lt;string&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class HttpResponse : HttpResponse&lt;string&gt;, IHttpResponse, IHttpResponse&lt;string&gt;, ISerializable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
+  
+  
+  <a id="Gw2Sharp_WebApi_Http_HttpResponse__ctor_" data-uid="Gw2Sharp.WebApi.Http.HttpResponse.#ctor*"></a>
+  <h4 id="Gw2Sharp_WebApi_Http_HttpResponse__ctor_SerializationInfo_StreamingContext_" data-uid="Gw2Sharp.WebApi.Http.HttpResponse.#ctor(SerializationInfo,StreamingContext)">HttpResponse(SerializationInfo, StreamingContext)</h4>
+  <div class="markdown level1 summary"><p>Deserialization constructor for <a class="xref" href="Gw2Sharp.WebApi.Http.HttpResponse.html">HttpResponse</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected HttpResponse(SerializationInfo info, StreamingContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">SerializationInfo</span></td>
+        <td><span class="parametername">info</span></td>
+        <td><p>The serialization info.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">StreamingContext</span></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The streaming context.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Gw2Sharp_WebApi_Http_HttpResponse__ctor_" data-uid="Gw2Sharp.WebApi.Http.HttpResponse.#ctor*"></a>
@@ -1915,6 +1954,9 @@
   </div>
   <div>
       <a class="xref" href="Gw2Sharp.WebApi.Http.IHttpResponse-1.html">IHttpResponse&lt;T&gt;</a>
+  </div>
+  <div>
+      <span class="xref">ISerializable</span>
   </div>
 </article>
           </div>
