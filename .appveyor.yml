@@ -16,7 +16,7 @@ branches:
 before_build:
   - dotnet restore
   - dotnet tool install --global dotnet-sonarscanner
-  - dotnet sonarscanner begin /k:"Archomeda_Gw2Sharp" /o:"archomeda-github" /d:sonar.login="%sonar_login%"
+  - dotnet sonarscanner begin /k:"Archomeda_Gw2Sharp" /o:"archomeda-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="%sonar_login%"
 
 build:
   project: Gw2Sharp.sln
