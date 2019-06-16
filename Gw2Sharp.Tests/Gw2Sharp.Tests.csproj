@@ -6,6 +6,11 @@
     <NullableContextOptions>enable</NullableContextOptions>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(Configuration)'=='Debug' ">
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
   <ItemGroup>
     <None Remove="TestFiles\Account\Account.1.json" />
     <None Remove="TestFiles\Account\Account.2.json" />
