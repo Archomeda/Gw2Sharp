@@ -30,5 +30,5 @@ before_build:
 build:
   project: Gw2Sharp.sln
 
-after_build:
+after_test:
   - dotnet sonarscanner end /d:sonar.login="%sonar_login%"
