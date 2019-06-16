@@ -108,13 +108,9 @@ namespace Gw2Sharp.WebApi.Http
         /// <param name="response">The response.</param>
         /// <param name="message">The message.</param>
         /// <param name="innerException">The inner exception.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="message"/> is <c>null</c>.</exception>
         public RequestException(IHttpRequest request, IHttpResponse<TResponse>? response, string message, Exception? innerException) :
             base(message, innerException)
         {
-            if (message == null)
-                throw new ArgumentNullException(nameof(message));
-
             this.Request = request ?? throw new ArgumentNullException(nameof(request));
             this.Response = response;
         }

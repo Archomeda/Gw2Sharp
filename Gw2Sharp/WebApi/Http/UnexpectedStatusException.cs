@@ -49,13 +49,9 @@ namespace Gw2Sharp.WebApi.Http
         /// </summary>
         /// <param name="request">The original request.</param>
         /// <param name="response">The response.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="response"/> is <c>null</c>.</exception>
         public UnexpectedStatusException(IHttpRequest request, IHttpResponse<T> response) :
             this(request, response, $"Unexpected HTTP status code: {(int?)response?.StatusCode ?? 0}")
-        {
-            if (response == null)
-                throw new ArgumentNullException(nameof(response));
-        }
+        { }
 
         /// <summary>
         /// Creates a new <see cref="UnexpectedStatusException{T}" />.
