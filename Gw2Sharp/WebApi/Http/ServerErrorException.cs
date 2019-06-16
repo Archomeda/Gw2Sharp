@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.Serialization;
 using Gw2Sharp.WebApi.V2.Models;
 
 namespace Gw2Sharp.WebApi.Http
@@ -7,6 +8,7 @@ namespace Gw2Sharp.WebApi.Http
     /// A web API specific exception that's used when a request fails due to an internal server error (code 500).
     /// </summary>
     /// <seealso cref="UnexpectedStatusException{Error}" />
+    [Serializable]
     public class ServerErrorException : UnexpectedStatusException<ErrorObject>
     {
         /// <summary>
@@ -18,5 +20,12 @@ namespace Gw2Sharp.WebApi.Http
         public ServerErrorException(IHttpRequest request, IHttpResponse<ErrorObject> response) :
             base(request, response, response.Content.Message)
         { }
+
+        /// <summary>
+        /// Deserialization constructor for <see cref="ServerErrorException"/>.
+        /// </summary>
+        /// <param name="info">The serialization info.</param>
+        /// <param name="context">The streaming context.</param>
+        protected ServerErrorException(SerializationInfo info, StreamingContext context) : base(info, context) { }
     }
 }

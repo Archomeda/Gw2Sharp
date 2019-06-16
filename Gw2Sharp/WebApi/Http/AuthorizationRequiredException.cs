@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.Serialization;
 using Gw2Sharp.WebApi.V2.Models;
 
 namespace Gw2Sharp.WebApi.Http
@@ -7,6 +8,7 @@ namespace Gw2Sharp.WebApi.Http
     /// A web API specific exception that's used when a request fails to authorize (code 403).
     /// </summary>
     /// <seealso cref="UnexpectedStatusException{Error}" />
+    [Serializable]
     public class AuthorizationRequiredException : UnexpectedStatusException<ErrorObject>
     {
         /// <summary>
@@ -17,15 +19,36 @@ namespace Gw2Sharp.WebApi.Http
         /// <param name="error">The error.</param>
         /// <exception cref="ArgumentNullException"><paramref name="request"/>, <paramref name="response"/> or <paramref name="error"/> is <c>null</c>.</exception>
         public AuthorizationRequiredException(IHttpRequest request, IHttpResponse<ErrorObject> response, AuthorizationError error) :
-            base(request, response, response?.Content?.Message)
+            base(request, response, response.Content.Message)
         {
             this.AuthorizationError = error;
+        }
+
+        /// <summary>
+        /// Deserialization constructor for <see cref="AuthorizationRequiredException"/>.
+        /// </summary>
+        /// <param name="info">The serialization info.</param>
+        /// <param name="context">The streaming context.</param>
+        protected AuthorizationRequiredException(SerializationInfo info, StreamingContext context) : base(info, context)
+        {
+            this.AuthorizationError = (AuthorizationError)info.GetValue(nameof(this.AuthorizationError), typeof(AuthorizationError));
         }
 
         /// <summary>
         /// The reason why authorization has failed.
         /// </summary>
         public AuthorizationError AuthorizationError { get; }
+
+        /// <inheritdoc />
+        public override void GetObjectData(SerializationInfo info, StreamingContext context)
+        {
+            if (info == null)
+                throw new ArgumentNullException(nameof(info));
+
+            info.AddValue(nameof(this.AuthorizationError), this.AuthorizationError, typeof(AuthorizationError));
+
+            base.GetObjectData(info, context);
+        }
 
         /// <summary>
         /// Creates a specific Exception derived from <see cref="AuthorizationRequiredException"/> from a response.

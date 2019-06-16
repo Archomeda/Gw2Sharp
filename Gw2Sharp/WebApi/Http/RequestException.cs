@@ -1,10 +1,12 @@
 using System;
+using System.Runtime.Serialization;
 
 namespace Gw2Sharp.WebApi.Http
 {
     /// <summary>
     /// A generic request exception used for the web API.
     /// </summary>
+    [Serializable]
     public class RequestException : RequestException<string>
     {
         /// <summary>
@@ -50,6 +52,13 @@ namespace Gw2Sharp.WebApi.Http
         public RequestException(IHttpRequest request, IHttpResponse<string>? response, string message, Exception innerException) :
             base(request, response, message, innerException)
         { }
+
+        /// <summary>
+        /// Deserialization constructor for <see cref="RequestException"/>.
+        /// </summary>
+        /// <param name="info">The serialization info.</param>
+        /// <param name="context">The streaming context.</param>
+        protected RequestException(SerializationInfo info, StreamingContext context) : base(info, context) { }
     }
 
 
@@ -57,10 +66,11 @@ namespace Gw2Sharp.WebApi.Http
     /// A generic request exception used for the web API.
     /// </summary>
     /// <typeparam name="TResponse">The response object.</typeparam>
+    [Serializable]
     public class RequestException<TResponse> : Exception
     {
         /// <summary>
-        /// Creates a new <see cref="RequestException" />.
+        /// Creates a new <see cref="RequestException{TResponse}" />.
         /// </summary>
         /// <param name="request">The original request.</param>
         /// <param name="message">The message.</param>
@@ -70,7 +80,7 @@ namespace Gw2Sharp.WebApi.Http
         { }
 
         /// <summary>
-        /// Creates a new <see cref="RequestException" />.
+        /// Creates a new <see cref="RequestException{TResponse}" />.
         /// </summary>
         /// <param name="request">The original request.</param>
         /// <param name="response">The response.</param>
@@ -81,7 +91,7 @@ namespace Gw2Sharp.WebApi.Http
         { }
 
         /// <summary>
-        /// Creates a new <see cref="RequestException" />.
+        /// Creates a new <see cref="RequestException{TResponse}" />.
         /// </summary>
         /// <param name="request">The original request.</param>
         /// <param name="message">The message.</param>
@@ -92,7 +102,7 @@ namespace Gw2Sharp.WebApi.Http
         { }
 
         /// <summary>
-        /// Creates a new <see cref="RequestException" />.
+        /// Creates a new <see cref="RequestException{TResponse}" />.
         /// </summary>
         /// <param name="request">The original request.</param>
         /// <param name="response">The response.</param>
@@ -110,6 +120,17 @@ namespace Gw2Sharp.WebApi.Http
         }
 
         /// <summary>
+        /// Deserialization constructor for <see cref="RequestException{TResponse}"/>.
+        /// </summary>
+        /// <param name="info">The serialization info.</param>
+        /// <param name="context">The streaming context.</param>
+        protected RequestException(SerializationInfo info, StreamingContext context)
+        {
+            this.Request = (IHttpRequest)info.GetValue(nameof(this.Request), typeof(IHttpRequest));
+            this.Response = (IHttpResponse<TResponse>?)info.GetValue(nameof(this.Response), typeof(IHttpResponse<TResponse>?));
+        }
+
+        /// <summary>
         /// Gets the original request.
         /// </summary>
         public IHttpRequest Request { get; }
@@ -118,5 +139,17 @@ namespace Gw2Sharp.WebApi.Http
         /// Gets the response.
         /// </summary>
         public IHttpResponse<TResponse>? Response { get; }
+
+        /// <inheritdoc />
+        public override void GetObjectData(SerializationInfo info, StreamingContext context)
+        {
+            if (info == null)
+                throw new ArgumentNullException(nameof(info));
+
+            info.AddValue(nameof(this.Request), this.Request, typeof(IHttpRequest));
+            info.AddValue(nameof(this.Response), this.Response, typeof(IHttpResponse<TResponse>?));
+
+            base.GetObjectData(info, context);
+        }
     }
 }

@@ -1,12 +1,13 @@
 using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 
 namespace Gw2Sharp.WebApi.Http
 {
     /// <summary>
     /// An interface for implementing a web API request.
     /// </summary>
-    public interface IHttpRequest
+    public interface IHttpRequest : ISerializable
     {
         /// <summary>
         /// The URL.

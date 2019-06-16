@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.Serialization;
 using Gw2Sharp.WebApi.V2.Models;
 
 namespace Gw2Sharp.WebApi.Http
@@ -7,6 +8,7 @@ namespace Gw2Sharp.WebApi.Http
     /// A web API specific exception that's used when a response cannot be found (code 404).
     /// </summary>
     /// <seealso cref="UnexpectedStatusException{Error}" />
+    [Serializable]
     public class NotFoundException : UnexpectedStatusException<ErrorObject>
     {
         /// <summary>
@@ -18,5 +20,12 @@ namespace Gw2Sharp.WebApi.Http
         public NotFoundException(IHttpRequest request, IHttpResponse<ErrorObject> response) :
             base(request, response, response.Content.Message)
         { }
+
+        /// <summary>
+        /// Deserialization constructor for <see cref="BadRequestException"/>.
+        /// </summary>
+        /// <param name="info">The serialization info.</param>
+        /// <param name="context">The streaming context.</param>
+        protected NotFoundException(SerializationInfo info, StreamingContext context) : base(info, context) { }
     }
 }

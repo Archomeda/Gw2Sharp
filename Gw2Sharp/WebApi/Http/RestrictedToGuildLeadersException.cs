@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.Serialization;
 using Gw2Sharp.WebApi.V2.Models;
 
 namespace Gw2Sharp.WebApi.Http
@@ -7,6 +8,7 @@ namespace Gw2Sharp.WebApi.Http
     /// A web API specific exception that's used when a request fails to authorize due to the owner not being a guild leader (code 403).
     /// </summary>
     /// <seealso cref="UnexpectedStatusException{Error}" />
+    [Serializable]
     public class RestrictedToGuildLeadersException : AuthorizationRequiredException
     {
         /// <summary>
@@ -18,5 +20,12 @@ namespace Gw2Sharp.WebApi.Http
         public RestrictedToGuildLeadersException(IHttpRequest request, IHttpResponse<ErrorObject> response) :
             base(request, response, AuthorizationError.AccessRestrictedToGuildLeaders)
         { }
+
+        /// <summary>
+        /// Deserialization constructor for <see cref="RestrictedToGuildLeadersException"/>.
+        /// </summary>
+        /// <param name="info">The serialization info.</param>
+        /// <param name="context">The streaming context.</param>
+        protected RestrictedToGuildLeadersException(SerializationInfo info, StreamingContext context) : base(info, context) { }
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Net;
+using System.Runtime.Serialization;
 
 namespace Gw2Sharp.WebApi.Http
 {
@@ -11,7 +12,7 @@ namespace Gw2Sharp.WebApi.Http
     /// <summary>
     /// An interface for implementing a deserialized web API response.
     /// </summary>
-    public interface IHttpResponse<T>
+    public interface IHttpResponse<T> : ISerializable
     {
         /// <summary>
         /// The content.
