@@ -1,0 +1,168 @@
+[
+  {
+    "id": 1,
+    "name": "Exalted Lore",
+    "requirement": "Journey to Auric Basin to unlock the Exalted Lore Mastery track.",
+    "order": 2,
+    "background": "https://render.guildwars2.com/file/4E09B60E16E6A7404B0638A00D0C6A02F7294308/1228720.png",
+    "region": "Maguuma",
+    "levels": [
+      {
+        "name": "Exalted Markings",
+        "description": "Gain the knowledge to read Exalted markings. You can now decipher their words and gain access to secrets of their civilization.",
+        "instruction": "You can now interact with Exalted artifacts found in Auric Basin and the greater Maguuma Jungle.",
+        "icon": "https://render.guildwars2.com/file/7372DCB5085D75F672B50CB8F3577373B8F90468/1228654.png",
+        "point_cost": 1,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Exalted Acceptance",
+        "description": "Gain the trust of the strange and mysterious Exalted, giving you access to their services in the Forgotten City.",
+        "instruction": "You can now trade with the Exalted and their representatives. Mastery vendors can be found across the Maguuma Jungle and are marked by Mastery icons on the map.",
+        "icon": "https://render.guildwars2.com/file/39DBD70271A074DCD6B1EAE1D639BD4D36765EC4/1228651.png",
+        "point_cost": 2,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Exalted Assistance",
+        "description": "Learn to use Exalted Recall devices found in the Maguuma Jungle to summon an Exalted warrior to fight for a short while.",
+        "instruction": "You can interact with Exalted recall devices, summoning a helpful Exalted ally or enhancing the power of an already summoned ally.",
+        "icon": "https://render.guildwars2.com/file/B9B7E50E29F554570E63945249002FC6B64C7FFB/1228652.png",
+        "point_cost": 3,
+        "exp_cost": 1778000
+      },
+      {
+        "name": "Exalted Purification",
+        "description": "Become honored among the Exalted by challenging their champion each day, and unlock their finest treasures within the Forgotten City.",
+        "instruction": "You can now fight the Tarnished Traitor found below the Forgotten City. Defeating the Tarnished Traitor will give you access to a reward chest once per day.",
+        "icon": "https://render.guildwars2.com/file/EE132C76A52AC66D0211CED63E74F64B7F4AFB34/1228655.png",
+        "point_cost": 5,
+        "exp_cost": 2540000
+      },
+      {
+        "name": "Exalted Gathering",
+        "description": "Learn from the Exalted how to gather rare materials around the Maguuma Jungle. Learn to mine up Auric Slivers from ore nodes in Auric Basin.",
+        "instruction": "When mining ore while in Auric Basin, you will gain Auric Slivers in addition to normal materials. You also have a chance to mine special items from ore nodes all around the Heart of Maguuma.",
+        "icon": "https://render.guildwars2.com/file/324312530AA1A427AB0951D0BFBC92C4B69774D6/1228653.png",
+        "point_cost": 8,
+        "exp_cost": 3302000
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Itzel Lore",
+    "requirement": "Train Basic Gliding in the Gliding Mastery track to unlock the Itzel Lore Mastery track.",
+    "order": 1,
+    "background": "https://render.guildwars2.com/file/F2ED9E6B330AA015B8AD06FF222715284E1BC622/1228723.png",
+    "region": "Maguuma",
+    "levels": [
+      {
+        "name": "Bouncing Mushrooms",
+        "description": "Learn how to land precisely and use the bouncing mushrooms found around the Heart of Maguuma to get to places previously impossible to reach.",
+        "instruction": "Bouncing mushrooms can be found all over the Heart of Maguuma. Jump on top of bouncing mushrooms to spring into the air.",
+        "icon": "https://render.guildwars2.com/file/C1D5574EF6B9B4CC7AB7EC3600993698D39BF975/1228645.png",
+        "point_cost": 1,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Itzel Language",
+        "description": "Learn the difficult dialect of the Itzel, endearing yourself to the local Itzel and gaining access to vendors with exclusive wares.",
+        "instruction": "You can now trade with the Itzel. Mastery vendors can be found across the Maguuma Jungle and are marked by Mastery icons on the map.",
+        "icon": "https://render.guildwars2.com/file/68B5A54FEC5F3C7763C5BDD12C0296942ABB0BB2/1228660.png",
+        "point_cost": 2,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Blazing Speed Mushrooms",
+        "description": "With stomach training, learn to ingest the speed-increasing mushrooms found scattered in the Heart of Maguuma. Run at blazing speeds with the help of nature!",
+        "instruction": "Blazing-speed mushrooms can be found all over the Heart of Maguuma. Simply move near or through a blazing-speed mushroom to get a speed boost.",
+        "icon": "https://render.guildwars2.com/file/C2609360DCF254E70C023517E27375AB0FA32236/1228644.png",
+        "point_cost": 3,
+        "exp_cost": 1778000
+      },
+      {
+        "name": "Itzel Poison Lore",
+        "description": "Learn about Itzel poisons, and gain the ability to pass through poisonous Mordrem vines and withstand poison hazes that exist in Maguuma.",
+        "instruction": "You can now enter poison haze areas and pass through poisonous Mordrem vines without taking damage.",
+        "icon": "https://render.guildwars2.com/file/4D2F77BE539B0F065B97C8B007E8D7324DA40D3C/1228662.png",
+        "point_cost": 5,
+        "exp_cost": 2540000
+      },
+      {
+        "name": "Itzel Leadership",
+        "description": "Carefully study the Itzel fighting style and then challenge their enemy's champion to claim a valuable daily prize.",
+        "instruction": "You can now fight Mayatl the Fierce by speaking to the Itzel bladedancer outside the Jaka Itzel village. Defeating this champion gives you access to a reward chest once per day.",
+        "icon": "https://render.guildwars2.com/file/0735EF06110A01EF69C2710EA1390A45EBE57232/1228661.png",
+        "point_cost": 8,
+        "exp_cost": 3302000
+      },
+      {
+        "name": "Adrenal Mushrooms",
+        "description": "Learning to eat these mushrooms tweaks your adrenal glands, giving you a surge of adrenaline and instantly refreshing your skills.",
+        "instruction": "Adrenal mushrooms can be found rarely in the Heart of Maguuma. Simply move near or pass through adrenal mushrooms to have all your skills instantly refreshed.",
+        "icon": "https://render.guildwars2.com/file/EB50DAD5409C937CD17A0A216A7B3E04E0C25307/1228643.png",
+        "point_cost": 12,
+        "exp_cost": 4318000
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Nuhoch Lore",
+    "requirement": "Journey to Tangled Depths to unlock the Nuhoch Lore Mastery track.",
+    "order": 3,
+    "background": "https://render.guildwars2.com/file/05AABD5EF4CF91375CE2420575C4B8CE5A084F05/1228724.png",
+    "region": "Maguuma",
+    "levels": [
+      {
+        "name": "Nuhoch Hunting",
+        "description": "Learn to take special trophies from foes in Maguuma and to harvest Sawgill mushrooms, unlocking rare collections and items.",
+        "instruction": "You will now have a chance to loot special items off of any creature killed in the Heart of Maguuma. You can also harvest sawgill mushrooms, which can be found all over the Maguuma Jungle.",
+        "icon": "https://render.guildwars2.com/file/F9EB68F169FB63A5D552471F2692AA73771D06F0/1228664.png",
+        "point_cost": 1,
+        "exp_cost": 508000
+      },
+      {
+        "name": "Nuhoch Wallows",
+        "description": "Master the use of Nuhoch Wallows, learning to traverse these hidden passages to gain access to locations both far and hidden.",
+        "instruction": "You can now interact with Nuhoch wallows. Doing so will instantly transport you between wallow entrances and exits in the Maguuma Jungle.",
+        "icon": "https://render.guildwars2.com/file/9B51B95FD0BD6FB80F900101977FFD66224605B1/1228668.png",
+        "point_cost": 2,
+        "exp_cost": 1016000
+      },
+      {
+        "name": "Nuhoch Language",
+        "description": "Learn the Nuhoch's traditional language, and gain the ability to trade and converse with the more wary members of the group.",
+        "instruction": "You can now trade with the Nuhoch. Mastery vendors can be found across the Maguuma Jungle and are marked by Mastery icons on the map.",
+        "icon": "https://render.guildwars2.com/file/7C9EB6B44A1F9D690D4D9A9856A01805395BD9A1/1228665.png",
+        "point_cost": 3,
+        "exp_cost": 1778000
+      },
+      {
+        "name": "Nuhoch Stealth Detection",
+        "description": "Learn to spot enemies that practice stealth techniques, rendering them visible to your trained eye.",
+        "instruction": "You can now see creatures that are normally invisible in the Maguuma Jungle. Creatures that are hidden will appear to you as highlighted and can now be easily found or avoided.",
+        "icon": "https://render.guildwars2.com/file/1606273520E5106D475C90447904E256E8FE6B98/1228667.png",
+        "point_cost": 5,
+        "exp_cost": 2540000
+      },
+      {
+        "name": "Nuhoch Proving",
+        "description": "Challenge the Nuhoch champion in combat to earn the Nuhoch's respect and unlock a powerful cache of rewards.",
+        "instruction": "You can now fight Potoni the Massive in Teku Nuhoch. Defeating Potoni the Massive gives you access to a reward chest once per day.",
+        "icon": "https://render.guildwars2.com/file/EA0D13224CC35B3F591DBD9812E9EA620C0FFE2F/1228666.png",
+        "point_cost": 8,
+        "exp_cost": 3302000
+      },
+      {
+        "name": "Nuhoch Alchemy",
+        "description": "Train with the Nuhoch to learn to remove the chak's powerful acid. Without this ability, chak acid can obliterate foes.",
+        "instruction": "Evading will now instantly remove all stacks of chak goop affecting you. You are also immune to the slowing effects of goop.",
+        "icon": "https://render.guildwars2.com/file/BED24BC7330F366E367FE0C9EA6975739B590A44/1228663.png",
+        "point_cost": 12,
+        "exp_cost": 4318000
+      }
+    ]
+  }
+]

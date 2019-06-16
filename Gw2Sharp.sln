@@ -5,19 +5,9 @@ VisualStudioVersion = 16.0.28407.52
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gw2Sharp", "Gw2Sharp\Gw2Sharp.csproj", "{3DDEB6A7-EBD6-4526-AD81-2547E303E049}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gw2Sharp.DocFX", "Gw2Sharp.DocFX\Gw2Sharp.DocFX.csproj", "{C2730018-70A5-47E9-BDE1-06D83AD41198}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gw2Sharp.DocFX", "Gw2Sharp.DocFX\Gw2Sharp.DocFX.csproj", "{C2730018-70A5-47E9-BDE1-06D83AD41198}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gw2Sharp.Tests", "Gw2Sharp.Tests\Gw2Sharp.Tests.csproj", "{294A1638-27F3-4508-8109-A52ED00145F7}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C9A97C0F-678E-4D1A-9ACF-A6AD690B7A92}"
-	ProjectSection(SolutionItems) = preProject
-		.editorconfig = .editorconfig
-		.gitattributes = .gitattributes
-		.gitignore = .gitignore
-		appveyor.yml = appveyor.yml
-		LICENSE = LICENSE
-		README.md = README.md
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,15 +22,15 @@ Global
 		{3DDEB6A7-EBD6-4526-AD81-2547E303E049}.Doc|Any CPU.Build.0 = Release|Any CPU
 		{3DDEB6A7-EBD6-4526-AD81-2547E303E049}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DDEB6A7-EBD6-4526-AD81-2547E303E049}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2730018-70A5-47E9-BDE1-06D83AD41198}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2730018-70A5-47E9-BDE1-06D83AD41198}.Doc|Any CPU.ActiveCfg = Release|Any CPU
+		{C2730018-70A5-47E9-BDE1-06D83AD41198}.Doc|Any CPU.Build.0 = Release|Any CPU
+		{C2730018-70A5-47E9-BDE1-06D83AD41198}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{294A1638-27F3-4508-8109-A52ED00145F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{294A1638-27F3-4508-8109-A52ED00145F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{294A1638-27F3-4508-8109-A52ED00145F7}.Doc|Any CPU.ActiveCfg = Release|Any CPU
 		{294A1638-27F3-4508-8109-A52ED00145F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{294A1638-27F3-4508-8109-A52ED00145F7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C2730018-70A5-47E9-BDE1-06D83AD41198}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C2730018-70A5-47E9-BDE1-06D83AD41198}.Doc|Any CPU.ActiveCfg = Release|Any CPU
-		{C2730018-70A5-47E9-BDE1-06D83AD41198}.Doc|Any CPU.Build.0 = Release|Any CPU
-		{C2730018-70A5-47E9-BDE1-06D83AD41198}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

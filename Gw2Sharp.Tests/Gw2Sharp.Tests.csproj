@@ -170,6 +170,9 @@
     <None Remove="TestFiles\Maps\Maps.bulk.json" />
     <None Remove="TestFiles\Maps\Maps.ids.json" />
     <None Remove="TestFiles\Maps\Maps.single.json" />
+    <None Remove="TestFiles\Masteries\Masteries.bulk.json" />
+    <None Remove="TestFiles\Masteries\Masteries.ids.json" />
+    <None Remove="TestFiles\Masteries\Masteries.single.json" />
     <None Remove="TestFiles\Materials\Materials.bulk.json" />
     <None Remove="TestFiles\Materials\Materials.ids.json" />
     <None Remove="TestFiles\Materials\Materials.single.json" />
@@ -344,6 +347,9 @@
     <EmbeddedResource Include="TestFiles\Maps\Maps.bulk.json" />
     <EmbeddedResource Include="TestFiles\Maps\Maps.ids.json" />
     <EmbeddedResource Include="TestFiles\Maps\Maps.single.json" />
+    <EmbeddedResource Include="TestFiles\Masteries\Masteries.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Masteries\Masteries.ids.json" />
+    <EmbeddedResource Include="TestFiles\Masteries\Masteries.single.json" />
     <EmbeddedResource Include="TestFiles\Materials\Materials.bulk.json" />
     <EmbeddedResource Include="TestFiles\Materials\Materials.ids.json" />
     <EmbeddedResource Include="TestFiles\Materials\Materials.single.json" />

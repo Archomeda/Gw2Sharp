@@ -7,6 +7,7 @@
 - Add `/v2/mailcarriers`
 - Add `/v2/mapchests`
 - Add `/v2/maps`
+- Add `/v2/masteries`
 - Add `/v2/materials`
 - Add `/v2/worldbosses`
 
