@@ -3,6 +3,10 @@ version: '{build}'
 
 configuration: Debug
 
+environment:
+  sonar_login:
+    secure: QDHrFOIyHrdnTjASRiMPjakQGHJzBeHDMVHBoqZ42GRwl2XUCWLdWTFIcMjDprMd
+
 skip_branch_with_pr: true
 
 branches:
@@ -11,6 +15,11 @@ branches:
 
 before_build:
   - dotnet restore
+  - dotnet tool install --global dotnet-sonarscanner
+  - dotnet sonarscanner begin /k:"Archomeda_Gw2Sharp" /o:"archomeda-github" /d:sonar.login="%sonar_login%"
 
 build:
   project: Gw2Sharp.sln
+
+after_build:
+  - dotnet sonarscanner end /d:sonar.login="%sonar_login%"
