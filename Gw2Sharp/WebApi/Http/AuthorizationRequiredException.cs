@@ -64,9 +64,10 @@ namespace Gw2Sharp.WebApi.Http
             if (response == null)
                 throw new ArgumentNullException(nameof(response));
 
-            switch (response.Content.Message)
+            switch (response.Content.Message.ToLowerInvariant())
             {
                 case "invalid key":
+                case "invalid access token":
                     return new InvalidAccessTokenException(request, response);
                 case var message when message.StartsWith("requires scope") || message.StartsWith("requires at least one scope from"):
                     return new MissingScopesException(request, response);

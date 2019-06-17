@@ -56,7 +56,6 @@ namespace Gw2Sharp.WebApi
         /// Creates a new <see cref="Connection"/> with a specified API key and the default English locale.
         /// </summary>
         /// <param name="accessToken">The API key.</param>
-        /// <exception cref="NullReferenceException"><paramref name="accessToken"/> is <c>null</c>.</exception>
         public Connection(string accessToken) : this(accessToken, Locale.English) { }
 
         /// <summary>
@@ -70,7 +69,6 @@ namespace Gw2Sharp.WebApi
         /// </summary>
         /// <param name="accessToken">The API key.</param>
         /// <param name="locale">The locale.</param>
-        /// <exception cref="NullReferenceException"><paramref name="accessToken"/> is <c>null</c>.</exception>
         public Connection(string accessToken, Locale locale) : this(accessToken, locale, new HttpClient(), new MemoryCacheMethod()) { }
 
         /// <summary>
@@ -80,7 +78,7 @@ namespace Gw2Sharp.WebApi
         /// <param name="locale">The locale.</param>
         /// <param name="httpClient">The HTTP client.</param>
         /// <param name="cacheMethod">The cache method.</param>
-        /// <exception cref="NullReferenceException"><paramref name="accessToken"/> is <c>null</c>.</exception>
+        /// <exception cref="NullReferenceException"><paramref name="httpClient"/> or <paramref name="cacheMethod"/> is <c>null</c>.</exception>
         public Connection(string accessToken, Locale locale, IHttpClient httpClient, ICacheMethod cacheMethod) :
             this(accessToken, locale, string.Empty, httpClient, cacheMethod)
         { }
@@ -93,18 +91,15 @@ namespace Gw2Sharp.WebApi
         /// <param name="userAgent">The User-Agent.</param>
         /// <param name="httpClient">The HTTP client.</param>
         /// <param name="cacheMethod">The cache method.</param>
-        /// <exception cref="NullReferenceException"><paramref name="accessToken"/> or <paramref name="userAgent"/> is <c>null</c>.</exception>
+        /// <exception cref="NullReferenceException"><paramref name="httpClient"/> or <paramref name="cacheMethod"/> is <c>null</c>.</exception>
         public Connection(string accessToken, Locale locale, string userAgent, IHttpClient httpClient, ICacheMethod cacheMethod)
         {
-            if (userAgent == null)
-                throw new ArgumentNullException(nameof(userAgent));
-
-            this.AccessToken = accessToken ?? throw new ArgumentNullException(nameof(accessToken));
+            this.AccessToken = accessToken ?? string.Empty;
             this.Locale = locale;
             this.UserAgent = $"{userAgent}{(string.IsNullOrWhiteSpace(userAgent) ? " " : "")}" +
                 $"Gw2Sharp/{typeof(Connection).GetTypeInfo().Assembly.GetName().Version.ToString(3)} (https://github.com/Archomeda/Gw2Sharp)";
-            this.HttpClient = httpClient;
-            this.CacheMethod = cacheMethod;
+            this.HttpClient = httpClient ?? throw new ArgumentNullException(nameof(httpClient));
+            this.CacheMethod = cacheMethod ?? throw new ArgumentNullException(nameof(cacheMethod));
 
             this.requestHeaders = new Dictionary<string, string>()
             {
@@ -126,25 +121,15 @@ namespace Gw2Sharp.WebApi
         /// <inheritdoc />
         public string LocaleString
         {
-            get
+            get => this.Locale switch
             {
-                switch (this.Locale)
-                {
-                    case Locale.German:
-                        return "de";
-                    case Locale.French:
-                        return "fr";
-                    case Locale.Spanish:
-                        return "es";
-                    case Locale.Korean:
-                        return "ko";
-                    case Locale.Chinese:
-                        return "zh";
-                    case Locale.English:
-                    default:
-                        return "en";
-                }
-            }
+                Locale.German => "de",
+                Locale.French => "fr",
+                Locale.Spanish => "es",
+                Locale.Korean => "ko",
+                Locale.Chinese => "zh",
+                _ => "en"
+            };
         }
 
         /// <inheritdoc />
@@ -191,7 +176,7 @@ namespace Gw2Sharp.WebApi
                     if (ex.Response != null)
                         error = JsonConvert.DeserializeObject<ErrorObject>(ex.Response.Content, DeserializerSettings);
                 }
-                catch (JsonSerializationException)
+                catch (JsonException)
                 {
                     // Fallback message
                     throw new UnexpectedStatusException(ex.Request, ex.Response, ex.Response?.Content ?? string.Empty);
@@ -204,6 +189,9 @@ namespace Gw2Sharp.WebApi
                     case HttpStatusCode.BadRequest:
                         // 400
                         throw new BadRequestException(ex.Request, errorResponse);
+                    case HttpStatusCode.Unauthorized:
+                        // 401
+                        throw AuthorizationRequiredException.CreateFromResponse(ex.Request, errorResponse);
                     case HttpStatusCode.Forbidden:
                         // 403
                         throw AuthorizationRequiredException.CreateFromResponse(ex.Request, errorResponse);
