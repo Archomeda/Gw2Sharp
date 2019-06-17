@@ -43,10 +43,7 @@ namespace Gw2Sharp.WebApi.Caching
                 this.CollectInnerGarbage(now, cache);
 
                 if (cache.Count == 0)
-                {
-                    while (!this.cachedItems.TryRemove(category, out _))
-                        Thread.Sleep(TimeSpan.FromMilliseconds(10));
-                }
+                    this.cachedItems.TryRemove(category, out _);
             }
         }
 
@@ -59,10 +56,7 @@ namespace Gw2Sharp.WebApi.Caching
 
                 var item = (CacheItem)obj;
                 if (item.ExpiryTime <= now)
-                {
-                    while (!cache.TryRemove(key, out _))
-                        Thread.Sleep(TimeSpan.FromMilliseconds(10));
-                }
+                    cache.TryRemove(key, out _);
             }
         }
 
