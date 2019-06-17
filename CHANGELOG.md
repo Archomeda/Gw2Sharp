@@ -16,6 +16,7 @@
 - Add HTTP 401 responses as alias for `AuthorizationRequiredException`
 - Add `Invalid access token` error response as alias for `InvalidAccessTokenException`
 - Authorization error responses are now matched case insensitive to their exception counterpart
+- Prevent possible race condition and infinite loop when collecting garbage from old cache items ([#3](https://github.com/Archomeda/Gw2Sharp/issues/3))
 
 ### Refactoring
 - **Breaking:** Various endpoint clients with child endpoint clients and/or extra parameters have had their virtual property setters removed; you can still override the property for customization however
