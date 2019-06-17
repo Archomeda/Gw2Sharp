@@ -8,6 +8,8 @@
       topicUid: Guides.ParameterizedEndpoints
     - name: Subtokens
       topicUid: Guides.Subtokens
+    - name: Exception handling
+      topicUid: Guides.ExceptionHandling
     - name: HTTP headers
       topicUid: Guides.HttpHeaders
     - name: Last-Modified
