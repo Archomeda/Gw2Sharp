@@ -7,6 +7,9 @@ references:
 - uid: Guides.Endpoints
   name: Supported endpoints
   href: guides/endpoints.html
+- uid: Guides.ExceptionHandling
+  name: Exception handling
+  href: guides/exception-handling.html
 - uid: Guides.HttpHeaders
   name: Checking the HTTP headers
   href: guides/http-headers.html

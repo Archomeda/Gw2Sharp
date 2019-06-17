@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Checking the Last-Modified header </title>
+    <title>Exception handling </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Checking the Last-Modified header ">
+    <meta name="title" content="Exception handling ">
     <meta name="generator" content="docfx 2.42.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -99,14 +99,14 @@
                           <li class="">
                             <a href="subtokens.html" title="Subtokens" class="">Subtokens</a>
                           </li>
-                          <li class="">
-                            <a href="exception-handling.html" title="Exception handling" class="">Exception handling</a>
+                          <li class="active">
+                            <a href="exception-handling.html" title="Exception handling" class="active">Exception handling</a>
                           </li>
                           <li class="">
                             <a href="http-headers.html" title="HTTP headers" class="">HTTP headers</a>
                           </li>
-                          <li class="active">
-                            <a href="last-modified.html" title="Last-Modified" class="active">Last-Modified</a>
+                          <li class="">
+                            <a href="last-modified.html" title="Last-Modified" class="">Last-Modified</a>
                           </li>
                         </ul>  </li>
                   </ul>        </div>
@@ -116,22 +116,37 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Guides.LastModified">
-<h1 id="checking-the-last-modified-header">Checking the <code>Last-Modified</code> header</h1>
+            <article class="content wrap" id="_content" data-uid="Guides.ExceptionHandling">
+<h1 id="exception-handling">Exception handling</h1>
 
-<p>This header is used to check the last time the content you&#39;re accessing has been changed.
-It was added to the API on March 22nd, 2019.
-You can read up on it <a href="https://en-forum.guildwars2.com/discussion/72091/api-updates-march-22-2019">on the forums</a>.</p>
-<p>Gw2Sharp allows you to check this header through the same way as <a href="http-headers.html">the other headers</a>.</p>
-<p>An example:</p>
-<pre><code class="lang-cs">// Assuming you already have a client
-var character = await client.V2.Characters[&quot;Your Character Name&quot;].GetAsync();
-var lastModified = character.HttpResponseInfo.LastModified;
-
-// Note that both HttpResponseInfo and LastModified are nullable
-// - HttpResponseInfo is null if the response object doesn&#39;t contain response information (e.g. when this object is not the root object of the response)
-// - LastModified is null if the response doesn&#39;t contain the header
-</code></pre></article>
+<p>Gw2Sharp aims to be as friendly as possible when unexpected status codes are received from the Guild Wars 2 API.
+Whenever a request fails, a custom exception will be thrown for you to catch.</p>
+<p>The following exceptions can be thrown from Gw2Sharp:</p>
+<ul>
+<li><a href="../api/Gw2Sharp.WebApi.Http.RequestException.html"><code>RequestException</code></a>: An exception occured during the request<ul>
+<li><a href="../api/Gw2Sharp.WebApi.Http.RequestCanceledException.html"><code>RequestCanceledException</code></a>: The request has been canceled</li>
+<li><a href="../api/Gw2Sharp.WebApi.Http.UnexpectedStatusException.html"><code>UnexpectedStatusException</code></a>: An unexpected HTTP status code was returned from the server<ul>
+<li><a href="../api/Gw2Sharp.WebApi.Http.BadRequestException.html"><code>BadRequestException</code></a> (400): The client sent an invalid request</li>
+<li><a href="../api/Gw2Sharp.WebApi.Http.AuthorizationRequiredException.html"><code>AuthorizationRequiredException</code></a> (401, 403): The client is unauthorized<ul>
+<li><a href="../api/Gw2Sharp.WebApi.Http.InvalidAccessTokenException.html"><code>InvalidAccessTokenException</code></a> (401, 403): The access token is invalid</li>
+<li><a href="../api/Gw2Sharp.WebApi.Http.MissingScopesException.html"><code>MissingScopesException</code></a> (403): The access token does not have the required scopes</li>
+<li><a href="../api/Gw2Sharp.WebApi.Http.MembershipRequiredException.html"><code>MembershipRequiredException</code></a> (403): The user is not a member of the guild</li>
+<li><a href="../api/Gw2Sharp.WebApi.Http.RestrictedToGuildLeadersException.html"><code>RestrictedToGuildLeadersException</code></a> (403): The user is not a leader of the guild</li>
+</ul>
+</li>
+<li><a href="../api/Gw2Sharp.WebApi.Http.NotFoundException.html"><code>NotFoundException</code></a> (404): The requested resource has not been found</li>
+<li><a href="../api/Gw2Sharp.WebApi.Http.ServerErrorException.html"><code>ServerErrorException</code></a> (500): The server encountered an error</li>
+<li><a href="../api/Gw2Sharp.WebApi.Http.ServiceUnavailableException.html"><code>ServiceUnavailableException</code></a> (503): The server is temporarily unavailable</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>As you can see, all custom exceptions inherit from <code>RequestException</code>.
+This makes it easier to have a generic catch-all statement for Gw2Sharp.
+However, certain exceptions may provide extra details as to why it has occured.
+If you need that information, it&#39;s recommended to catch the specific exceptions first, before the more generic ones.</p>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

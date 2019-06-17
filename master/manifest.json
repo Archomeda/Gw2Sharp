@@ -24,7 +24,22 @@
       "output": {
         ".html": {
           "relative_path": "guides/endpoints.html",
-          "hash": "iW5WyyN8I1AWxbLQLtJ3pw=="
+          "hash": "+j4trTWVVU2xGDlgo177tA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "guides/exception-handling.md",
+      "output": {
+        ".html": {
+          "relative_path": "guides/exception-handling.html",
+          "hash": "3bd5RoLxTGmIyNvQ+UQ3cQ=="
         }
       },
       "is_incremental": false,
@@ -36,7 +51,7 @@
       "output": {
         ".html": {
           "relative_path": "guides/http-headers.html",
-          "hash": "/x8v5wEB9GD1zIs8M3JvZA=="
+          "hash": "SNNdRTFHy5Dt4HL5j3wJmg=="
         }
       },
       "is_incremental": false,
@@ -51,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "guides/introduction.html",
-          "hash": "aSFswjhKdd5ftcFWy+YxFQ=="
+          "hash": "5u8UzMs3CKTLhS+lsfkN+w=="
         }
       },
       "is_incremental": false,
@@ -63,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "guides/last-modified.html",
-          "hash": "6lKLVAXcnkLDE+e66wNZlw=="
+          "hash": "apIQRuYYNv6rdvMtswpCDw=="
         }
       },
       "is_incremental": false,
@@ -75,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "guides/parameterized-endpoints.html",
-          "hash": "vjoc0BMbeM/sD66gRJwojw=="
+          "hash": "7Q9lmPwfsDAteaTUYrsZiw=="
         }
       },
       "is_incremental": false,
@@ -87,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "guides/subtokens.html",
-          "hash": "6uRpmKsEQge74R24pT3irw=="
+          "hash": "+e8RS+m9nqO0VIN3E6Dccw=="
         }
       },
       "is_incremental": false,
@@ -6864,7 +6879,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 8,
+          "total_file_count": 9,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
