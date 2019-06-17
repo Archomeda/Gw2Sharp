@@ -18155,6 +18155,25 @@ references:
   commentId: T:Gw2Sharp.WebApi.V2.Models.ErrorObject
   fullName: Gw2Sharp.WebApi.V2.Models.ErrorObject
   nameWithType: ErrorObject
+- uid: Gw2Sharp.WebApi.V2.Models.ErrorObject.#ctor
+  name: ErrorObject()
+  href: api/Gw2Sharp.WebApi.V2.Models.ErrorObject.html#Gw2Sharp_WebApi_V2_Models_ErrorObject__ctor
+  commentId: M:Gw2Sharp.WebApi.V2.Models.ErrorObject.#ctor
+  fullName: Gw2Sharp.WebApi.V2.Models.ErrorObject.ErrorObject()
+  nameWithType: ErrorObject.ErrorObject()
+- uid: Gw2Sharp.WebApi.V2.Models.ErrorObject.#ctor(SerializationInfo,StreamingContext)
+  name: ErrorObject(SerializationInfo, StreamingContext)
+  href: api/Gw2Sharp.WebApi.V2.Models.ErrorObject.html#Gw2Sharp_WebApi_V2_Models_ErrorObject__ctor_SerializationInfo_StreamingContext_
+  commentId: M:Gw2Sharp.WebApi.V2.Models.ErrorObject.#ctor(SerializationInfo,StreamingContext)
+  fullName: Gw2Sharp.WebApi.V2.Models.ErrorObject.ErrorObject(SerializationInfo, StreamingContext)
+  nameWithType: ErrorObject.ErrorObject(SerializationInfo, StreamingContext)
+- uid: Gw2Sharp.WebApi.V2.Models.ErrorObject.#ctor*
+  name: ErrorObject
+  href: api/Gw2Sharp.WebApi.V2.Models.ErrorObject.html#Gw2Sharp_WebApi_V2_Models_ErrorObject__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.ErrorObject.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.ErrorObject.ErrorObject
+  nameWithType: ErrorObject.ErrorObject
 - uid: Gw2Sharp.WebApi.V2.Models.ErrorObject.Error
   name: Error
   href: api/Gw2Sharp.WebApi.V2.Models.ErrorObject.html#Gw2Sharp_WebApi_V2_Models_ErrorObject_Error
@@ -18168,6 +18187,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.ErrorObject.Error
   nameWithType: ErrorObject.Error
+- uid: Gw2Sharp.WebApi.V2.Models.ErrorObject.GetObjectData(SerializationInfo,StreamingContext)
+  name: GetObjectData(SerializationInfo, StreamingContext)
+  href: api/Gw2Sharp.WebApi.V2.Models.ErrorObject.html#Gw2Sharp_WebApi_V2_Models_ErrorObject_GetObjectData_SerializationInfo_StreamingContext_
+  commentId: M:Gw2Sharp.WebApi.V2.Models.ErrorObject.GetObjectData(SerializationInfo,StreamingContext)
+  fullName: Gw2Sharp.WebApi.V2.Models.ErrorObject.GetObjectData(SerializationInfo, StreamingContext)
+  nameWithType: ErrorObject.GetObjectData(SerializationInfo, StreamingContext)
+- uid: Gw2Sharp.WebApi.V2.Models.ErrorObject.GetObjectData*
+  name: GetObjectData
+  href: api/Gw2Sharp.WebApi.V2.Models.ErrorObject.html#Gw2Sharp_WebApi_V2_Models_ErrorObject_GetObjectData_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.ErrorObject.GetObjectData
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.ErrorObject.GetObjectData
+  nameWithType: ErrorObject.GetObjectData
 - uid: Gw2Sharp.WebApi.V2.Models.ErrorObject.Message
   name: Message
   href: api/Gw2Sharp.WebApi.V2.Models.ErrorObject.html#Gw2Sharp_WebApi_V2_Models_ErrorObject_Message

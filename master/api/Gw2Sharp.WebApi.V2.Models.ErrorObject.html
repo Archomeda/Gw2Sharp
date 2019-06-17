@@ -1815,6 +1815,7 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="Gw2Sharp.WebApi.V2.IApiV2Object.html">IApiV2Object</a></div>
+    <div><span class="xref">ISerializable</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -1826,12 +1827,60 @@
   <h6><strong>Assembly</strong>: Gw2Sharp.dll</h6>
   <h5 id="Gw2Sharp_WebApi_V2_Models_ErrorObject_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ErrorObject : ApiV2BaseObject, IApiV2Object</code></pre>
+    <pre><code class="lang-csharp hljs">public class ErrorObject : ApiV2BaseObject, IApiV2Object, ISerializable</code></pre>
   </div>
   <h5 id="Gw2Sharp_WebApi_V2_Models_ErrorObject_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>Because of how the API works, either <a class="xref" href="Gw2Sharp.WebApi.V2.Models.ErrorObject.html#Gw2Sharp_WebApi_V2_Models_ErrorObject_Text">Text</a> or <a class="xref" href="Gw2Sharp.WebApi.V2.Models.ErrorObject.html#Gw2Sharp_WebApi_V2_Models_ErrorObject_Error">Error</a> is set.
 You can use <a class="xref" href="Gw2Sharp.WebApi.V2.Models.ErrorObject.html#Gw2Sharp_WebApi_V2_Models_ErrorObject_Message">Message</a> to prioritize <a class="xref" href="Gw2Sharp.WebApi.V2.Models.ErrorObject.html#Gw2Sharp_WebApi_V2_Models_ErrorObject_Text">Text</a> above <a class="xref" href="Gw2Sharp.WebApi.V2.Models.ErrorObject.html#Gw2Sharp_WebApi_V2_Models_ErrorObject_Error">Error</a>.</p>
 </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Gw2Sharp_WebApi_V2_Models_ErrorObject__ctor_" data-uid="Gw2Sharp.WebApi.V2.Models.ErrorObject.#ctor*"></a>
+  <h4 id="Gw2Sharp_WebApi_V2_Models_ErrorObject__ctor" data-uid="Gw2Sharp.WebApi.V2.Models.ErrorObject.#ctor">ErrorObject()</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Gw2Sharp.WebApi.V2.Models.ErrorObject.html">ErrorObject</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ErrorObject()</code></pre>
+  </div>
+  
+  
+  <a id="Gw2Sharp_WebApi_V2_Models_ErrorObject__ctor_" data-uid="Gw2Sharp.WebApi.V2.Models.ErrorObject.#ctor*"></a>
+  <h4 id="Gw2Sharp_WebApi_V2_Models_ErrorObject__ctor_SerializationInfo_StreamingContext_" data-uid="Gw2Sharp.WebApi.V2.Models.ErrorObject.#ctor(SerializationInfo,StreamingContext)">ErrorObject(SerializationInfo, StreamingContext)</h4>
+  <div class="markdown level1 summary"><p>Deserialization constructor for <a class="xref" href="Gw2Sharp.WebApi.V2.Models.ErrorObject.html">ErrorObject</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ErrorObject(SerializationInfo info, StreamingContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">SerializationInfo</span></td>
+        <td><span class="parametername">info</span></td>
+        <td><p>The serialization info.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">StreamingContext</span></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The streaming context.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   
@@ -1912,9 +1961,46 @@ You can use <a class="xref" href="Gw2Sharp.WebApi.V2.Models.ErrorObject.html#Gw2
       </tr>
     </tbody>
   </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Gw2Sharp_WebApi_V2_Models_ErrorObject_GetObjectData_" data-uid="Gw2Sharp.WebApi.V2.Models.ErrorObject.GetObjectData*"></a>
+  <h4 id="Gw2Sharp_WebApi_V2_Models_ErrorObject_GetObjectData_SerializationInfo_StreamingContext_" data-uid="Gw2Sharp.WebApi.V2.Models.ErrorObject.GetObjectData(SerializationInfo,StreamingContext)">GetObjectData(SerializationInfo, StreamingContext)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void GetObjectData(SerializationInfo info, StreamingContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">SerializationInfo</span></td>
+        <td><span class="parametername">info</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">StreamingContext</span></td>
+        <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Gw2Sharp.WebApi.V2.IApiV2Object.html">IApiV2Object</a>
+  </div>
+  <div>
+      <span class="xref">ISerializable</span>
   </div>
 </article>
           </div>
