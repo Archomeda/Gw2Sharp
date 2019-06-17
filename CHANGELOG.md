@@ -13,6 +13,9 @@
 
 ### Fixes
 - Fix `ApiEnum<T>.IsUnknown` detection when the API uses snake_case or camelCase enums instead of PascalCase
+- Add HTTP 401 responses as alias for `AuthorizationRequiredException`
+- Add `Invalid access token` error response as alias for `InvalidAccessTokenException`
+- Authorization error responses are now matched case insensitive to their exception counterpart
 
 ### Refactoring
 - **Breaking:** Various endpoint clients with child endpoint clients and/or extra parameters have had their virtual property setters removed; you can still override the property for customization however
