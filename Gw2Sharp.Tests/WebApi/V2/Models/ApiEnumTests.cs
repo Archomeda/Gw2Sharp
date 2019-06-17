@@ -84,6 +84,14 @@ namespace Gw2Sharp.Tests.WebApi.V2.Models
         }
 
         [Fact]
+        public void ToStringTest()
+        {
+            string rawValue = "RawEnumValue1";
+            var item = new ApiEnum<TestEnum>(TestEnum.EnumValue1, rawValue);
+            Assert.Equal(rawValue, item.ToString());
+        }
+
+        [Fact]
         public void EqualsTest()
         {
             var item = new ApiEnum<TestEnum>(TestEnum.EnumValue1, TestEnum.EnumValue1.ToString());
@@ -118,6 +126,34 @@ namespace Gw2Sharp.Tests.WebApi.V2.Models
             var item = new ApiEnum<TestEnum>(TestEnum.EnumValue1, TestEnum.EnumValue1.ToString());
             var item2 = new ApiEnum<TestEnum>(TestEnum.EnumValue2, TestEnum.EnumValue2.ToString());
             Assert.NotEqual(item.GetHashCode(), item2.GetHashCode());
+        }
+
+        [Fact]
+        public void OperatorEqualsTest()
+        {
+            var item = new ApiEnum<TestEnum>(TestEnum.EnumValue1, TestEnum.EnumValue1.ToString());
+            var item2 = new ApiEnum<TestEnum>(TestEnum.EnumValue1, TestEnum.EnumValue1.ToString());
+            Assert.True(item == item2);
+#pragma warning disable CS1718 // Comparison made to same variable
+            Assert.True(item == (ApiEnum)item);
+#pragma warning restore CS1718 // Comparison made to same variable
+        }
+
+        [Fact]
+        public void OperatorNotEqualsTest()
+        {
+            var item = new ApiEnum<TestEnum>(TestEnum.EnumValue1, TestEnum.EnumValue1.ToString());
+            var item2 = new ApiEnum<TestEnum>(TestEnum.EnumValue1, TestEnum.EnumValue2.ToString());
+            var item3 = new ApiEnum<TestEnum>(TestEnum.EnumValue2, TestEnum.EnumValue2.ToString());
+            Assert.True(item != item2);
+            Assert.True(item != item3);
+            Assert.True(item2 != item3);
+#pragma warning disable CS0253 // Possible unintended reference comparison; right hand side needs cast
+            Assert.True(item != new object());
+#pragma warning restore CS0253 // Possible unintended reference comparison; right hand side needs cast
+            Assert.True(item != null!);
+
+            Assert.True((ApiEnum)item != item2);
         }
 
         #region ArgumentNullException tests
