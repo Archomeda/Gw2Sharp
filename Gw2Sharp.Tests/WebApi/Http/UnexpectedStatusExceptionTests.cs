@@ -1,6 +1,8 @@
-﻿using Gw2Sharp.WebApi.Http;
-using NSubstitute;
 using System;
+using System.Collections.Generic;
+using FluentAssertions;
+using Gw2Sharp.WebApi.Http;
+using NSubstitute;
 using Xunit;
 
 namespace Gw2Sharp.Tests.WebApi.Http
@@ -25,6 +27,15 @@ namespace Gw2Sharp.Tests.WebApi.Http
             Assert.Null(exception2.InnerException);
             Assert.Same(request, exception2.Request);
             Assert.Same(response, exception2.Response);
+        }
+
+        [Fact]
+        public void SerializableTest()
+        {
+            var request = new HttpRequest(new Uri("http://localhost"), new Dictionary<string, string> { { "hello", "tyria" } });
+            var response = new HttpResponse("Hello Tyria!");
+            var exception = new UnexpectedStatusException(request, response);
+            exception.Should().BeBinarySerializable();
         }
     }
 }
