@@ -10803,6 +10803,12 @@ references:
   commentId: T:Gw2Sharp.WebApi.V2.Clients.IMaterialsClient
   fullName: Gw2Sharp.WebApi.V2.Clients.IMaterialsClient
   nameWithType: IMaterialsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.IMinisClient
+  name: IMinisClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.IMinisClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.IMinisClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.IMinisClient
+  nameWithType: IMinisClient
 - uid: Gw2Sharp.WebApi.V2.Clients.IPaginatedClient`1
   name: IPaginatedClient<TObject>
   href: api/Gw2Sharp.WebApi.V2.Clients.IPaginatedClient-1.html
@@ -11017,6 +11023,25 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.MaterialsClient.MaterialsClient
   nameWithType: MaterialsClient.MaterialsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.MinisClient
+  name: MinisClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.MinisClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.MinisClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.MinisClient
+  nameWithType: MinisClient
+- uid: Gw2Sharp.WebApi.V2.Clients.MinisClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  name: MinisClient(IConnection)
+  href: api/Gw2Sharp.WebApi.V2.Clients.MinisClient.html#Gw2Sharp_WebApi_V2_Clients_MinisClient__ctor_Gw2Sharp_WebApi_IConnection_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.MinisClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  fullName: Gw2Sharp.WebApi.V2.Clients.MinisClient.MinisClient(Gw2Sharp.WebApi.IConnection)
+  nameWithType: MinisClient.MinisClient(IConnection)
+- uid: Gw2Sharp.WebApi.V2.Clients.MinisClient.#ctor*
+  name: MinisClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.MinisClient.html#Gw2Sharp_WebApi_V2_Clients_MinisClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.MinisClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.MinisClient.MinisClient
+  nameWithType: MinisClient.MinisClient
 - uid: Gw2Sharp.WebApi.V2.Clients.TokenInfoClient
   name: TokenInfoClient
   href: api/Gw2Sharp.WebApi.V2.Clients.TokenInfoClient.html
@@ -11431,6 +11456,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Materials
   nameWithType: Gw2WebApiV2Client.Materials
+- uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Minis
+  name: Minis
+  href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_Minis
+  commentId: P:Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Minis
+  fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Minis
+  nameWithType: Gw2WebApiV2Client.Minis
+- uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Minis*
+  name: Minis
+  href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_Minis_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Minis
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Minis
+  nameWithType: Gw2WebApiV2Client.Minis
 - uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.TokenInfo
   name: TokenInfo
   href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_TokenInfo
@@ -11842,6 +11880,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Materials
   nameWithType: IGw2WebApiV2Client.Materials
+- uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Minis
+  name: Minis
+  href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_Minis
+  commentId: P:Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Minis
+  fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Minis
+  nameWithType: IGw2WebApiV2Client.Minis
+- uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Minis*
+  name: Minis
+  href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_Minis_
+  commentId: Overload:Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Minis
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Minis
+  nameWithType: IGw2WebApiV2Client.Minis
 - uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.TokenInfo
   name: TokenInfo
   href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_TokenInfo
@@ -24319,6 +24370,77 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.MaterialCategory.Order
   nameWithType: MaterialCategory.Order
+- uid: Gw2Sharp.WebApi.V2.Models.Mini
+  name: Mini
+  href: api/Gw2Sharp.WebApi.V2.Models.Mini.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.Mini
+  fullName: Gw2Sharp.WebApi.V2.Models.Mini
+  nameWithType: Mini
+- uid: Gw2Sharp.WebApi.V2.Models.Mini.Icon
+  name: Icon
+  href: api/Gw2Sharp.WebApi.V2.Models.Mini.html#Gw2Sharp_WebApi_V2_Models_Mini_Icon
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Mini.Icon
+  fullName: Gw2Sharp.WebApi.V2.Models.Mini.Icon
+  nameWithType: Mini.Icon
+- uid: Gw2Sharp.WebApi.V2.Models.Mini.Icon*
+  name: Icon
+  href: api/Gw2Sharp.WebApi.V2.Models.Mini.html#Gw2Sharp_WebApi_V2_Models_Mini_Icon_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Mini.Icon
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Mini.Icon
+  nameWithType: Mini.Icon
+- uid: Gw2Sharp.WebApi.V2.Models.Mini.Id
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.Mini.html#Gw2Sharp_WebApi_V2_Models_Mini_Id
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Mini.Id
+  fullName: Gw2Sharp.WebApi.V2.Models.Mini.Id
+  nameWithType: Mini.Id
+- uid: Gw2Sharp.WebApi.V2.Models.Mini.Id*
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.Mini.html#Gw2Sharp_WebApi_V2_Models_Mini_Id_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Mini.Id
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Mini.Id
+  nameWithType: Mini.Id
+- uid: Gw2Sharp.WebApi.V2.Models.Mini.ItemId
+  name: ItemId
+  href: api/Gw2Sharp.WebApi.V2.Models.Mini.html#Gw2Sharp_WebApi_V2_Models_Mini_ItemId
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Mini.ItemId
+  fullName: Gw2Sharp.WebApi.V2.Models.Mini.ItemId
+  nameWithType: Mini.ItemId
+- uid: Gw2Sharp.WebApi.V2.Models.Mini.ItemId*
+  name: ItemId
+  href: api/Gw2Sharp.WebApi.V2.Models.Mini.html#Gw2Sharp_WebApi_V2_Models_Mini_ItemId_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Mini.ItemId
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Mini.ItemId
+  nameWithType: Mini.ItemId
+- uid: Gw2Sharp.WebApi.V2.Models.Mini.Name
+  name: Name
+  href: api/Gw2Sharp.WebApi.V2.Models.Mini.html#Gw2Sharp_WebApi_V2_Models_Mini_Name
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Mini.Name
+  fullName: Gw2Sharp.WebApi.V2.Models.Mini.Name
+  nameWithType: Mini.Name
+- uid: Gw2Sharp.WebApi.V2.Models.Mini.Name*
+  name: Name
+  href: api/Gw2Sharp.WebApi.V2.Models.Mini.html#Gw2Sharp_WebApi_V2_Models_Mini_Name_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Mini.Name
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Mini.Name
+  nameWithType: Mini.Name
+- uid: Gw2Sharp.WebApi.V2.Models.Mini.Order
+  name: Order
+  href: api/Gw2Sharp.WebApi.V2.Models.Mini.html#Gw2Sharp_WebApi_V2_Models_Mini_Order
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Mini.Order
+  fullName: Gw2Sharp.WebApi.V2.Models.Mini.Order
+  nameWithType: Mini.Order
+- uid: Gw2Sharp.WebApi.V2.Models.Mini.Order*
+  name: Order
+  href: api/Gw2Sharp.WebApi.V2.Models.Mini.html#Gw2Sharp_WebApi_V2_Models_Mini_Order_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Mini.Order
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Mini.Order
+  nameWithType: Mini.Order
 - uid: Gw2Sharp.WebApi.V2.Models.Node
   name: Node
   href: api/Gw2Sharp.WebApi.V2.Models.Node.html
