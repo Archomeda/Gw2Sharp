@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Mini Rytlock",
+    "icon": "https://render.guildwars2.com/file/795ED1B945A29EC3E3066797DF57FFB25ABAA631/340551.png",
+    "order": 1,
+    "item_id": 21047
+  },
+  {
+    "id": 2,
+    "name": "Mini Servitor Golem",
+    "icon": "https://render.guildwars2.com/file/B3DC031CFBF3A257A058C4FC41C8450AD510A7CD/65888.png",
+    "order": 1,
+    "item_id": 20949
+  },
+  {
+    "id": 3,
+    "name": "Mini Rockfur Racoon",
+    "icon": "https://render.guildwars2.com/file/107AF7A2AE7EC90C5EF9066A27BB7C320F977CBB/62861.png",
+    "order": 1,
+    "item_id": 20950
+  }
+]

@@ -145,6 +145,11 @@ namespace Gw2Sharp.WebApi.V2
         IMapsClient Maps { get; }
 
         /// <summary>
+        /// Gets the minis.
+        /// </summary>
+        IMinisClient Minis { get; }
+
+        /// <summary>
         /// Gets the token info.
         /// </summary>
         ITokenInfoClient TokenInfo { get; }

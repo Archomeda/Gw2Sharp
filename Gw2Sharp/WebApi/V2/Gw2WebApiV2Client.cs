@@ -39,6 +39,7 @@ namespace Gw2Sharp.WebApi.V2
         private readonly IMapsClient maps;
         private readonly IMasteriesClient masteries;
         private readonly IMaterialsClient materials;
+        private readonly IMinisClient minis;
         private readonly ITokenInfoClient tokenInfo;
         private readonly IWorldBossesClient worldBosses;
 
@@ -81,6 +82,7 @@ namespace Gw2Sharp.WebApi.V2
             this.maps = new MapsClient(connection);
             this.masteries = new MasteriesClient(connection);
             this.materials = new MaterialsClient(connection);
+            this.minis = new MinisClient(connection);
             this.tokenInfo = new TokenInfoClient(connection);
             this.worldBosses = new WorldBossesClient(connection);
         }
@@ -165,6 +167,9 @@ namespace Gw2Sharp.WebApi.V2
 
         /// <inheritdoc />
         public virtual IMaterialsClient Materials => this.materials;
+
+        /// <inheritdoc />
+        public virtual IMinisClient Minis => this.minis;
 
         /// <inheritdoc />
         public virtual ITokenInfoClient TokenInfo => this.tokenInfo;

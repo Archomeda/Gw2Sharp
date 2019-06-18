@@ -9,6 +9,7 @@
 - Add `/v2/maps`
 - Add `/v2/masteries`
 - Add `/v2/materials`
+- Add `/v2/minis`
 - Add `/v2/worldbosses`
 
 ### Fixes
