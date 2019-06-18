@@ -43,9 +43,19 @@
         83
       ]
     },
-    "categories": [
-
-    ]
+    "fur": {
+      "brightness": 15,
+      "contrast": 1.25,
+      "hue": 38,
+      "saturation": 0.28125,
+      "lightness": 1.44531,
+      "rgb": [
+        124,
+        108,
+        83
+      ]
+    },
+    "categories": []
   },
   {
     "id": 2,
@@ -80,6 +90,18 @@
       ]
     },
     "metal": {
+      "brightness": -13,
+      "contrast": 1,
+      "hue": 275,
+      "saturation": 0.0234375,
+      "lightness": 1.09375,
+      "rgb": [
+        37,
+        35,
+        38
+      ]
+    },
+    "fur": {
       "brightness": -13,
       "contrast": 1,
       "hue": 275,
@@ -140,6 +162,18 @@
         84,
         81,
         81
+      ]
+    },
+    "fur": {
+      "brightness": 12,
+      "contrast": 1.13281,
+      "hue": 5,
+      "saturation": 0.0234375,
+      "lightness": 1.25,
+      "rgb": [
+        95,
+        92,
+        92
       ]
     },
     "item": 20360,

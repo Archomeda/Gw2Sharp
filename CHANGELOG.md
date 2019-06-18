@@ -11,6 +11,7 @@
 - Add `/v2/materials`
 - Add `/v2/minis`
 - Add `/v2/worldbosses`
+- Add `IColorsClient.Fur` (`/v2/colors`)
 
 ### Fixes
 - Fix `ApiEnum<T>.IsUnknown` detection when the API uses snake_case or camelCase enums instead of PascalCase

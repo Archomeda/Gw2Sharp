@@ -42,7 +42,17 @@
       83
     ]
   },
-  "categories": [
-
-  ]
+  "fur": {
+    "brightness": 15,
+    "contrast": 1.25,
+    "hue": 38,
+    "saturation": 0.28125,
+    "lightness": 1.44531,
+    "rgb": [
+      124,
+      108,
+      83
+    ]
+  },
+  "categories": []
 }

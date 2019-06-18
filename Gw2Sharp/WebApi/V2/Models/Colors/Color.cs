@@ -38,6 +38,11 @@ namespace Gw2Sharp.WebApi.V2.Models
         public ColorMaterial Metal { get; set; } = new ColorMaterial();
 
         /// <summary>
+        /// The color fur material.
+        /// </summary>
+        public ColorMaterial Fur { get; set; } = new ColorMaterial();
+
+        /// <summary>
         /// The dye item that unlocks this color.
         /// Can be resolved against <see cref="IGw2WebApiV2Client.Items"/>.
         /// </summary>
