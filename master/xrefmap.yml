@@ -15906,6 +15906,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.Color.Cloth
   nameWithType: Color.Cloth
+- uid: Gw2Sharp.WebApi.V2.Models.Color.Fur
+  name: Fur
+  href: api/Gw2Sharp.WebApi.V2.Models.Color.html#Gw2Sharp_WebApi_V2_Models_Color_Fur
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Color.Fur
+  fullName: Gw2Sharp.WebApi.V2.Models.Color.Fur
+  nameWithType: Color.Fur
+- uid: Gw2Sharp.WebApi.V2.Models.Color.Fur*
+  name: Fur
+  href: api/Gw2Sharp.WebApi.V2.Models.Color.html#Gw2Sharp_WebApi_V2_Models_Color_Fur_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Color.Fur
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Color.Fur
+  nameWithType: Color.Fur
 - uid: Gw2Sharp.WebApi.V2.Models.Color.Id
   name: Id
   href: api/Gw2Sharp.WebApi.V2.Models.Color.html#Gw2Sharp_WebApi_V2_Models_Color_Id
