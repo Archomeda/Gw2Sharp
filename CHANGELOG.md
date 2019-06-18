@@ -10,6 +10,8 @@
 - Add `/v2/masteries`
 - Add `/v2/materials`
 - Add `/v2/minis`
+- Add `/v2/mounts/skills`
+- Add `/v2/mounts/types`
 - Add `/v2/worldbosses`
 - Add `IColorsClient.Fur` (`/v2/colors`)
 

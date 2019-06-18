@@ -150,6 +150,11 @@ namespace Gw2Sharp.WebApi.V2
         IMinisClient Minis { get; }
 
         /// <summary>
+        /// Gets the mounts.
+        /// </summary>
+        IMountsClient Mounts { get; }
+
+        /// <summary>
         /// Gets the token info.
         /// </summary>
         ITokenInfoClient TokenInfo { get; }

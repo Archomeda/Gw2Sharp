@@ -1,0 +1,12 @@
+{
+  "id": 1,
+  "name": "Raptor",
+  "icon": "https://render.guildwars2.com/file/2F4AAA52F573C5425BFCD7525FB70C9E6DCAD791/1766903.png",
+  "dye_slots": [
+    {
+      "color_id": 19,
+      "material": "leather"
+    }
+  ],
+  "mount": "raptor"
+}

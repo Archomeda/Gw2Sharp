@@ -137,10 +137,10 @@ For your convenience, the following list gives an overview of the endpoints that
  /v2/maps | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Maps`](../api/Gw2Sharp.WebApi.V2.Clients.MapsClient.html)
  /v2/masteries | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Masteries`](../api/Gw2Sharp.WebApi.V2.Clients.MasteriesClient.html)
  /v2/materials | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Materials`](../api/Gw2Sharp.WebApi.V2.Clients.MaterialsClient.html)
- /v2/minis | ❌ | [`Gw2WebApiClient.V2.Minis`](../api/Gw2Sharp.WebApi.V2.Clients.MinisClient.html)
- /v2/mounts | ❌✨ |
- /v2/mounts/skins | ❌✨ |
- /v2/mounts/types | ❌✨ |
+ /v2/minis | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Minis`](../api/Gw2Sharp.WebApi.V2.Clients.MinisClient.html)
+ /v2/mounts | ✔️ | [`Gw2WebApiClient.V2.Mounts`](../api/Gw2Sharp.WebApi.V2.Clients.MountsClient.html)
+ /v2/mounts/skins | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Mounts.Skins`](../api/Gw2Sharp.WebApi.V2.Clients.MountsSkinsClient.html)
+ /v2/mounts/types | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Mounts.Types`](../api/Gw2Sharp.WebApi.V2.Clients.MountsTypesClient.html)
  /v2/novelties | ❌✨ |
  /v2/outfits | ❌ |
  /v2/pets | ❌ |

@@ -8,9 +8,9 @@ using Xunit;
 
 namespace Gw2Sharp.Tests.WebApi.V2.Clients
 {
-    public class EmblemForegroundsTests : BaseEndpointClientTests
+    public class EmblemForegroundsClientTests : BaseEndpointClientTests
     {
-        public EmblemForegroundsTests()
+        public EmblemForegroundsClientTests()
         {
             var connection = new Connection(string.Empty, Locale.English, Substitute.For<IHttpClient>(), new NullCacheMethod());
             this.client = new Gw2WebApiClient(connection).V2.Emblem.Foregrounds;

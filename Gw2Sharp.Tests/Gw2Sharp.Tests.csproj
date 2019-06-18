@@ -185,6 +185,12 @@
     <None Remove="TestFiles\Minis\Minis.bulk.json" />
     <None Remove="TestFiles\Minis\Minis.ids.json" />
     <None Remove="TestFiles\Minis\Minis.single.json" />
+    <None Remove="TestFiles\Mounts\MountsSkins.bulk.json" />
+    <None Remove="TestFiles\Mounts\MountsSkins.ids.json" />
+    <None Remove="TestFiles\Mounts\MountsSkins.single.json" />
+    <None Remove="TestFiles\Mounts\MountsTypes.bulk.json" />
+    <None Remove="TestFiles\Mounts\MountsTypes.ids.json" />
+    <None Remove="TestFiles\Mounts\MountsTypes.single.json" />
     <None Remove="TestFiles\TokenInfo\TokenInfo.ApiToken.json" />
     <None Remove="TestFiles\TokenInfo\TokenInfo.SubToken.json" />
     <None Remove="TestFiles\WorldBosses\WorldBosses.bulk.json" />
@@ -365,6 +371,12 @@
     <EmbeddedResource Include="TestFiles\Minis\Minis.bulk.json" />
     <EmbeddedResource Include="TestFiles\Minis\Minis.ids.json" />
     <EmbeddedResource Include="TestFiles\Minis\Minis.single.json" />
+    <EmbeddedResource Include="TestFiles\Mounts\MountsSkins.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Mounts\MountsSkins.ids.json" />
+    <EmbeddedResource Include="TestFiles\Mounts\MountsSkins.single.json" />
+    <EmbeddedResource Include="TestFiles\Mounts\MountsTypes.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Mounts\MountsTypes.ids.json" />
+    <EmbeddedResource Include="TestFiles\Mounts\MountsTypes.single.json" />
     <EmbeddedResource Include="TestFiles\TokenInfo\TokenInfo.ApiToken.json" />
     <EmbeddedResource Include="TestFiles\TokenInfo\TokenInfo.SubToken.json" />
     <EmbeddedResource Include="TestFiles\WorldBosses\WorldBosses.bulk.json" />

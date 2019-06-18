@@ -27,6 +27,11 @@ namespace Gw2Sharp.Extensions
             if (enumType == null)
                 throw new ArgumentNullException(nameof(enumType));
 
+            // Strip the underscores
+            string? strippedValue = value;
+            if (strippedValue != null)
+                strippedValue = strippedValue.Replace("_", "");
+
             // Try looking for custom enum serialization names with EnumMemberAttribute
             string[] enumNames = Enum.GetNames(enumType);
             var enumValues = Enum.GetValues(enumType);
@@ -34,14 +39,14 @@ namespace Gw2Sharp.Extensions
             {
                 var field = enumType.GetField(enumNames[i]);
                 var attr = field.GetCustomAttribute<EnumMemberAttribute>();
-                if (attr != null && attr.Value == value)
+                if (attr != null && (attr.Value == strippedValue || attr.Value == value))
                     return (Enum)enumValues.GetValue(i);
             }
 
             // Just parse normally
             try
             {
-                return (Enum)Enum.Parse(enumType, value, true);
+                return (Enum)Enum.Parse(enumType, strippedValue, true);
             }
             catch (ArgumentException)
             {

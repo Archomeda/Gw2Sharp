@@ -8,35 +8,35 @@ using Xunit;
 
 namespace Gw2Sharp.Tests.WebApi.V2.Clients
 {
-    public class EmblemBackgroundsClientTests : BaseEndpointClientTests
+    public class MountsTypesClientTests : BaseEndpointClientTests
     {
-        public EmblemBackgroundsClientTests()
+        public MountsTypesClientTests()
         {
             var connection = new Connection(string.Empty, Locale.English, Substitute.For<IHttpClient>(), new NullCacheMethod());
-            this.client = new Gw2WebApiClient(connection).V2.Emblem.Backgrounds;
+            this.client = new Gw2WebApiClient(connection).V2.Mounts.Types;
             this.Client = this.client;
         }
 
-        private readonly IEmblemBackgroundsClient client;
+        private readonly IMountsTypesClient client;
 
         [Theory]
-        [InlineData("TestFiles.Emblem.EmblemBackgrounds.bulk.json")]
+        [InlineData("TestFiles.Mounts.MountsTypes.bulk.json")]
         public Task PaginatedTestAsync(string file) => this.AssertPaginatedDataAsync(this.client, file);
 
         [Theory]
-        [InlineData("TestFiles.Emblem.EmblemBackgrounds.single.json")]
+        [InlineData("TestFiles.Mounts.MountsTypes.single.json")]
         public Task GetTestAsync(string file) => this.AssertGetDataAsync(this.client, file);
 
         [Theory]
-        [InlineData("TestFiles.Emblem.EmblemBackgrounds.bulk.json")]
+        [InlineData("TestFiles.Mounts.MountsTypes.bulk.json")]
         public Task BulkTestAsync(string file) => this.AssertBulkDataAsync(this.client, file);
 
         [Theory]
-        [InlineData("TestFiles.Emblem.EmblemBackgrounds.bulk.json")]
+        [InlineData("TestFiles.Mounts.MountsTypes.bulk.json")]
         public Task AllTestAsync(string file) => this.AssertAllDataAsync(this.client, file);
 
         [Theory]
-        [InlineData("TestFiles.Emblem.EmblemBackgrounds.ids.json")]
+        [InlineData("TestFiles.Mounts.MountsTypes.ids.json")]
         public Task IdsTestAsync(string file) => this.AssertIdsDataAsync(this.client, file);
     }
 }

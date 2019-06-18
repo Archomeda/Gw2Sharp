@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Raptor",
+    "icon": "https://render.guildwars2.com/file/2F4AAA52F573C5425BFCD7525FB70C9E6DCAD791/1766903.png",
+    "dye_slots": [
+      {
+        "color_id": 19,
+        "material": "leather"
+      }
+    ],
+    "mount": "raptor"
+  },
+  {
+    "id": 2,
+    "name": "Skimmer",
+    "icon": "https://render.guildwars2.com/file/BD357CB6A25EEFA961B974B6E980DFB0A396A5A4/1766901.png",
+    "dye_slots": [
+      {
+        "color_id": 590,
+        "material": "leather"
+      }
+    ],
+    "mount": "skimmer"
+  },
+  {
+    "id": 3,
+    "name": "Springer",
+    "icon": "https://render.guildwars2.com/file/EAD3540691D702A52E617140055725DF41BBBA49/1766899.png",
+    "dye_slots": [
+      {
+        "color_id": 466,
+        "material": "cloth"
+      }
+    ],
+    "mount": "springer"
+  },
+  {
+    "id": 191,
+    "name": "Shimmerwing",
+    "icon": "https://render.guildwars2.com/file/589290137DE9D8620E06A9EBCBC36B31E554E312/2156027.png",
+    "dye_slots": [
+      {
+        "color_id": 9,
+        "material": "metal"
+      },
+      {
+        "color_id": 614,
+        "material": "metal"
+      },
+      {
+        "color_id": 666,
+        "material": "metal"
+      },
+      {
+        "color_id": 143,
+        "material": "metal"
+      }
+    ],
+    "mount": "skyscale"
+  }
+]
