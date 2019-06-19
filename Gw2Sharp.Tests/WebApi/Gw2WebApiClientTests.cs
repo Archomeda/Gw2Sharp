@@ -17,6 +17,7 @@ namespace Gw2Sharp.Tests.WebApi
 
             Assert.IsType<Gw2WebApiV2Client>(client1.V2);
 
+            Assert.Same(connection, ((IWebApiClientInternal)client2.V2.Account.Achievements).Connection);
             Assert.IsType<Gw2WebApiV2Client>(client2.V2);
         }
     }
