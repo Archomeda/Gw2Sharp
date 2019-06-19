@@ -24,7 +24,7 @@
       "output": {
         ".html": {
           "relative_path": "guides/endpoints.html",
-          "hash": "scKftt+8h9sPVapBGHTXYQ=="
+          "hash": "t3dJ12JwDFXBx1iWJbqY2A=="
         }
       },
       "is_incremental": false,
@@ -39,7 +39,7 @@
       "output": {
         ".html": {
           "relative_path": "guides/exception-handling.html",
-          "hash": "3bd5RoLxTGmIyNvQ+UQ3cQ=="
+          "hash": "rsk/vGPYzQKsL58y7SAvgw=="
         }
       },
       "is_incremental": false,
@@ -51,7 +51,7 @@
       "output": {
         ".html": {
           "relative_path": "guides/http-headers.html",
-          "hash": "SNNdRTFHy5Dt4HL5j3wJmg=="
+          "hash": "ge/RNu8fSz5+zifQa4LftA=="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "guides/introduction.html",
-          "hash": "5u8UzMs3CKTLhS+lsfkN+w=="
+          "hash": "s8dacJXAgmL2DeC9BMwAeQ=="
         }
       },
       "is_incremental": false,
@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "guides/last-modified.html",
-          "hash": "apIQRuYYNv6rdvMtswpCDw=="
+          "hash": "d81pUDVBJ4ljjutN9fiaNw=="
         }
       },
       "is_incremental": false,
@@ -90,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "guides/parameterized-endpoints.html",
-          "hash": "7Q9lmPwfsDAteaTUYrsZiw=="
+          "hash": "yZ8rbBya5Y0KitP+dFotXA=="
         }
       },
       "is_incremental": false,
@@ -102,7 +102,19 @@
       "output": {
         ".html": {
           "relative_path": "guides/subtokens.html",
-          "hash": "+e8RS+m9nqO0VIN3E6Dccw=="
+          "hash": "cTGzqNL8bEWTMEaThRFRsA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "guides/symbols.md",
+      "output": {
+        ".html": {
+          "relative_path": "guides/symbols.html",
+          "hash": "o+GwcQhk9cTdawCGfvJeBA=="
         }
       },
       "is_incremental": false,
@@ -7047,7 +7059,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 9,
+          "total_file_count": 10,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {

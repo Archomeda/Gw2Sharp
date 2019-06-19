@@ -25,6 +25,9 @@ references:
 - uid: Guides.Subtokens
   name: Creating and using subtokens
   href: guides/subtokens.html
+- uid: Guides.Symbols
+  name: Debug symbols
+  href: guides/symbols.html
 - uid: Gw2Sharp.WebApi
   name: Gw2Sharp.WebApi
   href: api/Gw2Sharp.WebApi.html
