@@ -87,7 +87,7 @@ pack:
   script:
     - dotnet build Gw2Sharp -c $CONFIGURATION
     - cp bin/Gw2Sharp.xml Gw2Sharp/bin/$CONFIGURATION/netstandard2.0/
-    - dotnet pack Gw2Sharp -c $CONFIGURATION --no-build --include-symbols -o pack
+    - dotnet pack Gw2Sharp -c $CONFIGURATION --no-build --include-symbols -p:SymbolPackageFormat=snupkg -o pack
   artifacts:
     paths:
       - pack/
@@ -141,12 +141,12 @@ deploy:github:
     - cp pack/* artifacts/
     - ./ghr -t ${GITHUB_RELEASE_TOKEN} -u Archomeda -r Gw2Sharp -n ${CI_COMMIT_REF_NAME} -draft ${CI_COMMIT_REF_NAME} artifacts
 
-.deploy:nuget:
-  # TODO
+deploy:nuget:
   extends: .task
   stage: deploy
-  image: ubuntu
   dependencies:
     - pack
   only:
     - tags
+  script:
+    - dotnet nuget push pack/Gw2Sharp.*.nupkg -s https://api.nuget.org/v3/index.json -k ${NUGET_RELEASE_TOKEN}
