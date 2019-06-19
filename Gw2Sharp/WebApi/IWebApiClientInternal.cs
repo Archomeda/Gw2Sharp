@@ -1,9 +1,9 @@
-namespace Gw2Sharp.WebApi.V2.Clients
+namespace Gw2Sharp.WebApi
 {
     /// <summary>
-    /// Implements a client, consumed internally.
+    /// Implements a web API client, consumed internally.
     /// </summary>
-    internal interface IClientInternal
+    internal interface IWebApiClientInternal
     {
         /// <summary>
         /// Gets the client connection to make web requests.

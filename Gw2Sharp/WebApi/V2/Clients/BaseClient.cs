@@ -5,7 +5,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// <summary>
     /// An abstract base class for implementing clients.
     /// </summary>
-    public abstract class BaseClient : IClient, IClientInternal
+    public abstract class BaseClient : IClient, IWebApiClientInternal
     {
         /// <summary>
         /// Creates a new base client.
@@ -18,7 +18,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         }
 
         /// <inheritdoc />
-        IConnection IClientInternal.Connection => this.Connection;
+        IConnection IWebApiClientInternal.Connection => this.Connection;
 
         /// <summary>
         /// Gets the client connection to make web requests.

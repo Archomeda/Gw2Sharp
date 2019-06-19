@@ -6,7 +6,7 @@ namespace Gw2Sharp.WebApi
     /// <summary>
     /// A client for the Guild Wars 2 web API.
     /// </summary>
-    public class Gw2WebApiClient : IGw2WebApiClient
+    public class Gw2WebApiClient : IGw2WebApiClient, IWebApiClientInternal
     {
         /// <summary>
         /// The base URL for making Guild Wars 2 API requests.
@@ -31,7 +31,12 @@ namespace Gw2Sharp.WebApi
         }
 
         /// <inheritdoc />
-        public IConnection Connection { get; private set; }
+        IConnection IWebApiClientInternal.Connection => this.Connection;
+
+        /// <summary>
+        /// Provides the client connection to make web requests.
+        /// </summary>
+        internal IConnection Connection { get; }
 
         /// <inheritdoc />
         public virtual IGw2WebApiV2Client V2 => this.v2;
