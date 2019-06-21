@@ -62,14 +62,6 @@ namespace Gw2Sharp.WebApi.Caching
 
         #region BaseCacheController overrides
 
-        private async Task<bool> HasInternalAsync<T>(string category, object id) where T : object
-        {
-            return this.cachedItems.TryGetValue(category, out var cache) &&
-                 cache.TryGetValue(id, out object obj) &&
-                 obj is CacheItem<T> item &&
-                 item.ExpiryTime > DateTime.Now;
-        }
-
         /// <inheritdoc />
         public override Task<CacheItem<T>?> TryGetAsync<T>(string category, object id)
         {
