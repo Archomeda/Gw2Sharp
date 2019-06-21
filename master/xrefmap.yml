@@ -997,19 +997,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.Gw2WebApiClient.Gw2WebApiClient
   nameWithType: Gw2WebApiClient.Gw2WebApiClient
-- uid: Gw2Sharp.WebApi.Gw2WebApiClient.Connection
-  name: Connection
-  href: api/Gw2Sharp.WebApi.Gw2WebApiClient.html#Gw2Sharp_WebApi_Gw2WebApiClient_Connection
-  commentId: P:Gw2Sharp.WebApi.Gw2WebApiClient.Connection
-  fullName: Gw2Sharp.WebApi.Gw2WebApiClient.Connection
-  nameWithType: Gw2WebApiClient.Connection
-- uid: Gw2Sharp.WebApi.Gw2WebApiClient.Connection*
-  name: Connection
-  href: api/Gw2Sharp.WebApi.Gw2WebApiClient.html#Gw2Sharp_WebApi_Gw2WebApiClient_Connection_
-  commentId: Overload:Gw2Sharp.WebApi.Gw2WebApiClient.Connection
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.Gw2WebApiClient.Connection
-  nameWithType: Gw2WebApiClient.Connection
 - uid: Gw2Sharp.WebApi.Gw2WebApiClient.V2
   name: V2
   href: api/Gw2Sharp.WebApi.Gw2WebApiClient.html#Gw2Sharp_WebApi_Gw2WebApiClient_V2
@@ -2189,19 +2176,6 @@ references:
   commentId: T:Gw2Sharp.WebApi.IGw2WebApiClient
   fullName: Gw2Sharp.WebApi.IGw2WebApiClient
   nameWithType: IGw2WebApiClient
-- uid: Gw2Sharp.WebApi.IGw2WebApiClient.Connection
-  name: Connection
-  href: api/Gw2Sharp.WebApi.IGw2WebApiClient.html#Gw2Sharp_WebApi_IGw2WebApiClient_Connection
-  commentId: P:Gw2Sharp.WebApi.IGw2WebApiClient.Connection
-  fullName: Gw2Sharp.WebApi.IGw2WebApiClient.Connection
-  nameWithType: IGw2WebApiClient.Connection
-- uid: Gw2Sharp.WebApi.IGw2WebApiClient.Connection*
-  name: Connection
-  href: api/Gw2Sharp.WebApi.IGw2WebApiClient.html#Gw2Sharp_WebApi_IGw2WebApiClient_Connection_
-  commentId: Overload:Gw2Sharp.WebApi.IGw2WebApiClient.Connection
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.IGw2WebApiClient.Connection
-  nameWithType: IGw2WebApiClient.Connection
 - uid: Gw2Sharp.WebApi.IGw2WebApiClient.V2
   name: V2
   href: api/Gw2Sharp.WebApi.IGw2WebApiClient.html#Gw2Sharp_WebApi_IGw2WebApiClient_V2
@@ -3859,19 +3833,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.BaseClient.BaseClient
   nameWithType: BaseClient.BaseClient
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseClient.Connection
-  name: Connection
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseClient.html#Gw2Sharp_WebApi_V2_Clients_BaseClient_Connection
-  commentId: P:Gw2Sharp.WebApi.V2.Clients.BaseClient.Connection
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseClient.Connection
-  nameWithType: BaseClient.Connection
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseClient.Connection*
-  name: Connection
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseClient.html#Gw2Sharp_WebApi_V2_Clients_BaseClient_Connection_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.BaseClient.Connection
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseClient.Connection
-  nameWithType: BaseClient.Connection
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBlobClient`1
   name: BaseEndpointBlobClient<TObject>
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBlobClient-1.html
@@ -9084,19 +9045,6 @@ references:
   commentId: T:Gw2Sharp.WebApi.V2.Clients.IClient
   fullName: Gw2Sharp.WebApi.V2.Clients.IClient
   nameWithType: IClient
-- uid: Gw2Sharp.WebApi.V2.Clients.IClient.Connection
-  name: Connection
-  href: api/Gw2Sharp.WebApi.V2.Clients.IClient.html#Gw2Sharp_WebApi_V2_Clients_IClient_Connection
-  commentId: P:Gw2Sharp.WebApi.V2.Clients.IClient.Connection
-  fullName: Gw2Sharp.WebApi.V2.Clients.IClient.Connection
-  nameWithType: IClient.Connection
-- uid: Gw2Sharp.WebApi.V2.Clients.IClient.Connection*
-  name: Connection
-  href: api/Gw2Sharp.WebApi.V2.Clients.IClient.html#Gw2Sharp_WebApi_V2_Clients_IClient_Connection_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.IClient.Connection
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.IClient.Connection
-  nameWithType: IClient.Connection
 - uid: Gw2Sharp.WebApi.V2.Clients.IColorsClient
   name: IColorsClient
   href: api/Gw2Sharp.WebApi.V2.Clients.IColorsClient.html
@@ -11326,19 +11274,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Commerce
   nameWithType: Gw2WebApiV2Client.Commerce
-- uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Connection
-  name: Connection
-  href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_Connection
-  commentId: P:Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Connection
-  fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Connection
-  nameWithType: Gw2WebApiV2Client.Connection
-- uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Connection*
-  name: Connection
-  href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_Connection_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Connection
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Connection
-  nameWithType: Gw2WebApiV2Client.Connection
 - uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Continents
   name: Continents
   href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_Continents
@@ -11763,19 +11698,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Commerce
   nameWithType: IGw2WebApiV2Client.Commerce
-- uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Connection
-  name: Connection
-  href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_Connection
-  commentId: P:Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Connection
-  fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Connection
-  nameWithType: IGw2WebApiV2Client.Connection
-- uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Connection*
-  name: Connection
-  href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_Connection_
-  commentId: Overload:Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Connection
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Connection
-  nameWithType: IGw2WebApiV2Client.Connection
 - uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Continents
   name: Continents
   href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_Continents
