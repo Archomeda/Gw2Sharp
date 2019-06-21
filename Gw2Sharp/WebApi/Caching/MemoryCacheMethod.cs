@@ -62,17 +62,6 @@ namespace Gw2Sharp.WebApi.Caching
 
         #region BaseCacheController overrides
 
-        /// <inheritdoc />
-        public override Task<bool> HasAsync<T>(string category, object id)
-        {
-            if (category == null)
-                throw new ArgumentNullException(nameof(category));
-            if (id == null)
-                throw new ArgumentNullException(nameof(id));
-
-            return this.HasInternalAsync<T>(category, id);
-        }
-
         private async Task<bool> HasInternalAsync<T>(string category, object id) where T : object
         {
             return this.cachedItems.TryGetValue(category, out var cache) &&
@@ -82,17 +71,17 @@ namespace Gw2Sharp.WebApi.Caching
         }
 
         /// <inheritdoc />
-        public override Task<CacheItem<T>?> GetOrNullAsync<T>(string category, object id)
+        public override Task<CacheItem<T>?> TryGetAsync<T>(string category, object id)
         {
             if (category == null)
                 throw new ArgumentNullException(nameof(category));
             if (id == null)
                 throw new ArgumentNullException(nameof(id));
 
-            return this.GetOrNullInternalAsync<T>(category, id);
+            return this.TryGetInternalAsync<T>(category, id);
         }
 
-        private async Task<CacheItem<T>?> GetOrNullInternalAsync<T>(string category, object id) where T : object
+        private async Task<CacheItem<T>?> TryGetInternalAsync<T>(string category, object id) where T : object
         {
             return this.cachedItems.TryGetValue(category, out var cache) &&
                  cache.TryGetValue(id, out object obj) &&
@@ -132,11 +121,11 @@ namespace Gw2Sharp.WebApi.Caching
             var items = new Dictionary<object, CacheItem<T>>();
             if (this.cachedItems.TryGetValue(category, out var cache))
             {
-                foreach (object id in ids)
-                {
-                    if (await this.HasAsync<T>(category, id) && cache.TryGetValue(id, out object obj) && obj is CacheItem<T> item)
-                        items.Add(id, item);
-                }
+                items = ids
+                    .Select(id => cache.TryGetValue(id, out object obj) ? obj : null)
+                    .Where(x => x is CacheItem<T> item && item.ExpiryTime > DateTime.Now)
+                    .Cast<CacheItem<T>>()
+                    .ToDictionary(x => x.Id);
             }
             return items;
         }

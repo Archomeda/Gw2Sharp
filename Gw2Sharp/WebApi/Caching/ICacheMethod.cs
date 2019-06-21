@@ -16,6 +16,7 @@ namespace Gw2Sharp.WebApi.Caching
         /// <param name="category">The cache category.</param>
         /// <param name="id">The id.</param>
         /// <returns>The task for this operation with the result whether the cached item exists and has not expired.</returns>
+        [Obsolete("Removed: Use TryGetAsync to test whether the cache contains an item (this will be removed in next release)")]
         Task<bool> HasAsync<T>(string category, object id) where T : object;
 
         /// <summary>
@@ -26,6 +27,7 @@ namespace Gw2Sharp.WebApi.Caching
         /// <param name="id">The id.</param>
         /// <returns>The task for this operation with the cached item if it exists.</returns>
         /// <exception cref="KeyNotFoundException">The cache does not contain the cached item.</exception>
+        [Obsolete("Removed: Use TryGetAsync instead (this will be removed in next release)")]
         Task<CacheItem<T>> GetAsync<T>(string category, object id) where T : object;
 
         /// <summary>
@@ -35,7 +37,17 @@ namespace Gw2Sharp.WebApi.Caching
         /// <param name="category">The cache category.</param>
         /// <param name="id">The id.</param>
         /// <returns>The task for this operation with a returned cached item if it exists and is not expired; <c>null</c> otherwise.</returns>
+        [Obsolete("Renamed: Use TryGetAsync instead (this will be removed in next release)")]
         Task<CacheItem<T>?> GetOrNullAsync<T>(string category, object id) where T : object;
+
+        /// <summary>
+        /// Tries to get a cached item.
+        /// </summary>
+        /// <typeparam name="T">The cache type.</typeparam>
+        /// <param name="category">The cache category.</param>
+        /// <param name="id">The id.</param>
+        /// <returns>The task for this operation with a returned cached item if it exists and is not expired; <c>null</c> otherwise.</returns>
+        Task<CacheItem<T>?> TryGetAsync<T>(string category, object id) where T : object;
 
         /// <summary>
         /// Sets a cached item.

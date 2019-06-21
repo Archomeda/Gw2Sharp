@@ -11,14 +11,22 @@ namespace Gw2Sharp.WebApi.Caching
     public abstract class BaseCacheMethod : ICacheMethod
     {
         /// <inheritdoc />
-        public abstract Task<bool> HasAsync<T>(string category, object id) where T : object;
+        [Obsolete("Removed: Use TryGetAsync to test whether the cache contains an item (this will be removed in next release)")]
+        public virtual async Task<bool> HasAsync<T>(string category, object id) where T : object =>
+            await this.TryGetAsync<T>(category, id).ConfigureAwait(false) != null;
 
         /// <inheritdoc />
+        [Obsolete("Removed: Use TryGetAsync instead (this will be removed in next release)")]
         public virtual async Task<CacheItem<T>> GetAsync<T>(string category, object id) where T : object =>
-            await this.GetOrNullAsync<T>(category, id) ?? throw new KeyNotFoundException($"Cache item '{id}' in category '{category}' doesn't exist.");
+            await this.TryGetAsync<T>(category, id).ConfigureAwait(false) ?? throw new KeyNotFoundException($"Cache item '{id}' in category '{category}' doesn't exist.");
 
         /// <inheritdoc />
-        public abstract Task<CacheItem<T>?> GetOrNullAsync<T>(string category, object id) where T : object;
+        [Obsolete("Renamed: Use TryGetAsync instead (this will be removed in next release)")]
+        public virtual Task<CacheItem<T>?> GetOrNullAsync<T>(string category, object id) where T : object =>
+            this.TryGetAsync<T>(category, id);
+
+        /// <inheritdoc />
+        public abstract Task<CacheItem<T>?> TryGetAsync<T>(string category, object id) where T : object;
 
         /// <inheritdoc />
         public abstract Task SetAsync<T>(CacheItem<T> item) where T : object;
@@ -49,7 +57,11 @@ namespace Gw2Sharp.WebApi.Caching
         {
             var cache = new Dictionary<object, CacheItem<T>>();
             foreach (object id in ids)
-                cache[id] = await this.GetAsync<T>(category, id).ConfigureAwait(false);
+            {
+                var cacheItem = await this.TryGetAsync<T>(category, id).ConfigureAwait(false);
+                if (cacheItem != null)
+                    cache[id] = cacheItem;
+            }
             return cache;
         }
 
@@ -92,17 +104,14 @@ namespace Gw2Sharp.WebApi.Caching
 
         private async Task<CacheItem<T>> GetOrUpdateInternalAsync<T>(string category, object id, Func<Task<(T, DateTime)>> updateFunc) where T : object
         {
-            try
-            {
-                return await this.GetAsync<T>(category, id).ConfigureAwait(false);
-            }
-            catch (KeyNotFoundException)
-            {
-                var (item, expiryTime) = await updateFunc().ConfigureAwait(false);
-                var cache = new CacheItem<T>(category, id, item, expiryTime);
-                await this.SetAsync(cache).ConfigureAwait(false);
-                return cache;
-            }
+            var fItem = await this.TryGetAsync<T>(category, id).ConfigureAwait(false);
+            if (fItem != null)
+                return fItem;
+
+            var (item, expiryTime) = await updateFunc().ConfigureAwait(false);
+            var cache = new CacheItem<T>(category, id, item, expiryTime);
+            await this.SetAsync(cache).ConfigureAwait(false);
+            return cache;
         }
 
         /// <inheritdoc />

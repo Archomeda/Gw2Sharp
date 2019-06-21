@@ -14,11 +14,7 @@ namespace Gw2Sharp.WebApi.Caching
         #region ICacheController members
 
         /// <inheritdoc />
-        public override async Task<bool> HasAsync<T>(string category, object id) =>
-            false;
-
-        /// <inheritdoc />
-        public override async Task<CacheItem<T>?> GetOrNullAsync<T>(string category, object id) =>
+        public override async Task<CacheItem<T>?> TryGetAsync<T>(string category, object id) =>
             null;
 
         /// <inheritdoc />

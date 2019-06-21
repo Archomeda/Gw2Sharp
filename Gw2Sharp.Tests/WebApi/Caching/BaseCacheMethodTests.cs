@@ -15,9 +15,7 @@ namespace Gw2Sharp.Tests.WebApi.Caching
         [Fact]
         public async Task CategoryDoesNotExistTest()
         {
-            Assert.False(await this.cacheMethod.HasAsync<int>("unknown", "unknown"));
-            Assert.Null(await this.cacheMethod.GetOrNullAsync<int>("unknown", "unknown"));
-            await Assert.ThrowsAsync<KeyNotFoundException>(() => this.cacheMethod.GetAsync<int>("unknown", "unknown"));
+            Assert.Null(await this.cacheMethod.TryGetAsync<int>("unknown", "unknown"));
         }
 
         [Fact]
@@ -26,13 +24,10 @@ namespace Gw2Sharp.Tests.WebApi.Caching
             var cacheItem = new CacheItem<int>("Test category", "test", 42, DateTime.Now.AddMinutes(30));
 
             await this.cacheMethod.SetAsync(cacheItem);
-            Assert.True(await this.cacheMethod.HasAsync<int>(cacheItem.Category, cacheItem.Id));
-            Assert.Equal(cacheItem, await this.cacheMethod.GetAsync<int>(cacheItem.Category, cacheItem.Id));
+            Assert.Equal(cacheItem, await this.cacheMethod.TryGetAsync<int>(cacheItem.Category, cacheItem.Id));
 
             await this.cacheMethod.FlushAsync();
-            Assert.False(await this.cacheMethod.HasAsync<int>(cacheItem.Category, cacheItem.Id));
-            Assert.Null(await this.cacheMethod.GetOrNullAsync<int>(cacheItem.Category, cacheItem.Id));
-            await Assert.ThrowsAsync<KeyNotFoundException>(() => this.cacheMethod.GetAsync<int>(cacheItem.Category, cacheItem.Id));
+            Assert.Null(await this.cacheMethod.TryGetAsync<int>(cacheItem.Category, cacheItem.Id));
         }
 
         [Fact]
@@ -52,7 +47,7 @@ namespace Gw2Sharp.Tests.WebApi.Caching
             };
 
             await this.cacheMethod.SetManyAsync(cacheItems);
-            await AssertAsync.All(cacheItems.Select(async i => await this.cacheMethod.HasAsync<int>(i.Category, i.Id)), Assert.True);
+            await AssertAsync.All(cacheItems.Select(async i => await this.cacheMethod.TryGetAsync<int>(i.Category, i.Id) != null), Assert.True);
             await Task.Delay(2000);
 
             Assert.Equal(cacheItems.Where(i => i.ExpiryTime > DateTime.Now),
@@ -76,7 +71,7 @@ namespace Gw2Sharp.Tests.WebApi.Caching
                 Assert.Equal(cacheItems.Select(x => x.Id), missingIds);
                 return Task.FromResult<IDictionary<object, int>>(cacheItems.ToDictionary(x => x.Id, x => x.Item));
             });
-            await AssertAsync.All(cacheItems.Select(async i => await this.cacheMethod.HasAsync<int>(i.Category, i.Id)), Assert.True);
+            await AssertAsync.All(cacheItems.Select(async i => await this.cacheMethod.TryGetAsync<int>(i.Category, i.Id) != null), Assert.True);
             Assert.Equal(cacheItems, (await this.cacheMethod.GetManyAsync<int>(category, cacheItems.Select(x => x.Id))).Select(x => x.Value));
         }
 
@@ -88,7 +83,6 @@ namespace Gw2Sharp.Tests.WebApi.Caching
             int item = 42;
 
             await this.cacheMethod.SetAsync(category, id, item, DateTime.Now.AddMinutes(30));
-            Assert.True(await this.cacheMethod.HasAsync<int>(category, id));
             Assert.Equal(item, (await this.cacheMethod.GetOrUpdateAsync<int>(category, id, DateTime.Now.AddMinutes(30), () => throw new Exception("Should not be called"))).Item);
         }
 
@@ -99,8 +93,7 @@ namespace Gw2Sharp.Tests.WebApi.Caching
             string id = "test";
 
             await this.cacheMethod.GetOrUpdateAsync(category, id, DateTime.Now.AddMinutes(30), () => Task.FromResult(42));
-            Assert.True(await this.cacheMethod.HasAsync<int>(category, id));
-            Assert.Equal(42, (await this.cacheMethod.GetAsync<int>(category, id)).Item);
+            Assert.Equal(42, (await this.cacheMethod.TryGetAsync<int>(category, id))?.Item);
         }
 
         [Fact]
@@ -109,9 +102,7 @@ namespace Gw2Sharp.Tests.WebApi.Caching
             string category = "Test category";
 
             await this.cacheMethod.SetAsync(new CacheItem<int>(category, "test", 42, DateTime.Now.AddMinutes(30)));
-            Assert.False(await this.cacheMethod.HasAsync<int>(category, "unknown"));
-            Assert.Null(await this.cacheMethod.GetOrNullAsync<int>(category, "unknown"));
-            await Assert.ThrowsAsync<KeyNotFoundException>(() => this.cacheMethod.GetAsync<int>(category, "unknown"));
+            Assert.Null(await this.cacheMethod.TryGetAsync<int>(category, "unknown"));
         }
 
         [Fact]
@@ -120,9 +111,7 @@ namespace Gw2Sharp.Tests.WebApi.Caching
             var cacheItem = new CacheItem<int>("Test category", "test", 42, DateTime.Now.AddMinutes(-30));
 
             await this.cacheMethod.SetAsync(cacheItem);
-            Assert.False(await this.cacheMethod.HasAsync<int>(cacheItem.Category, cacheItem.Id));
-            Assert.Null(await this.cacheMethod.GetOrNullAsync<int>(cacheItem.Category, cacheItem.Id));
-            await Assert.ThrowsAsync<KeyNotFoundException>(() => this.cacheMethod.GetAsync<int>(cacheItem.Category, cacheItem.Id));
+            Assert.Null(await this.cacheMethod.TryGetAsync<int>(cacheItem.Category, cacheItem.Id));
         }
 
         [Fact]
@@ -131,14 +120,11 @@ namespace Gw2Sharp.Tests.WebApi.Caching
             var cacheItem = new CacheItem<int>("Test category", "test", 42, DateTime.Now.AddSeconds(1.5));
 
             await this.cacheMethod.SetAsync(cacheItem);
-            Assert.True(await this.cacheMethod.HasAsync<int>(cacheItem.Category, cacheItem.Id));
-            Assert.Equal(cacheItem, await this.cacheMethod.GetAsync<int>(cacheItem.Category, cacheItem.Id));
+            Assert.Equal(cacheItem, await this.cacheMethod.TryGetAsync<int>(cacheItem.Category, cacheItem.Id));
 
             await Task.Delay(2000);
 
-            Assert.False(await this.cacheMethod.HasAsync<int>(cacheItem.Category, cacheItem.Id));
-            Assert.Null(await this.cacheMethod.GetOrNullAsync<int>(cacheItem.Category, cacheItem.Id));
-            await Assert.ThrowsAsync<KeyNotFoundException>(() => this.cacheMethod.GetAsync<int>(cacheItem.Category, cacheItem.Id));
+            Assert.Null(await this.cacheMethod.TryGetAsync<int>(cacheItem.Category, cacheItem.Id));
         }
 
         [Fact]
@@ -153,7 +139,7 @@ namespace Gw2Sharp.Tests.WebApi.Caching
             };
 
             await this.cacheMethod.SetManyAsync(cacheItems);
-            await AssertAsync.All(cacheItems.Select(async i => await this.cacheMethod.HasAsync<int>(i.Category, i.Id)), Assert.True);
+            await AssertAsync.All(cacheItems.Select(async i => await this.cacheMethod.TryGetAsync<int>(i.Category, i.Id) != null), Assert.True);
             Assert.Equal(cacheItems, (await this.cacheMethod.GetManyAsync<int>(category, cacheItems.Select(x => x.Id))).Select(x => x.Value));
         }
 
@@ -164,31 +150,21 @@ namespace Gw2Sharp.Tests.WebApi.Caching
             var cacheItem = new CacheItem<int>(category, "test", 42, DateTime.Now.AddMinutes(30));
 
             await this.cacheMethod.SetAsync(cacheItem);
-            Assert.True(await this.cacheMethod.HasAsync<int>(cacheItem.Category, cacheItem.Id));
-            Assert.Equal(cacheItem, await this.cacheMethod.GetAsync<int>(cacheItem.Category, cacheItem.Id));
+            Assert.Equal(cacheItem, await this.cacheMethod.TryGetAsync<int>(cacheItem.Category, cacheItem.Id));
 
             cacheItem = new CacheItem<int>(category, "test2", 42, DateTime.Now.AddMinutes(30));
 
             await this.cacheMethod.SetAsync(cacheItem.Category, cacheItem.Id, cacheItem.Item, cacheItem.ExpiryTime);
-            Assert.True(await this.cacheMethod.HasAsync<int>(cacheItem.Category, cacheItem.Id));
-            Assert.Equal(cacheItem, await this.cacheMethod.GetAsync<int>(cacheItem.Category, cacheItem.Id));
+            Assert.Equal(cacheItem, await this.cacheMethod.TryGetAsync<int>(cacheItem.Category, cacheItem.Id));
         }
 
         #region ArgumentNullException tests
 
         [Fact]
-        public async Task ArgumentNullHasTest()
-        {
-            await AssertArguments.ThrowsWhenNullAsync(
-                () => this.cacheMethod.HasAsync<object>("Test category", "test"),
-                new[] { true, true });
-        }
-
-        [Fact]
         public async Task ArgumentNullGetTest()
         {
             await AssertArguments.ThrowsWhenNullAsync(
-                () => this.cacheMethod.GetAsync<object>("Test category", "test"),
+                () => this.cacheMethod.TryGetAsync<object>("Test category", "test"),
                 new[] { true, true });
         }
 
