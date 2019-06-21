@@ -233,6 +233,22 @@ references:
   fullName.vb: Gw2Sharp.WebApi.Caching.BaseCacheMethod.SetManyAsync(Of T)(IEnumerable(Of Gw2Sharp.WebApi.Caching.CacheItem(Of T)))
   nameWithType: BaseCacheMethod.SetManyAsync<T>(IEnumerable<CacheItem<T>>)
   nameWithType.vb: BaseCacheMethod.SetManyAsync(Of T)(IEnumerable(Of CacheItem(Of T)))
+- uid: Gw2Sharp.WebApi.Caching.BaseCacheMethod.TryGetAsync*
+  name: TryGetAsync
+  href: api/Gw2Sharp.WebApi.Caching.BaseCacheMethod.html#Gw2Sharp_WebApi_Caching_BaseCacheMethod_TryGetAsync_
+  commentId: Overload:Gw2Sharp.WebApi.Caching.BaseCacheMethod.TryGetAsync
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.Caching.BaseCacheMethod.TryGetAsync
+  nameWithType: BaseCacheMethod.TryGetAsync
+- uid: Gw2Sharp.WebApi.Caching.BaseCacheMethod.TryGetAsync``1(System.String,System.Object)
+  name: TryGetAsync<T>(String, Object)
+  href: api/Gw2Sharp.WebApi.Caching.BaseCacheMethod.html#Gw2Sharp_WebApi_Caching_BaseCacheMethod_TryGetAsync__1_System_String_System_Object_
+  commentId: M:Gw2Sharp.WebApi.Caching.BaseCacheMethod.TryGetAsync``1(System.String,System.Object)
+  name.vb: TryGetAsync(Of T)(String, Object)
+  fullName: Gw2Sharp.WebApi.Caching.BaseCacheMethod.TryGetAsync<T>(System.String, System.Object)
+  fullName.vb: Gw2Sharp.WebApi.Caching.BaseCacheMethod.TryGetAsync(Of T)(System.String, System.Object)
+  nameWithType: BaseCacheMethod.TryGetAsync<T>(String, Object)
+  nameWithType.vb: BaseCacheMethod.TryGetAsync(Of T)(String, Object)
 - uid: Gw2Sharp.WebApi.Caching.CacheItem
   name: CacheItem
   href: api/Gw2Sharp.WebApi.Caching.CacheItem.html
@@ -600,6 +616,22 @@ references:
   fullName.vb: Gw2Sharp.WebApi.Caching.ICacheMethod.SetManyAsync(Of T)(IEnumerable(Of Gw2Sharp.WebApi.Caching.CacheItem(Of T)))
   nameWithType: ICacheMethod.SetManyAsync<T>(IEnumerable<CacheItem<T>>)
   nameWithType.vb: ICacheMethod.SetManyAsync(Of T)(IEnumerable(Of CacheItem(Of T)))
+- uid: Gw2Sharp.WebApi.Caching.ICacheMethod.TryGetAsync*
+  name: TryGetAsync
+  href: api/Gw2Sharp.WebApi.Caching.ICacheMethod.html#Gw2Sharp_WebApi_Caching_ICacheMethod_TryGetAsync_
+  commentId: Overload:Gw2Sharp.WebApi.Caching.ICacheMethod.TryGetAsync
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.Caching.ICacheMethod.TryGetAsync
+  nameWithType: ICacheMethod.TryGetAsync
+- uid: Gw2Sharp.WebApi.Caching.ICacheMethod.TryGetAsync``1(System.String,System.Object)
+  name: TryGetAsync<T>(String, Object)
+  href: api/Gw2Sharp.WebApi.Caching.ICacheMethod.html#Gw2Sharp_WebApi_Caching_ICacheMethod_TryGetAsync__1_System_String_System_Object_
+  commentId: M:Gw2Sharp.WebApi.Caching.ICacheMethod.TryGetAsync``1(System.String,System.Object)
+  name.vb: TryGetAsync(Of T)(String, Object)
+  fullName: Gw2Sharp.WebApi.Caching.ICacheMethod.TryGetAsync<T>(System.String, System.Object)
+  fullName.vb: Gw2Sharp.WebApi.Caching.ICacheMethod.TryGetAsync(Of T)(System.String, System.Object)
+  nameWithType: ICacheMethod.TryGetAsync<T>(String, Object)
+  nameWithType.vb: ICacheMethod.TryGetAsync(Of T)(String, Object)
 - uid: Gw2Sharp.WebApi.Caching.MemoryCacheMethod
   name: MemoryCacheMethod
   href: api/Gw2Sharp.WebApi.Caching.MemoryCacheMethod.html
@@ -667,38 +699,6 @@ references:
   fullName.vb: Gw2Sharp.WebApi.Caching.MemoryCacheMethod.GetManyAsync(Of T)(System.String, IEnumerable(Of System.Object))
   nameWithType: MemoryCacheMethod.GetManyAsync<T>(String, IEnumerable<Object>)
   nameWithType.vb: MemoryCacheMethod.GetManyAsync(Of T)(String, IEnumerable(Of Object))
-- uid: Gw2Sharp.WebApi.Caching.MemoryCacheMethod.GetOrNullAsync*
-  name: GetOrNullAsync
-  href: api/Gw2Sharp.WebApi.Caching.MemoryCacheMethod.html#Gw2Sharp_WebApi_Caching_MemoryCacheMethod_GetOrNullAsync_
-  commentId: Overload:Gw2Sharp.WebApi.Caching.MemoryCacheMethod.GetOrNullAsync
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.Caching.MemoryCacheMethod.GetOrNullAsync
-  nameWithType: MemoryCacheMethod.GetOrNullAsync
-- uid: Gw2Sharp.WebApi.Caching.MemoryCacheMethod.GetOrNullAsync``1(System.String,System.Object)
-  name: GetOrNullAsync<T>(String, Object)
-  href: api/Gw2Sharp.WebApi.Caching.MemoryCacheMethod.html#Gw2Sharp_WebApi_Caching_MemoryCacheMethod_GetOrNullAsync__1_System_String_System_Object_
-  commentId: M:Gw2Sharp.WebApi.Caching.MemoryCacheMethod.GetOrNullAsync``1(System.String,System.Object)
-  name.vb: GetOrNullAsync(Of T)(String, Object)
-  fullName: Gw2Sharp.WebApi.Caching.MemoryCacheMethod.GetOrNullAsync<T>(System.String, System.Object)
-  fullName.vb: Gw2Sharp.WebApi.Caching.MemoryCacheMethod.GetOrNullAsync(Of T)(System.String, System.Object)
-  nameWithType: MemoryCacheMethod.GetOrNullAsync<T>(String, Object)
-  nameWithType.vb: MemoryCacheMethod.GetOrNullAsync(Of T)(String, Object)
-- uid: Gw2Sharp.WebApi.Caching.MemoryCacheMethod.HasAsync*
-  name: HasAsync
-  href: api/Gw2Sharp.WebApi.Caching.MemoryCacheMethod.html#Gw2Sharp_WebApi_Caching_MemoryCacheMethod_HasAsync_
-  commentId: Overload:Gw2Sharp.WebApi.Caching.MemoryCacheMethod.HasAsync
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.Caching.MemoryCacheMethod.HasAsync
-  nameWithType: MemoryCacheMethod.HasAsync
-- uid: Gw2Sharp.WebApi.Caching.MemoryCacheMethod.HasAsync``1(System.String,System.Object)
-  name: HasAsync<T>(String, Object)
-  href: api/Gw2Sharp.WebApi.Caching.MemoryCacheMethod.html#Gw2Sharp_WebApi_Caching_MemoryCacheMethod_HasAsync__1_System_String_System_Object_
-  commentId: M:Gw2Sharp.WebApi.Caching.MemoryCacheMethod.HasAsync``1(System.String,System.Object)
-  name.vb: HasAsync(Of T)(String, Object)
-  fullName: Gw2Sharp.WebApi.Caching.MemoryCacheMethod.HasAsync<T>(System.String, System.Object)
-  fullName.vb: Gw2Sharp.WebApi.Caching.MemoryCacheMethod.HasAsync(Of T)(System.String, System.Object)
-  nameWithType: MemoryCacheMethod.HasAsync<T>(String, Object)
-  nameWithType.vb: MemoryCacheMethod.HasAsync(Of T)(String, Object)
 - uid: Gw2Sharp.WebApi.Caching.MemoryCacheMethod.SetAsync*
   name: SetAsync
   href: api/Gw2Sharp.WebApi.Caching.MemoryCacheMethod.html#Gw2Sharp_WebApi_Caching_MemoryCacheMethod_SetAsync_
@@ -715,6 +715,22 @@ references:
   fullName.vb: Gw2Sharp.WebApi.Caching.MemoryCacheMethod.SetAsync(Of T)(Gw2Sharp.WebApi.Caching.CacheItem(Of T))
   nameWithType: MemoryCacheMethod.SetAsync<T>(CacheItem<T>)
   nameWithType.vb: MemoryCacheMethod.SetAsync(Of T)(CacheItem(Of T))
+- uid: Gw2Sharp.WebApi.Caching.MemoryCacheMethod.TryGetAsync*
+  name: TryGetAsync
+  href: api/Gw2Sharp.WebApi.Caching.MemoryCacheMethod.html#Gw2Sharp_WebApi_Caching_MemoryCacheMethod_TryGetAsync_
+  commentId: Overload:Gw2Sharp.WebApi.Caching.MemoryCacheMethod.TryGetAsync
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.Caching.MemoryCacheMethod.TryGetAsync
+  nameWithType: MemoryCacheMethod.TryGetAsync
+- uid: Gw2Sharp.WebApi.Caching.MemoryCacheMethod.TryGetAsync``1(System.String,System.Object)
+  name: TryGetAsync<T>(String, Object)
+  href: api/Gw2Sharp.WebApi.Caching.MemoryCacheMethod.html#Gw2Sharp_WebApi_Caching_MemoryCacheMethod_TryGetAsync__1_System_String_System_Object_
+  commentId: M:Gw2Sharp.WebApi.Caching.MemoryCacheMethod.TryGetAsync``1(System.String,System.Object)
+  name.vb: TryGetAsync(Of T)(String, Object)
+  fullName: Gw2Sharp.WebApi.Caching.MemoryCacheMethod.TryGetAsync<T>(System.String, System.Object)
+  fullName.vb: Gw2Sharp.WebApi.Caching.MemoryCacheMethod.TryGetAsync(Of T)(System.String, System.Object)
+  nameWithType: MemoryCacheMethod.TryGetAsync<T>(String, Object)
+  nameWithType.vb: MemoryCacheMethod.TryGetAsync(Of T)(String, Object)
 - uid: Gw2Sharp.WebApi.Caching.NullCacheMethod
   name: NullCacheMethod
   href: api/Gw2Sharp.WebApi.Caching.NullCacheMethod.html
@@ -750,38 +766,6 @@ references:
   fullName.vb: Gw2Sharp.WebApi.Caching.NullCacheMethod.GetManyAsync(Of T)(System.String, IEnumerable(Of System.Object))
   nameWithType: NullCacheMethod.GetManyAsync<T>(String, IEnumerable<Object>)
   nameWithType.vb: NullCacheMethod.GetManyAsync(Of T)(String, IEnumerable(Of Object))
-- uid: Gw2Sharp.WebApi.Caching.NullCacheMethod.GetOrNullAsync*
-  name: GetOrNullAsync
-  href: api/Gw2Sharp.WebApi.Caching.NullCacheMethod.html#Gw2Sharp_WebApi_Caching_NullCacheMethod_GetOrNullAsync_
-  commentId: Overload:Gw2Sharp.WebApi.Caching.NullCacheMethod.GetOrNullAsync
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.Caching.NullCacheMethod.GetOrNullAsync
-  nameWithType: NullCacheMethod.GetOrNullAsync
-- uid: Gw2Sharp.WebApi.Caching.NullCacheMethod.GetOrNullAsync``1(System.String,System.Object)
-  name: GetOrNullAsync<T>(String, Object)
-  href: api/Gw2Sharp.WebApi.Caching.NullCacheMethod.html#Gw2Sharp_WebApi_Caching_NullCacheMethod_GetOrNullAsync__1_System_String_System_Object_
-  commentId: M:Gw2Sharp.WebApi.Caching.NullCacheMethod.GetOrNullAsync``1(System.String,System.Object)
-  name.vb: GetOrNullAsync(Of T)(String, Object)
-  fullName: Gw2Sharp.WebApi.Caching.NullCacheMethod.GetOrNullAsync<T>(System.String, System.Object)
-  fullName.vb: Gw2Sharp.WebApi.Caching.NullCacheMethod.GetOrNullAsync(Of T)(System.String, System.Object)
-  nameWithType: NullCacheMethod.GetOrNullAsync<T>(String, Object)
-  nameWithType.vb: NullCacheMethod.GetOrNullAsync(Of T)(String, Object)
-- uid: Gw2Sharp.WebApi.Caching.NullCacheMethod.HasAsync*
-  name: HasAsync
-  href: api/Gw2Sharp.WebApi.Caching.NullCacheMethod.html#Gw2Sharp_WebApi_Caching_NullCacheMethod_HasAsync_
-  commentId: Overload:Gw2Sharp.WebApi.Caching.NullCacheMethod.HasAsync
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.Caching.NullCacheMethod.HasAsync
-  nameWithType: NullCacheMethod.HasAsync
-- uid: Gw2Sharp.WebApi.Caching.NullCacheMethod.HasAsync``1(System.String,System.Object)
-  name: HasAsync<T>(String, Object)
-  href: api/Gw2Sharp.WebApi.Caching.NullCacheMethod.html#Gw2Sharp_WebApi_Caching_NullCacheMethod_HasAsync__1_System_String_System_Object_
-  commentId: M:Gw2Sharp.WebApi.Caching.NullCacheMethod.HasAsync``1(System.String,System.Object)
-  name.vb: HasAsync(Of T)(String, Object)
-  fullName: Gw2Sharp.WebApi.Caching.NullCacheMethod.HasAsync<T>(System.String, System.Object)
-  fullName.vb: Gw2Sharp.WebApi.Caching.NullCacheMethod.HasAsync(Of T)(System.String, System.Object)
-  nameWithType: NullCacheMethod.HasAsync<T>(String, Object)
-  nameWithType.vb: NullCacheMethod.HasAsync(Of T)(String, Object)
 - uid: Gw2Sharp.WebApi.Caching.NullCacheMethod.SetAsync*
   name: SetAsync
   href: api/Gw2Sharp.WebApi.Caching.NullCacheMethod.html#Gw2Sharp_WebApi_Caching_NullCacheMethod_SetAsync_
@@ -823,6 +807,22 @@ references:
   fullName.vb: Gw2Sharp.WebApi.Caching.NullCacheMethod.SetManyAsync(Of T)(IEnumerable(Of Gw2Sharp.WebApi.Caching.CacheItem(Of T)))
   nameWithType: NullCacheMethod.SetManyAsync<T>(IEnumerable<CacheItem<T>>)
   nameWithType.vb: NullCacheMethod.SetManyAsync(Of T)(IEnumerable(Of CacheItem(Of T)))
+- uid: Gw2Sharp.WebApi.Caching.NullCacheMethod.TryGetAsync*
+  name: TryGetAsync
+  href: api/Gw2Sharp.WebApi.Caching.NullCacheMethod.html#Gw2Sharp_WebApi_Caching_NullCacheMethod_TryGetAsync_
+  commentId: Overload:Gw2Sharp.WebApi.Caching.NullCacheMethod.TryGetAsync
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.Caching.NullCacheMethod.TryGetAsync
+  nameWithType: NullCacheMethod.TryGetAsync
+- uid: Gw2Sharp.WebApi.Caching.NullCacheMethod.TryGetAsync``1(System.String,System.Object)
+  name: TryGetAsync<T>(String, Object)
+  href: api/Gw2Sharp.WebApi.Caching.NullCacheMethod.html#Gw2Sharp_WebApi_Caching_NullCacheMethod_TryGetAsync__1_System_String_System_Object_
+  commentId: M:Gw2Sharp.WebApi.Caching.NullCacheMethod.TryGetAsync``1(System.String,System.Object)
+  name.vb: TryGetAsync(Of T)(String, Object)
+  fullName: Gw2Sharp.WebApi.Caching.NullCacheMethod.TryGetAsync<T>(System.String, System.Object)
+  fullName.vb: Gw2Sharp.WebApi.Caching.NullCacheMethod.TryGetAsync(Of T)(System.String, System.Object)
+  nameWithType: NullCacheMethod.TryGetAsync<T>(String, Object)
+  nameWithType.vb: NullCacheMethod.TryGetAsync(Of T)(String, Object)
 - uid: Gw2Sharp.WebApi.Connection
   name: Connection
   href: api/Gw2Sharp.WebApi.Connection.html

@@ -1862,7 +1862,13 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
+      <a class="xref" href="Gw2Sharp.WebApi.Caching.BaseCacheMethod.html#Gw2Sharp_WebApi_Caching_BaseCacheMethod_HasAsync__1_System_String_System_Object_">BaseCacheMethod.HasAsync&lt;T&gt;(String, Object)</a>
+    </div>
+    <div>
       <a class="xref" href="Gw2Sharp.WebApi.Caching.BaseCacheMethod.html#Gw2Sharp_WebApi_Caching_BaseCacheMethod_GetAsync__1_System_String_System_Object_">BaseCacheMethod.GetAsync&lt;T&gt;(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gw2Sharp.WebApi.Caching.BaseCacheMethod.html#Gw2Sharp_WebApi_Caching_BaseCacheMethod_GetOrNullAsync__1_System_String_System_Object_">BaseCacheMethod.GetOrNullAsync&lt;T&gt;(String, Object)</a>
     </div>
     <div>
       <a class="xref" href="Gw2Sharp.WebApi.Caching.BaseCacheMethod.html#Gw2Sharp_WebApi_Caching_BaseCacheMethod_GetOrUpdateAsync__1_System_String_System_Object_DateTime_Func_Task___0___">BaseCacheMethod.GetOrUpdateAsync&lt;T&gt;(String, Object, DateTime, Func&lt;Task&lt;T&gt;&gt;)</a>
@@ -1990,144 +1996,6 @@ Only items that exist are included in the returned dictionary.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="Gw2Sharp.WebApi.Caching.BaseCacheMethod.html#Gw2Sharp_WebApi_Caching_BaseCacheMethod_GetManyAsync__1_System_String_IEnumerable_System_Object__">BaseCacheMethod.GetManyAsync&lt;T&gt;(String, IEnumerable&lt;Object&gt;)</a></div>
-  
-  
-  <a id="Gw2Sharp_WebApi_Caching_NullCacheMethod_GetOrNullAsync_" data-uid="Gw2Sharp.WebApi.Caching.NullCacheMethod.GetOrNullAsync*"></a>
-  <h4 id="Gw2Sharp_WebApi_Caching_NullCacheMethod_GetOrNullAsync__1_System_String_System_Object_" data-uid="Gw2Sharp.WebApi.Caching.NullCacheMethod.GetOrNullAsync``1(System.String,System.Object)">GetOrNullAsync&lt;T&gt;(String, Object)</h4>
-  <div class="markdown level1 summary"><p>Tries to get a cached item.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override Task&lt;CacheItem&lt;T&gt;? &gt; GetOrNullAsync&lt;T&gt;(string category, object id)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">category</span></td>
-        <td><p>The cache category.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td><span class="parametername">id</span></td>
-        <td><p>The id.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">System.Nullable</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.Caching.CacheItem-1.html">CacheItem</a>&lt;T&gt;&gt;&gt;</td>
-        <td><p>The task for this operation with a returned cached item if it exists and is not expired; <code>null</code> otherwise.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td><p>The cache type.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Gw2Sharp.WebApi.Caching.BaseCacheMethod.html#Gw2Sharp_WebApi_Caching_BaseCacheMethod_GetOrNullAsync__1_System_String_System_Object_">BaseCacheMethod.GetOrNullAsync&lt;T&gt;(String, Object)</a></div>
-  
-  
-  <a id="Gw2Sharp_WebApi_Caching_NullCacheMethod_HasAsync_" data-uid="Gw2Sharp.WebApi.Caching.NullCacheMethod.HasAsync*"></a>
-  <h4 id="Gw2Sharp_WebApi_Caching_NullCacheMethod_HasAsync__1_System_String_System_Object_" data-uid="Gw2Sharp.WebApi.Caching.NullCacheMethod.HasAsync``1(System.String,System.Object)">HasAsync&lt;T&gt;(String, Object)</h4>
-  <div class="markdown level1 summary"><p>Checks if the cache contains a cached item with the given id and type.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override Task&lt;bool&gt; HasAsync&lt;T&gt;(string category, object id)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">category</span></td>
-        <td><p>The cache category.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td><span class="parametername">id</span></td>
-        <td><p>The id.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
-        <td><p>The task for this operation with the result whether the cached item exists and has not expired.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td><p>The cache type.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Gw2Sharp.WebApi.Caching.BaseCacheMethod.html#Gw2Sharp_WebApi_Caching_BaseCacheMethod_HasAsync__1_System_String_System_Object_">BaseCacheMethod.HasAsync&lt;T&gt;(String, Object)</a></div>
   
   
   <a id="Gw2Sharp_WebApi_Caching_NullCacheMethod_SetAsync_" data-uid="Gw2Sharp.WebApi.Caching.NullCacheMethod.SetAsync*"></a>
@@ -2320,6 +2188,75 @@ Only items that exist are included in the returned dictionary.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">Gw2Sharp.WebApi.Caching.BaseCacheMethod.SetManyAsync&lt;T&gt;(IEnumerable&lt;Gw2Sharp.WebApi.Caching.CacheItem&lt;T&gt;&gt;)</span></div>
+  
+  
+  <a id="Gw2Sharp_WebApi_Caching_NullCacheMethod_TryGetAsync_" data-uid="Gw2Sharp.WebApi.Caching.NullCacheMethod.TryGetAsync*"></a>
+  <h4 id="Gw2Sharp_WebApi_Caching_NullCacheMethod_TryGetAsync__1_System_String_System_Object_" data-uid="Gw2Sharp.WebApi.Caching.NullCacheMethod.TryGetAsync``1(System.String,System.Object)">TryGetAsync&lt;T&gt;(String, Object)</h4>
+  <div class="markdown level1 summary"><p>Tries to get a cached item.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Task&lt;CacheItem&lt;T&gt;? &gt; TryGetAsync&lt;T&gt;(string category, object id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">category</span></td>
+        <td><p>The cache category.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The id.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.Nullable</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.Caching.CacheItem-1.html">CacheItem</a>&lt;T&gt;&gt;&gt;</td>
+        <td><p>The task for this operation with a returned cached item if it exists and is not expired; <code>null</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The cache type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Gw2Sharp.WebApi.Caching.BaseCacheMethod.html#Gw2Sharp_WebApi_Caching_BaseCacheMethod_TryGetAsync__1_System_String_System_Object_">BaseCacheMethod.TryGetAsync&lt;T&gt;(String, Object)</a></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Gw2Sharp.WebApi.Caching.ICacheMethod.html">ICacheMethod</a>

@@ -2078,7 +2078,7 @@ Only items that exist are included in the returned dictionary.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract Task&lt;CacheItem&lt;T&gt;? &gt; GetOrNullAsync&lt;T&gt;(string category, object id)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;CacheItem&lt;T&gt;? &gt; GetOrNullAsync&lt;T&gt;(string category, object id)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2423,7 +2423,7 @@ Only items that exist are included in the returned dictionary.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract Task&lt;bool&gt; HasAsync&lt;T&gt;(string category, object id)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;bool&gt; HasAsync&lt;T&gt;(string category, object id)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2664,6 +2664,73 @@ Only items that exist are included in the returned dictionary.</p>
       <tr>
         <td><span class="parametername">T</span></td>
         <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Gw2Sharp_WebApi_Caching_BaseCacheMethod_TryGetAsync_" data-uid="Gw2Sharp.WebApi.Caching.BaseCacheMethod.TryGetAsync*"></a>
+  <h4 id="Gw2Sharp_WebApi_Caching_BaseCacheMethod_TryGetAsync__1_System_String_System_Object_" data-uid="Gw2Sharp.WebApi.Caching.BaseCacheMethod.TryGetAsync``1(System.String,System.Object)">TryGetAsync&lt;T&gt;(String, Object)</h4>
+  <div class="markdown level1 summary"><p>Tries to get a cached item.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract Task&lt;CacheItem&lt;T&gt;? &gt; TryGetAsync&lt;T&gt;(string category, object id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">category</span></td>
+        <td><p>The cache category.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The id.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.Nullable</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.Caching.CacheItem-1.html">CacheItem</a>&lt;T&gt;&gt;&gt;</td>
+        <td><p>The task for this operation with a returned cached item if it exists and is not expired; <code>null</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The cache type.</p>
+</td>
       </tr>
     </tbody>
   </table>
