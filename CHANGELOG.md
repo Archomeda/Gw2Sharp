@@ -29,6 +29,10 @@
 - **Breaking:** Since the settings in `IConnection` are only used interally, the `.Connection` property of `IGw2WebApiClient`, `IGw2WebApiV2Client` and all endpoint clients have been either removed or are now marked as internal
   (if you still want to keep track of these settings, you should keep a reference to the instance yourself)
 - Most `Connection` properties have a public setter to allow changes after object creation
+- **Breaking:** `ICacheMethod` and its implementations received a small clean-up due to it being an overengineered interface (all deprecations will be fully removed in 0.5.0+):
+  - `HasAsync` is marked as deprecated and is unused in Gw2Sharp from now on
+  - `GetAsync` is marked as deprecated and is unused in Gw2Sharp from now on
+  - `GetOrNullAsync` is marked as deprecated and is renamed to `TryGetAsync` (functionality is the same)
 
 ## 0.3.1
 ### Fixes
