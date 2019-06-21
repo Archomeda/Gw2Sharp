@@ -26,6 +26,9 @@
 - **Breaking:** Various endpoint clients with child endpoint clients and/or extra parameters have had their virtual property setters removed; you can still override the property for customization however
   (reason: it's discouraged to call virtual methods or set virtual properties from a constructor in a non-sealed class)
 - **Breaking:** `IGuildIdLogClient.ParamSince` and its implementation `GuildIdLogClient.ParamSince` are no longer virtual and no longer have a public setter to follow convention of e.g. `CreateSubtokenClient` (use `IGuildIdLogClient.Since(int? since)` to set this parameter with the fluent design pattern)
+- **Breaking:** Since the settings in `IConnection` are only used interally, the `.Connection` property of `IGw2WebApiClient`, `IGw2WebApiV2Client` and all endpoint clients have been either removed or are now marked as internal
+  (if you still want to keep track of these settings, you should keep a reference to the instance yourself)
+- Most `Connection` properties have a public setter to allow changes after object creation
 
 ## 0.3.1
 ### Fixes

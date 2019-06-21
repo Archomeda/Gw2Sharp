@@ -113,10 +113,10 @@ namespace Gw2Sharp.WebApi
         }
 
         /// <inheritdoc />
-        public string AccessToken { get; private set; }
+        public string AccessToken { get; set; }
 
         /// <inheritdoc />
-        public Locale Locale { get; private set; }
+        public Locale Locale { get; set; }
 
         /// <inheritdoc />
         public string LocaleString
@@ -136,10 +136,10 @@ namespace Gw2Sharp.WebApi
         public string UserAgent { get; private set; }
 
         /// <inheritdoc />
-        public IHttpClient HttpClient { get; private set; }
+        public IHttpClient HttpClient { get; set; }
 
         /// <inheritdoc />
-        public ICacheMethod CacheMethod { get; private set; }
+        public ICacheMethod CacheMethod { get; set; }
 
 
         /// <inheritdoc />

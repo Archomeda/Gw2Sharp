@@ -24,14 +24,14 @@ namespace Gw2Sharp.WebApi
         /// Creates a new <see cref="Gw2WebApiClient"/>.
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
+        /// <exception cref="NullReferenceException"><paramref name="connection"/> is <c>null</c>.</exception>
         public Gw2WebApiClient(IConnection connection)
         {
-            this.Connection = connection;
+            if (connection == null)
+                throw new ArgumentNullException(nameof(connection));
+
             this.v2 = new Gw2WebApiV2Client(connection);
         }
-
-        /// <inheritdoc />
-        public IConnection Connection { get; private set; }
 
         /// <inheritdoc />
         public virtual IGw2WebApiV2Client V2 => this.v2;

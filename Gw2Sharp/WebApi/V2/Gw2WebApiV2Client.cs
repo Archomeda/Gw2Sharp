@@ -56,7 +56,9 @@ namespace Gw2Sharp.WebApi.V2
         /// <exception cref="NullReferenceException"><paramref name="connection"/> is <c>null</c>.</exception>
         public Gw2WebApiV2Client(IConnection connection)
         {
-            this.Connection = connection ?? throw new ArgumentNullException(nameof(connection));
+            if (connection == null)
+                throw new ArgumentNullException(nameof(connection));
+
             this.account = new AccountClient(connection);
             this.achievements = new AchievementsClient(connection);
             this.backstory = new BackstoryClient(connection);
@@ -88,9 +90,6 @@ namespace Gw2Sharp.WebApi.V2
             this.tokenInfo = new TokenInfoClient(connection);
             this.worldBosses = new WorldBossesClient(connection);
         }
-
-        /// <inheritdoc />
-        public IConnection Connection { get; private set; }
 
         /// <inheritdoc />
         public virtual IAccountClient Account => this.account;

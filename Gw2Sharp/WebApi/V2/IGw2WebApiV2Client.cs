@@ -8,11 +8,6 @@ namespace Gw2Sharp.WebApi.V2
     public interface IGw2WebApiV2Client
     {
         /// <summary>
-        /// Provides the client connection to make web requests.
-        /// </summary>
-        IConnection Connection { get; }
-
-        /// <summary>
         /// Gets the account information.
         /// Requires scopes: account.
         /// </summary>
