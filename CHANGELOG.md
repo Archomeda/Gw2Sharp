@@ -1,5 +1,9 @@
 # Gw2Sharp History
 
+## 0.4.1
+### Fixes
+- Fix memory cache garbage collection with keys other than a string causing InvalidCastExceptions
+
 ## 0.4.0
 ### Endpoints
 - Add `/v2/account/novelties`

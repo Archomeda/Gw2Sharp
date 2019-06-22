@@ -49,7 +49,7 @@ namespace Gw2Sharp.WebApi.Caching
 
         private void CollectInnerGarbage(DateTime now, ConcurrentDictionary<object, object> cache)
         {
-            foreach (string key in cache.Keys.ToArray())
+            foreach (object key in cache.Keys.ToArray())
             {
                 if (!cache.TryGetValue(key, out object obj))
                     continue;
