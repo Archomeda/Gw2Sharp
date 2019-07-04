@@ -4,6 +4,9 @@
 ### Fixes
 - **Breaking:** Fix types of `Coordinates2.X` and `Coordinates2.Y` from int to double
 
+### Deprecation removals
+- Following up on version 0.4.0, the methods `ICacheMethod.HasAsync`, `ICacheMethod.GetAsync` and `ICacheMethod.GetOrNullAsync` have been removed
+
 ## 0.4.1
 ### Fixes
 - Fix memory cache garbage collection with keys other than a string causing InvalidCastExceptions

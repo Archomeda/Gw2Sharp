@@ -11,21 +11,6 @@ namespace Gw2Sharp.WebApi.Caching
     public abstract class BaseCacheMethod : ICacheMethod
     {
         /// <inheritdoc />
-        [Obsolete("Removed: Use TryGetAsync to test whether the cache contains an item (this will be removed in next release)")]
-        public virtual async Task<bool> HasAsync<T>(string category, object id) where T : object =>
-            await this.TryGetAsync<T>(category, id).ConfigureAwait(false) != null;
-
-        /// <inheritdoc />
-        [Obsolete("Removed: Use TryGetAsync instead (this will be removed in next release)")]
-        public virtual async Task<CacheItem<T>> GetAsync<T>(string category, object id) where T : object =>
-            await this.TryGetAsync<T>(category, id).ConfigureAwait(false) ?? throw new KeyNotFoundException($"Cache item '{id}' in category '{category}' doesn't exist.");
-
-        /// <inheritdoc />
-        [Obsolete("Renamed: Use TryGetAsync instead (this will be removed in next release)")]
-        public virtual Task<CacheItem<T>?> GetOrNullAsync<T>(string category, object id) where T : object =>
-            this.TryGetAsync<T>(category, id);
-
-        /// <inheritdoc />
         public abstract Task<CacheItem<T>?> TryGetAsync<T>(string category, object id) where T : object;
 
         /// <inheritdoc />
