@@ -7,7 +7,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents a rectangle object.
     /// </summary>
-    public struct Rectangle : IEquatable<Rectangle>, IEnumerable<IEnumerable<int>>
+    public struct Rectangle : IEquatable<Rectangle>, IEnumerable<IEnumerable<double>>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Rectangle"/> struct.
@@ -62,15 +62,15 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// Gets the width.
         /// </summary>
-        public int Width => Math.Abs(this.TopRight.X - this.TopLeft.X);
+        public double Width => Math.Abs(this.TopRight.X - this.TopLeft.X);
 
         /// <summary>
         /// Gets the height.
         /// </summary>
-        public int Height => Math.Abs(this.BottomLeft.Y - this.TopLeft.Y);
+        public double Height => Math.Abs(this.BottomLeft.Y - this.TopLeft.Y);
 
         /// <inheritdoc />
-        public IEnumerator<IEnumerable<int>> GetEnumerator()
+        public IEnumerator<IEnumerable<double>> GetEnumerator()
         {
             if (this.Direction == RectangleDirectionType.BottomUp)
             {

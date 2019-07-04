@@ -10,14 +10,14 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// Represents a coordinates object in 2D space.
     /// </summary>
     [JsonConverter(typeof(Coordinates2Converter))]
-    public struct Coordinates2 : IEquatable<Coordinates2>, IEnumerable<int>
+    public struct Coordinates2 : IEquatable<Coordinates2>, IEnumerable<double>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Coordinates2"/> struct.
         /// </summary>
         /// <param name="x">The x-coordinate.</param>
         /// <param name="y">The y-coordinate.</param>
-        public Coordinates2(int x, int y)
+        public Coordinates2(double x, double y)
         {
             this.X = x;
             this.Y = y;
@@ -26,15 +26,15 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The x-coordinate.
         /// </summary>
-        public int X { get; }
+        public double X { get; }
 
         /// <summary>
         /// The y-coordinate.
         /// </summary>
-        public int Y { get; }
+        public double Y { get; }
 
         /// <inheritdoc />
-        public IEnumerator<int> GetEnumerator()
+        public IEnumerator<double> GetEnumerator()
         {
             yield return this.X;
             yield return this.Y;

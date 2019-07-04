@@ -1,6 +1,6 @@
+using System;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using System;
 
 namespace Gw2Sharp.WebApi.V2.Models.Converters
 {
@@ -19,7 +19,7 @@ namespace Gw2Sharp.WebApi.V2.Models.Converters
             if (!(serializer.Deserialize<JToken>(reader) is JArray jArray))
                 throw new JsonSerializationException($"Expected {nameof(jArray)} to be an array");
 
-            return new Coordinates2(jArray[0].ToObject<int>(serializer), jArray[1].ToObject<int>(serializer));
+            return new Coordinates2(jArray[0].ToObject<double>(serializer), jArray[1].ToObject<double>(serializer));
         }
 
         /// <inheritdoc />
