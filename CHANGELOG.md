@@ -1,5 +1,9 @@
 # Gw2Sharp History
 
+## 0.5.0
+### Fixes
+- **Breaking:** Fix types of `Coordinates2.X` and `Coordinates2.Y` from int to double
+
 ## 0.4.1
 ### Fixes
 - Fix memory cache garbage collection with keys other than a string causing InvalidCastExceptions
