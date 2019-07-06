@@ -23,7 +23,7 @@ Visit https://archomeda.github.io/Gw2Sharp for more information.
     <RepositoryUrl>https://github.com/Archomeda/Gw2Sharp</RepositoryUrl>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(APPVEYOR')!=''">
+  <PropertyGroup Condition="'$(APPVEYOR)'!=''">
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
   </PropertyGroup>
 
