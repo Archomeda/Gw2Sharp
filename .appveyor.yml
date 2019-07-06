@@ -42,6 +42,7 @@ after_test:
         dotnet sonarscanner end /d:sonar.login="$env:SONAR_TOKEN"
       }
   - dotnet pack Gw2Sharp -c %CONFIGURATION% --no-build -o pack
+  - ps: Remove-Item pack/*.symbols.nupkg
 
 artifacts:
   - path: pack/*.nupkg
