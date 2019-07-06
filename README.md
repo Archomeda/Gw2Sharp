@@ -22,10 +22,23 @@ This project targets .NET Standard 2.0.
 It supports the C# 8.0 Nullable Reference Types feature for your convenience (which is available since Visual Studio 2019), but it's not required when consuming the library.
 
 ## Installing
-You can find the library on [NuGet](https://www.nuget.org/packages/Gw2Sharp/), or you can install it by running the following command in the package manager:
-
+### Release builds
+You can find the library on [NuGet](https://www.nuget.org/packages/Gw2Sharp/), or you can install it by running the following command in the package manager console:
 ```powershell
 Install-Package Gw2Sharp
+```
+
+### CI builds
+On every build, a new package is created on AppVeyor that you can consume as well. Note that these builds are not considered to be stable, they are meant only for testing purposes. Therefore, these packages are also compiled in debug configuration and have their symbols included.
+
+First, you'll have to create a new `nuget.config` file and add the AppVeyor package source to it:
+```xml
+<add key="Gw2Sharp-AppVeyor" value="https://ci.appveyor.com/nuget/gw2sharp-c900m3msesag" />
+```
+
+Afterwards, you can install a specific version by selecting one in the package manager GUI, or by running the following command in the package manager console:
+```powershell
+Install-Package Gw2Sharp -Version x.x.x-appveyor.yyyy
 ```
 
 ## Usage
