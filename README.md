@@ -1,6 +1,6 @@
 # Gw2Sharp
 [![GitLab Pipeline](https://img.shields.io/gitlab/pipeline/archomeda/Gw2Sharp/master.svg?label=Pipeline&logo=gitlab)](https://gitlab.com/Archomeda/Gw2Sharp/pipelines)
-[![AppVeyor Tests](https://img.shields.io/appveyor/tests/Archomeda/Gw2Sharp.svg?label=Tests&logo=appveyor)](https://ci.appveyor.com/project/Archomeda/Gw2Sharp)
+[![AppVeyor Tests](https://img.shields.io/appveyor/tests/Archomeda/Gw2Sharp/master.svg?label=Tests&logo=appveyor)](https://ci.appveyor.com/project/Archomeda/Gw2Sharp/branch/master)
 [![NuGet](https://img.shields.io/nuget/v/Gw2Sharp.svg?label=NuGet&logo=nuget)](https://www.nuget.org/packages/Gw2Sharp)
 [![NuGet Downloads](https://img.shields.io/nuget/dt/Gw2Sharp.svg?label=Downloads&logo=nuget)](https://www.nuget.org/packages/Gw2Sharp)
 [![Discord](https://img.shields.io/discord/384735285197537290.svg?label=Discord&logo=discord)](https://discord.gg/u2YDPea)  
