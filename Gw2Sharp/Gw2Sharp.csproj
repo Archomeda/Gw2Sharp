@@ -10,7 +10,9 @@
     <Version>0.5.0</Version>
     <Authors>Archomeda</Authors>
     <Description>
-Gw2Sharp is a .NET wrapper library for the official Guild Wars 2 API written in C#. It uses the latest C# 8.0 features and targets .NET Standard 2.0 for cross platform compatibility.
+Gw2Sharp is a .NET wrapper library for the official Guild Wars 2 API.
+
+It uses the latest C# 8.0 features and targets .NET Standard 2.0 for cross platform compatibility.
 It aims to be as close as possible to the official API structure, with a few exceptions to make life easier.
 
 Visit https://archomeda.github.io/Gw2Sharp for more information.
@@ -21,14 +23,18 @@ Visit https://archomeda.github.io/Gw2Sharp for more information.
     <RepositoryUrl>https://github.com/Archomeda/Gw2Sharp</RepositoryUrl>
   </PropertyGroup>
 
-  <PropertyGroup Condition=" '$(GITLAB_CI)'!='' ">
+  <PropertyGroup Condition="'$(APPVEYOR')!=''">
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(GITLAB_CI)'!=''">
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
     <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
     <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
   </PropertyGroup>
 
-  <PropertyGroup Condition=" '$(Configuration)'=='Debug' ">
+  <PropertyGroup Condition="'$(Configuration)'=='Debug'">
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>

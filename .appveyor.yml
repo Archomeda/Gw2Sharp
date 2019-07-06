@@ -41,7 +41,7 @@ after_test:
       if (!(Test-Path env:APPVEYOR_PULL_REQUEST_NUMBER)) {
         dotnet sonarscanner end /d:sonar.login="$env:SONAR_TOKEN"
       }
-  - dotnet pack Gw2Sharp -c %CONFIGURATION% --no-build --include-symbols -o pack
+  - dotnet pack Gw2Sharp -c %CONFIGURATION% --no-build -o pack
 
 artifacts:
   - path: pack/*.nupkg
