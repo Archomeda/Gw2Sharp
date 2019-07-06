@@ -42,6 +42,9 @@ build:docs:
   extends: .task
   stage: build
   image: mono
+  only:
+    - master
+    - tags
   before_script:
     - apt update
     - apt install -y git wget unzip
@@ -61,6 +64,9 @@ post-build:binaries-with-docs:
   image: mcr.microsoft.com/dotnet/core/sdk:2.1
   dependencies:
     - build:binaries
+  only:
+    - master
+    - tags
   before_script:
     - dotnet tool install -g InheritDocTool
     - export PATH="$PATH:/root/.dotnet/tools"

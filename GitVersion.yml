@@ -1,3 +1,5 @@
 next-version: 0.5.0
-assembly-versioning-scheme: MajorMinorPatch
+assembly-versioning-format: '{MajorMinorPatch}.{env:APPVEYOR_BUILD_NUMBER ?? 0}'
+assembly-file-versioning-format: '{MajorMinorPatch}-{BranchName}-{ShortSha}'
+assembly-informational-format: '{MajorMinorPatch}-{BranchName}-{ShortSha}'
 mode: ContinuousDelivery
