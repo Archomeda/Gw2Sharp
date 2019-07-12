@@ -150,6 +150,11 @@ namespace Gw2Sharp.WebApi.V2
         IMountsClient Mounts { get; }
 
         /// <summary>
+        /// Gets the novelties.
+        /// </summary>
+        INoveltiesClient Novelties { get; }
+
+        /// <summary>
         /// Gets the token info.
         /// </summary>
         ITokenInfoClient TokenInfo { get; }

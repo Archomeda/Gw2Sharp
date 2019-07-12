@@ -41,6 +41,7 @@ namespace Gw2Sharp.WebApi.V2
         private readonly IMaterialsClient materials;
         private readonly IMinisClient minis;
         private readonly IMountsClient mounts;
+        private readonly INoveltiesClient novelties;
         private readonly ITokenInfoClient tokenInfo;
         private readonly IWorldBossesClient worldBosses;
 
@@ -87,6 +88,7 @@ namespace Gw2Sharp.WebApi.V2
             this.materials = new MaterialsClient(connection);
             this.minis = new MinisClient(connection);
             this.mounts = new MountsClient(connection);
+            this.novelties = new NoveltiesClient(connection);
             this.tokenInfo = new TokenInfoClient(connection);
             this.worldBosses = new WorldBossesClient(connection);
         }
@@ -174,6 +176,9 @@ namespace Gw2Sharp.WebApi.V2
 
         /// <inheritdoc />
         public virtual IMountsClient Mounts => this.mounts;
+
+        /// <inheritdoc />
+        public virtual INoveltiesClient Novelties => this.novelties;
 
         /// <inheritdoc />
         public virtual ITokenInfoClient TokenInfo => this.tokenInfo;

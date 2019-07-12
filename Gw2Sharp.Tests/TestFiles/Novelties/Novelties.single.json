@@ -1,0 +1,10 @@
+{
+  "id": 72,
+  "name": "Warm Potion",
+  "description": "<c=@abilitytype>Tonic.</c> Transform into another shape.",
+  "icon": "https://render.guildwars2.com/file/5FD20F09226805DF9C08BE23F4C418442F4DAE93/222648.png",
+  "slot": "Tonic",
+  "unlock_item": [
+    35750
+  ]
+}

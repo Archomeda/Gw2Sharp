@@ -1,6 +1,9 @@
 # Gw2Sharp History
 
 ## 0.5.0
+### Endpoints
+- Add `/v2/novelties`
+
 ### Fixes
 - **Breaking:** Fix types of `Coordinates2.X` and `Coordinates2.Y` from int to double
 

@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "name": "Embellished Kite",
+    "description": "<c=@abilitytype>Held Item.</c> Equip a bundle for decoration or to use noncombat skills.",
+    "icon": "https://render.guildwars2.com/file/7B043D640ED57517051D5FC038D7CDDDE5F82933/2015154.png",
+    "slot": "HeldItem",
+    "unlock_item": [
+      88124
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Musical Lute",
+    "description": "<c=@abilitytype>Musical Instrument.</c> Equip an instrument and play a tune.",
+    "icon": "https://render.guildwars2.com/file/EB163F2BB848193BC6D9E5092C4E1FFEB63057DE/819605.png",
+    "slot": "Music",
+    "unlock_item": [
+      66323
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Bouquet of Roses",
+    "description": "<c=@abilitytype>Held Item.</c> Equip a bundle for decoration or to use noncombat skills.",
+    "icon": "https://render.guildwars2.com/file/9B06346EC37F0DD0A2EF61F819F56962D11FE1BE/534227.png",
+    "slot": "Miscellaneous",
+    "unlock_item": [
+      49933
+    ]
+  },
+  {
+    "id": 69,
+    "name": "Luxurious Pile of Gold",
+    "description": "<c=@abilitytype>Chair.</c> Summon a chair and take a seat.",
+    "icon": "https://render.guildwars2.com/file/697670E596FA19DC3BA564A9A86B01386DDC0359/2038591.png",
+    "slot": "Chair",
+    "unlock_item": [
+      88507
+    ]
+  },
+  {
+    "id": 72,
+    "name": "Warm Potion",
+    "description": "<c=@abilitytype>Tonic.</c> Transform into another shape.",
+    "icon": "https://render.guildwars2.com/file/5FD20F09226805DF9C08BE23F4C418442F4DAE93/222648.png",
+    "slot": "Tonic",
+    "unlock_item": [
+      35750
+    ]
+  }
+]
