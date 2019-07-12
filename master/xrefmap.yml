@@ -10708,6 +10708,12 @@ references:
   commentId: T:Gw2Sharp.WebApi.V2.Clients.IMountsTypesClient
   fullName: Gw2Sharp.WebApi.V2.Clients.IMountsTypesClient
   nameWithType: IMountsTypesClient
+- uid: Gw2Sharp.WebApi.V2.Clients.INoveltiesClient
+  name: INoveltiesClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.INoveltiesClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.INoveltiesClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.INoveltiesClient
+  nameWithType: INoveltiesClient
 - uid: Gw2Sharp.WebApi.V2.Clients.IPaginatedClient`1
   name: IPaginatedClient<TObject>
   href: api/Gw2Sharp.WebApi.V2.Clients.IPaginatedClient-1.html
@@ -11024,6 +11030,25 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.MountsTypesClient.MountsTypesClient
   nameWithType: MountsTypesClient.MountsTypesClient
+- uid: Gw2Sharp.WebApi.V2.Clients.NoveltiesClient
+  name: NoveltiesClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.NoveltiesClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.NoveltiesClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.NoveltiesClient
+  nameWithType: NoveltiesClient
+- uid: Gw2Sharp.WebApi.V2.Clients.NoveltiesClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  name: NoveltiesClient(IConnection)
+  href: api/Gw2Sharp.WebApi.V2.Clients.NoveltiesClient.html#Gw2Sharp_WebApi_V2_Clients_NoveltiesClient__ctor_Gw2Sharp_WebApi_IConnection_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.NoveltiesClient.#ctor(Gw2Sharp.WebApi.IConnection)
+  fullName: Gw2Sharp.WebApi.V2.Clients.NoveltiesClient.NoveltiesClient(Gw2Sharp.WebApi.IConnection)
+  nameWithType: NoveltiesClient.NoveltiesClient(IConnection)
+- uid: Gw2Sharp.WebApi.V2.Clients.NoveltiesClient.#ctor*
+  name: NoveltiesClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.NoveltiesClient.html#Gw2Sharp_WebApi_V2_Clients_NoveltiesClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.NoveltiesClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.NoveltiesClient.NoveltiesClient
+  nameWithType: NoveltiesClient.NoveltiesClient
 - uid: Gw2Sharp.WebApi.V2.Clients.TokenInfoClient
   name: TokenInfoClient
   href: api/Gw2Sharp.WebApi.V2.Clients.TokenInfoClient.html
@@ -11451,6 +11476,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Mounts
   nameWithType: Gw2WebApiV2Client.Mounts
+- uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Novelties
+  name: Novelties
+  href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_Novelties
+  commentId: P:Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Novelties
+  fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Novelties
+  nameWithType: Gw2WebApiV2Client.Novelties
+- uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Novelties*
+  name: Novelties
+  href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_Novelties_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Novelties
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Novelties
+  nameWithType: Gw2WebApiV2Client.Novelties
 - uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.TokenInfo
   name: TokenInfo
   href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_TokenInfo
@@ -11875,6 +11913,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Mounts
   nameWithType: IGw2WebApiV2Client.Mounts
+- uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Novelties
+  name: Novelties
+  href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_Novelties
+  commentId: P:Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Novelties
+  fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Novelties
+  nameWithType: IGw2WebApiV2Client.Novelties
+- uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Novelties*
+  name: Novelties
+  href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_Novelties_
+  commentId: Overload:Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Novelties
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Novelties
+  nameWithType: IGw2WebApiV2Client.Novelties
 - uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.TokenInfo
   name: TokenInfo
   href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_TokenInfo
@@ -24661,6 +24712,132 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.Node.Id
   nameWithType: Node.Id
+- uid: Gw2Sharp.WebApi.V2.Models.Novelty
+  name: Novelty
+  href: api/Gw2Sharp.WebApi.V2.Models.Novelty.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.Novelty
+  fullName: Gw2Sharp.WebApi.V2.Models.Novelty
+  nameWithType: Novelty
+- uid: Gw2Sharp.WebApi.V2.Models.Novelty.Description
+  name: Description
+  href: api/Gw2Sharp.WebApi.V2.Models.Novelty.html#Gw2Sharp_WebApi_V2_Models_Novelty_Description
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Novelty.Description
+  fullName: Gw2Sharp.WebApi.V2.Models.Novelty.Description
+  nameWithType: Novelty.Description
+- uid: Gw2Sharp.WebApi.V2.Models.Novelty.Description*
+  name: Description
+  href: api/Gw2Sharp.WebApi.V2.Models.Novelty.html#Gw2Sharp_WebApi_V2_Models_Novelty_Description_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Novelty.Description
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Novelty.Description
+  nameWithType: Novelty.Description
+- uid: Gw2Sharp.WebApi.V2.Models.Novelty.Icon
+  name: Icon
+  href: api/Gw2Sharp.WebApi.V2.Models.Novelty.html#Gw2Sharp_WebApi_V2_Models_Novelty_Icon
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Novelty.Icon
+  fullName: Gw2Sharp.WebApi.V2.Models.Novelty.Icon
+  nameWithType: Novelty.Icon
+- uid: Gw2Sharp.WebApi.V2.Models.Novelty.Icon*
+  name: Icon
+  href: api/Gw2Sharp.WebApi.V2.Models.Novelty.html#Gw2Sharp_WebApi_V2_Models_Novelty_Icon_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Novelty.Icon
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Novelty.Icon
+  nameWithType: Novelty.Icon
+- uid: Gw2Sharp.WebApi.V2.Models.Novelty.Id
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.Novelty.html#Gw2Sharp_WebApi_V2_Models_Novelty_Id
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Novelty.Id
+  fullName: Gw2Sharp.WebApi.V2.Models.Novelty.Id
+  nameWithType: Novelty.Id
+- uid: Gw2Sharp.WebApi.V2.Models.Novelty.Id*
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.Novelty.html#Gw2Sharp_WebApi_V2_Models_Novelty_Id_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Novelty.Id
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Novelty.Id
+  nameWithType: Novelty.Id
+- uid: Gw2Sharp.WebApi.V2.Models.Novelty.Name
+  name: Name
+  href: api/Gw2Sharp.WebApi.V2.Models.Novelty.html#Gw2Sharp_WebApi_V2_Models_Novelty_Name
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Novelty.Name
+  fullName: Gw2Sharp.WebApi.V2.Models.Novelty.Name
+  nameWithType: Novelty.Name
+- uid: Gw2Sharp.WebApi.V2.Models.Novelty.Name*
+  name: Name
+  href: api/Gw2Sharp.WebApi.V2.Models.Novelty.html#Gw2Sharp_WebApi_V2_Models_Novelty_Name_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Novelty.Name
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Novelty.Name
+  nameWithType: Novelty.Name
+- uid: Gw2Sharp.WebApi.V2.Models.Novelty.Slot
+  name: Slot
+  href: api/Gw2Sharp.WebApi.V2.Models.Novelty.html#Gw2Sharp_WebApi_V2_Models_Novelty_Slot
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Novelty.Slot
+  fullName: Gw2Sharp.WebApi.V2.Models.Novelty.Slot
+  nameWithType: Novelty.Slot
+- uid: Gw2Sharp.WebApi.V2.Models.Novelty.Slot*
+  name: Slot
+  href: api/Gw2Sharp.WebApi.V2.Models.Novelty.html#Gw2Sharp_WebApi_V2_Models_Novelty_Slot_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Novelty.Slot
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Novelty.Slot
+  nameWithType: Novelty.Slot
+- uid: Gw2Sharp.WebApi.V2.Models.Novelty.UnlockItem
+  name: UnlockItem
+  href: api/Gw2Sharp.WebApi.V2.Models.Novelty.html#Gw2Sharp_WebApi_V2_Models_Novelty_UnlockItem
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Novelty.UnlockItem
+  fullName: Gw2Sharp.WebApi.V2.Models.Novelty.UnlockItem
+  nameWithType: Novelty.UnlockItem
+- uid: Gw2Sharp.WebApi.V2.Models.Novelty.UnlockItem*
+  name: UnlockItem
+  href: api/Gw2Sharp.WebApi.V2.Models.Novelty.html#Gw2Sharp_WebApi_V2_Models_Novelty_UnlockItem_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Novelty.UnlockItem
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Novelty.UnlockItem
+  nameWithType: Novelty.UnlockItem
+- uid: Gw2Sharp.WebApi.V2.Models.NoveltySlot
+  name: NoveltySlot
+  href: api/Gw2Sharp.WebApi.V2.Models.NoveltySlot.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.NoveltySlot
+  fullName: Gw2Sharp.WebApi.V2.Models.NoveltySlot
+  nameWithType: NoveltySlot
+- uid: Gw2Sharp.WebApi.V2.Models.NoveltySlot.Chair
+  name: Chair
+  href: api/Gw2Sharp.WebApi.V2.Models.NoveltySlot.html#Gw2Sharp_WebApi_V2_Models_NoveltySlot_Chair
+  commentId: F:Gw2Sharp.WebApi.V2.Models.NoveltySlot.Chair
+  fullName: Gw2Sharp.WebApi.V2.Models.NoveltySlot.Chair
+  nameWithType: NoveltySlot.Chair
+- uid: Gw2Sharp.WebApi.V2.Models.NoveltySlot.HeldItem
+  name: HeldItem
+  href: api/Gw2Sharp.WebApi.V2.Models.NoveltySlot.html#Gw2Sharp_WebApi_V2_Models_NoveltySlot_HeldItem
+  commentId: F:Gw2Sharp.WebApi.V2.Models.NoveltySlot.HeldItem
+  fullName: Gw2Sharp.WebApi.V2.Models.NoveltySlot.HeldItem
+  nameWithType: NoveltySlot.HeldItem
+- uid: Gw2Sharp.WebApi.V2.Models.NoveltySlot.Miscellaneous
+  name: Miscellaneous
+  href: api/Gw2Sharp.WebApi.V2.Models.NoveltySlot.html#Gw2Sharp_WebApi_V2_Models_NoveltySlot_Miscellaneous
+  commentId: F:Gw2Sharp.WebApi.V2.Models.NoveltySlot.Miscellaneous
+  fullName: Gw2Sharp.WebApi.V2.Models.NoveltySlot.Miscellaneous
+  nameWithType: NoveltySlot.Miscellaneous
+- uid: Gw2Sharp.WebApi.V2.Models.NoveltySlot.Music
+  name: Music
+  href: api/Gw2Sharp.WebApi.V2.Models.NoveltySlot.html#Gw2Sharp_WebApi_V2_Models_NoveltySlot_Music
+  commentId: F:Gw2Sharp.WebApi.V2.Models.NoveltySlot.Music
+  fullName: Gw2Sharp.WebApi.V2.Models.NoveltySlot.Music
+  nameWithType: NoveltySlot.Music
+- uid: Gw2Sharp.WebApi.V2.Models.NoveltySlot.Tonic
+  name: Tonic
+  href: api/Gw2Sharp.WebApi.V2.Models.NoveltySlot.html#Gw2Sharp_WebApi_V2_Models_NoveltySlot_Tonic
+  commentId: F:Gw2Sharp.WebApi.V2.Models.NoveltySlot.Tonic
+  fullName: Gw2Sharp.WebApi.V2.Models.NoveltySlot.Tonic
+  nameWithType: NoveltySlot.Tonic
+- uid: Gw2Sharp.WebApi.V2.Models.NoveltySlot.Unknown
+  name: Unknown
+  href: api/Gw2Sharp.WebApi.V2.Models.NoveltySlot.html#Gw2Sharp_WebApi_V2_Models_NoveltySlot_Unknown
+  commentId: F:Gw2Sharp.WebApi.V2.Models.NoveltySlot.Unknown
+  fullName: Gw2Sharp.WebApi.V2.Models.NoveltySlot.Unknown
+  nameWithType: NoveltySlot.Unknown
 - uid: Gw2Sharp.WebApi.V2.Models.PoiType
   name: PoiType
   href: api/Gw2Sharp.WebApi.V2.Models.PoiType.html
