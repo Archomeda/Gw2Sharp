@@ -8,6 +8,11 @@ namespace Gw2Sharp.WebApi
     public interface IGw2WebApiClient
     {
         /// <summary>
+        /// Gets the API render service.
+        /// </summary>
+        IGw2WebApiRenderClient Render { get; }
+
+        /// <summary>
         /// Gets the version 2 of the API.
         /// </summary>
         IGw2WebApiV2Client V2 { get; }

@@ -12,6 +12,12 @@ namespace Gw2Sharp.WebApi.Http
     public class HttpRequest : IHttpRequest
     {
         /// <summary>
+        /// Creates a new <see cref="HttpRequest"/>.
+        /// </summary>
+        /// <param name="url">The URL.</param>
+        public HttpRequest(Uri url) : this(url, null) { }
+
+        /// <summary>
         /// Creates a new <see cref="HttpRequest" />.
         /// </summary>
         /// <param name="url">The URL.</param>
@@ -28,7 +34,7 @@ namespace Gw2Sharp.WebApi.Http
         /// </summary>
         /// <param name="url">The URL.</param>
         /// <param name="requestHeaders">The request headers to use in the web request.</param>
-        public HttpRequest(Uri url, IEnumerable<KeyValuePair<string, string>>? requestHeaders) :
+        public HttpRequest(Uri url, IEnumerable<KeyValuePair<string, string>> requestHeaders) :
             this(url, requestHeaders?.ShallowCopy())
         { }
 

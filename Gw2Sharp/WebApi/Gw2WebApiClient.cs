@@ -13,6 +13,7 @@ namespace Gw2Sharp.WebApi
         /// </summary>
         internal static Uri UrlBase => new Uri("https://api.guildwars2.com");
 
+        private readonly IGw2WebApiRenderClient render;
         private readonly IGw2WebApiV2Client v2;
 
         /// <summary>
@@ -30,8 +31,12 @@ namespace Gw2Sharp.WebApi
             if (connection == null)
                 throw new ArgumentNullException(nameof(connection));
 
+            this.render = new Gw2WebApiRenderClient(connection);
             this.v2 = new Gw2WebApiV2Client(connection);
         }
+
+        /// <inheritdoc />
+        public virtual IGw2WebApiRenderClient Render => this.render;
 
         /// <inheritdoc />
         public virtual IGw2WebApiV2Client V2 => this.v2;
