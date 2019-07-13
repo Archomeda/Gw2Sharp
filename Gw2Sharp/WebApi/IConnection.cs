@@ -43,6 +43,17 @@ namespace Gw2Sharp.WebApi
         ICacheMethod CacheMethod { get; }
 
         /// <summary>
+        /// Gets the render cache duration.
+        /// If set to <see cref="TimeSpan.Zero"/>, the cache time that the render server returns in the headers will be used.
+        /// </summary>
+        TimeSpan RenderCacheDuration { get; }
+
+        /// <summary>
+        /// Gets the cache controller that's used for render file API requests.
+        /// </summary>
+        ICacheMethod RenderCacheMethod { get; }
+
+        /// <summary>
         /// Requests data from the API.
         /// </summary>
         /// <typeparam name="TResponse">The response type.</typeparam>

@@ -48,31 +48,51 @@ namespace Gw2Sharp.WebApi
 
 
         /// <summary>
-        /// Creates a new <see cref="Connection"/> without an API key, English locale and default HTTP client and caching method.
+        /// Creates a new <see cref="Connection"/> without an API key,
+        /// with English locale,
+        /// with .NET's HTTP client,
+        /// with in-memory caching method for API requests,
+        /// and no caching method for render API requests.
         /// </summary>
         public Connection() : this(string.Empty, Locale.English) { }
 
         /// <summary>
-        /// Creates a new <see cref="Connection"/> with a specified API key and the default English locale.
+        /// Creates a new <see cref="Connection"/> with a specified API key,
+        /// English locale,
+        /// .NET's HTTP client,
+        /// in-memory caching method for API requests,
+        /// and no caching method for render API requests.
         /// </summary>
         /// <param name="accessToken">The API key.</param>
         public Connection(string accessToken) : this(accessToken, Locale.English) { }
 
         /// <summary>
-        /// Creates a new <see cref="Connection"/> with a specified locale.
+        /// Creates a new <see cref="Connection"/> without an API key,
+        /// with a specified locale,
+        /// with .NET's HTTP client,
+        /// with in-memory caching method for API requests,
+        /// and no caching method for render API requests.
         /// </summary>
         /// <param name="locale">The locale.</param>
         public Connection(Locale locale) : this(string.Empty, locale) { }
 
         /// <summary>
-        /// Creates a new <see cref="Connection"/> with a specified API key and locale.
+        /// Creates a new <see cref="Connection"/> with a specified API key,
+        /// a specified locale,
+        /// .NET's HTTP client,
+        /// in-memory caching method for API requests,
+        /// and no caching method for render API requests.
         /// </summary>
         /// <param name="accessToken">The API key.</param>
         /// <param name="locale">The locale.</param>
         public Connection(string accessToken, Locale locale) : this(accessToken, locale, new HttpClient(), new MemoryCacheMethod()) { }
 
         /// <summary>
-        /// Creates a new <see cref="Connection"/>.
+        /// Creates a new <see cref="Connection"/> with a specified API key,
+        /// a specified locale,
+        /// a specified HTTP client,
+        /// a specified caching method for API requests,
+        /// and no caching method for render API requests.
         /// </summary>
         /// <param name="accessToken">The API key.</param>
         /// <param name="locale">The locale.</param>
@@ -84,7 +104,47 @@ namespace Gw2Sharp.WebApi
         { }
 
         /// <summary>
-        /// Creates a new <see cref="Connection"/>.
+        /// Creates a new <see cref="Connection"/> with a specified API key,
+        /// locale,
+        /// HTTP client,
+        /// caching method for API requests,
+        /// and caching method for render API requests.
+        /// </summary>
+        /// <param name="accessToken">The API key.</param>
+        /// <param name="locale">The locale.</param>
+        /// <param name="httpClient">The HTTP client.</param>
+        /// <param name="cacheMethod">The cache method.</param>
+        /// <param name="renderCacheMethod">The render cache method.</param>
+        /// <exception cref="NullReferenceException"><paramref name="httpClient"/> or <paramref name="cacheMethod"/> is <c>null</c>.</exception>
+        public Connection(string accessToken, Locale locale, IHttpClient httpClient, ICacheMethod cacheMethod, ICacheMethod renderCacheMethod) :
+            this(accessToken, locale, string.Empty, httpClient, cacheMethod, renderCacheMethod)
+        { }
+
+        /// <summary>
+        /// Creates a new <see cref="Connection"/> with a specified API key,
+        /// locale,
+        /// HTTP client,
+        /// caching method for API requests,
+        /// and caching method for render API requests.
+        /// </summary>
+        /// <param name="accessToken">The API key.</param>
+        /// <param name="locale">The locale.</param>
+        /// <param name="httpClient">The HTTP client.</param>
+        /// <param name="cacheMethod">The cache method.</param>
+        /// <param name="renderCacheMethod">The render cache method.</param>
+        /// <param name="renderCacheDuration">The render cache duration (defaults to render API headers)</param>
+        /// <exception cref="NullReferenceException"><paramref name="httpClient"/> or <paramref name="cacheMethod"/> is <c>null</c>.</exception>
+        public Connection(string accessToken, Locale locale, IHttpClient httpClient, ICacheMethod cacheMethod, ICacheMethod renderCacheMethod, TimeSpan renderCacheDuration) :
+            this(accessToken, locale, string.Empty, httpClient, cacheMethod, renderCacheMethod, renderCacheDuration)
+        { }
+
+        /// <summary>
+        /// Creates a new <see cref="Connection"/> with a specified API key,
+        /// a specified locale,
+        /// a custom user agent,
+        /// a specified HTTP client,
+        /// a specified caching method for API requests,
+        /// and no caching method for render API requests.
         /// </summary>
         /// <param name="accessToken">The API key.</param>
         /// <param name="locale">The locale.</param>
@@ -92,7 +152,46 @@ namespace Gw2Sharp.WebApi
         /// <param name="httpClient">The HTTP client.</param>
         /// <param name="cacheMethod">The cache method.</param>
         /// <exception cref="NullReferenceException"><paramref name="httpClient"/> or <paramref name="cacheMethod"/> is <c>null</c>.</exception>
-        public Connection(string accessToken, Locale locale, string userAgent, IHttpClient httpClient, ICacheMethod cacheMethod)
+        public Connection(string accessToken, Locale locale, string userAgent, IHttpClient httpClient, ICacheMethod cacheMethod) :
+            this(accessToken, locale, userAgent, httpClient, cacheMethod, new NullCacheMethod())
+        { }
+
+        /// <summary>
+        /// Creates a new <see cref="Connection"/> with a specified API key,
+        /// locale,
+        /// custom user agent,
+        /// HTTP client,
+        /// caching method for API requests,
+        /// and caching method for render API requests.
+        /// </summary>
+        /// <param name="accessToken">The API key.</param>
+        /// <param name="locale">The locale.</param>
+        /// <param name="userAgent">The User-Agent.</param>
+        /// <param name="httpClient">The HTTP client.</param>
+        /// <param name="cacheMethod">The cache method.</param>
+        /// <param name="renderCacheMethod">The render cache method.</param>
+        /// <exception cref="NullReferenceException"><paramref name="httpClient"/>, <paramref name="cacheMethod"/> or <paramref name="renderCacheMethod"/> is <c>null</c>.</exception>
+        public Connection(string accessToken, Locale locale, string userAgent, IHttpClient httpClient, ICacheMethod cacheMethod, ICacheMethod renderCacheMethod) :
+            this(accessToken, locale, userAgent, httpClient, cacheMethod, renderCacheMethod, TimeSpan.Zero)
+        { }
+
+        /// <summary>
+        /// Creates a new <see cref="Connection"/> with a specified API key,
+        /// locale,
+        /// custom user agent,
+        /// HTTP client,
+        /// caching method for API requests,
+        /// and caching method for render API requests.
+        /// </summary>
+        /// <param name="accessToken">The API key.</param>
+        /// <param name="locale">The locale.</param>
+        /// <param name="userAgent">The User-Agent.</param>
+        /// <param name="httpClient">The HTTP client.</param>
+        /// <param name="cacheMethod">The cache method.</param>
+        /// <param name="renderCacheMethod">The render cache method.</param>
+        /// <param name="renderCacheDuration">The render cache duration (defaults to render API headers)</param>
+        /// <exception cref="NullReferenceException"><paramref name="httpClient"/>, <paramref name="cacheMethod"/> or <paramref name="renderCacheMethod"/> is <c>null</c>.</exception>
+        public Connection(string accessToken, Locale locale, string userAgent, IHttpClient httpClient, ICacheMethod cacheMethod, ICacheMethod renderCacheMethod, TimeSpan renderCacheDuration)
         {
             this.AccessToken = accessToken ?? string.Empty;
             this.Locale = locale;
@@ -100,6 +199,8 @@ namespace Gw2Sharp.WebApi
                 $"Gw2Sharp/{typeof(Connection).GetTypeInfo().Assembly.GetName().Version.ToString(3)} (https://github.com/Archomeda/Gw2Sharp)";
             this.HttpClient = httpClient ?? throw new ArgumentNullException(nameof(httpClient));
             this.CacheMethod = cacheMethod ?? throw new ArgumentNullException(nameof(cacheMethod));
+            this.RenderCacheMethod = renderCacheMethod ?? throw new ArgumentNullException(nameof(renderCacheMethod));
+            this.RenderCacheDuration = renderCacheDuration;
 
             this.requestHeaders = new Dictionary<string, string>()
             {
@@ -111,6 +212,7 @@ namespace Gw2Sharp.WebApi
             if (!string.IsNullOrWhiteSpace(this.UserAgent))
                 this.requestHeaders.Add("User-Agent", this.UserAgent);
         }
+
 
         /// <inheritdoc />
         public string AccessToken { get; set; }
@@ -140,6 +242,12 @@ namespace Gw2Sharp.WebApi
 
         /// <inheritdoc />
         public ICacheMethod CacheMethod { get; set; }
+
+        /// <inheritdoc />
+        public TimeSpan RenderCacheDuration { get; set; } = TimeSpan.Zero;
+
+        /// <inheritdoc />
+        public ICacheMethod RenderCacheMethod { get; set; }
 
 
         /// <inheritdoc />

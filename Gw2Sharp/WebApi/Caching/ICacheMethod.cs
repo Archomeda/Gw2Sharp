@@ -35,7 +35,7 @@ namespace Gw2Sharp.WebApi.Caching
         /// <param name="item">The item to cache.</param>
         /// <param name="expiryTime">The expiry time.</param>
         /// <returns>The task for this operation.</returns>
-        Task SetAsync<T>(string category, object id, T item, DateTime expiryTime) where T : object;
+        Task SetAsync<T>(string category, object id, T item, DateTimeOffset expiryTime) where T : object;
 
         /// <summary>
         /// Gets many cached items of a given type at once.
@@ -67,7 +67,7 @@ namespace Gw2Sharp.WebApi.Caching
         /// <param name="expiryTime">The expiry date.</param>
         /// <param name="updateFunc">The method that is called when no cache has been found.</param>
         /// <returns>The item.</returns>
-        Task<CacheItem<T>> GetOrUpdateAsync<T>(string category, object id, DateTime expiryTime, Func<Task<T>> updateFunc) where T : object;
+        Task<CacheItem<T>> GetOrUpdateAsync<T>(string category, object id, DateTimeOffset expiryTime, Func<Task<T>> updateFunc) where T : object;
 
         /// <summary>
         /// Gets a cached item if it exists. If it doesn't exist, it calls <paramref name="updateFunc"/> to provide an updated value and its expiry date,
@@ -78,7 +78,7 @@ namespace Gw2Sharp.WebApi.Caching
         /// <param name="id">The cache id.</param>
         /// <param name="updateFunc">The method that is called when no cache has been found.</param>
         /// <returns>The item.</returns>
-        Task<CacheItem<T>> GetOrUpdateAsync<T>(string category, object id, Func<Task<(T, DateTime)>> updateFunc) where T : object;
+        Task<CacheItem<T>> GetOrUpdateAsync<T>(string category, object id, Func<Task<(T, DateTimeOffset)>> updateFunc) where T : object;
 
         /// <summary>
         /// Gets cached items if they exist. If one or more don't exist, <paramref name="updateFunc"/> will be called to provide updated values and their expiry date,
@@ -92,7 +92,7 @@ namespace Gw2Sharp.WebApi.Caching
         Task<IList<CacheItem<T>>> GetOrUpdateManyAsync<T>(
             string category,
             IEnumerable<object> ids,
-            Func<IList<object>, Task<(IDictionary<object, T>, DateTime)>> updateFunc)
+            Func<IList<object>, Task<(IDictionary<object, T>, DateTimeOffset)>> updateFunc)
             where T : object;
 
         /// <summary>
@@ -108,7 +108,7 @@ namespace Gw2Sharp.WebApi.Caching
         Task<IList<CacheItem<T>>> GetOrUpdateManyAsync<T>(
             string category,
             IEnumerable<object> ids,
-            DateTime expiryTime,
+            DateTimeOffset expiryTime,
             Func<IList<object>, Task<IDictionary<object, T>>> updateFunc)
             where T : object;
 

@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
+using Gw2Sharp.WebApi.Caching;
 using Gw2Sharp.WebApi.Http;
 
 namespace Gw2Sharp.WebApi.V2
@@ -11,6 +12,7 @@ namespace Gw2Sharp.WebApi.V2
     /// </summary>
     public class Gw2WebApiRenderClient : IGw2WebApiRenderClient
     {
+        private const string CACHE_CATEGORY = "render";
         private readonly IConnection connection;
 
         /// <summary>
@@ -27,6 +29,22 @@ namespace Gw2Sharp.WebApi.V2
         {
             this.connection = connection;
         }
+
+
+        private Task<CacheItem<byte[]>> DownloadImageToCacheAsync(string renderUrl, CancellationToken cancellationToken)
+        {
+            return this.connection.RenderCacheMethod.GetOrUpdateAsync<byte[]>(CACHE_CATEGORY, renderUrl, async () =>
+            {
+                var request = new HttpRequest(new Uri(renderUrl));
+                var response = await this.connection.HttpClient.RequestStreamAsync(request, cancellationToken).ConfigureAwait(false);
+
+                using var memoryStream = new MemoryStream();
+                await response.ContentStream.CopyToAsync(memoryStream).ConfigureAwait(false);
+                var responseInfo = new HttpResponseInfo(response.StatusCode, response.RequestHeaders, response.ResponseHeaders);
+                return (memoryStream.ToArray(), responseInfo.Expires ?? responseInfo.Date + responseInfo.CacheMaxAge ?? DateTimeOffset.Now);
+            });
+        }
+
 
         /// <inheritdoc />
         public virtual Task DownloadImageToStreamAsync(Stream targetStream, string renderUrl) =>
@@ -49,10 +67,11 @@ namespace Gw2Sharp.WebApi.V2
 
         private async Task DownloadImageToStreamInternalAsync(Stream targetStream, string renderUrl, CancellationToken cancellationToken)
         {
-            var request = new HttpRequest(new Uri(renderUrl));
-            var response = await this.connection.HttpClient.RequestStreamAsync(request, cancellationToken).ConfigureAwait(false);
-            await response.ContentStream.CopyToAsync(targetStream).ConfigureAwait(false);
+            var cacheItem = await this.DownloadImageToCacheAsync(renderUrl, cancellationToken).ConfigureAwait(false);
+            using var memoryStream = new MemoryStream(cacheItem.Item, false);
+            await memoryStream.CopyToAsync(targetStream).ConfigureAwait(false);
         }
+
 
         /// <inheritdoc />
         public virtual Task<byte[]> DownloadImageToByteArrayAsync(string renderUrl) =>
@@ -73,8 +92,8 @@ namespace Gw2Sharp.WebApi.V2
 
         private async Task<byte[]> DownloadImageToByteArrayInternalAsync(string renderUrl, CancellationToken cancellationToken)
         {
-            using var memoryStream = new MemoryStream();
-            await this.DownloadImageToStreamInternalAsync(memoryStream, renderUrl, cancellationToken).ConfigureAwait(false);
+            var cacheItem = await this.DownloadImageToCacheAsync(renderUrl, cancellationToken).ConfigureAwait(false);
+            using var memoryStream = new MemoryStream(cacheItem.Item, false);
             return memoryStream.ToArray();
         }
     }

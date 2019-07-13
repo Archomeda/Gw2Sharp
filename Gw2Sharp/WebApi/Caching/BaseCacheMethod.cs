@@ -17,7 +17,7 @@ namespace Gw2Sharp.WebApi.Caching
         public abstract Task SetAsync<T>(CacheItem<T> item) where T : object;
 
         /// <inheritdoc />
-        public virtual Task SetAsync<T>(string category, object id, T item, DateTime expiryTime) where T : object
+        public virtual Task SetAsync<T>(string category, object id, T item, DateTimeOffset expiryTime) where T : object
         {
             if (category == null)
                 throw new ArgumentNullException(nameof(category));
@@ -66,7 +66,7 @@ namespace Gw2Sharp.WebApi.Caching
         }
 
         /// <inheritdoc />
-        public virtual Task<CacheItem<T>> GetOrUpdateAsync<T>(string category, object id, DateTime expiryTime, Func<Task<T>> updateFunc) where T : object
+        public virtual Task<CacheItem<T>> GetOrUpdateAsync<T>(string category, object id, DateTimeOffset expiryTime, Func<Task<T>> updateFunc) where T : object
         {
             if (updateFunc == null)
                 throw new ArgumentNullException(nameof(updateFunc));
@@ -75,7 +75,7 @@ namespace Gw2Sharp.WebApi.Caching
         }
 
         /// <inheritdoc />
-        public virtual Task<CacheItem<T>> GetOrUpdateAsync<T>(string category, object id, Func<Task<(T, DateTime)>> updateFunc) where T : object
+        public virtual Task<CacheItem<T>> GetOrUpdateAsync<T>(string category, object id, Func<Task<(T, DateTimeOffset)>> updateFunc) where T : object
         {
             if (category == null)
                 throw new ArgumentNullException(nameof(category));
@@ -87,7 +87,7 @@ namespace Gw2Sharp.WebApi.Caching
             return this.GetOrUpdateInternalAsync(category, id, updateFunc);
         }
 
-        private async Task<CacheItem<T>> GetOrUpdateInternalAsync<T>(string category, object id, Func<Task<(T, DateTime)>> updateFunc) where T : object
+        private async Task<CacheItem<T>> GetOrUpdateInternalAsync<T>(string category, object id, Func<Task<(T, DateTimeOffset)>> updateFunc) where T : object
         {
             var fItem = await this.TryGetAsync<T>(category, id).ConfigureAwait(false);
             if (fItem != null)
@@ -103,7 +103,7 @@ namespace Gw2Sharp.WebApi.Caching
         public virtual Task<IList<CacheItem<T>>> GetOrUpdateManyAsync<T>(
             string category,
             IEnumerable<object> ids,
-            DateTime expiryTime,
+            DateTimeOffset expiryTime,
             Func<IList<object>, Task<IDictionary<object, T>>> updateFunc) where T : object
         {
             if (updateFunc == null)
@@ -116,7 +116,7 @@ namespace Gw2Sharp.WebApi.Caching
         public virtual Task<IList<CacheItem<T>>> GetOrUpdateManyAsync<T>(
             string category,
             IEnumerable<object> ids,
-            Func<IList<object>, Task<(IDictionary<object, T>, DateTime)>> updateFunc) where T : object
+            Func<IList<object>, Task<(IDictionary<object, T>, DateTimeOffset)>> updateFunc) where T : object
         {
             if (category == null)
                 throw new ArgumentNullException(nameof(category));
@@ -131,7 +131,7 @@ namespace Gw2Sharp.WebApi.Caching
         private async Task<IList<CacheItem<T>>> GetOrUpdateManyInternalAsync<T>(
             string category,
             IEnumerable<object> ids,
-            Func<IList<object>, Task<(IDictionary<object, T>, DateTime)>> updateFunc) where T : object
+            Func<IList<object>, Task<(IDictionary<object, T>, DateTimeOffset)>> updateFunc) where T : object
         {
             var idsList = ids as IList<object> ?? ids.ToList();
 

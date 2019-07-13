@@ -240,7 +240,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
             var cache = await this.Connection.CacheMethod.GetOrUpdateManyAsync<TEndpointObject>(this.EndpointPath, ids.Cast<object>(), async missingIds =>
             {
                 var partitions = Partitioner.Create(0, missingIds.Count, MAX_PAGE_SIZE).GetDynamicPartitions();
-                var latestCacheTime = DateTime.Now;
+                var latestCacheTime = DateTimeOffset.Now;
 
                 var result = await Task.WhenAll(partitions.Select(async partition =>
                 {

@@ -15,7 +15,7 @@ namespace Gw2Sharp.WebApi.Caching
         /// <param name="id">The id.</param>
         /// <param name="item">The item.</param>
         /// <param name="expiryTime">The expiry time.</param>
-        public CacheItem(string category, object id, object item, DateTime expiryTime)
+        public CacheItem(string category, object id, object item, DateTimeOffset expiryTime)
         {
             this.Category = category ?? throw new ArgumentNullException(nameof(category));
             this.Id = id ?? throw new ArgumentNullException(nameof(id));
@@ -41,7 +41,7 @@ namespace Gw2Sharp.WebApi.Caching
         /// <summary>
         /// The time when this cache item expires.
         /// </summary>
-        public DateTime ExpiryTime { get; }
+        public DateTimeOffset ExpiryTime { get; }
 
         /// <inheritdoc />
         public override int GetHashCode()
@@ -87,7 +87,7 @@ namespace Gw2Sharp.WebApi.Caching
         /// <param name="id">The id.</param>
         /// <param name="item">The item.</param>
         /// <param name="expiryTime">The expiry time.</param>
-        public CacheItem(string category, object id, T item, DateTime expiryTime) : base(category, id, item, expiryTime) { }
+        public CacheItem(string category, object id, T item, DateTimeOffset expiryTime) : base(category, id, item, expiryTime) { }
 
         /// <summary>
         /// The cache item.
