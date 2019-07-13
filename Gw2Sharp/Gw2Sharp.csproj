@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>netstandard2.0;net461;net471</TargetFrameworks>
     <LangVersion>8.0</LangVersion>
     <NullableContextOptions>enable</NullableContextOptions>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -23,6 +23,25 @@ Visit https://archomeda.github.io/Gw2Sharp for more information.
     <RepositoryUrl>https://github.com/Archomeda/Gw2Sharp</RepositoryUrl>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <PackageReference Include="System.IO.Compression" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)'=='net461'">
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="System.ValueTuple" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)'=='net471'">
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+
   <PropertyGroup Condition="'$(APPVEYOR)'!=''">
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
   </PropertyGroup>
@@ -38,10 +57,5 @@ Visit https://archomeda.github.io/Gw2Sharp for more information.
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
-    <PackageReference Include="System.IO.Compression" Version="4.3.0" />
-  </ItemGroup>
 
 </Project>
