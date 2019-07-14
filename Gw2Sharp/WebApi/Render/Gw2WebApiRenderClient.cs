@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Gw2Sharp.WebApi.Caching;
 using Gw2Sharp.WebApi.Http;
 
-namespace Gw2Sharp.WebApi.V2
+namespace Gw2Sharp.WebApi.Render
 {
     /// <summary>
     /// A client for the Guild Wars 2 API render service.
@@ -47,11 +47,11 @@ namespace Gw2Sharp.WebApi.V2
 
 
         /// <inheritdoc />
-        public virtual Task DownloadImageToStreamAsync(Stream targetStream, string renderUrl) =>
-            this.DownloadImageToStreamAsync(targetStream, renderUrl, CancellationToken.None);
+        public virtual Task DownloadToStreamAsync(Stream targetStream, string renderUrl) =>
+            this.DownloadToStreamAsync(targetStream, renderUrl, CancellationToken.None);
 
         /// <inheritdoc />
-        public virtual Task DownloadImageToStreamAsync(Stream targetStream, string renderUrl, CancellationToken cancellationToken)
+        public virtual Task DownloadToStreamAsync(Stream targetStream, string renderUrl, CancellationToken cancellationToken)
         {
             if (targetStream == null)
                 throw new ArgumentNullException(nameof(targetStream));
@@ -62,10 +62,10 @@ namespace Gw2Sharp.WebApi.V2
                 throw new ArgumentException("Render URL may not be empty or only contain whitespaces", nameof(renderUrl));
 #pragma warning restore S2583 // Conditionally executed blocks should be reachable
 
-            return this.DownloadImageToStreamInternalAsync(targetStream, renderUrl, cancellationToken);
+            return this.DownloadToStreamInternalAsync(targetStream, renderUrl, cancellationToken);
         }
 
-        private async Task DownloadImageToStreamInternalAsync(Stream targetStream, string renderUrl, CancellationToken cancellationToken)
+        private async Task DownloadToStreamInternalAsync(Stream targetStream, string renderUrl, CancellationToken cancellationToken)
         {
             var cacheItem = await this.DownloadImageToCacheAsync(renderUrl, cancellationToken).ConfigureAwait(false);
             using var memoryStream = new MemoryStream(cacheItem.Item, false);
@@ -74,11 +74,11 @@ namespace Gw2Sharp.WebApi.V2
 
 
         /// <inheritdoc />
-        public virtual Task<byte[]> DownloadImageToByteArrayAsync(string renderUrl) =>
-            this.DownloadImageToByteArrayAsync(renderUrl, CancellationToken.None);
+        public virtual Task<byte[]> DownloadToByteArrayAsync(string renderUrl) =>
+            this.DownloadToByteArrayAsync(renderUrl, CancellationToken.None);
 
         /// <inheritdoc />
-        public virtual Task<byte[]> DownloadImageToByteArrayAsync(string renderUrl, CancellationToken cancellationToken)
+        public virtual Task<byte[]> DownloadToByteArrayAsync(string renderUrl, CancellationToken cancellationToken)
         {
             if (renderUrl == null)
                 throw new ArgumentNullException(nameof(renderUrl));
@@ -87,10 +87,10 @@ namespace Gw2Sharp.WebApi.V2
                 throw new ArgumentException("Render URL may not be empty or only contain whitespaces", nameof(renderUrl));
 #pragma warning restore S2583 // Conditionally executed blocks should be reachable
 
-            return this.DownloadImageToByteArrayInternalAsync(renderUrl, cancellationToken);
+            return this.DownloadToByteArrayInternalAsync(renderUrl, cancellationToken);
         }
 
-        private async Task<byte[]> DownloadImageToByteArrayInternalAsync(string renderUrl, CancellationToken cancellationToken)
+        private async Task<byte[]> DownloadToByteArrayInternalAsync(string renderUrl, CancellationToken cancellationToken)
         {
             var cacheItem = await this.DownloadImageToCacheAsync(renderUrl, cancellationToken).ConfigureAwait(false);
             using var memoryStream = new MemoryStream(cacheItem.Item, false);

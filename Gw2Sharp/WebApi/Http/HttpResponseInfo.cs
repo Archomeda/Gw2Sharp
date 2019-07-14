@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Net;
 using System.Net.Http.Headers;
 using Gw2Sharp.Extensions;
-using Gw2Sharp.WebApi.Http;
 
-namespace Gw2Sharp.WebApi.V2
+namespace Gw2Sharp.WebApi.Http
 {
     /// <summary>
     /// An HTTP response info.

@@ -1,4 +1,5 @@
 using System;
+using Gw2Sharp.WebApi.Render;
 using Gw2Sharp.WebApi.V2;
 
 namespace Gw2Sharp.WebApi

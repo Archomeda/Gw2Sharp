@@ -2,7 +2,7 @@ using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Gw2Sharp.WebApi.V2
+namespace Gw2Sharp.WebApi.Render
 {
     /// <summary>
     /// An interface for the client implementation of the Guild Wars 2 API render service.
@@ -10,35 +10,35 @@ namespace Gw2Sharp.WebApi.V2
     public interface IGw2WebApiRenderClient
     {
         /// <summary>
-        /// Downloads an image from the render service to a stream asynchronously.
+        /// Downloads a resource from the render service to a stream asynchronously.
         /// </summary>
         /// <param name="targetStream">The target stream.</param>
-        /// <param name="renderUrl">The image render URL.</param>
+        /// <param name="renderUrl">The resource render URL.</param>
         /// <returns>The task.</returns>
-        Task DownloadImageToStreamAsync(Stream targetStream, string renderUrl);
+        Task DownloadToStreamAsync(Stream targetStream, string renderUrl);
 
         /// <summary>
-        /// Downloads an image from the render service to a stream asynchronously.
+        /// Downloads a resource from the render service to a stream asynchronously.
         /// </summary>
         /// <param name="targetStream">The target stream.</param>
-        /// <param name="renderUrl">The image render URL.</param>
+        /// <param name="renderUrl">The resource render URL.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The task.</returns>
-        Task DownloadImageToStreamAsync(Stream targetStream, string renderUrl, CancellationToken cancellationToken);
+        Task DownloadToStreamAsync(Stream targetStream, string renderUrl, CancellationToken cancellationToken);
 
         /// <summary>
-        /// Downloads an image from the render service to a byte array asynchronously.
+        /// Downloads a resource from the render service to a byte array asynchronously.
         /// </summary>
-        /// <param name="renderUrl">The image render URL.</param>
-        /// <returns>The task with the image as byte array.</returns>
-        Task<byte[]> DownloadImageToByteArrayAsync(string renderUrl);
+        /// <param name="renderUrl">The resource render URL.</param>
+        /// <returns>The task with the resource as byte array.</returns>
+        Task<byte[]> DownloadToByteArrayAsync(string renderUrl);
 
         /// <summary>
-        /// Downloads an image from the render service to a byte array asynchronously.
+        /// Downloads a resource from the render service to a byte array asynchronously.
         /// </summary>
-        /// <param name="renderUrl">The image render URL.</param>
+        /// <param name="renderUrl">The resource render URL.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
-        /// <returns>The task with the image as byte array.</returns>
-        Task<byte[]> DownloadImageToByteArrayAsync(string renderUrl, CancellationToken cancellationToken);
+        /// <returns>The task with the resource as byte array.</returns>
+        Task<byte[]> DownloadToByteArrayAsync(string renderUrl, CancellationToken cancellationToken);
     }
 }
