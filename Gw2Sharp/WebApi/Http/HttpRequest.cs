@@ -25,7 +25,7 @@ namespace Gw2Sharp.WebApi.Http
         public HttpRequest(Uri url, IDictionary<string, string>? requestHeaders)
         {
             this.Url = url;
-            if (this.RequestHeaders != null)
+            if (requestHeaders != null)
                 this.RequestHeaders = new Dictionary<string, string>(requestHeaders).AsReadOnly();
         }
 
