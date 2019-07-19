@@ -50,7 +50,6 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
         {
             var (data, expected) = this.GetTestData(file);
 
-            var httpRequest = Substitute.For<IHttpRequest>();
             ((IWebApiClientInternal)this.Client).Connection.HttpClient.RequestAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Returns(callInfo =>
             {
                 this.AssertRequest(callInfo, client, "?page=2&page_size=100");
@@ -87,10 +86,9 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
             var (data, expected) = this.GetTestData(file);
             var id = this.GetId<TId>(expected[idName]);
 
-            var httpRequest = Substitute.For<IHttpRequest>();
             ((IWebApiClientInternal)this.Client).Connection.HttpClient.RequestAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Returns(callInfo =>
             {
-                this.AssertRequest(callInfo, client, $"/{id.ToString()}");
+                this.AssertRequest(callInfo, client, $"/{id!.ToString()}");
                 this.AssertAuthenticatedRequest(callInfo, client);
                 this.AssertLocalizedRequest(callInfo, client);
                 this.AssertSchemaVersionRequest(callInfo, client);
@@ -127,7 +125,6 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                 return i is JProperty prop ? prop.Value[idName] : i[idName];
             }));
 
-            var httpRequest = Substitute.For<IHttpRequest>();
             ((IWebApiClientInternal)this.Client).Connection.HttpClient.RequestAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Returns(callInfo =>
             {
                 this.AssertRequest(callInfo, client, $"?ids={string.Join(",", ids.Select(i => i?.ToString()))}");
@@ -146,7 +143,6 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
         {
             var (data, expected) = this.GetTestData(file);
 
-            var httpRequest = Substitute.For<IHttpRequest>();
             ((IWebApiClientInternal)this.Client).Connection.HttpClient.RequestAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Returns(callInfo =>
             {
                 this.AssertRequest(callInfo, client, string.Empty);
@@ -167,7 +163,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
             var parameterProperties = client.GetType()
                 .GetProperties(BindingFlags.Public | BindingFlags.Instance)
                 .Where(p => p.GetCustomAttribute<EndpointPathParameterAttribute>() != null);
-            if (parameterProperties.Count() > 0)
+            if (parameterProperties.Any())
             {
                 var builder = new UriBuilder(uri);
                 foreach (var parameter in parameterProperties)
@@ -337,12 +333,12 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                     Assert.Equal(Convert.ToDouble(expected.Value), @double, 10);
                     break;
                 default:
-                    if (((actual != null && actual.GetType() != typeof(string)) || actual == null) &&
+                    if (((actual != null && !(actual is string)) || actual == null) &&
                         expected.Type == JTokenType.String)
                     {
                         // Special case where the resulting value has been auto deserialized into something else than a string,
                         // while the original is a string.
-                        Assert.Equal(expected.Value, actual?.ToString() ?? "");
+                        Assert.Equal(expected.Value, actual?.ToString() ?? string.Empty);
                     }
                     else
                         Assert.Equal(expected.Value, actual);
