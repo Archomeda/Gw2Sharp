@@ -2,6 +2,8 @@
   items:
     - name: Introduction
       topicUid: Guides.Introduction
+    - name: Caching
+      topicUid: Guides.Caching
     - name: Services
       topicUid: Guides.Services
     - name: Parameterized endpoints
