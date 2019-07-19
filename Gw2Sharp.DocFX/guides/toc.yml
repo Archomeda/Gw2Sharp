@@ -4,7 +4,7 @@
       topicUid: Guides.Introduction
     - name: Caching
       topicUid: Guides.Caching
-    - name: Services
+    - name: Supported services
       topicUid: Guides.Services
     - name: Parameterized endpoints
       topicUid: Guides.ParameterizedEndpoints

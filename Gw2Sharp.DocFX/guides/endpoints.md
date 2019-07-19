@@ -4,4 +4,4 @@ title: Supported endpoints
 ---
 
 # Supported endpoints
-This page has been moved to [supported services](Guides.Services).
+This page has been moved to [supported services](xref:Guides.Services).
