@@ -134,5 +134,32 @@ namespace Gw2Sharp.Tests.Helpers
                 });
             }
         }
+
+        public static void ThrowsWhenEmptyStringConstructor(Type type, Type[] paramTypes, object[] callArgs, bool[] paramsEmpty)
+        {
+            var constructorInfo = type.GetConstructor(paramTypes);
+            if (constructorInfo == null)
+                throw new InvalidOperationException($"No appropriate constructor found with parameters: {string.Join(", ", paramTypes.Select(p => p.FullName))}");
+
+            for (int i = 0; i < paramsEmpty.Length && i < callArgs.Length && i < paramTypes.Length; i++)
+            {
+                if (!paramsEmpty[i])
+                    continue;
+
+                object?[] args = callArgs.ToArray();
+                args[i] = string.Empty;
+                Assert.Throws<ArgumentException>(constructorInfo.GetParameters()[i].Name, () =>
+                {
+                    try
+                    {
+                        Activator.CreateInstance(type, args);
+                    }
+                    catch (TargetInvocationException ex)
+                    {
+                        throw ex.InnerException;
+                    }
+                });
+            }
+        }
     }
 }

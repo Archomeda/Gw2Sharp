@@ -165,7 +165,7 @@ namespace Gw2Sharp.WebApi.Caching
                     zipEntry.Delete();
 
                 zipEntry = this.archive.CreateEntry(fileName, CompressionLevel.Fastest);
-                var zipStream = zipEntry.Open();
+                using var zipStream = zipEntry.Open();
                 if (item.Item is byte[] byteArrayData)
                 {
                     // A byte array is stored
