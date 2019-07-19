@@ -12,7 +12,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
     {
         public AccountWorldBossesClientTests()
         {
-            var connection = new Connection("12345678-1234-1234-1234-12345678901234567890-1234-1234-1234-123456789012", Locale.English, Substitute.For<IHttpClient>(), new NullCacheMethod());
+            var connection = new Connection("12345678-1234-1234-1234-12345678901234567890-1234-1234-1234-123456789012", Locale.English, cacheMethod: new NullCacheMethod(), httpClient: Substitute.For<IHttpClient>());
             this.client = new Gw2WebApiClient(connection).V2.Account.WorldBosses;
             this.Client = this.client;
         }

@@ -45,6 +45,10 @@ namespace Gw2Sharp.WebApi
         };
 
         private readonly Dictionary<string, string> requestHeaders;
+        private IHttpClient httpClient;
+        private ICacheMethod cacheMethod;
+        private ICacheMethod renderCacheMethod;
+        private string accessToken;
 
 
         /// <summary>
@@ -77,108 +81,8 @@ namespace Gw2Sharp.WebApi
         public Connection(Locale locale) : this(string.Empty, locale) { }
 
         /// <summary>
-        /// Creates a new <see cref="Connection"/> with a specified API key,
-        /// a specified locale,
-        /// .NET's HTTP client,
-        /// in-memory caching method for API requests,
-        /// and no caching method for render API requests.
-        /// </summary>
-        /// <param name="accessToken">The API key.</param>
-        /// <param name="locale">The locale.</param>
-        public Connection(string accessToken, Locale locale) : this(accessToken, locale, new HttpClient(), new MemoryCacheMethod()) { }
-
-        /// <summary>
-        /// Creates a new <see cref="Connection"/> with a specified API key,
-        /// a specified locale,
-        /// a specified HTTP client,
-        /// a specified caching method for API requests,
-        /// and no caching method for render API requests.
-        /// </summary>
-        /// <param name="accessToken">The API key.</param>
-        /// <param name="locale">The locale.</param>
-        /// <param name="httpClient">The HTTP client.</param>
-        /// <param name="cacheMethod">The cache method.</param>
-        /// <exception cref="NullReferenceException"><paramref name="httpClient"/> or <paramref name="cacheMethod"/> is <c>null</c>.</exception>
-        public Connection(string accessToken, Locale locale, IHttpClient httpClient, ICacheMethod cacheMethod) :
-            this(accessToken, locale, string.Empty, httpClient, cacheMethod)
-        { }
-
-        /// <summary>
-        /// Creates a new <see cref="Connection"/> with a specified API key,
-        /// locale,
-        /// HTTP client,
-        /// caching method for API requests,
-        /// and caching method for render API requests.
-        /// </summary>
-        /// <param name="accessToken">The API key.</param>
-        /// <param name="locale">The locale.</param>
-        /// <param name="httpClient">The HTTP client.</param>
-        /// <param name="cacheMethod">The cache method.</param>
-        /// <param name="renderCacheMethod">The render cache method.</param>
-        /// <exception cref="NullReferenceException"><paramref name="httpClient"/> or <paramref name="cacheMethod"/> is <c>null</c>.</exception>
-        public Connection(string accessToken, Locale locale, IHttpClient httpClient, ICacheMethod cacheMethod, ICacheMethod renderCacheMethod) :
-            this(accessToken, locale, string.Empty, httpClient, cacheMethod, renderCacheMethod)
-        { }
-
-        /// <summary>
-        /// Creates a new <see cref="Connection"/> with a specified API key,
-        /// locale,
-        /// HTTP client,
-        /// caching method for API requests,
-        /// and caching method for render API requests.
-        /// </summary>
-        /// <param name="accessToken">The API key.</param>
-        /// <param name="locale">The locale.</param>
-        /// <param name="httpClient">The HTTP client.</param>
-        /// <param name="cacheMethod">The cache method.</param>
-        /// <param name="renderCacheMethod">The render cache method.</param>
-        /// <param name="renderCacheDuration">The render cache duration (defaults to render API headers)</param>
-        /// <exception cref="NullReferenceException"><paramref name="httpClient"/> or <paramref name="cacheMethod"/> is <c>null</c>.</exception>
-        public Connection(string accessToken, Locale locale, IHttpClient httpClient, ICacheMethod cacheMethod, ICacheMethod renderCacheMethod, TimeSpan renderCacheDuration) :
-            this(accessToken, locale, string.Empty, httpClient, cacheMethod, renderCacheMethod, renderCacheDuration)
-        { }
-
-        /// <summary>
-        /// Creates a new <see cref="Connection"/> with a specified API key,
-        /// a specified locale,
-        /// a custom user agent,
-        /// a specified HTTP client,
-        /// a specified caching method for API requests,
-        /// and no caching method for render API requests.
-        /// </summary>
-        /// <param name="accessToken">The API key.</param>
-        /// <param name="locale">The locale.</param>
-        /// <param name="userAgent">The User-Agent.</param>
-        /// <param name="httpClient">The HTTP client.</param>
-        /// <param name="cacheMethod">The cache method.</param>
-        /// <exception cref="NullReferenceException"><paramref name="httpClient"/> or <paramref name="cacheMethod"/> is <c>null</c>.</exception>
-        public Connection(string accessToken, Locale locale, string userAgent, IHttpClient httpClient, ICacheMethod cacheMethod) :
-            this(accessToken, locale, userAgent, httpClient, cacheMethod, new NullCacheMethod())
-        { }
-
-        /// <summary>
-        /// Creates a new <see cref="Connection"/> with a specified API key,
-        /// locale,
-        /// custom user agent,
-        /// HTTP client,
-        /// caching method for API requests,
-        /// and caching method for render API requests.
-        /// </summary>
-        /// <param name="accessToken">The API key.</param>
-        /// <param name="locale">The locale.</param>
-        /// <param name="userAgent">The User-Agent.</param>
-        /// <param name="httpClient">The HTTP client.</param>
-        /// <param name="cacheMethod">The cache method.</param>
-        /// <param name="renderCacheMethod">The render cache method.</param>
-        /// <exception cref="NullReferenceException"><paramref name="httpClient"/>, <paramref name="cacheMethod"/> or <paramref name="renderCacheMethod"/> is <c>null</c>.</exception>
-        public Connection(string accessToken, Locale locale, string userAgent, IHttpClient httpClient, ICacheMethod cacheMethod, ICacheMethod renderCacheMethod) :
-            this(accessToken, locale, userAgent, httpClient, cacheMethod, renderCacheMethod, TimeSpan.Zero)
-        { }
-
-        /// <summary>
-        /// Creates a new <see cref="Connection"/> with a specified API key,
-        /// locale,
-        /// custom user agent,
+        /// Creates a new <see cref="Connection"/> with a specified API key and locale.
+        /// With optionally a custom user agent,
         /// HTTP client,
         /// caching method for API requests,
         /// and caching method for render API requests.
@@ -190,17 +94,23 @@ namespace Gw2Sharp.WebApi
         /// <param name="cacheMethod">The cache method.</param>
         /// <param name="renderCacheMethod">The render cache method.</param>
         /// <param name="renderCacheDuration">The render cache duration (defaults to render API headers)</param>
-        /// <exception cref="NullReferenceException"><paramref name="httpClient"/>, <paramref name="cacheMethod"/> or <paramref name="renderCacheMethod"/> is <c>null</c>.</exception>
-        public Connection(string accessToken, Locale locale, string userAgent, IHttpClient httpClient, ICacheMethod cacheMethod, ICacheMethod renderCacheMethod, TimeSpan renderCacheDuration)
+        public Connection(
+            string accessToken,
+            Locale locale,
+            ICacheMethod? cacheMethod = null,
+            ICacheMethod? renderCacheMethod = null,
+            TimeSpan? renderCacheDuration = null,
+            string? userAgent = null,
+            IHttpClient? httpClient = null)
         {
-            this.AccessToken = accessToken ?? string.Empty;
+            this.accessToken = accessToken ?? string.Empty;
             this.Locale = locale;
             this.UserAgent = $"{userAgent}{(string.IsNullOrWhiteSpace(userAgent) ? " " : "")}" +
                 $"Gw2Sharp/{typeof(Connection).GetTypeInfo().Assembly.GetName().Version.ToString(3)} (https://github.com/Archomeda/Gw2Sharp)";
-            this.HttpClient = httpClient ?? throw new ArgumentNullException(nameof(httpClient));
-            this.CacheMethod = cacheMethod ?? throw new ArgumentNullException(nameof(cacheMethod));
-            this.RenderCacheMethod = renderCacheMethod ?? throw new ArgumentNullException(nameof(renderCacheMethod));
-            this.RenderCacheDuration = renderCacheDuration;
+            this.httpClient = httpClient ?? new HttpClient();
+            this.cacheMethod = cacheMethod ?? new MemoryCacheMethod();
+            this.renderCacheMethod = renderCacheMethod ?? new NullCacheMethod();
+            this.RenderCacheDuration = renderCacheDuration ?? TimeSpan.Zero;
 
             this.requestHeaders = new Dictionary<string, string>()
             {
@@ -215,7 +125,11 @@ namespace Gw2Sharp.WebApi
 
 
         /// <inheritdoc />
-        public string AccessToken { get; set; }
+        public string AccessToken
+        {
+            get => this.accessToken;
+            set => this.accessToken = value ?? string.Empty;
+        }
 
         /// <inheritdoc />
         public Locale Locale { get; set; }
@@ -238,16 +152,28 @@ namespace Gw2Sharp.WebApi
         public string UserAgent { get; private set; }
 
         /// <inheritdoc />
-        public IHttpClient HttpClient { get; set; }
+        public IHttpClient HttpClient
+        {
+            get => this.httpClient;
+            set => this.httpClient = value ?? throw new ArgumentNullException(nameof(value), "HttpClient cannot be null");
+        }
 
         /// <inheritdoc />
-        public ICacheMethod CacheMethod { get; set; }
+        public ICacheMethod CacheMethod
+        {
+            get => this.cacheMethod;
+            set => this.cacheMethod = value ?? throw new ArgumentNullException(nameof(value), "CacheMethod cannot be null");
+        }
 
         /// <inheritdoc />
         public TimeSpan RenderCacheDuration { get; set; } = TimeSpan.Zero;
 
         /// <inheritdoc />
-        public ICacheMethod RenderCacheMethod { get; set; }
+        public ICacheMethod RenderCacheMethod
+        {
+            get => this.renderCacheMethod;
+            set => this.renderCacheMethod = value ?? throw new ArgumentNullException(nameof(value), "RenderCacheMethod cannot be null");
+        }
 
 
         /// <inheritdoc />

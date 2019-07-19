@@ -11,6 +11,9 @@
 ### Fixes
 - **Breaking:** Fix types of `Coordinates2.X` and `Coordinates2.Y` from int to double
 
+### Refactoring
+- **Breaking:** A bunch of overloaded constructors of `Connection` have been simplified into one constructor with optional parameters
+
 ### Deprecation removals
 - Following up on version 0.4.0, the methods `ICacheMethod.HasAsync`, `ICacheMethod.GetAsync` and `ICacheMethod.GetOrNullAsync` have been removed
 

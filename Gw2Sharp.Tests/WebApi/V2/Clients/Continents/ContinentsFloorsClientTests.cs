@@ -13,7 +13,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
     {
         public ContinentsFloorsClientTests()
         {
-            var connection = new Connection(string.Empty, Locale.English, Substitute.For<IHttpClient>(), new NullCacheMethod());
+            var connection = new Connection(string.Empty, Locale.English, cacheMethod: new NullCacheMethod(), httpClient: Substitute.For<IHttpClient>());
             this.client = new Gw2WebApiClient(connection).V2.Continents[1].Floors;
             this.Client = this.client;
         }

@@ -17,7 +17,7 @@ namespace Gw2Sharp.Tests.WebApi.Render
     {
         public Gw2WebApiRenderClientTests()
         {
-            var connection = new Connection(string.Empty, Locale.English, Substitute.For<IHttpClient>(), new NullCacheMethod());
+            var connection = new Connection(string.Empty, Locale.English, cacheMethod: new NullCacheMethod(), httpClient: Substitute.For<IHttpClient>());
             this.client = new Gw2WebApiClient(connection).Render;
         }
 
