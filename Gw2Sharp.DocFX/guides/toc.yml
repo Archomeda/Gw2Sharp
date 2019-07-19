@@ -2,8 +2,8 @@
   items:
     - name: Introduction
       topicUid: Guides.Introduction
-    - name: Endpoints
-      topicUid: Guides.Endpoints
+    - name: Services
+      topicUid: Guides.Services
     - name: Parameterized endpoints
       topicUid: Guides.ParameterizedEndpoints
     - name: Subtokens

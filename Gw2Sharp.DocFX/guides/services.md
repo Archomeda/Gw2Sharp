@@ -1,10 +1,12 @@
 ---
-uid: Guides.Endpoints
-title: Supported endpoints
+uid: Guides.Services
+title: Supported services
 ---
 
-# Supported endpoints
+# Supported services
 Gw2Sharp is not finished yet, and development is being done whenever I have spare time.
+
+At this moment, the render service is fully supported, and a lot of the API v2 endpoints are supported as well.  
 For your convenience, the following list gives an overview of the endpoints that are already available in this library:
 
  Icon | Description

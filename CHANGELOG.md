@@ -2,7 +2,11 @@
 
 ## 0.5.0
 ### Endpoints
+- Add render service which can be found under `IGw2WebApiClient.Render` (right next to `IGw2WebApiClient.V2`)
 - Add `/v2/novelties`
+
+### Caching
+- Add `ArchiveCacheMethod` to support caching large blobs of data in a ZIP archive on disk (e.g. images from render)
 
 ### Fixes
 - **Breaking:** Fix types of `Coordinates2.X` and `Coordinates2.Y` from int to double
