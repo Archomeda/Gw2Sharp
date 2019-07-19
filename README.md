@@ -14,8 +14,8 @@ It uses the latest C# 8.0 features like Nullable Reference Types because they're
 This library has been written to be as close as possible to the official API structure, with a few exceptions to make life easier.
 *Make sure to read the [introductory guide](https://archomeda.github.io/Gw2Sharp/master/guides/introduction.html) to get started.*
 
-## Endpoints
-Check the [list of endpoints](https://archomeda.github.io/Gw2Sharp/master/guides/endpoints.html) for the supported endpoints.
+## Supported services
+Check the [documentation](https://archomeda.github.io/Gw2Sharp/master/guides/services.html) for the supported services.
 
 ## Requirements
 This project targets .NET Standard 2.0.
