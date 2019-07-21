@@ -5,6 +5,7 @@ using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 using Gw2Sharp.Extensions;
+using Gw2Sharp.Json;
 using Gw2Sharp.WebApi.Caching;
 using Gw2Sharp.WebApi.Http;
 using Gw2Sharp.WebApi.V2.Models;
@@ -22,9 +23,9 @@ namespace Gw2Sharp.WebApi
         /// <summary>
         /// The settings that are used when deserializing JSON objects.
         /// </summary>
-        public static readonly JsonSerializerSettings DeserializerSettings = new JsonSerializerSettings
+        internal static JsonSerializerSettings GetDeserializerSettings(IGw2Client client) => new JsonSerializerSettings
         {
-            ContractResolver = new DefaultContractResolver
+            ContractResolver = new Gw2ContractResolver(client)
             {
                 NamingStrategy = new SnakeCaseNamingStrategy
                 {
@@ -177,15 +178,15 @@ namespace Gw2Sharp.WebApi
 
 
         /// <inheritdoc />
-        public Task<IHttpResponse<TResponse>> RequestAsync<TResponse>(Uri requestUri, IEnumerable<KeyValuePair<string, string>>? additionalHeaders, CancellationToken cancellationToken) where TResponse : object
+        public Task<IHttpResponse<TResponse>> RequestAsync<TResponse>(IGw2Client client, Uri requestUri, IEnumerable<KeyValuePair<string, string>>? additionalHeaders, CancellationToken cancellationToken) where TResponse : object
         {
             if (requestUri == null)
                 throw new ArgumentNullException(nameof(requestUri));
 
-            return this.RequestInternalAsync<TResponse>(requestUri, additionalHeaders, cancellationToken);
+            return this.RequestInternalAsync<TResponse>(client, requestUri, additionalHeaders, cancellationToken);
         }
 
-        private async Task<IHttpResponse<TResponse>> RequestInternalAsync<TResponse>(Uri requestUri, IEnumerable<KeyValuePair<string, string>>? additionalHeaders, CancellationToken cancellationToken) where TResponse : object
+        private async Task<IHttpResponse<TResponse>> RequestInternalAsync<TResponse>(IGw2Client client, Uri requestUri, IEnumerable<KeyValuePair<string, string>>? additionalHeaders, CancellationToken cancellationToken) where TResponse : object
         {
             IDictionary<string, string> headers = this.requestHeaders;
             if (additionalHeaders != null)
@@ -195,11 +196,12 @@ namespace Gw2Sharp.WebApi
             }
 
             var request = new HttpRequest(requestUri, headers);
+            var deserializerSettings = GetDeserializerSettings(client);
 
             try
             {
                 var r = await this.HttpClient.RequestAsync(request, cancellationToken).ConfigureAwait(false);
-                var obj = JsonConvert.DeserializeObject<TResponse>(r.Content, DeserializerSettings);
+                var obj = JsonConvert.DeserializeObject<TResponse>(r.Content, deserializerSettings);
                 return new HttpResponse<TResponse>(obj, r.StatusCode, r.RequestHeaders, r.ResponseHeaders);
             }
             catch (UnexpectedStatusException ex)
@@ -208,7 +210,7 @@ namespace Gw2Sharp.WebApi
                 try
                 {
                     if (ex.Response != null)
-                        error = JsonConvert.DeserializeObject<ErrorObject>(ex.Response.Content, DeserializerSettings);
+                        error = JsonConvert.DeserializeObject<ErrorObject>(ex.Response.Content, deserializerSettings);
                 }
                 catch (JsonException)
                 {

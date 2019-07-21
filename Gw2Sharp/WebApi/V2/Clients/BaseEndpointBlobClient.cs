@@ -15,21 +15,23 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Creates a new base endpoint blob client.
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
+        /// <param name="gw2Client">The Guild Wars 2 client.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="connection"/> or <paramref name="gw2Client"/> is <c>null</c>.</exception>
         /// <exception cref="InvalidOperationException">The client implements an invalid combination of <see cref="IEndpointClient"/> interfaces.</exception>
-        protected BaseEndpointBlobClient(IConnection connection) :
-            base(connection)
+        protected BaseEndpointBlobClient(IConnection connection, IGw2Client gw2Client) :
+            base(connection, gw2Client)
         { }
 
         /// <summary>
         /// Creates a new base endpoint blob client.
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
+        /// <param name="gw2Client">The Guild Wars 2 client.</param>
         /// <param name="replaceSegments">The path segments to replace.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="connection"/> or <paramref name="gw2Client"/> is <c>null</c>.</exception>
         /// <exception cref="InvalidOperationException">The client implements an invalid combination of <see cref="IEndpointClient"/> interfaces.</exception>
-        protected BaseEndpointBlobClient(IConnection connection, params string[] replaceSegments) :
-            base(connection, replaceSegments)
+        protected BaseEndpointBlobClient(IConnection connection, IGw2Client gw2Client, params string[] replaceSegments) :
+            base(connection, gw2Client, replaceSegments)
         { }
 
         /// <inheritdoc />

@@ -14,9 +14,9 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
         {
             AssertArguments.ThrowsWhenNullConstructor(
                 this.Client.GetType(),
-                new[] { typeof(IConnection), typeof(int) },
-                new object[] { new Connection(), 42 },
-                new[] { true, false });
+                new[] { typeof(IConnection), typeof(IGw2Client), typeof(int) },
+                new object[] { new Connection(), new Gw2Client(), 42 },
+                new[] { true, true, false });
         }
 
         #endregion

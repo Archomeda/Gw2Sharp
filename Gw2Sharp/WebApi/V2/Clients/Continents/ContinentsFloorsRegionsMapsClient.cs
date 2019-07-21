@@ -20,12 +20,13 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Creates a new <see cref="ContinentsFloorsRegionsMapsClient"/> that is used for the API v2 characters floors regions maps endpoint.
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
+        /// <param name="gw2Client">The Guild Wars 2 client.</param>
         /// <param name="continentId">The continent id.</param>
         /// <param name="floorId">The floor id.</param>
         /// <param name="regionId">The region id.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
-        public ContinentsFloorsRegionsMapsClient(IConnection connection, int continentId, int floorId, int regionId) :
-            base(connection, continentId.ToString(), floorId.ToString(), regionId.ToString())
+        /// <exception cref="ArgumentNullException"><paramref name="connection"/> or <paramref name="gw2Client"/> is <c>null</c>.</exception>
+        internal ContinentsFloorsRegionsMapsClient(IConnection connection, IGw2Client gw2Client, int continentId, int floorId, int regionId) :
+            base(connection, gw2Client, continentId.ToString(), floorId.ToString(), regionId.ToString())
         {
             this.continentId = continentId;
             this.floorId = floorId;
@@ -43,6 +44,6 @@ namespace Gw2Sharp.WebApi.V2.Clients
 
         /// <inheritdoc />
         public virtual IContinentsFloorsRegionsMapsIdClient this[int mapId] =>
-            new ContinentsFloorsRegionsMapsIdClient(this.Connection, this.ContinentId, this.FloorId, this.RegionId, mapId);
+            new ContinentsFloorsRegionsMapsIdClient(this.Connection, this.Gw2Client!, this.ContinentId, this.FloorId, this.RegionId, mapId);
     }
 }

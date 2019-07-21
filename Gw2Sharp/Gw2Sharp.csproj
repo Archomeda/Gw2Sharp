@@ -44,4 +44,8 @@ Visit https://archomeda.github.io/Gw2Sharp for more information.
     <PackageReference Include="System.IO.Compression" Version="4.3.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Json\Converters\" />
+  </ItemGroup>
+
 </Project>

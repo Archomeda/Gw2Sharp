@@ -43,39 +43,37 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Creates a new <see cref="AccountClient"/> that is used for the API v2 account endpoint.
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
-        public AccountClient(IConnection connection) :
-            base(connection)
+        /// <param name="gw2Client">The Guild Wars 2 client.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="connection"/> or <paramref name="gw2Client"/> is <c>null</c>.</exception>
+        internal AccountClient(IConnection connection, IGw2Client gw2Client) :
+            base(connection, gw2Client)
         {
-            if (connection == null)
-                throw new ArgumentNullException(nameof(connection));
-
-            this.achievements = new AccountAchievementsClient(connection);
-            this.bank = new AccountBankClient(connection);
-            this.dailyCrafting = new AccountDailyCraftingClient(connection);
-            this.dungeons = new AccountDungeonsClient(connection);
-            this.dyes = new AccountDyesClient(connection);
-            this.finishers = new AccountFinishersClient(connection);
-            this.gliders = new AccountGlidersClient(connection);
-            this.home = new AccountHomeClient(connection);
-            this.inventory = new AccountInventoryClient(connection);
-            this.luck = new AccountLuckClient(connection);
-            this.mailCarriers = new AccountMailCarriersClient(connection);
-            this.mapChests = new AccountMapChestsClient(connection);
-            this.masteries = new AccountMasteriesClient(connection);
-            this.mastery = new AccountMasteryClient(connection);
-            this.materials = new AccountMaterialsClient(connection);
-            this.minis = new AccountMinisClient(connection);
-            this.mounts = new AccountMountsClient(connection);
-            this.novelties = new AccountNoveltiesClient(connection);
-            this.outfits = new AccountOutfitsClient(connection);
-            this.pvp = new AccountPvpClient(connection);
-            this.raids = new AccountRaidsClient(connection);
-            this.recipes = new AccountRecipesClient(connection);
-            this.skins = new AccountSkinsClient(connection);
-            this.titles = new AccountTitlesClient(connection);
-            this.wallet = new AccountWalletClient(connection);
-            this.worldBosses = new AccountWorldBossesClient(connection);
+            this.achievements = new AccountAchievementsClient(connection, gw2Client);
+            this.bank = new AccountBankClient(connection, gw2Client);
+            this.dailyCrafting = new AccountDailyCraftingClient(connection, gw2Client);
+            this.dungeons = new AccountDungeonsClient(connection, gw2Client);
+            this.dyes = new AccountDyesClient(connection, gw2Client);
+            this.finishers = new AccountFinishersClient(connection, gw2Client);
+            this.gliders = new AccountGlidersClient(connection, gw2Client);
+            this.home = new AccountHomeClient(connection, gw2Client);
+            this.inventory = new AccountInventoryClient(connection, gw2Client);
+            this.luck = new AccountLuckClient(connection, gw2Client);
+            this.mailCarriers = new AccountMailCarriersClient(connection, gw2Client);
+            this.mapChests = new AccountMapChestsClient(connection, gw2Client);
+            this.masteries = new AccountMasteriesClient(connection, gw2Client);
+            this.mastery = new AccountMasteryClient(connection, gw2Client);
+            this.materials = new AccountMaterialsClient(connection, gw2Client);
+            this.minis = new AccountMinisClient(connection, gw2Client);
+            this.mounts = new AccountMountsClient(connection, gw2Client);
+            this.novelties = new AccountNoveltiesClient(connection, gw2Client);
+            this.outfits = new AccountOutfitsClient(connection, gw2Client);
+            this.pvp = new AccountPvpClient(connection, gw2Client);
+            this.raids = new AccountRaidsClient(connection, gw2Client);
+            this.recipes = new AccountRecipesClient(connection, gw2Client);
+            this.skins = new AccountSkinsClient(connection, gw2Client);
+            this.titles = new AccountTitlesClient(connection, gw2Client);
+            this.wallet = new AccountWalletClient(connection, gw2Client);
+            this.worldBosses = new AccountWorldBossesClient(connection, gw2Client);
         }
 
         /// <inheritdoc />

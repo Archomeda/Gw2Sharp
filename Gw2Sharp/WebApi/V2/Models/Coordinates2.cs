@@ -41,22 +41,20 @@ namespace Gw2Sharp.WebApi.V2.Models
         }
 
         /// <inheritdoc />
-        IEnumerator IEnumerable.GetEnumerator() => this.GetEnumerator();
+        IEnumerator IEnumerable.GetEnumerator() =>
+            this.GetEnumerator();
 
         /// <inheritdoc />
-        public override string ToString() => $"({this.X},{this.Y})";
+        public override string ToString() =>
+            $"({this.X},{this.Y})";
 
         /// <inheritdoc />
-        public override bool Equals(object? obj) => obj is Coordinates2 && this.Equals((Coordinates2)obj);
+        public override bool Equals(object? obj) =>
+            obj is Coordinates2 && this.Equals((Coordinates2)obj);
 
-        /// <summary>
-        /// Indicates whether the current object is equal to another object of the same type.
-        /// </summary>
-        /// <param name="other">An object to compare with this object.</param>
-        /// <returns>
-        /// true if the current object is equal to the <paramref name="other" /> parameter; otherwise, false.
-        /// </returns>
-        public bool Equals(Coordinates2 other) => this.X == other.X && this.Y == other.Y;
+        /// <inheritdoc />
+        public bool Equals(Coordinates2 other) =>
+            this.X == other.X && this.Y == other.Y;
 
         /// <inheritdoc />
         public override int GetHashCode()
@@ -72,19 +70,17 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// </summary>
         /// <param name="coordinates">The first coordinates.</param>
         /// <param name="coordinates2">The second coordinates.</param>
-        /// <returns>
-        /// The result of the operator.
-        /// </returns>
-        public static bool operator ==(Coordinates2 coordinates, Coordinates2 coordinates2) => coordinates.Equals(coordinates2);
+        /// <returns>The result of the operator.</returns>
+        public static bool operator ==(Coordinates2 coordinates, Coordinates2 coordinates2) =>
+            coordinates.Equals(coordinates2);
 
         /// <summary>
         /// Implements the operator !=.
         /// </summary>
         /// <param name="coordinates">The first coordinates.</param>
         /// <param name="coordinates2">The second coordinates.</param>
-        /// <returns>
-        /// The result of the operator.
-        /// </returns>
-        public static bool operator !=(Coordinates2 coordinates, Coordinates2 coordinates2) => !(coordinates == coordinates2);
+        /// <returns>The result of the operator.</returns>
+        public static bool operator !=(Coordinates2 coordinates, Coordinates2 coordinates2) =>
+            !(coordinates == coordinates2);
     }
 }

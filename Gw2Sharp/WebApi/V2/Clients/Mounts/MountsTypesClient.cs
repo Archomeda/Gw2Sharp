@@ -14,8 +14,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
         /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
-        public MountsTypesClient(IConnection connection) :
-            base(connection)
+        internal MountsTypesClient(IConnection connection, IGw2Client gw2Client) :
+            base(connection, gw2Client)
         { }
     }
 }

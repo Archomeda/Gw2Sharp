@@ -13,7 +13,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
         public BuildClientTests()
         {
             var connection = new Connection(string.Empty, Locale.English, cacheMethod: new NullCacheMethod(), httpClient: Substitute.For<IHttpClient>());
-            this.client = new Gw2WebApiClient(connection).V2.Build;
+            this.client = new Gw2Client(connection).WebApi.V2.Build;
             this.Client = this.client;
         }
 
