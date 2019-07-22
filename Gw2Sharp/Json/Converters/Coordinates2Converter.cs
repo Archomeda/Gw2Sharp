@@ -1,14 +1,15 @@
 using System;
+using Gw2Sharp.WebApi.V2.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace Gw2Sharp.WebApi.V2.Models.Converters
+namespace Gw2Sharp.Json.Converters
 {
     /// <summary>
     /// A custom JSON converter that handles 2D coordinates conversion.
     /// </summary>
-    /// <seealso cref="Newtonsoft.Json.JsonConverter{Coordinates2}" />
-    public class Coordinates2Converter : JsonConverter<Coordinates2>
+    /// <seealso cref="JsonConverter{Coordinates2}" />
+    public sealed class Coordinates2Converter : JsonConverter<Coordinates2>
     {
         /// <inheritdoc />
         public override bool CanWrite => false;

@@ -2,10 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using Gw2Sharp.WebApi;
 using Gw2Sharp.WebApi.Caching;
 using Gw2Sharp.WebApi.Http;
 
-namespace Gw2Sharp.WebApi
+namespace Gw2Sharp
 {
     /// <summary>
     /// Implements a web connection.
@@ -60,6 +61,7 @@ namespace Gw2Sharp.WebApi
         /// Requests data from the API.
         /// </summary>
         /// <typeparam name="TResponse">The response type.</typeparam>
+        /// <param name="client">The Guild Wars 2 Web API client.</param>
         /// <param name="requestUri">The request Uri.</param>
         /// <param name="additionalHeaders">Additional request headers.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
@@ -68,6 +70,6 @@ namespace Gw2Sharp.WebApi
         /// <exception cref="RequestException">A generic request error occurs (<seealso cref="IHttpClient.RequestAsync"/>).</exception>
         /// <exception cref="RequestCanceledException">The request is canceled by the user or because of a timeout (<seealso cref="IHttpClient.RequestAsync"/>).</exception>
         /// <exception cref="UnexpectedStatusException">The server returns a non-successful HTTP status code (<seealso cref="IHttpClient.RequestAsync"/>).</exception>
-        Task<IHttpResponse<TResponse>> RequestAsync<TResponse>(Uri requestUri, IEnumerable<KeyValuePair<string, string>>? additionalHeaders, CancellationToken cancellationToken) where TResponse : object;
+        Task<IHttpResponse<TResponse>> RequestAsync<TResponse>(IGw2Client client, Uri requestUri, IEnumerable<KeyValuePair<string, string>>? additionalHeaders, CancellationToken cancellationToken) where TResponse : object;
     }
 }

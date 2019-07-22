@@ -13,7 +13,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
         public AccountMinisClientTests()
         {
             var connection = new Connection("12345678-1234-1234-1234-12345678901234567890-1234-1234-1234-123456789012", Locale.English, cacheMethod: new NullCacheMethod(), httpClient: Substitute.For<IHttpClient>());
-            this.client = new Gw2WebApiClient(connection).V2.Account.Minis;
+            this.client = new Gw2Client(connection).WebApi.V2.Account.Minis;
             this.Client = this.client;
         }
 

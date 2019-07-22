@@ -1,13 +1,14 @@
+using System;
+using Gw2Sharp.WebApi.V2.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using System;
 
-namespace Gw2Sharp.WebApi.V2.Models.Converters
+namespace Gw2Sharp.Json.Converters
 {
     /// <summary>
     /// A custom JSON converter that handles rectangle conversion.
     /// </summary>
-    /// <seealso cref="Newtonsoft.Json.JsonConverter{Rectangle}" />
+    /// <seealso cref="JsonConverter{Rectangle}" />
     public abstract class RectangleConverter : JsonConverter<Rectangle>
     {
         /// <inheritdoc />

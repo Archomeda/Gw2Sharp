@@ -18,15 +18,16 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Creates a new <see cref="CommerceClient"/> that is used for the API v2 commerce endpoint.
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
-        public CommerceClient(IConnection connection) :
-            base(connection)
+        /// <param name="gw2Client">The Guild Wars 2 client.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="connection"/> or <paramref name="gw2Client"/> is <c>null</c>.</exception>
+        protected internal CommerceClient(IConnection connection, IGw2Client gw2Client) :
+            base(connection, gw2Client)
         {
-            this.delivery = new CommerceDeliveryClient(connection);
-            this.exchange = new CommerceExchangeClient(connection);
-            this.listings = new CommerceListingsClient(connection);
-            this.prices = new CommercePricesClient(connection);
-            this.transactions = new CommerceTransactionsClient(connection);
+            this.delivery = new CommerceDeliveryClient(connection, gw2Client);
+            this.exchange = new CommerceExchangeClient(connection, gw2Client);
+            this.listings = new CommerceListingsClient(connection, gw2Client);
+            this.prices = new CommercePricesClient(connection, gw2Client);
+            this.transactions = new CommerceTransactionsClient(connection, gw2Client);
         }
 
         /// <inheritdoc />

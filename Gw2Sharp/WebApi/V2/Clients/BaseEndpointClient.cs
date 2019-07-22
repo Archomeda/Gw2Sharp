@@ -24,11 +24,17 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Creates a new base endpoint client.
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
+        /// <param name="gw2Client">The Guild Wars 2 client.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="connection"/> or <paramref name="gw2Client"/> is <c>null</c>.</exception>
         /// <exception cref="InvalidOperationException">Thrown when the client implements an invalid combination of <see cref="IEndpointClient"/> interfaces.</exception>
-        protected BaseEndpointClient(IConnection connection) :
-            base(connection)
+        protected BaseEndpointClient(IConnection connection, IGw2Client gw2Client) :
+            base(connection, gw2Client)
         {
+            if (connection == null)
+                throw new ArgumentNullException(nameof(connection));
+            if (gw2Client == null)
+                throw new ArgumentNullException(nameof(gw2Client));
+
             this.EndpointPath = this.GetRequiredAttribute<EndpointPathAttribute>().EndpointPath;
             this.SchemaVersion = this.GetAttribute<EndpointSchemaVersionAttribute>()?.SchemaVersion;
 
@@ -47,11 +53,12 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Creates a new base endpoint client.
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
+        /// <param name="gw2Client">The Guild Wars 2 client.</param>
         /// <param name="replaceSegments">The path segments to replace.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="connection"/> or <paramref name="gw2Client"/> is <c>null</c>.</exception>
         /// <exception cref="InvalidOperationException">Thrown when the client implements an invalid combination of <see cref="IEndpointClient"/> interfaces.</exception>
-        protected BaseEndpointClient(IConnection connection, params string[] replaceSegments) :
-            this(connection)
+        protected BaseEndpointClient(IConnection connection, IGw2Client gw2Client, params string[] replaceSegments) :
+            this(connection, gw2Client)
         {
             var segments = this.GetRequiredAttributes<EndpointPathSegmentAttribute>().OrderBy(a => a.Order).ToList();
             if (segments.Count != replaceSegments.Length)
@@ -249,7 +256,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
 
                     var uri = this.AppendUrlParameters(new Uri(Gw2WebApiV2Client.UrlBase, this.FormatUrlQueryMany(this.EndpointPath, pageIds)));
                     var headers = this.BuildRequestHeaders();
-                    var httpResponse = await this.Connection.RequestAsync<IApiV2ObjectList<TEndpointObject>>(uri, headers, cancellationToken).ConfigureAwait(false);
+                    // No NullReferenceException possible for this.Gw2Client: our constructor enforces a value
+                    var httpResponse = await this.Connection.RequestAsync<IApiV2ObjectList<TEndpointObject>>(this.Gw2Client!, uri, headers, cancellationToken).ConfigureAwait(false);
 
                     var @object = httpResponse.Content;
                     @object.HttpResponseInfo = new ApiV2HttpResponseInfo(httpResponse.StatusCode, httpResponse.RequestHeaders, httpResponse.ResponseHeaders);
@@ -384,7 +392,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
             {
                 var uri = this.AppendUrlParameters(new Uri(Gw2WebApiV2Client.UrlBase, url));
                 var headers = this.BuildRequestHeaders();
-                var httpResponse = await this.Connection.RequestAsync<TEndpointObject>(uri, headers, cancellationToken).ConfigureAwait(false);
+                // No NullReferenceException possible for this.Gw2Client: our constructor enforces a value
+                var httpResponse = await this.Connection.RequestAsync<TEndpointObject>(this.Gw2Client!, uri, headers, cancellationToken).ConfigureAwait(false);
 
                 var @object = httpResponse.Content;
                 @object.HttpResponseInfo = new ApiV2HttpResponseInfo(httpResponse.StatusCode, httpResponse.RequestHeaders, httpResponse.ResponseHeaders);

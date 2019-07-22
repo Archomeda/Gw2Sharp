@@ -16,11 +16,11 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
         /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
-        public EmblemClient(IConnection connection) :
-            base(connection)
+        protected internal EmblemClient(IConnection connection, IGw2Client gw2Client) :
+            base(connection, gw2Client)
         {
-            this.backgrounds = new EmblemBackgroundsClient(connection);
-            this.foregrounds = new EmblemForegroundsClient(connection);
+            this.backgrounds = new EmblemBackgroundsClient(connection, gw2Client);
+            this.foregrounds = new EmblemForegroundsClient(connection, gw2Client);
         }
 
         /// <inheritdoc />

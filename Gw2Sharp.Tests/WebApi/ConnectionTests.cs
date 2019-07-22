@@ -98,7 +98,7 @@ namespace Gw2Sharp.Tests.WebApi
             var content = new TestContentClass { Testkey = "testvalue" };
 
             var connection = new Connection(string.Empty, default, cacheMethod: new NullCacheMethod(), httpClient: httpClient);
-            var response = await connection.RequestAsync<TestContentClass>(new Uri("http://localhost"), null, CancellationToken.None);
+            var response = await connection.RequestAsync<TestContentClass>(null, new Uri("http://localhost"), null, CancellationToken.None);
 
             Assert.Equal(content.Testkey, response.Content.Testkey);
             Assert.Equal(httpResponse.StatusCode, response.StatusCode);
@@ -127,7 +127,7 @@ namespace Gw2Sharp.Tests.WebApi
             httpClient.RequestAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Throws(_ => new UnexpectedStatusException(httpRequest, httpResponse));
 
             var connection = new Connection(string.Empty, default, cacheMethod: new NullCacheMethod(), httpClient: httpClient);
-            var exception = (UnexpectedStatusException<ErrorObject>)await Assert.ThrowsAsync(exceptionType, () => connection.RequestAsync<TestContentClass>(new Uri("http://localhost"), null, CancellationToken.None));
+            var exception = (UnexpectedStatusException<ErrorObject>)await Assert.ThrowsAsync(exceptionType, () => connection.RequestAsync<TestContentClass>(null, new Uri("http://localhost"), null, CancellationToken.None));
             Assert.Equal(errorText, exception.Response?.Content.Text);
         }
 
@@ -144,7 +144,7 @@ namespace Gw2Sharp.Tests.WebApi
             httpClient.RequestAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Throws(_ => new UnexpectedStatusException(httpRequest, httpResponse));
 
             var connection = new Connection(string.Empty, default, cacheMethod: new NullCacheMethod(), httpClient: httpClient);
-            var exception = await Assert.ThrowsAsync<UnexpectedStatusException>(() => connection.RequestAsync<TestContentClass>(new Uri("http://localhost"), null, CancellationToken.None));
+            var exception = await Assert.ThrowsAsync<UnexpectedStatusException>(() => connection.RequestAsync<TestContentClass>(null, new Uri("http://localhost"), null, CancellationToken.None));
             Assert.Equal(body, exception.Response?.Content);
         }
 
@@ -160,7 +160,7 @@ namespace Gw2Sharp.Tests.WebApi
             httpClient.RequestAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Throws(_ => new UnexpectedStatusException(httpRequest, httpResponse));
 
             var connection = new Connection(string.Empty, default, cacheMethod: new NullCacheMethod(), httpClient: httpClient);
-            var exception = await Assert.ThrowsAsync<UnexpectedStatusException>(() => connection.RequestAsync<TestContentClass>(new Uri("http://localhost"), null, CancellationToken.None));
+            var exception = await Assert.ThrowsAsync<UnexpectedStatusException>(() => connection.RequestAsync<TestContentClass>(null, new Uri("http://localhost"), null, CancellationToken.None));
             Assert.Equal(message, exception.Response?.Content);
         }
 
@@ -176,8 +176,8 @@ namespace Gw2Sharp.Tests.WebApi
         {
             var connection = new Connection();
             await AssertArguments.ThrowsWhenNullAsync(
-                 () => connection.RequestAsync<object>(new Uri("http://localhost"), null, CancellationToken.None),
-                 new[] { true, false, false });
+                 () => connection.RequestAsync<object>(null, new Uri("http://localhost"), null, CancellationToken.None),
+                 new[] { false, true, false, false });
         }
 
         #endregion

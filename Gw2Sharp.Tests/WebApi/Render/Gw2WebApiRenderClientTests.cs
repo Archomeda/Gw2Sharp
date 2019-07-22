@@ -18,7 +18,7 @@ namespace Gw2Sharp.Tests.WebApi.Render
         public Gw2WebApiRenderClientTests()
         {
             var connection = new Connection(string.Empty, Locale.English, cacheMethod: new NullCacheMethod(), httpClient: Substitute.For<IHttpClient>());
-            this.client = new Gw2WebApiClient(connection).Render;
+            this.client = new Gw2Client(connection).WebApi.Render;
         }
 
         private readonly IGw2WebApiRenderClient client;
@@ -29,7 +29,7 @@ namespace Gw2Sharp.Tests.WebApi.Render
         {
             byte[] file = this.GetTestData("TestFiles.Render.414998.png");
             using var expectedMemoryStream = new MemoryStream(file, false);
-            ((IWebApiClientInternal)this.client).Connection.HttpClient.RequestStreamAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Returns(callInfo =>
+            ((IClientInternal)this.client).Connection.HttpClient.RequestStreamAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Returns(callInfo =>
             {
                 return new HttpResponseStream(expectedMemoryStream, HttpStatusCode.OK, null, null);
             });
@@ -46,7 +46,7 @@ namespace Gw2Sharp.Tests.WebApi.Render
         {
             byte[] file = this.GetTestData("TestFiles.Render.414998.png");
             using var expectedMemoryStream = new MemoryStream(file, false);
-            ((IWebApiClientInternal)this.client).Connection.HttpClient.RequestStreamAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Returns(callInfo =>
+            ((IClientInternal)this.client).Connection.HttpClient.RequestStreamAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Returns(callInfo =>
             {
                 return new HttpResponseStream(expectedMemoryStream, HttpStatusCode.OK, null, null);
             });
@@ -75,9 +75,9 @@ namespace Gw2Sharp.Tests.WebApi.Render
         {
             AssertArguments.ThrowsWhenNullConstructor(
                 this.client.GetType(),
-                new[] { typeof(IConnection) },
-                new[] { new Connection() },
-                new[] { true });
+                new[] { typeof(IConnection), typeof(IGw2Client) },
+                new object[] { new Connection(), new Gw2Client() },
+                new[] { true, true });
         }
 
         #endregion

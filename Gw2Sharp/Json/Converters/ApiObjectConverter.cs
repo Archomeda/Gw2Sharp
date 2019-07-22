@@ -1,13 +1,14 @@
 using System;
+using Gw2Sharp.WebApi.V2;
 using Newtonsoft.Json;
 
-namespace Gw2Sharp.WebApi.V2.Models.Converters
+namespace Gw2Sharp.Json.Converters
 {
     /// <summary>
     /// A custom JSON converter that handles API objects.
     /// </summary>
     /// <seealso cref="JsonConverter" />
-    public class ApiObjectConverter : JsonConverter
+    public sealed class ApiObjectConverter : JsonConverter
     {
         /// <inheritdoc />
         public override bool CanWrite => false;

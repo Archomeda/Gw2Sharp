@@ -17,17 +17,18 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Creates a new <see cref="ContinentsFloorsRegionsIdClient"/> that is used for the API v2 continents floors regions id endpoint.
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
+        /// <param name="gw2Client">The Guild Wars 2 client.</param>
         /// <param name="continentId">The continent id.</param>
         /// <param name="floorId">The floor id.</param>
         /// <param name="regionId">The region id.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
-        public ContinentsFloorsRegionsIdClient(IConnection connection, int continentId, int floorId, int regionId) :
-            base(connection)
+        /// <exception cref="ArgumentNullException"><paramref name="connection"/> or <paramref name="gw2Client"/> is <c>null</c>.</exception>
+        protected internal ContinentsFloorsRegionsIdClient(IConnection connection, IGw2Client gw2Client, int continentId, int floorId, int regionId) :
+            base(connection, gw2Client)
         {
             this.continentId = continentId;
             this.floorId = floorId;
             this.regionId = regionId;
-            this.maps = new ContinentsFloorsRegionsMapsClient(connection, continentId, floorId, regionId);
+            this.maps = new ContinentsFloorsRegionsMapsClient(connection, gw2Client, continentId, floorId, regionId);
         }
 
         /// <inheritdoc />

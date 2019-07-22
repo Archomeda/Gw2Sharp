@@ -13,11 +13,11 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
         /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
-        public GuildSearchClient(IConnection connection) :
-            base(connection)
+        protected internal GuildSearchClient(IConnection connection, IGw2Client gw2Client) :
+            base(connection, gw2Client)
         { }
 
         /// <inheritdoc />
-        public virtual IGuildSearchNameClient Name(string name) => new GuildSearchNameClient(this.Connection, name);
+        public virtual IGuildSearchNameClient Name(string name) => new GuildSearchNameClient(this.Connection, this.Gw2Client!, name);
     }
 }

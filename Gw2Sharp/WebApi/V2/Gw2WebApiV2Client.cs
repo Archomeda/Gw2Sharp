@@ -6,7 +6,7 @@ namespace Gw2Sharp.WebApi.V2
     /// <summary>
     /// A client for the Guild Wars 2 web API v2.
     /// </summary>
-    public class Gw2WebApiV2Client : IGw2WebApiV2Client
+    public class Gw2WebApiV2Client : BaseClient, IGw2WebApiV2Client
     {
         /// <summary>
         /// The base URL for making Guild Wars 2 API v2 requests.
@@ -48,49 +48,48 @@ namespace Gw2Sharp.WebApi.V2
         /// <summary>
         /// Creates a new <see cref="Gw2WebApiV2Client"/>.
         /// </summary>
-        public Gw2WebApiV2Client() : this(new Connection()) { }
-
-        /// <summary>
-        /// Creates a new <see cref="Gw2WebApiV2Client"/>.
-        /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
-        /// <exception cref="NullReferenceException"><paramref name="connection"/> is <c>null</c>.</exception>
-        public Gw2WebApiV2Client(IConnection connection)
+        /// <param name="gw2Client">The Guild Wars 2 client.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="connection"/> or <paramref name="gw2Client"/> is <c>null</c>.</exception>
+        protected internal Gw2WebApiV2Client(IConnection connection, IGw2Client gw2Client)
+            : base(connection, gw2Client)
         {
             if (connection == null)
                 throw new ArgumentNullException(nameof(connection));
+            if (gw2Client == null)
+                throw new ArgumentNullException(nameof(gw2Client));
 
-            this.account = new AccountClient(connection);
-            this.achievements = new AchievementsClient(connection);
-            this.backstory = new BackstoryClient(connection);
-            this.build = new BuildClient(connection);
-            this.characters = new CharactersClient(connection);
-            this.colors = new ColorsClient(connection);
-            this.commerce = new CommerceClient(connection);
-            this.continents = new ContinentsClient(connection);
-            this.createSubtoken = new CreateSubtokenClient(connection);
-            this.currencies = new CurrenciesClient(connection);
-            this.dailyCrafting = new DailyCraftingClient(connection);
-            this.dungeons = new DungeonsClient(connection);
-            this.emblem = new EmblemClient(connection);
-            this.files = new FilesClient(connection);
-            this.finishers = new FinishersClient(connection);
-            this.gliders = new GlidersClient(connection);
-            this.guild = new GuildClient(connection);
-            this.home = new HomeClient(connection);
-            this.items = new ItemsClient(connection);
-            this.itemstats = new ItemstatsClient(connection);
-            this.legends = new LegendsClient(connection);
-            this.mailCarriers = new MailCarriersClient(connection);
-            this.mapChests = new MapChestsClient(connection);
-            this.maps = new MapsClient(connection);
-            this.masteries = new MasteriesClient(connection);
-            this.materials = new MaterialsClient(connection);
-            this.minis = new MinisClient(connection);
-            this.mounts = new MountsClient(connection);
-            this.novelties = new NoveltiesClient(connection);
-            this.tokenInfo = new TokenInfoClient(connection);
-            this.worldBosses = new WorldBossesClient(connection);
+            this.account = new AccountClient(connection, gw2Client);
+            this.achievements = new AchievementsClient(connection, gw2Client);
+            this.backstory = new BackstoryClient(connection, gw2Client);
+            this.build = new BuildClient(connection, gw2Client);
+            this.characters = new CharactersClient(connection, gw2Client);
+            this.colors = new ColorsClient(connection, gw2Client);
+            this.commerce = new CommerceClient(connection, gw2Client);
+            this.continents = new ContinentsClient(connection, gw2Client);
+            this.createSubtoken = new CreateSubtokenClient(connection, gw2Client);
+            this.currencies = new CurrenciesClient(connection, gw2Client);
+            this.dailyCrafting = new DailyCraftingClient(connection, gw2Client);
+            this.dungeons = new DungeonsClient(connection, gw2Client);
+            this.emblem = new EmblemClient(connection, gw2Client);
+            this.files = new FilesClient(connection, gw2Client);
+            this.finishers = new FinishersClient(connection, gw2Client);
+            this.gliders = new GlidersClient(connection, gw2Client);
+            this.guild = new GuildClient(connection, gw2Client);
+            this.home = new HomeClient(connection, gw2Client);
+            this.items = new ItemsClient(connection, gw2Client);
+            this.itemstats = new ItemstatsClient(connection, gw2Client);
+            this.legends = new LegendsClient(connection, gw2Client);
+            this.mailCarriers = new MailCarriersClient(connection, gw2Client);
+            this.mapChests = new MapChestsClient(connection, gw2Client);
+            this.maps = new MapsClient(connection, gw2Client);
+            this.masteries = new MasteriesClient(connection, gw2Client);
+            this.materials = new MaterialsClient(connection, gw2Client);
+            this.minis = new MinisClient(connection, gw2Client);
+            this.mounts = new MountsClient(connection, gw2Client);
+            this.novelties = new NoveltiesClient(connection, gw2Client);
+            this.tokenInfo = new TokenInfoClient(connection, gw2Client);
+            this.worldBosses = new WorldBossesClient(connection, gw2Client);
         }
 
         /// <inheritdoc />

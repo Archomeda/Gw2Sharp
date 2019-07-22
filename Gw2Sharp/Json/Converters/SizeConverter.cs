@@ -1,14 +1,15 @@
+using System;
+using Gw2Sharp.WebApi.V2.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using System;
 
-namespace Gw2Sharp.WebApi.V2.Models.Converters
+namespace Gw2Sharp.Json.Converters
 {
     /// <summary>
     /// A custom JSON converter that handles size conversion.
     /// </summary>
-    /// <seealso cref="Newtonsoft.Json.JsonConverter{Size}" />
-    public class SizeConverter : JsonConverter<Size>
+    /// <seealso cref="JsonConverter{Size}" />
+    public sealed class SizeConverter : JsonConverter<Size>
     {
         /// <inheritdoc />
         public override bool CanWrite => false;

@@ -1,13 +1,13 @@
 using System;
 using Newtonsoft.Json;
 
-namespace Gw2Sharp.WebApi.V2.Models.Converters
+namespace Gw2Sharp.Json.Converters
 {
     /// <summary>
     /// A custom JSON converter that handles GUID conversions.
     /// </summary>
-    /// <seealso cref="Newtonsoft.Json.JsonConverter{Size}" />
-    public class GuidConverter : JsonConverter<Guid>
+    /// <seealso cref="JsonConverter{Guid}" />
+    public sealed class GuidConverter : JsonConverter<Guid>
     {
         /// <inheritdoc />
         public override bool CanWrite => false;
