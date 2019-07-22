@@ -19,7 +19,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="gw2Client">The Guild Wars 2 client.</param>
         /// <param name="guildId">The guild id.</param>
         /// <exception cref="ArgumentNullException"><paramref name="connection"/> or <paramref name="gw2Client"/> is <c>null</c>.</exception>
-        internal GuildIdStashClient(IConnection connection, IGw2Client gw2Client, Guid guildId) :
+        protected internal GuildIdStashClient(IConnection connection, IGw2Client gw2Client, Guid guildId) :
             base(connection, gw2Client)
         {
             this.guildId = guildId;

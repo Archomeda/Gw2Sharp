@@ -1,5 +1,5 @@
+using Gw2Sharp.Json.Converters;
 using Gw2Sharp.WebApi.V2.Models;
-using Gw2Sharp.WebApi.V2.Models.Converters;
 using Newtonsoft.Json;
 using Xunit;
 

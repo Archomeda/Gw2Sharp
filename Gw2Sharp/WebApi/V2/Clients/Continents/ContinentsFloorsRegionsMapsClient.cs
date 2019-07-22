@@ -25,7 +25,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="floorId">The floor id.</param>
         /// <param name="regionId">The region id.</param>
         /// <exception cref="ArgumentNullException"><paramref name="connection"/> or <paramref name="gw2Client"/> is <c>null</c>.</exception>
-        internal ContinentsFloorsRegionsMapsClient(IConnection connection, IGw2Client gw2Client, int continentId, int floorId, int regionId) :
+        protected internal ContinentsFloorsRegionsMapsClient(IConnection connection, IGw2Client gw2Client, int continentId, int floorId, int regionId) :
             base(connection, gw2Client, continentId.ToString(), floorId.ToString(), regionId.ToString())
         {
             this.continentId = continentId;

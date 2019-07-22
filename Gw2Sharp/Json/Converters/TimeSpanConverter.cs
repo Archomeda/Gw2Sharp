@@ -1,14 +1,13 @@
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using System;
+using Newtonsoft.Json;
 
-namespace Gw2Sharp.WebApi.V2.Models.Converters
+namespace Gw2Sharp.Json.Converters
 {
     /// <summary>
     /// A custom JSON converter that handles timespan conversions.
     /// </summary>
-    /// <seealso cref="Newtonsoft.Json.JsonConverter{Size}" />
-    public class TimeSpanConverter : JsonConverter<TimeSpan>
+    /// <seealso cref="JsonConverter{Size}" />
+    public sealed class TimeSpanConverter : JsonConverter<TimeSpan>
     {
         /// <inheritdoc />
         public override bool CanWrite => false;

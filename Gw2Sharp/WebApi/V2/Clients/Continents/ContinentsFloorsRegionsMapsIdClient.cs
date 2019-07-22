@@ -26,7 +26,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="regionId">The region id.</param>
         /// <param name="mapId">The map id.</param>
         /// <exception cref="ArgumentNullException"><paramref name="connection"/> or <paramref name="gw2Client"/> is <c>null</c>.</exception>
-        internal ContinentsFloorsRegionsMapsIdClient(IConnection connection, IGw2Client gw2Client, int continentId, int floorId, int regionId, int mapId) :
+        protected internal ContinentsFloorsRegionsMapsIdClient(IConnection connection, IGw2Client gw2Client, int continentId, int floorId, int regionId, int mapId) :
             base(connection, gw2Client)
         {
             this.continentId = continentId;

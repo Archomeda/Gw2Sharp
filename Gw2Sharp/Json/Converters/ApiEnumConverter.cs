@@ -1,16 +1,17 @@
 using System;
 using System.Reflection;
 using Gw2Sharp.Extensions;
+using Gw2Sharp.WebApi.V2.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace Gw2Sharp.WebApi.V2.Models.Converters
+namespace Gw2Sharp.Json.Converters
 {
     /// <summary>
     /// A custom JSON converter that handles <see cref="ApiEnum{T}" />.
     /// </summary>
     /// <seealso cref="JsonConverter" />
-    public class ApiEnumConverter : JsonConverter
+    public sealed class ApiEnumConverter : JsonConverter
     {
         /// <inheritdoc />
         public override bool CanWrite => false;

@@ -20,7 +20,7 @@ namespace Gw2Sharp.WebApi.Render
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
         /// <param name="gw2Client">The Guild Wars 2 client.</param>
         /// <exception cref="ArgumentNullException"><paramref name="connection"/> or <paramref name="gw2Client"/> is <c>null</c>.</exception>
-        internal Gw2WebApiRenderClient(IConnection connection, IGw2Client gw2Client) :
+        protected internal Gw2WebApiRenderClient(IConnection connection, IGw2Client gw2Client) :
             base(connection, gw2Client)
         {
             if (connection == null)
@@ -50,6 +50,10 @@ namespace Gw2Sharp.WebApi.Render
             this.DownloadToStreamAsync(targetStream, renderUrl, CancellationToken.None);
 
         /// <inheritdoc />
+        public Task DownloadToStreamAsync(Stream targetStream, Uri renderUrl) =>
+            this.DownloadToStreamAsync(targetStream, renderUrl.AbsoluteUri, CancellationToken.None);
+
+        /// <inheritdoc />
         public virtual Task DownloadToStreamAsync(Stream targetStream, string renderUrl, CancellationToken cancellationToken)
         {
             if (targetStream == null)
@@ -64,6 +68,10 @@ namespace Gw2Sharp.WebApi.Render
             return this.DownloadToStreamInternalAsync(targetStream, renderUrl, cancellationToken);
         }
 
+        /// <inheritdoc />
+        public Task DownloadToStreamAsync(Stream targetStream, Uri renderUrl, CancellationToken cancellationToken) =>
+            this.DownloadToStreamAsync(targetStream, renderUrl.AbsoluteUri, cancellationToken);
+
         private async Task DownloadToStreamInternalAsync(Stream targetStream, string renderUrl, CancellationToken cancellationToken)
         {
             var cacheItem = await this.DownloadToCacheAsync(renderUrl, cancellationToken).ConfigureAwait(false);
@@ -75,6 +83,10 @@ namespace Gw2Sharp.WebApi.Render
         /// <inheritdoc />
         public virtual Task<byte[]> DownloadToByteArrayAsync(string renderUrl) =>
             this.DownloadToByteArrayAsync(renderUrl, CancellationToken.None);
+
+        /// <inheritdoc />
+        public Task<byte[]> DownloadToByteArrayAsync(Uri renderUrl) =>
+            this.DownloadToByteArrayAsync(renderUrl.AbsoluteUri, CancellationToken.None);
 
         /// <inheritdoc />
         public virtual Task<byte[]> DownloadToByteArrayAsync(string renderUrl, CancellationToken cancellationToken)
@@ -95,5 +107,9 @@ namespace Gw2Sharp.WebApi.Render
             using var memoryStream = new MemoryStream(cacheItem.Item, false);
             return memoryStream.ToArray();
         }
+
+        /// <inheritdoc />
+        public Task<byte[]> DownloadToByteArrayAsync(Uri renderUrl, CancellationToken cancellationToken) =>
+            this.DownloadToByteArrayAsync(renderUrl.AbsoluteUri, cancellationToken);
     }
 }

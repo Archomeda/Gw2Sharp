@@ -6,10 +6,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using Gw2Sharp.Extensions;
 using Gw2Sharp.Json;
+using Gw2Sharp.Json.Converters;
 using Gw2Sharp.WebApi.Caching;
 using Gw2Sharp.WebApi.Http;
 using Gw2Sharp.WebApi.V2.Models;
-using Gw2Sharp.WebApi.V2.Models.Converters;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 

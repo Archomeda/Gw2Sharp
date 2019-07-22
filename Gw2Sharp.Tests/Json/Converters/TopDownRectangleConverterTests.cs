@@ -1,9 +1,9 @@
 using System;
+using Gw2Sharp.Json.Converters;
 using Gw2Sharp.WebApi.V2.Models;
-using Gw2Sharp.WebApi.V2.Models.Converters;
 using Xunit;
 
-namespace Gw2Sharp.Tests.WebApi.V2.Models.Converters
+namespace Gw2Sharp.Tests.Json.Converters
 {
     public class TopDownRectangleConverterTests
     {

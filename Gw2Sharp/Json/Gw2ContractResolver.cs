@@ -1,28 +1,28 @@
 using System;
-using System.Runtime.Serialization;
+using Gw2Sharp.Json.Converters;
+using Gw2Sharp.WebApi;
 using Newtonsoft.Json.Serialization;
 
 namespace Gw2Sharp.Json
 {
     internal class Gw2ContractResolver : DefaultContractResolver
     {
-        private readonly IGw2Client client;
+        private readonly RenderUrlConverter renderUrlConverter;
 
         public Gw2ContractResolver(IGw2Client client)
         {
-            this.client = client;
+            this.renderUrlConverter = new RenderUrlConverter(client);
         }
 
         protected override JsonObjectContract CreateObjectContract(Type objectType)
         {
             var contract = base.CreateObjectContract(objectType);
-            contract.OnDeserializingCallbacks.Add(this.OnDeserializing);
+
+            // Custom converters
+            if (objectType == typeof(RenderUrl))
+                contract.Converter = this.renderUrlConverter;
+
             return contract;
-        }
-
-        private void OnDeserializing(object obj, StreamingContext streamingContext)
-        {
-
         }
     }
 }

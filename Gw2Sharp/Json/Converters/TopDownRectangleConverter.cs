@@ -1,13 +1,14 @@
-using Newtonsoft.Json;
 using System;
+using Gw2Sharp.WebApi.V2.Models;
+using Newtonsoft.Json;
 
-namespace Gw2Sharp.WebApi.V2.Models.Converters
+namespace Gw2Sharp.Json.Converters
 {
     /// <summary>
     /// A custom JSON converter that handles top-down rectangle conversion.
     /// </summary>
     /// <seealso cref="RectangleConverter" />
-    public class TopDownRectangleConverter : RectangleConverter
+    public sealed class TopDownRectangleConverter : RectangleConverter
     {
         /// <inheritdoc />
         public override Rectangle ReadJson(JsonReader reader, Type objectType, Rectangle existingValue, bool hasExistingValue, JsonSerializer serializer) =>

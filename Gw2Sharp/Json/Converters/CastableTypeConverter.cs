@@ -2,16 +2,17 @@ using System;
 using System.Linq;
 using System.Reflection;
 using Gw2Sharp.Extensions;
+using Gw2Sharp.WebApi.V2.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace Gw2Sharp.WebApi.V2.Models.Converters
+namespace Gw2Sharp.Json.Converters
 {
     /// <summary>
     /// A custom JSON converter that handles castable type conversions.
     /// </summary>
     /// <seealso cref="JsonConverter" />
-    public class CastableTypeConverter : JsonConverter
+    public sealed class CastableTypeConverter : JsonConverter
     {
         /// <inheritdoc />
         public override bool CanWrite => false;

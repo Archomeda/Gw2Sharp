@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
-using Gw2Sharp.WebApi.Render;
 
 namespace Gw2Sharp.WebApi
 {
@@ -12,29 +11,33 @@ namespace Gw2Sharp.WebApi
     /// </summary>
     public struct RenderUrl : IEquatable<RenderUrl>
     {
-        private readonly IGw2WebApiRenderClient renderClient;
+        private const string RENDER_BASE_URL = "https://render.guildwars2.com";
+
+        internal IGw2Client Gw2Client { get; set; }
+
+        private readonly string renderPath;
 
         /// <summary>
         /// Creates a new <see cref="RenderUrl"/>.
         /// </summary>
-        /// <param name="renderClient">The web render client.</param>
+        /// <param name="client">The Guild Wars 2 client.</param>
         /// <param name="url">The URL to a resource on the Guild Wars 2 render service API.</param>
-        internal RenderUrl(IGw2WebApiRenderClient renderClient, string url)
+        internal RenderUrl(IGw2Client client, string url)
         {
-            this.renderClient = renderClient;
-            this.Url = url;
+            this.Gw2Client = client;
+            this.renderPath = new Uri(url, UriKind.Absolute).AbsolutePath;
         }
 
 
         /// <summary>
         /// The URL to a resource on the Guild Wars 2 render service API.
         /// </summary>
-        public string Url { get; }
+        public Uri Url => new Uri(new Uri(RENDER_BASE_URL), this.renderPath);
 
 
         /// <inheritdoc />
         public override string ToString() =>
-            this.Url;
+            this.Url.AbsoluteUri;
 
 
         #region IGw2WebApiRenderClient
@@ -45,7 +48,7 @@ namespace Gw2Sharp.WebApi
         /// <param name="targetStream">The target stream.</param>
         /// <returns>The task.</returns>
         public Task DownloadToStreamAsync(Stream targetStream) =>
-            this.renderClient.DownloadToStreamAsync(targetStream, this.Url);
+            this.Gw2Client.WebApi.Render.DownloadToStreamAsync(targetStream, this.Url);
 
         /// <summary>
         /// Downloads the resource from the render service to a stream asynchronously.
@@ -54,14 +57,14 @@ namespace Gw2Sharp.WebApi
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The task.</returns>
         public Task DownloadToStreamAsync(Stream targetStream, CancellationToken cancellationToken) =>
-            this.renderClient.DownloadToStreamAsync(targetStream, this.Url, cancellationToken);
+            this.Gw2Client.WebApi.Render.DownloadToStreamAsync(targetStream, this.Url, cancellationToken);
 
         /// <summary>
         /// Downloads the resource from the render service to a byte array asynchronously.
         /// </summary>
         /// <returns>The task with the resource as byte array.</returns>
         public Task<byte[]> DownloadToByteArrayAsync() =>
-            this.renderClient.DownloadToByteArrayAsync(this.Url);
+            this.Gw2Client.WebApi.Render.DownloadToByteArrayAsync(this.Url);
 
         /// <summary>
         /// Downloads the resource from the render service to a byte array asynchronously.
@@ -69,7 +72,7 @@ namespace Gw2Sharp.WebApi
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The task with the resource as byte array.</returns>
         public Task<byte[]> DownloadToByteArrayAsync(CancellationToken cancellationToken) =>
-            this.renderClient.DownloadToByteArrayAsync(this.Url, cancellationToken);
+            this.Gw2Client.WebApi.Render.DownloadToByteArrayAsync(this.Url, cancellationToken);
 
         #endregion
 
@@ -86,7 +89,7 @@ namespace Gw2Sharp.WebApi
 
         /// <inheritdoc />
         public override int GetHashCode() =>
-            -1915121810 + EqualityComparer<string>.Default.GetHashCode(this.Url);
+            -1915121810 + EqualityComparer<Uri>.Default.GetHashCode(this.Url);
 
         #endregion
 
@@ -116,7 +119,14 @@ namespace Gw2Sharp.WebApi
         /// </summary>
         /// <param name="renderUrl">The render URL object.</param>
         public static implicit operator string(RenderUrl renderUrl) =>
-            renderUrl.Url;
+            renderUrl.Url.AbsoluteUri;
+
+        /// <summary>
+        /// Gets the URL as <see cref="Uri"/>.
+        /// </summary>
+        /// <param name="renderUrl">The render URL object.</param>
+        public static implicit operator Uri(RenderUrl renderUrl) =>
+            new Uri(renderUrl.Url.AbsoluteUri, UriKind.Absolute);
 
         #endregion
     }
