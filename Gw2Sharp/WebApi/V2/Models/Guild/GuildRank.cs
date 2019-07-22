@@ -27,6 +27,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The guild rank icon.
         /// </summary>
-        public string Icon { get; set; } = string.Empty;
+        public RenderUrl Icon { get; set; }
     }
 }

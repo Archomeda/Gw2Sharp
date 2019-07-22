@@ -30,7 +30,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The achievement category icon.
         /// </summary>
-        public string Icon { get; set; } = string.Empty;
+        public RenderUrl Icon { get; set; }
 
         /// <summary>
         /// The achievements in the achievement category.

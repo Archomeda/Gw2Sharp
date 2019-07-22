@@ -21,6 +21,8 @@ namespace Gw2Sharp.Json
             // Custom converters
             if (objectType == typeof(RenderUrl))
                 contract.Converter = this.renderUrlConverter;
+            else if (objectType == typeof(RenderUrl?))
+                contract.Converter = this.renderUrlConverter;
 
             return contract;
         }
