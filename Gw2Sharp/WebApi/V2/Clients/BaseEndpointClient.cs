@@ -197,7 +197,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         private async Task<TEndpointObject> RequestGetInternalAsync<TEndpointObject, TId>(TId id, CancellationToken cancellationToken)
             where TEndpointObject : IApiV2Object, IIdentifiable<TId>
         {
-            var @object = await this.GetOrUpdateAsync<TEndpointObject>(this.FormatUrlQueryItem(this.EndpointPath, id), id, cancellationToken).ConfigureAwait(false);
+            var @object = await this.GetOrUpdateAsync<TEndpointObject>(this.FormatUrlQueryItem(this.EndpointPath, id), id!, cancellationToken).ConfigureAwait(false);
             return @object.Item;
         }
 
@@ -412,7 +412,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         private async Task<IReadOnlyList<CacheItem<TEndpointObject>>> UpdateIndividualsInternalAsync<TEndpointObject, TId>(CacheItem<IApiV2ObjectList<TEndpointObject>> cache)
             where TEndpointObject : IApiV2Object, IIdentifiable<TId>
         {
-            var cacheList = cache.Item.Select(x => new CacheItem<TEndpointObject>(this.EndpointPath, x.Id, x, cache.ExpiryTime)).ToList();
+            var cacheList = cache.Item.Select(x => new CacheItem<TEndpointObject>(this.EndpointPath, x.Id!, x, cache.ExpiryTime)).ToList();
             await this.Connection.CacheMethod.SetManyAsync(cacheList).ConfigureAwait(false);
             return cacheList;
         }

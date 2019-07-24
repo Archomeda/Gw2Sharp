@@ -137,7 +137,12 @@ namespace Gw2Sharp.WebApi.Caching
                     using var streamReader = new StreamReader(entryStream);
                     using var jsonReader = new JsonTextReader(streamReader);
                     var serializer = JsonSerializer.Create(this.serializerSettings);
-                    data = serializer.Deserialize<T>(jsonReader);
+
+                    var deserializedData = serializer.Deserialize<T>(jsonReader);
+                    if (deserializedData == null)
+                        return null;
+
+                    data = deserializedData;
                 }
 
                 return new CacheItem<T>(category, id, (T)data, expiryTime);

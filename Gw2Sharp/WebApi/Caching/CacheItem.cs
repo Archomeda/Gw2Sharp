@@ -78,7 +78,7 @@ namespace Gw2Sharp.WebApi.Caching
     /// <summary>
     /// A generic cache item.
     /// </summary>
-    public class CacheItem<T> : CacheItem, IEquatable<CacheItem<T>> 
+    public class CacheItem<T> : CacheItem, IEquatable<CacheItem<T>>
     {
         /// <summary>
         /// Creates a new cache item.
@@ -87,7 +87,7 @@ namespace Gw2Sharp.WebApi.Caching
         /// <param name="id">The id.</param>
         /// <param name="item">The item.</param>
         /// <param name="expiryTime">The expiry time.</param>
-        public CacheItem(string category, object id, T item, DateTimeOffset expiryTime) : base(category, id, item, expiryTime) { }
+        public CacheItem(string category, object id, T item, DateTimeOffset expiryTime) : base(category, id, item!, expiryTime) { }
 
         /// <summary>
         /// The cache item.
