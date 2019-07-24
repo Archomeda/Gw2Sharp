@@ -6,6 +6,7 @@
 - Add `RenderUrl` type to directly access download methods from the render client
 - Add `/v2/novelties`
 - Add `/v2/outfits`
+- Add `/v2/pets`
 
 ### Caching
 - Add `ArchiveCacheMethod` to support caching large blobs of data in a ZIP archive on disk (e.g. images from render)

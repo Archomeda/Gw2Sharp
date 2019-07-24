@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Juvenile Jungle Stalker",
+    "description": "Jungle stalkers rely on their power to take down prey. They enter battle with a mighty roar, inspiring allies as they lay into their victims with claws and teeth. They love tummy rubs. —Acht",
+    "icon": "https://render.guildwars2.com/file/EF1CBC60372CC60E420AD479A3504D90207A9A3F/52535.png",
+    "skills": [
+      {
+        "id": 12658
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Juvenile Boar",
+    "description": "This boar is a tough, strong fighter with wicked tusks. It's difficult for foes to stay on their feet against his charges. Though polite society may not appreciate his charms, a boar can be a ranger's best friend. —Acht",
+    "icon": "https://render.guildwars2.com/file/F4A7D5033C6BBB14F4EDE9F0946190047D2AA96F/52537.png",
+    "skills": [
+      {
+        "id": 12754
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Juvenile Brown Bear",
+    "description": "Brown bears are tremendously strong and fiercely protective. They throw themselves into combat selflessly to distract attention from their masters and use their great strength to shrug off blows that would kill any other creature. —Acht",
+    "icon": "https://render.guildwars2.com/file/1B51DCA656B8ED7A2C1C48AC03A4BCD6EDA66901/52543.png",
+    "skills": [
+      {
+        "id": 12666
+      },
+      {
+        "id": 12691
+      }
+    ]
+  }
+]

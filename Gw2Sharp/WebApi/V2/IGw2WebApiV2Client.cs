@@ -160,6 +160,11 @@ namespace Gw2Sharp.WebApi.V2
         IOutfitsClient Outfits { get; }
 
         /// <summary>
+        /// Gets the pets.
+        /// </summary>
+        IPetsClient Pets { get; }
+
+        /// <summary>
         /// Gets the token info.
         /// </summary>
         ITokenInfoClient TokenInfo { get; }
