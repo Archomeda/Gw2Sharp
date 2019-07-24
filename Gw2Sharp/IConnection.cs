@@ -70,6 +70,6 @@ namespace Gw2Sharp
         /// <exception cref="RequestException">A generic request error occurs (<seealso cref="IHttpClient.RequestAsync"/>).</exception>
         /// <exception cref="RequestCanceledException">The request is canceled by the user or because of a timeout (<seealso cref="IHttpClient.RequestAsync"/>).</exception>
         /// <exception cref="UnexpectedStatusException">The server returns a non-successful HTTP status code (<seealso cref="IHttpClient.RequestAsync"/>).</exception>
-        Task<IHttpResponse<TResponse>> RequestAsync<TResponse>(IGw2Client client, Uri requestUri, IEnumerable<KeyValuePair<string, string>>? additionalHeaders, CancellationToken cancellationToken) where TResponse : object;
+        Task<IHttpResponse<TResponse>> RequestAsync<TResponse>(IGw2Client client, Uri requestUri, IEnumerable<KeyValuePair<string, string>>? additionalHeaders, CancellationToken cancellationToken);
     }
 }

@@ -73,7 +73,7 @@ namespace Gw2Sharp.WebApi.Caching
             return this.TryGetInternalAsync<T>(category, id);
         }
 
-        private async Task<CacheItem<T>?> TryGetInternalAsync<T>(string category, object id) where T : object
+        private async Task<CacheItem<T>?> TryGetInternalAsync<T>(string category, object id)
         {
             return this.cachedItems.TryGetValue(category, out var cache) &&
                  cache.TryGetValue(id, out object obj) &&
@@ -91,7 +91,7 @@ namespace Gw2Sharp.WebApi.Caching
             return item.ExpiryTime <= DateTime.Now ? Task.CompletedTask : this.SetInternalAsync(item);
         }
 
-        private async Task SetInternalAsync<T>(CacheItem<T> item) where T : object
+        private async Task SetInternalAsync<T>(CacheItem<T> item)
         {
             var cache = this.cachedItems.GetOrAdd(item.Category, new ConcurrentDictionary<object, object>());
             cache[item.Id] = item;
@@ -108,7 +108,7 @@ namespace Gw2Sharp.WebApi.Caching
             return this.GetManyInternalAsync<T>(category, ids);
         }
 
-        private async Task<IDictionary<object, CacheItem<T>>> GetManyInternalAsync<T>(string category, IEnumerable<object> ids) where T : object
+        private async Task<IDictionary<object, CacheItem<T>>> GetManyInternalAsync<T>(string category, IEnumerable<object> ids)
         {
             var items = new Dictionary<object, CacheItem<T>>();
             if (this.cachedItems.TryGetValue(category, out var cache))

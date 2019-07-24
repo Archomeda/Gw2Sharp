@@ -123,7 +123,7 @@ namespace Gw2Sharp.WebApi.Http
         protected RequestException(SerializationInfo info, StreamingContext context) : base(info, context)
         {
             this.Request = (IHttpRequest)info.GetValue(nameof(this.Request), typeof(IHttpRequest));
-            this.Response = (IHttpResponse<TResponse>?)info.GetValue(nameof(this.Response), typeof(IHttpResponse<TResponse>?));
+            this.Response = (IHttpResponse<TResponse>?)info.GetValue(nameof(this.Response), typeof(IHttpResponse<TResponse>));
         }
 
         /// <summary>
@@ -143,7 +143,7 @@ namespace Gw2Sharp.WebApi.Http
                 throw new ArgumentNullException(nameof(info));
 
             info.AddValue(nameof(this.Request), this.Request, typeof(IHttpRequest));
-            info.AddValue(nameof(this.Response), this.Response, typeof(IHttpResponse<TResponse>?));
+            info.AddValue(nameof(this.Response), this.Response, typeof(IHttpResponse<TResponse>));
 
             base.GetObjectData(info, context);
         }

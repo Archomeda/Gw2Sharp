@@ -78,7 +78,7 @@ namespace Gw2Sharp.WebApi.Caching
     /// <summary>
     /// A generic cache item.
     /// </summary>
-    public class CacheItem<T> : CacheItem, IEquatable<CacheItem<T>> where T : object
+    public class CacheItem<T> : CacheItem, IEquatable<CacheItem<T>> 
     {
         /// <summary>
         /// Creates a new cache item.

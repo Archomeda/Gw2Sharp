@@ -106,7 +106,7 @@ namespace Gw2Sharp.WebApi.Caching
             return Task.FromResult(this.TryGetInternal<T>(category, id));
         }
 
-        private CacheItem<T>? TryGetInternal<T>(string category, object id) where T : object
+        private CacheItem<T>? TryGetInternal<T>(string category, object id)
         {
             string fileName = $"{category}/{id}";
             lock (this.operationLock)
@@ -155,7 +155,7 @@ namespace Gw2Sharp.WebApi.Caching
             return Task.CompletedTask;
         }
 
-        private void SetInternal<T>(CacheItem<T> item) where T : object
+        private void SetInternal<T>(CacheItem<T> item)
         {
             string fileName = $"{item.Category}/{item.Id}";
             lock (this.operationLock)
@@ -196,7 +196,7 @@ namespace Gw2Sharp.WebApi.Caching
             return this.GetManyInternalAsync<T>(category, ids);
         }
 
-        private async Task<IDictionary<object, CacheItem<T>>> GetManyInternalAsync<T>(string category, IEnumerable<object> ids) where T : object
+        private async Task<IDictionary<object, CacheItem<T>>> GetManyInternalAsync<T>(string category, IEnumerable<object> ids)
         {
             return ids
                 .Select(id => this.TryGetInternal<T>(category, id))

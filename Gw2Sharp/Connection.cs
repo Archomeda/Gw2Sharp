@@ -179,7 +179,7 @@ namespace Gw2Sharp
 
 
         /// <inheritdoc />
-        public Task<IHttpResponse<TResponse>> RequestAsync<TResponse>(IGw2Client client, Uri requestUri, IEnumerable<KeyValuePair<string, string>>? additionalHeaders, CancellationToken cancellationToken) where TResponse : object
+        public Task<IHttpResponse<TResponse>> RequestAsync<TResponse>(IGw2Client client, Uri requestUri, IEnumerable<KeyValuePair<string, string>>? additionalHeaders, CancellationToken cancellationToken)
         {
             if (requestUri == null)
                 throw new ArgumentNullException(nameof(requestUri));
@@ -187,7 +187,7 @@ namespace Gw2Sharp
             return this.RequestInternalAsync<TResponse>(client, requestUri, additionalHeaders, cancellationToken);
         }
 
-        private async Task<IHttpResponse<TResponse>> RequestInternalAsync<TResponse>(IGw2Client client, Uri requestUri, IEnumerable<KeyValuePair<string, string>>? additionalHeaders, CancellationToken cancellationToken) where TResponse : object
+        private async Task<IHttpResponse<TResponse>> RequestInternalAsync<TResponse>(IGw2Client client, Uri requestUri, IEnumerable<KeyValuePair<string, string>>? additionalHeaders, CancellationToken cancellationToken)
         {
             IDictionary<string, string> headers = this.requestHeaders;
             if (additionalHeaders != null)
