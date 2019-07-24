@@ -4,6 +4,7 @@
     <TargetFrameworks>netcoreapp3.0</TargetFrameworks>
     <LangVersion>8.0</LangVersion>
     <Nullable>enable</Nullable>
+    <NullableContextOptions>enable</NullableContextOptions>
     <IsTestProject>true</IsTestProject>
   </PropertyGroup>
 
