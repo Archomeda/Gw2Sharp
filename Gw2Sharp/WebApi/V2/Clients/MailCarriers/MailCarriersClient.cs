@@ -13,6 +13,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Creates a new <see cref="MailCarriersClient"/> that is used for the API v2 mailcarriers endpoint.
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
+        /// <param name="gw2Client">The Guild Wars 2 client.</param>
         /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
         protected internal MailCarriersClient(IConnection connection, IGw2Client gw2Client) :
             base(connection, gw2Client)
