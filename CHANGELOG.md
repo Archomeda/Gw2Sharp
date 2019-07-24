@@ -5,6 +5,7 @@
 - Add render service which can be found under `IGw2WebApiClient.Render` (right next to `IGw2WebApiClient.V2`)
 - Add `RenderUrl` type to directly access download methods from the render client
 - Add `/v2/novelties`
+- Add `/v2/outfits`
 
 ### Caching
 - Add `ArchiveCacheMethod` to support caching large blobs of data in a ZIP archive on disk (e.g. images from render)

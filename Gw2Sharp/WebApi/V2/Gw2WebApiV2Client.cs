@@ -42,6 +42,7 @@ namespace Gw2Sharp.WebApi.V2
         private readonly IMinisClient minis;
         private readonly IMountsClient mounts;
         private readonly INoveltiesClient novelties;
+        private readonly IOutfitsClient outfits;
         private readonly ITokenInfoClient tokenInfo;
         private readonly IWorldBossesClient worldBosses;
 
@@ -88,6 +89,7 @@ namespace Gw2Sharp.WebApi.V2
             this.minis = new MinisClient(connection, gw2Client);
             this.mounts = new MountsClient(connection, gw2Client);
             this.novelties = new NoveltiesClient(connection, gw2Client);
+            this.outfits = new OutfitsClient(connection, gw2Client);
             this.tokenInfo = new TokenInfoClient(connection, gw2Client);
             this.worldBosses = new WorldBossesClient(connection, gw2Client);
         }
@@ -178,6 +180,9 @@ namespace Gw2Sharp.WebApi.V2
 
         /// <inheritdoc />
         public virtual INoveltiesClient Novelties => this.novelties;
+
+        /// <inheritdoc />
+        public virtual IOutfitsClient Outfits => this.outfits;
 
         /// <inheritdoc />
         public virtual ITokenInfoClient TokenInfo => this.tokenInfo;

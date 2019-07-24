@@ -144,7 +144,7 @@ For your convenience, the following list gives an overview of the endpoints that
  /v2/mounts/skins | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Mounts.Skins`](../api/Gw2Sharp.WebApi.V2.Clients.MountsSkinsClient.html)
  /v2/mounts/types | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Mounts.Types`](../api/Gw2Sharp.WebApi.V2.Clients.MountsTypesClient.html)
  /v2/novelties | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Novelties`](../api/Gw2Sharp.WebApi.V2.Clients.NoveltiesClient.html)
- /v2/outfits | ❌ |
+ /v2/outfits | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Outfits`](../api/Gw2Sharp.WebApi.V2.Clients.OutfitsClient.html)
  /v2/pets | ❌ |
  /v2/professions | ❌ |
  /v2/pvp | ❌ |

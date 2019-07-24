@@ -194,6 +194,9 @@
     <None Remove="TestFiles\Novelties\Novelties.bulk.json" />
     <None Remove="TestFiles\Novelties\Novelties.ids.json" />
     <None Remove="TestFiles\Novelties\Novelties.single.json" />
+    <None Remove="TestFiles\Outfits\Outfits.bulk.json" />
+    <None Remove="TestFiles\Outfits\Outfits.ids.json" />
+    <None Remove="TestFiles\Outfits\Outfits.single.json" />
     <None Remove="TestFiles\Render\414998.png" />
     <None Remove="TestFiles\TokenInfo\TokenInfo.ApiToken.json" />
     <None Remove="TestFiles\TokenInfo\TokenInfo.SubToken.json" />
@@ -384,6 +387,9 @@
     <EmbeddedResource Include="TestFiles\Novelties\Novelties.bulk.json" />
     <EmbeddedResource Include="TestFiles\Novelties\Novelties.ids.json" />
     <EmbeddedResource Include="TestFiles\Novelties\Novelties.single.json" />
+    <EmbeddedResource Include="TestFiles\Outfits\Outfits.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Outfits\Outfits.ids.json" />
+    <EmbeddedResource Include="TestFiles\Outfits\Outfits.single.json" />
     <EmbeddedResource Include="TestFiles\Render\414998.png" />
     <EmbeddedResource Include="TestFiles\TokenInfo\TokenInfo.ApiToken.json" />
     <EmbeddedResource Include="TestFiles\TokenInfo\TokenInfo.SubToken.json" />
