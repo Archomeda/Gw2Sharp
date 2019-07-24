@@ -3,6 +3,7 @@
 ## 0.5.0
 ### Endpoints
 - Add render service which can be found under `IGw2WebApiClient.Render` (right next to `IGw2WebApiClient.V2`)
+- Add `RenderUrl` type to directly access download methods from the render client
 - Add `/v2/novelties`
 
 ### Caching
@@ -12,7 +13,13 @@
 - **Breaking:** Fix types of `Coordinates2.X` and `Coordinates2.Y` from int to double
 
 ### Refactoring
-- **Breaking:** A bunch of overloaded constructors of `Connection` have been simplified into one constructor with optional parameters
+- **Breaking:** All web API v2 properties that are URLs have been changed from type `string` to type `Gw2Sharp.WebApi.RenderUrl`
+- **Breaking:** `Gw2Sharp.WebApi.Gw2WebApiClient` can no longer be instantiated directly; use `Gw2Sharp.Gw2Client` instead
+- **Breaking:** `Gw2Sharp.WebApi.IConnection` and `Gw2Sharp.WebApi.Connection` have been moved into the root `Gw2Sharp` namespace
+- **Breaking:** A bunch of overloaded constructors of `Gw2Sharp.Connection` have been simplified into one constructor with optional parameters
+- **Breaking:** `Gw2Sharp.IConnection.RequestAsync` has its signature changed to include a parameter of type `Gw2Sharp.IGw2Client`
+- **Breaking:** All custom JSON converters inside the `Gw2Sharp.WebApi.V2.Models.Converters` namespace have been moved into the `Gw2Sharp.Json.Converters` namespace
+- **Breaking:** All web API clients no longer have public constructors; access them through `Gw2Sharp.Gw2Client` instead
 
 ### Deprecation removals
 - Following up on version 0.4.0, the methods `ICacheMethod.HasAsync`, `ICacheMethod.GetAsync` and `ICacheMethod.GetOrNullAsync` have been removed

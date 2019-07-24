@@ -16,14 +16,14 @@ As long as the subtoken permissions are a subset of the original token, you can 
 With Gw2Sharp, you can create a subtoken yourself with the following example:
 
 ```cs
-using Gw2Sharp.WebApi;
+using Gw2Sharp;
 using Gw2Sharp.WebApi.V2.Models;
 
 var connection = new Connection("your-original-token");
-var client = new Gw2WebApiClient(connection);
+var client = new Gw2Client(connection);
 
 // By using a fluent-design pattern, you can give it the parameters you want
-var subtokenResponse = await client.V2.CreateSubtoken
+var subtokenResponse = await client.WebApi.V2.CreateSubtoken
     .WithPermissions(new[] { TokenPermission.Characters })
     .WithUrls(new[] { "/v2/characters" })
     .Expires(DateTime.Now.AddDays(1))
@@ -37,5 +37,5 @@ And you can use this token with a new client, and it works the same as the previ
 
 ```cs
 var subConnection = new Connection(token);
-var subClient = new Gw2WebApiClient(subConnection);
+var subClient = new Gw2Client(subConnection);
 ```

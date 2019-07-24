@@ -17,7 +17,7 @@ If none of these provided cache methods suit your needs, you can bring your own 
 
 The following example shows how you can pass a custom cache method to a `Connection`:
 ```cs
-using Gw2Sharp.WebApi;
+using Gw2Sharp;
 using Gw2Sharp.WebApi.Caching;
 
 // The default constructor will use in-memory caching for API requests,

@@ -7,13 +7,14 @@ using System.Threading.Tasks;
 using Gw2Sharp.Extensions;
 using Gw2Sharp.Json;
 using Gw2Sharp.Json.Converters;
+using Gw2Sharp.WebApi;
 using Gw2Sharp.WebApi.Caching;
 using Gw2Sharp.WebApi.Http;
 using Gw2Sharp.WebApi.V2.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace Gw2Sharp.WebApi
+namespace Gw2Sharp
 {
     /// <summary>
     /// A web API connection.

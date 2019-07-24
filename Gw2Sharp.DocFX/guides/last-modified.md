@@ -14,7 +14,7 @@ An example:
 
 ```cs
 // Assuming you already have a client
-var character = await client.V2.Characters["Your Character Name"].GetAsync();
+var character = await client.WebApi.V2.Characters["Your Character Name"].GetAsync();
 var lastModified = character.HttpResponseInfo.LastModified;
 
 // Note that both HttpResponseInfo and LastModified are nullable
