@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace Gw2Sharp.WebApi.V2.Clients
 {
     /// <summary>
@@ -9,6 +11,11 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// The endpoint path used for this endpoint.
         /// </summary>
         string EndpointPath { get; }
+
+        /// <summary>
+        /// The additional endpoint path parameters for this endpoint.
+        /// </summary>
+        IDictionary<string, string> EndpointPathParameters { get; }
 
         /// <summary>
         /// The endpoint schema version override.

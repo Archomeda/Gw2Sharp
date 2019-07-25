@@ -36,6 +36,6 @@ namespace Gw2Sharp.WebApi.V2.Clients
 
         /// <inheritdoc />
         public virtual Task<TObject> GetAsync(CancellationToken cancellationToken = default) =>
-            this.RequestGetAsync(cancellationToken);
+            this.Implementation.RequestGetAsync(cancellationToken);
     }
 }

@@ -39,26 +39,26 @@ namespace Gw2Sharp.WebApi.V2.Clients
 
         /// <inheritdoc />
         public virtual Task<IApiV2ObjectList<TObject>> AllAsync(CancellationToken cancellationToken = default) =>
-            this.RequestAllAsync<TObject, TId>(cancellationToken);
+            this.Implementation.RequestAllAsync<TObject, TId>(cancellationToken);
 
         /// <inheritdoc />
         public virtual Task<TObject> GetAsync(TId id, CancellationToken cancellationToken = default) =>
-            this.RequestGetAsync<TObject, TId>(id, cancellationToken);
+            this.Implementation.RequestGetAsync<TObject, TId>(id, cancellationToken);
 
         /// <inheritdoc />
         public virtual Task<IApiV2ObjectList<TId>> IdsAsync(CancellationToken cancellationToken = default) =>
-            this.RequestIdsAsync<TId>(cancellationToken);
+            this.Implementation.RequestIdsAsync<TId>(cancellationToken);
 
         /// <inheritdoc />
         public virtual Task<IReadOnlyList<TObject>> ManyAsync(IEnumerable<TId> ids, CancellationToken cancellationToken = default) =>
-            this.RequestManyAsync<TObject, TId>(ids, cancellationToken);
+            this.Implementation.RequestManyAsync<TObject, TId>(ids, cancellationToken);
 
         /// <inheritdoc />
         public virtual Task<IApiV2ObjectList<TObject>> PageAsync(int page, CancellationToken cancellationToken = default) =>
-            this.RequestPageAsync<TObject, TId>(page, cancellationToken);
+            this.Implementation.RequestPageAsync<TObject, TId>(page, cancellationToken: cancellationToken);
 
         /// <inheritdoc />
         public virtual Task<IApiV2ObjectList<TObject>> PageAsync(int page, int pageSize, CancellationToken cancellationToken = default) =>
-            this.RequestPageAsync<TObject, TId>(page, cancellationToken, pageSize);
+            this.Implementation.RequestPageAsync<TObject, TId>(page, pageSize, cancellationToken);
     }
 }
