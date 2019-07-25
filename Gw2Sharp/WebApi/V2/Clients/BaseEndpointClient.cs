@@ -106,16 +106,6 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// </summary>
         /// <typeparam name="TEndpointObject">The endpoint return value type.</typeparam>
         /// <typeparam name="TId">The entry id type.</typeparam>
-        /// <returns>All entries.</returns>
-        protected Task<IApiV2ObjectList<TEndpointObject>> RequestAllAsync<TEndpointObject, TId>()
-            where TEndpointObject : IApiV2Object, IIdentifiable<TId> =>
-            this.RequestAllAsync<TEndpointObject, TId>(CancellationToken.None);
-
-        /// <summary>
-        /// Requests all entries from this endpoint.
-        /// </summary>
-        /// <typeparam name="TEndpointObject">The endpoint return value type.</typeparam>
-        /// <typeparam name="TId">The entry id type.</typeparam>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>All entries.</returns>
         protected async Task<IApiV2ObjectList<TEndpointObject>> RequestAllAsync<TEndpointObject, TId>(CancellationToken cancellationToken)
@@ -125,14 +115,6 @@ namespace Gw2Sharp.WebApi.V2.Clients
             await this.UpdateIndividualsAsync<TEndpointObject, TId>(items).ConfigureAwait(false);
             return items.Item;
         }
-
-        /// <summary>
-        /// Requests the list of entry ids from this endpoint.
-        /// </summary>
-        /// <typeparam name="TId">The entry id type.</typeparam>
-        /// <returns>Entry ids.</returns>
-        protected Task<IApiV2ObjectList<TId>> RequestIdsAsync<TId>() =>
-            this.RequestIdsAsync<TId>(CancellationToken.None);
 
         /// <summary>
         /// Requests the list of entry ids from this endpoint.
@@ -149,13 +131,6 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <summary>
         /// Requests the main blob data from this endpoint.
         /// </summary>
-        /// <returns>The blob data.</returns>
-        protected Task<TObject> RequestGetAsync() =>
-            this.RequestGetAsync(CancellationToken.None);
-
-        /// <summary>
-        /// Requests the main blob data from this endpoint.
-        /// </summary>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The blob data.</returns>
         protected async Task<TObject> RequestGetAsync(CancellationToken cancellationToken)
@@ -163,18 +138,6 @@ namespace Gw2Sharp.WebApi.V2.Clients
             var @object = await this.GetOrUpdateAsync<TObject>(this.FormatUrlQueryBlob(this.EndpointPath), "_index", cancellationToken).ConfigureAwait(false);
             return @object.Item;
         }
-
-        /// <summary>
-        /// Requests a single entry by id.
-        /// </summary>
-        /// <typeparam name="TEndpointObject">The endpoint return value type.</typeparam>
-        /// <typeparam name="TId">The id value type.</typeparam>
-        /// <param name="id">The entry id.</param>
-        /// <returns>The entry.</returns>
-        /// <exception cref="ArgumentNullException"><paramref name="id"/> is <c>null</c>.</exception>
-        protected Task<TEndpointObject> RequestGetAsync<TEndpointObject, TId>(TId id)
-            where TEndpointObject : IApiV2Object, IIdentifiable<TId> =>
-            this.RequestGetAsync<TEndpointObject, TId>(id, CancellationToken.None);
 
         /// <summary>
         /// Requests a single entry by id.
@@ -200,18 +163,6 @@ namespace Gw2Sharp.WebApi.V2.Clients
             var @object = await this.GetOrUpdateAsync<TEndpointObject>(this.FormatUrlQueryItem(this.EndpointPath, id), id!, cancellationToken).ConfigureAwait(false);
             return @object.Item;
         }
-
-        /// <summary>
-        /// Requests many entries by their id (a.k.a. bulk expansion).
-        /// </summary>
-        /// <typeparam name="TEndpointObject">The endpoint return value type.</typeparam>
-        /// <typeparam name="TId">The id value type.</typeparam>
-        /// <param name="ids">The entry ids.</param>
-        /// <returns>The entries.</returns>
-        /// <exception cref="ArgumentNullException"><paramref name="ids"/> is <c>null</c>.</exception>
-        protected Task<IReadOnlyList<TEndpointObject>> RequestManyAsync<TEndpointObject, TId>(IEnumerable<TId> ids)
-            where TEndpointObject : IApiV2Object, IIdentifiable<TId> =>
-            this.RequestManyAsync<TEndpointObject, TId>(ids, CancellationToken.None);
 
         /// <summary>
         /// Requests many entries by their id (a.k.a. bulk expansion).
@@ -276,19 +227,6 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <typeparam name="TEndpointObject">The endpoint return value type.</typeparam>
         /// <typeparam name="TId">The id value type.</typeparam>
         /// <param name="page">The page number (zero-indexed).</param>
-        /// <param name="pageSize">The page size (maximum 200).</param>
-        /// <returns>The entries.</returns>
-        /// <exception cref="ArgumentOutOfRangeException"><paramref name="pageSize"/> is not within the accepted boundaries (1 - 200).</exception>
-        protected Task<IApiV2ObjectList<TEndpointObject>> RequestPageAsync<TEndpointObject, TId>(int page, int pageSize = MAX_PAGE_SIZE)
-            where TEndpointObject : IApiV2Object, IIdentifiable<TId> =>
-            this.RequestPageAsync<TEndpointObject, TId>(page, CancellationToken.None, pageSize);
-
-        /// <summary>
-        /// Requests a page of entries with a specific page size.
-        /// </summary>
-        /// <typeparam name="TEndpointObject">The endpoint return value type.</typeparam>
-        /// <typeparam name="TId">The id value type.</typeparam>
-        /// <param name="page">The page number (zero-indexed).</param>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <param name="pageSize">The page size (maximum 200).</param>
         /// <returns>The entries.</returns>
@@ -309,16 +247,6 @@ namespace Gw2Sharp.WebApi.V2.Clients
             await this.UpdateIndividualsAsync<TEndpointObject, TId>(items).ConfigureAwait(false);
             return items.Item;
         }
-
-        /// <summary>
-        /// Requests a page of blob data with a specific page size.
-        /// </summary>
-        /// <param name="page">The page number (zero-indexed).</param>
-        /// <param name="pageSize">The page size (maximum 200).</param>
-        /// <returns>The entries.</returns>
-        /// <exception cref="ArgumentOutOfRangeException"><paramref name="pageSize"/> is not within the accepted boundaries (1 - 200).</exception>
-        protected Task<TObject> RequestPageAsync(int page, int pageSize = MAX_PAGE_SIZE) =>
-            this.RequestPageAsync(page, CancellationToken.None, pageSize);
 
         /// <summary>
         /// Requests a page of blob data with a specific page size.
