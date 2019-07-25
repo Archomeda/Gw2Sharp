@@ -46,32 +46,17 @@ namespace Gw2Sharp.WebApi
         /// Downloads the resource from the render service to a stream asynchronously.
         /// </summary>
         /// <param name="targetStream">The target stream.</param>
-        /// <returns>The task.</returns>
-        public Task DownloadToStreamAsync(Stream targetStream) =>
-            this.Gw2Client.WebApi.Render.DownloadToStreamAsync(targetStream, this.Url);
-
-        /// <summary>
-        /// Downloads the resource from the render service to a stream asynchronously.
-        /// </summary>
-        /// <param name="targetStream">The target stream.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The task.</returns>
-        public Task DownloadToStreamAsync(Stream targetStream, CancellationToken cancellationToken) =>
+        public Task DownloadToStreamAsync(Stream targetStream, CancellationToken cancellationToken = default) =>
             this.Gw2Client.WebApi.Render.DownloadToStreamAsync(targetStream, this.Url, cancellationToken);
 
         /// <summary>
         /// Downloads the resource from the render service to a byte array asynchronously.
         /// </summary>
-        /// <returns>The task with the resource as byte array.</returns>
-        public Task<byte[]> DownloadToByteArrayAsync() =>
-            this.Gw2Client.WebApi.Render.DownloadToByteArrayAsync(this.Url);
-
-        /// <summary>
-        /// Downloads the resource from the render service to a byte array asynchronously.
-        /// </summary>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The task with the resource as byte array.</returns>
-        public Task<byte[]> DownloadToByteArrayAsync(CancellationToken cancellationToken) =>
+        public Task<byte[]> DownloadToByteArrayAsync(CancellationToken cancellationToken = default) =>
             this.Gw2Client.WebApi.Render.DownloadToByteArrayAsync(this.Url, cancellationToken);
 
         #endregion

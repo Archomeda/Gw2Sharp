@@ -35,27 +35,15 @@ namespace Gw2Sharp.WebApi.V2.Clients
         { }
 
         /// <inheritdoc />
-        public virtual Task<IApiV2ObjectList<TObject>> GetAsync() =>
-            this.RequestGetAsync();
-
-        /// <inheritdoc />
-        public virtual Task<IApiV2ObjectList<TObject>> GetAsync(CancellationToken cancellationToken) =>
+        public virtual Task<IApiV2ObjectList<TObject>> GetAsync(CancellationToken cancellationToken = default) =>
             this.RequestGetAsync(cancellationToken);
 
         /// <inheritdoc />
-        public virtual Task<IApiV2ObjectList<TObject>> PageAsync(int page) =>
-            this.RequestPageAsync(page);
-
-        /// <inheritdoc />
-        public virtual Task<IApiV2ObjectList<TObject>> PageAsync(int page, int pageSize) =>
-            this.RequestPageAsync(page, pageSize);
-
-        /// <inheritdoc />
-        public virtual Task<IApiV2ObjectList<TObject>> PageAsync(int page, CancellationToken cancellationToken) =>
+        public virtual Task<IApiV2ObjectList<TObject>> PageAsync(int page, CancellationToken cancellationToken = default) =>
             this.RequestPageAsync(page, cancellationToken);
 
         /// <inheritdoc />
-        public virtual Task<IApiV2ObjectList<TObject>> PageAsync(int page, int pageSize, CancellationToken cancellationToken) =>
+        public virtual Task<IApiV2ObjectList<TObject>> PageAsync(int page, int pageSize, CancellationToken cancellationToken = default) =>
             this.RequestPageAsync(page, cancellationToken, pageSize);
     }
 }

@@ -14,24 +14,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Requests a page of entries with a specific page size.
         /// </summary>
         /// <param name="page">The page number (zero-indexed).</param>
-        /// <returns>The entries.</returns>
-        Task<IApiV2ObjectList<TObject>> PageAsync(int page);
-
-        /// <summary>
-        /// Requests a page of entries with a specific page size.
-        /// </summary>
-        /// <param name="page">The page number (zero-indexed).</param>
-        /// <param name="pageSize">The page size.</param>
-        /// <returns>The entries.</returns>
-        Task<IApiV2ObjectList<TObject>> PageAsync(int page, int pageSize);
-
-        /// <summary>
-        /// Requests a page of entries with a specific page size.
-        /// </summary>
-        /// <param name="page">The page number (zero-indexed).</param>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The entries.</returns>
-        Task<IApiV2ObjectList<TObject>> PageAsync(int page, CancellationToken cancellationToken);
+        Task<IApiV2ObjectList<TObject>> PageAsync(int page, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Requests a page of entries with a specific page size.
@@ -40,6 +25,6 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <param name="pageSize">The page size.</param>
         /// <returns>The entries.</returns>
-        Task<IApiV2ObjectList<TObject>> PageAsync(int page, int pageSize, CancellationToken cancellationToken);
+        Task<IApiV2ObjectList<TObject>> PageAsync(int page, int pageSize, CancellationToken cancellationToken = default);
     }
 }

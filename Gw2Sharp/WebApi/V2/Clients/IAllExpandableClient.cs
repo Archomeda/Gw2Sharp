@@ -13,14 +13,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <summary>
         /// Requests all entries.
         /// </summary>
-        /// <returns>All entries.</returns>
-        Task<IApiV2ObjectList<TObject>> AllAsync();
-
-        /// <summary>
-        /// Requests all entries.
-        /// </summary>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>All entries.</returns>
-        Task<IApiV2ObjectList<TObject>> AllAsync(CancellationToken cancellationToken);
+        Task<IApiV2ObjectList<TObject>> AllAsync(CancellationToken cancellationToken = default);
     }
 }

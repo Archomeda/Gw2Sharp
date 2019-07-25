@@ -179,7 +179,7 @@ namespace Gw2Sharp
 
 
         /// <inheritdoc />
-        public Task<IHttpResponse<TResponse>> RequestAsync<TResponse>(IGw2Client client, Uri requestUri, IEnumerable<KeyValuePair<string, string>>? additionalHeaders, CancellationToken cancellationToken)
+        public Task<IHttpResponse<TResponse>> RequestAsync<TResponse>(IGw2Client client, Uri requestUri, IEnumerable<KeyValuePair<string, string>>? additionalHeaders, CancellationToken cancellationToken = default)
         {
             if (requestUri == null)
                 throw new ArgumentNullException(nameof(requestUri));

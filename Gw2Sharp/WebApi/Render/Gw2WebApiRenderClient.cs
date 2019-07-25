@@ -46,15 +46,7 @@ namespace Gw2Sharp.WebApi.Render
 
 
         /// <inheritdoc />
-        public virtual Task DownloadToStreamAsync(Stream targetStream, string renderUrl) =>
-            this.DownloadToStreamAsync(targetStream, renderUrl, CancellationToken.None);
-
-        /// <inheritdoc />
-        public Task DownloadToStreamAsync(Stream targetStream, Uri renderUrl) =>
-            this.DownloadToStreamAsync(targetStream, renderUrl.AbsoluteUri, CancellationToken.None);
-
-        /// <inheritdoc />
-        public virtual Task DownloadToStreamAsync(Stream targetStream, string renderUrl, CancellationToken cancellationToken)
+        public virtual Task DownloadToStreamAsync(Stream targetStream, string renderUrl, CancellationToken cancellationToken = default)
         {
             if (targetStream == null)
                 throw new ArgumentNullException(nameof(targetStream));
@@ -69,7 +61,7 @@ namespace Gw2Sharp.WebApi.Render
         }
 
         /// <inheritdoc />
-        public Task DownloadToStreamAsync(Stream targetStream, Uri renderUrl, CancellationToken cancellationToken) =>
+        public Task DownloadToStreamAsync(Stream targetStream, Uri renderUrl, CancellationToken cancellationToken = default) =>
             this.DownloadToStreamAsync(targetStream, renderUrl.AbsoluteUri, cancellationToken);
 
         private async Task DownloadToStreamInternalAsync(Stream targetStream, string renderUrl, CancellationToken cancellationToken)
@@ -81,15 +73,7 @@ namespace Gw2Sharp.WebApi.Render
 
 
         /// <inheritdoc />
-        public virtual Task<byte[]> DownloadToByteArrayAsync(string renderUrl) =>
-            this.DownloadToByteArrayAsync(renderUrl, CancellationToken.None);
-
-        /// <inheritdoc />
-        public Task<byte[]> DownloadToByteArrayAsync(Uri renderUrl) =>
-            this.DownloadToByteArrayAsync(renderUrl.AbsoluteUri, CancellationToken.None);
-
-        /// <inheritdoc />
-        public virtual Task<byte[]> DownloadToByteArrayAsync(string renderUrl, CancellationToken cancellationToken)
+        public virtual Task<byte[]> DownloadToByteArrayAsync(string renderUrl, CancellationToken cancellationToken = default)
         {
             if (renderUrl == null)
                 throw new ArgumentNullException(nameof(renderUrl));
@@ -109,7 +93,7 @@ namespace Gw2Sharp.WebApi.Render
         }
 
         /// <inheritdoc />
-        public Task<byte[]> DownloadToByteArrayAsync(Uri renderUrl, CancellationToken cancellationToken) =>
+        public Task<byte[]> DownloadToByteArrayAsync(Uri renderUrl, CancellationToken cancellationToken = default) =>
             this.DownloadToByteArrayAsync(renderUrl.AbsoluteUri, cancellationToken);
     }
 }

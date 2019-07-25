@@ -47,7 +47,7 @@ namespace Gw2Sharp.WebApi.Http
         public TimeSpan Timeout { get; set; } = TimeSpan.FromSeconds(30);
 
         /// <inheritdoc />
-        public async Task<IHttpResponse> RequestAsync(IHttpRequest request, CancellationToken cancellationToken)
+        public async Task<IHttpResponse> RequestAsync(IHttpRequest request, CancellationToken cancellationToken = default)
         {
             var responseStream = await this.RequestStreamAsync(request, cancellationToken).ConfigureAwait(false);
             using var streamReader = new StreamReader(responseStream.ContentStream);
@@ -56,7 +56,7 @@ namespace Gw2Sharp.WebApi.Http
         }
 
         /// <inheritdoc />
-        public async Task<IHttpResponseStream> RequestStreamAsync(IHttpRequest request, CancellationToken cancellationToken)
+        public async Task<IHttpResponseStream> RequestStreamAsync(IHttpRequest request, CancellationToken cancellationToken = default)
         {
             using var cancellationTimeout = new CancellationTokenSource(this.Timeout);
             using var linkedCancellation = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken, cancellationTimeout.Token);
