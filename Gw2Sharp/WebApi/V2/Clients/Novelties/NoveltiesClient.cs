@@ -13,9 +13,10 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Creates a new <see cref="NoveltiesClient"/> that is used for the API v2 novelties endpoint.
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
+        /// <param name="gw2Client">The Guild Wars 2 client.</param>
         /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
-        public NoveltiesClient(IConnection connection) :
-            base(connection)
+        protected internal NoveltiesClient(IConnection connection, IGw2Client gw2Client) :
+            base(connection, gw2Client)
         { }
     }
 }

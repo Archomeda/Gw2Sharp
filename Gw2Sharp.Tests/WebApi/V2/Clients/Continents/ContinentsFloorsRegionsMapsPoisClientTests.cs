@@ -13,8 +13,8 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
     {
         public ContinentsFloorsRegionsMapsPoisClientTests()
         {
-            var connection = new Connection(string.Empty, Locale.English, Substitute.For<IHttpClient>(), new NullCacheMethod());
-            this.client = new Gw2WebApiClient(connection).V2.Continents[1].Floors[0].Regions[1].Maps[1].Pois;
+            var connection = new Connection(string.Empty, Locale.English, cacheMethod: new NullCacheMethod(), httpClient: Substitute.For<IHttpClient>());
+            this.client = new Gw2Client(connection).WebApi.V2.Continents[1].Floors[0].Regions[1].Maps[1].Pois;
             this.Client = this.client;
         }
 
@@ -48,9 +48,9 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
         {
             AssertArguments.ThrowsWhenNullConstructor(
                 this.Client.GetType(),
-                new[] { typeof(IConnection), typeof(int), typeof(int), typeof(int), typeof(int) },
-                new object[] { new Connection(), 1, 0, 1, 1 },
-                new[] { true, false, false, false, false });
+                new[] { typeof(IConnection), typeof(IGw2Client), typeof(int), typeof(int), typeof(int), typeof(int) },
+                new object[] { new Connection(), new Gw2Client(), 1, 0, 1, 1 },
+                new[] { true, true, false, false, false, false });
         }
 
         #endregion

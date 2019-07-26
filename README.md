@@ -14,8 +14,8 @@ It uses the latest C# 8.0 features like Nullable Reference Types because they're
 This library has been written to be as close as possible to the official API structure, with a few exceptions to make life easier.
 *Make sure to read the [introductory guide](https://archomeda.github.io/Gw2Sharp/master/guides/introduction.html) to get started.*
 
-## Endpoints
-Check the [list of endpoints](https://archomeda.github.io/Gw2Sharp/master/guides/endpoints.html) for the supported endpoints.
+## Supported services
+Check the [documentation](https://archomeda.github.io/Gw2Sharp/master/guides/services.html) for the supported services.
 
 ## Requirements
 This project targets .NET Standard 2.0.
@@ -29,7 +29,7 @@ Install-Package Gw2Sharp
 ```
 
 ### CI builds
-On every build, a new package is created on AppVeyor that you can consume as well. Note that these builds are not considered to be stable, they are meant only for testing purposes. Therefore, these packages are also compiled in debug configuration and have their symbols included.
+On every build, a new package is created on [AppVeyor](https://ci.appveyor.com/project/Archomeda/Gw2Sharp/branch/master) that you can consume as well. Note that these builds are not considered to be stable, they are meant only for testing purposes. Therefore, these packages are also compiled in debug configuration and have their symbols included.
 
 First, you'll have to create a new `nuget.config` file and add the AppVeyor package source to it:
 ```xml
@@ -42,40 +42,8 @@ Install-Package Gw2Sharp -Version x.x.x-appveyor.yyyy
 ```
 
 ## Usage
-### Basic usage
-```cs
-using Gw2Sharp.WebApi;
-
-// Make a connection with optionally: an access token, language.
-var connection = new Connection("optional-access-token", Locale.English);
-
-// Make a client and pass the connection to it
-var client = new Gw2WebApiClient(connection);
-
-// Get all item ids
-var ids = await client.V2.Items.IdsAsync();
-
-// Get a single item
-var item = await client.V2.Items.GetAsync(123);
-
-// Get multiple items
-var items = await client.V2.Items.ManyAsync(new[] { 123, 456 });
-
-// Get items by page
-var page = await client.V2.Items.PageAsync(5);
-
-// Getting all items is not supported by the API.
-// Any other endpoint that does support it, it will work as follows:
-var all = await client.V2.Colors.AllAsync();
-```
-
-For more information, check out the [guides](https://archomeda.github.io/Gw2Sharp/master/guides/introduction.html).
-
-### Caching
-By default, API requests are cached in memory.
-You can override this by passing it to the `Connection` constructor.
-There are two cache methods provided in `Gw2Sharp.WebApi.Caching`: `NullCacheMethod` and `MemoryCacheMethod`.
-You can create your own cache method by implementing the `ICacheMethod` interface or by inheriting from the abstract `BaseCacheMethod` class.
+For basic usage, check out the [introductory guide](https://archomeda.github.io/Gw2Sharp/master/guides/introduction.html).  
+You can find the other guides there as well to help you get started on the advanced usage of Gw2Sharp, such as caching and exception handling.
 
 ## Compiling
 Visual Studio 2019 or later is required.

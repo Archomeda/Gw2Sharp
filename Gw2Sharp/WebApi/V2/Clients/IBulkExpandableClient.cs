@@ -18,39 +18,17 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Requests a single entry by id.
         /// </summary>
         /// <param name="id">The entry id.</param>
-        /// <returns>The entry.</returns>
-        /// <exception cref="ArgumentNullException"><paramref name="id"/> is <c>null</c>.</exception>
-        Task<TObject> GetAsync(TId id);
-
-        /// <summary>
-        /// Requests a single entry by id.
-        /// </summary>
-        /// <param name="id">The entry id.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The entry.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="id"/> is <c>null</c>.</exception>
-        Task<TObject> GetAsync(TId id, CancellationToken cancellationToken);
-
-        /// <summary>
-        /// Requests all ids.
-        /// </summary>
-        /// <returns>The list of available ids.</returns>
-        Task<IApiV2ObjectList<TId>> IdsAsync();
+        Task<TObject> GetAsync(TId id, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Requests all ids.
         /// </summary>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The list of available ids.</returns>
-        Task<IApiV2ObjectList<TId>> IdsAsync(CancellationToken cancellationToken);
-
-        /// <summary>
-        /// Requests many entries by their id (a.k.a. bulk expansion).
-        /// </summary>
-        /// <param name="ids">The entry ids.</param>
-        /// <returns>The entries.</returns>
-        /// <exception cref="ArgumentNullException"><paramref name="ids"/> is <c>null</c>.</exception>
-        Task<IReadOnlyList<TObject>> ManyAsync(IEnumerable<TId> ids);
+        Task<IApiV2ObjectList<TId>> IdsAsync(CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Requests many entries by their id (a.k.a. bulk expansion).
@@ -59,6 +37,6 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The entries.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="ids"/> is <c>null</c>.</exception>
-        Task<IReadOnlyList<TObject>> ManyAsync(IEnumerable<TId> ids, CancellationToken cancellationToken);
+        Task<IReadOnlyList<TObject>> ManyAsync(IEnumerable<TId> ids, CancellationToken cancellationToken = default);
     }
 }

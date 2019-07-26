@@ -11,7 +11,7 @@ An example:
 
 ```cs
 // Assuming you already have a client
-var itemIds = await client.V2.Items.PageAsync(0);
+var itemIds = await client.WebApi.V2.Items.PageAsync(0);
 
 var cacheExpires = itemIds.HttpResponseInfo.Expires;
 var cacheAge = itemIds.HttpResponseInfo.CacheMaxAge;

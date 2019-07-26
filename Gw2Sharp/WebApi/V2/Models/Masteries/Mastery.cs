@@ -30,7 +30,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The mastery background image URL.
         /// </summary>
-        public string Background { get; set; } = string.Empty;
+        public RenderUrl Background { get; set; }
 
         /// <summary>
         /// The mastery region.

@@ -16,7 +16,7 @@ namespace Gw2Sharp.Tests.WebApi.Http
             var exception = new RequestCanceledException(request);
 
             Assert.NotNull(exception.Message);
-            Assert.NotEqual("", exception.Message);
+            Assert.NotEqual(string.Empty, exception.Message);
             Assert.Null(exception.InnerException);
             Assert.Same(request, exception.Request);
             Assert.Null(exception.Response);

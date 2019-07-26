@@ -13,8 +13,8 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
     {
         public ContinentsFloorsClientTests()
         {
-            var connection = new Connection(string.Empty, Locale.English, Substitute.For<IHttpClient>(), new NullCacheMethod());
-            this.client = new Gw2WebApiClient(connection).V2.Continents[1].Floors;
+            var connection = new Connection(string.Empty, Locale.English, cacheMethod: new NullCacheMethod(), httpClient: Substitute.For<IHttpClient>());
+            this.client = new Gw2Client(connection).WebApi.V2.Continents[1].Floors;
             this.Client = this.client;
         }
 
@@ -48,9 +48,9 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
         {
             AssertArguments.ThrowsWhenNullConstructor(
                 this.Client.GetType(),
-                new[] { typeof(IConnection), typeof(int) },
-                new object[] { new Connection(), 1 },
-                new[] { true, false });
+                new[] { typeof(IConnection), typeof(IGw2Client), typeof(int) },
+                new object[] { new Connection(), new Gw2Client(), 1 },
+                new[] { true, true, false });
         }
 
         #endregion

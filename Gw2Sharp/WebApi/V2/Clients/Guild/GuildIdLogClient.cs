@@ -16,10 +16,11 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Creates a new <see cref="GuildIdLogClient"/> that is used for the API v2 guild id log endpoint.
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
+        /// <param name="gw2Client">The Guild Wars 2 client.</param>
         /// <param name="guildId">The guild id.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
-        public GuildIdLogClient(IConnection connection, Guid guildId) :
-            base(connection)
+        /// <exception cref="ArgumentNullException"><paramref name="connection"/> or <paramref name="gw2Client"/> is <c>null</c>.</exception>
+        protected internal GuildIdLogClient(IConnection connection, IGw2Client gw2Client, Guid guildId) :
+            base(connection, gw2Client)
         {
             this.guildId = guildId;
         }

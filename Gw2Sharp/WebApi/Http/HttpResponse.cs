@@ -19,6 +19,10 @@ namespace Gw2Sharp.WebApi.Http
         public HttpResponse(string content, HttpStatusCode? statusCode, IDictionary<string, string>? requestHeaders, IDictionary<string, string>? responseHeaders)
             : base(content, statusCode, requestHeaders, responseHeaders) { }
 
+        /// <inheritdoc />
+        public HttpResponse(string content, HttpStatusCode? statusCode, IEnumerable<KeyValuePair<string, string>>? requestHeaders, IEnumerable<KeyValuePair<string, string>>? responseHeaders)
+            : base(content, statusCode, requestHeaders, responseHeaders) { }
+
         /// <summary>
         /// Deserialization constructor for <see cref="HttpResponse"/>.
         /// </summary>

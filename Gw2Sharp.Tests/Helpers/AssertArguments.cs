@@ -110,7 +110,7 @@ namespace Gw2Sharp.Tests.Helpers
 
         public static void ThrowsWhenNullConstructor(Type type, Type[] paramTypes, object[] callArgs, bool[] paramsNull)
         {
-            var constructorInfo = type.GetConstructor(paramTypes);
+            var constructorInfo = type.GetConstructor(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance, null, paramTypes, null);
             if (constructorInfo == null)
                 throw new InvalidOperationException($"No appropriate constructor found with parameters: {string.Join(", ", paramTypes.Select(p => p.FullName))}");
 
@@ -125,7 +125,34 @@ namespace Gw2Sharp.Tests.Helpers
                 {
                     try
                     {
-                        Activator.CreateInstance(type, args);
+                        Activator.CreateInstance(type, BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance, null, args, null);
+                    }
+                    catch (TargetInvocationException ex)
+                    {
+                        throw ex.InnerException;
+                    }
+                });
+            }
+        }
+
+        public static void ThrowsWhenEmptyStringConstructor(Type type, Type[] paramTypes, object[] callArgs, bool[] paramsEmpty)
+        {
+            var constructorInfo = type.GetConstructor(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance, null, paramTypes, null);
+            if (constructorInfo == null)
+                throw new InvalidOperationException($"No appropriate constructor found with parameters: {string.Join(", ", paramTypes.Select(p => p.FullName))}");
+
+            for (int i = 0; i < paramsEmpty.Length && i < callArgs.Length && i < paramTypes.Length; i++)
+            {
+                if (!paramsEmpty[i])
+                    continue;
+
+                object?[] args = callArgs.ToArray();
+                args[i] = string.Empty;
+                Assert.Throws<ArgumentException>(constructorInfo.GetParameters()[i].Name, () =>
+                {
+                    try
+                    {
+                        Activator.CreateInstance(type, BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance, null, args, null);
                     }
                     catch (TargetInvocationException ex)
                     {

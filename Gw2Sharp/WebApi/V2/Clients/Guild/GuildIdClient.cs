@@ -24,20 +24,21 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Creates a new <see cref="GuildIdClient"/> that is used for the API v2 guild id endpoint.
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
+        /// <param name="gw2Client">The Guild Wars 2 client.</param>
         /// <param name="guildId">The guild id.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
-        public GuildIdClient(IConnection connection, Guid guildId) :
-            base(connection)
+        /// <exception cref="ArgumentNullException"><paramref name="connection"/> or <paramref name="gw2Client"/> is <c>null</c>.</exception>
+        protected internal GuildIdClient(IConnection connection, IGw2Client gw2Client, Guid guildId) :
+            base(connection, gw2Client)
         {
             this.guildId = guildId;
-            this.log = new GuildIdLogClient(connection, guildId);
-            this.members = new GuildIdMembersClient(connection, guildId);
-            this.ranks = new GuildIdRanksClient(connection, guildId);
-            this.stash = new GuildIdStashClient(connection, guildId);
-            this.storage = new GuildIdStorageClient(connection, guildId);
-            this.teams = new GuildIdTeamsClient(connection, guildId);
-            this.treasury = new GuildIdTreasuryClient(connection, guildId);
-            this.upgrades = new GuildIdUpgradesClient(connection, guildId);
+            this.log = new GuildIdLogClient(connection, gw2Client, guildId);
+            this.members = new GuildIdMembersClient(connection, gw2Client, guildId);
+            this.ranks = new GuildIdRanksClient(connection, gw2Client, guildId);
+            this.stash = new GuildIdStashClient(connection, gw2Client, guildId);
+            this.storage = new GuildIdStorageClient(connection, gw2Client, guildId);
+            this.teams = new GuildIdTeamsClient(connection, gw2Client, guildId);
+            this.treasury = new GuildIdTreasuryClient(connection, gw2Client, guildId);
+            this.upgrades = new GuildIdUpgradesClient(connection, gw2Client, guildId);
         }
 
         /// <inheritdoc />

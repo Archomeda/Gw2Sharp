@@ -26,7 +26,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The glider icon.
         /// </summary>
-        public string Icon { get; set; } = string.Empty;
+        public RenderUrl Icon { get; set; }
 
         /// <summary>
         /// The glider name.

@@ -22,13 +22,14 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Creates a new <see cref="ContinentsFloorsRegionsMapsSectorsClient"/> that is used for the API v2 characters floors regions maps sectors endpoint.
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
+        /// <param name="gw2Client">The Guild Wars 2 client.</param>
         /// <param name="continentId">The continent id.</param>
         /// <param name="floorId">The floor id.</param>
         /// <param name="regionId">The region id.</param>
         /// <param name="mapId">The map id.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
-        public ContinentsFloorsRegionsMapsSectorsClient(IConnection connection, int continentId, int floorId, int regionId, int mapId) :
-            base(connection, continentId.ToString(), floorId.ToString(), regionId.ToString(), mapId.ToString())
+        /// <exception cref="ArgumentNullException"><paramref name="connection"/> or <paramref name="gw2Client"/> is <c>null</c>.</exception>
+        protected internal ContinentsFloorsRegionsMapsSectorsClient(IConnection connection, IGw2Client gw2Client, int continentId, int floorId, int regionId, int mapId) :
+            base(connection, gw2Client, continentId.ToString(), floorId.ToString(), regionId.ToString(), mapId.ToString())
         {
             this.continentId = continentId;
             this.floorId = floorId;

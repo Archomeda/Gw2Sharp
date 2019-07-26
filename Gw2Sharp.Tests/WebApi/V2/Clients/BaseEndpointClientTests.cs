@@ -50,8 +50,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
         {
             var (data, expected) = this.GetTestData(file);
 
-            var httpRequest = Substitute.For<IHttpRequest>();
-            ((IWebApiClientInternal)this.Client).Connection.HttpClient.RequestAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Returns(callInfo =>
+            ((IClientInternal)this.Client).Connection.HttpClient.RequestAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Returns(callInfo =>
             {
                 this.AssertRequest(callInfo, client, "?page=2&page_size=100");
                 this.AssertAuthenticatedRequest(callInfo, client);
@@ -68,7 +67,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
             where TObject : IApiV2Object
         {
             var (data, expected) = this.GetTestData(file);
-            ((IWebApiClientInternal)this.Client).Connection.HttpClient.RequestAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Returns(callInfo =>
+            ((IClientInternal)this.Client).Connection.HttpClient.RequestAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Returns(callInfo =>
             {
                 this.AssertRequest(callInfo, client, string.Empty);
                 this.AssertAuthenticatedRequest(callInfo, client);
@@ -87,10 +86,9 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
             var (data, expected) = this.GetTestData(file);
             var id = this.GetId<TId>(expected[idName]);
 
-            var httpRequest = Substitute.For<IHttpRequest>();
-            ((IWebApiClientInternal)this.Client).Connection.HttpClient.RequestAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Returns(callInfo =>
+            ((IClientInternal)this.Client).Connection.HttpClient.RequestAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Returns(callInfo =>
             {
-                this.AssertRequest(callInfo, client, $"/{id.ToString()}");
+                this.AssertRequest(callInfo, client, $"/{id!.ToString()}");
                 this.AssertAuthenticatedRequest(callInfo, client);
                 this.AssertLocalizedRequest(callInfo, client);
                 this.AssertSchemaVersionRequest(callInfo, client);
@@ -105,7 +103,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
             where TObject : IApiV2Object
         {
             var (data, expected) = this.GetTestData(file);
-            ((IWebApiClientInternal)this.Client).Connection.HttpClient.RequestAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Returns(callInfo =>
+            ((IClientInternal)this.Client).Connection.HttpClient.RequestAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Returns(callInfo =>
             {
                 this.AssertRequest(callInfo, client, "?ids=all");
                 this.AssertAuthenticatedRequest(callInfo, client);
@@ -127,8 +125,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                 return i is JProperty prop ? prop.Value[idName] : i[idName];
             }));
 
-            var httpRequest = Substitute.For<IHttpRequest>();
-            ((IWebApiClientInternal)this.Client).Connection.HttpClient.RequestAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Returns(callInfo =>
+            ((IClientInternal)this.Client).Connection.HttpClient.RequestAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Returns(callInfo =>
             {
                 this.AssertRequest(callInfo, client, $"?ids={string.Join(",", ids.Select(i => i?.ToString()))}");
                 this.AssertAuthenticatedRequest(callInfo, client);
@@ -146,8 +143,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
         {
             var (data, expected) = this.GetTestData(file);
 
-            var httpRequest = Substitute.For<IHttpRequest>();
-            ((IWebApiClientInternal)this.Client).Connection.HttpClient.RequestAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Returns(callInfo =>
+            ((IClientInternal)this.Client).Connection.HttpClient.RequestAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Returns(callInfo =>
             {
                 this.AssertRequest(callInfo, client, string.Empty);
                 this.AssertAuthenticatedRequest(callInfo, client);
@@ -167,7 +163,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
             var parameterProperties = client.GetType()
                 .GetProperties(BindingFlags.Public | BindingFlags.Instance)
                 .Where(p => p.GetCustomAttribute<EndpointPathParameterAttribute>() != null);
-            if (parameterProperties.Count() > 0)
+            if (parameterProperties.Any())
             {
                 var builder = new UriBuilder(uri);
                 foreach (var parameter in parameterProperties)
@@ -188,14 +184,14 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
             Assert.Equal(uri, callInfo.ArgAt<IHttpRequest>(0).Url);
             var requestHeaders = callInfo.ArgAt<IHttpRequest>(0).RequestHeaders;
             Assert.Contains(new KeyValuePair<string, string>("Accept", "application/json"), requestHeaders);
-            Assert.Contains(new KeyValuePair<string, string>("User-Agent", ((IWebApiClientInternal)client).Connection.UserAgent), requestHeaders);
+            Assert.Contains(new KeyValuePair<string, string>("User-Agent", ((IClientInternal)client).Connection.UserAgent), requestHeaders);
         }
 
         protected virtual void AssertAuthenticatedRequest(CallInfo callInfo, IEndpointClient client)
         {
             var requestHeaders = callInfo.ArgAt<IHttpRequest>(0).RequestHeaders;
             if (client.IsAuthenticated)
-                Assert.Contains(new KeyValuePair<string, string>("Authorization", $"Bearer {((IWebApiClientInternal)client).Connection.AccessToken}"), requestHeaders);
+                Assert.Contains(new KeyValuePair<string, string>("Authorization", $"Bearer {((IClientInternal)client).Connection.AccessToken}"), requestHeaders);
             else
                 Assert.DoesNotContain(requestHeaders, h => h.Key == "Authorization");
         }
@@ -203,7 +199,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
         protected virtual void AssertLocalizedRequest(CallInfo callInfo, IEndpointClient client)
         {
             var requestHeaders = callInfo.ArgAt<IHttpRequest>(0).RequestHeaders;
-            Assert.Contains(new KeyValuePair<string, string>("Accept-Language", ((IWebApiClientInternal)client).Connection.LocaleString), requestHeaders);
+            Assert.Contains(new KeyValuePair<string, string>("Accept-Language", ((IClientInternal)client).Connection.LocaleString), requestHeaders);
         }
 
         protected virtual void AssertSchemaVersionRequest(CallInfo callInfo, IEndpointClient client)
@@ -337,12 +333,12 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                     Assert.Equal(Convert.ToDouble(expected.Value), @double, 10);
                     break;
                 default:
-                    if (((actual != null && actual.GetType() != typeof(string)) || actual == null) &&
+                    if (((actual != null && !(actual is string)) || actual == null) &&
                         expected.Type == JTokenType.String)
                     {
                         // Special case where the resulting value has been auto deserialized into something else than a string,
                         // while the original is a string.
-                        Assert.Equal(expected.Value, actual?.ToString() ?? "");
+                        Assert.Equal(expected.Value, actual?.ToString() ?? string.Empty);
                     }
                     else
                         Assert.Equal(expected.Value, actual);
@@ -360,9 +356,9 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
         {
             AssertArguments.ThrowsWhenNullConstructor(
                 this.Client.GetType(),
-                new[] { typeof(IConnection) },
-                new[] { new Connection() },
-                new[] { true });
+                new[] { typeof(IConnection), typeof(IGw2Client) },
+                new object[] { new Connection(), new Gw2Client() },
+                new[] { true, true });
         }
 
         #endregion

@@ -155,6 +155,16 @@ namespace Gw2Sharp.WebApi.V2
         INoveltiesClient Novelties { get; }
 
         /// <summary>
+        /// Gets the outfits.
+        /// </summary>
+        IOutfitsClient Outfits { get; }
+
+        /// <summary>
+        /// Gets the pets.
+        /// </summary>
+        IPetsClient Pets { get; }
+
+        /// <summary>
         /// Gets the token info.
         /// </summary>
         ITokenInfoClient TokenInfo { get; }

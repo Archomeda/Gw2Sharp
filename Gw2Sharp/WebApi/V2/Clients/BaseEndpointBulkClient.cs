@@ -13,63 +13,48 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// <typeparam name="TId">The id value type.</typeparam>
     public abstract class BaseEndpointBulkClient<TObject, TId> : BaseEndpointClient<TObject>, IBulkExpandableClient<TObject, TId>, IPaginatedClient<TObject>
         where TObject : IApiV2Object, IIdentifiable<TId>
-        where TId : object
     {
         /// <summary>
         /// Creates a new base endpoint bulk client.
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
+        /// <param name="gw2Client">The Guild Wars 2 client.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="connection"/> or <paramref name="gw2Client"/> is <c>null</c>.</exception>
         /// <exception cref="InvalidOperationException">Thrown when the client implements an invalid combination of <see cref="IEndpointClient"/> interfaces.</exception>
-        protected BaseEndpointBulkClient(IConnection connection) : base(connection) { }
+        protected BaseEndpointBulkClient(IConnection connection, IGw2Client gw2Client) :
+            base(connection, gw2Client)
+        { }
 
         /// <summary>
         /// Creates a new base endpoint bulk client.
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
+        /// <param name="gw2Client">The Guild Wars 2 client.</param>
         /// <param name="replaceSegments">The path segments to replace.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="connection"/> or <paramref name="gw2Client"/> is <c>null</c>.</exception>
         /// <exception cref="InvalidOperationException">Thrown when the client implements an invalid combination of <see cref="IEndpointClient"/> interfaces.</exception>
-        protected BaseEndpointBulkClient(IConnection connection, params string[] replaceSegments) : base(connection, replaceSegments) { }
+        protected BaseEndpointBulkClient(IConnection connection, IGw2Client gw2Client, params string[] replaceSegments) :
+            base(connection, gw2Client, replaceSegments)
+        { }
 
         /// <inheritdoc />
-        public virtual Task<TObject> GetAsync(TId id) =>
-            this.RequestGetAsync<TObject, TId>(id);
+        public virtual Task<TObject> GetAsync(TId id, CancellationToken cancellationToken = default) =>
+            this.Implementation.RequestGetAsync<TObject, TId>(id, cancellationToken);
 
         /// <inheritdoc />
-        public virtual Task<TObject> GetAsync(TId id, CancellationToken cancellationToken) =>
-            this.RequestGetAsync<TObject, TId>(id, cancellationToken);
+        public virtual Task<IApiV2ObjectList<TId>> IdsAsync(CancellationToken cancellationToken = default) =>
+            this.Implementation.RequestIdsAsync<TId>(cancellationToken);
 
         /// <inheritdoc />
-        public virtual Task<IApiV2ObjectList<TId>> IdsAsync() =>
-            this.RequestIdsAsync<TId>();
+        public virtual Task<IReadOnlyList<TObject>> ManyAsync(IEnumerable<TId> ids, CancellationToken cancellationToken = default) =>
+            this.Implementation.RequestManyAsync<TObject, TId>(ids, cancellationToken);
 
         /// <inheritdoc />
-        public virtual Task<IApiV2ObjectList<TId>> IdsAsync(CancellationToken cancellationToken) =>
-            this.RequestIdsAsync<TId>(cancellationToken);
+        public virtual Task<IApiV2ObjectList<TObject>> PageAsync(int page, CancellationToken cancellationToken = default) =>
+            this.Implementation.RequestPageAsync<TObject, TId>(page, cancellationToken: cancellationToken);
 
         /// <inheritdoc />
-        public virtual Task<IReadOnlyList<TObject>> ManyAsync(IEnumerable<TId> ids) =>
-            this.RequestManyAsync<TObject, TId>(ids);
-
-        /// <inheritdoc />
-        public virtual Task<IReadOnlyList<TObject>> ManyAsync(IEnumerable<TId> ids, CancellationToken cancellationToken) =>
-            this.RequestManyAsync<TObject, TId>(ids, cancellationToken);
-
-        /// <inheritdoc />
-        public virtual Task<IApiV2ObjectList<TObject>> PageAsync(int page) =>
-            this.RequestPageAsync<TObject, TId>(page);
-
-        /// <inheritdoc />
-        public virtual Task<IApiV2ObjectList<TObject>> PageAsync(int page, int pageSize) =>
-            this.RequestPageAsync<TObject, TId>(page, pageSize);
-
-        /// <inheritdoc />
-        public virtual Task<IApiV2ObjectList<TObject>> PageAsync(int page, CancellationToken cancellationToken) =>
-            this.RequestPageAsync<TObject, TId>(page, cancellationToken);
-
-        /// <inheritdoc />
-        public virtual Task<IApiV2ObjectList<TObject>> PageAsync(int page, int pageSize, CancellationToken cancellationToken) =>
-            this.RequestPageAsync<TObject, TId>(page, cancellationToken, pageSize);
+        public virtual Task<IApiV2ObjectList<TObject>> PageAsync(int page, int pageSize, CancellationToken cancellationToken = default) =>
+            this.Implementation.RequestPageAsync<TObject, TId>(page, pageSize, cancellationToken);
     }
 }

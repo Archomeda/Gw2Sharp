@@ -12,12 +12,13 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Creates a new <see cref="HomeClient"/> that is used for the API v2 home endpoint.
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
+        /// <param name="gw2Client">The Guild Wars 2 client.</param>
         /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
-        public HomeClient(IConnection connection) :
-            base(connection)
+        protected internal HomeClient(IConnection connection, IGw2Client gw2Client) :
+            base(connection, gw2Client)
         {
-            this.Cats = new HomeCatsClient(connection);
-            this.Nodes = new HomeNodesClient(connection);
+            this.Cats = new HomeCatsClient(connection, gw2Client);
+            this.Nodes = new HomeNodesClient(connection, gw2Client);
         }
 
         /// <inheritdoc />

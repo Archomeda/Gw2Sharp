@@ -40,6 +40,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// The point of interest icon.
         /// If the point of interest has no icon, this value is <c>null</c>.
         /// </summary>
-        public string? Icon { get; set; }
+        public RenderUrl? Icon { get; set; }
     }
 }

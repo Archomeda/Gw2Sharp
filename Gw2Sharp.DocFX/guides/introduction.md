@@ -10,12 +10,14 @@ This means that the basic functionality is easy to understand.
 You start with creating a `Connection`:
 ```cs
 // The constructor also accepts overloads with an access token and locale
-var connection = new Gw2Sharp.WebApi.Connection();
+var connection = new Gw2Sharp.Connection();
 ```
 
-Then you'll need to create the `Gw2WebApiClient`:
+Then you'll need to create the `Gw2Client`:
 ```cs
-var client = new Gw2Sharp.WebApi.Gw2WebApiClient(connection);
+var client = new Gw2Sharp.Gw2Client(connection);
+var renderClient = client.WebApi.Render;
+var webApiClient = client.WebApi.V2;
 ```
 
 Now you're ready!  
@@ -35,20 +37,20 @@ For example, you can do the following:
 
 ```cs
 // Get all item ids
-var ids = await client.V2.Items.IdsAsync();
+var ids = await client.WebApi.V2.Items.IdsAsync();
 
 // Get a single achievement
-var item = await client.V2.Achievements.GetAsync(123);
+var item = await client.WebApi.V2.Achievements.GetAsync(123);
 
 // Get multiple gliders
-var items = await client.V2.Gliders.ManyAsync(new[] { 123, 456 });
+var items = await client.WebApi.V2.Gliders.ManyAsync(new[] { 123, 456 });
 
 // Get itemstats by page
-var page = await client.V2.Itemstats.PageAsync(5);
+var page = await client.WebApi.V2.Itemstats.PageAsync(5);
 
 // Get all colors
-var all = await client.V2.Colors.AllAsync();
+var all = await client.WebApi.V2.Colors.AllAsync();
 
 // Access account sub-endpoints (e.g. account/home/cats that contains blob data)
-var accountCats = await client.V2.Account.Home.Cats.GetAsync();
+var accountCats = await client.WebApi.V2.Account.Home.Cats.GetAsync();
 ```

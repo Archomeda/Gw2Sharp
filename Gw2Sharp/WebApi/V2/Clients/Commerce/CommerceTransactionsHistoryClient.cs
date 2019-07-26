@@ -15,12 +15,13 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Creates a new <see cref="CommerceTransactionsHistoryClient"/> that is used for the API v2 commerce transactions history endpoint.
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
-        public CommerceTransactionsHistoryClient(IConnection connection) :
-            base(connection)
+        /// <param name="gw2Client">The Guild Wars 2 client.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="connection"/> or <paramref name="gw2Client"/> is <c>null</c>.</exception>
+        protected internal CommerceTransactionsHistoryClient(IConnection connection, IGw2Client gw2Client) :
+            base(connection, gw2Client)
         {
-            this.buys = new CommerceTransactionsHistoryBuysClient(connection);
-            this.sells = new CommerceTransactionsHistorySellsClient(connection);
+            this.buys = new CommerceTransactionsHistoryBuysClient(connection, gw2Client);
+            this.sells = new CommerceTransactionsHistorySellsClient(connection, gw2Client);
         }
 
         /// <inheritdoc />

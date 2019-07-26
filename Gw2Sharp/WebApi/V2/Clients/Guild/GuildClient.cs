@@ -16,17 +16,18 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Creates a new <see cref="GuildClient"/> that is used for the API v2 guild endpoint.
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
+        /// <param name="gw2Client">The Guild Wars 2 client.</param>
         /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
-        public GuildClient(IConnection connection) :
-            base(connection)
+        protected internal GuildClient(IConnection connection, IGw2Client gw2Client) :
+            base(connection, gw2Client)
         {
-            this.permissions = new GuildPermissionsClient(connection);
-            this.search = new GuildSearchClient(connection);
-            this.upgrades = new GuildUpgradesClient(connection);
+            this.permissions = new GuildPermissionsClient(connection, gw2Client);
+            this.search = new GuildSearchClient(connection, gw2Client);
+            this.upgrades = new GuildUpgradesClient(connection, gw2Client);
         }
 
         /// <inheritdoc />
-        public virtual IGuildIdClient this[Guid guildId] => new GuildIdClient(this.Connection, guildId);
+        public virtual IGuildIdClient this[Guid guildId] => new GuildIdClient(this.Connection, this.Gw2Client!, guildId);
 
         /// <inheritdoc />
         public virtual IGuildIdClient this[string guildId] => this[Guid.Parse(guildId)];

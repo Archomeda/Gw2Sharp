@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Cook's Outfit",
+    "icon": "https://render.guildwars2.com/file/1509D1B76FCECC111E28D2F50EBEAD5DA102995A/340522.png",
+    "unlock_items": [
+      64756
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Mad King's Outfit",
+    "icon": "https://render.guildwars2.com/file/041DC1695CF0DD1A4438D45ACB036C510E1AFFB4/499488.png",
+    "unlock_items": [
+      65196
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Pirate Captain's Outfit",
+    "icon": "https://render.guildwars2.com/file/983CE77CC0D921A1EE100D4ECFFE3F01FC61CC6B/66637.png",
+    "unlock_items": [
+      64754
+    ]
+  }
+]

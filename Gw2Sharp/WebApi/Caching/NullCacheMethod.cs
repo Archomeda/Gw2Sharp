@@ -24,7 +24,7 @@ namespace Gw2Sharp.WebApi.Caching
         }
 
         /// <inheritdoc />
-        public override async Task SetAsync<T>(string category, object id, T item, DateTime expiryTime)
+        public override async Task SetAsync<T>(string category, object id, T item, DateTimeOffset expiryTime)
         {
             // Nothing to do
         }

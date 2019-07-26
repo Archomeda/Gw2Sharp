@@ -11,14 +11,12 @@ namespace Gw2Sharp.Tests.WebApi
         public void ConstructorTest()
         {
             var connection = Substitute.For<IConnection>();
+            var gw2Client = Substitute.For<IGw2Client>();
 
-            var client1 = new Gw2WebApiClient();
-            var client2 = new Gw2WebApiClient(connection);
+            var client = new Gw2WebApiClient(connection, gw2Client);
 
-            Assert.IsType<Gw2WebApiV2Client>(client1.V2);
-
-            Assert.Same(connection, ((IWebApiClientInternal)client2.V2.Account.Achievements).Connection);
-            Assert.IsType<Gw2WebApiV2Client>(client2.V2);
+            Assert.Same(connection, ((IClientInternal)client.V2.Account.Achievements).Connection);
+            Assert.IsType<Gw2WebApiV2Client>(client.V2);
         }
     }
 }

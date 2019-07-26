@@ -85,21 +85,18 @@ namespace Gw2Sharp.WebApi.V2.Models
         }
 
         /// <inheritdoc />
-        IEnumerator IEnumerable.GetEnumerator() => this.GetEnumerator();
+        IEnumerator IEnumerable.GetEnumerator() =>
+            this.GetEnumerator();
 
         /// <inheritdoc />
-        public override string ToString() => $"({this.TopLeft},{this.TopRight},{this.BottomLeft},{this.BottomRight})";
+        public override string ToString() =>
+            $"({this.TopLeft},{this.TopRight},{this.BottomLeft},{this.BottomRight})";
 
         /// <inheritdoc />
-        public override bool Equals(object? obj) => obj is Rectangle && this.Equals((Rectangle)obj);
+        public override bool Equals(object? obj) =>
+            obj is Rectangle && this.Equals((Rectangle)obj);
 
-        /// <summary>
-        /// Indicates whether the current object is equal to another object of the same type.
-        /// </summary>
-        /// <param name="other">An object to compare with this object.</param>
-        /// <returns>
-        /// true if the current object is equal to the <paramref name="other" /> parameter; otherwise, false.
-        /// </returns>
+        /// <inheritdoc />
         public bool Equals(Rectangle other)
         {
             return this.TopLeft.Equals(other.TopLeft) &&
@@ -124,20 +121,18 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// </summary>
         /// <param name="rectangle">The first rectangle.</param>
         /// <param name="rectangle2">The second rectangle.</param>
-        /// <returns>
-        /// The result of the operator.
-        /// </returns>
-        public static bool operator ==(Rectangle rectangle, Rectangle rectangle2) => rectangle.Equals(rectangle2);
+        /// <returns>The result of the operator.</returns>
+        public static bool operator ==(Rectangle rectangle, Rectangle rectangle2) =>
+            rectangle.Equals(rectangle2);
 
         /// <summary>
         /// Implements the operator !=.
         /// </summary>
         /// <param name="rectangle">The first rectangle.</param>
         /// <param name="rectangle2">The second rectangle.</param>
-        /// <returns>
-        /// The result of the operator.
-        /// </returns>
-        public static bool operator !=(Rectangle rectangle, Rectangle rectangle2) => !(rectangle == rectangle2);
+        /// <returns>The result of the operator.</returns>
+        public static bool operator !=(Rectangle rectangle, Rectangle rectangle2) =>
+            !(rectangle == rectangle2);
     }
 
     /// <summary>
