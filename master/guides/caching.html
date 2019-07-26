@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Supported endpoints </title>
+    <title>Gw2Sharp Caching </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Supported endpoints ">
+    <meta name="title" content="Gw2Sharp Caching ">
     <meta name="generator" content="docfx 2.42.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -90,8 +90,8 @@
                           <li class="">
                             <a href="introduction.html" title="Introduction" class="">Introduction</a>
                           </li>
-                          <li class="">
-                            <a href="caching.html" title="Caching" class="">Caching</a>
+                          <li class="active">
+                            <a href="caching.html" title="Caching" class="active">Caching</a>
                           </li>
                           <li class="">
                             <a href="services.html" title="Supported services" class="">Supported services</a>
@@ -122,10 +122,37 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Guides.Endpoints">
-<h1 id="supported-endpoints">Supported endpoints</h1>
+            <article class="content wrap" id="_content" data-uid="Guides.Caching">
+<h1 id="caching">Caching</h1>
 
-<p>This page has been moved to <a class="xref" href="services.html">supported services</a>.</p>
+<p>By default, Gw2Sharp will cache all API requests in memory.
+Requests to the render services are not cached by default, however.</p>
+<p>You can override this behavior by passing a custom cache method to the <code>Connection</code> constructor.
+The following cache methods are available in the <code>Gw2Sharp.WebApi.Caching</code> namespace:</p>
+<ul>
+<li><code>NullCacheMethod</code>: does not cache at all (default for render)</li>
+<li><code>MemoryCacheMethod</code>: caches in-memory (default for API)</li>
+<li><code>ArchiveCacheMethod</code>: caches in a ZIP archive for persistent storage (recommended for render)</li>
+</ul>
+<p>If none of these provided cache methods suit your needs, you can bring your own cache method by implementing <code>ICacheMethod</code> in your own class, or by inheriting from the abstract <code>BaseCacheMethod</code> class.</p>
+<p>The following example shows how you can pass a custom cache method to a <code>Connection</code>:</p>
+<pre><code class="lang-cs">using Gw2Sharp;
+using Gw2Sharp.WebApi.Caching;
+
+// The default constructor will use in-memory caching for API requests,
+// and no caching for render requests
+var connectionWithDefaultCache = new Connection();
+
+var connectionWithCustomCache = new Connection
+{
+     // No cache for API requests
+    CacheMethod = new NullCacheMethod(),
+
+    // Persistent ZIP storage for render requests
+    RenderCacheMethod = new ArchiveCacheMethod(&quot;render-cache.zip&quot;)
+};
+</code></pre><p><strong>Heads up!</strong><br>It&#39;s possible to share one instance of <code>MemoryCacheMethod</code> or <code>ArchiveCacheMethod</code> across different instances of <code>Connection</code>s.<br>In case of <code>ArchiveCacheMethod</code>, do <strong>not</strong> create <em>multiple</em> instances of this class with references to the same file.
+A ZIP archive file can only be used by <em>one</em> instance of <code>ArchiveCacheMethod</code>.</p>
 </article>
           </div>
           

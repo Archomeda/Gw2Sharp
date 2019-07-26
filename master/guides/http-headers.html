@@ -91,7 +91,10 @@
                             <a href="introduction.html" title="Introduction" class="">Introduction</a>
                           </li>
                           <li class="">
-                            <a href="endpoints.html" title="Endpoints" class="">Endpoints</a>
+                            <a href="caching.html" title="Caching" class="">Caching</a>
+                          </li>
+                          <li class="">
+                            <a href="services.html" title="Supported services" class="">Supported services</a>
                           </li>
                           <li class="">
                             <a href="parameterized-endpoints.html" title="Parameterized endpoints" class="">Parameterized endpoints</a>
@@ -126,7 +129,7 @@
 This property allows you to access the HTTP headers that the response has returned.</p>
 <p>An example:</p>
 <pre><code class="lang-cs">// Assuming you already have a client
-var itemIds = await client.V2.Items.PageAsync(0);
+var itemIds = await client.WebApi.V2.Items.PageAsync(0);
 
 var cacheExpires = itemIds.HttpResponseInfo.Expires;
 var cacheAge = itemIds.HttpResponseInfo.CacheMaxAge;

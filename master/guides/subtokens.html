@@ -91,7 +91,10 @@
                             <a href="introduction.html" title="Introduction" class="">Introduction</a>
                           </li>
                           <li class="">
-                            <a href="endpoints.html" title="Endpoints" class="">Endpoints</a>
+                            <a href="caching.html" title="Caching" class="">Caching</a>
+                          </li>
+                          <li class="">
+                            <a href="services.html" title="Supported services" class="">Supported services</a>
                           </li>
                           <li class="">
                             <a href="parameterized-endpoints.html" title="Parameterized endpoints" class="">Parameterized endpoints</a>
@@ -130,14 +133,14 @@ With subtokens, you can restrict the permissions based on scope and URL level.
 Plus, you can also give it an expiry time.
 As long as the subtoken permissions are a subset of the original token, you can do anything you want.</p>
 <p>With Gw2Sharp, you can create a subtoken yourself with the following example:</p>
-<pre><code class="lang-cs">using Gw2Sharp.WebApi;
+<pre><code class="lang-cs">using Gw2Sharp;
 using Gw2Sharp.WebApi.V2.Models;
 
 var connection = new Connection(&quot;your-original-token&quot;);
-var client = new Gw2WebApiClient(connection);
+var client = new Gw2Client(connection);
 
 // By using a fluent-design pattern, you can give it the parameters you want
-var subtokenResponse = await client.V2.CreateSubtoken
+var subtokenResponse = await client.WebApi.V2.CreateSubtoken
     .WithPermissions(new[] { TokenPermission.Characters })
     .WithUrls(new[] { &quot;/v2/characters&quot; })
     .Expires(DateTime.Now.AddDays(1))
@@ -147,7 +150,7 @@ var subtokenResponse = await client.V2.CreateSubtoken
 var token = subtokenResponse.Subtoken;
 </code></pre><p>And you can use this token with a new client, and it works the same as the previous client:</p>
 <pre><code class="lang-cs">var subConnection = new Connection(token);
-var subClient = new Gw2WebApiClient(subConnection);
+var subClient = new Gw2Client(subConnection);
 </code></pre></article>
           </div>
           

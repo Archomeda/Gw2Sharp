@@ -91,7 +91,10 @@
                             <a href="introduction.html" title="Introduction" class="">Introduction</a>
                           </li>
                           <li class="">
-                            <a href="endpoints.html" title="Endpoints" class="">Endpoints</a>
+                            <a href="caching.html" title="Caching" class="">Caching</a>
+                          </li>
+                          <li class="">
+                            <a href="services.html" title="Supported services" class="">Supported services</a>
                           </li>
                           <li class="">
                             <a href="parameterized-endpoints.html" title="Parameterized endpoints" class="">Parameterized endpoints</a>
@@ -128,7 +131,7 @@ You can read up on it <a href="https://en-forum.guildwars2.com/discussion/72091/
 <p>Gw2Sharp allows you to check this header through the same way as <a href="http-headers.html">the other headers</a>.</p>
 <p>An example:</p>
 <pre><code class="lang-cs">// Assuming you already have a client
-var character = await client.V2.Characters[&quot;Your Character Name&quot;].GetAsync();
+var character = await client.WebApi.V2.Characters[&quot;Your Character Name&quot;].GetAsync();
 var lastModified = character.HttpResponseInfo.LastModified;
 
 // Note that both HttpResponseInfo and LastModified are nullable

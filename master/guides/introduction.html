@@ -91,7 +91,10 @@
                             <a href="introduction.html" title="Introduction" class="active">Introduction</a>
                           </li>
                           <li class="">
-                            <a href="endpoints.html" title="Endpoints" class="">Endpoints</a>
+                            <a href="caching.html" title="Caching" class="">Caching</a>
+                          </li>
+                          <li class="">
+                            <a href="services.html" title="Supported services" class="">Supported services</a>
                           </li>
                           <li class="">
                             <a href="parameterized-endpoints.html" title="Parameterized endpoints" class="">Parameterized endpoints</a>
@@ -126,9 +129,11 @@
 This means that the basic functionality is easy to understand.</p>
 <p>You start with creating a <code>Connection</code>:</p>
 <pre><code class="lang-cs">// The constructor also accepts overloads with an access token and locale
-var connection = new Gw2Sharp.WebApi.Connection();
-</code></pre><p>Then you&#39;ll need to create the <code>Gw2WebApiClient</code>:</p>
-<pre><code class="lang-cs">var client = new Gw2Sharp.WebApi.Gw2WebApiClient(connection);
+var connection = new Gw2Sharp.Connection();
+</code></pre><p>Then you&#39;ll need to create the <code>Gw2Client</code>:</p>
+<pre><code class="lang-cs">var client = new Gw2Sharp.Gw2Client(connection);
+var renderClient = client.WebApi.Render;
+var webApiClient = client.WebApi.V2;
 </code></pre><p>Now you&#39;re ready!<br>Keep in mind that all API calls are done asynchronously.
 Depending on the API endpoint, you&#39;ll find that the following methods are available:</p>
 <ul>
@@ -142,22 +147,22 @@ Depending on the API endpoint, you&#39;ll find that the following methods are av
 <p>If an endpoint has sub-endpoints, you can access them as a property.</p>
 <p>For example, you can do the following:</p>
 <pre><code class="lang-cs">// Get all item ids
-var ids = await client.V2.Items.IdsAsync();
+var ids = await client.WebApi.V2.Items.IdsAsync();
 
 // Get a single achievement
-var item = await client.V2.Achievements.GetAsync(123);
+var item = await client.WebApi.V2.Achievements.GetAsync(123);
 
 // Get multiple gliders
-var items = await client.V2.Gliders.ManyAsync(new[] { 123, 456 });
+var items = await client.WebApi.V2.Gliders.ManyAsync(new[] { 123, 456 });
 
 // Get itemstats by page
-var page = await client.V2.Itemstats.PageAsync(5);
+var page = await client.WebApi.V2.Itemstats.PageAsync(5);
 
 // Get all colors
-var all = await client.V2.Colors.AllAsync();
+var all = await client.WebApi.V2.Colors.AllAsync();
 
 // Access account sub-endpoints (e.g. account/home/cats that contains blob data)
-var accountCats = await client.V2.Account.Home.Cats.GetAsync();
+var accountCats = await client.WebApi.V2.Account.Home.Cats.GetAsync();
 </code></pre></article>
           </div>
           
