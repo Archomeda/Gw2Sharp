@@ -1,4 +1,5 @@
 using System;
+using Gw2Sharp.Models;
 using Gw2Sharp.WebApi.V2.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;

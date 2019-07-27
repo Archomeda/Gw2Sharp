@@ -154,17 +154,17 @@ namespace Gw2Sharp.WebApi.Caching
         /// <inheritdoc />
         public abstract Task FlushAsync();
 
+        /// <summary>
+        /// Disposes the object.
+        /// </summary>
+        /// <param name="isDisposing">Dispose unmanaged resources.</param>
+        protected virtual void Dispose(bool isDisposing) { }
+
         /// <inheritdoc />
         public void Dispose()
         {
             this.Dispose(true);
             GC.SuppressFinalize(this);
         }
-
-        /// <summary>
-        /// Disposes the object.
-        /// </summary>
-        /// <param name="isDisposing">Dispose unmanaged resources.</param>
-        protected virtual void Dispose(bool isDisposing) { }
     }
 }

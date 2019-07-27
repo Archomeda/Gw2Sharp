@@ -1,3 +1,5 @@
+using Gw2Sharp.Models;
+
 namespace Gw2Sharp.WebApi.V2.Models
 {
     /// <summary>

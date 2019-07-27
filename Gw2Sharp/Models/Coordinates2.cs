@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Gw2Sharp.Json.Converters;
 using Newtonsoft.Json;
 
-namespace Gw2Sharp.WebApi.V2.Models
+namespace Gw2Sharp.Models
 {
     /// <summary>
     /// Represents a coordinates object in 2D space.

@@ -1,6 +1,6 @@
 using System.ComponentModel;
 
-namespace Gw2Sharp.WebApi.V2.Models
+namespace Gw2Sharp.Models
 {
     /// <summary>
     /// Represents a map type.
@@ -120,8 +120,13 @@ namespace Gw2Sharp.WebApi.V2.Models
         EdgeOfTheMists = 15,
 
         /// <summary>
-        /// Mini public map type, e.g. Mistlock Sanctuary.
+        /// Mini public map type, e.g. Dry Top, the Silverwastes and Mistlock Sanctuary.
         /// </summary>
-        PublicMini = 16
+        PublicMini = 16,
+
+        /// <summary>
+        /// WvW lounge map type, e.g. Armistice Bastion.
+        /// </summary>
+        WvwLounge = 18
     }
 }

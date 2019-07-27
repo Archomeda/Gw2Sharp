@@ -1,8 +1,8 @@
-using Gw2Sharp.WebApi.V2.Models;
+using Gw2Sharp.Models;
 using Newtonsoft.Json;
 using Xunit;
 
-namespace Gw2Sharp.Tests.WebApi.V2.Models
+namespace Gw2Sharp.Tests.Models
 {
     public class Coordinates2Tests
     {
