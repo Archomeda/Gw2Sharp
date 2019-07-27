@@ -67,15 +67,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "guides/introduction.md",
       "output": {
         ".html": {
           "relative_path": "guides/introduction.html",
-          "hash": "eP9tNoWJRsz5Si7HDLSO3A=="
+          "hash": "x9jzYV8MCifc4CMwyWFlqg=="
         }
       },
       "is_incremental": false,
@@ -87,7 +84,7 @@
       "output": {
         ".html": {
           "relative_path": "guides/last-modified.html",
-          "hash": "835bI3upp7SBDLf2AQJiFA=="
+          "hash": "nO/1wV6MGZpRRQVjmjEXPQ=="
         }
       },
       "is_incremental": false,
