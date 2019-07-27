@@ -1,0 +1,310 @@
+{
+  "id": "Guardian",
+  "name": "Guardian",
+  "icon": "https://render.guildwars2.com/file/C32BE61FC55C962524624F643897ECF1A9C80462/156634.png",
+  "icon_big": "https://render.guildwars2.com/file/6E0D0AC6E0CE5C0C29B3D736ABEA070F4A58540E/156633.png",
+  "specializations": [
+    42,
+    16,
+    13,
+    49,
+    46,
+    27,
+    62
+  ],
+  "weapons": {
+    "Axe": {
+      "specialization": 62,
+      "flags": [
+        "Mainhand"
+      ],
+      "skills": [
+        {
+          "id": 45047,
+          "slot": "Weapon_1"
+        },
+        {
+          "id": 40624,
+          "slot": "Weapon_2"
+        },
+        {
+          "id": 45402,
+          "slot": "Weapon_3"
+        }
+      ]
+    },
+    "Focus": {
+      "flags": [
+        "Offhand"
+      ],
+      "skills": [
+        {
+          "id": 9112,
+          "slot": "Weapon_4"
+        },
+        {
+          "id": 9082,
+          "slot": "Weapon_5"
+        }
+      ]
+    },
+    "Greatsword": {
+      "flags": [
+        "TwoHand"
+      ],
+      "skills": [
+        {
+          "id": 9137,
+          "slot": "Weapon_1"
+        },
+        {
+          "id": 9081,
+          "slot": "Weapon_2"
+        },
+        {
+          "id": 9080,
+          "slot": "Weapon_3"
+        },
+        {
+          "id": 9146,
+          "slot": "Weapon_4"
+        },
+        {
+          "id": 9147,
+          "slot": "Weapon_5"
+        }
+      ]
+    }
+  },
+  "flags": [],
+  "skills": [
+    {
+      "id": 9115,
+      "slot": "Profession_1",
+      "type": "Profession"
+    },
+    {
+      "id": 9118,
+      "slot": "Profession_3",
+      "type": "Profession"
+    },
+    {
+      "id": 9120,
+      "slot": "Profession_2",
+      "type": "Profession"
+    },
+    {
+      "id": 9102,
+      "slot": "Heal",
+      "type": "Heal"
+    },
+    {
+      "id": 9125,
+      "slot": "Utility",
+      "type": "Utility"
+    },
+    {
+      "id": 29965,
+      "slot": "Elite",
+      "type": "Elite"
+    }
+  ],
+  "training": [
+    {
+      "id": 26,
+      "category": "Skills",
+      "name": "Spirit Weapon Training",
+      "track": [
+        {
+          "cost": 2,
+          "type": "Skill",
+          "skill_id": 9168
+        },
+        {
+          "cost": 5,
+          "type": "Skill",
+          "skill_id": 9182
+        },
+        {
+          "cost": 9,
+          "type": "Skill",
+          "skill_id": 9175
+        },
+        {
+          "cost": 13,
+          "type": "Skill",
+          "skill_id": 9125
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "category": "Specializations",
+      "name": "Zeal",
+      "track": [
+        {
+          "cost": 2,
+          "type": "Trait",
+          "trait_id": 648
+        },
+        {
+          "cost": 5,
+          "type": "Trait",
+          "trait_id": 563
+        },
+        {
+          "cost": 8,
+          "type": "Trait",
+          "trait_id": 634
+        },
+        {
+          "cost": 11,
+          "type": "Trait",
+          "trait_id": 1925
+        },
+        {
+          "cost": 15,
+          "type": "Trait",
+          "trait_id": 646
+        },
+        {
+          "cost": 20,
+          "type": "Trait",
+          "trait_id": 628
+        },
+        {
+          "cost": 25,
+          "type": "Trait",
+          "trait_id": 653
+        },
+        {
+          "cost": 30,
+          "type": "Trait",
+          "trait_id": 1556
+        },
+        {
+          "cost": 36,
+          "type": "Trait",
+          "trait_id": 649
+        },
+        {
+          "cost": 44,
+          "type": "Trait",
+          "trait_id": 635
+        },
+        {
+          "cost": 52,
+          "type": "Trait",
+          "trait_id": 637
+        },
+        {
+          "cost": 60,
+          "type": "Trait",
+          "trait_id": 2017
+        }
+      ]
+    },
+    {
+      "id": 85,
+      "category": "EliteSpecializations",
+      "name": "Dragonhunter",
+      "track": [
+        {
+          "cost": 30,
+          "type": "Trait",
+          "trait_id": 1826
+        },
+        {
+          "cost": 40,
+          "type": "Trait",
+          "trait_id": 1848
+        },
+        {
+          "cost": 55,
+          "type": "Skill",
+          "skill_id": 30025
+        },
+        {
+          "cost": 65,
+          "type": "Trait",
+          "trait_id": 1898
+        },
+        {
+          "cost": 75,
+          "type": "Trait",
+          "trait_id": 1983
+        },
+        {
+          "cost": 85,
+          "type": "Trait",
+          "trait_id": 1911
+        },
+        {
+          "cost": 95,
+          "type": "Trait",
+          "trait_id": 1896
+        },
+        {
+          "cost": 110,
+          "type": "Skill",
+          "skill_id": 29786
+        },
+        {
+          "cost": 125,
+          "type": "Skill",
+          "skill_id": 30553
+        },
+        {
+          "cost": 135,
+          "type": "Trait",
+          "trait_id": 2037
+        },
+        {
+          "cost": 145,
+          "type": "Trait",
+          "trait_id": 1835
+        },
+        {
+          "cost": 155,
+          "type": "Trait",
+          "trait_id": 1943
+        },
+        {
+          "cost": 165,
+          "type": "Trait",
+          "trait_id": 1926
+        },
+        {
+          "cost": 180,
+          "type": "Skill",
+          "skill_id": 30364
+        },
+        {
+          "cost": 190,
+          "type": "Trait",
+          "trait_id": 1908
+        },
+        {
+          "cost": 200,
+          "type": "Trait",
+          "trait_id": 1963
+        },
+        {
+          "cost": 210,
+          "type": "Trait",
+          "trait_id": 1955
+        },
+        {
+          "cost": 225,
+          "type": "Skill",
+          "skill_id": 30871
+        },
+        {
+          "cost": 250,
+          "type": "Skill",
+          "skill_id": 30273
+        }
+      ]
+    }
+  ]
+}

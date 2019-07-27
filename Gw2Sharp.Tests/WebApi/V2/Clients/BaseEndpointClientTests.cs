@@ -10,7 +10,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Gw2Sharp.Extensions;
 using Gw2Sharp.Tests.Helpers;
-using Gw2Sharp.WebApi;
 using Gw2Sharp.WebApi.Http;
 using Gw2Sharp.WebApi.V2;
 using Gw2Sharp.WebApi.V2.Clients;
@@ -266,7 +265,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                         s.Substring(1))));
                     dynamic property = Convert.ChangeType(key, keyType);
                     if (property == null)
-                        throw new InvalidOperationException($"Property {key} does not exist");
+                        throw new InvalidOperationException($"Expected property '{key}' to exist in type {type.FullName}");
                     var actualValue = dic[property];
                     this.AssertJsonObject(kvp.Value, actualValue);
                 }
@@ -281,7 +280,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                         s.Substring(1))));
                     var property = type.GetProperty(key);
                     if (property == null)
-                        throw new InvalidOperationException($"Property {key} does not exist");
+                        throw new InvalidOperationException($"Expected property '{key}' to exist in type {type.FullName}");
                     object actualValue = property.GetValue(actual);
                     this.AssertJsonObject(kvp.Value, actualValue);
                 }
@@ -319,7 +318,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                         if (@enum.IsUnknown)
                         {
                             var enumNames = Enum.GetNames(enumType).Select(x => x.Replace("_", ""));
-                            Assert.True(enumNames.Contains(@enum.RawValue, StringComparer.OrdinalIgnoreCase), $"Expected '{expected}' to be a value in enumerator {@enum.Value.GetType().Name}; detected value '{@enum.Value}'");
+                            Assert.True(enumNames.Contains(@enum.RawValue, StringComparer.OrdinalIgnoreCase), $"Expected '{expected}' to be a value in enumerator {@enum.Value.GetType().FullName}; detected value '{@enum.Value}'");
                         }
                         Assert.Equal(expected.Value<string>().ParseEnum(enumType), @enum.Value);
                     }

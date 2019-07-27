@@ -146,7 +146,7 @@ For your convenience, the following list gives an overview of the endpoints that
  /v2/novelties | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Novelties`](../api/Gw2Sharp.WebApi.V2.Clients.NoveltiesClient.html)
  /v2/outfits | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Outfits`](../api/Gw2Sharp.WebApi.V2.Clients.OutfitsClient.html)
  /v2/pets | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Pets`](../api/Gw2Sharp.WebApi.V2.Clients.PetsClient.html)
- /v2/professions | ❌ |
+ /v2/professions | ✔️🌐📄📚📦 | [`Gw2WebApiClient.V2.Professions`](../api/Gw2Sharp.WebApi.V2.Clients.ProfessionsClient.html)
  /v2/pvp | ❌ |
  /v2/pvp/amulets | ❌ |
  /v2/pvp/games | ❌ |

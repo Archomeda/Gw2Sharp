@@ -165,6 +165,11 @@ namespace Gw2Sharp.WebApi.V2
         IPetsClient Pets { get; }
 
         /// <summary>
+        /// Gets the professions.
+        /// </summary>
+        IProfessionsClient Professions { get; }
+
+        /// <summary>
         /// Gets the token info.
         /// </summary>
         ITokenInfoClient TokenInfo { get; }
