@@ -2,11 +2,12 @@
 
 ## 0.5.0
 ### Endpoints
-- Add render service which can be found under `IGw2WebApiClient.Render` (right next to `IGw2WebApiClient.V2`)
+- Add render service which can be found under `IGw2WebApiClient.Render` (right next to `IGw2WebApiClient.V2`) ([#6](https://github.com/Archomeda/Gw2Sharp/issues/6))
 - Add `RenderUrl` type to directly access download methods from the render client
 - Add `/v2/novelties`
 - Add `/v2/outfits`
 - Add `/v2/pets`
+- Add `/v2/professions`
 
 ### Caching
 - Add `ArchiveCacheMethod` to support caching large blobs of data in a ZIP archive on disk (e.g. images from render)
@@ -56,7 +57,7 @@
 - **Breaking:** Various endpoint clients with child endpoint clients and/or extra parameters have had their virtual property setters removed; you can still override the property for customization however
   (reason: it's discouraged to call virtual methods or set virtual properties from a constructor in a non-sealed class)
 - **Breaking:** `IGuildIdLogClient.ParamSince` and its implementation `GuildIdLogClient.ParamSince` are no longer virtual and no longer have a public setter to follow convention of e.g. `CreateSubtokenClient` (use `IGuildIdLogClient.Since(int? since)` to set this parameter with the fluent design pattern)
-- **Breaking:** Since the settings in `IConnection` are only used interally, the `.Connection` property of `IGw2WebApiClient`, `IGw2WebApiV2Client` and all endpoint clients have been either removed or are now marked as internal
+- **Breaking:** Since the settings in `IConnection` are only used interally, the `.Connection` property of `IGw2WebApiClient`, `IGw2WebApiV2Client` and all endpoint clients have been either removed or are now marked as internal ([#4](https://github.com/Archomeda/Gw2Sharp/issues/4))
   (if you still want to keep track of these settings, you should keep a reference to the instance yourself)
 - Most `Connection` properties have a public setter to allow changes after object creation
 - **Breaking:** `ICacheMethod` and its implementations received a small clean-up due to it being an overengineered interface (all deprecations will be fully removed in 0.5.0+):
