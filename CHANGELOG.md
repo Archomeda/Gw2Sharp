@@ -19,6 +19,7 @@
 - **Breaking:** All web API v2 properties that are URLs have been changed from type `string` to type `Gw2Sharp.WebApi.RenderUrl`
 - **Breaking:** `Gw2Sharp.WebApi.Gw2WebApiClient` can no longer be instantiated directly; use `Gw2Sharp.Gw2Client` instead
 - **Breaking:** `Gw2Sharp.WebApi.IConnection` and `Gw2Sharp.WebApi.Connection` have been moved into the root `Gw2Sharp` namespace
+- **Breaking:** `Gw2Sharp.WebApi.V2.Models.Maps.MapType` and `Gw2Sharp.WebApi.V2.Models.Coordinates2` have been moved into the `Gw2Sharp.Models` namespace
 - **Breaking:** A bunch of overloaded constructors of `Gw2Sharp.Connection` have been simplified into one constructor with optional parameters
 - **Breaking:** `Gw2Sharp.IConnection.RequestAsync` has its signature changed to include a parameter of type `Gw2Sharp.IGw2Client`
 - **Breaking:** All custom JSON converters inside the `Gw2Sharp.WebApi.V2.Models.Converters` namespace have been moved into the `Gw2Sharp.Json.Converters` namespace
