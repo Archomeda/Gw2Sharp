@@ -41,7 +41,7 @@ build:binaries:
 build:docs:
   extends: .task
   stage: build
-  image: mono
+  image: mono:5.20.1.19
   only:
     - master
     - tags
@@ -49,7 +49,7 @@ build:docs:
     - apt update
     - apt install -y git wget unzip
   script:
-    - wget -q https://github.com/dotnet/docfx/releases/download/v2.43.3/docfx.zip
+    - wget -q https://github.com/dotnet/docfx/releases/download/v2.42.4/docfx.zip
     - unzip docfx.zip
     - mono docfx.exe Gw2Sharp.DocFX/docfx.json
     - mv Gw2Sharp.DocFX/_site doc
