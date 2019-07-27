@@ -41,7 +41,7 @@ build:binaries:
 build:docs:
   extends: .task
   stage: build
-  image: mono
+  image: mono:5
   only:
     - master
     - tags
