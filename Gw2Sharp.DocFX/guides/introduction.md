@@ -29,7 +29,7 @@ Depending on the API endpoint, you'll find that the following methods are availa
 - `PageAsync()` - Gets a page
 - `AllAsync()` - Gets all items at once (bulk all)
 
-Check the [features](../features.md) for the full list of supported endpoint operations.
+Check the [services](xref:Guides.Services) for the full list of supported services.
 
 If an endpoint has sub-endpoints, you can access them as a property.
 

@@ -8,7 +8,7 @@ This header is used to check the last time the content you're accessing has been
 It was added to the API on March 22nd, 2019.
 You can read up on it [on the forums](https://en-forum.guildwars2.com/discussion/72091/api-updates-march-22-2019).
 
-Gw2Sharp allows you to check this header through the same way as [the other headers](http-headers.md).
+Gw2Sharp allows you to check this header through the same way as [the other headers](xref:Guides.HttpHeaders).
 
 An example:
 
