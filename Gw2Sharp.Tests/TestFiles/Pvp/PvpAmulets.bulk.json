@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "name": "Celestial Amulet",
+    "icon": "https://render.guildwars2.com/file/03C8FB276B146CB64E201F006D0FC0D2380E956B/220645.png",
+    "attributes": {
+      "Power": 460,
+      "Precision": 460,
+      "Vitality": 460,
+      "Toughness": 460,
+      "CritDamage": 460,
+      "ConditionDamage": 460,
+      "Healing": 460
+    }
+  },
+  {
+    "id": 4,
+    "name": "Assassin Amulet",
+    "icon": "https://render.guildwars2.com/file/02E9EFDEF9587130A25F17AC396913FBBE3C716D/455602.png",
+    "attributes": {
+      "Precision": 1200,
+      "Power": 900,
+      "CritDamage": 900
+    }
+  },
+  {
+    "id": 5,
+    "name": "Cavalier Amulet",
+    "icon": "https://render.guildwars2.com/file/A0971CBC0EB8D8D51A7F0EFE6092B8713171DDF6/543914.png",
+    "attributes": {
+      "Toughness": 1200,
+      "Power": 900,
+      "CritDamage": 900
+    }
+  }
+]

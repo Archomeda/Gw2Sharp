@@ -170,6 +170,11 @@ namespace Gw2Sharp.WebApi.V2
         IProfessionsClient Professions { get; }
 
         /// <summary>
+        /// Gets the PvP.
+        /// </summary>
+        IPvpClient Pvp { get; }
+
+        /// <summary>
         /// Gets the token info.
         /// </summary>
         ITokenInfoClient TokenInfo { get; }
