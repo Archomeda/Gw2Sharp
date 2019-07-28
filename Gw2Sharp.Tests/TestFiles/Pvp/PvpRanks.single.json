@@ -1,0 +1,15 @@
+{
+  "id": 9,
+  "finisher_id": 9,
+  "name": "Dragon",
+  "icon": "https://render.guildwars2.com/file/A2ACA72B379FCC4C4D7CE3D59DED073196485B5B/347230.png",
+  "min_rank": 80,
+  "max_rank": 81,
+  "levels": [
+    {
+      "min_rank": 80,
+      "max_rank": 81,
+      "points": 20000
+    }
+  ]
+}

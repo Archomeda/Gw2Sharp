@@ -10,7 +10,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     {
         private readonly IPvpAmuletsClient amulets;
         private readonly IPvpGamesClient games;
-        //private readonly IPvpRanksClient ranks;
+        private readonly IPvpRanksClient ranks;
         //private readonly IPvpSeasonsClient seasons;
         //private readonly IPvpStatsClient stats;
 
@@ -25,7 +25,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         {
             this.amulets = new PvpAmuletsClient(connection, gw2Client);
             this.games = new PvpGamesClient(connection, gw2Client);
-            //this.ranks = new PvpRanksClient(connection, gw2Client);
+            this.ranks = new PvpRanksClient(connection, gw2Client);
             //this.seasons = new PvpSeasonsClient(connection, gw2Client);
             //this.stats = new PvpStatsClient(connection, gw2Client);
         }
@@ -37,7 +37,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         public virtual IPvpGamesClient Games => this.games;
 
         /// <inheritdoc />
-        //public virtual IPvpRanksClient Ranks => this.ranks;
+        public virtual IPvpRanksClient Ranks => this.ranks;
 
         /// <inheritdoc />
         //public virtual IPvpSeasonsClient Seasons => this.seasons;

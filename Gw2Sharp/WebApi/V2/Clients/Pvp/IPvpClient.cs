@@ -19,7 +19,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <summary>
         /// Gets the PvP ranks.
         /// </summary>
-        //IPvpRanksClient Ranks { get; }
+        IPvpRanksClient Ranks { get; }
 
         /// <summary>
         /// Gets the PvP seasons.
