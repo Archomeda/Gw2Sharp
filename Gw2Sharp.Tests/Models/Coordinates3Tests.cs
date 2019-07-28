@@ -12,7 +12,7 @@ namespace Gw2Sharp.Tests.Models
             var coordinates = new Coordinates3(4, 2, 8);
             Assert.Equal(4, coordinates.X);
             Assert.Equal(2, coordinates.Y);
-            Assert.Equal(new[] { 4d, 2d }, coordinates);
+            Assert.Equal(new[] { 4d, 2d, 8d }, coordinates);
         }
 
         [Fact]

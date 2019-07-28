@@ -89,13 +89,16 @@ namespace Gw2Sharp.Mumble
                     return string.Empty;
 
                 var context = this.linkedMem.context;
-                return context.socketAddressFamily switch
+                switch (context.socketAddressFamily)
                 {
-                    AddressFamily.InterNetwork => $"{context.socketAddress4[0]}.{context.socketAddress4[1]}.{context.socketAddress4[2]}.{context.socketAddress4[3]}",
-                    AddressFamily.InterNetworkV6 => $"{context.socketAddress6[0]:X4}:{context.socketAddress6[1]:X4}:{context.socketAddress6[2]:X4}:{context.socketAddress6[3]:X4}:" +
-                        $"{context.socketAddress6[4]:X4}:{context.socketAddress6[5]:X4}:{context.socketAddress6[6]:X4}:{context.socketAddress6[7]:X4}",
-                    _ => string.Empty,
-                };
+                    case AddressFamily.InterNetwork:
+                        return $"{context.socketAddress4[0]}.{context.socketAddress4[1]}.{context.socketAddress4[2]}.{context.socketAddress4[3]}";
+                    case AddressFamily.InterNetworkV6:
+                        return $"{context.socketAddress6[0]:X4}:{context.socketAddress6[1]:X4}:{context.socketAddress6[2]:X4}:{context.socketAddress6[3]:X4}:" +
+                        $"{context.socketAddress6[4]:X4}:{context.socketAddress6[5]:X4}:{context.socketAddress6[6]:X4}:{context.socketAddress6[7]:X4}";
+                    default:
+                        return string.Empty;
+                }
             }
         }
 
