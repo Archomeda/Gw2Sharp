@@ -214,7 +214,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
 
                 var @object = httpResponse.Content;
                 @object.HttpResponseInfo = new ApiV2HttpResponseInfo(httpResponse.StatusCode, httpResponse.RequestHeaders, httpResponse.ResponseHeaders);
-                return (@object, @object.HttpResponseInfo.Expires ?? DateTime.Now);
+                return (@object, @object.HttpResponseInfo.Expires ?? DateTimeOffset.Now);
             }).ConfigureAwait(false);
 
             return result;

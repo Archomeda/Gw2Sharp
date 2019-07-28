@@ -11,12 +11,12 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The subtoken's expiry date.
         /// </summary>
-        public DateTime ExpiresAt { get; set; }
+        public DateTimeOffset ExpiresAt { get; set; }
 
         /// <summary>
         /// The subtoken's creation date.
         /// </summary>
-        public DateTime IssuedAt { get; set; }
+        public DateTimeOffset IssuedAt { get; set; }
 
         /// <summary>
         /// The list of URLs that this subtoken has access to.

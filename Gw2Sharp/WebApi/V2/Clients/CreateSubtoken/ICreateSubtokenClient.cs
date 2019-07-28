@@ -31,7 +31,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// </summary>
         /// <param name="expire">The expire date.</param>
         /// <returns><c>this</c> to allow method chaining.</returns>
-        ICreateSubtokenClient Expires(DateTime expire);
+        ICreateSubtokenClient Expires(DateTimeOffset expire);
 
         /// <summary>
         /// Sets the subtoken permissions.

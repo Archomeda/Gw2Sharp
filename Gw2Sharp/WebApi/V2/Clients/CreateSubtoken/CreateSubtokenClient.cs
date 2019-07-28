@@ -34,7 +34,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         public string? ParamUrls { get; protected set; }
 
         /// <inheritdoc />
-        public virtual ICreateSubtokenClient Expires(DateTime expire)
+        public virtual ICreateSubtokenClient Expires(DateTimeOffset expire)
         {
             this.ParamExpire = expire.ToString("o");
             return this;

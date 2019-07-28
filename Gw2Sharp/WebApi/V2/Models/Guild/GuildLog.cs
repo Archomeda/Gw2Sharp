@@ -35,7 +35,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The guild log time.
         /// </summary>
-        public DateTime Time { get; set; }
+        public DateTimeOffset Time { get; set; }
 
         /// <summary>
         /// The guild log type.
