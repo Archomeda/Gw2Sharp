@@ -745,11 +745,11 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Json.Converters.Coordinates2Converter.CanWrite
   nameWithType: Coordinates2Converter.CanWrite
-- uid: Gw2Sharp.Json.Converters.Coordinates2Converter.ReadJson(JsonReader,Type,Gw2Sharp.WebApi.V2.Models.Coordinates2,System.Boolean,JsonSerializer)
+- uid: Gw2Sharp.Json.Converters.Coordinates2Converter.ReadJson(JsonReader,Type,Gw2Sharp.Models.Coordinates2,System.Boolean,JsonSerializer)
   name: ReadJson(JsonReader, Type, Coordinates2, Boolean, JsonSerializer)
-  href: api/Gw2Sharp.Json.Converters.Coordinates2Converter.html#Gw2Sharp_Json_Converters_Coordinates2Converter_ReadJson_JsonReader_Type_Gw2Sharp_WebApi_V2_Models_Coordinates2_System_Boolean_JsonSerializer_
-  commentId: M:Gw2Sharp.Json.Converters.Coordinates2Converter.ReadJson(JsonReader,Type,Gw2Sharp.WebApi.V2.Models.Coordinates2,System.Boolean,JsonSerializer)
-  fullName: Gw2Sharp.Json.Converters.Coordinates2Converter.ReadJson(JsonReader, Type, Gw2Sharp.WebApi.V2.Models.Coordinates2, System.Boolean, JsonSerializer)
+  href: api/Gw2Sharp.Json.Converters.Coordinates2Converter.html#Gw2Sharp_Json_Converters_Coordinates2Converter_ReadJson_JsonReader_Type_Gw2Sharp_Models_Coordinates2_System_Boolean_JsonSerializer_
+  commentId: M:Gw2Sharp.Json.Converters.Coordinates2Converter.ReadJson(JsonReader,Type,Gw2Sharp.Models.Coordinates2,System.Boolean,JsonSerializer)
+  fullName: Gw2Sharp.Json.Converters.Coordinates2Converter.ReadJson(JsonReader, Type, Gw2Sharp.Models.Coordinates2, System.Boolean, JsonSerializer)
   nameWithType: Coordinates2Converter.ReadJson(JsonReader, Type, Coordinates2, Boolean, JsonSerializer)
 - uid: Gw2Sharp.Json.Converters.Coordinates2Converter.ReadJson*
   name: ReadJson
@@ -758,11 +758,11 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Json.Converters.Coordinates2Converter.ReadJson
   nameWithType: Coordinates2Converter.ReadJson
-- uid: Gw2Sharp.Json.Converters.Coordinates2Converter.WriteJson(JsonWriter,Gw2Sharp.WebApi.V2.Models.Coordinates2,JsonSerializer)
+- uid: Gw2Sharp.Json.Converters.Coordinates2Converter.WriteJson(JsonWriter,Gw2Sharp.Models.Coordinates2,JsonSerializer)
   name: WriteJson(JsonWriter, Coordinates2, JsonSerializer)
-  href: api/Gw2Sharp.Json.Converters.Coordinates2Converter.html#Gw2Sharp_Json_Converters_Coordinates2Converter_WriteJson_JsonWriter_Gw2Sharp_WebApi_V2_Models_Coordinates2_JsonSerializer_
-  commentId: M:Gw2Sharp.Json.Converters.Coordinates2Converter.WriteJson(JsonWriter,Gw2Sharp.WebApi.V2.Models.Coordinates2,JsonSerializer)
-  fullName: Gw2Sharp.Json.Converters.Coordinates2Converter.WriteJson(JsonWriter, Gw2Sharp.WebApi.V2.Models.Coordinates2, JsonSerializer)
+  href: api/Gw2Sharp.Json.Converters.Coordinates2Converter.html#Gw2Sharp_Json_Converters_Coordinates2Converter_WriteJson_JsonWriter_Gw2Sharp_Models_Coordinates2_JsonSerializer_
+  commentId: M:Gw2Sharp.Json.Converters.Coordinates2Converter.WriteJson(JsonWriter,Gw2Sharp.Models.Coordinates2,JsonSerializer)
+  fullName: Gw2Sharp.Json.Converters.Coordinates2Converter.WriteJson(JsonWriter, Gw2Sharp.Models.Coordinates2, JsonSerializer)
   nameWithType: Coordinates2Converter.WriteJson(JsonWriter, Coordinates2, JsonSerializer)
 - uid: Gw2Sharp.Json.Converters.Coordinates2Converter.WriteJson*
   name: WriteJson
@@ -1028,6 +1028,294 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Json.Converters.TopDownRectangleConverter.ReadJson
   nameWithType: TopDownRectangleConverter.ReadJson
+- uid: Gw2Sharp.Models
+  name: Gw2Sharp.Models
+  href: api/Gw2Sharp.Models.html
+  commentId: N:Gw2Sharp.Models
+  fullName: Gw2Sharp.Models
+  nameWithType: Gw2Sharp.Models
+- uid: Gw2Sharp.Models.Coordinates2
+  name: Coordinates2
+  href: api/Gw2Sharp.Models.Coordinates2.html
+  commentId: T:Gw2Sharp.Models.Coordinates2
+  fullName: Gw2Sharp.Models.Coordinates2
+  nameWithType: Coordinates2
+- uid: Gw2Sharp.Models.Coordinates2.#ctor(System.Double,System.Double)
+  name: Coordinates2(Double, Double)
+  href: api/Gw2Sharp.Models.Coordinates2.html#Gw2Sharp_Models_Coordinates2__ctor_System_Double_System_Double_
+  commentId: M:Gw2Sharp.Models.Coordinates2.#ctor(System.Double,System.Double)
+  fullName: Gw2Sharp.Models.Coordinates2.Coordinates2(System.Double, System.Double)
+  nameWithType: Coordinates2.Coordinates2(Double, Double)
+- uid: Gw2Sharp.Models.Coordinates2.#ctor*
+  name: Coordinates2
+  href: api/Gw2Sharp.Models.Coordinates2.html#Gw2Sharp_Models_Coordinates2__ctor_
+  commentId: Overload:Gw2Sharp.Models.Coordinates2.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.Models.Coordinates2.Coordinates2
+  nameWithType: Coordinates2.Coordinates2
+- uid: Gw2Sharp.Models.Coordinates2.Equals(Gw2Sharp.Models.Coordinates2)
+  name: Equals(Coordinates2)
+  href: api/Gw2Sharp.Models.Coordinates2.html#Gw2Sharp_Models_Coordinates2_Equals_Gw2Sharp_Models_Coordinates2_
+  commentId: M:Gw2Sharp.Models.Coordinates2.Equals(Gw2Sharp.Models.Coordinates2)
+  fullName: Gw2Sharp.Models.Coordinates2.Equals(Gw2Sharp.Models.Coordinates2)
+  nameWithType: Coordinates2.Equals(Coordinates2)
+- uid: Gw2Sharp.Models.Coordinates2.Equals(System.Nullable{System.Object})
+  name: Equals(Nullable<Object>)
+  href: api/Gw2Sharp.Models.Coordinates2.html#Gw2Sharp_Models_Coordinates2_Equals_System_Nullable_System_Object__
+  commentId: M:Gw2Sharp.Models.Coordinates2.Equals(System.Nullable{System.Object})
+  name.vb: Equals(Nullable(Of Object))
+  fullName: Gw2Sharp.Models.Coordinates2.Equals(System.Nullable<System.Object>)
+  fullName.vb: Gw2Sharp.Models.Coordinates2.Equals(System.Nullable(Of System.Object))
+  nameWithType: Coordinates2.Equals(Nullable<Object>)
+  nameWithType.vb: Coordinates2.Equals(Nullable(Of Object))
+- uid: Gw2Sharp.Models.Coordinates2.Equals*
+  name: Equals
+  href: api/Gw2Sharp.Models.Coordinates2.html#Gw2Sharp_Models_Coordinates2_Equals_
+  commentId: Overload:Gw2Sharp.Models.Coordinates2.Equals
+  isSpec: "True"
+  fullName: Gw2Sharp.Models.Coordinates2.Equals
+  nameWithType: Coordinates2.Equals
+- uid: Gw2Sharp.Models.Coordinates2.GetEnumerator
+  name: GetEnumerator()
+  href: api/Gw2Sharp.Models.Coordinates2.html#Gw2Sharp_Models_Coordinates2_GetEnumerator
+  commentId: M:Gw2Sharp.Models.Coordinates2.GetEnumerator
+  fullName: Gw2Sharp.Models.Coordinates2.GetEnumerator()
+  nameWithType: Coordinates2.GetEnumerator()
+- uid: Gw2Sharp.Models.Coordinates2.GetEnumerator*
+  name: GetEnumerator
+  href: api/Gw2Sharp.Models.Coordinates2.html#Gw2Sharp_Models_Coordinates2_GetEnumerator_
+  commentId: Overload:Gw2Sharp.Models.Coordinates2.GetEnumerator
+  isSpec: "True"
+  fullName: Gw2Sharp.Models.Coordinates2.GetEnumerator
+  nameWithType: Coordinates2.GetEnumerator
+- uid: Gw2Sharp.Models.Coordinates2.GetHashCode
+  name: GetHashCode()
+  href: api/Gw2Sharp.Models.Coordinates2.html#Gw2Sharp_Models_Coordinates2_GetHashCode
+  commentId: M:Gw2Sharp.Models.Coordinates2.GetHashCode
+  fullName: Gw2Sharp.Models.Coordinates2.GetHashCode()
+  nameWithType: Coordinates2.GetHashCode()
+- uid: Gw2Sharp.Models.Coordinates2.GetHashCode*
+  name: GetHashCode
+  href: api/Gw2Sharp.Models.Coordinates2.html#Gw2Sharp_Models_Coordinates2_GetHashCode_
+  commentId: Overload:Gw2Sharp.Models.Coordinates2.GetHashCode
+  isSpec: "True"
+  fullName: Gw2Sharp.Models.Coordinates2.GetHashCode
+  nameWithType: Coordinates2.GetHashCode
+- uid: Gw2Sharp.Models.Coordinates2.op_Equality(Gw2Sharp.Models.Coordinates2,Gw2Sharp.Models.Coordinates2)
+  name: Equality(Coordinates2, Coordinates2)
+  href: api/Gw2Sharp.Models.Coordinates2.html#Gw2Sharp_Models_Coordinates2_op_Equality_Gw2Sharp_Models_Coordinates2_Gw2Sharp_Models_Coordinates2_
+  commentId: M:Gw2Sharp.Models.Coordinates2.op_Equality(Gw2Sharp.Models.Coordinates2,Gw2Sharp.Models.Coordinates2)
+  fullName: Gw2Sharp.Models.Coordinates2.Equality(Gw2Sharp.Models.Coordinates2, Gw2Sharp.Models.Coordinates2)
+  nameWithType: Coordinates2.Equality(Coordinates2, Coordinates2)
+- uid: Gw2Sharp.Models.Coordinates2.op_Equality*
+  name: Equality
+  href: api/Gw2Sharp.Models.Coordinates2.html#Gw2Sharp_Models_Coordinates2_op_Equality_
+  commentId: Overload:Gw2Sharp.Models.Coordinates2.op_Equality
+  isSpec: "True"
+  fullName: Gw2Sharp.Models.Coordinates2.Equality
+  nameWithType: Coordinates2.Equality
+- uid: Gw2Sharp.Models.Coordinates2.op_Inequality(Gw2Sharp.Models.Coordinates2,Gw2Sharp.Models.Coordinates2)
+  name: Inequality(Coordinates2, Coordinates2)
+  href: api/Gw2Sharp.Models.Coordinates2.html#Gw2Sharp_Models_Coordinates2_op_Inequality_Gw2Sharp_Models_Coordinates2_Gw2Sharp_Models_Coordinates2_
+  commentId: M:Gw2Sharp.Models.Coordinates2.op_Inequality(Gw2Sharp.Models.Coordinates2,Gw2Sharp.Models.Coordinates2)
+  fullName: Gw2Sharp.Models.Coordinates2.Inequality(Gw2Sharp.Models.Coordinates2, Gw2Sharp.Models.Coordinates2)
+  nameWithType: Coordinates2.Inequality(Coordinates2, Coordinates2)
+- uid: Gw2Sharp.Models.Coordinates2.op_Inequality*
+  name: Inequality
+  href: api/Gw2Sharp.Models.Coordinates2.html#Gw2Sharp_Models_Coordinates2_op_Inequality_
+  commentId: Overload:Gw2Sharp.Models.Coordinates2.op_Inequality
+  isSpec: "True"
+  fullName: Gw2Sharp.Models.Coordinates2.Inequality
+  nameWithType: Coordinates2.Inequality
+- uid: Gw2Sharp.Models.Coordinates2.ToString
+  name: ToString()
+  href: api/Gw2Sharp.Models.Coordinates2.html#Gw2Sharp_Models_Coordinates2_ToString
+  commentId: M:Gw2Sharp.Models.Coordinates2.ToString
+  fullName: Gw2Sharp.Models.Coordinates2.ToString()
+  nameWithType: Coordinates2.ToString()
+- uid: Gw2Sharp.Models.Coordinates2.ToString*
+  name: ToString
+  href: api/Gw2Sharp.Models.Coordinates2.html#Gw2Sharp_Models_Coordinates2_ToString_
+  commentId: Overload:Gw2Sharp.Models.Coordinates2.ToString
+  isSpec: "True"
+  fullName: Gw2Sharp.Models.Coordinates2.ToString
+  nameWithType: Coordinates2.ToString
+- uid: Gw2Sharp.Models.Coordinates2.X
+  name: X
+  href: api/Gw2Sharp.Models.Coordinates2.html#Gw2Sharp_Models_Coordinates2_X
+  commentId: P:Gw2Sharp.Models.Coordinates2.X
+  fullName: Gw2Sharp.Models.Coordinates2.X
+  nameWithType: Coordinates2.X
+- uid: Gw2Sharp.Models.Coordinates2.X*
+  name: X
+  href: api/Gw2Sharp.Models.Coordinates2.html#Gw2Sharp_Models_Coordinates2_X_
+  commentId: Overload:Gw2Sharp.Models.Coordinates2.X
+  isSpec: "True"
+  fullName: Gw2Sharp.Models.Coordinates2.X
+  nameWithType: Coordinates2.X
+- uid: Gw2Sharp.Models.Coordinates2.Y
+  name: Y
+  href: api/Gw2Sharp.Models.Coordinates2.html#Gw2Sharp_Models_Coordinates2_Y
+  commentId: P:Gw2Sharp.Models.Coordinates2.Y
+  fullName: Gw2Sharp.Models.Coordinates2.Y
+  nameWithType: Coordinates2.Y
+- uid: Gw2Sharp.Models.Coordinates2.Y*
+  name: Y
+  href: api/Gw2Sharp.Models.Coordinates2.html#Gw2Sharp_Models_Coordinates2_Y_
+  commentId: Overload:Gw2Sharp.Models.Coordinates2.Y
+  isSpec: "True"
+  fullName: Gw2Sharp.Models.Coordinates2.Y
+  nameWithType: Coordinates2.Y
+- uid: Gw2Sharp.Models.MapType
+  name: MapType
+  href: api/Gw2Sharp.Models.MapType.html
+  commentId: T:Gw2Sharp.Models.MapType
+  fullName: Gw2Sharp.Models.MapType
+  nameWithType: MapType
+- uid: Gw2Sharp.Models.MapType.BlueBorderlands
+  name: BlueBorderlands
+  href: api/Gw2Sharp.Models.MapType.html#Gw2Sharp_Models_MapType_BlueBorderlands
+  commentId: F:Gw2Sharp.Models.MapType.BlueBorderlands
+  fullName: Gw2Sharp.Models.MapType.BlueBorderlands
+  nameWithType: MapType.BlueBorderlands
+- uid: Gw2Sharp.Models.MapType.BlueHome
+  name: BlueHome
+  href: api/Gw2Sharp.Models.MapType.html#Gw2Sharp_Models_MapType_BlueHome
+  commentId: F:Gw2Sharp.Models.MapType.BlueHome
+  fullName: Gw2Sharp.Models.MapType.BlueHome
+  nameWithType: MapType.BlueHome
+- uid: Gw2Sharp.Models.MapType.Center
+  name: Center
+  href: api/Gw2Sharp.Models.MapType.html#Gw2Sharp_Models_MapType_Center
+  commentId: F:Gw2Sharp.Models.MapType.Center
+  fullName: Gw2Sharp.Models.MapType.Center
+  nameWithType: MapType.Center
+- uid: Gw2Sharp.Models.MapType.CharacterCreate
+  name: CharacterCreate
+  href: api/Gw2Sharp.Models.MapType.html#Gw2Sharp_Models_MapType_CharacterCreate
+  commentId: F:Gw2Sharp.Models.MapType.CharacterCreate
+  fullName: Gw2Sharp.Models.MapType.CharacterCreate
+  nameWithType: MapType.CharacterCreate
+- uid: Gw2Sharp.Models.MapType.EdgeOfTheMists
+  name: EdgeOfTheMists
+  href: api/Gw2Sharp.Models.MapType.html#Gw2Sharp_Models_MapType_EdgeOfTheMists
+  commentId: F:Gw2Sharp.Models.MapType.EdgeOfTheMists
+  fullName: Gw2Sharp.Models.MapType.EdgeOfTheMists
+  nameWithType: MapType.EdgeOfTheMists
+- uid: Gw2Sharp.Models.MapType.EternalBattlegrounds
+  name: EternalBattlegrounds
+  href: api/Gw2Sharp.Models.MapType.html#Gw2Sharp_Models_MapType_EternalBattlegrounds
+  commentId: F:Gw2Sharp.Models.MapType.EternalBattlegrounds
+  fullName: Gw2Sharp.Models.MapType.EternalBattlegrounds
+  nameWithType: MapType.EternalBattlegrounds
+- uid: Gw2Sharp.Models.MapType.FortunesVale
+  name: FortunesVale
+  href: api/Gw2Sharp.Models.MapType.html#Gw2Sharp_Models_MapType_FortunesVale
+  commentId: F:Gw2Sharp.Models.MapType.FortunesVale
+  fullName: Gw2Sharp.Models.MapType.FortunesVale
+  nameWithType: MapType.FortunesVale
+- uid: Gw2Sharp.Models.MapType.GreenBorderlands
+  name: GreenBorderlands
+  href: api/Gw2Sharp.Models.MapType.html#Gw2Sharp_Models_MapType_GreenBorderlands
+  commentId: F:Gw2Sharp.Models.MapType.GreenBorderlands
+  fullName: Gw2Sharp.Models.MapType.GreenBorderlands
+  nameWithType: MapType.GreenBorderlands
+- uid: Gw2Sharp.Models.MapType.GreenHome
+  name: GreenHome
+  href: api/Gw2Sharp.Models.MapType.html#Gw2Sharp_Models_MapType_GreenHome
+  commentId: F:Gw2Sharp.Models.MapType.GreenHome
+  fullName: Gw2Sharp.Models.MapType.GreenHome
+  nameWithType: MapType.GreenHome
+- uid: Gw2Sharp.Models.MapType.Gvg
+  name: Gvg
+  href: api/Gw2Sharp.Models.MapType.html#Gw2Sharp_Models_MapType_Gvg
+  commentId: F:Gw2Sharp.Models.MapType.Gvg
+  fullName: Gw2Sharp.Models.MapType.Gvg
+  nameWithType: MapType.Gvg
+- uid: Gw2Sharp.Models.MapType.Instance
+  name: Instance
+  href: api/Gw2Sharp.Models.MapType.html#Gw2Sharp_Models_MapType_Instance
+  commentId: F:Gw2Sharp.Models.MapType.Instance
+  fullName: Gw2Sharp.Models.MapType.Instance
+  nameWithType: MapType.Instance
+- uid: Gw2Sharp.Models.MapType.JumpPuzzle
+  name: JumpPuzzle
+  href: api/Gw2Sharp.Models.MapType.html#Gw2Sharp_Models_MapType_JumpPuzzle
+  commentId: F:Gw2Sharp.Models.MapType.JumpPuzzle
+  fullName: Gw2Sharp.Models.MapType.JumpPuzzle
+  nameWithType: MapType.JumpPuzzle
+- uid: Gw2Sharp.Models.MapType.ObsidianSanctum
+  name: ObsidianSanctum
+  href: api/Gw2Sharp.Models.MapType.html#Gw2Sharp_Models_MapType_ObsidianSanctum
+  commentId: F:Gw2Sharp.Models.MapType.ObsidianSanctum
+  fullName: Gw2Sharp.Models.MapType.ObsidianSanctum
+  nameWithType: MapType.ObsidianSanctum
+- uid: Gw2Sharp.Models.MapType.Public
+  name: Public
+  href: api/Gw2Sharp.Models.MapType.html#Gw2Sharp_Models_MapType_Public
+  commentId: F:Gw2Sharp.Models.MapType.Public
+  fullName: Gw2Sharp.Models.MapType.Public
+  nameWithType: MapType.Public
+- uid: Gw2Sharp.Models.MapType.PublicMini
+  name: PublicMini
+  href: api/Gw2Sharp.Models.MapType.html#Gw2Sharp_Models_MapType_PublicMini
+  commentId: F:Gw2Sharp.Models.MapType.PublicMini
+  fullName: Gw2Sharp.Models.MapType.PublicMini
+  nameWithType: MapType.PublicMini
+- uid: Gw2Sharp.Models.MapType.Pvp
+  name: Pvp
+  href: api/Gw2Sharp.Models.MapType.html#Gw2Sharp_Models_MapType_Pvp
+  commentId: F:Gw2Sharp.Models.MapType.Pvp
+  fullName: Gw2Sharp.Models.MapType.Pvp
+  nameWithType: MapType.Pvp
+- uid: Gw2Sharp.Models.MapType.RedBorderlands
+  name: RedBorderlands
+  href: api/Gw2Sharp.Models.MapType.html#Gw2Sharp_Models_MapType_RedBorderlands
+  commentId: F:Gw2Sharp.Models.MapType.RedBorderlands
+  fullName: Gw2Sharp.Models.MapType.RedBorderlands
+  nameWithType: MapType.RedBorderlands
+- uid: Gw2Sharp.Models.MapType.RedHome
+  name: RedHome
+  href: api/Gw2Sharp.Models.MapType.html#Gw2Sharp_Models_MapType_RedHome
+  commentId: F:Gw2Sharp.Models.MapType.RedHome
+  fullName: Gw2Sharp.Models.MapType.RedHome
+  nameWithType: MapType.RedHome
+- uid: Gw2Sharp.Models.MapType.Redirect
+  name: Redirect
+  href: api/Gw2Sharp.Models.MapType.html#Gw2Sharp_Models_MapType_Redirect
+  commentId: F:Gw2Sharp.Models.MapType.Redirect
+  fullName: Gw2Sharp.Models.MapType.Redirect
+  nameWithType: MapType.Redirect
+- uid: Gw2Sharp.Models.MapType.Tournament
+  name: Tournament
+  href: api/Gw2Sharp.Models.MapType.html#Gw2Sharp_Models_MapType_Tournament
+  commentId: F:Gw2Sharp.Models.MapType.Tournament
+  fullName: Gw2Sharp.Models.MapType.Tournament
+  nameWithType: MapType.Tournament
+- uid: Gw2Sharp.Models.MapType.Tutorial
+  name: Tutorial
+  href: api/Gw2Sharp.Models.MapType.html#Gw2Sharp_Models_MapType_Tutorial
+  commentId: F:Gw2Sharp.Models.MapType.Tutorial
+  fullName: Gw2Sharp.Models.MapType.Tutorial
+  nameWithType: MapType.Tutorial
+- uid: Gw2Sharp.Models.MapType.Unknown
+  name: Unknown
+  href: api/Gw2Sharp.Models.MapType.html#Gw2Sharp_Models_MapType_Unknown
+  commentId: F:Gw2Sharp.Models.MapType.Unknown
+  fullName: Gw2Sharp.Models.MapType.Unknown
+  nameWithType: MapType.Unknown
+- uid: Gw2Sharp.Models.MapType.UserTournament
+  name: UserTournament
+  href: api/Gw2Sharp.Models.MapType.html#Gw2Sharp_Models_MapType_UserTournament
+  commentId: F:Gw2Sharp.Models.MapType.UserTournament
+  fullName: Gw2Sharp.Models.MapType.UserTournament
+  nameWithType: MapType.UserTournament
+- uid: Gw2Sharp.Models.MapType.WvwLounge
+  name: WvwLounge
+  href: api/Gw2Sharp.Models.MapType.html#Gw2Sharp_Models_MapType_WvwLounge
+  commentId: F:Gw2Sharp.Models.MapType.WvwLounge
+  fullName: Gw2Sharp.Models.MapType.WvwLounge
+  nameWithType: MapType.WvwLounge
 - uid: Gw2Sharp.ProfessionFlag
   name: ProfessionFlag
   href: api/Gw2Sharp.ProfessionFlag.html
@@ -18881,138 +19169,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.ContinentFloorRegionMapTask.Objective
   nameWithType: ContinentFloorRegionMapTask.Objective
-- uid: Gw2Sharp.WebApi.V2.Models.Coordinates2
-  name: Coordinates2
-  href: api/Gw2Sharp.WebApi.V2.Models.Coordinates2.html
-  commentId: T:Gw2Sharp.WebApi.V2.Models.Coordinates2
-  fullName: Gw2Sharp.WebApi.V2.Models.Coordinates2
-  nameWithType: Coordinates2
-- uid: Gw2Sharp.WebApi.V2.Models.Coordinates2.#ctor(System.Double,System.Double)
-  name: Coordinates2(Double, Double)
-  href: api/Gw2Sharp.WebApi.V2.Models.Coordinates2.html#Gw2Sharp_WebApi_V2_Models_Coordinates2__ctor_System_Double_System_Double_
-  commentId: M:Gw2Sharp.WebApi.V2.Models.Coordinates2.#ctor(System.Double,System.Double)
-  fullName: Gw2Sharp.WebApi.V2.Models.Coordinates2.Coordinates2(System.Double, System.Double)
-  nameWithType: Coordinates2.Coordinates2(Double, Double)
-- uid: Gw2Sharp.WebApi.V2.Models.Coordinates2.#ctor*
-  name: Coordinates2
-  href: api/Gw2Sharp.WebApi.V2.Models.Coordinates2.html#Gw2Sharp_WebApi_V2_Models_Coordinates2__ctor_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Coordinates2.#ctor
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Models.Coordinates2.Coordinates2
-  nameWithType: Coordinates2.Coordinates2
-- uid: Gw2Sharp.WebApi.V2.Models.Coordinates2.Equals(Gw2Sharp.WebApi.V2.Models.Coordinates2)
-  name: Equals(Coordinates2)
-  href: api/Gw2Sharp.WebApi.V2.Models.Coordinates2.html#Gw2Sharp_WebApi_V2_Models_Coordinates2_Equals_Gw2Sharp_WebApi_V2_Models_Coordinates2_
-  commentId: M:Gw2Sharp.WebApi.V2.Models.Coordinates2.Equals(Gw2Sharp.WebApi.V2.Models.Coordinates2)
-  fullName: Gw2Sharp.WebApi.V2.Models.Coordinates2.Equals(Gw2Sharp.WebApi.V2.Models.Coordinates2)
-  nameWithType: Coordinates2.Equals(Coordinates2)
-- uid: Gw2Sharp.WebApi.V2.Models.Coordinates2.Equals(System.Nullable{System.Object})
-  name: Equals(Nullable<Object>)
-  href: api/Gw2Sharp.WebApi.V2.Models.Coordinates2.html#Gw2Sharp_WebApi_V2_Models_Coordinates2_Equals_System_Nullable_System_Object__
-  commentId: M:Gw2Sharp.WebApi.V2.Models.Coordinates2.Equals(System.Nullable{System.Object})
-  name.vb: Equals(Nullable(Of Object))
-  fullName: Gw2Sharp.WebApi.V2.Models.Coordinates2.Equals(System.Nullable<System.Object>)
-  fullName.vb: Gw2Sharp.WebApi.V2.Models.Coordinates2.Equals(System.Nullable(Of System.Object))
-  nameWithType: Coordinates2.Equals(Nullable<Object>)
-  nameWithType.vb: Coordinates2.Equals(Nullable(Of Object))
-- uid: Gw2Sharp.WebApi.V2.Models.Coordinates2.Equals*
-  name: Equals
-  href: api/Gw2Sharp.WebApi.V2.Models.Coordinates2.html#Gw2Sharp_WebApi_V2_Models_Coordinates2_Equals_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Coordinates2.Equals
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Models.Coordinates2.Equals
-  nameWithType: Coordinates2.Equals
-- uid: Gw2Sharp.WebApi.V2.Models.Coordinates2.GetEnumerator
-  name: GetEnumerator()
-  href: api/Gw2Sharp.WebApi.V2.Models.Coordinates2.html#Gw2Sharp_WebApi_V2_Models_Coordinates2_GetEnumerator
-  commentId: M:Gw2Sharp.WebApi.V2.Models.Coordinates2.GetEnumerator
-  fullName: Gw2Sharp.WebApi.V2.Models.Coordinates2.GetEnumerator()
-  nameWithType: Coordinates2.GetEnumerator()
-- uid: Gw2Sharp.WebApi.V2.Models.Coordinates2.GetEnumerator*
-  name: GetEnumerator
-  href: api/Gw2Sharp.WebApi.V2.Models.Coordinates2.html#Gw2Sharp_WebApi_V2_Models_Coordinates2_GetEnumerator_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Coordinates2.GetEnumerator
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Models.Coordinates2.GetEnumerator
-  nameWithType: Coordinates2.GetEnumerator
-- uid: Gw2Sharp.WebApi.V2.Models.Coordinates2.GetHashCode
-  name: GetHashCode()
-  href: api/Gw2Sharp.WebApi.V2.Models.Coordinates2.html#Gw2Sharp_WebApi_V2_Models_Coordinates2_GetHashCode
-  commentId: M:Gw2Sharp.WebApi.V2.Models.Coordinates2.GetHashCode
-  fullName: Gw2Sharp.WebApi.V2.Models.Coordinates2.GetHashCode()
-  nameWithType: Coordinates2.GetHashCode()
-- uid: Gw2Sharp.WebApi.V2.Models.Coordinates2.GetHashCode*
-  name: GetHashCode
-  href: api/Gw2Sharp.WebApi.V2.Models.Coordinates2.html#Gw2Sharp_WebApi_V2_Models_Coordinates2_GetHashCode_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Coordinates2.GetHashCode
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Models.Coordinates2.GetHashCode
-  nameWithType: Coordinates2.GetHashCode
-- uid: Gw2Sharp.WebApi.V2.Models.Coordinates2.op_Equality(Gw2Sharp.WebApi.V2.Models.Coordinates2,Gw2Sharp.WebApi.V2.Models.Coordinates2)
-  name: Equality(Coordinates2, Coordinates2)
-  href: api/Gw2Sharp.WebApi.V2.Models.Coordinates2.html#Gw2Sharp_WebApi_V2_Models_Coordinates2_op_Equality_Gw2Sharp_WebApi_V2_Models_Coordinates2_Gw2Sharp_WebApi_V2_Models_Coordinates2_
-  commentId: M:Gw2Sharp.WebApi.V2.Models.Coordinates2.op_Equality(Gw2Sharp.WebApi.V2.Models.Coordinates2,Gw2Sharp.WebApi.V2.Models.Coordinates2)
-  fullName: Gw2Sharp.WebApi.V2.Models.Coordinates2.Equality(Gw2Sharp.WebApi.V2.Models.Coordinates2, Gw2Sharp.WebApi.V2.Models.Coordinates2)
-  nameWithType: Coordinates2.Equality(Coordinates2, Coordinates2)
-- uid: Gw2Sharp.WebApi.V2.Models.Coordinates2.op_Equality*
-  name: Equality
-  href: api/Gw2Sharp.WebApi.V2.Models.Coordinates2.html#Gw2Sharp_WebApi_V2_Models_Coordinates2_op_Equality_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Coordinates2.op_Equality
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Models.Coordinates2.Equality
-  nameWithType: Coordinates2.Equality
-- uid: Gw2Sharp.WebApi.V2.Models.Coordinates2.op_Inequality(Gw2Sharp.WebApi.V2.Models.Coordinates2,Gw2Sharp.WebApi.V2.Models.Coordinates2)
-  name: Inequality(Coordinates2, Coordinates2)
-  href: api/Gw2Sharp.WebApi.V2.Models.Coordinates2.html#Gw2Sharp_WebApi_V2_Models_Coordinates2_op_Inequality_Gw2Sharp_WebApi_V2_Models_Coordinates2_Gw2Sharp_WebApi_V2_Models_Coordinates2_
-  commentId: M:Gw2Sharp.WebApi.V2.Models.Coordinates2.op_Inequality(Gw2Sharp.WebApi.V2.Models.Coordinates2,Gw2Sharp.WebApi.V2.Models.Coordinates2)
-  fullName: Gw2Sharp.WebApi.V2.Models.Coordinates2.Inequality(Gw2Sharp.WebApi.V2.Models.Coordinates2, Gw2Sharp.WebApi.V2.Models.Coordinates2)
-  nameWithType: Coordinates2.Inequality(Coordinates2, Coordinates2)
-- uid: Gw2Sharp.WebApi.V2.Models.Coordinates2.op_Inequality*
-  name: Inequality
-  href: api/Gw2Sharp.WebApi.V2.Models.Coordinates2.html#Gw2Sharp_WebApi_V2_Models_Coordinates2_op_Inequality_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Coordinates2.op_Inequality
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Models.Coordinates2.Inequality
-  nameWithType: Coordinates2.Inequality
-- uid: Gw2Sharp.WebApi.V2.Models.Coordinates2.ToString
-  name: ToString()
-  href: api/Gw2Sharp.WebApi.V2.Models.Coordinates2.html#Gw2Sharp_WebApi_V2_Models_Coordinates2_ToString
-  commentId: M:Gw2Sharp.WebApi.V2.Models.Coordinates2.ToString
-  fullName: Gw2Sharp.WebApi.V2.Models.Coordinates2.ToString()
-  nameWithType: Coordinates2.ToString()
-- uid: Gw2Sharp.WebApi.V2.Models.Coordinates2.ToString*
-  name: ToString
-  href: api/Gw2Sharp.WebApi.V2.Models.Coordinates2.html#Gw2Sharp_WebApi_V2_Models_Coordinates2_ToString_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Coordinates2.ToString
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Models.Coordinates2.ToString
-  nameWithType: Coordinates2.ToString
-- uid: Gw2Sharp.WebApi.V2.Models.Coordinates2.X
-  name: X
-  href: api/Gw2Sharp.WebApi.V2.Models.Coordinates2.html#Gw2Sharp_WebApi_V2_Models_Coordinates2_X
-  commentId: P:Gw2Sharp.WebApi.V2.Models.Coordinates2.X
-  fullName: Gw2Sharp.WebApi.V2.Models.Coordinates2.X
-  nameWithType: Coordinates2.X
-- uid: Gw2Sharp.WebApi.V2.Models.Coordinates2.X*
-  name: X
-  href: api/Gw2Sharp.WebApi.V2.Models.Coordinates2.html#Gw2Sharp_WebApi_V2_Models_Coordinates2_X_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Coordinates2.X
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Models.Coordinates2.X
-  nameWithType: Coordinates2.X
-- uid: Gw2Sharp.WebApi.V2.Models.Coordinates2.Y
-  name: Y
-  href: api/Gw2Sharp.WebApi.V2.Models.Coordinates2.html#Gw2Sharp_WebApi_V2_Models_Coordinates2_Y
-  commentId: P:Gw2Sharp.WebApi.V2.Models.Coordinates2.Y
-  fullName: Gw2Sharp.WebApi.V2.Models.Coordinates2.Y
-  nameWithType: Coordinates2.Y
-- uid: Gw2Sharp.WebApi.V2.Models.Coordinates2.Y*
-  name: Y
-  href: api/Gw2Sharp.WebApi.V2.Models.Coordinates2.html#Gw2Sharp_WebApi_V2_Models_Coordinates2_Y_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Coordinates2.Y
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Models.Coordinates2.Y
-  nameWithType: Coordinates2.Y
 - uid: Gw2Sharp.WebApi.V2.Models.CreateSubtoken
   name: CreateSubtoken
   href: api/Gw2Sharp.WebApi.V2.Models.CreateSubtoken.html
@@ -25061,150 +25217,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.MapChest.Id
   nameWithType: MapChest.Id
-- uid: Gw2Sharp.WebApi.V2.Models.MapType
-  name: MapType
-  href: api/Gw2Sharp.WebApi.V2.Models.MapType.html
-  commentId: T:Gw2Sharp.WebApi.V2.Models.MapType
-  fullName: Gw2Sharp.WebApi.V2.Models.MapType
-  nameWithType: MapType
-- uid: Gw2Sharp.WebApi.V2.Models.MapType.BlueBorderlands
-  name: BlueBorderlands
-  href: api/Gw2Sharp.WebApi.V2.Models.MapType.html#Gw2Sharp_WebApi_V2_Models_MapType_BlueBorderlands
-  commentId: F:Gw2Sharp.WebApi.V2.Models.MapType.BlueBorderlands
-  fullName: Gw2Sharp.WebApi.V2.Models.MapType.BlueBorderlands
-  nameWithType: MapType.BlueBorderlands
-- uid: Gw2Sharp.WebApi.V2.Models.MapType.BlueHome
-  name: BlueHome
-  href: api/Gw2Sharp.WebApi.V2.Models.MapType.html#Gw2Sharp_WebApi_V2_Models_MapType_BlueHome
-  commentId: F:Gw2Sharp.WebApi.V2.Models.MapType.BlueHome
-  fullName: Gw2Sharp.WebApi.V2.Models.MapType.BlueHome
-  nameWithType: MapType.BlueHome
-- uid: Gw2Sharp.WebApi.V2.Models.MapType.Center
-  name: Center
-  href: api/Gw2Sharp.WebApi.V2.Models.MapType.html#Gw2Sharp_WebApi_V2_Models_MapType_Center
-  commentId: F:Gw2Sharp.WebApi.V2.Models.MapType.Center
-  fullName: Gw2Sharp.WebApi.V2.Models.MapType.Center
-  nameWithType: MapType.Center
-- uid: Gw2Sharp.WebApi.V2.Models.MapType.CharacterCreate
-  name: CharacterCreate
-  href: api/Gw2Sharp.WebApi.V2.Models.MapType.html#Gw2Sharp_WebApi_V2_Models_MapType_CharacterCreate
-  commentId: F:Gw2Sharp.WebApi.V2.Models.MapType.CharacterCreate
-  fullName: Gw2Sharp.WebApi.V2.Models.MapType.CharacterCreate
-  nameWithType: MapType.CharacterCreate
-- uid: Gw2Sharp.WebApi.V2.Models.MapType.EdgeOfTheMists
-  name: EdgeOfTheMists
-  href: api/Gw2Sharp.WebApi.V2.Models.MapType.html#Gw2Sharp_WebApi_V2_Models_MapType_EdgeOfTheMists
-  commentId: F:Gw2Sharp.WebApi.V2.Models.MapType.EdgeOfTheMists
-  fullName: Gw2Sharp.WebApi.V2.Models.MapType.EdgeOfTheMists
-  nameWithType: MapType.EdgeOfTheMists
-- uid: Gw2Sharp.WebApi.V2.Models.MapType.EternalBattlegrounds
-  name: EternalBattlegrounds
-  href: api/Gw2Sharp.WebApi.V2.Models.MapType.html#Gw2Sharp_WebApi_V2_Models_MapType_EternalBattlegrounds
-  commentId: F:Gw2Sharp.WebApi.V2.Models.MapType.EternalBattlegrounds
-  fullName: Gw2Sharp.WebApi.V2.Models.MapType.EternalBattlegrounds
-  nameWithType: MapType.EternalBattlegrounds
-- uid: Gw2Sharp.WebApi.V2.Models.MapType.FortunesVale
-  name: FortunesVale
-  href: api/Gw2Sharp.WebApi.V2.Models.MapType.html#Gw2Sharp_WebApi_V2_Models_MapType_FortunesVale
-  commentId: F:Gw2Sharp.WebApi.V2.Models.MapType.FortunesVale
-  fullName: Gw2Sharp.WebApi.V2.Models.MapType.FortunesVale
-  nameWithType: MapType.FortunesVale
-- uid: Gw2Sharp.WebApi.V2.Models.MapType.GreenBorderlands
-  name: GreenBorderlands
-  href: api/Gw2Sharp.WebApi.V2.Models.MapType.html#Gw2Sharp_WebApi_V2_Models_MapType_GreenBorderlands
-  commentId: F:Gw2Sharp.WebApi.V2.Models.MapType.GreenBorderlands
-  fullName: Gw2Sharp.WebApi.V2.Models.MapType.GreenBorderlands
-  nameWithType: MapType.GreenBorderlands
-- uid: Gw2Sharp.WebApi.V2.Models.MapType.GreenHome
-  name: GreenHome
-  href: api/Gw2Sharp.WebApi.V2.Models.MapType.html#Gw2Sharp_WebApi_V2_Models_MapType_GreenHome
-  commentId: F:Gw2Sharp.WebApi.V2.Models.MapType.GreenHome
-  fullName: Gw2Sharp.WebApi.V2.Models.MapType.GreenHome
-  nameWithType: MapType.GreenHome
-- uid: Gw2Sharp.WebApi.V2.Models.MapType.Gvg
-  name: Gvg
-  href: api/Gw2Sharp.WebApi.V2.Models.MapType.html#Gw2Sharp_WebApi_V2_Models_MapType_Gvg
-  commentId: F:Gw2Sharp.WebApi.V2.Models.MapType.Gvg
-  fullName: Gw2Sharp.WebApi.V2.Models.MapType.Gvg
-  nameWithType: MapType.Gvg
-- uid: Gw2Sharp.WebApi.V2.Models.MapType.Instance
-  name: Instance
-  href: api/Gw2Sharp.WebApi.V2.Models.MapType.html#Gw2Sharp_WebApi_V2_Models_MapType_Instance
-  commentId: F:Gw2Sharp.WebApi.V2.Models.MapType.Instance
-  fullName: Gw2Sharp.WebApi.V2.Models.MapType.Instance
-  nameWithType: MapType.Instance
-- uid: Gw2Sharp.WebApi.V2.Models.MapType.JumpPuzzle
-  name: JumpPuzzle
-  href: api/Gw2Sharp.WebApi.V2.Models.MapType.html#Gw2Sharp_WebApi_V2_Models_MapType_JumpPuzzle
-  commentId: F:Gw2Sharp.WebApi.V2.Models.MapType.JumpPuzzle
-  fullName: Gw2Sharp.WebApi.V2.Models.MapType.JumpPuzzle
-  nameWithType: MapType.JumpPuzzle
-- uid: Gw2Sharp.WebApi.V2.Models.MapType.ObsidianSanctum
-  name: ObsidianSanctum
-  href: api/Gw2Sharp.WebApi.V2.Models.MapType.html#Gw2Sharp_WebApi_V2_Models_MapType_ObsidianSanctum
-  commentId: F:Gw2Sharp.WebApi.V2.Models.MapType.ObsidianSanctum
-  fullName: Gw2Sharp.WebApi.V2.Models.MapType.ObsidianSanctum
-  nameWithType: MapType.ObsidianSanctum
-- uid: Gw2Sharp.WebApi.V2.Models.MapType.Public
-  name: Public
-  href: api/Gw2Sharp.WebApi.V2.Models.MapType.html#Gw2Sharp_WebApi_V2_Models_MapType_Public
-  commentId: F:Gw2Sharp.WebApi.V2.Models.MapType.Public
-  fullName: Gw2Sharp.WebApi.V2.Models.MapType.Public
-  nameWithType: MapType.Public
-- uid: Gw2Sharp.WebApi.V2.Models.MapType.PublicMini
-  name: PublicMini
-  href: api/Gw2Sharp.WebApi.V2.Models.MapType.html#Gw2Sharp_WebApi_V2_Models_MapType_PublicMini
-  commentId: F:Gw2Sharp.WebApi.V2.Models.MapType.PublicMini
-  fullName: Gw2Sharp.WebApi.V2.Models.MapType.PublicMini
-  nameWithType: MapType.PublicMini
-- uid: Gw2Sharp.WebApi.V2.Models.MapType.Pvp
-  name: Pvp
-  href: api/Gw2Sharp.WebApi.V2.Models.MapType.html#Gw2Sharp_WebApi_V2_Models_MapType_Pvp
-  commentId: F:Gw2Sharp.WebApi.V2.Models.MapType.Pvp
-  fullName: Gw2Sharp.WebApi.V2.Models.MapType.Pvp
-  nameWithType: MapType.Pvp
-- uid: Gw2Sharp.WebApi.V2.Models.MapType.RedBorderlands
-  name: RedBorderlands
-  href: api/Gw2Sharp.WebApi.V2.Models.MapType.html#Gw2Sharp_WebApi_V2_Models_MapType_RedBorderlands
-  commentId: F:Gw2Sharp.WebApi.V2.Models.MapType.RedBorderlands
-  fullName: Gw2Sharp.WebApi.V2.Models.MapType.RedBorderlands
-  nameWithType: MapType.RedBorderlands
-- uid: Gw2Sharp.WebApi.V2.Models.MapType.RedHome
-  name: RedHome
-  href: api/Gw2Sharp.WebApi.V2.Models.MapType.html#Gw2Sharp_WebApi_V2_Models_MapType_RedHome
-  commentId: F:Gw2Sharp.WebApi.V2.Models.MapType.RedHome
-  fullName: Gw2Sharp.WebApi.V2.Models.MapType.RedHome
-  nameWithType: MapType.RedHome
-- uid: Gw2Sharp.WebApi.V2.Models.MapType.Redirect
-  name: Redirect
-  href: api/Gw2Sharp.WebApi.V2.Models.MapType.html#Gw2Sharp_WebApi_V2_Models_MapType_Redirect
-  commentId: F:Gw2Sharp.WebApi.V2.Models.MapType.Redirect
-  fullName: Gw2Sharp.WebApi.V2.Models.MapType.Redirect
-  nameWithType: MapType.Redirect
-- uid: Gw2Sharp.WebApi.V2.Models.MapType.Tournament
-  name: Tournament
-  href: api/Gw2Sharp.WebApi.V2.Models.MapType.html#Gw2Sharp_WebApi_V2_Models_MapType_Tournament
-  commentId: F:Gw2Sharp.WebApi.V2.Models.MapType.Tournament
-  fullName: Gw2Sharp.WebApi.V2.Models.MapType.Tournament
-  nameWithType: MapType.Tournament
-- uid: Gw2Sharp.WebApi.V2.Models.MapType.Tutorial
-  name: Tutorial
-  href: api/Gw2Sharp.WebApi.V2.Models.MapType.html#Gw2Sharp_WebApi_V2_Models_MapType_Tutorial
-  commentId: F:Gw2Sharp.WebApi.V2.Models.MapType.Tutorial
-  fullName: Gw2Sharp.WebApi.V2.Models.MapType.Tutorial
-  nameWithType: MapType.Tutorial
-- uid: Gw2Sharp.WebApi.V2.Models.MapType.Unknown
-  name: Unknown
-  href: api/Gw2Sharp.WebApi.V2.Models.MapType.html#Gw2Sharp_WebApi_V2_Models_MapType_Unknown
-  commentId: F:Gw2Sharp.WebApi.V2.Models.MapType.Unknown
-  fullName: Gw2Sharp.WebApi.V2.Models.MapType.Unknown
-  nameWithType: MapType.Unknown
-- uid: Gw2Sharp.WebApi.V2.Models.MapType.UserTournament
-  name: UserTournament
-  href: api/Gw2Sharp.WebApi.V2.Models.MapType.html#Gw2Sharp_WebApi_V2_Models_MapType_UserTournament
-  commentId: F:Gw2Sharp.WebApi.V2.Models.MapType.UserTournament
-  fullName: Gw2Sharp.WebApi.V2.Models.MapType.UserTournament
-  nameWithType: MapType.UserTournament
 - uid: Gw2Sharp.WebApi.V2.Models.Mastery
   name: Mastery
   href: api/Gw2Sharp.WebApi.V2.Models.Mastery.html
@@ -26668,11 +26680,11 @@ references:
   commentId: T:Gw2Sharp.WebApi.V2.Models.Rectangle
   fullName: Gw2Sharp.WebApi.V2.Models.Rectangle
   nameWithType: Rectangle
-- uid: Gw2Sharp.WebApi.V2.Models.Rectangle.#ctor(Gw2Sharp.WebApi.V2.Models.Coordinates2,Gw2Sharp.WebApi.V2.Models.Coordinates2,Gw2Sharp.WebApi.V2.Models.RectangleDirectionType)
+- uid: Gw2Sharp.WebApi.V2.Models.Rectangle.#ctor(Gw2Sharp.Models.Coordinates2,Gw2Sharp.Models.Coordinates2,Gw2Sharp.WebApi.V2.Models.RectangleDirectionType)
   name: Rectangle(Coordinates2, Coordinates2, RectangleDirectionType)
-  href: api/Gw2Sharp.WebApi.V2.Models.Rectangle.html#Gw2Sharp_WebApi_V2_Models_Rectangle__ctor_Gw2Sharp_WebApi_V2_Models_Coordinates2_Gw2Sharp_WebApi_V2_Models_Coordinates2_Gw2Sharp_WebApi_V2_Models_RectangleDirectionType_
-  commentId: M:Gw2Sharp.WebApi.V2.Models.Rectangle.#ctor(Gw2Sharp.WebApi.V2.Models.Coordinates2,Gw2Sharp.WebApi.V2.Models.Coordinates2,Gw2Sharp.WebApi.V2.Models.RectangleDirectionType)
-  fullName: Gw2Sharp.WebApi.V2.Models.Rectangle.Rectangle(Gw2Sharp.WebApi.V2.Models.Coordinates2, Gw2Sharp.WebApi.V2.Models.Coordinates2, Gw2Sharp.WebApi.V2.Models.RectangleDirectionType)
+  href: api/Gw2Sharp.WebApi.V2.Models.Rectangle.html#Gw2Sharp_WebApi_V2_Models_Rectangle__ctor_Gw2Sharp_Models_Coordinates2_Gw2Sharp_Models_Coordinates2_Gw2Sharp_WebApi_V2_Models_RectangleDirectionType_
+  commentId: M:Gw2Sharp.WebApi.V2.Models.Rectangle.#ctor(Gw2Sharp.Models.Coordinates2,Gw2Sharp.Models.Coordinates2,Gw2Sharp.WebApi.V2.Models.RectangleDirectionType)
+  fullName: Gw2Sharp.WebApi.V2.Models.Rectangle.Rectangle(Gw2Sharp.Models.Coordinates2, Gw2Sharp.Models.Coordinates2, Gw2Sharp.WebApi.V2.Models.RectangleDirectionType)
   nameWithType: Rectangle.Rectangle(Coordinates2, Coordinates2, RectangleDirectionType)
 - uid: Gw2Sharp.WebApi.V2.Models.Rectangle.#ctor*
   name: Rectangle
