@@ -1,7 +1,6 @@
 using System;
 using System.IO.MemoryMappedFiles;
 using System.Net.Sockets;
-using System.Runtime.InteropServices;
 using Gw2Sharp.Models;
 using Gw2Sharp.Mumble.Models;
 using Newtonsoft.Json;
@@ -13,6 +12,10 @@ namespace Gw2Sharp.Mumble
     /// </summary>
     public class Gw2MumbleClient : BaseClient, IGw2MumbleClient
     {
+        internal const string MUMBLE_LINK_MAP_NAME = "MumbleLink";
+        internal const string MUMBLE_LINK_GAME_NAME = "Guild Wars 2";
+        private const string EMPTY_IDENTITY = "{}";
+
         private readonly Lazy<MemoryMappedFile> memoryMappedFile;
         private readonly Lazy<MemoryMappedViewAccessor> memoryMappedViewAccessor;
 
@@ -24,7 +27,7 @@ namespace Gw2Sharp.Mumble
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
         /// <param name="gw2Client">The Guild Wars 2 client.</param>
         /// <exception cref="ArgumentNullException"><paramref name="connection"/> or <paramref name="gw2Client"/> is <c>null</c>.</exception>
-        protected internal Gw2MumbleClient(IConnection connection, IGw2Client? gw2Client) : base(connection, gw2Client)
+        protected internal Gw2MumbleClient(IConnection connection, IGw2Client gw2Client) : base(connection, gw2Client)
         {
             if (connection == null)
                 throw new ArgumentNullException(nameof(connection));
@@ -32,12 +35,12 @@ namespace Gw2Sharp.Mumble
                 throw new ArgumentNullException(nameof(gw2Client));
 
             this.memoryMappedFile = new Lazy<MemoryMappedFile>(
-                () => MemoryMappedFile.CreateOrOpen("MumbleLink", Marshal.SizeOf(typeof(Gw2LinkedMem)), MemoryMappedFileAccess.ReadWrite), true);
+                () => MemoryMappedFile.CreateOrOpen(MUMBLE_LINK_MAP_NAME, Gw2LinkedMem.SIZE, MemoryMappedFileAccess.ReadWrite), true);
             this.memoryMappedViewAccessor = new Lazy<MemoryMappedViewAccessor>(
-                () => this.memoryMappedFile.Value.CreateViewAccessor());
+                () => this.memoryMappedFile.Value.CreateViewAccessor(), true);
         }
 
-        private string identityJson = "{}";
+        private string identityJson = EMPTY_IDENTITY;
         private CharacterIdentity? identityObject;
         private CharacterIdentity Identity
         {
@@ -162,9 +165,9 @@ namespace Gw2Sharp.Mumble
 
             this.identityJson = new string(linkedMem.identity);
             this.Name = new string(linkedMem.name);
-            this.IsAvailable = this.Name == "Guild Wars 2";
+            this.IsAvailable = this.Name == MUMBLE_LINK_GAME_NAME;
 
-            this.identityJson = this.IsAvailable ? new string(linkedMem.identity) : "{}";
+            this.identityJson = this.IsAvailable ? new string(linkedMem.identity) : EMPTY_IDENTITY;
             this.identityObject = null;
 
             this.linkedMem = linkedMem;

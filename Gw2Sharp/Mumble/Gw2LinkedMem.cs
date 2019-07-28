@@ -10,6 +10,8 @@ namespace Gw2Sharp.Mumble
     [StructLayout(LayoutKind.Explicit)]
     internal unsafe struct Gw2LinkedMem
     {
+        public const int SIZE = 3412;
+
         [FieldOffset(0)]
         public uint uiVersion;
         [FieldOffset(4)]
@@ -18,28 +20,29 @@ namespace Gw2Sharp.Mumble
         public fixed float fAvatarPosition[3];
         [FieldOffset(20)]
         public fixed float fAvatarFront[3];
-        // Unused
-        //public fixed float fAvatarTop[3];
         [FieldOffset(44)]
         public fixed char name[256];
         [FieldOffset(556)]
         public fixed float fCameraPosition[3];
         [FieldOffset(568)]
         public fixed float fCameraFront[3];
-        // Unused
-        //public fixed float fCameraTop[3];
         [FieldOffset(592)]
         public fixed char identity[256];
         [FieldOffset(1104)]
         public uint contextLen;
-
-        // Inject the context directly instead of parsing it later for performance
-        //public fixed byte context[256];
         [FieldOffset(1108)]
         public Gw2Context context;
 
-        // Desscription is unused, leave it out for performance
-        //public fixed char description[2048];
+        // Unused fields
+#if FALSE
+        [FieldOffset(32)]
+        public fixed float fAvatarTop[3];
+        [FieldOffset(580)]
+        public fixed float fCameraTop[3];
+        [FieldOffset(1364)]
+        public fixed char description[2048];
+#endif
+        // Total struct size is 3412 bytes
     }
 
     [StructLayout(LayoutKind.Explicit)]
@@ -66,5 +69,7 @@ namespace Gw2Sharp.Mumble
         public uint instance;
         [FieldOffset(44)]
         public uint buildId;
+
+        // Total struct size is 256 bytes
     }
 }
