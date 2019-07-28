@@ -57,7 +57,7 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <summary>
         /// The item stat choices.
-        /// Each element can be resolved against <see cref="IGw2WebApiV2Client.ItemStats"/>.
+        /// Each element can be resolved against <see cref="IGw2WebApiV2Client.Itemstats"/>.
         /// </summary>
         public IReadOnlyList<int> StatChoices { get; set; } = new List<int>();
     }
