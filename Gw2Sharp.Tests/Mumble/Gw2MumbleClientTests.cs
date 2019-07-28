@@ -1,3 +1,4 @@
+using System;
 using System.IO.MemoryMappedFiles;
 using System.Reflection;
 using Gw2Sharp.Models;
@@ -10,9 +11,13 @@ namespace Gw2Sharp.Tests.Mumble
 {
     public class Gw2MumbleClientTests
     {
-        [Fact]
+        [SkippableFact]
         public void ReadStructCorrectlyTest()
         {
+            // Named memory mapped files aren't supported on Unix based systems.
+            // So we need to skip this test.
+            Skip.IfNot(Environment.OSVersion.Platform == PlatformID.Win32NT);
+
             var connection = Substitute.For<IConnection>();
             var gw2Client = Substitute.For<IGw2Client>();
 
