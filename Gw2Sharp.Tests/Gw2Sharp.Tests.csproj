@@ -207,6 +207,9 @@
     <None Remove="TestFiles\Pvp\PvpAmulets.bulk.json" />
     <None Remove="TestFiles\Pvp\PvpAmulets.ids.json" />
     <None Remove="TestFiles\Pvp\PvpAmulets.single.json" />
+    <None Remove="TestFiles\Pvp\PvpGames.bulk.json" />
+    <None Remove="TestFiles\Pvp\PvpGames.ids.json" />
+    <None Remove="TestFiles\Pvp\PvpGames.single.json" />
     <None Remove="TestFiles\Render\414998.png" />
     <None Remove="TestFiles\TokenInfo\TokenInfo.ApiToken.json" />
     <None Remove="TestFiles\TokenInfo\TokenInfo.SubToken.json" />
@@ -403,6 +406,9 @@
     <EmbeddedResource Include="TestFiles\Outfits\Outfits.bulk.json" />
     <EmbeddedResource Include="TestFiles\Outfits\Outfits.ids.json" />
     <EmbeddedResource Include="TestFiles\Outfits\Outfits.single.json" />
+    <EmbeddedResource Include="TestFiles\Pvp\PvpGames.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Pvp\PvpGames.ids.json" />
+    <EmbeddedResource Include="TestFiles\Pvp\PvpGames.single.json" />
     <EmbeddedResource Include="TestFiles\Pvp\PvpAmulets.bulk.json" />
     <EmbeddedResource Include="TestFiles\Pvp\PvpAmulets.ids.json" />
     <EmbeddedResource Include="TestFiles\Pvp\PvpAmulets.single.json" />

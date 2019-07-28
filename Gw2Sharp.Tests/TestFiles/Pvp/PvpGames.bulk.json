@@ -1,0 +1,49 @@
+[
+  {
+    "id": "13BB1160-7227-477F-9D94-9C83E38DFF95",
+    "map_id": 554,
+    "started": "2016-12-15T21:38:42.448Z",
+    "ended": "2016-12-15T21:47:49.448Z",
+    "result": "Defeat",
+    "team": "Red",
+    "profession": "Engineer",
+    "rating_type": "Ranked",
+    "rating_change": -146,
+    "season": "A54849B7-7DBD-4958-91EF-72E18CD659BA",
+    "scores": {
+      "red": 270,
+      "blue": 500
+    }
+  },
+  {
+    "id": "2822DA4B-C775-4AD6-99DB-BED79A2BA6DF",
+    "map_id": 554,
+    "started": "2016-12-15T21:50:42.564Z",
+    "ended": "2016-12-15T22:00:58.564Z",
+    "result": "Defeat",
+    "team": "Blue",
+    "profession": "Engineer",
+    "rating_type": "Ranked",
+    "rating_change": -100,
+    "season": "A54849B7-7DBD-4958-91EF-72E18CD659BA",
+    "scores": {
+      "red": 500,
+      "blue": 407
+    }
+  },
+  {
+    "id": "342782A6-1433-4D23-B983-F853137576E3",
+    "map_id": 1163,
+    "started": "2016-10-02T20:32:40.650Z",
+    "ended": "2016-10-02T20:41:19.650Z",
+    "result": "Victory",
+    "team": "Blue",
+    "profession": "Engineer",
+    "rating_type": "Unranked",
+    "rating_change": 11,
+    "scores": {
+      "red": 329,
+      "blue": 502
+    }
+  }
+]

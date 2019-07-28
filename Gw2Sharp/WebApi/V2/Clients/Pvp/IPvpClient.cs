@@ -12,8 +12,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
 
         /// <summary>
         /// Gets the PvP games.
+        /// Requires scopes: account, pvp.
         /// </summary>
-        //IPvpGamesClient Games { get; }
+        IPvpGamesClient Games { get; }
 
         /// <summary>
         /// Gets the PvP ranks.

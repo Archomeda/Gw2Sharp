@@ -306,6 +306,9 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                 case DateTime dateTime:
                     Assert.Equal(expected.Value<DateTime>(), dateTime);
                     break;
+                case DateTimeOffset dateTime:
+                    Assert.Equal(expected.Value<DateTime>(), dateTime);
+                    break;
                 case TimeSpan timeSpan:
                     Assert.Equal(TimeSpan.FromSeconds(expected.Value<int>()), timeSpan);
                     break;
