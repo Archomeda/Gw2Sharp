@@ -17,7 +17,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The profession weapon flags.
         /// </summary>
-        public ApiFlags<ProfessionWeaponFlag> Flags { get; set; }
+        public ApiFlags<ProfessionWeaponFlag> Flags { get; set; } = new ApiFlags<ProfessionWeaponFlag>();
 
         /// <summary>
         /// The profession weapon skills.
