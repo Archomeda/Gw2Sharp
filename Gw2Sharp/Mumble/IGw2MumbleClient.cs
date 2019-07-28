@@ -1,0 +1,155 @@
+using System;
+using Gw2Sharp.Models;
+using Gw2Sharp.Mumble.Models;
+using Gw2Sharp.WebApi.V2;
+
+namespace Gw2Sharp.Mumble
+{
+    /// <summary>
+    /// An interface for the client implementation of the Guild Wars 2 Mumble Link API service.
+    /// </summary>
+    public interface IGw2MumbleClient : IClient, IDisposable
+    {
+        /// <summary>
+        /// Whether the Guild Wars 2 Mumble Link API is available or not.
+        /// Use this to check if the Mumble Link API contains valid Guild Wars 2 data.
+        /// </summary>
+        bool IsAvailable { get; }
+
+        /// <summary>
+        /// The Mumble Link communication version.
+        /// Should be equal to 2.
+        /// </summary>
+        int Version { get; }
+
+        /// <summary>
+        /// The current Mumble Link tick number.
+        /// Every update to the Mumble Link from Guild Wars 2 increments this value.
+        /// </summary>
+        int Tick { get; }
+
+        /// <summary>
+        /// The game name.
+        /// Should be equal to "Guild Wars 2" when Guild Wars 2 is running.
+        /// </summary>
+        string Name { get; }
+
+        /// <summary>
+        /// The character's position in the current map.
+        /// These coordinates are left-handed.
+        /// </summary>
+        Coordinates3 AvatarPosition { get; }
+
+        /// <summary>
+        /// The vector pointing out of the character's eyes.
+        /// These coordinates are left-handed.
+        /// </summary>
+        Coordinates3 AvatarFront { get; }
+
+        /// <summary>
+        /// The camera's position in the current map.
+        /// These coordinates are left-handed.
+        /// </summary>
+        Coordinates3 CameraPosition { get; }
+
+        /// <summary>
+        /// The vector pointing out of the camera.
+        /// These coordinates are left-handed.
+        /// </summary>
+        Coordinates3 CameraFront { get; }
+
+        /// <summary>
+        /// The server address the client is currently connected to.
+        /// This value has always been IPv4 so far.
+        /// However, this value may also be IPv6 if ArenaNet decides to support that.
+        /// </summary>
+        string ServerAddress { get; }
+
+        /// <summary>
+        /// The server port the client is currently connected to.
+        /// </summary>
+        ushort ServerPort { get; }
+
+        /// <summary>
+        /// The Guild Wars 2 client build id.
+        /// </summary>
+        int BuildId { get; }
+
+        /// <summary>
+        /// The current map id.
+        /// Can be resolved against <see cref="IGw2WebApiV2Client.Maps"/>.
+        /// </summary>
+        int MapId { get; }
+
+        /// <summary>
+        /// The current map type.
+        /// </summary>
+        MapType MapType { get; }
+
+        // 4 MSB:
+        // 0000 - Instances
+        // 0001 - Generic public maps
+        // 0010 - PvP maps
+        // 1000 - WvW maps
+        // 1100 - Edge of the Mists
+        //
+        // Rest:
+        // 0000 - World id
+        // ---- - Map number?
+        /// <summary>
+        /// The current shard id.
+        /// </summary>
+        uint ShardId { get; }
+
+        /// <summary>
+        /// The instance. Unknown.
+        /// </summary>
+        uint Instance { get; }
+
+        /// <summary>
+        /// The character name.
+        /// </summary>
+        string CharacterName { get; }
+
+        /// <summary>
+        /// The character profession.
+        /// Can be resolved against <see cref="IGw2WebApiV2Client.Professions"/>.
+        /// </summary>
+        string Profession { get; }
+
+        /// <summary>
+        /// The character race.
+        /// Can be resolved against <see cref="IGw2WebApiV2Client.Races"/>.
+        /// </summary>
+        string Race { get; }
+
+        /// <summary>
+        /// The current team color.
+        /// This value is 0 if no team color is available.
+        /// Can be resolved against <see cref="IGw2WebApiV2Client.Colors"/>.
+        /// </summary>
+        int TeamColorId { get; }
+
+        /// <summary>
+        /// Whether the commander tag is active.
+        /// </summary>
+        bool IsCommander { get; }
+
+        /// <summary>
+        /// The vertical field of view value.
+        /// </summary>
+        double FieldOfView { get; }
+
+        /// <summary>
+        /// The UI size.
+        /// </summary>
+        UiSize UiSize { get; }
+
+
+        /// <summary>
+        /// Performs an update on the Mumble Link memory mapped file.
+        /// Call this every frame and/or every time you want to update the Mumble Link data before reading.
+        /// </summary>
+        void Update();
+    }
+}
