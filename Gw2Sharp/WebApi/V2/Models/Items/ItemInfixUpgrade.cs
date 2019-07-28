@@ -9,7 +9,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     {
         /// <summary>
         /// The infix upgrade item id.
-        /// Can be resolved against <see cref="IGw2WebApiV2Client.ItemStats"/>.
+        /// Can be resolved against <see cref="IGw2WebApiV2Client.Itemstats"/>.
         /// If the infix upgrade does not have an item, this value is <c>null</c>.
         /// </summary>
         public int? Id { get; set; }
