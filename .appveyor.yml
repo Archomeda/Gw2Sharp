@@ -13,6 +13,9 @@ branches:
   except:
     - gh-pages
 
+install:
+  - choco install dotnetcore-sdk --version 3.0.100-preview7-012821 --pre
+
 before_build:
   - dotnet restore
   - dotnet tool install --global dotnet-sonarscanner
