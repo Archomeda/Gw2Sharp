@@ -1,5 +1,18 @@
 # Gw2Sharp History
 
+## 0.6.0
+### Endpoints
+- **Breaking:** `Gw2Sharp.WebApi.V2.Models.GuildTeam` has had the type of its property `Ladders` changed from `PvpStatsLadders` to `IReadOnlyDictionary<string, PvpStatsAggregate>`
+  (reason: the keys in this property of this endpoint (`/v2/guild/:id/teams`) are actually dynamic, just like the ones in `/v2/pvp/stats`)
+- Add `/v2/pvp/amulets`
+- Add `/v2/pvp/games`
+- Add `/v2/pvp/ranks`
+- Add `/v2/pvp/seasons`
+- Add `/v2/pvp/stats`
+
+### Refactoring
+- **Breaking:** The class `Gw2Sharp.WebApi.V2.Models.PvpStatsLadders` has been fully removed since it's no longer used
+
 ## 0.5.0
 ### Endpoints
 - Add render service which can be found under `IGw2WebApiClient.Render` (right next to `IGw2WebApiClient.V2`) ([#6](https://github.com/Archomeda/Gw2Sharp/issues/6))
