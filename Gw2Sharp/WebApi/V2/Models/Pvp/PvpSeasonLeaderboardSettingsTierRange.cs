@@ -9,14 +9,14 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// Represents a PvP season leaderboard tier range.
     /// </summary>
     [JsonConverter(typeof(PvpSeasonLeaderboardSettingsTierRangeConverter))]
-    public struct PvpSeasonLeaderboardSettingsTierRange : IEquatable<PvpSeasonLeaderboardSettingsTierRange>, IEnumerable<int>
+    public struct PvpSeasonLeaderboardSettingsTierRange : IEquatable<PvpSeasonLeaderboardSettingsTierRange>, IEnumerable<double>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="PvpSeasonLeaderboardSettingsTierRange"/> struct.
         /// </summary>
         /// <param name="lowest">The lowest position.</param>
         /// <param name="highest">The highest position.</param>
-        public PvpSeasonLeaderboardSettingsTierRange(int lowest, int highest)
+        public PvpSeasonLeaderboardSettingsTierRange(double lowest, double highest)
         {
             this.Lowest = lowest;
             this.Highest = highest;
@@ -25,15 +25,15 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The lowest position in this tier range.
         /// </summary>
-        public int Lowest { get; private set; }
+        public double Lowest { get; private set; }
 
         /// <summary>
         /// The highest position in this tier range.
         /// </summary>
-        public int Highest { get; private set; }
+        public double Highest { get; private set; }
 
         /// <inheritdoc />
-        public IEnumerator<int> GetEnumerator()
+        public IEnumerator<double> GetEnumerator()
         {
             yield return this.Lowest;
             yield return this.Highest;

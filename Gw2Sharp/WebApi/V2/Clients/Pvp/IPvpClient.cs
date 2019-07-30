@@ -28,7 +28,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
 
         /// <summary>
         /// Gets the PvP stats.
+        /// Requires scopes: account, pvp.
         /// </summary>
-        //IPvpStatsClient Stats { get; }
+        IPvpStatsClient Stats { get; }
     }
 }

@@ -20,7 +20,7 @@ namespace Gw2Sharp
             if (!(serializer.Deserialize<JToken>(reader) is JArray jArray))
                 throw new JsonSerializationException($"Expected {nameof(jArray)} to be an array");
 
-            return new PvpSeasonLeaderboardSettingsTierRange(jArray[0].ToObject<int>(serializer), jArray[1].ToObject<int>(serializer));
+            return new PvpSeasonLeaderboardSettingsTierRange(jArray[0].ToObject<double>(serializer), jArray[1].ToObject<double>(serializer));
         }
 
         /// <inheritdoc />

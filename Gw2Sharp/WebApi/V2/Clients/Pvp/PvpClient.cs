@@ -12,7 +12,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         private readonly IPvpGamesClient games;
         private readonly IPvpRanksClient ranks;
         private readonly IPvpSeasonsClient seasons;
-        //private readonly IPvpStatsClient stats;
+        private readonly IPvpStatsClient stats;
 
         /// <summary>
         /// Creates a new <see cref="PvpClient"/> that is used for the API v2 PvP endpoint.
@@ -27,7 +27,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
             this.games = new PvpGamesClient(connection, gw2Client);
             this.ranks = new PvpRanksClient(connection, gw2Client);
             this.seasons = new PvpSeasonsClient(connection, gw2Client);
-            //this.stats = new PvpStatsClient(connection, gw2Client);
+            this.stats = new PvpStatsClient(connection, gw2Client);
         }
 
         /// <inheritdoc />
@@ -43,6 +43,6 @@ namespace Gw2Sharp.WebApi.V2.Clients
         public virtual IPvpSeasonsClient Seasons => this.seasons;
 
         /// <inheritdoc />
-        //public virtual IPvpStatsClient Stats => this.stats;
+        public virtual IPvpStatsClient Stats => this.stats;
     }
 }
