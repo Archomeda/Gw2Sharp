@@ -148,18 +148,18 @@ For your convenience, the following list gives an overview of the endpoints that
  /v2/pets | ✔️🌐📄📚📦 | [`Gw2Client.WebApi.V2.Pets`](../api/Gw2Sharp.WebApi.V2.Clients.PetsClient.html)
  /v2/professions | ✔️🌐📄📚📦 | [`Gw2Client.WebApi.V2.Professions`](../api/Gw2Sharp.WebApi.V2.Clients.ProfessionsClient.html)
  /v2/pvp | ✔️ | [`Gw2Client.WebApi.V2.Pvp`](../api/Gw2Sharp.WebApi.V2.Clients.PvpClient.html)
- /v2/pvp/amulets | ✔️🌐📄📚📦 | [`Gw2Client.WebApi.V2.PvpAmulets`](../api/Gw2Sharp.WebApi.V2.Clients.PvpAmuletsClient.html)
- /v2/pvp/games | ✔️🔑📄📚📦 | [`Gw2Client.WebApi.V2.PvpGames`](../api/Gw2Sharp.WebApi.V2.Clients.PvpGamesClient.html)
- /v2/pvp/heroes | ❌ |
- /v2/pvp/ranks | ✔️🌐📄📚📦 | [`Gw2Client.WebApi.V2.PvpRanks`](../api/Gw2Sharp.WebApi.V2.Clients.PvpRanksClient.html)
+ /v2/pvp/amulets | ✔️🌐📄📚📦 | [`Gw2Client.WebApi.V2.Pvp.Amulets`](../api/Gw2Sharp.WebApi.V2.Clients.PvpAmuletsClient.html)
+ /v2/pvp/games | ✔️🔑📄📚📦 | [`Gw2Client.WebApi.V2.Pvp.Games`](../api/Gw2Sharp.WebApi.V2.Clients.PvpGamesClient.html)
+ /v2/pvp/heroes | ✔️🌐📄📚📦 | [`Gw2Client.WebApi.V2.Pvp.Heroes`](../api/Gw2Sharp.WebApi.V2.Clients.PvpHeroesClient.html)
+ /v2/pvp/ranks | ✔️🌐📄📚📦 | [`Gw2Client.WebApi.V2.Pvp.Ranks`](../api/Gw2Sharp.WebApi.V2.Clients.PvpRanksClient.html)
  ~~/v2/pvp/rewardtracks~~ | ✖️ |
  ~~/v2/pvp/runes~~ | ✖️ |
- /v2/pvp/seasons | ✔️🌐📄📚📦 | [`Gw2Client.WebApi.V2.PvpSeasons`](../api/Gw2Sharp.WebApi.V2.Clients.PvpSeasonsClient.html)
+ /v2/pvp/seasons | ✔️🌐📄📚📦 | [`Gw2Client.WebApi.V2.Pvp.Seasons`](../api/Gw2Sharp.WebApi.V2.Clients.PvpSeasonsClient.html)
  /v2/pvp/seasons/`:id`/leaderboards | ❌ |
  /v2/pvp/seasons/`:id`/leaderboards/`:board`/`:region` | ❌ |
  ~~/v2/pvp/sigils~~ | ✖️ |
  /v2/pvp/standings | ❌ |
- /v2/pvp/stats | ✔️🔑📄📚📦 | [`Gw2Client.WebApi.V2.PvpStats`](../api/Gw2Sharp.WebApi.V2.Clients.PvpStatsClient.html)
+ /v2/pvp/stats | ✔️🔑📄📚📦 | [`Gw2Client.WebApi.V2.Pvp.Stats`](../api/Gw2Sharp.WebApi.V2.Clients.PvpStatsClient.html)
  /v2/quaggans | ❌ |
  /v2/quests | ❌✨ |
  /v2/races | ❌ |

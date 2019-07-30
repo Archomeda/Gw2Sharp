@@ -1,0 +1,51 @@
+{
+  "id": "B7EA9889-5F16-4636-9705-4FCAF8B39ECD",
+  "name": "Lightbringer Tybalt Leftpaw",
+  "description": "Originally a soldier of the Iron Legion, Tybalt left the legions in disgrace after an explosion wiped out his warband and mangled his right hand, giving him his nickname. Tybalt later joined the Order of Whispers, where he performed clerical duties for six years and designed the security system for the Chantry of Secrets.  After discovering a Risen creature in Lion's Arch, Tybalt and his ally traveled to Claw Island to warn Watch Commander Talon of the impending attack. Unfortunately, they were too late, and Tybalt sacrificed himself so that Trahearne and the injured Lionguard could make it to safety.",
+  "type": "Defensive Hero",
+  "stats": {
+    "offense": 3,
+    "defense": 4,
+    "speed": 2
+  },
+  "overlay": "https://render.guildwars2.com/file/24F404D0E9A169366AF811D650FE9CCE2D51C069/993701.png",
+  "underlay": "https://render.guildwars2.com/file/F257C025F0714C0039E9E51B92B265CBB0E59B76/993702.png",
+  "skins": [
+    {
+      "id": 5,
+      "name": "Lightbringer Tybalt Leftpaw",
+      "icon": "https://render.guildwars2.com/file/1192A90AE007DB4D3ADDFEACF1A8B1407B084A6D/1341593.png",
+      "default": true,
+      "unlock_items": [
+        77708
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Steampunk Tybalt",
+      "icon": "https://render.guildwars2.com/file/09492402E20C2293BDAD0CFDD2EB1F922DF9EE3C/1341592.png",
+      "default": false,
+      "unlock_items": [
+        77684
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Orrian Armor Tybalt",
+      "icon": "https://render.guildwars2.com/file/B2A53A023C6FA8F43CCE09F4A5B26FB84CA40422/1341450.png",
+      "default": false,
+      "unlock_items": [
+        77704
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Elite Glorious Tybalt",
+      "icon": "https://render.guildwars2.com/file/0BB2305F530FFAE2BDF7FA75AE02A1D98002041B/1341449.png",
+      "default": false,
+      "unlock_items": [
+        77691
+      ]
+    }
+  ]
+}

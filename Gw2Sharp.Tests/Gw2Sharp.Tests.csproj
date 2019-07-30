@@ -210,6 +210,9 @@
     <None Remove="TestFiles\Pvp\PvpGames.bulk.json" />
     <None Remove="TestFiles\Pvp\PvpGames.ids.json" />
     <None Remove="TestFiles\Pvp\PvpGames.single.json" />
+    <None Remove="TestFiles\Pvp\PvpHeroes.bulk.json" />
+    <None Remove="TestFiles\Pvp\PvpHeroes.ids.json" />
+    <None Remove="TestFiles\Pvp\PvpHeroes.single.json" />
     <None Remove="TestFiles\Pvp\PvpRanks.bulk.json" />
     <None Remove="TestFiles\Pvp\PvpRanks.ids.json" />
     <None Remove="TestFiles\Pvp\PvpRanks.single.json" />
@@ -422,6 +425,9 @@
     <EmbeddedResource Include="TestFiles\Pvp\PvpGames.bulk.json" />
     <EmbeddedResource Include="TestFiles\Pvp\PvpGames.ids.json" />
     <EmbeddedResource Include="TestFiles\Pvp\PvpGames.single.json" />
+    <EmbeddedResource Include="TestFiles\Pvp\PvpHeroes.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Pvp\PvpHeroes.ids.json" />
+    <EmbeddedResource Include="TestFiles\Pvp\PvpHeroes.single.json" />
     <EmbeddedResource Include="TestFiles\Pvp\PvpRanks.bulk.json" />
     <EmbeddedResource Include="TestFiles\Pvp\PvpRanks.ids.json" />
     <EmbeddedResource Include="TestFiles\Pvp\PvpRanks.single.json" />

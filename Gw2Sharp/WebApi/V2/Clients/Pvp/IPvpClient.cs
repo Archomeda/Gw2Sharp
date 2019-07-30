@@ -17,6 +17,11 @@ namespace Gw2Sharp.WebApi.V2.Clients
         IPvpGamesClient Games { get; }
 
         /// <summary>
+        /// Gets the PvP heroes.
+        /// </summary>
+        IPvpHeroesClient Heroes { get; }
+
+        /// <summary>
         /// Gets the PvP ranks.
         /// </summary>
         IPvpRanksClient Ranks { get; }

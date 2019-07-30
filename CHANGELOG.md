@@ -6,6 +6,7 @@
   (reason: the keys in this property of this endpoint (`/v2/guild/:id/teams`) are actually dynamic, just like the ones in `/v2/pvp/stats`)
 - Add `/v2/pvp/amulets`
 - Add `/v2/pvp/games`
+- Add `/v2/pvp/heroes`
 - Add `/v2/pvp/ranks`
 - Add `/v2/pvp/seasons`
 - Add `/v2/pvp/stats`
