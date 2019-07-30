@@ -12683,6 +12683,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.IPvpClient.Games
   nameWithType: IPvpClient.Games
+- uid: Gw2Sharp.WebApi.V2.Clients.IPvpClient.Heroes
+  name: Heroes
+  href: api/Gw2Sharp.WebApi.V2.Clients.IPvpClient.html#Gw2Sharp_WebApi_V2_Clients_IPvpClient_Heroes
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.IPvpClient.Heroes
+  fullName: Gw2Sharp.WebApi.V2.Clients.IPvpClient.Heroes
+  nameWithType: IPvpClient.Heroes
+- uid: Gw2Sharp.WebApi.V2.Clients.IPvpClient.Heroes*
+  name: Heroes
+  href: api/Gw2Sharp.WebApi.V2.Clients.IPvpClient.html#Gw2Sharp_WebApi_V2_Clients_IPvpClient_Heroes_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.IPvpClient.Heroes
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.IPvpClient.Heroes
+  nameWithType: IPvpClient.Heroes
 - uid: Gw2Sharp.WebApi.V2.Clients.IPvpClient.Ranks
   name: Ranks
   href: api/Gw2Sharp.WebApi.V2.Clients.IPvpClient.html#Gw2Sharp_WebApi_V2_Clients_IPvpClient_Ranks
@@ -12728,6 +12741,12 @@ references:
   commentId: T:Gw2Sharp.WebApi.V2.Clients.IPvpGamesClient
   fullName: Gw2Sharp.WebApi.V2.Clients.IPvpGamesClient
   nameWithType: IPvpGamesClient
+- uid: Gw2Sharp.WebApi.V2.Clients.IPvpHeroesClient
+  name: IPvpHeroesClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.IPvpHeroesClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.IPvpHeroesClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.IPvpHeroesClient
+  nameWithType: IPvpHeroesClient
 - uid: Gw2Sharp.WebApi.V2.Clients.IPvpRanksClient
   name: IPvpRanksClient
   href: api/Gw2Sharp.WebApi.V2.Clients.IPvpRanksClient.html
@@ -13152,6 +13171,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.PvpClient.Games
   nameWithType: PvpClient.Games
+- uid: Gw2Sharp.WebApi.V2.Clients.PvpClient.Heroes
+  name: Heroes
+  href: api/Gw2Sharp.WebApi.V2.Clients.PvpClient.html#Gw2Sharp_WebApi_V2_Clients_PvpClient_Heroes
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.PvpClient.Heroes
+  fullName: Gw2Sharp.WebApi.V2.Clients.PvpClient.Heroes
+  nameWithType: PvpClient.Heroes
+- uid: Gw2Sharp.WebApi.V2.Clients.PvpClient.Heroes*
+  name: Heroes
+  href: api/Gw2Sharp.WebApi.V2.Clients.PvpClient.html#Gw2Sharp_WebApi_V2_Clients_PvpClient_Heroes_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.PvpClient.Heroes
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.PvpClient.Heroes
+  nameWithType: PvpClient.Heroes
 - uid: Gw2Sharp.WebApi.V2.Clients.PvpClient.Ranks
   name: Ranks
   href: api/Gw2Sharp.WebApi.V2.Clients.PvpClient.html#Gw2Sharp_WebApi_V2_Clients_PvpClient_Ranks
@@ -13210,6 +13242,25 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.PvpGamesClient.PvpGamesClient
   nameWithType: PvpGamesClient.PvpGamesClient
+- uid: Gw2Sharp.WebApi.V2.Clients.PvpHeroesClient
+  name: PvpHeroesClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.PvpHeroesClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.PvpHeroesClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.PvpHeroesClient
+  nameWithType: PvpHeroesClient
+- uid: Gw2Sharp.WebApi.V2.Clients.PvpHeroesClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client)
+  name: PvpHeroesClient(IConnection, IGw2Client)
+  href: api/Gw2Sharp.WebApi.V2.Clients.PvpHeroesClient.html#Gw2Sharp_WebApi_V2_Clients_PvpHeroesClient__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.PvpHeroesClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client)
+  fullName: Gw2Sharp.WebApi.V2.Clients.PvpHeroesClient.PvpHeroesClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client)
+  nameWithType: PvpHeroesClient.PvpHeroesClient(IConnection, IGw2Client)
+- uid: Gw2Sharp.WebApi.V2.Clients.PvpHeroesClient.#ctor*
+  name: PvpHeroesClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.PvpHeroesClient.html#Gw2Sharp_WebApi_V2_Clients_PvpHeroesClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.PvpHeroesClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.PvpHeroesClient.PvpHeroesClient
+  nameWithType: PvpHeroesClient.PvpHeroesClient
 - uid: Gw2Sharp.WebApi.V2.Clients.PvpRanksClient
   name: PvpRanksClient
   href: api/Gw2Sharp.WebApi.V2.Clients.PvpRanksClient.html
@@ -27109,6 +27160,232 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.PvpGame.Team
   nameWithType: PvpGame.Team
+- uid: Gw2Sharp.WebApi.V2.Models.PvpHero
+  name: PvpHero
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpHero.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.PvpHero
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpHero
+  nameWithType: PvpHero
+- uid: Gw2Sharp.WebApi.V2.Models.PvpHero.Description
+  name: Description
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpHero.html#Gw2Sharp_WebApi_V2_Models_PvpHero_Description
+  commentId: P:Gw2Sharp.WebApi.V2.Models.PvpHero.Description
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpHero.Description
+  nameWithType: PvpHero.Description
+- uid: Gw2Sharp.WebApi.V2.Models.PvpHero.Description*
+  name: Description
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpHero.html#Gw2Sharp_WebApi_V2_Models_PvpHero_Description_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.PvpHero.Description
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpHero.Description
+  nameWithType: PvpHero.Description
+- uid: Gw2Sharp.WebApi.V2.Models.PvpHero.Id
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpHero.html#Gw2Sharp_WebApi_V2_Models_PvpHero_Id
+  commentId: P:Gw2Sharp.WebApi.V2.Models.PvpHero.Id
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpHero.Id
+  nameWithType: PvpHero.Id
+- uid: Gw2Sharp.WebApi.V2.Models.PvpHero.Id*
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpHero.html#Gw2Sharp_WebApi_V2_Models_PvpHero_Id_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.PvpHero.Id
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpHero.Id
+  nameWithType: PvpHero.Id
+- uid: Gw2Sharp.WebApi.V2.Models.PvpHero.Name
+  name: Name
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpHero.html#Gw2Sharp_WebApi_V2_Models_PvpHero_Name
+  commentId: P:Gw2Sharp.WebApi.V2.Models.PvpHero.Name
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpHero.Name
+  nameWithType: PvpHero.Name
+- uid: Gw2Sharp.WebApi.V2.Models.PvpHero.Name*
+  name: Name
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpHero.html#Gw2Sharp_WebApi_V2_Models_PvpHero_Name_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.PvpHero.Name
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpHero.Name
+  nameWithType: PvpHero.Name
+- uid: Gw2Sharp.WebApi.V2.Models.PvpHero.Overlay
+  name: Overlay
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpHero.html#Gw2Sharp_WebApi_V2_Models_PvpHero_Overlay
+  commentId: P:Gw2Sharp.WebApi.V2.Models.PvpHero.Overlay
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpHero.Overlay
+  nameWithType: PvpHero.Overlay
+- uid: Gw2Sharp.WebApi.V2.Models.PvpHero.Overlay*
+  name: Overlay
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpHero.html#Gw2Sharp_WebApi_V2_Models_PvpHero_Overlay_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.PvpHero.Overlay
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpHero.Overlay
+  nameWithType: PvpHero.Overlay
+- uid: Gw2Sharp.WebApi.V2.Models.PvpHero.Skins
+  name: Skins
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpHero.html#Gw2Sharp_WebApi_V2_Models_PvpHero_Skins
+  commentId: P:Gw2Sharp.WebApi.V2.Models.PvpHero.Skins
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpHero.Skins
+  nameWithType: PvpHero.Skins
+- uid: Gw2Sharp.WebApi.V2.Models.PvpHero.Skins*
+  name: Skins
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpHero.html#Gw2Sharp_WebApi_V2_Models_PvpHero_Skins_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.PvpHero.Skins
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpHero.Skins
+  nameWithType: PvpHero.Skins
+- uid: Gw2Sharp.WebApi.V2.Models.PvpHero.Stats
+  name: Stats
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpHero.html#Gw2Sharp_WebApi_V2_Models_PvpHero_Stats
+  commentId: P:Gw2Sharp.WebApi.V2.Models.PvpHero.Stats
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpHero.Stats
+  nameWithType: PvpHero.Stats
+- uid: Gw2Sharp.WebApi.V2.Models.PvpHero.Stats*
+  name: Stats
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpHero.html#Gw2Sharp_WebApi_V2_Models_PvpHero_Stats_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.PvpHero.Stats
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpHero.Stats
+  nameWithType: PvpHero.Stats
+- uid: Gw2Sharp.WebApi.V2.Models.PvpHero.Type
+  name: Type
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpHero.html#Gw2Sharp_WebApi_V2_Models_PvpHero_Type
+  commentId: P:Gw2Sharp.WebApi.V2.Models.PvpHero.Type
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpHero.Type
+  nameWithType: PvpHero.Type
+- uid: Gw2Sharp.WebApi.V2.Models.PvpHero.Type*
+  name: Type
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpHero.html#Gw2Sharp_WebApi_V2_Models_PvpHero_Type_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.PvpHero.Type
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpHero.Type
+  nameWithType: PvpHero.Type
+- uid: Gw2Sharp.WebApi.V2.Models.PvpHero.Underlay
+  name: Underlay
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpHero.html#Gw2Sharp_WebApi_V2_Models_PvpHero_Underlay
+  commentId: P:Gw2Sharp.WebApi.V2.Models.PvpHero.Underlay
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpHero.Underlay
+  nameWithType: PvpHero.Underlay
+- uid: Gw2Sharp.WebApi.V2.Models.PvpHero.Underlay*
+  name: Underlay
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpHero.html#Gw2Sharp_WebApi_V2_Models_PvpHero_Underlay_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.PvpHero.Underlay
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpHero.Underlay
+  nameWithType: PvpHero.Underlay
+- uid: Gw2Sharp.WebApi.V2.Models.PvpHeroSkin
+  name: PvpHeroSkin
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpHeroSkin.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.PvpHeroSkin
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpHeroSkin
+  nameWithType: PvpHeroSkin
+- uid: Gw2Sharp.WebApi.V2.Models.PvpHeroSkin.Default
+  name: Default
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpHeroSkin.html#Gw2Sharp_WebApi_V2_Models_PvpHeroSkin_Default
+  commentId: P:Gw2Sharp.WebApi.V2.Models.PvpHeroSkin.Default
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpHeroSkin.Default
+  nameWithType: PvpHeroSkin.Default
+- uid: Gw2Sharp.WebApi.V2.Models.PvpHeroSkin.Default*
+  name: Default
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpHeroSkin.html#Gw2Sharp_WebApi_V2_Models_PvpHeroSkin_Default_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.PvpHeroSkin.Default
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpHeroSkin.Default
+  nameWithType: PvpHeroSkin.Default
+- uid: Gw2Sharp.WebApi.V2.Models.PvpHeroSkin.Icon
+  name: Icon
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpHeroSkin.html#Gw2Sharp_WebApi_V2_Models_PvpHeroSkin_Icon
+  commentId: P:Gw2Sharp.WebApi.V2.Models.PvpHeroSkin.Icon
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpHeroSkin.Icon
+  nameWithType: PvpHeroSkin.Icon
+- uid: Gw2Sharp.WebApi.V2.Models.PvpHeroSkin.Icon*
+  name: Icon
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpHeroSkin.html#Gw2Sharp_WebApi_V2_Models_PvpHeroSkin_Icon_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.PvpHeroSkin.Icon
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpHeroSkin.Icon
+  nameWithType: PvpHeroSkin.Icon
+- uid: Gw2Sharp.WebApi.V2.Models.PvpHeroSkin.Id
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpHeroSkin.html#Gw2Sharp_WebApi_V2_Models_PvpHeroSkin_Id
+  commentId: P:Gw2Sharp.WebApi.V2.Models.PvpHeroSkin.Id
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpHeroSkin.Id
+  nameWithType: PvpHeroSkin.Id
+- uid: Gw2Sharp.WebApi.V2.Models.PvpHeroSkin.Id*
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpHeroSkin.html#Gw2Sharp_WebApi_V2_Models_PvpHeroSkin_Id_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.PvpHeroSkin.Id
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpHeroSkin.Id
+  nameWithType: PvpHeroSkin.Id
+- uid: Gw2Sharp.WebApi.V2.Models.PvpHeroSkin.Name
+  name: Name
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpHeroSkin.html#Gw2Sharp_WebApi_V2_Models_PvpHeroSkin_Name
+  commentId: P:Gw2Sharp.WebApi.V2.Models.PvpHeroSkin.Name
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpHeroSkin.Name
+  nameWithType: PvpHeroSkin.Name
+- uid: Gw2Sharp.WebApi.V2.Models.PvpHeroSkin.Name*
+  name: Name
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpHeroSkin.html#Gw2Sharp_WebApi_V2_Models_PvpHeroSkin_Name_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.PvpHeroSkin.Name
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpHeroSkin.Name
+  nameWithType: PvpHeroSkin.Name
+- uid: Gw2Sharp.WebApi.V2.Models.PvpHeroSkin.UnlockItems
+  name: UnlockItems
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpHeroSkin.html#Gw2Sharp_WebApi_V2_Models_PvpHeroSkin_UnlockItems
+  commentId: P:Gw2Sharp.WebApi.V2.Models.PvpHeroSkin.UnlockItems
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpHeroSkin.UnlockItems
+  nameWithType: PvpHeroSkin.UnlockItems
+- uid: Gw2Sharp.WebApi.V2.Models.PvpHeroSkin.UnlockItems*
+  name: UnlockItems
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpHeroSkin.html#Gw2Sharp_WebApi_V2_Models_PvpHeroSkin_UnlockItems_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.PvpHeroSkin.UnlockItems
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpHeroSkin.UnlockItems
+  nameWithType: PvpHeroSkin.UnlockItems
+- uid: Gw2Sharp.WebApi.V2.Models.PvpHeroStats
+  name: PvpHeroStats
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpHeroStats.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.PvpHeroStats
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpHeroStats
+  nameWithType: PvpHeroStats
+- uid: Gw2Sharp.WebApi.V2.Models.PvpHeroStats.Defense
+  name: Defense
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpHeroStats.html#Gw2Sharp_WebApi_V2_Models_PvpHeroStats_Defense
+  commentId: P:Gw2Sharp.WebApi.V2.Models.PvpHeroStats.Defense
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpHeroStats.Defense
+  nameWithType: PvpHeroStats.Defense
+- uid: Gw2Sharp.WebApi.V2.Models.PvpHeroStats.Defense*
+  name: Defense
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpHeroStats.html#Gw2Sharp_WebApi_V2_Models_PvpHeroStats_Defense_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.PvpHeroStats.Defense
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpHeroStats.Defense
+  nameWithType: PvpHeroStats.Defense
+- uid: Gw2Sharp.WebApi.V2.Models.PvpHeroStats.Offense
+  name: Offense
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpHeroStats.html#Gw2Sharp_WebApi_V2_Models_PvpHeroStats_Offense
+  commentId: P:Gw2Sharp.WebApi.V2.Models.PvpHeroStats.Offense
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpHeroStats.Offense
+  nameWithType: PvpHeroStats.Offense
+- uid: Gw2Sharp.WebApi.V2.Models.PvpHeroStats.Offense*
+  name: Offense
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpHeroStats.html#Gw2Sharp_WebApi_V2_Models_PvpHeroStats_Offense_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.PvpHeroStats.Offense
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpHeroStats.Offense
+  nameWithType: PvpHeroStats.Offense
+- uid: Gw2Sharp.WebApi.V2.Models.PvpHeroStats.Speed
+  name: Speed
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpHeroStats.html#Gw2Sharp_WebApi_V2_Models_PvpHeroStats_Speed
+  commentId: P:Gw2Sharp.WebApi.V2.Models.PvpHeroStats.Speed
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpHeroStats.Speed
+  nameWithType: PvpHeroStats.Speed
+- uid: Gw2Sharp.WebApi.V2.Models.PvpHeroStats.Speed*
+  name: Speed
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpHeroStats.html#Gw2Sharp_WebApi_V2_Models_PvpHeroStats_Speed_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.PvpHeroStats.Speed
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpHeroStats.Speed
+  nameWithType: PvpHeroStats.Speed
 - uid: Gw2Sharp.WebApi.V2.Models.PvpRank
   name: PvpRank
   href: api/Gw2Sharp.WebApi.V2.Models.PvpRank.html
