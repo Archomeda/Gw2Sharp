@@ -23,6 +23,7 @@ before_build:
       Out-File Gw2Sharp/Gw2Sharp.csproj
   - ps: >-
       $version = Get-Content Gw2Sharp/Gw2Sharp.csproj | Select-String -Pattern '<Version>([^<]*)</Version>' -AllMatches | % { $_.Matches.Groups[1].Value }
+
       Update-AppveyorBuild -Version '$version-$env:APPVEYOR_BUILD_VERSION'
   - ps: >-
       if (!(Test-Path env:APPVEYOR_PULL_REQUEST_NUMBER)) {
