@@ -1,0 +1,317 @@
+{
+  "id": "07D11E7E-F63C-451D-84F4-D96D369DE5BF",
+  "name": "PvP League Season Sixteen",
+  "start": "2019-04-02T07:00:00.000Z",
+  "end": "2019-05-28T00:00:00.000Z",
+  "active": false,
+  "divisions": [
+    {
+      "name": "Cerulean",
+      "flags": [],
+      "large_icon": "https://render.guildwars2.com/file/CBACFFCD30B623FCCAF3CC7296056265F15E09BB/1614868.png",
+      "small_icon": "https://render.guildwars2.com/file/0673802F661E33D2BAFB400F56E502ACAE9468F4/1614874.png",
+      "pip_icon": "https://render.guildwars2.com/file/DF4AE7C6B85711B5EF0A970851672FFE230FE61D/1614836.png",
+      "tiers": [
+        {
+          "points": 20
+        },
+        {
+          "points": 20
+        },
+        {
+          "points": 20
+        }
+      ]
+    },
+    {
+      "name": "Jasper",
+      "flags": [],
+      "large_icon": "https://render.guildwars2.com/file/769445B8AFC30D92345AB6A84ACD02A223B5B1B5/1614869.png",
+      "small_icon": "https://render.guildwars2.com/file/6E0EF5120B6E095ED894A4E3BFC69F141EEF652E/1614876.png",
+      "pip_icon": "https://render.guildwars2.com/file/65192C9BEF0C080CACB5005B7B074C7EE37C6527/1614837.png",
+      "tiers": [
+        {
+          "points": 20
+        },
+        {
+          "points": 20
+        },
+        {
+          "points": 20
+        },
+        {
+          "points": 20
+        }
+      ]
+    },
+    {
+      "name": "Saffron",
+      "flags": [],
+      "large_icon": "https://render.guildwars2.com/file/509921D3BFDC049BC20758B71AD85592A043A439/1614870.png",
+      "small_icon": "https://render.guildwars2.com/file/6BE7DAD4635AF66FA4017A4D217F609FC95CE3A6/1614878.png",
+      "pip_icon": "https://render.guildwars2.com/file/0E9EFE4F06A46D124EF970375CB0FE7C5646DEBD/1614838.png",
+      "tiers": [
+        {
+          "points": 20
+        },
+        {
+          "points": 20
+        },
+        {
+          "points": 20
+        },
+        {
+          "points": 20
+        },
+        {
+          "points": 20
+        }
+      ]
+    },
+    {
+      "name": "Persimmon",
+      "flags": [],
+      "large_icon": "https://render.guildwars2.com/file/5807B5E8BC4658DE9CB44664C125A6A3900D80A9/1614871.png",
+      "small_icon": "https://render.guildwars2.com/file/AA9C38331B5F97511697C66E236E54BB151CF93C/1614880.png",
+      "pip_icon": "https://render.guildwars2.com/file/D7A1BE091BEB55FFFBE529F84DAF0EA23B9E0943/1614839.png",
+      "tiers": [
+        {
+          "points": 20
+        },
+        {
+          "points": 20
+        },
+        {
+          "points": 20
+        },
+        {
+          "points": 20
+        },
+        {
+          "points": 20
+        }
+      ]
+    },
+    {
+      "name": "Amaranth",
+      "flags": [],
+      "large_icon": "https://render.guildwars2.com/file/9CEAC0D269EC685D2818320FACC4130151C9B4B7/1614872.png",
+      "small_icon": "https://render.guildwars2.com/file/18A56E0F97DF075C30EA05CD1B571DEB024E0815/1614882.png",
+      "pip_icon": "https://render.guildwars2.com/file/76EA60C4256FA580F167036739006D5B7D0791A1/1614840.png",
+      "tiers": [
+        {
+          "points": 30
+        },
+        {
+          "points": 30
+        },
+        {
+          "points": 30
+        },
+        {
+          "points": 30
+        },
+        {
+          "points": 30
+        }
+      ]
+    },
+    {
+      "name": "Byzantium (Repeatable)",
+      "flags": [
+        "Repeatable"
+      ],
+      "large_icon": "https://render.guildwars2.com/file/52F72F4C72B517B0955D00CE0415E9B778191395/1614873.png",
+      "small_icon": "https://render.guildwars2.com/file/EDA19B7B0FF77E7044087F02D909AC0846A228BC/1614884.png",
+      "pip_icon": "https://render.guildwars2.com/file/32A2E3C56EE514912A0AF41C9904AFAF64082D0B/1614841.png",
+      "tiers": [
+        {
+          "points": 30
+        },
+        {
+          "points": 30
+        },
+        {
+          "points": 30
+        },
+        {
+          "points": 30
+        },
+        {
+          "points": 30
+        },
+        {
+          "points": 30
+        }
+      ]
+    }
+  ],
+  "ranks": [
+    {
+      "name": "Bronze",
+      "description": "This PvP League badge is available with a bronze effective rating.",
+      "icon": "https://render.guildwars2.com/file/6C5C27021FBF30026F1A5B0B5648D84F6A12C361/1614805.png",
+      "overlay": "https://render.guildwars2.com/file/7CDD58197C21E0D1F5076D5F2437060D13A03276/1614803.png",
+      "overlay_small": "https://render.guildwars2.com/file/B64F6C01E17554BC777F68D106294F3FC1BACBA7/1614804.png",
+      "tiers": [
+        {
+          "rating": 699
+        },
+        {
+          "rating": 799
+        },
+        {
+          "rating": 899
+        }
+      ]
+    },
+    {
+      "name": "Silver",
+      "description": "This PvP League badge is available with a silver effective rating.",
+      "icon": "https://render.guildwars2.com/file/031107A75BA0A8267F2925032CAA006C92D1024C/1614808.png",
+      "overlay": "https://render.guildwars2.com/file/E9710E98D90E3DCB1B6ABA08DF09059630E04A0B/1614806.png",
+      "overlay_small": "https://render.guildwars2.com/file/1E0CB9F01C7C58DC60CB67C26B6697D42A09A701/1614807.png",
+      "tiers": [
+        {
+          "rating": 999
+        },
+        {
+          "rating": 1099
+        },
+        {
+          "rating": 1199
+        }
+      ]
+    },
+    {
+      "name": "Gold",
+      "description": "This PvP League badge is available with a gold effective rating.",
+      "icon": "https://render.guildwars2.com/file/B11206B5D509587AB9726FAC9101F4E1062CC15E/1614811.png",
+      "overlay": "https://render.guildwars2.com/file/39D36849D82301ACAC1F0746E4E270DEEB64A097/1614809.png",
+      "overlay_small": "https://render.guildwars2.com/file/3C3096652D111C287F45FD1B6DAB500CE3227A64/1614810.png",
+      "tiers": [
+        {
+          "rating": 1299
+        },
+        {
+          "rating": 1399
+        },
+        {
+          "rating": 1499
+        }
+      ]
+    },
+    {
+      "name": "Platinum",
+      "description": "This PvP League badge is available with a platinum effective rating.",
+      "icon": "https://render.guildwars2.com/file/9723D561C0FE045711651678C2599A2D27122D0D/1614814.png",
+      "overlay": "https://render.guildwars2.com/file/BFF6A83B453F005436B252BD57183EB63D38B36F/1614812.png",
+      "overlay_small": "https://render.guildwars2.com/file/E6E0CD64A9D93C011B29CAFAE5355C1B4D5FE61E/1614813.png",
+      "tiers": [
+        {
+          "rating": 1599
+        },
+        {
+          "rating": 1699
+        },
+        {
+          "rating": 1799
+        }
+      ]
+    },
+    {
+      "name": "Legendary",
+      "description": "This PvP League badge is available with a legendary effective rating.",
+      "icon": "https://render.guildwars2.com/file/C9A7F6735DC310292AC09CFCE453AAFE1DC0970A/1614817.png",
+      "overlay": "https://render.guildwars2.com/file/0DFDCF280AF0D9033DFD68BC0175109EF0377B7D/1614815.png",
+      "overlay_small": "https://render.guildwars2.com/file/D29D750A334BCAD47DF4F5397D6EA999101BE8BE/1614816.png",
+      "tiers": [
+        {
+          "rating": 1899
+        },
+        {
+          "rating": 1999
+        },
+        {
+          "rating": 2099
+        }
+      ]
+    }
+  ],
+  "leaderboards": {
+    "ladder": {
+      "settings": {
+        "name": "",
+        "duration": null,
+        "scoring": "0F86D504-63C2-4465-80AA-C278E1CB7800",
+        "tiers": [
+          {
+            "range": [
+              1,
+              1
+            ]
+          },
+          {
+            "range": [
+              2,
+              2
+            ]
+          },
+          {
+            "range": [
+              3,
+              3
+            ]
+          },
+          {
+            "range": [
+              10,
+              4
+            ]
+          },
+          {
+            "range": [
+              25,
+              11
+            ]
+          },
+          {
+            "range": [
+              100,
+              26
+            ]
+          },
+          {
+            "range": [
+              250,
+              101
+            ]
+          }
+        ]
+      },
+      "scorings": [
+        {
+          "id": "0F86D504-63C2-4465-80AA-C278E1CB7800",
+          "type": "Integer",
+          "description": "Effective rating that includes decay.",
+          "name": "Rating",
+          "ordering": "MoreIsBetter"
+        },
+        {
+          "id": "8A5F1199-CFD8-44CE-84C3-811C5EE8B16C",
+          "type": "Integer",
+          "description": "",
+          "name": "Wins",
+          "ordering": "MoreIsBetter"
+        },
+        {
+          "id": "FECEE3A5-B66C-44A3-B81E-65EA43829E1D",
+          "type": "Integer",
+          "description": "",
+          "name": "Losses",
+          "ordering": "LessIsBetter"
+        }
+      ]
+    }
+  }
+}

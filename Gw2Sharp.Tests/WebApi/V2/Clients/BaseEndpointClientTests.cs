@@ -260,13 +260,21 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                 var dic = (dynamic)actual;
                 foreach (var kvp in expected)
                 {
-                    string key = string.Concat(kvp.Key.Split('_').Select(s => string.Concat(
-                        s[0].ToString().ToUpper(),
-                        s.Substring(1))));
-                    dynamic property = Convert.ChangeType(key, keyType);
-                    if (property == null)
-                        throw new InvalidOperationException($"Expected property '{key}' to exist in type {type.FullName}");
-                    var actualValue = dic[property];
+                    dynamic key;
+                    if (keyType == typeof(string))
+                    {
+                        key = kvp.Key;
+                    }
+                    else
+                    {
+                        string keyString = string.Concat(kvp.Key.Split('_').Select(s => string.Concat(
+                            s[0].ToString().ToUpper(),
+                            s.Substring(1))));
+                        key = Convert.ChangeType(keyString, keyType);
+                        if (key == null)
+                            throw new InvalidOperationException($"Expected property '{keyString}' to exist in type {type.FullName}");
+                    }
+                    var actualValue = dic[key];
                     this.AssertJsonObject(kvp.Value, actualValue);
                 }
             }

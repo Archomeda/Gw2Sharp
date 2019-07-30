@@ -1,5 +1,8 @@
 namespace Gw2Sharp.WebApi.V2.Models
 {
+    /// <summary>
+    /// Represents a PvP rank level.
+    /// </summary>
     public class PvpRankLevel
     {
         /// <summary>

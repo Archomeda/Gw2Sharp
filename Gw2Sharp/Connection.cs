@@ -39,9 +39,9 @@ namespace Gw2Sharp
                 new ApiObjectListConverter(),
                 new ApiEnumConverter(),
                 new CastableTypeConverter(),
-                new Coordinates2Converter(),
+                //new Coordinates2Converter(),
                 new GuidConverter(),
-                new SizeConverter(),
+                //new SizeConverter(),
                 new TimeSpanConverter()
             }
         };

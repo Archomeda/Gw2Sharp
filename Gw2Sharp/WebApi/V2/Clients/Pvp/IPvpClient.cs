@@ -24,7 +24,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <summary>
         /// Gets the PvP seasons.
         /// </summary>
-        //IPvpSeasonsClient Seasons { get; }
+        IPvpSeasonsClient Seasons { get; }
 
         /// <summary>
         /// Gets the PvP stats.
