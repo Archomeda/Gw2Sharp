@@ -12,6 +12,19 @@
 
 ### Refactoring
 - **Breaking:** The class `Gw2Sharp.WebApi.V2.Models.PvpStatsLadders` has been fully removed since it's no longer used
+- **Breaking:** The following properties have had their types changed from `DateTime` to `DateTimeOffset`:
+  - `LastModified` and `Created` in `Gw2Sharp.WebApi.V2.Models.Account`
+  - `LastModified` and `Created` in `Gw2Sharp.WebApi.V2.Models.Character`
+  - `LastModified` and `Created` in `Gw2Sharp.WebApi.V2.Models.CharactersCore`
+  - `Created` in `Gw2Sharp.WebApi.V2.Models.CommerceTransactionCurrent`
+  - `Created` and `Purchased` in `Gw2Sharp.WebApi.V2.Models.CommerceTransactionHistory`
+  - `Time` in `Gw2Sharp.WebApi.V2.Models.GuildLog`
+  - `Joined` in `Gw2Sharp.WebApi.V2.Models.GuildMember`
+  - `Started` and `Ended` in `Gw2Sharp.WebApi.V2.Models.GuildTeamGame`
+  - `ExpiresAt` and `IssuedAt` in `Gw2Sharp.WebApi.V2.Models.SubTokenInfo`
+- **Breaking:** The following arguments have had their types changed from `DateTime` to `DateTimeOffset`:
+  - `expire` in `Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.Expires()`
+  - `expire` in `Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.Expires()`
 
 ## 0.5.0
 ### Endpoints
