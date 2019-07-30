@@ -18,13 +18,13 @@ before_build:
   - dotnet tool install --global dotnet-sonarscanner
   - choco install -y opencover.portable
   - ps: >-
-      (Get-Content Gw2Sharp/Gw2Sharp.csproj) `
-        -replace '<Version>([^<]*)</Version>', "<Version>`$1-appveyor.$env:APPVEYOR_BUILD_VERSION</Version>" |
-      Out-File Gw2Sharp/Gw2Sharp.csproj
-  - ps: >-
       $version = Get-Content Gw2Sharp/Gw2Sharp.csproj | Select-String -Pattern '<Version>([^<]*)</Version>' -AllMatches | % { $_.Matches.Groups[1].Value }
 
       Update-AppveyorBuild -Version "$version-$env:APPVEYOR_BUILD_VERSION"
+  - ps: >-
+      (Get-Content Gw2Sharp/Gw2Sharp.csproj) `
+        -replace '<Version>([^<]*)</Version>', "<Version>`$1-appveyor.$env:APPVEYOR_BUILD_VERSION</Version>" |
+      Out-File Gw2Sharp/Gw2Sharp.csproj
   - ps: >-
       if (!(Test-Path env:APPVEYOR_PULL_REQUEST_NUMBER)) {
         if ($env:APPVEYOR_REPO_TAG -eq "true") {
