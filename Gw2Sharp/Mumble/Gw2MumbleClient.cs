@@ -40,14 +40,19 @@ namespace Gw2Sharp.Mumble
                 () => this.memoryMappedFile.Value.CreateViewAccessor(), true);
         }
 
-        private string identityJson = EMPTY_IDENTITY;
+        private string currentIdentityJson = EMPTY_IDENTITY;
+        private string? newIdentityJson;
         private CharacterIdentity? identityObject;
         private CharacterIdentity Identity
         {
             get
             {
-                if (this.identityObject == null)
-                    this.identityObject = JsonConvert.DeserializeObject<CharacterIdentity>(this.identityJson);
+                if (this.identityObject == null || (this.newIdentityJson != null && this.newIdentityJson != this.currentIdentityJson))
+                {
+                    this.currentIdentityJson = this.newIdentityJson ?? EMPTY_IDENTITY;
+                    this.newIdentityJson = null;
+                    this.identityObject = JsonConvert.DeserializeObject<CharacterIdentity>(this.currentIdentityJson);
+                }
                 return this.identityObject;
             }
         }
@@ -163,13 +168,10 @@ namespace Gw2Sharp.Mumble
         {
             this.memoryMappedViewAccessor.Value.Read<Gw2LinkedMem>(0, out var linkedMem);
 
-            this.identityJson = new string(linkedMem.identity);
             this.Name = new string(linkedMem.name);
             this.IsAvailable = this.Name == MUMBLE_LINK_GAME_NAME;
 
-            this.identityJson = this.IsAvailable ? new string(linkedMem.identity) : EMPTY_IDENTITY;
-            this.identityObject = null;
-
+            this.newIdentityJson = this.IsAvailable ? new string(linkedMem.identity) : null;
             this.linkedMem = linkedMem;
         }
 
