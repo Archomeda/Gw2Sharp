@@ -159,7 +159,7 @@ For your convenience, the following list gives an overview of the endpoints that
  /v2/pvp/seasons/`:id`/leaderboards/`:board`/`:region` | ❌ |
  ~~/v2/pvp/sigils~~ | ✖️ |
  /v2/pvp/standings | ❌ |
- /v2/pvp/stats | ✔️🔑📄📚📦 | [`Gw2Client.WebApi.V2.Pvp.Stats`](../api/Gw2Sharp.WebApi.V2.Clients.PvpStatsClient.html)
+ /v2/pvp/stats | ✔️🔑 | [`Gw2Client.WebApi.V2.Pvp.Stats`](../api/Gw2Sharp.WebApi.V2.Clients.PvpStatsClient.html)
  /v2/quaggans | ❌ |
  /v2/quests | ❌✨ |
  /v2/races | ❌ |
