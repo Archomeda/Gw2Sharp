@@ -23,7 +23,7 @@ before_build:
       Update-AppveyorBuild -Version "$version-$env:APPVEYOR_BUILD_VERSION"
 
       (Get-Content Gw2Sharp/Gw2Sharp.csproj) `
-        -replace '<Version>([^<]*)</Version>', "<Version>`$version-appveyor.$env:APPVEYOR_BUILD_VERSION</Version>" |
+        -replace '<Version>([^<]*)</Version>', "<Version>$version-appveyor.$env:APPVEYOR_BUILD_VERSION</Version>" |
       Out-File Gw2Sharp/Gw2Sharp.csproj
   - ps: >-
       if (!(Test-Path env:APPVEYOR_PULL_REQUEST_NUMBER)) {
