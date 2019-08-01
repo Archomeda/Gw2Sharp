@@ -5,21 +5,23 @@ It uses the latest C# 8.0 features like Nullable Reference Types because they're
 This library has been written to be as close as possible to the official API structure, with a few exceptions to make life easier.
 *Make sure to read the [introductory guide](xref:Guides.Introduction) to get started.*
 
-### Endpoints
-Check the [list of endpoints](xref:Guides.Services) for the supported endpoints.
+## Supported services
+The following services supported by Gw2Sharp:
+- Render service - [introduction](xref:Guides.Introduction#render-service)
+- WebAPI v2 - [introduction](xref:Guides.Introduction#web-api-v2), [endpoints](xref:Guides.Endpoints)
 
-### Requirements
+## Requirements
 This project targets .NET Standard 2.0.
 It supports the C# 8.0 Nullable Reference Types feature for your convenience (which is available since Visual Studio 2019), but it's not required when consuming the library.
 
-### Installing
+## Installing
 You can find the library on [NuGet](https://www.nuget.org/packages/Gw2Sharp/), or you can install it by running the following command in the package manager:
 
 ```powershell
 Install-Package Gw2Sharp
 ```
 
-### Additional resources
+## Additional resources
 - [GW2 Development Community Discord](https://discord.gg/hNcpDT3) - Discussions about Gw2Sharp and other API related projects
 - [Guild Wars 2 Wiki](https://wiki.guildwars2.com/wiki/API) - Community Wiki articles about the API
 - [GitHub repository](https://github.com/Archomeda/Gw2Sharp)

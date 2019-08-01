@@ -7,31 +7,69 @@ title: Gw2Sharp Introduction
 The library is written to be as close as possible with the API endpoints.
 This means that the basic functionality is easy to understand.
 
-You start with creating a `Connection`:
+Start with creating a `Connection`:
 ```cs
 // The constructor also accepts overloads with an access token and locale
 var connection = new Gw2Sharp.Connection();
 ```
 
-Then you'll need to create the `Gw2Client`:
+Then, create the `Gw2Client`:
 ```cs
 var client = new Gw2Sharp.Gw2Client(connection);
+```
+
+Now you're ready!
+
+To get started with a specific service, go to one of the following services supported by Gw2Sharp:
+- [Render service](#render-service)
+- [WebAPI v2](#web-api-v2)
+
+---
+
+## Render service
+Accessing the render service is done through the main `Gw2Sharp.Gw2Client`:
+```cs
 var renderClient = client.WebApi.Render;
+```
+
+The render service client exposes a few methods that help with downloading image assets from the Guild Wars 2 render service.
+For example:
+```cs
+var appleUrl = "https://render.guildwars2.com/file/17520D2F53CF62BFA696EDE02DA1F77445A9F796/63265.png";
+
+// Downloads the apple icon into a byte array asynchronously
+var apple = await renderClient.DownloadToByteArrayAsync(appleUrl);
+
+// Downloads the apple icon into a stream asynchronously
+using var appleStream = new MemoryStream();
+await renderClient.DownloadToStreamAsync(appleStream, appleUrl);
+```
+
+**Related topics:**
+- [Caching](xref:Guides.Caching)
+- [Exception handling](xref:Guides.ExceptionHandling)
+- [Using RenderUrl](xref:Guides.RenderUrl)
+
+## Web API v2
+Accessing the web API v2 service is done through the main `Gw2Sharp.Gw2Client`:
+```cs
 var webApiClient = client.WebApi.V2;
 ```
 
-Now you're ready!  
-Keep in mind that all API calls are done asynchronously.
-Depending on the API endpoint, you'll find that the following methods are available:
+This client exposes the web API endpoints that are available at https://api.guildwars2.com/v2 in a 1:1 relation.
+This means that, for example if you want to access the unlocked mount skins on your account, you can access it in the same path as the web API:
+
+```cs
+var unlockedMountSkinsClient = webApiClient.Account.Mounts.Skins;
+```
+
+Next step is to actually get the information from the API.  
+Depending on the endpoint, you'll find that the following methods are available:
 - `IdsAsync()` - Gets the full list of ids
 - `GetAsync()` - Gets a single item or an API blob object
 - `ManyAsync()` - Gets multiple items at once (bulk)
 - `PageAsync()` - Gets a page
 - `AllAsync()` - Gets all items at once (bulk all)
-
-Check the [services](xref:Guides.Services) for the full list of supported services.
-
-If an endpoint has sub-endpoints, you can access them as a property.
 
 For example, you can do the following:
 
@@ -45,7 +83,7 @@ var item = await client.WebApi.V2.Achievements.GetAsync(123);
 // Get multiple gliders
 var items = await client.WebApi.V2.Gliders.ManyAsync(new[] { 123, 456 });
 
-// Get itemstats by page
+// Get itemstats by page (page numbers are 0-indexed)
 var page = await client.WebApi.V2.Itemstats.PageAsync(5);
 
 // Get all colors
@@ -53,4 +91,19 @@ var all = await client.WebApi.V2.Colors.AllAsync();
 
 // Access account sub-endpoints (e.g. account/home/cats that contains blob data)
 var accountCats = await client.WebApi.V2.Account.Home.Cats.GetAsync();
+
+// Access sub-endpoints that require an id (e.g. characters/:id)
+var characters = await client.WebApi.V2.Characters.AllAsync();
+var tybaltLeftpaw = await client.WebApi.V2.Characters["Tybalt Leftpaw"].GetAsync();
+
+// Accessing a nested sub-endpoint works as well
+var tybaltsSpecializations = await client.WebApi.V2.Characters["Tybalt Leftpaw"].Specializations.GetAsync();
 ```
+
+**Related topics:**
+- [Caching](xref:Guides.Caching)
+- [Checking HTTP headers](xref:Guides.HttpHeaders)
+- [Checking the Last-Modified header](xref:Guides.LastModified)
+- [Creating and using subtokens](xref:Guides.Subtokens)
+- [Exception handling](xref:Guides.ExceptionHandling)
+- [Supported endpoints](xref:Guides.Endpoints)
