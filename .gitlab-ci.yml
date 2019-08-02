@@ -117,6 +117,7 @@ deploy:docs:
     - git config --global user.email $GITLAB_USER_EMAIL
     - git clone https://${GITHUB_PAGES_TOKEN}@github.com/Archomeda/Gw2Sharp.git --branch gh-pages repo_doc
     - mkdir -p repo_doc/${CI_COMMIT_REF_NAME}
+    - rm -rf repo_doc/${CI_COMMIT_REF_NAME}/*
     - cp -rf doc/* repo_doc/${CI_COMMIT_REF_NAME}
     - cd repo_doc
     - git add -A
