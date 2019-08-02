@@ -2122,18 +2122,59 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><a class="xref" href="Gw2Sharp.BaseClient.html">BaseClient</a></div>
-    <div class="level2"><span class="xref">CharactersIdClient</span></div>
+    <div class="level2"><a class="xref" href="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html">BaseEndpointClient</a>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.Models.Character.html">Character</a>&gt;</div>
+    <div class="level3"><a class="xref" href="Gw2Sharp.WebApi.V2.Clients.BaseEndpointBlobClient-1.html">BaseEndpointBlobClient</a>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.Models.Character.html">Character</a>&gt;</div>
+    <div class="level4"><span class="xref">CharactersIdClient</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.html">ICharactersIdClient</a></div>
+    <div><a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IAuthenticatedClient-1.html">IAuthenticatedClient</a>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.Models.Character.html">Character</a>&gt;</div>
+    <div><a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IBlobClient-1.html">IBlobClient</a>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.Models.Character.html">Character</a>&gt;</div>
+    <div><a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IEndpointClient.html">IEndpointClient</a></div>
     <div><a class="xref" href="Gw2Sharp.IClient.html">IClient</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.BaseEndpointBlobClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBlobClient_1_GetAsync_CancellationToken_">BaseEndpointBlobClient&lt;Character&gt;.GetAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_Implementation">BaseEndpointClient&lt;Character&gt;.Implementation</a>
+    </div>
+    <div>
+      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_EndpointPath">BaseEndpointClient&lt;Character&gt;.EndpointPath</a>
+    </div>
+    <div>
+      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_EndpointPathParameters">BaseEndpointClient&lt;Character&gt;.EndpointPathParameters</a>
+    </div>
+    <div>
+      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_SchemaVersion">BaseEndpointClient&lt;Character&gt;.SchemaVersion</a>
+    </div>
+    <div>
+      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_IsPaginated">BaseEndpointClient&lt;Character&gt;.IsPaginated</a>
+    </div>
+    <div>
+      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_IsAuthenticated">BaseEndpointClient&lt;Character&gt;.IsAuthenticated</a>
+    </div>
+    <div>
+      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_IsLocalized">BaseEndpointClient&lt;Character&gt;.IsLocalized</a>
+    </div>
+    <div>
+      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_HasBlobData">BaseEndpointClient&lt;Character&gt;.HasBlobData</a>
+    </div>
+    <div>
+      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_IsAllExpandable">BaseEndpointClient&lt;Character&gt;.IsAllExpandable</a>
+    </div>
+    <div>
+      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_IsBulkExpandable">BaseEndpointClient&lt;Character&gt;.IsBulkExpandable</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.html">Gw2Sharp.WebApi.V2.Clients</a></h6>
   <h6><strong>Assembly</strong>: Gw2Sharp.dll</h6>
   <h5 id="Gw2Sharp_WebApi_V2_Clients_CharactersIdClient_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class CharactersIdClient : BaseClient, IClientInternal, ICharactersIdClient, IClient</code></pre>
+    <pre><code class="lang-csharp hljs">public class CharactersIdClient : BaseEndpointBlobClient&lt;Character&gt;, IClientInternal, ICharactersIdClient, IAuthenticatedClient&lt;Character&gt;, IBlobClient&lt;Character&gt;, IEndpointClient, IClient</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -2535,6 +2576,15 @@ Requires scopes: account, characters, progression.</p>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.html">ICharactersIdClient</a>
+  </div>
+  <div>
+      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IAuthenticatedClient-1.html">IAuthenticatedClient&lt;TObject&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IBlobClient-1.html">IBlobClient&lt;TObject&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IEndpointClient.html">IEndpointClient</a>
   </div>
   <div>
       <a class="xref" href="Gw2Sharp.IClient.html">IClient</a>
