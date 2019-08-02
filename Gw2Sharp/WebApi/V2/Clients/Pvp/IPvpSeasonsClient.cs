@@ -13,5 +13,14 @@ namespace Gw2Sharp.WebApi.V2.Clients
         ILocalizedClient<PvpSeason>,
         IPaginatedClient<PvpSeason>
     {
+        /// <summary>
+        /// Gets a PvP season by id.
+        /// </summary>
+        IPvpSeasonsIdClient this[Guid seasonId] { get; }
+
+        /// <summary>
+        /// Gets a PvP season by id.
+        /// </summary>
+        IPvpSeasonsIdClient this[string seasonId] { get; }
     }
 }

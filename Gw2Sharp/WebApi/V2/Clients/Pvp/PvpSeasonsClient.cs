@@ -18,5 +18,11 @@ namespace Gw2Sharp.WebApi.V2.Clients
         protected internal PvpSeasonsClient(IConnection connection, IGw2Client gw2Client) :
             base(connection, gw2Client)
         { }
+
+        /// <inheritdoc />
+        public IPvpSeasonsIdClient this[Guid seasonId] => new PvpSeasonsIdClient(this.Connection, this.Gw2Client!, seasonId);
+
+        /// <inheritdoc />
+        public IPvpSeasonsIdClient this[string seasonId] => this[Guid.Parse(seasonId)];
     }
 }

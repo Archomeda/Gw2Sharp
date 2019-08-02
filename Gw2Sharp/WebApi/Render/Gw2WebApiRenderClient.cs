@@ -52,7 +52,7 @@ namespace Gw2Sharp.WebApi.Render
                 throw new ArgumentNullException(nameof(targetStream));
             if (renderUrl == null)
                 throw new ArgumentNullException(nameof(renderUrl));
-#pragma warning disable S2583 // Conditionally executed blocks should be reachable - false positive in SonarCloud
+#pragma warning disable S2583 // Conditionally executed blocks should be reachable - false positive in SonarCloud (SonarSource/sonar-dotnet#1347)
             if (string.IsNullOrWhiteSpace(renderUrl))
                 throw new ArgumentException("Render URL may not be empty or only contain whitespaces", nameof(renderUrl));
 #pragma warning restore S2583 // Conditionally executed blocks should be reachable
@@ -77,7 +77,7 @@ namespace Gw2Sharp.WebApi.Render
         {
             if (renderUrl == null)
                 throw new ArgumentNullException(nameof(renderUrl));
-#pragma warning disable S2583 // Conditionally executed blocks should be reachable - false positive in SonarCloud
+#pragma warning disable S2583 // Conditionally executed blocks should be reachable - false positive in SonarCloud (SonarSource/sonar-dotnet#1347)
             if (string.IsNullOrWhiteSpace(renderUrl))
                 throw new ArgumentException("Render URL may not be empty or only contain whitespaces", nameof(renderUrl));
 #pragma warning restore S2583 // Conditionally executed blocks should be reachable
