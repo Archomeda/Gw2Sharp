@@ -1158,6 +1158,18 @@
                             <a href="Gw2Sharp.WebApi.V2.Clients.IPvpSeasonsClient.html" title="IPvpSeasonsClient" class="active">IPvpSeasonsClient</a>
                           </li>
                           <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.Clients.IPvpSeasonsIdClient.html" title="IPvpSeasonsIdClient" class="">IPvpSeasonsIdClient</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.Clients.IPvpSeasonsLeaderboardsClient.html" title="IPvpSeasonsLeaderboardsClient" class="">IPvpSeasonsLeaderboardsClient</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.Clients.IPvpSeasonsLeaderboardsIdClient.html" title="IPvpSeasonsLeaderboardsIdClient" class="">IPvpSeasonsLeaderboardsIdClient</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.Clients.IPvpSeasonsLeaderboardsRegionIdClient.html" title="IPvpSeasonsLeaderboardsRegionIdClient" class="">IPvpSeasonsLeaderboardsRegionIdClient</a>
+                          </li>
+                          <li class="">
                             <a href="Gw2Sharp.WebApi.V2.Clients.IPvpStatsClient.html" title="IPvpStatsClient" class="">IPvpStatsClient</a>
                           </li>
                           <li class="">
@@ -1231,6 +1243,18 @@
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.WebApi.V2.Clients.PvpSeasonsClient.html" title="PvpSeasonsClient" class="">PvpSeasonsClient</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.Clients.PvpSeasonsIdClient.html" title="PvpSeasonsIdClient" class="">PvpSeasonsIdClient</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.Clients.PvpSeasonsLeaderboardsClient.html" title="PvpSeasonsLeaderboardsClient" class="">PvpSeasonsLeaderboardsClient</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.Clients.PvpSeasonsLeaderboardsIdClient.html" title="PvpSeasonsLeaderboardsIdClient" class="">PvpSeasonsLeaderboardsIdClient</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.Clients.PvpSeasonsLeaderboardsRegionIdClient.html" title="PvpSeasonsLeaderboardsRegionIdClient" class="">PvpSeasonsLeaderboardsRegionIdClient</a>
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.WebApi.V2.Clients.PvpStatsClient.html" title="PvpStatsClient" class="">PvpStatsClient</a>
@@ -2013,6 +2037,12 @@
                             <a href="Gw2Sharp.WebApi.V2.Models.PvpSeasonLeaderboard.html" title="PvpSeasonLeaderboard" class="">PvpSeasonLeaderboard</a>
                           </li>
                           <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.Models.PvpSeasonLeaderboardEntry.html" title="PvpSeasonLeaderboardEntry" class="">PvpSeasonLeaderboardEntry</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.Models.PvpSeasonLeaderboardEntryScore.html" title="PvpSeasonLeaderboardEntryScore" class="">PvpSeasonLeaderboardEntryScore</a>
+                          </li>
+                          <li class="">
                             <a href="Gw2Sharp.WebApi.V2.Models.PvpSeasonLeaderboardScoring.html" title="PvpSeasonLeaderboardScoring" class="">PvpSeasonLeaderboardScoring</a>
                           </li>
                           <li class="">
@@ -2142,6 +2172,94 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public interface IPvpSeasonsClient : IAllExpandableClient&lt;PvpSeason&gt;, IBulkExpandableClient&lt;PvpSeason, Guid&gt;, ILocalizedClient&lt;PvpSeason&gt;, IPaginatedClient&lt;PvpSeason&gt;, IEndpointClient, IClient</code></pre>
   </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Gw2Sharp_WebApi_V2_Clients_IPvpSeasonsClient_Item_" data-uid="Gw2Sharp.WebApi.V2.Clients.IPvpSeasonsClient.Item*"></a>
+  <h4 id="Gw2Sharp_WebApi_V2_Clients_IPvpSeasonsClient_Item_Guid_" data-uid="Gw2Sharp.WebApi.V2.Clients.IPvpSeasonsClient.Item(Guid)">Item[Guid]</h4>
+  <div class="markdown level1 summary"><p>Gets a PvP season by id.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IPvpSeasonsIdClient this[Guid seasonId] { get; }</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Guid</span></td>
+        <td><span class="parametername">seasonId</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IPvpSeasonsIdClient.html">IPvpSeasonsIdClient</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Gw2Sharp_WebApi_V2_Clients_IPvpSeasonsClient_Item_" data-uid="Gw2Sharp.WebApi.V2.Clients.IPvpSeasonsClient.Item*"></a>
+  <h4 id="Gw2Sharp_WebApi_V2_Clients_IPvpSeasonsClient_Item_System_String_" data-uid="Gw2Sharp.WebApi.V2.Clients.IPvpSeasonsClient.Item(System.String)">Item[String]</h4>
+  <div class="markdown level1 summary"><p>Gets a PvP season by id.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IPvpSeasonsIdClient this[string seasonId] { get; }</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">seasonId</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IPvpSeasonsIdClient.html">IPvpSeasonsIdClient</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           

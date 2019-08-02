@@ -84,23 +84,26 @@
                   <ul class="nav level1">
                     <li class="">
                       <span class="expand-stub"></span>
-                      <a class="">Guides</a>
+                      <a class="">Basic Guides</a>
                         
                         <ul class="nav level2">
                           <li class="active">
                             <a href="introduction.html" title="Introduction" class="active">Introduction</a>
                           </li>
                           <li class="">
+                            <a href="endpoints.html" title="Supported endpoints" class="">Supported endpoints</a>
+                          </li>
+                          <li class="">
+                            <a href="exception-handling.html" title="Exception handling" class="">Exception handling</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Advanced Guides</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
                             <a href="caching.html" title="Caching" class="">Caching</a>
-                          </li>
-                          <li class="">
-                            <a href="services.html" title="Supported services" class="">Supported services</a>
-                          </li>
-                          <li class="">
-                            <a href="parameterized-endpoints.html" title="Parameterized endpoints" class="">Parameterized endpoints</a>
-                          </li>
-                          <li class="">
-                            <a href="subtokens.html" title="Subtokens" class="">Subtokens</a>
                           </li>
                           <li class="">
                             <a href="http-headers.html" title="HTTP headers" class="">HTTP headers</a>
@@ -109,10 +112,19 @@
                             <a href="last-modified.html" title="Last-Modified" class="">Last-Modified</a>
                           </li>
                           <li class="">
-                            <a href="exception-handling.html" title="Exception handling" class="">Exception handling</a>
+                            <a href="subtokens.html" title="Subtokens" class="">Subtokens</a>
                           </li>
                           <li class="">
                             <a href="symbols.html" title="Debug symbols" class="">Debug symbols</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Tips</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="render-url.html" title="Using RenderUrl" class="">Using RenderUrl</a>
                           </li>
                         </ul>  </li>
                   </ul>        </div>
@@ -127,15 +139,44 @@
 
 <p>The library is written to be as close as possible with the API endpoints.
 This means that the basic functionality is easy to understand.</p>
-<p>You start with creating a <code>Connection</code>:</p>
+<p>Start with creating a <code>Connection</code>:</p>
 <pre><code class="lang-cs">// The constructor also accepts overloads with an access token and locale
 var connection = new Gw2Sharp.Connection();
-</code></pre><p>Then you&#39;ll need to create the <code>Gw2Client</code>:</p>
+</code></pre><p>Then, create the <code>Gw2Client</code>:</p>
 <pre><code class="lang-cs">var client = new Gw2Sharp.Gw2Client(connection);
-var renderClient = client.WebApi.Render;
-var webApiClient = client.WebApi.V2;
-</code></pre><p>Now you&#39;re ready!<br>Keep in mind that all API calls are done asynchronously.
-Depending on the API endpoint, you&#39;ll find that the following methods are available:</p>
+</code></pre><p>Now you&#39;re ready!</p>
+<p>To get started with a specific service, go to one of the following services supported by Gw2Sharp:</p>
+<ul>
+<li><a href="#render-service">Render service</a></li>
+<li><a href="#web-api-v2">WebAPI v2</a></li>
+</ul>
+<hr>
+<h2 id="render-service">Render service</h2>
+<p>Accessing the render service is done through the main <code>Gw2Sharp.Gw2Client</code>:</p>
+<pre><code class="lang-cs">var renderClient = client.WebApi.Render;
+</code></pre><p>The render service client exposes a few methods that help with downloading image assets from the Guild Wars 2 render service.
+For example:</p>
+<pre><code class="lang-cs">var appleUrl = &quot;https://render.guildwars2.com/file/17520D2F53CF62BFA696EDE02DA1F77445A9F796/63265.png&quot;;
+
+// Downloads the apple icon into a byte array asynchronously
+var apple = await renderClient.DownloadToByteArrayAsync(appleUrl);
+
+// Downloads the apple icon into a stream asynchronously
+using var appleStream = new MemoryStream();
+await renderClient.DownloadToStreamAsync(appleStream, appleUrl);
+</code></pre><p><strong>Related topics:</strong></p>
+<ul>
+<li><a class="xref" href="caching.html">Caching</a></li>
+<li><a class="xref" href="exception-handling.html">Exception handling</a></li>
+<li><a class="xref" href="render-url.html">Using RenderUrl</a></li>
+</ul>
+<h2 id="web-api-v2">Web API v2</h2>
+<p>Accessing the web API v2 service is done through the main <code>Gw2Sharp.Gw2Client</code>:</p>
+<pre><code class="lang-cs">var webApiClient = client.WebApi.V2;
+</code></pre><p>This client exposes the web API endpoints that are available at <a href="https://api.guildwars2.com/v2">https://api.guildwars2.com/v2</a> in a 1:1 relation.
+This means that, for example if you want to access the unlocked mount skins on your account, you can access it in the same path as the web API:</p>
+<pre><code class="lang-cs">var unlockedMountSkinsClient = webApiClient.Account.Mounts.Skins;
+</code></pre><p>Next step is to actually get the information from the API.<br>Depending on the endpoint, you&#39;ll find that the following methods are available:</p>
 <ul>
 <li><code>IdsAsync()</code> - Gets the full list of ids</li>
 <li><code>GetAsync()</code> - Gets a single item or an API blob object</li>
@@ -143,8 +184,6 @@ Depending on the API endpoint, you&#39;ll find that the following methods are av
 <li><code>PageAsync()</code> - Gets a page</li>
 <li><code>AllAsync()</code> - Gets all items at once (bulk all)</li>
 </ul>
-<p>Check the <a class="xref" href="services.html">services</a> for the full list of supported services.</p>
-<p>If an endpoint has sub-endpoints, you can access them as a property.</p>
 <p>For example, you can do the following:</p>
 <pre><code class="lang-cs">// Get all item ids
 var ids = await client.WebApi.V2.Items.IdsAsync();
@@ -155,7 +194,7 @@ var item = await client.WebApi.V2.Achievements.GetAsync(123);
 // Get multiple gliders
 var items = await client.WebApi.V2.Gliders.ManyAsync(new[] { 123, 456 });
 
-// Get itemstats by page
+// Get itemstats by page (page numbers are 0-indexed)
 var page = await client.WebApi.V2.Itemstats.PageAsync(5);
 
 // Get all colors
@@ -163,7 +202,23 @@ var all = await client.WebApi.V2.Colors.AllAsync();
 
 // Access account sub-endpoints (e.g. account/home/cats that contains blob data)
 var accountCats = await client.WebApi.V2.Account.Home.Cats.GetAsync();
-</code></pre></article>
+
+// Access sub-endpoints that require an id (e.g. characters/:id)
+var characters = await client.WebApi.V2.Characters.AllAsync();
+var tybaltLeftpaw = await client.WebApi.V2.Characters[&quot;Tybalt Leftpaw&quot;].GetAsync();
+
+// Accessing a nested sub-endpoint works as well
+var tybaltsSpecializations = await client.WebApi.V2.Characters[&quot;Tybalt Leftpaw&quot;].Specializations.GetAsync();
+</code></pre><p><strong>Related topics:</strong></p>
+<ul>
+<li><a class="xref" href="caching.html">Caching</a></li>
+<li><a class="xref" href="http-headers.html">Checking HTTP headers</a></li>
+<li><a class="xref" href="last-modified.html">Checking the Last-Modified header</a></li>
+<li><a class="xref" href="subtokens.html">Creating and using subtokens</a></li>
+<li><a class="xref" href="exception-handling.html">Exception handling</a></li>
+<li><a class="xref" href="endpoints.html">Supported endpoints</a></li>
+</ul>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
