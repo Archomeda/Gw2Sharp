@@ -9,7 +9,10 @@
 - Add `/v2/pvp/heroes`
 - Add `/v2/pvp/ranks`
 - Add `/v2/pvp/seasons`
+- Add `/v2/pvp/seasons/:id/leaderboards`
+- Add `/v2/pvp/seasons/:id/leaderboards/:board/:region`
 - Add `/v2/pvp/stats`
+- Change `ICharactersIdClient` to use `IBlobClient<Character>` in order to consistently accept `GetAsync()` (`/v2/characters/:id`)
 
 ### Refactoring
 - **Breaking:** The class `Gw2Sharp.WebApi.V2.Models.PvpStatsLadders` has been fully removed since it's no longer used
