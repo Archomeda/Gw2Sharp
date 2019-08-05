@@ -12719,6 +12719,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.IPvpClient.Seasons
   nameWithType: IPvpClient.Seasons
+- uid: Gw2Sharp.WebApi.V2.Clients.IPvpClient.Standings
+  name: Standings
+  href: api/Gw2Sharp.WebApi.V2.Clients.IPvpClient.html#Gw2Sharp_WebApi_V2_Clients_IPvpClient_Standings
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.IPvpClient.Standings
+  fullName: Gw2Sharp.WebApi.V2.Clients.IPvpClient.Standings
+  nameWithType: IPvpClient.Standings
+- uid: Gw2Sharp.WebApi.V2.Clients.IPvpClient.Standings*
+  name: Standings
+  href: api/Gw2Sharp.WebApi.V2.Clients.IPvpClient.html#Gw2Sharp_WebApi_V2_Clients_IPvpClient_Standings_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.IPvpClient.Standings
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.IPvpClient.Standings
+  nameWithType: IPvpClient.Standings
 - uid: Gw2Sharp.WebApi.V2.Clients.IPvpClient.Stats
   name: Stats
   href: api/Gw2Sharp.WebApi.V2.Clients.IPvpClient.html#Gw2Sharp_WebApi_V2_Clients_IPvpClient_Stats
@@ -12902,12 +12915,24 @@ references:
   commentId: T:Gw2Sharp.WebApi.V2.Clients.IPvpSeasonsLeaderboardsRegionIdClient
   fullName: Gw2Sharp.WebApi.V2.Clients.IPvpSeasonsLeaderboardsRegionIdClient
   nameWithType: IPvpSeasonsLeaderboardsRegionIdClient
+- uid: Gw2Sharp.WebApi.V2.Clients.IPvpStandingsClient
+  name: IPvpStandingsClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.IPvpStandingsClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.IPvpStandingsClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.IPvpStandingsClient
+  nameWithType: IPvpStandingsClient
 - uid: Gw2Sharp.WebApi.V2.Clients.IPvpStatsClient
   name: IPvpStatsClient
   href: api/Gw2Sharp.WebApi.V2.Clients.IPvpStatsClient.html
   commentId: T:Gw2Sharp.WebApi.V2.Clients.IPvpStatsClient
   fullName: Gw2Sharp.WebApi.V2.Clients.IPvpStatsClient
   nameWithType: IPvpStatsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.IQuaggansClient
+  name: IQuaggansClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.IQuaggansClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.IQuaggansClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.IQuaggansClient
+  nameWithType: IQuaggansClient
 - uid: Gw2Sharp.WebApi.V2.Clients.ItemsClient
   name: ItemsClient
   href: api/Gw2Sharp.WebApi.V2.Clients.ItemsClient.html
@@ -13353,6 +13378,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.PvpClient.Seasons
   nameWithType: PvpClient.Seasons
+- uid: Gw2Sharp.WebApi.V2.Clients.PvpClient.Standings
+  name: Standings
+  href: api/Gw2Sharp.WebApi.V2.Clients.PvpClient.html#Gw2Sharp_WebApi_V2_Clients_PvpClient_Standings
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.PvpClient.Standings
+  fullName: Gw2Sharp.WebApi.V2.Clients.PvpClient.Standings
+  nameWithType: PvpClient.Standings
+- uid: Gw2Sharp.WebApi.V2.Clients.PvpClient.Standings*
+  name: Standings
+  href: api/Gw2Sharp.WebApi.V2.Clients.PvpClient.html#Gw2Sharp_WebApi_V2_Clients_PvpClient_Standings_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.PvpClient.Standings
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.PvpClient.Standings
+  nameWithType: PvpClient.Standings
 - uid: Gw2Sharp.WebApi.V2.Clients.PvpClient.Stats
   name: Stats
   href: api/Gw2Sharp.WebApi.V2.Clients.PvpClient.html#Gw2Sharp_WebApi_V2_Clients_PvpClient_Stats
@@ -13679,6 +13717,25 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.PvpSeasonsLeaderboardsRegionIdClient.SeasonId
   nameWithType: PvpSeasonsLeaderboardsRegionIdClient.SeasonId
+- uid: Gw2Sharp.WebApi.V2.Clients.PvpStandingsClient
+  name: PvpStandingsClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.PvpStandingsClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.PvpStandingsClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.PvpStandingsClient
+  nameWithType: PvpStandingsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.PvpStandingsClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client)
+  name: PvpStandingsClient(IConnection, IGw2Client)
+  href: api/Gw2Sharp.WebApi.V2.Clients.PvpStandingsClient.html#Gw2Sharp_WebApi_V2_Clients_PvpStandingsClient__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.PvpStandingsClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client)
+  fullName: Gw2Sharp.WebApi.V2.Clients.PvpStandingsClient.PvpStandingsClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client)
+  nameWithType: PvpStandingsClient.PvpStandingsClient(IConnection, IGw2Client)
+- uid: Gw2Sharp.WebApi.V2.Clients.PvpStandingsClient.#ctor*
+  name: PvpStandingsClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.PvpStandingsClient.html#Gw2Sharp_WebApi_V2_Clients_PvpStandingsClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.PvpStandingsClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.PvpStandingsClient.PvpStandingsClient
+  nameWithType: PvpStandingsClient.PvpStandingsClient
 - uid: Gw2Sharp.WebApi.V2.Clients.PvpStatsClient
   name: PvpStatsClient
   href: api/Gw2Sharp.WebApi.V2.Clients.PvpStatsClient.html
@@ -13698,6 +13755,25 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.PvpStatsClient.PvpStatsClient
   nameWithType: PvpStatsClient.PvpStatsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.QuaggansClient
+  name: QuaggansClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.QuaggansClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.QuaggansClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.QuaggansClient
+  nameWithType: QuaggansClient
+- uid: Gw2Sharp.WebApi.V2.Clients.QuaggansClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client)
+  name: QuaggansClient(IConnection, IGw2Client)
+  href: api/Gw2Sharp.WebApi.V2.Clients.QuaggansClient.html#Gw2Sharp_WebApi_V2_Clients_QuaggansClient__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.QuaggansClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client)
+  fullName: Gw2Sharp.WebApi.V2.Clients.QuaggansClient.QuaggansClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client)
+  nameWithType: QuaggansClient.QuaggansClient(IConnection, IGw2Client)
+- uid: Gw2Sharp.WebApi.V2.Clients.QuaggansClient.#ctor*
+  name: QuaggansClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.QuaggansClient.html#Gw2Sharp_WebApi_V2_Clients_QuaggansClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.QuaggansClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.QuaggansClient.QuaggansClient
+  nameWithType: QuaggansClient.QuaggansClient
 - uid: Gw2Sharp.WebApi.V2.Clients.TokenInfoClient
   name: TokenInfoClient
   href: api/Gw2Sharp.WebApi.V2.Clients.TokenInfoClient.html
@@ -14184,6 +14260,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Pvp
   nameWithType: Gw2WebApiV2Client.Pvp
+- uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Quaggans
+  name: Quaggans
+  href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_Quaggans
+  commentId: P:Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Quaggans
+  fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Quaggans
+  nameWithType: Gw2WebApiV2Client.Quaggans
+- uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Quaggans*
+  name: Quaggans
+  href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_Quaggans_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Quaggans
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Quaggans
+  nameWithType: Gw2WebApiV2Client.Quaggans
 - uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.TokenInfo
   name: TokenInfo
   href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_TokenInfo
@@ -14673,6 +14762,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Pvp
   nameWithType: IGw2WebApiV2Client.Pvp
+- uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Quaggans
+  name: Quaggans
+  href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_Quaggans
+  commentId: P:Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Quaggans
+  fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Quaggans
+  nameWithType: IGw2WebApiV2Client.Quaggans
+- uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Quaggans*
+  name: Quaggans
+  href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_Quaggans_
+  commentId: Overload:Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Quaggans
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Quaggans
+  nameWithType: IGw2WebApiV2Client.Quaggans
 - uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.TokenInfo
   name: TokenInfo
   href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_TokenInfo
@@ -28719,6 +28821,135 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.PvpSeasonRankTier.Rating
   nameWithType: PvpSeasonRankTier.Rating
+- uid: Gw2Sharp.WebApi.V2.Models.PvpStanding
+  name: PvpStanding
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpStanding.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.PvpStanding
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpStanding
+  nameWithType: PvpStanding
+- uid: Gw2Sharp.WebApi.V2.Models.PvpStanding.Best
+  name: Best
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpStanding.html#Gw2Sharp_WebApi_V2_Models_PvpStanding_Best
+  commentId: P:Gw2Sharp.WebApi.V2.Models.PvpStanding.Best
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpStanding.Best
+  nameWithType: PvpStanding.Best
+- uid: Gw2Sharp.WebApi.V2.Models.PvpStanding.Best*
+  name: Best
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpStanding.html#Gw2Sharp_WebApi_V2_Models_PvpStanding_Best_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.PvpStanding.Best
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpStanding.Best
+  nameWithType: PvpStanding.Best
+- uid: Gw2Sharp.WebApi.V2.Models.PvpStanding.Current
+  name: Current
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpStanding.html#Gw2Sharp_WebApi_V2_Models_PvpStanding_Current
+  commentId: P:Gw2Sharp.WebApi.V2.Models.PvpStanding.Current
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpStanding.Current
+  nameWithType: PvpStanding.Current
+- uid: Gw2Sharp.WebApi.V2.Models.PvpStanding.Current*
+  name: Current
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpStanding.html#Gw2Sharp_WebApi_V2_Models_PvpStanding_Current_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.PvpStanding.Current
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpStanding.Current
+  nameWithType: PvpStanding.Current
+- uid: Gw2Sharp.WebApi.V2.Models.PvpStanding.SeasonId
+  name: SeasonId
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpStanding.html#Gw2Sharp_WebApi_V2_Models_PvpStanding_SeasonId
+  commentId: P:Gw2Sharp.WebApi.V2.Models.PvpStanding.SeasonId
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpStanding.SeasonId
+  nameWithType: PvpStanding.SeasonId
+- uid: Gw2Sharp.WebApi.V2.Models.PvpStanding.SeasonId*
+  name: SeasonId
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpStanding.html#Gw2Sharp_WebApi_V2_Models_PvpStanding_SeasonId_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.PvpStanding.SeasonId
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpStanding.SeasonId
+  nameWithType: PvpStanding.SeasonId
+- uid: Gw2Sharp.WebApi.V2.Models.PvpStandingRecord
+  name: PvpStandingRecord
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.PvpStandingRecord
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpStandingRecord
+  nameWithType: PvpStandingRecord
+- uid: Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.Division
+  name: Division
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.html#Gw2Sharp_WebApi_V2_Models_PvpStandingRecord_Division
+  commentId: P:Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.Division
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.Division
+  nameWithType: PvpStandingRecord.Division
+- uid: Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.Division*
+  name: Division
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.html#Gw2Sharp_WebApi_V2_Models_PvpStandingRecord_Division_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.Division
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.Division
+  nameWithType: PvpStandingRecord.Division
+- uid: Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.Points
+  name: Points
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.html#Gw2Sharp_WebApi_V2_Models_PvpStandingRecord_Points
+  commentId: P:Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.Points
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.Points
+  nameWithType: PvpStandingRecord.Points
+- uid: Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.Points*
+  name: Points
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.html#Gw2Sharp_WebApi_V2_Models_PvpStandingRecord_Points_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.Points
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.Points
+  nameWithType: PvpStandingRecord.Points
+- uid: Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.Rating
+  name: Rating
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.html#Gw2Sharp_WebApi_V2_Models_PvpStandingRecord_Rating
+  commentId: P:Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.Rating
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.Rating
+  nameWithType: PvpStandingRecord.Rating
+- uid: Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.Rating*
+  name: Rating
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.html#Gw2Sharp_WebApi_V2_Models_PvpStandingRecord_Rating_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.Rating
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.Rating
+  nameWithType: PvpStandingRecord.Rating
+- uid: Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.Repeats
+  name: Repeats
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.html#Gw2Sharp_WebApi_V2_Models_PvpStandingRecord_Repeats
+  commentId: P:Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.Repeats
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.Repeats
+  nameWithType: PvpStandingRecord.Repeats
+- uid: Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.Repeats*
+  name: Repeats
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.html#Gw2Sharp_WebApi_V2_Models_PvpStandingRecord_Repeats_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.Repeats
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.Repeats
+  nameWithType: PvpStandingRecord.Repeats
+- uid: Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.Tier
+  name: Tier
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.html#Gw2Sharp_WebApi_V2_Models_PvpStandingRecord_Tier
+  commentId: P:Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.Tier
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.Tier
+  nameWithType: PvpStandingRecord.Tier
+- uid: Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.Tier*
+  name: Tier
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.html#Gw2Sharp_WebApi_V2_Models_PvpStandingRecord_Tier_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.Tier
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.Tier
+  nameWithType: PvpStandingRecord.Tier
+- uid: Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.TotalPoints
+  name: TotalPoints
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.html#Gw2Sharp_WebApi_V2_Models_PvpStandingRecord_TotalPoints
+  commentId: P:Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.TotalPoints
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.TotalPoints
+  nameWithType: PvpStandingRecord.TotalPoints
+- uid: Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.TotalPoints*
+  name: TotalPoints
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.html#Gw2Sharp_WebApi_V2_Models_PvpStandingRecord_TotalPoints_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.TotalPoints
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpStandingRecord.TotalPoints
+  nameWithType: PvpStandingRecord.TotalPoints
 - uid: Gw2Sharp.WebApi.V2.Models.PvpStats
   name: PvpStats
   href: api/Gw2Sharp.WebApi.V2.Models.PvpStats.html
@@ -28930,6 +29161,38 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.PvpTeamScores.Red
   nameWithType: PvpTeamScores.Red
+- uid: Gw2Sharp.WebApi.V2.Models.Quaggan
+  name: Quaggan
+  href: api/Gw2Sharp.WebApi.V2.Models.Quaggan.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.Quaggan
+  fullName: Gw2Sharp.WebApi.V2.Models.Quaggan
+  nameWithType: Quaggan
+- uid: Gw2Sharp.WebApi.V2.Models.Quaggan.Id
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.Quaggan.html#Gw2Sharp_WebApi_V2_Models_Quaggan_Id
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Quaggan.Id
+  fullName: Gw2Sharp.WebApi.V2.Models.Quaggan.Id
+  nameWithType: Quaggan.Id
+- uid: Gw2Sharp.WebApi.V2.Models.Quaggan.Id*
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.Quaggan.html#Gw2Sharp_WebApi_V2_Models_Quaggan_Id_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Quaggan.Id
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Quaggan.Id
+  nameWithType: Quaggan.Id
+- uid: Gw2Sharp.WebApi.V2.Models.Quaggan.Url
+  name: Url
+  href: api/Gw2Sharp.WebApi.V2.Models.Quaggan.html#Gw2Sharp_WebApi_V2_Models_Quaggan_Url
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Quaggan.Url
+  fullName: Gw2Sharp.WebApi.V2.Models.Quaggan.Url
+  nameWithType: Quaggan.Url
+- uid: Gw2Sharp.WebApi.V2.Models.Quaggan.Url*
+  name: Url
+  href: api/Gw2Sharp.WebApi.V2.Models.Quaggan.html#Gw2Sharp_WebApi_V2_Models_Quaggan_Url_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Quaggan.Url
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Quaggan.Url
+  nameWithType: Quaggan.Url
 - uid: Gw2Sharp.WebApi.V2.Models.Rectangle
   name: Rectangle
   href: api/Gw2Sharp.WebApi.V2.Models.Rectangle.html
