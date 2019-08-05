@@ -11,11 +11,7 @@ namespace Gw2Sharp.WebApi
     /// </summary>
     public struct RenderUrl : IEquatable<RenderUrl>
     {
-        private const string RENDER_BASE_URL = "https://render.guildwars2.com";
-
         internal IGw2Client Gw2Client { get; set; }
-
-        private readonly string renderPath;
 
         /// <summary>
         /// Creates a new <see cref="RenderUrl"/>.
@@ -25,14 +21,14 @@ namespace Gw2Sharp.WebApi
         internal RenderUrl(IGw2Client client, string url)
         {
             this.Gw2Client = client;
-            this.renderPath = new Uri(url, UriKind.Absolute).AbsolutePath;
+            this.Url = new Uri(url);
         }
 
 
         /// <summary>
         /// The URL to a resource on the Guild Wars 2 render service API.
         /// </summary>
-        public Uri Url => new Uri(new Uri(RENDER_BASE_URL), this.renderPath);
+        public Uri Url { get; private set; }
 
 
         /// <inheritdoc />

@@ -175,6 +175,11 @@ namespace Gw2Sharp.WebApi.V2
         IPvpClient Pvp { get; }
 
         /// <summary>
+        /// Gets the quaggans.
+        /// </summary>
+        IQuaggansClient Quaggans { get; }
+
+        /// <summary>
         /// Gets the token info.
         /// </summary>
         ITokenInfoClient TokenInfo { get; }
