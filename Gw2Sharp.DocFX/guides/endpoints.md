@@ -155,7 +155,7 @@ For your convenience, the following list gives an overview of the web API endpoi
  /v2/pvp/seasons/`:id`/leaderboards | ✔️ | [`Gw2Client.WebApi.V2.Pvp.Seasons[id].Leaderboards`](../api/Gw2Sharp.WebApi.V2.Clients.PvpSeasonsLeaderboardsClient.html)
  /v2/pvp/seasons/`:id`/leaderboards/`:board`/`:region` | ✔️ | [`Gw2Client.WebApi.V2.Pvp.Seasons[id].Leaderboards[board][region]`](../api/Gw2Sharp.WebApi.V2.Clients.PvpSeasonsLeaderboardsRegionIdClient.html)
  ~~/v2/pvp/sigils~~ | ✖️ |
- /v2/pvp/standings | ❌ |
+ /v2/pvp/standings | ✔️🔑 | [`Gw2Client.WebApi.V2.Pvp.Standings`](../api/Gw2Sharp.WebApi.V2.Clients.PvpStandingsClient.html)
  /v2/pvp/stats | ✔️🔑 | [`Gw2Client.WebApi.V2.Pvp.Stats`](../api/Gw2Sharp.WebApi.V2.Clients.PvpStatsClient.html)
  /v2/quaggans | ❌ |
  /v2/quests | ❌✨ |

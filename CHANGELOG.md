@@ -11,6 +11,7 @@
 - Add `/v2/pvp/seasons`
 - Add `/v2/pvp/seasons/:id/leaderboards`
 - Add `/v2/pvp/seasons/:id/leaderboards/:board/:region`
+- Add `/v2/pvp/standings`
 - Add `/v2/pvp/stats`
 - Change `ICharactersIdClient` to use `IBlobClient<Character>` in order to consistently accept `GetAsync()` (`/v2/characters/:id`)
 

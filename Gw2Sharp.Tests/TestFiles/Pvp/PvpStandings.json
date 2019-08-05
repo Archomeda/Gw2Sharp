@@ -1,0 +1,89 @@
+[
+  {
+    "current": {
+      "total_points": 48,
+      "division": 2,
+      "tier": 1,
+      "points": 3,
+      "repeats": 0
+    },
+    "best": {
+      "total_points": 48,
+      "division": 2,
+      "tier": 1,
+      "points": 3,
+      "repeats": 0
+    },
+    "season_id": "44B85826-B5ED-4890-8C77-82DDF9F2CF2B"
+  },
+  {
+    "current": {
+      "total_points": 17,
+      "division": 0,
+      "tier": 0,
+      "points": 17,
+      "repeats": 0,
+      "rating": 1217
+    },
+    "best": {
+      "total_points": 17,
+      "division": 0,
+      "tier": 0,
+      "points": 17,
+      "repeats": 0
+    },
+    "season_id": "A54849B7-7DBD-4958-91EF-72E18CD659BA"
+  },
+  {
+    "current": {
+      "total_points": 37,
+      "division": 2,
+      "tier": 0,
+      "points": 2,
+      "repeats": 0,
+      "rating": 1296
+    },
+    "best": {
+      "total_points": 38,
+      "division": 2,
+      "tier": 0,
+      "points": 3,
+      "repeats": 0
+    },
+    "season_id": "2B2E80D3-0A74-424F-B0EA-E221500B323C"
+  },
+  {
+    "current": {
+      "total_points": 84,
+      "division": 3,
+      "tier": 4,
+      "points": 4,
+      "repeats": 0
+    },
+    "best": {
+      "total_points": 84,
+      "division": 3,
+      "tier": 4,
+      "points": 4,
+      "repeats": 0
+    },
+    "season_id": "95D5B290-798A-421E-A919-1C2A75F74B72"
+  },
+  {
+    "current": {
+      "total_points": 75,
+      "division": 3,
+      "tier": 3,
+      "points": 0,
+      "repeats": 0
+    },
+    "best": {
+      "total_points": 77,
+      "division": 3,
+      "tier": 3,
+      "points": 2,
+      "repeats": 0
+    },
+    "season_id": "D1777261-555B-4B72-A27E-BDC96EC393D5"
+  }
+]
