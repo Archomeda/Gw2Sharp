@@ -77,21 +77,21 @@ references:
   commentId: M:Gw2Sharp.Connection.#ctor(Gw2Sharp.WebApi.Locale)
   fullName: Gw2Sharp.Connection.Connection(Gw2Sharp.WebApi.Locale)
   nameWithType: Connection.Connection(Locale)
+- uid: Gw2Sharp.Connection.#ctor(System.Nullable{System.String},Gw2Sharp.WebApi.Locale,System.Nullable{Gw2Sharp.WebApi.Caching.ICacheMethod},System.Nullable{Gw2Sharp.WebApi.Caching.ICacheMethod},System.Nullable{TimeSpan},System.Nullable{System.String},System.Nullable{Gw2Sharp.WebApi.Http.IHttpClient})
+  name: Connection(Nullable<String>, Locale, Nullable<ICacheMethod>, Nullable<ICacheMethod>, Nullable<TimeSpan>, Nullable<String>, Nullable<IHttpClient>)
+  href: api/Gw2Sharp.Connection.html#Gw2Sharp_Connection__ctor_System_Nullable_System_String__Gw2Sharp_WebApi_Locale_System_Nullable_Gw2Sharp_WebApi_Caching_ICacheMethod__System_Nullable_Gw2Sharp_WebApi_Caching_ICacheMethod__System_Nullable_TimeSpan__System_Nullable_System_String__System_Nullable_Gw2Sharp_WebApi_Http_IHttpClient__
+  commentId: M:Gw2Sharp.Connection.#ctor(System.Nullable{System.String},Gw2Sharp.WebApi.Locale,System.Nullable{Gw2Sharp.WebApi.Caching.ICacheMethod},System.Nullable{Gw2Sharp.WebApi.Caching.ICacheMethod},System.Nullable{TimeSpan},System.Nullable{System.String},System.Nullable{Gw2Sharp.WebApi.Http.IHttpClient})
+  name.vb: Connection(Nullable(Of String), Locale, Nullable(Of ICacheMethod), Nullable(Of ICacheMethod), Nullable(Of TimeSpan), Nullable(Of String), Nullable(Of IHttpClient))
+  fullName: Gw2Sharp.Connection.Connection(System.Nullable<System.String>, Gw2Sharp.WebApi.Locale, System.Nullable<Gw2Sharp.WebApi.Caching.ICacheMethod>, System.Nullable<Gw2Sharp.WebApi.Caching.ICacheMethod>, System.Nullable<TimeSpan>, System.Nullable<System.String>, System.Nullable<Gw2Sharp.WebApi.Http.IHttpClient>)
+  fullName.vb: Gw2Sharp.Connection.Connection(System.Nullable(Of System.String), Gw2Sharp.WebApi.Locale, System.Nullable(Of Gw2Sharp.WebApi.Caching.ICacheMethod), System.Nullable(Of Gw2Sharp.WebApi.Caching.ICacheMethod), System.Nullable(Of TimeSpan), System.Nullable(Of System.String), System.Nullable(Of Gw2Sharp.WebApi.Http.IHttpClient))
+  nameWithType: Connection.Connection(Nullable<String>, Locale, Nullable<ICacheMethod>, Nullable<ICacheMethod>, Nullable<TimeSpan>, Nullable<String>, Nullable<IHttpClient>)
+  nameWithType.vb: Connection.Connection(Nullable(Of String), Locale, Nullable(Of ICacheMethod), Nullable(Of ICacheMethod), Nullable(Of TimeSpan), Nullable(Of String), Nullable(Of IHttpClient))
 - uid: Gw2Sharp.Connection.#ctor(System.String)
   name: Connection(String)
   href: api/Gw2Sharp.Connection.html#Gw2Sharp_Connection__ctor_System_String_
   commentId: M:Gw2Sharp.Connection.#ctor(System.String)
   fullName: Gw2Sharp.Connection.Connection(System.String)
   nameWithType: Connection.Connection(String)
-- uid: Gw2Sharp.Connection.#ctor(System.String,Gw2Sharp.WebApi.Locale,System.Nullable{Gw2Sharp.WebApi.Caching.ICacheMethod},System.Nullable{Gw2Sharp.WebApi.Caching.ICacheMethod},System.Nullable{TimeSpan},System.Nullable{System.String},System.Nullable{Gw2Sharp.WebApi.Http.IHttpClient})
-  name: Connection(String, Locale, Nullable<ICacheMethod>, Nullable<ICacheMethod>, Nullable<TimeSpan>, Nullable<String>, Nullable<IHttpClient>)
-  href: api/Gw2Sharp.Connection.html#Gw2Sharp_Connection__ctor_System_String_Gw2Sharp_WebApi_Locale_System_Nullable_Gw2Sharp_WebApi_Caching_ICacheMethod__System_Nullable_Gw2Sharp_WebApi_Caching_ICacheMethod__System_Nullable_TimeSpan__System_Nullable_System_String__System_Nullable_Gw2Sharp_WebApi_Http_IHttpClient__
-  commentId: M:Gw2Sharp.Connection.#ctor(System.String,Gw2Sharp.WebApi.Locale,System.Nullable{Gw2Sharp.WebApi.Caching.ICacheMethod},System.Nullable{Gw2Sharp.WebApi.Caching.ICacheMethod},System.Nullable{TimeSpan},System.Nullable{System.String},System.Nullable{Gw2Sharp.WebApi.Http.IHttpClient})
-  name.vb: Connection(String, Locale, Nullable(Of ICacheMethod), Nullable(Of ICacheMethod), Nullable(Of TimeSpan), Nullable(Of String), Nullable(Of IHttpClient))
-  fullName: Gw2Sharp.Connection.Connection(System.String, Gw2Sharp.WebApi.Locale, System.Nullable<Gw2Sharp.WebApi.Caching.ICacheMethod>, System.Nullable<Gw2Sharp.WebApi.Caching.ICacheMethod>, System.Nullable<TimeSpan>, System.Nullable<System.String>, System.Nullable<Gw2Sharp.WebApi.Http.IHttpClient>)
-  fullName.vb: Gw2Sharp.Connection.Connection(System.String, Gw2Sharp.WebApi.Locale, System.Nullable(Of Gw2Sharp.WebApi.Caching.ICacheMethod), System.Nullable(Of Gw2Sharp.WebApi.Caching.ICacheMethod), System.Nullable(Of TimeSpan), System.Nullable(Of System.String), System.Nullable(Of Gw2Sharp.WebApi.Http.IHttpClient))
-  nameWithType: Connection.Connection(String, Locale, Nullable<ICacheMethod>, Nullable<ICacheMethod>, Nullable<TimeSpan>, Nullable<String>, Nullable<IHttpClient>)
-  nameWithType.vb: Connection.Connection(String, Locale, Nullable(Of ICacheMethod), Nullable(Of ICacheMethod), Nullable(Of TimeSpan), Nullable(Of String), Nullable(Of IHttpClient))
 - uid: Gw2Sharp.Connection.#ctor*
   name: Connection
   href: api/Gw2Sharp.Connection.html#Gw2Sharp_Connection__ctor_
@@ -8152,6 +8152,23 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.DefaultEndpointClientImplementation(Of TObject).Connection
   nameWithType: DefaultEndpointClientImplementation<TObject>.Connection
   nameWithType.vb: DefaultEndpointClientImplementation(Of TObject).Connection
+- uid: Gw2Sharp.WebApi.V2.Clients.DefaultEndpointClientImplementation`1.FormatCacheId(System.Object)
+  name: FormatCacheId(Object)
+  href: api/Gw2Sharp.WebApi.V2.Clients.DefaultEndpointClientImplementation-1.html#Gw2Sharp_WebApi_V2_Clients_DefaultEndpointClientImplementation_1_FormatCacheId_System_Object_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.DefaultEndpointClientImplementation`1.FormatCacheId(System.Object)
+  fullName: Gw2Sharp.WebApi.V2.Clients.DefaultEndpointClientImplementation<TObject>.FormatCacheId(System.Object)
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.DefaultEndpointClientImplementation(Of TObject).FormatCacheId(System.Object)
+  nameWithType: DefaultEndpointClientImplementation<TObject>.FormatCacheId(Object)
+  nameWithType.vb: DefaultEndpointClientImplementation(Of TObject).FormatCacheId(Object)
+- uid: Gw2Sharp.WebApi.V2.Clients.DefaultEndpointClientImplementation`1.FormatCacheId*
+  name: FormatCacheId
+  href: api/Gw2Sharp.WebApi.V2.Clients.DefaultEndpointClientImplementation-1.html#Gw2Sharp_WebApi_V2_Clients_DefaultEndpointClientImplementation_1_FormatCacheId_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.DefaultEndpointClientImplementation`1.FormatCacheId
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.DefaultEndpointClientImplementation<TObject>.FormatCacheId
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.DefaultEndpointClientImplementation(Of TObject).FormatCacheId
+  nameWithType: DefaultEndpointClientImplementation<TObject>.FormatCacheId
+  nameWithType.vb: DefaultEndpointClientImplementation(Of TObject).FormatCacheId
 - uid: Gw2Sharp.WebApi.V2.Clients.DefaultEndpointClientImplementation`1.FormatUrlQueryAll(System.String)
   name: FormatUrlQueryAll(String)
   href: api/Gw2Sharp.WebApi.V2.Clients.DefaultEndpointClientImplementation-1.html#Gw2Sharp_WebApi_V2_Clients_DefaultEndpointClientImplementation_1_FormatUrlQueryAll_System_String_
