@@ -16,6 +16,9 @@
 - Add `/v2/quaggans`
 - Change `ICharactersIdClient` to use `IBlobClient<Character>` in order to consistently accept `GetAsync()` (`/v2/characters/:id`)
 
+### Caching
+- Fix locale setting from being ignored when generating the cache id for cachable endpoints
+
 ### Refactoring
 - **Breaking:** The class `Gw2Sharp.WebApi.V2.Models.PvpStatsLadders` has been fully removed since it's no longer used
 - **Breaking:** The following properties have had their types changed from `DateTime` to `DateTimeOffset`:

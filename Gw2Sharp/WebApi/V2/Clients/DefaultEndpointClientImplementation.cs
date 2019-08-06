@@ -199,11 +199,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         private async Task<CacheItem<TEndpointObject>> GetOrUpdateInternalAsync<TEndpointObject>(string url, object cacheId, CancellationToken cancellationToken)
             where TEndpointObject : IApiV2Object
         {
-            if (this.client.IsAuthenticated)
-            {
-                // Prepend the cache id with a hash of the access token to make sure that different access tokens will get separately cached
-                cacheId = $"{this.Connection.AccessToken.GetSha1Hash()}_{cacheId}";
-            }
+            cacheId = this.FormatCacheId(cacheId);
 
             var result = await this.Connection.CacheMethod.GetOrUpdateAsync(this.client.EndpointPath, cacheId, async () =>
             {
@@ -249,6 +245,31 @@ namespace Gw2Sharp.WebApi.V2.Clients
 
 
         #region Formatters
+
+        /// <summary>
+        /// Formats the cache id with localization and authentication strings.
+        /// </summary>
+        /// <param name="cacheId">The original cache id.</param>
+        /// <returns>The formatted cache id.</returns>
+        protected internal virtual string FormatCacheId(object cacheId)
+        {
+            string prefixedCacheId = cacheId.ToString();
+
+            if (this.client.IsLocalized)
+            {
+                // Prepend the cache id with the locale string to make sure that different locale requests will get separately cached
+                prefixedCacheId = $"{this.Connection.LocaleString}_{prefixedCacheId}";
+            }
+
+            if (this.client.IsAuthenticated)
+            {
+                // Prepend the cache id with a hash of the access token to make sure that different access tokens will get separately cached
+                prefixedCacheId = $"{this.Connection.AccessToken.GetSha1Hash()}_{prefixedCacheId}";
+            }
+
+            return prefixedCacheId;
+        }
+
 
         private const string QUERY_ALL = "?ids=all";
         private const string QUERY_ITEM = "/{0}";

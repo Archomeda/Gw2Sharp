@@ -39,9 +39,7 @@ namespace Gw2Sharp
                 new ApiObjectListConverter(),
                 new ApiEnumConverter(),
                 new CastableTypeConverter(),
-                //new Coordinates2Converter(),
                 new GuidConverter(),
-                //new SizeConverter(),
                 new TimeSpanConverter()
             }
         };
@@ -97,7 +95,7 @@ namespace Gw2Sharp
         /// <param name="renderCacheMethod">The render cache method.</param>
         /// <param name="renderCacheDuration">The render cache duration (defaults to render API headers)</param>
         public Connection(
-            string accessToken,
+            string? accessToken,
             Locale locale,
             ICacheMethod? cacheMethod = null,
             ICacheMethod? renderCacheMethod = null,
