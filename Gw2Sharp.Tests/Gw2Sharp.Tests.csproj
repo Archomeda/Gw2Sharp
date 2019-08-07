@@ -233,6 +233,9 @@
     <None Remove="TestFiles\Races\Races.bulk.json" />
     <None Remove="TestFiles\Races\Races.ids.json" />
     <None Remove="TestFiles\Races\Races.single.json" />
+    <None Remove="TestFiles\Raids\Raids.bulk.json" />
+    <None Remove="TestFiles\Raids\Raids.ids.json" />
+    <None Remove="TestFiles\Raids\Raids.single.json" />
     <None Remove="TestFiles\Render\414998.png" />
     <None Remove="TestFiles\TokenInfo\TokenInfo.ApiToken.json" />
     <None Remove="TestFiles\TokenInfo\TokenInfo.SubToken.json" />
@@ -461,6 +464,9 @@
     <EmbeddedResource Include="TestFiles\Races\Races.bulk.json" />
     <EmbeddedResource Include="TestFiles\Races\Races.ids.json" />
     <EmbeddedResource Include="TestFiles\Races\Races.single.json" />
+    <EmbeddedResource Include="TestFiles\Raids\Raids.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Raids\Raids.ids.json" />
+    <EmbeddedResource Include="TestFiles\Raids\Raids.single.json" />
     <EmbeddedResource Include="TestFiles\Render\414998.png" />
     <EmbeddedResource Include="TestFiles\TokenInfo\TokenInfo.ApiToken.json" />
     <EmbeddedResource Include="TestFiles\TokenInfo\TokenInfo.SubToken.json" />

@@ -190,6 +190,11 @@ namespace Gw2Sharp.WebApi.V2
         IRacesClient Races { get; }
 
         /// <summary>
+        /// Gets the raids.
+        /// </summary>
+        IRaidsClient Raids { get; }
+
+        /// <summary>
         /// Gets the token info.
         /// </summary>
         ITokenInfoClient TokenInfo { get; }

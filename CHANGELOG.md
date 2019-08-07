@@ -16,6 +16,7 @@
 - Add `/v2/quaggans`
 - Add `/v2/quests`
 - Add `/v2/races`
+- Add `/v2/raids`
 - Change `ICharactersIdClient` to use `IBlobClient<Character>` in order to consistently accept `GetAsync()` (`/v2/characters/:id`)
 
 ### Caching

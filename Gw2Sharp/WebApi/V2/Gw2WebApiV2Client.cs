@@ -49,6 +49,7 @@ namespace Gw2Sharp.WebApi.V2
         private readonly IQuaggansClient quaggans;
         private readonly IQuestsClient quests;
         private readonly IRacesClient races;
+        private readonly IRaidsClient raids;
         private readonly ITokenInfoClient tokenInfo;
         private readonly IWorldBossesClient worldBosses;
 
@@ -102,6 +103,7 @@ namespace Gw2Sharp.WebApi.V2
             this.quaggans = new QuaggansClient(connection, gw2Client);
             this.quests = new QuestsClient(connection, gw2Client);
             this.races = new RacesClient(connection, gw2Client);
+            this.raids = new RaidsClient(connection, gw2Client);
             this.tokenInfo = new TokenInfoClient(connection, gw2Client);
             this.worldBosses = new WorldBossesClient(connection, gw2Client);
         }
@@ -213,6 +215,9 @@ namespace Gw2Sharp.WebApi.V2
 
         /// <inheritdoc />
         public virtual IRacesClient Races => this.races;
+
+        /// <inheritdoc />
+        public virtual IRaidsClient Raids => this.raids;
 
         /// <inheritdoc />
         public virtual ITokenInfoClient TokenInfo => this.tokenInfo;
