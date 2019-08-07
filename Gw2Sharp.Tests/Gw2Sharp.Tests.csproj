@@ -227,6 +227,9 @@
     <None Remove="TestFiles\Quaggans\Quaggans.bulk.json" />
     <None Remove="TestFiles\Quaggans\Quaggans.ids.json" />
     <None Remove="TestFiles\Quaggans\Quaggans.single.json" />
+    <None Remove="TestFiles\Quests\Quests.bulk.json" />
+    <None Remove="TestFiles\Quests\Quests.ids.json" />
+    <None Remove="TestFiles\Quests\Quests.single.json" />
     <None Remove="TestFiles\Render\414998.png" />
     <None Remove="TestFiles\TokenInfo\TokenInfo.ApiToken.json" />
     <None Remove="TestFiles\TokenInfo\TokenInfo.SubToken.json" />
@@ -449,6 +452,9 @@
     <EmbeddedResource Include="TestFiles\Quaggans\Quaggans.bulk.json" />
     <EmbeddedResource Include="TestFiles\Quaggans\Quaggans.ids.json" />
     <EmbeddedResource Include="TestFiles\Quaggans\Quaggans.single.json" />
+    <EmbeddedResource Include="TestFiles\Quests\Quests.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Quests\Quests.ids.json" />
+    <EmbeddedResource Include="TestFiles\Quests\Quests.single.json" />
     <EmbeddedResource Include="TestFiles\Render\414998.png" />
     <EmbeddedResource Include="TestFiles\TokenInfo\TokenInfo.ApiToken.json" />
     <EmbeddedResource Include="TestFiles\TokenInfo\TokenInfo.SubToken.json" />

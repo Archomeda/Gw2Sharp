@@ -158,7 +158,7 @@ For your convenience, the following list gives an overview of the web API endpoi
  /v2/pvp/standings | ✔️🔑 | [`Gw2Client.WebApi.V2.Pvp.Standings`](../api/Gw2Sharp.WebApi.V2.Clients.PvpStandingsClient.html)
  /v2/pvp/stats | ✔️🔑 | [`Gw2Client.WebApi.V2.Pvp.Stats`](../api/Gw2Sharp.WebApi.V2.Clients.PvpStatsClient.html)
  /v2/quaggans | ✔️📄📚📦 | [`Gw2Client.WebApi.V2.Quaggans`](../api/Gw2Sharp.WebApi.V2.Clients.QuaggansClient.html)
- /v2/quests | ❌✨ |
+ /v2/quests | ✔️🌐📄📚📦 | [`Gw2Client.WebApi.V2.Quests`](../api/Gw2Sharp.WebApi.V2.Clients.QuestsClient.html)
  /v2/races | ❌ |
  /v2/raids | ❌ |
  /v2/recipes | ❌ |

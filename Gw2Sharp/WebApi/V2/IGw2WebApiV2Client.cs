@@ -180,6 +180,11 @@ namespace Gw2Sharp.WebApi.V2
         IQuaggansClient Quaggans { get; }
 
         /// <summary>
+        /// Gets the quests.
+        /// </summary>
+        IQuestsClient Quests { get; }
+
+        /// <summary>
         /// Gets the token info.
         /// </summary>
         ITokenInfoClient TokenInfo { get; }
