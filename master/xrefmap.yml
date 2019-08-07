@@ -12956,6 +12956,12 @@ references:
   commentId: T:Gw2Sharp.WebApi.V2.Clients.IQuestsClient
   fullName: Gw2Sharp.WebApi.V2.Clients.IQuestsClient
   nameWithType: IQuestsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.IRacesClient
+  name: IRacesClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.IRacesClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.IRacesClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.IRacesClient
+  nameWithType: IRacesClient
 - uid: Gw2Sharp.WebApi.V2.Clients.ItemsClient
   name: ItemsClient
   href: api/Gw2Sharp.WebApi.V2.Clients.ItemsClient.html
@@ -13816,6 +13822,25 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.QuestsClient.QuestsClient
   nameWithType: QuestsClient.QuestsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.RacesClient
+  name: RacesClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.RacesClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.RacesClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.RacesClient
+  nameWithType: RacesClient
+- uid: Gw2Sharp.WebApi.V2.Clients.RacesClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client)
+  name: RacesClient(IConnection, IGw2Client)
+  href: api/Gw2Sharp.WebApi.V2.Clients.RacesClient.html#Gw2Sharp_WebApi_V2_Clients_RacesClient__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.RacesClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client)
+  fullName: Gw2Sharp.WebApi.V2.Clients.RacesClient.RacesClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client)
+  nameWithType: RacesClient.RacesClient(IConnection, IGw2Client)
+- uid: Gw2Sharp.WebApi.V2.Clients.RacesClient.#ctor*
+  name: RacesClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.RacesClient.html#Gw2Sharp_WebApi_V2_Clients_RacesClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.RacesClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.RacesClient.RacesClient
+  nameWithType: RacesClient.RacesClient
 - uid: Gw2Sharp.WebApi.V2.Clients.TokenInfoClient
   name: TokenInfoClient
   href: api/Gw2Sharp.WebApi.V2.Clients.TokenInfoClient.html
@@ -14328,6 +14353,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Quests
   nameWithType: Gw2WebApiV2Client.Quests
+- uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Races
+  name: Races
+  href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_Races
+  commentId: P:Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Races
+  fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Races
+  nameWithType: Gw2WebApiV2Client.Races
+- uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Races*
+  name: Races
+  href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_Races_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Races
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Races
+  nameWithType: Gw2WebApiV2Client.Races
 - uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.TokenInfo
   name: TokenInfo
   href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_TokenInfo
@@ -14843,6 +14881,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Quests
   nameWithType: IGw2WebApiV2Client.Quests
+- uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Races
+  name: Races
+  href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_Races
+  commentId: P:Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Races
+  fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Races
+  nameWithType: IGw2WebApiV2Client.Races
+- uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Races*
+  name: Races
+  href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_Races_
+  commentId: Overload:Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Races
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Races
+  nameWithType: IGw2WebApiV2Client.Races
 - uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.TokenInfo
   name: TokenInfo
   href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_TokenInfo
@@ -29364,6 +29415,51 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.QuestGoal.Complete
   nameWithType: QuestGoal.Complete
+- uid: Gw2Sharp.WebApi.V2.Models.Race
+  name: Race
+  href: api/Gw2Sharp.WebApi.V2.Models.Race.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.Race
+  fullName: Gw2Sharp.WebApi.V2.Models.Race
+  nameWithType: Race
+- uid: Gw2Sharp.WebApi.V2.Models.Race.Id
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.Race.html#Gw2Sharp_WebApi_V2_Models_Race_Id
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Race.Id
+  fullName: Gw2Sharp.WebApi.V2.Models.Race.Id
+  nameWithType: Race.Id
+- uid: Gw2Sharp.WebApi.V2.Models.Race.Id*
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.Race.html#Gw2Sharp_WebApi_V2_Models_Race_Id_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Race.Id
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Race.Id
+  nameWithType: Race.Id
+- uid: Gw2Sharp.WebApi.V2.Models.Race.Name
+  name: Name
+  href: api/Gw2Sharp.WebApi.V2.Models.Race.html#Gw2Sharp_WebApi_V2_Models_Race_Name
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Race.Name
+  fullName: Gw2Sharp.WebApi.V2.Models.Race.Name
+  nameWithType: Race.Name
+- uid: Gw2Sharp.WebApi.V2.Models.Race.Name*
+  name: Name
+  href: api/Gw2Sharp.WebApi.V2.Models.Race.html#Gw2Sharp_WebApi_V2_Models_Race_Name_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Race.Name
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Race.Name
+  nameWithType: Race.Name
+- uid: Gw2Sharp.WebApi.V2.Models.Race.Skills
+  name: Skills
+  href: api/Gw2Sharp.WebApi.V2.Models.Race.html#Gw2Sharp_WebApi_V2_Models_Race_Skills
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Race.Skills
+  fullName: Gw2Sharp.WebApi.V2.Models.Race.Skills
+  nameWithType: Race.Skills
+- uid: Gw2Sharp.WebApi.V2.Models.Race.Skills*
+  name: Skills
+  href: api/Gw2Sharp.WebApi.V2.Models.Race.html#Gw2Sharp_WebApi_V2_Models_Race_Skills_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Race.Skills
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Race.Skills
+  nameWithType: Race.Skills
 - uid: Gw2Sharp.WebApi.V2.Models.Rectangle
   name: Rectangle
   href: api/Gw2Sharp.WebApi.V2.Models.Rectangle.html
