@@ -12950,6 +12950,12 @@ references:
   commentId: T:Gw2Sharp.WebApi.V2.Clients.IQuaggansClient
   fullName: Gw2Sharp.WebApi.V2.Clients.IQuaggansClient
   nameWithType: IQuaggansClient
+- uid: Gw2Sharp.WebApi.V2.Clients.IQuestsClient
+  name: IQuestsClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.IQuestsClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.IQuestsClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.IQuestsClient
+  nameWithType: IQuestsClient
 - uid: Gw2Sharp.WebApi.V2.Clients.ItemsClient
   name: ItemsClient
   href: api/Gw2Sharp.WebApi.V2.Clients.ItemsClient.html
@@ -13791,6 +13797,25 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.QuaggansClient.QuaggansClient
   nameWithType: QuaggansClient.QuaggansClient
+- uid: Gw2Sharp.WebApi.V2.Clients.QuestsClient
+  name: QuestsClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.QuestsClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.QuestsClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.QuestsClient
+  nameWithType: QuestsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.QuestsClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client)
+  name: QuestsClient(IConnection, IGw2Client)
+  href: api/Gw2Sharp.WebApi.V2.Clients.QuestsClient.html#Gw2Sharp_WebApi_V2_Clients_QuestsClient__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.QuestsClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client)
+  fullName: Gw2Sharp.WebApi.V2.Clients.QuestsClient.QuestsClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client)
+  nameWithType: QuestsClient.QuestsClient(IConnection, IGw2Client)
+- uid: Gw2Sharp.WebApi.V2.Clients.QuestsClient.#ctor*
+  name: QuestsClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.QuestsClient.html#Gw2Sharp_WebApi_V2_Clients_QuestsClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.QuestsClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.QuestsClient.QuestsClient
+  nameWithType: QuestsClient.QuestsClient
 - uid: Gw2Sharp.WebApi.V2.Clients.TokenInfoClient
   name: TokenInfoClient
   href: api/Gw2Sharp.WebApi.V2.Clients.TokenInfoClient.html
@@ -14290,6 +14315,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Quaggans
   nameWithType: Gw2WebApiV2Client.Quaggans
+- uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Quests
+  name: Quests
+  href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_Quests
+  commentId: P:Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Quests
+  fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Quests
+  nameWithType: Gw2WebApiV2Client.Quests
+- uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Quests*
+  name: Quests
+  href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_Quests_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Quests
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Quests
+  nameWithType: Gw2WebApiV2Client.Quests
 - uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.TokenInfo
   name: TokenInfo
   href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_TokenInfo
@@ -14792,6 +14830,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Quaggans
   nameWithType: IGw2WebApiV2Client.Quaggans
+- uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Quests
+  name: Quests
+  href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_Quests
+  commentId: P:Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Quests
+  fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Quests
+  nameWithType: IGw2WebApiV2Client.Quests
+- uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Quests*
+  name: Quests
+  href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_Quests_
+  commentId: Overload:Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Quests
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Quests
+  nameWithType: IGw2WebApiV2Client.Quests
 - uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.TokenInfo
   name: TokenInfo
   href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_TokenInfo
@@ -29210,6 +29261,109 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.Quaggan.Url
   nameWithType: Quaggan.Url
+- uid: Gw2Sharp.WebApi.V2.Models.Quest
+  name: Quest
+  href: api/Gw2Sharp.WebApi.V2.Models.Quest.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.Quest
+  fullName: Gw2Sharp.WebApi.V2.Models.Quest
+  nameWithType: Quest
+- uid: Gw2Sharp.WebApi.V2.Models.Quest.Goals
+  name: Goals
+  href: api/Gw2Sharp.WebApi.V2.Models.Quest.html#Gw2Sharp_WebApi_V2_Models_Quest_Goals
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Quest.Goals
+  fullName: Gw2Sharp.WebApi.V2.Models.Quest.Goals
+  nameWithType: Quest.Goals
+- uid: Gw2Sharp.WebApi.V2.Models.Quest.Goals*
+  name: Goals
+  href: api/Gw2Sharp.WebApi.V2.Models.Quest.html#Gw2Sharp_WebApi_V2_Models_Quest_Goals_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Quest.Goals
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Quest.Goals
+  nameWithType: Quest.Goals
+- uid: Gw2Sharp.WebApi.V2.Models.Quest.Id
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.Quest.html#Gw2Sharp_WebApi_V2_Models_Quest_Id
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Quest.Id
+  fullName: Gw2Sharp.WebApi.V2.Models.Quest.Id
+  nameWithType: Quest.Id
+- uid: Gw2Sharp.WebApi.V2.Models.Quest.Id*
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.Quest.html#Gw2Sharp_WebApi_V2_Models_Quest_Id_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Quest.Id
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Quest.Id
+  nameWithType: Quest.Id
+- uid: Gw2Sharp.WebApi.V2.Models.Quest.Level
+  name: Level
+  href: api/Gw2Sharp.WebApi.V2.Models.Quest.html#Gw2Sharp_WebApi_V2_Models_Quest_Level
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Quest.Level
+  fullName: Gw2Sharp.WebApi.V2.Models.Quest.Level
+  nameWithType: Quest.Level
+- uid: Gw2Sharp.WebApi.V2.Models.Quest.Level*
+  name: Level
+  href: api/Gw2Sharp.WebApi.V2.Models.Quest.html#Gw2Sharp_WebApi_V2_Models_Quest_Level_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Quest.Level
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Quest.Level
+  nameWithType: Quest.Level
+- uid: Gw2Sharp.WebApi.V2.Models.Quest.Name
+  name: Name
+  href: api/Gw2Sharp.WebApi.V2.Models.Quest.html#Gw2Sharp_WebApi_V2_Models_Quest_Name
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Quest.Name
+  fullName: Gw2Sharp.WebApi.V2.Models.Quest.Name
+  nameWithType: Quest.Name
+- uid: Gw2Sharp.WebApi.V2.Models.Quest.Name*
+  name: Name
+  href: api/Gw2Sharp.WebApi.V2.Models.Quest.html#Gw2Sharp_WebApi_V2_Models_Quest_Name_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Quest.Name
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Quest.Name
+  nameWithType: Quest.Name
+- uid: Gw2Sharp.WebApi.V2.Models.Quest.Story
+  name: Story
+  href: api/Gw2Sharp.WebApi.V2.Models.Quest.html#Gw2Sharp_WebApi_V2_Models_Quest_Story
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Quest.Story
+  fullName: Gw2Sharp.WebApi.V2.Models.Quest.Story
+  nameWithType: Quest.Story
+- uid: Gw2Sharp.WebApi.V2.Models.Quest.Story*
+  name: Story
+  href: api/Gw2Sharp.WebApi.V2.Models.Quest.html#Gw2Sharp_WebApi_V2_Models_Quest_Story_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Quest.Story
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Quest.Story
+  nameWithType: Quest.Story
+- uid: Gw2Sharp.WebApi.V2.Models.QuestGoal
+  name: QuestGoal
+  href: api/Gw2Sharp.WebApi.V2.Models.QuestGoal.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.QuestGoal
+  fullName: Gw2Sharp.WebApi.V2.Models.QuestGoal
+  nameWithType: QuestGoal
+- uid: Gw2Sharp.WebApi.V2.Models.QuestGoal.Active
+  name: Active
+  href: api/Gw2Sharp.WebApi.V2.Models.QuestGoal.html#Gw2Sharp_WebApi_V2_Models_QuestGoal_Active
+  commentId: P:Gw2Sharp.WebApi.V2.Models.QuestGoal.Active
+  fullName: Gw2Sharp.WebApi.V2.Models.QuestGoal.Active
+  nameWithType: QuestGoal.Active
+- uid: Gw2Sharp.WebApi.V2.Models.QuestGoal.Active*
+  name: Active
+  href: api/Gw2Sharp.WebApi.V2.Models.QuestGoal.html#Gw2Sharp_WebApi_V2_Models_QuestGoal_Active_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.QuestGoal.Active
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.QuestGoal.Active
+  nameWithType: QuestGoal.Active
+- uid: Gw2Sharp.WebApi.V2.Models.QuestGoal.Complete
+  name: Complete
+  href: api/Gw2Sharp.WebApi.V2.Models.QuestGoal.html#Gw2Sharp_WebApi_V2_Models_QuestGoal_Complete
+  commentId: P:Gw2Sharp.WebApi.V2.Models.QuestGoal.Complete
+  fullName: Gw2Sharp.WebApi.V2.Models.QuestGoal.Complete
+  nameWithType: QuestGoal.Complete
+- uid: Gw2Sharp.WebApi.V2.Models.QuestGoal.Complete*
+  name: Complete
+  href: api/Gw2Sharp.WebApi.V2.Models.QuestGoal.html#Gw2Sharp_WebApi_V2_Models_QuestGoal_Complete_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.QuestGoal.Complete
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.QuestGoal.Complete
+  nameWithType: QuestGoal.Complete
 - uid: Gw2Sharp.WebApi.V2.Models.Rectangle
   name: Rectangle
   href: api/Gw2Sharp.WebApi.V2.Models.Rectangle.html
