@@ -1556,6 +1556,30 @@ references:
   commentId: F:Gw2Sharp.PvpSeasonLeaderboardSettingsTierType.Unknown
   fullName: Gw2Sharp.PvpSeasonLeaderboardSettingsTierType.Unknown
   nameWithType: PvpSeasonLeaderboardSettingsTierType.Unknown
+- uid: Gw2Sharp.RaidWingEventType
+  name: RaidWingEventType
+  href: api/Gw2Sharp.RaidWingEventType.html
+  commentId: T:Gw2Sharp.RaidWingEventType
+  fullName: Gw2Sharp.RaidWingEventType
+  nameWithType: RaidWingEventType
+- uid: Gw2Sharp.RaidWingEventType.Boss
+  name: Boss
+  href: api/Gw2Sharp.RaidWingEventType.html#Gw2Sharp_RaidWingEventType_Boss
+  commentId: F:Gw2Sharp.RaidWingEventType.Boss
+  fullName: Gw2Sharp.RaidWingEventType.Boss
+  nameWithType: RaidWingEventType.Boss
+- uid: Gw2Sharp.RaidWingEventType.Checkpoint
+  name: Checkpoint
+  href: api/Gw2Sharp.RaidWingEventType.html#Gw2Sharp_RaidWingEventType_Checkpoint
+  commentId: F:Gw2Sharp.RaidWingEventType.Checkpoint
+  fullName: Gw2Sharp.RaidWingEventType.Checkpoint
+  nameWithType: RaidWingEventType.Checkpoint
+- uid: Gw2Sharp.RaidWingEventType.Unknown
+  name: Unknown
+  href: api/Gw2Sharp.RaidWingEventType.html#Gw2Sharp_RaidWingEventType_Unknown
+  commentId: F:Gw2Sharp.RaidWingEventType.Unknown
+  fullName: Gw2Sharp.RaidWingEventType.Unknown
+  nameWithType: RaidWingEventType.Unknown
 - uid: Gw2Sharp.SkillType
   name: SkillType
   href: api/Gw2Sharp.SkillType.html
@@ -12962,6 +12986,12 @@ references:
   commentId: T:Gw2Sharp.WebApi.V2.Clients.IRacesClient
   fullName: Gw2Sharp.WebApi.V2.Clients.IRacesClient
   nameWithType: IRacesClient
+- uid: Gw2Sharp.WebApi.V2.Clients.IRaidsClient
+  name: IRaidsClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.IRaidsClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.IRaidsClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.IRaidsClient
+  nameWithType: IRaidsClient
 - uid: Gw2Sharp.WebApi.V2.Clients.ItemsClient
   name: ItemsClient
   href: api/Gw2Sharp.WebApi.V2.Clients.ItemsClient.html
@@ -13841,6 +13871,25 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.RacesClient.RacesClient
   nameWithType: RacesClient.RacesClient
+- uid: Gw2Sharp.WebApi.V2.Clients.RaidsClient
+  name: RaidsClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.RaidsClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.RaidsClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.RaidsClient
+  nameWithType: RaidsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.RaidsClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client)
+  name: RaidsClient(IConnection, IGw2Client)
+  href: api/Gw2Sharp.WebApi.V2.Clients.RaidsClient.html#Gw2Sharp_WebApi_V2_Clients_RaidsClient__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.RaidsClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client)
+  fullName: Gw2Sharp.WebApi.V2.Clients.RaidsClient.RaidsClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client)
+  nameWithType: RaidsClient.RaidsClient(IConnection, IGw2Client)
+- uid: Gw2Sharp.WebApi.V2.Clients.RaidsClient.#ctor*
+  name: RaidsClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.RaidsClient.html#Gw2Sharp_WebApi_V2_Clients_RaidsClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.RaidsClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.RaidsClient.RaidsClient
+  nameWithType: RaidsClient.RaidsClient
 - uid: Gw2Sharp.WebApi.V2.Clients.TokenInfoClient
   name: TokenInfoClient
   href: api/Gw2Sharp.WebApi.V2.Clients.TokenInfoClient.html
@@ -14366,6 +14415,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Races
   nameWithType: Gw2WebApiV2Client.Races
+- uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Raids
+  name: Raids
+  href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_Raids
+  commentId: P:Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Raids
+  fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Raids
+  nameWithType: Gw2WebApiV2Client.Raids
+- uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Raids*
+  name: Raids
+  href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_Raids_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Raids
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Raids
+  nameWithType: Gw2WebApiV2Client.Raids
 - uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.TokenInfo
   name: TokenInfo
   href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_TokenInfo
@@ -14894,6 +14956,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Races
   nameWithType: IGw2WebApiV2Client.Races
+- uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Raids
+  name: Raids
+  href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_Raids
+  commentId: P:Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Raids
+  fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Raids
+  nameWithType: IGw2WebApiV2Client.Raids
+- uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Raids*
+  name: Raids
+  href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_Raids_
+  commentId: Overload:Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Raids
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Raids
+  nameWithType: IGw2WebApiV2Client.Raids
 - uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.TokenInfo
   name: TokenInfo
   href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_TokenInfo
@@ -29460,6 +29535,102 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.Race.Skills
   nameWithType: Race.Skills
+- uid: Gw2Sharp.WebApi.V2.Models.Raid
+  name: Raid
+  href: api/Gw2Sharp.WebApi.V2.Models.Raid.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.Raid
+  fullName: Gw2Sharp.WebApi.V2.Models.Raid
+  nameWithType: Raid
+- uid: Gw2Sharp.WebApi.V2.Models.Raid.Id
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.Raid.html#Gw2Sharp_WebApi_V2_Models_Raid_Id
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Raid.Id
+  fullName: Gw2Sharp.WebApi.V2.Models.Raid.Id
+  nameWithType: Raid.Id
+- uid: Gw2Sharp.WebApi.V2.Models.Raid.Id*
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.Raid.html#Gw2Sharp_WebApi_V2_Models_Raid_Id_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Raid.Id
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Raid.Id
+  nameWithType: Raid.Id
+- uid: Gw2Sharp.WebApi.V2.Models.Raid.Wings
+  name: Wings
+  href: api/Gw2Sharp.WebApi.V2.Models.Raid.html#Gw2Sharp_WebApi_V2_Models_Raid_Wings
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Raid.Wings
+  fullName: Gw2Sharp.WebApi.V2.Models.Raid.Wings
+  nameWithType: Raid.Wings
+- uid: Gw2Sharp.WebApi.V2.Models.Raid.Wings*
+  name: Wings
+  href: api/Gw2Sharp.WebApi.V2.Models.Raid.html#Gw2Sharp_WebApi_V2_Models_Raid_Wings_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Raid.Wings
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Raid.Wings
+  nameWithType: Raid.Wings
+- uid: Gw2Sharp.WebApi.V2.Models.RaidWing
+  name: RaidWing
+  href: api/Gw2Sharp.WebApi.V2.Models.RaidWing.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.RaidWing
+  fullName: Gw2Sharp.WebApi.V2.Models.RaidWing
+  nameWithType: RaidWing
+- uid: Gw2Sharp.WebApi.V2.Models.RaidWing.Events
+  name: Events
+  href: api/Gw2Sharp.WebApi.V2.Models.RaidWing.html#Gw2Sharp_WebApi_V2_Models_RaidWing_Events
+  commentId: P:Gw2Sharp.WebApi.V2.Models.RaidWing.Events
+  fullName: Gw2Sharp.WebApi.V2.Models.RaidWing.Events
+  nameWithType: RaidWing.Events
+- uid: Gw2Sharp.WebApi.V2.Models.RaidWing.Events*
+  name: Events
+  href: api/Gw2Sharp.WebApi.V2.Models.RaidWing.html#Gw2Sharp_WebApi_V2_Models_RaidWing_Events_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.RaidWing.Events
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.RaidWing.Events
+  nameWithType: RaidWing.Events
+- uid: Gw2Sharp.WebApi.V2.Models.RaidWing.Id
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.RaidWing.html#Gw2Sharp_WebApi_V2_Models_RaidWing_Id
+  commentId: P:Gw2Sharp.WebApi.V2.Models.RaidWing.Id
+  fullName: Gw2Sharp.WebApi.V2.Models.RaidWing.Id
+  nameWithType: RaidWing.Id
+- uid: Gw2Sharp.WebApi.V2.Models.RaidWing.Id*
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.RaidWing.html#Gw2Sharp_WebApi_V2_Models_RaidWing_Id_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.RaidWing.Id
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.RaidWing.Id
+  nameWithType: RaidWing.Id
+- uid: Gw2Sharp.WebApi.V2.Models.RaidWingEvent
+  name: RaidWingEvent
+  href: api/Gw2Sharp.WebApi.V2.Models.RaidWingEvent.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.RaidWingEvent
+  fullName: Gw2Sharp.WebApi.V2.Models.RaidWingEvent
+  nameWithType: RaidWingEvent
+- uid: Gw2Sharp.WebApi.V2.Models.RaidWingEvent.Id
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.RaidWingEvent.html#Gw2Sharp_WebApi_V2_Models_RaidWingEvent_Id
+  commentId: P:Gw2Sharp.WebApi.V2.Models.RaidWingEvent.Id
+  fullName: Gw2Sharp.WebApi.V2.Models.RaidWingEvent.Id
+  nameWithType: RaidWingEvent.Id
+- uid: Gw2Sharp.WebApi.V2.Models.RaidWingEvent.Id*
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.RaidWingEvent.html#Gw2Sharp_WebApi_V2_Models_RaidWingEvent_Id_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.RaidWingEvent.Id
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.RaidWingEvent.Id
+  nameWithType: RaidWingEvent.Id
+- uid: Gw2Sharp.WebApi.V2.Models.RaidWingEvent.Type
+  name: Type
+  href: api/Gw2Sharp.WebApi.V2.Models.RaidWingEvent.html#Gw2Sharp_WebApi_V2_Models_RaidWingEvent_Type
+  commentId: P:Gw2Sharp.WebApi.V2.Models.RaidWingEvent.Type
+  fullName: Gw2Sharp.WebApi.V2.Models.RaidWingEvent.Type
+  nameWithType: RaidWingEvent.Type
+- uid: Gw2Sharp.WebApi.V2.Models.RaidWingEvent.Type*
+  name: Type
+  href: api/Gw2Sharp.WebApi.V2.Models.RaidWingEvent.html#Gw2Sharp_WebApi_V2_Models_RaidWingEvent_Type_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.RaidWingEvent.Type
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.RaidWingEvent.Type
+  nameWithType: RaidWingEvent.Type
 - uid: Gw2Sharp.WebApi.V2.Models.Rectangle
   name: Rectangle
   href: api/Gw2Sharp.WebApi.V2.Models.Rectangle.html
