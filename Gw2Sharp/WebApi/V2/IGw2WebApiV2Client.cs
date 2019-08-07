@@ -185,6 +185,11 @@ namespace Gw2Sharp.WebApi.V2
         IQuestsClient Quests { get; }
 
         /// <summary>
+        /// Gets the races.
+        /// </summary>
+        IRacesClient Races { get; }
+
+        /// <summary>
         /// Gets the token info.
         /// </summary>
         ITokenInfoClient TokenInfo { get; }
