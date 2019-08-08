@@ -21,34 +21,11 @@ var client = new Gw2Sharp.Gw2Client(connection);
 Now you're ready!
 
 To get started with a specific service, go to one of the following services supported by Gw2Sharp:
-- [Render service](#render-service)
 - [WebAPI v2](#web-api-v2)
+- [Render service](#render-service)
+- [Mumble Link](#mumble-link)
 
 ---
-
-## Render service
-Accessing the render service is done through the main `Gw2Sharp.Gw2Client`:
-```cs
-var renderClient = client.WebApi.Render;
-```
-
-The render service client exposes a few methods that help with downloading image assets from the Guild Wars 2 render service.
-For example:
-```cs
-var appleUrl = "https://render.guildwars2.com/file/17520D2F53CF62BFA696EDE02DA1F77445A9F796/63265.png";
-
-// Downloads the apple icon into a byte array asynchronously
-var apple = await renderClient.DownloadToByteArrayAsync(appleUrl);
-
-// Downloads the apple icon into a stream asynchronously
-using var appleStream = new MemoryStream();
-await renderClient.DownloadToStreamAsync(appleStream, appleUrl);
-```
-
-**Related topics:**
-- [Caching](xref:Guides.Caching)
-- [Exception handling](xref:Guides.ExceptionHandling)
-- [Using RenderUrl](xref:Guides.RenderUrl)
 
 ## Web API v2
 Accessing the web API v2 service is done through the main `Gw2Sharp.Gw2Client`:
@@ -107,3 +84,55 @@ var tybaltsSpecializations = await client.WebApi.V2.Characters["Tybalt Leftpaw"]
 - [Creating and using subtokens](xref:Guides.Subtokens)
 - [Exception handling](xref:Guides.ExceptionHandling)
 - [Supported endpoints](xref:Guides.Endpoints)
+
+## Render service
+Accessing the render service is done through the main `Gw2Sharp.Gw2Client`:
+```cs
+var renderClient = client.WebApi.Render;
+```
+
+The render service client exposes a few methods that help with downloading image assets from the Guild Wars 2 render service.
+For example:
+```cs
+var appleUrl = "https://render.guildwars2.com/file/17520D2F53CF62BFA696EDE02DA1F77445A9F796/63265.png";
+
+// Downloads the apple icon into a byte array asynchronously
+var apple = await renderClient.DownloadToByteArrayAsync(appleUrl);
+
+// Downloads the apple icon into a stream asynchronously
+using var appleStream = new MemoryStream();
+await renderClient.DownloadToStreamAsync(appleStream, appleUrl);
+```
+
+**Related topics:**
+- [Caching](xref:Guides.Caching)
+- [Exception handling](xref:Guides.ExceptionHandling)
+- [Using RenderUrl](xref:Guides.RenderUrl)
+
+## Mumble Link
+Accessing the Mumble Link service is done through the main `Gw2Sharp.Gw2Client`:
+```cs
+var mumbleClient = client.Mumble;
+```
+
+**Note:** The Mumble Link service client requires Guild Wars 2 to be running on a Windows operating system.
+However, this validation is totally up to you.
+The property `IsAvailable` will return `true` if the Guild Wars 2 Mumble Link API is available.
+
+You are responsible for updating the Mumble Link values by calling the method `Update()`.
+The update tick rate depends on how fast the game is updating the frames.
+For example, if Guild Wars 2 is running at 60 frames per second, the Mumble Link API will be updated 60 times per second.
+
+Note that some of the values in `Gw2MumbleClient` are lazily evaluated.
+The reason is that these values are parsed from a JSON string that Guild Wars 2 provides through the Mumble Link.
+In order to keep performance to a maximum, the following JSON properties are only parsed when you request them:
+- `CharacterName`
+- `Profession`
+- `Race`
+- `TeamColorId`
+- `IsCommander`
+- `FieldOfView`
+- `UiSize`
+
+If you need the performance, it's recommended to not request these values on every update, but to cache them locally, and only update once in a while.
+Any other value is safe to be read every tick without taking any additional performance hit.
