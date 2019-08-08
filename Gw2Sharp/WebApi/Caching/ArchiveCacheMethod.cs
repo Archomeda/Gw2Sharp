@@ -39,7 +39,7 @@ namespace Gw2Sharp.WebApi.Caching
         {
             if (archiveFileName == null)
                 throw new ArgumentNullException(nameof(archiveFileName));
-#pragma warning disable S2583 // Conditionally executed blocks should be reachable - false positive in SonarCloud
+#pragma warning disable S2583 // Conditionally executed blocks should be reachable - false positive in SonarCloud (SonarSource/sonar-dotnet#1347)
             if (string.IsNullOrWhiteSpace(archiveFileName))
                 throw new ArgumentException("File name cannot be empty or only contain whitespaces", nameof(archiveFileName));
 #pragma warning restore S2583 // Conditionally executed blocks should be reachable

@@ -45,6 +45,11 @@ namespace Gw2Sharp.WebApi.V2
         private readonly IOutfitsClient outfits;
         private readonly IPetsClient pets;
         private readonly IProfessionsClient professions;
+        private readonly IPvpClient pvp;
+        private readonly IQuaggansClient quaggans;
+        private readonly IQuestsClient quests;
+        private readonly IRacesClient races;
+        private readonly IRaidsClient raids;
         private readonly ITokenInfoClient tokenInfo;
         private readonly IWorldBossesClient worldBosses;
 
@@ -94,6 +99,11 @@ namespace Gw2Sharp.WebApi.V2
             this.outfits = new OutfitsClient(connection, gw2Client);
             this.pets = new PetsClient(connection, gw2Client);
             this.professions = new ProfessionsClient(connection, gw2Client);
+            this.pvp = new PvpClient(connection, gw2Client);
+            this.quaggans = new QuaggansClient(connection, gw2Client);
+            this.quests = new QuestsClient(connection, gw2Client);
+            this.races = new RacesClient(connection, gw2Client);
+            this.raids = new RaidsClient(connection, gw2Client);
             this.tokenInfo = new TokenInfoClient(connection, gw2Client);
             this.worldBosses = new WorldBossesClient(connection, gw2Client);
         }
@@ -193,6 +203,21 @@ namespace Gw2Sharp.WebApi.V2
 
         /// <inheritdoc />
         public virtual IProfessionsClient Professions => this.professions;
+
+        /// <inheritdoc />
+        public virtual IPvpClient Pvp => this.pvp;
+
+        /// <inheritdoc />
+        public virtual IQuaggansClient Quaggans => this.quaggans;
+
+        /// <inheritdoc />
+        public virtual IQuestsClient Quests => this.quests;
+
+        /// <inheritdoc />
+        public virtual IRacesClient Races => this.races;
+
+        /// <inheritdoc />
+        public virtual IRaidsClient Raids => this.raids;
 
         /// <inheritdoc />
         public virtual ITokenInfoClient TokenInfo => this.tokenInfo;

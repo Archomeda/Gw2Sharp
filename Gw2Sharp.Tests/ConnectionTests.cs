@@ -12,7 +12,7 @@ using NSubstitute;
 using NSubstitute.ExceptionExtensions;
 using Xunit;
 
-namespace Gw2Sharp.Tests.WebApi
+namespace Gw2Sharp.Tests
 {
     public class ConnectionTests
     {

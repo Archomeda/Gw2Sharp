@@ -1,44 +1,34 @@
 using System.Threading.Tasks;
 using Gw2Sharp.Tests.Helpers;
-using Gw2Sharp.WebApi;
-using Gw2Sharp.WebApi.Caching;
-using Gw2Sharp.WebApi.Http;
 using Gw2Sharp.WebApi.V2.Clients;
-using NSubstitute;
 using Xunit;
 
 namespace Gw2Sharp.Tests.WebApi.V2.Clients
 {
-    public class ContinentsFloorsClientTests : BaseEndpointClientTests
+    public class ContinentsFloorsClientTests : BaseEndpointClientTests<IContinentsFloorsClient>
     {
-        public ContinentsFloorsClientTests()
-        {
-            var connection = new Connection(string.Empty, Locale.English, cacheMethod: new NullCacheMethod(), httpClient: Substitute.For<IHttpClient>());
-            this.client = new Gw2Client(connection).WebApi.V2.Continents[1].Floors;
-            this.Client = this.client;
-        }
-
-        private readonly IContinentsFloorsClient client;
+        protected override IContinentsFloorsClient CreateClient(IGw2Client gw2Client) =>
+            gw2Client.WebApi.V2.Continents[1].Floors;
 
         [Theory]
         [InlineData("TestFiles.Continents.ContinentsFloors.bulk.json")]
-        public Task PaginatedTestAsync(string file) => this.AssertPaginatedDataAsync(this.client, file);
+        public Task PaginatedTestAsync(string file) => this.AssertPaginatedDataAsync(this.Client, file);
 
         [Theory]
         [InlineData("TestFiles.Continents.ContinentsFloors.single.json")]
-        public Task GetTestAsync(string file) => this.AssertGetDataAsync(this.client, file);
+        public Task GetTestAsync(string file) => this.AssertGetDataAsync(this.Client, file);
 
         [Theory]
         [InlineData("TestFiles.Continents.ContinentsFloors.bulk.json")]
-        public Task BulkTestAsync(string file) => this.AssertBulkDataAsync(this.client, file);
+        public Task BulkTestAsync(string file) => this.AssertBulkDataAsync(this.Client, file);
 
         [Theory]
         [InlineData("TestFiles.Continents.ContinentsFloors.bulk.json")]
-        public Task AllTestAsync(string file) => this.AssertAllDataAsync(this.client, file);
+        public Task AllTestAsync(string file) => this.AssertAllDataAsync(this.Client, file);
 
         [Theory]
         [InlineData("TestFiles.Continents.ContinentsFloors.ids.json")]
-        public Task IdsTestAsync(string file) => this.AssertIdsDataAsync(this.client, file);
+        public Task IdsTestAsync(string file) => this.AssertIdsDataAsync(this.Client, file);
 
 
         #region ArgumentNullException tests

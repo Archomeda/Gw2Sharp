@@ -1,10 +1,10 @@
 using Gw2Sharp.Tests.Helpers;
-using Gw2Sharp.WebApi;
+using Gw2Sharp.WebApi.V2.Clients;
 using Xunit;
 
 namespace Gw2Sharp.Tests.WebApi.V2.Clients
 {
-    public abstract class BaseCommerceExchangeClientTests : BaseEndpointClientTests
+    public abstract class BaseCommerceExchangeClientTests<T> : BaseEndpointClientTests<T> where T : IEndpointClient
     {
 
         #region ArgumentNullException tests

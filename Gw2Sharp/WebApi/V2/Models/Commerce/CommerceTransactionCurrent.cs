@@ -31,6 +31,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The date the transaction was created.
         /// </summary>
-        public DateTime Created { get; set; }
+        public DateTimeOffset Created { get; set; }
     }
 }

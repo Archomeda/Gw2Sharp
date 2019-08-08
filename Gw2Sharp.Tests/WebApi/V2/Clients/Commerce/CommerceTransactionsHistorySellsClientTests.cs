@@ -1,30 +1,22 @@
 using System.Threading.Tasks;
-using Gw2Sharp.WebApi;
-using Gw2Sharp.WebApi.Caching;
-using Gw2Sharp.WebApi.Http;
 using Gw2Sharp.WebApi.V2.Clients;
-using NSubstitute;
 using Xunit;
 
 namespace Gw2Sharp.Tests.WebApi.V2.Clients
 {
-    public class CommerceTransactionsHistorySellsClientTests : BaseEndpointClientTests
+    public class CommerceTransactionsHistorySellsClientTests : BaseEndpointClientTests<ICommerceTransactionsHistorySellsClient>
     {
-        public CommerceTransactionsHistorySellsClientTests()
-        {
-            var connection = new Connection("12345678-1234-1234-1234-12345678901234567890-1234-1234-1234-123456789012", Locale.English, cacheMethod: new NullCacheMethod(), httpClient: Substitute.For<IHttpClient>());
-            this.client = new Gw2Client(connection).WebApi.V2.Commerce.Transactions.History.Sells;
-            this.Client = this.client;
-        }
+        protected override bool IsAuthenticated => true;
 
-        private readonly ICommerceTransactionsHistorySellsClient client;
+        protected override ICommerceTransactionsHistorySellsClient CreateClient(IGw2Client gw2Client) =>
+            gw2Client.WebApi.V2.Commerce.Transactions.History.Sells;
 
         [Theory]
         [InlineData("TestFiles.Commerce.CommerceTransactionsHistory.json")]
-        public Task BlobTest(string file) => this.AssertBlobDataAsync(this.client, file);
+        public Task BlobTest(string file) => this.AssertBlobDataAsync(this.Client, file);
 
         [Theory]
         [InlineData("TestFiles.Commerce.CommerceTransactionsHistory.json")]
-        public Task PaginatedTestAsync(string file) => this.AssertPaginatedDataAsync(this.client, file);
+        public Task PaginatedTestAsync(string file) => this.AssertPaginatedDataAsync(this.Client, file);
     }
 }

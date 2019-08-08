@@ -170,6 +170,31 @@ namespace Gw2Sharp.WebApi.V2
         IProfessionsClient Professions { get; }
 
         /// <summary>
+        /// Gets the PvP.
+        /// </summary>
+        IPvpClient Pvp { get; }
+
+        /// <summary>
+        /// Gets the quaggans.
+        /// </summary>
+        IQuaggansClient Quaggans { get; }
+
+        /// <summary>
+        /// Gets the quests.
+        /// </summary>
+        IQuestsClient Quests { get; }
+
+        /// <summary>
+        /// Gets the races.
+        /// </summary>
+        IRacesClient Races { get; }
+
+        /// <summary>
+        /// Gets the raids.
+        /// </summary>
+        IRaidsClient Raids { get; }
+
+        /// <summary>
         /// Gets the token info.
         /// </summary>
         ITokenInfoClient TokenInfo { get; }

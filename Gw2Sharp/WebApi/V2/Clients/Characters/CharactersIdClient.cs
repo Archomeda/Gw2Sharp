@@ -1,4 +1,5 @@
 using System;
+using Gw2Sharp.WebApi.V2.Models;
 
 namespace Gw2Sharp.WebApi.V2.Clients
 {
@@ -6,7 +7,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 characters id endpoint.
     /// </summary>
     [EndpointPath("characters/:id")]
-    public class CharactersIdClient : BaseClient, ICharactersIdClient
+    public class CharactersIdClient : BaseEndpointBlobClient<Character>, ICharactersIdClient
     {
         private readonly string characterName;
         private readonly ICharactersIdBackstoryClient backstory;

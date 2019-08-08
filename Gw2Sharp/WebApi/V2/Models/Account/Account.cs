@@ -45,12 +45,12 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The last modification date for this data.
         /// </summary>
-        public DateTime LastModified { get; set; }
+        public DateTimeOffset LastModified { get; set; }
 
         /// <summary>
         /// The account creation date.
         /// </summary>
-        public DateTime Created { get; set; }
+        public DateTimeOffset Created { get; set; }
 
         /// <summary>
         /// The content flags that this account has access to.

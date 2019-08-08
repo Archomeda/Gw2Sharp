@@ -23,12 +23,12 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The start time.
         /// </summary>
-        public DateTime Started { get; set; }
+        public DateTimeOffset Started { get; set; }
 
         /// <summary>
         /// The end time.
         /// </summary>
-        public DateTime Ended { get; set; }
+        public DateTimeOffset Ended { get; set; }
 
         /// <summary>
         /// The result.

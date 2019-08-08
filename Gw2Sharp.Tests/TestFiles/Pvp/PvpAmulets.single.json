@@ -1,0 +1,14 @@
+{
+  "id": 1,
+  "name": "Celestial Amulet",
+  "icon": "https://render.guildwars2.com/file/03C8FB276B146CB64E201F006D0FC0D2380E956B/220645.png",
+  "attributes": {
+    "Power": 460,
+    "Precision": 460,
+    "Vitality": 460,
+    "Toughness": 460,
+    "CritDamage": 460,
+    "ConditionDamage": 460,
+    "Healing": 460
+  }
+}

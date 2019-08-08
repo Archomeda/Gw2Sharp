@@ -34,7 +34,7 @@ namespace Gw2Sharp.WebApi.Caching
 
         private void CollectGarbage()
         {
-            var now = DateTime.Now;
+            var now = DateTimeOffset.Now;
             foreach (string category in this.cachedItems.Keys.ToArray())
             {
                 if (!this.cachedItems.TryGetValue(category, out var cache))
@@ -47,7 +47,7 @@ namespace Gw2Sharp.WebApi.Caching
             }
         }
 
-        private void CollectInnerGarbage(DateTime now, ConcurrentDictionary<object, object> cache)
+        private void CollectInnerGarbage(DateTimeOffset now, ConcurrentDictionary<object, object> cache)
         {
             foreach (object key in cache.Keys.ToArray())
             {
@@ -78,7 +78,7 @@ namespace Gw2Sharp.WebApi.Caching
             return this.cachedItems.TryGetValue(category, out var cache) &&
                  cache.TryGetValue(id, out object obj) &&
                  obj is CacheItem<T> item &&
-                 item.ExpiryTime > DateTime.Now
+                 item.ExpiryTime > DateTimeOffset.Now
                  ? item : null;
         }
 
@@ -88,7 +88,7 @@ namespace Gw2Sharp.WebApi.Caching
             if (item == null)
                 throw new ArgumentNullException(nameof(item));
 
-            return item.ExpiryTime <= DateTime.Now ? Task.CompletedTask : this.SetInternalAsync(item);
+            return item.ExpiryTime <= DateTimeOffset.Now ? Task.CompletedTask : this.SetInternalAsync(item);
         }
 
         private async Task SetInternalAsync<T>(CacheItem<T> item)
@@ -115,7 +115,7 @@ namespace Gw2Sharp.WebApi.Caching
             {
                 items = ids
                     .Select(id => cache.TryGetValue(id, out object obj) ? obj : null)
-                    .Where(x => x is CacheItem<T> item && item.ExpiryTime > DateTime.Now)
+                    .Where(x => x is CacheItem<T> item && item.ExpiryTime > DateTimeOffset.Now)
                     .Cast<CacheItem<T>>()
                     .ToDictionary(x => x.Id);
             }

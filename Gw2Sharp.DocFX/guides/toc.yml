@@ -1,20 +1,24 @@
-- name: Guides
+- name: Basic Guides
   items:
     - name: Introduction
       topicUid: Guides.Introduction
+    - name: Supported endpoints
+      topicUid: Guides.Endpoints
+    - name: Exception handling
+      topicUid: Guides.ExceptionHandling
+- name: Advanced Guides
+  items:
     - name: Caching
       topicUid: Guides.Caching
-    - name: Supported services
-      topicUid: Guides.Services
-    - name: Parameterized endpoints
-      topicUid: Guides.ParameterizedEndpoints
-    - name: Subtokens
-      topicUid: Guides.Subtokens
     - name: HTTP headers
       topicUid: Guides.HttpHeaders
     - name: Last-Modified
       topicUid: Guides.LastModified
-    - name: Exception handling
-      topicUid: Guides.ExceptionHandling
+    - name: Subtokens
+      topicUid: Guides.Subtokens
     - name: Debug symbols
       topicUid: Guides.Symbols
+- name: Tips
+  items:
+    - name: Using RenderUrl
+      topicUid: Guides.RenderUrl

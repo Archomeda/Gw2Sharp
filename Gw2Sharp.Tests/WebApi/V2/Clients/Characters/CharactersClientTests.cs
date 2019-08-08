@@ -1,42 +1,34 @@
 using System.Threading.Tasks;
-using Gw2Sharp.WebApi;
-using Gw2Sharp.WebApi.Caching;
-using Gw2Sharp.WebApi.Http;
 using Gw2Sharp.WebApi.V2.Clients;
-using NSubstitute;
 using Xunit;
 
 namespace Gw2Sharp.Tests.WebApi.V2.Clients
 {
-    public class CharactersClientTests : BaseEndpointClientTests
+    public class CharactersClientTests : BaseEndpointClientTests<ICharactersClient>
     {
-        public CharactersClientTests()
-        {
-            var connection = new Connection("12345678-1234-1234-1234-12345678901234567890-1234-1234-1234-123456789012", Locale.English, cacheMethod: new NullCacheMethod(), httpClient: Substitute.For<IHttpClient>());
-            this.client = new Gw2Client(connection).WebApi.V2.Characters;
-            this.Client = this.client;
-        }
+        protected override bool IsAuthenticated => true;
 
-        private readonly ICharactersClient client;
+        protected override ICharactersClient CreateClient(IGw2Client gw2Client) =>
+            gw2Client.WebApi.V2.Characters;
 
         [Theory]
         [InlineData("TestFiles.Characters.Characters.bulk.json")]
-        public Task PaginatedTestAsync(string file) => this.AssertPaginatedDataAsync(this.client, file);
+        public Task PaginatedTestAsync(string file) => this.AssertPaginatedDataAsync(this.Client, file);
 
         [Theory]
         [InlineData("TestFiles.Characters.Characters.single.json")]
-        public Task GetTestAsync(string file) => this.AssertGetDataAsync(this.client, file, "name");
+        public Task GetTestAsync(string file) => this.AssertGetDataAsync(this.Client, file, "name");
 
         [Theory]
         [InlineData("TestFiles.Characters.Characters.bulk.json")]
-        public Task BulkTestAsync(string file) => this.AssertBulkDataAsync(this.client, file, "name");
+        public Task BulkTestAsync(string file) => this.AssertBulkDataAsync(this.Client, file, "name");
 
         [Theory]
         [InlineData("TestFiles.Characters.Characters.bulk.json")]
-        public Task AllTestAsync(string file) => this.AssertAllDataAsync(this.client, file);
+        public Task AllTestAsync(string file) => this.AssertAllDataAsync(this.Client, file);
 
         [Theory]
         [InlineData("TestFiles.Characters.Characters.ids.json")]
-        public Task IdsTestAsync(string file) => this.AssertIdsDataAsync(this.client, file);
+        public Task IdsTestAsync(string file) => this.AssertIdsDataAsync(this.Client, file);
     }
 }

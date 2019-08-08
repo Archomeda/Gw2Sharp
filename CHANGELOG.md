@@ -1,5 +1,43 @@
 # Gw2Sharp History
 
+## 0.6.0
+### Endpoints
+- **Breaking:** `Gw2Sharp.WebApi.V2.Models.GuildTeam` has had the type of its property `Ladders` changed from `PvpStatsLadders` to `IReadOnlyDictionary<string, PvpStatsAggregate>`
+  (reason: the keys in this property of this endpoint (`/v2/guild/:id/teams`) are actually dynamic, just like the ones in `/v2/pvp/stats`)
+- Add `/v2/pvp/amulets`
+- Add `/v2/pvp/games`
+- Add `/v2/pvp/heroes`
+- Add `/v2/pvp/ranks`
+- Add `/v2/pvp/seasons`
+- Add `/v2/pvp/seasons/:id/leaderboards`
+- Add `/v2/pvp/seasons/:id/leaderboards/:board/:region`
+- Add `/v2/pvp/standings`
+- Add `/v2/pvp/stats`
+- Add `/v2/quaggans`
+- Add `/v2/quests`
+- Add `/v2/races`
+- Add `/v2/raids`
+- Change `ICharactersIdClient` to use `IBlobClient<Character>` in order to consistently accept `GetAsync()` (`/v2/characters/:id`)
+
+### Caching
+- Fix locale setting from being ignored when generating the cache id for cachable endpoints
+
+### Refactoring
+- **Breaking:** The class `Gw2Sharp.WebApi.V2.Models.PvpStatsLadders` has been fully removed since it's no longer used
+- **Breaking:** The following properties have had their types changed from `DateTime` to `DateTimeOffset`:
+  - `LastModified` and `Created` in `Gw2Sharp.WebApi.V2.Models.Account`
+  - `LastModified` and `Created` in `Gw2Sharp.WebApi.V2.Models.Character`
+  - `LastModified` and `Created` in `Gw2Sharp.WebApi.V2.Models.CharactersCore`
+  - `Created` in `Gw2Sharp.WebApi.V2.Models.CommerceTransactionCurrent`
+  - `Created` and `Purchased` in `Gw2Sharp.WebApi.V2.Models.CommerceTransactionHistory`
+  - `Time` in `Gw2Sharp.WebApi.V2.Models.GuildLog`
+  - `Joined` in `Gw2Sharp.WebApi.V2.Models.GuildMember`
+  - `Started` and `Ended` in `Gw2Sharp.WebApi.V2.Models.GuildTeamGame`
+  - `ExpiresAt` and `IssuedAt` in `Gw2Sharp.WebApi.V2.Models.SubTokenInfo`
+- **Breaking:** The following arguments have had their types changed from `DateTime` to `DateTimeOffset`:
+  - `expire` in `Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.Expires()`
+  - `expire` in `Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.Expires()`
+
 ## 0.5.0
 ### Endpoints
 - Add render service which can be found under `IGw2WebApiClient.Render` (right next to `IGw2WebApiClient.V2`) ([#6](https://github.com/Archomeda/Gw2Sharp/issues/6))

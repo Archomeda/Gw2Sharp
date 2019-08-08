@@ -15,7 +15,9 @@ This library has been written to be as close as possible to the official API str
 *Make sure to read the [introductory guide](https://archomeda.github.io/Gw2Sharp/master/guides/introduction.html) to get started.*
 
 ## Supported services
-Check the [documentation](https://archomeda.github.io/Gw2Sharp/master/guides/services.html) for the supported services.
+The following services supported by Gw2Sharp:
+- Render service - [introduction](https://archomeda.github.io/Gw2Sharp/master/guides/introduction.html#render-service)
+- WebAPI v2 - [introduction](https://archomeda.github.io/Gw2Sharp/master/guides/introduction.html#web-api-v2), [endpoints](https://archomeda.github.io/Gw2Sharp/master/guides/endpoints.html)
 
 ## Requirements
 This project targets .NET Standard 2.0.

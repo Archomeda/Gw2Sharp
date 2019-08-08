@@ -1,0 +1,74 @@
+[
+  {
+    "name": "AWOL",
+    "level": 20,
+    "story": 1,
+    "goals": [
+      {
+        "active": "Report to Rytlock's office.",
+        "complete": "My father, Vallus Smokemane, has deserted his warband. Rytlock sent me to track Vallus down and bring him back alive. My first stop is in Human's Lament, where I will speak to Emer Whipmane, my father's legionnaire."
+      },
+      {
+        "active": "Locate your father's warband.",
+        "complete": ""
+      }
+    ],
+    "id": 83
+  },
+  {
+    "name": "Infiltration",
+    "level": 10,
+    "story": 3,
+    "goals": [
+      {
+        "active": "Infiltrate the bandit cave southeast of the city.",
+        "complete": "I discovered important information from the thieves. First, the Ministry Guard has been releasing prisoners and sending them out to join a growing band of criminals. Second, the ringleader is planning an arson attack on Divinity's Reach. He's targeting either the military hospital or the orphanage."
+      },
+      {
+        "active": "Tell Captain Thackeray that bandits plan to attack the city.",
+        "complete": "I warned Captain Thackeray about the impending attack on the orphanage and the hospital. We had to act quickly. Logan sent Lieutenant Francis with some soldiers in one direction, while he and I went in the other."
+      }
+    ],
+    "id": 113
+  },
+  {
+    "name": "The Wolf Havroun",
+    "level": 10,
+    "story": 2,
+    "goals": [
+      {
+        "active": "Find Wolf Havroun Solvi to close the Sons of Svanir portal.",
+        "complete": "Along with Eir and Garm, I defeated the Sons of Svanir. We couldn't save Wolf Havroun Solvi's life, but we did release his spirit and close the Sons of Svanir portal to the Mists. With order restored to the Spirit World and Valda assuming the role of Wolf Havroun, we're ready to meet whatever challenges lay ahead."
+      }
+    ],
+    "id": 171
+  },
+  {
+    "name": "Eye of the Brandstorm",
+    "level": 80,
+    "story": 85,
+    "goals": [
+      {
+        "active": "",
+        "complete": "Soon after Balthazar's defeat at the Kodash Bazaar, Rytlock Brimstone, Canach, and Taimi procured a dolyak ranch outside the Free City of Amnoon where they could make necessary repairs to Taimi's golem before resuming our search for Aurene. Taimi contacted me with a progress report."
+      },
+      {
+        "active": "Discuss the current status of Kralkatorrik with Taimi and Rytlock.",
+        "complete": "Cavalier Captain Rahim generously allowed Taimi, Canach, and Rytlock to have use of the dolyak ranch as a base camp from which to search for Aurene, track Kralkatorrik's activities, and figure out what to do next. The location provides easy access to Amnoon's bustling marketplace while allowing us to keep a low profile.\n\nWhen I arrived at the ranch, Taimi updated me on her progress outfitting Scruffy, her mobile lab/golem. She also relayed a message from Marjory Delaqua and Kasmeer Meade regarding Kralkatorrik's current location and activity. Their update was interrupted by a Brandstorm that appeared without warning and engulfed Amnoon. We put our search for Aurene on hold to investigate."
+      },
+      {
+        "active": "Save citizens of Amnoon from the Branded.",
+        "complete": "Rytlock Brimstone, Canach, and I fought waves of Branded laying siege to the Free City of Amnoon and rescued as many Elonians as possible. The Brandstorm concealed a Branded wyvern: Kralkatorrik was clearly experimenting with new powers acquired after the deaths of Balthazar and the two Elder Dragons. \n\nWe also found our search for Aurene rendered unexpectedly moot, as she was already in Amnoon protecting its citizens. She appeared to be substantially larger and more powerful than when we last saw her just days ago at the Kodash Bazaar, and her temperament seemed erratic. My concern about the effect of Aurene's proximity to Balthazar at his death has only increased after this encounter."
+      },
+      {
+        "active": "Defend the Free City of Amnoon against the Branded invasion.",
+        "complete": ""
+      },
+      {
+        "active": "Discuss the next move for Dragon's Watch with your allies.",
+        "complete": ""
+      }
+    ],
+    "id": 505
+  }
+]

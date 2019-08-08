@@ -10,6 +10,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using Gw2Sharp.Extensions;
 using Gw2Sharp.Tests.Helpers;
+using Gw2Sharp.WebApi;
+using Gw2Sharp.WebApi.Caching;
 using Gw2Sharp.WebApi.Http;
 using Gw2Sharp.WebApi.V2;
 using Gw2Sharp.WebApi.V2.Clients;
@@ -21,9 +23,28 @@ using Xunit;
 
 namespace Gw2Sharp.Tests.WebApi.V2.Clients
 {
-    public abstract class BaseEndpointClientTests
+    public abstract class BaseEndpointClientTests<T> where T : IEndpointClient
     {
-        public IEndpointClient Client { get; protected set; } = default!;
+        protected BaseEndpointClientTests()
+        {
+            this.Client = this.CreateClient(this.CreateGw2Client());
+        }
+
+        public T Client { get; }
+
+        protected virtual bool IsAuthenticated => false;
+
+        protected abstract T CreateClient(IGw2Client gw2Client);
+
+
+        private IGw2Client CreateGw2Client()
+        {
+            var cacheMethod = new NullCacheMethod();
+            var httpClient = Substitute.For<IHttpClient>();
+            var connection = new Connection(this.IsAuthenticated ? "12345678-1234-1234-1234-12345678901234567890-1234-1234-1234-123456789012" : null, Locale.English, cacheMethod: cacheMethod, httpClient: httpClient);
+            return new Gw2Client(connection);
+        }
+
 
         [Fact]
         public void InterfaceConsistencyTest()
@@ -260,13 +281,21 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                 var dic = (dynamic)actual;
                 foreach (var kvp in expected)
                 {
-                    string key = string.Concat(kvp.Key.Split('_').Select(s => string.Concat(
-                        s[0].ToString().ToUpper(),
-                        s.Substring(1))));
-                    dynamic property = Convert.ChangeType(key, keyType);
-                    if (property == null)
-                        throw new InvalidOperationException($"Expected property '{key}' to exist in type {type.FullName}");
-                    var actualValue = dic[property];
+                    dynamic key;
+                    if (keyType == typeof(string))
+                    {
+                        key = kvp.Key;
+                    }
+                    else
+                    {
+                        string keyString = string.Concat(kvp.Key.Split('_').Select(s => string.Concat(
+                            s[0].ToString().ToUpper(),
+                            s.Substring(1))));
+                        key = Convert.ChangeType(keyString, keyType);
+                        if (key == null)
+                            throw new InvalidOperationException($"Expected property '{keyString}' to exist in type {type.FullName}");
+                    }
+                    var actualValue = dic[key];
                     this.AssertJsonObject(kvp.Value, actualValue);
                 }
             }
@@ -304,6 +333,9 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                     Assert.Equal(new Guid(expected.Value<string>()), guid);
                     break;
                 case DateTime dateTime:
+                    Assert.Equal(expected.Value<DateTime>(), dateTime);
+                    break;
+                case DateTimeOffset dateTime:
                     Assert.Equal(expected.Value<DateTime>(), dateTime);
                     break;
                 case TimeSpan timeSpan:

@@ -205,6 +205,38 @@
     <None Remove="TestFiles\Professions\Professions.bulk.json" />
     <None Remove="TestFiles\Professions\Professions.ids.json" />
     <None Remove="TestFiles\Professions\Professions.single.json" />
+    <None Remove="TestFiles\Pvp\PvpAmulets.bulk.json" />
+    <None Remove="TestFiles\Pvp\PvpAmulets.ids.json" />
+    <None Remove="TestFiles\Pvp\PvpAmulets.single.json" />
+    <None Remove="TestFiles\Pvp\PvpGames.bulk.json" />
+    <None Remove="TestFiles\Pvp\PvpGames.ids.json" />
+    <None Remove="TestFiles\Pvp\PvpGames.single.json" />
+    <None Remove="TestFiles\Pvp\PvpHeroes.bulk.json" />
+    <None Remove="TestFiles\Pvp\PvpHeroes.ids.json" />
+    <None Remove="TestFiles\Pvp\PvpHeroes.single.json" />
+    <None Remove="TestFiles\Pvp\PvpLeaderboards.json" />
+    <None Remove="TestFiles\Pvp\PvpLeaderboardsId.json" />
+    <None Remove="TestFiles\Pvp\PvpLeaderboardsRegionId.json" />
+    <None Remove="TestFiles\Pvp\PvpRanks.bulk.json" />
+    <None Remove="TestFiles\Pvp\PvpRanks.ids.json" />
+    <None Remove="TestFiles\Pvp\PvpRanks.single.json" />
+    <None Remove="TestFiles\Pvp\PvpSeasons.bulk.json" />
+    <None Remove="TestFiles\Pvp\PvpSeasons.ids.json" />
+    <None Remove="TestFiles\Pvp\PvpSeasons.single.json" />
+    <None Remove="TestFiles\Pvp\PvpStandings.json" />
+    <None Remove="TestFiles\Pvp\PvpStats.json" />
+    <None Remove="TestFiles\Quaggans\Quaggans.bulk.json" />
+    <None Remove="TestFiles\Quaggans\Quaggans.ids.json" />
+    <None Remove="TestFiles\Quaggans\Quaggans.single.json" />
+    <None Remove="TestFiles\Quests\Quests.bulk.json" />
+    <None Remove="TestFiles\Quests\Quests.ids.json" />
+    <None Remove="TestFiles\Quests\Quests.single.json" />
+    <None Remove="TestFiles\Races\Races.bulk.json" />
+    <None Remove="TestFiles\Races\Races.ids.json" />
+    <None Remove="TestFiles\Races\Races.single.json" />
+    <None Remove="TestFiles\Raids\Raids.bulk.json" />
+    <None Remove="TestFiles\Raids\Raids.ids.json" />
+    <None Remove="TestFiles\Raids\Raids.single.json" />
     <None Remove="TestFiles\Render\414998.png" />
     <None Remove="TestFiles\TokenInfo\TokenInfo.ApiToken.json" />
     <None Remove="TestFiles\TokenInfo\TokenInfo.SubToken.json" />
@@ -405,6 +437,38 @@
     <EmbeddedResource Include="TestFiles\Professions\Professions.bulk.json" />
     <EmbeddedResource Include="TestFiles\Professions\Professions.ids.json" />
     <EmbeddedResource Include="TestFiles\Professions\Professions.single.json" />
+    <EmbeddedResource Include="TestFiles\Pvp\PvpAmulets.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Pvp\PvpAmulets.ids.json" />
+    <EmbeddedResource Include="TestFiles\Pvp\PvpAmulets.single.json" />
+    <EmbeddedResource Include="TestFiles\Pvp\PvpGames.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Pvp\PvpGames.ids.json" />
+    <EmbeddedResource Include="TestFiles\Pvp\PvpGames.single.json" />
+    <EmbeddedResource Include="TestFiles\Pvp\PvpHeroes.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Pvp\PvpHeroes.ids.json" />
+    <EmbeddedResource Include="TestFiles\Pvp\PvpHeroes.single.json" />
+    <EmbeddedResource Include="TestFiles\Pvp\PvpLeaderboards.json" />
+    <EmbeddedResource Include="TestFiles\Pvp\PvpLeaderboardsId.json" />
+    <EmbeddedResource Include="TestFiles\Pvp\PvpLeaderboardsRegionId.json" />
+    <EmbeddedResource Include="TestFiles\Pvp\PvpRanks.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Pvp\PvpRanks.ids.json" />
+    <EmbeddedResource Include="TestFiles\Pvp\PvpRanks.single.json" />
+    <EmbeddedResource Include="TestFiles\Pvp\PvpSeasons.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Pvp\PvpSeasons.ids.json" />
+    <EmbeddedResource Include="TestFiles\Pvp\PvpSeasons.single.json" />
+    <EmbeddedResource Include="TestFiles\Pvp\PvpStandings.json" />
+    <EmbeddedResource Include="TestFiles\Pvp\PvpStats.json" />
+    <EmbeddedResource Include="TestFiles\Quaggans\Quaggans.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Quaggans\Quaggans.ids.json" />
+    <EmbeddedResource Include="TestFiles\Quaggans\Quaggans.single.json" />
+    <EmbeddedResource Include="TestFiles\Quests\Quests.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Quests\Quests.ids.json" />
+    <EmbeddedResource Include="TestFiles\Quests\Quests.single.json" />
+    <EmbeddedResource Include="TestFiles\Races\Races.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Races\Races.ids.json" />
+    <EmbeddedResource Include="TestFiles\Races\Races.single.json" />
+    <EmbeddedResource Include="TestFiles\Raids\Raids.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Raids\Raids.ids.json" />
+    <EmbeddedResource Include="TestFiles\Raids\Raids.single.json" />
     <EmbeddedResource Include="TestFiles\Render\414998.png" />
     <EmbeddedResource Include="TestFiles\TokenInfo\TokenInfo.ApiToken.json" />
     <EmbeddedResource Include="TestFiles\TokenInfo\TokenInfo.SubToken.json" />
@@ -419,9 +483,9 @@
 
   <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="5.7.0" />
-    <PackageReference Include="Microsoft.CodeCoverage" Version="16.0.1" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.0.1" />
-    <PackageReference Include="NSubstitute" Version="3.1.0" />
+    <PackageReference Include="Microsoft.CodeCoverage" Version="16.2.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
+    <PackageReference Include="NSubstitute" Version="4.2.1" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.analyzers" Version="0.10.0" />
     <PackageReference Include="xunit.runner.console" Version="2.4.1">

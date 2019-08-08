@@ -8,6 +8,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
     [EndpointPath("home")]
     public class HomeClient : BaseClient, IHomeClient
     {
+        private readonly IHomeCatsClient cats;
+        private readonly IHomeNodesClient nodes;
+
         /// <summary>
         /// Creates a new <see cref="HomeClient"/> that is used for the API v2 home endpoint.
         /// </summary>
@@ -17,14 +20,14 @@ namespace Gw2Sharp.WebApi.V2.Clients
         protected internal HomeClient(IConnection connection, IGw2Client gw2Client) :
             base(connection, gw2Client)
         {
-            this.Cats = new HomeCatsClient(connection, gw2Client);
-            this.Nodes = new HomeNodesClient(connection, gw2Client);
+            this.cats = new HomeCatsClient(connection, gw2Client);
+            this.nodes = new HomeNodesClient(connection, gw2Client);
         }
 
         /// <inheritdoc />
-        public virtual IHomeCatsClient Cats { get; protected set; }
+        public virtual IHomeCatsClient Cats => this.cats;
 
         /// <inheritdoc />
-        public virtual IHomeNodesClient Nodes { get; protected set; }
+        public virtual IHomeNodesClient Nodes => this.nodes;
     }
 }
