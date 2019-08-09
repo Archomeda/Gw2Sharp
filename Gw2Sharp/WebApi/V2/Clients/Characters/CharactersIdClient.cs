@@ -7,6 +7,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 characters id endpoint.
     /// </summary>
     [EndpointPath("characters/:id")]
+    [EndpointPathSegment("id", 0)]
     public class CharactersIdClient : BaseEndpointBlobClient<Character>, ICharactersIdClient
     {
         private readonly string characterName;
@@ -31,7 +32,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="gw2Client">The Guild Wars 2 client.</param>
         /// <exception cref="ArgumentNullException"><paramref name="connection"/> or <paramref name="gw2Client"/> is <c>null</c>.</exception>
         protected internal CharactersIdClient(IConnection connection, IGw2Client gw2Client, string characterName) :
-            base(connection, gw2Client)
+            base(connection, gw2Client, characterName)
         {
             this.characterName = characterName ?? throw new ArgumentNullException(nameof(characterName));
             this.backstory = new CharactersIdBackstoryClient(connection, gw2Client, characterName);
