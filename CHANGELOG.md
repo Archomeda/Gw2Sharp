@@ -19,6 +19,9 @@
 - Add `/v2/raids`
 - Change `ICharactersIdClient` to use `IBlobClient<Character>` in order to consistently accept `GetAsync()` (`/v2/characters/:id`)
 
+### Lifetime
+- **Breaking:** Because of the introduction of the `Gw2MumbleClient` that implements `IDisposable` (because it holds a reference to a memory mapped file that needs to be disposed), `Gw2Client` now implements `IDisposable` as well and should be disposed accordingly
+
 ### Caching
 - Fix locale setting from being ignored when generating the cache id for cachable endpoints
 
