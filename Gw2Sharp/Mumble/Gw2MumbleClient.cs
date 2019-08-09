@@ -167,11 +167,22 @@ namespace Gw2Sharp.Mumble
         public unsafe void Update()
         {
             this.memoryMappedViewAccessor.Value.Read<Gw2LinkedMem>(0, out var linkedMem);
+            int oldTick = this.Tick;
 
             this.Name = new string(linkedMem.name);
             this.IsAvailable = this.Name == MUMBLE_LINK_GAME_NAME;
 
-            this.newIdentityJson = this.IsAvailable ? new string(linkedMem.identity) : null;
+            if (this.IsAvailable && linkedMem.uiTick != oldTick)
+            {
+                // There's actually a possible identity update
+                this.newIdentityJson = new string(linkedMem.identity);
+            }
+            else if (!this.IsAvailable)
+            {
+                // Mumble Link isn't available, clear the identity
+                this.newIdentityJson = null;
+            }
+
             this.linkedMem = linkedMem;
         }
 
