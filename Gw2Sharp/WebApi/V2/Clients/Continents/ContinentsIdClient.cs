@@ -1,4 +1,5 @@
 using System;
+using Gw2Sharp.WebApi.V2.Models;
 
 namespace Gw2Sharp.WebApi.V2.Clients
 {
@@ -6,7 +7,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 continents id endpoint.
     /// </summary>
     [EndpointPath("continents/:continent_id")]
-    public class ContinentsIdClient : BaseClient, IContinentsIdClient
+    [EndpointPathSegment("continent_id", 0)]
+    public class ContinentsIdClient : BaseEndpointBlobClient<Continent>, IContinentsIdClient
     {
         private readonly int continentId;
         private readonly IContinentsFloorsClient floors;
@@ -19,7 +21,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="continentId">The continent id.</param>
         /// <exception cref="ArgumentNullException"><paramref name="connection"/> or <paramref name="gw2Client"/> is <c>null</c>.</exception>
         protected internal ContinentsIdClient(IConnection connection, IGw2Client gw2Client, int continentId) :
-            base(connection, gw2Client)
+            base(connection, gw2Client, continentId.ToString())
         {
             this.continentId = continentId;
             this.floors = new ContinentsFloorsClient(connection, gw2Client, continentId);

@@ -20,6 +20,10 @@
 - Add `/v2/races`
 - Add `/v2/raids`
 - Change `ICharactersIdClient` to use `IBlobClient<Character>` in order to consistently accept `GetAsync()` (`/v2/characters/:id`)
+- Change `IContinentsIdClient` to use `IBlobClient<Continent>` in order to consistently accept `GetAsync()` (`/v2/continents/:continent_id`)
+- Change `IContinentsFloorsIdClient` to use `IBlobClient<ContinentFloor>` in order to consistently accept `GetAsync()` (`/v2/continents/:continent_id/floors/:floor_id`)
+- Change `IContinentsFloorsRegionsIdClient` to use `IBlobClient<ContinentFloorRegion>` in order to consistently accept `GetAsync()` (`/v2/continents/:id/floors/:floor_id/regions/:region_id`)
+- Change `IContinentsFloorsRegionsMapsIdClient` to use `IBlobClient<ContinentFloorRegionMap>` in order to consistently accept `GetAsync()` (`/v2/continents/:id/floors/:floor_id/regions/:region_id/maps/:map_id`)
 
 ### Caching
 - Fix locale setting from being ignored when generating the cache id for cachable endpoints
