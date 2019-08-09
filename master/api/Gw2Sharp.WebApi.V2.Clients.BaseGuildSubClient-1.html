@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class ContinentFloorRegionMapTask
+    <title>Class BaseGuildSubClient&lt;TObject&gt;
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class ContinentFloorRegionMapTask
+    <meta name="title" content="Class BaseGuildSubClient&lt;TObject&gt;
    ">
     <meta name="generator" content="docfx 2.43.3.0">
     
@@ -515,8 +515,8 @@
                           <li class="">
                             <a href="Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient-1.html" title="BaseEndpointPaginatedBlobClient&lt;TObject&gt;" class="">BaseEndpointPaginatedBlobClient&lt;TObject&gt;</a>
                           </li>
-                          <li class="">
-                            <a href="Gw2Sharp.WebApi.V2.Clients.BaseGuildSubClient-1.html" title="BaseGuildSubClient&lt;TObject&gt;" class="">BaseGuildSubClient&lt;TObject&gt;</a>
+                          <li class="active">
+                            <a href="Gw2Sharp.WebApi.V2.Clients.BaseGuildSubClient-1.html" title="BaseGuildSubClient&lt;TObject&gt;" class="active">BaseGuildSubClient&lt;TObject&gt;</a>
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.WebApi.V2.Clients.BuildClient.html" title="BuildClient" class="">BuildClient</a>
@@ -1574,8 +1574,8 @@
                           <li class="">
                             <a href="Gw2Sharp.WebApi.V2.Models.ContinentFloorRegionMapSkillChallenge.html" title="ContinentFloorRegionMapSkillChallenge" class="">ContinentFloorRegionMapSkillChallenge</a>
                           </li>
-                          <li class="active">
-                            <a href="Gw2Sharp.WebApi.V2.Models.ContinentFloorRegionMapTask.html" title="ContinentFloorRegionMapTask" class="active">ContinentFloorRegionMapTask</a>
+                          <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.Models.ContinentFloorRegionMapTask.html" title="ContinentFloorRegionMapTask" class="">ContinentFloorRegionMapTask</a>
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.WebApi.V2.Models.CreateSubtoken.html" title="CreateSubtoken" class="">CreateSubtoken</a>
@@ -2176,49 +2176,148 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Gw2Sharp.WebApi.V2.Models.ContinentFloorRegionMapTask">
+            <article class="content wrap" id="_content" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseGuildSubClient`1">
   
   
-  <h1 id="Gw2Sharp_WebApi_V2_Models_ContinentFloorRegionMapTask" data-uid="Gw2Sharp.WebApi.V2.Models.ContinentFloorRegionMapTask" class="text-break">Class ContinentFloorRegionMapTask
+  <h1 id="Gw2Sharp_WebApi_V2_Clients_BaseGuildSubClient_1" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseGuildSubClient`1" class="text-break">Class BaseGuildSubClient&lt;TObject&gt;
   </h1>
-  <div class="markdown level0 summary"><p>Represents a continent floor region map task.</p>
+  <div class="markdown level0 summary"><p>An abstract base class for implementing guild subendpoint clients.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="Gw2Sharp.WebApi.V2.ApiV2BaseObject.html">ApiV2BaseObject</a></div>
-    <div class="level2"><span class="xref">ContinentFloorRegionMapTask</span></div>
+    <div class="level1"><a class="xref" href="Gw2Sharp.BaseClient.html">BaseClient</a></div>
+    <div class="level2"><a class="xref" href="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html">BaseEndpointClient</a>&lt;TObject&gt;</div>
+    <div class="level3"><a class="xref" href="Gw2Sharp.WebApi.V2.Clients.BaseEndpointBlobClient-1.html">BaseEndpointBlobClient</a>&lt;TObject&gt;</div>
+    <div class="level4"><span class="xref">BaseGuildSubClient&lt;TObject&gt;</span></div>
+      <div class="level5"><a class="xref" href="Gw2Sharp.WebApi.V2.Clients.GuildIdLogClient.html">GuildIdLogClient</a></div>
+      <div class="level5"><a class="xref" href="Gw2Sharp.WebApi.V2.Clients.GuildIdMembersClient.html">GuildIdMembersClient</a></div>
+      <div class="level5"><a class="xref" href="Gw2Sharp.WebApi.V2.Clients.GuildIdRanksClient.html">GuildIdRanksClient</a></div>
+      <div class="level5"><a class="xref" href="Gw2Sharp.WebApi.V2.Clients.GuildIdStashClient.html">GuildIdStashClient</a></div>
+      <div class="level5"><a class="xref" href="Gw2Sharp.WebApi.V2.Clients.GuildIdStorageClient.html">GuildIdStorageClient</a></div>
+      <div class="level5"><a class="xref" href="Gw2Sharp.WebApi.V2.Clients.GuildIdTeamsClient.html">GuildIdTeamsClient</a></div>
+      <div class="level5"><a class="xref" href="Gw2Sharp.WebApi.V2.Clients.GuildIdTreasuryClient.html">GuildIdTreasuryClient</a></div>
+      <div class="level5"><a class="xref" href="Gw2Sharp.WebApi.V2.Clients.GuildIdUpgradesClient.html">GuildIdUpgradesClient</a></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="Gw2Sharp.WebApi.V2.IApiV2Object.html">IApiV2Object</a></div>
-    <div><a class="xref" href="Gw2Sharp.WebApi.V2.Models.IIdentifiable-1.html">IIdentifiable</a>&lt;<span class="xref">System.Int32</span>&gt;</div>
+    <div><a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IBlobClient-1.html">IBlobClient</a>&lt;TObject&gt;</div>
+    <div><a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IEndpointClient.html">IEndpointClient</a></div>
+    <div><a class="xref" href="Gw2Sharp.IClient.html">IClient</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="Gw2Sharp.WebApi.V2.ApiV2BaseObject.html#Gw2Sharp_WebApi_V2_ApiV2BaseObject_HttpResponseInfo">ApiV2BaseObject.HttpResponseInfo</a>
+      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.BaseEndpointBlobClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBlobClient_1_GetAsync_CancellationToken_">BaseEndpointBlobClient&lt;TObject&gt;.GetAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_Implementation">BaseEndpointClient&lt;TObject&gt;.Implementation</a>
+    </div>
+    <div>
+      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_EndpointPath">BaseEndpointClient&lt;TObject&gt;.EndpointPath</a>
+    </div>
+    <div>
+      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_EndpointPathParameters">BaseEndpointClient&lt;TObject&gt;.EndpointPathParameters</a>
+    </div>
+    <div>
+      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_SchemaVersion">BaseEndpointClient&lt;TObject&gt;.SchemaVersion</a>
+    </div>
+    <div>
+      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_IsPaginated">BaseEndpointClient&lt;TObject&gt;.IsPaginated</a>
+    </div>
+    <div>
+      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_IsAuthenticated">BaseEndpointClient&lt;TObject&gt;.IsAuthenticated</a>
+    </div>
+    <div>
+      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_IsLocalized">BaseEndpointClient&lt;TObject&gt;.IsLocalized</a>
+    </div>
+    <div>
+      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_HasBlobData">BaseEndpointClient&lt;TObject&gt;.HasBlobData</a>
+    </div>
+    <div>
+      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_IsAllExpandable">BaseEndpointClient&lt;TObject&gt;.IsAllExpandable</a>
+    </div>
+    <div>
+      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_IsBulkExpandable">BaseEndpointClient&lt;TObject&gt;.IsBulkExpandable</a>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Gw2Sharp.WebApi.V2.Models.html">Gw2Sharp.WebApi.V2.Models</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.html">Gw2Sharp.WebApi.V2.Clients</a></h6>
   <h6><strong>Assembly</strong>: Gw2Sharp.dll</h6>
-  <h5 id="Gw2Sharp_WebApi_V2_Models_ContinentFloorRegionMapTask_syntax">Syntax</h5>
+  <h5 id="Gw2Sharp_WebApi_V2_Clients_BaseGuildSubClient_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ContinentFloorRegionMapTask : ApiV2BaseObject, IApiV2Object, IIdentifiable&lt;int&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class BaseGuildSubClient&lt;TObject&gt; : BaseEndpointBlobClient&lt;TObject&gt;, IClientInternal, IBlobClient&lt;TObject&gt;, IEndpointClient, IClient where TObject : IApiV2Object</code></pre>
   </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TObject</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Gw2Sharp_WebApi_V2_Clients_BaseGuildSubClient_1__ctor_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseGuildSubClient`1.#ctor*"></a>
+  <h4 id="Gw2Sharp_WebApi_V2_Clients_BaseGuildSubClient_1__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_Guid_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseGuildSubClient`1.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client,Guid)">BaseGuildSubClient(IConnection, IGw2Client, Guid)</h4>
+  <div class="markdown level1 summary"><p>Creates a new base guild subendpoint client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BaseGuildSubClient(IConnection connection, IGw2Client gw2Client, Guid guildId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Gw2Sharp.IConnection.html">IConnection</a></td>
+        <td><span class="parametername">connection</span></td>
+        <td><p>The connection used to make requests, see <a class="xref" href="Gw2Sharp.IConnection.html">IConnection</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Gw2Sharp.IGw2Client.html">IGw2Client</a></td>
+        <td><span class="parametername">gw2Client</span></td>
+        <td><p>The Guild Wars 2 client.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Guid</span></td>
+        <td><span class="parametername">guildId</span></td>
+        <td><p>The guild id.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   
   
-  <a id="Gw2Sharp_WebApi_V2_Models_ContinentFloorRegionMapTask_Bounds_" data-uid="Gw2Sharp.WebApi.V2.Models.ContinentFloorRegionMapTask.Bounds*"></a>
-  <h4 id="Gw2Sharp_WebApi_V2_Models_ContinentFloorRegionMapTask_Bounds" data-uid="Gw2Sharp.WebApi.V2.Models.ContinentFloorRegionMapTask.Bounds">Bounds</h4>
-  <div class="markdown level1 summary"><p>The task bounds.</p>
+  <a id="Gw2Sharp_WebApi_V2_Clients_BaseGuildSubClient_1_GuildId_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseGuildSubClient`1.GuildId*"></a>
+  <h4 id="Gw2Sharp_WebApi_V2_Clients_BaseGuildSubClient_1_GuildId" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseGuildSubClient`1.GuildId">GuildId</h4>
+  <div class="markdown level1 summary"><p>The guild id.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;Coordinates2&gt; Bounds { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Guid GuildId { get; protected set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2230,147 +2329,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IReadOnlyList</span>&lt;<a class="xref" href="Gw2Sharp.Models.Coordinates2.html">Coordinates2</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Gw2Sharp_WebApi_V2_Models_ContinentFloorRegionMapTask_ChatLink_" data-uid="Gw2Sharp.WebApi.V2.Models.ContinentFloorRegionMapTask.ChatLink*"></a>
-  <h4 id="Gw2Sharp_WebApi_V2_Models_ContinentFloorRegionMapTask_ChatLink" data-uid="Gw2Sharp.WebApi.V2.Models.ContinentFloorRegionMapTask.ChatLink">ChatLink</h4>
-  <div class="markdown level1 summary"><p>The sector chat link.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string ChatLink { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Gw2Sharp_WebApi_V2_Models_ContinentFloorRegionMapTask_Coord_" data-uid="Gw2Sharp.WebApi.V2.Models.ContinentFloorRegionMapTask.Coord*"></a>
-  <h4 id="Gw2Sharp_WebApi_V2_Models_ContinentFloorRegionMapTask_Coord" data-uid="Gw2Sharp.WebApi.V2.Models.ContinentFloorRegionMapTask.Coord">Coord</h4>
-  <div class="markdown level1 summary"><p>The task coordinates.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Coordinates2 Coord { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Gw2Sharp.Models.Coordinates2.html">Coordinates2</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Gw2Sharp_WebApi_V2_Models_ContinentFloorRegionMapTask_Id_" data-uid="Gw2Sharp.WebApi.V2.Models.ContinentFloorRegionMapTask.Id*"></a>
-  <h4 id="Gw2Sharp_WebApi_V2_Models_ContinentFloorRegionMapTask_Id" data-uid="Gw2Sharp.WebApi.V2.Models.ContinentFloorRegionMapTask.Id">Id</h4>
-  <div class="markdown level1 summary"><p>The task id.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Id { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Gw2Sharp_WebApi_V2_Models_ContinentFloorRegionMapTask_Level_" data-uid="Gw2Sharp.WebApi.V2.Models.ContinentFloorRegionMapTask.Level*"></a>
-  <h4 id="Gw2Sharp_WebApi_V2_Models_ContinentFloorRegionMapTask_Level" data-uid="Gw2Sharp.WebApi.V2.Models.ContinentFloorRegionMapTask.Level">Level</h4>
-  <div class="markdown level1 summary"><p>The task level.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Level { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Gw2Sharp_WebApi_V2_Models_ContinentFloorRegionMapTask_Objective_" data-uid="Gw2Sharp.WebApi.V2.Models.ContinentFloorRegionMapTask.Objective*"></a>
-  <h4 id="Gw2Sharp_WebApi_V2_Models_ContinentFloorRegionMapTask_Objective" data-uid="Gw2Sharp.WebApi.V2.Models.ContinentFloorRegionMapTask.Objective">Objective</h4>
-  <div class="markdown level1 summary"><p>The task objective.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Objective { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">Guid</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="Gw2Sharp.WebApi.V2.IApiV2Object.html">IApiV2Object</a>
+      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IBlobClient-1.html">IBlobClient&lt;TObject&gt;</a>
   </div>
   <div>
-      <a class="xref" href="Gw2Sharp.WebApi.V2.Models.IIdentifiable-1.html">IIdentifiable&lt;T&gt;</a>
+      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IEndpointClient.html">IEndpointClient</a>
+  </div>
+  <div>
+      <a class="xref" href="Gw2Sharp.IClient.html">IClient</a>
   </div>
 </article>
           </div>

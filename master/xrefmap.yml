@@ -5681,14 +5681,6 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBlobClient(Of TObject)
   nameWithType: BaseEndpointBlobClient<TObject>
   nameWithType.vb: BaseEndpointBlobClient(Of TObject)
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBlobClient`1.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client)
-  name: BaseEndpointBlobClient(IConnection, IGw2Client)
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBlobClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBlobClient_1__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointBlobClient`1.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client)
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBlobClient<TObject>.BaseEndpointBlobClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBlobClient(Of TObject).BaseEndpointBlobClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client)
-  nameWithType: BaseEndpointBlobClient<TObject>.BaseEndpointBlobClient(IConnection, IGw2Client)
-  nameWithType.vb: BaseEndpointBlobClient(Of TObject).BaseEndpointBlobClient(IConnection, IGw2Client)
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBlobClient`1.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client,System.String[])
   name: BaseEndpointBlobClient(IConnection, IGw2Client, String[])
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBlobClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBlobClient_1__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_System_String___
@@ -5733,14 +5725,6 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient(Of TObject, TId)
   nameWithType: BaseEndpointBulkAllClient<TObject, TId>
   nameWithType.vb: BaseEndpointBulkAllClient(Of TObject, TId)
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client)
-  name: BaseEndpointBulkAllClient(IConnection, IGw2Client)
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkAllClient_2__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client)
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient<TObject, TId>.BaseEndpointBulkAllClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient(Of TObject, TId).BaseEndpointBulkAllClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client)
-  nameWithType: BaseEndpointBulkAllClient<TObject, TId>.BaseEndpointBulkAllClient(IConnection, IGw2Client)
-  nameWithType.vb: BaseEndpointBulkAllClient(Of TObject, TId).BaseEndpointBulkAllClient(IConnection, IGw2Client)
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client,System.String[])
   name: BaseEndpointBulkAllClient(IConnection, IGw2Client, String[])
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkAllClient_2__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_System_String___
@@ -5862,14 +5846,6 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient(Of TObject, TId)
   nameWithType: BaseEndpointBulkClient<TObject, TId>
   nameWithType.vb: BaseEndpointBulkClient(Of TObject, TId)
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient`2.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client)
-  name: BaseEndpointBulkClient(IConnection, IGw2Client)
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkClient_2__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient`2.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client)
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient<TObject, TId>.BaseEndpointBulkClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient(Of TObject, TId).BaseEndpointBulkClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client)
-  nameWithType: BaseEndpointBulkClient<TObject, TId>.BaseEndpointBulkClient(IConnection, IGw2Client)
-  nameWithType.vb: BaseEndpointBulkClient(Of TObject, TId).BaseEndpointBulkClient(IConnection, IGw2Client)
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient`2.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client,System.String[])
   name: BaseEndpointBulkClient(IConnection, IGw2Client, String[])
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkClient_2__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_System_String___
@@ -5974,14 +5950,6 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject)
   nameWithType: BaseEndpointClient<TObject>
   nameWithType.vb: BaseEndpointClient(Of TObject)
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client)
-  name: BaseEndpointClient(IConnection, IGw2Client)
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client)
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient<TObject>.BaseEndpointClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).BaseEndpointClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client)
-  nameWithType: BaseEndpointClient<TObject>.BaseEndpointClient(IConnection, IGw2Client)
-  nameWithType.vb: BaseEndpointClient(Of TObject).BaseEndpointClient(IConnection, IGw2Client)
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client,System.String[])
   name: BaseEndpointClient(IConnection, IGw2Client, String[])
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_System_String___
@@ -6179,14 +6147,6 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient(Of TObject)
   nameWithType: BaseEndpointPaginatedBlobClient<TObject>
   nameWithType.vb: BaseEndpointPaginatedBlobClient(Of TObject)
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient`1.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client)
-  name: BaseEndpointPaginatedBlobClient(IConnection, IGw2Client)
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointPaginatedBlobClient_1__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient`1.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client)
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient<TObject>.BaseEndpointPaginatedBlobClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient(Of TObject).BaseEndpointPaginatedBlobClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client)
-  nameWithType: BaseEndpointPaginatedBlobClient<TObject>.BaseEndpointPaginatedBlobClient(IConnection, IGw2Client)
-  nameWithType.vb: BaseEndpointPaginatedBlobClient(Of TObject).BaseEndpointPaginatedBlobClient(IConnection, IGw2Client)
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient`1.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client,System.String[])
   name: BaseEndpointPaginatedBlobClient(IConnection, IGw2Client, String[])
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointPaginatedBlobClient_1__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_System_String___
@@ -6247,6 +6207,49 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient(Of TObject).PageAsync
   nameWithType: BaseEndpointPaginatedBlobClient<TObject>.PageAsync
   nameWithType.vb: BaseEndpointPaginatedBlobClient(Of TObject).PageAsync
+- uid: Gw2Sharp.WebApi.V2.Clients.BaseGuildSubClient`1
+  name: BaseGuildSubClient<TObject>
+  href: api/Gw2Sharp.WebApi.V2.Clients.BaseGuildSubClient-1.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.BaseGuildSubClient`1
+  name.vb: BaseGuildSubClient(Of TObject)
+  fullName: Gw2Sharp.WebApi.V2.Clients.BaseGuildSubClient<TObject>
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseGuildSubClient(Of TObject)
+  nameWithType: BaseGuildSubClient<TObject>
+  nameWithType.vb: BaseGuildSubClient(Of TObject)
+- uid: Gw2Sharp.WebApi.V2.Clients.BaseGuildSubClient`1.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client,Guid)
+  name: BaseGuildSubClient(IConnection, IGw2Client, Guid)
+  href: api/Gw2Sharp.WebApi.V2.Clients.BaseGuildSubClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseGuildSubClient_1__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_Guid_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseGuildSubClient`1.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client,Guid)
+  fullName: Gw2Sharp.WebApi.V2.Clients.BaseGuildSubClient<TObject>.BaseGuildSubClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client, Guid)
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseGuildSubClient(Of TObject).BaseGuildSubClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client, Guid)
+  nameWithType: BaseGuildSubClient<TObject>.BaseGuildSubClient(IConnection, IGw2Client, Guid)
+  nameWithType.vb: BaseGuildSubClient(Of TObject).BaseGuildSubClient(IConnection, IGw2Client, Guid)
+- uid: Gw2Sharp.WebApi.V2.Clients.BaseGuildSubClient`1.#ctor*
+  name: BaseGuildSubClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.BaseGuildSubClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseGuildSubClient_1__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.BaseGuildSubClient`1.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.BaseGuildSubClient<TObject>.BaseGuildSubClient
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseGuildSubClient(Of TObject).BaseGuildSubClient
+  nameWithType: BaseGuildSubClient<TObject>.BaseGuildSubClient
+  nameWithType.vb: BaseGuildSubClient(Of TObject).BaseGuildSubClient
+- uid: Gw2Sharp.WebApi.V2.Clients.BaseGuildSubClient`1.GuildId
+  name: GuildId
+  href: api/Gw2Sharp.WebApi.V2.Clients.BaseGuildSubClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseGuildSubClient_1_GuildId
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.BaseGuildSubClient`1.GuildId
+  fullName: Gw2Sharp.WebApi.V2.Clients.BaseGuildSubClient<TObject>.GuildId
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseGuildSubClient(Of TObject).GuildId
+  nameWithType: BaseGuildSubClient<TObject>.GuildId
+  nameWithType.vb: BaseGuildSubClient(Of TObject).GuildId
+- uid: Gw2Sharp.WebApi.V2.Clients.BaseGuildSubClient`1.GuildId*
+  name: GuildId
+  href: api/Gw2Sharp.WebApi.V2.Clients.BaseGuildSubClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseGuildSubClient_1_GuildId_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.BaseGuildSubClient`1.GuildId
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.BaseGuildSubClient<TObject>.GuildId
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseGuildSubClient(Of TObject).GuildId
+  nameWithType: BaseGuildSubClient<TObject>.GuildId
+  nameWithType.vb: BaseGuildSubClient(Of TObject).GuildId
 - uid: Gw2Sharp.WebApi.V2.Clients.BuildClient
   name: BuildClient
   href: api/Gw2Sharp.WebApi.V2.Clients.BuildClient.html
@@ -9022,19 +9025,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.GuildIdLogClient.GuildIdLogClient
   nameWithType: GuildIdLogClient.GuildIdLogClient
-- uid: Gw2Sharp.WebApi.V2.Clients.GuildIdLogClient.GuildId
-  name: GuildId
-  href: api/Gw2Sharp.WebApi.V2.Clients.GuildIdLogClient.html#Gw2Sharp_WebApi_V2_Clients_GuildIdLogClient_GuildId
-  commentId: P:Gw2Sharp.WebApi.V2.Clients.GuildIdLogClient.GuildId
-  fullName: Gw2Sharp.WebApi.V2.Clients.GuildIdLogClient.GuildId
-  nameWithType: GuildIdLogClient.GuildId
-- uid: Gw2Sharp.WebApi.V2.Clients.GuildIdLogClient.GuildId*
-  name: GuildId
-  href: api/Gw2Sharp.WebApi.V2.Clients.GuildIdLogClient.html#Gw2Sharp_WebApi_V2_Clients_GuildIdLogClient_GuildId_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.GuildIdLogClient.GuildId
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.GuildIdLogClient.GuildId
-  nameWithType: GuildIdLogClient.GuildId
 - uid: Gw2Sharp.WebApi.V2.Clients.GuildIdLogClient.ParamSince
   name: ParamSince
   href: api/Gw2Sharp.WebApi.V2.Clients.GuildIdLogClient.html#Gw2Sharp_WebApi_V2_Clients_GuildIdLogClient_ParamSince
@@ -9083,19 +9073,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.GuildIdMembersClient.GuildIdMembersClient
   nameWithType: GuildIdMembersClient.GuildIdMembersClient
-- uid: Gw2Sharp.WebApi.V2.Clients.GuildIdMembersClient.GuildId
-  name: GuildId
-  href: api/Gw2Sharp.WebApi.V2.Clients.GuildIdMembersClient.html#Gw2Sharp_WebApi_V2_Clients_GuildIdMembersClient_GuildId
-  commentId: P:Gw2Sharp.WebApi.V2.Clients.GuildIdMembersClient.GuildId
-  fullName: Gw2Sharp.WebApi.V2.Clients.GuildIdMembersClient.GuildId
-  nameWithType: GuildIdMembersClient.GuildId
-- uid: Gw2Sharp.WebApi.V2.Clients.GuildIdMembersClient.GuildId*
-  name: GuildId
-  href: api/Gw2Sharp.WebApi.V2.Clients.GuildIdMembersClient.html#Gw2Sharp_WebApi_V2_Clients_GuildIdMembersClient_GuildId_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.GuildIdMembersClient.GuildId
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.GuildIdMembersClient.GuildId
-  nameWithType: GuildIdMembersClient.GuildId
 - uid: Gw2Sharp.WebApi.V2.Clients.GuildIdRanksClient
   name: GuildIdRanksClient
   href: api/Gw2Sharp.WebApi.V2.Clients.GuildIdRanksClient.html
@@ -9115,19 +9092,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.GuildIdRanksClient.GuildIdRanksClient
   nameWithType: GuildIdRanksClient.GuildIdRanksClient
-- uid: Gw2Sharp.WebApi.V2.Clients.GuildIdRanksClient.GuildId
-  name: GuildId
-  href: api/Gw2Sharp.WebApi.V2.Clients.GuildIdRanksClient.html#Gw2Sharp_WebApi_V2_Clients_GuildIdRanksClient_GuildId
-  commentId: P:Gw2Sharp.WebApi.V2.Clients.GuildIdRanksClient.GuildId
-  fullName: Gw2Sharp.WebApi.V2.Clients.GuildIdRanksClient.GuildId
-  nameWithType: GuildIdRanksClient.GuildId
-- uid: Gw2Sharp.WebApi.V2.Clients.GuildIdRanksClient.GuildId*
-  name: GuildId
-  href: api/Gw2Sharp.WebApi.V2.Clients.GuildIdRanksClient.html#Gw2Sharp_WebApi_V2_Clients_GuildIdRanksClient_GuildId_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.GuildIdRanksClient.GuildId
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.GuildIdRanksClient.GuildId
-  nameWithType: GuildIdRanksClient.GuildId
 - uid: Gw2Sharp.WebApi.V2.Clients.GuildIdStashClient
   name: GuildIdStashClient
   href: api/Gw2Sharp.WebApi.V2.Clients.GuildIdStashClient.html
@@ -9147,19 +9111,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.GuildIdStashClient.GuildIdStashClient
   nameWithType: GuildIdStashClient.GuildIdStashClient
-- uid: Gw2Sharp.WebApi.V2.Clients.GuildIdStashClient.GuildId
-  name: GuildId
-  href: api/Gw2Sharp.WebApi.V2.Clients.GuildIdStashClient.html#Gw2Sharp_WebApi_V2_Clients_GuildIdStashClient_GuildId
-  commentId: P:Gw2Sharp.WebApi.V2.Clients.GuildIdStashClient.GuildId
-  fullName: Gw2Sharp.WebApi.V2.Clients.GuildIdStashClient.GuildId
-  nameWithType: GuildIdStashClient.GuildId
-- uid: Gw2Sharp.WebApi.V2.Clients.GuildIdStashClient.GuildId*
-  name: GuildId
-  href: api/Gw2Sharp.WebApi.V2.Clients.GuildIdStashClient.html#Gw2Sharp_WebApi_V2_Clients_GuildIdStashClient_GuildId_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.GuildIdStashClient.GuildId
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.GuildIdStashClient.GuildId
-  nameWithType: GuildIdStashClient.GuildId
 - uid: Gw2Sharp.WebApi.V2.Clients.GuildIdStorageClient
   name: GuildIdStorageClient
   href: api/Gw2Sharp.WebApi.V2.Clients.GuildIdStorageClient.html
@@ -9179,19 +9130,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.GuildIdStorageClient.GuildIdStorageClient
   nameWithType: GuildIdStorageClient.GuildIdStorageClient
-- uid: Gw2Sharp.WebApi.V2.Clients.GuildIdStorageClient.GuildId
-  name: GuildId
-  href: api/Gw2Sharp.WebApi.V2.Clients.GuildIdStorageClient.html#Gw2Sharp_WebApi_V2_Clients_GuildIdStorageClient_GuildId
-  commentId: P:Gw2Sharp.WebApi.V2.Clients.GuildIdStorageClient.GuildId
-  fullName: Gw2Sharp.WebApi.V2.Clients.GuildIdStorageClient.GuildId
-  nameWithType: GuildIdStorageClient.GuildId
-- uid: Gw2Sharp.WebApi.V2.Clients.GuildIdStorageClient.GuildId*
-  name: GuildId
-  href: api/Gw2Sharp.WebApi.V2.Clients.GuildIdStorageClient.html#Gw2Sharp_WebApi_V2_Clients_GuildIdStorageClient_GuildId_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.GuildIdStorageClient.GuildId
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.GuildIdStorageClient.GuildId
-  nameWithType: GuildIdStorageClient.GuildId
 - uid: Gw2Sharp.WebApi.V2.Clients.GuildIdTeamsClient
   name: GuildIdTeamsClient
   href: api/Gw2Sharp.WebApi.V2.Clients.GuildIdTeamsClient.html
@@ -9211,19 +9149,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.GuildIdTeamsClient.GuildIdTeamsClient
   nameWithType: GuildIdTeamsClient.GuildIdTeamsClient
-- uid: Gw2Sharp.WebApi.V2.Clients.GuildIdTeamsClient.GuildId
-  name: GuildId
-  href: api/Gw2Sharp.WebApi.V2.Clients.GuildIdTeamsClient.html#Gw2Sharp_WebApi_V2_Clients_GuildIdTeamsClient_GuildId
-  commentId: P:Gw2Sharp.WebApi.V2.Clients.GuildIdTeamsClient.GuildId
-  fullName: Gw2Sharp.WebApi.V2.Clients.GuildIdTeamsClient.GuildId
-  nameWithType: GuildIdTeamsClient.GuildId
-- uid: Gw2Sharp.WebApi.V2.Clients.GuildIdTeamsClient.GuildId*
-  name: GuildId
-  href: api/Gw2Sharp.WebApi.V2.Clients.GuildIdTeamsClient.html#Gw2Sharp_WebApi_V2_Clients_GuildIdTeamsClient_GuildId_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.GuildIdTeamsClient.GuildId
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.GuildIdTeamsClient.GuildId
-  nameWithType: GuildIdTeamsClient.GuildId
 - uid: Gw2Sharp.WebApi.V2.Clients.GuildIdTreasuryClient
   name: GuildIdTreasuryClient
   href: api/Gw2Sharp.WebApi.V2.Clients.GuildIdTreasuryClient.html
@@ -9243,19 +9168,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.GuildIdTreasuryClient.GuildIdTreasuryClient
   nameWithType: GuildIdTreasuryClient.GuildIdTreasuryClient
-- uid: Gw2Sharp.WebApi.V2.Clients.GuildIdTreasuryClient.GuildId
-  name: GuildId
-  href: api/Gw2Sharp.WebApi.V2.Clients.GuildIdTreasuryClient.html#Gw2Sharp_WebApi_V2_Clients_GuildIdTreasuryClient_GuildId
-  commentId: P:Gw2Sharp.WebApi.V2.Clients.GuildIdTreasuryClient.GuildId
-  fullName: Gw2Sharp.WebApi.V2.Clients.GuildIdTreasuryClient.GuildId
-  nameWithType: GuildIdTreasuryClient.GuildId
-- uid: Gw2Sharp.WebApi.V2.Clients.GuildIdTreasuryClient.GuildId*
-  name: GuildId
-  href: api/Gw2Sharp.WebApi.V2.Clients.GuildIdTreasuryClient.html#Gw2Sharp_WebApi_V2_Clients_GuildIdTreasuryClient_GuildId_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.GuildIdTreasuryClient.GuildId
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.GuildIdTreasuryClient.GuildId
-  nameWithType: GuildIdTreasuryClient.GuildId
 - uid: Gw2Sharp.WebApi.V2.Clients.GuildIdUpgradesClient
   name: GuildIdUpgradesClient
   href: api/Gw2Sharp.WebApi.V2.Clients.GuildIdUpgradesClient.html
@@ -9275,19 +9187,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.GuildIdUpgradesClient.GuildIdUpgradesClient
   nameWithType: GuildIdUpgradesClient.GuildIdUpgradesClient
-- uid: Gw2Sharp.WebApi.V2.Clients.GuildIdUpgradesClient.GuildId
-  name: GuildId
-  href: api/Gw2Sharp.WebApi.V2.Clients.GuildIdUpgradesClient.html#Gw2Sharp_WebApi_V2_Clients_GuildIdUpgradesClient_GuildId
-  commentId: P:Gw2Sharp.WebApi.V2.Clients.GuildIdUpgradesClient.GuildId
-  fullName: Gw2Sharp.WebApi.V2.Clients.GuildIdUpgradesClient.GuildId
-  nameWithType: GuildIdUpgradesClient.GuildId
-- uid: Gw2Sharp.WebApi.V2.Clients.GuildIdUpgradesClient.GuildId*
-  name: GuildId
-  href: api/Gw2Sharp.WebApi.V2.Clients.GuildIdUpgradesClient.html#Gw2Sharp_WebApi_V2_Clients_GuildIdUpgradesClient_GuildId_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.GuildIdUpgradesClient.GuildId
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.GuildIdUpgradesClient.GuildId
-  nameWithType: GuildIdUpgradesClient.GuildId
 - uid: Gw2Sharp.WebApi.V2.Clients.GuildPermissionsClient
   name: GuildPermissionsClient
   href: api/Gw2Sharp.WebApi.V2.Clients.GuildPermissionsClient.html

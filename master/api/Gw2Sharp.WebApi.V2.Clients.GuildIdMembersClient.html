@@ -516,6 +516,9 @@
                             <a href="Gw2Sharp.WebApi.V2.Clients.BaseEndpointPaginatedBlobClient-1.html" title="BaseEndpointPaginatedBlobClient&lt;TObject&gt;" class="">BaseEndpointPaginatedBlobClient&lt;TObject&gt;</a>
                           </li>
                           <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.Clients.BaseGuildSubClient-1.html" title="BaseGuildSubClient&lt;TObject&gt;" class="">BaseGuildSubClient&lt;TObject&gt;</a>
+                          </li>
+                          <li class="">
                             <a href="Gw2Sharp.WebApi.V2.Clients.BuildClient.html" title="BuildClient" class="">BuildClient</a>
                           </li>
                           <li class="">
@@ -2187,7 +2190,8 @@
     <div class="level1"><a class="xref" href="Gw2Sharp.BaseClient.html">BaseClient</a></div>
     <div class="level2"><a class="xref" href="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html">BaseEndpointClient</a>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.IApiV2ObjectList-1.html">IApiV2ObjectList</a>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.Models.GuildMember.html">GuildMember</a>&gt;&gt;</div>
     <div class="level3"><a class="xref" href="Gw2Sharp.WebApi.V2.Clients.BaseEndpointBlobClient-1.html">BaseEndpointBlobClient</a>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.IApiV2ObjectList-1.html">IApiV2ObjectList</a>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.Models.GuildMember.html">GuildMember</a>&gt;&gt;</div>
-    <div class="level4"><span class="xref">GuildIdMembersClient</span></div>
+    <div class="level4"><a class="xref" href="Gw2Sharp.WebApi.V2.Clients.BaseGuildSubClient-1.html">BaseGuildSubClient</a>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.IApiV2ObjectList-1.html">IApiV2ObjectList</a>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.Models.GuildMember.html">GuildMember</a>&gt;&gt;</div>
+    <div class="level5"><span class="xref">GuildIdMembersClient</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -2199,6 +2203,9 @@
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.BaseGuildSubClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseGuildSubClient_1_GuildId">BaseGuildSubClient&lt;IApiV2ObjectList&lt;GuildMember&gt;&gt;.GuildId</a>
+    </div>
     <div>
       <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.BaseEndpointBlobClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointBlobClient_1_GetAsync_CancellationToken_">BaseEndpointBlobClient&lt;IApiV2ObjectList&lt;GuildMember&gt;&gt;.GetAsync(CancellationToken)</a>
     </div>
@@ -2237,7 +2244,7 @@
   <h6><strong>Assembly</strong>: Gw2Sharp.dll</h6>
   <h5 id="Gw2Sharp_WebApi_V2_Clients_GuildIdMembersClient_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GuildIdMembersClient : BaseEndpointBlobClient&lt;IApiV2ObjectList&lt;GuildMember&gt;&gt;, IClientInternal, IGuildIdMembersClient, IAuthenticatedClient&lt;IApiV2ObjectList&lt;GuildMember&gt;&gt;, IBlobClient&lt;IApiV2ObjectList&lt;GuildMember&gt;&gt;, IEndpointClient, IClient</code></pre>
+    <pre><code class="lang-csharp hljs">public class GuildIdMembersClient : BaseGuildSubClient&lt;IApiV2ObjectList&lt;GuildMember&gt;&gt;, IClientInternal, IGuildIdMembersClient, IAuthenticatedClient&lt;IApiV2ObjectList&lt;GuildMember&gt;&gt;, IBlobClient&lt;IApiV2ObjectList&lt;GuildMember&gt;&gt;, IEndpointClient, IClient</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -2279,34 +2286,6 @@
         <td><span class="parametername">guildId</span></td>
         <td><p>The guild id.</p>
 </td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">Properties
-  </h3>
-  
-  
-  <a id="Gw2Sharp_WebApi_V2_Clients_GuildIdMembersClient_GuildId_" data-uid="Gw2Sharp.WebApi.V2.Clients.GuildIdMembersClient.GuildId*"></a>
-  <h4 id="Gw2Sharp_WebApi_V2_Clients_GuildIdMembersClient_GuildId" data-uid="Gw2Sharp.WebApi.V2.Clients.GuildIdMembersClient.GuildId">GuildId</h4>
-  <div class="markdown level1 summary"><p>The guild id.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Guid GuildId { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Guid</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
