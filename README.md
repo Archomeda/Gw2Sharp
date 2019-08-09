@@ -48,8 +48,8 @@ For basic usage, check out the [introductory guide](https://archomeda.github.io/
 You can find the other guides there as well to help you get started on the advanced usage of Gw2Sharp, such as caching and exception handling.
 
 ## Compiling
-Visual Studio 2019 or later is required.
-There are no specific build instructions.
+Visual Studio 2019 (16.2) or later is required.
+Because Gw2Sharp uses many new C# 8.0 features, make sure to install [.NET Core SDK 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0) as well.
 
 ## Contributing
 Contributing is always welcome, but please keep them in scope of this project.
