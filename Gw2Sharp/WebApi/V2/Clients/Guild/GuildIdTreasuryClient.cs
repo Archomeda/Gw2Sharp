@@ -7,11 +7,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 guild id treasury endpoint.
     /// </summary>
     [EndpointPath("guild/:id/treasury")]
-    [EndpointPathSegment("id", 0)]
-    public class GuildIdTreasuryClient : BaseEndpointBlobClient<IApiV2ObjectList<GuildTreasuryItem>>, IGuildIdTreasuryClient
+    public class GuildIdTreasuryClient : BaseGuildSubClient<IApiV2ObjectList<GuildTreasuryItem>>, IGuildIdTreasuryClient
     {
-        private readonly Guid guildId;
-
         /// <summary>
         /// Creates a new <see cref="GuildIdTreasuryClient"/> that is used for the API v2 guild id treasury endpoint.
         /// </summary>
@@ -20,12 +17,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="guildId">The guild id.</param>
         /// <exception cref="ArgumentNullException"><paramref name="connection"/> or <paramref name="gw2Client"/> is <c>null</c>.</exception>
         protected internal GuildIdTreasuryClient(IConnection connection, IGw2Client gw2Client, Guid guildId) :
-            base(connection, gw2Client)
-        {
-            this.guildId = guildId;
-        }
-
-        /// <inheritdoc />
-        public virtual Guid GuildId => this.guildId;
+            base(connection, gw2Client, guildId)
+        { }
     }
 }
