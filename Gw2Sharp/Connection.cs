@@ -233,6 +233,9 @@ namespace Gw2Sharp
                     case HttpStatusCode.NotFound:
                         // 404
                         throw new NotFoundException(ex.Request, errorResponse);
+                    case (HttpStatusCode)429:
+                        // 429
+                        throw new TooManyRequestsException(ex.Request, errorResponse);
                     case HttpStatusCode.InternalServerError:
                         // 500
                         throw new ServerErrorException(ex.Request, errorResponse);

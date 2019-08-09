@@ -4,6 +4,7 @@
 ### Endpoints
 - **Breaking:** `Gw2Sharp.WebApi.V2.Models.GuildTeam` has had the type of its property `Ladders` changed from `PvpStatsLadders` to `IReadOnlyDictionary<string, PvpStatsAggregate>`
   (reason: the keys in this property of this endpoint (`/v2/guild/:id/teams`) are actually dynamic, just like the ones in `/v2/pvp/stats`)
+- Hitting the rate limit will now throw a `TooManyRequestsException` instead of `UnexpectedStatusException`
 - Add `/v2/pvp/amulets`
 - Add `/v2/pvp/games`
 - Add `/v2/pvp/heroes`

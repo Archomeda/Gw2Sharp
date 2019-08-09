@@ -8,14 +8,14 @@ using Xunit;
 
 namespace Gw2Sharp.Tests.WebApi.Http
 {
-    public class ServerErrorExceptionTests
+    public class TooManyRequestsExceptionTests
     {
         [Fact]
         public void SerializableTest()
         {
             var request = new HttpRequest(new Uri("http://localhost"), new Dictionary<string, string> { { "hello", "tyria" } });
-            var response = new HttpResponse<ErrorObject>(new ErrorObject { Text = "Error" }, HttpStatusCode.InternalServerError, null, null);
-            var exception = new ServerErrorException(request, response);
+            var response = new HttpResponse<ErrorObject>(new ErrorObject { Text = "Error" }, HttpStatusCode.TooManyRequests, null, null);
+            var exception = new TooManyRequestsException(request, response);
             exception.Should().BeBinarySerializable();
         }
     }
