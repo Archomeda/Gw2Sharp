@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class CharactersSab
+    <title>Class TooManyRequestsException
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class CharactersSab
+    <meta name="title" content="Class TooManyRequestsException
    ">
     <meta name="generator" content="docfx 2.43.3.0">
     
@@ -320,8 +320,8 @@
                           <li class="">
                             <a href="Gw2Sharp.WebApi.Http.ServiceUnavailableException.html" title="ServiceUnavailableException" class="">ServiceUnavailableException</a>
                           </li>
-                          <li class="">
-                            <a href="Gw2Sharp.WebApi.Http.TooManyRequestsException.html" title="TooManyRequestsException" class="">TooManyRequestsException</a>
+                          <li class="active">
+                            <a href="Gw2Sharp.WebApi.Http.TooManyRequestsException.html" title="TooManyRequestsException" class="active">TooManyRequestsException</a>
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.WebApi.Http.UnexpectedStatusException.html" title="UnexpectedStatusException" class="">UnexpectedStatusException</a>
@@ -1493,8 +1493,8 @@
                           <li class="">
                             <a href="Gw2Sharp.WebApi.V2.Models.CharactersRecipes.html" title="CharactersRecipes" class="">CharactersRecipes</a>
                           </li>
-                          <li class="active">
-                            <a href="Gw2Sharp.WebApi.V2.Models.CharactersSab.html" title="CharactersSab" class="active">CharactersSab</a>
+                          <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.Models.CharactersSab.html" title="CharactersSab" class="">CharactersSab</a>
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.WebApi.V2.Models.CharactersSkills.html" title="CharactersSkills" class="">CharactersSkills</a>
@@ -2173,119 +2173,114 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Gw2Sharp.WebApi.V2.Models.CharactersSab">
+            <article class="content wrap" id="_content" data-uid="Gw2Sharp.WebApi.Http.TooManyRequestsException">
   
   
-  <h1 id="Gw2Sharp_WebApi_V2_Models_CharactersSab" data-uid="Gw2Sharp.WebApi.V2.Models.CharactersSab" class="text-break">Class CharactersSab
+  <h1 id="Gw2Sharp_WebApi_Http_TooManyRequestsException" data-uid="Gw2Sharp.WebApi.Http.TooManyRequestsException" class="text-break">Class TooManyRequestsException
   </h1>
-  <div class="markdown level0 summary"><p>Represents the response from the characters Super Adventure Box endpoint.</p>
+  <div class="markdown level0 summary"><p>A web API specific exception that&apos;s used when a request fails due to issuing too many requests in a short period of time (code 429).</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="Gw2Sharp.WebApi.V2.ApiV2BaseObject.html">ApiV2BaseObject</a></div>
-    <div class="level2"><span class="xref">CharactersSab</span></div>
-  </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="Gw2Sharp.WebApi.V2.IApiV2Object.html">IApiV2Object</a></div>
+    <div class="level1"><a class="xref" href="Gw2Sharp.WebApi.Http.RequestException-1.html">RequestException</a>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.Models.ErrorObject.html">ErrorObject</a>&gt;</div>
+    <div class="level2"><a class="xref" href="Gw2Sharp.WebApi.Http.UnexpectedStatusException-1.html">UnexpectedStatusException</a>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.Models.ErrorObject.html">ErrorObject</a>&gt;</div>
+    <div class="level3"><span class="xref">TooManyRequestsException</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="Gw2Sharp.WebApi.V2.ApiV2BaseObject.html#Gw2Sharp_WebApi_V2_ApiV2BaseObject_HttpResponseInfo">ApiV2BaseObject.HttpResponseInfo</a>
+      <a class="xref" href="Gw2Sharp.WebApi.Http.RequestException-1.html#Gw2Sharp_WebApi_Http_RequestException_1_Request">RequestException&lt;ErrorObject&gt;.Request</a>
+    </div>
+    <div>
+      <a class="xref" href="Gw2Sharp.WebApi.Http.RequestException-1.html#Gw2Sharp_WebApi_Http_RequestException_1_Response">RequestException&lt;ErrorObject&gt;.Response</a>
+    </div>
+    <div>
+      <a class="xref" href="Gw2Sharp.WebApi.Http.RequestException-1.html#Gw2Sharp_WebApi_Http_RequestException_1_GetObjectData_SerializationInfo_StreamingContext_">RequestException&lt;ErrorObject&gt;.GetObjectData(SerializationInfo, StreamingContext)</a>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Gw2Sharp.WebApi.V2.Models.html">Gw2Sharp.WebApi.V2.Models</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Gw2Sharp.WebApi.Http.html">Gw2Sharp.WebApi.Http</a></h6>
   <h6><strong>Assembly</strong>: Gw2Sharp.dll</h6>
-  <h5 id="Gw2Sharp_WebApi_V2_Models_CharactersSab_syntax">Syntax</h5>
+  <h5 id="Gw2Sharp_WebApi_Http_TooManyRequestsException_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class CharactersSab : ApiV2BaseObject, IApiV2Object</code></pre>
+    <pre><code class="lang-csharp hljs">public class TooManyRequestsException : UnexpectedStatusException&lt;ErrorObject&gt;</code></pre>
   </div>
-  <h3 id="properties">Properties
+  <h3 id="constructors">Constructors
   </h3>
   
   
-  <a id="Gw2Sharp_WebApi_V2_Models_CharactersSab_Songs_" data-uid="Gw2Sharp.WebApi.V2.Models.CharactersSab.Songs*"></a>
-  <h4 id="Gw2Sharp_WebApi_V2_Models_CharactersSab_Songs" data-uid="Gw2Sharp.WebApi.V2.Models.CharactersSab.Songs">Songs</h4>
-  <div class="markdown level1 summary"><p>The list of Super Adventure Box songs.</p>
+  <a id="Gw2Sharp_WebApi_Http_TooManyRequestsException__ctor_" data-uid="Gw2Sharp.WebApi.Http.TooManyRequestsException.#ctor*"></a>
+  <h4 id="Gw2Sharp_WebApi_Http_TooManyRequestsException__ctor_Gw2Sharp_WebApi_Http_IHttpRequest_Gw2Sharp_WebApi_Http_IHttpResponse_Gw2Sharp_WebApi_V2_Models_ErrorObject__" data-uid="Gw2Sharp.WebApi.Http.TooManyRequestsException.#ctor(Gw2Sharp.WebApi.Http.IHttpRequest,Gw2Sharp.WebApi.Http.IHttpResponse{Gw2Sharp.WebApi.V2.Models.ErrorObject})">TooManyRequestsException(IHttpRequest, IHttpResponse&lt;ErrorObject&gt;)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Gw2Sharp.WebApi.Http.TooManyRequestsException.html">TooManyRequestsException</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;CharacterSabSong&gt; Songs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public TooManyRequestsException(IHttpRequest request, IHttpResponse&lt;ErrorObject&gt; response)</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IReadOnlyList</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.Models.CharacterSabSong.html">CharacterSabSong</a>&gt;</td>
-        <td></td>
+        <td><a class="xref" href="Gw2Sharp.WebApi.Http.IHttpRequest.html">IHttpRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The original request.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Gw2Sharp.WebApi.Http.IHttpResponse-1.html">IHttpResponse</a>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.Models.ErrorObject.html">ErrorObject</a>&gt;</td>
+        <td><span class="parametername">response</span></td>
+        <td><p>The response.</p>
+</td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Gw2Sharp_WebApi_V2_Models_CharactersSab_Unlocks_" data-uid="Gw2Sharp.WebApi.V2.Models.CharactersSab.Unlocks*"></a>
-  <h4 id="Gw2Sharp_WebApi_V2_Models_CharactersSab_Unlocks" data-uid="Gw2Sharp.WebApi.V2.Models.CharactersSab.Unlocks">Unlocks</h4>
-  <div class="markdown level1 summary"><p>The list of Super Adventure Box unlocks.</p>
+  <a id="Gw2Sharp_WebApi_Http_TooManyRequestsException__ctor_" data-uid="Gw2Sharp.WebApi.Http.TooManyRequestsException.#ctor*"></a>
+  <h4 id="Gw2Sharp_WebApi_Http_TooManyRequestsException__ctor_SerializationInfo_StreamingContext_" data-uid="Gw2Sharp.WebApi.Http.TooManyRequestsException.#ctor(SerializationInfo,StreamingContext)">TooManyRequestsException(SerializationInfo, StreamingContext)</h4>
+  <div class="markdown level1 summary"><p>Deserialization constructor for <a class="xref" href="Gw2Sharp.WebApi.Http.TooManyRequestsException.html">TooManyRequestsException</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;CharacterSabUnlock&gt; Unlocks { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">protected TooManyRequestsException(SerializationInfo info, StreamingContext context)</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IReadOnlyList</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.Models.CharacterSabUnlock.html">CharacterSabUnlock</a>&gt;</td>
-        <td></td>
+        <td><span class="xref">SerializationInfo</span></td>
+        <td><span class="parametername">info</span></td>
+        <td><p>The serialization info.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">StreamingContext</span></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The streaming context.</p>
+</td>
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="Gw2Sharp_WebApi_V2_Models_CharactersSab_Zones_" data-uid="Gw2Sharp.WebApi.V2.Models.CharactersSab.Zones*"></a>
-  <h4 id="Gw2Sharp_WebApi_V2_Models_CharactersSab_Zones" data-uid="Gw2Sharp.WebApi.V2.Models.CharactersSab.Zones">Zones</h4>
-  <div class="markdown level1 summary"><p>The list of Super Adventure Box zones.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;CharacterSabZone&gt; Zones { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">IReadOnlyList</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.Models.CharacterSabZone.html">CharacterSabZone</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="Gw2Sharp.WebApi.V2.IApiV2Object.html">IApiV2Object</a>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="Gw2Sharp.WebApi.Http.UnexpectedStatusException-1.html">UnexpectedStatusException</a>&lt;T&gt;</div>
   </div>
 </article>
           </div>

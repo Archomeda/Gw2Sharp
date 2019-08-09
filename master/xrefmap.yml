@@ -3749,6 +3749,34 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.Http.ServiceUnavailableException.ServiceUnavailableException
   nameWithType: ServiceUnavailableException.ServiceUnavailableException
+- uid: Gw2Sharp.WebApi.Http.TooManyRequestsException
+  name: TooManyRequestsException
+  href: api/Gw2Sharp.WebApi.Http.TooManyRequestsException.html
+  commentId: T:Gw2Sharp.WebApi.Http.TooManyRequestsException
+  fullName: Gw2Sharp.WebApi.Http.TooManyRequestsException
+  nameWithType: TooManyRequestsException
+- uid: Gw2Sharp.WebApi.Http.TooManyRequestsException.#ctor(Gw2Sharp.WebApi.Http.IHttpRequest,Gw2Sharp.WebApi.Http.IHttpResponse{Gw2Sharp.WebApi.V2.Models.ErrorObject})
+  name: TooManyRequestsException(IHttpRequest, IHttpResponse<ErrorObject>)
+  href: api/Gw2Sharp.WebApi.Http.TooManyRequestsException.html#Gw2Sharp_WebApi_Http_TooManyRequestsException__ctor_Gw2Sharp_WebApi_Http_IHttpRequest_Gw2Sharp_WebApi_Http_IHttpResponse_Gw2Sharp_WebApi_V2_Models_ErrorObject__
+  commentId: M:Gw2Sharp.WebApi.Http.TooManyRequestsException.#ctor(Gw2Sharp.WebApi.Http.IHttpRequest,Gw2Sharp.WebApi.Http.IHttpResponse{Gw2Sharp.WebApi.V2.Models.ErrorObject})
+  name.vb: TooManyRequestsException(IHttpRequest, IHttpResponse(Of ErrorObject))
+  fullName: Gw2Sharp.WebApi.Http.TooManyRequestsException.TooManyRequestsException(Gw2Sharp.WebApi.Http.IHttpRequest, Gw2Sharp.WebApi.Http.IHttpResponse<Gw2Sharp.WebApi.V2.Models.ErrorObject>)
+  fullName.vb: Gw2Sharp.WebApi.Http.TooManyRequestsException.TooManyRequestsException(Gw2Sharp.WebApi.Http.IHttpRequest, Gw2Sharp.WebApi.Http.IHttpResponse(Of Gw2Sharp.WebApi.V2.Models.ErrorObject))
+  nameWithType: TooManyRequestsException.TooManyRequestsException(IHttpRequest, IHttpResponse<ErrorObject>)
+  nameWithType.vb: TooManyRequestsException.TooManyRequestsException(IHttpRequest, IHttpResponse(Of ErrorObject))
+- uid: Gw2Sharp.WebApi.Http.TooManyRequestsException.#ctor(SerializationInfo,StreamingContext)
+  name: TooManyRequestsException(SerializationInfo, StreamingContext)
+  href: api/Gw2Sharp.WebApi.Http.TooManyRequestsException.html#Gw2Sharp_WebApi_Http_TooManyRequestsException__ctor_SerializationInfo_StreamingContext_
+  commentId: M:Gw2Sharp.WebApi.Http.TooManyRequestsException.#ctor(SerializationInfo,StreamingContext)
+  fullName: Gw2Sharp.WebApi.Http.TooManyRequestsException.TooManyRequestsException(SerializationInfo, StreamingContext)
+  nameWithType: TooManyRequestsException.TooManyRequestsException(SerializationInfo, StreamingContext)
+- uid: Gw2Sharp.WebApi.Http.TooManyRequestsException.#ctor*
+  name: TooManyRequestsException
+  href: api/Gw2Sharp.WebApi.Http.TooManyRequestsException.html#Gw2Sharp_WebApi_Http_TooManyRequestsException__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.Http.TooManyRequestsException.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.Http.TooManyRequestsException.TooManyRequestsException
+  nameWithType: TooManyRequestsException.TooManyRequestsException
 - uid: Gw2Sharp.WebApi.Http.UnexpectedStatusException
   name: UnexpectedStatusException
   href: api/Gw2Sharp.WebApi.Http.UnexpectedStatusException.html
