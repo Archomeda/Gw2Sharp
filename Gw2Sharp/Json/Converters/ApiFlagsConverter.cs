@@ -21,27 +21,31 @@ namespace Gw2Sharp.Json.Converters
         public override object? ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
         {
             var fToken = serializer.Deserialize<JToken>(reader);
+
+            // If it's explicitly defined as null, just return null
             if (fToken.Type == JTokenType.Null)
                 return null;
-            if (!(fToken is JArray jArray))
-                throw new JsonSerializationException($"Expected an array for {nameof(jArray)}");
 
-            // Get generic type information and some sanity checks
-            var typeInfo = objectType.GetTypeInfo();
-            Type enumType;
-            if (typeInfo.IsGenericType && typeInfo.GenericTypeArguments.Length > 0)
-                enumType = typeInfo.GenericTypeArguments[0];
-            else
-                return null;
-            var apiEnumType = typeof(ApiEnum<>).MakeGenericType(enumType);
-
-            var flags = jArray.Select(e =>
+            if (fToken is JArray jArray)
             {
-                string rawValue = e.ToObject<string>();
-                var value = rawValue.ParseEnum(enumType);
-                return Activator.CreateInstance(apiEnumType, value, rawValue);
-            });
-            return Activator.CreateInstance(objectType, BindingFlags.NonPublic | BindingFlags.Instance, null, new[] { flags }, null);
+                // Get generic type information and some sanity checks
+                var typeInfo = objectType.GetTypeInfo();
+                var enumType = typeInfo.IsGenericType ? typeInfo.GenericTypeArguments.FirstOrDefault() : null;
+                if (enumType == null)
+                    return null;
+
+                // If it's a value, create a flag with that value
+                var apiEnumType = typeof(ApiEnum<>).MakeGenericType(enumType);
+                var flags = jArray.Select(e =>
+                {
+                    string rawValue = e.ToObject<string>();
+                    var value = rawValue.ParseEnum(enumType);
+                    return Activator.CreateInstance(apiEnumType, value, rawValue);
+                });
+                return Activator.CreateInstance(objectType, BindingFlags.NonPublic | BindingFlags.Instance, null, new[] { flags }, null);
+            }
+
+            throw new JsonSerializationException($"Expected an array or null");
         }
 
         /// <inheritdoc />
