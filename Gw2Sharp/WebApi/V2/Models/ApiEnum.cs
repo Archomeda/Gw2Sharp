@@ -100,7 +100,8 @@ namespace Gw2Sharp.WebApi.V2.Models
         {
             int hashCode = -159790080;
             hashCode = (hashCode * -1521134295) + EqualityComparer<Enum>.Default.GetHashCode(this.Value);
-            hashCode = (hashCode * -1521134295) + EqualityComparer<string>.Default.GetHashCode(this.RawValue);
+            if (this.RawValue != null)
+                hashCode = (hashCode * -1521134295) + EqualityComparer<string>.Default.GetHashCode(this.RawValue);
             return hashCode;
         }
 
