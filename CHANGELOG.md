@@ -1,5 +1,12 @@
 # Gw2Sharp History
 
+## 0.6.1
+### Endpoints
+- Change property `Emblem` in `Gw2Sharp.WebApi.V2.Models.Guild` to be nullable because the API might leave this property out ([#10](https://github.com/Archomeda/Gw2Sharp/issues/10))
+
+### Fixes
+- Fix default instantiations of `ApiEnum` and `ApiFlags` that might cause `InvalidCastException`s when requesting data by removing the non-generic `ApiEnum` and `ApiFlags` variants (they were only used internally for easy casting when deserializing) ([#10](https://github.com/Archomeda/Gw2Sharp/issues/10))
+
 ## 0.6.0
 ### Endpoints
 - **Breaking:** `Gw2Sharp.WebApi.V2.Models.GuildTeam` has had the type of its property `Ladders` changed from `PvpStatsLadders` to `IReadOnlyDictionary<string, PvpStatsAggregate>`
