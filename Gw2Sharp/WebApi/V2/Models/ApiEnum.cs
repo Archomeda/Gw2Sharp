@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Gw2Sharp.Extensions;
 using Gw2Sharp.Json.Converters;
 using Newtonsoft.Json;
 
@@ -29,10 +30,9 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// </summary>
         /// <param name="value">The enum value.</param>
         /// <param name="rawValue">The raw value.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="value"/> is <c>null</c>.</exception>
         public ApiEnum(T value, string? rawValue)
         {
-            this.Value = value ?? throw new ArgumentNullException(nameof(value));
+            this.Value = value;
             this.RawValue = rawValue;
         }
 
@@ -61,6 +61,13 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <param name="e">The enum.</param>
         public static implicit operator ApiEnum<T>(T e) =>
             new ApiEnum<T>(e, e.ToString());
+
+        /// <summary>
+        /// Converts a string to an API enum.
+        /// </summary>
+        /// <param name="e">The enum.</param>
+        public static implicit operator ApiEnum<T>(string e) =>
+            new ApiEnum<T>(e.ParseEnum<T>(), e);
 
         /// <summary>
         /// Converts an API enum to its normal enum.

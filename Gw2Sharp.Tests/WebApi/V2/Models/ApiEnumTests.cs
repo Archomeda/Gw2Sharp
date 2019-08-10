@@ -1,6 +1,4 @@
-using System;
 using System.ComponentModel;
-using Gw2Sharp.Tests.Helpers;
 using Gw2Sharp.WebApi.V2.Models;
 using Newtonsoft.Json;
 using Xunit;
@@ -83,6 +81,14 @@ namespace Gw2Sharp.Tests.WebApi.V2.Models
         }
 
         [Fact]
+        public void ImplicitConversionFromStringTest()
+        {
+            var expected = new ApiEnum<TestEnum>(TestEnum.EnumValue2);
+            ApiEnum<TestEnum> actual = "EnumValue2";
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
         public void ImplicitConversionToStringTest()
         {
             string expected = "SomeRawEnumValue";
@@ -160,20 +166,5 @@ namespace Gw2Sharp.Tests.WebApi.V2.Models
 #pragma warning restore CS0253 // Possible unintended reference comparison; right hand side needs cast
             Assert.True(item1 != null!);
         }
-
-        #region ArgumentNullException tests
-
-        [Fact]
-        public void ArgumentNullConstructorTest()
-        {
-            AssertArguments.ThrowsWhenNull(
-                () => new ApiEnum<Enum>(TestEnum.EnumValue1),
-                new[] { true });
-            AssertArguments.ThrowsWhenNull(
-                () => new ApiEnum<Enum>(TestEnum.EnumValue1, TestEnum.EnumValue1.ToString()),
-                new[] { true, false });
-        }
-
-        #endregion
     }
 }
