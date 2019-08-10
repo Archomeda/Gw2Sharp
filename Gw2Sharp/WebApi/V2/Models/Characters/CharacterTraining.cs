@@ -7,7 +7,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     {
         /// <summary>
         /// The training id.
-        /// Can be resolved against <see cref="IProfessions.Trainings"/>.
+        /// Can be resolved against <see cref="Profession.Training"/> in <see cref="IGw2WebApiV2Client.Professions"/>.
         /// </summary>
         public int Id { get; set; }
 

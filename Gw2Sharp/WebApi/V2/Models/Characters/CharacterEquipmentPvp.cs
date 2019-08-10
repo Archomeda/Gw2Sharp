@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Gw2Sharp.WebApi.V2.Clients;
 
 namespace Gw2Sharp.WebApi.V2.Models
 {
