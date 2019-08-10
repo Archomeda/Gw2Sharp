@@ -84,7 +84,8 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The guild emblem.
         /// No authentication required.
+        /// If the guild does not have an emblem, this value is <c>null</c>.
         /// </summary>
-        public GuildEmblem Emblem { get; set; } = new GuildEmblem();
+        public GuildEmblem? Emblem { get; set; }
     }
 }
