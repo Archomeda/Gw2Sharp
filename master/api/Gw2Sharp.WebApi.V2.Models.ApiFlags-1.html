@@ -1410,13 +1410,7 @@
                             <a href="Gw2Sharp.WebApi.V2.Models.AchievementType.html" title="AchievementType" class="">AchievementType</a>
                           </li>
                           <li class="">
-                            <a href="Gw2Sharp.WebApi.V2.Models.ApiEnum.html" title="ApiEnum" class="">ApiEnum</a>
-                          </li>
-                          <li class="">
                             <a href="Gw2Sharp.WebApi.V2.Models.ApiEnum-1.html" title="ApiEnum&lt;T&gt;" class="">ApiEnum&lt;T&gt;</a>
-                          </li>
-                          <li class="">
-                            <a href="Gw2Sharp.WebApi.V2.Models.ApiFlags.html" title="ApiFlags" class="">ApiFlags</a>
                           </li>
                           <li class="active">
                             <a href="Gw2Sharp.WebApi.V2.Models.ApiFlags-1.html" title="ApiFlags&lt;T&gt;" class="active">ApiFlags&lt;T&gt;</a>
@@ -2187,29 +2181,17 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="Gw2Sharp.WebApi.V2.Models.ApiFlags.html">ApiFlags</a></div>
-    <div class="level2"><span class="xref">ApiFlags&lt;T&gt;</span></div>
+    <div class="level1"><span class="xref">ApiFlags&lt;T&gt;</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.Models.ApiEnum.html">ApiEnum</a>&gt;</div>
-    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.Models.ApiFlags-1.html">ApiFlags</a>&lt;T&gt;&gt;</div>
     <div><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.Models.ApiEnum-1.html">ApiEnum</a>&lt;T&gt;&gt;</div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="Gw2Sharp.WebApi.V2.Models.ApiFlags.html#Gw2Sharp_WebApi_V2_Models_ApiFlags_HasUnknowns">ApiFlags.HasUnknowns</a>
-    </div>
-    <div>
-      <a class="xref" href="Gw2Sharp.WebApi.V2.Models.ApiFlags.html#Gw2Sharp_WebApi_V2_Models_ApiFlags_Equals_Gw2Sharp_WebApi_V2_Models_ApiFlags_">ApiFlags.Equals(ApiFlags)</a>
-    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Gw2Sharp.WebApi.V2.Models.html">Gw2Sharp.WebApi.V2.Models</a></h6>
   <h6><strong>Assembly</strong>: Gw2Sharp.dll</h6>
   <h5 id="Gw2Sharp_WebApi_V2_Models_ApiFlags_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ApiFlags&lt;T&gt; : ApiFlags, IEnumerable&lt;ApiEnum&gt;, IEquatable&lt;ApiFlags&lt;T&gt;&gt;, IEnumerable&lt;ApiEnum&lt;T&gt;&gt; where T : Enum</code></pre>
+    <pre><code class="lang-csharp hljs">public class ApiFlags&lt;T&gt; : IEquatable&lt;ApiFlags&lt;T&gt;&gt;, IEnumerable&lt;ApiEnum&lt;T&gt;&gt; where T : Enum</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2243,13 +2225,13 @@
   
   
   <a id="Gw2Sharp_WebApi_V2_Models_ApiFlags_1__ctor_" data-uid="Gw2Sharp.WebApi.V2.Models.ApiFlags`1.#ctor*"></a>
-  <h4 id="Gw2Sharp_WebApi_V2_Models_ApiFlags_1__ctor_IReadOnlyList_Gw2Sharp_WebApi_V2_Models_ApiEnum__0___" data-uid="Gw2Sharp.WebApi.V2.Models.ApiFlags`1.#ctor(IReadOnlyList{Gw2Sharp.WebApi.V2.Models.ApiEnum{`0}})">ApiFlags(IReadOnlyList&lt;ApiEnum&lt;T&gt;&gt;)</h4>
+  <h4 id="Gw2Sharp_WebApi_V2_Models_ApiFlags_1__ctor_IEnumerable_Gw2Sharp_WebApi_V2_Models_ApiEnum__0___" data-uid="Gw2Sharp.WebApi.V2.Models.ApiFlags`1.#ctor(IEnumerable{Gw2Sharp.WebApi.V2.Models.ApiEnum{`0}})">ApiFlags(IEnumerable&lt;ApiEnum&lt;T&gt;&gt;)</h4>
   <div class="markdown level1 summary"><p>Creates new API flags.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ApiFlags(IReadOnlyList&lt;ApiEnum&lt;T&gt;&gt; list)</code></pre>
+    <pre><code class="lang-csharp hljs">public ApiFlags(IEnumerable&lt;ApiEnum&lt;T&gt;&gt; list)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2262,36 +2244,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IReadOnlyList</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.Models.ApiEnum-1.html">ApiEnum</a>&lt;T&gt;&gt;</td>
-        <td><span class="parametername">list</span></td>
-        <td><p>The list of enum values.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Gw2Sharp_WebApi_V2_Models_ApiFlags_1__ctor_" data-uid="Gw2Sharp.WebApi.V2.Models.ApiFlags`1.#ctor*"></a>
-  <h4 id="Gw2Sharp_WebApi_V2_Models_ApiFlags_1__ctor_IReadOnlyList_Gw2Sharp_WebApi_V2_Models_ApiEnum__" data-uid="Gw2Sharp.WebApi.V2.Models.ApiFlags`1.#ctor(IReadOnlyList{Gw2Sharp.WebApi.V2.Models.ApiEnum})">ApiFlags(IReadOnlyList&lt;ApiEnum&gt;)</h4>
-  <div class="markdown level1 summary"><p>Creates new API flags.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ApiFlags(IReadOnlyList&lt;ApiEnum&gt; list)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">IReadOnlyList</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.Models.ApiEnum.html">ApiEnum</a>&gt;</td>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.Models.ApiEnum-1.html">ApiEnum</a>&lt;T&gt;&gt;</td>
         <td><span class="parametername">list</span></td>
         <td><p>The list of enum values.</p>
 </td>
@@ -2300,6 +2253,33 @@
   </table>
   <h3 id="properties">Properties
   </h3>
+  
+  
+  <a id="Gw2Sharp_WebApi_V2_Models_ApiFlags_1_HasUnknowns_" data-uid="Gw2Sharp.WebApi.V2.Models.ApiFlags`1.HasUnknowns*"></a>
+  <h4 id="Gw2Sharp_WebApi_V2_Models_ApiFlags_1_HasUnknowns" data-uid="Gw2Sharp.WebApi.V2.Models.ApiFlags`1.HasUnknowns">HasUnknowns</h4>
+  <div class="markdown level1 summary"><p>Whether the flags has at least one unknown value to the library.
+If true, <a class="xref" href="Gw2Sharp.WebApi.V2.Models.ApiFlags-1.html#Gw2Sharp_WebApi_V2_Models_ApiFlags_1_UnknownList">UnknownList</a> will contain the actual values whereas <a class="xref" href="Gw2Sharp.WebApi.V2.Models.ApiFlags-1.html#Gw2Sharp_WebApi_V2_Models_ApiFlags_1_List">List</a> will have the default values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasUnknowns { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Gw2Sharp_WebApi_V2_Models_ApiFlags_1_List_" data-uid="Gw2Sharp.WebApi.V2.Models.ApiFlags`1.List*"></a>
@@ -2438,8 +2418,6 @@
       </tr>
     </tbody>
   </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Gw2Sharp.WebApi.V2.Models.ApiFlags.html#Gw2Sharp_WebApi_V2_Models_ApiFlags_Equals_System_Nullable_System_Object__">ApiFlags.Equals(Nullable&lt;Object&gt;)</a></div>
   
   
   <a id="Gw2Sharp_WebApi_V2_Models_ApiFlags_1_GetEnumerator_" data-uid="Gw2Sharp.WebApi.V2.Models.ApiFlags`1.GetEnumerator*"></a>
@@ -2490,8 +2468,6 @@
       </tr>
     </tbody>
   </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Gw2Sharp.WebApi.V2.Models.ApiFlags.html#Gw2Sharp_WebApi_V2_Models_ApiFlags_GetHashCode">ApiFlags.GetHashCode()</a></div>
   <h3 id="operators">Operators
   </h3>
   
@@ -2581,6 +2557,94 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Gw2Sharp.WebApi.V2.Models.ApiFlags-1.html">ApiFlags</a>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Gw2Sharp_WebApi_V2_Models_ApiFlags_1_op_Implicit_" data-uid="Gw2Sharp.WebApi.V2.Models.ApiFlags`1.op_Implicit*"></a>
+  <h4 id="Gw2Sharp_WebApi_V2_Models_ApiFlags_1_op_Implicit_Gw2Sharp_WebApi_V2_Models_ApiEnum__0_____Gw2Sharp_WebApi_V2_Models_ApiFlags__0_" data-uid="Gw2Sharp.WebApi.V2.Models.ApiFlags`1.op_Implicit(Gw2Sharp.WebApi.V2.Models.ApiEnum{`0}[])~Gw2Sharp.WebApi.V2.Models.ApiFlags{`0}">Implicit(ApiEnum&lt;T&gt;[] to ApiFlags&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"><p>Converts an array of enums to API flags.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator ApiFlags&lt;T&gt;(ApiEnum&lt;T&gt;[] l)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Gw2Sharp.WebApi.V2.Models.ApiEnum-1.html">ApiEnum</a>&lt;T&gt;[]</td>
+        <td><span class="parametername">l</span></td>
+        <td><p>The list of enums.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Gw2Sharp.WebApi.V2.Models.ApiFlags-1.html">ApiFlags</a>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Gw2Sharp_WebApi_V2_Models_ApiFlags_1_op_Implicit_" data-uid="Gw2Sharp.WebApi.V2.Models.ApiFlags`1.op_Implicit*"></a>
+  <h4 id="Gw2Sharp_WebApi_V2_Models_ApiFlags_1_op_Implicit_Gw2Sharp_WebApi_V2_Models_ApiFlags__0___Gw2Sharp_WebApi_V2_Models_ApiEnum__0___" data-uid="Gw2Sharp.WebApi.V2.Models.ApiFlags`1.op_Implicit(Gw2Sharp.WebApi.V2.Models.ApiFlags{`0})~Gw2Sharp.WebApi.V2.Models.ApiEnum{`0}[]">Implicit(ApiFlags&lt;T&gt; to ApiEnum&lt;T&gt;[])</h4>
+  <div class="markdown level1 summary"><p>Converts API flags to an array of enums.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator ApiEnum&lt;T&gt;[](ApiFlags&lt;T&gt; e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Gw2Sharp.WebApi.V2.Models.ApiFlags-1.html">ApiFlags</a>&lt;T&gt;</td>
+        <td><span class="parametername">e</span></td>
+        <td><p>The API enum.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Gw2Sharp.WebApi.V2.Models.ApiEnum-1.html">ApiEnum</a>&lt;T&gt;[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -2765,12 +2829,6 @@
     </tbody>
   </table>
   <h3 id="implements">Implements</h3>
-  <div>
-      <span class="xref">IEnumerable&lt;&gt;</span>
-  </div>
-  <div>
-      <span class="xref">IEquatable&lt;&gt;</span>
-  </div>
   <div>
       <span class="xref">IEnumerable&lt;&gt;</span>
   </div>
