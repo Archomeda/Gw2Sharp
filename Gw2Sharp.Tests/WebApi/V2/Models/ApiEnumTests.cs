@@ -1,6 +1,4 @@
-using System;
 using System.ComponentModel;
-using Gw2Sharp.Tests.Helpers;
 using Gw2Sharp.WebApi.V2.Models;
 using Newtonsoft.Json;
 using Xunit;
@@ -35,12 +33,19 @@ namespace Gw2Sharp.Tests.WebApi.V2.Models
         [Theory]
         [InlineData("{\"Enum\":\"EnumValue2\"}", "EnumValue2", TestEnum.EnumValue2)]
         [InlineData("{\"Enum\":\"SomeRandomValue\"}", "SomeRandomValue", TestEnum.EnumValue3)]
-        [InlineData("{\"Enum\":undefined}", "EnumValue3", TestEnum.EnumValue3)]
-        public void DeserializeTest(string json, string expectedRaw, TestEnum expected)
+        [InlineData("{\"Enum\":\"\"}", "", TestEnum.EnumValue3)]
+        [InlineData("{\"Enum\":undefined}", null, TestEnum.EnumValue3)]
+        [InlineData("{}", null, null)]
+        public void DeserializeTest(string json, string expectedRaw, TestEnum? expected)
         {
             var obj = JsonConvert.DeserializeObject<JsonObject>(json);
-            Assert.Equal(expectedRaw, obj.Enum.RawValue);
-            Assert.Equal(expected, obj.Enum.Value);
+            if (expected == null)
+                Assert.Null(obj.Enum);
+            else
+            {
+                Assert.Equal(expectedRaw, obj.Enum.RawValue);
+                Assert.Equal(expected, obj.Enum.Value);
+            }
         }
 
         [Fact]
@@ -76,6 +81,14 @@ namespace Gw2Sharp.Tests.WebApi.V2.Models
         }
 
         [Fact]
+        public void ImplicitConversionFromStringTest()
+        {
+            var expected = new ApiEnum<TestEnum>(TestEnum.EnumValue2);
+            ApiEnum<TestEnum> actual = "EnumValue2";
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
         public void ImplicitConversionToStringTest()
         {
             string expected = "SomeRawEnumValue";
@@ -94,81 +107,64 @@ namespace Gw2Sharp.Tests.WebApi.V2.Models
         [Fact]
         public void EqualsTest()
         {
-            var item = new ApiEnum<TestEnum>(TestEnum.EnumValue1, TestEnum.EnumValue1.ToString());
+            var item1 = new ApiEnum<TestEnum>(TestEnum.EnumValue1, TestEnum.EnumValue1.ToString());
             var item2 = new ApiEnum<TestEnum>(TestEnum.EnumValue1, TestEnum.EnumValue1.ToString());
-            Assert.True(item.Equals(item2));
+            Assert.True(item1.Equals(item2));
         }
 
         [Fact]
         public void NotEqualsTest()
         {
-            var item = new ApiEnum<TestEnum>(TestEnum.EnumValue1, TestEnum.EnumValue1.ToString());
+            var item1 = new ApiEnum<TestEnum>(TestEnum.EnumValue1, TestEnum.EnumValue1.ToString());
             var item2 = new ApiEnum<TestEnum>(TestEnum.EnumValue1, TestEnum.EnumValue2.ToString());
             var item3 = new ApiEnum<TestEnum>(TestEnum.EnumValue2, TestEnum.EnumValue2.ToString());
-            Assert.False(item.Equals(item2));
-            Assert.False(item.Equals(item3));
+            Assert.False(item1.Equals(item2));
+            Assert.False(item1.Equals(item3));
             Assert.False(item2.Equals(item3));
-            Assert.False(item.Equals(new object()));
-            Assert.False(item.Equals(null!));
+            Assert.False(item1.Equals(new object()));
+            Assert.False(item1.Equals(null!));
         }
 
         [Fact]
         public void HashCodeEqualsTest()
         {
-            var item = new ApiEnum<TestEnum>(TestEnum.EnumValue1, TestEnum.EnumValue1.ToString());
+            var item1 = new ApiEnum<TestEnum>(TestEnum.EnumValue1, TestEnum.EnumValue1.ToString());
             var item2 = new ApiEnum<TestEnum>(TestEnum.EnumValue1, TestEnum.EnumValue1.ToString());
-            Assert.Equal(item.GetHashCode(), item2.GetHashCode());
+            Assert.Equal(item1.GetHashCode(), item2.GetHashCode());
         }
 
         [Fact]
         public void HashCodeNotEqualsTest()
         {
-            var item = new ApiEnum<TestEnum>(TestEnum.EnumValue1, TestEnum.EnumValue1.ToString());
-            var item2 = new ApiEnum<TestEnum>(TestEnum.EnumValue2, TestEnum.EnumValue2.ToString());
-            Assert.NotEqual(item.GetHashCode(), item2.GetHashCode());
+            var item1 = new ApiEnum<TestEnum>(TestEnum.EnumValue1, TestEnum.EnumValue1.ToString());
+            var item2 = new ApiEnum<TestEnum>(TestEnum.EnumValue1, TestEnum.EnumValue2.ToString());
+            var item3 = new ApiEnum<TestEnum>(TestEnum.EnumValue2, TestEnum.EnumValue2.ToString());
+            Assert.NotEqual(item1.GetHashCode(), item2.GetHashCode());
+            Assert.NotEqual(item2.GetHashCode(), item3.GetHashCode());
+            Assert.NotEqual(item1.GetHashCode(), item3.GetHashCode());
         }
 
         [Fact]
         public void OperatorEqualsTest()
         {
-            var item = new ApiEnum<TestEnum>(TestEnum.EnumValue1, TestEnum.EnumValue1.ToString());
+            var item1 = new ApiEnum<TestEnum>(TestEnum.EnumValue1, TestEnum.EnumValue1.ToString());
             var item2 = new ApiEnum<TestEnum>(TestEnum.EnumValue1, TestEnum.EnumValue1.ToString());
-            Assert.True(item == item2);
-#pragma warning disable CS1718 // Comparison made to same variable
-            Assert.True(item == (ApiEnum)item);
-#pragma warning restore CS1718 // Comparison made to same variable
+            Assert.True(item1 == item2);
         }
 
         [Fact]
         public void OperatorNotEqualsTest()
         {
-            var item = new ApiEnum<TestEnum>(TestEnum.EnumValue1, TestEnum.EnumValue1.ToString());
+            var item1 = new ApiEnum<TestEnum>(TestEnum.EnumValue1, TestEnum.EnumValue1.ToString());
             var item2 = new ApiEnum<TestEnum>(TestEnum.EnumValue1, TestEnum.EnumValue2.ToString());
             var item3 = new ApiEnum<TestEnum>(TestEnum.EnumValue2, TestEnum.EnumValue2.ToString());
-            Assert.True(item != item2);
-            Assert.True(item != item3);
+            Assert.True(item1 != item2);
+            Assert.True(item1 != item3);
             Assert.True(item2 != item3);
 #pragma warning disable CS0253 // Possible unintended reference comparison; right hand side needs cast
-            Assert.True(item != new object());
+            Assert.True(item1 != new object());
 #pragma warning restore CS0253 // Possible unintended reference comparison; right hand side needs cast
-            Assert.True(item != null!);
-
-            Assert.True((ApiEnum)item != item2);
+            Assert.True(item1 != null!);
         }
-
-        #region ArgumentNullException tests
-
-        [Fact]
-        public void ArgumentNullConstructorTest()
-        {
-            AssertArguments.ThrowsWhenNull(
-                () => new ApiEnum<Enum>(TestEnum.EnumValue1),
-                new[] { true });
-            AssertArguments.ThrowsWhenNull(
-                () => new ApiEnum<Enum>(TestEnum.EnumValue1, TestEnum.EnumValue1.ToString()),
-                new[] { true, false });
-        }
-
-        #endregion
     }
 }

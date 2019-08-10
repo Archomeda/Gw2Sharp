@@ -138,6 +138,7 @@
     <None Remove="TestFiles\Gliders\Gliders.single.json" />
     <None Remove="TestFiles\Guild\GuildId.1.json" />
     <None Remove="TestFiles\Guild\GuildId.2.json" />
+    <None Remove="TestFiles\Guild\GuildId.3.json" />
     <None Remove="TestFiles\Guild\GuildIdLog.json" />
     <None Remove="TestFiles\Guild\GuildIdMembers.json" />
     <None Remove="TestFiles\Guild\GuildIdRanks.json" />
@@ -369,6 +370,7 @@
     <EmbeddedResource Include="TestFiles\Gliders\Gliders.single.json" />
     <EmbeddedResource Include="TestFiles\Guild\GuildId.1.json" />
     <EmbeddedResource Include="TestFiles\Guild\GuildId.2.json" />
+    <EmbeddedResource Include="TestFiles\Guild\GuildId.3.json" />
     <EmbeddedResource Include="TestFiles\Guild\GuildIdLog.json" />
     <EmbeddedResource Include="TestFiles\Guild\GuildIdMembers.json" />
     <EmbeddedResource Include="TestFiles\Guild\GuildIdRanks.json" />
