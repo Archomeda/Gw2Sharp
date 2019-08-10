@@ -14,6 +14,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
         [Theory]
         [InlineData("TestFiles.Guild.GuildId.1.json")]
         [InlineData("TestFiles.Guild.GuildId.2.json")]
+        [InlineData("TestFiles.Guild.GuildId.3.json")]
         public Task BlobTest(string file) => this.AssertBlobDataAsync(this.Client, file);
     }
 }

@@ -19,7 +19,7 @@ namespace Gw2Sharp.Tests.Json.Converters
         public void CanConvertTest()
         {
             var converter = new ApiEnumConverter();
-            Assert.True(converter.CanConvert(typeof(ApiEnum)));
+            Assert.True(converter.CanConvert(typeof(ApiEnum<>)));
         }
     }
 }

@@ -18,10 +18,13 @@ namespace Gw2Sharp.Json.Converters
         public override bool CanWrite => false;
 
         /// <inheritdoc />
-        public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+        public override object? ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
         {
-            if (!(serializer.Deserialize<JToken>(reader) is JArray jArray))
-                throw new JsonSerializationException($"Expected a value for {nameof(jArray)}");
+            var fToken = serializer.Deserialize<JToken>(reader);
+            if (fToken.Type == JTokenType.Null)
+                return null;
+            if (!(fToken is JArray jArray))
+                throw new JsonSerializationException($"Expected an array for {nameof(jArray)}");
 
             // Get generic type information and some sanity checks
             var typeInfo = objectType.GetTypeInfo();
@@ -29,16 +32,16 @@ namespace Gw2Sharp.Json.Converters
             if (typeInfo.IsGenericType && typeInfo.GenericTypeArguments.Length > 0)
                 enumType = typeInfo.GenericTypeArguments[0];
             else
-                return null!;
+                return null;
             var apiEnumType = typeof(ApiEnum<>).MakeGenericType(enumType);
 
             var flags = jArray.Select(e =>
             {
                 string rawValue = e.ToObject<string>();
                 var value = rawValue.ParseEnum(enumType);
-                return (ApiEnum)Activator.CreateInstance(apiEnumType, value, rawValue);
-            }).ToList();
-            return (ApiFlags)Activator.CreateInstance(objectType, flags);
+                return Activator.CreateInstance(apiEnumType, value, rawValue);
+            });
+            return Activator.CreateInstance(objectType, BindingFlags.NonPublic | BindingFlags.Instance, null, new[] { flags }, null);
         }
 
         /// <inheritdoc />
@@ -46,6 +49,7 @@ namespace Gw2Sharp.Json.Converters
             throw new NotImplementedException("TODO: This should generally not be used since we only deserialize stuff from the API, and not serialize to it. Might add support later.");
 
         /// <inheritdoc />
-        public override bool CanConvert(Type objectType) => objectType == typeof(ApiFlags);
+        public override bool CanConvert(Type objectType) =>
+          objectType.IsGenericType && objectType.GetGenericTypeDefinition() == typeof(ApiFlags<>);
     }
 }
