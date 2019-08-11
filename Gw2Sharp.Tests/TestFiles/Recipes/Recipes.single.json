@@ -1,0 +1,33 @@
+{
+  "type": "LegendaryComponent",
+  "output_item_id": 71078,
+  "output_item_count": 1,
+  "min_rating": 450,
+  "time_to_craft_ms": 10000,
+  "disciplines": [
+    "Huntsman"
+  ],
+  "flags": [
+    "LearnedFromItem"
+  ],
+  "ingredients": [
+    {
+      "item_id": 75939,
+      "count": 1
+    },
+    {
+      "item_id": 74218,
+      "count": 1
+    },
+    {
+      "item_id": 76402,
+      "count": 1
+    },
+    {
+      "item_id": 72261,
+      "count": 1
+    }
+  ],
+  "id": 11006,
+  "chat_link": "[&Cf4qAAA=]"
+}
