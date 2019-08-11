@@ -162,7 +162,7 @@ For your convenience, the following list gives an overview of the web API endpoi
  /v2/races | ✔️🌐📄📚📦 | [`Gw2Client.WebApi.V2.Races`](../api/Gw2Sharp.WebApi.V2.Clients.RacesClient.html)
  /v2/raids | ✔️📄📚📦 | [`Gw2Client.WebApi.V2.Raids`](../api/Gw2Sharp.WebApi.V2.Clients.RaidsClient.html)
  /v2/recipes | ✔️📄📚 | [`Gw2Client.WebApi.V2.Recipes`](../api/Gw2Sharp.WebApi.V2.Clients.RecipesClient.html)
- /v2/recipes/search | ❌ |
+ /v2/recipes/search | ✔️ | [`Gw2Client.WebApi.V2.Recipes.Search`](../api/Gw2Sharp.WebApi.V2.Clients.RecipesSearchClient.html)
  /v2/skills | ❌ |
  /v2/skins | ❌ |
  /v2/specializations | ❌ |

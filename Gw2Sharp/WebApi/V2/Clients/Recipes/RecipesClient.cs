@@ -9,6 +9,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
     [EndpointPath("recipes")]
     public class RecipesClient : BaseEndpointBulkAllClient<Recipe, int>, IRecipesClient
     {
+        private readonly IRecipesSearchClient search;
+
         /// <summary>
         /// Creates a new <see cref="RecipesClient"/> that is used for the API v2 recipes endpoint.
         /// </summary>
@@ -17,6 +19,11 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
         protected internal RecipesClient(IConnection connection, IGw2Client gw2Client) :
             base(connection, gw2Client)
-        { }
+        {
+            this.search = new RecipesSearchClient(connection, gw2Client);
+        }
+
+        /// <inheritdoc />
+        public virtual IRecipesSearchClient Search => this.search;
     }
 }

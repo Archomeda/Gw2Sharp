@@ -4,6 +4,7 @@
 ### Endpoints
 - **Breaking:** `Gw2Sharp.WebApi.V2.Models.CharacterCraftingDiscipline` has had the type of its property `Discipline` changed from `string` to `ApiEnum<CraftingDisciplineType>`
 - Add `/v2/recipes`
+- Add `/v2/recipes/search`
 
 ## 0.6.1
 ### Endpoints

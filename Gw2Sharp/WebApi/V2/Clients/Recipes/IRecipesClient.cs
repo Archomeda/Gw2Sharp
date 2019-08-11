@@ -9,5 +9,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
         IBulkExpandableClient<Recipe, int>,
         IPaginatedClient<Recipe>
     {
+        /// <summary>
+        /// Gets the recipes search.
+        /// </summary>
+        IRecipesSearchClient Search { get; }
     }
 }

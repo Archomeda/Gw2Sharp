@@ -240,6 +240,7 @@
     <None Remove="TestFiles\Recipes\Recipes.bulk.json" />
     <None Remove="TestFiles\Recipes\Recipes.ids.json" />
     <None Remove="TestFiles\Recipes\Recipes.single.json" />
+    <None Remove="TestFiles\Recipes\RecipesSearch.json" />
     <None Remove="TestFiles\Render\414998.png" />
     <None Remove="TestFiles\TokenInfo\TokenInfo.ApiToken.json" />
     <None Remove="TestFiles\TokenInfo\TokenInfo.SubToken.json" />
@@ -475,6 +476,7 @@
     <EmbeddedResource Include="TestFiles\Recipes\Recipes.bulk.json" />
     <EmbeddedResource Include="TestFiles\Recipes\Recipes.ids.json" />
     <EmbeddedResource Include="TestFiles\Recipes\Recipes.single.json" />
+    <EmbeddedResource Include="TestFiles\Recipes\RecipesSearch.json" />
     <EmbeddedResource Include="TestFiles\Render\414998.png" />
     <EmbeddedResource Include="TestFiles\TokenInfo\TokenInfo.ApiToken.json" />
     <EmbeddedResource Include="TestFiles\TokenInfo\TokenInfo.SubToken.json" />
