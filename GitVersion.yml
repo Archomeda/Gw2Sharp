@@ -1,4 +1,4 @@
-next-version: 0.6.2
+next-version: 0.7.0
 assembly-versioning-format: '{MajorMinorPatch}.{env:APPVEYOR_BUILD_NUMBER ?? 0}'
 assembly-file-versioning-format: '{MajorMinorPatch}-{BranchName}-{ShortSha}'
 assembly-informational-format: '{MajorMinorPatch}-{BranchName}-{ShortSha}'
