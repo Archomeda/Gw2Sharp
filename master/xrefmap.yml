@@ -24739,6 +24739,12 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.ItemInfusionSlot.ItemId
   nameWithType: ItemInfusionSlot.ItemId
+- uid: Gw2Sharp.WebApi.V2.Models.ItemKey
+  name: ItemKey
+  href: api/Gw2Sharp.WebApi.V2.Models.ItemKey.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.ItemKey
+  fullName: Gw2Sharp.WebApi.V2.Models.ItemKey
+  nameWithType: ItemKey
 - uid: Gw2Sharp.WebApi.V2.Models.ItemMiniPet
   name: ItemMiniPet
   href: api/Gw2Sharp.WebApi.V2.Models.ItemMiniPet.html
