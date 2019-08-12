@@ -6,6 +6,9 @@
 - Add `/v2/recipes`
 - Add `/v2/recipes/search`
 
+### Refactoring
+- **Breaking:** Fix type of property `Icon` in `Gw2Sharp.WebApi.V2.Models.MasteryLevel` to `RenderUrl` from `string`
+
 ## 0.6.1
 ### Endpoints
 - Change property `Emblem` in `Gw2Sharp.WebApi.V2.Models.Guild` to be nullable because the API might leave this property out ([#10](https://github.com/Archomeda/Gw2Sharp/issues/10))

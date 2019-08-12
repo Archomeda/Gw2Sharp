@@ -23,7 +23,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The mastery level icon URL.
         /// </summary>
-        public string Icon { get; set; } = string.Empty;
+        public RenderUrl Icon { get; set; }
 
         /// <summary>
         /// The mastery level cost.
