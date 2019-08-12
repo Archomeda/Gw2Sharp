@@ -25983,18 +25983,18 @@ references:
   commentId: F:Gw2Sharp.WebApi.V2.Models.ItemWeaponType.Toy
   fullName: Gw2Sharp.WebApi.V2.Models.ItemWeaponType.Toy
   nameWithType: ItemWeaponType.Toy
+- uid: Gw2Sharp.WebApi.V2.Models.ItemWeaponType.ToyTwoHanded
+  name: ToyTwoHanded
+  href: api/Gw2Sharp.WebApi.V2.Models.ItemWeaponType.html#Gw2Sharp_WebApi_V2_Models_ItemWeaponType_ToyTwoHanded
+  commentId: F:Gw2Sharp.WebApi.V2.Models.ItemWeaponType.ToyTwoHanded
+  fullName: Gw2Sharp.WebApi.V2.Models.ItemWeaponType.ToyTwoHanded
+  nameWithType: ItemWeaponType.ToyTwoHanded
 - uid: Gw2Sharp.WebApi.V2.Models.ItemWeaponType.Trident
   name: Trident
   href: api/Gw2Sharp.WebApi.V2.Models.ItemWeaponType.html#Gw2Sharp_WebApi_V2_Models_ItemWeaponType_Trident
   commentId: F:Gw2Sharp.WebApi.V2.Models.ItemWeaponType.Trident
   fullName: Gw2Sharp.WebApi.V2.Models.ItemWeaponType.Trident
   nameWithType: ItemWeaponType.Trident
-- uid: Gw2Sharp.WebApi.V2.Models.ItemWeaponType.TwoHandedToy
-  name: TwoHandedToy
-  href: api/Gw2Sharp.WebApi.V2.Models.ItemWeaponType.html#Gw2Sharp_WebApi_V2_Models_ItemWeaponType_TwoHandedToy
-  commentId: F:Gw2Sharp.WebApi.V2.Models.ItemWeaponType.TwoHandedToy
-  fullName: Gw2Sharp.WebApi.V2.Models.ItemWeaponType.TwoHandedToy
-  nameWithType: ItemWeaponType.TwoHandedToy
 - uid: Gw2Sharp.WebApi.V2.Models.ItemWeaponType.Unknown
   name: Unknown
   href: api/Gw2Sharp.WebApi.V2.Models.ItemWeaponType.html#Gw2Sharp_WebApi_V2_Models_ItemWeaponType_Unknown
