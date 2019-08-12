@@ -83,6 +83,11 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// Weapon type.
         /// </summary>
-        Weapon
+        Weapon,
+
+        /// <summary>
+        /// Key type.
+        /// </summary>
+        Key
     }
 }

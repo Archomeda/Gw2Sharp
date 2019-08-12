@@ -68,6 +68,21 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// Teleport to friend consumable type.
         /// </summary>
-        TeleportToFriend
+        TeleportToFriend,
+
+        /// <summary>
+        /// Currency type.
+        /// </summary>
+        Currency,
+
+        /// <summary>
+        /// A randomized unlock type.
+        /// </summary>
+        RandomUnlock,
+
+        /// <summary>
+        /// A randomized mount unlock type.
+        /// </summary>
+        MountRandomUnlock
     }
 }

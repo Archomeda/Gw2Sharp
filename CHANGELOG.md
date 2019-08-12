@@ -7,8 +7,12 @@
 - **Breaking:** Enum value `TwoHandedToy` in `Gw2Sharp.WebApi.V2.Models.ItemWeaponType` has had its name fixed to `ToyTwoHanded`
 - Add `/v2/recipes`
 - Add `/v2/recipes/search`
-
-### Refactoring
+- Add missing enum `AgonyResistance` in `Gw2Sharp.WebApi.V2.Models.ItemAttributeType`
+- Add missing enums `Currency`, `RandomUnlock` and `MountRandomUnlock` in `Gw2Sharp.WebApi.V2.Models.ItemConsumableType`
+- Add missing enum `Immediate` in `Gw2Sharp.WebApi.V2.Models.ItemContainerType`
+- Add missing enum `Female` in `Gw2Sharp.WebApi.V2.Models.ItemRestriction`
+- Add missing enum `Key` in `Gw2Sharp.WebApi.V2.Models.ItemType`
+- Add missing enums `SharedSlot`, `Minipet` and `MountSkin` in `Gw2Sharp.WebApi.V2.Models.ItemUnlockType`
 
 ## 0.6.1
 ### Endpoints

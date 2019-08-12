@@ -23,6 +23,11 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// A type that opens a custom UI.
         /// </summary>
-        OpenUI
+        OpenUI,
+
+        /// <summary>
+        /// A type that's immediate.
+        /// </summary>
+        Immediate
     }
 }

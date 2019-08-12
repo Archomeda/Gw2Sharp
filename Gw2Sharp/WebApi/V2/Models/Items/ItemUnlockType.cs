@@ -1,3 +1,5 @@
+using System.Runtime.Serialization;
+
 namespace Gw2Sharp.WebApi.V2.Models
 {
     /// <summary>
@@ -58,6 +60,22 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// Random guaranteed wardrobe unlock type.
         /// </summary>
-        RandomUlock
+        RandomUlock,
+
+        /// <summary>
+        /// Shared slot unlock type.
+        /// </summary>
+        SharedSlot,
+
+        /// <summary>
+        /// Minipet unlock type.
+        /// </summary>
+        Minipet,
+
+        /// <summary>
+        /// Mount skin unlock type.
+        /// </summary>
+        [EnumMember(Value = "Ms")]
+        MountSkin
     }
 }
