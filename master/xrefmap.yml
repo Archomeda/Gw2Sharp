@@ -23566,6 +23566,12 @@ references:
   commentId: T:Gw2Sharp.WebApi.V2.Models.ItemAttributeType
   fullName: Gw2Sharp.WebApi.V2.Models.ItemAttributeType
   nameWithType: ItemAttributeType
+- uid: Gw2Sharp.WebApi.V2.Models.ItemAttributeType.AgonyResistance
+  name: AgonyResistance
+  href: api/Gw2Sharp.WebApi.V2.Models.ItemAttributeType.html#Gw2Sharp_WebApi_V2_Models_ItemAttributeType_AgonyResistance
+  commentId: F:Gw2Sharp.WebApi.V2.Models.ItemAttributeType.AgonyResistance
+  fullName: Gw2Sharp.WebApi.V2.Models.ItemAttributeType.AgonyResistance
+  nameWithType: ItemAttributeType.AgonyResistance
 - uid: Gw2Sharp.WebApi.V2.Models.ItemAttributeType.BoonDuration
   name: BoonDuration
   href: api/Gw2Sharp.WebApi.V2.Models.ItemAttributeType.html#Gw2Sharp_WebApi_V2_Models_ItemAttributeType_BoonDuration
@@ -24002,6 +24008,12 @@ references:
   commentId: F:Gw2Sharp.WebApi.V2.Models.ItemConsumableType.ContractNpc
   fullName: Gw2Sharp.WebApi.V2.Models.ItemConsumableType.ContractNpc
   nameWithType: ItemConsumableType.ContractNpc
+- uid: Gw2Sharp.WebApi.V2.Models.ItemConsumableType.Currency
+  name: Currency
+  href: api/Gw2Sharp.WebApi.V2.Models.ItemConsumableType.html#Gw2Sharp_WebApi_V2_Models_ItemConsumableType_Currency
+  commentId: F:Gw2Sharp.WebApi.V2.Models.ItemConsumableType.Currency
+  fullName: Gw2Sharp.WebApi.V2.Models.ItemConsumableType.Currency
+  nameWithType: ItemConsumableType.Currency
 - uid: Gw2Sharp.WebApi.V2.Models.ItemConsumableType.Food
   name: Food
   href: api/Gw2Sharp.WebApi.V2.Models.ItemConsumableType.html#Gw2Sharp_WebApi_V2_Models_ItemConsumableType_Food
@@ -24026,6 +24038,18 @@ references:
   commentId: F:Gw2Sharp.WebApi.V2.Models.ItemConsumableType.Immediate
   fullName: Gw2Sharp.WebApi.V2.Models.ItemConsumableType.Immediate
   nameWithType: ItemConsumableType.Immediate
+- uid: Gw2Sharp.WebApi.V2.Models.ItemConsumableType.MountRandomUnlock
+  name: MountRandomUnlock
+  href: api/Gw2Sharp.WebApi.V2.Models.ItemConsumableType.html#Gw2Sharp_WebApi_V2_Models_ItemConsumableType_MountRandomUnlock
+  commentId: F:Gw2Sharp.WebApi.V2.Models.ItemConsumableType.MountRandomUnlock
+  fullName: Gw2Sharp.WebApi.V2.Models.ItemConsumableType.MountRandomUnlock
+  nameWithType: ItemConsumableType.MountRandomUnlock
+- uid: Gw2Sharp.WebApi.V2.Models.ItemConsumableType.RandomUnlock
+  name: RandomUnlock
+  href: api/Gw2Sharp.WebApi.V2.Models.ItemConsumableType.html#Gw2Sharp_WebApi_V2_Models_ItemConsumableType_RandomUnlock
+  commentId: F:Gw2Sharp.WebApi.V2.Models.ItemConsumableType.RandomUnlock
+  fullName: Gw2Sharp.WebApi.V2.Models.ItemConsumableType.RandomUnlock
+  nameWithType: ItemConsumableType.RandomUnlock
 - uid: Gw2Sharp.WebApi.V2.Models.ItemConsumableType.TeleportToFriend
   name: TeleportToFriend
   href: api/Gw2Sharp.WebApi.V2.Models.ItemConsumableType.html#Gw2Sharp_WebApi_V2_Models_ItemConsumableType_TeleportToFriend
@@ -24118,6 +24142,12 @@ references:
   commentId: F:Gw2Sharp.WebApi.V2.Models.ItemContainerType.GiftBox
   fullName: Gw2Sharp.WebApi.V2.Models.ItemContainerType.GiftBox
   nameWithType: ItemContainerType.GiftBox
+- uid: Gw2Sharp.WebApi.V2.Models.ItemContainerType.Immediate
+  name: Immediate
+  href: api/Gw2Sharp.WebApi.V2.Models.ItemContainerType.html#Gw2Sharp_WebApi_V2_Models_ItemContainerType_Immediate
+  commentId: F:Gw2Sharp.WebApi.V2.Models.ItemContainerType.Immediate
+  fullName: Gw2Sharp.WebApi.V2.Models.ItemContainerType.Immediate
+  nameWithType: ItemContainerType.Immediate
 - uid: Gw2Sharp.WebApi.V2.Models.ItemContainerType.OpenUI
   name: OpenUI
   href: api/Gw2Sharp.WebApi.V2.Models.ItemContainerType.html#Gw2Sharp_WebApi_V2_Models_ItemContainerType_OpenUI
@@ -24837,6 +24867,12 @@ references:
   commentId: F:Gw2Sharp.WebApi.V2.Models.ItemRestriction.Engineer
   fullName: Gw2Sharp.WebApi.V2.Models.ItemRestriction.Engineer
   nameWithType: ItemRestriction.Engineer
+- uid: Gw2Sharp.WebApi.V2.Models.ItemRestriction.Female
+  name: Female
+  href: api/Gw2Sharp.WebApi.V2.Models.ItemRestriction.html#Gw2Sharp_WebApi_V2_Models_ItemRestriction_Female
+  commentId: F:Gw2Sharp.WebApi.V2.Models.ItemRestriction.Female
+  fullName: Gw2Sharp.WebApi.V2.Models.ItemRestriction.Female
+  nameWithType: ItemRestriction.Female
 - uid: Gw2Sharp.WebApi.V2.Models.ItemRestriction.Guardian
   name: Guardian
   href: api/Gw2Sharp.WebApi.V2.Models.ItemRestriction.html#Gw2Sharp_WebApi_V2_Models_ItemRestriction_Guardian
@@ -25261,6 +25297,12 @@ references:
   commentId: F:Gw2Sharp.WebApi.V2.Models.ItemType.Gizmo
   fullName: Gw2Sharp.WebApi.V2.Models.ItemType.Gizmo
   nameWithType: ItemType.Gizmo
+- uid: Gw2Sharp.WebApi.V2.Models.ItemType.Key
+  name: Key
+  href: api/Gw2Sharp.WebApi.V2.Models.ItemType.html#Gw2Sharp_WebApi_V2_Models_ItemType_Key
+  commentId: F:Gw2Sharp.WebApi.V2.Models.ItemType.Key
+  fullName: Gw2Sharp.WebApi.V2.Models.ItemType.Key
+  nameWithType: ItemType.Key
 - uid: Gw2Sharp.WebApi.V2.Models.ItemType.MiniPet
   name: MiniPet
   href: api/Gw2Sharp.WebApi.V2.Models.ItemType.html#Gw2Sharp_WebApi_V2_Models_ItemType_MiniPet
@@ -25363,6 +25405,18 @@ references:
   commentId: F:Gw2Sharp.WebApi.V2.Models.ItemUnlockType.GliderSkin
   fullName: Gw2Sharp.WebApi.V2.Models.ItemUnlockType.GliderSkin
   nameWithType: ItemUnlockType.GliderSkin
+- uid: Gw2Sharp.WebApi.V2.Models.ItemUnlockType.Minipet
+  name: Minipet
+  href: api/Gw2Sharp.WebApi.V2.Models.ItemUnlockType.html#Gw2Sharp_WebApi_V2_Models_ItemUnlockType_Minipet
+  commentId: F:Gw2Sharp.WebApi.V2.Models.ItemUnlockType.Minipet
+  fullName: Gw2Sharp.WebApi.V2.Models.ItemUnlockType.Minipet
+  nameWithType: ItemUnlockType.Minipet
+- uid: Gw2Sharp.WebApi.V2.Models.ItemUnlockType.MountSkin
+  name: MountSkin
+  href: api/Gw2Sharp.WebApi.V2.Models.ItemUnlockType.html#Gw2Sharp_WebApi_V2_Models_ItemUnlockType_MountSkin
+  commentId: F:Gw2Sharp.WebApi.V2.Models.ItemUnlockType.MountSkin
+  fullName: Gw2Sharp.WebApi.V2.Models.ItemUnlockType.MountSkin
+  nameWithType: ItemUnlockType.MountSkin
 - uid: Gw2Sharp.WebApi.V2.Models.ItemUnlockType.Outfit
   name: Outfit
   href: api/Gw2Sharp.WebApi.V2.Models.ItemUnlockType.html#Gw2Sharp_WebApi_V2_Models_ItemUnlockType_Outfit
@@ -25375,6 +25429,12 @@ references:
   commentId: F:Gw2Sharp.WebApi.V2.Models.ItemUnlockType.RandomUlock
   fullName: Gw2Sharp.WebApi.V2.Models.ItemUnlockType.RandomUlock
   nameWithType: ItemUnlockType.RandomUlock
+- uid: Gw2Sharp.WebApi.V2.Models.ItemUnlockType.SharedSlot
+  name: SharedSlot
+  href: api/Gw2Sharp.WebApi.V2.Models.ItemUnlockType.html#Gw2Sharp_WebApi_V2_Models_ItemUnlockType_SharedSlot
+  commentId: F:Gw2Sharp.WebApi.V2.Models.ItemUnlockType.SharedSlot
+  fullName: Gw2Sharp.WebApi.V2.Models.ItemUnlockType.SharedSlot
+  nameWithType: ItemUnlockType.SharedSlot
 - uid: Gw2Sharp.WebApi.V2.Models.ItemUnlockType.Unknown
   name: Unknown
   href: api/Gw2Sharp.WebApi.V2.Models.ItemUnlockType.html#Gw2Sharp_WebApi_V2_Models_ItemUnlockType_Unknown
