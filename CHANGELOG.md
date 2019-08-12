@@ -14,6 +14,9 @@
 - Add missing enum `Key` in `Gw2Sharp.WebApi.V2.Models.ItemType`
 - Add missing enums `SharedSlot`, `Minipet` and `MountSkin` in `Gw2Sharp.WebApi.V2.Models.ItemUnlockType`
 
+### Fixes
+- Classes that implement `Gw2Sharp.WebApi.V2.Models.ICastableType` to support polymorphism (e.g. various items from `/v2/items`) should no longer fail to deserialize with `RenderUrl` properties ([#12](https://github.com/Archomeda/Gw2Sharp/issues/12))
+
 ## 0.6.1
 ### Endpoints
 - Change property `Emblem` in `Gw2Sharp.WebApi.V2.Models.Guild` to be nullable because the API might leave this property out ([#10](https://github.com/Archomeda/Gw2Sharp/issues/10))
