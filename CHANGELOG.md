@@ -3,12 +3,12 @@
 ## 0.7.0
 ### Endpoints
 - **Breaking:** `Gw2Sharp.WebApi.V2.Models.CharacterCraftingDiscipline` has had the type of its property `Discipline` changed from `string` to `ApiEnum<CraftingDisciplineType>`
+- **Breaking:** `Gw2Sharp.WebApi.V2.Models.MasteryLevel` has had the type of its property `Icon` fixed from `string` to `RenderUrl`
 - **Breaking:** Enum value `TwoHandedToy` in `Gw2Sharp.WebApi.V2.Models.ItemWeaponType` has had its name fixed to `ToyTwoHanded`
 - Add `/v2/recipes`
 - Add `/v2/recipes/search`
 
 ### Refactoring
-- **Breaking:** Fix type of property `Icon` in `Gw2Sharp.WebApi.V2.Models.MasteryLevel` to `RenderUrl` from `string`
 
 ## 0.6.1
 ### Endpoints
