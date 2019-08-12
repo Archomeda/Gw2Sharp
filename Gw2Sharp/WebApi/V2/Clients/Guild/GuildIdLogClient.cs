@@ -20,15 +20,23 @@ namespace Gw2Sharp.WebApi.V2.Clients
             base(connection, gw2Client, guildId)
         { }
 
+        /// <summary>
+        /// Clones a <see cref="GuildIdLogClient"/> instance.
+        /// </summary>
+        /// <param name="client">The original client.</param>
+        private GuildIdLogClient(GuildIdLogClient client)
+            : this(client.Connection, client.Gw2Client!, client.GuildId)
+        {
+            this.ParamSince = client.ParamSince;
+        }
+
+
         /// <inheritdoc />
         [EndpointPathParameter("since")]
         public int? ParamSince { get; protected set; }
 
         /// <inheritdoc />
-        public virtual IGuildIdLogClient Since(int? since)
-        {
-            this.ParamSince = since;
-            return this;
-        }
+        public virtual IGuildIdLogClient Since(int? since) =>
+            new GuildIdLogClient(this) { ParamSince = since };
     }
 }

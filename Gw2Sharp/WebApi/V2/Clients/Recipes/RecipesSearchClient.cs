@@ -20,6 +20,18 @@ namespace Gw2Sharp.WebApi.V2.Clients
             base(connection, gw2Client)
         { }
 
+        /// <summary>
+        /// Clones a <see cref="RecipesSearchClient"/> instance.
+        /// </summary>
+        /// <param name="client">The original client.</param>
+        private RecipesSearchClient(RecipesSearchClient client)
+            : this(client.Connection, client.Gw2Client!)
+        {
+            this.ParamInput = client.ParamInput;
+            this.ParamOutput = client.ParamOutput;
+        }
+
+
         /// <inheritdoc />
         [EndpointPathParameter("input")]
         public int? ParamInput { get; protected set; }
@@ -32,17 +44,21 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <inheritdoc />
         public IRecipesSearchClient Input(int inputItemId)
         {
-            this.ParamOutput = null;
-            this.ParamInput = inputItemId;
-            return this;
+            return new RecipesSearchClient(this)
+            {
+                ParamInput = inputItemId,
+                ParamOutput = null
+            };
         }
 
         /// <inheritdoc />
         public IRecipesSearchClient Output(int outputItemId)
         {
-            this.ParamInput = null;
-            this.ParamOutput = outputItemId;
-            return this;
+            return new RecipesSearchClient(this)
+            {
+                ParamInput = null,
+                ParamOutput = outputItemId
+            };
         }
 
 
