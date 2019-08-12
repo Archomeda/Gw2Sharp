@@ -11,6 +11,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <see cref="ItemGathering"/>,
     /// <see cref="ItemGizmo"/>,
     /// <see cref="ItemMiniPet"/>,
+    /// <see cref="ItemKey"/>,
     /// <see cref="ItemTool"/>,
     /// <see cref="ItemTrait"/>,
     /// <see cref="ItemTrinket"/>,
@@ -26,6 +27,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     [CastableType(ItemType.Container, typeof(ItemContainer))]
     [CastableType(ItemType.Gathering, typeof(ItemGathering))]
     [CastableType(ItemType.Gizmo, typeof(ItemGizmo))]
+    [CastableType(ItemType.Key, typeof(ItemKey))]
     [CastableType(ItemType.MiniPet, typeof(ItemMiniPet))]
     [CastableType(ItemType.Tool, typeof(ItemTool))]
     [CastableType(ItemType.Trait, typeof(ItemTrait))]

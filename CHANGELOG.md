@@ -13,6 +13,7 @@
 - Add missing enum `Female` in `Gw2Sharp.WebApi.V2.Models.ItemRestriction`
 - Add missing enum `Key` in `Gw2Sharp.WebApi.V2.Models.ItemType`
 - Add missing enums `SharedSlot`, `Minipet` and `MountSkin` in `Gw2Sharp.WebApi.V2.Models.ItemUnlockType`
+- Add missing item type `Key` as `Gw2Sharp.WebApi.V2.Models.ItemKey` for pattern matching
 
 ### Fixes
 - Classes that implement `Gw2Sharp.WebApi.V2.Models.ICastableType` to support polymorphism (e.g. various items from `/v2/items`) should no longer fail to deserialize with `RenderUrl` properties ([#12](https://github.com/Archomeda/Gw2Sharp/issues/12))
