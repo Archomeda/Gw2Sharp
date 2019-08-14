@@ -18,6 +18,9 @@
 ### Fixes
 - Classes that implement `Gw2Sharp.WebApi.V2.Models.ICastableType` to support polymorphism (e.g. various items from `/v2/items`) should no longer fail to deserialize with `RenderUrl` properties ([#12](https://github.com/Archomeda/Gw2Sharp/issues/12))
 
+### Refactoring
+- The endpoint clients `Gw2Sharp.WebApi.V2.Clients.CommerceExchangeCoinsClient` and `Gw2Sharp.WebApi.V2.Clients.CommerceExchangeGemsClient` no longer inherit from `Gw2Sharp.WebApi.V2.Clients.BaseEndpointBlobClient` and instead inherit from `Gw2Sharp.WebApi.BlobClient` (they require the quantity to be given and cannot return a valid blob response without it)
+
 ## 0.6.1
 ### Endpoints
 - Change property `Emblem` in `Gw2Sharp.WebApi.V2.Models.Guild` to be nullable because the API might leave this property out ([#10](https://github.com/Archomeda/Gw2Sharp/issues/10))

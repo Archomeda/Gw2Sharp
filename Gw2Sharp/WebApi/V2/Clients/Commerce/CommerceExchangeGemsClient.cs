@@ -1,5 +1,4 @@
 using System;
-using Gw2Sharp.WebApi.V2.Models;
 
 namespace Gw2Sharp.WebApi.V2.Clients
 {
@@ -7,7 +6,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 commerce exchange gems endpoint.
     /// </summary>
     [EndpointPath("commerce/exchange/gems")]
-    public class CommerceExchangeGemsClient : BaseEndpointBlobClient<CommerceExchangeGems>, ICommerceExchangeGemsClient
+    public class CommerceExchangeGemsClient : BaseClient, ICommerceExchangeGemsClient
     {
         /// <summary>
         /// Creates a new <see cref="CommerceExchangeGemsClient"/> that is used for the API v2 commerce exchange gems endpoint.
