@@ -1,43 +1,23 @@
-using System;
-
 namespace Gw2Sharp.WebApi.V2.Clients
 {
     /// <summary>
     /// A client of the Guild Wars 2 API v2 recipes search endpoint.
     /// </summary>
-    public interface IRecipesSearchClient :
-        IBlobClient<IApiV2ObjectList<int>>
+    public interface IRecipesSearchClient : IClient
     {
         /// <summary>
-        /// The parameter for requesting a recipe with a specific input item id.
-        /// Exactly one of <see cref="ParamInput"/> or <see cref="ParamOutput"/> can be used.
-        /// If none is given, an <see cref="InvalidOperationException"/> will be thrown when requesting.
+        /// Requests recipes with the specified input item id.
         /// </summary>
-        int? ParamInput { get; }
-
-        /// <summary>
-        /// The parameter for requesting a recipe with a specific output item id.
-        /// Exactly one of <see cref="ParamInput"/> or <see cref="ParamOutput"/> can be used.
-        /// If none is given, an <see cref="InvalidOperationException"/> will be thrown when requesting.
-        /// </summary>
-        int? ParamOutput { get; }
-
-        /// <summary>
-        /// Sets the parameter for requesting a recipe with a specific input item id.
-        /// Setting this will override <see cref="ParamOutput"/> to <c>null</c>,
-        /// because only one of <see cref="ParamInput"/> or <see cref="ParamOutput"/> can be used at the same time.
-        /// </summary>
-        /// <param name="inputItemId">The input item id.</param>
+        /// <param name="input">The input item id.</param>
+        /// <returns>The recipes search input client.</returns>
         /// <returns><c>this</c> to allow method chaining.</returns>
-        IRecipesSearchClient Input(int inputItemId);
+        IRecipesSearchInputClient Input(int input);
 
         /// <summary>
-        /// Sets the parameter for requesting a recipe with a specific output item id.
-        /// Setting this will override <see cref="ParamInput"/> to <c>null</c>,
-        /// because only one of <see cref="ParamInput"/> or <see cref="ParamOutput"/> can be used at the same time.
+        /// Requests recipes with the specified output item id.
         /// </summary>
-        /// <param name="outputItemId">The input item id.</param>
-        /// <returns><c>this</c> to allow method chaining.</returns>
-        IRecipesSearchClient Output(int outputItemId);
+        /// <param name="output">The output item id.</param>
+        /// <returns>The recipes search output client.</returns>
+        IRecipesSearchOutputClient Output(int output);
     }
 }
