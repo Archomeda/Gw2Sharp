@@ -12970,32 +12970,44 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.IRecipesSearchClient.Output
   nameWithType: IRecipesSearchClient.Output
-- uid: Gw2Sharp.WebApi.V2.Clients.IRecipesSearchClient.ParamInput
-  name: ParamInput
-  href: api/Gw2Sharp.WebApi.V2.Clients.IRecipesSearchClient.html#Gw2Sharp_WebApi_V2_Clients_IRecipesSearchClient_ParamInput
-  commentId: P:Gw2Sharp.WebApi.V2.Clients.IRecipesSearchClient.ParamInput
-  fullName: Gw2Sharp.WebApi.V2.Clients.IRecipesSearchClient.ParamInput
-  nameWithType: IRecipesSearchClient.ParamInput
-- uid: Gw2Sharp.WebApi.V2.Clients.IRecipesSearchClient.ParamInput*
-  name: ParamInput
-  href: api/Gw2Sharp.WebApi.V2.Clients.IRecipesSearchClient.html#Gw2Sharp_WebApi_V2_Clients_IRecipesSearchClient_ParamInput_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.IRecipesSearchClient.ParamInput
+- uid: Gw2Sharp.WebApi.V2.Clients.IRecipesSearchInputClient
+  name: IRecipesSearchInputClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.IRecipesSearchInputClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.IRecipesSearchInputClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.IRecipesSearchInputClient
+  nameWithType: IRecipesSearchInputClient
+- uid: Gw2Sharp.WebApi.V2.Clients.IRecipesSearchInputClient.Input
+  name: Input
+  href: api/Gw2Sharp.WebApi.V2.Clients.IRecipesSearchInputClient.html#Gw2Sharp_WebApi_V2_Clients_IRecipesSearchInputClient_Input
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.IRecipesSearchInputClient.Input
+  fullName: Gw2Sharp.WebApi.V2.Clients.IRecipesSearchInputClient.Input
+  nameWithType: IRecipesSearchInputClient.Input
+- uid: Gw2Sharp.WebApi.V2.Clients.IRecipesSearchInputClient.Input*
+  name: Input
+  href: api/Gw2Sharp.WebApi.V2.Clients.IRecipesSearchInputClient.html#Gw2Sharp_WebApi_V2_Clients_IRecipesSearchInputClient_Input_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.IRecipesSearchInputClient.Input
   isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.IRecipesSearchClient.ParamInput
-  nameWithType: IRecipesSearchClient.ParamInput
-- uid: Gw2Sharp.WebApi.V2.Clients.IRecipesSearchClient.ParamOutput
-  name: ParamOutput
-  href: api/Gw2Sharp.WebApi.V2.Clients.IRecipesSearchClient.html#Gw2Sharp_WebApi_V2_Clients_IRecipesSearchClient_ParamOutput
-  commentId: P:Gw2Sharp.WebApi.V2.Clients.IRecipesSearchClient.ParamOutput
-  fullName: Gw2Sharp.WebApi.V2.Clients.IRecipesSearchClient.ParamOutput
-  nameWithType: IRecipesSearchClient.ParamOutput
-- uid: Gw2Sharp.WebApi.V2.Clients.IRecipesSearchClient.ParamOutput*
-  name: ParamOutput
-  href: api/Gw2Sharp.WebApi.V2.Clients.IRecipesSearchClient.html#Gw2Sharp_WebApi_V2_Clients_IRecipesSearchClient_ParamOutput_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.IRecipesSearchClient.ParamOutput
+  fullName: Gw2Sharp.WebApi.V2.Clients.IRecipesSearchInputClient.Input
+  nameWithType: IRecipesSearchInputClient.Input
+- uid: Gw2Sharp.WebApi.V2.Clients.IRecipesSearchOutputClient
+  name: IRecipesSearchOutputClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.IRecipesSearchOutputClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.IRecipesSearchOutputClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.IRecipesSearchOutputClient
+  nameWithType: IRecipesSearchOutputClient
+- uid: Gw2Sharp.WebApi.V2.Clients.IRecipesSearchOutputClient.Output
+  name: Output
+  href: api/Gw2Sharp.WebApi.V2.Clients.IRecipesSearchOutputClient.html#Gw2Sharp_WebApi_V2_Clients_IRecipesSearchOutputClient_Output
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.IRecipesSearchOutputClient.Output
+  fullName: Gw2Sharp.WebApi.V2.Clients.IRecipesSearchOutputClient.Output
+  nameWithType: IRecipesSearchOutputClient.Output
+- uid: Gw2Sharp.WebApi.V2.Clients.IRecipesSearchOutputClient.Output*
+  name: Output
+  href: api/Gw2Sharp.WebApi.V2.Clients.IRecipesSearchOutputClient.html#Gw2Sharp_WebApi_V2_Clients_IRecipesSearchOutputClient_Output_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.IRecipesSearchOutputClient.Output
   isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.IRecipesSearchClient.ParamOutput
-  nameWithType: IRecipesSearchClient.ParamOutput
+  fullName: Gw2Sharp.WebApi.V2.Clients.IRecipesSearchOutputClient.Output
+  nameWithType: IRecipesSearchOutputClient.Output
 - uid: Gw2Sharp.WebApi.V2.Clients.ItemsClient
   name: ItemsClient
   href: api/Gw2Sharp.WebApi.V2.Clients.ItemsClient.html
@@ -13945,19 +13957,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.RecipesSearchClient.RecipesSearchClient
   nameWithType: RecipesSearchClient.RecipesSearchClient
-- uid: Gw2Sharp.WebApi.V2.Clients.RecipesSearchClient.GetAsync(CancellationToken)
-  name: GetAsync(CancellationToken)
-  href: api/Gw2Sharp.WebApi.V2.Clients.RecipesSearchClient.html#Gw2Sharp_WebApi_V2_Clients_RecipesSearchClient_GetAsync_CancellationToken_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.RecipesSearchClient.GetAsync(CancellationToken)
-  fullName: Gw2Sharp.WebApi.V2.Clients.RecipesSearchClient.GetAsync(CancellationToken)
-  nameWithType: RecipesSearchClient.GetAsync(CancellationToken)
-- uid: Gw2Sharp.WebApi.V2.Clients.RecipesSearchClient.GetAsync*
-  name: GetAsync
-  href: api/Gw2Sharp.WebApi.V2.Clients.RecipesSearchClient.html#Gw2Sharp_WebApi_V2_Clients_RecipesSearchClient_GetAsync_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.RecipesSearchClient.GetAsync
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.RecipesSearchClient.GetAsync
-  nameWithType: RecipesSearchClient.GetAsync
 - uid: Gw2Sharp.WebApi.V2.Clients.RecipesSearchClient.Input(System.Int32)
   name: Input(Int32)
   href: api/Gw2Sharp.WebApi.V2.Clients.RecipesSearchClient.html#Gw2Sharp_WebApi_V2_Clients_RecipesSearchClient_Input_System_Int32_
@@ -13984,32 +13983,70 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.RecipesSearchClient.Output
   nameWithType: RecipesSearchClient.Output
-- uid: Gw2Sharp.WebApi.V2.Clients.RecipesSearchClient.ParamInput
-  name: ParamInput
-  href: api/Gw2Sharp.WebApi.V2.Clients.RecipesSearchClient.html#Gw2Sharp_WebApi_V2_Clients_RecipesSearchClient_ParamInput
-  commentId: P:Gw2Sharp.WebApi.V2.Clients.RecipesSearchClient.ParamInput
-  fullName: Gw2Sharp.WebApi.V2.Clients.RecipesSearchClient.ParamInput
-  nameWithType: RecipesSearchClient.ParamInput
-- uid: Gw2Sharp.WebApi.V2.Clients.RecipesSearchClient.ParamInput*
-  name: ParamInput
-  href: api/Gw2Sharp.WebApi.V2.Clients.RecipesSearchClient.html#Gw2Sharp_WebApi_V2_Clients_RecipesSearchClient_ParamInput_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.RecipesSearchClient.ParamInput
+- uid: Gw2Sharp.WebApi.V2.Clients.RecipesSearchInputClient
+  name: RecipesSearchInputClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.RecipesSearchInputClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.RecipesSearchInputClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.RecipesSearchInputClient
+  nameWithType: RecipesSearchInputClient
+- uid: Gw2Sharp.WebApi.V2.Clients.RecipesSearchInputClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client,System.Int32)
+  name: RecipesSearchInputClient(IConnection, IGw2Client, Int32)
+  href: api/Gw2Sharp.WebApi.V2.Clients.RecipesSearchInputClient.html#Gw2Sharp_WebApi_V2_Clients_RecipesSearchInputClient__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_System_Int32_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.RecipesSearchInputClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client,System.Int32)
+  fullName: Gw2Sharp.WebApi.V2.Clients.RecipesSearchInputClient.RecipesSearchInputClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client, System.Int32)
+  nameWithType: RecipesSearchInputClient.RecipesSearchInputClient(IConnection, IGw2Client, Int32)
+- uid: Gw2Sharp.WebApi.V2.Clients.RecipesSearchInputClient.#ctor*
+  name: RecipesSearchInputClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.RecipesSearchInputClient.html#Gw2Sharp_WebApi_V2_Clients_RecipesSearchInputClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.RecipesSearchInputClient.#ctor
   isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.RecipesSearchClient.ParamInput
-  nameWithType: RecipesSearchClient.ParamInput
-- uid: Gw2Sharp.WebApi.V2.Clients.RecipesSearchClient.ParamOutput
-  name: ParamOutput
-  href: api/Gw2Sharp.WebApi.V2.Clients.RecipesSearchClient.html#Gw2Sharp_WebApi_V2_Clients_RecipesSearchClient_ParamOutput
-  commentId: P:Gw2Sharp.WebApi.V2.Clients.RecipesSearchClient.ParamOutput
-  fullName: Gw2Sharp.WebApi.V2.Clients.RecipesSearchClient.ParamOutput
-  nameWithType: RecipesSearchClient.ParamOutput
-- uid: Gw2Sharp.WebApi.V2.Clients.RecipesSearchClient.ParamOutput*
-  name: ParamOutput
-  href: api/Gw2Sharp.WebApi.V2.Clients.RecipesSearchClient.html#Gw2Sharp_WebApi_V2_Clients_RecipesSearchClient_ParamOutput_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.RecipesSearchClient.ParamOutput
+  fullName: Gw2Sharp.WebApi.V2.Clients.RecipesSearchInputClient.RecipesSearchInputClient
+  nameWithType: RecipesSearchInputClient.RecipesSearchInputClient
+- uid: Gw2Sharp.WebApi.V2.Clients.RecipesSearchInputClient.Input
+  name: Input
+  href: api/Gw2Sharp.WebApi.V2.Clients.RecipesSearchInputClient.html#Gw2Sharp_WebApi_V2_Clients_RecipesSearchInputClient_Input
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.RecipesSearchInputClient.Input
+  fullName: Gw2Sharp.WebApi.V2.Clients.RecipesSearchInputClient.Input
+  nameWithType: RecipesSearchInputClient.Input
+- uid: Gw2Sharp.WebApi.V2.Clients.RecipesSearchInputClient.Input*
+  name: Input
+  href: api/Gw2Sharp.WebApi.V2.Clients.RecipesSearchInputClient.html#Gw2Sharp_WebApi_V2_Clients_RecipesSearchInputClient_Input_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.RecipesSearchInputClient.Input
   isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.RecipesSearchClient.ParamOutput
-  nameWithType: RecipesSearchClient.ParamOutput
+  fullName: Gw2Sharp.WebApi.V2.Clients.RecipesSearchInputClient.Input
+  nameWithType: RecipesSearchInputClient.Input
+- uid: Gw2Sharp.WebApi.V2.Clients.RecipesSearchOutputClient
+  name: RecipesSearchOutputClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.RecipesSearchOutputClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.RecipesSearchOutputClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.RecipesSearchOutputClient
+  nameWithType: RecipesSearchOutputClient
+- uid: Gw2Sharp.WebApi.V2.Clients.RecipesSearchOutputClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client,System.Int32)
+  name: RecipesSearchOutputClient(IConnection, IGw2Client, Int32)
+  href: api/Gw2Sharp.WebApi.V2.Clients.RecipesSearchOutputClient.html#Gw2Sharp_WebApi_V2_Clients_RecipesSearchOutputClient__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_System_Int32_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.RecipesSearchOutputClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client,System.Int32)
+  fullName: Gw2Sharp.WebApi.V2.Clients.RecipesSearchOutputClient.RecipesSearchOutputClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client, System.Int32)
+  nameWithType: RecipesSearchOutputClient.RecipesSearchOutputClient(IConnection, IGw2Client, Int32)
+- uid: Gw2Sharp.WebApi.V2.Clients.RecipesSearchOutputClient.#ctor*
+  name: RecipesSearchOutputClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.RecipesSearchOutputClient.html#Gw2Sharp_WebApi_V2_Clients_RecipesSearchOutputClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.RecipesSearchOutputClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.RecipesSearchOutputClient.RecipesSearchOutputClient
+  nameWithType: RecipesSearchOutputClient.RecipesSearchOutputClient
+- uid: Gw2Sharp.WebApi.V2.Clients.RecipesSearchOutputClient.Output
+  name: Output
+  href: api/Gw2Sharp.WebApi.V2.Clients.RecipesSearchOutputClient.html#Gw2Sharp_WebApi_V2_Clients_RecipesSearchOutputClient_Output
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.RecipesSearchOutputClient.Output
+  fullName: Gw2Sharp.WebApi.V2.Clients.RecipesSearchOutputClient.Output
+  nameWithType: RecipesSearchOutputClient.Output
+- uid: Gw2Sharp.WebApi.V2.Clients.RecipesSearchOutputClient.Output*
+  name: Output
+  href: api/Gw2Sharp.WebApi.V2.Clients.RecipesSearchOutputClient.html#Gw2Sharp_WebApi_V2_Clients_RecipesSearchOutputClient_Output_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.RecipesSearchOutputClient.Output
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.RecipesSearchOutputClient.Output
+  nameWithType: RecipesSearchOutputClient.Output
 - uid: Gw2Sharp.WebApi.V2.Clients.TokenInfoClient
   name: TokenInfoClient
   href: api/Gw2Sharp.WebApi.V2.Clients.TokenInfoClient.html

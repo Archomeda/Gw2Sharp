@@ -1203,6 +1203,12 @@
                             <a href="Gw2Sharp.WebApi.V2.Clients.IRecipesSearchClient.html" title="IRecipesSearchClient" class="active">IRecipesSearchClient</a>
                           </li>
                           <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.Clients.IRecipesSearchInputClient.html" title="IRecipesSearchInputClient" class="">IRecipesSearchInputClient</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.Clients.IRecipesSearchOutputClient.html" title="IRecipesSearchOutputClient" class="">IRecipesSearchOutputClient</a>
+                          </li>
+                          <li class="">
                             <a href="Gw2Sharp.WebApi.V2.Clients.ItemsClient.html" title="ItemsClient" class="">ItemsClient</a>
                           </li>
                           <li class="">
@@ -1309,6 +1315,12 @@
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.WebApi.V2.Clients.RecipesSearchClient.html" title="RecipesSearchClient" class="">RecipesSearchClient</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.Clients.RecipesSearchInputClient.html" title="RecipesSearchInputClient" class="">RecipesSearchInputClient</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.WebApi.V2.Clients.RecipesSearchOutputClient.html" title="RecipesSearchOutputClient" class="">RecipesSearchOutputClient</a>
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.WebApi.V2.Clients.TokenInfoClient.html" title="TokenInfoClient" class="">TokenInfoClient</a>
@@ -2211,117 +2223,24 @@
   <div class="markdown level0 summary"><p>A client of the Guild Wars 2 API v2 recipes search endpoint.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IBlobClient-1.html#Gw2Sharp_WebApi_V2_Clients_IBlobClient_1_GetAsync_CancellationToken_">IBlobClient&lt;IApiV2ObjectList&lt;Int32&gt;&gt;.GetAsync(CancellationToken)</a>
-    </div>
-    <div>
-      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IEndpointClient.html#Gw2Sharp_WebApi_V2_Clients_IEndpointClient_EndpointPath">IEndpointClient.EndpointPath</a>
-    </div>
-    <div>
-      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IEndpointClient.html#Gw2Sharp_WebApi_V2_Clients_IEndpointClient_EndpointPathParameters">IEndpointClient.EndpointPathParameters</a>
-    </div>
-    <div>
-      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IEndpointClient.html#Gw2Sharp_WebApi_V2_Clients_IEndpointClient_SchemaVersion">IEndpointClient.SchemaVersion</a>
-    </div>
-    <div>
-      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IEndpointClient.html#Gw2Sharp_WebApi_V2_Clients_IEndpointClient_IsLocalized">IEndpointClient.IsLocalized</a>
-    </div>
-    <div>
-      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IEndpointClient.html#Gw2Sharp_WebApi_V2_Clients_IEndpointClient_IsAuthenticated">IEndpointClient.IsAuthenticated</a>
-    </div>
-    <div>
-      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IEndpointClient.html#Gw2Sharp_WebApi_V2_Clients_IEndpointClient_IsPaginated">IEndpointClient.IsPaginated</a>
-    </div>
-    <div>
-      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IEndpointClient.html#Gw2Sharp_WebApi_V2_Clients_IEndpointClient_IsAllExpandable">IEndpointClient.IsAllExpandable</a>
-    </div>
-    <div>
-      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IEndpointClient.html#Gw2Sharp_WebApi_V2_Clients_IEndpointClient_IsBulkExpandable">IEndpointClient.IsBulkExpandable</a>
-    </div>
-    <div>
-      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IEndpointClient.html#Gw2Sharp_WebApi_V2_Clients_IEndpointClient_HasBlobData">IEndpointClient.HasBlobData</a>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.html">Gw2Sharp.WebApi.V2.Clients</a></h6>
   <h6><strong>Assembly</strong>: Gw2Sharp.dll</h6>
   <h5 id="Gw2Sharp_WebApi_V2_Clients_IRecipesSearchClient_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IRecipesSearchClient : IBlobClient&lt;IApiV2ObjectList&lt;int&gt;&gt;, IEndpointClient, IClient</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IRecipesSearchClient : IClient</code></pre>
   </div>
-  <h3 id="properties">Properties
-  </h3>
-  
-  
-  <a id="Gw2Sharp_WebApi_V2_Clients_IRecipesSearchClient_ParamInput_" data-uid="Gw2Sharp.WebApi.V2.Clients.IRecipesSearchClient.ParamInput*"></a>
-  <h4 id="Gw2Sharp_WebApi_V2_Clients_IRecipesSearchClient_ParamInput" data-uid="Gw2Sharp.WebApi.V2.Clients.IRecipesSearchClient.ParamInput">ParamInput</h4>
-  <div class="markdown level1 summary"><p>The parameter for requesting a recipe with a specific input item id.
-Exactly one of <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IRecipesSearchClient.html#Gw2Sharp_WebApi_V2_Clients_IRecipesSearchClient_ParamInput">ParamInput</a> or <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IRecipesSearchClient.html#Gw2Sharp_WebApi_V2_Clients_IRecipesSearchClient_ParamOutput">ParamOutput</a> can be used.
-If none is given, an <see cref="!:InvalidOperationException"></see> will be thrown when requesting.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int? ParamInput { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Gw2Sharp_WebApi_V2_Clients_IRecipesSearchClient_ParamOutput_" data-uid="Gw2Sharp.WebApi.V2.Clients.IRecipesSearchClient.ParamOutput*"></a>
-  <h4 id="Gw2Sharp_WebApi_V2_Clients_IRecipesSearchClient_ParamOutput" data-uid="Gw2Sharp.WebApi.V2.Clients.IRecipesSearchClient.ParamOutput">ParamOutput</h4>
-  <div class="markdown level1 summary"><p>The parameter for requesting a recipe with a specific output item id.
-Exactly one of <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IRecipesSearchClient.html#Gw2Sharp_WebApi_V2_Clients_IRecipesSearchClient_ParamInput">ParamInput</a> or <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IRecipesSearchClient.html#Gw2Sharp_WebApi_V2_Clients_IRecipesSearchClient_ParamOutput">ParamOutput</a> can be used.
-If none is given, an <see cref="!:InvalidOperationException"></see> will be thrown when requesting.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int? ParamOutput { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
   
   
   <a id="Gw2Sharp_WebApi_V2_Clients_IRecipesSearchClient_Input_" data-uid="Gw2Sharp.WebApi.V2.Clients.IRecipesSearchClient.Input*"></a>
   <h4 id="Gw2Sharp_WebApi_V2_Clients_IRecipesSearchClient_Input_System_Int32_" data-uid="Gw2Sharp.WebApi.V2.Clients.IRecipesSearchClient.Input(System.Int32)">Input(Int32)</h4>
-  <div class="markdown level1 summary"><p>Sets the parameter for requesting a recipe with a specific input item id.
-Setting this will override <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IRecipesSearchClient.html#Gw2Sharp_WebApi_V2_Clients_IRecipesSearchClient_ParamOutput">ParamOutput</a> to <code>null</code>,
-because only one of <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IRecipesSearchClient.html#Gw2Sharp_WebApi_V2_Clients_IRecipesSearchClient_ParamInput">ParamInput</a> or <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IRecipesSearchClient.html#Gw2Sharp_WebApi_V2_Clients_IRecipesSearchClient_ParamOutput">ParamOutput</a> can be used at the same time.</p>
+  <div class="markdown level1 summary"><p>Requests recipes with the specified input item id.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IRecipesSearchClient Input(int inputItemId)</code></pre>
+    <pre><code class="lang-csharp hljs">IRecipesSearchInputClient Input(int input)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2335,7 +2254,7 @@ because only one of <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IRecipesSea
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">inputItemId</span></td>
+        <td><span class="parametername">input</span></td>
         <td><p>The input item id.</p>
 </td>
       </tr>
@@ -2351,8 +2270,8 @@ because only one of <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IRecipesSea
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IRecipesSearchClient.html">IRecipesSearchClient</a></td>
-        <td><p><code>this</code> to allow method chaining.</p>
+        <td><a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IRecipesSearchInputClient.html">IRecipesSearchInputClient</a></td>
+        <td><p>The recipes search input client.</p>
 </td>
       </tr>
     </tbody>
@@ -2361,14 +2280,12 @@ because only one of <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IRecipesSea
   
   <a id="Gw2Sharp_WebApi_V2_Clients_IRecipesSearchClient_Output_" data-uid="Gw2Sharp.WebApi.V2.Clients.IRecipesSearchClient.Output*"></a>
   <h4 id="Gw2Sharp_WebApi_V2_Clients_IRecipesSearchClient_Output_System_Int32_" data-uid="Gw2Sharp.WebApi.V2.Clients.IRecipesSearchClient.Output(System.Int32)">Output(Int32)</h4>
-  <div class="markdown level1 summary"><p>Sets the parameter for requesting a recipe with a specific output item id.
-Setting this will override <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IRecipesSearchClient.html#Gw2Sharp_WebApi_V2_Clients_IRecipesSearchClient_ParamInput">ParamInput</a> to <code>null</code>,
-because only one of <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IRecipesSearchClient.html#Gw2Sharp_WebApi_V2_Clients_IRecipesSearchClient_ParamInput">ParamInput</a> or <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IRecipesSearchClient.html#Gw2Sharp_WebApi_V2_Clients_IRecipesSearchClient_ParamOutput">ParamOutput</a> can be used at the same time.</p>
+  <div class="markdown level1 summary"><p>Requests recipes with the specified output item id.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IRecipesSearchClient Output(int outputItemId)</code></pre>
+    <pre><code class="lang-csharp hljs">IRecipesSearchOutputClient Output(int output)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2382,8 +2299,8 @@ because only one of <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IRecipesSea
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">outputItemId</span></td>
-        <td><p>The input item id.</p>
+        <td><span class="parametername">output</span></td>
+        <td><p>The output item id.</p>
 </td>
       </tr>
     </tbody>
@@ -2398,8 +2315,8 @@ because only one of <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IRecipesSea
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IRecipesSearchClient.html">IRecipesSearchClient</a></td>
-        <td><p><code>this</code> to allow method chaining.</p>
+        <td><a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IRecipesSearchOutputClient.html">IRecipesSearchOutputClient</a></td>
+        <td><p>The recipes search output client.</p>
 </td>
       </tr>
     </tbody>
