@@ -103,7 +103,7 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <inheritdoc />
         public override bool Equals(object? obj) =>
-            !(obj is null) && obj.GetType() == typeof(ApiFlags<T>) && this.Equals((ApiFlags<T>)obj);
+            obj is ApiFlags<T> apiFlags && this.Equals(apiFlags);
 
         /// <inheritdoc />
         public virtual bool Equals(ApiFlags<T> other) =>

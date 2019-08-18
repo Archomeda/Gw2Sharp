@@ -85,7 +85,7 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <inheritdoc />
         public override bool Equals(object? obj) =>
-            !(obj is null) && obj.GetType() == typeof(ApiEnum<T>) && this.Equals((ApiEnum<T>)obj);
+            obj is ApiEnum<T> apiEnum && this.Equals(apiEnum);
 
         /// <inheritdoc />
         public virtual bool Equals(ApiEnum<T> other)
