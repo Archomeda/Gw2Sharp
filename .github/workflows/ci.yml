@@ -9,7 +9,6 @@ jobs:
     strategy:
       matrix:
         dotnet:
-          - 2.2.108
           - 3.0.100-preview7-012821
           - 3.0.100-preview8-013656
         os:
