@@ -7,6 +7,7 @@ jobs:
     name: Test with dotnet ${{ matrix.dotnet }} on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
+      fail-fast: false
       matrix:
         dotnet:
           - 3.0.100-preview7-012821
