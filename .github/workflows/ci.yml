@@ -3,6 +3,7 @@ name: CI
 on: [push]
 
 jobs:
+  # Unit tests
   test:
     name: Test
     runs-on: ${{ matrix.os }}
@@ -26,17 +27,55 @@ jobs:
       - name: Run dotnet test
         run: dotnet test -c Release
 
-  sonarcloud:
-    name: SonarCloud Analysis
-    runs-on: ${{ matrix.os }}
+  # Nightly packaged builds
+  nightly:
+    name: Nightly build
+    runs-on: windows-latest
+    needs: test
     strategy:
       fail-fast: false
       matrix:
         dotnet:
           - 3.0.100-preview7-012821
           #- 3.0.100-preview8-013656 # See #13
-        os:
-          - windows-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-dotnet@v1
+        name: Install .NET Core ${{ matrix.dotnet }}
+        with:
+          dotnet-version: ${{ matrix.dotnet }}
+      - name: Install GitVersion
+        run: choco install GitVersion.Portable -y
+      - name: Patch assembly version
+        run: GitVersion /updateassemblyinfo Gw2Sharp/Properties/AssemblyVersionInfo.cs /ensureassemblyinfo
+      - name: Patch package version
+        shell: powershell
+        run: |
+          $version = (GitVersion /output json | ConvertFrom-Json).AssemblySemFileVer -replace "origin/","" -replace "[^a-zA-Z0-9-_.]","-"
+          Write-Output "NuGet package version: $version"
+
+          (Get-Content Gw2Sharp/Gw2Sharp.csproj) `
+            -replace '<Version>([^<]*)</Version>', "<Version>$version</Version>" |
+          Out-File Gw2Sharp/Gw2Sharp.csproj
+      - name: Run dotnet build
+        run: dotnet build -c Debug -p:VERSIONED_BUILD=1
+      - name: Run dotnet pack
+        run: dotnet pack Gw2Sharp -c Debug --no-build -p:VERSIONED_BUILD=1
+      - name: Run dotnet nuget push
+        run: dotnet nuget push **/*.symbols.nupkg -s "https://www.myget.org/F/gw2sharp/api/v2/package" -k "%MYGET_TOKEN%"
+        env:
+          MYGET_TOKEN: ${{ secrets.MYGET_TOKEN }}
+
+  # SonarCloud analysis
+  sonarcloud:
+    name: SonarCloud analysis
+    runs-on: windows-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        dotnet:
+          - 3.0.100-preview7-012821
+          #- 3.0.100-preview8-013656 # See #13
     steps:
       - uses: actions/checkout@v1
       - uses: actions/setup-dotnet@v1
