@@ -78,7 +78,7 @@ jobs:
           #- 3.0.100-preview8-013656 # See #13
     steps:
       - uses: actions/checkout@v1
-      - uses: actions/setup-dotnet@v1
+      - uses: actions/setup-dotnet@v1.0.2 # Explicitly use v1.0.2 because of actions/setup-dotnet#29
         name: Install .NET Core ${{ matrix.dotnet }}
         with:
           dotnet-version: ${{ matrix.dotnet }}
