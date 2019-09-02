@@ -15,7 +15,10 @@ var connection = new Gw2Sharp.Connection();
 
 Then, create the `Gw2Client`:
 ```cs
-var client = new Gw2Sharp.Gw2Client(connection);
+using var client = new Gw2Sharp.Gw2Client(connection);
+// Note that Gw2Client implements IDisposable!
+// Make sure to dispose it explicitly by calling .Dispose(),
+// or use the using statement to dispose automatically
 ```
 
 Now you're ready!
