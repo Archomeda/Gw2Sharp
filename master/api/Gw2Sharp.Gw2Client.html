@@ -168,6 +168,9 @@
                             <a href="Gw2Sharp.Json.Converters.Coordinates2Converter.html" title="Coordinates2Converter" class="">Coordinates2Converter</a>
                           </li>
                           <li class="">
+                            <a href="Gw2Sharp.Json.Converters.Coordinates3Converter.html" title="Coordinates3Converter" class="">Coordinates3Converter</a>
+                          </li>
+                          <li class="">
                             <a href="Gw2Sharp.Json.Converters.GuidConverter.html" title="GuidConverter" class="">GuidConverter</a>
                           </li>
                           <li class="">
@@ -195,7 +198,31 @@
                             <a href="Gw2Sharp.Models.Coordinates2.html" title="Coordinates2" class="">Coordinates2</a>
                           </li>
                           <li class="">
+                            <a href="Gw2Sharp.Models.Coordinates3.html" title="Coordinates3" class="">Coordinates3</a>
+                          </li>
+                          <li class="">
                             <a href="Gw2Sharp.Models.MapType.html" title="MapType" class="">MapType</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Gw2Sharp.Mumble.html" title="Gw2Sharp.Mumble" class="">Gw2Sharp.Mumble</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Gw2Sharp.Mumble.Gw2MumbleClient.html" title="Gw2MumbleClient" class="">Gw2MumbleClient</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.Mumble.IGw2MumbleClient.html" title="IGw2MumbleClient" class="">IGw2MumbleClient</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Gw2Sharp.Mumble.Models.html" title="Gw2Sharp.Mumble.Models" class="">Gw2Sharp.Mumble.Models</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Gw2Sharp.Mumble.Models.UiSize.html" title="UiSize" class="">UiSize</a>
                           </li>
                         </ul>  </li>
                     <li class="">
@@ -2233,12 +2260,13 @@
     <h5>Implements</h5>
     <div><a class="xref" href="Gw2Sharp.IClient.html">IClient</a></div>
     <div><a class="xref" href="Gw2Sharp.IGw2Client.html">IGw2Client</a></div>
+    <div><span class="xref">IDisposable</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Gw2Sharp.html">Gw2Sharp</a></h6>
   <h6><strong>Assembly</strong>: Gw2Sharp.dll</h6>
   <h5 id="Gw2Sharp_Gw2Client_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Gw2Client : BaseClient, IClient, IClientInternal, IGw2Client</code></pre>
+    <pre><code class="lang-csharp hljs">public class Gw2Client : BaseClient, IClient, IClientInternal, IGw2Client, IDisposable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -2286,6 +2314,32 @@
   </h3>
   
   
+  <a id="Gw2Sharp_Gw2Client_Mumble_" data-uid="Gw2Sharp.Gw2Client.Mumble*"></a>
+  <h4 id="Gw2Sharp_Gw2Client_Mumble" data-uid="Gw2Sharp.Gw2Client.Mumble">Mumble</h4>
+  <div class="markdown level1 summary"><p>Gets the Mumble Link API.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IGw2MumbleClient Mumble { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Gw2Sharp.Mumble.IGw2MumbleClient.html">IGw2MumbleClient</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Gw2Sharp_Gw2Client_WebApi_" data-uid="Gw2Sharp.Gw2Client.WebApi*"></a>
   <h4 id="Gw2Sharp_Gw2Client_WebApi" data-uid="Gw2Sharp.Gw2Client.WebApi">WebApi</h4>
   <div class="markdown level1 summary"><p>Gets the web API.</p>
@@ -2310,12 +2364,56 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Gw2Sharp_Gw2Client_Dispose_" data-uid="Gw2Sharp.Gw2Client.Dispose*"></a>
+  <h4 id="Gw2Sharp_Gw2Client_Dispose" data-uid="Gw2Sharp.Gw2Client.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  
+  
+  <a id="Gw2Sharp_Gw2Client_Dispose_" data-uid="Gw2Sharp.Gw2Client.Dispose*"></a>
+  <h4 id="Gw2Sharp_Gw2Client_Dispose_System_Boolean_" data-uid="Gw2Sharp.Gw2Client.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Disposes the object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disposing</span></td>
+        <td><p>Dispose managed resources.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Gw2Sharp.IClient.html">IClient</a>
   </div>
   <div>
       <a class="xref" href="Gw2Sharp.IGw2Client.html">IGw2Client</a>
+  </div>
+  <div>
+      <span class="xref">IDisposable</span>
   </div>
 </article>
           </div>
