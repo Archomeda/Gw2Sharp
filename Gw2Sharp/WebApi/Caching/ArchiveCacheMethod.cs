@@ -224,12 +224,22 @@ namespace Gw2Sharp.WebApi.Caching
             }
         }
 
+        private bool isDisposed = false; // To detect redundant calls
+
         /// <inheritdoc />
-        protected override void Dispose(bool isDisposing)
+        protected override void Dispose(bool disposing)
         {
-            this.archive.Dispose();
-            this.archiveStream.Dispose();
-            base.Dispose(isDisposing);
+            if (!this.isDisposed)
+            {
+                if (disposing)
+                {
+                    this.archive.Dispose();
+                    this.archiveStream.Dispose();
+                }
+
+                base.Dispose(disposing);
+                this.isDisposed = true;
+            }
         }
 
         #endregion

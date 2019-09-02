@@ -1,5 +1,13 @@
 # Gw2Sharp History
 
+## 0.7.1
+### Services
+- Add Mumble Link client as `Gw2MumbleClient`, which can be accessed through `Gw2Client.Mumble`
+
+### Lifetime
+- Because of the introduction of the `Gw2MumbleClient` that implements `IDisposable` (because it holds a reference to a memory mapped file that needs to be disposed), `Gw2Client` now implements `IDisposable` as well and should be disposed accordingly  
+  **Note:** This is a breaking change if you decide to start using the Mumble Link client, because it will only create disposable resources on the first call to `.Update()` in the `Gw2MumbleClient`
+
 ## 0.7.0
 ### Endpoints
 - **Breaking:** `Gw2Sharp.WebApi.V2.Models.CharacterCraftingDiscipline` has had the type of its property `Discipline` changed from `string` to `ApiEnum<CraftingDisciplineType>`

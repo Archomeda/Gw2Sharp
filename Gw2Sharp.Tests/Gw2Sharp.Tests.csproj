@@ -193,6 +193,7 @@
     <None Remove="TestFiles\Mounts\MountsTypes.bulk.json" />
     <None Remove="TestFiles\Mounts\MountsTypes.ids.json" />
     <None Remove="TestFiles\Mounts\MountsTypes.single.json" />
+    <None Remove="TestFiles\Mumble\MemoryMappedFile.bin" />
     <None Remove="TestFiles\Novelties\Novelties.bulk.json" />
     <None Remove="TestFiles\Novelties\Novelties.ids.json" />
     <None Remove="TestFiles\Novelties\Novelties.single.json" />
@@ -429,6 +430,7 @@
     <EmbeddedResource Include="TestFiles\Mounts\MountsTypes.bulk.json" />
     <EmbeddedResource Include="TestFiles\Mounts\MountsTypes.ids.json" />
     <EmbeddedResource Include="TestFiles\Mounts\MountsTypes.single.json" />
+    <EmbeddedResource Include="TestFiles\Mumble\MemoryMappedFile.bin" />
     <EmbeddedResource Include="TestFiles\Novelties\Novelties.bulk.json" />
     <EmbeddedResource Include="TestFiles\Novelties\Novelties.ids.json" />
     <EmbeddedResource Include="TestFiles\Novelties\Novelties.single.json" />
@@ -504,6 +506,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Xunit.SkippableFact" Version="1.3.12" />
   </ItemGroup>
 
 </Project>

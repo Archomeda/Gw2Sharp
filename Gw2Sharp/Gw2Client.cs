@@ -1,4 +1,5 @@
 using System;
+using Gw2Sharp.Mumble;
 using Gw2Sharp.WebApi;
 
 namespace Gw2Sharp
@@ -8,6 +9,7 @@ namespace Gw2Sharp
     /// </summary>
     public class Gw2Client : BaseClient, IGw2Client
     {
+        private readonly IGw2MumbleClient mumble;
         private readonly IGw2WebApiClient webApi;
 
         /// <summary>
@@ -27,10 +29,44 @@ namespace Gw2Sharp
                 throw new ArgumentNullException(nameof(connection));
 
             this.Gw2Client = this;
+            this.mumble = new Gw2MumbleClient(connection, this.Gw2Client);
             this.webApi = new Gw2WebApiClient(connection, this.Gw2Client);
         }
 
         /// <inheritdoc />
+        public virtual IGw2MumbleClient Mumble => this.mumble;
+
+        /// <inheritdoc />
         public virtual IGw2WebApiClient WebApi => this.webApi;
+
+        #region IDisposable Support
+
+        private bool isDisposed = false; // To detect redundant calls
+
+        /// <summary>
+        /// Disposes the object.
+        /// </summary>
+        /// <param name="disposing">Dispose managed resources.</param>
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!this.isDisposed)
+            {
+                if (disposing)
+                {
+                    this.mumble.Dispose();
+                }
+
+                this.isDisposed = true;
+            }
+        }
+
+        /// <inheritdoc />
+        public void Dispose()
+        {
+            this.Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        #endregion
     }
 }

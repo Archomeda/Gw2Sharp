@@ -126,11 +126,21 @@ namespace Gw2Sharp.WebApi.Caching
         public override async Task FlushAsync() =>
             this.cachedItems.Clear();
 
+        private bool isDisposed = false; // To detect redundant calls
+
         /// <inheritdoc />
-        protected override void Dispose(bool isDisposing)
+        protected override void Dispose(bool disposing)
         {
-            this.gcTimer.Dispose();
-            base.Dispose(isDisposing);
+            if (!this.isDisposed)
+            {
+                if (disposing)
+                {
+                    this.gcTimer.Dispose();
+                }
+
+                base.Dispose(disposing);
+                this.isDisposed = true;
+            }
         }
 
         #endregion
