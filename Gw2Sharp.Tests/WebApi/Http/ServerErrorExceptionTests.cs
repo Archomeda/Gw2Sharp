@@ -8,7 +8,7 @@ using Xunit;
 
 namespace Gw2Sharp.Tests.WebApi.Http
 {
-    public class ServerErrorExceptionExceptionTests
+    public class ServerErrorExceptionTests
     {
         [Fact]
         public void SerializableTest()

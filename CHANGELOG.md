@@ -1,9 +1,39 @@
 # Gw2Sharp History
 
+## 0.7.0
+### Endpoints
+- **Breaking:** `Gw2Sharp.WebApi.V2.Models.CharacterCraftingDiscipline` has had the type of its property `Discipline` changed from `string` to `ApiEnum<CraftingDisciplineType>`
+- **Breaking:** `Gw2Sharp.WebApi.V2.Models.MasteryLevel` has had the type of its property `Icon` fixed from `string` to `RenderUrl`
+- **Breaking:** Enum value `TwoHandedToy` in `Gw2Sharp.WebApi.V2.Models.ItemWeaponType` has had its name fixed to `ToyTwoHanded`
+- Add `/v2/recipes`
+- Add `/v2/recipes/search`
+- Add missing enum `AgonyResistance` in `Gw2Sharp.WebApi.V2.Models.ItemAttributeType`
+- Add missing enums `Currency`, `RandomUnlock` and `MountRandomUnlock` in `Gw2Sharp.WebApi.V2.Models.ItemConsumableType`
+- Add missing enum `Immediate` in `Gw2Sharp.WebApi.V2.Models.ItemContainerType`
+- Add missing enum `Female` in `Gw2Sharp.WebApi.V2.Models.ItemRestriction`
+- Add missing enum `Key` in `Gw2Sharp.WebApi.V2.Models.ItemType`
+- Add missing enums `SharedSlot`, `Minipet` and `MountSkin` in `Gw2Sharp.WebApi.V2.Models.ItemUnlockType`
+- Add missing item type `Key` as `Gw2Sharp.WebApi.V2.Models.ItemKey` for pattern matching
+
+### Fixes
+- Classes that implement `Gw2Sharp.WebApi.V2.Models.ICastableType` to support polymorphism (e.g. various items from `/v2/items`) should no longer fail to deserialize with `RenderUrl` properties ([#12](https://github.com/Archomeda/Gw2Sharp/issues/12))
+
+### Refactoring
+- The endpoint clients `Gw2Sharp.WebApi.V2.Clients.CommerceExchangeCoinsClient` and `Gw2Sharp.WebApi.V2.Clients.CommerceExchangeGemsClient` no longer inherit from `Gw2Sharp.WebApi.V2.Clients.BaseEndpointBlobClient` and instead inherit from `Gw2Sharp.WebApi.BlobClient` (they require the quantity to be given and cannot return a valid blob response without it)
+
+## 0.6.1
+### Endpoints
+- Change property `Emblem` in `Gw2Sharp.WebApi.V2.Models.Guild` to be nullable because the API might leave this property out ([#10](https://github.com/Archomeda/Gw2Sharp/issues/10))
+
+### Fixes
+- Fix default instantiations of `ApiEnum` and `ApiFlags` that might cause `InvalidCastException`s when requesting data by removing the non-generic `ApiEnum` and `ApiFlags` variants (they were only used internally for easy casting when deserializing) ([#10](https://github.com/Archomeda/Gw2Sharp/issues/10))
+
 ## 0.6.0
 ### Endpoints
 - **Breaking:** `Gw2Sharp.WebApi.V2.Models.GuildTeam` has had the type of its property `Ladders` changed from `PvpStatsLadders` to `IReadOnlyDictionary<string, PvpStatsAggregate>`
   (reason: the keys in this property of this endpoint (`/v2/guild/:id/teams`) are actually dynamic, just like the ones in `/v2/pvp/stats`)
+- Hitting the rate limit will now throw a `TooManyRequestsException` instead of `UnexpectedStatusException` ([#8](https://github.com/Archomeda/Gw2Sharp/issues/8))
+- Fix guild id from not being used in guild endpoints ([#9](https://github.com/Archomeda/Gw2Sharp/issues/9))
 - Add `/v2/pvp/amulets`
 - Add `/v2/pvp/games`
 - Add `/v2/pvp/heroes`
@@ -18,6 +48,10 @@
 - Add `/v2/races`
 - Add `/v2/raids`
 - Change `ICharactersIdClient` to use `IBlobClient<Character>` in order to consistently accept `GetAsync()` (`/v2/characters/:id`)
+- Change `IContinentsIdClient` to use `IBlobClient<Continent>` in order to consistently accept `GetAsync()` (`/v2/continents/:continent_id`)
+- Change `IContinentsFloorsIdClient` to use `IBlobClient<ContinentFloor>` in order to consistently accept `GetAsync()` (`/v2/continents/:continent_id/floors/:floor_id`)
+- Change `IContinentsFloorsRegionsIdClient` to use `IBlobClient<ContinentFloorRegion>` in order to consistently accept `GetAsync()` (`/v2/continents/:id/floors/:floor_id/regions/:region_id`)
+- Change `IContinentsFloorsRegionsMapsIdClient` to use `IBlobClient<ContinentFloorRegionMap>` in order to consistently accept `GetAsync()` (`/v2/continents/:id/floors/:floor_id/regions/:region_id/maps/:map_id`)
 
 ### Lifetime
 - **Breaking:** Because of the introduction of the `Gw2MumbleClient` that implements `IDisposable` (because it holds a reference to a memory mapped file that needs to be disposed), `Gw2Client` now implements `IDisposable` as well and should be disposed accordingly

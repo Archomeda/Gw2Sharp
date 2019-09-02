@@ -15,14 +15,14 @@ namespace Gw2Sharp.Extensions
         /// </summary>
         /// <param name="value">The enum string to convert.</param>
         /// <param name="enumType">The enum type.</param>
-        /// <returns>The enum value, or <c>null</c> if parsing failed.</returns>
+        /// <returns>The enum value, or <c>default</c> if parsing failed.</returns>
         /// <exception cref="ArgumentException">
         /// <paramref name="enumType"/>is not an <see cref="Enum"/>.
         /// <paramref name="value"/> is a name, but not one of the named constants defined for the enumeration.
         /// </exception>
         /// <exception cref="ArgumentNullException"><paramref name="enumType"/> is <c>null</c>.</exception>
         /// <exception cref="OverflowException"><paramref name="value"/> is outside the range of the underlying type of <paramref name="enumType"/>.</exception>
-        public static Enum? ParseEnum(this string? value, Type enumType)
+        public static Enum ParseEnum(this string? value, Type enumType)
         {
             if (enumType == null)
                 throw new ArgumentNullException(nameof(enumType));
@@ -54,7 +54,20 @@ namespace Gw2Sharp.Extensions
                 if (enumType.GetTypeInfo().GetCustomAttribute(typeof(DefaultValueAttribute)) is DefaultValueAttribute attribute)
                     return (Enum)attribute.Value;
             }
-            return null;
+            return (Enum)Enum.ToObject(enumType, 0);
         }
+
+        /// <summary>
+        /// Parses a string into an enum.
+        /// </summary>
+        /// <typeparam name="T">The enum type.</typeparam>
+        /// <param name="value">The enum string to convert.</param>
+        /// <returns>The enum value, or <c>null</c> if parsing failed.</returns>
+        /// <exception cref="ArgumentException">
+        /// <paramref name="value"/> is a name, but not one of the named constants defined for the enumeration.
+        /// </exception>
+        /// <exception cref="OverflowException"><paramref name="value"/> is outside the range of the underlying type of <typeparamref name="T"/>.</exception>
+        public static T ParseEnum<T>(this string? value) where T : Enum =>
+            (T)ParseEnum(value, typeof(T));
     }
 }

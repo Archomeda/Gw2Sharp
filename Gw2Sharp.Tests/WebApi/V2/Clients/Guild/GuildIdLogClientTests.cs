@@ -13,11 +13,11 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
 
         [Theory]
         [InlineData("TestFiles.Guild.GuildIdLog.json")]
-        public Task BlobTest(string file) => this.AssertBlobDataAsync(this.Client, file);
+        public Task BlobTestAsync(string file) => this.AssertBlobDataAsync(this.Client, file);
 
         [Theory]
         [InlineData("TestFiles.Guild.GuildIdLog.json")]
-        public Task BlobSinceTest(string file)
+        public Task BlobSinceTestAsync(string file)
         {
             var client = this.Client.Since(5);
             return this.AssertBlobDataAsync(client, file);

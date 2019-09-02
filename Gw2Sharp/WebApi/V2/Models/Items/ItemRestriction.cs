@@ -79,5 +79,10 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// The item is restricted for usage by warriors.
         /// </summary>
         Warrior,
+
+        /// <summary>
+        /// This item is restricted for usage by female characters.
+        /// </summary>
+        Female
     }
 }

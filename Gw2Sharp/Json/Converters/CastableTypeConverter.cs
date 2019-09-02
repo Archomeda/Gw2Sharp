@@ -30,7 +30,23 @@ namespace Gw2Sharp.Json.Converters
 
             // Get the castable type
             var targetType = objectType.GetCustomAttributes<CastableTypeAttribute>().FirstOrDefault(a => a.Value.Equals(type.ParseEnum(a.Value.GetType())))?.ObjectType;
-            return targetType == null ? jObject.ToObject(objectType) : jObject.ToObject(targetType, serializer);
+            if (targetType == null)
+            {
+                // Make a new inner serializer based on the current one before deserializing, but without CastableTypeConverter.
+                // Because the CastableTypeConverter assumes that the actual type is always given
+                // (and we get here if we don't have a special class for the given type),
+                // calling ToObject with the original serializer will end up in a stack overflow.
+                // Using the default serializer will break code that depend on our own serializer settings, like RenderUrl.
+                // Related issue: #12.
+                var innerSerializer = JsonSerializer.Create(new JsonSerializerSettings
+                {
+                    ContractResolver = serializer.ContractResolver,
+                    Converters = serializer.Converters.Where(x => !(x is CastableTypeConverter)).ToList()
+                });
+                return jObject.ToObject(objectType, innerSerializer);
+            }
+
+            return jObject.ToObject(targetType, serializer);
         }
 
         /// <inheritdoc />

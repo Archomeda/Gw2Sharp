@@ -8,7 +8,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The crafting discipline id.
         /// </summary>
-        public string Discipline { get; set; } = string.Empty;
+        public ApiEnum<CraftingDisciplineType> Discipline { get; set; } = new ApiEnum<CraftingDisciplineType>();
 
         /// <summary>
         /// The current level of the crafting discipline.

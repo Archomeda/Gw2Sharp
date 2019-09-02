@@ -18,6 +18,7 @@ The following exceptions can be thrown from Gw2Sharp:
       - [`MembershipRequiredException`](../api/Gw2Sharp.WebApi.Http.MembershipRequiredException.html) (403): The user is not a member of the guild
       - [`RestrictedToGuildLeadersException`](../api/Gw2Sharp.WebApi.Http.RestrictedToGuildLeadersException.html) (403): The user is not a leader of the guild
     - [`NotFoundException`](../api/Gw2Sharp.WebApi.Http.NotFoundException.html) (404): The requested resource has not been found
+    - [`TooManyRequestsException`](../api/Gw2Sharp.WebApi.Http.TooManyRequestsException.html) (429): Too many requests have been issued in a short period of time
     - [`ServerErrorException`](../api/Gw2Sharp.WebApi.Http.ServerErrorException.html) (500): The server encountered an error
     - [`ServiceUnavailableException`](../api/Gw2Sharp.WebApi.Http.ServiceUnavailableException.html) (503): The server is temporarily unavailable
 

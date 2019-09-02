@@ -1,0 +1,92 @@
+[
+  {
+    "type": "Refinement",
+    "output_item_id": 71900,
+    "output_item_count": 1,
+    "min_rating": 400,
+    "time_to_craft_ms": 1000,
+    "disciplines": [
+      "Artificer"
+    ],
+    "flags": [
+      "LearnedFromItem"
+    ],
+    "ingredients": [
+      {
+        "item_id": 73537,
+        "count": 5
+      }
+    ],
+    "id": 11023,
+    "chat_link": "[&CQ8rAAA=]"
+  },
+  {
+    "type": "Focus",
+    "output_item_id": 47008,
+    "output_item_count": 1,
+    "min_rating": 500,
+    "time_to_craft_ms": 10000,
+    "disciplines": [
+      "Artificer"
+    ],
+    "flags": [
+      "LearnedFromItem"
+    ],
+    "ingredients": [
+      {
+        "item_id": 46699,
+        "count": 1
+      },
+      {
+        "item_id": 45883,
+        "count": 1
+      },
+      {
+        "item_id": 45884,
+        "count": 1
+      },
+      {
+        "item_id": 46746,
+        "count": 1
+      }
+    ],
+    "id": 7382,
+    "chat_link": "[&CdYcAAA=]"
+  },
+  {
+    "type": "GuildDecoration",
+    "output_item_id": 90083,
+    "output_item_count": 1,
+    "min_rating": 200,
+    "time_to_craft_ms": 1000,
+    "disciplines": [
+      "Scribe"
+    ],
+    "flags": [
+      "AutoLearned"
+    ],
+    "ingredients": [
+      {
+        "item_id": 70926,
+        "count": 1
+      },
+      {
+        "item_id": 70426,
+        "count": 4
+      },
+      {
+        "item_id": 75862,
+        "count": 4
+      }
+    ],
+    "guild_ingredients": [
+      {
+        "upgrade_id": 721,
+        "count": 8
+      }
+    ],
+    "output_upgrade_id": 1028,
+    "id": 13132,
+    "chat_link": "[&CUwzAAA=]"
+  }
+]

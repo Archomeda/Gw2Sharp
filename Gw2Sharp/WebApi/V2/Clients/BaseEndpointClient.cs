@@ -17,9 +17,13 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
         /// <param name="gw2Client">The Guild Wars 2 client.</param>
+        /// <param name="replaceSegments">The path segments to replace.</param>
         /// <exception cref="ArgumentNullException"><paramref name="connection"/> or <paramref name="gw2Client"/> is <c>null</c>.</exception>
-        /// <exception cref="InvalidOperationException">The client implements an invalid combination of <see cref="IEndpointClient"/> interfaces.</exception>
-        protected BaseEndpointClient(IConnection connection, IGw2Client gw2Client) :
+        /// <exception cref="InvalidOperationException">
+        /// The client implements an invalid combination of <see cref="IEndpointClient"/> interfaces,
+        /// or the number of replace segments does not equal the number of path segments given by <see cref="EndpointPathSegmentAttribute"/>.
+        /// </exception>
+        protected BaseEndpointClient(IConnection connection, IGw2Client gw2Client, params string[] replaceSegments) :
             base(connection, gw2Client)
         {
             if (connection == null)
@@ -41,22 +45,10 @@ namespace Gw2Sharp.WebApi.V2.Clients
 
             if (this.HasBlobData && (this.IsAllExpandable || this.IsBulkExpandable))
                 throw new InvalidOperationException("An endpoint cannot implement all or bulk expansion in combination with blob data.");
-        }
 
-        /// <summary>
-        /// Creates a new base endpoint client.
-        /// </summary>
-        /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
-        /// <param name="gw2Client">The Guild Wars 2 client.</param>
-        /// <param name="replaceSegments">The path segments to replace.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="connection"/> or <paramref name="gw2Client"/> is <c>null</c>.</exception>
-        /// <exception cref="InvalidOperationException">The client implements an invalid combination of <see cref="IEndpointClient"/> interfaces.</exception>
-        protected BaseEndpointClient(IConnection connection, IGw2Client gw2Client, params string[] replaceSegments) :
-            this(connection, gw2Client)
-        {
-            var segments = this.GetRequiredAttributes<EndpointPathSegmentAttribute>().OrderBy(a => a.Order).ToList();
+            var segments = this.GetAttributes<EndpointPathSegmentAttribute>().OrderBy(a => a.Order).ToList();
             if (segments.Count != replaceSegments.Length)
-                throw new InvalidOperationException($"The defined amount of path segments ({segments.Count}) does not equal to the passed amount of replacement segments ({replaceSegments.Length})");
+                throw new InvalidOperationException($"The number of defined attribute path segments ({segments.Count}) does not equal the number of given replacement segments in the constructor ({replaceSegments.Length})");
 
             for (int i = 0; i < segments.Count; i++)
                 this.EndpointPath = this.EndpointPath.Replace($":{segments[i].PathSegment}", replaceSegments[i]);

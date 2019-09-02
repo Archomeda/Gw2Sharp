@@ -195,6 +195,11 @@ namespace Gw2Sharp.WebApi.V2
         IRaidsClient Raids { get; }
 
         /// <summary>
+        /// Gets the recipes.
+        /// </summary>
+        IRecipesClient Recipes { get; }
+
+        /// <summary>
         /// Gets the token info.
         /// </summary>
         ITokenInfoClient TokenInfo { get; }

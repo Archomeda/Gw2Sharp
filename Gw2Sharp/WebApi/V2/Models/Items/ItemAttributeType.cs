@@ -53,6 +53,11 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// Vitality.
         /// </summary>
-        Vitality
+        Vitality,
+
+        /// <summary>
+        /// Agony resistance.
+        /// </summary>
+        AgonyResistance
     }
 }

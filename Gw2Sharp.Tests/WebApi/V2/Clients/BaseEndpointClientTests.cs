@@ -327,6 +327,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
 
         protected void AssertJsonObject(JValue expected, object actual)
         {
+            bool switched = true;
             switch (actual)
             {
                 case Guid guid:
@@ -341,40 +342,52 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                 case TimeSpan timeSpan:
                     Assert.Equal(TimeSpan.FromSeconds(expected.Value<int>()), timeSpan);
                     break;
-                case ApiEnum @enum:
-                    Assert.Equal(expected.Value<string>(), @enum.RawValue);
-                    var typeInfo = @enum.GetType().GetTypeInfo();
-                    if (typeInfo.IsGenericType && typeInfo.GenericTypeArguments.Length > 0)
-                    {
-                        var enumType = typeInfo.GenericTypeArguments[0];
-                        if (@enum.IsUnknown)
-                        {
-                            var enumNames = Enum.GetNames(enumType).Select(x => x.Replace("_", ""));
-                            Assert.True(enumNames.Contains(@enum.RawValue, StringComparer.OrdinalIgnoreCase), $"Expected '{expected}' to be a value in enumerator {@enum.Value.GetType().FullName}; detected value '{@enum.Value}'");
-                        }
-                        Assert.Equal(expected.Value<string>().ParseEnum(enumType), @enum.Value);
-                    }
-                    else
-                        throw new InvalidOperationException("Expected a generic ApiEnum");
-                    break;
                 case int @int:
-                    Assert.Equal(Convert.ToInt32(expected.Value), @int);
+                    Assert.Equal(expected.Value<int>(), @int);
+                    break;
+                case long @long:
+                    Assert.Equal(expected.Value<long>(), @long);
                     break;
                 case double @double:
-                    Assert.Equal(Convert.ToDouble(expected.Value), @double, 10);
+                    Assert.Equal(expected.Value<double>(), @double, 10);
+                    break;
+                case bool @bool:
+                    Assert.Equal(expected.Value<bool>(), @bool);
+                    break;
+                case string @string:
+                    Assert.Equal(expected.Value, @string);
+                    break;
+                case null:
+                    if (expected.Type == JTokenType.String)
+                        Assert.Equal(expected.Value, string.Empty);
                     break;
                 default:
-                    if (((actual != null && !(actual is string)) || actual == null) &&
-                        expected.Type == JTokenType.String)
-                    {
-                        // Special case where the resulting value has been auto deserialized into something else than a string,
-                        // while the original is a string.
-                        Assert.Equal(expected.Value, actual?.ToString() ?? string.Empty);
-                    }
-                    else
-                        Assert.Equal(expected.Value, actual);
+                    switched = false;
                     break;
             }
+
+            if (!switched)
+            {
+                var typeInfo = actual!.GetType().GetTypeInfo();
+                if (typeInfo.IsGenericType && typeInfo.GetGenericTypeDefinition() == typeof(ApiEnum<>))
+                {
+                    var enumType = typeInfo.GenericTypeArguments[0];
+                    dynamic @enum = actual; // Just for easiness
+
+                    Assert.Equal(expected.Value<string>(), @enum.RawValue);
+                    if (@enum.IsUnknown)
+                    {
+                        var enumNames = Enum.GetNames(enumType).Select(x => x.Replace("_", ""));
+                        Assert.True(enumNames.Contains((string)@enum.RawValue, StringComparer.OrdinalIgnoreCase), $"Expected '{expected}' to be a value in enumerator {@enum.Value.GetType().FullName}; detected value '{@enum.Value}'");
+                    }
+                    Assert.Equal(expected.Value<string>().ParseEnum(enumType), @enum.Value);
+
+                    switched = true;
+                }
+            }
+
+            if (!switched)
+                Assert.Equal(expected.Value, actual!.ToString());
         }
 
         #endregion

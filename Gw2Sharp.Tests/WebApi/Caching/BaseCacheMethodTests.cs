@@ -43,7 +43,7 @@ namespace Gw2Sharp.Tests.WebApi.Caching
             var cacheItems = new[]
             {
                 new CacheItem<int>(category, "test", 42, DateTime.Now.AddMinutes(30)),
-                new CacheItem<int>(category, "test2", 84, DateTime.Now.AddSeconds(2))
+                new CacheItem<int>(category, "test2", 84, DateTime.Now.AddMilliseconds(1750))
             };
 
             await this.cacheMethod.SetManyAsync(cacheItems);

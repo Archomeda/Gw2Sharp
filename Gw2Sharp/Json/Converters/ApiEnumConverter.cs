@@ -1,4 +1,6 @@
 using System;
+using System.ComponentModel;
+using System.Linq;
 using System.Reflection;
 using Gw2Sharp.Extensions;
 using Gw2Sharp.WebApi.V2.Models;
@@ -17,22 +19,31 @@ namespace Gw2Sharp.Json.Converters
         public override bool CanWrite => false;
 
         /// <inheritdoc />
-        public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+        public override object? ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
         {
-            if (!(serializer.Deserialize<JToken>(reader) is JValue jValue))
-                throw new JsonSerializationException($"Expected a value for {nameof(jValue)}");
+            var fToken = serializer.Deserialize<JToken>(reader);
+            if (fToken is JValue jValue)
+            {
+                // Get generic type information and some sanity checks
+                var typeInfo = objectType.GetTypeInfo();
+                var enumType = typeInfo.IsGenericType ? typeInfo.GenericTypeArguments.FirstOrDefault() : null;
+                if (enumType == null)
+                    return null;
 
-            // Get generic type information and some sanity checks
-            var typeInfo = objectType.GetTypeInfo();
-            Type enumType;
-            if (typeInfo.IsGenericType && typeInfo.GenericTypeArguments.Length > 0)
-                enumType = typeInfo.GenericTypeArguments[0];
-            else
-                return null!;
+                // If it's explicitly defined as null, create an enum with null raw value and default enum value
+                if (jValue.Type == JTokenType.Null)
+                {
+                    var defaultValueAttribute = enumType.GetCustomAttribute<DefaultValueAttribute>();
+                    object enumValue = defaultValueAttribute != null ? defaultValueAttribute.Value : Enum.ToObject(enumType, 0);
+                    return Activator.CreateInstance(objectType, enumValue, null);
+                }
 
-            string rawValue = jValue.ToObject<string>();
-            var value = rawValue.ParseEnum(enumType);
-            return (ApiEnum)Activator.CreateInstance(objectType, value, rawValue);
+                // It's a value, create an enum with that value
+                string rawValue = jValue.ToObject<string>();
+                var value = rawValue.ParseEnum(enumType);
+                return Activator.CreateInstance(objectType, value, rawValue);
+            }
+            throw new JsonSerializationException($"Expected an enum value or null");
         }
 
         /// <inheritdoc />
@@ -40,6 +51,7 @@ namespace Gw2Sharp.Json.Converters
             throw new NotImplementedException("TODO: This should generally not be used since we only deserialize stuff from the API, and not serialize to it. Might add support later.");
 
         /// <inheritdoc />
-        public override bool CanConvert(Type objectType) => objectType == typeof(ApiEnum);
+        public override bool CanConvert(Type objectType) =>
+            objectType.IsGenericType && objectType.GetGenericTypeDefinition() == typeof(ApiEnum<>);
     }
 }

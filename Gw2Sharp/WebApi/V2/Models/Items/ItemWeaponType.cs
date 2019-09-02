@@ -123,6 +123,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// Two-handed toy weapon type.
         /// </summary>
-        TwoHandedToy
+        ToyTwoHanded
     }
 }

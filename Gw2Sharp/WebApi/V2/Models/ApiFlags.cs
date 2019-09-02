@@ -11,23 +11,36 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Wraps a list an API enums into flags to allow unsupported and/or future enum values.
     /// </summary>
-    public abstract class ApiFlags : IEquatable<ApiFlags>, IEnumerable<ApiEnum>
+    /// <typeparam name="T">The enum type.</typeparam>
+    [JsonConverter(typeof(ApiFlagsConverter))]
+    public class ApiFlags<T> : IEquatable<ApiFlags<T>>, IEnumerable<ApiEnum<T>> where T : Enum
     {
         /// <summary>
         /// Creates new API flags.
         /// </summary>
-        protected ApiFlags() { }
+        public ApiFlags() { }
 
         /// <summary>
         /// Creates new API flags.
         /// </summary>
         /// <param name="list">The list of enum values.</param>
         /// <exception cref="ArgumentNullException"><paramref name="list"/> is <c>null</c>.</exception>
-        protected ApiFlags(IReadOnlyList<ApiEnum> list)
+        public ApiFlags(IEnumerable<ApiEnum<T>> list)
         {
-            this.List = list ?? throw new ArgumentNullException(nameof(list));
-            this.UnknownList = list.Where(e => e.IsUnknown).ToList().AsReadOnly();
+            this.List = list?.ToList()?.AsReadOnly() ?? throw new ArgumentNullException(nameof(list));
+            this.UnknownList = this.List.Where(e => e.IsUnknown).ToList().AsReadOnly();
         }
+
+        /// <summary>
+        /// Creates new API flags.
+        /// Used internally by <see cref="ApiFlagsConverter"/>.
+        /// </summary>
+        /// <param name="list">The list of enum values.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="list"/> is <c>null</c>.</exception>
+        internal ApiFlags(IEnumerable<object> list) :
+            this(list?.Cast<ApiEnum<T>>() ?? throw new ArgumentNullException(nameof(list)))
+        { }
+
 
         /// <summary>
         /// Whether the flags has at least one unknown value to the library.
@@ -38,112 +51,59 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The actual flags as interpreted by the library.
         /// </summary>
-        public IReadOnlyList<ApiEnum> List { get; protected set; } = new List<ApiEnum>();
+        public IReadOnlyList<ApiEnum<T>> List { get; } = new List<ApiEnum<T>>();
 
         /// <summary>
         /// Gets the list of unknown enum values.
         /// </summary>
-        public IReadOnlyList<ApiEnum> UnknownList { get; protected set; } = new List<ApiEnum>();
+        public IReadOnlyList<ApiEnum<T>> UnknownList { get; } = new List<ApiEnum<T>>();
 
-        /// <inheritdoc />
-        public override bool Equals(object? obj) =>
-            obj != null && obj.GetType() == typeof(ApiFlags) && this.Equals((ApiFlags)obj);
-
-        /// <inheritdoc />
-        public virtual bool Equals(ApiFlags other) =>
-            !(other is null) && this.List.SequenceEqual(other.List);
-
-        /// <inheritdoc />
-        public override int GetHashCode()
-        {
-            return -2004394551 +
-                EqualityComparer<IReadOnlyList<ApiEnum>>.Default.GetHashCode(this.List);
-        }
-
-        /// <inheritdoc />
-        public IEnumerator<ApiEnum> GetEnumerator() =>
-            this.List.GetEnumerator();
-
-        /// <inheritdoc />
-        IEnumerator IEnumerable.GetEnumerator() =>
-            this.GetEnumerator();
-
-        /// <inheritdoc />
-        public static bool operator ==(ApiFlags flags1, ApiFlags flags2) =>
-            EqualityComparer<ApiFlags>.Default.Equals(flags1, flags2);
-
-        /// <inheritdoc />
-        public static bool operator !=(ApiFlags flags1, ApiFlags flags2) =>
-            !(flags1 == flags2);
-    }
-
-    /// <summary>
-    /// Wraps a list an API enums into flags to allow unsupported and/or future enum values.
-    /// </summary>
-    /// <typeparam name="T">The enum type.</typeparam>
-    [JsonConverter(typeof(ApiFlagsConverter))]
-    public class ApiFlags<T> : ApiFlags, IEquatable<ApiFlags<T>>, IEnumerable<ApiEnum<T>> where T : Enum
-    {
-        /// <summary>
-        /// Creates new API flags.
-        /// </summary>
-        public ApiFlags() : base() { }
 
         /// <summary>
-        /// Creates new API flags.
+        /// Converts an array of enums to API flags.
         /// </summary>
-        /// <param name="list">The list of enum values.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="list"/> is <c>null</c>.</exception>
-        public ApiFlags(IReadOnlyList<ApiEnum> list) :
-            this(list.Select(e => new ApiEnum<T>((T)e.Value, e.RawValue)).ToList())
-        { }
-
-        /// <summary>
-        /// Creates new API flags.
-        /// </summary>
-        /// <param name="list">The list of enum values.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="list"/> is <c>null</c>.</exception>
-        public ApiFlags(IReadOnlyList<ApiEnum<T>> list) :
-            base(list)
-        { }
-
-        /// <summary>
-        /// The actual flags as interpreted by the library.
-        /// </summary>
-        public new IReadOnlyList<ApiEnum<T>> List => (IReadOnlyList<ApiEnum<T>>)base.List;
-
-        /// <summary>
-        /// Gets the list of unknown enum values.
-        /// </summary>
-        public new IReadOnlyList<ApiEnum<T>> UnknownList => (IReadOnlyList<ApiEnum<T>>)base.UnknownList;
+        /// <param name="l">The list of enums.</param>
+        public static implicit operator ApiFlags<T>(ApiEnum<T>[] l) =>
+            new ApiFlags<T>(l);
 
         /// <summary>
         /// Converts a list of enums to API flags.
         /// </summary>
         /// <param name="l">The list of enums.</param>
-        public static implicit operator ApiFlags<T>(List<ApiEnum<T>> l) => new ApiFlags<T>(l);
+        public static implicit operator ApiFlags<T>(List<ApiEnum<T>> l) =>
+            new ApiFlags<T>(l);
 
         /// <summary>
         /// Converts a collection of enums to API flags.
         /// </summary>
         /// <param name="l">The collection of enums.</param>
-        public static implicit operator ApiFlags<T>(Collection<ApiEnum<T>> l) => new ApiFlags<T>(l);
+        public static implicit operator ApiFlags<T>(Collection<ApiEnum<T>> l) =>
+            new ApiFlags<T>(l);
 
         /// <summary>
         /// Converts a set of enums to API flags.
         /// </summary>
         /// <param name="l">The set of enums.</param>
-        public static implicit operator ApiFlags<T>(HashSet<ApiEnum<T>> l) => new ApiFlags<T>(l.ToList());
+        public static implicit operator ApiFlags<T>(HashSet<ApiEnum<T>> l) =>
+            new ApiFlags<T>(l);
+
+        /// <summary>
+        /// Converts API flags to an array of enums.
+        /// </summary>
+        /// <param name="e">The API enum.</param>
+        public static implicit operator ApiEnum<T>[](ApiFlags<T> e) =>
+            e.List.ToArray();
 
         /// <summary>
         /// Converts API flags to a list of enums.
         /// </summary>
         /// <param name="e">The API enum.</param>
-        public static implicit operator List<ApiEnum<T>>(ApiFlags<T> e) => e.List.ToList();
+        public static implicit operator List<ApiEnum<T>>(ApiFlags<T> e) =>
+            e.List.ToList();
 
         /// <inheritdoc />
         public override bool Equals(object? obj) =>
-            obj != null && obj.GetType() == typeof(ApiFlags<T>) && this.Equals((ApiFlags<T>)obj);
+            obj is ApiFlags<T> apiFlags && this.Equals(apiFlags);
 
         /// <inheritdoc />
         public virtual bool Equals(ApiFlags<T> other) =>
@@ -153,14 +113,18 @@ namespace Gw2Sharp.WebApi.V2.Models
         public override int GetHashCode()
         {
             int hashCode = 1050334356;
-            hashCode = (hashCode * -1521134295) + base.GetHashCode();
-            hashCode = (hashCode * -1521134295) + EqualityComparer<IReadOnlyList<ApiEnum<T>>>.Default.GetHashCode(this.List);
+            foreach (var item in this.List)
+                hashCode = (hashCode * -1521134295) + EqualityComparer<ApiEnum<T>>.Default.GetHashCode(item);
             return hashCode;
         }
 
         /// <inheritdoc />
-        public new IEnumerator<ApiEnum<T>> GetEnumerator() =>
+        public IEnumerator<ApiEnum<T>> GetEnumerator() =>
             this.List.GetEnumerator();
+
+        /// <inheritdoc />
+        IEnumerator IEnumerable.GetEnumerator() =>
+            this.GetEnumerator();
 
         /// <inheritdoc />
         public static bool operator ==(ApiFlags<T> flags1, ApiFlags<T> flags2) =>

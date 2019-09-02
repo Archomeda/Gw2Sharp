@@ -21,6 +21,19 @@ namespace Gw2Sharp.WebApi.V2.Clients
             base(connection, gw2Client)
         { }
 
+        /// <summary>
+        /// Clones a <see cref="CreateSubtokenClient"/> instance.
+        /// </summary>
+        /// <param name="client">The original client.</param>
+        private CreateSubtokenClient(CreateSubtokenClient client)
+            : this(client.Connection, client.Gw2Client!)
+        {
+            this.ParamExpire = client.ParamExpire;
+            this.ParamPermissions = client.ParamPermissions;
+            this.ParamUrls = client.ParamUrls;
+        }
+
+
         /// <inheritdoc />
         [EndpointPathParameter("expire")]
         public string? ParamExpire { get; protected set; }
@@ -34,28 +47,19 @@ namespace Gw2Sharp.WebApi.V2.Clients
         public string? ParamUrls { get; protected set; }
 
         /// <inheritdoc />
-        public virtual ICreateSubtokenClient Expires(DateTimeOffset expire)
-        {
-            this.ParamExpire = expire.ToString("o");
-            return this;
-        }
+        public virtual ICreateSubtokenClient Expires(DateTimeOffset expire) =>
+            new CreateSubtokenClient(this) { ParamExpire = expire.ToString("o") };
 
         /// <inheritdoc />
-        public virtual ICreateSubtokenClient WithPermissions(IEnumerable<string> permissions)
-        {
-            this.ParamPermissions = string.Join(",", permissions);
-            return this;
-        }
+        public virtual ICreateSubtokenClient WithPermissions(IEnumerable<string> permissions) =>
+            new CreateSubtokenClient(this) { ParamPermissions = string.Join(",", permissions) };
 
         /// <inheritdoc />
         public virtual ICreateSubtokenClient WithPermissions(IEnumerable<TokenPermission> permissions) =>
             this.WithPermissions(permissions.Select(x => x.ToString().ToLowerInvariant()));
 
         /// <inheritdoc />
-        public virtual ICreateSubtokenClient WithUrls(IList<string> urls)
-        {
-            this.ParamUrls = string.Join(",", urls);
-            return this;
-        }
+        public virtual ICreateSubtokenClient WithUrls(IList<string> urls) =>
+            new CreateSubtokenClient(this) { ParamUrls = string.Join(",", urls) };
     }
 }

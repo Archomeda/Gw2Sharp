@@ -28,7 +28,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="guildId">The guild id.</param>
         /// <exception cref="ArgumentNullException"><paramref name="connection"/> or <paramref name="gw2Client"/> is <c>null</c>.</exception>
         protected internal GuildIdClient(IConnection connection, IGw2Client gw2Client, Guid guildId) :
-            base(connection, gw2Client)
+            base(connection, gw2Client, guildId.ToString())
         {
             this.guildId = guildId;
             this.log = new GuildIdLogClient(connection, gw2Client, guildId);
