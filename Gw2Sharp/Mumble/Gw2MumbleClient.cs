@@ -193,12 +193,12 @@ namespace Gw2Sharp.Mumble
         /// <summary>
         /// Disposes the object.
         /// </summary>
-        /// <param name="isDisposing">Dispose unmanaged resources.</param>
-        protected virtual void Dispose(bool isDisposing)
+        /// <param name="disposing">Dispose managed resources.</param>
+        protected virtual void Dispose(bool disposing)
         {
             if (!this.isDisposed)
             {
-                if (isDisposing)
+                if (disposing)
                 {
                     if (this.memoryMappedViewAccessor.IsValueCreated)
                         this.memoryMappedViewAccessor.Value.Dispose();
