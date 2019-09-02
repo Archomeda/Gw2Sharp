@@ -2,11 +2,14 @@
 
 ## 0.7.1
 ### Services
-- Add Mumble Link client as `Gw2MumbleClient`, which can be accessed through `Gw2Client.Mumble`
+- Add Mumble Link client as `Gw2MumbleClient`, which can be accessed through `Gw2Client.Mumble` ([#7](https://github.com/Archomeda/Gw2Sharp/issues/7), [#16](https://github.com/Archomeda/Gw2Sharp/pull/16))
 
 ### Lifetime
 - Because of the introduction of the `Gw2MumbleClient` that implements `IDisposable` (because it holds a reference to a memory mapped file that needs to be disposed), `Gw2Client` now implements `IDisposable` as well and should be disposed accordingly  
   **Note:** This is a breaking change if you decide to start using the Mumble Link client, because it will only create disposable resources on the first call to `.Update()` in the `Gw2MumbleClient`
+
+### Fixes
+- Fix `RecipesClient` to correctly inherit from `BaseEndpointBulkClient` instead of `BaseEndpointBulkAllClient` (`/v2/recipes` doesn't support expanding all items at once, and this was incorrectly set on the implementation, the interface was correct) ([#14](https://github.com/Archomeda/Gw2Sharp/pull/14) by [@darthmaim](https://github.com/darthmaim))
 
 ## 0.7.0
 ### Endpoints
