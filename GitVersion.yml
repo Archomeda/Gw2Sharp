@@ -1,4 +1,4 @@
-next-version: 0.7.1
+next-version: 0.7.2
 assembly-versioning-format: '{MajorMinorPatch}.0'
 assembly-file-versioning-format: '{MajorMinorPatch}-{BranchName}.{CommitsSinceVersionSource}+{ShortSha}'
 assembly-informational-format: '{MajorMinorPatch}-{BranchName}.{CommitsSinceVersionSource}+{ShortSha}'
