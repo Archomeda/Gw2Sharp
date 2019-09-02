@@ -166,6 +166,9 @@ namespace Gw2Sharp.Mumble
         /// <inheritdoc />
         public unsafe void Update()
         {
+            if (this.isDisposed)
+                throw new ObjectDisposedException(nameof(Gw2MumbleClient));
+
             this.memoryMappedViewAccessor.Value.Read<Gw2LinkedMem>(0, out var linkedMem);
             int oldTick = this.Tick;
 
