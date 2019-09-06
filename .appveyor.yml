@@ -3,10 +3,6 @@ version: '{build}'
 
 configuration: Debug
 
-environment:
-  SONAR_TOKEN:
-    secure: QDHrFOIyHrdnTjASRiMPjakQGHJzBeHDMVHBoqZ42GRwl2XUCWLdWTFIcMjDprMd
-
 skip_branch_with_pr: true
 
 branches:
@@ -15,8 +11,6 @@ branches:
 
 before_build:
   - dotnet restore
-  # - dotnet tool install --global dotnet-sonarscanner
-  # - choco install -y opencover.portable
   - ps: >-
       $version = Get-Content Gw2Sharp/Gw2Sharp.csproj | Select-String -Pattern '<Version>([^<]*)</Version>' -AllMatches | % { $_.Matches.Groups[1].Value }
 
@@ -25,27 +19,14 @@ before_build:
       Out-File Gw2Sharp/Gw2Sharp.csproj
 
       Update-AppveyorBuild -Version "$version-$env:APPVEYOR_BUILD_VERSION"
-  # - ps: >-
-  #     if (!(Test-Path env:APPVEYOR_PULL_REQUEST_NUMBER)) {
-  #       if ($env:APPVEYOR_REPO_TAG -eq "true") {
-  #         dotnet sonarscanner begin /k:"Archomeda_Gw2Sharp" /o:"archomeda-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="$env:SONAR_TOKEN" /d:sonar.cs.opencover.reportsPaths="coverage.xml" /d:sonar.branch.name="$env:APPVEYOR_REPO_BRANCH" /v:"$env:APPVEYOR_REPO_TAG_NAME"
-  #       } else {
-  #         dotnet sonarscanner begin /k:"Archomeda_Gw2Sharp" /o:"archomeda-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="$env:SONAR_TOKEN" /d:sonar.cs.opencover.reportsPaths="coverage.xml" /d:sonar.branch.name="$env:APPVEYOR_REPO_BRANCH"
-  #       }
-  #     }
 
 build:
   project: Gw2Sharp.sln
 
 test_script:
-  # - OpenCover.Console.exe -register:user -target:"C:\Program Files\dotnet\dotnet.exe" -returntargetcode -targetargs:"test Gw2Sharp.Tests/Gw2Sharp.Tests.csproj --configuration %CONFIGURATION% --no-build" -output:"coverage.xml" -oldStyle
   - dotnet test --configuration %CONFIGURATION% --no-build
 
 after_test:
-  # - ps: >-
-  #     if (!(Test-Path env:APPVEYOR_PULL_REQUEST_NUMBER)) {
-  #       dotnet sonarscanner end /d:sonar.login="$env:SONAR_TOKEN"
-  #     }
   - dotnet pack Gw2Sharp -c %CONFIGURATION% --no-build -o pack
   - ps: Remove-Item pack/*.symbols.nupkg
 
