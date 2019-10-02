@@ -119,6 +119,39 @@ namespace Gw2Sharp.Mumble
             this.IsAvailable ? (int)this.linkedMem.context.buildId : default;
 
         /// <inheritdoc />
+        public bool IsMapOpen =>
+            this.IsAvailable ? this.linkedMem.context.uiState.HasFlag(UiState.IsMapOpen) : default;
+
+        /// <inheritdoc />
+        public bool IsCompassTopRight =>
+            this.IsAvailable ? this.linkedMem.context.uiState.HasFlag(UiState.IsCompassTopRight) : default;
+
+        /// <inheritdoc />
+        public bool IsCompassRotationEnabled =>
+            this.IsAvailable ? this.linkedMem.context.uiState.HasFlag(UiState.IsCompassRotationEnabled) : default;
+
+        /// <inheritdoc />
+        public Size Compass =>
+            this.IsAvailable ? new Size(this.linkedMem.context.compassWidth, this.linkedMem.context.compassHeight) : default;
+
+        /// <inheritdoc />
+        public double CompassRotation =>
+            this.IsAvailable ? this.linkedMem.context.compassRotation : default;
+
+        /// <inheritdoc />
+        public Coordinates2 PlayerLocationMap =>
+            this.IsAvailable ? new Coordinates2(this.linkedMem.context.playerMapX, this.linkedMem.context.playerMapY) : default;
+
+        /// <inheritdoc />
+        public Coordinates2 MapCenter =>
+            this.IsAvailable ? new Coordinates2(this.linkedMem.context.mapCenterX, this.linkedMem.context.mapCenterY) : default;
+
+        /// <inheritdoc />
+        public double MapScale =>
+            this.IsAvailable ? this.linkedMem.context.mapScale : default;
+
+
+        /// <inheritdoc />
         public int MapId =>
             this.IsAvailable ? (int)this.linkedMem.context.mapId : default;
 
@@ -141,6 +174,10 @@ namespace Gw2Sharp.Mumble
         /// <inheritdoc />
         public string Profession =>
             this.IsAvailable ? this.Identity.Profession.ToString() : string.Empty;
+
+        /// <inheritdoc />
+        public int Specialization =>
+            this.IsAvailable ? this.Identity.Spec : 0;
 
         /// <inheritdoc />
         public string Race =>

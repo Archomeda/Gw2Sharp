@@ -18,6 +18,11 @@ namespace Gw2Sharp.Mumble.Models
         public Profession Profession { get; set; }
 
         /// <summary>
+        /// The character specialization.
+        /// </summary>
+        public int Spec { get; set; }
+
+        /// <summary>
         /// The character race.
         /// </summary>
         public Race Race { get; set; }
