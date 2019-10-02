@@ -1,5 +1,6 @@
 using System.Net.Sockets;
 using System.Runtime.InteropServices;
+using Gw2Sharp.Mumble.Models;
 
 #pragma warning disable IDE0044
 #pragma warning disable IDE1006
@@ -69,6 +70,24 @@ namespace Gw2Sharp.Mumble
         public uint instance;
         [FieldOffset(44)]
         public uint buildId;
+        [FieldOffset(48)]
+        public UiState uiState;
+        [FieldOffset(52)]
+        public ushort compassWidth;
+        [FieldOffset(54)]
+        public ushort compassHeight;
+        [FieldOffset(56)]
+        public float compassRotation;
+        [FieldOffset(60)]
+        public float playerMapX;
+        [FieldOffset(64)]
+        public float playerMapY;
+        [FieldOffset(68)]
+        public float mapCenterX;
+        [FieldOffset(72)]
+        public float mapCenterY;
+        [FieldOffset(76)]
+        public float mapScale;
 
         // Total struct size is 256 bytes
     }

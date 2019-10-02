@@ -1,6 +1,6 @@
 using System;
 using Gw2Sharp.Json.Converters;
-using Gw2Sharp.WebApi.V2.Models;
+using Gw2Sharp.Models;
 using Xunit;
 
 namespace Gw2Sharp.Tests.Json.Converters

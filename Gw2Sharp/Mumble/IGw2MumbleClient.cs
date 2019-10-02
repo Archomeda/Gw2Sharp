@@ -76,6 +76,50 @@ namespace Gw2Sharp.Mumble
         int BuildId { get; }
 
         /// <summary>
+        /// Whether the map is currently open.
+        /// </summary>
+        bool IsMapOpen { get; }
+
+        /// <summary>
+        /// Whether the compass is positioned in the top right corner.
+        /// Otherwise it's in the bottom right corner.
+        /// </summary>
+        bool IsCompassTopRight { get; }
+
+        /// <summary>
+        /// Whether the compass has rotation mode enabled.
+        /// </summary>
+        bool IsCompassRotationEnabled { get; }
+
+        /// <summary>
+        /// The compass size.
+        /// </summary>
+        Size Compass { get; }
+
+        /// <summary>
+        /// The compass rotation.
+        /// </summary>
+        double CompassRotation { get; }
+
+        /// <summary>
+        /// The player's location on the map.
+        /// This is measured in continent coordinates.
+        /// </summary>
+        Coordinates2 PlayerLocationMap { get; }
+
+        /// <summary>
+        /// The map center on the map.
+        /// This is measured in continent coordinates.
+        /// </summary>
+        Coordinates2 MapCenter { get; }
+
+        /// <summary>
+        /// The map scaling.
+        /// </summary>
+        double MapScale { get; }
+
+
+        /// <summary>
         /// The current map id.
         /// Can be resolved against <see cref="IGw2WebApiV2Client.Maps"/>.
         /// </summary>
@@ -116,6 +160,13 @@ namespace Gw2Sharp.Mumble
         /// Can be resolved against <see cref="IGw2WebApiV2Client.Professions"/>.
         /// </summary>
         string Profession { get; }
+
+        /// <summary>
+        /// The character's currently equipped third specialization.
+        /// Can be used to identify the elite specialization that's currently used.
+        /// Can be resolved against <see cref="IGw2WebApiV2Client.Specializations"/>.
+        /// </summary>
+        int Specialization { get; }
 
         /// <summary>
         /// The character race.
