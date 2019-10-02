@@ -203,6 +203,9 @@
                           <li class="">
                             <a href="Gw2Sharp.Models.MapType.html" title="MapType" class="">MapType</a>
                           </li>
+                          <li class="">
+                            <a href="Gw2Sharp.Models.Size.html" title="Size" class="">Size</a>
+                          </li>
                         </ul>  </li>
                     <li class="">
                       <span class="expand-stub"></span>
@@ -2211,9 +2214,6 @@
                             <a href="Gw2Sharp.WebApi.V2.Models.RectangleDirectionType.html" title="RectangleDirectionType" class="">RectangleDirectionType</a>
                           </li>
                           <li class="">
-                            <a href="Gw2Sharp.WebApi.V2.Models.Size.html" title="Size" class="">Size</a>
-                          </li>
-                          <li class="">
                             <a href="Gw2Sharp.WebApi.V2.Models.SkillSlot.html" title="SkillSlot" class="">SkillSlot</a>
                           </li>
                           <li class="">
@@ -2420,6 +2420,58 @@ These coordinates are left-handed.</p>
   </table>
   
   
+  <a id="Gw2Sharp_Mumble_IGw2MumbleClient_Compass_" data-uid="Gw2Sharp.Mumble.IGw2MumbleClient.Compass*"></a>
+  <h4 id="Gw2Sharp_Mumble_IGw2MumbleClient_Compass" data-uid="Gw2Sharp.Mumble.IGw2MumbleClient.Compass">Compass</h4>
+  <div class="markdown level1 summary"><p>The compass size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Size Compass { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Gw2Sharp.Models.Size.html">Size</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Gw2Sharp_Mumble_IGw2MumbleClient_CompassRotation_" data-uid="Gw2Sharp.Mumble.IGw2MumbleClient.CompassRotation*"></a>
+  <h4 id="Gw2Sharp_Mumble_IGw2MumbleClient_CompassRotation" data-uid="Gw2Sharp.Mumble.IGw2MumbleClient.CompassRotation">CompassRotation</h4>
+  <div class="markdown level1 summary"><p>The compass rotation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double CompassRotation { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Gw2Sharp_Mumble_IGw2MumbleClient_FieldOfView_" data-uid="Gw2Sharp.Mumble.IGw2MumbleClient.FieldOfView*"></a>
   <h4 id="Gw2Sharp_Mumble_IGw2MumbleClient_FieldOfView" data-uid="Gw2Sharp.Mumble.IGw2MumbleClient.FieldOfView">FieldOfView</h4>
   <div class="markdown level1 summary"><p>The vertical field of view value.</p>
@@ -2525,6 +2577,112 @@ Use this to check if the Mumble Link API contains valid Guild Wars 2 data.</p>
   </table>
   
   
+  <a id="Gw2Sharp_Mumble_IGw2MumbleClient_IsCompassRotationEnabled_" data-uid="Gw2Sharp.Mumble.IGw2MumbleClient.IsCompassRotationEnabled*"></a>
+  <h4 id="Gw2Sharp_Mumble_IGw2MumbleClient_IsCompassRotationEnabled" data-uid="Gw2Sharp.Mumble.IGw2MumbleClient.IsCompassRotationEnabled">IsCompassRotationEnabled</h4>
+  <div class="markdown level1 summary"><p>Whether the compass has rotation mode enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsCompassRotationEnabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Gw2Sharp_Mumble_IGw2MumbleClient_IsCompassTopRight_" data-uid="Gw2Sharp.Mumble.IGw2MumbleClient.IsCompassTopRight*"></a>
+  <h4 id="Gw2Sharp_Mumble_IGw2MumbleClient_IsCompassTopRight" data-uid="Gw2Sharp.Mumble.IGw2MumbleClient.IsCompassTopRight">IsCompassTopRight</h4>
+  <div class="markdown level1 summary"><p>Whether the compass is positioned in the top right corner.
+Otherwise it&apos;s in the bottom right corner.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsCompassTopRight { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Gw2Sharp_Mumble_IGw2MumbleClient_IsMapOpen_" data-uid="Gw2Sharp.Mumble.IGw2MumbleClient.IsMapOpen*"></a>
+  <h4 id="Gw2Sharp_Mumble_IGw2MumbleClient_IsMapOpen" data-uid="Gw2Sharp.Mumble.IGw2MumbleClient.IsMapOpen">IsMapOpen</h4>
+  <div class="markdown level1 summary"><p>Whether the map is currently open.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsMapOpen { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Gw2Sharp_Mumble_IGw2MumbleClient_MapCenter_" data-uid="Gw2Sharp.Mumble.IGw2MumbleClient.MapCenter*"></a>
+  <h4 id="Gw2Sharp_Mumble_IGw2MumbleClient_MapCenter" data-uid="Gw2Sharp.Mumble.IGw2MumbleClient.MapCenter">MapCenter</h4>
+  <div class="markdown level1 summary"><p>The map center on the map.
+This is measured in continent coordinates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Coordinates2 MapCenter { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Gw2Sharp.Models.Coordinates2.html">Coordinates2</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Gw2Sharp_Mumble_IGw2MumbleClient_MapId_" data-uid="Gw2Sharp.Mumble.IGw2MumbleClient.MapId*"></a>
   <h4 id="Gw2Sharp_Mumble_IGw2MumbleClient_MapId" data-uid="Gw2Sharp.Mumble.IGw2MumbleClient.MapId">MapId</h4>
   <div class="markdown level1 summary"><p>The current map id.
@@ -2546,6 +2704,32 @@ Can be resolved against <a class="xref" href="Gw2Sharp.WebApi.V2.IGw2WebApiV2Cli
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Gw2Sharp_Mumble_IGw2MumbleClient_MapScale_" data-uid="Gw2Sharp.Mumble.IGw2MumbleClient.MapScale*"></a>
+  <h4 id="Gw2Sharp_Mumble_IGw2MumbleClient_MapScale" data-uid="Gw2Sharp.Mumble.IGw2MumbleClient.MapScale">MapScale</h4>
+  <div class="markdown level1 summary"><p>The map scaling.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">double MapScale { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -2599,6 +2783,33 @@ Should be equal to &quot;Guild Wars 2&quot; when Guild Wars 2 is running.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Gw2Sharp_Mumble_IGw2MumbleClient_PlayerLocationMap_" data-uid="Gw2Sharp.Mumble.IGw2MumbleClient.PlayerLocationMap*"></a>
+  <h4 id="Gw2Sharp_Mumble_IGw2MumbleClient_PlayerLocationMap" data-uid="Gw2Sharp.Mumble.IGw2MumbleClient.PlayerLocationMap">PlayerLocationMap</h4>
+  <div class="markdown level1 summary"><p>The player&apos;s location on the map.
+This is measured in continent coordinates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Coordinates2 PlayerLocationMap { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Gw2Sharp.Models.Coordinates2.html">Coordinates2</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -2733,6 +2944,34 @@ However, this value may also be IPv6 if ArenaNet decides to support that.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.UInt32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Gw2Sharp_Mumble_IGw2MumbleClient_Specialization_" data-uid="Gw2Sharp.Mumble.IGw2MumbleClient.Specialization*"></a>
+  <h4 id="Gw2Sharp_Mumble_IGw2MumbleClient_Specialization" data-uid="Gw2Sharp.Mumble.IGw2MumbleClient.Specialization">Specialization</h4>
+  <div class="markdown level1 summary"><p>The character&apos;s currently equipped third specialization.
+Can be used to identify the elite specialization that&apos;s currently used.
+Can be resolved against <see cref="!:IGw2WebApiV2Client.Specializations"></see>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Specialization { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
         <td></td>
       </tr>
     </tbody>

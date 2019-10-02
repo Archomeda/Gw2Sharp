@@ -1025,11 +1025,11 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Json.Converters.SizeConverter.CanWrite
   nameWithType: SizeConverter.CanWrite
-- uid: Gw2Sharp.Json.Converters.SizeConverter.ReadJson(JsonReader,Type,Gw2Sharp.WebApi.V2.Models.Size,System.Boolean,JsonSerializer)
+- uid: Gw2Sharp.Json.Converters.SizeConverter.ReadJson(JsonReader,Type,Gw2Sharp.Models.Size,System.Boolean,JsonSerializer)
   name: ReadJson(JsonReader, Type, Size, Boolean, JsonSerializer)
-  href: api/Gw2Sharp.Json.Converters.SizeConverter.html#Gw2Sharp_Json_Converters_SizeConverter_ReadJson_JsonReader_Type_Gw2Sharp_WebApi_V2_Models_Size_System_Boolean_JsonSerializer_
-  commentId: M:Gw2Sharp.Json.Converters.SizeConverter.ReadJson(JsonReader,Type,Gw2Sharp.WebApi.V2.Models.Size,System.Boolean,JsonSerializer)
-  fullName: Gw2Sharp.Json.Converters.SizeConverter.ReadJson(JsonReader, Type, Gw2Sharp.WebApi.V2.Models.Size, System.Boolean, JsonSerializer)
+  href: api/Gw2Sharp.Json.Converters.SizeConverter.html#Gw2Sharp_Json_Converters_SizeConverter_ReadJson_JsonReader_Type_Gw2Sharp_Models_Size_System_Boolean_JsonSerializer_
+  commentId: M:Gw2Sharp.Json.Converters.SizeConverter.ReadJson(JsonReader,Type,Gw2Sharp.Models.Size,System.Boolean,JsonSerializer)
+  fullName: Gw2Sharp.Json.Converters.SizeConverter.ReadJson(JsonReader, Type, Gw2Sharp.Models.Size, System.Boolean, JsonSerializer)
   nameWithType: SizeConverter.ReadJson(JsonReader, Type, Size, Boolean, JsonSerializer)
 - uid: Gw2Sharp.Json.Converters.SizeConverter.ReadJson*
   name: ReadJson
@@ -1038,11 +1038,11 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Json.Converters.SizeConverter.ReadJson
   nameWithType: SizeConverter.ReadJson
-- uid: Gw2Sharp.Json.Converters.SizeConverter.WriteJson(JsonWriter,Gw2Sharp.WebApi.V2.Models.Size,JsonSerializer)
+- uid: Gw2Sharp.Json.Converters.SizeConverter.WriteJson(JsonWriter,Gw2Sharp.Models.Size,JsonSerializer)
   name: WriteJson(JsonWriter, Size, JsonSerializer)
-  href: api/Gw2Sharp.Json.Converters.SizeConverter.html#Gw2Sharp_Json_Converters_SizeConverter_WriteJson_JsonWriter_Gw2Sharp_WebApi_V2_Models_Size_JsonSerializer_
-  commentId: M:Gw2Sharp.Json.Converters.SizeConverter.WriteJson(JsonWriter,Gw2Sharp.WebApi.V2.Models.Size,JsonSerializer)
-  fullName: Gw2Sharp.Json.Converters.SizeConverter.WriteJson(JsonWriter, Gw2Sharp.WebApi.V2.Models.Size, JsonSerializer)
+  href: api/Gw2Sharp.Json.Converters.SizeConverter.html#Gw2Sharp_Json_Converters_SizeConverter_WriteJson_JsonWriter_Gw2Sharp_Models_Size_JsonSerializer_
+  commentId: M:Gw2Sharp.Json.Converters.SizeConverter.WriteJson(JsonWriter,Gw2Sharp.Models.Size,JsonSerializer)
+  fullName: Gw2Sharp.Json.Converters.SizeConverter.WriteJson(JsonWriter, Gw2Sharp.Models.Size, JsonSerializer)
   nameWithType: SizeConverter.WriteJson(JsonWriter, Size, JsonSerializer)
 - uid: Gw2Sharp.Json.Converters.SizeConverter.WriteJson*
   name: WriteJson
@@ -1548,6 +1548,138 @@ references:
   commentId: F:Gw2Sharp.Models.MapType.WvwLounge
   fullName: Gw2Sharp.Models.MapType.WvwLounge
   nameWithType: MapType.WvwLounge
+- uid: Gw2Sharp.Models.Size
+  name: Size
+  href: api/Gw2Sharp.Models.Size.html
+  commentId: T:Gw2Sharp.Models.Size
+  fullName: Gw2Sharp.Models.Size
+  nameWithType: Size
+- uid: Gw2Sharp.Models.Size.#ctor(System.Int32,System.Int32)
+  name: Size(Int32, Int32)
+  href: api/Gw2Sharp.Models.Size.html#Gw2Sharp_Models_Size__ctor_System_Int32_System_Int32_
+  commentId: M:Gw2Sharp.Models.Size.#ctor(System.Int32,System.Int32)
+  fullName: Gw2Sharp.Models.Size.Size(System.Int32, System.Int32)
+  nameWithType: Size.Size(Int32, Int32)
+- uid: Gw2Sharp.Models.Size.#ctor*
+  name: Size
+  href: api/Gw2Sharp.Models.Size.html#Gw2Sharp_Models_Size__ctor_
+  commentId: Overload:Gw2Sharp.Models.Size.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.Models.Size.Size
+  nameWithType: Size.Size
+- uid: Gw2Sharp.Models.Size.Equals(Gw2Sharp.Models.Size)
+  name: Equals(Size)
+  href: api/Gw2Sharp.Models.Size.html#Gw2Sharp_Models_Size_Equals_Gw2Sharp_Models_Size_
+  commentId: M:Gw2Sharp.Models.Size.Equals(Gw2Sharp.Models.Size)
+  fullName: Gw2Sharp.Models.Size.Equals(Gw2Sharp.Models.Size)
+  nameWithType: Size.Equals(Size)
+- uid: Gw2Sharp.Models.Size.Equals(System.Nullable{System.Object})
+  name: Equals(Nullable<Object>)
+  href: api/Gw2Sharp.Models.Size.html#Gw2Sharp_Models_Size_Equals_System_Nullable_System_Object__
+  commentId: M:Gw2Sharp.Models.Size.Equals(System.Nullable{System.Object})
+  name.vb: Equals(Nullable(Of Object))
+  fullName: Gw2Sharp.Models.Size.Equals(System.Nullable<System.Object>)
+  fullName.vb: Gw2Sharp.Models.Size.Equals(System.Nullable(Of System.Object))
+  nameWithType: Size.Equals(Nullable<Object>)
+  nameWithType.vb: Size.Equals(Nullable(Of Object))
+- uid: Gw2Sharp.Models.Size.Equals*
+  name: Equals
+  href: api/Gw2Sharp.Models.Size.html#Gw2Sharp_Models_Size_Equals_
+  commentId: Overload:Gw2Sharp.Models.Size.Equals
+  isSpec: "True"
+  fullName: Gw2Sharp.Models.Size.Equals
+  nameWithType: Size.Equals
+- uid: Gw2Sharp.Models.Size.GetEnumerator
+  name: GetEnumerator()
+  href: api/Gw2Sharp.Models.Size.html#Gw2Sharp_Models_Size_GetEnumerator
+  commentId: M:Gw2Sharp.Models.Size.GetEnumerator
+  fullName: Gw2Sharp.Models.Size.GetEnumerator()
+  nameWithType: Size.GetEnumerator()
+- uid: Gw2Sharp.Models.Size.GetEnumerator*
+  name: GetEnumerator
+  href: api/Gw2Sharp.Models.Size.html#Gw2Sharp_Models_Size_GetEnumerator_
+  commentId: Overload:Gw2Sharp.Models.Size.GetEnumerator
+  isSpec: "True"
+  fullName: Gw2Sharp.Models.Size.GetEnumerator
+  nameWithType: Size.GetEnumerator
+- uid: Gw2Sharp.Models.Size.GetHashCode
+  name: GetHashCode()
+  href: api/Gw2Sharp.Models.Size.html#Gw2Sharp_Models_Size_GetHashCode
+  commentId: M:Gw2Sharp.Models.Size.GetHashCode
+  fullName: Gw2Sharp.Models.Size.GetHashCode()
+  nameWithType: Size.GetHashCode()
+- uid: Gw2Sharp.Models.Size.GetHashCode*
+  name: GetHashCode
+  href: api/Gw2Sharp.Models.Size.html#Gw2Sharp_Models_Size_GetHashCode_
+  commentId: Overload:Gw2Sharp.Models.Size.GetHashCode
+  isSpec: "True"
+  fullName: Gw2Sharp.Models.Size.GetHashCode
+  nameWithType: Size.GetHashCode
+- uid: Gw2Sharp.Models.Size.Height
+  name: Height
+  href: api/Gw2Sharp.Models.Size.html#Gw2Sharp_Models_Size_Height
+  commentId: P:Gw2Sharp.Models.Size.Height
+  fullName: Gw2Sharp.Models.Size.Height
+  nameWithType: Size.Height
+- uid: Gw2Sharp.Models.Size.Height*
+  name: Height
+  href: api/Gw2Sharp.Models.Size.html#Gw2Sharp_Models_Size_Height_
+  commentId: Overload:Gw2Sharp.Models.Size.Height
+  isSpec: "True"
+  fullName: Gw2Sharp.Models.Size.Height
+  nameWithType: Size.Height
+- uid: Gw2Sharp.Models.Size.op_Equality(Gw2Sharp.Models.Size,Gw2Sharp.Models.Size)
+  name: Equality(Size, Size)
+  href: api/Gw2Sharp.Models.Size.html#Gw2Sharp_Models_Size_op_Equality_Gw2Sharp_Models_Size_Gw2Sharp_Models_Size_
+  commentId: M:Gw2Sharp.Models.Size.op_Equality(Gw2Sharp.Models.Size,Gw2Sharp.Models.Size)
+  fullName: Gw2Sharp.Models.Size.Equality(Gw2Sharp.Models.Size, Gw2Sharp.Models.Size)
+  nameWithType: Size.Equality(Size, Size)
+- uid: Gw2Sharp.Models.Size.op_Equality*
+  name: Equality
+  href: api/Gw2Sharp.Models.Size.html#Gw2Sharp_Models_Size_op_Equality_
+  commentId: Overload:Gw2Sharp.Models.Size.op_Equality
+  isSpec: "True"
+  fullName: Gw2Sharp.Models.Size.Equality
+  nameWithType: Size.Equality
+- uid: Gw2Sharp.Models.Size.op_Inequality(Gw2Sharp.Models.Size,Gw2Sharp.Models.Size)
+  name: Inequality(Size, Size)
+  href: api/Gw2Sharp.Models.Size.html#Gw2Sharp_Models_Size_op_Inequality_Gw2Sharp_Models_Size_Gw2Sharp_Models_Size_
+  commentId: M:Gw2Sharp.Models.Size.op_Inequality(Gw2Sharp.Models.Size,Gw2Sharp.Models.Size)
+  fullName: Gw2Sharp.Models.Size.Inequality(Gw2Sharp.Models.Size, Gw2Sharp.Models.Size)
+  nameWithType: Size.Inequality(Size, Size)
+- uid: Gw2Sharp.Models.Size.op_Inequality*
+  name: Inequality
+  href: api/Gw2Sharp.Models.Size.html#Gw2Sharp_Models_Size_op_Inequality_
+  commentId: Overload:Gw2Sharp.Models.Size.op_Inequality
+  isSpec: "True"
+  fullName: Gw2Sharp.Models.Size.Inequality
+  nameWithType: Size.Inequality
+- uid: Gw2Sharp.Models.Size.ToString
+  name: ToString()
+  href: api/Gw2Sharp.Models.Size.html#Gw2Sharp_Models_Size_ToString
+  commentId: M:Gw2Sharp.Models.Size.ToString
+  fullName: Gw2Sharp.Models.Size.ToString()
+  nameWithType: Size.ToString()
+- uid: Gw2Sharp.Models.Size.ToString*
+  name: ToString
+  href: api/Gw2Sharp.Models.Size.html#Gw2Sharp_Models_Size_ToString_
+  commentId: Overload:Gw2Sharp.Models.Size.ToString
+  isSpec: "True"
+  fullName: Gw2Sharp.Models.Size.ToString
+  nameWithType: Size.ToString
+- uid: Gw2Sharp.Models.Size.Width
+  name: Width
+  href: api/Gw2Sharp.Models.Size.html#Gw2Sharp_Models_Size_Width
+  commentId: P:Gw2Sharp.Models.Size.Width
+  fullName: Gw2Sharp.Models.Size.Width
+  nameWithType: Size.Width
+- uid: Gw2Sharp.Models.Size.Width*
+  name: Width
+  href: api/Gw2Sharp.Models.Size.html#Gw2Sharp_Models_Size_Width_
+  commentId: Overload:Gw2Sharp.Models.Size.Width
+  isSpec: "True"
+  fullName: Gw2Sharp.Models.Size.Width
+  nameWithType: Size.Width
 - uid: Gw2Sharp.Mumble
   name: Gw2Sharp.Mumble
   href: api/Gw2Sharp.Mumble.html
@@ -1651,6 +1783,32 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Mumble.Gw2MumbleClient.CharacterName
   nameWithType: Gw2MumbleClient.CharacterName
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.Compass
+  name: Compass
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Compass
+  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.Compass
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Compass
+  nameWithType: Gw2MumbleClient.Compass
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.Compass*
+  name: Compass
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Compass_
+  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.Compass
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Compass
+  nameWithType: Gw2MumbleClient.Compass
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.CompassRotation
+  name: CompassRotation
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_CompassRotation
+  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.CompassRotation
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.CompassRotation
+  nameWithType: Gw2MumbleClient.CompassRotation
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.CompassRotation*
+  name: CompassRotation
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_CompassRotation_
+  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.CompassRotation
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.CompassRotation
+  nameWithType: Gw2MumbleClient.CompassRotation
 - uid: Gw2Sharp.Mumble.Gw2MumbleClient.Dispose
   name: Dispose()
   href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Dispose
@@ -1722,6 +1880,58 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Mumble.Gw2MumbleClient.IsCommander
   nameWithType: Gw2MumbleClient.IsCommander
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.IsCompassRotationEnabled
+  name: IsCompassRotationEnabled
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_IsCompassRotationEnabled
+  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.IsCompassRotationEnabled
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.IsCompassRotationEnabled
+  nameWithType: Gw2MumbleClient.IsCompassRotationEnabled
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.IsCompassRotationEnabled*
+  name: IsCompassRotationEnabled
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_IsCompassRotationEnabled_
+  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.IsCompassRotationEnabled
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.IsCompassRotationEnabled
+  nameWithType: Gw2MumbleClient.IsCompassRotationEnabled
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.IsCompassTopRight
+  name: IsCompassTopRight
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_IsCompassTopRight
+  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.IsCompassTopRight
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.IsCompassTopRight
+  nameWithType: Gw2MumbleClient.IsCompassTopRight
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.IsCompassTopRight*
+  name: IsCompassTopRight
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_IsCompassTopRight_
+  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.IsCompassTopRight
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.IsCompassTopRight
+  nameWithType: Gw2MumbleClient.IsCompassTopRight
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.IsMapOpen
+  name: IsMapOpen
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_IsMapOpen
+  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.IsMapOpen
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.IsMapOpen
+  nameWithType: Gw2MumbleClient.IsMapOpen
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.IsMapOpen*
+  name: IsMapOpen
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_IsMapOpen_
+  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.IsMapOpen
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.IsMapOpen
+  nameWithType: Gw2MumbleClient.IsMapOpen
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.MapCenter
+  name: MapCenter
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_MapCenter
+  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.MapCenter
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.MapCenter
+  nameWithType: Gw2MumbleClient.MapCenter
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.MapCenter*
+  name: MapCenter
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_MapCenter_
+  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.MapCenter
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.MapCenter
+  nameWithType: Gw2MumbleClient.MapCenter
 - uid: Gw2Sharp.Mumble.Gw2MumbleClient.MapId
   name: MapId
   href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_MapId
@@ -1735,6 +1945,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Mumble.Gw2MumbleClient.MapId
   nameWithType: Gw2MumbleClient.MapId
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.MapScale
+  name: MapScale
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_MapScale
+  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.MapScale
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.MapScale
+  nameWithType: Gw2MumbleClient.MapScale
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.MapScale*
+  name: MapScale
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_MapScale_
+  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.MapScale
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.MapScale
+  nameWithType: Gw2MumbleClient.MapScale
 - uid: Gw2Sharp.Mumble.Gw2MumbleClient.MapType
   name: MapType
   href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_MapType
@@ -1761,6 +1984,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Name
   nameWithType: Gw2MumbleClient.Name
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.PlayerLocationMap
+  name: PlayerLocationMap
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_PlayerLocationMap
+  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.PlayerLocationMap
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.PlayerLocationMap
+  nameWithType: Gw2MumbleClient.PlayerLocationMap
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.PlayerLocationMap*
+  name: PlayerLocationMap
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_PlayerLocationMap_
+  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.PlayerLocationMap
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.PlayerLocationMap
+  nameWithType: Gw2MumbleClient.PlayerLocationMap
 - uid: Gw2Sharp.Mumble.Gw2MumbleClient.Profession
   name: Profession
   href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Profession
@@ -1826,6 +2062,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Mumble.Gw2MumbleClient.ShardId
   nameWithType: Gw2MumbleClient.ShardId
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.Specialization
+  name: Specialization
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Specialization
+  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.Specialization
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Specialization
+  nameWithType: Gw2MumbleClient.Specialization
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.Specialization*
+  name: Specialization
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Specialization_
+  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.Specialization
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Specialization
+  nameWithType: Gw2MumbleClient.Specialization
 - uid: Gw2Sharp.Mumble.Gw2MumbleClient.TeamColorId
   name: TeamColorId
   href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_TeamColorId
@@ -1975,6 +2224,32 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Mumble.IGw2MumbleClient.CharacterName
   nameWithType: IGw2MumbleClient.CharacterName
+- uid: Gw2Sharp.Mumble.IGw2MumbleClient.Compass
+  name: Compass
+  href: api/Gw2Sharp.Mumble.IGw2MumbleClient.html#Gw2Sharp_Mumble_IGw2MumbleClient_Compass
+  commentId: P:Gw2Sharp.Mumble.IGw2MumbleClient.Compass
+  fullName: Gw2Sharp.Mumble.IGw2MumbleClient.Compass
+  nameWithType: IGw2MumbleClient.Compass
+- uid: Gw2Sharp.Mumble.IGw2MumbleClient.Compass*
+  name: Compass
+  href: api/Gw2Sharp.Mumble.IGw2MumbleClient.html#Gw2Sharp_Mumble_IGw2MumbleClient_Compass_
+  commentId: Overload:Gw2Sharp.Mumble.IGw2MumbleClient.Compass
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.IGw2MumbleClient.Compass
+  nameWithType: IGw2MumbleClient.Compass
+- uid: Gw2Sharp.Mumble.IGw2MumbleClient.CompassRotation
+  name: CompassRotation
+  href: api/Gw2Sharp.Mumble.IGw2MumbleClient.html#Gw2Sharp_Mumble_IGw2MumbleClient_CompassRotation
+  commentId: P:Gw2Sharp.Mumble.IGw2MumbleClient.CompassRotation
+  fullName: Gw2Sharp.Mumble.IGw2MumbleClient.CompassRotation
+  nameWithType: IGw2MumbleClient.CompassRotation
+- uid: Gw2Sharp.Mumble.IGw2MumbleClient.CompassRotation*
+  name: CompassRotation
+  href: api/Gw2Sharp.Mumble.IGw2MumbleClient.html#Gw2Sharp_Mumble_IGw2MumbleClient_CompassRotation_
+  commentId: Overload:Gw2Sharp.Mumble.IGw2MumbleClient.CompassRotation
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.IGw2MumbleClient.CompassRotation
+  nameWithType: IGw2MumbleClient.CompassRotation
 - uid: Gw2Sharp.Mumble.IGw2MumbleClient.FieldOfView
   name: FieldOfView
   href: api/Gw2Sharp.Mumble.IGw2MumbleClient.html#Gw2Sharp_Mumble_IGw2MumbleClient_FieldOfView
@@ -2027,6 +2302,58 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Mumble.IGw2MumbleClient.IsCommander
   nameWithType: IGw2MumbleClient.IsCommander
+- uid: Gw2Sharp.Mumble.IGw2MumbleClient.IsCompassRotationEnabled
+  name: IsCompassRotationEnabled
+  href: api/Gw2Sharp.Mumble.IGw2MumbleClient.html#Gw2Sharp_Mumble_IGw2MumbleClient_IsCompassRotationEnabled
+  commentId: P:Gw2Sharp.Mumble.IGw2MumbleClient.IsCompassRotationEnabled
+  fullName: Gw2Sharp.Mumble.IGw2MumbleClient.IsCompassRotationEnabled
+  nameWithType: IGw2MumbleClient.IsCompassRotationEnabled
+- uid: Gw2Sharp.Mumble.IGw2MumbleClient.IsCompassRotationEnabled*
+  name: IsCompassRotationEnabled
+  href: api/Gw2Sharp.Mumble.IGw2MumbleClient.html#Gw2Sharp_Mumble_IGw2MumbleClient_IsCompassRotationEnabled_
+  commentId: Overload:Gw2Sharp.Mumble.IGw2MumbleClient.IsCompassRotationEnabled
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.IGw2MumbleClient.IsCompassRotationEnabled
+  nameWithType: IGw2MumbleClient.IsCompassRotationEnabled
+- uid: Gw2Sharp.Mumble.IGw2MumbleClient.IsCompassTopRight
+  name: IsCompassTopRight
+  href: api/Gw2Sharp.Mumble.IGw2MumbleClient.html#Gw2Sharp_Mumble_IGw2MumbleClient_IsCompassTopRight
+  commentId: P:Gw2Sharp.Mumble.IGw2MumbleClient.IsCompassTopRight
+  fullName: Gw2Sharp.Mumble.IGw2MumbleClient.IsCompassTopRight
+  nameWithType: IGw2MumbleClient.IsCompassTopRight
+- uid: Gw2Sharp.Mumble.IGw2MumbleClient.IsCompassTopRight*
+  name: IsCompassTopRight
+  href: api/Gw2Sharp.Mumble.IGw2MumbleClient.html#Gw2Sharp_Mumble_IGw2MumbleClient_IsCompassTopRight_
+  commentId: Overload:Gw2Sharp.Mumble.IGw2MumbleClient.IsCompassTopRight
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.IGw2MumbleClient.IsCompassTopRight
+  nameWithType: IGw2MumbleClient.IsCompassTopRight
+- uid: Gw2Sharp.Mumble.IGw2MumbleClient.IsMapOpen
+  name: IsMapOpen
+  href: api/Gw2Sharp.Mumble.IGw2MumbleClient.html#Gw2Sharp_Mumble_IGw2MumbleClient_IsMapOpen
+  commentId: P:Gw2Sharp.Mumble.IGw2MumbleClient.IsMapOpen
+  fullName: Gw2Sharp.Mumble.IGw2MumbleClient.IsMapOpen
+  nameWithType: IGw2MumbleClient.IsMapOpen
+- uid: Gw2Sharp.Mumble.IGw2MumbleClient.IsMapOpen*
+  name: IsMapOpen
+  href: api/Gw2Sharp.Mumble.IGw2MumbleClient.html#Gw2Sharp_Mumble_IGw2MumbleClient_IsMapOpen_
+  commentId: Overload:Gw2Sharp.Mumble.IGw2MumbleClient.IsMapOpen
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.IGw2MumbleClient.IsMapOpen
+  nameWithType: IGw2MumbleClient.IsMapOpen
+- uid: Gw2Sharp.Mumble.IGw2MumbleClient.MapCenter
+  name: MapCenter
+  href: api/Gw2Sharp.Mumble.IGw2MumbleClient.html#Gw2Sharp_Mumble_IGw2MumbleClient_MapCenter
+  commentId: P:Gw2Sharp.Mumble.IGw2MumbleClient.MapCenter
+  fullName: Gw2Sharp.Mumble.IGw2MumbleClient.MapCenter
+  nameWithType: IGw2MumbleClient.MapCenter
+- uid: Gw2Sharp.Mumble.IGw2MumbleClient.MapCenter*
+  name: MapCenter
+  href: api/Gw2Sharp.Mumble.IGw2MumbleClient.html#Gw2Sharp_Mumble_IGw2MumbleClient_MapCenter_
+  commentId: Overload:Gw2Sharp.Mumble.IGw2MumbleClient.MapCenter
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.IGw2MumbleClient.MapCenter
+  nameWithType: IGw2MumbleClient.MapCenter
 - uid: Gw2Sharp.Mumble.IGw2MumbleClient.MapId
   name: MapId
   href: api/Gw2Sharp.Mumble.IGw2MumbleClient.html#Gw2Sharp_Mumble_IGw2MumbleClient_MapId
@@ -2040,6 +2367,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Mumble.IGw2MumbleClient.MapId
   nameWithType: IGw2MumbleClient.MapId
+- uid: Gw2Sharp.Mumble.IGw2MumbleClient.MapScale
+  name: MapScale
+  href: api/Gw2Sharp.Mumble.IGw2MumbleClient.html#Gw2Sharp_Mumble_IGw2MumbleClient_MapScale
+  commentId: P:Gw2Sharp.Mumble.IGw2MumbleClient.MapScale
+  fullName: Gw2Sharp.Mumble.IGw2MumbleClient.MapScale
+  nameWithType: IGw2MumbleClient.MapScale
+- uid: Gw2Sharp.Mumble.IGw2MumbleClient.MapScale*
+  name: MapScale
+  href: api/Gw2Sharp.Mumble.IGw2MumbleClient.html#Gw2Sharp_Mumble_IGw2MumbleClient_MapScale_
+  commentId: Overload:Gw2Sharp.Mumble.IGw2MumbleClient.MapScale
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.IGw2MumbleClient.MapScale
+  nameWithType: IGw2MumbleClient.MapScale
 - uid: Gw2Sharp.Mumble.IGw2MumbleClient.MapType
   name: MapType
   href: api/Gw2Sharp.Mumble.IGw2MumbleClient.html#Gw2Sharp_Mumble_IGw2MumbleClient_MapType
@@ -2066,6 +2406,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Mumble.IGw2MumbleClient.Name
   nameWithType: IGw2MumbleClient.Name
+- uid: Gw2Sharp.Mumble.IGw2MumbleClient.PlayerLocationMap
+  name: PlayerLocationMap
+  href: api/Gw2Sharp.Mumble.IGw2MumbleClient.html#Gw2Sharp_Mumble_IGw2MumbleClient_PlayerLocationMap
+  commentId: P:Gw2Sharp.Mumble.IGw2MumbleClient.PlayerLocationMap
+  fullName: Gw2Sharp.Mumble.IGw2MumbleClient.PlayerLocationMap
+  nameWithType: IGw2MumbleClient.PlayerLocationMap
+- uid: Gw2Sharp.Mumble.IGw2MumbleClient.PlayerLocationMap*
+  name: PlayerLocationMap
+  href: api/Gw2Sharp.Mumble.IGw2MumbleClient.html#Gw2Sharp_Mumble_IGw2MumbleClient_PlayerLocationMap_
+  commentId: Overload:Gw2Sharp.Mumble.IGw2MumbleClient.PlayerLocationMap
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.IGw2MumbleClient.PlayerLocationMap
+  nameWithType: IGw2MumbleClient.PlayerLocationMap
 - uid: Gw2Sharp.Mumble.IGw2MumbleClient.Profession
   name: Profession
   href: api/Gw2Sharp.Mumble.IGw2MumbleClient.html#Gw2Sharp_Mumble_IGw2MumbleClient_Profession
@@ -2131,6 +2484,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Mumble.IGw2MumbleClient.ShardId
   nameWithType: IGw2MumbleClient.ShardId
+- uid: Gw2Sharp.Mumble.IGw2MumbleClient.Specialization
+  name: Specialization
+  href: api/Gw2Sharp.Mumble.IGw2MumbleClient.html#Gw2Sharp_Mumble_IGw2MumbleClient_Specialization
+  commentId: P:Gw2Sharp.Mumble.IGw2MumbleClient.Specialization
+  fullName: Gw2Sharp.Mumble.IGw2MumbleClient.Specialization
+  nameWithType: IGw2MumbleClient.Specialization
+- uid: Gw2Sharp.Mumble.IGw2MumbleClient.Specialization*
+  name: Specialization
+  href: api/Gw2Sharp.Mumble.IGw2MumbleClient.html#Gw2Sharp_Mumble_IGw2MumbleClient_Specialization_
+  commentId: Overload:Gw2Sharp.Mumble.IGw2MumbleClient.Specialization
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.IGw2MumbleClient.Specialization
+  nameWithType: IGw2MumbleClient.Specialization
 - uid: Gw2Sharp.Mumble.IGw2MumbleClient.TeamColorId
   name: TeamColorId
   href: api/Gw2Sharp.Mumble.IGw2MumbleClient.html#Gw2Sharp_Mumble_IGw2MumbleClient_TeamColorId
@@ -31473,138 +31839,6 @@ references:
   commentId: F:Gw2Sharp.WebApi.V2.Models.RectangleDirectionType.TopDown
   fullName: Gw2Sharp.WebApi.V2.Models.RectangleDirectionType.TopDown
   nameWithType: RectangleDirectionType.TopDown
-- uid: Gw2Sharp.WebApi.V2.Models.Size
-  name: Size
-  href: api/Gw2Sharp.WebApi.V2.Models.Size.html
-  commentId: T:Gw2Sharp.WebApi.V2.Models.Size
-  fullName: Gw2Sharp.WebApi.V2.Models.Size
-  nameWithType: Size
-- uid: Gw2Sharp.WebApi.V2.Models.Size.#ctor(System.Int32,System.Int32)
-  name: Size(Int32, Int32)
-  href: api/Gw2Sharp.WebApi.V2.Models.Size.html#Gw2Sharp_WebApi_V2_Models_Size__ctor_System_Int32_System_Int32_
-  commentId: M:Gw2Sharp.WebApi.V2.Models.Size.#ctor(System.Int32,System.Int32)
-  fullName: Gw2Sharp.WebApi.V2.Models.Size.Size(System.Int32, System.Int32)
-  nameWithType: Size.Size(Int32, Int32)
-- uid: Gw2Sharp.WebApi.V2.Models.Size.#ctor*
-  name: Size
-  href: api/Gw2Sharp.WebApi.V2.Models.Size.html#Gw2Sharp_WebApi_V2_Models_Size__ctor_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Size.#ctor
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Models.Size.Size
-  nameWithType: Size.Size
-- uid: Gw2Sharp.WebApi.V2.Models.Size.Equals(Gw2Sharp.WebApi.V2.Models.Size)
-  name: Equals(Size)
-  href: api/Gw2Sharp.WebApi.V2.Models.Size.html#Gw2Sharp_WebApi_V2_Models_Size_Equals_Gw2Sharp_WebApi_V2_Models_Size_
-  commentId: M:Gw2Sharp.WebApi.V2.Models.Size.Equals(Gw2Sharp.WebApi.V2.Models.Size)
-  fullName: Gw2Sharp.WebApi.V2.Models.Size.Equals(Gw2Sharp.WebApi.V2.Models.Size)
-  nameWithType: Size.Equals(Size)
-- uid: Gw2Sharp.WebApi.V2.Models.Size.Equals(System.Nullable{System.Object})
-  name: Equals(Nullable<Object>)
-  href: api/Gw2Sharp.WebApi.V2.Models.Size.html#Gw2Sharp_WebApi_V2_Models_Size_Equals_System_Nullable_System_Object__
-  commentId: M:Gw2Sharp.WebApi.V2.Models.Size.Equals(System.Nullable{System.Object})
-  name.vb: Equals(Nullable(Of Object))
-  fullName: Gw2Sharp.WebApi.V2.Models.Size.Equals(System.Nullable<System.Object>)
-  fullName.vb: Gw2Sharp.WebApi.V2.Models.Size.Equals(System.Nullable(Of System.Object))
-  nameWithType: Size.Equals(Nullable<Object>)
-  nameWithType.vb: Size.Equals(Nullable(Of Object))
-- uid: Gw2Sharp.WebApi.V2.Models.Size.Equals*
-  name: Equals
-  href: api/Gw2Sharp.WebApi.V2.Models.Size.html#Gw2Sharp_WebApi_V2_Models_Size_Equals_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Size.Equals
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Models.Size.Equals
-  nameWithType: Size.Equals
-- uid: Gw2Sharp.WebApi.V2.Models.Size.GetEnumerator
-  name: GetEnumerator()
-  href: api/Gw2Sharp.WebApi.V2.Models.Size.html#Gw2Sharp_WebApi_V2_Models_Size_GetEnumerator
-  commentId: M:Gw2Sharp.WebApi.V2.Models.Size.GetEnumerator
-  fullName: Gw2Sharp.WebApi.V2.Models.Size.GetEnumerator()
-  nameWithType: Size.GetEnumerator()
-- uid: Gw2Sharp.WebApi.V2.Models.Size.GetEnumerator*
-  name: GetEnumerator
-  href: api/Gw2Sharp.WebApi.V2.Models.Size.html#Gw2Sharp_WebApi_V2_Models_Size_GetEnumerator_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Size.GetEnumerator
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Models.Size.GetEnumerator
-  nameWithType: Size.GetEnumerator
-- uid: Gw2Sharp.WebApi.V2.Models.Size.GetHashCode
-  name: GetHashCode()
-  href: api/Gw2Sharp.WebApi.V2.Models.Size.html#Gw2Sharp_WebApi_V2_Models_Size_GetHashCode
-  commentId: M:Gw2Sharp.WebApi.V2.Models.Size.GetHashCode
-  fullName: Gw2Sharp.WebApi.V2.Models.Size.GetHashCode()
-  nameWithType: Size.GetHashCode()
-- uid: Gw2Sharp.WebApi.V2.Models.Size.GetHashCode*
-  name: GetHashCode
-  href: api/Gw2Sharp.WebApi.V2.Models.Size.html#Gw2Sharp_WebApi_V2_Models_Size_GetHashCode_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Size.GetHashCode
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Models.Size.GetHashCode
-  nameWithType: Size.GetHashCode
-- uid: Gw2Sharp.WebApi.V2.Models.Size.Height
-  name: Height
-  href: api/Gw2Sharp.WebApi.V2.Models.Size.html#Gw2Sharp_WebApi_V2_Models_Size_Height
-  commentId: P:Gw2Sharp.WebApi.V2.Models.Size.Height
-  fullName: Gw2Sharp.WebApi.V2.Models.Size.Height
-  nameWithType: Size.Height
-- uid: Gw2Sharp.WebApi.V2.Models.Size.Height*
-  name: Height
-  href: api/Gw2Sharp.WebApi.V2.Models.Size.html#Gw2Sharp_WebApi_V2_Models_Size_Height_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Size.Height
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Models.Size.Height
-  nameWithType: Size.Height
-- uid: Gw2Sharp.WebApi.V2.Models.Size.op_Equality(Gw2Sharp.WebApi.V2.Models.Size,Gw2Sharp.WebApi.V2.Models.Size)
-  name: Equality(Size, Size)
-  href: api/Gw2Sharp.WebApi.V2.Models.Size.html#Gw2Sharp_WebApi_V2_Models_Size_op_Equality_Gw2Sharp_WebApi_V2_Models_Size_Gw2Sharp_WebApi_V2_Models_Size_
-  commentId: M:Gw2Sharp.WebApi.V2.Models.Size.op_Equality(Gw2Sharp.WebApi.V2.Models.Size,Gw2Sharp.WebApi.V2.Models.Size)
-  fullName: Gw2Sharp.WebApi.V2.Models.Size.Equality(Gw2Sharp.WebApi.V2.Models.Size, Gw2Sharp.WebApi.V2.Models.Size)
-  nameWithType: Size.Equality(Size, Size)
-- uid: Gw2Sharp.WebApi.V2.Models.Size.op_Equality*
-  name: Equality
-  href: api/Gw2Sharp.WebApi.V2.Models.Size.html#Gw2Sharp_WebApi_V2_Models_Size_op_Equality_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Size.op_Equality
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Models.Size.Equality
-  nameWithType: Size.Equality
-- uid: Gw2Sharp.WebApi.V2.Models.Size.op_Inequality(Gw2Sharp.WebApi.V2.Models.Size,Gw2Sharp.WebApi.V2.Models.Size)
-  name: Inequality(Size, Size)
-  href: api/Gw2Sharp.WebApi.V2.Models.Size.html#Gw2Sharp_WebApi_V2_Models_Size_op_Inequality_Gw2Sharp_WebApi_V2_Models_Size_Gw2Sharp_WebApi_V2_Models_Size_
-  commentId: M:Gw2Sharp.WebApi.V2.Models.Size.op_Inequality(Gw2Sharp.WebApi.V2.Models.Size,Gw2Sharp.WebApi.V2.Models.Size)
-  fullName: Gw2Sharp.WebApi.V2.Models.Size.Inequality(Gw2Sharp.WebApi.V2.Models.Size, Gw2Sharp.WebApi.V2.Models.Size)
-  nameWithType: Size.Inequality(Size, Size)
-- uid: Gw2Sharp.WebApi.V2.Models.Size.op_Inequality*
-  name: Inequality
-  href: api/Gw2Sharp.WebApi.V2.Models.Size.html#Gw2Sharp_WebApi_V2_Models_Size_op_Inequality_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Size.op_Inequality
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Models.Size.Inequality
-  nameWithType: Size.Inequality
-- uid: Gw2Sharp.WebApi.V2.Models.Size.ToString
-  name: ToString()
-  href: api/Gw2Sharp.WebApi.V2.Models.Size.html#Gw2Sharp_WebApi_V2_Models_Size_ToString
-  commentId: M:Gw2Sharp.WebApi.V2.Models.Size.ToString
-  fullName: Gw2Sharp.WebApi.V2.Models.Size.ToString()
-  nameWithType: Size.ToString()
-- uid: Gw2Sharp.WebApi.V2.Models.Size.ToString*
-  name: ToString
-  href: api/Gw2Sharp.WebApi.V2.Models.Size.html#Gw2Sharp_WebApi_V2_Models_Size_ToString_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Size.ToString
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Models.Size.ToString
-  nameWithType: Size.ToString
-- uid: Gw2Sharp.WebApi.V2.Models.Size.Width
-  name: Width
-  href: api/Gw2Sharp.WebApi.V2.Models.Size.html#Gw2Sharp_WebApi_V2_Models_Size_Width
-  commentId: P:Gw2Sharp.WebApi.V2.Models.Size.Width
-  fullName: Gw2Sharp.WebApi.V2.Models.Size.Width
-  nameWithType: Size.Width
-- uid: Gw2Sharp.WebApi.V2.Models.Size.Width*
-  name: Width
-  href: api/Gw2Sharp.WebApi.V2.Models.Size.html#Gw2Sharp_WebApi_V2_Models_Size_Width_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Size.Width
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Models.Size.Width
-  nameWithType: Size.Width
 - uid: Gw2Sharp.WebApi.V2.Models.SkillSlot
   name: SkillSlot
   href: api/Gw2Sharp.WebApi.V2.Models.SkillSlot.html
