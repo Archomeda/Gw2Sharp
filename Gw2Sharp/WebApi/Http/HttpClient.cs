@@ -49,7 +49,7 @@ namespace Gw2Sharp.WebApi.Http
         /// <inheritdoc />
         public async Task<IHttpResponse> RequestAsync(IHttpRequest request, CancellationToken cancellationToken = default)
         {
-            var responseStream = await this.RequestStreamAsync(request, cancellationToken).ConfigureAwait(false);
+            using var responseStream = await this.RequestStreamAsync(request, cancellationToken).ConfigureAwait(false);
             using var streamReader = new StreamReader(responseStream.ContentStream);
             string responseText = await streamReader.ReadToEndAsync().ConfigureAwait(false);
             return new HttpResponse(responseText, responseStream.StatusCode, responseStream.RequestHeaders, responseStream.ResponseHeaders);

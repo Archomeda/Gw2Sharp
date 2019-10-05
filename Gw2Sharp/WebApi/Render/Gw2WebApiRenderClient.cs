@@ -35,7 +35,7 @@ namespace Gw2Sharp.WebApi.Render
             return this.Connection.RenderCacheMethod.GetOrUpdateAsync<byte[]>(CACHE_CATEGORY, renderUrl, async () =>
             {
                 var request = new HttpRequest(new Uri(renderUrl));
-                var response = await this.Connection.HttpClient.RequestStreamAsync(request, cancellationToken).ConfigureAwait(false);
+                using var response = await this.Connection.HttpClient.RequestStreamAsync(request, cancellationToken).ConfigureAwait(false);
 
                 using var memoryStream = new MemoryStream();
                 await response.ContentStream.CopyToAsync(memoryStream).ConfigureAwait(false);

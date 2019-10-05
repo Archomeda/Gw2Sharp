@@ -60,5 +60,31 @@ namespace Gw2Sharp.WebApi.Http
 
         /// <inheritdoc />
         public IReadOnlyDictionary<string, string> ResponseHeaders { get; } = new Dictionary<string, string>().AsReadOnly();
+
+
+        private bool isDisposed = false; // To detect redundant calls
+
+        /// <summary>
+        /// Disposes the object.
+        /// </summary>
+        /// <param name="isDisposing">Dispose managed resources.</param>
+        protected virtual void Dispose(bool isDisposing)
+        {
+            if (!this.isDisposed)
+            {
+                if (isDisposing)
+                {
+                    this.ContentStream?.Dispose();
+                }
+                this.isDisposed = true;
+            }
+        }
+
+        /// <inheritdoc />
+        public void Dispose()
+        {
+            this.Dispose(true);
+            GC.SuppressFinalize(this);
+        }
     }
 }

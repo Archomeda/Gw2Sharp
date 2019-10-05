@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
@@ -7,7 +8,7 @@ namespace Gw2Sharp.WebApi.Http
     /// <summary>
     /// An interface for implementing a streaming web API response.
     /// </summary>
-    public interface IHttpResponseStream
+    public interface IHttpResponseStream : IDisposable
     {
         /// <summary>
         /// The content stream.
