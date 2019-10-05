@@ -8,6 +8,7 @@ skip_branch_with_pr: true
 branches:
   except:
     - gh-pages
+    - /^build-number-/
 
 before_build:
   - dotnet restore
