@@ -58,9 +58,9 @@ jobs:
         name: Download build number
         with:
           name: BUILD_NUMBER
-      - uses: Restore build number
+      - uses: einaregilsson/build-number@v1
+        name: Restore build number
         id: buildnumber
-        uses: einaregilsson/build-number@v1
       - uses: actions/setup-dotnet@v1
         name: Install .NET Core ${{ matrix.dotnet }}
         with:
