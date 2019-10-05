@@ -4,11 +4,11 @@ version: '{build}'
 configuration: Debug
 
 skip_branch_with_pr: true
+skip_tags: true
 
 branches:
   except:
     - gh-pages
-    - /^build-number-/
 
 before_build:
   - dotnet restore
