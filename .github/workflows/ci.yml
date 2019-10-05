@@ -3,6 +3,22 @@ name: CI
 on: [push]
 
 jobs:
+  # Determine the build number
+  buildnumber:
+    name: Build number
+    runs-on: ubuntu-latest
+    steps:
+      - uses: einaregilsson/build-number@v1
+        name: Generate build number
+        id: buildnumber
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/upload-artifact@v1
+        name: Upload build number
+        with:
+          name: BUILD_NUMBER
+          path: BUILD_NUMBER
+
   # Unit tests
   test:
     name: Test
@@ -30,7 +46,7 @@ jobs:
   nightly:
     name: Nightly build
     runs-on: windows-latest
-    needs: test
+    needs: [buildnumber, test]
     strategy:
       fail-fast: false
       matrix:
@@ -38,6 +54,13 @@ jobs:
           - "3.0.100"
     steps:
       - uses: actions/checkout@v1
+      - uses: actions/download-artifact@v1
+        name: Download build number
+        with:
+          name: BUILD_NUMBER
+      - uses: Restore build number
+        id: buildnumber
+        uses: einaregilsson/build-number@v1
       - uses: actions/setup-dotnet@v1
         name: Install .NET Core ${{ matrix.dotnet }}
         with:
@@ -49,7 +72,7 @@ jobs:
       - name: Patch package version
         shell: powershell
         run: |
-          $version = (GitVersion /output json | ConvertFrom-Json).AssemblySemFileVer -replace "origin/","" -replace "[^a-zA-Z0-9-_.]","-"
+          $version = (GitVersion /output json | ConvertFrom-Json).AssemblySemFileVer -replace "origin/","" -replace "[^a-zA-Z0-9-_.]","-" -replace "(\d+\.\d+\.\d+)(.*)","`$1.$env:BUILD_NUMBER`$2"
           Write-Output "NuGet package version: $version"
 
           (Get-Content Gw2Sharp/Gw2Sharp.csproj) `
