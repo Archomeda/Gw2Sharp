@@ -129,16 +129,16 @@ namespace Gw2Sharp.WebApi.Caching
         private bool isDisposed = false; // To detect redundant calls
 
         /// <inheritdoc />
-        protected override void Dispose(bool disposing)
+        protected override void Dispose(bool isDisposing)
         {
             if (!this.isDisposed)
             {
-                if (disposing)
+                if (isDisposing)
                 {
                     this.gcTimer.Dispose();
                 }
 
-                base.Dispose(disposing);
+                base.Dispose(isDisposing);
                 this.isDisposed = true;
             }
         }

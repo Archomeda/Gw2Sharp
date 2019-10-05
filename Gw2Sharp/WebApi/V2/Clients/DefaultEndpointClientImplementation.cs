@@ -364,7 +364,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         {
             var headers = new Dictionary<string, string>();
             if (!string.IsNullOrWhiteSpace(schemaVersion))
-                headers.Add("X-Schema-Version", schemaVersion);
+                headers.Add("X-Schema-Version", schemaVersion!);
             return headers;
         }
 

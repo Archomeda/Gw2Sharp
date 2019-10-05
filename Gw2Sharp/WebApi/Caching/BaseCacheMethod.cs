@@ -157,8 +157,8 @@ namespace Gw2Sharp.WebApi.Caching
         /// <summary>
         /// Disposes the object.
         /// </summary>
-        /// <param name="disposing">Dispose managed resources.</param>
-        protected virtual void Dispose(bool disposing) { }
+        /// <param name="isDisposing">Dispose managed resources.</param>
+        protected virtual void Dispose(bool isDisposing) { }
 
         /// <inheritdoc />
         public void Dispose()

@@ -4,6 +4,7 @@ using System.IO;
 using System.IO.Compression;
 using System.Linq;
 using System.Threading.Tasks;
+using Gw2Sharp.Extensions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
@@ -205,8 +206,7 @@ namespace Gw2Sharp.WebApi.Caching
         {
             return ids
                 .Select(id => this.TryGetInternal<T>(category, id))
-                .Where(x => x != null)
-                .Cast<CacheItem<T>>() // Somehow this is needed to get rid of the possible null reference warning
+                .WhereNotNull()
                 .ToDictionary(x => x.Id);
         }
 
@@ -227,17 +227,17 @@ namespace Gw2Sharp.WebApi.Caching
         private bool isDisposed = false; // To detect redundant calls
 
         /// <inheritdoc />
-        protected override void Dispose(bool disposing)
+        protected override void Dispose(bool isDisposing)
         {
             if (!this.isDisposed)
             {
-                if (disposing)
+                if (isDisposing)
                 {
                     this.archive.Dispose();
                     this.archiveStream.Dispose();
                 }
 
-                base.Dispose(disposing);
+                base.Dispose(isDisposing);
                 this.isDisposed = true;
             }
         }
