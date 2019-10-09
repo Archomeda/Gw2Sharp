@@ -43,6 +43,13 @@ namespace Gw2Sharp.WebApi.V2.Clients
         IAccountDyesClient Dyes { get; }
 
         /// <summary>
+        /// Gets the unlocked emotes.
+        /// Each element can be resolved against <see cref="IGw2WebApiV2Client.Emotes"/>.
+        /// Requires scopes: account, progression, unlocks.
+        /// </summary>
+        IAccountEmotesClient Emotes { get; }
+
+        /// <summary>
         /// Gets the unlocked finishers.
         /// Requires scopes: account, unlocks.
         /// </summary>

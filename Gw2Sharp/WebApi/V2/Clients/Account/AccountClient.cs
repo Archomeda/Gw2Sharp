@@ -17,6 +17,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         private readonly IAccountDailyCraftingClient dailyCrafting;
         private readonly IAccountDungeonsClient dungeons;
         private readonly IAccountDyesClient dyes;
+        private readonly IAccountEmotesClient emotes;
         private readonly IAccountFinishersClient finishers;
         private readonly IAccountGlidersClient gliders;
         private readonly IAccountHomeClient home;
@@ -53,6 +54,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
             this.dailyCrafting = new AccountDailyCraftingClient(connection, gw2Client);
             this.dungeons = new AccountDungeonsClient(connection, gw2Client);
             this.dyes = new AccountDyesClient(connection, gw2Client);
+            this.emotes = new AccountEmotesClient(connection, gw2Client);
             this.finishers = new AccountFinishersClient(connection, gw2Client);
             this.gliders = new AccountGlidersClient(connection, gw2Client);
             this.home = new AccountHomeClient(connection, gw2Client);
@@ -90,6 +92,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
 
         /// <inheritdoc />
         public virtual IAccountDyesClient Dyes => this.dyes;
+
+        /// <inheritdoc />
+        public virtual IAccountEmotesClient Emotes => this.emotes;
 
         /// <inheritdoc />
         public virtual IAccountFinishersClient Finishers => this.finishers;

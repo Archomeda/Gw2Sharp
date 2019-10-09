@@ -21,6 +21,7 @@
     <None Remove="TestFiles\Account\AccountDailyCrafting.json" />
     <None Remove="TestFiles\Account\AccountDungeons.json" />
     <None Remove="TestFiles\Account\AccountDyes.json" />
+    <None Remove="TestFiles\Account\AccountEmotes.json" />
     <None Remove="TestFiles\Account\AccountFinishers.json" />
     <None Remove="TestFiles\Account\AccountGliders.json" />
     <None Remove="TestFiles\Account\AccountHomeCats.json" />
@@ -127,6 +128,9 @@
     <None Remove="TestFiles\Emblem\EmblemForegrounds.bulk.json" />
     <None Remove="TestFiles\Emblem\EmblemForegrounds.ids.json" />
     <None Remove="TestFiles\Emblem\EmblemForegrounds.single.json" />
+    <None Remove="TestFiles\Emotes\Emotes.bulk.json" />
+    <None Remove="TestFiles\Emotes\Emotes.ids.json" />
+    <None Remove="TestFiles\Emotes\Emotes.single.json" />
     <None Remove="TestFiles\Files\Files.bulk.json" />
     <None Remove="TestFiles\Files\Files.ids.json" />
     <None Remove="TestFiles\Files\Files.single.json" />
@@ -258,6 +262,7 @@
     <EmbeddedResource Include="TestFiles\Account\AccountDailyCrafting.json" />
     <EmbeddedResource Include="TestFiles\Account\AccountDungeons.json" />
     <EmbeddedResource Include="TestFiles\Account\AccountDyes.json" />
+    <EmbeddedResource Include="TestFiles\Account\AccountEmotes.json" />
     <EmbeddedResource Include="TestFiles\Account\AccountFinishers.json" />
     <EmbeddedResource Include="TestFiles\Account\AccountGliders.json" />
     <EmbeddedResource Include="TestFiles\Account\AccountHomeCats.json" />
@@ -364,6 +369,9 @@
     <EmbeddedResource Include="TestFiles\Emblem\EmblemForegrounds.bulk.json" />
     <EmbeddedResource Include="TestFiles\Emblem\EmblemForegrounds.ids.json" />
     <EmbeddedResource Include="TestFiles\Emblem\EmblemForegrounds.single.json" />
+    <EmbeddedResource Include="TestFiles\Emotes\Emotes.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Emotes\Emotes.ids.json" />
+    <EmbeddedResource Include="TestFiles\Emotes\Emotes.single.json" />
     <EmbeddedResource Include="TestFiles\Files\Files.bulk.json" />
     <EmbeddedResource Include="TestFiles\Files\Files.ids.json" />
     <EmbeddedResource Include="TestFiles\Files\Files.single.json" />

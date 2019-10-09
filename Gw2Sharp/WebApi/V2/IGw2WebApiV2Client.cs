@@ -75,6 +75,11 @@ namespace Gw2Sharp.WebApi.V2
         IEmblemClient Emblem { get; }
 
         /// <summary>
+        /// Gets the emotes.
+        /// </summary>
+        IEmotesClient Emotes { get; }
+
+        /// <summary>
         /// Gets the files.
         /// </summary>
         IFilesClient Files { get; }

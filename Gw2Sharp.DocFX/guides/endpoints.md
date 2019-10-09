@@ -26,6 +26,7 @@ For your convenience, the following list gives an overview of the web API endpoi
  /v2/account/dailycrafting | 🔑📆 | [`Gw2Client.WebApi.V2.Account.DailyCrafting`](../api/Gw2Sharp.WebApi.V2.Clients.AccountDailyCraftingClient.html)
  /v2/account/dungeons | 🔑📆 | [`Gw2Client.WebApi.V2.Account.Dungeons`](../api/Gw2Sharp.WebApi.V2.Clients.AccountDungeonsClient.html)
  /v2/account/dyes | 🔑📆 | [`Gw2Client.WebApi.V2.Account.Dyes`](../api/Gw2Sharp.WebApi.V2.Clients.AccountDyesClient.html)
+ /v2/account/emotes | 🔑 | [`Gw2Client.WebApi.V2.Account.Emotes`](../api/Gw2Sharp.WebApi.V2.Clients.AccountEmotesClient.html)
  /v2/account/finishers | 🔑📆 | [`Gw2Client.WebApi.V2.Account.Finishers`](../api/Gw2Sharp.WebApi.V2.Clients.AccountFinishersClient.html)
  /v2/account/gliders | 🔑📆 | [`Gw2Client.WebApi.V2.Account.Gliders`](../api/Gw2Sharp.WebApi.V2.Clients.AccountGlidersClient.html)
  /v2/account/home | 🔑📆 | [`Gw2Client.WebApi.V2.Account.Home`](../api/Gw2Sharp.WebApi.V2.Clients.AccountHomeClient.html)

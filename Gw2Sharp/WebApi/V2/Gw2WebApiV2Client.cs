@@ -26,6 +26,7 @@ namespace Gw2Sharp.WebApi.V2
         private readonly IDailyCraftingClient dailyCrafting;
         private readonly IDungeonsClient dungeons;
         private readonly IEmblemClient emblem;
+        private readonly IEmotesClient emotes;
         private readonly IFilesClient files;
         private readonly IFinishersClient finishers;
         private readonly IGlidersClient gliders;
@@ -81,6 +82,7 @@ namespace Gw2Sharp.WebApi.V2
             this.dailyCrafting = new DailyCraftingClient(connection, gw2Client);
             this.dungeons = new DungeonsClient(connection, gw2Client);
             this.emblem = new EmblemClient(connection, gw2Client);
+            this.emotes = new EmotesClient(connection, gw2Client);
             this.files = new FilesClient(connection, gw2Client);
             this.finishers = new FinishersClient(connection, gw2Client);
             this.gliders = new GlidersClient(connection, gw2Client);
@@ -148,6 +150,9 @@ namespace Gw2Sharp.WebApi.V2
 
         /// <inheritdoc />
         public virtual IEmblemClient Emblem => this.emblem;
+
+        /// <inheritdoc />
+        public virtual IEmotesClient Emotes => this.emotes;
 
         /// <inheritdoc />
         public virtual IFilesClient Files => this.files;

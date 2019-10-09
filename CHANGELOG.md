@@ -1,5 +1,10 @@
 # Gw2Sharp History
 
+## 0.7.3
+### Endpoints
+- Add `/v2/account/emotes`
+- Add `/v2/emotes`
+
 ## 0.7.1
 ### Services
 - Add Mumble Link client as `Gw2MumbleClient`, which can be accessed through `Gw2Client.Mumble` ([#7](https://github.com/Archomeda/Gw2Sharp/issues/7), [#16](https://github.com/Archomeda/Gw2Sharp/pull/16))

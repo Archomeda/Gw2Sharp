@@ -1,0 +1,48 @@
+[
+  {
+    "commands": [
+      "/geargrind",
+      "/coureur",
+      "/Endlos",
+      "/corredor"
+    ],
+    "id": "geargrind",
+    "unlock_items": [
+      20312
+    ]
+  },
+  {
+    "commands": [
+      "/rockout",
+      "/hardrock",
+      "/Abrocken",
+      "/rockear"
+    ],
+    "id": "rockout",
+    "unlock_items": [
+      91956
+    ]
+  },
+  {
+    "commands": [
+      "/shuffle",
+      "/mezclador"
+    ],
+    "id": "shuffle",
+    "unlock_items": [
+      20312
+    ]
+  },
+  {
+    "commands": [
+      "/step",
+      "/esquive",
+      "/Schritt",
+      "/paso"
+    ],
+    "id": "step",
+    "unlock_items": [
+      20312
+    ]
+  }
+]
