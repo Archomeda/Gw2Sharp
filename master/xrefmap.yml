@@ -5769,6 +5769,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.AccountClient.Dyes
   nameWithType: AccountClient.Dyes
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountClient.Emotes
+  name: Emotes
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountClient.html#Gw2Sharp_WebApi_V2_Clients_AccountClient_Emotes
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.AccountClient.Emotes
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountClient.Emotes
+  nameWithType: AccountClient.Emotes
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountClient.Emotes*
+  name: Emotes
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountClient.html#Gw2Sharp_WebApi_V2_Clients_AccountClient_Emotes_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.AccountClient.Emotes
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountClient.Emotes
+  nameWithType: AccountClient.Emotes
 - uid: Gw2Sharp.WebApi.V2.Clients.AccountClient.Finishers
   name: Finishers
   href: api/Gw2Sharp.WebApi.V2.Clients.AccountClient.html#Gw2Sharp_WebApi_V2_Clients_AccountClient_Finishers
@@ -6112,6 +6125,25 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.AccountDyesClient.AccountDyesClient
   nameWithType: AccountDyesClient.AccountDyesClient
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountEmotesClient
+  name: AccountEmotesClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountEmotesClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.AccountEmotesClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountEmotesClient
+  nameWithType: AccountEmotesClient
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountEmotesClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client)
+  name: AccountEmotesClient(IConnection, IGw2Client)
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountEmotesClient.html#Gw2Sharp_WebApi_V2_Clients_AccountEmotesClient__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.AccountEmotesClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client)
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountEmotesClient.AccountEmotesClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client)
+  nameWithType: AccountEmotesClient.AccountEmotesClient(IConnection, IGw2Client)
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountEmotesClient.#ctor*
+  name: AccountEmotesClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountEmotesClient.html#Gw2Sharp_WebApi_V2_Clients_AccountEmotesClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.AccountEmotesClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountEmotesClient.AccountEmotesClient
+  nameWithType: AccountEmotesClient.AccountEmotesClient
 - uid: Gw2Sharp.WebApi.V2.Clients.AccountFinishersClient
   name: AccountFinishersClient
   href: api/Gw2Sharp.WebApi.V2.Clients.AccountFinishersClient.html
@@ -9893,6 +9925,25 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.EmblemForegroundsClient.EmblemForegroundsClient
   nameWithType: EmblemForegroundsClient.EmblemForegroundsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.EmotesClient
+  name: EmotesClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.EmotesClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.EmotesClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.EmotesClient
+  nameWithType: EmotesClient
+- uid: Gw2Sharp.WebApi.V2.Clients.EmotesClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client)
+  name: EmotesClient(IConnection, IGw2Client)
+  href: api/Gw2Sharp.WebApi.V2.Clients.EmotesClient.html#Gw2Sharp_WebApi_V2_Clients_EmotesClient__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.EmotesClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client)
+  fullName: Gw2Sharp.WebApi.V2.Clients.EmotesClient.EmotesClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client)
+  nameWithType: EmotesClient.EmotesClient(IConnection, IGw2Client)
+- uid: Gw2Sharp.WebApi.V2.Clients.EmotesClient.#ctor*
+  name: EmotesClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.EmotesClient.html#Gw2Sharp_WebApi_V2_Clients_EmotesClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.EmotesClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.EmotesClient.EmotesClient
+  nameWithType: EmotesClient.EmotesClient
 - uid: Gw2Sharp.WebApi.V2.Clients.EndpointPathAttribute
   name: EndpointPathAttribute
   href: api/Gw2Sharp.WebApi.V2.Clients.EndpointPathAttribute.html
@@ -10759,6 +10810,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.IAccountClient.Dyes
   nameWithType: IAccountClient.Dyes
+- uid: Gw2Sharp.WebApi.V2.Clients.IAccountClient.Emotes
+  name: Emotes
+  href: api/Gw2Sharp.WebApi.V2.Clients.IAccountClient.html#Gw2Sharp_WebApi_V2_Clients_IAccountClient_Emotes
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.IAccountClient.Emotes
+  fullName: Gw2Sharp.WebApi.V2.Clients.IAccountClient.Emotes
+  nameWithType: IAccountClient.Emotes
+- uid: Gw2Sharp.WebApi.V2.Clients.IAccountClient.Emotes*
+  name: Emotes
+  href: api/Gw2Sharp.WebApi.V2.Clients.IAccountClient.html#Gw2Sharp_WebApi_V2_Clients_IAccountClient_Emotes_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.IAccountClient.Emotes
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.IAccountClient.Emotes
+  nameWithType: IAccountClient.Emotes
 - uid: Gw2Sharp.WebApi.V2.Clients.IAccountClient.Finishers
   name: Finishers
   href: api/Gw2Sharp.WebApi.V2.Clients.IAccountClient.html#Gw2Sharp_WebApi_V2_Clients_IAccountClient_Finishers
@@ -11050,6 +11114,12 @@ references:
   commentId: T:Gw2Sharp.WebApi.V2.Clients.IAccountDyesClient
   fullName: Gw2Sharp.WebApi.V2.Clients.IAccountDyesClient
   nameWithType: IAccountDyesClient
+- uid: Gw2Sharp.WebApi.V2.Clients.IAccountEmotesClient
+  name: IAccountEmotesClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.IAccountEmotesClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.IAccountEmotesClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.IAccountEmotesClient
+  nameWithType: IAccountEmotesClient
 - uid: Gw2Sharp.WebApi.V2.Clients.IAccountFinishersClient
   name: IAccountFinishersClient
   href: api/Gw2Sharp.WebApi.V2.Clients.IAccountFinishersClient.html
@@ -13025,6 +13095,12 @@ references:
   commentId: T:Gw2Sharp.WebApi.V2.Clients.IEmblemForegroundsClient
   fullName: Gw2Sharp.WebApi.V2.Clients.IEmblemForegroundsClient
   nameWithType: IEmblemForegroundsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.IEmotesClient
+  name: IEmotesClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.IEmotesClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.IEmotesClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.IEmotesClient
+  nameWithType: IEmotesClient
 - uid: Gw2Sharp.WebApi.V2.Clients.IEndpointClient
   name: IEndpointClient
   href: api/Gw2Sharp.WebApi.V2.Clients.IEndpointClient.html
@@ -15577,6 +15653,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Emblem
   nameWithType: Gw2WebApiV2Client.Emblem
+- uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Emotes
+  name: Emotes
+  href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_Emotes
+  commentId: P:Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Emotes
+  fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Emotes
+  nameWithType: Gw2WebApiV2Client.Emotes
+- uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Emotes*
+  name: Emotes
+  href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_Emotes_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Emotes
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Emotes
+  nameWithType: Gw2WebApiV2Client.Emotes
 - uid: Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.Files
   name: Files
   href: api/Gw2Sharp.WebApi.V2.Gw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_Gw2WebApiV2Client_Files
@@ -16131,6 +16220,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Emblem
   nameWithType: IGw2WebApiV2Client.Emblem
+- uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Emotes
+  name: Emotes
+  href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_Emotes
+  commentId: P:Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Emotes
+  fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Emotes
+  nameWithType: IGw2WebApiV2Client.Emotes
+- uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Emotes*
+  name: Emotes
+  href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_Emotes_
+  commentId: Overload:Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Emotes
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Emotes
+  nameWithType: IGw2WebApiV2Client.Emotes
 - uid: Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.Files
   name: Files
   href: api/Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_Files
@@ -21932,6 +22034,51 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.Emblem.Layers
   nameWithType: Emblem.Layers
+- uid: Gw2Sharp.WebApi.V2.Models.Emote
+  name: Emote
+  href: api/Gw2Sharp.WebApi.V2.Models.Emote.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.Emote
+  fullName: Gw2Sharp.WebApi.V2.Models.Emote
+  nameWithType: Emote
+- uid: Gw2Sharp.WebApi.V2.Models.Emote.Commands
+  name: Commands
+  href: api/Gw2Sharp.WebApi.V2.Models.Emote.html#Gw2Sharp_WebApi_V2_Models_Emote_Commands
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Emote.Commands
+  fullName: Gw2Sharp.WebApi.V2.Models.Emote.Commands
+  nameWithType: Emote.Commands
+- uid: Gw2Sharp.WebApi.V2.Models.Emote.Commands*
+  name: Commands
+  href: api/Gw2Sharp.WebApi.V2.Models.Emote.html#Gw2Sharp_WebApi_V2_Models_Emote_Commands_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Emote.Commands
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Emote.Commands
+  nameWithType: Emote.Commands
+- uid: Gw2Sharp.WebApi.V2.Models.Emote.Id
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.Emote.html#Gw2Sharp_WebApi_V2_Models_Emote_Id
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Emote.Id
+  fullName: Gw2Sharp.WebApi.V2.Models.Emote.Id
+  nameWithType: Emote.Id
+- uid: Gw2Sharp.WebApi.V2.Models.Emote.Id*
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.Emote.html#Gw2Sharp_WebApi_V2_Models_Emote_Id_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Emote.Id
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Emote.Id
+  nameWithType: Emote.Id
+- uid: Gw2Sharp.WebApi.V2.Models.Emote.UnlockItems
+  name: UnlockItems
+  href: api/Gw2Sharp.WebApi.V2.Models.Emote.html#Gw2Sharp_WebApi_V2_Models_Emote_UnlockItems
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Emote.UnlockItems
+  fullName: Gw2Sharp.WebApi.V2.Models.Emote.UnlockItems
+  nameWithType: Emote.UnlockItems
+- uid: Gw2Sharp.WebApi.V2.Models.Emote.UnlockItems*
+  name: UnlockItems
+  href: api/Gw2Sharp.WebApi.V2.Models.Emote.html#Gw2Sharp_WebApi_V2_Models_Emote_UnlockItems_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Emote.UnlockItems
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Emote.UnlockItems
+  nameWithType: Emote.UnlockItems
 - uid: Gw2Sharp.WebApi.V2.Models.EquipmentItemStats
   name: EquipmentItemStats
   href: api/Gw2Sharp.WebApi.V2.Models.EquipmentItemStats.html
