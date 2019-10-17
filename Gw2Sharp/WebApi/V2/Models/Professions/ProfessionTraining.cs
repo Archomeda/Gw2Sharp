@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Models
@@ -25,6 +26,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The profession training track steps.
         /// </summary>
-        public IReadOnlyList<ProfessionTrainingTrackStep> Track { get; set; } = new List<ProfessionTrainingTrackStep>();
+        public IReadOnlyList<ProfessionTrainingTrackStep> Track { get; set; } = Array.Empty<ProfessionTrainingTrackStep>();
     }
 }

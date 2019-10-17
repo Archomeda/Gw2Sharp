@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Models
@@ -20,7 +21,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The color base RGB.
         /// </summary>
-        public IReadOnlyList<int> BaseRgb { get; set; } = new List<int>();
+        public IReadOnlyList<int> BaseRgb { get; set; } = Array.Empty<int>();
 
         /// <summary>
         /// The color cloth material.
@@ -51,6 +52,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The list of color categories.
         /// </summary>
-        public IReadOnlyList<string> Categories { get; set; } = new List<string>();
+        public IReadOnlyList<string> Categories { get; set; } = Array.Empty<string>();
     }
 }

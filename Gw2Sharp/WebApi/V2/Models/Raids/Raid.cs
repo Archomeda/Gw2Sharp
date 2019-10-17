@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Models
@@ -15,6 +16,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The raid wings.
         /// </summary>
-        public IReadOnlyList<RaidWing> Wings { get; set; } = new List<RaidWing>();
+        public IReadOnlyList<RaidWing> Wings { get; set; } = Array.Empty<RaidWing>();
     }
 }

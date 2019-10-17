@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Models
@@ -35,6 +36,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The division tiers.
         /// </summary>
-        public IReadOnlyList<PvpSeasonDivisionTier> Tiers { get; set; } = new List<PvpSeasonDivisionTier>();
+        public IReadOnlyList<PvpSeasonDivisionTier> Tiers { get; set; } = Array.Empty<PvpSeasonDivisionTier>();
     }
 }

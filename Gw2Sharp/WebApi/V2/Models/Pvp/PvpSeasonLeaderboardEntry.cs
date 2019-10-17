@@ -26,6 +26,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The leaderboard scores.
         /// </summary>
-        public IReadOnlyList<PvpSeasonLeaderboardEntryScore> Scores { get; set; } = new List<PvpSeasonLeaderboardEntryScore>();
+        public IReadOnlyList<PvpSeasonLeaderboardEntryScore> Scores { get; set; } = Array.Empty<PvpSeasonLeaderboardEntryScore>();
     }
 }

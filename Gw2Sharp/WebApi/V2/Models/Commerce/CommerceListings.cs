@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Models
@@ -16,11 +17,11 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The buy listings.
         /// </summary>
-        public IReadOnlyList<CommerceListing> Buys { get; set; } = new List<CommerceListing>();
+        public IReadOnlyList<CommerceListing> Buys { get; set; } = Array.Empty<CommerceListing>();
 
         /// <summary>
         /// The sell listings.
         /// </summary>
-        public IReadOnlyList<CommerceListing> Sells { get; set; } = new List<CommerceListing>();
+        public IReadOnlyList<CommerceListing> Sells { get; set; } = Array.Empty<CommerceListing>();
     }
 }

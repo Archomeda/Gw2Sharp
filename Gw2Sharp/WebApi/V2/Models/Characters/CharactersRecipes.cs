@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Models
@@ -11,6 +12,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// The list of character recipes.
         /// Each element can be resolved against <see cref="IGw2WebApiV2Client.Recipes"/>.
         /// </summary>
-        public IReadOnlyList<int> Recipes { get; set; } = new List<int>();
+        public IReadOnlyList<int> Recipes { get; set; } = Array.Empty<int>();
     }
 }

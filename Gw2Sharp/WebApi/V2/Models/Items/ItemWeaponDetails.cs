@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Models
@@ -35,7 +36,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The item infusion slots.
         /// </summary>
-        public IReadOnlyList<ItemInfusionSlot> InfusionSlots { get; set; } = new List<ItemInfusionSlot>();
+        public IReadOnlyList<ItemInfusionSlot> InfusionSlots { get; set; } = Array.Empty<ItemInfusionSlot>();
 
         /// <summary>
         /// The item infix upgrade.
@@ -59,6 +60,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// The item stat choices.
         /// Each element can be resolved against <see cref="IGw2WebApiV2Client.Itemstats"/>.
         /// </summary>
-        public IReadOnlyList<int> StatChoices { get; set; } = new List<int>();
+        public IReadOnlyList<int> StatChoices { get; set; } = Array.Empty<int>();
     }
 }

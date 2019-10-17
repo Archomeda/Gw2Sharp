@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Models
@@ -10,6 +11,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The list of character trainings.
         /// </summary>
-        public IReadOnlyList<CharacterTraining> Training { get; set; } = new List<CharacterTraining>();
+        public IReadOnlyList<CharacterTraining> Training { get; set; } = Array.Empty<CharacterTraining>();
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Models
@@ -10,6 +11,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The list of the character inventory bags.
         /// </summary>
-        public IReadOnlyList<CharacterInventoryBag> Bags { get; set; } = new List<CharacterInventoryBag>();
+        public IReadOnlyList<CharacterInventoryBag> Bags { get; set; } = Array.Empty<CharacterInventoryBag>();
     }
 }

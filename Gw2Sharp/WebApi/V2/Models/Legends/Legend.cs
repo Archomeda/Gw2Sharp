@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Models
@@ -34,6 +35,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// The list of legend utility skill ids.
         /// Each element can be resolved against <see cref="IGw2WebApiV2Client.Skills"/>.
         /// </summary>
-        public IReadOnlyList<int> Utilities { get; set; } = new List<int>();
+        public IReadOnlyList<int> Utilities { get; set; } = Array.Empty<int>();
     }
 }

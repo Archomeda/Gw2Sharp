@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Models
@@ -15,6 +16,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The emblem layer images.
         /// </summary>
-        public IReadOnlyList<RenderUrl> Layers { get; set; } = new List<RenderUrl>();
+        public IReadOnlyList<RenderUrl> Layers { get; set; } = Array.Empty<RenderUrl>();
     }
 }

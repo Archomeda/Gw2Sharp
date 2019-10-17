@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Models
@@ -30,6 +31,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The pet skills.
         /// </summary>
-        public IReadOnlyList<PetSkill> Skills { get; set; } = new List<PetSkill>();
+        public IReadOnlyList<PetSkill> Skills { get; set; } = Array.Empty<PetSkill>();
     }
 }

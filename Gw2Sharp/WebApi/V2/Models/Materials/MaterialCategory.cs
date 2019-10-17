@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Models
@@ -21,7 +22,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// The items that can be stored in this material category.
         /// Each element can be resolved against <see cref="IGw2WebApiV2Client.Items"/>.
         /// </summary>
-        public IReadOnlyList<int> Items { get; set; } = new List<int>();
+        public IReadOnlyList<int> Items { get; set; } = Array.Empty<int>();
 
         /// <summary>
         /// The material category order.

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Gw2Sharp.WebApi.V2.Clients;
 
@@ -26,7 +27,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The mount skin dye slots.
         /// </summary>
-        public IReadOnlyList<MountSkinDyeSlot> DyeSlots { get; set; } = new List<MountSkinDyeSlot>();
+        public IReadOnlyList<MountSkinDyeSlot> DyeSlots { get; set; } = Array.Empty<MountSkinDyeSlot>();
 
         /// <summary>
         /// The mount type.

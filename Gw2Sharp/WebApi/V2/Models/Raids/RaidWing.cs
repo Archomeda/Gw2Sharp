@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Models
@@ -15,6 +16,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The raid wing events.
         /// </summary>
-        public IReadOnlyList<RaidWingEvent> Events { get; set; } = new List<RaidWingEvent>();
+        public IReadOnlyList<RaidWingEvent> Events { get; set; } = Array.Empty<RaidWingEvent>();
     }
 }

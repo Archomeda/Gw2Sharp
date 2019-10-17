@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Models
@@ -21,6 +22,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// The bag inventory with a list of items.
         /// If a slot is empty, that element is <c>null</c>.
         /// </summary>
-        public IReadOnlyList<AccountItem?> Inventory { get; set; } = new List<AccountItem?>();
+        public IReadOnlyList<AccountItem?> Inventory { get; set; } = Array.Empty<AccountItem?>();
     }
 }

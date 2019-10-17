@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Models
@@ -21,6 +22,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// The racial skills.
         /// Each element can be resolved against <see cref="IGw2WebApiV2Client.Skills"/>.
         /// </summary>
-        public IReadOnlyList<int> Skills { get; set; } = new List<int>();
+        public IReadOnlyList<int> Skills { get; set; } = Array.Empty<int>();
     }
 }

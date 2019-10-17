@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Models
@@ -41,6 +42,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The PvP levels for this rank.
         /// </summary>
-        public IReadOnlyList<PvpRankLevel> Levels { get; set; } = new List<PvpRankLevel>();
+        public IReadOnlyList<PvpRankLevel> Levels { get; set; } = Array.Empty<PvpRankLevel>();
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Models
@@ -10,6 +11,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The list of the character equipment.
         /// </summary>
-        public IReadOnlyList<CharacterEquipmentItem> Equipment { get; set; } = new List<CharacterEquipmentItem>();
+        public IReadOnlyList<CharacterEquipmentItem> Equipment { get; set; } = Array.Empty<CharacterEquipmentItem>();
     }
 }

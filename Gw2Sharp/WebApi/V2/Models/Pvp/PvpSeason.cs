@@ -36,12 +36,12 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The PvP season divisions.
         /// </summary>
-        public IReadOnlyList<PvpSeasonDivision> Divisions { get; set; } = new List<PvpSeasonDivision>();
+        public IReadOnlyList<PvpSeasonDivision> Divisions { get; set; } = Array.Empty<PvpSeasonDivision>();
 
         /// <summary>
         /// The PvP season ranks.
         /// </summary>
-        public IReadOnlyList<PvpSeasonRank> Ranks { get; set; } = new List<PvpSeasonRank>();
+        public IReadOnlyList<PvpSeasonRank> Ranks { get; set; } = Array.Empty<PvpSeasonRank>();
 
         /// <summary>
         /// The PvP season leaderboards.

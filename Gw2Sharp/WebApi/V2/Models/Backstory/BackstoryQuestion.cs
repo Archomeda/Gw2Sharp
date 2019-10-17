@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Gw2Sharp.WebApi.V2.Clients;
 
@@ -27,7 +28,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// The list of backstory question answer ids.
         /// Each element can be resolved against <see cref="IBackstoryClient.Answers"/>.
         /// </summary>
-        public IReadOnlyList<string> Answers { get; set; } = new List<string>();
+        public IReadOnlyList<string> Answers { get; set; } = Array.Empty<string>();
 
         /// <summary>
         /// The backstory question order.

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Gw2Sharp.Json.Converters;
 using Gw2Sharp.Models;
@@ -43,7 +44,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The available map floors.
         /// </summary>
-        public IReadOnlyList<int> Floors { get; set; } = new List<int>();
+        public IReadOnlyList<int> Floors { get; set; } = Array.Empty<int>();
 
         /// <summary>
         /// The region id.

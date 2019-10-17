@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Models
@@ -20,6 +21,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The participating users.
         /// </summary>
-        public IReadOnlyList<string> Participants { get; set; } = new List<string>();
+        public IReadOnlyList<string> Participants { get; set; } = Array.Empty<string>();
     }
 }

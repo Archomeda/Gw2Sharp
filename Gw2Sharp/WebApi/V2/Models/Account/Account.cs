@@ -34,13 +34,13 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// The list of guilds that this account is a member of.
         /// Each element can be resolved against <see cref="IGw2WebApiV2Client.Guild"/>.
         /// </summary>
-        public IReadOnlyList<Guid> Guilds { get; set; } = new List<Guid>();
+        public IReadOnlyList<Guid> Guilds { get; set; } = Array.Empty<Guid>();
 
         /// <summary>
         /// The list of guilds that this account is a leader of.
         /// Each element can be resolved against <see cref="IGw2WebApiV2Client.Guild"/>.
         /// </summary>
-        public IReadOnlyList<Guid> GuildLeader { get; set; } = new List<Guid>();
+        public IReadOnlyList<Guid> GuildLeader { get; set; } = Array.Empty<Guid>();
 
         /// <summary>
         /// The last modification date for this data.

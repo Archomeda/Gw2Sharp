@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Models
@@ -22,6 +23,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The profession weapon skills.
         /// </summary>
-        public IReadOnlyList<ProfessionWeaponSkill> Skills { get; set; } = new List<ProfessionWeaponSkill>();
+        public IReadOnlyList<ProfessionWeaponSkill> Skills { get; set; } = Array.Empty<ProfessionWeaponSkill>();
     }
 }

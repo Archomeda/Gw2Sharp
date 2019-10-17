@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Gw2Sharp.WebApi.V2.Clients;
 
@@ -57,7 +58,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The recipe ingredients.
         /// </summary>
-        public IReadOnlyList<RecipeIngredient> Ingredients { get; set; } = new List<RecipeIngredient>();
+        public IReadOnlyList<RecipeIngredient> Ingredients { get; set; } = Array.Empty<RecipeIngredient>();
 
         /// <summary>
         /// The recipe ingredients from the guild.

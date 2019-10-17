@@ -51,12 +51,12 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The actual flags as interpreted by the library.
         /// </summary>
-        public IReadOnlyList<ApiEnum<T>> List { get; } = new List<ApiEnum<T>>();
+        public IReadOnlyList<ApiEnum<T>> List { get; } = Array.Empty<ApiEnum<T>>();
 
         /// <summary>
         /// Gets the list of unknown enum values.
         /// </summary>
-        public IReadOnlyList<ApiEnum<T>> UnknownList { get; } = new List<ApiEnum<T>>();
+        public IReadOnlyList<ApiEnum<T>> UnknownList { get; } = Array.Empty<ApiEnum<T>>();
 
 
         /// <summary>

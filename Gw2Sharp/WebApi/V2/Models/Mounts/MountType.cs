@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Gw2Sharp.WebApi.V2.Clients;
 
@@ -28,11 +29,11 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// The mount type skin ids.
         /// Each element can be resolved against <see cref="IMountsClient.Skins"/>.
         /// </summary>
-        public IReadOnlyList<int> Skins { get; set; } = new List<int>();
+        public IReadOnlyList<int> Skins { get; set; } = Array.Empty<int>();
 
         /// <summary>
         /// The mount type skills.
         /// </summary>
-        public IReadOnlyList<MountSkill> Skills { get; set; } = new List<MountSkill>();
+        public IReadOnlyList<MountSkill> Skills { get; set; } = Array.Empty<MountSkill>();
     }
 }

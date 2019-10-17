@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Models
@@ -35,6 +36,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The rank tiers.
         /// </summary>
-        public IReadOnlyList<PvpSeasonRankTier> Tiers { get; set; } = new List<PvpSeasonRankTier>();
+        public IReadOnlyList<PvpSeasonRankTier> Tiers { get; set; } = Array.Empty<PvpSeasonRankTier>();
     }
 }

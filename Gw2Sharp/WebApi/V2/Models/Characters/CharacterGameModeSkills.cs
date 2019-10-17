@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Models
@@ -19,7 +20,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// If a utility skill is not selected in a specific slot, that element is <c>null</c>.
         /// Each element can be resolved against <see cref="IGw2WebApiV2Client.Skills"/>.
         /// </summary>
-        public IReadOnlyList<int?> Utilities { get; set; } = new List<int?>();
+        public IReadOnlyList<int?> Utilities { get; set; } = Array.Empty<int?>();
 
         /// <summary>
         /// The elite skill.

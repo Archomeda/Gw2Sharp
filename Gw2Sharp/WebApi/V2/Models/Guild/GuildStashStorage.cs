@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Gw2Sharp.WebApi.V2.Clients;
 
@@ -32,6 +33,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The stash storage inventory.
         /// </summary>
-        public IReadOnlyList<GuildStashItem> Inventory { get; set; } = new List<GuildStashItem>();
+        public IReadOnlyList<GuildStashItem> Inventory { get; set; } = Array.Empty<GuildStashItem>();
     }
 }

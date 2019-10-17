@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Models
@@ -36,6 +37,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// The achievements in the achievement category.
         /// Each element can be resolved against <see cref="IGw2WebApiV2Client.Achievements"/>.
         /// </summary>
-        public IReadOnlyList<int> Achievements { get; set; } = new List<int>();
+        public IReadOnlyList<int> Achievements { get; set; } = Array.Empty<int>();
     }
 }

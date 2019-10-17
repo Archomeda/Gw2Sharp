@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Models
@@ -15,6 +16,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The dungeon paths.
         /// </summary>
-        public IReadOnlyList<DungeonPath> Paths { get; set; } = new List<DungeonPath>();
+        public IReadOnlyList<DungeonPath> Paths { get; set; } = Array.Empty<DungeonPath>();
     }
 }

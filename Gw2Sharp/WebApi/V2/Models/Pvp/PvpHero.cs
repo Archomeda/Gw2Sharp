@@ -46,6 +46,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The hero skins.
         /// </summary>
-        public IReadOnlyList<PvpHeroSkin> Skins { get; set; } = new List<PvpHeroSkin>();
+        public IReadOnlyList<PvpHeroSkin> Skins { get; set; } = Array.Empty<PvpHeroSkin>();
     }
 }

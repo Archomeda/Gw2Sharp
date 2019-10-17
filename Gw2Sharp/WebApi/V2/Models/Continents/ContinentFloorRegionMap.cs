@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Gw2Sharp.Json.Converters;
 using Gw2Sharp.Models;
@@ -65,7 +66,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The map skill challenges (a.k.a. hero points).
         /// </summary>
-        public IReadOnlyList<ContinentFloorRegionMapSkillChallenge> SkillChallenges { get; set; } = new List<ContinentFloorRegionMapSkillChallenge>();
+        public IReadOnlyList<ContinentFloorRegionMapSkillChallenge> SkillChallenges { get; set; } = Array.Empty<ContinentFloorRegionMapSkillChallenge>();
 
         /// <summary>
         /// The map sectors.
@@ -76,11 +77,11 @@ namespace Gw2Sharp.WebApi.V2.Models
         ///// <summary>
         ///// The map adventures.
         ///// </summary>
-        //public IReadOnlyList<ContinentFloorRegionMapAdventure> Adventures { get; set; } = new List<ContinentFloorRegionMapAdventure>();
+        //public IReadOnlyList<ContinentFloorRegionMapAdventure> Adventures { get; set; } = Array.Empty<ContinentFloorRegionMapAdventure>();
 
         /// <summary>
         /// The map mastery points.
         /// </summary>
-        public IReadOnlyList<ContinentFloorRegionMapMasteryPoint> MasteryPoints { get; set; } = new List<ContinentFloorRegionMapMasteryPoint>();
+        public IReadOnlyList<ContinentFloorRegionMapMasteryPoint> MasteryPoints { get; set; } = Array.Empty<ContinentFloorRegionMapMasteryPoint>();
     }
 }

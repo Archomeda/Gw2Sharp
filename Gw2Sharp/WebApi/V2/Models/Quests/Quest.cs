@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Models
@@ -31,6 +32,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The quest goals.
         /// </summary>
-        public IReadOnlyList<QuestGoal> Goals { get; set; } = new List<QuestGoal>();
+        public IReadOnlyList<QuestGoal> Goals { get; set; } = Array.Empty<QuestGoal>();
     }
 }

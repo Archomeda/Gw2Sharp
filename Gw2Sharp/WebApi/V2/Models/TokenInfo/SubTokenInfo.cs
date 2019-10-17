@@ -21,6 +21,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The list of URLs that this subtoken has access to.
         /// </summary>
-        public IReadOnlyList<string> Urls { get; set; } = new List<string>();
+        public IReadOnlyList<string> Urls { get; set; } = Array.Empty<string>();
     }
 }

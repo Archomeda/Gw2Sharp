@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Gw2Sharp.WebApi.V2.Clients;
 
@@ -18,6 +19,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// The colors.
         /// Can be resolved against <see cref="IGw2WebApiV2Client.Colors"/>.
         /// </summary>
-        public IReadOnlyList<int> Colors { get; set; } = new List<int>();
+        public IReadOnlyList<int> Colors { get; set; } = Array.Empty<int>();
     }
 }

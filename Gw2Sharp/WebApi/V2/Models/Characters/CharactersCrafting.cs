@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Models
@@ -10,6 +11,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The list of the character crafting disciplines.
         /// </summary>
-        public IReadOnlyList<CharacterCraftingDiscipline> Crafting { get; set; } = new List<CharacterCraftingDiscipline>();
+        public IReadOnlyList<CharacterCraftingDiscipline> Crafting { get; set; } = Array.Empty<CharacterCraftingDiscipline>();
     }
 }

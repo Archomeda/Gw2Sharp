@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Models
@@ -40,6 +41,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The mastery levels.
         /// </summary>
-        public IReadOnlyList<MasteryLevel> Levels { get; set; } = new List<MasteryLevel>();
+        public IReadOnlyList<MasteryLevel> Levels { get; set; } = Array.Empty<MasteryLevel>();
     }
 }

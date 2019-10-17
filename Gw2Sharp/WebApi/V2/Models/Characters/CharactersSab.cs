@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Models
@@ -10,16 +11,16 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The list of Super Adventure Box zones.
         /// </summary>
-        public IReadOnlyList<CharacterSabZone> Zones { get; set; } = new List<CharacterSabZone>();
+        public IReadOnlyList<CharacterSabZone> Zones { get; set; } = Array.Empty<CharacterSabZone>();
 
         /// <summary>
         /// The list of Super Adventure Box unlocks.
         /// </summary>
-        public IReadOnlyList<CharacterSabUnlock> Unlocks { get; set; } = new List<CharacterSabUnlock>();
+        public IReadOnlyList<CharacterSabUnlock> Unlocks { get; set; } = Array.Empty<CharacterSabUnlock>();
 
         /// <summary>
         /// The list of Super Adventure Box songs.
         /// </summary>
-        public IReadOnlyList<CharacterSabSong> Songs { get; set; } = new List<CharacterSabSong>();
+        public IReadOnlyList<CharacterSabSong> Songs { get; set; } = Array.Empty<CharacterSabSong>();
     }
 }

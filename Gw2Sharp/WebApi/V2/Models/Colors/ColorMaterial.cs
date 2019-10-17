@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Models
@@ -35,6 +36,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The precalculated RGB values.
         /// </summary>
-        public IReadOnlyList<int> Rgb { get; set; } = new List<int>();
+        public IReadOnlyList<int> Rgb { get; set; } = Array.Empty<int>();
     }
 }

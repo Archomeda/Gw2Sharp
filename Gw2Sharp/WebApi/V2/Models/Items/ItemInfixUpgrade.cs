@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Models
@@ -17,7 +18,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The infix upgrade item attributes.
         /// </summary>
-        public IReadOnlyList<ItemUpgradeAttribute> Attributes { get; set; } = new List<ItemUpgradeAttribute>();
+        public IReadOnlyList<ItemUpgradeAttribute> Attributes { get; set; } = Array.Empty<ItemUpgradeAttribute>();
 
         /// <summary>
         /// The infix upgrade buff.

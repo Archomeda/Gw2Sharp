@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Gw2Sharp.WebApi.V2.Clients;
 
@@ -27,6 +28,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// If a sigil is not selected in a specific slot, that value is <c>null</c>.
         /// Each element can be resolved against <see cref="IGw2WebApiV2Client.Items"/>.
         /// </summary>
-        public IReadOnlyList<int?> Sigils { get; set; } = new List<int?>();
+        public IReadOnlyList<int?> Sigils { get; set; } = Array.Empty<int?>();
     }
 }

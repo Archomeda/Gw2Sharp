@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Models
@@ -20,6 +21,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The list of itemstat attributes.
         /// </summary>
-        public IReadOnlyList<ItemstatAttribute> Attributes { get; set; } = new List<ItemstatAttribute>();
+        public IReadOnlyList<ItemstatAttribute> Attributes { get; set; } = Array.Empty<ItemstatAttribute>();
     }
 }

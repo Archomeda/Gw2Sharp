@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Gw2Sharp.Models;
 using Gw2Sharp.WebApi.V2.Clients;
@@ -38,6 +39,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// The continent floors.
         /// Each element can be resolved against <see cref="IContinentsIdClient.Floors"/>.
         /// </summary>
-        public IReadOnlyList<int> Floors { get; set; } = new List<int>();
+        public IReadOnlyList<int> Floors { get; set; } = Array.Empty<int>();
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Models
@@ -15,7 +16,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The team members.
         /// </summary>
-        public IReadOnlyList<GuildTeamMember> Members { get; set; } = new List<GuildTeamMember>();
+        public IReadOnlyList<GuildTeamMember> Members { get; set; } = Array.Empty<GuildTeamMember>();
 
         /// <summary>
         /// The team name.
@@ -40,12 +41,12 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The team games.
         /// </summary>
-        public IReadOnlyList<GuildTeamGame> Games { get; set; } = new List<GuildTeamGame>();
+        public IReadOnlyList<GuildTeamGame> Games { get; set; } = Array.Empty<GuildTeamGame>();
 
         /// <summary>
         /// The team seasons.
         /// If no seasons are available, this value is <c>null</c>.
         /// </summary>
-        public IReadOnlyList<GuildTeamSeason> Seasons { get; set; } = new List<GuildTeamSeason>();
+        public IReadOnlyList<GuildTeamSeason> Seasons { get; set; } = Array.Empty<GuildTeamSeason>();
     }
 }

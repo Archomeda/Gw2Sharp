@@ -76,7 +76,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The list of the character crafting disciplines.
         /// </summary>
-        public IReadOnlyList<CharacterCraftingDiscipline> Crafting { get; set; } = new List<CharacterCraftingDiscipline>();
+        public IReadOnlyList<CharacterCraftingDiscipline> Crafting { get; set; } = Array.Empty<CharacterCraftingDiscipline>();
 
         /// <summary>
         /// The character's current active title.
@@ -88,7 +88,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// The character backstory answers.
         /// Each element can be resolved against <see cref="IBackstoryClient.Answers"/>.
         /// </summary>
-        public IReadOnlyList<string> Backstory { get; set; } = new List<string>();
+        public IReadOnlyList<string> Backstory { get; set; } = Array.Empty<string>();
 
         /// <summary>
         /// The character's WvW abilities.

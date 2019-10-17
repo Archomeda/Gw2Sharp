@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Models
@@ -15,6 +16,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The ladder scorings.
         /// </summary>
-        public IReadOnlyList<PvpSeasonLeaderboardScoring> Scorings { get; set; } = new List<PvpSeasonLeaderboardScoring>();
+        public IReadOnlyList<PvpSeasonLeaderboardScoring> Scorings { get; set; } = Array.Empty<PvpSeasonLeaderboardScoring>();
     }
 }

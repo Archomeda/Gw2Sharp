@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Gw2Sharp.Models;
 
@@ -31,7 +32,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The sector bounds.
         /// </summary>
-        public IReadOnlyList<Coordinates2> Bounds { get; set; } = new List<Coordinates2>();
+        public IReadOnlyList<Coordinates2> Bounds { get; set; } = Array.Empty<Coordinates2>();
 
         /// <summary>
         /// The sector chat link.

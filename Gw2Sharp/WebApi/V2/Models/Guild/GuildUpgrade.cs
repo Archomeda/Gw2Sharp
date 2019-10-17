@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Gw2Sharp.WebApi.V2.Clients;
 
@@ -74,11 +75,11 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// The guild upgrade prerequisites.
         /// Each element can be resolved against <see cref="IGuildClient.Upgrades"/>.
         /// </summary>
-        public IReadOnlyList<int> Prerequisites { get; set; } = new List<int>();
+        public IReadOnlyList<int> Prerequisites { get; set; } = Array.Empty<int>();
 
         /// <summary>
         /// The guild upgrade costs.
         /// </summary>
-        public IReadOnlyList<GuildUpgradeCost> Costs { get; set; } = new List<GuildUpgradeCost>();
+        public IReadOnlyList<GuildUpgradeCost> Costs { get; set; } = Array.Empty<GuildUpgradeCost>();
     }
 }

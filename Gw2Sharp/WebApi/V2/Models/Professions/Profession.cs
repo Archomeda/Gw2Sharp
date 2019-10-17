@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Models
@@ -30,7 +31,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The profession specializations.
         /// </summary>
-        public IReadOnlyList<int> Specializations { get; set; } = new List<int>();
+        public IReadOnlyList<int> Specializations { get; set; } = Array.Empty<int>();
 
         /// <summary>
         /// The profession weapons.
@@ -45,11 +46,11 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The profession skills.
         /// </summary>
-        public IReadOnlyList<ProfessionSkill> Skills { get; set; } = new List<ProfessionSkill>();
+        public IReadOnlyList<ProfessionSkill> Skills { get; set; } = Array.Empty<ProfessionSkill>();
 
         /// <summary>
         /// The profession training.
         /// </summary>
-        public IReadOnlyList<ProfessionTraining> Training { get; set; } = new List<ProfessionTraining>();
+        public IReadOnlyList<ProfessionTraining> Training { get; set; } = Array.Empty<ProfessionTraining>();
     }
 }

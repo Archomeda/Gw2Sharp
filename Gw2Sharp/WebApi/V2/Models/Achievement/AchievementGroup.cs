@@ -33,6 +33,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// The achievement categories in the achievement group.
         /// Each element can be resolved against <see cref="IAchievementsClient.Categories"/>.
         /// </summary>
-        public IReadOnlyList<int> Categories { get; set; } = new List<int>();
+        public IReadOnlyList<int> Categories { get; set; } = Array.Empty<int>();
     }
 }

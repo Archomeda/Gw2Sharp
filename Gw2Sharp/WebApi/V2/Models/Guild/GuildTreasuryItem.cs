@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.V2.Models
@@ -21,6 +22,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The upgrades that require this item.
         /// </summary>
-        public IReadOnlyList<GuildTreasuryItemUpgrade> NeededBy { get; set; } = new List<GuildTreasuryItemUpgrade>();
+        public IReadOnlyList<GuildTreasuryItemUpgrade> NeededBy { get; set; } = Array.Empty<GuildTreasuryItemUpgrade>();
     }
 }

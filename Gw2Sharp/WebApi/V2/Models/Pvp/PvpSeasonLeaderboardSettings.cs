@@ -28,6 +28,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The leaderboard tiers.
         /// </summary>
-        public IReadOnlyList<PvpSeasonLeaderboardSettingsTier> Tiers { get; set; } = new List<PvpSeasonLeaderboardSettingsTier>();
+        public IReadOnlyList<PvpSeasonLeaderboardSettingsTier> Tiers { get; set; } = Array.Empty<PvpSeasonLeaderboardSettingsTier>();
     }
 }
