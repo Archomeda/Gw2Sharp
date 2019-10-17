@@ -1,0 +1,48 @@
+{
+  "name": "Throw Gunk",
+  "facts": [
+    {
+      "text": "Range",
+      "type": "Range",
+      "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+      "value": 900
+    },
+    {
+      "text": "Damage",
+      "type": "Damage",
+      "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+      "hit_count": 6,
+      "dmg_multiplier": 0.3
+    },
+    {
+      "text": "Number of Targets",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+      "value": 5
+    },
+    {
+      "text": "Radius",
+      "type": "Distance",
+      "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+      "distance": 120
+    },
+    {
+      "text": "Combo Field",
+      "type": "ComboField",
+      "icon": "https://render.guildwars2.com/file/59E0DB6A699810641C959926ADFEF73E08CC255B/156655.png",
+      "field_type": "Ethereal"
+    }
+  ],
+  "description": "Throw gunk at target area to inflict a random condition.",
+  "icon": "https://render.guildwars2.com/file/3A487770D4A0E006D0A0E57C68A639BF7003A5BC/102940.png",
+  "type": "Profession",
+  "weapon_type": "None",
+  "professions": [],
+  "slot": "Profession_2",
+  "flags": [
+    "GroundTargeted",
+    "NoUnderwater"
+  ],
+  "id": 1110,
+  "chat_link": "[&BlYEAAA=]"
+}

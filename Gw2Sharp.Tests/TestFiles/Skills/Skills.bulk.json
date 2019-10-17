@@ -1,0 +1,744 @@
+[
+  {
+    "name": "Throw Gunk",
+    "facts": [
+      {
+        "text": "Range",
+        "type": "Range",
+        "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+        "value": 900
+      },
+      {
+        "text": "Damage",
+        "type": "Damage",
+        "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+        "hit_count": 6,
+        "dmg_multiplier": 0.3
+      },
+      {
+        "text": "Number of Targets",
+        "type": "Number",
+        "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+        "value": 5
+      },
+      {
+        "text": "Radius",
+        "type": "Distance",
+        "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+        "distance": 120
+      },
+      {
+        "text": "Combo Field",
+        "type": "ComboField",
+        "icon": "https://render.guildwars2.com/file/59E0DB6A699810641C959926ADFEF73E08CC255B/156655.png",
+        "field_type": "Ethereal"
+      }
+    ],
+    "description": "Throw gunk at target area to inflict a random condition.",
+    "icon": "https://render.guildwars2.com/file/3A487770D4A0E006D0A0E57C68A639BF7003A5BC/102940.png",
+    "type": "Profession",
+    "weapon_type": "None",
+    "professions": [],
+    "slot": "Profession_2",
+    "flags": [
+      "GroundTargeted",
+      "NoUnderwater"
+    ],
+    "id": 1110,
+    "chat_link": "[&BlYEAAA=]"
+  },
+  {
+    "name": "Conjure Fiery Greatsword",
+    "facts": [
+      {
+        "text": "Range",
+        "type": "Range",
+        "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+        "value": 1200
+      },
+      {
+        "text": "Recharge",
+        "type": "Recharge",
+        "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+        "value": 180
+      },
+      {
+        "text": "Damage",
+        "type": "Damage",
+        "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+        "hit_count": 1,
+        "dmg_multiplier": 1
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/EEDA0B1847077DE93DBB0575D44BE0615FBCE728/103328.png",
+        "duration": 0,
+        "status": "Conjure Fire Attributes",
+        "description": "Increased power and condition damage.",
+        "apply_count": 1
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/B47BF5803FED2718D7474EAF9617629AD068EE10/102849.png",
+        "duration": 3,
+        "status": "Burning",
+        "description": "Deals damage every second; stacks intensity.",
+        "apply_count": 1
+      },
+      {
+        "text": "Duration",
+        "type": "Time",
+        "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+        "duration": 30
+      },
+      {
+        "text": "Radius",
+        "type": "Distance",
+        "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+        "distance": 150
+      },
+      {
+        "text": "Number of Targets",
+        "type": "Number",
+        "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+        "value": 3
+      }
+    ],
+    "description": "Conjure. Manifest a fiery greatsword in your hands and at the target location. When it lands, it damages and burns foes. Wielders of this weapon gain increased power and condition damage and cast Lesser Fiery Eruption at regular intervals on random enemies.",
+    "icon": "https://render.guildwars2.com/file/EEDA0B1847077DE93DBB0575D44BE0615FBCE728/103328.png",
+    "type": "Elite",
+    "weapon_type": "None",
+    "professions": [
+      "Elementalist"
+    ],
+    "slot": "Elite",
+    "bundle_skills": [
+      5532,
+      5533,
+      5697,
+      5517,
+      5531
+    ],
+    "flags": [
+      "GroundTargeted",
+      "NoUnderwater"
+    ],
+    "id": 5516,
+    "chat_link": "[&BowVAAA=]",
+    "categories": [
+      "Conjure"
+    ]
+  },
+  {
+    "name": "Med Kit",
+    "description": "Engineering Kit. Equip a kit that replaces your weapon with healing skills.",
+    "icon": "https://render.guildwars2.com/file/206FCC2A05035FDB306AB5136E5F3AC0FC6467F3/103395.png",
+    "type": "Heal",
+    "weapon_type": "None",
+    "professions": [
+      "Engineer"
+    ],
+    "slot": "Heal",
+    "toolbelt_skill": 29772,
+    "flip_skill": 6109,
+    "bundle_skills": [
+      58090,
+      30521,
+      29547,
+      49045,
+      49082,
+      58104,
+      50444
+    ],
+    "flags": [],
+    "id": 5802,
+    "chat_link": "[&BqoWAAA=]"
+  },
+  {
+    "name": "Poison Grenade",
+    "facts": [
+      {
+        "text": "Range",
+        "type": "Range",
+        "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+        "value": 900
+      },
+      {
+        "text": "Recharge",
+        "type": "Recharge",
+        "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+        "value": 25
+      },
+      {
+        "text": "Unblockable",
+        "type": "Unblockable",
+        "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+        "value": true
+      },
+      {
+        "text": "Damage",
+        "type": "Damage",
+        "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+        "hit_count": 1,
+        "dmg_multiplier": 0.5
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/559B0AF9FB5E1243D2649FAAE660CCB338AACC19/102840.png",
+        "duration": 8,
+        "status": "Poisoned",
+        "description": "Deals damage every second; decreases healing effectiveness by 33%; damage stacks intensity.",
+        "apply_count": 3
+      },
+      {
+        "text": "Number of Grenades",
+        "type": "Number",
+        "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+        "value": 3
+      },
+      {
+        "text": "Number of Targets",
+        "type": "Number",
+        "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+        "value": 3
+      },
+      {
+        "text": "Radius",
+        "type": "Distance",
+        "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+        "distance": 120
+      },
+      {
+        "text": "Explosion",
+        "type": "NoData",
+        "icon": "https://render.guildwars2.com/file/450630987A0566D4A7A491EDA4DCDF57D9396854/1770203.png"
+      }
+    ],
+    "description": "Throw several grenades that explode in poisonous blasts.",
+    "icon": "https://render.guildwars2.com/file/D7236B1D9176DBEEA8C4570AE04965E902B14502/103172.png",
+    "type": "Bundle",
+    "weapon_type": "None",
+    "professions": [
+      "Engineer"
+    ],
+    "slot": "Weapon_5",
+    "flags": [
+      "GroundTargeted",
+      "NoUnderwater"
+    ],
+    "id": 5806,
+    "chat_link": "[&Bq4WAAA=]",
+    "traited_facts": [
+      {
+        "text": "Radius",
+        "type": "Distance",
+        "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+        "distance": 180,
+        "requires_trait": 514,
+        "overrides": 7
+      }
+    ]
+  },
+  {
+    "name": "Personal Battering Ram",
+    "facts": [
+      {
+        "text": "Range",
+        "type": "Range",
+        "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+        "value": 130
+      },
+      {
+        "text": "Recharge",
+        "type": "Recharge",
+        "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+        "value": 5
+      },
+      {
+        "text": "Damage",
+        "type": "Damage",
+        "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+        "hit_count": 1,
+        "dmg_multiplier": 1.25
+      },
+      {
+        "text": "Launch",
+        "type": "Distance",
+        "icon": "https://render.guildwars2.com/file/CB330EF25C62C05F1800A1C507B6AE4944551746/156653.png",
+        "distance": 450
+      },
+      {
+        "text": "Maximum Count",
+        "type": "Number",
+        "icon": "https://render.guildwars2.com/file/B4490FB81AA1E7C06F1B22056AE09A0F54CBE2C4/1770201.png",
+        "value": 2
+      },
+      {
+        "text": "Count Recharge",
+        "type": "Time",
+        "icon": "https://render.guildwars2.com/file/AAB7C5387A08367C2F023F19FEE70E1556AD4375/1770202.png",
+        "duration": 25
+      }
+    ],
+    "description": "Gadget. Launch a target foe with a concealed ram head.",
+    "icon": "https://render.guildwars2.com/file/A8224970EEDE7C5A9A94DA2499646B0E6E787809/103398.png",
+    "type": "Utility",
+    "weapon_type": "None",
+    "professions": [
+      "Engineer"
+    ],
+    "slot": "Utility",
+    "toolbelt_skill": 5982,
+    "flip_skill": 29991,
+    "flags": [],
+    "id": 5811,
+    "chat_link": "[&BrMWAAA=]",
+    "categories": [
+      "Gadget"
+    ]
+  },
+  {
+    "name": "Throw Junk",
+    "facts": [
+      {
+        "text": "Range",
+        "type": "Range",
+        "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+        "value": 900
+      },
+      {
+        "text": "Damage",
+        "type": "Damage",
+        "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+        "hit_count": 1,
+        "dmg_multiplier": 0.33
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/79FF0046A5F9ADA3B4C4EC19ADB4CB124D5F0021/102848.png",
+        "duration": 6,
+        "status": "Bleeding",
+        "description": "Deals damage every second; stacks intensity.",
+        "apply_count": 1
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/28C4EC547A3516AF0242E826772DA43A5EAC3DF3/102839.png",
+        "duration": 3,
+        "status": "Chilled",
+        "description": "Movement speed decreased by 66%; skill cooldown increased by 66%; stacks duration.",
+        "apply_count": 1
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/6CB0E64AF9AA292E332A38C1770CE577E2CDE0E8/102853.png",
+        "duration": 3,
+        "status": "Weakness",
+        "description": "Endurance regeneration decreased by 50%. 50% of hits are Glancing Blows (50% damage). Stacks duration.",
+        "apply_count": 1
+      }
+    ],
+    "description": "Throw a bit of junk and inflict a random condition on your foe.",
+    "icon": "https://render.guildwars2.com/file/AEB21DB6955411BD270BCE9B4663D07C64A30673/103245.png",
+    "type": "Weapon",
+    "weapon_type": "None",
+    "professions": [
+      "Engineer"
+    ],
+    "slot": "Downed_1",
+    "flags": [
+      "NoUnderwater"
+    ],
+    "id": 5820,
+    "chat_link": "[&BrwWAAA=]"
+  },
+  {
+    "name": "Icy Bite",
+    "facts": [
+      {
+        "text": "Range",
+        "type": "Range",
+        "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+        "value": 130
+      },
+      {
+        "text": "Recharge",
+        "type": "Recharge",
+        "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+        "value": 25
+      },
+      {
+        "text": "Damage",
+        "type": "Damage",
+        "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+        "hit_count": 1,
+        "dmg_multiplier": 0.5
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/28C4EC547A3516AF0242E826772DA43A5EAC3DF3/102839.png",
+        "duration": 3,
+        "status": "Chilled",
+        "description": "Movement speed decreased by 66%; skill cooldown increased by 66%; stacks duration.",
+        "apply_count": 1
+      }
+    ],
+    "description": "Beast. Bite your foe, chilling them.",
+    "icon": "https://render.guildwars2.com/file/520693759A79FD464CA7AD08947D10B4B50F7A96/103516.png",
+    "type": "Pet",
+    "weapon_type": "None",
+    "professions": [],
+    "slot": "Pet",
+    "flags": [],
+    "id": 12656,
+    "chat_link": "[&BnAxAAA=]"
+  },
+  {
+    "name": "Death Blossom",
+    "facts": [
+      {
+        "text": "Range",
+        "type": "Range",
+        "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+        "value": 130
+      },
+      {
+        "text": "Damage",
+        "type": "Damage",
+        "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+        "hit_count": 3,
+        "dmg_multiplier": 0.21
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/79FF0046A5F9ADA3B4C4EC19ADB4CB124D5F0021/102848.png",
+        "duration": 10,
+        "status": "Bleeding",
+        "description": "Deals damage every second; stacks intensity.",
+        "apply_count": 3
+      },
+      {
+        "text": "Number of Targets",
+        "type": "Number",
+        "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+        "value": 3
+      },
+      {
+        "text": "Combo Finisher",
+        "type": "ComboFinisher",
+        "icon": "https://render.guildwars2.com/file/A513F3653D33FBA4220D2D307799F8A327A36A3B/156656.png",
+        "percent": 100,
+        "finisher_type": "Whirl"
+      }
+    ],
+    "description": "Dual Wield. Do an evasive attack over your target, striking nearby foes three times. Each hit causes bleeding.",
+    "icon": "https://render.guildwars2.com/file/61EB7B59609FF6FBD36523D6E47B04E59D90C27D/103072.png",
+    "type": "Weapon",
+    "weapon_type": "Dagger",
+    "professions": [
+      "Thief"
+    ],
+    "slot": "Weapon_3",
+    "dual_wield": "Dagger",
+    "initiative": 4,
+    "flags": [
+      "NoUnderwater"
+    ],
+    "id": 13006,
+    "chat_link": "[&Bs4yAAA=]",
+    "categories": [
+      "DualWield"
+    ],
+    "traited_facts": [
+      {
+        "text": "Healing",
+        "type": "AttributeAdjust",
+        "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+        "value": 407,
+        "requires_trait": 1238,
+        "target": "Healing"
+      }
+    ]
+  },
+  {
+    "name": "Wild Strike",
+    "facts": [
+      {
+        "text": "Range",
+        "type": "Range",
+        "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+        "value": 130
+      },
+      {
+        "text": "Damage",
+        "type": "Damage",
+        "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+        "hit_count": 1,
+        "dmg_multiplier": 0.65
+      },
+      {
+        "text": "Endurance Gain",
+        "type": "Number",
+        "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+        "value": 10
+      },
+      {
+        "text": "Number of Targets",
+        "type": "Number",
+        "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+        "value": 2
+      }
+    ],
+    "description": "Chain. Strike your foe again. Gain endurance with a successful strike.",
+    "icon": "https://render.guildwars2.com/file/6CA8D360E77E37AE42ACB8610EA0E2744E3BF87B/104095.png",
+    "type": "Weapon",
+    "weapon_type": "Dagger",
+    "professions": [
+      "Thief"
+    ],
+    "slot": "Weapon_1",
+    "next_chain": 13108,
+    "prev_chain": 13004,
+    "flags": [
+      "NoUnderwater"
+    ],
+    "id": 13087,
+    "chat_link": "[&Bh8zAAA=]",
+    "categories": []
+  },
+  {
+    "name": "Rampage",
+    "facts": [
+      {
+        "text": "Recharge",
+        "type": "Recharge",
+        "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+        "value": 120
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/20CFC14967E67F7A3FD4A4B8722B4CF5B8565E11/102836.png",
+        "duration": 3,
+        "status": "Swiftness",
+        "description": "Movement speed increased by 33%; stacks duration.",
+        "apply_count": 1
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/3D3A1C2D6D791C05179AB871902D28782C65C244/415959.png",
+        "duration": 3,
+        "status": "Stability",
+        "description": "Cannot be knocked down, pushed back, pulled, launched, stunned, dazed, floated, sunk, feared, or taunted.",
+        "apply_count": 2
+      },
+      {
+        "text": "Boon Application Interval",
+        "type": "Time",
+        "icon": "https://render.guildwars2.com/file/B75E91EB22E0DFCC1D08030204055946506D56F6/1770206.png",
+        "duration": 3
+      },
+      {
+        "text": "Duration",
+        "type": "Time",
+        "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+        "duration": 15
+      },
+      {
+        "text": "Duration",
+        "type": "Time",
+        "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+        "duration": 10
+      },
+      {
+        "text": "Damage Reduced",
+        "type": "Percent",
+        "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+        "percent": 50
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/397A613651BFCA2832B6469CE34735580A2C120E/102844.png",
+        "duration": 0,
+        "status": "Immobile",
+        "description": "Unable to move; stacks duration.",
+        "apply_count": 1
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/070325E519C178D502A8160523766070D30C0C19/102838.png",
+        "duration": 0,
+        "status": "Crippled",
+        "description": "Movement speed decreased by 50%; stacks duration.",
+        "apply_count": 1
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/28C4EC547A3516AF0242E826772DA43A5EAC3DF3/102839.png",
+        "duration": 0,
+        "status": "Chilled",
+        "description": "Movement speed decreased by 66%; skill cooldown increased by 66%; stacks duration.",
+        "apply_count": 1
+      },
+      {
+        "text": "Duration Decreased",
+        "type": "Percent",
+        "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+        "percent": 33
+      }
+    ],
+    "description": "Physical. Take the form of a massive juggernaut, reducing the damage you take and the duration of incoming movement-impeding conditions.",
+    "icon": "https://render.guildwars2.com/file/D59294B049BF3412990AA9BAAF50809A0AA3EF0F/103571.png",
+    "type": "Elite",
+    "weapon_type": "None",
+    "professions": [
+      "Warrior"
+    ],
+    "slot": "Elite",
+    "flags": [
+      "NoUnderwater"
+    ],
+    "id": 14483,
+    "chat_link": "[&BpM4AAA=]",
+    "categories": [
+      "Physical"
+    ],
+    "transform_skills": [
+      14489,
+      14487,
+      14486,
+      14485,
+      14556,
+      14488,
+      14490
+    ]
+  },
+  {
+    "name": "Defiant Stance",
+    "facts": [
+      {
+        "text": "Recharge",
+        "type": "Recharge",
+        "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+        "value": 30
+      },
+      {
+        "text": "Initial Self Heal",
+        "type": "HealingAdjust",
+        "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+        "hit_count": 1
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/29C39009CD5230764480DC2404E740A49898AFA0/699533.png",
+        "duration": 4,
+        "status": "Defiant Stance",
+        "description": "All incoming attacks heal you.",
+        "apply_count": 1
+      }
+    ],
+    "description": "Stance. Heal yourself. Absorb all incoming strikes for a period of time.",
+    "icon": "https://render.guildwars2.com/file/29C39009CD5230764480DC2404E740A49898AFA0/699533.png",
+    "type": "Heal",
+    "weapon_type": "None",
+    "professions": [
+      "Warrior"
+    ],
+    "slot": "Heal",
+    "flags": [],
+    "id": 21815,
+    "chat_link": "[&BjdVAAA=]",
+    "categories": [
+      "Stance"
+    ],
+    "traited_facts": [
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/29C39009CD5230764480DC2404E740A49898AFA0/699533.png",
+        "duration": 5,
+        "status": "Defiant Stance",
+        "description": "All incoming attacks heal you.",
+        "apply_count": 1,
+        "requires_trait": 1375,
+        "overrides": 2
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/58E92EBAF0DB4DA7C4AC04D9B22BCA5ECF0100DE/102843.png",
+        "duration": 6,
+        "status": "Vigor",
+        "description": "Endurance regeneration increased by 50%; stacks duration.",
+        "apply_count": 1,
+        "requires_trait": 1375
+      }
+    ]
+  },
+  {
+    "name": "Glyph of Lesser Elementals",
+    "facts": [
+      {
+        "text": "Recharge",
+        "type": "Recharge",
+        "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+        "value": 40
+      },
+      {
+        "text": "Duration",
+        "type": "Time",
+        "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+        "duration": 60
+      }
+    ],
+    "description": "Glyph. Summon a lesser fire elemental.",
+    "icon": "https://render.guildwars2.com/file/0DB6250806EEE1F020543290797C4AA36A90EC07/867435.png",
+    "type": "Utility",
+    "weapon_type": "None",
+    "attunement": "Fire",
+    "professions": [
+      "Elementalist"
+    ],
+    "slot": "Utility",
+    "flip_skill": 25500,
+    "flags": [
+      "NoUnderwater"
+    ],
+    "id": 25486,
+    "chat_link": "[&Bo5jAAA=]",
+    "categories": [
+      "Glyph"
+    ],
+    "traited_facts": [
+      {
+        "text": "Apply Buff/Condition",
+        "type": "PrefixedBuff",
+        "icon": "https://render.guildwars2.com/file/2FA9DF9D6BC17839BBEA14723F1C53D645DDB5E1/102852.png",
+        "duration": 20,
+        "status": "Might",
+        "description": "Increased outgoing damage; stacks intensity.",
+        "apply_count": 1,
+        "requires_trait": 229,
+        "prefix": {
+          "text": "Apply Buff/Condition",
+          "icon": "https://render.guildwars2.com/file/1C91E9C799469ACC6EAF1ACD4B0AD8ACAB0C69A2/103035.png",
+          "status": "Fire Attunement",
+          "description": "Cast fire spells."
+        }
+      }
+    ]
+  }
+]

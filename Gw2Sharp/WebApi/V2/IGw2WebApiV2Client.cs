@@ -205,6 +205,11 @@ namespace Gw2Sharp.WebApi.V2
         IRecipesClient Recipes { get; }
 
         /// <summary>
+        /// Gets the skills.
+        /// </summary>
+        ISkillsClient Skills { get; }
+
+        /// <summary>
         /// Gets the token info.
         /// </summary>
         ITokenInfoClient TokenInfo { get; }

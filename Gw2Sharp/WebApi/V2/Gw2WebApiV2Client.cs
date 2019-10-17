@@ -52,6 +52,7 @@ namespace Gw2Sharp.WebApi.V2
         private readonly IRacesClient races;
         private readonly IRaidsClient raids;
         private readonly IRecipesClient recipes;
+        private readonly ISkillsClient skills;
         private readonly ITokenInfoClient tokenInfo;
         private readonly IWorldBossesClient worldBosses;
 
@@ -108,6 +109,7 @@ namespace Gw2Sharp.WebApi.V2
             this.races = new RacesClient(connection, gw2Client);
             this.raids = new RaidsClient(connection, gw2Client);
             this.recipes = new RecipesClient(connection, gw2Client);
+            this.skills = new SkillsClient(connection, gw2Client);
             this.tokenInfo = new TokenInfoClient(connection, gw2Client);
             this.worldBosses = new WorldBossesClient(connection, gw2Client);
         }
@@ -228,6 +230,9 @@ namespace Gw2Sharp.WebApi.V2
 
         /// <inheritdoc />
         public virtual IRecipesClient Recipes => this.recipes;
+
+        /// <inheritdoc />
+        public virtual ISkillsClient Skills => this.skills;
 
         /// <inheritdoc />
         public virtual ITokenInfoClient TokenInfo => this.tokenInfo;

@@ -4,6 +4,7 @@
 ### Endpoints
 - Add `/v2/account/emotes`
 - Add `/v2/emotes`
+- Add `/v2/skills`
 
 ## 0.7.1
 ### Services

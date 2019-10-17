@@ -73,6 +73,31 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// Elite slot.
         /// </summary>
-        Elite
+        Elite,
+
+        /// <summary>
+        /// First downed slot.
+        /// </summary>
+        Downed1,
+
+        /// <summary>
+        /// Second downed slot.
+        /// </summary>
+        Downed2,
+
+        /// <summary>
+        /// Third downed slot.
+        /// </summary>
+        Downed3,
+
+        /// <summary>
+        /// Fourth downed slot.
+        /// </summary>
+        Downed4,
+
+        /// <summary>
+        /// Pet slot.
+        /// </summary>
+        Pet
     }
 }

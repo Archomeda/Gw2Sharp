@@ -28,6 +28,31 @@ namespace Gw2Sharp
         /// <summary>
         /// Elite type.
         /// </summary>
-        Elite
+        Elite,
+
+        /// <summary>
+        /// Weapon type.
+        /// </summary>
+        Weapon,
+
+        /// <summary>
+        /// Pet type.
+        /// </summary>
+        Pet,
+
+        /// <summary>
+        /// Bundle type.
+        /// </summary>
+        Bundle,
+
+        /// <summary>
+        /// Toolbelt type.
+        /// </summary>
+        Toolbelt,
+
+        /// <summary>
+        /// Monster type.
+        /// </summary>
+        Monster
     }
 }

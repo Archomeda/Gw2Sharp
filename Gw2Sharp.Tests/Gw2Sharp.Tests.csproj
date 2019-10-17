@@ -247,6 +247,9 @@
     <None Remove="TestFiles\Recipes\Recipes.single.json" />
     <None Remove="TestFiles\Recipes\RecipesSearch.json" />
     <None Remove="TestFiles\Render\414998.png" />
+    <None Remove="TestFiles\Skills\Skills.bulk.json" />
+    <None Remove="TestFiles\Skills\Skills.ids.json" />
+    <None Remove="TestFiles\Skills\Skills.single.json" />
     <None Remove="TestFiles\TokenInfo\TokenInfo.ApiToken.json" />
     <None Remove="TestFiles\TokenInfo\TokenInfo.SubToken.json" />
     <None Remove="TestFiles\WorldBosses\WorldBosses.bulk.json" />
@@ -488,6 +491,9 @@
     <EmbeddedResource Include="TestFiles\Recipes\Recipes.single.json" />
     <EmbeddedResource Include="TestFiles\Recipes\RecipesSearch.json" />
     <EmbeddedResource Include="TestFiles\Render\414998.png" />
+    <EmbeddedResource Include="TestFiles\Skills\Skills.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Skills\Skills.ids.json" />
+    <EmbeddedResource Include="TestFiles\Skills\Skills.single.json" />
     <EmbeddedResource Include="TestFiles\TokenInfo\TokenInfo.ApiToken.json" />
     <EmbeddedResource Include="TestFiles\TokenInfo\TokenInfo.SubToken.json" />
     <EmbeddedResource Include="TestFiles\WorldBosses\WorldBosses.bulk.json" />

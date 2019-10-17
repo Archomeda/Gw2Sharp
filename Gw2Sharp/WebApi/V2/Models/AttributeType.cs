@@ -3,7 +3,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// An item attribute type.
     /// </summary>
-    public enum ItemAttributeType
+    public enum AttributeType
     {
         /// <summary>
         /// Unknown type.
