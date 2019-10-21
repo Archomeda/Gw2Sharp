@@ -100,10 +100,17 @@ namespace Gw2Sharp.WebApi.Http
 
             if (!responseMessage.IsSuccessStatusCode)
             {
-                using var streamReader = new StreamReader(response.ContentStream);
-                string responseText = await streamReader.ReadToEndAsync().ConfigureAwait(false);
-                var httpResponseString = new HttpResponse<string>(responseText, response.StatusCode, response.RequestHeaders, response.ResponseHeaders);
-                throw new UnexpectedStatusException(request, httpResponseString);
+                try
+                {
+                    using var streamReader = new StreamReader(response.ContentStream);
+                    string responseText = await streamReader.ReadToEndAsync().ConfigureAwait(false);
+                    var httpResponseString = new HttpResponse<string>(responseText, response.StatusCode, response.RequestHeaders, response.ResponseHeaders);
+                    throw new UnexpectedStatusException(request, httpResponseString);
+                }
+                finally
+                {
+                    response.Dispose();
+                }
             }
 
             return response;
