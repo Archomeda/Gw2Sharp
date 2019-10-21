@@ -307,7 +307,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="id">The item id.</param>
         /// <returns>The formatted URL.</returns>
         protected virtual string FormatUrlQueryItem<T>(string endpointPath, T id) =>
-            $"{endpointPath}{string.Format(QUERY_ITEM, id)}";
+            $"{endpointPath}{string.Format(QUERY_ITEM, FormatId(id))}";
 
         /// <summary>
         /// Formats a URL with querying many items.
@@ -316,7 +316,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="ids">The item ids.</param>
         /// <returns>The formatted URL.</returns>
         protected virtual string FormatUrlQueryMany<T>(string endpointPath, IEnumerable<T> ids) =>
-            $"{endpointPath}{string.Format(QUERY_MANY, string.Join(",", ids))}";
+            $"{endpointPath}{string.Format(QUERY_MANY, string.Join(",", ids.Select(FormatId)))}";
 
         /// <summary>
         /// Formats a URL with querying a page of items.
@@ -366,6 +366,15 @@ namespace Gw2Sharp.WebApi.V2.Clients
             if (!string.IsNullOrWhiteSpace(schemaVersion))
                 headers.Add("X-Schema-Version", schemaVersion!);
             return headers;
+        }
+
+        private static string? FormatId<T>(T id)
+        {
+            return id switch
+            {
+                Guid guid => guid.ToString().ToUpperInvariant(),
+                _ => id?.ToString(),
+            };
         }
 
         #endregion

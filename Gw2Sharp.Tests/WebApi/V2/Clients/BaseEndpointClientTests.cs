@@ -108,7 +108,11 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
 
             ((IClientInternal)this.Client).Connection.HttpClient.RequestAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Returns(callInfo =>
             {
-                this.AssertRequest(callInfo, client, $"/{id!.ToString()}");
+                string idString = id!.ToString()!;
+                if (id is Guid)
+                    idString = idString.ToUpperInvariant();
+
+                this.AssertRequest(callInfo, client, $"/{idString}");
                 this.AssertAuthenticatedRequest(callInfo, client);
                 this.AssertLocalizedRequest(callInfo, client);
                 this.AssertSchemaVersionRequest(callInfo, client);
@@ -147,7 +151,15 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
 
             ((IClientInternal)this.Client).Connection.HttpClient.RequestAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Returns(callInfo =>
             {
-                this.AssertRequest(callInfo, client, $"?ids={string.Join(",", ids.Select(i => i?.ToString()))}");
+                var idStrings = ids.Select(i =>
+                {
+                    string idString = i!.ToString()!;
+                    if (i is Guid)
+                        idString = idString.ToUpperInvariant();
+                    return idString;
+                });
+
+                this.AssertRequest(callInfo, client, $"?ids={string.Join(",", idStrings)}");
                 this.AssertAuthenticatedRequest(callInfo, client);
                 this.AssertLocalizedRequest(callInfo, client);
                 this.AssertSchemaVersionRequest(callInfo, client);

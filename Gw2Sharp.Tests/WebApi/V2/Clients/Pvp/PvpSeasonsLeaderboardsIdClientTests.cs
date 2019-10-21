@@ -9,7 +9,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
     public class PvpSeasonsLeaderboardsIdClientTests : BaseEndpointClientTests<IPvpSeasonsLeaderboardsIdClient>
     {
         protected override IPvpSeasonsLeaderboardsIdClient CreateClient(IGw2Client gw2Client) =>
-            gw2Client.WebApi.V2.Pvp.Seasons["11111111-2222-3333-4444-555555555555"].Leaderboards["ladder"];
+            gw2Client.WebApi.V2.Pvp.Seasons["11111111-2222-3333-4444-abcdeffedcba"].Leaderboards["ladder"];
 
         [Theory]
         [InlineData("TestFiles.Pvp.PvpLeaderboardsId.json")]
@@ -24,7 +24,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
             AssertArguments.ThrowsWhenNullConstructor(
                 this.Client.GetType(),
                 new[] { typeof(IConnection), typeof(IGw2Client), typeof(Guid), typeof(string) },
-                new object[] { new Connection(), new Gw2Client(), Guid.Parse("11111111-2222-3333-4444-555555555555"), "ladder" },
+                new object[] { new Connection(), new Gw2Client(), Guid.Parse("11111111-2222-3333-4444-abcdeffedcba"), "ladder" },
                 new[] { true, true, false, true });
         }
 
