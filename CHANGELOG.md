@@ -1,10 +1,32 @@
 # Gw2Sharp History
 
 ## 0.7.3
+Gw2Sharp has moved to the release version of .NET Core 3.0.
+This only means that .NET Core 3.0 is used for compiling, while .NET Standard 2.0 is still targeted.
+From now on, at least Visual Studio 2019 16.3 is required when working with the source code.
+This shouldn't impact any NuGet package users.
+
+### Dependencies
+- System.IO.Compression has been removed as explicit dependency as it's already referenced from the framework
+
 ### Endpoints
 - Add `/v2/account/emotes`
 - Add `/v2/emotes`
 - Add `/v2/skills`
+
+### Services
+- Update MumbleLink to support new features ([#18](https://github.com/Archomeda/Gw2Sharp/pull/18)):
+  - Current character selected specialization
+  - UI states: IsMapOpen, IsCompassTopRight, IsCompassRotationEnabled
+  - Compass size
+  - Compass rotation
+  - Player location map
+  - Map center
+  - Map scale
+
+### Fixes
+- `IHttpResponseStream` now implements `IDisposable` because it's assumed that it owns the stream that's passed in the constructor
+- GUID ids are converted to uppercase before being used in API request URLs ([#22](https://github.com/Archomeda/Gw2Sharp/issues/22))
 
 ## 0.7.1
 ### Services
