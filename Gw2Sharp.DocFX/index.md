@@ -7,9 +7,10 @@ This library has been written to be as close as possible to the official API str
 
 ## Supported services
 The following services are supported by Gw2Sharp:
-- Render service - [introduction](xref:Guides.Introduction#render-service)
 - WebAPI v2 - [introduction](xref:Guides.Introduction#web-api-v2), [endpoints](xref:Guides.Endpoints)
+- Render service - [introduction](xref:Guides.Introduction#render-service)
 - Mumble service - [introduction](xref:Guides.Introduction#mumble-link)
+- Chat links - [introduction](xref:Guides.Introduction#chat-links)
 
 ## Requirements
 This project targets .NET Standard 2.0.

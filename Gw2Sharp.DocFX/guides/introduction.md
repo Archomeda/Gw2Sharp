@@ -27,6 +27,7 @@ To get started with a specific service, go to one of the following services supp
 - [WebAPI v2](#web-api-v2)
 - [Render service](#render-service)
 - [Mumble Link](#mumble-link)
+- [Chat links](#chat-links)
 
 ---
 
@@ -139,3 +140,33 @@ In order to keep performance to a maximum, the following JSON properties are onl
 
 If you need the performance, it's recommended to not request these values on every update, but to cache them locally, and only update once in a while.
 Any other value is safe to be read every tick without taking any additional performance hit.
+
+## Chat links
+Accessing the chat links is a bit different compared to the other services.
+Methods regarding chat link parsing are static, while creating chat links is done through the respective item link type classes:
+
+```cs
+//
+// Parsing chat links
+//
+var chatLink = "[&AgH1WQAA]";
+
+// The following line may throw a FormatException if the chat link isn't valid 
+var chatLinkObject = Gw2Sharp.ChatLinks.Gw2ChatLink.Parse(chatLink);
+// OR use .TryParse(...) instead
+if (Gw2Sharp.ChatLinks.Gw2ChatLink.TryParse(chatLink, out var chatLinkObject2))
+{
+    // Valid chat link
+}
+else
+{
+    // Invalid chat link
+}
+
+//
+// Creating chat links
+//
+var chatLinkObject3 = new OutfitChatLink { OutfitId = 41 };
+var chatLink3 = chatLinkObject3.ToString();
+// chatLink3 == "[&CykAAAA=]"
+```
