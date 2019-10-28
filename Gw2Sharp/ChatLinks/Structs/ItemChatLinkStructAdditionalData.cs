@@ -1,9 +1,11 @@
+#pragma warning disable S2342 // Enumeration types should comply with a naming convention
+
 using System;
 
 namespace Gw2Sharp.ChatLinks.Structs
 {
     /// <summary>
-    /// Additional data for item chat links.
+    /// Additional data flags for item chat links.
     /// </summary>
     [Flags]
     public enum ItemChatLinkStructAdditionalData : byte

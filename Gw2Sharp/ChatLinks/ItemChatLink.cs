@@ -10,7 +10,7 @@ namespace Gw2Sharp.ChatLinks
     /// <summary>
     /// Represents a Guild Wars 2 item chat link.
     /// </summary>
-    public class ItemChatLink : Gw2ChatLink, IEquatable<ItemChatLink>
+    public sealed class ItemChatLink : Gw2ChatLink, IEquatable<ItemChatLink>
     {
         /// <inheritdoc />
         public override ChatLinkType Type => ChatLinkType.Item;

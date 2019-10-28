@@ -1,3 +1,5 @@
+#pragma warning disable S4136 // Method overloads should be grouped together
+
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.InteropServices;
@@ -88,6 +90,7 @@ namespace Gw2Sharp.ChatLinks
         /// <returns>The chat link as string.</returns>
         protected static unsafe string ToString(byte[] chatLinkData) =>
             $"[&{Convert.ToBase64String(chatLinkData)}]";
+
 
         /// <summary>
         /// Parses a Guild Wars 2 chat link from a string.

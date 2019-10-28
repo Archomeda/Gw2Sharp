@@ -7,7 +7,7 @@ namespace Gw2Sharp.ChatLinks
     /// <summary>
     /// Represents a Guild Wars 2 coin chat link.
     /// </summary>
-    public class CoinChatLink : Gw2ChatLink<CoinChatLinkStruct>, IEquatable<CoinChatLink>
+    public sealed class CoinChatLink : Gw2ChatLink<CoinChatLinkStruct>, IEquatable<CoinChatLink>
     {
         /// <inheritdoc />
         public override ChatLinkType Type => ChatLinkType.Coin;
