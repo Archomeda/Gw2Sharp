@@ -132,6 +132,7 @@ The reason is that these values are parsed from a JSON string that Guild Wars 2 
 In order to keep performance to a maximum, the following JSON properties are only parsed when you request them:
 - `CharacterName`
 - `Profession`
+- `Specialization`
 - `Race`
 - `TeamColorId`
 - `IsCommander`
