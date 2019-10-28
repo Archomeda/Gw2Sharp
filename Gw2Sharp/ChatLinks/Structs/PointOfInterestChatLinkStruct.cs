@@ -12,6 +12,6 @@ namespace Gw2Sharp.ChatLinks.Structs
         /// The point of interest id.
         /// </summary>
         [FieldOffset(0)]
-        public ushort PointOfInterestId;
+        public uint PointOfInterestId;
     }
 }

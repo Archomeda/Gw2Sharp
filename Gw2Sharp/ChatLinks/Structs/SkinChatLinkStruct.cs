@@ -12,6 +12,6 @@ namespace Gw2Sharp.ChatLinks.Structs
         /// The skin id.
         /// </summary>
         [FieldOffset(0)]
-        public ushort SkinId;
+        public uint SkinId;
     }
 }

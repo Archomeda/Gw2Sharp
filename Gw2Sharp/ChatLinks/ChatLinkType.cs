@@ -3,7 +3,7 @@ namespace Gw2Sharp.ChatLinks
     /// <summary>
     /// The chat link type.
     /// </summary>
-    public enum ChatLinkType
+    public enum ChatLinkType : byte
     {
         /// <summary>
         /// A coin chat link type.

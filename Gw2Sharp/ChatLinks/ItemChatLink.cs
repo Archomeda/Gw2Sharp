@@ -1,6 +1,8 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using Gw2Sharp.ChatLinks.Structs;
+using Gw2Sharp.Extensions;
 using Gw2Sharp.WebApi.V2;
 
 namespace Gw2Sharp.ChatLinks
@@ -8,7 +10,7 @@ namespace Gw2Sharp.ChatLinks
     /// <summary>
     /// Represents a Guild Wars 2 item chat link.
     /// </summary>
-    public class ItemChatLink : Gw2ChatLink
+    public class ItemChatLink : Gw2ChatLink, IEquatable<ItemChatLink>
     {
         /// <inheritdoc />
         public override ChatLinkType Type => ChatLinkType.Item;
@@ -16,7 +18,7 @@ namespace Gw2Sharp.ChatLinks
         /// <summary>
         /// The quantity.
         /// </summary>
-        public int Quantity { get; set; }
+        public byte Quantity { get; set; }
 
         /// <summary>
         /// The item id.
@@ -45,50 +47,106 @@ namespace Gw2Sharp.ChatLinks
         /// </summary>
         public int? Upgrade2Id { get; set; }
 
+
         /// <inheritdoc />
-        public override void Parse(byte[] chatLinkData)
+        public override unsafe void Parse(byte[] chatLinkData)
         {
-            var item = Parse<ItemChatLinkStructMain>(chatLinkData);
+            var item = Parse<ItemChatLinkStruct>(chatLinkData);
             this.Quantity = item.Quantity;
+            this.ItemId = item.ItemId;
 
-            bool hasSkin = item.AdditionalData.HasFlag(ItemChatLinkStructAdditionalData.Skin);
-            bool hasUpgrade1 = item.AdditionalData.HasFlag(ItemChatLinkStructAdditionalData.Upgrade1);
-            bool hasUpgrade2 = item.AdditionalData.HasFlag(ItemChatLinkStructAdditionalData.Upgrade2);
+            bool hasSkin = item.AdditionalDataFlag.HasFlag(ItemChatLinkStructAdditionalData.Skin);
+            bool hasUpgrade1 = item.AdditionalDataFlag.HasFlag(ItemChatLinkStructAdditionalData.Upgrade1);
+            bool hasUpgrade2 = item.AdditionalDataFlag.HasFlag(ItemChatLinkStructAdditionalData.Upgrade2);
 
-            int additionalDataCount = new bool[] { hasSkin, hasUpgrade1, hasUpgrade2 }.Count(x => x);
-            for (int i = 0; i < additionalDataCount; i++)
-            {
-                int pos = 5 + (4 * i);
-                var data = Parse<ItemChatLinkStructData>(chatLinkData.Skip(pos).Take(4).ToArray());
-
-                if (i == 0)
-                {
-                    if (hasSkin)
-                        this.SkinId = data.ItemId;
-                    else if (hasUpgrade1)
-                        this.Upgrade1Id = data.ItemId;
-                    else if (hasUpgrade2)
-                        this.Upgrade2Id = data.ItemId;
-                }
-
-                if (i == 1)
-                {
-                    if (hasUpgrade1)
-                        this.Upgrade1Id = data.ItemId;
-                    else if (hasUpgrade2)
-                        this.Upgrade2Id = data.ItemId;
-                }
-
-                if (i == 2 && hasUpgrade2)
-                    this.Upgrade2Id = data.ItemId;
-            }
+            int i = 0;
+            if (hasSkin)
+                this.SkinId = (int)item.AdditionalData[i++];
+            if (hasUpgrade1)
+                this.Upgrade1Id = (int)item.AdditionalData[i++];
+            if (hasUpgrade2)
+                this.Upgrade2Id = (int)item.AdditionalData[i];
         }
 
         /// <inheritdoc />
-        public override string ToString()
+        public override unsafe byte[] ToArray()
         {
-            //TODO Implement
-            throw new NotImplementedException("TODO");
+            var additionalDataFlag = ItemChatLinkStructAdditionalData.None;
+            if (this.SkinId.HasValue)
+                additionalDataFlag |= ItemChatLinkStructAdditionalData.Skin;
+            if (this.Upgrade1Id.HasValue)
+                additionalDataFlag |= ItemChatLinkStructAdditionalData.Upgrade1;
+            if (this.Upgrade2Id.HasValue)
+                additionalDataFlag |= ItemChatLinkStructAdditionalData.Upgrade2;
+
+            var chatLinkStruct = new ItemChatLinkStruct
+            {
+                Quantity = this.Quantity,
+                ItemId = this.ItemId,
+                AdditionalDataFlag = additionalDataFlag
+            };
+
+            var additionalData = new[] { this.SkinId, this.Upgrade1Id, this.Upgrade2Id }.WhereNotNull().ToList();
+            for (int i = 0; i < additionalData.Count; i++)
+                chatLinkStruct.AdditionalData[i] = (uint)additionalData[i];
+
+            byte[] chatLinkData = ToArray(chatLinkStruct, this.Type);
+            return chatLinkData.Take(1 + 1 + 3 + 1 + (4 * additionalData.Count)).ToArray(); // chat link type + quantity + item id + additional data flag + (upgrade id * i)
         }
+
+        /// <inheritdoc />
+        public override string ToString() =>
+            ToString(this.ToArray());
+
+
+        #region Equality
+
+        /// <inheritdoc />
+        public override bool Equals(object? obj) =>
+            obj is ItemChatLink && this.Equals((ItemChatLink)obj);
+
+        /// <inheritdoc />
+        public bool Equals(ItemChatLink other) =>
+            !(other is null) &&
+            this.Type == other.Type &&
+            this.Quantity == other.Quantity &&
+            this.ItemId == other.ItemId &&
+            EqualityComparer<int?>.Default.Equals(this.SkinId, other.SkinId) &&
+            EqualityComparer<int?>.Default.Equals(this.Upgrade1Id, other.Upgrade1Id) &&
+            EqualityComparer<int?>.Default.Equals(this.Upgrade2Id, other.Upgrade2Id);
+
+        /// <inheritdoc />
+        public override int GetHashCode()
+        {
+            int hashCode = -508909554;
+            hashCode = (hashCode * -1521134295) + this.Type.GetHashCode();
+            hashCode = (hashCode * -1521134295) + this.Quantity.GetHashCode();
+            hashCode = (hashCode * -1521134295) + this.ItemId.GetHashCode();
+            hashCode = (hashCode * -1521134295) + EqualityComparer<int?>.Default.GetHashCode(this.SkinId);
+            hashCode = (hashCode * -1521134295) + EqualityComparer<int?>.Default.GetHashCode(this.Upgrade1Id);
+            hashCode = (hashCode * -1521134295) + EqualityComparer<int?>.Default.GetHashCode(this.Upgrade2Id);
+            return hashCode;
+        }
+
+        /// <summary>
+        /// Implements the operator ==.
+        /// </summary>
+        /// <param name="left">The first <see cref="ItemChatLink"/>.</param>
+        /// <param name="right">The second <see cref="ItemChatLink"/>.</param>
+        /// <returns>The result of the operator.</returns>
+        public static bool operator ==(ItemChatLink left, ItemChatLink right) =>
+            EqualityComparer<ItemChatLink>.Default.Equals(left, right);
+
+        /// <summary>
+        /// Implements the operator !=.
+        /// </summary>
+        /// <param name="left">The first <see cref="ItemChatLink"/>.</param>
+        /// <param name="right">The second <see cref="ItemChatLink"/>.</param>
+        /// <returns>The result of the operator.</returns>
+        public static bool operator !=(ItemChatLink left, ItemChatLink right) =>
+            !(left == right);
+
+        #endregion
+
     }
 }

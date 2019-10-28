@@ -12,6 +12,6 @@ namespace Gw2Sharp.ChatLinks.Structs
         /// The number of coins in copper.
         /// </summary>
         [FieldOffset(0)]
-        public int Coins;
+        public uint Coins;
     }
 }

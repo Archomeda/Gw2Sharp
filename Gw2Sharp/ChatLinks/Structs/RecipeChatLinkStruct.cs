@@ -12,6 +12,6 @@ namespace Gw2Sharp.ChatLinks.Structs
         /// The recipe id.
         /// </summary>
         [FieldOffset(0)]
-        public ushort RecipeId;
+        public uint RecipeId;
     }
 }

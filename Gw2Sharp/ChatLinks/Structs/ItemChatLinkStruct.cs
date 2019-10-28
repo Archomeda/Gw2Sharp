@@ -3,10 +3,10 @@ using System.Runtime.InteropServices;
 namespace Gw2Sharp.ChatLinks.Structs
 {
     /// <summary>
-    /// Represents a Guild Wars 2 item chat link (main).
+    /// Represents a Guild Wars 2 item chat link.
     /// </summary>
     [StructLayout(LayoutKind.Explicit)]
-    public struct ItemChatLinkStructMain
+    public unsafe struct ItemChatLinkStruct
     {
         /// <summary>
         /// The quantity.
@@ -21,9 +21,15 @@ namespace Gw2Sharp.ChatLinks.Structs
         public UInt24 ItemId;
 
         /// <summary>
-        /// The extra item data.
+        /// Additional data flag.
         /// </summary>
         [FieldOffset(4)]
-        public ItemChatLinkStructAdditionalData AdditionalData;
+        public ItemChatLinkStructAdditionalData AdditionalDataFlag;
+
+        /// <summary>
+        /// Additional data.
+        /// </summary>
+        [FieldOffset(5)]
+        public fixed uint AdditionalData[3];
     }
 }

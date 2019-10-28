@@ -12,6 +12,6 @@ namespace Gw2Sharp.ChatLinks.Structs
         /// The string id.
         /// </summary>
         [FieldOffset(0)]
-        public ushort StringId;
+        public uint StringId;
     }
 }

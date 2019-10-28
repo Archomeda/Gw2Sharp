@@ -1,6 +1,5 @@
 using System;
 using System.Diagnostics.CodeAnalysis;
-using System.Linq;
 using System.Runtime.InteropServices;
 
 namespace Gw2Sharp.ChatLinks
@@ -19,23 +18,54 @@ namespace Gw2Sharp.ChatLinks
         /// <summary>
         /// Parses Guild Wars 2 chat link struct.
         /// </summary>
+        /// <typeparam name="T">The chat link type.</typeparam>
         /// <param name="chatLinkData">The chat link data.</param>
+        /// <param name="startIndex">The index to start parsing the chat link data.</param>
         /// <returns>The chat link as string.</returns>
-        protected static T Parse<T>(byte[] chatLinkData) where T : struct
+        protected static unsafe T Parse<T>(byte[] chatLinkData, int startIndex = 1) where T : struct
         {
-            T chatLink = default;
-            var handle = GCHandle.Alloc(chatLink, GCHandleType.Pinned);
-            try
+            int structSize = Marshal.SizeOf(typeof(T));
+            if (chatLinkData.Length < structSize + startIndex)
             {
-                var pointer = handle.AddrOfPinnedObject();
-                Marshal.Copy(chatLinkData, 0, pointer, chatLinkData.Length);
-                return chatLink;
+                // Prevent reading past the buffer by creating a new byte array in which the struct can fit
+                byte[] bytes = new byte[structSize];
+                Array.Copy(chatLinkData, startIndex, bytes, 0, chatLinkData.Length - startIndex);
+                chatLinkData = bytes;
+                startIndex = 0;
             }
-            finally
+
+            fixed (byte* ptr = &chatLinkData[startIndex])
             {
-                if (handle.IsAllocated)
-                    handle.Free();
+                var intPtr = new IntPtr(ptr);
+                return Marshal.PtrToStructure<T>(intPtr);
             }
+        }
+
+        /// <inheritdoc />
+        public abstract byte[] ToArray();
+
+        /// <summary>
+        /// Converts a chat link struct to its byte representation.
+        /// </summary>
+        /// <typeparam name="T">The chat link type.</typeparam>
+        /// <param name="chatLinkStruct">The chat link struct.</param>
+        /// <param name="chatLinkType">The chat link type.</param>
+        /// <returns>The chat link as byte array.</returns>
+        protected static unsafe byte[] ToArray<T>(T chatLinkStruct, ChatLinkType? chatLinkType) where T : struct
+        {
+            int startPos = chatLinkType.HasValue ? 1 : 0;
+            int structSize = Marshal.SizeOf(typeof(T));
+            byte[] bytes = new byte[structSize + startPos];
+
+            if (chatLinkType.HasValue)
+                bytes[0] = (byte)chatLinkType;
+            fixed (byte* ptr = &bytes[startPos])
+            {
+                var intPtr = new IntPtr(ptr);
+                Marshal.StructureToPtr(chatLinkStruct, intPtr, true);
+            }
+
+            return bytes;
         }
 
         /// <inheritdoc />
@@ -44,24 +74,20 @@ namespace Gw2Sharp.ChatLinks
         /// <summary>
         /// Converts a chat link struct to its string representation.
         /// </summary>
+        /// <typeparam name="T">The chat link type.</typeparam>
+        /// <param name="chatLinkType">The chat link type.</param>
         /// <param name="chatLinkStruct">The chat link struct.</param>
         /// <returns>The chat link as string.</returns>
-        protected static string ToString<T>(T chatLinkStruct) where T : struct
-        {
-            var handle = GCHandle.Alloc(chatLinkStruct, GCHandleType.Pinned);
-            try
-            {
-                var pointer = handle.AddrOfPinnedObject();
-                byte[] bytes = new byte[Marshal.SizeOf(typeof(T))];
-                Marshal.Copy(pointer, bytes, 0, bytes.Length);
-                return $"[&{Convert.ToBase64String(bytes)}]";
-            }
-            finally
-            {
-                if (handle.IsAllocated)
-                    handle.Free();
-            }
-        }
+        protected static unsafe string ToString<T>(ChatLinkType chatLinkType, T chatLinkStruct) where T : struct =>
+            ToString(ToArray(chatLinkStruct, chatLinkType));
+
+        /// <summary>
+        /// Converts a chat link byte array to its string representation.
+        /// </summary>
+        /// <param name="chatLinkData">The chat link byte array.</param>
+        /// <returns>The chat link as string.</returns>
+        protected static unsafe string ToString(byte[] chatLinkData) =>
+            $"[&{Convert.ToBase64String(chatLinkData)}]";
 
         /// <summary>
         /// Parses a Guild Wars 2 chat link from a string.
@@ -79,10 +105,9 @@ namespace Gw2Sharp.ChatLinks
                 if (chatLinkString.StartsWith("&"))
                     chatLinkString = chatLinkString.Substring(1);
                 if (chatLinkString.EndsWith("]"))
-                    chatLinkString = chatLinkString.Remove(chatLinkString.Length - 2);
+                    chatLinkString = chatLinkString.Remove(chatLinkString.Length - 1);
 
                 byte[] bytes = Convert.FromBase64String(chatLinkString);
-                byte[] bytesLink = bytes.Skip(1).ToArray();
                 var chatLink = ((ChatLinkType)bytes[0]) switch
                 {
                     ChatLinkType.Coin => (Gw2ChatLink)new CoinChatLink(),
@@ -96,7 +121,7 @@ namespace Gw2Sharp.ChatLinks
                     ChatLinkType.Outfit => new OutfitChatLink(),
                     _ => throw new FormatException("Unsupported chat link or the chat link is not in the correct format")
                 };
-                chatLink.Parse(bytesLink);
+                chatLink.Parse(bytes);
                 return chatLink;
             }
             catch (Exception ex)
@@ -143,7 +168,11 @@ namespace Gw2Sharp.ChatLinks
             this.data = Parse<T>(chatLinkData);
 
         /// <inheritdoc />
+        public override byte[] ToArray() =>
+            ToArray(this.data, this.Type);
+
+        /// <inheritdoc />
         public override string ToString() =>
-            ToString(this.data);
+            ToString(this.Type, this.data);
     }
 }

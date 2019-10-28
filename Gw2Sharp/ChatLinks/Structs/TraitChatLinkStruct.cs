@@ -12,6 +12,6 @@ namespace Gw2Sharp.ChatLinks.Structs
         /// The trait id.
         /// </summary>
         [FieldOffset(0)]
-        public ushort TraitId;
+        public uint TraitId;
     }
 }

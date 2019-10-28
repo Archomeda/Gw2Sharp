@@ -21,6 +21,11 @@ namespace Gw2Sharp.ChatLinks
         void Parse(byte[] chatLinkData);
 
         /// <summary>
+        /// Converts the chat link to its byte array representation.
+        /// </summary>
+        byte[] ToArray();
+
+        /// <summary>
         /// Converts the chat link to its string representation.
         /// </summary>
         /// <returns>The chat link as string.</returns>

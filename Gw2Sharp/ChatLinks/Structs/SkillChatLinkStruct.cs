@@ -12,6 +12,6 @@ namespace Gw2Sharp.ChatLinks.Structs
         /// The skill id.
         /// </summary>
         [FieldOffset(0)]
-        public ushort SkillId;
+        public uint SkillId;
     }
 }

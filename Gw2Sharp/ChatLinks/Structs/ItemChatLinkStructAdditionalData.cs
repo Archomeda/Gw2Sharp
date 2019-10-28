@@ -6,7 +6,7 @@ namespace Gw2Sharp.ChatLinks.Structs
     /// Additional data for item chat links.
     /// </summary>
     [Flags]
-    public enum ItemChatLinkStructAdditionalData
+    public enum ItemChatLinkStructAdditionalData : byte
     {
         /// <summary>
         /// No extra data.

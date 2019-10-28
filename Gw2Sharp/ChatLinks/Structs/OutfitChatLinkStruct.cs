@@ -12,6 +12,6 @@ namespace Gw2Sharp.ChatLinks.Structs
         /// The outfit id.
         /// </summary>
         [FieldOffset(0)]
-        public ushort OutfitId;
+        public uint OutfitId;
     }
 }
