@@ -103,7 +103,7 @@ namespace Gw2Sharp.ChatLinks
 
         /// <inheritdoc />
         public override bool Equals(object? obj) =>
-            obj is ItemChatLink && this.Equals((ItemChatLink)obj);
+            obj is ItemChatLink link && this.Equals(link);
 
         /// <inheritdoc />
         public bool Equals(ItemChatLink other) =>
@@ -147,6 +147,5 @@ namespace Gw2Sharp.ChatLinks
             !(left == right);
 
         #endregion
-
     }
 }

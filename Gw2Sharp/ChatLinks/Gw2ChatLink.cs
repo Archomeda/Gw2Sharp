@@ -122,6 +122,7 @@ namespace Gw2Sharp.ChatLinks
                     ChatLinkType.Recipe => new RecipeChatLink(),
                     ChatLinkType.Skin => new SkinChatLink(),
                     ChatLinkType.Outfit => new OutfitChatLink(),
+                    ChatLinkType.Build => new BuildChatLink(),
                     _ => throw new FormatException("Unsupported chat link or the chat link is not in the correct format")
                 };
                 chatLink.Parse(bytes);

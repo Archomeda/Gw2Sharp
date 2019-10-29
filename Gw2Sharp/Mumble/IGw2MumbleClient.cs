@@ -157,9 +157,9 @@ namespace Gw2Sharp.Mumble
 
         /// <summary>
         /// The character profession.
-        /// Can be resolved against <see cref="IGw2WebApiV2Client.Professions"/>.
+        /// Can be resolved against <see cref="IGw2WebApiV2Client.Professions"/> if converted to string.
         /// </summary>
-        string Profession { get; }
+        Profession Profession { get; }
 
         /// <summary>
         /// The character's currently equipped third specialization.

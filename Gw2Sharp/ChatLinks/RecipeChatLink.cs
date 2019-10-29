@@ -28,7 +28,7 @@ namespace Gw2Sharp.ChatLinks
 
         /// <inheritdoc />
         public override bool Equals(object? obj) =>
-            obj is RecipeChatLink && this.Equals((RecipeChatLink)obj);
+            obj is RecipeChatLink link && this.Equals(link);
 
         /// <inheritdoc />
         public bool Equals(RecipeChatLink other) =>

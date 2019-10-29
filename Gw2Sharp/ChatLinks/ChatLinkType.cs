@@ -65,7 +65,12 @@ namespace Gw2Sharp.ChatLinks
         /// <summary>
         /// A WvW objective chat link type.
         /// </summary>
-        WvwObjective = 0xC
+        WvwObjective = 0xC,
+
+        /// <summary>
+        /// A build chat link type.
+        /// </summary>
+        Build = 0xD
     }
 }
 

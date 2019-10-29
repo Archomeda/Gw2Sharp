@@ -26,7 +26,7 @@ namespace Gw2Sharp.ChatLinks
 
         /// <inheritdoc />
         public override bool Equals(object? obj) =>
-            obj is CoinChatLink && this.Equals((CoinChatLink)obj);
+            obj is CoinChatLink link && this.Equals(link);
 
         /// <inheritdoc />
         public bool Equals(CoinChatLink other) =>
