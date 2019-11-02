@@ -16,7 +16,7 @@ namespace Gw2Sharp.Tests.Mumble
         {
             // Named memory mapped files aren't supported on Unix based systems.
             // So we need to skip this test.
-            Skip.IfNot(Environment.OSVersion.Platform == PlatformID.Win32NT);
+            Skip.IfNot(Environment.OSVersion.Platform == PlatformID.Win32NT, "Mumble Link is only supported in Windows");
 
             var connection = Substitute.For<IConnection>();
             var gw2Client = Substitute.For<IGw2Client>();
@@ -45,7 +45,7 @@ namespace Gw2Sharp.Tests.Mumble
             Assert.Equal(-0.3139677, client.CameraFront.Y, 7);
             Assert.Equal(-0.4892152, client.CameraFront.Z, 7);
             Assert.Equal("Reiga Fiercecrusher", client.CharacterName);
-            Assert.Equal("Warrior", client.Profession);
+            Assert.Equal(Profession.Warrior, client.Profession);
             Assert.Equal("Charr", client.Race);
             Assert.Equal(18, client.Specialization);
             Assert.Equal(0, client.TeamColorId);

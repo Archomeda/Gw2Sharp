@@ -1,9 +1,10 @@
-namespace Gw2Sharp.Mumble.Models
+namespace Gw2Sharp.Models
 {
     /// <summary>
-    /// The profession.
+    /// Represents a profession.
+    /// Used by Mumble Link and chat links.
     /// </summary>
-    internal enum Profession
+    public enum Profession : byte
     {
         /// <summary>
         /// Guardian.
@@ -48,6 +49,6 @@ namespace Gw2Sharp.Mumble.Models
         /// <summary>
         /// Revenant.
         /// </summary>
-        Reventant = 9
+        Revenant = 9
     }
 }

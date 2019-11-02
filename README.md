@@ -16,9 +16,10 @@ This library has been written to be as close as possible to the official API str
 
 ## Supported services
 The following services supported by Gw2Sharp:
-- Render service - [introduction](https://archomeda.github.io/Gw2Sharp/master/guides/introduction.html#render-service)
 - WebAPI v2 - [introduction](https://archomeda.github.io/Gw2Sharp/master/guides/introduction.html#web-api-v2), [endpoints](https://archomeda.github.io/Gw2Sharp/master/guides/endpoints.html)
+- Render service - [introduction](https://archomeda.github.io/Gw2Sharp/master/guides/introduction.html#render-service)
 - Mumble service - [introduction](https://archomeda.github.io/Gw2Sharp/master/guides/introduction.html#mumble)
+- Chat links - [introduction](https://archomeda.github.io/Gw2Sharp/master/guides/introduction.html#chat-links)
 
 ## Requirements
 This project targets .NET Standard 2.0.

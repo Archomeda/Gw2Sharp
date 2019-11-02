@@ -172,8 +172,8 @@ namespace Gw2Sharp.Mumble
             this.IsAvailable ? this.Identity.Name : string.Empty;
 
         /// <inheritdoc />
-        public string Profession =>
-            this.IsAvailable ? this.Identity.Profession.ToString() : string.Empty;
+        public Profession Profession =>
+            this.IsAvailable ? this.Identity.Profession : (Profession)0;
 
         /// <inheritdoc />
         public int Specialization =>

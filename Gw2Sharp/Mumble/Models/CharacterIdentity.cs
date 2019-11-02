@@ -1,3 +1,4 @@
+using Gw2Sharp.Models;
 using Gw2Sharp.WebApi.V2;
 
 namespace Gw2Sharp.Mumble.Models
