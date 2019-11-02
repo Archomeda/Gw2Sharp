@@ -153,6 +153,7 @@ var connection = new Gw2Sharp.Connection();
 <li><a href="#web-api-v2">WebAPI v2</a></li>
 <li><a href="#render-service">Render service</a></li>
 <li><a href="#mumble-link">Mumble Link</a></li>
+<li><a href="#chat-links">Chat links</a></li>
 </ul>
 <hr>
 <h2 id="web-api-v2">Web API v2</h2>
@@ -237,6 +238,7 @@ In order to keep performance to a maximum, the following JSON properties are onl
 <ul>
 <li><code>CharacterName</code></li>
 <li><code>Profession</code></li>
+<li><code>Specialization</code></li>
 <li><code>Race</code></li>
 <li><code>TeamColorId</code></li>
 <li><code>IsCommander</code></li>
@@ -245,7 +247,33 @@ In order to keep performance to a maximum, the following JSON properties are onl
 </ul>
 <p>If you need the performance, it&#39;s recommended to not request these values on every update, but to cache them locally, and only update once in a while.
 Any other value is safe to be read every tick without taking any additional performance hit.</p>
-</article>
+<h2 id="chat-links">Chat links</h2>
+<p>Accessing the chat links is a bit different compared to the other services.
+Methods regarding chat link parsing are static, while creating chat links is done through the respective item link type classes:</p>
+<pre><code class="lang-cs">//
+// Parsing chat links
+//
+var chatLink = &quot;[&amp;AgH1WQAA]&quot;;
+
+// The following line may throw a FormatException if the chat link isn&#39;t valid 
+var chatLinkObject = Gw2Sharp.ChatLinks.Gw2ChatLink.Parse(chatLink);
+// OR use .TryParse(...) instead
+if (Gw2Sharp.ChatLinks.Gw2ChatLink.TryParse(chatLink, out var chatLinkObject2))
+{
+    // Valid chat link
+}
+else
+{
+    // Invalid chat link
+}
+
+//
+// Creating chat links
+//
+var chatLinkObject3 = new OutfitChatLink { OutfitId = 41 };
+var chatLink3 = chatLinkObject3.ToString();
+// chatLink3 == &quot;[&amp;CykAAAA=]&quot;
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
