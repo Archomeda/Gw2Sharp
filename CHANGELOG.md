@@ -1,5 +1,9 @@
 # Gw2Sharp History
 
+## 0.7.4
+### Services
+- Chat link parsing and rendering is now supported ([#23](https://github.com/Archomeda/Gw2Sharp/issues/23), [#24](https://github.com/Archomeda/Gw2Sharp/pull/24))
+
 ## 0.7.3
 Gw2Sharp has moved to the release version of .NET Core 3.0.
 This only means that .NET Core 3.0 is used for compiling, while .NET Standard 2.0 is still targeted.
