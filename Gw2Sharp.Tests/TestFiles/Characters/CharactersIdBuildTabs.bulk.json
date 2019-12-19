@@ -41,43 +41,40 @@
     "tab": 2,
     "is_active": false,
     "build": {
-      "id": 2,
-      "build": {
-        "name": "Non-existent ranger build",
-        "profession": "Ranger",
-        "skills": {
-          "heal": null,
-          "utilities": [
-            null,
-            null,
-            null
-          ],
-          "elite": null
-        },
-        "aquatic_skills": {
-          "heal": null,
-          "utilities": [
-            null,
-            null,
-            null
-          ],
-          "elite": null
-        },
-        "specializations": [
+      "name": "Non-existent ranger build",
+      "profession": "Ranger",
+      "skills": {
+        "heal": null,
+        "utilities": [
           null,
           null,
           null
         ],
-        "pets": {
-          "terrestrial": [
-            1,
-            32
-          ],
-          "aquatic": [
-            null,
-            null
-          ]
-        }
+        "elite": null
+      },
+      "aquatic_skills": {
+        "heal": null,
+        "utilities": [
+          null,
+          null,
+          null
+        ],
+        "elite": null
+      },
+      "specializations": [
+        null,
+        null,
+        null
+      ],
+      "pets": {
+        "terrestrial": [
+          1,
+          32
+        ],
+        "aquatic": [
+          null,
+          null
+        ]
       }
     }
   },
