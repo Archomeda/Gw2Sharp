@@ -91,9 +91,11 @@ namespace Gw2Sharp.WebApi.V2.Clients
         public virtual ICharactersIdSabClient Sab => this.sab;
 
         /// <inheritdoc />
+        [Obsolete("Deprecated since the build template update on 2019-12-19. Use /v2/characters/:id/buildtabs instead. To be removed starting with version 0.9.0.")]
         public virtual ICharactersIdSkillsClient Skills => this.skills;
 
         /// <inheritdoc />
+        [Obsolete("Deprecated since the build template update on 2019-12-19. Use /v2/characters/:id/buildtabs instead. To be removed starting with version 0.9.0.")]
         public virtual ICharactersIdSpecializationsClient Specializations => this.specializations;
 
         /// <inheritdoc />

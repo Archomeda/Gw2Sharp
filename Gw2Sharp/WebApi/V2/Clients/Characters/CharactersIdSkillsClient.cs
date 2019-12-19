@@ -8,6 +8,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// </summary>
     [EndpointPath("characters/:id/skills")]
     [EndpointSchemaVersion("2019-02-21T00:00:00.000Z")]
+    [Obsolete("Deprecated since the build template update on 2019-12-19. Use /v2/characters/:id/buildtabs instead. To be removed starting with version 0.9.0.")]
     public class CharactersIdSkillsClient : BaseCharactersSubBlobClient<CharactersSkills>, ICharactersIdSkillsClient
     {
         /// <summary>
