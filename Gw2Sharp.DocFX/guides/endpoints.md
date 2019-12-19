@@ -11,6 +11,7 @@ For your convenience, the following list gives an overview of the web API endpoi
 ✔️   | Implemented; no additional endpoint features
 ❌   | Not implemented yet, but is available on API
 ✖️   | Missing on API
+⚠️   | Deprecated; scheduled for removal in next major release
 🔑   | Endpoint with authentication
 🌐   | Endpoint with locale support
 📆   | Endpoint with `Last-Modified` support
@@ -23,6 +24,7 @@ For your convenience, the following list gives an overview of the web API endpoi
  /v2/account | 🔑 | [`Gw2Client.WebApi.V2.Account`](../api/Gw2Sharp.WebApi.V2.Clients.AccountClient.html)
  /v2/account/achievements | 🔑 | [`Gw2Client.WebApi.V2.Account.Achievements`](../api/Gw2Sharp.WebApi.V2.Clients.AccountAchievementsClient.html)
  /v2/account/bank | 🔑📆 | [`Gw2Client.WebApi.V2.Account.Bank`](../api/Gw2Sharp.WebApi.V2.Clients.AccountBankClient.html)
+ /v2/account/buildstorage | 🔑 | [`Gw2Client.WebApi.V2.Account.BuildStorage`](../api/Gw2Sharp.WebApi.V2.Clients.AccountBuildStorageClient.html)
  /v2/account/dailycrafting | 🔑 | [`Gw2Client.WebApi.V2.Account.DailyCrafting`](../api/Gw2Sharp.WebApi.V2.Clients.AccountDailyCraftingClient.html)
  /v2/account/dungeons | 🔑 | [`Gw2Client.WebApi.V2.Account.Dungeons`](../api/Gw2Sharp.WebApi.V2.Clients.AccountDungeonsClient.html)
  /v2/account/dyes | 🔑📆 | [`Gw2Client.WebApi.V2.Account.Dyes`](../api/Gw2Sharp.WebApi.V2.Clients.AccountDyesClient.html)
@@ -67,17 +69,21 @@ For your convenience, the following list gives an overview of the web API endpoi
  /v2/characters | 🔑📄📚📦 | [`Gw2Client.WebApi.V2.Characters`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersClient.html)
  /v2/characters/`:id` | 🔑📆 | [`Gw2Client.WebApi.V2.Characters[id]`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.html)
  /v2/characters/`:id`/backstory | 🔑📆 | [`Gw2Client.WebApi.V2.Characters[id].Backstory`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdBackstoryClient.html)
+ /v2/characters/`:id`/buildtabs | 🔑 | [`Gw2Client.WebApi.V2.Characters[id].BuildTabs`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdBuildTabsActiveClient.html)
+ /v2/characters/`:id`/buildtabs/active | 🔑 | [`Gw2Client.WebApi.V2.Characters[id].BuildTabs.Active`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdBuildTabsActiveClient.html)
  /v2/characters/`:id`/core | 🔑📆 | [`Gw2Client.WebApi.V2.Characters[id].Core`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdCoreClient.html)
  /v2/characters/`:id`/crafting | 🔑📆 | [`Gw2Client.WebApi.V2.Characters[id].Crafting`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdCraftingClient.html)
  ~~/v2/characters/`:id`/dungeons~~ | ✖️ |
  /v2/characters/`:id`/equipment | 🔑📆 | [`Gw2Client.WebApi.V2.Characters[id].Equipment`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentClient.html)
+ /v2/characters/`:id`/equipmenttabs | 🔑 | [`Gw2Client.WebApi.V2.Characters[id].EquipmentTabs`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsActiveClient.html)
+ /v2/characters/`:id`/equipmenttabs/active | 🔑 | [`Gw2Client.WebApi.V2.Characters[id].EquipmentTabs.Active`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsActiveClient.html)
  /v2/characters/`:id`/heropoints | 🔑 | [`Gw2Client.WebApi.V2.Characters[id].HeroPoints`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdHeroPointsClient.html)
  /v2/characters/`:id`/inventory | 🔑📆 | [`Gw2Client.WebApi.V2.Characters[id].Inventory`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdInventoryClient.html)
  /v2/characters/`:id`/quests | 🔑 | [`Gw2Client.WebApi.V2.Characters[id].Quests`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdQuestsClient.html)
  /v2/characters/`:id`/recipes | 🔑📆 | [`Gw2Client.WebApi.V2.Characters[id].Recipes`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdRecipesClient.html)
  /v2/characters/`:id`/sab | 🔑 | [`Gw2Client.WebApi.V2.Characters[id].Sab`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdSabClient.html)
- /v2/characters/`:id`/skills | 🔑📆 | [`Gw2Client.WebApi.V2.Characters[id].Skills`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdSkillsClient.html)
- /v2/characters/`:id`/specializations | 🔑📆 | [`Gw2Client.WebApi.V2.Characters[id].Specializations`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdSpecializationsClient.html)
+ /v2/characters/`:id`/skills | ⚠️🔑📆 | [`Gw2Client.WebApi.V2.Characters[id].Skills`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdSkillsClient.html)
+ /v2/characters/`:id`/specializations | ⚠️🔑📆 | [`Gw2Client.WebApi.V2.Characters[id].Specializations`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdSpecializationsClient.html)
  /v2/characters/`:id`/training | 🔑📆 | [`Gw2Client.WebApi.V2.Characters[id].Training`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdTrainingClient.html)
  /v2/colors | 🌐📄📚📦 | [`Gw2Client.WebApi.V2.Colors`](../api/Gw2Sharp.WebApi.V2.Clients.ColorsClient.html)
  /v2/commerce/delivery | 🔑 | [`Gw2Client.WebApi.V2.Commerce.Delivery`](../api/Gw2Sharp.WebApi.V2.Clients.CommerceDeliveryClient.html)

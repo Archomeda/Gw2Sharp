@@ -8,13 +8,16 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// </summary>
     [EndpointPath("characters/:id")]
     [EndpointPathSegment("id", 0)]
+    [EndpointSchemaVersion("2019-12-19T00:00:00.000Z")]
     public class CharactersIdClient : BaseEndpointBlobClient<Character>, ICharactersIdClient
     {
         private readonly string characterName;
         private readonly ICharactersIdBackstoryClient backstory;
+        private readonly ICharactersIdBuildTabsClient buildTabs;
         private readonly ICharactersIdCoreClient core;
         private readonly ICharactersIdCraftingClient crafting;
         private readonly ICharactersIdEquipmentClient equipment;
+        private readonly ICharactersIdEquipmentTabsClient equipmentTabs;
         private readonly ICharactersIdHeroPointsClient heroPoints;
         private readonly ICharactersIdInventoryClient inventory;
         private readonly ICharactersIdQuestsClient quests;
@@ -30,15 +33,17 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
         /// <param name="characterName">The character name that's used for all character requests.</param>
         /// <param name="gw2Client">The Guild Wars 2 client.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="connection"/> or <paramref name="gw2Client"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="connection"/>, <paramref name="gw2Client"/> or <paramref name="characterName"/> is <c>null</c>.</exception>
         protected internal CharactersIdClient(IConnection connection, IGw2Client gw2Client, string characterName) :
             base(connection, gw2Client, characterName)
         {
             this.characterName = characterName ?? throw new ArgumentNullException(nameof(characterName));
             this.backstory = new CharactersIdBackstoryClient(connection, gw2Client, characterName);
+            this.buildTabs = new CharactersIdBuildTabsClient(connection, gw2Client, characterName);
             this.core = new CharactersIdCoreClient(connection, gw2Client, characterName);
             this.crafting = new CharactersIdCraftingClient(connection, gw2Client, characterName);
             this.equipment = new CharactersIdEquipmentClient(connection, gw2Client, characterName);
+            this.equipmentTabs = new CharactersIdEquipmentTabsClient(connection, gw2Client, characterName);
             this.heroPoints = new CharactersIdHeroPointsClient(connection, gw2Client, characterName);
             this.inventory = new CharactersIdInventoryClient(connection, gw2Client, characterName);
             this.quests = new CharactersIdQuestsClient(connection, gw2Client, characterName);
@@ -56,6 +61,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
         public virtual ICharactersIdBackstoryClient Backstory => this.backstory;
 
         /// <inheritdoc />
+        public virtual ICharactersIdBuildTabsClient BuildTabs => this.buildTabs;
+
+        /// <inheritdoc />
         public virtual ICharactersIdCoreClient Core => this.core;
 
         /// <inheritdoc />
@@ -63,6 +71,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
 
         /// <inheritdoc />
         public virtual ICharactersIdEquipmentClient Equipment => this.equipment;
+
+        /// <inheritdoc />
+        public virtual ICharactersIdEquipmentTabsClient EquipmentTabs => this.equipmentTabs;
 
         /// <inheritdoc />
         public virtual ICharactersIdHeroPointsClient HeroPoints => this.heroPoints;

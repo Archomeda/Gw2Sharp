@@ -49,15 +49,15 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
         [Fact]
         public void InterfaceConsistencyTest()
         {
-            Assert.Equal(this.CheckIfImplementsInterface(this.Client, typeof(IPaginatedClient<>)), this.Client.IsPaginated);
-            Assert.Equal(this.CheckIfImplementsInterface(this.Client, typeof(IAuthenticatedClient<>)), this.Client.IsAuthenticated);
-            Assert.Equal(this.CheckIfImplementsInterface(this.Client, typeof(ILocalizedClient<>)), this.Client.IsLocalized);
-            Assert.Equal(this.CheckIfImplementsInterface(this.Client, typeof(IBlobClient<>)), this.Client.HasBlobData);
-            Assert.Equal(this.CheckIfImplementsInterface(this.Client, typeof(IAllExpandableClient<>)), this.Client.IsAllExpandable);
-            Assert.Equal(this.CheckIfImplementsInterface(this.Client, typeof(IBulkExpandableClient<,>)), this.Client.IsBulkExpandable);
+            Assert.Equal(this.CheckIfImplementsGenericInterface(this.Client, typeof(IPaginatedClient<>)), this.Client.IsPaginated);
+            Assert.Equal(this.Client is IAuthenticatedClient, this.Client.IsAuthenticated);
+            Assert.Equal(this.CheckIfImplementsGenericInterface(this.Client, typeof(ILocalizedClient<>)), this.Client.IsLocalized);
+            Assert.Equal(this.CheckIfImplementsGenericInterface(this.Client, typeof(IBlobClient<>)), this.Client.HasBlobData);
+            Assert.Equal(this.CheckIfImplementsGenericInterface(this.Client, typeof(IAllExpandableClient<>)), this.Client.IsAllExpandable);
+            Assert.Equal(this.CheckIfImplementsGenericInterface(this.Client, typeof(IBulkExpandableClient<,>)), this.Client.IsBulkExpandable);
         }
 
-        private bool CheckIfImplementsInterface(IClient client, Type interfaceType) =>
+        private bool CheckIfImplementsGenericInterface(IClient client, Type interfaceType) =>
             client.GetType().GetInterfaces()
                 .Where(i => i.IsGenericType)
                 .Any(i => i.GetGenericTypeDefinition() == interfaceType);
@@ -123,13 +123,13 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
             this.AssertJsonObject(expected, actual);
         }
 
-        protected virtual async Task AssertAllDataAsync<TObject>(IAllExpandableClient<TObject> client, string file)
+        protected virtual async Task AssertAllDataAsync<TObject>(IAllExpandableClient<TObject> client, string file, string idsName = "ids")
             where TObject : IApiV2Object
         {
             var (data, expected) = this.GetTestData(file);
             ((IClientInternal)this.Client).Connection.HttpClient.RequestAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Returns(callInfo =>
             {
-                this.AssertRequest(callInfo, client, "?ids=all");
+                this.AssertRequest(callInfo, client, $"?{idsName}=all");
                 this.AssertAuthenticatedRequest(callInfo, client);
                 this.AssertLocalizedRequest(callInfo, client);
                 this.AssertSchemaVersionRequest(callInfo, client);
@@ -140,7 +140,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
             this.AssertJsonObject(expected, actual);
         }
 
-        protected virtual async Task AssertBulkDataAsync<TObject, TId>(IBulkExpandableClient<TObject, TId> client, string file, string idName = "id")
+        protected virtual async Task AssertBulkDataAsync<TObject, TId>(IBulkExpandableClient<TObject, TId> client, string file, string idName = "id", string idsName = "ids")
             where TObject : IApiV2Object, IIdentifiable<TId>
         {
             var (data, expected) = this.GetTestData(file);
@@ -159,7 +159,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                     return idString;
                 });
 
-                this.AssertRequest(callInfo, client, $"?ids={string.Join(",", idStrings)}");
+                this.AssertRequest(callInfo, client, $"?{idsName}={string.Join(",", idStrings)}");
                 this.AssertAuthenticatedRequest(callInfo, client);
                 this.AssertLocalizedRequest(callInfo, client);
                 this.AssertSchemaVersionRequest(callInfo, client);
@@ -331,8 +331,15 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
         protected void AssertJsonObject(JArray expected, object actual)
         {
             var actualList = (actual as IEnumerable)?.Cast<object>().ToList();
-            if (actualList == null)
+            if (actualList is null && actual.GetType().GetGenericTypeDefinition() == typeof(KeyValuePair<,>))
+            {
+                // Cast KeyValuePair to a list
+                dynamic kvp = actual;
+                actualList = new List<object> { kvp.Key, kvp.Value };
+            }
+            if (actualList is null)
                 throw new InvalidOperationException($"Expected an object that's castable to an enumerable for {expected}");
+
             for (int i = 0; i < expected.Count; i++)
                 this.AssertJsonObject(expected[i], actualList[i]);
         }

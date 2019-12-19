@@ -6,7 +6,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 tokeninfo endpoint.
     /// </summary>
     public interface ITokenInfoClient :
-        IAuthenticatedClient<TokenInfo>,
+        IAuthenticatedClient,
         IBlobClient<TokenInfo>
     { }
 }

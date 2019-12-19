@@ -1,0 +1,205 @@
+[
+  {
+    "tab": 1,
+    "is_active": true,
+    "equipment": [
+      {
+        "id": 6479,
+        "location": "Equipped",
+        "slot": "HelmAquatic",
+        "tabs": [ 1 ],
+        "binding": "Character",
+        "bound_to": "Bob"
+      },
+      {
+        "id": 77474,
+        "location": "Equipped",
+        "slot": "Backpack",
+        "tabs": [ 1 ],
+        "infusions": [
+          78052,
+          78028
+        ],
+        "skin": 2352,
+        "stats": {
+          "id": 1130,
+          "attributes": {
+            "Power": 52,
+            "Precision": 27,
+            "ConditionDamage": 52,
+            "ConditionDuration": 27
+          }
+        },
+        "binding": "Account"
+      },
+      {
+        "id": 80254,
+        "location": "Equipped",
+        "slot": "Coat",
+        "tabs": [ 1 ],
+        "upgrades": [
+          83502
+        ],
+        "infusions": [
+          70852
+        ],
+        "stats": {
+          "id": 1153,
+          "attributes": {
+            "Power": 121,
+            "Precision": 67,
+            "ConditionDamage": 121,
+            "ConditionDuration": 67
+          }
+        },
+        "binding": "Account",
+        "dyes": [
+          11,
+          1155,
+          6,
+          null
+        ]
+      },
+      {
+        "id": 80557,
+        "location": "Equipped",
+        "slot": "Boots",
+        "tabs": [ 1 ],
+        "upgrades": [
+          83502
+        ],
+        "infusions": [
+          70852
+        ],
+        "stats": {
+          "id": 1153,
+          "attributes": {
+            "Power": 40,
+            "Precision": 22,
+            "ConditionDamage": 40,
+            "ConditionDuration": 22
+          }
+        },
+        "binding": "Account",
+        "dyes": [
+          11,
+          1155,
+          6,
+          null
+        ]
+      },
+      {
+        "id": 78984,
+        "location": "Equipped",
+        "slot": "WeaponA1",
+        "tabs": [ 1 ],
+        "upgrades": [
+          24605
+        ],
+        "infusions": [
+          49432
+        ],
+        "skin": 6588,
+        "stats": {
+          "id": 1224,
+          "attributes": {
+            "Power": 108,
+            "Precision": 59,
+            "ConditionDamage": 108,
+            "ConditionDuration": 59
+          }
+        },
+        "binding": "Account"
+      }
+    ]
+  },
+  {
+    "tab": 2,
+    "is_active": false,
+    "equipment": [
+      {
+        "id": 80205,
+        "location": "Armory",
+        "slot": "Gloves",
+        "tabs": [ 2 ],
+        "upgrades": [
+          83502
+        ],
+        "infusions": [
+          70852
+        ],
+        "stats": {
+          "id": 1153,
+          "attributes": {
+            "Power": 40,
+            "Precision": 22,
+            "ConditionDamage": 40,
+            "ConditionDuration": 22
+          }
+        },
+        "binding": "Account",
+        "dyes": [
+          11,
+          1155,
+          6,
+          null
+        ]
+      },
+      {
+        "id": 80277,
+        "location": "Armory",
+        "slot": "Leggings",
+        "tabs": [ 2 ],
+        "upgrades": [
+          83502
+        ],
+        "infusions": [
+          70852
+        ],
+        "stats": {
+          "id": 1153,
+          "attributes": {
+            "Power": 81,
+            "Precision": 44,
+            "ConditionDamage": 81,
+            "ConditionDuration": 44
+          }
+        },
+        "binding": "Account",
+        "dyes": [
+          11,
+          1155,
+          6,
+          15
+        ]
+      },
+      {
+        "id": 77413,
+        "location": "Armory",
+        "slot": "Accessory1",
+        "tabs": [ 2 ],
+        "infusions": [
+          77366
+        ],
+        "stats": {
+          "id": 1268,
+          "attributes": {
+            "Power": 92,
+            "Precision": 49,
+            "ConditionDamage": 92,
+            "ConditionDuration": 49
+          }
+        },
+        "binding": "Account"
+      },
+      {
+        "id": 42024,
+        "location": "Armory",
+        "slot": "WeaponAquaticA",
+        "tabs": [ 2 ],
+        "binding": "Character",
+        "bound_to": "Bob"
+      }
+    ]
+  }
+]

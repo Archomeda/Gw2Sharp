@@ -271,18 +271,13 @@ namespace Gw2Sharp.WebApi.V2.Clients
         }
 
 
-        private const string QUERY_ALL = "?ids=all";
-        private const string QUERY_ITEM = "/{0}";
-        private const string QUERY_MANY = "?ids={0}";
-        private const string QUERY_PAGE = "?page={0}&page_size={1}";
-
         /// <summary>
         /// Formats a URL with querying all items.
         /// </summary>
         /// <param name="endpointPath">The endpoint path.</param>
         /// <returns>The formatted URL.</returns>
         protected virtual string FormatUrlQueryAll(string endpointPath) =>
-            $"{endpointPath}{QUERY_ALL}";
+            $"{endpointPath}?{this.client.BulkEndpointIdsParameterName}=all";
 
         /// <summary>
         /// Formats a URL with querying ids.
@@ -307,7 +302,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="id">The item id.</param>
         /// <returns>The formatted URL.</returns>
         protected virtual string FormatUrlQueryItem<T>(string endpointPath, T id) =>
-            $"{endpointPath}{string.Format(QUERY_ITEM, FormatId(id))}";
+            $"{endpointPath}/{FormatId(id)}";
 
         /// <summary>
         /// Formats a URL with querying many items.
@@ -316,7 +311,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="ids">The item ids.</param>
         /// <returns>The formatted URL.</returns>
         protected virtual string FormatUrlQueryMany<T>(string endpointPath, IEnumerable<T> ids) =>
-            $"{endpointPath}{string.Format(QUERY_MANY, string.Join(",", ids.Select(FormatId)))}";
+            $"{endpointPath}?{this.client.BulkEndpointIdsParameterName}={string.Join(",", ids.Select(FormatId))}";
 
         /// <summary>
         /// Formats a URL with querying a page of items.
@@ -326,7 +321,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="pageSize">The page size.</param>
         /// <returns>The formatted URL.</returns>
         protected virtual string FormatUrlQueryPage(string endpointPath, int page, int pageSize) =>
-            $"{endpointPath}{string.Format(QUERY_PAGE, page, pageSize)}";
+            $"{endpointPath}?page={page}&page_size={pageSize}";
 
         /// <summary>
         /// Appends the parameters to the URI.

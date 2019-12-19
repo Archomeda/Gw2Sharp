@@ -8,7 +8,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 createsubtoken endpoint.
     /// </summary>
     public interface ICreateSubtokenClient :
-        IAuthenticatedClient<CreateSubtoken>,
+        IAuthenticatedClient,
         IBlobClient<CreateSubtoken>
     {
         /// <summary>

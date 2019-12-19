@@ -6,7 +6,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 characters id endpoint.
     /// </summary>
     public interface ICharactersIdClient :
-        IAuthenticatedClient<Character>,
+        IAuthenticatedClient,
         IBlobClient<Character>
     {
         /// <summary>
@@ -19,6 +19,12 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Requires scopes: account, characters.
         /// </summary>
         ICharactersIdBackstoryClient Backstory { get; }
+
+        /// <summary>
+        /// Gets a character's build tabs.
+        /// Requires scopes: account, characters, build.
+        /// </summary>
+        ICharactersIdBuildTabsClient BuildTabs { get; }
 
         /// <summary>
         /// Gets a character's core information.
@@ -37,6 +43,12 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Requires scopes: account, characters, and builds and/or inventories.
         /// </summary>
         ICharactersIdEquipmentClient Equipment { get; }
+
+        /// <summary>
+        /// Gets a character's equipment.
+        /// Requires scopes: account, characters, and builds and/or inventories.
+        /// </summary>
+        ICharactersIdEquipmentTabsClient EquipmentTabs { get; }
 
         /// <summary>
         /// Gets a character's hero points information.

@@ -6,7 +6,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 commerce transactions history sells endpoint.
     /// </summary>
     public interface ICommerceTransactionsHistorySellsClient :
-        IAuthenticatedClient<IApiV2ObjectList<CommerceTransactionHistory>>,
+        IAuthenticatedClient,
         IBlobClient<IApiV2ObjectList<CommerceTransactionHistory>>,
         IPaginatedClient<CommerceTransactionHistory>
     {

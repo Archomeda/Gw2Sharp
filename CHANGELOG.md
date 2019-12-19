@@ -1,5 +1,35 @@
 # Gw2Sharp History
 
+## 0.8.0
+This release applies the schema changes of 2019-12-19, which includes the build and equipment template update from October 2019.
+
+### Endpoints
+- Add `/v2/account/buildstorage`
+- Add `/v2/account/buildstorage/active`
+- Add `/v2/characters/:id/buildtabs`
+- Add `/v2/characters/:id/buildtabs/active`
+- Add `/v2/characters/:id/equipmenttabs`
+- Add `/v2/characters/:id/equipmenttabs/active`
+- Add `BuildStorageSlots` property to `/v2/account`
+- Add `BuildTabsUnlocked`, `ActiveBuildTab` and `BuildTabs` properties to `/v2/characters/:id`
+- Add `EquipmentTabsUnlocked`, `ActiveEquipmentTab` and `EquipmentTabs` properties to `/v2/characters/:id`
+- Add `Equipment[i].Location` and `Equipment[i].Tabs` properties to `/v2/characters/:id`
+- Add `Code` property to `/v2/legends`
+- Add `Code` and `SkillsByPalette` properties to `/v2/professions`
+- Marked `/v2/characters/:id/skills` as deprecated
+- Marked `/v2/characters/:id/specializations` as deprecated
+- Marked `Skills` and `Specializations` properties as deprecated
+
+### Refactoring
+- **Breaking:** `Gw2Sharp.WebApi.V2.Clients.IAuthenticatedClient` no longer accepts the object type as generic type parameter; it's now just an interface without any type parameters
+
+### Deprecation notes
+The deprecated endpoints and properties can still be used for now.
+The API still provides the endpoints, and the properties have been implemented with backwards compatibility code on Gw2Sharp's end.
+However, it's advised to update as soon as possible, as these deprecations will be fully removed starting with the next major prerelease version 0.9.0.
+
+---
+
 ## 0.7.4
 ### Services
 - Chat link parsing and rendering is now supported ([#23](https://github.com/Archomeda/Gw2Sharp/issues/23), [#24](https://github.com/Archomeda/Gw2Sharp/pull/24))
@@ -64,6 +94,8 @@ This shouldn't impact any NuGet package users.
 ### Refactoring
 - The endpoint clients `Gw2Sharp.WebApi.V2.Clients.CommerceExchangeCoinsClient` and `Gw2Sharp.WebApi.V2.Clients.CommerceExchangeGemsClient` no longer inherit from `Gw2Sharp.WebApi.V2.Clients.BaseEndpointBlobClient` and instead inherit from `Gw2Sharp.WebApi.BlobClient` (they require the quantity to be given and cannot return a valid blob response without it)
 
+---
+
 ## 0.6.1
 ### Endpoints
 - Change property `Emblem` in `Gw2Sharp.WebApi.V2.Models.Guild` to be nullable because the API might leave this property out ([#10](https://github.com/Archomeda/Gw2Sharp/issues/10))
@@ -115,6 +147,8 @@ This shouldn't impact any NuGet package users.
   - `expire` in `Gw2Sharp.WebApi.V2.Clients.ICreateSubtokenClient.Expires()`
   - `expire` in `Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.Expires()`
 
+---
+
 ## 0.5.0
 ### Endpoints
 - Add render service which can be found under `IGw2WebApiClient.Render` (right next to `IGw2WebApiClient.V2`) ([#6](https://github.com/Archomeda/Gw2Sharp/issues/6))
@@ -142,6 +176,8 @@ This shouldn't impact any NuGet package users.
 
 ### Deprecation removals
 - Following up on version 0.4.0, the methods `ICacheMethod.HasAsync`, `ICacheMethod.GetAsync` and `ICacheMethod.GetOrNullAsync` have been removed
+
+---
 
 ## 0.4.1
 ### Fixes
@@ -181,6 +217,8 @@ This shouldn't impact any NuGet package users.
   - `GetAsync` is marked as deprecated and is unused in Gw2Sharp from now on
   - `GetOrNullAsync` is marked as deprecated and is renamed to `TryGetAsync` (functionality is the same)
 
+---
+
 ## 0.3.1
 ### Fixes
 - Don't leak cached authenticated requests ([#1](https://github.com/Archomeda/Gw2Sharp/issues/1))
@@ -207,6 +245,8 @@ This shouldn't impact any NuGet package users.
 ### Refactoring
 - **Breaking:** In `IPaginatedClient<TObject>`, the `PageAsync(int page, CancellationToken cancellationToken, int pageSize)` method has had its order of parameters changed to `PageAsync(int page, int pageSize, CancellationToken cancellationToken)`.
 
+---
+
 ## 0.2.0
 ### Endpoints
 - **Breaking:** Update `/v2/account/home/cats` to schema version `2019-03-22T00:00:00.000Z`
@@ -215,6 +255,8 @@ This shouldn't impact any NuGet package users.
 - **Breaking:** Remove `/v2/cats` in favor of `/v2/home/cats`
 - Add `/v2/createsubtoken`
 - Add `/v2/tokeninfo`
+
+---
 
 ## 0.1.0
 - Test release with support for a bunch of endpoints

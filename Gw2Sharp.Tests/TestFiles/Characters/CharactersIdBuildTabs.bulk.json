@@ -1,0 +1,123 @@
+[
+  {
+    "tab": 1,
+    "is_active": true,
+    "build": {
+      "name": "Non-existent warrior build",
+      "profession": "Warrior",
+      "skills": {
+        "heal": 11111,
+        "utilities": [
+          22222,
+          33333,
+          44444
+        ],
+        "elite": null
+      },
+      "aquatic_skills": {
+        "heal": 22222,
+        "utilities": [
+          33333,
+          44444,
+          55555
+        ],
+        "elite": null
+      },
+      "specializations": [
+        {
+          "id": 42,
+          "traits": [
+            1234,
+            2345,
+            4567
+          ]
+        },
+        null,
+        null
+      ]
+    }
+  },
+  {
+    "tab": 2,
+    "is_active": false,
+    "build": {
+      "id": 2,
+      "build": {
+        "name": "Non-existent ranger build",
+        "profession": "Ranger",
+        "skills": {
+          "heal": null,
+          "utilities": [
+            null,
+            null,
+            null
+          ],
+          "elite": null
+        },
+        "aquatic_skills": {
+          "heal": null,
+          "utilities": [
+            null,
+            null,
+            null
+          ],
+          "elite": null
+        },
+        "specializations": [
+          null,
+          null,
+          null
+        ],
+        "pets": {
+          "terrestrial": [
+            1,
+            32
+          ],
+          "aquatic": [
+            null,
+            null
+          ]
+        }
+      }
+    }
+  },
+  {
+    "tab": 3,
+    "is_active": false,
+    "build": {
+      "name": "Non-existent revenant build",
+      "profession": "Revenant",
+      "skills": {
+        "heal": null,
+        "utilities": [
+          null,
+          null,
+          null
+        ],
+        "elite": null
+      },
+      "aquatic_skills": {
+        "heal": null,
+        "utilities": [
+          null,
+          null,
+          null
+        ],
+        "elite": null
+      },
+      "specializations": [
+        null,
+        null,
+        null
+      ],
+      "legends": [
+        "Legend2",
+        "Legend3"
+      ],
+      "aquatic_legends": [
+        "Legend3",
+        null
+      ]
+    }
+  }
+]

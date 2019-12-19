@@ -6,7 +6,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 account endpoint.
     /// </summary>
     public interface IAccountClient :
-        IAuthenticatedClient<Account>,
+        IAuthenticatedClient,
         IBlobClient<Account>
     {
         /// <summary>
@@ -20,6 +20,12 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Requires scopes: account, inventories.
         /// </summary>
         IAccountBankClient Bank { get; }
+
+        /// <summary>
+        /// Gets the build storage.
+        /// Requires scopes: builds.
+        /// </summary>
+        IAccountBuildStorageClient BuildStorage { get; }
 
         /// <summary>
         /// Gets the daily crafting progression.

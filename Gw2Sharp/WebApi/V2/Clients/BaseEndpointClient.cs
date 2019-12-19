@@ -12,6 +12,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public abstract class BaseEndpointClient<TObject> : BaseClient, IEndpointClient
         where TObject : IApiV2Object
     {
+        private IReadOnlyList<(PropertyInfo Property, EndpointPathParameterAttribute Attribute)> parameterProperties;
+
         /// <summary>
         /// Creates a new base endpoint client.
         /// </summary>
@@ -34,14 +36,23 @@ namespace Gw2Sharp.WebApi.V2.Clients
             this.Implementation = new DefaultEndpointClientImplementation<TObject>(this, connection, gw2Client);
 
             this.EndpointPath = this.GetRequiredAttribute<EndpointPathAttribute>().EndpointPath;
+            this.parameterProperties = this.GetType()
+                .GetProperties(BindingFlags.Public | BindingFlags.Instance)
+                .Select(p => (Property: p, Attribute: p.GetCustomAttribute<EndpointPathParameterAttribute>()))
+                .Where(x => x.Attribute != null)
+                .ToList()
+                .AsReadOnly();
+            var bulkIdAttribute = this.GetAttribute<EndpointBulkIdNameAttribute>();
+            this.BulkEndpointIdParameterName = bulkIdAttribute?.Id ?? "id";
+            this.BulkEndpointIdsParameterName = bulkIdAttribute?.Ids ?? "ids";
             this.SchemaVersion = this.GetAttribute<EndpointSchemaVersionAttribute>()?.SchemaVersion;
 
-            this.IsLocalized = this.ImplementsInterface(typeof(ILocalizedClient<>));
-            this.IsAuthenticated = this.ImplementsInterface(typeof(IAuthenticatedClient<>));
-            this.IsPaginated = this.ImplementsInterface(typeof(IPaginatedClient<>));
-            this.IsAllExpandable = this.ImplementsInterface(typeof(IAllExpandableClient<>));
-            this.IsBulkExpandable = this.ImplementsInterface(typeof(IBulkExpandableClient<,>));
-            this.HasBlobData = this.ImplementsInterface(typeof(IBlobClient<>));
+            this.IsLocalized = this.ImplementsGenericInterface(typeof(ILocalizedClient<>));
+            this.IsAuthenticated = this is IAuthenticatedClient;
+            this.IsPaginated = this.ImplementsGenericInterface(typeof(IPaginatedClient<>));
+            this.IsAllExpandable = this.ImplementsGenericInterface(typeof(IAllExpandableClient<>));
+            this.IsBulkExpandable = this.ImplementsGenericInterface(typeof(IBulkExpandableClient<,>));
+            this.HasBlobData = this.ImplementsGenericInterface(typeof(IBlobClient<>));
 
             if (this.HasBlobData && (this.IsAllExpandable || this.IsBulkExpandable))
                 throw new InvalidOperationException("An endpoint cannot implement all or bulk expansion in combination with blob data.");
@@ -67,21 +78,17 @@ namespace Gw2Sharp.WebApi.V2.Clients
         public string EndpointPath { get; }
 
         /// <inheritdoc />
-        public IDictionary<string, string> EndpointPathParameters
-        {
-            get
-            {
-                var parameterProperties = this.GetType()
-                    .GetProperties(BindingFlags.Public | BindingFlags.Instance)
-                    .Select(p => (Property: p, Attribute: p.GetCustomAttribute<EndpointPathParameterAttribute>()))
-                    .Where(x => x.Attribute != null);
+        public IDictionary<string, string> EndpointPathParameters =>
+            this.parameterProperties
+                .Select(x => new KeyValuePair<string, object?>(x.Attribute.ParameterName, x.Property.GetValue(this)))
+                .Where(x => x.Value != null) // Explicit check for null
+                .ToDictionary(x => x.Key, x => x.Value!.ToString());
 
-                return parameterProperties
-                    .Select(x => new KeyValuePair<string, object?>(x.Attribute.ParameterName, x.Property.GetValue(this)))
-                    .Where(x => x.Value != null) // Explicit check for null
-                    .ToDictionary(x => x.Key, x => x.Value!.ToString());
-            }
-        }
+        /// <inheritdoc />
+        public string? BulkEndpointIdParameterName { get; }
+
+        /// <inheritdoc />
+        public string? BulkEndpointIdsParameterName { get; }
 
         /// <inheritdoc />
         public string? SchemaVersion { get; }
@@ -110,7 +117,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
 
         #region Reflection helpers
 
-        private bool ImplementsInterface(Type interfaceType) =>
+        private bool ImplementsGenericInterface(Type interfaceType) =>
             this.GetType().GetInterfaces()
                 .Where(i => i.IsGenericType)
                 .Any(i => i.GetGenericTypeDefinition() == interfaceType);

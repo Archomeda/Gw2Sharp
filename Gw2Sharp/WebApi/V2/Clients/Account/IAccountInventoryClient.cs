@@ -6,7 +6,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 account inventory endpoint.
     /// </summary>
     public interface IAccountInventoryClient :
-        IAuthenticatedClient<IApiV2ObjectList<AccountItem>>,
+        IAuthenticatedClient,
         IBlobClient<IApiV2ObjectList<AccountItem>>
     {
     }

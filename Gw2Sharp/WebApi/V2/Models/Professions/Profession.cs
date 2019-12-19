@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using Gw2Sharp.Json.Converters;
+using Newtonsoft.Json;
 
 namespace Gw2Sharp.WebApi.V2.Models
 {
@@ -12,6 +14,12 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// The profession id.
         /// </summary>
         public string Id { get; set; } = string.Empty;
+
+        /// <summary>
+        /// The profession code.
+        /// Used in build template chat links.
+        /// </summary>
+        public int Code { get; set; }
 
         /// <summary>
         /// The profession name.
@@ -52,5 +60,11 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// The profession training.
         /// </summary>
         public IReadOnlyList<ProfessionTraining> Training { get; set; } = Array.Empty<ProfessionTraining>();
+
+        /// <summary>
+        /// The map of skill palette ids to skill ids.
+        /// </summary>
+        [JsonConverter(typeof(CompactMapConverter))]
+        public IDictionary<int, int> SkillsByPalette { get; set; } = new Dictionary<int, int>();
     }
 }

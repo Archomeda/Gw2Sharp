@@ -4,16 +4,16 @@ using System.Collections.Generic;
 namespace Gw2Sharp.WebApi.V2.Models
 {
     /// <summary>
-    /// Represents the character specialization in a specific game mode.
+    /// Represents the build template specialization.
     /// </summary>
-    public class CharacterGameModeSpecialization
+    public class BuildTemplateSpecialization
     {
         /// <summary>
         /// The specialization id.
         /// If no specialization is selected, this value is <c>null</c>.
         /// Can be resolved against <see cref="IGw2WebApiV2Client.Specializations"/>.
         /// </summary>
-        public int Id { get; set; }
+        public int? Id { get; set; }
 
         /// <summary>
         /// The list of major traits.

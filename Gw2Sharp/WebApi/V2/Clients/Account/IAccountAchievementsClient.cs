@@ -6,7 +6,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 account achievements endpoint.
     /// </summary>
     public interface IAccountAchievementsClient :
-        IAuthenticatedClient<IApiV2ObjectList<AccountAchievement>>,
+        IAuthenticatedClient,
         IBlobClient<IApiV2ObjectList<AccountAchievement>>
     {
     }

@@ -6,7 +6,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 characters id equipment endpoint.
     /// </summary>
     public interface ICharactersIdEquipmentClient :
-        IAuthenticatedClient<CharactersEquipment>,
+        IAuthenticatedClient,
         IBlobClient<CharactersEquipment>
     {
         /// <summary>

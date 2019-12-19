@@ -9,11 +9,12 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 account endpoint.
     /// </summary>
     [EndpointPath("account")]
-    [EndpointSchemaVersion("2019-02-21T00:00:00.000Z")]
+    [EndpointSchemaVersion("2019-12-19T00:00:00.000Z")]
     public class AccountClient : BaseEndpointClient<Account>, IAccountClient
     {
         private readonly IAccountAchievementsClient achievements;
         private readonly IAccountBankClient bank;
+        private readonly IAccountBuildStorageClient buildStorage;
         private readonly IAccountDailyCraftingClient dailyCrafting;
         private readonly IAccountDungeonsClient dungeons;
         private readonly IAccountDyesClient dyes;
@@ -51,6 +52,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         {
             this.achievements = new AccountAchievementsClient(connection, gw2Client);
             this.bank = new AccountBankClient(connection, gw2Client);
+            this.buildStorage = new AccountBuildStorageClient(connection, gw2Client);
             this.dailyCrafting = new AccountDailyCraftingClient(connection, gw2Client);
             this.dungeons = new AccountDungeonsClient(connection, gw2Client);
             this.dyes = new AccountDyesClient(connection, gw2Client);
@@ -83,6 +85,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
 
         /// <inheritdoc />
         public virtual IAccountBankClient Bank => this.bank;
+
+        /// <inheritdoc />
+        public virtual IAccountBuildStorageClient BuildStorage => this.buildStorage;
 
         /// <inheritdoc />
         public virtual IAccountDailyCraftingClient DailyCrafting => this.dailyCrafting;

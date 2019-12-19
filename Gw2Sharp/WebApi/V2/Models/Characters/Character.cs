@@ -102,14 +102,67 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// Additionally requires scopes: builds.
         /// If the required scopes are not met, this value is <c>null</c>.
         /// </summary>
-        public CharacterSpecializations? Specializations { get; set; }
+        [Obsolete("Deprecated since the build template update on 2019-12-19. Use /v2/characters/:id/buildtabs instead. To be removed starting with version 0.9.0.")]
+        public CharacterSpecializations? Specializations
+        {
+            get
+            {
+                var specializations = this.ActiveBuildTab.HasValue ? this.BuildTabs?[this.ActiveBuildTab.Value].Build.Specializations : null;
+                if (specializations == null)
+                    return null;
+
+                return new CharacterSpecializations
+                {
+                    Pve = specializations,
+                    Pvp = specializations,
+                    Wvw = specializations
+                };
+            }
+        }
 
         /// <summary>
         /// The character skills.
         /// Additionally requires scopes: builds.
         /// If the required scopes are not met, this value is <c>null</c>.
         /// </summary>
-        public CharacterSkills? Skills { get; set; }
+        [Obsolete("Deprecated since the build template update on 2019-12-19. Use /v2/characters/:id/buildtabs instead. To be removed starting with version 0.9.0.")]
+        public CharacterSkills? Skills
+        {
+            get
+            {
+                var skills = this.ActiveBuildTab.HasValue ? this.BuildTabs?[this.ActiveBuildTab.Value].Build.Skills : null;
+                if (skills == null)
+                    return null;
+
+                return new CharacterSkills
+                {
+                    Pve = skills,
+                    Pvp = skills,
+                    Wvw = skills
+                };
+            }
+        }
+
+        /// <summary>
+        /// The number of build tabs that this character has unlocked.
+        /// Additionally requires scopes: builds.
+        /// If the required scopes are not met, this value is <c>null</c>.
+        /// </summary>
+        public int? BuildTabsUnlocked { get; set; }
+
+        /// <summary>
+        /// The current active build tab index. To be used as index in <see cref="BuildTabs"/>.
+        /// Additionally requires scopes: builds.
+        /// If the required scopes are not met, this value is <c>null</c>.
+        /// </summary>
+        public int? ActiveBuildTab { get; set; }
+
+        /// <summary>
+        /// The list of character build tabs.
+        /// Additionally requires scopes: builds.
+        /// If the required scopes are not met, this value is <c>null</c>.
+        /// </summary>
+        public IReadOnlyList<CharacterBuildTabSlot>? BuildTabs { get; set; }
 
         /// <summary>
         /// The list of the character equipment.
@@ -117,6 +170,27 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// If the required scopes are not met, this value is <c>null</c>.
         /// </summary>
         public IReadOnlyList<CharacterEquipmentItem>? Equipment { get; set; }
+
+        /// <summary>
+        /// The number of equipment tabs that this character has unlocked.
+        /// Additionally requires scopes: builds and/or inventories.
+        /// If the required scopes are not met, this value is <c>null</c>.
+        /// </summary>
+        public int? EquipmentTabsUnlocked { get; set; }
+
+        /// <summary>
+        /// The current active equipment tab index. To be used as index in <see cref="EquipmentTabs"/>.
+        /// Additionally requires scopes: builds and/or inventories.
+        /// If the required scopes are not met, this value is <c>null</c>.
+        /// </summary>
+        public int? ActiveEquipmentTab { get; set; }
+
+        /// <summary>
+        /// The list of the character equipment tabs.
+        /// Additionally requires scopes: builds and/or inventories.
+        /// If the required scopes are not met, this value is <c>null</c>.
+        /// </summary>
+        public IReadOnlyList<CharacterEquipmentTabSlot>? EquipmentTabs { get; set; }
 
         /// <summary>
         /// The list of learned recipes.

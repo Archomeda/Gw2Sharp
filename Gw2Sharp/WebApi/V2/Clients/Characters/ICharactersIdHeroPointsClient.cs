@@ -4,7 +4,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 characters id hero points endpoint.
     /// </summary>
     public interface ICharactersIdHeroPointsClient :
-        IAuthenticatedClient<IApiV2ObjectList<string>>,
+        IAuthenticatedClient,
         IBlobClient<IApiV2ObjectList<string>>
     {
         /// <summary>

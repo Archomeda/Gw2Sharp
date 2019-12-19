@@ -7,7 +7,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 characters id recipes endpoint.
     /// </summary>
     public interface ICharactersIdRecipesClient :
-        IAuthenticatedClient<CharactersRecipes>,
+        IAuthenticatedClient,
         IBlobClient<CharactersRecipes>
     {
         /// <summary>

@@ -7,7 +7,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// </summary>
     public interface ICharactersClient :
         IAllExpandableClient<Character>,
-        IAuthenticatedClient<Character>,
+        IAuthenticatedClient,
         IBulkExpandableClient<Character, string>,
         IPaginatedClient<Character>
     {

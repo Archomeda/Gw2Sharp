@@ -4,7 +4,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 account dungeons endpoint.
     /// </summary>
     public interface IAccountDungeonsClient :
-        IAuthenticatedClient<IApiV2ObjectList<string>>,
+        IAuthenticatedClient,
         IBlobClient<IApiV2ObjectList<string>>
     {
     }

@@ -8,7 +8,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 guild id endpoint.
     /// </summary>
     public interface IGuildIdClient :
-        IAuthenticatedClient<Guild>,
+        IAuthenticatedClient,
         IBlobClient<Guild>
     {
         /// <summary>

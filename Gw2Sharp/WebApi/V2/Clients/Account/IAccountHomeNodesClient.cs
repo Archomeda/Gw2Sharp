@@ -4,7 +4,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 account home nodes endpoint.
     /// </summary>
     public interface IAccountHomeNodesClient :
-        IAuthenticatedClient<IApiV2ObjectList<string>>,
+        IAuthenticatedClient,
         IBlobClient<IApiV2ObjectList<string>>
     {
     }

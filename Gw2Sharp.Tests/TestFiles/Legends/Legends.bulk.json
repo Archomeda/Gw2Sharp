@@ -1,6 +1,7 @@
 [
   {
     "id": "Legend1",
+    "code": 13,
     "swap": 28229,
     "heal": 27220,
     "elite": 27760,
@@ -12,6 +13,7 @@
   },
   {
     "id": "Legend2",
+    "code": 14,
     "swap": 27659,
     "heal": 26937,
     "elite": 28406,
@@ -23,6 +25,7 @@
   },
   {
     "id": "Legend3",
+    "code": 15,
     "swap": 26650,
     "heal": 27372,
     "elite": 27975,

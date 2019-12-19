@@ -6,7 +6,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 characters id core endpoint.
     /// </summary>
     public interface ICharactersIdCoreClient :
-        IAuthenticatedClient<CharactersCore>,
+        IAuthenticatedClient,
         IBlobClient<CharactersCore>
     {
         /// <summary>

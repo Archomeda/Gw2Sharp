@@ -11,18 +11,18 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// The list of PvE character specializations.
         /// If a specialization is not selected in a specific slot, that value is <c>null</c>.
         /// </summary>
-        public IReadOnlyList<CharacterGameModeSpecialization>? Pve { get; set; }
+        public IReadOnlyList<BuildTemplateSpecialization>? Pve { get; set; }
 
         /// <summary>
         /// The list of PvP character specializations.
         /// If a specialization is not selected in a specific slot, that value is <c>null</c>.
         /// </summary>
-        public IReadOnlyList<CharacterGameModeSpecialization>? Pvp { get; set; }
+        public IReadOnlyList<BuildTemplateSpecialization>? Pvp { get; set; }
 
         /// <summary>
         /// The list of WvW character specializations.
         /// If a specialization is not selected in a specific slot, that value is <c>null</c>.
         /// </summary>
-        public IReadOnlyList<CharacterGameModeSpecialization>? Wvw { get; set; }
+        public IReadOnlyList<BuildTemplateSpecialization>? Wvw { get; set; }
     }
 }
