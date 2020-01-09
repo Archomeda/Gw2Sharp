@@ -2845,6 +2845,30 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.IGw2Client.WebApi
   nameWithType: IGw2Client.WebApi
+- uid: Gw2Sharp.ItemEquipmentLocationType
+  name: ItemEquipmentLocationType
+  href: api/Gw2Sharp.ItemEquipmentLocationType.html
+  commentId: T:Gw2Sharp.ItemEquipmentLocationType
+  fullName: Gw2Sharp.ItemEquipmentLocationType
+  nameWithType: ItemEquipmentLocationType
+- uid: Gw2Sharp.ItemEquipmentLocationType.Armory
+  name: Armory
+  href: api/Gw2Sharp.ItemEquipmentLocationType.html#Gw2Sharp_ItemEquipmentLocationType_Armory
+  commentId: F:Gw2Sharp.ItemEquipmentLocationType.Armory
+  fullName: Gw2Sharp.ItemEquipmentLocationType.Armory
+  nameWithType: ItemEquipmentLocationType.Armory
+- uid: Gw2Sharp.ItemEquipmentLocationType.Equipped
+  name: Equipped
+  href: api/Gw2Sharp.ItemEquipmentLocationType.html#Gw2Sharp_ItemEquipmentLocationType_Equipped
+  commentId: F:Gw2Sharp.ItemEquipmentLocationType.Equipped
+  fullName: Gw2Sharp.ItemEquipmentLocationType.Equipped
+  nameWithType: ItemEquipmentLocationType.Equipped
+- uid: Gw2Sharp.ItemEquipmentLocationType.Unknown
+  name: Unknown
+  href: api/Gw2Sharp.ItemEquipmentLocationType.html#Gw2Sharp_ItemEquipmentLocationType_Unknown
+  commentId: F:Gw2Sharp.ItemEquipmentLocationType.Unknown
+  fullName: Gw2Sharp.ItemEquipmentLocationType.Unknown
+  nameWithType: ItemEquipmentLocationType.Unknown
 - uid: Gw2Sharp.Json.Converters
   name: Gw2Sharp.Json.Converters
   href: api/Gw2Sharp.Json.Converters.html
@@ -3160,6 +3184,57 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Json.Converters.CastableTypeConverter.WriteJson
   nameWithType: CastableTypeConverter.WriteJson
+- uid: Gw2Sharp.Json.Converters.CompactMapConverter
+  name: CompactMapConverter
+  href: api/Gw2Sharp.Json.Converters.CompactMapConverter.html
+  commentId: T:Gw2Sharp.Json.Converters.CompactMapConverter
+  fullName: Gw2Sharp.Json.Converters.CompactMapConverter
+  nameWithType: CompactMapConverter
+- uid: Gw2Sharp.Json.Converters.CompactMapConverter.CanWrite
+  name: CanWrite
+  href: api/Gw2Sharp.Json.Converters.CompactMapConverter.html#Gw2Sharp_Json_Converters_CompactMapConverter_CanWrite
+  commentId: P:Gw2Sharp.Json.Converters.CompactMapConverter.CanWrite
+  fullName: Gw2Sharp.Json.Converters.CompactMapConverter.CanWrite
+  nameWithType: CompactMapConverter.CanWrite
+- uid: Gw2Sharp.Json.Converters.CompactMapConverter.CanWrite*
+  name: CanWrite
+  href: api/Gw2Sharp.Json.Converters.CompactMapConverter.html#Gw2Sharp_Json_Converters_CompactMapConverter_CanWrite_
+  commentId: Overload:Gw2Sharp.Json.Converters.CompactMapConverter.CanWrite
+  isSpec: "True"
+  fullName: Gw2Sharp.Json.Converters.CompactMapConverter.CanWrite
+  nameWithType: CompactMapConverter.CanWrite
+- uid: Gw2Sharp.Json.Converters.CompactMapConverter.ReadJson(JsonReader,Type,IDictionary{System.Int32,System.Int32},System.Boolean,JsonSerializer)
+  name: ReadJson(JsonReader, Type, IDictionary<Int32, Int32>, Boolean, JsonSerializer)
+  href: api/Gw2Sharp.Json.Converters.CompactMapConverter.html#Gw2Sharp_Json_Converters_CompactMapConverter_ReadJson_JsonReader_Type_IDictionary_System_Int32_System_Int32__System_Boolean_JsonSerializer_
+  commentId: M:Gw2Sharp.Json.Converters.CompactMapConverter.ReadJson(JsonReader,Type,IDictionary{System.Int32,System.Int32},System.Boolean,JsonSerializer)
+  name.vb: ReadJson(JsonReader, Type, IDictionary(Of Int32, Int32), Boolean, JsonSerializer)
+  fullName: Gw2Sharp.Json.Converters.CompactMapConverter.ReadJson(JsonReader, Type, IDictionary<System.Int32, System.Int32>, System.Boolean, JsonSerializer)
+  fullName.vb: Gw2Sharp.Json.Converters.CompactMapConverter.ReadJson(JsonReader, Type, IDictionary(Of System.Int32, System.Int32), System.Boolean, JsonSerializer)
+  nameWithType: CompactMapConverter.ReadJson(JsonReader, Type, IDictionary<Int32, Int32>, Boolean, JsonSerializer)
+  nameWithType.vb: CompactMapConverter.ReadJson(JsonReader, Type, IDictionary(Of Int32, Int32), Boolean, JsonSerializer)
+- uid: Gw2Sharp.Json.Converters.CompactMapConverter.ReadJson*
+  name: ReadJson
+  href: api/Gw2Sharp.Json.Converters.CompactMapConverter.html#Gw2Sharp_Json_Converters_CompactMapConverter_ReadJson_
+  commentId: Overload:Gw2Sharp.Json.Converters.CompactMapConverter.ReadJson
+  isSpec: "True"
+  fullName: Gw2Sharp.Json.Converters.CompactMapConverter.ReadJson
+  nameWithType: CompactMapConverter.ReadJson
+- uid: Gw2Sharp.Json.Converters.CompactMapConverter.WriteJson(JsonWriter,IDictionary{System.Int32,System.Int32},JsonSerializer)
+  name: WriteJson(JsonWriter, IDictionary<Int32, Int32>, JsonSerializer)
+  href: api/Gw2Sharp.Json.Converters.CompactMapConverter.html#Gw2Sharp_Json_Converters_CompactMapConverter_WriteJson_JsonWriter_IDictionary_System_Int32_System_Int32__JsonSerializer_
+  commentId: M:Gw2Sharp.Json.Converters.CompactMapConverter.WriteJson(JsonWriter,IDictionary{System.Int32,System.Int32},JsonSerializer)
+  name.vb: WriteJson(JsonWriter, IDictionary(Of Int32, Int32), JsonSerializer)
+  fullName: Gw2Sharp.Json.Converters.CompactMapConverter.WriteJson(JsonWriter, IDictionary<System.Int32, System.Int32>, JsonSerializer)
+  fullName.vb: Gw2Sharp.Json.Converters.CompactMapConverter.WriteJson(JsonWriter, IDictionary(Of System.Int32, System.Int32), JsonSerializer)
+  nameWithType: CompactMapConverter.WriteJson(JsonWriter, IDictionary<Int32, Int32>, JsonSerializer)
+  nameWithType.vb: CompactMapConverter.WriteJson(JsonWriter, IDictionary(Of Int32, Int32), JsonSerializer)
+- uid: Gw2Sharp.Json.Converters.CompactMapConverter.WriteJson*
+  name: WriteJson
+  href: api/Gw2Sharp.Json.Converters.CompactMapConverter.html#Gw2Sharp_Json_Converters_CompactMapConverter_WriteJson_
+  commentId: Overload:Gw2Sharp.Json.Converters.CompactMapConverter.WriteJson
+  isSpec: "True"
+  fullName: Gw2Sharp.Json.Converters.CompactMapConverter.WriteJson
+  nameWithType: CompactMapConverter.WriteJson
 - uid: Gw2Sharp.Json.Converters.Coordinates2Converter
   name: Coordinates2Converter
   href: api/Gw2Sharp.Json.Converters.Coordinates2Converter.html
@@ -8269,6 +8344,25 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.AccountBankClient.AccountBankClient
   nameWithType: AccountBankClient.AccountBankClient
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountBuildStorageClient
+  name: AccountBuildStorageClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountBuildStorageClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.AccountBuildStorageClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountBuildStorageClient
+  nameWithType: AccountBuildStorageClient
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountBuildStorageClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client)
+  name: AccountBuildStorageClient(IConnection, IGw2Client)
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountBuildStorageClient.html#Gw2Sharp_WebApi_V2_Clients_AccountBuildStorageClient__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.AccountBuildStorageClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client)
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountBuildStorageClient.AccountBuildStorageClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client)
+  nameWithType: AccountBuildStorageClient.AccountBuildStorageClient(IConnection, IGw2Client)
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountBuildStorageClient.#ctor*
+  name: AccountBuildStorageClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountBuildStorageClient.html#Gw2Sharp_WebApi_V2_Clients_AccountBuildStorageClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.AccountBuildStorageClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountBuildStorageClient.AccountBuildStorageClient
+  nameWithType: AccountBuildStorageClient.AccountBuildStorageClient
 - uid: Gw2Sharp.WebApi.V2.Clients.AccountClient
   name: AccountClient
   href: api/Gw2Sharp.WebApi.V2.Clients.AccountClient.html
@@ -8314,6 +8408,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.AccountClient.Bank
   nameWithType: AccountClient.Bank
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountClient.BuildStorage
+  name: BuildStorage
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountClient.html#Gw2Sharp_WebApi_V2_Clients_AccountClient_BuildStorage
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.AccountClient.BuildStorage
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountClient.BuildStorage
+  nameWithType: AccountClient.BuildStorage
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountClient.BuildStorage*
+  name: BuildStorage
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountClient.html#Gw2Sharp_WebApi_V2_Clients_AccountClient_BuildStorage_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.AccountClient.BuildStorage
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountClient.BuildStorage
+  nameWithType: AccountClient.BuildStorage
 - uid: Gw2Sharp.WebApi.V2.Clients.AccountClient.DailyCrafting
   name: DailyCrafting
   href: api/Gw2Sharp.WebApi.V2.Clients.AccountClient.html#Gw2Sharp_WebApi_V2_Clients_AccountClient_DailyCrafting
@@ -9549,49 +9656,92 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.BackstoryQuestionsClient.BackstoryQuestionsClient
   nameWithType: BackstoryQuestionsClient.BackstoryQuestionsClient
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubClient`1
-  name: BaseCharactersSubClient<TObject>
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubClient-1.html
-  commentId: T:Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubClient`1
-  name.vb: BaseCharactersSubClient(Of TObject)
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubClient<TObject>
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubClient(Of TObject)
-  nameWithType: BaseCharactersSubClient<TObject>
-  nameWithType.vb: BaseCharactersSubClient(Of TObject)
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubClient`1.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client,System.String)
-  name: BaseCharactersSubClient(IConnection, IGw2Client, String)
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseCharactersSubClient_1__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_System_String_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubClient`1.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client,System.String)
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubClient<TObject>.BaseCharactersSubClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client, System.String)
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubClient(Of TObject).BaseCharactersSubClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client, System.String)
-  nameWithType: BaseCharactersSubClient<TObject>.BaseCharactersSubClient(IConnection, IGw2Client, String)
-  nameWithType.vb: BaseCharactersSubClient(Of TObject).BaseCharactersSubClient(IConnection, IGw2Client, String)
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubClient`1.#ctor*
-  name: BaseCharactersSubClient
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseCharactersSubClient_1__ctor_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubClient`1.#ctor
+- uid: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBlobClient`1
+  name: BaseCharactersSubBlobClient<TObject>
+  href: api/Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBlobClient-1.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBlobClient`1
+  name.vb: BaseCharactersSubBlobClient(Of TObject)
+  fullName: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBlobClient<TObject>
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBlobClient(Of TObject)
+  nameWithType: BaseCharactersSubBlobClient<TObject>
+  nameWithType.vb: BaseCharactersSubBlobClient(Of TObject)
+- uid: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBlobClient`1.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client,System.String)
+  name: BaseCharactersSubBlobClient(IConnection, IGw2Client, String)
+  href: api/Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBlobClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseCharactersSubBlobClient_1__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_System_String_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBlobClient`1.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client,System.String)
+  fullName: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBlobClient<TObject>.BaseCharactersSubBlobClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client, System.String)
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBlobClient(Of TObject).BaseCharactersSubBlobClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client, System.String)
+  nameWithType: BaseCharactersSubBlobClient<TObject>.BaseCharactersSubBlobClient(IConnection, IGw2Client, String)
+  nameWithType.vb: BaseCharactersSubBlobClient(Of TObject).BaseCharactersSubBlobClient(IConnection, IGw2Client, String)
+- uid: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBlobClient`1.#ctor*
+  name: BaseCharactersSubBlobClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBlobClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseCharactersSubBlobClient_1__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBlobClient`1.#ctor
   isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubClient<TObject>.BaseCharactersSubClient
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubClient(Of TObject).BaseCharactersSubClient
-  nameWithType: BaseCharactersSubClient<TObject>.BaseCharactersSubClient
-  nameWithType.vb: BaseCharactersSubClient(Of TObject).BaseCharactersSubClient
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubClient`1.CharacterName
+  fullName: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBlobClient<TObject>.BaseCharactersSubBlobClient
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBlobClient(Of TObject).BaseCharactersSubBlobClient
+  nameWithType: BaseCharactersSubBlobClient<TObject>.BaseCharactersSubBlobClient
+  nameWithType.vb: BaseCharactersSubBlobClient(Of TObject).BaseCharactersSubBlobClient
+- uid: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBlobClient`1.CharacterName
   name: CharacterName
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseCharactersSubClient_1_CharacterName
-  commentId: P:Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubClient`1.CharacterName
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubClient<TObject>.CharacterName
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubClient(Of TObject).CharacterName
-  nameWithType: BaseCharactersSubClient<TObject>.CharacterName
-  nameWithType.vb: BaseCharactersSubClient(Of TObject).CharacterName
-- uid: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubClient`1.CharacterName*
+  href: api/Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBlobClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseCharactersSubBlobClient_1_CharacterName
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBlobClient`1.CharacterName
+  fullName: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBlobClient<TObject>.CharacterName
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBlobClient(Of TObject).CharacterName
+  nameWithType: BaseCharactersSubBlobClient<TObject>.CharacterName
+  nameWithType.vb: BaseCharactersSubBlobClient(Of TObject).CharacterName
+- uid: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBlobClient`1.CharacterName*
   name: CharacterName
-  href: api/Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseCharactersSubClient_1_CharacterName_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubClient`1.CharacterName
+  href: api/Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBlobClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseCharactersSubBlobClient_1_CharacterName_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBlobClient`1.CharacterName
   isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubClient<TObject>.CharacterName
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubClient(Of TObject).CharacterName
-  nameWithType: BaseCharactersSubClient<TObject>.CharacterName
-  nameWithType.vb: BaseCharactersSubClient(Of TObject).CharacterName
+  fullName: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBlobClient<TObject>.CharacterName
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBlobClient(Of TObject).CharacterName
+  nameWithType: BaseCharactersSubBlobClient<TObject>.CharacterName
+  nameWithType.vb: BaseCharactersSubBlobClient(Of TObject).CharacterName
+- uid: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBulkClient`2
+  name: BaseCharactersSubBulkClient<TObject, TId>
+  href: api/Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBulkClient-2.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBulkClient`2
+  name.vb: BaseCharactersSubBulkClient(Of TObject, TId)
+  fullName: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBulkClient<TObject, TId>
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBulkClient(Of TObject, TId)
+  nameWithType: BaseCharactersSubBulkClient<TObject, TId>
+  nameWithType.vb: BaseCharactersSubBulkClient(Of TObject, TId)
+- uid: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBulkClient`2.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client,System.String)
+  name: BaseCharactersSubBulkClient(IConnection, IGw2Client, String)
+  href: api/Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBulkClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseCharactersSubBulkClient_2__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_System_String_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBulkClient`2.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client,System.String)
+  fullName: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBulkClient<TObject, TId>.BaseCharactersSubBulkClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client, System.String)
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBulkClient(Of TObject, TId).BaseCharactersSubBulkClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client, System.String)
+  nameWithType: BaseCharactersSubBulkClient<TObject, TId>.BaseCharactersSubBulkClient(IConnection, IGw2Client, String)
+  nameWithType.vb: BaseCharactersSubBulkClient(Of TObject, TId).BaseCharactersSubBulkClient(IConnection, IGw2Client, String)
+- uid: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBulkClient`2.#ctor*
+  name: BaseCharactersSubBulkClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBulkClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseCharactersSubBulkClient_2__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBulkClient`2.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBulkClient<TObject, TId>.BaseCharactersSubBulkClient
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBulkClient(Of TObject, TId).BaseCharactersSubBulkClient
+  nameWithType: BaseCharactersSubBulkClient<TObject, TId>.BaseCharactersSubBulkClient
+  nameWithType.vb: BaseCharactersSubBulkClient(Of TObject, TId).BaseCharactersSubBulkClient
+- uid: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBulkClient`2.CharacterName
+  name: CharacterName
+  href: api/Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBulkClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseCharactersSubBulkClient_2_CharacterName
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBulkClient`2.CharacterName
+  fullName: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBulkClient<TObject, TId>.CharacterName
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBulkClient(Of TObject, TId).CharacterName
+  nameWithType: BaseCharactersSubBulkClient<TObject, TId>.CharacterName
+  nameWithType.vb: BaseCharactersSubBulkClient(Of TObject, TId).CharacterName
+- uid: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBulkClient`2.CharacterName*
+  name: CharacterName
+  href: api/Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBulkClient-2.html#Gw2Sharp_WebApi_V2_Clients_BaseCharactersSubBulkClient_2_CharacterName_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBulkClient`2.CharacterName
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBulkClient<TObject, TId>.CharacterName
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBulkClient(Of TObject, TId).CharacterName
+  nameWithType: BaseCharactersSubBulkClient<TObject, TId>.CharacterName
+  nameWithType.vb: BaseCharactersSubBulkClient(Of TObject, TId).CharacterName
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointBlobClient`1
   name: BaseEndpointBlobClient<TObject>
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointBlobClient-1.html
@@ -9888,6 +10038,40 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).BaseEndpointClient
   nameWithType: BaseEndpointClient<TObject>.BaseEndpointClient
   nameWithType.vb: BaseEndpointClient(Of TObject).BaseEndpointClient
+- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.BulkEndpointIdParameterName
+  name: BulkEndpointIdParameterName
+  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_BulkEndpointIdParameterName
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.BulkEndpointIdParameterName
+  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient<TObject>.BulkEndpointIdParameterName
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).BulkEndpointIdParameterName
+  nameWithType: BaseEndpointClient<TObject>.BulkEndpointIdParameterName
+  nameWithType.vb: BaseEndpointClient(Of TObject).BulkEndpointIdParameterName
+- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.BulkEndpointIdParameterName*
+  name: BulkEndpointIdParameterName
+  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_BulkEndpointIdParameterName_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.BulkEndpointIdParameterName
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient<TObject>.BulkEndpointIdParameterName
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).BulkEndpointIdParameterName
+  nameWithType: BaseEndpointClient<TObject>.BulkEndpointIdParameterName
+  nameWithType.vb: BaseEndpointClient(Of TObject).BulkEndpointIdParameterName
+- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.BulkEndpointIdsParameterName
+  name: BulkEndpointIdsParameterName
+  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_BulkEndpointIdsParameterName
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.BulkEndpointIdsParameterName
+  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient<TObject>.BulkEndpointIdsParameterName
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).BulkEndpointIdsParameterName
+  nameWithType: BaseEndpointClient<TObject>.BulkEndpointIdsParameterName
+  nameWithType.vb: BaseEndpointClient(Of TObject).BulkEndpointIdsParameterName
+- uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.BulkEndpointIdsParameterName*
+  name: BulkEndpointIdsParameterName
+  href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_BulkEndpointIdsParameterName_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.BulkEndpointIdsParameterName
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient<TObject>.BulkEndpointIdsParameterName
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient(Of TObject).BulkEndpointIdsParameterName
+  nameWithType: BaseEndpointClient<TObject>.BulkEndpointIdsParameterName
+  nameWithType.vb: BaseEndpointClient(Of TObject).BulkEndpointIdsParameterName
 - uid: Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient`1.EndpointPath
   name: EndpointPath
   href: api/Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html#Gw2Sharp_WebApi_V2_Clients_BaseEndpointClient_1_EndpointPath
@@ -10243,6 +10427,57 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdBackstoryClient.CharactersIdBackstoryClient
   nameWithType: CharactersIdBackstoryClient.CharactersIdBackstoryClient
+- uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdBuildTabsActiveClient
+  name: CharactersIdBuildTabsActiveClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdBuildTabsActiveClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.CharactersIdBuildTabsActiveClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdBuildTabsActiveClient
+  nameWithType: CharactersIdBuildTabsActiveClient
+- uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdBuildTabsActiveClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client,System.String)
+  name: CharactersIdBuildTabsActiveClient(IConnection, IGw2Client, String)
+  href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdBuildTabsActiveClient.html#Gw2Sharp_WebApi_V2_Clients_CharactersIdBuildTabsActiveClient__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_System_String_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.CharactersIdBuildTabsActiveClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client,System.String)
+  fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdBuildTabsActiveClient.CharactersIdBuildTabsActiveClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client, System.String)
+  nameWithType: CharactersIdBuildTabsActiveClient.CharactersIdBuildTabsActiveClient(IConnection, IGw2Client, String)
+- uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdBuildTabsActiveClient.#ctor*
+  name: CharactersIdBuildTabsActiveClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdBuildTabsActiveClient.html#Gw2Sharp_WebApi_V2_Clients_CharactersIdBuildTabsActiveClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.CharactersIdBuildTabsActiveClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdBuildTabsActiveClient.CharactersIdBuildTabsActiveClient
+  nameWithType: CharactersIdBuildTabsActiveClient.CharactersIdBuildTabsActiveClient
+- uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdBuildTabsClient
+  name: CharactersIdBuildTabsClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdBuildTabsClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.CharactersIdBuildTabsClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdBuildTabsClient
+  nameWithType: CharactersIdBuildTabsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdBuildTabsClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client,System.String)
+  name: CharactersIdBuildTabsClient(IConnection, IGw2Client, String)
+  href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdBuildTabsClient.html#Gw2Sharp_WebApi_V2_Clients_CharactersIdBuildTabsClient__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_System_String_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.CharactersIdBuildTabsClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client,System.String)
+  fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdBuildTabsClient.CharactersIdBuildTabsClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client, System.String)
+  nameWithType: CharactersIdBuildTabsClient.CharactersIdBuildTabsClient(IConnection, IGw2Client, String)
+- uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdBuildTabsClient.#ctor*
+  name: CharactersIdBuildTabsClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdBuildTabsClient.html#Gw2Sharp_WebApi_V2_Clients_CharactersIdBuildTabsClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.CharactersIdBuildTabsClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdBuildTabsClient.CharactersIdBuildTabsClient
+  nameWithType: CharactersIdBuildTabsClient.CharactersIdBuildTabsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdBuildTabsClient.Active
+  name: Active
+  href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdBuildTabsClient.html#Gw2Sharp_WebApi_V2_Clients_CharactersIdBuildTabsClient_Active
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.CharactersIdBuildTabsClient.Active
+  fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdBuildTabsClient.Active
+  nameWithType: CharactersIdBuildTabsClient.Active
+- uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdBuildTabsClient.Active*
+  name: Active
+  href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdBuildTabsClient.html#Gw2Sharp_WebApi_V2_Clients_CharactersIdBuildTabsClient_Active_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.CharactersIdBuildTabsClient.Active
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdBuildTabsClient.Active
+  nameWithType: CharactersIdBuildTabsClient.Active
 - uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdClient
   name: CharactersIdClient
   href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.html
@@ -10275,6 +10510,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.Backstory
   nameWithType: CharactersIdClient.Backstory
+- uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.BuildTabs
+  name: BuildTabs
+  href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.html#Gw2Sharp_WebApi_V2_Clients_CharactersIdClient_BuildTabs
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.BuildTabs
+  fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.BuildTabs
+  nameWithType: CharactersIdClient.BuildTabs
+- uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.BuildTabs*
+  name: BuildTabs
+  href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.html#Gw2Sharp_WebApi_V2_Clients_CharactersIdClient_BuildTabs_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.BuildTabs
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.BuildTabs
+  nameWithType: CharactersIdClient.BuildTabs
 - uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.CharacterName
   name: CharacterName
   href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.html#Gw2Sharp_WebApi_V2_Clients_CharactersIdClient_CharacterName
@@ -10327,6 +10575,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.Equipment
   nameWithType: CharactersIdClient.Equipment
+- uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.EquipmentTabs
+  name: EquipmentTabs
+  href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.html#Gw2Sharp_WebApi_V2_Clients_CharactersIdClient_EquipmentTabs
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.EquipmentTabs
+  fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.EquipmentTabs
+  nameWithType: CharactersIdClient.EquipmentTabs
+- uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.EquipmentTabs*
+  name: EquipmentTabs
+  href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.html#Gw2Sharp_WebApi_V2_Clients_CharactersIdClient_EquipmentTabs_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.EquipmentTabs
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.EquipmentTabs
+  nameWithType: CharactersIdClient.EquipmentTabs
 - uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.HeroPoints
   name: HeroPoints
   href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.html#Gw2Sharp_WebApi_V2_Clients_CharactersIdClient_HeroPoints
@@ -10488,6 +10749,57 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentClient.CharactersIdEquipmentClient
   nameWithType: CharactersIdEquipmentClient.CharactersIdEquipmentClient
+- uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsActiveClient
+  name: CharactersIdEquipmentTabsActiveClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsActiveClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsActiveClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsActiveClient
+  nameWithType: CharactersIdEquipmentTabsActiveClient
+- uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsActiveClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client,System.String)
+  name: CharactersIdEquipmentTabsActiveClient(IConnection, IGw2Client, String)
+  href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsActiveClient.html#Gw2Sharp_WebApi_V2_Clients_CharactersIdEquipmentTabsActiveClient__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_System_String_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsActiveClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client,System.String)
+  fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsActiveClient.CharactersIdEquipmentTabsActiveClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client, System.String)
+  nameWithType: CharactersIdEquipmentTabsActiveClient.CharactersIdEquipmentTabsActiveClient(IConnection, IGw2Client, String)
+- uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsActiveClient.#ctor*
+  name: CharactersIdEquipmentTabsActiveClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsActiveClient.html#Gw2Sharp_WebApi_V2_Clients_CharactersIdEquipmentTabsActiveClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsActiveClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsActiveClient.CharactersIdEquipmentTabsActiveClient
+  nameWithType: CharactersIdEquipmentTabsActiveClient.CharactersIdEquipmentTabsActiveClient
+- uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsClient
+  name: CharactersIdEquipmentTabsClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsClient
+  nameWithType: CharactersIdEquipmentTabsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client,System.String)
+  name: CharactersIdEquipmentTabsClient(IConnection, IGw2Client, String)
+  href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsClient.html#Gw2Sharp_WebApi_V2_Clients_CharactersIdEquipmentTabsClient__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_System_String_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client,System.String)
+  fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsClient.CharactersIdEquipmentTabsClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client, System.String)
+  nameWithType: CharactersIdEquipmentTabsClient.CharactersIdEquipmentTabsClient(IConnection, IGw2Client, String)
+- uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsClient.#ctor*
+  name: CharactersIdEquipmentTabsClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsClient.html#Gw2Sharp_WebApi_V2_Clients_CharactersIdEquipmentTabsClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsClient.CharactersIdEquipmentTabsClient
+  nameWithType: CharactersIdEquipmentTabsClient.CharactersIdEquipmentTabsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsClient.Active
+  name: Active
+  href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsClient.html#Gw2Sharp_WebApi_V2_Clients_CharactersIdEquipmentTabsClient_Active
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsClient.Active
+  fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsClient.Active
+  nameWithType: CharactersIdEquipmentTabsClient.Active
+- uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsClient.Active*
+  name: Active
+  href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsClient.html#Gw2Sharp_WebApi_V2_Clients_CharactersIdEquipmentTabsClient_Active_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsClient.Active
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsClient.Active
+  nameWithType: CharactersIdEquipmentTabsClient.Active
 - uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdHeroPointsClient
   name: CharactersIdHeroPointsClient
   href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdHeroPointsClient.html
@@ -12528,6 +12840,51 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.EmotesClient.EmotesClient
   nameWithType: EmotesClient.EmotesClient
+- uid: Gw2Sharp.WebApi.V2.Clients.EndpointBulkIdNameAttribute
+  name: EndpointBulkIdNameAttribute
+  href: api/Gw2Sharp.WebApi.V2.Clients.EndpointBulkIdNameAttribute.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.EndpointBulkIdNameAttribute
+  fullName: Gw2Sharp.WebApi.V2.Clients.EndpointBulkIdNameAttribute
+  nameWithType: EndpointBulkIdNameAttribute
+- uid: Gw2Sharp.WebApi.V2.Clients.EndpointBulkIdNameAttribute.#ctor(System.String,System.String)
+  name: EndpointBulkIdNameAttribute(String, String)
+  href: api/Gw2Sharp.WebApi.V2.Clients.EndpointBulkIdNameAttribute.html#Gw2Sharp_WebApi_V2_Clients_EndpointBulkIdNameAttribute__ctor_System_String_System_String_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.EndpointBulkIdNameAttribute.#ctor(System.String,System.String)
+  fullName: Gw2Sharp.WebApi.V2.Clients.EndpointBulkIdNameAttribute.EndpointBulkIdNameAttribute(System.String, System.String)
+  nameWithType: EndpointBulkIdNameAttribute.EndpointBulkIdNameAttribute(String, String)
+- uid: Gw2Sharp.WebApi.V2.Clients.EndpointBulkIdNameAttribute.#ctor*
+  name: EndpointBulkIdNameAttribute
+  href: api/Gw2Sharp.WebApi.V2.Clients.EndpointBulkIdNameAttribute.html#Gw2Sharp_WebApi_V2_Clients_EndpointBulkIdNameAttribute__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.EndpointBulkIdNameAttribute.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.EndpointBulkIdNameAttribute.EndpointBulkIdNameAttribute
+  nameWithType: EndpointBulkIdNameAttribute.EndpointBulkIdNameAttribute
+- uid: Gw2Sharp.WebApi.V2.Clients.EndpointBulkIdNameAttribute.Id
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Clients.EndpointBulkIdNameAttribute.html#Gw2Sharp_WebApi_V2_Clients_EndpointBulkIdNameAttribute_Id
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.EndpointBulkIdNameAttribute.Id
+  fullName: Gw2Sharp.WebApi.V2.Clients.EndpointBulkIdNameAttribute.Id
+  nameWithType: EndpointBulkIdNameAttribute.Id
+- uid: Gw2Sharp.WebApi.V2.Clients.EndpointBulkIdNameAttribute.Id*
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Clients.EndpointBulkIdNameAttribute.html#Gw2Sharp_WebApi_V2_Clients_EndpointBulkIdNameAttribute_Id_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.EndpointBulkIdNameAttribute.Id
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.EndpointBulkIdNameAttribute.Id
+  nameWithType: EndpointBulkIdNameAttribute.Id
+- uid: Gw2Sharp.WebApi.V2.Clients.EndpointBulkIdNameAttribute.Ids
+  name: Ids
+  href: api/Gw2Sharp.WebApi.V2.Clients.EndpointBulkIdNameAttribute.html#Gw2Sharp_WebApi_V2_Clients_EndpointBulkIdNameAttribute_Ids
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.EndpointBulkIdNameAttribute.Ids
+  fullName: Gw2Sharp.WebApi.V2.Clients.EndpointBulkIdNameAttribute.Ids
+  nameWithType: EndpointBulkIdNameAttribute.Ids
+- uid: Gw2Sharp.WebApi.V2.Clients.EndpointBulkIdNameAttribute.Ids*
+  name: Ids
+  href: api/Gw2Sharp.WebApi.V2.Clients.EndpointBulkIdNameAttribute.html#Gw2Sharp_WebApi_V2_Clients_EndpointBulkIdNameAttribute_Ids_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.EndpointBulkIdNameAttribute.Ids
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.EndpointBulkIdNameAttribute.Ids
+  nameWithType: EndpointBulkIdNameAttribute.Ids
 - uid: Gw2Sharp.WebApi.V2.Clients.EndpointPathAttribute
   name: EndpointPathAttribute
   href: api/Gw2Sharp.WebApi.V2.Clients.EndpointPathAttribute.html
@@ -13323,6 +13680,12 @@ references:
   commentId: T:Gw2Sharp.WebApi.V2.Clients.IAccountBankClient
   fullName: Gw2Sharp.WebApi.V2.Clients.IAccountBankClient
   nameWithType: IAccountBankClient
+- uid: Gw2Sharp.WebApi.V2.Clients.IAccountBuildStorageClient
+  name: IAccountBuildStorageClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.IAccountBuildStorageClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.IAccountBuildStorageClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.IAccountBuildStorageClient
+  nameWithType: IAccountBuildStorageClient
 - uid: Gw2Sharp.WebApi.V2.Clients.IAccountClient
   name: IAccountClient
   href: api/Gw2Sharp.WebApi.V2.Clients.IAccountClient.html
@@ -13355,6 +13718,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.IAccountClient.Bank
   nameWithType: IAccountClient.Bank
+- uid: Gw2Sharp.WebApi.V2.Clients.IAccountClient.BuildStorage
+  name: BuildStorage
+  href: api/Gw2Sharp.WebApi.V2.Clients.IAccountClient.html#Gw2Sharp_WebApi_V2_Clients_IAccountClient_BuildStorage
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.IAccountClient.BuildStorage
+  fullName: Gw2Sharp.WebApi.V2.Clients.IAccountClient.BuildStorage
+  nameWithType: IAccountClient.BuildStorage
+- uid: Gw2Sharp.WebApi.V2.Clients.IAccountClient.BuildStorage*
+  name: BuildStorage
+  href: api/Gw2Sharp.WebApi.V2.Clients.IAccountClient.html#Gw2Sharp_WebApi_V2_Clients_IAccountClient_BuildStorage_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.IAccountClient.BuildStorage
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.IAccountClient.BuildStorage
+  nameWithType: IAccountClient.BuildStorage
 - uid: Gw2Sharp.WebApi.V2.Clients.IAccountClient.DailyCrafting
   name: DailyCrafting
   href: api/Gw2Sharp.WebApi.V2.Clients.IAccountClient.html#Gw2Sharp_WebApi_V2_Clients_IAccountClient_DailyCrafting
@@ -14052,15 +14428,12 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Clients.IAllExpandableClient(Of TObject).AllAsync
   nameWithType: IAllExpandableClient<TObject>.AllAsync
   nameWithType.vb: IAllExpandableClient(Of TObject).AllAsync
-- uid: Gw2Sharp.WebApi.V2.Clients.IAuthenticatedClient`1
-  name: IAuthenticatedClient<TObject>
-  href: api/Gw2Sharp.WebApi.V2.Clients.IAuthenticatedClient-1.html
-  commentId: T:Gw2Sharp.WebApi.V2.Clients.IAuthenticatedClient`1
-  name.vb: IAuthenticatedClient(Of TObject)
-  fullName: Gw2Sharp.WebApi.V2.Clients.IAuthenticatedClient<TObject>
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.IAuthenticatedClient(Of TObject)
-  nameWithType: IAuthenticatedClient<TObject>
-  nameWithType.vb: IAuthenticatedClient(Of TObject)
+- uid: Gw2Sharp.WebApi.V2.Clients.IAuthenticatedClient
+  name: IAuthenticatedClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.IAuthenticatedClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.IAuthenticatedClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.IAuthenticatedClient
+  nameWithType: IAuthenticatedClient
 - uid: Gw2Sharp.WebApi.V2.Clients.IBackstoryAnswersClient
   name: IBackstoryAnswersClient
   href: api/Gw2Sharp.WebApi.V2.Clients.IBackstoryAnswersClient.html
@@ -14239,6 +14612,44 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.ICharactersIdBackstoryClient.CharacterName
   nameWithType: ICharactersIdBackstoryClient.CharacterName
+- uid: Gw2Sharp.WebApi.V2.Clients.ICharactersIdBuildTabsActiveClient
+  name: ICharactersIdBuildTabsActiveClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdBuildTabsActiveClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.ICharactersIdBuildTabsActiveClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.ICharactersIdBuildTabsActiveClient
+  nameWithType: ICharactersIdBuildTabsActiveClient
+- uid: Gw2Sharp.WebApi.V2.Clients.ICharactersIdBuildTabsClient
+  name: ICharactersIdBuildTabsClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdBuildTabsClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.ICharactersIdBuildTabsClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.ICharactersIdBuildTabsClient
+  nameWithType: ICharactersIdBuildTabsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.ICharactersIdBuildTabsClient.Active
+  name: Active
+  href: api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdBuildTabsClient.html#Gw2Sharp_WebApi_V2_Clients_ICharactersIdBuildTabsClient_Active
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.ICharactersIdBuildTabsClient.Active
+  fullName: Gw2Sharp.WebApi.V2.Clients.ICharactersIdBuildTabsClient.Active
+  nameWithType: ICharactersIdBuildTabsClient.Active
+- uid: Gw2Sharp.WebApi.V2.Clients.ICharactersIdBuildTabsClient.Active*
+  name: Active
+  href: api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdBuildTabsClient.html#Gw2Sharp_WebApi_V2_Clients_ICharactersIdBuildTabsClient_Active_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.ICharactersIdBuildTabsClient.Active
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.ICharactersIdBuildTabsClient.Active
+  nameWithType: ICharactersIdBuildTabsClient.Active
+- uid: Gw2Sharp.WebApi.V2.Clients.ICharactersIdBuildTabsClient.CharacterName
+  name: CharacterName
+  href: api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdBuildTabsClient.html#Gw2Sharp_WebApi_V2_Clients_ICharactersIdBuildTabsClient_CharacterName
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.ICharactersIdBuildTabsClient.CharacterName
+  fullName: Gw2Sharp.WebApi.V2.Clients.ICharactersIdBuildTabsClient.CharacterName
+  nameWithType: ICharactersIdBuildTabsClient.CharacterName
+- uid: Gw2Sharp.WebApi.V2.Clients.ICharactersIdBuildTabsClient.CharacterName*
+  name: CharacterName
+  href: api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdBuildTabsClient.html#Gw2Sharp_WebApi_V2_Clients_ICharactersIdBuildTabsClient_CharacterName_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.ICharactersIdBuildTabsClient.CharacterName
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.ICharactersIdBuildTabsClient.CharacterName
+  nameWithType: ICharactersIdBuildTabsClient.CharacterName
 - uid: Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient
   name: ICharactersIdClient
   href: api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.html
@@ -14258,6 +14669,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.Backstory
   nameWithType: ICharactersIdClient.Backstory
+- uid: Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.BuildTabs
+  name: BuildTabs
+  href: api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.html#Gw2Sharp_WebApi_V2_Clients_ICharactersIdClient_BuildTabs
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.BuildTabs
+  fullName: Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.BuildTabs
+  nameWithType: ICharactersIdClient.BuildTabs
+- uid: Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.BuildTabs*
+  name: BuildTabs
+  href: api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.html#Gw2Sharp_WebApi_V2_Clients_ICharactersIdClient_BuildTabs_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.BuildTabs
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.BuildTabs
+  nameWithType: ICharactersIdClient.BuildTabs
 - uid: Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.CharacterName
   name: CharacterName
   href: api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.html#Gw2Sharp_WebApi_V2_Clients_ICharactersIdClient_CharacterName
@@ -14310,6 +14734,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.Equipment
   nameWithType: ICharactersIdClient.Equipment
+- uid: Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.EquipmentTabs
+  name: EquipmentTabs
+  href: api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.html#Gw2Sharp_WebApi_V2_Clients_ICharactersIdClient_EquipmentTabs
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.EquipmentTabs
+  fullName: Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.EquipmentTabs
+  nameWithType: ICharactersIdClient.EquipmentTabs
+- uid: Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.EquipmentTabs*
+  name: EquipmentTabs
+  href: api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.html#Gw2Sharp_WebApi_V2_Clients_ICharactersIdClient_EquipmentTabs_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.EquipmentTabs
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.EquipmentTabs
+  nameWithType: ICharactersIdClient.EquipmentTabs
 - uid: Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.HeroPoints
   name: HeroPoints
   href: api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.html#Gw2Sharp_WebApi_V2_Clients_ICharactersIdClient_HeroPoints
@@ -14471,6 +14908,44 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.ICharactersIdEquipmentClient.CharacterName
   nameWithType: ICharactersIdEquipmentClient.CharacterName
+- uid: Gw2Sharp.WebApi.V2.Clients.ICharactersIdEquipmentTabsActiveClient
+  name: ICharactersIdEquipmentTabsActiveClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdEquipmentTabsActiveClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.ICharactersIdEquipmentTabsActiveClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.ICharactersIdEquipmentTabsActiveClient
+  nameWithType: ICharactersIdEquipmentTabsActiveClient
+- uid: Gw2Sharp.WebApi.V2.Clients.ICharactersIdEquipmentTabsClient
+  name: ICharactersIdEquipmentTabsClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdEquipmentTabsClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.ICharactersIdEquipmentTabsClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.ICharactersIdEquipmentTabsClient
+  nameWithType: ICharactersIdEquipmentTabsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.ICharactersIdEquipmentTabsClient.Active
+  name: Active
+  href: api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdEquipmentTabsClient.html#Gw2Sharp_WebApi_V2_Clients_ICharactersIdEquipmentTabsClient_Active
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.ICharactersIdEquipmentTabsClient.Active
+  fullName: Gw2Sharp.WebApi.V2.Clients.ICharactersIdEquipmentTabsClient.Active
+  nameWithType: ICharactersIdEquipmentTabsClient.Active
+- uid: Gw2Sharp.WebApi.V2.Clients.ICharactersIdEquipmentTabsClient.Active*
+  name: Active
+  href: api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdEquipmentTabsClient.html#Gw2Sharp_WebApi_V2_Clients_ICharactersIdEquipmentTabsClient_Active_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.ICharactersIdEquipmentTabsClient.Active
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.ICharactersIdEquipmentTabsClient.Active
+  nameWithType: ICharactersIdEquipmentTabsClient.Active
+- uid: Gw2Sharp.WebApi.V2.Clients.ICharactersIdEquipmentTabsClient.CharacterName
+  name: CharacterName
+  href: api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdEquipmentTabsClient.html#Gw2Sharp_WebApi_V2_Clients_ICharactersIdEquipmentTabsClient_CharacterName
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.ICharactersIdEquipmentTabsClient.CharacterName
+  fullName: Gw2Sharp.WebApi.V2.Clients.ICharactersIdEquipmentTabsClient.CharacterName
+  nameWithType: ICharactersIdEquipmentTabsClient.CharacterName
+- uid: Gw2Sharp.WebApi.V2.Clients.ICharactersIdEquipmentTabsClient.CharacterName*
+  name: CharacterName
+  href: api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdEquipmentTabsClient.html#Gw2Sharp_WebApi_V2_Clients_ICharactersIdEquipmentTabsClient_CharacterName_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.ICharactersIdEquipmentTabsClient.CharacterName
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.ICharactersIdEquipmentTabsClient.CharacterName
+  nameWithType: ICharactersIdEquipmentTabsClient.CharacterName
 - uid: Gw2Sharp.WebApi.V2.Clients.ICharactersIdHeroPointsClient
   name: ICharactersIdHeroPointsClient
   href: api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdHeroPointsClient.html
@@ -15691,6 +16166,32 @@ references:
   commentId: T:Gw2Sharp.WebApi.V2.Clients.IEndpointClient
   fullName: Gw2Sharp.WebApi.V2.Clients.IEndpointClient
   nameWithType: IEndpointClient
+- uid: Gw2Sharp.WebApi.V2.Clients.IEndpointClient.BulkEndpointIdParameterName
+  name: BulkEndpointIdParameterName
+  href: api/Gw2Sharp.WebApi.V2.Clients.IEndpointClient.html#Gw2Sharp_WebApi_V2_Clients_IEndpointClient_BulkEndpointIdParameterName
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.IEndpointClient.BulkEndpointIdParameterName
+  fullName: Gw2Sharp.WebApi.V2.Clients.IEndpointClient.BulkEndpointIdParameterName
+  nameWithType: IEndpointClient.BulkEndpointIdParameterName
+- uid: Gw2Sharp.WebApi.V2.Clients.IEndpointClient.BulkEndpointIdParameterName*
+  name: BulkEndpointIdParameterName
+  href: api/Gw2Sharp.WebApi.V2.Clients.IEndpointClient.html#Gw2Sharp_WebApi_V2_Clients_IEndpointClient_BulkEndpointIdParameterName_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.IEndpointClient.BulkEndpointIdParameterName
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.IEndpointClient.BulkEndpointIdParameterName
+  nameWithType: IEndpointClient.BulkEndpointIdParameterName
+- uid: Gw2Sharp.WebApi.V2.Clients.IEndpointClient.BulkEndpointIdsParameterName
+  name: BulkEndpointIdsParameterName
+  href: api/Gw2Sharp.WebApi.V2.Clients.IEndpointClient.html#Gw2Sharp_WebApi_V2_Clients_IEndpointClient_BulkEndpointIdsParameterName
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.IEndpointClient.BulkEndpointIdsParameterName
+  fullName: Gw2Sharp.WebApi.V2.Clients.IEndpointClient.BulkEndpointIdsParameterName
+  nameWithType: IEndpointClient.BulkEndpointIdsParameterName
+- uid: Gw2Sharp.WebApi.V2.Clients.IEndpointClient.BulkEndpointIdsParameterName*
+  name: BulkEndpointIdsParameterName
+  href: api/Gw2Sharp.WebApi.V2.Clients.IEndpointClient.html#Gw2Sharp_WebApi_V2_Clients_IEndpointClient_BulkEndpointIdsParameterName_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.IEndpointClient.BulkEndpointIdsParameterName
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.IEndpointClient.BulkEndpointIdsParameterName
+  nameWithType: IEndpointClient.BulkEndpointIdsParameterName
 - uid: Gw2Sharp.WebApi.V2.Clients.IEndpointClient.EndpointPath
   name: EndpointPath
   href: api/Gw2Sharp.WebApi.V2.Clients.IEndpointClient.html#Gw2Sharp_WebApi_V2_Clients_IEndpointClient_EndpointPath
@@ -19281,6 +19782,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.Account.Age
   nameWithType: Account.Age
+- uid: Gw2Sharp.WebApi.V2.Models.Account.BuildStorageSlots
+  name: BuildStorageSlots
+  href: api/Gw2Sharp.WebApi.V2.Models.Account.html#Gw2Sharp_WebApi_V2_Models_Account_BuildStorageSlots
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Account.BuildStorageSlots
+  fullName: Gw2Sharp.WebApi.V2.Models.Account.BuildStorageSlots
+  nameWithType: Account.BuildStorageSlots
+- uid: Gw2Sharp.WebApi.V2.Models.Account.BuildStorageSlots*
+  name: BuildStorageSlots
+  href: api/Gw2Sharp.WebApi.V2.Models.Account.html#Gw2Sharp_WebApi_V2_Models_Account_BuildStorageSlots_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Account.BuildStorageSlots
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Account.BuildStorageSlots
+  nameWithType: Account.BuildStorageSlots
 - uid: Gw2Sharp.WebApi.V2.Models.Account.Commander
   name: Commander
   href: api/Gw2Sharp.WebApi.V2.Models.Account.html#Gw2Sharp_WebApi_V2_Models_Account_Commander
@@ -19534,6 +20048,38 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.AccountAchievement.Unlocked
   nameWithType: AccountAchievement.Unlocked
+- uid: Gw2Sharp.WebApi.V2.Models.AccountBuildStorageSlot
+  name: AccountBuildStorageSlot
+  href: api/Gw2Sharp.WebApi.V2.Models.AccountBuildStorageSlot.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.AccountBuildStorageSlot
+  fullName: Gw2Sharp.WebApi.V2.Models.AccountBuildStorageSlot
+  nameWithType: AccountBuildStorageSlot
+- uid: Gw2Sharp.WebApi.V2.Models.AccountBuildStorageSlot.Build
+  name: Build
+  href: api/Gw2Sharp.WebApi.V2.Models.AccountBuildStorageSlot.html#Gw2Sharp_WebApi_V2_Models_AccountBuildStorageSlot_Build
+  commentId: P:Gw2Sharp.WebApi.V2.Models.AccountBuildStorageSlot.Build
+  fullName: Gw2Sharp.WebApi.V2.Models.AccountBuildStorageSlot.Build
+  nameWithType: AccountBuildStorageSlot.Build
+- uid: Gw2Sharp.WebApi.V2.Models.AccountBuildStorageSlot.Build*
+  name: Build
+  href: api/Gw2Sharp.WebApi.V2.Models.AccountBuildStorageSlot.html#Gw2Sharp_WebApi_V2_Models_AccountBuildStorageSlot_Build_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.AccountBuildStorageSlot.Build
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.AccountBuildStorageSlot.Build
+  nameWithType: AccountBuildStorageSlot.Build
+- uid: Gw2Sharp.WebApi.V2.Models.AccountBuildStorageSlot.Id
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.AccountBuildStorageSlot.html#Gw2Sharp_WebApi_V2_Models_AccountBuildStorageSlot_Id
+  commentId: P:Gw2Sharp.WebApi.V2.Models.AccountBuildStorageSlot.Id
+  fullName: Gw2Sharp.WebApi.V2.Models.AccountBuildStorageSlot.Id
+  nameWithType: AccountBuildStorageSlot.Id
+- uid: Gw2Sharp.WebApi.V2.Models.AccountBuildStorageSlot.Id*
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.AccountBuildStorageSlot.html#Gw2Sharp_WebApi_V2_Models_AccountBuildStorageSlot_Id_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.AccountBuildStorageSlot.Id
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.AccountBuildStorageSlot.Id
+  nameWithType: AccountBuildStorageSlot.Id
 - uid: Gw2Sharp.WebApi.V2.Models.AccountCurrency
   name: AccountCurrency
   href: api/Gw2Sharp.WebApi.V2.Models.AccountCurrency.html
@@ -21682,6 +22228,225 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.Build.Id
   nameWithType: Build.Id
+- uid: Gw2Sharp.WebApi.V2.Models.BuildTemplate
+  name: BuildTemplate
+  href: api/Gw2Sharp.WebApi.V2.Models.BuildTemplate.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.BuildTemplate
+  fullName: Gw2Sharp.WebApi.V2.Models.BuildTemplate
+  nameWithType: BuildTemplate
+- uid: Gw2Sharp.WebApi.V2.Models.BuildTemplate.AquaticLegends
+  name: AquaticLegends
+  href: api/Gw2Sharp.WebApi.V2.Models.BuildTemplate.html#Gw2Sharp_WebApi_V2_Models_BuildTemplate_AquaticLegends
+  commentId: P:Gw2Sharp.WebApi.V2.Models.BuildTemplate.AquaticLegends
+  fullName: Gw2Sharp.WebApi.V2.Models.BuildTemplate.AquaticLegends
+  nameWithType: BuildTemplate.AquaticLegends
+- uid: Gw2Sharp.WebApi.V2.Models.BuildTemplate.AquaticLegends*
+  name: AquaticLegends
+  href: api/Gw2Sharp.WebApi.V2.Models.BuildTemplate.html#Gw2Sharp_WebApi_V2_Models_BuildTemplate_AquaticLegends_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.BuildTemplate.AquaticLegends
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.BuildTemplate.AquaticLegends
+  nameWithType: BuildTemplate.AquaticLegends
+- uid: Gw2Sharp.WebApi.V2.Models.BuildTemplate.AquaticSkills
+  name: AquaticSkills
+  href: api/Gw2Sharp.WebApi.V2.Models.BuildTemplate.html#Gw2Sharp_WebApi_V2_Models_BuildTemplate_AquaticSkills
+  commentId: P:Gw2Sharp.WebApi.V2.Models.BuildTemplate.AquaticSkills
+  fullName: Gw2Sharp.WebApi.V2.Models.BuildTemplate.AquaticSkills
+  nameWithType: BuildTemplate.AquaticSkills
+- uid: Gw2Sharp.WebApi.V2.Models.BuildTemplate.AquaticSkills*
+  name: AquaticSkills
+  href: api/Gw2Sharp.WebApi.V2.Models.BuildTemplate.html#Gw2Sharp_WebApi_V2_Models_BuildTemplate_AquaticSkills_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.BuildTemplate.AquaticSkills
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.BuildTemplate.AquaticSkills
+  nameWithType: BuildTemplate.AquaticSkills
+- uid: Gw2Sharp.WebApi.V2.Models.BuildTemplate.Legends
+  name: Legends
+  href: api/Gw2Sharp.WebApi.V2.Models.BuildTemplate.html#Gw2Sharp_WebApi_V2_Models_BuildTemplate_Legends
+  commentId: P:Gw2Sharp.WebApi.V2.Models.BuildTemplate.Legends
+  fullName: Gw2Sharp.WebApi.V2.Models.BuildTemplate.Legends
+  nameWithType: BuildTemplate.Legends
+- uid: Gw2Sharp.WebApi.V2.Models.BuildTemplate.Legends*
+  name: Legends
+  href: api/Gw2Sharp.WebApi.V2.Models.BuildTemplate.html#Gw2Sharp_WebApi_V2_Models_BuildTemplate_Legends_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.BuildTemplate.Legends
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.BuildTemplate.Legends
+  nameWithType: BuildTemplate.Legends
+- uid: Gw2Sharp.WebApi.V2.Models.BuildTemplate.Name
+  name: Name
+  href: api/Gw2Sharp.WebApi.V2.Models.BuildTemplate.html#Gw2Sharp_WebApi_V2_Models_BuildTemplate_Name
+  commentId: P:Gw2Sharp.WebApi.V2.Models.BuildTemplate.Name
+  fullName: Gw2Sharp.WebApi.V2.Models.BuildTemplate.Name
+  nameWithType: BuildTemplate.Name
+- uid: Gw2Sharp.WebApi.V2.Models.BuildTemplate.Name*
+  name: Name
+  href: api/Gw2Sharp.WebApi.V2.Models.BuildTemplate.html#Gw2Sharp_WebApi_V2_Models_BuildTemplate_Name_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.BuildTemplate.Name
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.BuildTemplate.Name
+  nameWithType: BuildTemplate.Name
+- uid: Gw2Sharp.WebApi.V2.Models.BuildTemplate.Pets
+  name: Pets
+  href: api/Gw2Sharp.WebApi.V2.Models.BuildTemplate.html#Gw2Sharp_WebApi_V2_Models_BuildTemplate_Pets
+  commentId: P:Gw2Sharp.WebApi.V2.Models.BuildTemplate.Pets
+  fullName: Gw2Sharp.WebApi.V2.Models.BuildTemplate.Pets
+  nameWithType: BuildTemplate.Pets
+- uid: Gw2Sharp.WebApi.V2.Models.BuildTemplate.Pets*
+  name: Pets
+  href: api/Gw2Sharp.WebApi.V2.Models.BuildTemplate.html#Gw2Sharp_WebApi_V2_Models_BuildTemplate_Pets_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.BuildTemplate.Pets
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.BuildTemplate.Pets
+  nameWithType: BuildTemplate.Pets
+- uid: Gw2Sharp.WebApi.V2.Models.BuildTemplate.Profession
+  name: Profession
+  href: api/Gw2Sharp.WebApi.V2.Models.BuildTemplate.html#Gw2Sharp_WebApi_V2_Models_BuildTemplate_Profession
+  commentId: P:Gw2Sharp.WebApi.V2.Models.BuildTemplate.Profession
+  fullName: Gw2Sharp.WebApi.V2.Models.BuildTemplate.Profession
+  nameWithType: BuildTemplate.Profession
+- uid: Gw2Sharp.WebApi.V2.Models.BuildTemplate.Profession*
+  name: Profession
+  href: api/Gw2Sharp.WebApi.V2.Models.BuildTemplate.html#Gw2Sharp_WebApi_V2_Models_BuildTemplate_Profession_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.BuildTemplate.Profession
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.BuildTemplate.Profession
+  nameWithType: BuildTemplate.Profession
+- uid: Gw2Sharp.WebApi.V2.Models.BuildTemplate.Skills
+  name: Skills
+  href: api/Gw2Sharp.WebApi.V2.Models.BuildTemplate.html#Gw2Sharp_WebApi_V2_Models_BuildTemplate_Skills
+  commentId: P:Gw2Sharp.WebApi.V2.Models.BuildTemplate.Skills
+  fullName: Gw2Sharp.WebApi.V2.Models.BuildTemplate.Skills
+  nameWithType: BuildTemplate.Skills
+- uid: Gw2Sharp.WebApi.V2.Models.BuildTemplate.Skills*
+  name: Skills
+  href: api/Gw2Sharp.WebApi.V2.Models.BuildTemplate.html#Gw2Sharp_WebApi_V2_Models_BuildTemplate_Skills_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.BuildTemplate.Skills
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.BuildTemplate.Skills
+  nameWithType: BuildTemplate.Skills
+- uid: Gw2Sharp.WebApi.V2.Models.BuildTemplate.Specializations
+  name: Specializations
+  href: api/Gw2Sharp.WebApi.V2.Models.BuildTemplate.html#Gw2Sharp_WebApi_V2_Models_BuildTemplate_Specializations
+  commentId: P:Gw2Sharp.WebApi.V2.Models.BuildTemplate.Specializations
+  fullName: Gw2Sharp.WebApi.V2.Models.BuildTemplate.Specializations
+  nameWithType: BuildTemplate.Specializations
+- uid: Gw2Sharp.WebApi.V2.Models.BuildTemplate.Specializations*
+  name: Specializations
+  href: api/Gw2Sharp.WebApi.V2.Models.BuildTemplate.html#Gw2Sharp_WebApi_V2_Models_BuildTemplate_Specializations_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.BuildTemplate.Specializations
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.BuildTemplate.Specializations
+  nameWithType: BuildTemplate.Specializations
+- uid: Gw2Sharp.WebApi.V2.Models.BuildTemplatePets
+  name: BuildTemplatePets
+  href: api/Gw2Sharp.WebApi.V2.Models.BuildTemplatePets.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.BuildTemplatePets
+  fullName: Gw2Sharp.WebApi.V2.Models.BuildTemplatePets
+  nameWithType: BuildTemplatePets
+- uid: Gw2Sharp.WebApi.V2.Models.BuildTemplatePets.Aquatic
+  name: Aquatic
+  href: api/Gw2Sharp.WebApi.V2.Models.BuildTemplatePets.html#Gw2Sharp_WebApi_V2_Models_BuildTemplatePets_Aquatic
+  commentId: P:Gw2Sharp.WebApi.V2.Models.BuildTemplatePets.Aquatic
+  fullName: Gw2Sharp.WebApi.V2.Models.BuildTemplatePets.Aquatic
+  nameWithType: BuildTemplatePets.Aquatic
+- uid: Gw2Sharp.WebApi.V2.Models.BuildTemplatePets.Aquatic*
+  name: Aquatic
+  href: api/Gw2Sharp.WebApi.V2.Models.BuildTemplatePets.html#Gw2Sharp_WebApi_V2_Models_BuildTemplatePets_Aquatic_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.BuildTemplatePets.Aquatic
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.BuildTemplatePets.Aquatic
+  nameWithType: BuildTemplatePets.Aquatic
+- uid: Gw2Sharp.WebApi.V2.Models.BuildTemplatePets.Terrestrial
+  name: Terrestrial
+  href: api/Gw2Sharp.WebApi.V2.Models.BuildTemplatePets.html#Gw2Sharp_WebApi_V2_Models_BuildTemplatePets_Terrestrial
+  commentId: P:Gw2Sharp.WebApi.V2.Models.BuildTemplatePets.Terrestrial
+  fullName: Gw2Sharp.WebApi.V2.Models.BuildTemplatePets.Terrestrial
+  nameWithType: BuildTemplatePets.Terrestrial
+- uid: Gw2Sharp.WebApi.V2.Models.BuildTemplatePets.Terrestrial*
+  name: Terrestrial
+  href: api/Gw2Sharp.WebApi.V2.Models.BuildTemplatePets.html#Gw2Sharp_WebApi_V2_Models_BuildTemplatePets_Terrestrial_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.BuildTemplatePets.Terrestrial
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.BuildTemplatePets.Terrestrial
+  nameWithType: BuildTemplatePets.Terrestrial
+- uid: Gw2Sharp.WebApi.V2.Models.BuildTemplateSkills
+  name: BuildTemplateSkills
+  href: api/Gw2Sharp.WebApi.V2.Models.BuildTemplateSkills.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.BuildTemplateSkills
+  fullName: Gw2Sharp.WebApi.V2.Models.BuildTemplateSkills
+  nameWithType: BuildTemplateSkills
+- uid: Gw2Sharp.WebApi.V2.Models.BuildTemplateSkills.Elite
+  name: Elite
+  href: api/Gw2Sharp.WebApi.V2.Models.BuildTemplateSkills.html#Gw2Sharp_WebApi_V2_Models_BuildTemplateSkills_Elite
+  commentId: P:Gw2Sharp.WebApi.V2.Models.BuildTemplateSkills.Elite
+  fullName: Gw2Sharp.WebApi.V2.Models.BuildTemplateSkills.Elite
+  nameWithType: BuildTemplateSkills.Elite
+- uid: Gw2Sharp.WebApi.V2.Models.BuildTemplateSkills.Elite*
+  name: Elite
+  href: api/Gw2Sharp.WebApi.V2.Models.BuildTemplateSkills.html#Gw2Sharp_WebApi_V2_Models_BuildTemplateSkills_Elite_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.BuildTemplateSkills.Elite
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.BuildTemplateSkills.Elite
+  nameWithType: BuildTemplateSkills.Elite
+- uid: Gw2Sharp.WebApi.V2.Models.BuildTemplateSkills.Heal
+  name: Heal
+  href: api/Gw2Sharp.WebApi.V2.Models.BuildTemplateSkills.html#Gw2Sharp_WebApi_V2_Models_BuildTemplateSkills_Heal
+  commentId: P:Gw2Sharp.WebApi.V2.Models.BuildTemplateSkills.Heal
+  fullName: Gw2Sharp.WebApi.V2.Models.BuildTemplateSkills.Heal
+  nameWithType: BuildTemplateSkills.Heal
+- uid: Gw2Sharp.WebApi.V2.Models.BuildTemplateSkills.Heal*
+  name: Heal
+  href: api/Gw2Sharp.WebApi.V2.Models.BuildTemplateSkills.html#Gw2Sharp_WebApi_V2_Models_BuildTemplateSkills_Heal_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.BuildTemplateSkills.Heal
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.BuildTemplateSkills.Heal
+  nameWithType: BuildTemplateSkills.Heal
+- uid: Gw2Sharp.WebApi.V2.Models.BuildTemplateSkills.Utilities
+  name: Utilities
+  href: api/Gw2Sharp.WebApi.V2.Models.BuildTemplateSkills.html#Gw2Sharp_WebApi_V2_Models_BuildTemplateSkills_Utilities
+  commentId: P:Gw2Sharp.WebApi.V2.Models.BuildTemplateSkills.Utilities
+  fullName: Gw2Sharp.WebApi.V2.Models.BuildTemplateSkills.Utilities
+  nameWithType: BuildTemplateSkills.Utilities
+- uid: Gw2Sharp.WebApi.V2.Models.BuildTemplateSkills.Utilities*
+  name: Utilities
+  href: api/Gw2Sharp.WebApi.V2.Models.BuildTemplateSkills.html#Gw2Sharp_WebApi_V2_Models_BuildTemplateSkills_Utilities_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.BuildTemplateSkills.Utilities
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.BuildTemplateSkills.Utilities
+  nameWithType: BuildTemplateSkills.Utilities
+- uid: Gw2Sharp.WebApi.V2.Models.BuildTemplateSpecialization
+  name: BuildTemplateSpecialization
+  href: api/Gw2Sharp.WebApi.V2.Models.BuildTemplateSpecialization.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.BuildTemplateSpecialization
+  fullName: Gw2Sharp.WebApi.V2.Models.BuildTemplateSpecialization
+  nameWithType: BuildTemplateSpecialization
+- uid: Gw2Sharp.WebApi.V2.Models.BuildTemplateSpecialization.Id
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.BuildTemplateSpecialization.html#Gw2Sharp_WebApi_V2_Models_BuildTemplateSpecialization_Id
+  commentId: P:Gw2Sharp.WebApi.V2.Models.BuildTemplateSpecialization.Id
+  fullName: Gw2Sharp.WebApi.V2.Models.BuildTemplateSpecialization.Id
+  nameWithType: BuildTemplateSpecialization.Id
+- uid: Gw2Sharp.WebApi.V2.Models.BuildTemplateSpecialization.Id*
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.BuildTemplateSpecialization.html#Gw2Sharp_WebApi_V2_Models_BuildTemplateSpecialization_Id_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.BuildTemplateSpecialization.Id
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.BuildTemplateSpecialization.Id
+  nameWithType: BuildTemplateSpecialization.Id
+- uid: Gw2Sharp.WebApi.V2.Models.BuildTemplateSpecialization.Traits
+  name: Traits
+  href: api/Gw2Sharp.WebApi.V2.Models.BuildTemplateSpecialization.html#Gw2Sharp_WebApi_V2_Models_BuildTemplateSpecialization_Traits
+  commentId: P:Gw2Sharp.WebApi.V2.Models.BuildTemplateSpecialization.Traits
+  fullName: Gw2Sharp.WebApi.V2.Models.BuildTemplateSpecialization.Traits
+  nameWithType: BuildTemplateSpecialization.Traits
+- uid: Gw2Sharp.WebApi.V2.Models.BuildTemplateSpecialization.Traits*
+  name: Traits
+  href: api/Gw2Sharp.WebApi.V2.Models.BuildTemplateSpecialization.html#Gw2Sharp_WebApi_V2_Models_BuildTemplateSpecialization_Traits_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.BuildTemplateSpecialization.Traits
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.BuildTemplateSpecialization.Traits
+  nameWithType: BuildTemplateSpecialization.Traits
 - uid: Gw2Sharp.WebApi.V2.Models.CastableTypeAttribute
   name: CastableTypeAttribute
   href: api/Gw2Sharp.WebApi.V2.Models.CastableTypeAttribute.html
@@ -21765,6 +22530,32 @@ references:
   commentId: T:Gw2Sharp.WebApi.V2.Models.Character
   fullName: Gw2Sharp.WebApi.V2.Models.Character
   nameWithType: Character
+- uid: Gw2Sharp.WebApi.V2.Models.Character.ActiveBuildTab
+  name: ActiveBuildTab
+  href: api/Gw2Sharp.WebApi.V2.Models.Character.html#Gw2Sharp_WebApi_V2_Models_Character_ActiveBuildTab
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Character.ActiveBuildTab
+  fullName: Gw2Sharp.WebApi.V2.Models.Character.ActiveBuildTab
+  nameWithType: Character.ActiveBuildTab
+- uid: Gw2Sharp.WebApi.V2.Models.Character.ActiveBuildTab*
+  name: ActiveBuildTab
+  href: api/Gw2Sharp.WebApi.V2.Models.Character.html#Gw2Sharp_WebApi_V2_Models_Character_ActiveBuildTab_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Character.ActiveBuildTab
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Character.ActiveBuildTab
+  nameWithType: Character.ActiveBuildTab
+- uid: Gw2Sharp.WebApi.V2.Models.Character.ActiveEquipmentTab
+  name: ActiveEquipmentTab
+  href: api/Gw2Sharp.WebApi.V2.Models.Character.html#Gw2Sharp_WebApi_V2_Models_Character_ActiveEquipmentTab
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Character.ActiveEquipmentTab
+  fullName: Gw2Sharp.WebApi.V2.Models.Character.ActiveEquipmentTab
+  nameWithType: Character.ActiveEquipmentTab
+- uid: Gw2Sharp.WebApi.V2.Models.Character.ActiveEquipmentTab*
+  name: ActiveEquipmentTab
+  href: api/Gw2Sharp.WebApi.V2.Models.Character.html#Gw2Sharp_WebApi_V2_Models_Character_ActiveEquipmentTab_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Character.ActiveEquipmentTab
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Character.ActiveEquipmentTab
+  nameWithType: Character.ActiveEquipmentTab
 - uid: Gw2Sharp.WebApi.V2.Models.Character.Age
   name: Age
   href: api/Gw2Sharp.WebApi.V2.Models.Character.html#Gw2Sharp_WebApi_V2_Models_Character_Age
@@ -21804,6 +22595,32 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.Character.Bags
   nameWithType: Character.Bags
+- uid: Gw2Sharp.WebApi.V2.Models.Character.BuildTabs
+  name: BuildTabs
+  href: api/Gw2Sharp.WebApi.V2.Models.Character.html#Gw2Sharp_WebApi_V2_Models_Character_BuildTabs
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Character.BuildTabs
+  fullName: Gw2Sharp.WebApi.V2.Models.Character.BuildTabs
+  nameWithType: Character.BuildTabs
+- uid: Gw2Sharp.WebApi.V2.Models.Character.BuildTabs*
+  name: BuildTabs
+  href: api/Gw2Sharp.WebApi.V2.Models.Character.html#Gw2Sharp_WebApi_V2_Models_Character_BuildTabs_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Character.BuildTabs
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Character.BuildTabs
+  nameWithType: Character.BuildTabs
+- uid: Gw2Sharp.WebApi.V2.Models.Character.BuildTabsUnlocked
+  name: BuildTabsUnlocked
+  href: api/Gw2Sharp.WebApi.V2.Models.Character.html#Gw2Sharp_WebApi_V2_Models_Character_BuildTabsUnlocked
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Character.BuildTabsUnlocked
+  fullName: Gw2Sharp.WebApi.V2.Models.Character.BuildTabsUnlocked
+  nameWithType: Character.BuildTabsUnlocked
+- uid: Gw2Sharp.WebApi.V2.Models.Character.BuildTabsUnlocked*
+  name: BuildTabsUnlocked
+  href: api/Gw2Sharp.WebApi.V2.Models.Character.html#Gw2Sharp_WebApi_V2_Models_Character_BuildTabsUnlocked_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Character.BuildTabsUnlocked
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Character.BuildTabsUnlocked
+  nameWithType: Character.BuildTabsUnlocked
 - uid: Gw2Sharp.WebApi.V2.Models.Character.Crafting
   name: Crafting
   href: api/Gw2Sharp.WebApi.V2.Models.Character.html#Gw2Sharp_WebApi_V2_Models_Character_Crafting
@@ -21869,6 +22686,32 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.Character.EquipmentPvp
   nameWithType: Character.EquipmentPvp
+- uid: Gw2Sharp.WebApi.V2.Models.Character.EquipmentTabs
+  name: EquipmentTabs
+  href: api/Gw2Sharp.WebApi.V2.Models.Character.html#Gw2Sharp_WebApi_V2_Models_Character_EquipmentTabs
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Character.EquipmentTabs
+  fullName: Gw2Sharp.WebApi.V2.Models.Character.EquipmentTabs
+  nameWithType: Character.EquipmentTabs
+- uid: Gw2Sharp.WebApi.V2.Models.Character.EquipmentTabs*
+  name: EquipmentTabs
+  href: api/Gw2Sharp.WebApi.V2.Models.Character.html#Gw2Sharp_WebApi_V2_Models_Character_EquipmentTabs_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Character.EquipmentTabs
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Character.EquipmentTabs
+  nameWithType: Character.EquipmentTabs
+- uid: Gw2Sharp.WebApi.V2.Models.Character.EquipmentTabsUnlocked
+  name: EquipmentTabsUnlocked
+  href: api/Gw2Sharp.WebApi.V2.Models.Character.html#Gw2Sharp_WebApi_V2_Models_Character_EquipmentTabsUnlocked
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Character.EquipmentTabsUnlocked
+  fullName: Gw2Sharp.WebApi.V2.Models.Character.EquipmentTabsUnlocked
+  nameWithType: Character.EquipmentTabsUnlocked
+- uid: Gw2Sharp.WebApi.V2.Models.Character.EquipmentTabsUnlocked*
+  name: EquipmentTabsUnlocked
+  href: api/Gw2Sharp.WebApi.V2.Models.Character.html#Gw2Sharp_WebApi_V2_Models_Character_EquipmentTabsUnlocked_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Character.EquipmentTabsUnlocked
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Character.EquipmentTabsUnlocked
+  nameWithType: Character.EquipmentTabsUnlocked
 - uid: Gw2Sharp.WebApi.V2.Models.Character.Flags
   name: Flags
   href: api/Gw2Sharp.WebApi.V2.Models.Character.html#Gw2Sharp_WebApi_V2_Models_Character_Flags
@@ -22068,6 +22911,68 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.Character.WvwAbilities
   nameWithType: Character.WvwAbilities
+- uid: Gw2Sharp.WebApi.V2.Models.CharacterBuildTabSlot
+  name: CharacterBuildTabSlot
+  href: api/Gw2Sharp.WebApi.V2.Models.CharacterBuildTabSlot.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.CharacterBuildTabSlot
+  fullName: Gw2Sharp.WebApi.V2.Models.CharacterBuildTabSlot
+  nameWithType: CharacterBuildTabSlot
+- uid: Gw2Sharp.WebApi.V2.Models.CharacterBuildTabSlot.Build
+  name: Build
+  href: api/Gw2Sharp.WebApi.V2.Models.CharacterBuildTabSlot.html#Gw2Sharp_WebApi_V2_Models_CharacterBuildTabSlot_Build
+  commentId: P:Gw2Sharp.WebApi.V2.Models.CharacterBuildTabSlot.Build
+  fullName: Gw2Sharp.WebApi.V2.Models.CharacterBuildTabSlot.Build
+  nameWithType: CharacterBuildTabSlot.Build
+- uid: Gw2Sharp.WebApi.V2.Models.CharacterBuildTabSlot.Build*
+  name: Build
+  href: api/Gw2Sharp.WebApi.V2.Models.CharacterBuildTabSlot.html#Gw2Sharp_WebApi_V2_Models_CharacterBuildTabSlot_Build_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.CharacterBuildTabSlot.Build
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.CharacterBuildTabSlot.Build
+  nameWithType: CharacterBuildTabSlot.Build
+- uid: Gw2Sharp.WebApi.V2.Models.CharacterBuildTabSlot.Gw2Sharp#WebApi#V2#Models#IIdentifiable{System#Int32}#Id
+  name: IIdentifiable<Int32>.Id
+  href: api/Gw2Sharp.WebApi.V2.Models.CharacterBuildTabSlot.html#Gw2Sharp_WebApi_V2_Models_CharacterBuildTabSlot_Gw2Sharp_WebApi_V2_Models_IIdentifiable_System_Int32__Id
+  commentId: P:Gw2Sharp.WebApi.V2.Models.CharacterBuildTabSlot.Gw2Sharp#WebApi#V2#Models#IIdentifiable{System#Int32}#Id
+  name.vb: Gw2Sharp.WebApi.V2.Models.IIdentifiable<System.Int32>.Id
+  fullName: Gw2Sharp.WebApi.V2.Models.CharacterBuildTabSlot.Gw2Sharp.WebApi.V2.Models.IIdentifiable<System.Int32>.Id
+  nameWithType: CharacterBuildTabSlot.IIdentifiable<Int32>.Id
+  nameWithType.vb: CharacterBuildTabSlot.Gw2Sharp.WebApi.V2.Models.IIdentifiable<System.Int32>.Id
+- uid: Gw2Sharp.WebApi.V2.Models.CharacterBuildTabSlot.Gw2Sharp#WebApi#V2#Models#IIdentifiable{System#Int32}#Id*
+  name: IIdentifiable<Int32>.Id
+  href: api/Gw2Sharp.WebApi.V2.Models.CharacterBuildTabSlot.html#Gw2Sharp_WebApi_V2_Models_CharacterBuildTabSlot_Gw2Sharp_WebApi_V2_Models_IIdentifiable_System_Int32__Id_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.CharacterBuildTabSlot.Gw2Sharp#WebApi#V2#Models#IIdentifiable{System#Int32}#Id
+  isSpec: "True"
+  name.vb: Gw2Sharp.WebApi.V2.Models.IIdentifiable<System.Int32>.Id
+  fullName: Gw2Sharp.WebApi.V2.Models.CharacterBuildTabSlot.Gw2Sharp.WebApi.V2.Models.IIdentifiable<System.Int32>.Id
+  nameWithType: CharacterBuildTabSlot.IIdentifiable<Int32>.Id
+  nameWithType.vb: CharacterBuildTabSlot.Gw2Sharp.WebApi.V2.Models.IIdentifiable<System.Int32>.Id
+- uid: Gw2Sharp.WebApi.V2.Models.CharacterBuildTabSlot.IsActive
+  name: IsActive
+  href: api/Gw2Sharp.WebApi.V2.Models.CharacterBuildTabSlot.html#Gw2Sharp_WebApi_V2_Models_CharacterBuildTabSlot_IsActive
+  commentId: P:Gw2Sharp.WebApi.V2.Models.CharacterBuildTabSlot.IsActive
+  fullName: Gw2Sharp.WebApi.V2.Models.CharacterBuildTabSlot.IsActive
+  nameWithType: CharacterBuildTabSlot.IsActive
+- uid: Gw2Sharp.WebApi.V2.Models.CharacterBuildTabSlot.IsActive*
+  name: IsActive
+  href: api/Gw2Sharp.WebApi.V2.Models.CharacterBuildTabSlot.html#Gw2Sharp_WebApi_V2_Models_CharacterBuildTabSlot_IsActive_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.CharacterBuildTabSlot.IsActive
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.CharacterBuildTabSlot.IsActive
+  nameWithType: CharacterBuildTabSlot.IsActive
+- uid: Gw2Sharp.WebApi.V2.Models.CharacterBuildTabSlot.Tab
+  name: Tab
+  href: api/Gw2Sharp.WebApi.V2.Models.CharacterBuildTabSlot.html#Gw2Sharp_WebApi_V2_Models_CharacterBuildTabSlot_Tab
+  commentId: P:Gw2Sharp.WebApi.V2.Models.CharacterBuildTabSlot.Tab
+  fullName: Gw2Sharp.WebApi.V2.Models.CharacterBuildTabSlot.Tab
+  nameWithType: CharacterBuildTabSlot.Tab
+- uid: Gw2Sharp.WebApi.V2.Models.CharacterBuildTabSlot.Tab*
+  name: Tab
+  href: api/Gw2Sharp.WebApi.V2.Models.CharacterBuildTabSlot.html#Gw2Sharp_WebApi_V2_Models_CharacterBuildTabSlot_Tab_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.CharacterBuildTabSlot.Tab
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.CharacterBuildTabSlot.Tab
+  nameWithType: CharacterBuildTabSlot.Tab
 - uid: Gw2Sharp.WebApi.V2.Models.CharacterCraftingDiscipline
   name: CharacterCraftingDiscipline
   href: api/Gw2Sharp.WebApi.V2.Models.CharacterCraftingDiscipline.html
@@ -22145,19 +23050,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentItem.BoundTo
   nameWithType: CharacterEquipmentItem.BoundTo
-- uid: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentItem.Charges
-  name: Charges
-  href: api/Gw2Sharp.WebApi.V2.Models.CharacterEquipmentItem.html#Gw2Sharp_WebApi_V2_Models_CharacterEquipmentItem_Charges
-  commentId: P:Gw2Sharp.WebApi.V2.Models.CharacterEquipmentItem.Charges
-  fullName: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentItem.Charges
-  nameWithType: CharacterEquipmentItem.Charges
-- uid: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentItem.Charges*
-  name: Charges
-  href: api/Gw2Sharp.WebApi.V2.Models.CharacterEquipmentItem.html#Gw2Sharp_WebApi_V2_Models_CharacterEquipmentItem_Charges_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Models.CharacterEquipmentItem.Charges
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentItem.Charges
-  nameWithType: CharacterEquipmentItem.Charges
 - uid: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentItem.Dyes
   name: Dyes
   href: api/Gw2Sharp.WebApi.V2.Models.CharacterEquipmentItem.html#Gw2Sharp_WebApi_V2_Models_CharacterEquipmentItem_Dyes
@@ -22197,6 +23089,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentItem.Infusions
   nameWithType: CharacterEquipmentItem.Infusions
+- uid: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentItem.Location
+  name: Location
+  href: api/Gw2Sharp.WebApi.V2.Models.CharacterEquipmentItem.html#Gw2Sharp_WebApi_V2_Models_CharacterEquipmentItem_Location
+  commentId: P:Gw2Sharp.WebApi.V2.Models.CharacterEquipmentItem.Location
+  fullName: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentItem.Location
+  nameWithType: CharacterEquipmentItem.Location
+- uid: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentItem.Location*
+  name: Location
+  href: api/Gw2Sharp.WebApi.V2.Models.CharacterEquipmentItem.html#Gw2Sharp_WebApi_V2_Models_CharacterEquipmentItem_Location_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.CharacterEquipmentItem.Location
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentItem.Location
+  nameWithType: CharacterEquipmentItem.Location
 - uid: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentItem.Skin
   name: Skin
   href: api/Gw2Sharp.WebApi.V2.Models.CharacterEquipmentItem.html#Gw2Sharp_WebApi_V2_Models_CharacterEquipmentItem_Skin
@@ -22236,6 +23141,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentItem.Stats
   nameWithType: CharacterEquipmentItem.Stats
+- uid: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentItem.Tabs
+  name: Tabs
+  href: api/Gw2Sharp.WebApi.V2.Models.CharacterEquipmentItem.html#Gw2Sharp_WebApi_V2_Models_CharacterEquipmentItem_Tabs
+  commentId: P:Gw2Sharp.WebApi.V2.Models.CharacterEquipmentItem.Tabs
+  fullName: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentItem.Tabs
+  nameWithType: CharacterEquipmentItem.Tabs
+- uid: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentItem.Tabs*
+  name: Tabs
+  href: api/Gw2Sharp.WebApi.V2.Models.CharacterEquipmentItem.html#Gw2Sharp_WebApi_V2_Models_CharacterEquipmentItem_Tabs_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.CharacterEquipmentItem.Tabs
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentItem.Tabs
+  nameWithType: CharacterEquipmentItem.Tabs
 - uid: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentItem.Upgrades
   name: Upgrades
   href: api/Gw2Sharp.WebApi.V2.Models.CharacterEquipmentItem.html#Gw2Sharp_WebApi_V2_Models_CharacterEquipmentItem_Upgrades
@@ -22294,6 +23212,68 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentPvp.Sigils
   nameWithType: CharacterEquipmentPvp.Sigils
+- uid: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot
+  name: CharacterEquipmentTabSlot
+  href: api/Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot
+  fullName: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot
+  nameWithType: CharacterEquipmentTabSlot
+- uid: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.Equipment
+  name: Equipment
+  href: api/Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.html#Gw2Sharp_WebApi_V2_Models_CharacterEquipmentTabSlot_Equipment
+  commentId: P:Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.Equipment
+  fullName: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.Equipment
+  nameWithType: CharacterEquipmentTabSlot.Equipment
+- uid: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.Equipment*
+  name: Equipment
+  href: api/Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.html#Gw2Sharp_WebApi_V2_Models_CharacterEquipmentTabSlot_Equipment_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.Equipment
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.Equipment
+  nameWithType: CharacterEquipmentTabSlot.Equipment
+- uid: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.Gw2Sharp#WebApi#V2#Models#IIdentifiable{System#Int32}#Id
+  name: IIdentifiable<Int32>.Id
+  href: api/Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.html#Gw2Sharp_WebApi_V2_Models_CharacterEquipmentTabSlot_Gw2Sharp_WebApi_V2_Models_IIdentifiable_System_Int32__Id
+  commentId: P:Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.Gw2Sharp#WebApi#V2#Models#IIdentifiable{System#Int32}#Id
+  name.vb: Gw2Sharp.WebApi.V2.Models.IIdentifiable<System.Int32>.Id
+  fullName: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.Gw2Sharp.WebApi.V2.Models.IIdentifiable<System.Int32>.Id
+  nameWithType: CharacterEquipmentTabSlot.IIdentifiable<Int32>.Id
+  nameWithType.vb: CharacterEquipmentTabSlot.Gw2Sharp.WebApi.V2.Models.IIdentifiable<System.Int32>.Id
+- uid: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.Gw2Sharp#WebApi#V2#Models#IIdentifiable{System#Int32}#Id*
+  name: IIdentifiable<Int32>.Id
+  href: api/Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.html#Gw2Sharp_WebApi_V2_Models_CharacterEquipmentTabSlot_Gw2Sharp_WebApi_V2_Models_IIdentifiable_System_Int32__Id_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.Gw2Sharp#WebApi#V2#Models#IIdentifiable{System#Int32}#Id
+  isSpec: "True"
+  name.vb: Gw2Sharp.WebApi.V2.Models.IIdentifiable<System.Int32>.Id
+  fullName: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.Gw2Sharp.WebApi.V2.Models.IIdentifiable<System.Int32>.Id
+  nameWithType: CharacterEquipmentTabSlot.IIdentifiable<Int32>.Id
+  nameWithType.vb: CharacterEquipmentTabSlot.Gw2Sharp.WebApi.V2.Models.IIdentifiable<System.Int32>.Id
+- uid: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.IsActive
+  name: IsActive
+  href: api/Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.html#Gw2Sharp_WebApi_V2_Models_CharacterEquipmentTabSlot_IsActive
+  commentId: P:Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.IsActive
+  fullName: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.IsActive
+  nameWithType: CharacterEquipmentTabSlot.IsActive
+- uid: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.IsActive*
+  name: IsActive
+  href: api/Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.html#Gw2Sharp_WebApi_V2_Models_CharacterEquipmentTabSlot_IsActive_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.IsActive
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.IsActive
+  nameWithType: CharacterEquipmentTabSlot.IsActive
+- uid: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.Tab
+  name: Tab
+  href: api/Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.html#Gw2Sharp_WebApi_V2_Models_CharacterEquipmentTabSlot_Tab
+  commentId: P:Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.Tab
+  fullName: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.Tab
+  nameWithType: CharacterEquipmentTabSlot.Tab
+- uid: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.Tab*
+  name: Tab
+  href: api/Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.html#Gw2Sharp_WebApi_V2_Models_CharacterEquipmentTabSlot_Tab_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.Tab
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.Tab
+  nameWithType: CharacterEquipmentTabSlot.Tab
 - uid: Gw2Sharp.WebApi.V2.Models.CharacterFlag
   name: CharacterFlag
   href: api/Gw2Sharp.WebApi.V2.Models.CharacterFlag.html
@@ -22312,96 +23292,6 @@ references:
   commentId: F:Gw2Sharp.WebApi.V2.Models.CharacterFlag.Unknown
   fullName: Gw2Sharp.WebApi.V2.Models.CharacterFlag.Unknown
   nameWithType: CharacterFlag.Unknown
-- uid: Gw2Sharp.WebApi.V2.Models.CharacterGameModeSkills
-  name: CharacterGameModeSkills
-  href: api/Gw2Sharp.WebApi.V2.Models.CharacterGameModeSkills.html
-  commentId: T:Gw2Sharp.WebApi.V2.Models.CharacterGameModeSkills
-  fullName: Gw2Sharp.WebApi.V2.Models.CharacterGameModeSkills
-  nameWithType: CharacterGameModeSkills
-- uid: Gw2Sharp.WebApi.V2.Models.CharacterGameModeSkills.Elite
-  name: Elite
-  href: api/Gw2Sharp.WebApi.V2.Models.CharacterGameModeSkills.html#Gw2Sharp_WebApi_V2_Models_CharacterGameModeSkills_Elite
-  commentId: P:Gw2Sharp.WebApi.V2.Models.CharacterGameModeSkills.Elite
-  fullName: Gw2Sharp.WebApi.V2.Models.CharacterGameModeSkills.Elite
-  nameWithType: CharacterGameModeSkills.Elite
-- uid: Gw2Sharp.WebApi.V2.Models.CharacterGameModeSkills.Elite*
-  name: Elite
-  href: api/Gw2Sharp.WebApi.V2.Models.CharacterGameModeSkills.html#Gw2Sharp_WebApi_V2_Models_CharacterGameModeSkills_Elite_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Models.CharacterGameModeSkills.Elite
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Models.CharacterGameModeSkills.Elite
-  nameWithType: CharacterGameModeSkills.Elite
-- uid: Gw2Sharp.WebApi.V2.Models.CharacterGameModeSkills.Heal
-  name: Heal
-  href: api/Gw2Sharp.WebApi.V2.Models.CharacterGameModeSkills.html#Gw2Sharp_WebApi_V2_Models_CharacterGameModeSkills_Heal
-  commentId: P:Gw2Sharp.WebApi.V2.Models.CharacterGameModeSkills.Heal
-  fullName: Gw2Sharp.WebApi.V2.Models.CharacterGameModeSkills.Heal
-  nameWithType: CharacterGameModeSkills.Heal
-- uid: Gw2Sharp.WebApi.V2.Models.CharacterGameModeSkills.Heal*
-  name: Heal
-  href: api/Gw2Sharp.WebApi.V2.Models.CharacterGameModeSkills.html#Gw2Sharp_WebApi_V2_Models_CharacterGameModeSkills_Heal_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Models.CharacterGameModeSkills.Heal
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Models.CharacterGameModeSkills.Heal
-  nameWithType: CharacterGameModeSkills.Heal
-- uid: Gw2Sharp.WebApi.V2.Models.CharacterGameModeSkills.Legends
-  name: Legends
-  href: api/Gw2Sharp.WebApi.V2.Models.CharacterGameModeSkills.html#Gw2Sharp_WebApi_V2_Models_CharacterGameModeSkills_Legends
-  commentId: P:Gw2Sharp.WebApi.V2.Models.CharacterGameModeSkills.Legends
-  fullName: Gw2Sharp.WebApi.V2.Models.CharacterGameModeSkills.Legends
-  nameWithType: CharacterGameModeSkills.Legends
-- uid: Gw2Sharp.WebApi.V2.Models.CharacterGameModeSkills.Legends*
-  name: Legends
-  href: api/Gw2Sharp.WebApi.V2.Models.CharacterGameModeSkills.html#Gw2Sharp_WebApi_V2_Models_CharacterGameModeSkills_Legends_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Models.CharacterGameModeSkills.Legends
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Models.CharacterGameModeSkills.Legends
-  nameWithType: CharacterGameModeSkills.Legends
-- uid: Gw2Sharp.WebApi.V2.Models.CharacterGameModeSkills.Utilities
-  name: Utilities
-  href: api/Gw2Sharp.WebApi.V2.Models.CharacterGameModeSkills.html#Gw2Sharp_WebApi_V2_Models_CharacterGameModeSkills_Utilities
-  commentId: P:Gw2Sharp.WebApi.V2.Models.CharacterGameModeSkills.Utilities
-  fullName: Gw2Sharp.WebApi.V2.Models.CharacterGameModeSkills.Utilities
-  nameWithType: CharacterGameModeSkills.Utilities
-- uid: Gw2Sharp.WebApi.V2.Models.CharacterGameModeSkills.Utilities*
-  name: Utilities
-  href: api/Gw2Sharp.WebApi.V2.Models.CharacterGameModeSkills.html#Gw2Sharp_WebApi_V2_Models_CharacterGameModeSkills_Utilities_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Models.CharacterGameModeSkills.Utilities
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Models.CharacterGameModeSkills.Utilities
-  nameWithType: CharacterGameModeSkills.Utilities
-- uid: Gw2Sharp.WebApi.V2.Models.CharacterGameModeSpecialization
-  name: CharacterGameModeSpecialization
-  href: api/Gw2Sharp.WebApi.V2.Models.CharacterGameModeSpecialization.html
-  commentId: T:Gw2Sharp.WebApi.V2.Models.CharacterGameModeSpecialization
-  fullName: Gw2Sharp.WebApi.V2.Models.CharacterGameModeSpecialization
-  nameWithType: CharacterGameModeSpecialization
-- uid: Gw2Sharp.WebApi.V2.Models.CharacterGameModeSpecialization.Id
-  name: Id
-  href: api/Gw2Sharp.WebApi.V2.Models.CharacterGameModeSpecialization.html#Gw2Sharp_WebApi_V2_Models_CharacterGameModeSpecialization_Id
-  commentId: P:Gw2Sharp.WebApi.V2.Models.CharacterGameModeSpecialization.Id
-  fullName: Gw2Sharp.WebApi.V2.Models.CharacterGameModeSpecialization.Id
-  nameWithType: CharacterGameModeSpecialization.Id
-- uid: Gw2Sharp.WebApi.V2.Models.CharacterGameModeSpecialization.Id*
-  name: Id
-  href: api/Gw2Sharp.WebApi.V2.Models.CharacterGameModeSpecialization.html#Gw2Sharp_WebApi_V2_Models_CharacterGameModeSpecialization_Id_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Models.CharacterGameModeSpecialization.Id
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Models.CharacterGameModeSpecialization.Id
-  nameWithType: CharacterGameModeSpecialization.Id
-- uid: Gw2Sharp.WebApi.V2.Models.CharacterGameModeSpecialization.Traits
-  name: Traits
-  href: api/Gw2Sharp.WebApi.V2.Models.CharacterGameModeSpecialization.html#Gw2Sharp_WebApi_V2_Models_CharacterGameModeSpecialization_Traits
-  commentId: P:Gw2Sharp.WebApi.V2.Models.CharacterGameModeSpecialization.Traits
-  fullName: Gw2Sharp.WebApi.V2.Models.CharacterGameModeSpecialization.Traits
-  nameWithType: CharacterGameModeSpecialization.Traits
-- uid: Gw2Sharp.WebApi.V2.Models.CharacterGameModeSpecialization.Traits*
-  name: Traits
-  href: api/Gw2Sharp.WebApi.V2.Models.CharacterGameModeSpecialization.html#Gw2Sharp_WebApi_V2_Models_CharacterGameModeSpecialization_Traits_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Models.CharacterGameModeSpecialization.Traits
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Models.CharacterGameModeSpecialization.Traits
-  nameWithType: CharacterGameModeSpecialization.Traits
 - uid: Gw2Sharp.WebApi.V2.Models.CharacterInventoryBag
   name: CharacterInventoryBag
   href: api/Gw2Sharp.WebApi.V2.Models.CharacterInventoryBag.html
@@ -30274,6 +31164,19 @@ references:
   commentId: T:Gw2Sharp.WebApi.V2.Models.Legend
   fullName: Gw2Sharp.WebApi.V2.Models.Legend
   nameWithType: Legend
+- uid: Gw2Sharp.WebApi.V2.Models.Legend.Code
+  name: Code
+  href: api/Gw2Sharp.WebApi.V2.Models.Legend.html#Gw2Sharp_WebApi_V2_Models_Legend_Code
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Legend.Code
+  fullName: Gw2Sharp.WebApi.V2.Models.Legend.Code
+  nameWithType: Legend.Code
+- uid: Gw2Sharp.WebApi.V2.Models.Legend.Code*
+  name: Code
+  href: api/Gw2Sharp.WebApi.V2.Models.Legend.html#Gw2Sharp_WebApi_V2_Models_Legend_Code_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Legend.Code
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Legend.Code
+  nameWithType: Legend.Code
 - uid: Gw2Sharp.WebApi.V2.Models.Legend.Elite
   name: Elite
   href: api/Gw2Sharp.WebApi.V2.Models.Legend.html#Gw2Sharp_WebApi_V2_Models_Legend_Elite
@@ -31486,6 +32389,19 @@ references:
   commentId: T:Gw2Sharp.WebApi.V2.Models.Profession
   fullName: Gw2Sharp.WebApi.V2.Models.Profession
   nameWithType: Profession
+- uid: Gw2Sharp.WebApi.V2.Models.Profession.Code
+  name: Code
+  href: api/Gw2Sharp.WebApi.V2.Models.Profession.html#Gw2Sharp_WebApi_V2_Models_Profession_Code
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Profession.Code
+  fullName: Gw2Sharp.WebApi.V2.Models.Profession.Code
+  nameWithType: Profession.Code
+- uid: Gw2Sharp.WebApi.V2.Models.Profession.Code*
+  name: Code
+  href: api/Gw2Sharp.WebApi.V2.Models.Profession.html#Gw2Sharp_WebApi_V2_Models_Profession_Code_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Profession.Code
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Profession.Code
+  nameWithType: Profession.Code
 - uid: Gw2Sharp.WebApi.V2.Models.Profession.Flags
   name: Flags
   href: api/Gw2Sharp.WebApi.V2.Models.Profession.html#Gw2Sharp_WebApi_V2_Models_Profession_Flags
@@ -31564,6 +32480,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.Profession.Skills
   nameWithType: Profession.Skills
+- uid: Gw2Sharp.WebApi.V2.Models.Profession.SkillsByPalette
+  name: SkillsByPalette
+  href: api/Gw2Sharp.WebApi.V2.Models.Profession.html#Gw2Sharp_WebApi_V2_Models_Profession_SkillsByPalette
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Profession.SkillsByPalette
+  fullName: Gw2Sharp.WebApi.V2.Models.Profession.SkillsByPalette
+  nameWithType: Profession.SkillsByPalette
+- uid: Gw2Sharp.WebApi.V2.Models.Profession.SkillsByPalette*
+  name: SkillsByPalette
+  href: api/Gw2Sharp.WebApi.V2.Models.Profession.html#Gw2Sharp_WebApi_V2_Models_Profession_SkillsByPalette_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Profession.SkillsByPalette
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Profession.SkillsByPalette
+  nameWithType: Profession.SkillsByPalette
 - uid: Gw2Sharp.WebApi.V2.Models.Profession.Specializations
   name: Specializations
   href: api/Gw2Sharp.WebApi.V2.Models.Profession.html#Gw2Sharp_WebApi_V2_Models_Profession_Specializations
