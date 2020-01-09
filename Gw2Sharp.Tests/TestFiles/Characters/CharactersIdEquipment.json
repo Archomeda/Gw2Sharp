@@ -2,13 +2,17 @@
   "equipment": [
     {
       "id": 6479,
+      "location": "Equipped",
       "slot": "HelmAquatic",
+      "tabs": [ 1 ],
       "binding": "Character",
       "bound_to": "Bob"
     },
     {
       "id": 77474,
+      "location": "Equipped",
       "slot": "Backpack",
+      "tabs": [ 1 ],
       "infusions": [
         78052,
         78028
@@ -27,7 +31,9 @@
     },
     {
       "id": 80254,
+      "location": "Equipped",
       "slot": "Coat",
+      "tabs": [ 1 ],
       "upgrades": [
         83502
       ],
@@ -53,7 +59,9 @@
     },
     {
       "id": 80557,
+      "location": "Equipped",
       "slot": "Boots",
+      "tabs": [ 1 ],
       "upgrades": [
         83502
       ],
@@ -79,7 +87,9 @@
     },
     {
       "id": 78984,
+      "location": "Equipped",
       "slot": "WeaponA1",
+      "tabs": [ 1 ],
       "upgrades": [
         24605
       ],
@@ -100,17 +110,20 @@
     },
     {
       "id": 49308,
+      "location": "Equipped",
       "slot": "Sickle",
       "binding": "Account"
     },
     {
       "id": 48931,
+      "location": "Equipped",
       "slot": "Axe",
       "skin": 8087,
       "binding": "Account"
     },
     {
       "id": 87422,
+      "location": "Equipped",
       "slot": "Pick",
       "skin": 8097,
       "binding": "Account"

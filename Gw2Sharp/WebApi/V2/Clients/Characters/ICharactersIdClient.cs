@@ -1,3 +1,4 @@
+using System;
 using Gw2Sharp.WebApi.V2.Models;
 
 namespace Gw2Sharp.WebApi.V2.Clients
@@ -6,7 +7,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 characters id endpoint.
     /// </summary>
     public interface ICharactersIdClient :
-        IAuthenticatedClient<Character>,
+        IAuthenticatedClient,
         IBlobClient<Character>
     {
         /// <summary>
@@ -19,6 +20,12 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Requires scopes: account, characters.
         /// </summary>
         ICharactersIdBackstoryClient Backstory { get; }
+
+        /// <summary>
+        /// Gets a character's build tabs.
+        /// Requires scopes: account, characters, build.
+        /// </summary>
+        ICharactersIdBuildTabsClient BuildTabs { get; }
 
         /// <summary>
         /// Gets a character's core information.
@@ -37,6 +44,12 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Requires scopes: account, characters, and builds and/or inventories.
         /// </summary>
         ICharactersIdEquipmentClient Equipment { get; }
+
+        /// <summary>
+        /// Gets a character's equipment.
+        /// Requires scopes: account, characters, and builds and/or inventories.
+        /// </summary>
+        ICharactersIdEquipmentTabsClient EquipmentTabs { get; }
 
         /// <summary>
         /// Gets a character's hero points information.
@@ -74,12 +87,14 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Gets a character's skills.
         /// Requires scopes: account, builds, characters.
         /// </summary>
+        [Obsolete("Deprecated since the build template update on 2019-12-19. Use /v2/characters/:id/buildtabs instead. To be removed starting with version 0.9.0.")]
         ICharactersIdSkillsClient Skills { get; }
 
         /// <summary>
         /// Gets a character's specializations.
         /// Requires scopes: account, builds, characters.
         /// </summary>
+        [Obsolete("Deprecated since the build template update on 2019-12-19. Use /v2/characters/:id/buildtabs instead. To be removed starting with version 0.9.0.")]
         ICharactersIdSpecializationsClient Specializations { get; }
 
         /// <summary>

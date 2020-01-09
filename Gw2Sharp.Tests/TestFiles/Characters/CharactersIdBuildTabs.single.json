@@ -1,0 +1,52 @@
+{
+  "tab": 1,
+  "is_active": true,
+  "build": {
+    "name": "Non-existent warrior build",
+    "profession": "Warrior",
+    "specializations": [
+      {
+        "id": 36,
+        "traits": [
+          1455,
+          1333,
+          1346
+        ]
+      },
+      {
+        "id": 11,
+        "traits": [
+          1471,
+          1482,
+          1667
+        ]
+      },
+      {
+        "id": 18,
+        "traits": [
+          2039,
+          2042,
+          2038
+        ]
+      }
+    ],
+    "skills": {
+      "heal": 30189,
+      "utilities": [
+        30074,
+        14405,
+        14407
+      ],
+      "elite": 30343
+    },
+    "aquatic_skills": {
+      "heal": 22222,
+      "utilities": [
+        33333,
+        44444,
+        55555
+      ],
+      "elite": null
+    }
+  }
+}

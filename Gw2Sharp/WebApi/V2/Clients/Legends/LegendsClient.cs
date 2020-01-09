@@ -7,6 +7,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 legends endpoint.
     /// </summary>
     [EndpointPath("legends")]
+    [EndpointSchemaVersion("2019-12-19T00:00:00.000Z")]
     public class LegendsClient : BaseEndpointBulkAllClient<Legend, string>, ILegendsClient
     {
         /// <summary>

@@ -14,6 +14,12 @@ namespace Gw2Sharp.WebApi.V2.Models
         public string Id { get; set; } = string.Empty;
 
         /// <summary>
+        /// The legend code.
+        /// Used in build template chat links.
+        /// </summary>
+        public int Code { get; set; }
+
+        /// <summary>
         /// The legend swap skill id.
         /// Can be resolved against <see cref="IGw2WebApiV2Client.Skills"/>.
         /// </summary>

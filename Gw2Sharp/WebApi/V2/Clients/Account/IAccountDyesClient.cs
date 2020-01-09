@@ -4,7 +4,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 account dyes endpoint.
     /// </summary>
     public interface IAccountDyesClient :
-        IAuthenticatedClient<IApiV2ObjectList<int>>,
+        IAuthenticatedClient,
         IBlobClient<IApiV2ObjectList<int>>
     {
     }

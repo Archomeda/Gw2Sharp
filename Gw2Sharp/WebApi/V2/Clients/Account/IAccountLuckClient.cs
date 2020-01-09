@@ -6,7 +6,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 account luck endpoint.
     /// </summary>
     public interface IAccountLuckClient :
-        IAuthenticatedClient<IApiV2ObjectList<AccountLuck>>,
+        IAuthenticatedClient,
         IBlobClient<IApiV2ObjectList<AccountLuck>>
     {
     }

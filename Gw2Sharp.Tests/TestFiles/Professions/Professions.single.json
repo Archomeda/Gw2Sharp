@@ -1,5 +1,6 @@
 {
   "id": "Guardian",
+  "code": 1,
   "name": "Guardian",
   "icon": "https://render.guildwars2.com/file/C32BE61FC55C962524624F643897ECF1A9C80462/156634.png",
   "icon_big": "https://render.guildwars2.com/file/6E0D0AC6E0CE5C0C29B3D736ABEA070F4A58540E/156633.png",
@@ -306,5 +307,11 @@
         }
       ]
     }
+  ],
+  "skills_by_palette": [
+    [ 1, 2 ],
+    [ 2, 3 ],
+    [ 4, 8 ],
+    [ 10, 20 ]
   ]
 }

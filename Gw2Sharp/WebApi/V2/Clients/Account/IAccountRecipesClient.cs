@@ -4,7 +4,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 account recipes endpoint.
     /// </summary>
     public interface IAccountRecipesClient :
-        IAuthenticatedClient<IApiV2ObjectList<int>>,
+        IAuthenticatedClient,
         IBlobClient<IApiV2ObjectList<int>>
     {
     }

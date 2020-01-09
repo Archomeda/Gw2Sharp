@@ -12,6 +12,7 @@ namespace Gw2Sharp.ChatLinks.Structs
     {
         /// <summary>
         /// The profession id.
+        /// Matches <see cref="WebApi.V2.Models.Profession.Code"/> in <see cref="IGw2WebApiV2Client.Professions"/>.
         /// </summary>
         [FieldOffset(0)]
         public Profession Profession;
@@ -90,60 +91,70 @@ namespace Gw2Sharp.ChatLinks.Structs
 
         /// <summary>
         /// The terrestrial healing skill palette id.
+        /// Can be resolved against <see cref="IGw2WebApiV2Client.Professions"/> on <see cref="WebApi.V2.Models.Profession.SkillsByPalette"/>.
         /// </summary>
         [FieldOffset(7)]
         public ushort TerrestrialHealingSkillPaletteId;
 
         /// <summary>
         /// The aquatic healing skill palette id.
+        /// Can be resolved against <see cref="IGw2WebApiV2Client.Professions"/> on <see cref="WebApi.V2.Models.Profession.SkillsByPalette"/>.
         /// </summary>
         [FieldOffset(9)]
         public ushort AquaticHealingSkillPaletteId;
 
         /// <summary>
         /// The first terrestrial utility skill palette id.
+        /// Can be resolved against <see cref="IGw2WebApiV2Client.Professions"/> on <see cref="WebApi.V2.Models.Profession.SkillsByPalette"/>.
         /// </summary>
         [FieldOffset(11)]
         public ushort TerrestrialUtility1SkillPaletteId;
 
         /// <summary>
         /// The first aquatic utility skill palette id.
+        /// Can be resolved against <see cref="IGw2WebApiV2Client.Professions"/> on <see cref="WebApi.V2.Models.Profession.SkillsByPalette"/>.
         /// </summary>
         [FieldOffset(13)]
         public ushort AquaticUtility1SkillPaletteId;
 
         /// <summary>
         /// The second terrestrial utility skill palette id.
+        /// Can be resolved against <see cref="IGw2WebApiV2Client.Professions"/> on <see cref="WebApi.V2.Models.Profession.SkillsByPalette"/>.
         /// </summary>
         [FieldOffset(15)]
         public ushort TerrestrialUtility2SkillPaletteId;
 
         /// <summary>
         /// The second aquatic utility skill palette id.
+        /// Can be resolved against <see cref="IGw2WebApiV2Client.Professions"/> on <see cref="WebApi.V2.Models.Profession.SkillsByPalette"/>.
         /// </summary>
         [FieldOffset(17)]
         public ushort AquaticUtility2SkillPaletteId;
 
         /// <summary>
         /// The third terrestrial utility skill palette id.
+        /// Can be resolved against <see cref="IGw2WebApiV2Client.Professions"/> on <see cref="WebApi.V2.Models.Profession.SkillsByPalette"/>.
         /// </summary>
         [FieldOffset(19)]
         public ushort TerrestrialUtility3SkillPaletteId;
 
         /// <summary>
         /// The third aquatic utility skill palette id.
+        /// Can be resolved against <see cref="IGw2WebApiV2Client.Professions"/> on <see cref="WebApi.V2.Models.Profession.SkillsByPalette"/>.
         /// </summary>
         [FieldOffset(21)]
         public ushort AquaticUtility3SkillPaletteId;
 
         /// <summary>
         /// The terrestrial elite skill palette id.
+        /// Can be resolved against <see cref="IGw2WebApiV2Client.Professions"/> on <see cref="WebApi.V2.Models.Profession.SkillsByPalette"/>.
         /// </summary>
         [FieldOffset(23)]
         public ushort TerrestrialEliteSkillPaletteId;
 
         /// <summary>
         /// The aquatic elite skill palette id.
+        /// Can be resolved against <see cref="IGw2WebApiV2Client.Professions"/> on <see cref="WebApi.V2.Models.Profession.SkillsByPalette"/>.
         /// </summary>
         [FieldOffset(25)]
         public ushort AquaticEliteSkillPaletteId;
@@ -183,60 +194,70 @@ namespace Gw2Sharp.ChatLinks.Structs
 
         /// <summary>
         /// The active revenant terrestrial legend id.
+        /// Can be resolved against <see cref="IGw2WebApiV2Client.Legends"/> if used as string, or on <see cref="WebApi.V2.Models.Legend.Code"/> if used as byte.
         /// </summary>
         [FieldOffset(27)]
         public byte RevenantActiveTerrestrialLegend;
 
         /// <summary>
         /// The inactive revenant terrestrial legend id.
+        /// Can be resolved against <see cref="IGw2WebApiV2Client.Legends"/> if used as string, or on <see cref="WebApi.V2.Models.Legend.Code"/> if used as byte.
         /// </summary>
         [FieldOffset(28)]
         public byte RevenantInactiveTerrestrialLegend;
 
         /// <summary>
         /// The active revenant aquatic legend id.
+        /// Can be resolved against <see cref="IGw2WebApiV2Client.Legends"/> if used as string, or on <see cref="WebApi.V2.Models.Legend.Code"/> if used as byte.
         /// </summary>
         [FieldOffset(29)]
         public byte RevenantActiveAquaticLegend;
 
         /// <summary>
         /// The inactive revenant aquatic legend id.
+        /// Can be resolved against <see cref="IGw2WebApiV2Client.Legends"/> if used as string, or on <see cref="WebApi.V2.Models.Legend.Code"/> if used as byte.
         /// </summary>
         [FieldOffset(30)]
         public byte RevenantInactiveAquaticLegend;
 
         /// <summary>
         /// The first inactive revenant terrestrial utility skill palette id.
+        /// Can be resolved against <see cref="IGw2WebApiV2Client.Professions"/> on <see cref="WebApi.V2.Models.Profession.SkillsByPalette"/>.
         /// </summary>
         [FieldOffset(31)]
         public ushort RevenantInactiveTerrestrialUtility1SkillPaletteId;
 
         /// <summary>
         /// The second inactive revenant terrestrial utility skill palette id.
+        /// Can be resolved against <see cref="IGw2WebApiV2Client.Professions"/> on <see cref="WebApi.V2.Models.Profession.SkillsByPalette"/>.
         /// </summary>
         [FieldOffset(33)]
         public ushort RevenantInactiveTerrestrialUtility2SkillPaletteId;
 
         /// <summary>
         /// The third inactive revenant terrestrial utility skill palette id.
+        /// Can be resolved against <see cref="IGw2WebApiV2Client.Professions"/> on <see cref="WebApi.V2.Models.Profession.SkillsByPalette"/>.
         /// </summary>
         [FieldOffset(35)]
         public ushort RevenantInactiveTerrestrialUtility3SkillPaletteId;
 
         /// <summary>
         /// The first inactive revenant aquatic utility skill palette id.
+        /// Can be resolved against <see cref="IGw2WebApiV2Client.Professions"/> on <see cref="WebApi.V2.Models.Profession.SkillsByPalette"/>.
         /// </summary>
         [FieldOffset(37)]
         public ushort RevenantInactiveAquaticUtility1SkillPaletteId;
 
         /// <summary>
         /// The second inactive revenant aquatic utility skill palette id.
+        /// Can be resolved against <see cref="IGw2WebApiV2Client.Professions"/> on <see cref="WebApi.V2.Models.Profession.SkillsByPalette"/>.
         /// </summary>
         [FieldOffset(39)]
         public ushort RevenantInactiveAquaticUtility2SkillPaletteId;
 
         /// <summary>
         /// The third inactive revenant aquatic utility skill palette id.
+        /// Can be resolved against <see cref="IGw2WebApiV2Client.Professions"/> on <see cref="WebApi.V2.Models.Profession.SkillsByPalette"/>.
         /// </summary>
         [FieldOffset(41)]
         public ushort RevenantInactiveAquaticUtility3SkillPaletteId;

@@ -4,7 +4,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 characters id quests endpoint.
     /// </summary>
     public interface ICharactersIdQuestsClient :
-        IAuthenticatedClient<IApiV2ObjectList<int>>,
+        IAuthenticatedClient,
         IBlobClient<IApiV2ObjectList<int>>
     {
         /// <summary>

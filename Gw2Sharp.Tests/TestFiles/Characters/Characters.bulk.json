@@ -4,7 +4,6 @@
     "race": "Human",
     "gender": "Male",
     "flags": [
-
     ],
     "profession": "Warrior",
     "level": 80,
@@ -49,7 +48,6 @@
     "race": "Human",
     "gender": "Female",
     "flags": [
-
     ],
     "profession": "Necromancer",
     "level": 80,
@@ -59,7 +57,6 @@
     "created": "2016-01-11T14:00:00Z",
     "deaths": 1400,
     "crafting": [
-
     ],
     "title": 212,
     "backstory": [
@@ -77,6 +74,118 @@
       {
         "id": 4,
         "rank": 2
+      }
+    ]
+  },
+  {
+    "name": "Bob Ranger",
+    "race": "Human",
+    "gender": "Male",
+    "flags": [
+    ],
+    "profession": "Ranger",
+    "level": 80,
+    "guild": "F00FF00F-F00F-F00F-F00F-F00FF00FF00F",
+    "age": 7441000,
+    "last_modified": "2019-05-22T22:51:00Z",
+    "created": "2014-01-31T18:00:00Z",
+    "deaths": 4100,
+    "build_tabs": [
+      {
+        "tab": 1,
+        "is_active": true,
+        "build": {
+          "name": "Non-existent ranger build",
+          "profession": "Ranger",
+          "skills": {
+            "heal": null,
+            "utilities": [
+              null,
+              null,
+              null
+            ],
+            "elite": null
+          },
+          "aquatic_skills": {
+            "heal": null,
+            "utilities": [
+              null,
+              null,
+              null
+            ],
+            "elite": null
+          },
+          "specializations": [
+            null,
+            null,
+            null
+          ],
+          "pets": {
+            "terrestrial": [
+              1,
+              32
+            ],
+            "aquatic": [
+              null,
+              null
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "Bob Revenant",
+    "race": "Human",
+    "gender": "Male",
+    "flags": [
+    ],
+    "profession": "Revenant",
+    "level": 80,
+    "guild": "F00FF00F-F00F-F00F-F00F-F00FF00FF00F",
+    "age": 7441000,
+    "last_modified": "2019-05-22T22:51:00Z",
+    "created": "2014-01-31T18:00:00Z",
+    "deaths": 4100,
+    "build_tabs": [
+      {
+        "tab": 1,
+        "is_active": true,
+        "build": {
+          "name": "Non-existent revenant build",
+          "profession": "Revenant",
+          "skills": {
+            "heal": null,
+            "utilities": [
+              null,
+              null,
+              null
+            ],
+            "elite": null
+          },
+          "aquatic_skills": {
+            "heal": null,
+            "utilities": [
+              null,
+              null,
+              null
+            ],
+            "elite": null
+          },
+          "specializations": [
+            null,
+            null,
+            null
+          ],
+          "legends": [
+            "Legend2",
+            "Legend3"
+          ],
+          "aquatic_legends": [
+            "Legend3",
+            null
+          ]
+        }
       }
     ]
   }

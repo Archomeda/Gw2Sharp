@@ -10,7 +10,7 @@
     <GenerateNullableAttributes>true</GenerateNullableAttributes>
 
     <PackageId>Gw2Sharp</PackageId>
-    <Version>0.7.4</Version>
+    <Version>0.8.0</Version>
     <Authors>Archomeda</Authors>
     <Description>
 Gw2Sharp is a .NET wrapper library for the official Guild Wars 2 API.

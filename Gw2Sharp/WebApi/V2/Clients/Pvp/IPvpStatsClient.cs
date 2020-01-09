@@ -7,7 +7,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 PvP stats endpoint.
     /// </summary>
     public interface IPvpStatsClient :
-        IAuthenticatedClient<PvpStats>,
+        IAuthenticatedClient,
         IBlobClient<PvpStats>
     {
     }

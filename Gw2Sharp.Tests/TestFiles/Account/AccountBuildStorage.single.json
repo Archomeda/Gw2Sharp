@@ -1,0 +1,37 @@
+{
+  "id": 1,
+  "build": {
+    "name": "Non-existent warrior build",
+    "profession": "Warrior",
+    "skills": {
+      "heal": 11111,
+      "utilities": [
+        22222,
+        33333,
+        44444
+      ],
+      "elite": null
+    },
+    "aquatic_skills": {
+      "heal": 22222,
+      "utilities": [
+        33333,
+        44444,
+        55555
+      ],
+      "elite": null
+    },
+    "specializations": [
+      {
+        "id": 42,
+        "traits": [
+          1234,
+          2345,
+          4567
+        ]
+      },
+      null,
+      null
+    ]
+  }
+}

@@ -7,7 +7,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 guild id storage endpoint.
     /// </summary>
     public interface IGuildIdStorageClient :
-        IAuthenticatedClient<IApiV2ObjectList<GuildStorageItem>>,
+        IAuthenticatedClient,
         IBlobClient<IApiV2ObjectList<GuildStorageItem>>
     {
         /// <summary>

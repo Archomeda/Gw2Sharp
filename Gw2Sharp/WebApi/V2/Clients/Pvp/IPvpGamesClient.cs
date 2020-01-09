@@ -9,7 +9,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// </summary>
     public interface IPvpGamesClient :
         IAllExpandableClient<PvpGame>,
-        IAuthenticatedClient<PvpGame>,
+        IAuthenticatedClient,
         IBulkExpandableClient<PvpGame, Guid>,
         IPaginatedClient<PvpGame>
     {

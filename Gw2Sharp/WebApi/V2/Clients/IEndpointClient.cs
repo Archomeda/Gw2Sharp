@@ -18,6 +18,16 @@ namespace Gw2Sharp.WebApi.V2.Clients
         IDictionary<string, string> EndpointPathParameters { get; }
 
         /// <summary>
+        /// The bulk expandable endpoint "id" parameter name.
+        /// </summary>
+        string? BulkEndpointIdParameterName { get; }
+
+        /// <summary>
+        /// The bulk expandable endpoint "ids" parameter name.
+        /// </summary>
+        string? BulkEndpointIdsParameterName { get; }
+
+        /// <summary>
         /// The endpoint schema version override.
         /// </summary>
         string? SchemaVersion { get; }

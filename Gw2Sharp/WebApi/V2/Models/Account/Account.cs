@@ -85,5 +85,11 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// Additionally requires scopes: progression.
         /// </summary>
         public int? WvwRank { get; set; }
+
+        /// <summary>
+        /// The number of build storage slots this account has unlocked.
+        /// Additionally requires scopes: builds.
+        /// </summary>
+        public int? BuildStorageSlots { get; set; }
     }
 }
