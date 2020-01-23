@@ -2973,12 +2973,13 @@ If the required scopes are not met, this value is <code>null</code>.</p>
   <a id="Gw2Sharp_WebApi_V2_Models_Character_Guild_" data-uid="Gw2Sharp.WebApi.V2.Models.Character.Guild*"></a>
   <h4 id="Gw2Sharp_WebApi_V2_Models_Character_Guild" data-uid="Gw2Sharp.WebApi.V2.Models.Character.Guild">Guild</h4>
   <div class="markdown level1 summary"><p>The character&apos;s guild.
-Can be resolved against <a class="xref" href="Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_Guild">Guild</a>.</p>
+Can be resolved against <a class="xref" href="Gw2Sharp.WebApi.V2.IGw2WebApiV2Client.html#Gw2Sharp_WebApi_V2_IGw2WebApiV2Client_Guild">Guild</a>.
+If the character is not representing a guild, this value is <code>null</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Guid Guild { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Guid? Guild { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2990,7 +2991,7 @@ Can be resolved against <a class="xref" href="Gw2Sharp.WebApi.V2.IGw2WebApiV2Cli
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Guid</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
