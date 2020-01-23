@@ -50,8 +50,9 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The character's guild.
         /// Can be resolved against <see cref="IGw2WebApiV2Client.Guild"/>.
+        /// If the character is not representing a guild, this value is <c>null</c>.
         /// </summary>
-        public Guid Guild { get; set; }
+        public Guid? Guild { get; set; }
 
         /// <summary>
         /// The character's total play time.

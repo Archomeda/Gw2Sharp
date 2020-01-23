@@ -14,7 +14,7 @@ namespace Gw2Sharp.Json.Converters
 
         /// <inheritdoc />
         public override Guid ReadJson(JsonReader reader, Type objectType, Guid existingValue, bool hasExistingValue, JsonSerializer serializer) =>
-            new Guid(serializer.Deserialize<string>(reader));
+            reader.TokenType == JsonToken.Null ? Guid.Empty : new Guid(serializer.Deserialize<string>(reader));
 
         /// <inheritdoc />
         public override void WriteJson(JsonWriter writer, Guid value, JsonSerializer serializer) =>
