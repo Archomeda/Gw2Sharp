@@ -219,7 +219,7 @@ namespace Gw2Sharp.WebApi.Caching
                 this.archive.Dispose();
                 this.archiveStream.Close();
                 this.archiveStream.Dispose();
-                this.archiveStream = File.Open(fileName, FileMode.Truncate, FileAccess.ReadWrite, FileShare.None);
+                this.archiveStream = File.Open(fileName, FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.None);
                 this.archive = new ZipArchive(this.archiveStream, ZipArchiveMode.Update);
             }
         }
