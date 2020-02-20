@@ -20,8 +20,14 @@ This release applies the schema changes of 2019-12-19, which includes the build 
 - Marked `/v2/characters/:id/specializations` as deprecated
 - Marked `Skills` and `Specializations` properties as deprecated
 
+### Services
+- Update MumbleLink to support new features ([#33](https://github.com/Archomeda/Gw2Sharp/pull/33)):
+  - UI states: DoesGameHaveFocus, IsCompetitiveMode, DoesAnyInputHaveFocus (not yet implemented in GW2)
+
 ### Refactoring
 - **Breaking:** `Gw2Sharp.WebApi.V2.Clients.IAuthenticatedClient` no longer accepts the object type as generic type parameter; it's now just an interface without any type parameters
+- **Breaking:** `ICacheMethod.FlushAsync` has been renamed to `ClearAsync` to better indicate its purpose ([#34](https://github.com/Archomeda/Gw2Sharp/pull/34)) (all deprecations will be fully removed in 0.9.0+):
+  - `FlushAsync` is marked as deprecated and is unused in Gw2Sharp from now on
 
 ### Deprecation notes
 The deprecated endpoints and properties can still be used for now.
