@@ -1,5 +1,10 @@
 # Gw2Sharp History
 
+## 0.8.1
+### Fixes
+- Fix struct size when creating the Mumble Link memory mapped file ([#35](https://github.com/Archomeda/Gw2Sharp/pull/35))
+  - It was initialized with a struct size that was too small for Guild Wars 2 to write to, causing funky stuff
+
 ## 0.8.0
 This release applies the schema changes of 2019-12-19, which includes the build and equipment template update from October 2019.
 
