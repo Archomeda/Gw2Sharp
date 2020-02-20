@@ -211,7 +211,7 @@ namespace Gw2Sharp.WebApi.Caching
         }
 
         /// <inheritdoc />
-        public override async Task FlushAsync()
+        public override async Task ClearAsync()
         {
             lock (this.operationLock)
             {

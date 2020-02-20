@@ -24,7 +24,7 @@ namespace Gw2Sharp.Tests.WebApi.Caching
             await this.cacheMethod.SetAsync(cacheItem);
             Assert.Null(await this.cacheMethod.TryGetAsync<int>(cacheItem.Category, cacheItem.Id));
 
-            await this.cacheMethod.FlushAsync();
+            await this.cacheMethod.ClearAsync();
             Assert.Null(await this.cacheMethod.TryGetAsync<int>(cacheItem.Category, cacheItem.Id));
         }
 

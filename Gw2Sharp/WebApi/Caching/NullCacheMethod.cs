@@ -40,7 +40,7 @@ namespace Gw2Sharp.WebApi.Caching
         }
 
         /// <inheritdoc />
-        public override async Task FlushAsync()
+        public override async Task ClearAsync()
         {
             // Nothing to do
         }
