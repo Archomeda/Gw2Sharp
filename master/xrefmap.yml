@@ -5669,6 +5669,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.Caching.ArchiveCacheMethod.ArchiveCacheMethod
   nameWithType: ArchiveCacheMethod.ArchiveCacheMethod
+- uid: Gw2Sharp.WebApi.Caching.ArchiveCacheMethod.ClearAsync
+  name: ClearAsync()
+  href: api/Gw2Sharp.WebApi.Caching.ArchiveCacheMethod.html#Gw2Sharp_WebApi_Caching_ArchiveCacheMethod_ClearAsync
+  commentId: M:Gw2Sharp.WebApi.Caching.ArchiveCacheMethod.ClearAsync
+  fullName: Gw2Sharp.WebApi.Caching.ArchiveCacheMethod.ClearAsync()
+  nameWithType: ArchiveCacheMethod.ClearAsync()
+- uid: Gw2Sharp.WebApi.Caching.ArchiveCacheMethod.ClearAsync*
+  name: ClearAsync
+  href: api/Gw2Sharp.WebApi.Caching.ArchiveCacheMethod.html#Gw2Sharp_WebApi_Caching_ArchiveCacheMethod_ClearAsync_
+  commentId: Overload:Gw2Sharp.WebApi.Caching.ArchiveCacheMethod.ClearAsync
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.Caching.ArchiveCacheMethod.ClearAsync
+  nameWithType: ArchiveCacheMethod.ClearAsync
 - uid: Gw2Sharp.WebApi.Caching.ArchiveCacheMethod.Dispose(System.Boolean)
   name: Dispose(Boolean)
   href: api/Gw2Sharp.WebApi.Caching.ArchiveCacheMethod.html#Gw2Sharp_WebApi_Caching_ArchiveCacheMethod_Dispose_System_Boolean_
@@ -5682,19 +5695,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.Caching.ArchiveCacheMethod.Dispose
   nameWithType: ArchiveCacheMethod.Dispose
-- uid: Gw2Sharp.WebApi.Caching.ArchiveCacheMethod.FlushAsync
-  name: FlushAsync()
-  href: api/Gw2Sharp.WebApi.Caching.ArchiveCacheMethod.html#Gw2Sharp_WebApi_Caching_ArchiveCacheMethod_FlushAsync
-  commentId: M:Gw2Sharp.WebApi.Caching.ArchiveCacheMethod.FlushAsync
-  fullName: Gw2Sharp.WebApi.Caching.ArchiveCacheMethod.FlushAsync()
-  nameWithType: ArchiveCacheMethod.FlushAsync()
-- uid: Gw2Sharp.WebApi.Caching.ArchiveCacheMethod.FlushAsync*
-  name: FlushAsync
-  href: api/Gw2Sharp.WebApi.Caching.ArchiveCacheMethod.html#Gw2Sharp_WebApi_Caching_ArchiveCacheMethod_FlushAsync_
-  commentId: Overload:Gw2Sharp.WebApi.Caching.ArchiveCacheMethod.FlushAsync
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.Caching.ArchiveCacheMethod.FlushAsync
-  nameWithType: ArchiveCacheMethod.FlushAsync
 - uid: Gw2Sharp.WebApi.Caching.ArchiveCacheMethod.GetManyAsync*
   name: GetManyAsync
   href: api/Gw2Sharp.WebApi.Caching.ArchiveCacheMethod.html#Gw2Sharp_WebApi_Caching_ArchiveCacheMethod_GetManyAsync_
@@ -5749,6 +5749,19 @@ references:
   commentId: T:Gw2Sharp.WebApi.Caching.BaseCacheMethod
   fullName: Gw2Sharp.WebApi.Caching.BaseCacheMethod
   nameWithType: BaseCacheMethod
+- uid: Gw2Sharp.WebApi.Caching.BaseCacheMethod.ClearAsync
+  name: ClearAsync()
+  href: api/Gw2Sharp.WebApi.Caching.BaseCacheMethod.html#Gw2Sharp_WebApi_Caching_BaseCacheMethod_ClearAsync
+  commentId: M:Gw2Sharp.WebApi.Caching.BaseCacheMethod.ClearAsync
+  fullName: Gw2Sharp.WebApi.Caching.BaseCacheMethod.ClearAsync()
+  nameWithType: BaseCacheMethod.ClearAsync()
+- uid: Gw2Sharp.WebApi.Caching.BaseCacheMethod.ClearAsync*
+  name: ClearAsync
+  href: api/Gw2Sharp.WebApi.Caching.BaseCacheMethod.html#Gw2Sharp_WebApi_Caching_BaseCacheMethod_ClearAsync_
+  commentId: Overload:Gw2Sharp.WebApi.Caching.BaseCacheMethod.ClearAsync
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.Caching.BaseCacheMethod.ClearAsync
+  nameWithType: BaseCacheMethod.ClearAsync
 - uid: Gw2Sharp.WebApi.Caching.BaseCacheMethod.Dispose
   name: Dispose()
   href: api/Gw2Sharp.WebApi.Caching.BaseCacheMethod.html#Gw2Sharp_WebApi_Caching_BaseCacheMethod_Dispose
@@ -6103,6 +6116,19 @@ references:
   commentId: T:Gw2Sharp.WebApi.Caching.ICacheMethod
   fullName: Gw2Sharp.WebApi.Caching.ICacheMethod
   nameWithType: ICacheMethod
+- uid: Gw2Sharp.WebApi.Caching.ICacheMethod.ClearAsync
+  name: ClearAsync()
+  href: api/Gw2Sharp.WebApi.Caching.ICacheMethod.html#Gw2Sharp_WebApi_Caching_ICacheMethod_ClearAsync
+  commentId: M:Gw2Sharp.WebApi.Caching.ICacheMethod.ClearAsync
+  fullName: Gw2Sharp.WebApi.Caching.ICacheMethod.ClearAsync()
+  nameWithType: ICacheMethod.ClearAsync()
+- uid: Gw2Sharp.WebApi.Caching.ICacheMethod.ClearAsync*
+  name: ClearAsync
+  href: api/Gw2Sharp.WebApi.Caching.ICacheMethod.html#Gw2Sharp_WebApi_Caching_ICacheMethod_ClearAsync_
+  commentId: Overload:Gw2Sharp.WebApi.Caching.ICacheMethod.ClearAsync
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.Caching.ICacheMethod.ClearAsync
+  nameWithType: ICacheMethod.ClearAsync
 - uid: Gw2Sharp.WebApi.Caching.ICacheMethod.FlushAsync
   name: FlushAsync()
   href: api/Gw2Sharp.WebApi.Caching.ICacheMethod.html#Gw2Sharp_WebApi_Caching_ICacheMethod_FlushAsync
@@ -6264,6 +6290,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.Caching.MemoryCacheMethod.MemoryCacheMethod
   nameWithType: MemoryCacheMethod.MemoryCacheMethod
+- uid: Gw2Sharp.WebApi.Caching.MemoryCacheMethod.ClearAsync
+  name: ClearAsync()
+  href: api/Gw2Sharp.WebApi.Caching.MemoryCacheMethod.html#Gw2Sharp_WebApi_Caching_MemoryCacheMethod_ClearAsync
+  commentId: M:Gw2Sharp.WebApi.Caching.MemoryCacheMethod.ClearAsync
+  fullName: Gw2Sharp.WebApi.Caching.MemoryCacheMethod.ClearAsync()
+  nameWithType: MemoryCacheMethod.ClearAsync()
+- uid: Gw2Sharp.WebApi.Caching.MemoryCacheMethod.ClearAsync*
+  name: ClearAsync
+  href: api/Gw2Sharp.WebApi.Caching.MemoryCacheMethod.html#Gw2Sharp_WebApi_Caching_MemoryCacheMethod_ClearAsync_
+  commentId: Overload:Gw2Sharp.WebApi.Caching.MemoryCacheMethod.ClearAsync
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.Caching.MemoryCacheMethod.ClearAsync
+  nameWithType: MemoryCacheMethod.ClearAsync
 - uid: Gw2Sharp.WebApi.Caching.MemoryCacheMethod.Dispose(System.Boolean)
   name: Dispose(Boolean)
   href: api/Gw2Sharp.WebApi.Caching.MemoryCacheMethod.html#Gw2Sharp_WebApi_Caching_MemoryCacheMethod_Dispose_System_Boolean_
@@ -6277,19 +6316,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.Caching.MemoryCacheMethod.Dispose
   nameWithType: MemoryCacheMethod.Dispose
-- uid: Gw2Sharp.WebApi.Caching.MemoryCacheMethod.FlushAsync
-  name: FlushAsync()
-  href: api/Gw2Sharp.WebApi.Caching.MemoryCacheMethod.html#Gw2Sharp_WebApi_Caching_MemoryCacheMethod_FlushAsync
-  commentId: M:Gw2Sharp.WebApi.Caching.MemoryCacheMethod.FlushAsync
-  fullName: Gw2Sharp.WebApi.Caching.MemoryCacheMethod.FlushAsync()
-  nameWithType: MemoryCacheMethod.FlushAsync()
-- uid: Gw2Sharp.WebApi.Caching.MemoryCacheMethod.FlushAsync*
-  name: FlushAsync
-  href: api/Gw2Sharp.WebApi.Caching.MemoryCacheMethod.html#Gw2Sharp_WebApi_Caching_MemoryCacheMethod_FlushAsync_
-  commentId: Overload:Gw2Sharp.WebApi.Caching.MemoryCacheMethod.FlushAsync
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.Caching.MemoryCacheMethod.FlushAsync
-  nameWithType: MemoryCacheMethod.FlushAsync
 - uid: Gw2Sharp.WebApi.Caching.MemoryCacheMethod.GetManyAsync*
   name: GetManyAsync
   href: api/Gw2Sharp.WebApi.Caching.MemoryCacheMethod.html#Gw2Sharp_WebApi_Caching_MemoryCacheMethod_GetManyAsync_
@@ -6344,19 +6370,19 @@ references:
   commentId: T:Gw2Sharp.WebApi.Caching.NullCacheMethod
   fullName: Gw2Sharp.WebApi.Caching.NullCacheMethod
   nameWithType: NullCacheMethod
-- uid: Gw2Sharp.WebApi.Caching.NullCacheMethod.FlushAsync
-  name: FlushAsync()
-  href: api/Gw2Sharp.WebApi.Caching.NullCacheMethod.html#Gw2Sharp_WebApi_Caching_NullCacheMethod_FlushAsync
-  commentId: M:Gw2Sharp.WebApi.Caching.NullCacheMethod.FlushAsync
-  fullName: Gw2Sharp.WebApi.Caching.NullCacheMethod.FlushAsync()
-  nameWithType: NullCacheMethod.FlushAsync()
-- uid: Gw2Sharp.WebApi.Caching.NullCacheMethod.FlushAsync*
-  name: FlushAsync
-  href: api/Gw2Sharp.WebApi.Caching.NullCacheMethod.html#Gw2Sharp_WebApi_Caching_NullCacheMethod_FlushAsync_
-  commentId: Overload:Gw2Sharp.WebApi.Caching.NullCacheMethod.FlushAsync
+- uid: Gw2Sharp.WebApi.Caching.NullCacheMethod.ClearAsync
+  name: ClearAsync()
+  href: api/Gw2Sharp.WebApi.Caching.NullCacheMethod.html#Gw2Sharp_WebApi_Caching_NullCacheMethod_ClearAsync
+  commentId: M:Gw2Sharp.WebApi.Caching.NullCacheMethod.ClearAsync
+  fullName: Gw2Sharp.WebApi.Caching.NullCacheMethod.ClearAsync()
+  nameWithType: NullCacheMethod.ClearAsync()
+- uid: Gw2Sharp.WebApi.Caching.NullCacheMethod.ClearAsync*
+  name: ClearAsync
+  href: api/Gw2Sharp.WebApi.Caching.NullCacheMethod.html#Gw2Sharp_WebApi_Caching_NullCacheMethod_ClearAsync_
+  commentId: Overload:Gw2Sharp.WebApi.Caching.NullCacheMethod.ClearAsync
   isSpec: "True"
-  fullName: Gw2Sharp.WebApi.Caching.NullCacheMethod.FlushAsync
-  nameWithType: NullCacheMethod.FlushAsync
+  fullName: Gw2Sharp.WebApi.Caching.NullCacheMethod.ClearAsync
+  nameWithType: NullCacheMethod.ClearAsync
 - uid: Gw2Sharp.WebApi.Caching.NullCacheMethod.GetManyAsync*
   name: GetManyAsync
   href: api/Gw2Sharp.WebApi.Caching.NullCacheMethod.html#Gw2Sharp_WebApi_Caching_NullCacheMethod_GetManyAsync_
