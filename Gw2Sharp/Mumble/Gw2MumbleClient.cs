@@ -131,6 +131,18 @@ namespace Gw2Sharp.Mumble
             this.IsAvailable ? this.linkedMem.context.uiState.HasFlag(UiState.IsCompassRotationEnabled) : default;
 
         /// <inheritdoc />
+        public bool DoesGameHaveFocus =>
+            this.IsAvailable ? this.linkedMem.context.uiState.HasFlag(UiState.DoesGameHaveFocus) : default;
+
+        /// <inheritdoc />
+        public bool IsCompetitiveMode =>
+            this.IsAvailable ? this.linkedMem.context.uiState.HasFlag(UiState.IsCompetitiveMode) : default;
+
+        /// <inheritdoc />
+        public bool DoesAnyInputHaveFocus =>
+            this.IsAvailable ? this.linkedMem.context.uiState.HasFlag(UiState.DoesAnyInputHaveFocus) : default;
+
+        /// <inheritdoc />
         public Size Compass =>
             this.IsAvailable ? new Size(this.linkedMem.context.compassWidth, this.linkedMem.context.compassHeight) : default;
 

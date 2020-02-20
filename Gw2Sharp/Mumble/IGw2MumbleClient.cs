@@ -92,6 +92,21 @@ namespace Gw2Sharp.Mumble
         bool IsCompassRotationEnabled { get; }
 
         /// <summary>
+        /// Whether the game window currently has focus.
+        /// </summary>
+        bool DoesGameHaveFocus { get; }
+
+        /// <summary>
+        /// Whether the map the player is currently in, is a competitive mode map.
+        /// </summary>
+        bool IsCompetitiveMode { get; }
+
+        /// <summary>
+        /// Whether any textbox input field has focus.
+        /// </summary>
+        bool DoesAnyInputHaveFocus { get; }
+
+        /// <summary>
         /// The compass size.
         /// </summary>
         Size Compass { get; }
