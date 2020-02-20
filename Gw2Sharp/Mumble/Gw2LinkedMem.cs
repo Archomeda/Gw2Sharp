@@ -11,7 +11,7 @@ namespace Gw2Sharp.Mumble
     [StructLayout(LayoutKind.Explicit)]
     internal unsafe struct Gw2LinkedMem
     {
-        public const int SIZE = 3412;
+        public const int SIZE = 5460;
 
         [FieldOffset(0)]
         public uint uiVersion;
@@ -43,7 +43,7 @@ namespace Gw2Sharp.Mumble
         [FieldOffset(1364)]
         public fixed char description[2048];
 #endif
-        // Total struct size is 3412 bytes
+        // Total struct size is 5460 bytes
     }
 
     [StructLayout(LayoutKind.Explicit)]
