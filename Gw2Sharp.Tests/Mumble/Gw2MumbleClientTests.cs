@@ -62,6 +62,9 @@ namespace Gw2Sharp.Tests.Mumble
             Assert.False(client.IsMapOpen);
             Assert.False(client.IsCompassTopRight);
             Assert.True(client.IsCompassRotationEnabled);
+            Assert.True(client.DoesGameHaveFocus);
+            Assert.True(client.IsCompetitiveMode);
+            Assert.True(client.DoesAnyInputHaveFocus);
             Assert.Equal(362, client.Compass.Width);
             Assert.Equal(229, client.Compass.Height);
             Assert.Equal(-2.11212, client.CompassRotation, 5);

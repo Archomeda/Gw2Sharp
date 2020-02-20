@@ -90,14 +90,17 @@ namespace Gw2Sharp.WebApi.Http
             if (headers == null)
                 return default!;
 
-            headers.TryGetValue(key, out string header);
+            headers.TryGetValue(key, out string? header);
+            if (header == null)
+                return default!;
+
             try
             {
                 return parser(header);
             }
             catch (Exception ex)
             {
-                if (ex is NullReferenceException || ex is ArgumentNullException || ex is FormatException || ex is OverflowException)
+                if (ex is FormatException || ex is OverflowException)
                     return default!;
                 throw;
             }
