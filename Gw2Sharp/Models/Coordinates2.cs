@@ -59,10 +59,13 @@ namespace Gw2Sharp.Models
         /// <inheritdoc />
         public override int GetHashCode()
         {
-            int hashCode = 1861411795;
-            hashCode = (hashCode * -1521134295) + this.X.GetHashCode();
-            hashCode = (hashCode * -1521134295) + this.Y.GetHashCode();
-            return hashCode;
+            unchecked
+            {
+                int hashCode = 1861411795;
+                hashCode = (hashCode * -1521134295) + this.X.GetHashCode();
+                hashCode = (hashCode * -1521134295) + this.Y.GetHashCode();
+                return hashCode;
+            }
         }
 
         /// <summary>

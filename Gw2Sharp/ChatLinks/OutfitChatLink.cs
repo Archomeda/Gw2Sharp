@@ -39,10 +39,13 @@ namespace Gw2Sharp.ChatLinks
         /// <inheritdoc />
         public override int GetHashCode()
         {
-            int hashCode = 1806301648;
-            hashCode = (hashCode * -1521134295) + this.Type.GetHashCode();
-            hashCode = (hashCode * -1521134295) + this.OutfitId.GetHashCode();
-            return hashCode;
+            unchecked
+            {
+                int hashCode = 1806301648;
+                hashCode = (hashCode * -1521134295) + this.Type.GetHashCode();
+                hashCode = (hashCode * -1521134295) + this.OutfitId.GetHashCode();
+                return hashCode;
+            }
         }
 
         /// <summary>

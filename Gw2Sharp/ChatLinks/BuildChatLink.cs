@@ -415,46 +415,49 @@ namespace Gw2Sharp.ChatLinks
         /// <inheritdoc />
         public override int GetHashCode()
         {
-            int hashCode = -1117218795;
-            hashCode = (hashCode * -1521134295) + this.Type.GetHashCode();
-            hashCode = (hashCode * -1521134295) + this.Profession.GetHashCode();
-            hashCode = (hashCode * -1521134295) + this.Specialization1Id.GetHashCode();
-            hashCode = (hashCode * -1521134295) + this.Specialization1Trait1Index.GetHashCode();
-            hashCode = (hashCode * -1521134295) + this.Specialization1Trait2Index.GetHashCode();
-            hashCode = (hashCode * -1521134295) + this.Specialization1Trait3Index.GetHashCode();
-            hashCode = (hashCode * -1521134295) + this.Specialization2Id.GetHashCode();
-            hashCode = (hashCode * -1521134295) + this.Specialization2Trait1Index.GetHashCode();
-            hashCode = (hashCode * -1521134295) + this.Specialization2Trait2Index.GetHashCode();
-            hashCode = (hashCode * -1521134295) + this.Specialization2Trait3Index.GetHashCode();
-            hashCode = (hashCode * -1521134295) + this.Specialization3Id.GetHashCode();
-            hashCode = (hashCode * -1521134295) + this.Specialization3Trait1Index.GetHashCode();
-            hashCode = (hashCode * -1521134295) + this.Specialization3Trait2Index.GetHashCode();
-            hashCode = (hashCode * -1521134295) + this.Specialization3Trait3Index.GetHashCode();
-            hashCode = (hashCode * -1521134295) + this.TerrestrialHealingSkillPaletteId.GetHashCode();
-            hashCode = (hashCode * -1521134295) + this.AquaticHealingSkillPaletteId.GetHashCode();
-            hashCode = (hashCode * -1521134295) + this.TerrestrialUtility1SkillPaletteId.GetHashCode();
-            hashCode = (hashCode * -1521134295) + this.AquaticUtility1SkillPaletteId.GetHashCode();
-            hashCode = (hashCode * -1521134295) + this.TerrestrialUtility2SkillPaletteId.GetHashCode();
-            hashCode = (hashCode * -1521134295) + this.AquaticUtility2SkillPaletteId.GetHashCode();
-            hashCode = (hashCode * -1521134295) + this.TerrestrialUtility3SkillPaletteId.GetHashCode();
-            hashCode = (hashCode * -1521134295) + this.AquaticUtility3SkillPaletteId.GetHashCode();
-            hashCode = (hashCode * -1521134295) + this.TerrestrialEliteSkillPaletteId.GetHashCode();
-            hashCode = (hashCode * -1521134295) + this.AquaticEliteSkillPaletteId.GetHashCode();
-            hashCode = (hashCode * -1521134295) + this.RangerTerrestrialPet1Id.GetHashCode();
-            hashCode = (hashCode * -1521134295) + this.RangerTerrestrialPet2Id.GetHashCode();
-            hashCode = (hashCode * -1521134295) + this.RangerAquaticPet1Id.GetHashCode();
-            hashCode = (hashCode * -1521134295) + this.RangerAquaticPet2Id.GetHashCode();
-            hashCode = (hashCode * -1521134295) + this.RevenantActiveTerrestrialLegend.GetHashCode();
-            hashCode = (hashCode * -1521134295) + this.RevenantInactiveTerrestrialLegend.GetHashCode();
-            hashCode = (hashCode * -1521134295) + this.RevenantActiveAquaticLegend.GetHashCode();
-            hashCode = (hashCode * -1521134295) + this.RevenantInactiveAquaticLegend.GetHashCode();
-            hashCode = (hashCode * -1521134295) + this.RevenantInactiveTerrestrialUtility1SkillPaletteId.GetHashCode();
-            hashCode = (hashCode * -1521134295) + this.RevenantInactiveTerrestrialUtility2SkillPaletteId.GetHashCode();
-            hashCode = (hashCode * -1521134295) + this.RevenantInactiveTerrestrialUtility3SkillPaletteId.GetHashCode();
-            hashCode = (hashCode * -1521134295) + this.RevenantInactiveAquaticUtility1SkillPaletteId.GetHashCode();
-            hashCode = (hashCode * -1521134295) + this.RevenantInactiveAquaticUtility2SkillPaletteId.GetHashCode();
-            hashCode = (hashCode * -1521134295) + this.RevenantInactiveAquaticUtility3SkillPaletteId.GetHashCode();
-            return hashCode;
+            unchecked
+            {
+                int hashCode = -1117218795;
+                hashCode = (hashCode * -1521134295) + this.Type.GetHashCode();
+                hashCode = (hashCode * -1521134295) + this.Profession.GetHashCode();
+                hashCode = (hashCode * -1521134295) + this.Specialization1Id.GetHashCode();
+                hashCode = (hashCode * -1521134295) + this.Specialization1Trait1Index.GetHashCode();
+                hashCode = (hashCode * -1521134295) + this.Specialization1Trait2Index.GetHashCode();
+                hashCode = (hashCode * -1521134295) + this.Specialization1Trait3Index.GetHashCode();
+                hashCode = (hashCode * -1521134295) + this.Specialization2Id.GetHashCode();
+                hashCode = (hashCode * -1521134295) + this.Specialization2Trait1Index.GetHashCode();
+                hashCode = (hashCode * -1521134295) + this.Specialization2Trait2Index.GetHashCode();
+                hashCode = (hashCode * -1521134295) + this.Specialization2Trait3Index.GetHashCode();
+                hashCode = (hashCode * -1521134295) + this.Specialization3Id.GetHashCode();
+                hashCode = (hashCode * -1521134295) + this.Specialization3Trait1Index.GetHashCode();
+                hashCode = (hashCode * -1521134295) + this.Specialization3Trait2Index.GetHashCode();
+                hashCode = (hashCode * -1521134295) + this.Specialization3Trait3Index.GetHashCode();
+                hashCode = (hashCode * -1521134295) + this.TerrestrialHealingSkillPaletteId.GetHashCode();
+                hashCode = (hashCode * -1521134295) + this.AquaticHealingSkillPaletteId.GetHashCode();
+                hashCode = (hashCode * -1521134295) + this.TerrestrialUtility1SkillPaletteId.GetHashCode();
+                hashCode = (hashCode * -1521134295) + this.AquaticUtility1SkillPaletteId.GetHashCode();
+                hashCode = (hashCode * -1521134295) + this.TerrestrialUtility2SkillPaletteId.GetHashCode();
+                hashCode = (hashCode * -1521134295) + this.AquaticUtility2SkillPaletteId.GetHashCode();
+                hashCode = (hashCode * -1521134295) + this.TerrestrialUtility3SkillPaletteId.GetHashCode();
+                hashCode = (hashCode * -1521134295) + this.AquaticUtility3SkillPaletteId.GetHashCode();
+                hashCode = (hashCode * -1521134295) + this.TerrestrialEliteSkillPaletteId.GetHashCode();
+                hashCode = (hashCode * -1521134295) + this.AquaticEliteSkillPaletteId.GetHashCode();
+                hashCode = (hashCode * -1521134295) + this.RangerTerrestrialPet1Id.GetHashCode();
+                hashCode = (hashCode * -1521134295) + this.RangerTerrestrialPet2Id.GetHashCode();
+                hashCode = (hashCode * -1521134295) + this.RangerAquaticPet1Id.GetHashCode();
+                hashCode = (hashCode * -1521134295) + this.RangerAquaticPet2Id.GetHashCode();
+                hashCode = (hashCode * -1521134295) + this.RevenantActiveTerrestrialLegend.GetHashCode();
+                hashCode = (hashCode * -1521134295) + this.RevenantInactiveTerrestrialLegend.GetHashCode();
+                hashCode = (hashCode * -1521134295) + this.RevenantActiveAquaticLegend.GetHashCode();
+                hashCode = (hashCode * -1521134295) + this.RevenantInactiveAquaticLegend.GetHashCode();
+                hashCode = (hashCode * -1521134295) + this.RevenantInactiveTerrestrialUtility1SkillPaletteId.GetHashCode();
+                hashCode = (hashCode * -1521134295) + this.RevenantInactiveTerrestrialUtility2SkillPaletteId.GetHashCode();
+                hashCode = (hashCode * -1521134295) + this.RevenantInactiveTerrestrialUtility3SkillPaletteId.GetHashCode();
+                hashCode = (hashCode * -1521134295) + this.RevenantInactiveAquaticUtility1SkillPaletteId.GetHashCode();
+                hashCode = (hashCode * -1521134295) + this.RevenantInactiveAquaticUtility2SkillPaletteId.GetHashCode();
+                hashCode = (hashCode * -1521134295) + this.RevenantInactiveAquaticUtility3SkillPaletteId.GetHashCode();
+                return hashCode;
+            }
         }
 
         /// <summary>
