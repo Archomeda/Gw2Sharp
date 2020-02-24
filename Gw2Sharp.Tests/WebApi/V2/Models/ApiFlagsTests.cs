@@ -48,7 +48,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Models
 
         [Theory]
         [MemberData(nameof(DeserializeTestData))]
-        public void DeserializeTest(string json, IEnumerable<ApiEnum<TestEnum>> expected)
+        public void DeserializeTest(string json, ApiEnum<TestEnum>[] expected)
         {
             var obj = JsonConvert.DeserializeObject<JsonObject>(json);
 
