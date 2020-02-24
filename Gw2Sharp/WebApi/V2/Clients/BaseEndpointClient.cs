@@ -85,7 +85,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
             this.parameterProperties
                 .Select(x => new KeyValuePair<string, object?>(x.Attribute.ParameterName, x.Property.GetValue(this)))
                 .Where(x => x.Value != null) // Explicit check for null
-                .ToDictionary(x => x.Key, x => x.Value!.ToString());
+                .ToDictionary(x => x.Key, x => x.Value!.ToString()!);
 
         /// <inheritdoc />
         public string? BulkEndpointIdParameterName { get; }
