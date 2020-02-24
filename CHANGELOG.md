@@ -1,5 +1,9 @@
 # Gw2Sharp History
 
+## 0.8.2
+### Fixes
+- Fix API enum comparison with different character casings ([#36](https://github.com/Archomeda/Gw2Sharp/pull/36))
+
 ## 0.8.1
 ### Fixes
 - Fix struct size when creating the Mumble Link memory mapped file ([#35](https://github.com/Archomeda/Gw2Sharp/pull/35))
