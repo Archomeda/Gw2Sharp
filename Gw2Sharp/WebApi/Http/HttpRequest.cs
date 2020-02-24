@@ -45,8 +45,8 @@ namespace Gw2Sharp.WebApi.Http
         /// <param name="context">The streaming context.</param>
         protected HttpRequest(SerializationInfo info, StreamingContext context)
         {
-            this.Url = (Uri)info.GetValue(nameof(this.Url), typeof(Uri));
-            this.RequestHeaders = (IReadOnlyDictionary<string, string>)info.GetValue(nameof(this.RequestHeaders), typeof(IReadOnlyDictionary<string, string>));
+            this.Url = (Uri?)info.GetValue(nameof(this.Url), typeof(Uri)) ?? throw new InvalidOperationException("Url cannot be null");
+            this.RequestHeaders = (IReadOnlyDictionary<string, string>?)info.GetValue(nameof(this.RequestHeaders), typeof(IReadOnlyDictionary<string, string>)) ?? new Dictionary<string, string>();
         }
 
         /// <inheritdoc />

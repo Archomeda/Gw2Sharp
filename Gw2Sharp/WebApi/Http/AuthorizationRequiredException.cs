@@ -31,7 +31,7 @@ namespace Gw2Sharp.WebApi.Http
         /// <param name="context">The streaming context.</param>
         protected AuthorizationRequiredException(SerializationInfo info, StreamingContext context) : base(info, context)
         {
-            this.AuthorizationError = (AuthorizationError)info.GetValue(nameof(this.AuthorizationError), typeof(AuthorizationError));
+            this.AuthorizationError = (AuthorizationError?)info.GetValue(nameof(this.AuthorizationError), typeof(AuthorizationError)) ?? 0;
         }
 
         /// <summary>

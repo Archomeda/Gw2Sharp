@@ -12,7 +12,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public abstract class BaseEndpointClient<TObject> : BaseClient, IEndpointClient
         where TObject : IApiV2Object
     {
-        private IReadOnlyList<(PropertyInfo Property, EndpointPathParameterAttribute Attribute)> parameterProperties;
+        private readonly IReadOnlyList<(PropertyInfo Property, EndpointPathParameterAttribute Attribute)> parameterProperties;
 
         /// <summary>
         /// Creates a new base endpoint client.
@@ -40,6 +40,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
                 .GetProperties(BindingFlags.Public | BindingFlags.Instance)
                 .Select(p => (Property: p, Attribute: p.GetCustomAttribute<EndpointPathParameterAttribute>()))
                 .Where(x => x.Attribute != null)
+                .Select(x => (x.Property, x.Attribute!))
                 .ToList()
                 .AsReadOnly();
             var bulkIdAttribute = this.GetAttribute<EndpointBulkIdNameAttribute>();
@@ -48,7 +49,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
             this.SchemaVersion = this.GetAttribute<EndpointSchemaVersionAttribute>()?.SchemaVersion;
 
             this.IsLocalized = this.ImplementsGenericInterface(typeof(ILocalizedClient<>));
+#pragma warning disable S3060 // "is" should not be used with "this"
             this.IsAuthenticated = this is IAuthenticatedClient;
+#pragma warning restore S3060 // "is" should not be used with "this"
             this.IsPaginated = this.ImplementsGenericInterface(typeof(IPaginatedClient<>));
             this.IsAllExpandable = this.ImplementsGenericInterface(typeof(IAllExpandableClient<>));
             this.IsBulkExpandable = this.ImplementsGenericInterface(typeof(IBulkExpandableClient<,>));
@@ -82,7 +85,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
             this.parameterProperties
                 .Select(x => new KeyValuePair<string, object?>(x.Attribute.ParameterName, x.Property.GetValue(this)))
                 .Where(x => x.Value != null) // Explicit check for null
-                .ToDictionary(x => x.Key, x => x.Value!.ToString());
+                .ToDictionary(x => x.Key, x => x.Value!.ToString()!);
 
         /// <inheritdoc />
         public string? BulkEndpointIdParameterName { get; }

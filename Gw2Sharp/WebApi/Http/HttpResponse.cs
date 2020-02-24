@@ -82,10 +82,12 @@ namespace Gw2Sharp.WebApi.Http
         /// <param name="context">The streaming context.</param>
         protected HttpResponse(SerializationInfo info, StreamingContext context)
         {
+#pragma warning disable CS8601 // Possible null reference assignment.
             this.Content = (T)info.GetValue(nameof(this.Content), typeof(T));
-            this.StatusCode = (HttpStatusCode)info.GetValue(nameof(this.StatusCode), typeof(HttpStatusCode));
-            this.RequestHeaders = (IReadOnlyDictionary<string, string>)info.GetValue(nameof(this.RequestHeaders), typeof(IReadOnlyDictionary<string, string>));
-            this.ResponseHeaders = (IReadOnlyDictionary<string, string>)info.GetValue(nameof(this.ResponseHeaders), typeof(IReadOnlyDictionary<string, string>));
+#pragma warning restore CS8601 // Possible null reference assignment.
+            this.StatusCode = (HttpStatusCode?)info.GetValue(nameof(this.StatusCode), typeof(HttpStatusCode)) ?? 0;
+            this.RequestHeaders = (IReadOnlyDictionary<string, string>?)info.GetValue(nameof(this.RequestHeaders), typeof(IReadOnlyDictionary<string, string>)) ?? new Dictionary<string, string>();
+            this.ResponseHeaders = (IReadOnlyDictionary<string, string>?)info.GetValue(nameof(this.ResponseHeaders), typeof(IReadOnlyDictionary<string, string>)) ?? new Dictionary<string, string>();
         }
 
         /// <inheritdoc />

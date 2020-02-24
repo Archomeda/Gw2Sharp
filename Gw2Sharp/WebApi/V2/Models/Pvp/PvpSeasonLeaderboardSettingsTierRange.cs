@@ -61,10 +61,13 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <inheritdoc />
         public override int GetHashCode()
         {
-            int hashCode = 689316674;
-            hashCode = (hashCode * -1521134295) + this.Lowest.GetHashCode();
-            hashCode = (hashCode * -1521134295) + this.Highest.GetHashCode();
-            return hashCode;
+            unchecked
+            {
+                int hashCode = 689316674;
+                hashCode = (hashCode * -1521134295) + this.Lowest.GetHashCode();
+                hashCode = (hashCode * -1521134295) + this.Highest.GetHashCode();
+                return hashCode;
+            }
         }
 
         /// <summary>

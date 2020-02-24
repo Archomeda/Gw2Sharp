@@ -258,11 +258,11 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
             }
         }
 
-        protected T GetId<T>(JToken id) =>
-            typeof(T) == typeof(Guid) ? (T)(object)Guid.Parse(id.Value<string>()) : id.Value<T>();
+        protected TObject GetId<TObject>(JToken id) =>
+            typeof(TObject) == typeof(Guid) ? (TObject)(object)Guid.Parse(id.Value<string>()) : id.Value<TObject>();
 
-        protected IEnumerable<T> GetIds<T>(IEnumerable<JToken> ids) =>
-            typeof(T) == typeof(Guid) ? ids.Select(i => Guid.Parse(i.Value<string>())).Cast<T>() : ids.Select(i => i.Value<T>());
+        protected IEnumerable<TObject> GetIds<TObject>(IEnumerable<JToken> ids) =>
+            typeof(TObject) == typeof(Guid) ? ids.Select(i => Guid.Parse(i.Value<string>())).Cast<TObject>() : ids.Select(i => i.Value<TObject>());
 
 
         protected void AssertJsonObject(object expected, object actual)

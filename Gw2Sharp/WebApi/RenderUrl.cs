@@ -69,8 +69,13 @@ namespace Gw2Sharp.WebApi
             this.Url == other.Url;
 
         /// <inheritdoc />
-        public override int GetHashCode() =>
-            -1915121810 + EqualityComparer<Uri>.Default.GetHashCode(this.Url);
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                return -1915121810 + EqualityComparer<Uri>.Default.GetHashCode(this.Url);
+            }
+        }
 
         #endregion
 

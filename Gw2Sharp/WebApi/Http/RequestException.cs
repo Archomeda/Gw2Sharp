@@ -122,7 +122,7 @@ namespace Gw2Sharp.WebApi.Http
         /// <param name="context">The streaming context.</param>
         protected RequestException(SerializationInfo info, StreamingContext context) : base(info, context)
         {
-            this.Request = (IHttpRequest)info.GetValue(nameof(this.Request), typeof(IHttpRequest));
+            this.Request = (IHttpRequest?)info.GetValue(nameof(this.Request), typeof(IHttpRequest)) ?? throw new InvalidOperationException("Request cannot be null");
             this.Response = (IHttpResponse<TResponse>?)info.GetValue(nameof(this.Response), typeof(IHttpResponse<TResponse>));
         }
 

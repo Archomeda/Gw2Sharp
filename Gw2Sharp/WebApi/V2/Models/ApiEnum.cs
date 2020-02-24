@@ -98,11 +98,14 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <inheritdoc />
         public override int GetHashCode()
         {
-            int hashCode = -159790080;
-            hashCode = (hashCode * -1521134295) + EqualityComparer<Enum>.Default.GetHashCode(this.Value);
-            if (this.RawValue != null)
-                hashCode = (hashCode * -1521134295) + EqualityComparer<string>.Default.GetHashCode(this.RawValue.ToLowerInvariant());
-            return hashCode;
+            unchecked
+            {
+                int hashCode = -159790080;
+                hashCode = (hashCode * -1521134295) + EqualityComparer<Enum>.Default.GetHashCode(this.Value);
+                if (this.RawValue != null)
+                    hashCode = (hashCode * -1521134295) + EqualityComparer<string>.Default.GetHashCode(this.RawValue.ToLowerInvariant());
+                return hashCode;
+            }
         }
 
         /// <inheritdoc />
