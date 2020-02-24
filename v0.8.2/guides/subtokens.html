@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Creating and using subtokens </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Creating and using subtokens ">
+    <meta name="generator" content="docfx 2.43.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc">
+    <meta property="docfx:tocrel" content="toc">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+                
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../guides/introduction.html" title="Guides">Guides</a>
+                      </li>
+                      <li>
+                          <a href="../api/index.html" title="API Documentation">API Documentation</a>
+                      </li>
+                      <li>
+                          <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/CHANGELOG.md" title="Changelog">Changelog</a>
+                      </li>
+                </ul>    </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+                  
+                  <ul class="nav level1">
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Basic Guides</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="introduction.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                          <li class="">
+                            <a href="endpoints.html" title="Supported endpoints" class="">Supported endpoints</a>
+                          </li>
+                          <li class="">
+                            <a href="exception-handling.html" title="Exception handling" class="">Exception handling</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Advanced Guides</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="caching.html" title="Caching" class="">Caching</a>
+                          </li>
+                          <li class="">
+                            <a href="http-headers.html" title="HTTP headers" class="">HTTP headers</a>
+                          </li>
+                          <li class="">
+                            <a href="last-modified.html" title="Last-Modified" class="">Last-Modified</a>
+                          </li>
+                          <li class="active">
+                            <a href="subtokens.html" title="Subtokens" class="active">Subtokens</a>
+                          </li>
+                          <li class="">
+                            <a href="symbols.html" title="Debug symbols" class="">Debug symbols</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Tips</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="render-url.html" title="Using RenderUrl" class="">Using RenderUrl</a>
+                          </li>
+                        </ul>  </li>
+                  </ul>        </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Guides.Subtokens">
+<h1 id="creating-and-using-subtokens">Creating and using subtokens</h1>
+
+<p>Support for subtokens has been added to the API on May 20th, 2019.
+You can read up on it <a href="https://en-forum.guildwars2.com/discussion/77211/api-update-may-20-2019">on the forums</a>.</p>
+<p>On the outside, subtokens are just like the normal tokens, and can be used as such.
+However, on the inside there&#39;s a big difference.
+With subtokens, you can restrict the permissions based on scope and URL level.
+Plus, you can also give it an expiry time.
+As long as the subtoken permissions are a subset of the original token, you can do anything you want.</p>
+<p>With Gw2Sharp, you can create a subtoken yourself with the following example:</p>
+<pre><code class="lang-cs">using Gw2Sharp;
+using Gw2Sharp.WebApi.V2.Models;
+
+var connection = new Connection(&quot;your-original-token&quot;);
+var client = new Gw2Client(connection);
+
+// By using a fluent-design pattern, you can give it the parameters you want
+var subtokenResponse = await client.WebApi.V2.CreateSubtoken
+    .WithPermissions(new[] { TokenPermission.Characters })
+    .WithUrls(new[] { &quot;/v2/characters&quot; })
+    .Expires(DateTime.Now.AddDays(1))
+    .GetAsync();
+
+// This token is now valid for 1 day, has the scope &quot;characters&quot; and can only access the /v2/characters API endpoint
+var token = subtokenResponse.Subtoken;
+</code></pre><p>And you can use this token with a new client, and it works the same as the previous client:</p>
+<pre><code class="lang-cs">var subConnection = new Connection(token);
+var subClient = new Gw2Client(subConnection);
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
