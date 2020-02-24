@@ -34,7 +34,7 @@ namespace Gw2Sharp.Json.Converters
                 if (jValue.Type == JTokenType.Null)
                 {
                     var defaultValueAttribute = enumType.GetCustomAttribute<DefaultValueAttribute>();
-                    object enumValue = defaultValueAttribute != null ? defaultValueAttribute.Value : Enum.ToObject(enumType, 0);
+                    object enumValue = defaultValueAttribute?.Value ?? Enum.ToObject(enumType, 0);
                     return Activator.CreateInstance(objectType, enumValue, null);
                 }
 

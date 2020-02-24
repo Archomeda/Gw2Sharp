@@ -181,6 +181,17 @@ dotnet_naming_style.camel_case.capitalization = camel_case
 dotnet_naming_style.upper.capitalization = all_upper
 
 
+# Rule overrides
+# S1117: Local variables should not shadow class fields
+dotnet_diagnostic.S1117.severity = silent
+# S2342: Enumeration types should comply with a naming convention
+dotnet_diagnostic.S2342.severity = silent
+# S3966: Objects should not be disposed more than once
+dotnet_diagnostic.S3966.severity = silent
+# S4136: Method overloads should be grouped together
+dotnet_diagnostic.S4136.severity = silent
+
+
 [*.{csproj,json,yml}]
 # Formatting
 indent_style = space
@@ -190,7 +201,6 @@ trim_trailing_whitespace = true
 insert_final_newline = true
 
 [*.md]
-# Formatting
 # Formatting
 indent_style = space
 indent_size = 2

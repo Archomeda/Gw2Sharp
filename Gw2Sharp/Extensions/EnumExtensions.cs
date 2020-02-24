@@ -27,10 +27,11 @@ namespace Gw2Sharp.Extensions
             if (enumType == null)
                 throw new ArgumentNullException(nameof(enumType));
 
+            if (value == null)
+                return CreateResult(default);
+
             // Strip the underscores
-            string? strippedValue = value;
-            if (strippedValue != null)
-                strippedValue = strippedValue.Replace("_", "");
+            string? strippedValue = value.Replace("_", "");
 
             // Try looking for custom enum serialization names with EnumMemberAttribute
             string[] enumNames = Enum.GetNames(enumType);
@@ -38,23 +39,26 @@ namespace Gw2Sharp.Extensions
             for (int i = 0; i < enumNames.Length; i++)
             {
                 var field = enumType.GetField(enumNames[i]);
-                var attr = field.GetCustomAttribute<EnumMemberAttribute>();
+                var attr = field?.GetCustomAttribute<EnumMemberAttribute>();
                 if (attr != null && (attr.Value == strippedValue || attr.Value == value))
-                    return (Enum)enumValues.GetValue(i);
+                    return CreateResult(enumValues.GetValue(i));
             }
 
             // Just parse normally
             try
             {
-                return (Enum)Enum.Parse(enumType, strippedValue, true);
+                return CreateResult(Enum.Parse(enumType, strippedValue, true));
             }
             catch (ArgumentException)
             {
                 // Not found, set to custom default if available
                 if (enumType.GetTypeInfo().GetCustomAttribute(typeof(DefaultValueAttribute)) is DefaultValueAttribute attribute)
-                    return (Enum)attribute.Value;
+                    return CreateResult(attribute.Value);
             }
-            return (Enum)Enum.ToObject(enumType, 0);
+            return CreateResult(default);
+
+            Enum CreateResult(object? result) =>
+                (Enum?)result ?? (Enum)Enum.ToObject(enumType, 0);
         }
 
         /// <summary>

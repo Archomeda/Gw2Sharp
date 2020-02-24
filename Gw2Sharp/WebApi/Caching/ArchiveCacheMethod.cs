@@ -60,7 +60,8 @@ namespace Gw2Sharp.WebApi.Caching
                 using var streamReader = new StreamReader(entryStream);
                 while (!streamReader.EndOfStream)
                 {
-                    string[] line = streamReader.ReadLine().Split('=');
+                    // ReadLine may return null if the end of the stream has been reached, but we're checking that case in the loop itself
+                    string[] line = streamReader.ReadLine()!.Split('=');
                     this.expiryCache.Add(line[0], DateTimeOffset.Parse(line[1]));
                 }
             }

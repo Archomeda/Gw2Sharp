@@ -124,9 +124,12 @@ namespace Gw2Sharp.ChatLinks
                 hashCode = (hashCode * -1521134295) + this.Type.GetHashCode();
                 hashCode = (hashCode * -1521134295) + this.Quantity.GetHashCode();
                 hashCode = (hashCode * -1521134295) + this.ItemId.GetHashCode();
-                hashCode = (hashCode * -1521134295) + EqualityComparer<int?>.Default.GetHashCode(this.SkinId);
-                hashCode = (hashCode * -1521134295) + EqualityComparer<int?>.Default.GetHashCode(this.Upgrade1Id);
-                hashCode = (hashCode * -1521134295) + EqualityComparer<int?>.Default.GetHashCode(this.Upgrade2Id);
+                if (this.SkinId != null)
+                    hashCode = (hashCode * -1521134295) + EqualityComparer<int?>.Default.GetHashCode(this.SkinId);
+                if (this.Upgrade1Id != null)
+                    hashCode = (hashCode * -1521134295) + EqualityComparer<int?>.Default.GetHashCode(this.Upgrade1Id);
+                if (this.Upgrade2Id != null)
+                    hashCode = (hashCode * -1521134295) + EqualityComparer<int?>.Default.GetHashCode(this.Upgrade2Id);
                 return hashCode;
             }
         }

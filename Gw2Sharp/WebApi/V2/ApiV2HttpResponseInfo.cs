@@ -78,7 +78,7 @@ namespace Gw2Sharp.WebApi.V2
         /// The links.
         /// This is returned by the header Link and may contain the following ids: previous, next, self, first, last.
         /// </summary>
-        public IReadOnlyDictionary<string, Uri> Links { get; protected set; } = new Dictionary<string, Uri>();
+        public IReadOnlyDictionary<string, Uri> Links { get; protected set; }
 
         /// <summary>
         /// The page size.
