@@ -92,7 +92,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         {
             return !(other is null) &&
                 EqualityComparer<T>.Default.Equals(this.Value, other.Value) &&
-                this.RawValue == other.RawValue;
+                EqualityComparer<string>.Default.Equals(this.RawValue?.ToLowerInvariant(), other.RawValue?.ToLowerInvariant());
         }
 
         /// <inheritdoc />
@@ -101,7 +101,7 @@ namespace Gw2Sharp.WebApi.V2.Models
             int hashCode = -159790080;
             hashCode = (hashCode * -1521134295) + EqualityComparer<Enum>.Default.GetHashCode(this.Value);
             if (this.RawValue != null)
-                hashCode = (hashCode * -1521134295) + EqualityComparer<string>.Default.GetHashCode(this.RawValue);
+                hashCode = (hashCode * -1521134295) + EqualityComparer<string>.Default.GetHashCode(this.RawValue.ToLowerInvariant());
             return hashCode;
         }
 

@@ -113,6 +113,14 @@ namespace Gw2Sharp.Tests.WebApi.V2.Models
         }
 
         [Fact]
+        public void CaseInsensitiveEqualsTest()
+        {
+            var item1 = new ApiEnum<TestEnum>(TestEnum.EnumValue1, "enumValue1");
+            var item2 = new ApiEnum<TestEnum>(TestEnum.EnumValue1, "Enumvalue1");
+            Assert.True(item1.Equals(item2));
+        }
+
+        [Fact]
         public void NotEqualsTest()
         {
             var item1 = new ApiEnum<TestEnum>(TestEnum.EnumValue1, TestEnum.EnumValue1.ToString());
@@ -130,6 +138,14 @@ namespace Gw2Sharp.Tests.WebApi.V2.Models
         {
             var item1 = new ApiEnum<TestEnum>(TestEnum.EnumValue1, TestEnum.EnumValue1.ToString());
             var item2 = new ApiEnum<TestEnum>(TestEnum.EnumValue1, TestEnum.EnumValue1.ToString());
+            Assert.Equal(item1.GetHashCode(), item2.GetHashCode());
+        }
+
+        [Fact]
+        public void CaseInsensitiveHashCodeEqualsTest()
+        {
+            var item1 = new ApiEnum<TestEnum>(TestEnum.EnumValue1, "enumValue1");
+            var item2 = new ApiEnum<TestEnum>(TestEnum.EnumValue1, "Enumvalue1");
             Assert.Equal(item1.GetHashCode(), item2.GetHashCode());
         }
 
