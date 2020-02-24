@@ -27,11 +27,10 @@ namespace Gw2Sharp.Extensions
             if (enumType == null)
                 throw new ArgumentNullException(nameof(enumType));
 
-            if (value == null)
-                return CreateResult(default);
+            Enum? result = null;
 
             // Strip the underscores
-            string? strippedValue = value.Replace("_", "");
+            string strippedValue = value?.Replace("_", "") ?? string.Empty;
 
             // Try looking for custom enum serialization names with EnumMemberAttribute
             string[] enumNames = Enum.GetNames(enumType);
@@ -41,24 +40,29 @@ namespace Gw2Sharp.Extensions
                 var field = enumType.GetField(enumNames[i]);
                 var attr = field?.GetCustomAttribute<EnumMemberAttribute>();
                 if (attr != null && (attr.Value == strippedValue || attr.Value == value))
-                    return CreateResult(enumValues.GetValue(i));
+                {
+                    result = (Enum?)enumValues.GetValue(i);
+                    break;
+                }
             }
 
             // Just parse normally
-            try
+            if (result == null)
             {
-                return CreateResult(Enum.Parse(enumType, strippedValue, true));
+                try
+                {
+                    result = (Enum?)Enum.Parse(enumType, strippedValue, true);
+                }
+                catch (ArgumentException)
+                {
+                    // Do nothing
+                }
             }
-            catch (ArgumentException)
-            {
-                // Not found, set to custom default if available
-                if (enumType.GetTypeInfo().GetCustomAttribute(typeof(DefaultValueAttribute)) is DefaultValueAttribute attribute)
-                    return CreateResult(attribute.Value);
-            }
-            return CreateResult(default);
 
-            Enum CreateResult(object? result) =>
-                (Enum?)result ?? (Enum)Enum.ToObject(enumType, 0);
+            if (result == null && enumType.GetTypeInfo().GetCustomAttribute(typeof(DefaultValueAttribute)) is DefaultValueAttribute attribute)
+                result = (Enum?)attribute.Value;
+
+            return result ?? (Enum)Enum.ToObject(enumType, 0);
         }
 
         /// <summary>
