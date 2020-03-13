@@ -49,7 +49,7 @@ jobs:
       - name: Patch package version
         shell: powershell
         run: |
-          $version = (GitVersion /output json | ConvertFrom-Json).AssemblySemFileVer -replace "origin/","" -replace "[^a-zA-Z0-9-_.]","-" -replace "(\d+\.\d+\.\d+)(.*)","`$1.$env:GITHUB_RUN_ID`$2"
+          $version = (GitVersion /output json | ConvertFrom-Json).AssemblySemFileVer -replace "origin/","" -replace "[^a-zA-Z0-9-_.]","-" -replace "(\d+\.\d+\.\d+)(.*)","`$1.$env:GITHUB_RUN_NUMBER`$2"
           Write-Output "NuGet package version: $version"
 
           (Get-Content Gw2Sharp/Gw2Sharp.csproj) `
