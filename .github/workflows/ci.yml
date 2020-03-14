@@ -56,8 +56,8 @@ jobs:
           Write-Output "NuGet version: $nuget"
           echo "::set-env name=VERSION::$nuget"
       - name: Run dotnet build
-        run: dotnet build -c Debug -p:VERSIONED_BUILD=${{ VERSION }}
+        run: dotnet build -c Debug -p:VERSIONED_BUILD=$env:VERSION
       - name: Run dotnet pack
-        run: dotnet pack Gw2Sharp -c Debug --no-build -p:VERSIONED_BUILD=${{ VERSION }}
+        run: dotnet pack Gw2Sharp -c Debug --no-build -p:VERSIONED_BUILD=$env:VERSION
       - name: Run dotnet nuget push
         run: dotnet nuget push **/*.symbols.nupkg -s "https://www.myget.org/F/gw2sharp/api/v2/package" -k "${{ secrets.MYGET_TOKEN }}"
