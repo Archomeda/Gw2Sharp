@@ -29,7 +29,7 @@ jobs:
       - name: Run dotnet test
         run: dotnet test -c Release
 
-  # Nightly packaged builds
+  # Nightly packaged build
   nightly:
     name: Nightly build
     runs-on: windows-latest
@@ -57,52 +57,10 @@ jobs:
           Write-Output "Assembly file version: $($version.AssemblySemFileVer)"
           Write-Output "Informational version: $($version.InformationalVersion)"
           Write-Output "NuGet version: $nuget"
-
-          (Get-Content Gw2Sharp/Gw2Sharp.csproj) `
-            -replace '<Version>([^<]*)</Version>', "<Version>$nuget</Version>" |
-          Out-File Gw2Sharp/Gw2Sharp.csproj
+          echo "::set-env name=VERSION::$nuget"
       - name: Run dotnet build
-        run: dotnet build -c Debug -p:VERSIONED_BUILD=1
+        run: dotnet build -c Debug -p:VERSIONED_BUILD=${{ VERSION }}
       - name: Run dotnet pack
-        run: dotnet pack Gw2Sharp -c Debug --no-build -p:VERSIONED_BUILD=1
+        run: dotnet pack Gw2Sharp -c Debug --no-build -p:VERSIONED_BUILD=${{ VERSION }}
       - name: Run dotnet nuget push
         run: dotnet nuget push **/*.symbols.nupkg -s "https://www.myget.org/F/gw2sharp/api/v2/package" -k "${{ secrets.MYGET_TOKEN }}"
-
-  # SonarCloud analysis
-  sonarcloud:
-    name: SonarCloud analysis
-    runs-on: windows-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        dotnet:
-          - "3.1.102"
-    steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-dotnet@v1
-        name: Install .NET Core ${{ matrix.dotnet }}
-        with:
-          dotnet-version: ${{ matrix.dotnet }}
-      - name: Install Coverlet
-        run: dotnet tool install --global coverlet.console
-      - name: Install SonarScanner
-        run: dotnet tool install --global dotnet-sonarscanner
-      - name: Start SonarScanner
-        shell: powershell
-        run: |
-          if ($env:GITHUB_REF -match "refs/([^/]*)/(.*)") {
-            dotnet sonarscanner begin /k:"Archomeda_Gw2Sharp" /o:"archomeda-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.cs.opencover.reportsPaths="coverage.xml" /d:sonar.branch.name="$($matches[2])"
-          } else {
-            Write-Error "No valid ref found in $env:GITHUB_REF"
-            exit 1
-          }
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Run dotnet build
-        run: dotnet build -c Debug
-      - name: Run Coverlet
-        run: coverlet Gw2Sharp.Tests/bin/Debug/netcoreapp3.0/Gw2Sharp.Tests.dll --target "dotnet.exe" --targetargs "test -c Debug --no-build" --format opencover --output "coverage.xml"
-      - name: End SonarScanner
-        run: dotnet sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
