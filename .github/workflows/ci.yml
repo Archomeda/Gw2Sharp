@@ -1,6 +1,9 @@
 name: CI
 
-on: [push]
+on:
+  push:
+    tags-ignore:
+      - v*
 
 jobs:
   # Unit tests
@@ -88,14 +91,7 @@ jobs:
         shell: powershell
         run: |
           if ($env:GITHUB_REF -match "refs/([^/]*)/(.*)") {
-            if ($matches[1] -eq "tags") {
-              dotnet sonarscanner begin /k:"Archomeda_Gw2Sharp" /o:"archomeda-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.cs.opencover.reportsPaths="coverage.xml" /v:"$($matches[2])"
-            } elseif ($matches[1] -eq "heads") {
-              dotnet sonarscanner begin /k:"Archomeda_Gw2Sharp" /o:"archomeda-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.cs.opencover.reportsPaths="coverage.xml" /d:sonar.branch.name="$($matches[2])"
-            } else {
-              Write-Error "No valid ref found in $env:GITHUB_REF"
-              exit 1
-            }
+            dotnet sonarscanner begin /k:"Archomeda_Gw2Sharp" /o:"archomeda-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.cs.opencover.reportsPaths="coverage.xml" /d:sonar.branch.name="$($matches[2])"
           } else {
             Write-Error "No valid ref found in $env:GITHUB_REF"
             exit 1
