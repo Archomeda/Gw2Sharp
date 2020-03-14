@@ -1,5 +1,2 @@
-next-version: 0.8.3
-assembly-versioning-format: '{MajorMinorPatch}.0'
-assembly-file-versioning-format: '{MajorMinorPatch}-{BranchName}.{CommitsSinceVersionSource}+{ShortSha}'
-assembly-informational-format: '{MajorMinorPatch}-{BranchName}.{CommitsSinceVersionSource}+{ShortSha}'
+assembly-versioning-scheme: MajorMinor
 mode: ContinuousDelivery

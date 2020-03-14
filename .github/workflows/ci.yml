@@ -42,18 +42,21 @@ jobs:
         name: Install .NET Core ${{ matrix.dotnet }}
         with:
           dotnet-version: ${{ matrix.dotnet }}
-      - name: Install GitVersion
-        run: choco install GitVersion.Portable -y
-      - name: Patch assembly version
-        run: GitVersion /updateassemblyinfo Gw2Sharp/Properties/AssemblyVersionInfo.cs /ensureassemblyinfo
-      - name: Patch package version
+      - name: Patch nightly version
         shell: powershell
         run: |
-          $version = (GitVersion /output json | ConvertFrom-Json).AssemblySemFileVer -replace "origin/","" -replace "[^a-zA-Z0-9-_.]","-" -replace "(\d+\.\d+\.\d+)(.*)","`$1.$env:GITHUB_RUN_NUMBER`$2"
-          Write-Output "NuGet package version: $version"
+          $version = GitVersion /output json /updateassemblyinfo Gw2Sharp/Properties/AssemblyVersionInfo.cs /ensureassemblyinfo | ConvertFrom-Json
+          $nuget = $version.SemVer
+          if ($version.BranchName -eq "master") {
+            $nuget += "-master.$($version.CommitsSinceVersionSource)"
+          }
+          Write-Output "Assembly version: $($version.AssemblySemVer)"
+          Write-Output "Assembly file version: $($version.AssemblySemFileVer)"
+          Write-Output "Informational version: $($version.InformationalVersion)"
+          Write-Output "NuGet version: $nuget"
 
           (Get-Content Gw2Sharp/Gw2Sharp.csproj) `
-            -replace '<Version>([^<]*)</Version>', "<Version>$version</Version>" |
+            -replace '<Version>([^<]*)</Version>', "<Version>$nuget</Version>" |
           Out-File Gw2Sharp/Gw2Sharp.csproj
       - name: Run dotnet build
         run: dotnet build -c Debug -p:VERSIONED_BUILD=1
