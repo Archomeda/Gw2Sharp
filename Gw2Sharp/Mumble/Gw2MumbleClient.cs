@@ -184,16 +184,16 @@ namespace Gw2Sharp.Mumble
             this.IsAvailable ? this.Identity.Name : string.Empty;
 
         /// <inheritdoc />
-        public Profession Profession =>
-            this.IsAvailable ? this.Identity.Profession : (Profession)0;
+        public ProfessionType Profession =>
+            this.IsAvailable ? this.Identity.Profession : 0;
 
         /// <inheritdoc />
         public int Specialization =>
             this.IsAvailable ? this.Identity.Spec : 0;
 
         /// <inheritdoc />
-        public string Race =>
-            this.IsAvailable ? this.Identity.Race.ToString() : string.Empty;
+        public RaceType Race =>
+            this.IsAvailable ? this.Identity.Race : 0;
 
         /// <inheritdoc />
         public int TeamColorId =>

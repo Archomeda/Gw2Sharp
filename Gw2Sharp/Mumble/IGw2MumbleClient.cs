@@ -172,9 +172,9 @@ namespace Gw2Sharp.Mumble
 
         /// <summary>
         /// The character profession.
-        /// Can be resolved against <see cref="IGw2WebApiV2Client.Professions"/> if converted to string.
+        /// Can be resolved against <see cref="IGw2WebApiV2Client.Professions"/>.
         /// </summary>
-        Profession Profession { get; }
+        ProfessionType Profession { get; }
 
         /// <summary>
         /// The character's currently equipped third specialization.
@@ -187,7 +187,7 @@ namespace Gw2Sharp.Mumble
         /// The character race.
         /// Can be resolved against <see cref="IGw2WebApiV2Client.Races"/>.
         /// </summary>
-        string Race { get; }
+        RaceType Race { get; }
 
         /// <summary>
         /// The current team color.

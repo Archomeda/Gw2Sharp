@@ -4,7 +4,7 @@ namespace Gw2Sharp.Models
     /// Represents a profession.
     /// Used by Mumble Link and chat links.
     /// </summary>
-    public enum Profession : byte
+    public enum ProfessionType : byte
     {
         /// <summary>
         /// Guardian.

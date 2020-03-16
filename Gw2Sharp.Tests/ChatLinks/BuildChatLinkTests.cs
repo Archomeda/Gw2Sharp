@@ -11,7 +11,7 @@ namespace Gw2Sharp.Tests.ChatLinks
         {
             new object[] { "[&DQIzNSQtEipwAHAA1xJxANwSqgDEEqwAwhKcAAAAAAAAAAAAAAAAAAAAAAA=]", new BuildChatLink
             {
-                Profession = Profession.Warrior,
+                Profession = ProfessionType.Warrior,
                 Specialization1Id = 51,
                 Specialization1Trait1Index = 1,
                 Specialization1Trait2Index = 1,
@@ -50,18 +50,18 @@ namespace Gw2Sharp.Tests.ChatLinks
         [Fact]
         public void EqualsTest()
         {
-            var chatLink = new BuildChatLink { Profession = Profession.Warrior, Specialization1Id = 123, Specialization2Id = 234, Specialization3Id = 14 };
-            var chatLink2 = new BuildChatLink { Profession = Profession.Warrior, Specialization1Id = 123, Specialization2Id = 234, Specialization3Id = 14 };
+            var chatLink = new BuildChatLink { Profession = ProfessionType.Warrior, Specialization1Id = 123, Specialization2Id = 234, Specialization3Id = 14 };
+            var chatLink2 = new BuildChatLink { Profession = ProfessionType.Warrior, Specialization1Id = 123, Specialization2Id = 234, Specialization3Id = 14 };
             Assert.True(chatLink.Equals((object)chatLink2));
         }
 
         [Fact]
         public void NotEqualsTest()
         {
-            var chatLink = new BuildChatLink { Profession = Profession.Warrior, Specialization1Id = 123, Specialization2Id = 234, Specialization3Id = 14 };
-            var chatLink2 = new BuildChatLink { Profession = Profession.Guardian, Specialization1Id = 123, Specialization2Id = 234, Specialization3Id = 14 };
-            var chatLink3 = new BuildChatLink { Profession = Profession.Warrior, Specialization1Id = 222, Specialization2Id = 100, Specialization3Id = 14 };
-            var chatLink4 = new BuildChatLink { Profession = Profession.Warrior, Specialization1Id = 123, Specialization2Id = 234, Specialization3Id = 147 };
+            var chatLink = new BuildChatLink { Profession = ProfessionType.Warrior, Specialization1Id = 123, Specialization2Id = 234, Specialization3Id = 14 };
+            var chatLink2 = new BuildChatLink { Profession = ProfessionType.Guardian, Specialization1Id = 123, Specialization2Id = 234, Specialization3Id = 14 };
+            var chatLink3 = new BuildChatLink { Profession = ProfessionType.Warrior, Specialization1Id = 222, Specialization2Id = 100, Specialization3Id = 14 };
+            var chatLink4 = new BuildChatLink { Profession = ProfessionType.Warrior, Specialization1Id = 123, Specialization2Id = 234, Specialization3Id = 147 };
             Assert.False(chatLink.Equals(chatLink2));
             Assert.False(chatLink.Equals(chatLink3));
             Assert.False(chatLink.Equals(chatLink4));
@@ -77,18 +77,18 @@ namespace Gw2Sharp.Tests.ChatLinks
         [Fact]
         public void OperatorEqualsTest()
         {
-            var chatLink = new BuildChatLink { Profession = Profession.Warrior, Specialization1Id = 123, Specialization2Id = 234, Specialization3Id = 14 };
-            var chatLink2 = new BuildChatLink { Profession = Profession.Warrior, Specialization1Id = 123, Specialization2Id = 234, Specialization3Id = 14 };
+            var chatLink = new BuildChatLink { Profession = ProfessionType.Warrior, Specialization1Id = 123, Specialization2Id = 234, Specialization3Id = 14 };
+            var chatLink2 = new BuildChatLink { Profession = ProfessionType.Warrior, Specialization1Id = 123, Specialization2Id = 234, Specialization3Id = 14 };
             Assert.True(chatLink == chatLink2);
         }
 
         [Fact]
         public void OperatorNotEqualsTest()
         {
-            var chatLink = new BuildChatLink { Profession = Profession.Warrior, Specialization1Id = 123, Specialization2Id = 234, Specialization3Id = 14 };
-            var chatLink2 = new BuildChatLink { Profession = Profession.Guardian, Specialization1Id = 123, Specialization2Id = 234, Specialization3Id = 14 };
-            var chatLink3 = new BuildChatLink { Profession = Profession.Warrior, Specialization1Id = 222, Specialization2Id = 100, Specialization3Id = 14 };
-            var chatLink4 = new BuildChatLink { Profession = Profession.Warrior, Specialization1Id = 123, Specialization2Id = 234, Specialization3Id = 147 };
+            var chatLink = new BuildChatLink { Profession = ProfessionType.Warrior, Specialization1Id = 123, Specialization2Id = 234, Specialization3Id = 14 };
+            var chatLink2 = new BuildChatLink { Profession = ProfessionType.Guardian, Specialization1Id = 123, Specialization2Id = 234, Specialization3Id = 14 };
+            var chatLink3 = new BuildChatLink { Profession = ProfessionType.Warrior, Specialization1Id = 222, Specialization2Id = 100, Specialization3Id = 14 };
+            var chatLink4 = new BuildChatLink { Profession = ProfessionType.Warrior, Specialization1Id = 123, Specialization2Id = 234, Specialization3Id = 147 };
             Assert.True(chatLink != chatLink2);
             Assert.True(chatLink != chatLink3);
             Assert.True(chatLink != chatLink4);
@@ -100,18 +100,18 @@ namespace Gw2Sharp.Tests.ChatLinks
         [Fact]
         public void HashCodeEqualsTest()
         {
-            var chatLink = new BuildChatLink { Profession = Profession.Warrior, Specialization1Id = 123, Specialization2Id = 234, Specialization3Id = 14 };
-            var chatLink2 = new BuildChatLink { Profession = Profession.Warrior, Specialization1Id = 123, Specialization2Id = 234, Specialization3Id = 14 };
+            var chatLink = new BuildChatLink { Profession = ProfessionType.Warrior, Specialization1Id = 123, Specialization2Id = 234, Specialization3Id = 14 };
+            var chatLink2 = new BuildChatLink { Profession = ProfessionType.Warrior, Specialization1Id = 123, Specialization2Id = 234, Specialization3Id = 14 };
             Assert.Equal(chatLink.GetHashCode(), chatLink2.GetHashCode());
         }
 
         [Fact]
         public void HashCodeNotEqualsTest()
         {
-            var chatLink = new BuildChatLink { Profession = Profession.Warrior, Specialization1Id = 123, Specialization2Id = 234, Specialization3Id = 14 };
-            var chatLink2 = new BuildChatLink { Profession = Profession.Guardian, Specialization1Id = 123, Specialization2Id = 234, Specialization3Id = 14 };
-            var chatLink3 = new BuildChatLink { Profession = Profession.Warrior, Specialization1Id = 222, Specialization2Id = 100, Specialization3Id = 14 };
-            var chatLink4 = new BuildChatLink { Profession = Profession.Warrior, Specialization1Id = 123, Specialization2Id = 234, Specialization3Id = 147 };
+            var chatLink = new BuildChatLink { Profession = ProfessionType.Warrior, Specialization1Id = 123, Specialization2Id = 234, Specialization3Id = 14 };
+            var chatLink2 = new BuildChatLink { Profession = ProfessionType.Guardian, Specialization1Id = 123, Specialization2Id = 234, Specialization3Id = 14 };
+            var chatLink3 = new BuildChatLink { Profession = ProfessionType.Warrior, Specialization1Id = 222, Specialization2Id = 100, Specialization3Id = 14 };
+            var chatLink4 = new BuildChatLink { Profession = ProfessionType.Warrior, Specialization1Id = 123, Specialization2Id = 234, Specialization3Id = 147 };
             Assert.NotEqual(chatLink.GetHashCode(), chatLink2.GetHashCode());
             Assert.NotEqual(chatLink.GetHashCode(), chatLink3.GetHashCode());
             Assert.NotEqual(chatLink.GetHashCode(), chatLink4.GetHashCode());
