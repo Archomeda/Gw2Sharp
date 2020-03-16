@@ -8,6 +8,7 @@
   - `Gw2Sharp.WebApi.V2.Clients.IProfessionClient` now implements `Gw2Sharp.WebApi.V2.Clients.IBulkAliasExpandableClient` and supports requesting `GetAsync` and `ManyAsync` with `Gw2Sharp.Models.ProfessionType` as id type
   - `Gw2Sharp.WebApi.V2.Clients.IRaceClient` now implements `Gw2Sharp.WebApi.V2.Clients.IBulkAliasExpandableClient` and supports requesting `GetAsync` and `ManyAsync` with `Gw2Sharp.Models.RaceType` as id type
 - **Breaking:** The `Race` property in the Mumble Client is now of type `RaceType` instead of `string`
+- Repeatedly requesting Mumble identity fields (or just requesting multiple) should be a bit faster now
 
 ### Refactoring
 - **Breaking:** `Gw2Sharp.Models.Legend` has been renamed to `Gw2Sharp.Models.LegendType`
