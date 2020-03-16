@@ -17,7 +17,7 @@ namespace Gw2Sharp.ChatLinks
         /// <summary>
         /// The profession.
         /// </summary>
-        public Profession Profession
+        public ProfessionType Profession
         {
             get => this.data.Profession;
             set => this.data.Profession = value;

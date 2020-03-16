@@ -1,3 +1,4 @@
+using Gw2Sharp.Models;
 using Gw2Sharp.WebApi.V2.Models;
 
 namespace Gw2Sharp.WebApi.V2.Clients
@@ -8,6 +9,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public interface ILegendsClient :
         IAllExpandableClient<Legend>,
         IBulkExpandableClient<Legend, string>,
+        IBulkAliasExpandableClient<Legend, LegendType>,
         IPaginatedClient<Legend>
     {
     }
