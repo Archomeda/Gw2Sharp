@@ -7,7 +7,6 @@ jobs:
     name: SonarCloud analysis
     runs-on: windows-latest
     strategy:
-      fail-fast: false
       matrix:
         dotnet:
           - "3.1.102"
