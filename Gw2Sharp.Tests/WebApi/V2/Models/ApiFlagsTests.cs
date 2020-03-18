@@ -1,9 +1,10 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Text.Json;
+using Gw2Sharp.Json.Converters;
 using Gw2Sharp.Tests.Helpers;
 using Gw2Sharp.WebApi.V2.Models;
-using Newtonsoft.Json;
 using Xunit;
 
 namespace Gw2Sharp.Tests.WebApi.V2.Models
@@ -39,9 +40,9 @@ namespace Gw2Sharp.Tests.WebApi.V2.Models
             new object[] { "{\"Flags\":[\"EnumValue2\"]}", new[] { new ApiEnum<TestEnum>(TestEnum.EnumValue2) } },
             new object[] { "{\"Flags\":[\"EnumValue2\",\"EnumValue3\"]}", new[] { new ApiEnum<TestEnum>(TestEnum.EnumValue2), new ApiEnum<TestEnum>(TestEnum.EnumValue3) } },
             new object[] { "{\"Flags\":[\"\"]}", new[] { new ApiEnum<TestEnum>(TestEnum.EnumValue3, string.Empty) } },
-            new object[] { "{\"Flags\":[undefined]}", new[] { new ApiEnum<TestEnum>(TestEnum.EnumValue3, null) } },
+            new object[] { "{\"Flags\":[null]}", new[] { new ApiEnum<TestEnum>(TestEnum.EnumValue3, null) } },
             new object[] { "{\"Flags\":[]}", new ApiEnum<TestEnum>[0] },
-            new object[] { "{\"Flags\":undefined}", null },
+            new object[] { "{\"Flags\":null}", null },
             new object[] { "{}", null },
         };
 #nullable enable
@@ -50,7 +51,9 @@ namespace Gw2Sharp.Tests.WebApi.V2.Models
         [MemberData(nameof(DeserializeTestData))]
         public void DeserializeTest(string json, ApiEnum<TestEnum>[] expected)
         {
-            var obj = JsonConvert.DeserializeObject<JsonObject>(json);
+            var options = new JsonSerializerOptions();
+            options.Converters.Add(new ApiFlagsConverter());
+            var obj = JsonSerializer.Deserialize<JsonObject>(json, options);
 
             if (expected == null)
                 Assert.Null(obj.Flags);

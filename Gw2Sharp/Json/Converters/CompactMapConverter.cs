@@ -1,8 +1,7 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace Gw2Sharp.Json.Converters
 {
@@ -13,27 +12,42 @@ namespace Gw2Sharp.Json.Converters
     public class CompactMapConverter : JsonConverter<IDictionary<int, int>>
     {
         /// <inheritdoc />
-        public override bool CanWrite => false;
-
-        /// <summary>
-        /// Reads the JSON representation of the object.
-        /// </summary>
-        /// <param name="reader">The <see cref="JsonReader"/> to read from.</param>
-        /// <param name="objectType">Type of the object.</param>
-        /// <param name="existingValue">The existing value of object being read. If there is no existing value then <c>null</c> will be used.</param>
-        /// <param name="hasExistingValue">The existing value has a value.</param>
-        /// <param name="serializer">The calling serializer.</param>
-        /// <returns>The object value.</returns>
-        public override IDictionary<int, int> ReadJson(JsonReader reader, Type objectType, IDictionary<int, int> existingValue, bool hasExistingValue, JsonSerializer serializer)
+        public override IDictionary<int, int> Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
-            if (!(serializer.Deserialize<JToken>(reader) is JArray jArray))
-                throw new JsonSerializationException($"Expected {nameof(jArray)} to be an array");
+            if (reader.TokenType != JsonTokenType.StartArray)
+                throw new JsonException("Expected start of array");
 
-            return jArray.ToDictionary(x => (int)x[0], x => (int)x[1]);
+            var values = new Dictionary<int, int>();
+            int[] pair = new int[2];
+            while (reader.Read())
+            {
+                if (reader.TokenType == JsonTokenType.EndArray)
+                    return values;
+
+                if (reader.TokenType != JsonTokenType.StartArray)
+                    throw new JsonException("Expected start of array");
+
+                for (int i = 0; i < 2; i++)
+                {
+                    if (!reader.Read())
+                        throw new JsonException("Unexpected end of array");
+
+                    if (reader.TryGetInt32(out int value))
+                        pair[i] = value;
+                    else
+                        throw new JsonException("Expected an int");
+                }
+
+                if (!reader.Read() || reader.TokenType != JsonTokenType.EndArray)
+                    throw new JsonException("Expected end of array");
+                values[pair[0]] = pair[1];
+            }
+
+            throw new JsonException("Unexpected end of compact map");
         }
 
         /// <inheritdoc />
-        public override void WriteJson(JsonWriter writer, IDictionary<int, int> value, JsonSerializer serializer) =>
+        public override void Write(Utf8JsonWriter writer, IDictionary<int, int> value, JsonSerializerOptions options) =>
             throw new NotImplementedException("TODO: This should generally not be used since we only deserialize stuff from the API, and not serialize to it. Might add support later.");
     }
 }

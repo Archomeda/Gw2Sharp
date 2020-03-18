@@ -1,7 +1,7 @@
+using System.Text.Json;
 using Gw2Sharp.Json.Converters;
 using Gw2Sharp.Models;
 using Gw2Sharp.WebApi.V2.Models;
-using Newtonsoft.Json;
 using Xunit;
 
 namespace Gw2Sharp.Tests.WebApi.V2.Models
@@ -27,18 +27,28 @@ namespace Gw2Sharp.Tests.WebApi.V2.Models
         }
 
         [Fact]
-        public void DeserializeTest()
+        public void DeserializeTopDownTest()
         {
+            var options = new JsonSerializerOptions();
+            options.Converters.Add(new TopDownRectangleConverter());
+
             string json = "[[2,4],[6,8]]";
-            var rectangle = JsonConvert.DeserializeObject<Rectangle>(json, new TopDownRectangleConverter());
+            var rectangle = JsonSerializer.Deserialize<Rectangle>(json, options);
             Assert.Equal(new Coordinates2(2, 4), rectangle.TopLeft);
             Assert.Equal(new Coordinates2(6, 4), rectangle.TopRight);
             Assert.Equal(new Coordinates2(2, 8), rectangle.BottomLeft);
             Assert.Equal(new Coordinates2(6, 8), rectangle.BottomRight);
             Assert.Equal(new[] { new[] { 2d, 4d }, new[] { 6d, 8d } }, rectangle);
+        }
 
-            json = "[[2,4],[6,8]]";
-            rectangle = JsonConvert.DeserializeObject<Rectangle>(json, new BottomUpRectangleConverter());
+        [Fact]
+        public void DeserializeBottomUpTest()
+        {
+            var options = new JsonSerializerOptions();
+            options.Converters.Add(new BottomUpRectangleConverter());
+
+            string json = "[[2,4],[6,8]]";
+            var rectangle = JsonSerializer.Deserialize<Rectangle>(json, options);
             Assert.Equal(new Coordinates2(2, 8), rectangle.TopLeft);
             Assert.Equal(new Coordinates2(6, 8), rectangle.TopRight);
             Assert.Equal(new Coordinates2(2, 4), rectangle.BottomLeft);

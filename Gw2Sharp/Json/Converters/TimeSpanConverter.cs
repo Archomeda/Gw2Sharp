@@ -1,23 +1,21 @@
 using System;
-using Newtonsoft.Json;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace Gw2Sharp.Json.Converters
 {
     /// <summary>
     /// A custom JSON converter that handles timespan conversions.
     /// </summary>
-    /// <seealso cref="JsonConverter{Size}" />
+    /// <seealso cref="JsonConverter{TimeSpan}" />
     public sealed class TimeSpanConverter : JsonConverter<TimeSpan>
     {
         /// <inheritdoc />
-        public override bool CanWrite => false;
+        public override TimeSpan Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options) =>
+            TimeSpan.FromSeconds(reader.GetInt64());
 
         /// <inheritdoc />
-        public override TimeSpan ReadJson(JsonReader reader, Type objectType, TimeSpan existingValue, bool hasExistingValue, JsonSerializer serializer) =>
-            TimeSpan.FromSeconds(serializer.Deserialize<int>(reader));
-
-        /// <inheritdoc />
-        public override void WriteJson(JsonWriter writer, TimeSpan value, JsonSerializer serializer) =>
+        public override void Write(Utf8JsonWriter writer, TimeSpan value, JsonSerializerOptions options) =>
             throw new NotImplementedException("TODO: This should generally not be used since we only deserialize stuff from the API, and not serialize to it. Might add support later.");
     }
 }

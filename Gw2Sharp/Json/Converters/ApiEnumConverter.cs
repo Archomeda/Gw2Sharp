@@ -1,57 +1,67 @@
 using System;
 using System.ComponentModel;
-using System.Linq;
 using System.Reflection;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using Gw2Sharp.Extensions;
 using Gw2Sharp.WebApi.V2.Models;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace Gw2Sharp.Json.Converters
 {
     /// <summary>
     /// A custom JSON converter that handles <see cref="ApiEnum{T}" />.
     /// </summary>
-    /// <seealso cref="JsonConverter" />
-    public sealed class ApiEnumConverter : JsonConverter
+    /// <seealso cref="JsonConverterFactory" />
+    public sealed class ApiEnumConverter : JsonConverterFactory
     {
         /// <inheritdoc />
-        public override bool CanWrite => false;
+        public override bool CanConvert(Type typeToConvert) =>
+            typeToConvert.IsGenericType && typeToConvert.GetGenericTypeDefinition() == typeof(ApiEnum<>) && typeToConvert.GetGenericArguments()[0].IsEnum;
 
         /// <inheritdoc />
-        public override object? ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+        public override JsonConverter? CreateConverter(Type typeToConvert, JsonSerializerOptions options)
         {
-            var fToken = serializer.Deserialize<JToken>(reader);
-            if (fToken is JValue jValue)
-            {
-                // Get generic type information and some sanity checks
-                var typeInfo = objectType.GetTypeInfo();
-                var enumType = typeInfo.IsGenericType ? typeInfo.GenericTypeArguments.FirstOrDefault() : null;
-                if (enumType == null)
-                    return null;
-
-                // If it's explicitly defined as null, create an enum with null raw value and default enum value
-                if (jValue.Type == JTokenType.Null)
-                {
-                    var defaultValueAttribute = enumType.GetCustomAttribute<DefaultValueAttribute>();
-                    object enumValue = defaultValueAttribute?.Value ?? Enum.ToObject(enumType, 0);
-                    return Activator.CreateInstance(objectType, enumValue, null);
-                }
-
-                // It's a value, create an enum with that value
-                string rawValue = jValue.ToObject<string>();
-                var value = rawValue.ParseEnum(enumType);
-                return Activator.CreateInstance(objectType, value, rawValue);
-            }
-            throw new JsonSerializationException($"Expected an enum value or null");
+            var innerType = typeToConvert.GetGenericArguments()[0];
+            var type = typeof(ApiEnumConverterInner<>).MakeGenericType(innerType);
+            return (JsonConverter?)Activator.CreateInstance(type, BindingFlags.Instance | BindingFlags.Public, null, null, null);
         }
 
-        /// <inheritdoc />
-        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer) =>
-            throw new NotImplementedException("TODO: This should generally not be used since we only deserialize stuff from the API, and not serialize to it. Might add support later.");
+        private sealed class ApiEnumConverterInner<T> : JsonConverter<ApiEnum<T>>
+            where T : Enum
+        {
+            private readonly Type type;
+            private readonly T defaultValue;
 
-        /// <inheritdoc />
-        public override bool CanConvert(Type objectType) =>
-            objectType.IsGenericType && objectType.GetGenericTypeDefinition() == typeof(ApiEnum<>);
+            public ApiEnumConverterInner()
+            {
+                this.type = typeof(T);
+
+                var defaultValueAttribute = this.type.GetCustomAttribute<DefaultValueAttribute>();
+                this.defaultValue = (T)(defaultValueAttribute?.Value ?? Enum.ToObject(this.type, 0));
+            }
+
+            public override ApiEnum<T> Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+            {
+                if (reader.TokenType == JsonTokenType.String)
+                {
+                    // If it's a string, create an enum with that value
+                    string rawValue = reader.GetString();
+                    var value = rawValue.ParseEnum<T>();
+                    return new ApiEnum<T>(value, rawValue);
+                }
+                else if (reader.TokenType == JsonTokenType.Number)
+                {
+                    // If it's a number, create an enum with that value
+                    int rawValue = reader.GetInt32();
+                    var value = (T)Enum.ToObject(this.type, rawValue);
+                    return new ApiEnum<T>(value, rawValue.ToString());
+                }
+
+                throw new JsonException("Expected null, a string or a number to deserialize as enum");
+            }
+
+            public override void Write(Utf8JsonWriter writer, ApiEnum<T> value, JsonSerializerOptions options) =>
+                throw new NotImplementedException("TODO: This should generally not be used since we only deserialize stuff from the API, and not serialize to it. Might add support later.");
+        }
     }
 }

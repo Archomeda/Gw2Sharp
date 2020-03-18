@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
+using Gw2Sharp.Json.Converters;
 
 namespace Gw2Sharp.WebApi.V2.Models
 {
@@ -44,6 +46,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// The id of the secondary suffix item.
         /// If the item does not have a secondary suffix item, this value is <c>null</c>.
         /// </summary>
+        [JsonConverter(typeof(StringAsIntConverter))]
         public int? SecondarySuffixItemId { get; set; }
 
         /// <summary>

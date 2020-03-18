@@ -1,5 +1,5 @@
+using System.Text.Json;
 using Gw2Sharp.Models;
-using Newtonsoft.Json;
 using Xunit;
 
 namespace Gw2Sharp.Tests.Models
@@ -19,7 +19,7 @@ namespace Gw2Sharp.Tests.Models
         public void DeserializeTest()
         {
             const string json = "[4,2,1]";
-            var coordinates = JsonConvert.DeserializeObject<Coordinates3>(json);
+            var coordinates = JsonSerializer.Deserialize<Coordinates3>(json);
             Assert.Equal(4, coordinates.X);
             Assert.Equal(2, coordinates.Y);
             Assert.Equal(new[] { 4d, 2d, 1d }, coordinates);

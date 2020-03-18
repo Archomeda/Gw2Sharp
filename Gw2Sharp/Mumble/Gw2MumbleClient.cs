@@ -1,9 +1,10 @@
 using System;
 using System.IO.MemoryMappedFiles;
 using System.Net.Sockets;
+using System.Text.Json;
+using Gw2Sharp.Json;
 using Gw2Sharp.Models;
 using Gw2Sharp.Mumble.Models;
-using Newtonsoft.Json;
 
 namespace Gw2Sharp.Mumble
 {
@@ -12,6 +13,15 @@ namespace Gw2Sharp.Mumble
     /// </summary>
     public class Gw2MumbleClient : BaseClient, IGw2MumbleClient
     {
+        /// <summary>
+        /// The settings that are used when deserializing JSON objects.
+        /// </summary>
+        private static JsonSerializerOptions deserializerSettings = new JsonSerializerOptions
+        {
+            PropertyNameCaseInsensitive = true,
+            PropertyNamingPolicy = SnakeCaseNamingPolicy.SnakeCase
+        };
+
         internal const string MUMBLE_LINK_MAP_NAME = "MumbleLink";
         internal const string MUMBLE_LINK_GAME_NAME = "Guild Wars 2";
         private const string EMPTY_IDENTITY = "{}";
@@ -51,7 +61,7 @@ namespace Gw2Sharp.Mumble
                 {
                     this.currentIdentityJson = this.newIdentityJson ?? EMPTY_IDENTITY;
                     this.newIdentityJson = null;
-                    this.identityObject = JsonConvert.DeserializeObject<CharacterIdentity>(this.currentIdentityJson);
+                    this.identityObject = JsonSerializer.Deserialize<CharacterIdentity>(this.currentIdentityJson, deserializerSettings);
                 }
                 return this.identityObject;
             }

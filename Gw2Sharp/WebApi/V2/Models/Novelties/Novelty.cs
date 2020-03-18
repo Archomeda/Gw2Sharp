@@ -31,7 +31,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The novelty slot.
         /// </summary>
-        public NoveltySlot Slot { get; set; }
+        public ApiEnum<NoveltySlot> Slot { get; set; } = new ApiEnum<NoveltySlot>();
 
         /// <summary>
         /// The items that unlock this novelty.

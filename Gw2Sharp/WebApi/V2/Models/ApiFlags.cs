@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using Gw2Sharp.Json.Converters;
-using Newtonsoft.Json;
 
 namespace Gw2Sharp.WebApi.V2.Models
 {
@@ -12,7 +11,6 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// Wraps a list an API enums into flags to allow unsupported and/or future enum values.
     /// </summary>
     /// <typeparam name="T">The enum type.</typeparam>
-    [JsonConverter(typeof(ApiFlagsConverter))]
     public class ApiFlags<T> : IEquatable<ApiFlags<T>>, IEnumerable<ApiEnum<T>> where T : Enum
     {
         /// <summary>

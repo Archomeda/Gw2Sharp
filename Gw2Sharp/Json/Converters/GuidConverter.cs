@@ -1,5 +1,6 @@
 using System;
-using Newtonsoft.Json;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace Gw2Sharp.Json.Converters
 {
@@ -10,14 +11,11 @@ namespace Gw2Sharp.Json.Converters
     public sealed class GuidConverter : JsonConverter<Guid>
     {
         /// <inheritdoc />
-        public override bool CanWrite => false;
+        public override Guid Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options) =>
+            Guid.TryParse(reader.GetString(), out var result) ? result : Guid.Empty;
 
         /// <inheritdoc />
-        public override Guid ReadJson(JsonReader reader, Type objectType, Guid existingValue, bool hasExistingValue, JsonSerializer serializer) =>
-            reader.TokenType == JsonToken.Null ? Guid.Empty : new Guid(serializer.Deserialize<string>(reader));
-
-        /// <inheritdoc />
-        public override void WriteJson(JsonWriter writer, Guid value, JsonSerializer serializer) =>
+        public override void Write(Utf8JsonWriter writer, Guid value, JsonSerializerOptions options) =>
             throw new NotImplementedException("TODO: This should generally not be used since we only deserialize stuff from the API, and not serialize to it. Might add support later.");
     }
 }

@@ -4,13 +4,13 @@ using Xunit;
 
 namespace Gw2Sharp.Tests.Json.Converters
 {
-    public class ApiEnumConverterTests
+    public class ApiFlagsConverterTests
     {
         [Fact]
         public void CanConvertTest()
         {
-            var converter = new ApiEnumConverter();
-            Assert.True(converter.CanConvert(typeof(ApiEnum<>)));
+            var converter = new ApiFlagsConverter();
+            Assert.True(converter.CanConvert(typeof(ApiFlags<>)));
         }
     }
 }

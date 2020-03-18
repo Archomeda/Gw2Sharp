@@ -29,14 +29,6 @@ namespace Gw2Sharp.Tests.Json.Converters
         }
 
         [Fact]
-        public void NoWriteTest()
-        {
-            var converter = new CastableTypeConverter();
-            Assert.False(converter.CanWrite);
-            Assert.Throws<NotImplementedException>(() => converter.WriteJson(default!, default!, default!));
-        }
-
-        [Fact]
         public void CanConvertTest()
         {
             var converter = new CastableTypeConverter();

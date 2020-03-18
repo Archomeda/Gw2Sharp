@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
+using System.Text.Json;
 using System.Threading.Tasks;
 using Gw2Sharp.Extensions;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Serialization;
 
 #pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
 
@@ -20,9 +19,10 @@ namespace Gw2Sharp.WebApi.Caching
     {
         private const string EXPIRY_DATE_INDEX_FILENAME = "expiry_index";
 
-        private readonly JsonSerializerSettings serializerSettings = new JsonSerializerSettings
+        private readonly JsonSerializerOptions serializerSettings = new JsonSerializerOptions
         {
-            ContractResolver = new DefaultContractResolver { NamingStrategy = new DefaultNamingStrategy() }
+            PropertyNameCaseInsensitive = true,
+            PropertyNamingPolicy = JsonNamingPolicy.CamelCase
         };
 
         private FileStream archiveStream;
@@ -125,26 +125,21 @@ namespace Gw2Sharp.WebApi.Caching
                 }
 
                 object data;
-                using var entryStream = zipEntry.Open();
+                using var zipStream = zipEntry.Open();
                 if (typeof(T) == typeof(byte[]))
                 {
                     // A byte array is requested
                     using var memoryStream = new MemoryStream();
-                    entryStream.CopyTo(memoryStream);
+                    zipStream.CopyTo(memoryStream);
                     data = memoryStream.ToArray();
                 }
                 else
                 {
                     // Another type is requested, try deserializing it from JSON
-                    using var streamReader = new StreamReader(entryStream);
-                    using var jsonReader = new JsonTextReader(streamReader);
-                    var serializer = JsonSerializer.Create(this.serializerSettings);
-
-                    var deserializedData = serializer.Deserialize<T>(jsonReader);
-                    if (deserializedData == null)
-                        return null;
-
-                    data = deserializedData;
+                    // Sadly enough System.Text.Json doesn't yet support deserializing from streams
+                    using var streamReader = new StreamReader(zipStream);
+                    string json = streamReader.ReadToEnd();
+                    data = JsonSerializer.Deserialize<T>(json, this.serializerSettings)!;
                 }
 
                 return new CacheItem<T>(category, id, (T)data, expiryTime);
@@ -182,10 +177,10 @@ namespace Gw2Sharp.WebApi.Caching
                 else
                 {
                     // Another type is stored, try serializing it to JSON
+                    // Sadly enough System.Text.Json doesn't yet support serializing to streams
                     using var streamWriter = new StreamWriter(zipStream);
-                    using var jsonWriter = new JsonTextWriter(streamWriter);
-                    var serializer = JsonSerializer.Create(this.serializerSettings);
-                    serializer.Serialize(jsonWriter, item.Item);
+                    string json = JsonSerializer.Serialize(item.Item, this.serializerSettings);
+                    streamWriter.Write(json);
                 }
 
                 this.SetExpiryTime(fileName, item.ExpiryTime);

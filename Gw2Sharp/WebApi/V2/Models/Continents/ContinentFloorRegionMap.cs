@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 using Gw2Sharp.Json.Converters;
 using Gw2Sharp.Models;
-using Newtonsoft.Json;
 
 namespace Gw2Sharp.WebApi.V2.Models
 {
