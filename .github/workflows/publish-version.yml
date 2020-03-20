@@ -1,52 +1,41 @@
-name: Version tag
+name: Publish version
 
 on:
   push:
-    branches:
-      - master
     tags:
       - v*
 
 jobs:
-  # Unit tests
   test:
     name: Test
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
-        dotnet:
-          - "3.1.102"
         os:
           - ubuntu-latest
           - windows-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - uses: actions/setup-dotnet@v1
-        name: Install .NET Core ${{ matrix.dotnet }}
+        name: Install .NET Core 3.1
         with:
-          dotnet-version: ${{ matrix.dotnet }}
+          dotnet-version: "3.1.102"
       - name: Run dotnet build
         run: dotnet build Gw2Sharp -c Release
       - name: Run dotnet test
         run: dotnet test -c Release
 
-  # Release build
   release:
-    name: Release build
+    name: Release
     runs-on: windows-latest
     needs: [test]
-    strategy:
-      fail-fast: false
-      matrix:
-        dotnet:
-          - "3.1.102"
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - uses: actions/setup-dotnet@v1
-        name: Install .NET Core ${{ matrix.dotnet }}
+        name: Install .NET Core 3.1
         with:
-          dotnet-version: ${{ matrix.dotnet }}
+          dotnet-version: "3.1.102"
       - name: Install InheritDocTool
         shell: powershell
         run: dotnet tool install --global InheritDocTool
@@ -61,15 +50,15 @@ jobs:
           Write-Output "NuGet version: $nuget"
           echo "::set-env name=VERSION::$nuget"
       - name: Run dotnet build
-        run: dotnet build -c Release -p:VERSIONED_BUILD=${{ VERSION }} -o bin
+        run: dotnet build -c Release -p:VERSIONED_BUILD=${{ env.VERSION }}
       - name: Run InheritDocTool
         shell: powershell
         run: InheritDoc -o
       - name: Zip binaries
         shell: powershell
-        run: 7z a Gw2Sharp.zip bin/*
+        run: 7z a Gw2Sharp.zip ./Gw2Sharp/bin/Release/*
       - name: Run dotnet pack
-        run: dotnet pack Gw2Sharp -c Release --no-build --include-symbols -p:SymbolPackageFormat=snupkg -p:VERSIONED_BUILD=${{ VERSION }} -o pack
+        run: dotnet pack Gw2Sharp -c Release --no-build --include-symbols -p:SymbolPackageFormat=snupkg -p:VERSIONED_BUILD=${{ env.VERSION }} -o pack
       - name: Create release
         uses: softprops/action-gh-release@v1
         with:

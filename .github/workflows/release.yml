@@ -5,7 +5,6 @@ on:
     types: [published]
 
 jobs:
-  # NuGet
   nuget:
     name: NuGet
     runs-on: windows-latest

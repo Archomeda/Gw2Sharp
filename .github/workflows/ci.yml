@@ -8,45 +8,39 @@ on:
       - v*
 
 jobs:
-  # Unit tests
   test:
     name: Test
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
-        dotnet:
-          - "3.1.102"
         os:
           - ubuntu-latest
           - windows-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - uses: actions/setup-dotnet@v1
-        name: Install .NET Core ${{ matrix.dotnet }}
+        name: Install .NET Core 3.1
         with:
-          dotnet-version: ${{ matrix.dotnet }}
+          dotnet-version: "3.1.102"
       - name: Run dotnet build
         run: dotnet build Gw2Sharp -c Release
       - name: Run dotnet test
         run: dotnet test -c Release
 
-  # Nightly packaged build
   nightly:
-    name: Nightly build
+    name: Nightly
     runs-on: windows-latest
     needs: [test]
-    strategy:
-      fail-fast: false
-      matrix:
-        dotnet:
-          - "3.1.102"
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - uses: actions/setup-dotnet@v1
-        name: Install .NET Core ${{ matrix.dotnet }}
+        name: Install .NET Core 3.1
         with:
-          dotnet-version: ${{ matrix.dotnet }}
+          dotnet-version: "3.1.102"
+      - name: Install InheritDocTool
+        shell: powershell
+        run: dotnet tool install --global InheritDocTool
       - name: Patch nightly version
         shell: powershell
         run: |
@@ -61,8 +55,11 @@ jobs:
           Write-Output "NuGet version: $nuget"
           echo "::set-env name=VERSION::$nuget"
       - name: Run dotnet build
-        run: dotnet build -c Debug -p:VERSIONED_BUILD=$env:VERSION
+        run: dotnet build -c Release -p:VERSIONED_BUILD=$env:VERSION
+      - name: Run InheritDocTool
+        shell: powershell
+        run: InheritDoc -o
       - name: Run dotnet pack
-        run: dotnet pack Gw2Sharp -c Debug --no-build -p:VERSIONED_BUILD=$env:VERSION
+        run: dotnet pack Gw2Sharp -c Release --no-build -p:VERSIONED_BUILD=$env:VERSION
       - name: Run dotnet nuget push
         run: dotnet nuget push **/*.symbols.nupkg -s "https://www.myget.org/F/gw2sharp/api/v2/package" -k "${{ secrets.MYGET_TOKEN }}"

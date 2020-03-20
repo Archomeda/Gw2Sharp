@@ -1,4 +1,4 @@
-name: CI
+name: Update docs
 
 on:
   push:
@@ -8,9 +8,8 @@ on:
       - v*
 
 jobs:
-  # Build docs
   build:
-    name: Build docs
+    name: Build
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
@@ -21,17 +20,14 @@ jobs:
           7z e docfx.zip
       - name: Generate docs
         run: ./docfx.exe Gw2Sharp.DocFX/docfx.json
-      - name: Zip docs
-        run: 7z a docs.zip Gw2Sharp.DocFX/_site/*
       - name: Upload docs
         uses: actions/upload-artifact@v1
         with:
           name: docs
-          path: docs.zip
+          path: Gw2Sharp.DocFX/_site/
 
-  # Push docs
   push:
-    name: Push docs
+    name: Push
     runs-on: ubuntu-latest
     needs: [build]
     steps:
@@ -45,13 +41,12 @@ jobs:
       - name: Replace docs
         run: |
           rm -rf ${GITHUB_REF##*/}
-          7z e docs/docs.zip -o${GITHUB_REF##*/}
-          rm -rf docs
+          mv docs ${GITHUB_REF##*/}
 
           git add -A
           if [[ `git status --porcelain` ]]; then
-            git config --local user.email "action@github.com"
-            git config --local user.name "Github Action"
+            git config --local user.email "actions@github.com"
+            git config --local user.name "github-actions"
             git commit -m "Update documentation for ${GITHUB_REF##*/} (${GITHUB_SHA:0:7})"
           fi
       - name: Push docs
