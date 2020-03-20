@@ -4,7 +4,7 @@ namespace Gw2Sharp.Models
     /// Represents a legend.
     /// Used by chat links.
     /// </summary>
-    public enum Legend : byte
+    public enum LegendType : byte
     {
         /// <summary>
         /// Glint.

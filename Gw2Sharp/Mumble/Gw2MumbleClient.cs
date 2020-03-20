@@ -40,6 +40,7 @@ namespace Gw2Sharp.Mumble
                 () => this.memoryMappedFile.Value.CreateViewAccessor(), true);
         }
 
+        private bool hasNewIdentity = false;
         private string currentIdentityJson = EMPTY_IDENTITY;
         private string? newIdentityJson;
         private CharacterIdentity? identityObject;
@@ -47,8 +48,9 @@ namespace Gw2Sharp.Mumble
         {
             get
             {
-                if (this.identityObject == null || (this.newIdentityJson != null && this.newIdentityJson != this.currentIdentityJson))
+                if (this.identityObject == null || (this.hasNewIdentity && this.newIdentityJson != null && this.newIdentityJson != this.currentIdentityJson))
                 {
+                    this.hasNewIdentity = false;
                     this.currentIdentityJson = this.newIdentityJson ?? EMPTY_IDENTITY;
                     this.newIdentityJson = null;
                     this.identityObject = JsonConvert.DeserializeObject<CharacterIdentity>(this.currentIdentityJson);
@@ -184,16 +186,16 @@ namespace Gw2Sharp.Mumble
             this.IsAvailable ? this.Identity.Name : string.Empty;
 
         /// <inheritdoc />
-        public Profession Profession =>
-            this.IsAvailable ? this.Identity.Profession : (Profession)0;
+        public ProfessionType Profession =>
+            this.IsAvailable ? this.Identity.Profession : 0;
 
         /// <inheritdoc />
         public int Specialization =>
             this.IsAvailable ? this.Identity.Spec : 0;
 
         /// <inheritdoc />
-        public string Race =>
-            this.IsAvailable ? this.Identity.Race.ToString() : string.Empty;
+        public RaceType Race =>
+            this.IsAvailable ? this.Identity.Race : 0;
 
         /// <inheritdoc />
         public int TeamColorId =>
@@ -228,6 +230,7 @@ namespace Gw2Sharp.Mumble
             {
                 // There's actually a possible identity update
                 this.newIdentityJson = new string(linkedMem.identity);
+                this.hasNewIdentity = true;
             }
             else if (!this.IsAvailable)
             {

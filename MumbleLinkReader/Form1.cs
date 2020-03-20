@@ -126,7 +126,7 @@ namespace MumbleLinkReader
                             this.textBoxCameraFront3.Text = m.CameraFront.Z.ToString();
 
                             this.textBoxCharacterName.Text = m.CharacterName;
-                            this.textBoxRace.Text = m.Race;
+                            this.textBoxRace.Text = m.Race.ToString();
                             this.textBoxSpecialization.Text = m.Specialization.ToString();
                             this.textBoxTeamColorId.Text = m.TeamColorId.ToString();
                             this.checkBoxCommander.Checked = m.IsCommander;

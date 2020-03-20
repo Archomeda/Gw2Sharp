@@ -1,4 +1,9 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
+using Gw2Sharp.Models;
 using Gw2Sharp.WebApi.V2.Models;
 
 namespace Gw2Sharp.WebApi.V2.Clients
@@ -19,5 +24,13 @@ namespace Gw2Sharp.WebApi.V2.Clients
         protected internal LegendsClient(IConnection connection, IGw2Client gw2Client) :
             base(connection, gw2Client)
         { }
+
+        /// <inheritdoc />
+        public Task<Legend> GetAsync(LegendType id, CancellationToken cancellationToken = default) =>
+            this.GetAsync(id.ToString(), cancellationToken);
+
+        /// <inheritdoc />
+        public Task<IReadOnlyList<Legend>> ManyAsync(IEnumerable<LegendType> ids, CancellationToken cancellationToken = default) =>
+            this.ManyAsync(ids.Select(x => x.ToString()), cancellationToken);
     }
 }
