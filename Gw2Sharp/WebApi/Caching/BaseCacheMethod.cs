@@ -152,11 +152,6 @@ namespace Gw2Sharp.WebApi.Caching
         }
 
         /// <inheritdoc />
-        [Obsolete("Use ClearAsync instead. Will be removed starting with version 0.9.0")]
-        public Task FlushAsync() =>
-            this.ClearAsync();
-
-        /// <inheritdoc />
         public abstract Task ClearAsync();
 
         /// <summary>

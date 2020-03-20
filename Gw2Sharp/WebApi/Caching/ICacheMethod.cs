@@ -114,13 +114,6 @@ namespace Gw2Sharp.WebApi.Caching
         /// Clears the cache, a.k.a. empties the cache.
         /// </summary>
         /// <returns>The task for this operation.</returns>
-        [Obsolete("Use ClearAsync instead. Will be removed starting with version 0.9.0")]
-        Task FlushAsync();
-
-        /// <summary>
-        /// Clears the cache, a.k.a. empties the cache.
-        /// </summary>
-        /// <returns>The task for this operation.</returns>
         Task ClearAsync();
     }
 }
