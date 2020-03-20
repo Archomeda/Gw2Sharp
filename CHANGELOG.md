@@ -15,6 +15,9 @@
 - **Breaking:** `Gw2Sharp.Models.Profession` has been renamed to `Gw2Sharp.Models.ProfessionType` ([#40](https://github.com/Archomeda/Gw2Sharp/issues/40), [#41](https://github.com/Archomeda/Gw2Sharp/pull/41))
 - `Gw2Sharp.Mumble.Models.Race` has been renamed to `Gw2Sharp.Models.RaceType` and is now public instead of internal ([#40](https://github.com/Archomeda/Gw2Sharp/issues/40), [#41](https://github.com/Archomeda/Gw2Sharp/pull/41))
 
+### Miscellaneous
+- Source Link is now supported ([#46](https://github.com/Archomeda/Gw2Sharp/pull/46))
+
 ### Deprecation removals
 - Following up on version 0.8.0, the method `Gw2Sharp.WebApi.Caching.ICacheMethod.FlushAsync` has been removed in favor of `ClearAsync` ([#31](https://github.com/Archomeda/Gw2Sharp/issues/31), [#44](https://github.com/Archomeda/Gw2Sharp/pull/44))
 - Following up on version 0.8.0, the following pre-template APIs have been removed ([#45](https://github.com/Archomeda/Gw2Sharp/pull/45)):
