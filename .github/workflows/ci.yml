@@ -44,7 +44,10 @@ jobs:
       - name: Patch nightly version
         shell: powershell
         run: |
-          $version = GitVersion /output json /updateassemblyinfo Gw2Sharp/Properties/AssemblyVersionInfo.cs /ensureassemblyinfo | ConvertFrom-Json
+          $version = GitVersion /output json /updateassemblyinfo Gw2Sharp/Properties/AssemblyVersionInfo.cs /ensureassemblyinfo
+          Write-Output $version
+          $version = $version | ConvertFrom-Json
+
           $nuget = $version.SemVer
           if ($version.BranchName -eq "master") {
             $nuget += "-master.$($version.CommitsSinceVersionSource)"
