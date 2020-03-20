@@ -21,7 +21,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>All entries.</returns>
         Task<IApiV2ObjectList<TEndpointObject>> RequestAllAsync<TEndpointObject, TId>(CancellationToken cancellationToken = default)
-            where TEndpointObject : IApiV2Object, IIdentifiable<TId>;
+            where TEndpointObject : IApiV2Object, IIdentifiable<TId>
+            where TId : notnull;
 
         /// <summary>
         /// Requests the list of entry ids from this endpoint.
@@ -29,7 +30,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <typeparam name="TId">The entry id type.</typeparam>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>Entry ids.</returns>
-        Task<IApiV2ObjectList<TId>> RequestIdsAsync<TId>(CancellationToken cancellationToken = default);
+        Task<IApiV2ObjectList<TId>> RequestIdsAsync<TId>(CancellationToken cancellationToken = default)
+            where TId : notnull;
 
         /// <summary>
         /// Requests the main blob data from this endpoint.
@@ -48,7 +50,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <returns>The entry.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="id"/> is <c>null</c>.</exception>
         Task<TEndpointObject> RequestGetAsync<TEndpointObject, TId>(TId id, CancellationToken cancellationToken = default)
-            where TEndpointObject : IApiV2Object, IIdentifiable<TId>;
+            where TEndpointObject : IApiV2Object, IIdentifiable<TId>
+            where TId : notnull;
 
         /// <summary>
         /// Requests many entries by their id (a.k.a. bulk expansion).
@@ -60,7 +63,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <returns>The entries.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="ids"/> is <c>null</c>.</exception>
         Task<IReadOnlyList<TEndpointObject>> RequestManyAsync<TEndpointObject, TId>(IEnumerable<TId> ids, CancellationToken cancellationToken = default)
-            where TEndpointObject : IApiV2Object, IIdentifiable<TId>;
+            where TEndpointObject : IApiV2Object, IIdentifiable<TId>
+            where TId : notnull;
 
         /// <summary>
         /// Requests a page of entries with a specific page size.
@@ -73,7 +77,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <returns>The entries.</returns>
         /// <exception cref="ArgumentOutOfRangeException"><paramref name="pageSize"/> is not within the accepted boundaries (1 - 200).</exception>
         Task<IApiV2ObjectList<TEndpointObject>> RequestPageAsync<TEndpointObject, TId>(int page, int pageSize = DefaultEndpointClientImplementation<TObject>.MAX_PAGE_SIZE, CancellationToken cancellationToken = default)
-                where TEndpointObject : IApiV2Object, IIdentifiable<TId>;
+                where TEndpointObject : IApiV2Object, IIdentifiable<TId>
+            where TId : notnull;
 
         /// <summary>
         /// Requests a page of blob data with a specific page size.

@@ -13,6 +13,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// <typeparam name="TId">The id value type.</typeparam>
     public abstract class BaseEndpointBulkClient<TObject, TId> : BaseEndpointClient<TObject>, IBulkExpandableClient<TObject, TId>, IPaginatedClient<TObject>
         where TObject : IApiV2Object, IIdentifiable<TId>
+        where TId : notnull
     {
         /// <summary>
         /// Creates a new base endpoint bulk client.
