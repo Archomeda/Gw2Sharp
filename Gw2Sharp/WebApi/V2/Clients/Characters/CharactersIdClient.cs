@@ -23,8 +23,6 @@ namespace Gw2Sharp.WebApi.V2.Clients
         private readonly ICharactersIdQuestsClient quests;
         private readonly ICharactersIdRecipesClient recipes;
         private readonly ICharactersIdSabClient sab;
-        private readonly ICharactersIdSkillsClient skills;
-        private readonly ICharactersIdSpecializationsClient specializations;
         private readonly ICharactersIdTrainingClient training;
 
         /// <summary>
@@ -49,8 +47,6 @@ namespace Gw2Sharp.WebApi.V2.Clients
             this.quests = new CharactersIdQuestsClient(connection, gw2Client, characterName);
             this.recipes = new CharactersIdRecipesClient(connection, gw2Client, characterName);
             this.sab = new CharactersIdSabClient(connection, gw2Client, characterName);
-            this.skills = new CharactersIdSkillsClient(connection, gw2Client, characterName);
-            this.specializations = new CharactersIdSpecializationsClient(connection, gw2Client, characterName);
             this.training = new CharactersIdTrainingClient(connection, gw2Client, characterName);
         }
 
@@ -89,14 +85,6 @@ namespace Gw2Sharp.WebApi.V2.Clients
 
         /// <inheritdoc />
         public virtual ICharactersIdSabClient Sab => this.sab;
-
-        /// <inheritdoc />
-        [Obsolete("Deprecated since the build template update on 2019-12-19. Use /v2/characters/:id/buildtabs instead. To be removed starting with version 0.9.0.")]
-        public virtual ICharactersIdSkillsClient Skills => this.skills;
-
-        /// <inheritdoc />
-        [Obsolete("Deprecated since the build template update on 2019-12-19. Use /v2/characters/:id/buildtabs instead. To be removed starting with version 0.9.0.")]
-        public virtual ICharactersIdSpecializationsClient Specializations => this.specializations;
 
         /// <inheritdoc />
         public virtual ICharactersIdTrainingClient Training => this.training;
