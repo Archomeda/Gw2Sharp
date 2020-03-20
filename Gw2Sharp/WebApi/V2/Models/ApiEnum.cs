@@ -89,7 +89,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         {
             return !(other is null) &&
                 EqualityComparer<T>.Default.Equals(this.Value, other.Value) &&
-                EqualityComparer<string>.Default.Equals(this.RawValue?.ToLowerInvariant(), other.RawValue?.ToLowerInvariant());
+                EqualityComparer<string?>.Default.Equals(this.RawValue?.ToLowerInvariant(), other.RawValue?.ToLowerInvariant());
         }
 
         /// <inheritdoc />

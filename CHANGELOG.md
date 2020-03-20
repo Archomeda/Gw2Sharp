@@ -1,5 +1,31 @@
 # Gw2Sharp History
 
+## 0.9.0
+### Services
+- Various web API endpoints have been extended to support enums as ids with automatic conversion to their API id type ([#40](https://github.com/Archomeda/Gw2Sharp/issues/40), [#41](https://github.com/Archomeda/Gw2Sharp/pull/41))
+  - To support this, the interface `Gw2Sharp.WebApi.V2.Clients.IBulkAliasExpandableClient` has been added
+  - `Gw2Sharp.WebApi.V2.Clients.ILegendsClient` now implements `Gw2Sharp.WebApi.V2.Clients.IBulkAliasExpandableClient` and supports requesting `GetAsync` and `ManyAsync` with `Gw2Sharp.Models.LegendType` as id type
+  - `Gw2Sharp.WebApi.V2.Clients.IProfessionClient` now implements `Gw2Sharp.WebApi.V2.Clients.IBulkAliasExpandableClient` and supports requesting `GetAsync` and `ManyAsync` with `Gw2Sharp.Models.ProfessionType` as id type
+  - `Gw2Sharp.WebApi.V2.Clients.IRaceClient` now implements `Gw2Sharp.WebApi.V2.Clients.IBulkAliasExpandableClient` and supports requesting `GetAsync` and `ManyAsync` with `Gw2Sharp.Models.RaceType` as id type
+- **Breaking:** The `Race` property in the Mumble Client is now of type `RaceType` instead of `string` ([#40](https://github.com/Archomeda/Gw2Sharp/issues/40), [#41](https://github.com/Archomeda/Gw2Sharp/pull/41))
+- Repeatedly requesting Mumble identity fields (or just requesting multiple) should be a bit faster now ([#39](https://github.com/Archomeda/Gw2Sharp/issues/39), [#42](https://github.com/Archomeda/Gw2Sharp/pull/42))
+
+### Refactoring
+- **Breaking:** `Gw2Sharp.Models.Legend` has been renamed to `Gw2Sharp.Models.LegendType` ([#40](https://github.com/Archomeda/Gw2Sharp/issues/40), [#41](https://github.com/Archomeda/Gw2Sharp/pull/41))
+- **Breaking:** `Gw2Sharp.Models.Profession` has been renamed to `Gw2Sharp.Models.ProfessionType` ([#40](https://github.com/Archomeda/Gw2Sharp/issues/40), [#41](https://github.com/Archomeda/Gw2Sharp/pull/41))
+- `Gw2Sharp.Mumble.Models.Race` has been renamed to `Gw2Sharp.Models.RaceType` and is now public instead of internal ([#40](https://github.com/Archomeda/Gw2Sharp/issues/40), [#41](https://github.com/Archomeda/Gw2Sharp/pull/41))
+
+### Miscellaneous
+- Source Link is now supported ([#46](https://github.com/Archomeda/Gw2Sharp/pull/46))
+
+### Deprecation removals
+- Following up on version 0.8.0, the method `Gw2Sharp.WebApi.Caching.ICacheMethod.FlushAsync` has been removed in favor of `ClearAsync` ([#31](https://github.com/Archomeda/Gw2Sharp/issues/31), [#44](https://github.com/Archomeda/Gw2Sharp/pull/44))
+- Following up on version 0.8.0, the following pre-template APIs have been removed ([#45](https://github.com/Archomeda/Gw2Sharp/pull/45)):
+  - `/v2/characters/:id/skills`
+  - `/v2/characters/:id/specializations`
+
+---
+
 ## 0.8.2
 ### Fixes
 - Fix API enum comparison with different character casings ([#36](https://github.com/Archomeda/Gw2Sharp/pull/36))

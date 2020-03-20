@@ -51,6 +51,7 @@ namespace Gw2Sharp.Mumble
                 () => this.memoryMappedFile.Value.CreateViewAccessor(), true);
         }
 
+        private bool hasNewIdentity = false;
         private string currentIdentityJson = EMPTY_IDENTITY;
         private readonly char[] newIdentityData = new char[256];
         private CharacterIdentity? identityObject;
@@ -204,16 +205,26 @@ namespace Gw2Sharp.Mumble
             this.IsAvailable && this.Identity != null ? this.Identity.Name : string.Empty;
 
         /// <inheritdoc />
+<<<<<<< HEAD
         public Profession Profession =>
             this.IsAvailable && this.Identity != null ? this.Identity.Profession : 0;
+=======
+        public ProfessionType Profession =>
+            this.IsAvailable ? this.Identity.Profession : 0;
+>>>>>>> 0.9
 
         /// <inheritdoc />
         public int Specialization =>
             this.IsAvailable && this.Identity != null ? this.Identity.Spec : 0;
 
         /// <inheritdoc />
+<<<<<<< HEAD
         public string Race =>
             this.IsAvailable && this.Identity != null ? this.Identity.Race.ToString() : string.Empty;
+=======
+        public RaceType Race =>
+            this.IsAvailable ? this.Identity.Race : 0;
+>>>>>>> 0.9
 
         /// <inheritdoc />
         public int TeamColorId =>
@@ -241,7 +252,20 @@ namespace Gw2Sharp.Mumble
             this.memoryMappedViewAccessor.Value.Read<Gw2LinkedMem>(0, out var linkedMem);
             int oldTick = this.Tick;
 
+<<<<<<< HEAD
             if (linkedMem.uiTick != oldTick)
+=======
+            this.Name = new string(linkedMem.name);
+            this.IsAvailable = this.Name == MUMBLE_LINK_GAME_NAME;
+
+            if (this.IsAvailable && linkedMem.uiTick != oldTick)
+            {
+                // There's actually a possible identity update
+                this.newIdentityJson = new string(linkedMem.identity);
+                this.hasNewIdentity = true;
+            }
+            else if (!this.IsAvailable)
+>>>>>>> 0.9
             {
                 var gameNameSpan = new ReadOnlySpan<char>(mumbleLinkGameName);
                 var linkedNameSpan = new ReadOnlySpan<char>(linkedMem.name, mumbleLinkGameName.Length);

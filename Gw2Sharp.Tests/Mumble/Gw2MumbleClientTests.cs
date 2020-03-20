@@ -45,8 +45,8 @@ namespace Gw2Sharp.Tests.Mumble
             Assert.Equal(-0.3139677, client.CameraFront.Y, 7);
             Assert.Equal(-0.4892152, client.CameraFront.Z, 7);
             Assert.Equal("Reiga Fiercecrusher", client.CharacterName);
-            Assert.Equal(Profession.Warrior, client.Profession);
-            Assert.Equal("Charr", client.Race);
+            Assert.Equal(ProfessionType.Warrior, client.Profession);
+            Assert.Equal(RaceType.Charr, client.Race);
             Assert.Equal(18, client.Specialization);
             Assert.Equal(0, client.TeamColorId);
             Assert.False(client.IsCommander);

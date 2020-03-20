@@ -36,7 +36,6 @@ Install-Package Gw2Sharp
 Whenever a new commit is pushed, a workflow will run on GitHub Actions.
 This will result in a new CI build that will be automatically uploaded to [MyGet](https://www.myget.org/feed/gw2sharp/package/nuget/Gw2Sharp).
 Note that these builds are not considered to be stable, they are meant only for testing purposes.
-Therefore, these packages are also compiled in debug configuration and have their symbols included.
 
 First, you'll have to create a new `nuget.config` file and add the MyGet package source to it:
 ```xml

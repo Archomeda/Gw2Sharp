@@ -1,4 +1,9 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
+using Gw2Sharp.Models;
 using Gw2Sharp.WebApi.V2.Models;
 
 namespace Gw2Sharp.WebApi.V2.Clients
@@ -19,5 +24,13 @@ namespace Gw2Sharp.WebApi.V2.Clients
         protected internal ProfessionsClient(IConnection connection, IGw2Client gw2Client) :
             base(connection, gw2Client)
         { }
+
+        /// <inheritdoc />
+        public Task<Profession> GetAsync(ProfessionType id, CancellationToken cancellationToken = default) =>
+            this.GetAsync(id.ToString(), cancellationToken);
+
+        /// <inheritdoc />
+        public Task<IReadOnlyList<Profession>> ManyAsync(IEnumerable<ProfessionType> ids, CancellationToken cancellationToken = default) =>
+            this.ManyAsync(ids.Select(x => x.ToString()), cancellationToken);
     }
 }

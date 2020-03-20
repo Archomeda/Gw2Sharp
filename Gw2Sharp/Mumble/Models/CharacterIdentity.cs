@@ -16,7 +16,7 @@ namespace Gw2Sharp.Mumble.Models
         /// <summary>
         /// The character profession.
         /// </summary>
-        public Profession Profession { get; set; }
+        public ProfessionType Profession { get; set; }
 
         /// <summary>
         /// The character specialization.
@@ -26,7 +26,7 @@ namespace Gw2Sharp.Mumble.Models
         /// <summary>
         /// The character race.
         /// </summary>
-        public Race Race { get; set; }
+        public RaceType Race { get; set; }
 
         /// <summary>
         /// The team color id.

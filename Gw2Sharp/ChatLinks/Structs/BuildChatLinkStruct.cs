@@ -15,7 +15,7 @@ namespace Gw2Sharp.ChatLinks.Structs
         /// Matches <see cref="WebApi.V2.Models.Profession.Code"/> in <see cref="IGw2WebApiV2Client.Professions"/>.
         /// </summary>
         [FieldOffset(0)]
-        public Profession Profession;
+        public ProfessionType Profession;
 
         /// <summary>
         /// The first specialization id.
