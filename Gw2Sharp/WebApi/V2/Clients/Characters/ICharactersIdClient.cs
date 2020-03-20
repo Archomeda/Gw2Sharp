@@ -1,4 +1,3 @@
-using System;
 using Gw2Sharp.WebApi.V2.Models;
 
 namespace Gw2Sharp.WebApi.V2.Clients
@@ -82,20 +81,6 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Requires scopes: account, characters, progression.
         /// </summary>
         ICharactersIdSabClient Sab { get; }
-
-        /// <summary>
-        /// Gets a character's skills.
-        /// Requires scopes: account, builds, characters.
-        /// </summary>
-        [Obsolete("Deprecated since the build template update on 2019-12-19. Use /v2/characters/:id/buildtabs instead. To be removed starting with version 0.9.0.")]
-        ICharactersIdSkillsClient Skills { get; }
-
-        /// <summary>
-        /// Gets a character's specializations.
-        /// Requires scopes: account, builds, characters.
-        /// </summary>
-        [Obsolete("Deprecated since the build template update on 2019-12-19. Use /v2/characters/:id/buildtabs instead. To be removed starting with version 0.9.0.")]
-        ICharactersIdSpecializationsClient Specializations { get; }
 
         /// <summary>
         /// Gets a character's training information.

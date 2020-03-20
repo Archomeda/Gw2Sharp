@@ -17,6 +17,9 @@
 
 ### Deprecation removals
 - Following up on version 0.8.0, the method `Gw2Sharp.WebApi.Caching.ICacheMethod.FlushAsync` has been removed in favor of `ClearAsync` ([#31](https://github.com/Archomeda/Gw2Sharp/issues/31), [#44](https://github.com/Archomeda/Gw2Sharp/pull/44))
+- Following up on version 0.8.0, the following pre-template APIs have been removed ([#45](https://github.com/Archomeda/Gw2Sharp/pull/45)):
+  - `/v2/characters/:id/skills`
+  - `/v2/characters/:id/specializations`
 
 ---
 
