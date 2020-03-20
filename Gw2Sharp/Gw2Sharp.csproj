@@ -10,7 +10,6 @@
     <GenerateNullableAttributes>true</GenerateNullableAttributes>
 
     <PackageId>Gw2Sharp</PackageId>
-    <Version>0.9.0</Version>
     <Authors>Archomeda</Authors>
     <Description>
 Gw2Sharp is a .NET wrapper library for the official Guild Wars 2 API.
@@ -40,13 +39,7 @@ Visit https://archomeda.github.io/Gw2Sharp for more information.
   </ItemGroup>
 
   <PropertyGroup Condition="'$(VERSIONED_BUILD)'!=''">
-    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
-    <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
-    <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
-    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(GITLAB_CI)'!=''">
+    <Version>$(VERSIONED_BUILD)</Version>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
     <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>

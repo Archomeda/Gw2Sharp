@@ -1,10 +1,8 @@
-name: CI
+name: Publish version
 
 on:
   push:
-    branches:
-      - '**'
-    tags-ignore:
+    tags:
       - v*
 
 jobs:
@@ -28,8 +26,8 @@ jobs:
       - name: Run dotnet test
         run: dotnet test -c Release
 
-  nightly:
-    name: Nightly
+  release:
+    name: Release
     runs-on: windows-latest
     needs: [test]
     steps:
@@ -43,28 +41,32 @@ jobs:
       - name: Install InheritDocTool
         shell: powershell
         run: dotnet tool install --global InheritDocTool
-      - name: Patch nightly version
+      - name: Patch release version
         shell: powershell
         run: |
-          $version = GitVersion /output json /updateassemblyinfo Gw2Sharp/Properties/AssemblyVersionInfo.cs /ensureassemblyinfo
-          Write-Output $version
-          $version = $version | ConvertFrom-Json
-
+          $version = GitVersion /output json /updateassemblyinfo Gw2Sharp/Properties/AssemblyVersionInfo.cs /ensureassemblyinfo | ConvertFrom-Json
           $nuget = $version.SemVer
-          if ($version.BranchName -eq "master") {
-            $nuget += "-master.$($version.CommitsSinceVersionSource)"
-          }
           Write-Output "Assembly version: $($version.AssemblySemVer)"
           Write-Output "Assembly file version: $($version.AssemblySemFileVer)"
           Write-Output "Informational version: $($version.InformationalVersion)"
           Write-Output "NuGet version: $nuget"
           echo "::set-env name=VERSION::$nuget"
       - name: Run dotnet build
-        run: dotnet build -c Release -p:VERSIONED_BUILD=$env:VERSION
+        run: dotnet build -c Release -p:VERSIONED_BUILD=${{ env.VERSION }}
       - name: Run InheritDocTool
         shell: powershell
         run: InheritDoc -o
+      - name: Zip binaries
+        shell: powershell
+        run: 7z a Gw2Sharp.zip ./Gw2Sharp/bin/Release/*
       - name: Run dotnet pack
-        run: dotnet pack Gw2Sharp -c Release --no-build -p:VERSIONED_BUILD=$env:VERSION
-      - name: Run dotnet nuget push
-        run: dotnet nuget push **/*.symbols.nupkg -s "https://www.myget.org/F/gw2sharp/api/v2/package" -k "${{ secrets.MYGET_TOKEN }}"
+        run: dotnet pack Gw2Sharp -c Release --no-build --include-symbols -p:SymbolPackageFormat=snupkg -p:VERSIONED_BUILD=${{ env.VERSION }} -o pack
+      - name: Create release
+        uses: softprops/action-gh-release@v1
+        with:
+          draft: true
+          files: |
+            Gw2Sharp.zip
+            pack/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
