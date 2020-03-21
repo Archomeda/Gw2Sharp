@@ -1,9 +1,10 @@
 using System;
 using System.IO.MemoryMappedFiles;
 using System.Net.Sockets;
+using System.Text.Json;
+using Gw2Sharp.Json;
 using Gw2Sharp.Models;
 using Gw2Sharp.Mumble.Models;
-using Newtonsoft.Json;
 
 namespace Gw2Sharp.Mumble
 {
@@ -12,8 +13,18 @@ namespace Gw2Sharp.Mumble
     /// </summary>
     public class Gw2MumbleClient : BaseClient, IGw2MumbleClient
     {
+        /// <summary>
+        /// The settings that are used when deserializing JSON objects.
+        /// </summary>
+        private static readonly JsonSerializerOptions deserializerSettings = new JsonSerializerOptions
+        {
+            PropertyNameCaseInsensitive = true,
+            PropertyNamingPolicy = SnakeCaseNamingPolicy.SnakeCase
+        };
+
         internal const string MUMBLE_LINK_MAP_NAME = "MumbleLink";
-        internal const string MUMBLE_LINK_GAME_NAME = "Guild Wars 2";
+        internal const string MUMBLE_LINK_GAME_NAME_GUILD_WARS_2 = "Guild Wars 2";
+        internal static readonly char[] mumbleLinkGameName = new[] { 'G', 'u', 'i', 'l', 'd', ' ', 'W', 'a', 'r', 's', ' ', '2', '\0' };
         private const string EMPTY_IDENTITY = "{}";
 
         private readonly Lazy<MemoryMappedFile> memoryMappedFile;
@@ -42,18 +53,26 @@ namespace Gw2Sharp.Mumble
 
         private bool hasNewIdentity = false;
         private string currentIdentityJson = EMPTY_IDENTITY;
-        private string? newIdentityJson;
+        private readonly char[] newIdentityData = new char[256];
         private CharacterIdentity? identityObject;
-        private CharacterIdentity Identity
+        private unsafe CharacterIdentity? Identity
         {
             get
             {
-                if (this.identityObject == null || (this.hasNewIdentity && this.newIdentityJson != null && this.newIdentityJson != this.currentIdentityJson))
+                if (this.newIdentityData[0] != '\0')
                 {
-                    this.hasNewIdentity = false;
-                    this.currentIdentityJson = this.newIdentityJson ?? EMPTY_IDENTITY;
-                    this.newIdentityJson = null;
-                    this.identityObject = JsonConvert.DeserializeObject<CharacterIdentity>(this.currentIdentityJson);
+                    var currentIdentitySpan = this.currentIdentityJson.AsSpan();
+                    var newIdentitySpan = this.newIdentityData.AsSpan(0, this.currentIdentityJson.Length);
+
+                    if (!newIdentitySpan.SequenceEqual(currentIdentitySpan))
+                    {
+                        fixed (char* newIdentityPtr = this.newIdentityData)
+                        {
+                            this.currentIdentityJson = new string(newIdentityPtr);
+                            this.identityObject = JsonSerializer.Deserialize<CharacterIdentity>(this.currentIdentityJson, deserializerSettings);
+                        }
+                    }
+                    this.newIdentityData[0] = '\0';
                 }
                 return this.identityObject;
             }
@@ -183,35 +202,35 @@ namespace Gw2Sharp.Mumble
 
         /// <inheritdoc />
         public string CharacterName =>
-            this.IsAvailable ? this.Identity.Name : string.Empty;
+            this.IsAvailable && this.Identity != null ? this.Identity.Name : string.Empty;
 
         /// <inheritdoc />
         public ProfessionType Profession =>
-            this.IsAvailable ? this.Identity.Profession : 0;
+            this.IsAvailable && this.Identity != null ? this.Identity.Profession : 0;
 
         /// <inheritdoc />
         public int Specialization =>
-            this.IsAvailable ? this.Identity.Spec : 0;
+            this.IsAvailable && this.Identity != null ? this.Identity.Spec : 0;
 
         /// <inheritdoc />
         public RaceType Race =>
-            this.IsAvailable ? this.Identity.Race : 0;
+            this.IsAvailable && this.Identity != null ? this.Identity.Race : 0;
 
         /// <inheritdoc />
         public int TeamColorId =>
-            this.IsAvailable ? this.Identity.TeamColorId : default;
+            this.IsAvailable && this.Identity != null ? this.Identity.TeamColorId : default;
 
         /// <inheritdoc />
         public bool IsCommander =>
-            this.IsAvailable ? this.Identity.Commander : default;
+            this.IsAvailable && this.Identity != null ? this.Identity.Commander : default;
 
         /// <inheritdoc />
         public double FieldOfView =>
-            this.IsAvailable ? this.Identity.Fov : default;
+            this.IsAvailable && this.Identity != null ? this.Identity.Fov : default;
 
         /// <inheritdoc />
         public UiSize UiSize =>
-            this.IsAvailable ? this.Identity.Uisz : default;
+            this.IsAvailable && this.Identity != null ? this.Identity.Uisz : default;
 
 
         /// <inheritdoc />
@@ -223,19 +242,22 @@ namespace Gw2Sharp.Mumble
             this.memoryMappedViewAccessor.Value.Read<Gw2LinkedMem>(0, out var linkedMem);
             int oldTick = this.Tick;
 
-            this.Name = new string(linkedMem.name);
-            this.IsAvailable = this.Name == MUMBLE_LINK_GAME_NAME;
+            if (linkedMem.uiTick != oldTick)
+            {
+                var gameNameSpan = new ReadOnlySpan<char>(mumbleLinkGameName);
+                var linkedNameSpan = new ReadOnlySpan<char>(linkedMem.name, mumbleLinkGameName.Length);
+                this.IsAvailable = gameNameSpan.SequenceEqual(linkedNameSpan);
 
-            if (this.IsAvailable && linkedMem.uiTick != oldTick)
-            {
-                // There's actually a possible identity update
-                this.newIdentityJson = new string(linkedMem.identity);
-                this.hasNewIdentity = true;
-            }
-            else if (!this.IsAvailable)
-            {
-                // Mumble Link isn't available, clear the identity
-                this.newIdentityJson = null;
+                if (this.IsAvailable)
+                {
+                    this.Name = MUMBLE_LINK_GAME_NAME_GUILD_WARS_2;
+                    fixed (char* ptr = this.newIdentityData)
+                        Buffer.MemoryCopy(linkedMem.identity, ptr, 512, 512);
+                }
+                else
+                {
+                    this.Name = new string(linkedMem.name);
+                }
             }
 
             this.linkedMem = linkedMem;

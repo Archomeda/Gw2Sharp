@@ -1,5 +1,4 @@
 using System;
-using System.Threading.Tasks;
 using Gw2Sharp.Json.Converters;
 using Gw2Sharp.WebApi;
 using Gw2Sharp.WebApi.Render;
@@ -23,8 +22,7 @@ namespace Gw2Sharp.Tests.Json.Converters
         public void NoWriteTest()
         {
             var converter = new RenderUrlConverter(this.client);
-            Assert.False(converter.CanWrite);
-            Assert.Throws<NotImplementedException>(() => converter.WriteJson(default!, new RenderUrl(), default!));
+            Assert.Throws<NotImplementedException>(() => converter.Write(default!, default!, default!));
         }
 
         [Fact]

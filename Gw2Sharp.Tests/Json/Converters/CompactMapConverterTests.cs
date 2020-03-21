@@ -11,8 +11,7 @@ namespace Gw2Sharp.Tests.Json.Converters
         public void NoWriteTest()
         {
             var converter = new CompactMapConverter();
-            Assert.False(converter.CanWrite);
-            Assert.Throws<NotImplementedException>(() => converter.WriteJson(default!, new Dictionary<int, int>(), default!));
+            Assert.Throws<NotImplementedException>(() => converter.Write(default!, default!, default!));
         }
 
         [Fact]
