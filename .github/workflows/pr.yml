@@ -12,13 +12,14 @@ jobs:
         os:
           - ubuntu-latest
           - windows-latest
+        dotnet:
+          - netcoreapp3.1
+          - netcoreapp2.1
+          - net461
+        exclude:
+          - os: ubuntu-latest
+            dotnet: net461
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-dotnet@v1
-        name: Install .NET Core 3.1
-        with:
-          dotnet-version: "3.1.102"
-      - name: Run dotnet build
-        run: dotnet build Gw2Sharp -c Release
       - name: Run dotnet test
-        run: dotnet test -c Release
+        run: dotnet test -c Release -f ${{ matrix.dotnet }}

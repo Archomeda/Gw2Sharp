@@ -115,7 +115,11 @@ namespace Gw2Sharp.Tests
         [InlineData("membership required", HttpStatusCode.Forbidden, typeof(MembershipRequiredException))]
         [InlineData("access restricted to guild leaders", HttpStatusCode.Forbidden, typeof(RestrictedToGuildLeadersException))]
         [InlineData("not found", HttpStatusCode.NotFound, typeof(NotFoundException))]
+#if NET461
+        [InlineData("too many requests", (HttpStatusCode)429, typeof(TooManyRequestsException))]
+#else
         [InlineData("too many requests", HttpStatusCode.TooManyRequests, typeof(TooManyRequestsException))]
+#endif
         [InlineData("server error", HttpStatusCode.InternalServerError, typeof(ServerErrorException))]
         [InlineData("service unavailable", HttpStatusCode.ServiceUnavailable, typeof(ServiceUnavailableException))]
         public async Task ExceptionRequestTest(string errorText, HttpStatusCode statusCode, Type exceptionType)
