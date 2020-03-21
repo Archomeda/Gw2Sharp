@@ -27,6 +27,9 @@ namespace Gw2Sharp.Mumble
         internal static readonly char[] mumbleLinkGameName = new[] { 'G', 'u', 'i', 'l', 'd', ' ', 'W', 'a', 'r', 's', ' ', '2', '\0' };
         private const string EMPTY_IDENTITY = "{}";
 
+        private readonly object identityLock = new object();
+        private readonly object serverAddressLock = new object();
+
         private readonly Lazy<MemoryMappedFile> memoryMappedFile;
         private readonly Lazy<MemoryMappedViewAccessor> memoryMappedViewAccessor;
 
@@ -51,30 +54,38 @@ namespace Gw2Sharp.Mumble
                 () => this.memoryMappedFile.Value.CreateViewAccessor(), true);
         }
 
-        private bool hasNewIdentity = false;
-        private string currentIdentityJson = EMPTY_IDENTITY;
-        private readonly char[] newIdentityData = new char[256];
-        private CharacterIdentity? identityObject;
+        private string identityCache = EMPTY_IDENTITY;
+        private CharacterIdentity? identity;
         private unsafe CharacterIdentity? Identity
         {
             get
             {
-                if (this.newIdentityData[0] != '\0')
-                {
-                    var currentIdentitySpan = this.currentIdentityJson.AsSpan();
-                    var newIdentitySpan = this.newIdentityData.AsSpan(0, this.currentIdentityJson.Length);
+                // Check if we're in the same frame update
+                if (this.linkedMem.identity[0] == '\0')
+                    return this.identity;
 
-                    if (!newIdentitySpan.SequenceEqual(currentIdentitySpan))
+                // Thread-safety
+                lock (this.identityLock)
+                {
+                    // Check again
+                    if (this.linkedMem.identity[0] != '\0')
                     {
-                        fixed (char* newIdentityPtr = this.newIdentityData)
+                        var cacheSpan = this.identityCache.AsSpan();
+                        fixed (char* ptr = this.linkedMem.identity)
                         {
-                            this.currentIdentityJson = new string(newIdentityPtr);
-                            this.identityObject = JsonSerializer.Deserialize<CharacterIdentity>(this.currentIdentityJson, deserializerSettings);
+                            // Check if the identity is different from last update
+                            var span = new ReadOnlySpan<char>(ptr, this.identityCache.Length);
+                            if (!span.SequenceEqual(cacheSpan))
+                            {
+                                // Update and parse JSON
+                                this.identityCache = new string(ptr);
+                                this.identity = JsonSerializer.Deserialize<CharacterIdentity>(this.identityCache, deserializerSettings);
+                            }
                         }
+                        this.linkedMem.identity[0] = '\0';
                     }
-                    this.newIdentityData[0] = '\0';
                 }
-                return this.identityObject;
+                return this.identity;
             }
         }
 
@@ -109,6 +120,9 @@ namespace Gw2Sharp.Mumble
         public unsafe Coordinates3 CameraFront =>
             this.IsAvailable ? new Coordinates3(this.linkedMem.fCameraFront[0], this.linkedMem.fCameraFront[1], this.linkedMem.fCameraFront[2]) : default;
 
+        private readonly byte[] serverAddressCache = new byte[Gw2Context.SOCKET_ADDRESS_SIZE];
+        private bool serverAddressCacheDirty = true;
+        private string? serverAddress;
         /// <inheritdoc />
         public unsafe string ServerAddress
         {
@@ -117,17 +131,45 @@ namespace Gw2Sharp.Mumble
                 if (!this.IsAvailable)
                     return string.Empty;
 
-                var context = this.linkedMem.context;
-                switch (context.socketAddressFamily)
+                // Check if we're in the same frame update
+                if (!this.serverAddressCacheDirty)
+                    return this.serverAddress ?? string.Empty;
+
+                // Thread-safety
+                lock (this.serverAddressLock)
                 {
-                    case AddressFamily.InterNetwork:
-                        return $"{context.socketAddress4[0]}.{context.socketAddress4[1]}.{context.socketAddress4[2]}.{context.socketAddress4[3]}";
-                    case AddressFamily.InterNetworkV6:
-                        return $"{context.socketAddress6[0]:X4}:{context.socketAddress6[1]:X4}:{context.socketAddress6[2]:X4}:{context.socketAddress6[3]:X4}:" +
-                        $"{context.socketAddress6[4]:X4}:{context.socketAddress6[5]:X4}:{context.socketAddress6[6]:X4}:{context.socketAddress6[7]:X4}";
-                    default:
-                        return string.Empty;
+                    var cacheSpan = this.serverAddressCache.AsSpan();
+                    fixed (byte* ptr = this.linkedMem.context.socketAddress)
+                    {
+                        // Check if the server address is different from last update
+                        var span = new ReadOnlySpan<byte>(ptr, Gw2Context.SOCKET_ADDRESS_SIZE);
+                        if (!span.SequenceEqual(cacheSpan))
+                        {
+                            // Update server address
+                            span.CopyTo(cacheSpan);
+                            this.serverAddressCacheDirty = false;
+                            this.serverAddress = this.linkedMem.context.socketAddressFamily switch
+                            {
+                                AddressFamily.InterNetwork =>
+                                    $"{this.linkedMem.context.socketAddress4[0]}." +
+                                    $"{this.linkedMem.context.socketAddress4[1]}." +
+                                    $"{this.linkedMem.context.socketAddress4[2]}." +
+                                    $"{this.linkedMem.context.socketAddress4[3]}",
+                                AddressFamily.InterNetworkV6 =>
+                                    $"{this.linkedMem.context.socketAddress6[0]:X4}:" +
+                                    $"{this.linkedMem.context.socketAddress6[1]:X4}:" +
+                                    $"{this.linkedMem.context.socketAddress6[2]:X4}:" +
+                                    $"{this.linkedMem.context.socketAddress6[3]:X4}:" +
+                                    $"{this.linkedMem.context.socketAddress6[4]:X4}:" +
+                                    $"{this.linkedMem.context.socketAddress6[5]:X4}:" +
+                                    $"{this.linkedMem.context.socketAddress6[6]:X4}:" +
+                                    $"{this.linkedMem.context.socketAddress6[7]:X4}",
+                                _ => string.Empty
+                            };
+                        }
+                    }
                 }
+                return this.serverAddress ?? string.Empty;
             }
         }
 
@@ -239,6 +281,8 @@ namespace Gw2Sharp.Mumble
             if (this.isDisposed)
                 throw new ObjectDisposedException(nameof(Gw2MumbleClient));
 
+
+
             this.memoryMappedViewAccessor.Value.Read<Gw2LinkedMem>(0, out var linkedMem);
             int oldTick = this.Tick;
 
@@ -251,8 +295,7 @@ namespace Gw2Sharp.Mumble
                 if (this.IsAvailable)
                 {
                     this.Name = MUMBLE_LINK_GAME_NAME_GUILD_WARS_2;
-                    fixed (char* ptr = this.newIdentityData)
-                        Buffer.MemoryCopy(linkedMem.identity, ptr, 512, 512);
+                    this.serverAddressCacheDirty = true;
                 }
                 else
                 {

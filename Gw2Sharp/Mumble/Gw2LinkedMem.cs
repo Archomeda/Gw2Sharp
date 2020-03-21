@@ -49,6 +49,11 @@ namespace Gw2Sharp.Mumble
     [StructLayout(LayoutKind.Explicit)]
     internal unsafe struct Gw2Context
     {
+        public const int SOCKET_ADDRESS_SIZE = 28;
+
+        [FieldOffset(0)]
+        public fixed byte socketAddress[SOCKET_ADDRESS_SIZE];
+
         [FieldOffset(0)]
         private ushort _socketAddressFamily;
         public AddressFamily socketAddressFamily => (AddressFamily)this._socketAddressFamily;

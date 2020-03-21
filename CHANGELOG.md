@@ -10,7 +10,7 @@ For this release, Gw2Sharp has swapped its JSON dependency from Newtonsoft.Json 
   - `Gw2Sharp.WebApi.V2.Clients.IProfessionClient` now implements `Gw2Sharp.WebApi.V2.Clients.IBulkAliasExpandableClient` and supports requesting `GetAsync` and `ManyAsync` with `Gw2Sharp.Models.ProfessionType` as id type
   - `Gw2Sharp.WebApi.V2.Clients.IRaceClient` now implements `Gw2Sharp.WebApi.V2.Clients.IBulkAliasExpandableClient` and supports requesting `GetAsync` and `ManyAsync` with `Gw2Sharp.Models.RaceType` as id type
 - **Breaking:** The `Race` property in the Mumble Client is now of type `RaceType` instead of `string` ([#40](https://github.com/Archomeda/Gw2Sharp/issues/40), [#41](https://github.com/Archomeda/Gw2Sharp/pull/41))
-- Repeatedly requesting Mumble identity fields (or just requesting multiple) should be a bit faster now ([#39](https://github.com/Archomeda/Gw2Sharp/issues/39), [#42](https://github.com/Archomeda/Gw2Sharp/pull/42), [#48](https://github.com/Archomeda/Gw2Sharp/pull/48))
+- Repeatedly requesting Mumble identity fields (or just requesting multiple) should be a bit faster now ([#39](https://github.com/Archomeda/Gw2Sharp/issues/39), [#42](https://github.com/Archomeda/Gw2Sharp/pull/42), [#48](https://github.com/Archomeda/Gw2Sharp/pull/48), [#50](https://github.com/Archomeda/Gw2Sharp/pull/50))
 
 ### Refactoring
 - **Breaking:** `Gw2Sharp.Models.Legend` has been renamed to `Gw2Sharp.Models.LegendType` ([#40](https://github.com/Archomeda/Gw2Sharp/issues/40), [#41](https://github.com/Archomeda/Gw2Sharp/pull/41))
