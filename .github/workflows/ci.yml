@@ -46,11 +46,7 @@ jobs:
           $version = GitVersion /output json /updateassemblyinfo Gw2Sharp/Properties/AssemblyVersionInfo.cs /ensureassemblyinfo
           Write-Output $version
           $version = $version | ConvertFrom-Json
-
           $nuget = $version.SemVer
-          if ($version.BranchName -eq "master") {
-            $nuget += "-master.$($version.CommitsSinceVersionSource)"
-          }
           Write-Output "Assembly version: $($version.AssemblySemVer)"
           Write-Output "Assembly file version: $($version.AssemblySemFileVer)"
           Write-Output "Informational version: $($version.InformationalVersion)"
