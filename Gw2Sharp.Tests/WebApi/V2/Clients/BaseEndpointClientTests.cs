@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Reflection;
+using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
 using Gw2Sharp.Extensions;
@@ -16,7 +17,6 @@ using Gw2Sharp.WebApi.Http;
 using Gw2Sharp.WebApi.V2;
 using Gw2Sharp.WebApi.V2.Clients;
 using Gw2Sharp.WebApi.V2.Models;
-using Newtonsoft.Json.Linq;
 using NSubstitute;
 using NSubstitute.Core;
 using Xunit;
@@ -80,7 +80,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
             });
 
             var actual = await client.PageAsync(2, 100);
-            this.AssertJsonObject(expected, actual);
+            this.AssertJsonObject(expected.RootElement, actual);
         }
 
         protected virtual async Task AssertBlobDataAsync<TObject>(IBlobClient<TObject> client, string file)
@@ -97,14 +97,14 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
             });
 
             var actual = await client.GetAsync();
-            this.AssertJsonObject(expected, actual!);
+            this.AssertJsonObject(expected.RootElement, actual!);
         }
 
         protected virtual async Task AssertGetDataAsync<TObject, TId>(IBulkExpandableClient<TObject, TId> client, string file, string idName = "id")
             where TObject : IApiV2Object, IIdentifiable<TId>
         {
             var (data, expected) = this.GetTestData(file);
-            var id = this.GetId<TId>(expected[idName]);
+            var id = this.GetId<TId>(expected.RootElement.GetProperty(idName));
 
             ((IClientInternal)this.Client).Connection.HttpClient.RequestAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Returns(callInfo =>
             {
@@ -120,7 +120,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
             });
 
             var actual = await client.GetAsync(id);
-            this.AssertJsonObject(expected, actual);
+            this.AssertJsonObject(expected.RootElement, actual);
         }
 
         protected virtual async Task AssertAllDataAsync<TObject>(IAllExpandableClient<TObject> client, string file, string idsName = "ids")
@@ -137,17 +137,14 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
             });
 
             var actual = await client.AllAsync();
-            this.AssertJsonObject(expected, actual);
+            this.AssertJsonObject(expected.RootElement, actual);
         }
 
         protected virtual async Task AssertBulkDataAsync<TObject, TId>(IBulkExpandableClient<TObject, TId> client, string file, string idName = "id", string idsName = "ids")
             where TObject : IApiV2Object, IIdentifiable<TId>
         {
             var (data, expected) = this.GetTestData(file);
-            var ids = this.GetIds<TId>(expected.Select(i =>
-            {
-                return i is JProperty prop ? prop.Value[idName] : i[idName];
-            }));
+            var ids = this.GetIds<TId>(expected.RootElement.EnumerateArray().Select(i => i.GetProperty(idName)));
 
             ((IClientInternal)this.Client).Connection.HttpClient.RequestAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Returns(callInfo =>
             {
@@ -167,7 +164,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
             });
 
             var actual = await client.ManyAsync(ids);
-            this.AssertJsonObject(expected, actual);
+            this.AssertJsonObject(expected.RootElement, actual);
         }
 
         protected virtual async Task AssertIdsDataAsync<TObject, TId>(IBulkExpandableClient<TObject, TId> client, string file)
@@ -185,7 +182,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
             });
 
             var actual = await client.IdsAsync();
-            this.AssertJsonObject(expected, actual);
+            this.AssertJsonObject(expected.RootElement, actual);
         }
 
         protected virtual void AssertRequest(CallInfo callInfo, IEndpointClient client, string pathAndQuery)
@@ -244,7 +241,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
         }
 
 
-        protected (string, JToken) GetTestData(string fileResourceName)
+        protected (string, JsonDocument) GetTestData(string fileResourceName)
         {
             using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream($"Gw2Sharp.Tests.{fileResourceName}"))
             {
@@ -253,37 +250,35 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                 using (var reader = new StreamReader(stream))
                 {
                     string data = reader.ReadToEnd();
-                    return (data, JToken.Parse(data));
+                    return (data, JsonDocument.Parse(data));
                 }
             }
         }
 
-        protected TObject GetId<TObject>(JToken id) =>
-            typeof(TObject) == typeof(Guid) ? (TObject)(object)Guid.Parse(id.Value<string>()) : id.Value<TObject>();
+        protected TObject GetId<TObject>(JsonElement id) =>
+            typeof(TObject) == typeof(Guid) ? (TObject)(object)id.GetGuid() : JsonSerializer.Deserialize<TObject>(id.GetRawText());
 
-        protected IEnumerable<TObject> GetIds<TObject>(IEnumerable<JToken> ids) =>
-            typeof(TObject) == typeof(Guid) ? ids.Select(i => Guid.Parse(i.Value<string>())).Cast<TObject>() : ids.Select(i => i.Value<TObject>());
+        protected IEnumerable<TObject> GetIds<TObject>(IEnumerable<JsonElement> ids) =>
+            typeof(TObject) == typeof(Guid) ? ids.Select(i => i.GetGuid()).Cast<TObject>() : ids.Select(i => JsonSerializer.Deserialize<TObject>(i.GetRawText()));
 
 
-        protected void AssertJsonObject(object expected, object actual)
+        protected void AssertJsonObject(JsonElement expected, object actual)
         {
-            switch (expected)
+            switch (expected.ValueKind)
             {
-                case JObject jObject:
-                    this.AssertJsonObject(jObject, actual);
+                case JsonValueKind.Object:
+                    this.AssertJsonObject(expected.EnumerateObject(), actual);
                     break;
-                case JArray jArray:
-                    this.AssertJsonObject(jArray, actual);
-                    break;
-                case JValue jValue:
-                    this.AssertJsonObject(jValue, actual);
+                case JsonValueKind.Array:
+                    this.AssertJsonObject(expected.EnumerateArray(), actual);
                     break;
                 default:
-                    throw new InvalidOperationException($"{nameof(expected)} is not an object, array or value");
+                    this.AssertJsonValue(expected, actual);
+                    break;
             }
         }
 
-        protected void AssertJsonObject(JObject expected, object actual)
+        protected void AssertJsonObject(JsonElement.ObjectEnumerator expected, object actual)
         {
             var type = actual.GetType();
             if (type.IsGenericType && (type.GetGenericTypeDefinition() == typeof(ReadOnlyDictionary<,>) || type.GetGenericTypeDefinition() == typeof(Dictionary<,>)))
@@ -296,11 +291,11 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                     dynamic key;
                     if (keyType == typeof(string))
                     {
-                        key = kvp.Key;
+                        key = kvp.Name;
                     }
                     else
                     {
-                        string keyString = string.Concat(kvp.Key.Split('_').Select(s => string.Concat(
+                        string keyString = string.Concat(kvp.Name.Split('_').Select(s => string.Concat(
                             s[0].ToString().ToUpper(),
                             s.Substring(1))));
                         key = Convert.ChangeType(keyString, keyType);
@@ -316,7 +311,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                 // Specific object
                 foreach (var kvp in expected)
                 {
-                    string key = string.Concat(kvp.Key.Split('_').Select(s => string.Concat(
+                    string key = string.Concat(kvp.Name.Split('_').Select(s => string.Concat(
                         s[0].ToString().ToUpper(),
                         s.Substring(1))));
                     var property = type.GetProperty(key);
@@ -328,7 +323,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
             }
         }
 
-        protected void AssertJsonObject(JArray expected, object actual)
+        protected void AssertJsonObject(JsonElement.ArrayEnumerator expected, object actual)
         {
             var actualList = (actual as IEnumerable)?.Cast<object>().ToList();
             if (actualList is null && actual.GetType().GetGenericTypeDefinition() == typeof(KeyValuePair<,>))
@@ -340,45 +335,52 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
             if (actualList is null)
                 throw new InvalidOperationException($"Expected an object that's castable to an enumerable for {expected}");
 
-            for (int i = 0; i < expected.Count; i++)
-                this.AssertJsonObject(expected[i], actualList[i]);
+            var expectedList = expected.ToList();
+            for (int i = 0; i < expectedList.Count; i++)
+                this.AssertJsonObject(expectedList[i], actualList[i]);
         }
 
-        protected void AssertJsonObject(JValue expected, object actual)
+        protected void AssertJsonValue(JsonElement expected, object actual)
         {
             bool switched = true;
             switch (actual)
             {
                 case Guid guid:
-                    Assert.Equal(new Guid(expected.Value<string>()), guid);
+                    Assert.Equal(new Guid(expected.GetString()), guid);
                     break;
                 case DateTime dateTime:
-                    Assert.Equal(expected.Value<DateTime>(), dateTime);
+                    Assert.Equal(expected.GetDateTime(), dateTime);
                     break;
                 case DateTimeOffset dateTime:
-                    Assert.Equal(expected.Value<DateTime>(), dateTime);
+                    Assert.Equal(expected.GetDateTimeOffset(), dateTime);
                     break;
                 case TimeSpan timeSpan:
-                    Assert.Equal(TimeSpan.FromSeconds(expected.Value<int>()), timeSpan);
+                    Assert.Equal(TimeSpan.FromSeconds(expected.GetInt32()), timeSpan);
                     break;
                 case int @int:
-                    Assert.Equal(expected.Value<int>(), @int);
+                    if (expected.ValueKind == JsonValueKind.String)
+                        Assert.Equal(int.Parse(expected.GetString()), @int);
+                    else
+                        Assert.Equal(expected.GetInt32(), @int);
                     break;
                 case long @long:
-                    Assert.Equal(expected.Value<long>(), @long);
+                    if (expected.ValueKind == JsonValueKind.String)
+                        Assert.Equal(long.Parse(expected.GetString()), @long);
+                    else
+                        Assert.Equal(expected.GetInt64(), @long);
                     break;
                 case double @double:
-                    Assert.Equal(expected.Value<double>(), @double, 10);
+                    Assert.Equal(expected.GetDouble(), @double, 10);
                     break;
                 case bool @bool:
-                    Assert.Equal(expected.Value<bool>(), @bool);
+                    Assert.Equal(expected.GetBoolean(), @bool);
                     break;
                 case string @string:
-                    Assert.Equal(expected.Value, @string);
+                    Assert.Equal(expected.GetString(), @string);
                     break;
                 case null:
-                    if (expected.Type == JTokenType.String)
-                        Assert.Equal(expected.Value, string.Empty);
+                    if (expected.ValueKind == JsonValueKind.String)
+                        Assert.Equal(expected.GetString(), string.Empty);
                     break;
                 default:
                     switched = false;
@@ -393,20 +395,20 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                     var enumType = typeInfo.GenericTypeArguments[0];
                     dynamic @enum = actual; // Just for easiness
 
-                    Assert.Equal(expected.Value<string>(), @enum.RawValue);
+                    Assert.Equal(expected.GetString(), @enum.RawValue);
                     if (@enum.IsUnknown)
                     {
                         var enumNames = Enum.GetNames(enumType).Select(x => x.Replace("_", ""));
                         Assert.True(enumNames.Contains((string)@enum.RawValue, StringComparer.OrdinalIgnoreCase), $"Expected '{expected}' to be a value in enumerator {@enum.Value.GetType().FullName}; detected value '{@enum.Value}'");
                     }
-                    Assert.Equal(expected.Value<string>().ParseEnum(enumType), @enum.Value);
+                    Assert.Equal(expected.GetString().ParseEnum(enumType), @enum.Value);
 
                     switched = true;
                 }
             }
 
             if (!switched)
-                Assert.Equal(expected.Value, actual!.ToString());
+                Assert.Equal(expected.GetString(), actual!.ToString());
         }
 
         #endregion
