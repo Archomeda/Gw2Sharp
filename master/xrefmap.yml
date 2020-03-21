@@ -2894,45 +2894,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Json.Converters.ApiEnumConverter.CanConvert
   nameWithType: ApiEnumConverter.CanConvert
-- uid: Gw2Sharp.Json.Converters.ApiEnumConverter.CanWrite
-  name: CanWrite
-  href: api/Gw2Sharp.Json.Converters.ApiEnumConverter.html#Gw2Sharp_Json_Converters_ApiEnumConverter_CanWrite
-  commentId: P:Gw2Sharp.Json.Converters.ApiEnumConverter.CanWrite
-  fullName: Gw2Sharp.Json.Converters.ApiEnumConverter.CanWrite
-  nameWithType: ApiEnumConverter.CanWrite
-- uid: Gw2Sharp.Json.Converters.ApiEnumConverter.CanWrite*
-  name: CanWrite
-  href: api/Gw2Sharp.Json.Converters.ApiEnumConverter.html#Gw2Sharp_Json_Converters_ApiEnumConverter_CanWrite_
-  commentId: Overload:Gw2Sharp.Json.Converters.ApiEnumConverter.CanWrite
+- uid: Gw2Sharp.Json.Converters.ApiEnumConverter.CreateConverter(Type,JsonSerializerOptions)
+  name: CreateConverter(Type, JsonSerializerOptions)
+  href: api/Gw2Sharp.Json.Converters.ApiEnumConverter.html#Gw2Sharp_Json_Converters_ApiEnumConverter_CreateConverter_Type_JsonSerializerOptions_
+  commentId: M:Gw2Sharp.Json.Converters.ApiEnumConverter.CreateConverter(Type,JsonSerializerOptions)
+  fullName: Gw2Sharp.Json.Converters.ApiEnumConverter.CreateConverter(Type, JsonSerializerOptions)
+  nameWithType: ApiEnumConverter.CreateConverter(Type, JsonSerializerOptions)
+- uid: Gw2Sharp.Json.Converters.ApiEnumConverter.CreateConverter*
+  name: CreateConverter
+  href: api/Gw2Sharp.Json.Converters.ApiEnumConverter.html#Gw2Sharp_Json_Converters_ApiEnumConverter_CreateConverter_
+  commentId: Overload:Gw2Sharp.Json.Converters.ApiEnumConverter.CreateConverter
   isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.ApiEnumConverter.CanWrite
-  nameWithType: ApiEnumConverter.CanWrite
-- uid: Gw2Sharp.Json.Converters.ApiEnumConverter.ReadJson(JsonReader,Type,System.Object,JsonSerializer)
-  name: ReadJson(JsonReader, Type, Object, JsonSerializer)
-  href: api/Gw2Sharp.Json.Converters.ApiEnumConverter.html#Gw2Sharp_Json_Converters_ApiEnumConverter_ReadJson_JsonReader_Type_System_Object_JsonSerializer_
-  commentId: M:Gw2Sharp.Json.Converters.ApiEnumConverter.ReadJson(JsonReader,Type,System.Object,JsonSerializer)
-  fullName: Gw2Sharp.Json.Converters.ApiEnumConverter.ReadJson(JsonReader, Type, System.Object, JsonSerializer)
-  nameWithType: ApiEnumConverter.ReadJson(JsonReader, Type, Object, JsonSerializer)
-- uid: Gw2Sharp.Json.Converters.ApiEnumConverter.ReadJson*
-  name: ReadJson
-  href: api/Gw2Sharp.Json.Converters.ApiEnumConverter.html#Gw2Sharp_Json_Converters_ApiEnumConverter_ReadJson_
-  commentId: Overload:Gw2Sharp.Json.Converters.ApiEnumConverter.ReadJson
-  isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.ApiEnumConverter.ReadJson
-  nameWithType: ApiEnumConverter.ReadJson
-- uid: Gw2Sharp.Json.Converters.ApiEnumConverter.WriteJson(JsonWriter,System.Object,JsonSerializer)
-  name: WriteJson(JsonWriter, Object, JsonSerializer)
-  href: api/Gw2Sharp.Json.Converters.ApiEnumConverter.html#Gw2Sharp_Json_Converters_ApiEnumConverter_WriteJson_JsonWriter_System_Object_JsonSerializer_
-  commentId: M:Gw2Sharp.Json.Converters.ApiEnumConverter.WriteJson(JsonWriter,System.Object,JsonSerializer)
-  fullName: Gw2Sharp.Json.Converters.ApiEnumConverter.WriteJson(JsonWriter, System.Object, JsonSerializer)
-  nameWithType: ApiEnumConverter.WriteJson(JsonWriter, Object, JsonSerializer)
-- uid: Gw2Sharp.Json.Converters.ApiEnumConverter.WriteJson*
-  name: WriteJson
-  href: api/Gw2Sharp.Json.Converters.ApiEnumConverter.html#Gw2Sharp_Json_Converters_ApiEnumConverter_WriteJson_
-  commentId: Overload:Gw2Sharp.Json.Converters.ApiEnumConverter.WriteJson
-  isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.ApiEnumConverter.WriteJson
-  nameWithType: ApiEnumConverter.WriteJson
+  fullName: Gw2Sharp.Json.Converters.ApiEnumConverter.CreateConverter
+  nameWithType: ApiEnumConverter.CreateConverter
 - uid: Gw2Sharp.Json.Converters.ApiFlagsConverter
   name: ApiFlagsConverter
   href: api/Gw2Sharp.Json.Converters.ApiFlagsConverter.html
@@ -2952,103 +2926,54 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Json.Converters.ApiFlagsConverter.CanConvert
   nameWithType: ApiFlagsConverter.CanConvert
-- uid: Gw2Sharp.Json.Converters.ApiFlagsConverter.CanWrite
-  name: CanWrite
-  href: api/Gw2Sharp.Json.Converters.ApiFlagsConverter.html#Gw2Sharp_Json_Converters_ApiFlagsConverter_CanWrite
-  commentId: P:Gw2Sharp.Json.Converters.ApiFlagsConverter.CanWrite
-  fullName: Gw2Sharp.Json.Converters.ApiFlagsConverter.CanWrite
-  nameWithType: ApiFlagsConverter.CanWrite
-- uid: Gw2Sharp.Json.Converters.ApiFlagsConverter.CanWrite*
-  name: CanWrite
-  href: api/Gw2Sharp.Json.Converters.ApiFlagsConverter.html#Gw2Sharp_Json_Converters_ApiFlagsConverter_CanWrite_
-  commentId: Overload:Gw2Sharp.Json.Converters.ApiFlagsConverter.CanWrite
+- uid: Gw2Sharp.Json.Converters.ApiFlagsConverter.CreateConverter(Type,JsonSerializerOptions)
+  name: CreateConverter(Type, JsonSerializerOptions)
+  href: api/Gw2Sharp.Json.Converters.ApiFlagsConverter.html#Gw2Sharp_Json_Converters_ApiFlagsConverter_CreateConverter_Type_JsonSerializerOptions_
+  commentId: M:Gw2Sharp.Json.Converters.ApiFlagsConverter.CreateConverter(Type,JsonSerializerOptions)
+  fullName: Gw2Sharp.Json.Converters.ApiFlagsConverter.CreateConverter(Type, JsonSerializerOptions)
+  nameWithType: ApiFlagsConverter.CreateConverter(Type, JsonSerializerOptions)
+- uid: Gw2Sharp.Json.Converters.ApiFlagsConverter.CreateConverter*
+  name: CreateConverter
+  href: api/Gw2Sharp.Json.Converters.ApiFlagsConverter.html#Gw2Sharp_Json_Converters_ApiFlagsConverter_CreateConverter_
+  commentId: Overload:Gw2Sharp.Json.Converters.ApiFlagsConverter.CreateConverter
   isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.ApiFlagsConverter.CanWrite
-  nameWithType: ApiFlagsConverter.CanWrite
-- uid: Gw2Sharp.Json.Converters.ApiFlagsConverter.ReadJson(JsonReader,Type,System.Object,JsonSerializer)
-  name: ReadJson(JsonReader, Type, Object, JsonSerializer)
-  href: api/Gw2Sharp.Json.Converters.ApiFlagsConverter.html#Gw2Sharp_Json_Converters_ApiFlagsConverter_ReadJson_JsonReader_Type_System_Object_JsonSerializer_
-  commentId: M:Gw2Sharp.Json.Converters.ApiFlagsConverter.ReadJson(JsonReader,Type,System.Object,JsonSerializer)
-  fullName: Gw2Sharp.Json.Converters.ApiFlagsConverter.ReadJson(JsonReader, Type, System.Object, JsonSerializer)
-  nameWithType: ApiFlagsConverter.ReadJson(JsonReader, Type, Object, JsonSerializer)
-- uid: Gw2Sharp.Json.Converters.ApiFlagsConverter.ReadJson*
-  name: ReadJson
-  href: api/Gw2Sharp.Json.Converters.ApiFlagsConverter.html#Gw2Sharp_Json_Converters_ApiFlagsConverter_ReadJson_
-  commentId: Overload:Gw2Sharp.Json.Converters.ApiFlagsConverter.ReadJson
-  isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.ApiFlagsConverter.ReadJson
-  nameWithType: ApiFlagsConverter.ReadJson
-- uid: Gw2Sharp.Json.Converters.ApiFlagsConverter.WriteJson(JsonWriter,System.Object,JsonSerializer)
-  name: WriteJson(JsonWriter, Object, JsonSerializer)
-  href: api/Gw2Sharp.Json.Converters.ApiFlagsConverter.html#Gw2Sharp_Json_Converters_ApiFlagsConverter_WriteJson_JsonWriter_System_Object_JsonSerializer_
-  commentId: M:Gw2Sharp.Json.Converters.ApiFlagsConverter.WriteJson(JsonWriter,System.Object,JsonSerializer)
-  fullName: Gw2Sharp.Json.Converters.ApiFlagsConverter.WriteJson(JsonWriter, System.Object, JsonSerializer)
-  nameWithType: ApiFlagsConverter.WriteJson(JsonWriter, Object, JsonSerializer)
-- uid: Gw2Sharp.Json.Converters.ApiFlagsConverter.WriteJson*
-  name: WriteJson
-  href: api/Gw2Sharp.Json.Converters.ApiFlagsConverter.html#Gw2Sharp_Json_Converters_ApiFlagsConverter_WriteJson_
-  commentId: Overload:Gw2Sharp.Json.Converters.ApiFlagsConverter.WriteJson
-  isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.ApiFlagsConverter.WriteJson
-  nameWithType: ApiFlagsConverter.WriteJson
+  fullName: Gw2Sharp.Json.Converters.ApiFlagsConverter.CreateConverter
+  nameWithType: ApiFlagsConverter.CreateConverter
 - uid: Gw2Sharp.Json.Converters.ApiObjectConverter
   name: ApiObjectConverter
   href: api/Gw2Sharp.Json.Converters.ApiObjectConverter.html
   commentId: T:Gw2Sharp.Json.Converters.ApiObjectConverter
   fullName: Gw2Sharp.Json.Converters.ApiObjectConverter
   nameWithType: ApiObjectConverter
-- uid: Gw2Sharp.Json.Converters.ApiObjectConverter.CanConvert(Type)
-  name: CanConvert(Type)
-  href: api/Gw2Sharp.Json.Converters.ApiObjectConverter.html#Gw2Sharp_Json_Converters_ApiObjectConverter_CanConvert_Type_
-  commentId: M:Gw2Sharp.Json.Converters.ApiObjectConverter.CanConvert(Type)
-  fullName: Gw2Sharp.Json.Converters.ApiObjectConverter.CanConvert(Type)
-  nameWithType: ApiObjectConverter.CanConvert(Type)
-- uid: Gw2Sharp.Json.Converters.ApiObjectConverter.CanConvert*
-  name: CanConvert
-  href: api/Gw2Sharp.Json.Converters.ApiObjectConverter.html#Gw2Sharp_Json_Converters_ApiObjectConverter_CanConvert_
-  commentId: Overload:Gw2Sharp.Json.Converters.ApiObjectConverter.CanConvert
+- uid: Gw2Sharp.Json.Converters.ApiObjectConverter.Read(Utf8JsonReader@,Type,JsonSerializerOptions)
+  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  href: api/Gw2Sharp.Json.Converters.ApiObjectConverter.html#Gw2Sharp_Json_Converters_ApiObjectConverter_Read_Utf8JsonReader__Type_JsonSerializerOptions_
+  commentId: M:Gw2Sharp.Json.Converters.ApiObjectConverter.Read(Utf8JsonReader@,Type,JsonSerializerOptions)
+  name.vb: Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName: Gw2Sharp.Json.Converters.ApiObjectConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName.vb: Gw2Sharp.Json.Converters.ApiObjectConverter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType: ApiObjectConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType.vb: ApiObjectConverter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+- uid: Gw2Sharp.Json.Converters.ApiObjectConverter.Read*
+  name: Read
+  href: api/Gw2Sharp.Json.Converters.ApiObjectConverter.html#Gw2Sharp_Json_Converters_ApiObjectConverter_Read_
+  commentId: Overload:Gw2Sharp.Json.Converters.ApiObjectConverter.Read
   isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.ApiObjectConverter.CanConvert
-  nameWithType: ApiObjectConverter.CanConvert
-- uid: Gw2Sharp.Json.Converters.ApiObjectConverter.CanWrite
-  name: CanWrite
-  href: api/Gw2Sharp.Json.Converters.ApiObjectConverter.html#Gw2Sharp_Json_Converters_ApiObjectConverter_CanWrite
-  commentId: P:Gw2Sharp.Json.Converters.ApiObjectConverter.CanWrite
-  fullName: Gw2Sharp.Json.Converters.ApiObjectConverter.CanWrite
-  nameWithType: ApiObjectConverter.CanWrite
-- uid: Gw2Sharp.Json.Converters.ApiObjectConverter.CanWrite*
-  name: CanWrite
-  href: api/Gw2Sharp.Json.Converters.ApiObjectConverter.html#Gw2Sharp_Json_Converters_ApiObjectConverter_CanWrite_
-  commentId: Overload:Gw2Sharp.Json.Converters.ApiObjectConverter.CanWrite
+  fullName: Gw2Sharp.Json.Converters.ApiObjectConverter.Read
+  nameWithType: ApiObjectConverter.Read
+- uid: Gw2Sharp.Json.Converters.ApiObjectConverter.Write(Utf8JsonWriter,Gw2Sharp.WebApi.V2.IApiV2Object,JsonSerializerOptions)
+  name: Write(Utf8JsonWriter, IApiV2Object, JsonSerializerOptions)
+  href: api/Gw2Sharp.Json.Converters.ApiObjectConverter.html#Gw2Sharp_Json_Converters_ApiObjectConverter_Write_Utf8JsonWriter_Gw2Sharp_WebApi_V2_IApiV2Object_JsonSerializerOptions_
+  commentId: M:Gw2Sharp.Json.Converters.ApiObjectConverter.Write(Utf8JsonWriter,Gw2Sharp.WebApi.V2.IApiV2Object,JsonSerializerOptions)
+  fullName: Gw2Sharp.Json.Converters.ApiObjectConverter.Write(Utf8JsonWriter, Gw2Sharp.WebApi.V2.IApiV2Object, JsonSerializerOptions)
+  nameWithType: ApiObjectConverter.Write(Utf8JsonWriter, IApiV2Object, JsonSerializerOptions)
+- uid: Gw2Sharp.Json.Converters.ApiObjectConverter.Write*
+  name: Write
+  href: api/Gw2Sharp.Json.Converters.ApiObjectConverter.html#Gw2Sharp_Json_Converters_ApiObjectConverter_Write_
+  commentId: Overload:Gw2Sharp.Json.Converters.ApiObjectConverter.Write
   isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.ApiObjectConverter.CanWrite
-  nameWithType: ApiObjectConverter.CanWrite
-- uid: Gw2Sharp.Json.Converters.ApiObjectConverter.ReadJson(JsonReader,Type,System.Object,JsonSerializer)
-  name: ReadJson(JsonReader, Type, Object, JsonSerializer)
-  href: api/Gw2Sharp.Json.Converters.ApiObjectConverter.html#Gw2Sharp_Json_Converters_ApiObjectConverter_ReadJson_JsonReader_Type_System_Object_JsonSerializer_
-  commentId: M:Gw2Sharp.Json.Converters.ApiObjectConverter.ReadJson(JsonReader,Type,System.Object,JsonSerializer)
-  fullName: Gw2Sharp.Json.Converters.ApiObjectConverter.ReadJson(JsonReader, Type, System.Object, JsonSerializer)
-  nameWithType: ApiObjectConverter.ReadJson(JsonReader, Type, Object, JsonSerializer)
-- uid: Gw2Sharp.Json.Converters.ApiObjectConverter.ReadJson*
-  name: ReadJson
-  href: api/Gw2Sharp.Json.Converters.ApiObjectConverter.html#Gw2Sharp_Json_Converters_ApiObjectConverter_ReadJson_
-  commentId: Overload:Gw2Sharp.Json.Converters.ApiObjectConverter.ReadJson
-  isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.ApiObjectConverter.ReadJson
-  nameWithType: ApiObjectConverter.ReadJson
-- uid: Gw2Sharp.Json.Converters.ApiObjectConverter.WriteJson(JsonWriter,System.Object,JsonSerializer)
-  name: WriteJson(JsonWriter, Object, JsonSerializer)
-  href: api/Gw2Sharp.Json.Converters.ApiObjectConverter.html#Gw2Sharp_Json_Converters_ApiObjectConverter_WriteJson_JsonWriter_System_Object_JsonSerializer_
-  commentId: M:Gw2Sharp.Json.Converters.ApiObjectConverter.WriteJson(JsonWriter,System.Object,JsonSerializer)
-  fullName: Gw2Sharp.Json.Converters.ApiObjectConverter.WriteJson(JsonWriter, System.Object, JsonSerializer)
-  nameWithType: ApiObjectConverter.WriteJson(JsonWriter, Object, JsonSerializer)
-- uid: Gw2Sharp.Json.Converters.ApiObjectConverter.WriteJson*
-  name: WriteJson
-  href: api/Gw2Sharp.Json.Converters.ApiObjectConverter.html#Gw2Sharp_Json_Converters_ApiObjectConverter_WriteJson_
-  commentId: Overload:Gw2Sharp.Json.Converters.ApiObjectConverter.WriteJson
-  isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.ApiObjectConverter.WriteJson
-  nameWithType: ApiObjectConverter.WriteJson
+  fullName: Gw2Sharp.Json.Converters.ApiObjectConverter.Write
+  nameWithType: ApiObjectConverter.Write
 - uid: Gw2Sharp.Json.Converters.ApiObjectListConverter
   name: ApiObjectListConverter
   href: api/Gw2Sharp.Json.Converters.ApiObjectListConverter.html
@@ -3068,64 +2993,41 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Json.Converters.ApiObjectListConverter.CanConvert
   nameWithType: ApiObjectListConverter.CanConvert
-- uid: Gw2Sharp.Json.Converters.ApiObjectListConverter.CanWrite
-  name: CanWrite
-  href: api/Gw2Sharp.Json.Converters.ApiObjectListConverter.html#Gw2Sharp_Json_Converters_ApiObjectListConverter_CanWrite
-  commentId: P:Gw2Sharp.Json.Converters.ApiObjectListConverter.CanWrite
-  fullName: Gw2Sharp.Json.Converters.ApiObjectListConverter.CanWrite
-  nameWithType: ApiObjectListConverter.CanWrite
-- uid: Gw2Sharp.Json.Converters.ApiObjectListConverter.CanWrite*
-  name: CanWrite
-  href: api/Gw2Sharp.Json.Converters.ApiObjectListConverter.html#Gw2Sharp_Json_Converters_ApiObjectListConverter_CanWrite_
-  commentId: Overload:Gw2Sharp.Json.Converters.ApiObjectListConverter.CanWrite
+- uid: Gw2Sharp.Json.Converters.ApiObjectListConverter.CreateConverter(Type,JsonSerializerOptions)
+  name: CreateConverter(Type, JsonSerializerOptions)
+  href: api/Gw2Sharp.Json.Converters.ApiObjectListConverter.html#Gw2Sharp_Json_Converters_ApiObjectListConverter_CreateConverter_Type_JsonSerializerOptions_
+  commentId: M:Gw2Sharp.Json.Converters.ApiObjectListConverter.CreateConverter(Type,JsonSerializerOptions)
+  fullName: Gw2Sharp.Json.Converters.ApiObjectListConverter.CreateConverter(Type, JsonSerializerOptions)
+  nameWithType: ApiObjectListConverter.CreateConverter(Type, JsonSerializerOptions)
+- uid: Gw2Sharp.Json.Converters.ApiObjectListConverter.CreateConverter*
+  name: CreateConverter
+  href: api/Gw2Sharp.Json.Converters.ApiObjectListConverter.html#Gw2Sharp_Json_Converters_ApiObjectListConverter_CreateConverter_
+  commentId: Overload:Gw2Sharp.Json.Converters.ApiObjectListConverter.CreateConverter
   isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.ApiObjectListConverter.CanWrite
-  nameWithType: ApiObjectListConverter.CanWrite
-- uid: Gw2Sharp.Json.Converters.ApiObjectListConverter.ReadJson(JsonReader,Type,System.Object,JsonSerializer)
-  name: ReadJson(JsonReader, Type, Object, JsonSerializer)
-  href: api/Gw2Sharp.Json.Converters.ApiObjectListConverter.html#Gw2Sharp_Json_Converters_ApiObjectListConverter_ReadJson_JsonReader_Type_System_Object_JsonSerializer_
-  commentId: M:Gw2Sharp.Json.Converters.ApiObjectListConverter.ReadJson(JsonReader,Type,System.Object,JsonSerializer)
-  fullName: Gw2Sharp.Json.Converters.ApiObjectListConverter.ReadJson(JsonReader, Type, System.Object, JsonSerializer)
-  nameWithType: ApiObjectListConverter.ReadJson(JsonReader, Type, Object, JsonSerializer)
-- uid: Gw2Sharp.Json.Converters.ApiObjectListConverter.ReadJson*
-  name: ReadJson
-  href: api/Gw2Sharp.Json.Converters.ApiObjectListConverter.html#Gw2Sharp_Json_Converters_ApiObjectListConverter_ReadJson_
-  commentId: Overload:Gw2Sharp.Json.Converters.ApiObjectListConverter.ReadJson
-  isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.ApiObjectListConverter.ReadJson
-  nameWithType: ApiObjectListConverter.ReadJson
-- uid: Gw2Sharp.Json.Converters.ApiObjectListConverter.WriteJson(JsonWriter,System.Object,JsonSerializer)
-  name: WriteJson(JsonWriter, Object, JsonSerializer)
-  href: api/Gw2Sharp.Json.Converters.ApiObjectListConverter.html#Gw2Sharp_Json_Converters_ApiObjectListConverter_WriteJson_JsonWriter_System_Object_JsonSerializer_
-  commentId: M:Gw2Sharp.Json.Converters.ApiObjectListConverter.WriteJson(JsonWriter,System.Object,JsonSerializer)
-  fullName: Gw2Sharp.Json.Converters.ApiObjectListConverter.WriteJson(JsonWriter, System.Object, JsonSerializer)
-  nameWithType: ApiObjectListConverter.WriteJson(JsonWriter, Object, JsonSerializer)
-- uid: Gw2Sharp.Json.Converters.ApiObjectListConverter.WriteJson*
-  name: WriteJson
-  href: api/Gw2Sharp.Json.Converters.ApiObjectListConverter.html#Gw2Sharp_Json_Converters_ApiObjectListConverter_WriteJson_
-  commentId: Overload:Gw2Sharp.Json.Converters.ApiObjectListConverter.WriteJson
-  isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.ApiObjectListConverter.WriteJson
-  nameWithType: ApiObjectListConverter.WriteJson
+  fullName: Gw2Sharp.Json.Converters.ApiObjectListConverter.CreateConverter
+  nameWithType: ApiObjectListConverter.CreateConverter
 - uid: Gw2Sharp.Json.Converters.BottomUpRectangleConverter
   name: BottomUpRectangleConverter
   href: api/Gw2Sharp.Json.Converters.BottomUpRectangleConverter.html
   commentId: T:Gw2Sharp.Json.Converters.BottomUpRectangleConverter
   fullName: Gw2Sharp.Json.Converters.BottomUpRectangleConverter
   nameWithType: BottomUpRectangleConverter
-- uid: Gw2Sharp.Json.Converters.BottomUpRectangleConverter.ReadJson(JsonReader,Type,Gw2Sharp.WebApi.V2.Models.Rectangle,System.Boolean,JsonSerializer)
-  name: ReadJson(JsonReader, Type, Rectangle, Boolean, JsonSerializer)
-  href: api/Gw2Sharp.Json.Converters.BottomUpRectangleConverter.html#Gw2Sharp_Json_Converters_BottomUpRectangleConverter_ReadJson_JsonReader_Type_Gw2Sharp_WebApi_V2_Models_Rectangle_System_Boolean_JsonSerializer_
-  commentId: M:Gw2Sharp.Json.Converters.BottomUpRectangleConverter.ReadJson(JsonReader,Type,Gw2Sharp.WebApi.V2.Models.Rectangle,System.Boolean,JsonSerializer)
-  fullName: Gw2Sharp.Json.Converters.BottomUpRectangleConverter.ReadJson(JsonReader, Type, Gw2Sharp.WebApi.V2.Models.Rectangle, System.Boolean, JsonSerializer)
-  nameWithType: BottomUpRectangleConverter.ReadJson(JsonReader, Type, Rectangle, Boolean, JsonSerializer)
-- uid: Gw2Sharp.Json.Converters.BottomUpRectangleConverter.ReadJson*
-  name: ReadJson
-  href: api/Gw2Sharp.Json.Converters.BottomUpRectangleConverter.html#Gw2Sharp_Json_Converters_BottomUpRectangleConverter_ReadJson_
-  commentId: Overload:Gw2Sharp.Json.Converters.BottomUpRectangleConverter.ReadJson
+- uid: Gw2Sharp.Json.Converters.BottomUpRectangleConverter.Read(Utf8JsonReader@,Type,JsonSerializerOptions)
+  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  href: api/Gw2Sharp.Json.Converters.BottomUpRectangleConverter.html#Gw2Sharp_Json_Converters_BottomUpRectangleConverter_Read_Utf8JsonReader__Type_JsonSerializerOptions_
+  commentId: M:Gw2Sharp.Json.Converters.BottomUpRectangleConverter.Read(Utf8JsonReader@,Type,JsonSerializerOptions)
+  name.vb: Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName: Gw2Sharp.Json.Converters.BottomUpRectangleConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName.vb: Gw2Sharp.Json.Converters.BottomUpRectangleConverter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType: BottomUpRectangleConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType.vb: BottomUpRectangleConverter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+- uid: Gw2Sharp.Json.Converters.BottomUpRectangleConverter.Read*
+  name: Read
+  href: api/Gw2Sharp.Json.Converters.BottomUpRectangleConverter.html#Gw2Sharp_Json_Converters_BottomUpRectangleConverter_Read_
+  commentId: Overload:Gw2Sharp.Json.Converters.BottomUpRectangleConverter.Read
   isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.BottomUpRectangleConverter.ReadJson
-  nameWithType: BottomUpRectangleConverter.ReadJson
+  fullName: Gw2Sharp.Json.Converters.BottomUpRectangleConverter.Read
+  nameWithType: BottomUpRectangleConverter.Read
 - uid: Gw2Sharp.Json.Converters.CastableTypeConverter
   name: CastableTypeConverter
   href: api/Gw2Sharp.Json.Converters.CastableTypeConverter.html
@@ -3145,276 +3047,264 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Json.Converters.CastableTypeConverter.CanConvert
   nameWithType: CastableTypeConverter.CanConvert
-- uid: Gw2Sharp.Json.Converters.CastableTypeConverter.CanWrite
-  name: CanWrite
-  href: api/Gw2Sharp.Json.Converters.CastableTypeConverter.html#Gw2Sharp_Json_Converters_CastableTypeConverter_CanWrite
-  commentId: P:Gw2Sharp.Json.Converters.CastableTypeConverter.CanWrite
-  fullName: Gw2Sharp.Json.Converters.CastableTypeConverter.CanWrite
-  nameWithType: CastableTypeConverter.CanWrite
-- uid: Gw2Sharp.Json.Converters.CastableTypeConverter.CanWrite*
-  name: CanWrite
-  href: api/Gw2Sharp.Json.Converters.CastableTypeConverter.html#Gw2Sharp_Json_Converters_CastableTypeConverter_CanWrite_
-  commentId: Overload:Gw2Sharp.Json.Converters.CastableTypeConverter.CanWrite
+- uid: Gw2Sharp.Json.Converters.CastableTypeConverter.CreateConverter(Type,JsonSerializerOptions)
+  name: CreateConverter(Type, JsonSerializerOptions)
+  href: api/Gw2Sharp.Json.Converters.CastableTypeConverter.html#Gw2Sharp_Json_Converters_CastableTypeConverter_CreateConverter_Type_JsonSerializerOptions_
+  commentId: M:Gw2Sharp.Json.Converters.CastableTypeConverter.CreateConverter(Type,JsonSerializerOptions)
+  fullName: Gw2Sharp.Json.Converters.CastableTypeConverter.CreateConverter(Type, JsonSerializerOptions)
+  nameWithType: CastableTypeConverter.CreateConverter(Type, JsonSerializerOptions)
+- uid: Gw2Sharp.Json.Converters.CastableTypeConverter.CreateConverter*
+  name: CreateConverter
+  href: api/Gw2Sharp.Json.Converters.CastableTypeConverter.html#Gw2Sharp_Json_Converters_CastableTypeConverter_CreateConverter_
+  commentId: Overload:Gw2Sharp.Json.Converters.CastableTypeConverter.CreateConverter
   isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.CastableTypeConverter.CanWrite
-  nameWithType: CastableTypeConverter.CanWrite
-- uid: Gw2Sharp.Json.Converters.CastableTypeConverter.ReadJson(JsonReader,Type,System.Object,JsonSerializer)
-  name: ReadJson(JsonReader, Type, Object, JsonSerializer)
-  href: api/Gw2Sharp.Json.Converters.CastableTypeConverter.html#Gw2Sharp_Json_Converters_CastableTypeConverter_ReadJson_JsonReader_Type_System_Object_JsonSerializer_
-  commentId: M:Gw2Sharp.Json.Converters.CastableTypeConverter.ReadJson(JsonReader,Type,System.Object,JsonSerializer)
-  fullName: Gw2Sharp.Json.Converters.CastableTypeConverter.ReadJson(JsonReader, Type, System.Object, JsonSerializer)
-  nameWithType: CastableTypeConverter.ReadJson(JsonReader, Type, Object, JsonSerializer)
-- uid: Gw2Sharp.Json.Converters.CastableTypeConverter.ReadJson*
-  name: ReadJson
-  href: api/Gw2Sharp.Json.Converters.CastableTypeConverter.html#Gw2Sharp_Json_Converters_CastableTypeConverter_ReadJson_
-  commentId: Overload:Gw2Sharp.Json.Converters.CastableTypeConverter.ReadJson
-  isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.CastableTypeConverter.ReadJson
-  nameWithType: CastableTypeConverter.ReadJson
-- uid: Gw2Sharp.Json.Converters.CastableTypeConverter.WriteJson(JsonWriter,System.Object,JsonSerializer)
-  name: WriteJson(JsonWriter, Object, JsonSerializer)
-  href: api/Gw2Sharp.Json.Converters.CastableTypeConverter.html#Gw2Sharp_Json_Converters_CastableTypeConverter_WriteJson_JsonWriter_System_Object_JsonSerializer_
-  commentId: M:Gw2Sharp.Json.Converters.CastableTypeConverter.WriteJson(JsonWriter,System.Object,JsonSerializer)
-  fullName: Gw2Sharp.Json.Converters.CastableTypeConverter.WriteJson(JsonWriter, System.Object, JsonSerializer)
-  nameWithType: CastableTypeConverter.WriteJson(JsonWriter, Object, JsonSerializer)
-- uid: Gw2Sharp.Json.Converters.CastableTypeConverter.WriteJson*
-  name: WriteJson
-  href: api/Gw2Sharp.Json.Converters.CastableTypeConverter.html#Gw2Sharp_Json_Converters_CastableTypeConverter_WriteJson_
-  commentId: Overload:Gw2Sharp.Json.Converters.CastableTypeConverter.WriteJson
-  isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.CastableTypeConverter.WriteJson
-  nameWithType: CastableTypeConverter.WriteJson
+  fullName: Gw2Sharp.Json.Converters.CastableTypeConverter.CreateConverter
+  nameWithType: CastableTypeConverter.CreateConverter
 - uid: Gw2Sharp.Json.Converters.CompactMapConverter
   name: CompactMapConverter
   href: api/Gw2Sharp.Json.Converters.CompactMapConverter.html
   commentId: T:Gw2Sharp.Json.Converters.CompactMapConverter
   fullName: Gw2Sharp.Json.Converters.CompactMapConverter
   nameWithType: CompactMapConverter
-- uid: Gw2Sharp.Json.Converters.CompactMapConverter.CanWrite
-  name: CanWrite
-  href: api/Gw2Sharp.Json.Converters.CompactMapConverter.html#Gw2Sharp_Json_Converters_CompactMapConverter_CanWrite
-  commentId: P:Gw2Sharp.Json.Converters.CompactMapConverter.CanWrite
-  fullName: Gw2Sharp.Json.Converters.CompactMapConverter.CanWrite
-  nameWithType: CompactMapConverter.CanWrite
-- uid: Gw2Sharp.Json.Converters.CompactMapConverter.CanWrite*
-  name: CanWrite
-  href: api/Gw2Sharp.Json.Converters.CompactMapConverter.html#Gw2Sharp_Json_Converters_CompactMapConverter_CanWrite_
-  commentId: Overload:Gw2Sharp.Json.Converters.CompactMapConverter.CanWrite
+- uid: Gw2Sharp.Json.Converters.CompactMapConverter.Read(Utf8JsonReader@,Type,JsonSerializerOptions)
+  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  href: api/Gw2Sharp.Json.Converters.CompactMapConverter.html#Gw2Sharp_Json_Converters_CompactMapConverter_Read_Utf8JsonReader__Type_JsonSerializerOptions_
+  commentId: M:Gw2Sharp.Json.Converters.CompactMapConverter.Read(Utf8JsonReader@,Type,JsonSerializerOptions)
+  name.vb: Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName: Gw2Sharp.Json.Converters.CompactMapConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName.vb: Gw2Sharp.Json.Converters.CompactMapConverter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType: CompactMapConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType.vb: CompactMapConverter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+- uid: Gw2Sharp.Json.Converters.CompactMapConverter.Read*
+  name: Read
+  href: api/Gw2Sharp.Json.Converters.CompactMapConverter.html#Gw2Sharp_Json_Converters_CompactMapConverter_Read_
+  commentId: Overload:Gw2Sharp.Json.Converters.CompactMapConverter.Read
   isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.CompactMapConverter.CanWrite
-  nameWithType: CompactMapConverter.CanWrite
-- uid: Gw2Sharp.Json.Converters.CompactMapConverter.ReadJson(JsonReader,Type,IDictionary{System.Int32,System.Int32},System.Boolean,JsonSerializer)
-  name: ReadJson(JsonReader, Type, IDictionary<Int32, Int32>, Boolean, JsonSerializer)
-  href: api/Gw2Sharp.Json.Converters.CompactMapConverter.html#Gw2Sharp_Json_Converters_CompactMapConverter_ReadJson_JsonReader_Type_IDictionary_System_Int32_System_Int32__System_Boolean_JsonSerializer_
-  commentId: M:Gw2Sharp.Json.Converters.CompactMapConverter.ReadJson(JsonReader,Type,IDictionary{System.Int32,System.Int32},System.Boolean,JsonSerializer)
-  name.vb: ReadJson(JsonReader, Type, IDictionary(Of Int32, Int32), Boolean, JsonSerializer)
-  fullName: Gw2Sharp.Json.Converters.CompactMapConverter.ReadJson(JsonReader, Type, IDictionary<System.Int32, System.Int32>, System.Boolean, JsonSerializer)
-  fullName.vb: Gw2Sharp.Json.Converters.CompactMapConverter.ReadJson(JsonReader, Type, IDictionary(Of System.Int32, System.Int32), System.Boolean, JsonSerializer)
-  nameWithType: CompactMapConverter.ReadJson(JsonReader, Type, IDictionary<Int32, Int32>, Boolean, JsonSerializer)
-  nameWithType.vb: CompactMapConverter.ReadJson(JsonReader, Type, IDictionary(Of Int32, Int32), Boolean, JsonSerializer)
-- uid: Gw2Sharp.Json.Converters.CompactMapConverter.ReadJson*
-  name: ReadJson
-  href: api/Gw2Sharp.Json.Converters.CompactMapConverter.html#Gw2Sharp_Json_Converters_CompactMapConverter_ReadJson_
-  commentId: Overload:Gw2Sharp.Json.Converters.CompactMapConverter.ReadJson
+  fullName: Gw2Sharp.Json.Converters.CompactMapConverter.Read
+  nameWithType: CompactMapConverter.Read
+- uid: Gw2Sharp.Json.Converters.CompactMapConverter.Write(Utf8JsonWriter,IDictionary{System.Int32,System.Int32},JsonSerializerOptions)
+  name: Write(Utf8JsonWriter, IDictionary<Int32, Int32>, JsonSerializerOptions)
+  href: api/Gw2Sharp.Json.Converters.CompactMapConverter.html#Gw2Sharp_Json_Converters_CompactMapConverter_Write_Utf8JsonWriter_IDictionary_System_Int32_System_Int32__JsonSerializerOptions_
+  commentId: M:Gw2Sharp.Json.Converters.CompactMapConverter.Write(Utf8JsonWriter,IDictionary{System.Int32,System.Int32},JsonSerializerOptions)
+  name.vb: Write(Utf8JsonWriter, IDictionary(Of Int32, Int32), JsonSerializerOptions)
+  fullName: Gw2Sharp.Json.Converters.CompactMapConverter.Write(Utf8JsonWriter, IDictionary<System.Int32, System.Int32>, JsonSerializerOptions)
+  fullName.vb: Gw2Sharp.Json.Converters.CompactMapConverter.Write(Utf8JsonWriter, IDictionary(Of System.Int32, System.Int32), JsonSerializerOptions)
+  nameWithType: CompactMapConverter.Write(Utf8JsonWriter, IDictionary<Int32, Int32>, JsonSerializerOptions)
+  nameWithType.vb: CompactMapConverter.Write(Utf8JsonWriter, IDictionary(Of Int32, Int32), JsonSerializerOptions)
+- uid: Gw2Sharp.Json.Converters.CompactMapConverter.Write*
+  name: Write
+  href: api/Gw2Sharp.Json.Converters.CompactMapConverter.html#Gw2Sharp_Json_Converters_CompactMapConverter_Write_
+  commentId: Overload:Gw2Sharp.Json.Converters.CompactMapConverter.Write
   isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.CompactMapConverter.ReadJson
-  nameWithType: CompactMapConverter.ReadJson
-- uid: Gw2Sharp.Json.Converters.CompactMapConverter.WriteJson(JsonWriter,IDictionary{System.Int32,System.Int32},JsonSerializer)
-  name: WriteJson(JsonWriter, IDictionary<Int32, Int32>, JsonSerializer)
-  href: api/Gw2Sharp.Json.Converters.CompactMapConverter.html#Gw2Sharp_Json_Converters_CompactMapConverter_WriteJson_JsonWriter_IDictionary_System_Int32_System_Int32__JsonSerializer_
-  commentId: M:Gw2Sharp.Json.Converters.CompactMapConverter.WriteJson(JsonWriter,IDictionary{System.Int32,System.Int32},JsonSerializer)
-  name.vb: WriteJson(JsonWriter, IDictionary(Of Int32, Int32), JsonSerializer)
-  fullName: Gw2Sharp.Json.Converters.CompactMapConverter.WriteJson(JsonWriter, IDictionary<System.Int32, System.Int32>, JsonSerializer)
-  fullName.vb: Gw2Sharp.Json.Converters.CompactMapConverter.WriteJson(JsonWriter, IDictionary(Of System.Int32, System.Int32), JsonSerializer)
-  nameWithType: CompactMapConverter.WriteJson(JsonWriter, IDictionary<Int32, Int32>, JsonSerializer)
-  nameWithType.vb: CompactMapConverter.WriteJson(JsonWriter, IDictionary(Of Int32, Int32), JsonSerializer)
-- uid: Gw2Sharp.Json.Converters.CompactMapConverter.WriteJson*
-  name: WriteJson
-  href: api/Gw2Sharp.Json.Converters.CompactMapConverter.html#Gw2Sharp_Json_Converters_CompactMapConverter_WriteJson_
-  commentId: Overload:Gw2Sharp.Json.Converters.CompactMapConverter.WriteJson
-  isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.CompactMapConverter.WriteJson
-  nameWithType: CompactMapConverter.WriteJson
+  fullName: Gw2Sharp.Json.Converters.CompactMapConverter.Write
+  nameWithType: CompactMapConverter.Write
 - uid: Gw2Sharp.Json.Converters.Coordinates2Converter
   name: Coordinates2Converter
   href: api/Gw2Sharp.Json.Converters.Coordinates2Converter.html
   commentId: T:Gw2Sharp.Json.Converters.Coordinates2Converter
   fullName: Gw2Sharp.Json.Converters.Coordinates2Converter
   nameWithType: Coordinates2Converter
-- uid: Gw2Sharp.Json.Converters.Coordinates2Converter.CanWrite
-  name: CanWrite
-  href: api/Gw2Sharp.Json.Converters.Coordinates2Converter.html#Gw2Sharp_Json_Converters_Coordinates2Converter_CanWrite
-  commentId: P:Gw2Sharp.Json.Converters.Coordinates2Converter.CanWrite
-  fullName: Gw2Sharp.Json.Converters.Coordinates2Converter.CanWrite
-  nameWithType: Coordinates2Converter.CanWrite
-- uid: Gw2Sharp.Json.Converters.Coordinates2Converter.CanWrite*
-  name: CanWrite
-  href: api/Gw2Sharp.Json.Converters.Coordinates2Converter.html#Gw2Sharp_Json_Converters_Coordinates2Converter_CanWrite_
-  commentId: Overload:Gw2Sharp.Json.Converters.Coordinates2Converter.CanWrite
+- uid: Gw2Sharp.Json.Converters.Coordinates2Converter.Read(Utf8JsonReader@,Type,JsonSerializerOptions)
+  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  href: api/Gw2Sharp.Json.Converters.Coordinates2Converter.html#Gw2Sharp_Json_Converters_Coordinates2Converter_Read_Utf8JsonReader__Type_JsonSerializerOptions_
+  commentId: M:Gw2Sharp.Json.Converters.Coordinates2Converter.Read(Utf8JsonReader@,Type,JsonSerializerOptions)
+  name.vb: Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName: Gw2Sharp.Json.Converters.Coordinates2Converter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName.vb: Gw2Sharp.Json.Converters.Coordinates2Converter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType: Coordinates2Converter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType.vb: Coordinates2Converter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+- uid: Gw2Sharp.Json.Converters.Coordinates2Converter.Read*
+  name: Read
+  href: api/Gw2Sharp.Json.Converters.Coordinates2Converter.html#Gw2Sharp_Json_Converters_Coordinates2Converter_Read_
+  commentId: Overload:Gw2Sharp.Json.Converters.Coordinates2Converter.Read
   isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.Coordinates2Converter.CanWrite
-  nameWithType: Coordinates2Converter.CanWrite
-- uid: Gw2Sharp.Json.Converters.Coordinates2Converter.ReadJson(JsonReader,Type,Gw2Sharp.Models.Coordinates2,System.Boolean,JsonSerializer)
-  name: ReadJson(JsonReader, Type, Coordinates2, Boolean, JsonSerializer)
-  href: api/Gw2Sharp.Json.Converters.Coordinates2Converter.html#Gw2Sharp_Json_Converters_Coordinates2Converter_ReadJson_JsonReader_Type_Gw2Sharp_Models_Coordinates2_System_Boolean_JsonSerializer_
-  commentId: M:Gw2Sharp.Json.Converters.Coordinates2Converter.ReadJson(JsonReader,Type,Gw2Sharp.Models.Coordinates2,System.Boolean,JsonSerializer)
-  fullName: Gw2Sharp.Json.Converters.Coordinates2Converter.ReadJson(JsonReader, Type, Gw2Sharp.Models.Coordinates2, System.Boolean, JsonSerializer)
-  nameWithType: Coordinates2Converter.ReadJson(JsonReader, Type, Coordinates2, Boolean, JsonSerializer)
-- uid: Gw2Sharp.Json.Converters.Coordinates2Converter.ReadJson*
-  name: ReadJson
-  href: api/Gw2Sharp.Json.Converters.Coordinates2Converter.html#Gw2Sharp_Json_Converters_Coordinates2Converter_ReadJson_
-  commentId: Overload:Gw2Sharp.Json.Converters.Coordinates2Converter.ReadJson
+  fullName: Gw2Sharp.Json.Converters.Coordinates2Converter.Read
+  nameWithType: Coordinates2Converter.Read
+- uid: Gw2Sharp.Json.Converters.Coordinates2Converter.Write(Utf8JsonWriter,Gw2Sharp.Models.Coordinates2,JsonSerializerOptions)
+  name: Write(Utf8JsonWriter, Coordinates2, JsonSerializerOptions)
+  href: api/Gw2Sharp.Json.Converters.Coordinates2Converter.html#Gw2Sharp_Json_Converters_Coordinates2Converter_Write_Utf8JsonWriter_Gw2Sharp_Models_Coordinates2_JsonSerializerOptions_
+  commentId: M:Gw2Sharp.Json.Converters.Coordinates2Converter.Write(Utf8JsonWriter,Gw2Sharp.Models.Coordinates2,JsonSerializerOptions)
+  fullName: Gw2Sharp.Json.Converters.Coordinates2Converter.Write(Utf8JsonWriter, Gw2Sharp.Models.Coordinates2, JsonSerializerOptions)
+  nameWithType: Coordinates2Converter.Write(Utf8JsonWriter, Coordinates2, JsonSerializerOptions)
+- uid: Gw2Sharp.Json.Converters.Coordinates2Converter.Write*
+  name: Write
+  href: api/Gw2Sharp.Json.Converters.Coordinates2Converter.html#Gw2Sharp_Json_Converters_Coordinates2Converter_Write_
+  commentId: Overload:Gw2Sharp.Json.Converters.Coordinates2Converter.Write
   isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.Coordinates2Converter.ReadJson
-  nameWithType: Coordinates2Converter.ReadJson
-- uid: Gw2Sharp.Json.Converters.Coordinates2Converter.WriteJson(JsonWriter,Gw2Sharp.Models.Coordinates2,JsonSerializer)
-  name: WriteJson(JsonWriter, Coordinates2, JsonSerializer)
-  href: api/Gw2Sharp.Json.Converters.Coordinates2Converter.html#Gw2Sharp_Json_Converters_Coordinates2Converter_WriteJson_JsonWriter_Gw2Sharp_Models_Coordinates2_JsonSerializer_
-  commentId: M:Gw2Sharp.Json.Converters.Coordinates2Converter.WriteJson(JsonWriter,Gw2Sharp.Models.Coordinates2,JsonSerializer)
-  fullName: Gw2Sharp.Json.Converters.Coordinates2Converter.WriteJson(JsonWriter, Gw2Sharp.Models.Coordinates2, JsonSerializer)
-  nameWithType: Coordinates2Converter.WriteJson(JsonWriter, Coordinates2, JsonSerializer)
-- uid: Gw2Sharp.Json.Converters.Coordinates2Converter.WriteJson*
-  name: WriteJson
-  href: api/Gw2Sharp.Json.Converters.Coordinates2Converter.html#Gw2Sharp_Json_Converters_Coordinates2Converter_WriteJson_
-  commentId: Overload:Gw2Sharp.Json.Converters.Coordinates2Converter.WriteJson
-  isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.Coordinates2Converter.WriteJson
-  nameWithType: Coordinates2Converter.WriteJson
+  fullName: Gw2Sharp.Json.Converters.Coordinates2Converter.Write
+  nameWithType: Coordinates2Converter.Write
 - uid: Gw2Sharp.Json.Converters.Coordinates3Converter
   name: Coordinates3Converter
   href: api/Gw2Sharp.Json.Converters.Coordinates3Converter.html
   commentId: T:Gw2Sharp.Json.Converters.Coordinates3Converter
   fullName: Gw2Sharp.Json.Converters.Coordinates3Converter
   nameWithType: Coordinates3Converter
-- uid: Gw2Sharp.Json.Converters.Coordinates3Converter.CanWrite
-  name: CanWrite
-  href: api/Gw2Sharp.Json.Converters.Coordinates3Converter.html#Gw2Sharp_Json_Converters_Coordinates3Converter_CanWrite
-  commentId: P:Gw2Sharp.Json.Converters.Coordinates3Converter.CanWrite
-  fullName: Gw2Sharp.Json.Converters.Coordinates3Converter.CanWrite
-  nameWithType: Coordinates3Converter.CanWrite
-- uid: Gw2Sharp.Json.Converters.Coordinates3Converter.CanWrite*
-  name: CanWrite
-  href: api/Gw2Sharp.Json.Converters.Coordinates3Converter.html#Gw2Sharp_Json_Converters_Coordinates3Converter_CanWrite_
-  commentId: Overload:Gw2Sharp.Json.Converters.Coordinates3Converter.CanWrite
+- uid: Gw2Sharp.Json.Converters.Coordinates3Converter.Read(Utf8JsonReader@,Type,JsonSerializerOptions)
+  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  href: api/Gw2Sharp.Json.Converters.Coordinates3Converter.html#Gw2Sharp_Json_Converters_Coordinates3Converter_Read_Utf8JsonReader__Type_JsonSerializerOptions_
+  commentId: M:Gw2Sharp.Json.Converters.Coordinates3Converter.Read(Utf8JsonReader@,Type,JsonSerializerOptions)
+  name.vb: Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName: Gw2Sharp.Json.Converters.Coordinates3Converter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName.vb: Gw2Sharp.Json.Converters.Coordinates3Converter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType: Coordinates3Converter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType.vb: Coordinates3Converter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+- uid: Gw2Sharp.Json.Converters.Coordinates3Converter.Read*
+  name: Read
+  href: api/Gw2Sharp.Json.Converters.Coordinates3Converter.html#Gw2Sharp_Json_Converters_Coordinates3Converter_Read_
+  commentId: Overload:Gw2Sharp.Json.Converters.Coordinates3Converter.Read
   isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.Coordinates3Converter.CanWrite
-  nameWithType: Coordinates3Converter.CanWrite
-- uid: Gw2Sharp.Json.Converters.Coordinates3Converter.ReadJson(JsonReader,Type,Gw2Sharp.Models.Coordinates3,System.Boolean,JsonSerializer)
-  name: ReadJson(JsonReader, Type, Coordinates3, Boolean, JsonSerializer)
-  href: api/Gw2Sharp.Json.Converters.Coordinates3Converter.html#Gw2Sharp_Json_Converters_Coordinates3Converter_ReadJson_JsonReader_Type_Gw2Sharp_Models_Coordinates3_System_Boolean_JsonSerializer_
-  commentId: M:Gw2Sharp.Json.Converters.Coordinates3Converter.ReadJson(JsonReader,Type,Gw2Sharp.Models.Coordinates3,System.Boolean,JsonSerializer)
-  fullName: Gw2Sharp.Json.Converters.Coordinates3Converter.ReadJson(JsonReader, Type, Gw2Sharp.Models.Coordinates3, System.Boolean, JsonSerializer)
-  nameWithType: Coordinates3Converter.ReadJson(JsonReader, Type, Coordinates3, Boolean, JsonSerializer)
-- uid: Gw2Sharp.Json.Converters.Coordinates3Converter.ReadJson*
-  name: ReadJson
-  href: api/Gw2Sharp.Json.Converters.Coordinates3Converter.html#Gw2Sharp_Json_Converters_Coordinates3Converter_ReadJson_
-  commentId: Overload:Gw2Sharp.Json.Converters.Coordinates3Converter.ReadJson
+  fullName: Gw2Sharp.Json.Converters.Coordinates3Converter.Read
+  nameWithType: Coordinates3Converter.Read
+- uid: Gw2Sharp.Json.Converters.Coordinates3Converter.Write(Utf8JsonWriter,Gw2Sharp.Models.Coordinates3,JsonSerializerOptions)
+  name: Write(Utf8JsonWriter, Coordinates3, JsonSerializerOptions)
+  href: api/Gw2Sharp.Json.Converters.Coordinates3Converter.html#Gw2Sharp_Json_Converters_Coordinates3Converter_Write_Utf8JsonWriter_Gw2Sharp_Models_Coordinates3_JsonSerializerOptions_
+  commentId: M:Gw2Sharp.Json.Converters.Coordinates3Converter.Write(Utf8JsonWriter,Gw2Sharp.Models.Coordinates3,JsonSerializerOptions)
+  fullName: Gw2Sharp.Json.Converters.Coordinates3Converter.Write(Utf8JsonWriter, Gw2Sharp.Models.Coordinates3, JsonSerializerOptions)
+  nameWithType: Coordinates3Converter.Write(Utf8JsonWriter, Coordinates3, JsonSerializerOptions)
+- uid: Gw2Sharp.Json.Converters.Coordinates3Converter.Write*
+  name: Write
+  href: api/Gw2Sharp.Json.Converters.Coordinates3Converter.html#Gw2Sharp_Json_Converters_Coordinates3Converter_Write_
+  commentId: Overload:Gw2Sharp.Json.Converters.Coordinates3Converter.Write
   isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.Coordinates3Converter.ReadJson
-  nameWithType: Coordinates3Converter.ReadJson
-- uid: Gw2Sharp.Json.Converters.Coordinates3Converter.WriteJson(JsonWriter,Gw2Sharp.Models.Coordinates3,JsonSerializer)
-  name: WriteJson(JsonWriter, Coordinates3, JsonSerializer)
-  href: api/Gw2Sharp.Json.Converters.Coordinates3Converter.html#Gw2Sharp_Json_Converters_Coordinates3Converter_WriteJson_JsonWriter_Gw2Sharp_Models_Coordinates3_JsonSerializer_
-  commentId: M:Gw2Sharp.Json.Converters.Coordinates3Converter.WriteJson(JsonWriter,Gw2Sharp.Models.Coordinates3,JsonSerializer)
-  fullName: Gw2Sharp.Json.Converters.Coordinates3Converter.WriteJson(JsonWriter, Gw2Sharp.Models.Coordinates3, JsonSerializer)
-  nameWithType: Coordinates3Converter.WriteJson(JsonWriter, Coordinates3, JsonSerializer)
-- uid: Gw2Sharp.Json.Converters.Coordinates3Converter.WriteJson*
-  name: WriteJson
-  href: api/Gw2Sharp.Json.Converters.Coordinates3Converter.html#Gw2Sharp_Json_Converters_Coordinates3Converter_WriteJson_
-  commentId: Overload:Gw2Sharp.Json.Converters.Coordinates3Converter.WriteJson
+  fullName: Gw2Sharp.Json.Converters.Coordinates3Converter.Write
+  nameWithType: Coordinates3Converter.Write
+- uid: Gw2Sharp.Json.Converters.DictionaryIntKeyConverter
+  name: DictionaryIntKeyConverter
+  href: api/Gw2Sharp.Json.Converters.DictionaryIntKeyConverter.html
+  commentId: T:Gw2Sharp.Json.Converters.DictionaryIntKeyConverter
+  fullName: Gw2Sharp.Json.Converters.DictionaryIntKeyConverter
+  nameWithType: DictionaryIntKeyConverter
+- uid: Gw2Sharp.Json.Converters.DictionaryIntKeyConverter.CanConvert(Type)
+  name: CanConvert(Type)
+  href: api/Gw2Sharp.Json.Converters.DictionaryIntKeyConverter.html#Gw2Sharp_Json_Converters_DictionaryIntKeyConverter_CanConvert_Type_
+  commentId: M:Gw2Sharp.Json.Converters.DictionaryIntKeyConverter.CanConvert(Type)
+  fullName: Gw2Sharp.Json.Converters.DictionaryIntKeyConverter.CanConvert(Type)
+  nameWithType: DictionaryIntKeyConverter.CanConvert(Type)
+- uid: Gw2Sharp.Json.Converters.DictionaryIntKeyConverter.CanConvert*
+  name: CanConvert
+  href: api/Gw2Sharp.Json.Converters.DictionaryIntKeyConverter.html#Gw2Sharp_Json_Converters_DictionaryIntKeyConverter_CanConvert_
+  commentId: Overload:Gw2Sharp.Json.Converters.DictionaryIntKeyConverter.CanConvert
   isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.Coordinates3Converter.WriteJson
-  nameWithType: Coordinates3Converter.WriteJson
+  fullName: Gw2Sharp.Json.Converters.DictionaryIntKeyConverter.CanConvert
+  nameWithType: DictionaryIntKeyConverter.CanConvert
+- uid: Gw2Sharp.Json.Converters.DictionaryIntKeyConverter.CreateConverter(Type,JsonSerializerOptions)
+  name: CreateConverter(Type, JsonSerializerOptions)
+  href: api/Gw2Sharp.Json.Converters.DictionaryIntKeyConverter.html#Gw2Sharp_Json_Converters_DictionaryIntKeyConverter_CreateConverter_Type_JsonSerializerOptions_
+  commentId: M:Gw2Sharp.Json.Converters.DictionaryIntKeyConverter.CreateConverter(Type,JsonSerializerOptions)
+  fullName: Gw2Sharp.Json.Converters.DictionaryIntKeyConverter.CreateConverter(Type, JsonSerializerOptions)
+  nameWithType: DictionaryIntKeyConverter.CreateConverter(Type, JsonSerializerOptions)
+- uid: Gw2Sharp.Json.Converters.DictionaryIntKeyConverter.CreateConverter*
+  name: CreateConverter
+  href: api/Gw2Sharp.Json.Converters.DictionaryIntKeyConverter.html#Gw2Sharp_Json_Converters_DictionaryIntKeyConverter_CreateConverter_
+  commentId: Overload:Gw2Sharp.Json.Converters.DictionaryIntKeyConverter.CreateConverter
+  isSpec: "True"
+  fullName: Gw2Sharp.Json.Converters.DictionaryIntKeyConverter.CreateConverter
+  nameWithType: DictionaryIntKeyConverter.CreateConverter
 - uid: Gw2Sharp.Json.Converters.GuidConverter
   name: GuidConverter
   href: api/Gw2Sharp.Json.Converters.GuidConverter.html
   commentId: T:Gw2Sharp.Json.Converters.GuidConverter
   fullName: Gw2Sharp.Json.Converters.GuidConverter
   nameWithType: GuidConverter
-- uid: Gw2Sharp.Json.Converters.GuidConverter.CanWrite
-  name: CanWrite
-  href: api/Gw2Sharp.Json.Converters.GuidConverter.html#Gw2Sharp_Json_Converters_GuidConverter_CanWrite
-  commentId: P:Gw2Sharp.Json.Converters.GuidConverter.CanWrite
-  fullName: Gw2Sharp.Json.Converters.GuidConverter.CanWrite
-  nameWithType: GuidConverter.CanWrite
-- uid: Gw2Sharp.Json.Converters.GuidConverter.CanWrite*
-  name: CanWrite
-  href: api/Gw2Sharp.Json.Converters.GuidConverter.html#Gw2Sharp_Json_Converters_GuidConverter_CanWrite_
-  commentId: Overload:Gw2Sharp.Json.Converters.GuidConverter.CanWrite
+- uid: Gw2Sharp.Json.Converters.GuidConverter.Read(Utf8JsonReader@,Type,JsonSerializerOptions)
+  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  href: api/Gw2Sharp.Json.Converters.GuidConverter.html#Gw2Sharp_Json_Converters_GuidConverter_Read_Utf8JsonReader__Type_JsonSerializerOptions_
+  commentId: M:Gw2Sharp.Json.Converters.GuidConverter.Read(Utf8JsonReader@,Type,JsonSerializerOptions)
+  name.vb: Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName: Gw2Sharp.Json.Converters.GuidConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName.vb: Gw2Sharp.Json.Converters.GuidConverter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType: GuidConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType.vb: GuidConverter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+- uid: Gw2Sharp.Json.Converters.GuidConverter.Read*
+  name: Read
+  href: api/Gw2Sharp.Json.Converters.GuidConverter.html#Gw2Sharp_Json_Converters_GuidConverter_Read_
+  commentId: Overload:Gw2Sharp.Json.Converters.GuidConverter.Read
   isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.GuidConverter.CanWrite
-  nameWithType: GuidConverter.CanWrite
-- uid: Gw2Sharp.Json.Converters.GuidConverter.ReadJson(JsonReader,Type,Guid,System.Boolean,JsonSerializer)
-  name: ReadJson(JsonReader, Type, Guid, Boolean, JsonSerializer)
-  href: api/Gw2Sharp.Json.Converters.GuidConverter.html#Gw2Sharp_Json_Converters_GuidConverter_ReadJson_JsonReader_Type_Guid_System_Boolean_JsonSerializer_
-  commentId: M:Gw2Sharp.Json.Converters.GuidConverter.ReadJson(JsonReader,Type,Guid,System.Boolean,JsonSerializer)
-  fullName: Gw2Sharp.Json.Converters.GuidConverter.ReadJson(JsonReader, Type, Guid, System.Boolean, JsonSerializer)
-  nameWithType: GuidConverter.ReadJson(JsonReader, Type, Guid, Boolean, JsonSerializer)
-- uid: Gw2Sharp.Json.Converters.GuidConverter.ReadJson*
-  name: ReadJson
-  href: api/Gw2Sharp.Json.Converters.GuidConverter.html#Gw2Sharp_Json_Converters_GuidConverter_ReadJson_
-  commentId: Overload:Gw2Sharp.Json.Converters.GuidConverter.ReadJson
+  fullName: Gw2Sharp.Json.Converters.GuidConverter.Read
+  nameWithType: GuidConverter.Read
+- uid: Gw2Sharp.Json.Converters.GuidConverter.Write(Utf8JsonWriter,Guid,JsonSerializerOptions)
+  name: Write(Utf8JsonWriter, Guid, JsonSerializerOptions)
+  href: api/Gw2Sharp.Json.Converters.GuidConverter.html#Gw2Sharp_Json_Converters_GuidConverter_Write_Utf8JsonWriter_Guid_JsonSerializerOptions_
+  commentId: M:Gw2Sharp.Json.Converters.GuidConverter.Write(Utf8JsonWriter,Guid,JsonSerializerOptions)
+  fullName: Gw2Sharp.Json.Converters.GuidConverter.Write(Utf8JsonWriter, Guid, JsonSerializerOptions)
+  nameWithType: GuidConverter.Write(Utf8JsonWriter, Guid, JsonSerializerOptions)
+- uid: Gw2Sharp.Json.Converters.GuidConverter.Write*
+  name: Write
+  href: api/Gw2Sharp.Json.Converters.GuidConverter.html#Gw2Sharp_Json_Converters_GuidConverter_Write_
+  commentId: Overload:Gw2Sharp.Json.Converters.GuidConverter.Write
   isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.GuidConverter.ReadJson
-  nameWithType: GuidConverter.ReadJson
-- uid: Gw2Sharp.Json.Converters.GuidConverter.WriteJson(JsonWriter,Guid,JsonSerializer)
-  name: WriteJson(JsonWriter, Guid, JsonSerializer)
-  href: api/Gw2Sharp.Json.Converters.GuidConverter.html#Gw2Sharp_Json_Converters_GuidConverter_WriteJson_JsonWriter_Guid_JsonSerializer_
-  commentId: M:Gw2Sharp.Json.Converters.GuidConverter.WriteJson(JsonWriter,Guid,JsonSerializer)
-  fullName: Gw2Sharp.Json.Converters.GuidConverter.WriteJson(JsonWriter, Guid, JsonSerializer)
-  nameWithType: GuidConverter.WriteJson(JsonWriter, Guid, JsonSerializer)
-- uid: Gw2Sharp.Json.Converters.GuidConverter.WriteJson*
-  name: WriteJson
-  href: api/Gw2Sharp.Json.Converters.GuidConverter.html#Gw2Sharp_Json_Converters_GuidConverter_WriteJson_
-  commentId: Overload:Gw2Sharp.Json.Converters.GuidConverter.WriteJson
+  fullName: Gw2Sharp.Json.Converters.GuidConverter.Write
+  nameWithType: GuidConverter.Write
+- uid: Gw2Sharp.Json.Converters.PvpSeasonLeaderboardSettingsTierRangeConverter
+  name: PvpSeasonLeaderboardSettingsTierRangeConverter
+  href: api/Gw2Sharp.Json.Converters.PvpSeasonLeaderboardSettingsTierRangeConverter.html
+  commentId: T:Gw2Sharp.Json.Converters.PvpSeasonLeaderboardSettingsTierRangeConverter
+  fullName: Gw2Sharp.Json.Converters.PvpSeasonLeaderboardSettingsTierRangeConverter
+  nameWithType: PvpSeasonLeaderboardSettingsTierRangeConverter
+- uid: Gw2Sharp.Json.Converters.PvpSeasonLeaderboardSettingsTierRangeConverter.Read(Utf8JsonReader@,Type,JsonSerializerOptions)
+  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  href: api/Gw2Sharp.Json.Converters.PvpSeasonLeaderboardSettingsTierRangeConverter.html#Gw2Sharp_Json_Converters_PvpSeasonLeaderboardSettingsTierRangeConverter_Read_Utf8JsonReader__Type_JsonSerializerOptions_
+  commentId: M:Gw2Sharp.Json.Converters.PvpSeasonLeaderboardSettingsTierRangeConverter.Read(Utf8JsonReader@,Type,JsonSerializerOptions)
+  name.vb: Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName: Gw2Sharp.Json.Converters.PvpSeasonLeaderboardSettingsTierRangeConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName.vb: Gw2Sharp.Json.Converters.PvpSeasonLeaderboardSettingsTierRangeConverter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType: PvpSeasonLeaderboardSettingsTierRangeConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType.vb: PvpSeasonLeaderboardSettingsTierRangeConverter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+- uid: Gw2Sharp.Json.Converters.PvpSeasonLeaderboardSettingsTierRangeConverter.Read*
+  name: Read
+  href: api/Gw2Sharp.Json.Converters.PvpSeasonLeaderboardSettingsTierRangeConverter.html#Gw2Sharp_Json_Converters_PvpSeasonLeaderboardSettingsTierRangeConverter_Read_
+  commentId: Overload:Gw2Sharp.Json.Converters.PvpSeasonLeaderboardSettingsTierRangeConverter.Read
   isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.GuidConverter.WriteJson
-  nameWithType: GuidConverter.WriteJson
+  fullName: Gw2Sharp.Json.Converters.PvpSeasonLeaderboardSettingsTierRangeConverter.Read
+  nameWithType: PvpSeasonLeaderboardSettingsTierRangeConverter.Read
+- uid: Gw2Sharp.Json.Converters.PvpSeasonLeaderboardSettingsTierRangeConverter.Write(Utf8JsonWriter,Gw2Sharp.WebApi.V2.Models.PvpSeasonLeaderboardSettingsTierRange,JsonSerializerOptions)
+  name: Write(Utf8JsonWriter, PvpSeasonLeaderboardSettingsTierRange, JsonSerializerOptions)
+  href: api/Gw2Sharp.Json.Converters.PvpSeasonLeaderboardSettingsTierRangeConverter.html#Gw2Sharp_Json_Converters_PvpSeasonLeaderboardSettingsTierRangeConverter_Write_Utf8JsonWriter_Gw2Sharp_WebApi_V2_Models_PvpSeasonLeaderboardSettingsTierRange_JsonSerializerOptions_
+  commentId: M:Gw2Sharp.Json.Converters.PvpSeasonLeaderboardSettingsTierRangeConverter.Write(Utf8JsonWriter,Gw2Sharp.WebApi.V2.Models.PvpSeasonLeaderboardSettingsTierRange,JsonSerializerOptions)
+  fullName: Gw2Sharp.Json.Converters.PvpSeasonLeaderboardSettingsTierRangeConverter.Write(Utf8JsonWriter, Gw2Sharp.WebApi.V2.Models.PvpSeasonLeaderboardSettingsTierRange, JsonSerializerOptions)
+  nameWithType: PvpSeasonLeaderboardSettingsTierRangeConverter.Write(Utf8JsonWriter, PvpSeasonLeaderboardSettingsTierRange, JsonSerializerOptions)
+- uid: Gw2Sharp.Json.Converters.PvpSeasonLeaderboardSettingsTierRangeConverter.Write*
+  name: Write
+  href: api/Gw2Sharp.Json.Converters.PvpSeasonLeaderboardSettingsTierRangeConverter.html#Gw2Sharp_Json_Converters_PvpSeasonLeaderboardSettingsTierRangeConverter_Write_
+  commentId: Overload:Gw2Sharp.Json.Converters.PvpSeasonLeaderboardSettingsTierRangeConverter.Write
+  isSpec: "True"
+  fullName: Gw2Sharp.Json.Converters.PvpSeasonLeaderboardSettingsTierRangeConverter.Write
+  nameWithType: PvpSeasonLeaderboardSettingsTierRangeConverter.Write
 - uid: Gw2Sharp.Json.Converters.RectangleConverter
   name: RectangleConverter
   href: api/Gw2Sharp.Json.Converters.RectangleConverter.html
   commentId: T:Gw2Sharp.Json.Converters.RectangleConverter
   fullName: Gw2Sharp.Json.Converters.RectangleConverter
   nameWithType: RectangleConverter
-- uid: Gw2Sharp.Json.Converters.RectangleConverter.CanWrite
-  name: CanWrite
-  href: api/Gw2Sharp.Json.Converters.RectangleConverter.html#Gw2Sharp_Json_Converters_RectangleConverter_CanWrite
-  commentId: P:Gw2Sharp.Json.Converters.RectangleConverter.CanWrite
-  fullName: Gw2Sharp.Json.Converters.RectangleConverter.CanWrite
-  nameWithType: RectangleConverter.CanWrite
-- uid: Gw2Sharp.Json.Converters.RectangleConverter.CanWrite*
-  name: CanWrite
-  href: api/Gw2Sharp.Json.Converters.RectangleConverter.html#Gw2Sharp_Json_Converters_RectangleConverter_CanWrite_
-  commentId: Overload:Gw2Sharp.Json.Converters.RectangleConverter.CanWrite
+- uid: Gw2Sharp.Json.Converters.RectangleConverter.Read(Utf8JsonReader@,Type,JsonSerializerOptions,Gw2Sharp.WebApi.V2.Models.RectangleDirectionType)
+  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions, RectangleDirectionType)
+  href: api/Gw2Sharp.Json.Converters.RectangleConverter.html#Gw2Sharp_Json_Converters_RectangleConverter_Read_Utf8JsonReader__Type_JsonSerializerOptions_Gw2Sharp_WebApi_V2_Models_RectangleDirectionType_
+  commentId: M:Gw2Sharp.Json.Converters.RectangleConverter.Read(Utf8JsonReader@,Type,JsonSerializerOptions,Gw2Sharp.WebApi.V2.Models.RectangleDirectionType)
+  name.vb: Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions, RectangleDirectionType)
+  fullName: Gw2Sharp.Json.Converters.RectangleConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions, Gw2Sharp.WebApi.V2.Models.RectangleDirectionType)
+  fullName.vb: Gw2Sharp.Json.Converters.RectangleConverter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions, Gw2Sharp.WebApi.V2.Models.RectangleDirectionType)
+  nameWithType: RectangleConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions, RectangleDirectionType)
+  nameWithType.vb: RectangleConverter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions, RectangleDirectionType)
+- uid: Gw2Sharp.Json.Converters.RectangleConverter.Read*
+  name: Read
+  href: api/Gw2Sharp.Json.Converters.RectangleConverter.html#Gw2Sharp_Json_Converters_RectangleConverter_Read_
+  commentId: Overload:Gw2Sharp.Json.Converters.RectangleConverter.Read
   isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.RectangleConverter.CanWrite
-  nameWithType: RectangleConverter.CanWrite
-- uid: Gw2Sharp.Json.Converters.RectangleConverter.ReadJson(JsonReader,Type,Gw2Sharp.WebApi.V2.Models.Rectangle,System.Boolean,JsonSerializer,Gw2Sharp.WebApi.V2.Models.RectangleDirectionType)
-  name: ReadJson(JsonReader, Type, Rectangle, Boolean, JsonSerializer, RectangleDirectionType)
-  href: api/Gw2Sharp.Json.Converters.RectangleConverter.html#Gw2Sharp_Json_Converters_RectangleConverter_ReadJson_JsonReader_Type_Gw2Sharp_WebApi_V2_Models_Rectangle_System_Boolean_JsonSerializer_Gw2Sharp_WebApi_V2_Models_RectangleDirectionType_
-  commentId: M:Gw2Sharp.Json.Converters.RectangleConverter.ReadJson(JsonReader,Type,Gw2Sharp.WebApi.V2.Models.Rectangle,System.Boolean,JsonSerializer,Gw2Sharp.WebApi.V2.Models.RectangleDirectionType)
-  fullName: Gw2Sharp.Json.Converters.RectangleConverter.ReadJson(JsonReader, Type, Gw2Sharp.WebApi.V2.Models.Rectangle, System.Boolean, JsonSerializer, Gw2Sharp.WebApi.V2.Models.RectangleDirectionType)
-  nameWithType: RectangleConverter.ReadJson(JsonReader, Type, Rectangle, Boolean, JsonSerializer, RectangleDirectionType)
-- uid: Gw2Sharp.Json.Converters.RectangleConverter.ReadJson*
-  name: ReadJson
-  href: api/Gw2Sharp.Json.Converters.RectangleConverter.html#Gw2Sharp_Json_Converters_RectangleConverter_ReadJson_
-  commentId: Overload:Gw2Sharp.Json.Converters.RectangleConverter.ReadJson
+  fullName: Gw2Sharp.Json.Converters.RectangleConverter.Read
+  nameWithType: RectangleConverter.Read
+- uid: Gw2Sharp.Json.Converters.RectangleConverter.Write(Utf8JsonWriter,Gw2Sharp.WebApi.V2.Models.Rectangle,JsonSerializerOptions)
+  name: Write(Utf8JsonWriter, Rectangle, JsonSerializerOptions)
+  href: api/Gw2Sharp.Json.Converters.RectangleConverter.html#Gw2Sharp_Json_Converters_RectangleConverter_Write_Utf8JsonWriter_Gw2Sharp_WebApi_V2_Models_Rectangle_JsonSerializerOptions_
+  commentId: M:Gw2Sharp.Json.Converters.RectangleConverter.Write(Utf8JsonWriter,Gw2Sharp.WebApi.V2.Models.Rectangle,JsonSerializerOptions)
+  fullName: Gw2Sharp.Json.Converters.RectangleConverter.Write(Utf8JsonWriter, Gw2Sharp.WebApi.V2.Models.Rectangle, JsonSerializerOptions)
+  nameWithType: RectangleConverter.Write(Utf8JsonWriter, Rectangle, JsonSerializerOptions)
+- uid: Gw2Sharp.Json.Converters.RectangleConverter.Write*
+  name: Write
+  href: api/Gw2Sharp.Json.Converters.RectangleConverter.html#Gw2Sharp_Json_Converters_RectangleConverter_Write_
+  commentId: Overload:Gw2Sharp.Json.Converters.RectangleConverter.Write
   isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.RectangleConverter.ReadJson
-  nameWithType: RectangleConverter.ReadJson
-- uid: Gw2Sharp.Json.Converters.RectangleConverter.WriteJson(JsonWriter,Gw2Sharp.WebApi.V2.Models.Rectangle,JsonSerializer)
-  name: WriteJson(JsonWriter, Rectangle, JsonSerializer)
-  href: api/Gw2Sharp.Json.Converters.RectangleConverter.html#Gw2Sharp_Json_Converters_RectangleConverter_WriteJson_JsonWriter_Gw2Sharp_WebApi_V2_Models_Rectangle_JsonSerializer_
-  commentId: M:Gw2Sharp.Json.Converters.RectangleConverter.WriteJson(JsonWriter,Gw2Sharp.WebApi.V2.Models.Rectangle,JsonSerializer)
-  fullName: Gw2Sharp.Json.Converters.RectangleConverter.WriteJson(JsonWriter, Gw2Sharp.WebApi.V2.Models.Rectangle, JsonSerializer)
-  nameWithType: RectangleConverter.WriteJson(JsonWriter, Rectangle, JsonSerializer)
-- uid: Gw2Sharp.Json.Converters.RectangleConverter.WriteJson*
-  name: WriteJson
-  href: api/Gw2Sharp.Json.Converters.RectangleConverter.html#Gw2Sharp_Json_Converters_RectangleConverter_WriteJson_
-  commentId: Overload:Gw2Sharp.Json.Converters.RectangleConverter.WriteJson
-  isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.RectangleConverter.WriteJson
-  nameWithType: RectangleConverter.WriteJson
+  fullName: Gw2Sharp.Json.Converters.RectangleConverter.Write
+  nameWithType: RectangleConverter.Write
 - uid: Gw2Sharp.Json.Converters.RenderUrlConverter
   name: RenderUrlConverter
   href: api/Gw2Sharp.Json.Converters.RenderUrlConverter.html
@@ -3434,154 +3324,165 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Json.Converters.RenderUrlConverter.RenderUrlConverter
   nameWithType: RenderUrlConverter.RenderUrlConverter
-- uid: Gw2Sharp.Json.Converters.RenderUrlConverter.CanWrite
-  name: CanWrite
-  href: api/Gw2Sharp.Json.Converters.RenderUrlConverter.html#Gw2Sharp_Json_Converters_RenderUrlConverter_CanWrite
-  commentId: P:Gw2Sharp.Json.Converters.RenderUrlConverter.CanWrite
-  fullName: Gw2Sharp.Json.Converters.RenderUrlConverter.CanWrite
-  nameWithType: RenderUrlConverter.CanWrite
-- uid: Gw2Sharp.Json.Converters.RenderUrlConverter.CanWrite*
-  name: CanWrite
-  href: api/Gw2Sharp.Json.Converters.RenderUrlConverter.html#Gw2Sharp_Json_Converters_RenderUrlConverter_CanWrite_
-  commentId: Overload:Gw2Sharp.Json.Converters.RenderUrlConverter.CanWrite
+- uid: Gw2Sharp.Json.Converters.RenderUrlConverter.Read(Utf8JsonReader@,Type,JsonSerializerOptions)
+  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  href: api/Gw2Sharp.Json.Converters.RenderUrlConverter.html#Gw2Sharp_Json_Converters_RenderUrlConverter_Read_Utf8JsonReader__Type_JsonSerializerOptions_
+  commentId: M:Gw2Sharp.Json.Converters.RenderUrlConverter.Read(Utf8JsonReader@,Type,JsonSerializerOptions)
+  name.vb: Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName: Gw2Sharp.Json.Converters.RenderUrlConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName.vb: Gw2Sharp.Json.Converters.RenderUrlConverter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType: RenderUrlConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType.vb: RenderUrlConverter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+- uid: Gw2Sharp.Json.Converters.RenderUrlConverter.Read*
+  name: Read
+  href: api/Gw2Sharp.Json.Converters.RenderUrlConverter.html#Gw2Sharp_Json_Converters_RenderUrlConverter_Read_
+  commentId: Overload:Gw2Sharp.Json.Converters.RenderUrlConverter.Read
   isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.RenderUrlConverter.CanWrite
-  nameWithType: RenderUrlConverter.CanWrite
-- uid: Gw2Sharp.Json.Converters.RenderUrlConverter.ReadJson(JsonReader,Type,Gw2Sharp.WebApi.RenderUrl,System.Boolean,JsonSerializer)
-  name: ReadJson(JsonReader, Type, RenderUrl, Boolean, JsonSerializer)
-  href: api/Gw2Sharp.Json.Converters.RenderUrlConverter.html#Gw2Sharp_Json_Converters_RenderUrlConverter_ReadJson_JsonReader_Type_Gw2Sharp_WebApi_RenderUrl_System_Boolean_JsonSerializer_
-  commentId: M:Gw2Sharp.Json.Converters.RenderUrlConverter.ReadJson(JsonReader,Type,Gw2Sharp.WebApi.RenderUrl,System.Boolean,JsonSerializer)
-  fullName: Gw2Sharp.Json.Converters.RenderUrlConverter.ReadJson(JsonReader, Type, Gw2Sharp.WebApi.RenderUrl, System.Boolean, JsonSerializer)
-  nameWithType: RenderUrlConverter.ReadJson(JsonReader, Type, RenderUrl, Boolean, JsonSerializer)
-- uid: Gw2Sharp.Json.Converters.RenderUrlConverter.ReadJson*
-  name: ReadJson
-  href: api/Gw2Sharp.Json.Converters.RenderUrlConverter.html#Gw2Sharp_Json_Converters_RenderUrlConverter_ReadJson_
-  commentId: Overload:Gw2Sharp.Json.Converters.RenderUrlConverter.ReadJson
+  fullName: Gw2Sharp.Json.Converters.RenderUrlConverter.Read
+  nameWithType: RenderUrlConverter.Read
+- uid: Gw2Sharp.Json.Converters.RenderUrlConverter.Write(Utf8JsonWriter,Gw2Sharp.WebApi.RenderUrl,JsonSerializerOptions)
+  name: Write(Utf8JsonWriter, RenderUrl, JsonSerializerOptions)
+  href: api/Gw2Sharp.Json.Converters.RenderUrlConverter.html#Gw2Sharp_Json_Converters_RenderUrlConverter_Write_Utf8JsonWriter_Gw2Sharp_WebApi_RenderUrl_JsonSerializerOptions_
+  commentId: M:Gw2Sharp.Json.Converters.RenderUrlConverter.Write(Utf8JsonWriter,Gw2Sharp.WebApi.RenderUrl,JsonSerializerOptions)
+  fullName: Gw2Sharp.Json.Converters.RenderUrlConverter.Write(Utf8JsonWriter, Gw2Sharp.WebApi.RenderUrl, JsonSerializerOptions)
+  nameWithType: RenderUrlConverter.Write(Utf8JsonWriter, RenderUrl, JsonSerializerOptions)
+- uid: Gw2Sharp.Json.Converters.RenderUrlConverter.Write*
+  name: Write
+  href: api/Gw2Sharp.Json.Converters.RenderUrlConverter.html#Gw2Sharp_Json_Converters_RenderUrlConverter_Write_
+  commentId: Overload:Gw2Sharp.Json.Converters.RenderUrlConverter.Write
   isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.RenderUrlConverter.ReadJson
-  nameWithType: RenderUrlConverter.ReadJson
-- uid: Gw2Sharp.Json.Converters.RenderUrlConverter.WriteJson(JsonWriter,Gw2Sharp.WebApi.RenderUrl,JsonSerializer)
-  name: WriteJson(JsonWriter, RenderUrl, JsonSerializer)
-  href: api/Gw2Sharp.Json.Converters.RenderUrlConverter.html#Gw2Sharp_Json_Converters_RenderUrlConverter_WriteJson_JsonWriter_Gw2Sharp_WebApi_RenderUrl_JsonSerializer_
-  commentId: M:Gw2Sharp.Json.Converters.RenderUrlConverter.WriteJson(JsonWriter,Gw2Sharp.WebApi.RenderUrl,JsonSerializer)
-  fullName: Gw2Sharp.Json.Converters.RenderUrlConverter.WriteJson(JsonWriter, Gw2Sharp.WebApi.RenderUrl, JsonSerializer)
-  nameWithType: RenderUrlConverter.WriteJson(JsonWriter, RenderUrl, JsonSerializer)
-- uid: Gw2Sharp.Json.Converters.RenderUrlConverter.WriteJson*
-  name: WriteJson
-  href: api/Gw2Sharp.Json.Converters.RenderUrlConverter.html#Gw2Sharp_Json_Converters_RenderUrlConverter_WriteJson_
-  commentId: Overload:Gw2Sharp.Json.Converters.RenderUrlConverter.WriteJson
-  isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.RenderUrlConverter.WriteJson
-  nameWithType: RenderUrlConverter.WriteJson
+  fullName: Gw2Sharp.Json.Converters.RenderUrlConverter.Write
+  nameWithType: RenderUrlConverter.Write
 - uid: Gw2Sharp.Json.Converters.SizeConverter
   name: SizeConverter
   href: api/Gw2Sharp.Json.Converters.SizeConverter.html
   commentId: T:Gw2Sharp.Json.Converters.SizeConverter
   fullName: Gw2Sharp.Json.Converters.SizeConverter
   nameWithType: SizeConverter
-- uid: Gw2Sharp.Json.Converters.SizeConverter.CanWrite
-  name: CanWrite
-  href: api/Gw2Sharp.Json.Converters.SizeConverter.html#Gw2Sharp_Json_Converters_SizeConverter_CanWrite
-  commentId: P:Gw2Sharp.Json.Converters.SizeConverter.CanWrite
-  fullName: Gw2Sharp.Json.Converters.SizeConverter.CanWrite
-  nameWithType: SizeConverter.CanWrite
-- uid: Gw2Sharp.Json.Converters.SizeConverter.CanWrite*
-  name: CanWrite
-  href: api/Gw2Sharp.Json.Converters.SizeConverter.html#Gw2Sharp_Json_Converters_SizeConverter_CanWrite_
-  commentId: Overload:Gw2Sharp.Json.Converters.SizeConverter.CanWrite
+- uid: Gw2Sharp.Json.Converters.SizeConverter.Read(Utf8JsonReader@,Type,JsonSerializerOptions)
+  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  href: api/Gw2Sharp.Json.Converters.SizeConverter.html#Gw2Sharp_Json_Converters_SizeConverter_Read_Utf8JsonReader__Type_JsonSerializerOptions_
+  commentId: M:Gw2Sharp.Json.Converters.SizeConverter.Read(Utf8JsonReader@,Type,JsonSerializerOptions)
+  name.vb: Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName: Gw2Sharp.Json.Converters.SizeConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName.vb: Gw2Sharp.Json.Converters.SizeConverter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType: SizeConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType.vb: SizeConverter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+- uid: Gw2Sharp.Json.Converters.SizeConverter.Read*
+  name: Read
+  href: api/Gw2Sharp.Json.Converters.SizeConverter.html#Gw2Sharp_Json_Converters_SizeConverter_Read_
+  commentId: Overload:Gw2Sharp.Json.Converters.SizeConverter.Read
   isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.SizeConverter.CanWrite
-  nameWithType: SizeConverter.CanWrite
-- uid: Gw2Sharp.Json.Converters.SizeConverter.ReadJson(JsonReader,Type,Gw2Sharp.Models.Size,System.Boolean,JsonSerializer)
-  name: ReadJson(JsonReader, Type, Size, Boolean, JsonSerializer)
-  href: api/Gw2Sharp.Json.Converters.SizeConverter.html#Gw2Sharp_Json_Converters_SizeConverter_ReadJson_JsonReader_Type_Gw2Sharp_Models_Size_System_Boolean_JsonSerializer_
-  commentId: M:Gw2Sharp.Json.Converters.SizeConverter.ReadJson(JsonReader,Type,Gw2Sharp.Models.Size,System.Boolean,JsonSerializer)
-  fullName: Gw2Sharp.Json.Converters.SizeConverter.ReadJson(JsonReader, Type, Gw2Sharp.Models.Size, System.Boolean, JsonSerializer)
-  nameWithType: SizeConverter.ReadJson(JsonReader, Type, Size, Boolean, JsonSerializer)
-- uid: Gw2Sharp.Json.Converters.SizeConverter.ReadJson*
-  name: ReadJson
-  href: api/Gw2Sharp.Json.Converters.SizeConverter.html#Gw2Sharp_Json_Converters_SizeConverter_ReadJson_
-  commentId: Overload:Gw2Sharp.Json.Converters.SizeConverter.ReadJson
+  fullName: Gw2Sharp.Json.Converters.SizeConverter.Read
+  nameWithType: SizeConverter.Read
+- uid: Gw2Sharp.Json.Converters.SizeConverter.Write(Utf8JsonWriter,Gw2Sharp.Models.Size,JsonSerializerOptions)
+  name: Write(Utf8JsonWriter, Size, JsonSerializerOptions)
+  href: api/Gw2Sharp.Json.Converters.SizeConverter.html#Gw2Sharp_Json_Converters_SizeConverter_Write_Utf8JsonWriter_Gw2Sharp_Models_Size_JsonSerializerOptions_
+  commentId: M:Gw2Sharp.Json.Converters.SizeConverter.Write(Utf8JsonWriter,Gw2Sharp.Models.Size,JsonSerializerOptions)
+  fullName: Gw2Sharp.Json.Converters.SizeConverter.Write(Utf8JsonWriter, Gw2Sharp.Models.Size, JsonSerializerOptions)
+  nameWithType: SizeConverter.Write(Utf8JsonWriter, Size, JsonSerializerOptions)
+- uid: Gw2Sharp.Json.Converters.SizeConverter.Write*
+  name: Write
+  href: api/Gw2Sharp.Json.Converters.SizeConverter.html#Gw2Sharp_Json_Converters_SizeConverter_Write_
+  commentId: Overload:Gw2Sharp.Json.Converters.SizeConverter.Write
   isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.SizeConverter.ReadJson
-  nameWithType: SizeConverter.ReadJson
-- uid: Gw2Sharp.Json.Converters.SizeConverter.WriteJson(JsonWriter,Gw2Sharp.Models.Size,JsonSerializer)
-  name: WriteJson(JsonWriter, Size, JsonSerializer)
-  href: api/Gw2Sharp.Json.Converters.SizeConverter.html#Gw2Sharp_Json_Converters_SizeConverter_WriteJson_JsonWriter_Gw2Sharp_Models_Size_JsonSerializer_
-  commentId: M:Gw2Sharp.Json.Converters.SizeConverter.WriteJson(JsonWriter,Gw2Sharp.Models.Size,JsonSerializer)
-  fullName: Gw2Sharp.Json.Converters.SizeConverter.WriteJson(JsonWriter, Gw2Sharp.Models.Size, JsonSerializer)
-  nameWithType: SizeConverter.WriteJson(JsonWriter, Size, JsonSerializer)
-- uid: Gw2Sharp.Json.Converters.SizeConverter.WriteJson*
-  name: WriteJson
-  href: api/Gw2Sharp.Json.Converters.SizeConverter.html#Gw2Sharp_Json_Converters_SizeConverter_WriteJson_
-  commentId: Overload:Gw2Sharp.Json.Converters.SizeConverter.WriteJson
+  fullName: Gw2Sharp.Json.Converters.SizeConverter.Write
+  nameWithType: SizeConverter.Write
+- uid: Gw2Sharp.Json.Converters.StringAsIntConverter
+  name: StringAsIntConverter
+  href: api/Gw2Sharp.Json.Converters.StringAsIntConverter.html
+  commentId: T:Gw2Sharp.Json.Converters.StringAsIntConverter
+  fullName: Gw2Sharp.Json.Converters.StringAsIntConverter
+  nameWithType: StringAsIntConverter
+- uid: Gw2Sharp.Json.Converters.StringAsIntConverter.Read(Utf8JsonReader@,Type,JsonSerializerOptions)
+  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  href: api/Gw2Sharp.Json.Converters.StringAsIntConverter.html#Gw2Sharp_Json_Converters_StringAsIntConverter_Read_Utf8JsonReader__Type_JsonSerializerOptions_
+  commentId: M:Gw2Sharp.Json.Converters.StringAsIntConverter.Read(Utf8JsonReader@,Type,JsonSerializerOptions)
+  name.vb: Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName: Gw2Sharp.Json.Converters.StringAsIntConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName.vb: Gw2Sharp.Json.Converters.StringAsIntConverter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType: StringAsIntConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType.vb: StringAsIntConverter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+- uid: Gw2Sharp.Json.Converters.StringAsIntConverter.Read*
+  name: Read
+  href: api/Gw2Sharp.Json.Converters.StringAsIntConverter.html#Gw2Sharp_Json_Converters_StringAsIntConverter_Read_
+  commentId: Overload:Gw2Sharp.Json.Converters.StringAsIntConverter.Read
   isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.SizeConverter.WriteJson
-  nameWithType: SizeConverter.WriteJson
+  fullName: Gw2Sharp.Json.Converters.StringAsIntConverter.Read
+  nameWithType: StringAsIntConverter.Read
+- uid: Gw2Sharp.Json.Converters.StringAsIntConverter.Write(Utf8JsonWriter,System.Nullable{System.Int32},JsonSerializerOptions)
+  name: Write(Utf8JsonWriter, Nullable<Int32>, JsonSerializerOptions)
+  href: api/Gw2Sharp.Json.Converters.StringAsIntConverter.html#Gw2Sharp_Json_Converters_StringAsIntConverter_Write_Utf8JsonWriter_System_Nullable_System_Int32__JsonSerializerOptions_
+  commentId: M:Gw2Sharp.Json.Converters.StringAsIntConverter.Write(Utf8JsonWriter,System.Nullable{System.Int32},JsonSerializerOptions)
+  name.vb: Write(Utf8JsonWriter, Nullable(Of Int32), JsonSerializerOptions)
+  fullName: Gw2Sharp.Json.Converters.StringAsIntConverter.Write(Utf8JsonWriter, System.Nullable<System.Int32>, JsonSerializerOptions)
+  fullName.vb: Gw2Sharp.Json.Converters.StringAsIntConverter.Write(Utf8JsonWriter, System.Nullable(Of System.Int32), JsonSerializerOptions)
+  nameWithType: StringAsIntConverter.Write(Utf8JsonWriter, Nullable<Int32>, JsonSerializerOptions)
+  nameWithType.vb: StringAsIntConverter.Write(Utf8JsonWriter, Nullable(Of Int32), JsonSerializerOptions)
+- uid: Gw2Sharp.Json.Converters.StringAsIntConverter.Write*
+  name: Write
+  href: api/Gw2Sharp.Json.Converters.StringAsIntConverter.html#Gw2Sharp_Json_Converters_StringAsIntConverter_Write_
+  commentId: Overload:Gw2Sharp.Json.Converters.StringAsIntConverter.Write
+  isSpec: "True"
+  fullName: Gw2Sharp.Json.Converters.StringAsIntConverter.Write
+  nameWithType: StringAsIntConverter.Write
 - uid: Gw2Sharp.Json.Converters.TimeSpanConverter
   name: TimeSpanConverter
   href: api/Gw2Sharp.Json.Converters.TimeSpanConverter.html
   commentId: T:Gw2Sharp.Json.Converters.TimeSpanConverter
   fullName: Gw2Sharp.Json.Converters.TimeSpanConverter
   nameWithType: TimeSpanConverter
-- uid: Gw2Sharp.Json.Converters.TimeSpanConverter.CanWrite
-  name: CanWrite
-  href: api/Gw2Sharp.Json.Converters.TimeSpanConverter.html#Gw2Sharp_Json_Converters_TimeSpanConverter_CanWrite
-  commentId: P:Gw2Sharp.Json.Converters.TimeSpanConverter.CanWrite
-  fullName: Gw2Sharp.Json.Converters.TimeSpanConverter.CanWrite
-  nameWithType: TimeSpanConverter.CanWrite
-- uid: Gw2Sharp.Json.Converters.TimeSpanConverter.CanWrite*
-  name: CanWrite
-  href: api/Gw2Sharp.Json.Converters.TimeSpanConverter.html#Gw2Sharp_Json_Converters_TimeSpanConverter_CanWrite_
-  commentId: Overload:Gw2Sharp.Json.Converters.TimeSpanConverter.CanWrite
+- uid: Gw2Sharp.Json.Converters.TimeSpanConverter.Read(Utf8JsonReader@,Type,JsonSerializerOptions)
+  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  href: api/Gw2Sharp.Json.Converters.TimeSpanConverter.html#Gw2Sharp_Json_Converters_TimeSpanConverter_Read_Utf8JsonReader__Type_JsonSerializerOptions_
+  commentId: M:Gw2Sharp.Json.Converters.TimeSpanConverter.Read(Utf8JsonReader@,Type,JsonSerializerOptions)
+  name.vb: Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName: Gw2Sharp.Json.Converters.TimeSpanConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName.vb: Gw2Sharp.Json.Converters.TimeSpanConverter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType: TimeSpanConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType.vb: TimeSpanConverter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+- uid: Gw2Sharp.Json.Converters.TimeSpanConverter.Read*
+  name: Read
+  href: api/Gw2Sharp.Json.Converters.TimeSpanConverter.html#Gw2Sharp_Json_Converters_TimeSpanConverter_Read_
+  commentId: Overload:Gw2Sharp.Json.Converters.TimeSpanConverter.Read
   isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.TimeSpanConverter.CanWrite
-  nameWithType: TimeSpanConverter.CanWrite
-- uid: Gw2Sharp.Json.Converters.TimeSpanConverter.ReadJson(JsonReader,Type,TimeSpan,System.Boolean,JsonSerializer)
-  name: ReadJson(JsonReader, Type, TimeSpan, Boolean, JsonSerializer)
-  href: api/Gw2Sharp.Json.Converters.TimeSpanConverter.html#Gw2Sharp_Json_Converters_TimeSpanConverter_ReadJson_JsonReader_Type_TimeSpan_System_Boolean_JsonSerializer_
-  commentId: M:Gw2Sharp.Json.Converters.TimeSpanConverter.ReadJson(JsonReader,Type,TimeSpan,System.Boolean,JsonSerializer)
-  fullName: Gw2Sharp.Json.Converters.TimeSpanConverter.ReadJson(JsonReader, Type, TimeSpan, System.Boolean, JsonSerializer)
-  nameWithType: TimeSpanConverter.ReadJson(JsonReader, Type, TimeSpan, Boolean, JsonSerializer)
-- uid: Gw2Sharp.Json.Converters.TimeSpanConverter.ReadJson*
-  name: ReadJson
-  href: api/Gw2Sharp.Json.Converters.TimeSpanConverter.html#Gw2Sharp_Json_Converters_TimeSpanConverter_ReadJson_
-  commentId: Overload:Gw2Sharp.Json.Converters.TimeSpanConverter.ReadJson
+  fullName: Gw2Sharp.Json.Converters.TimeSpanConverter.Read
+  nameWithType: TimeSpanConverter.Read
+- uid: Gw2Sharp.Json.Converters.TimeSpanConverter.Write(Utf8JsonWriter,TimeSpan,JsonSerializerOptions)
+  name: Write(Utf8JsonWriter, TimeSpan, JsonSerializerOptions)
+  href: api/Gw2Sharp.Json.Converters.TimeSpanConverter.html#Gw2Sharp_Json_Converters_TimeSpanConverter_Write_Utf8JsonWriter_TimeSpan_JsonSerializerOptions_
+  commentId: M:Gw2Sharp.Json.Converters.TimeSpanConverter.Write(Utf8JsonWriter,TimeSpan,JsonSerializerOptions)
+  fullName: Gw2Sharp.Json.Converters.TimeSpanConverter.Write(Utf8JsonWriter, TimeSpan, JsonSerializerOptions)
+  nameWithType: TimeSpanConverter.Write(Utf8JsonWriter, TimeSpan, JsonSerializerOptions)
+- uid: Gw2Sharp.Json.Converters.TimeSpanConverter.Write*
+  name: Write
+  href: api/Gw2Sharp.Json.Converters.TimeSpanConverter.html#Gw2Sharp_Json_Converters_TimeSpanConverter_Write_
+  commentId: Overload:Gw2Sharp.Json.Converters.TimeSpanConverter.Write
   isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.TimeSpanConverter.ReadJson
-  nameWithType: TimeSpanConverter.ReadJson
-- uid: Gw2Sharp.Json.Converters.TimeSpanConverter.WriteJson(JsonWriter,TimeSpan,JsonSerializer)
-  name: WriteJson(JsonWriter, TimeSpan, JsonSerializer)
-  href: api/Gw2Sharp.Json.Converters.TimeSpanConverter.html#Gw2Sharp_Json_Converters_TimeSpanConverter_WriteJson_JsonWriter_TimeSpan_JsonSerializer_
-  commentId: M:Gw2Sharp.Json.Converters.TimeSpanConverter.WriteJson(JsonWriter,TimeSpan,JsonSerializer)
-  fullName: Gw2Sharp.Json.Converters.TimeSpanConverter.WriteJson(JsonWriter, TimeSpan, JsonSerializer)
-  nameWithType: TimeSpanConverter.WriteJson(JsonWriter, TimeSpan, JsonSerializer)
-- uid: Gw2Sharp.Json.Converters.TimeSpanConverter.WriteJson*
-  name: WriteJson
-  href: api/Gw2Sharp.Json.Converters.TimeSpanConverter.html#Gw2Sharp_Json_Converters_TimeSpanConverter_WriteJson_
-  commentId: Overload:Gw2Sharp.Json.Converters.TimeSpanConverter.WriteJson
-  isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.TimeSpanConverter.WriteJson
-  nameWithType: TimeSpanConverter.WriteJson
+  fullName: Gw2Sharp.Json.Converters.TimeSpanConverter.Write
+  nameWithType: TimeSpanConverter.Write
 - uid: Gw2Sharp.Json.Converters.TopDownRectangleConverter
   name: TopDownRectangleConverter
   href: api/Gw2Sharp.Json.Converters.TopDownRectangleConverter.html
   commentId: T:Gw2Sharp.Json.Converters.TopDownRectangleConverter
   fullName: Gw2Sharp.Json.Converters.TopDownRectangleConverter
   nameWithType: TopDownRectangleConverter
-- uid: Gw2Sharp.Json.Converters.TopDownRectangleConverter.ReadJson(JsonReader,Type,Gw2Sharp.WebApi.V2.Models.Rectangle,System.Boolean,JsonSerializer)
-  name: ReadJson(JsonReader, Type, Rectangle, Boolean, JsonSerializer)
-  href: api/Gw2Sharp.Json.Converters.TopDownRectangleConverter.html#Gw2Sharp_Json_Converters_TopDownRectangleConverter_ReadJson_JsonReader_Type_Gw2Sharp_WebApi_V2_Models_Rectangle_System_Boolean_JsonSerializer_
-  commentId: M:Gw2Sharp.Json.Converters.TopDownRectangleConverter.ReadJson(JsonReader,Type,Gw2Sharp.WebApi.V2.Models.Rectangle,System.Boolean,JsonSerializer)
-  fullName: Gw2Sharp.Json.Converters.TopDownRectangleConverter.ReadJson(JsonReader, Type, Gw2Sharp.WebApi.V2.Models.Rectangle, System.Boolean, JsonSerializer)
-  nameWithType: TopDownRectangleConverter.ReadJson(JsonReader, Type, Rectangle, Boolean, JsonSerializer)
-- uid: Gw2Sharp.Json.Converters.TopDownRectangleConverter.ReadJson*
-  name: ReadJson
-  href: api/Gw2Sharp.Json.Converters.TopDownRectangleConverter.html#Gw2Sharp_Json_Converters_TopDownRectangleConverter_ReadJson_
-  commentId: Overload:Gw2Sharp.Json.Converters.TopDownRectangleConverter.ReadJson
+- uid: Gw2Sharp.Json.Converters.TopDownRectangleConverter.Read(Utf8JsonReader@,Type,JsonSerializerOptions)
+  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  href: api/Gw2Sharp.Json.Converters.TopDownRectangleConverter.html#Gw2Sharp_Json_Converters_TopDownRectangleConverter_Read_Utf8JsonReader__Type_JsonSerializerOptions_
+  commentId: M:Gw2Sharp.Json.Converters.TopDownRectangleConverter.Read(Utf8JsonReader@,Type,JsonSerializerOptions)
+  name.vb: Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName: Gw2Sharp.Json.Converters.TopDownRectangleConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  fullName.vb: Gw2Sharp.Json.Converters.TopDownRectangleConverter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType: TopDownRectangleConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
+  nameWithType.vb: TopDownRectangleConverter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
+- uid: Gw2Sharp.Json.Converters.TopDownRectangleConverter.Read*
+  name: Read
+  href: api/Gw2Sharp.Json.Converters.TopDownRectangleConverter.html#Gw2Sharp_Json_Converters_TopDownRectangleConverter_Read_
+  commentId: Overload:Gw2Sharp.Json.Converters.TopDownRectangleConverter.Read
   isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.TopDownRectangleConverter.ReadJson
-  nameWithType: TopDownRectangleConverter.ReadJson
+  fullName: Gw2Sharp.Json.Converters.TopDownRectangleConverter.Read
+  nameWithType: TopDownRectangleConverter.Read
 - uid: Gw2Sharp.Models
   name: Gw2Sharp.Models
   href: api/Gw2Sharp.Models.html
@@ -3865,84 +3766,84 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Models.Coordinates3.Z
   nameWithType: Coordinates3.Z
-- uid: Gw2Sharp.Models.Legend
-  name: Legend
-  href: api/Gw2Sharp.Models.Legend.html
-  commentId: T:Gw2Sharp.Models.Legend
-  fullName: Gw2Sharp.Models.Legend
-  nameWithType: Legend
-- uid: Gw2Sharp.Models.Legend.Glint
+- uid: Gw2Sharp.Models.LegendType
+  name: LegendType
+  href: api/Gw2Sharp.Models.LegendType.html
+  commentId: T:Gw2Sharp.Models.LegendType
+  fullName: Gw2Sharp.Models.LegendType
+  nameWithType: LegendType
+- uid: Gw2Sharp.Models.LegendType.Glint
   name: Glint
-  href: api/Gw2Sharp.Models.Legend.html#Gw2Sharp_Models_Legend_Glint
-  commentId: F:Gw2Sharp.Models.Legend.Glint
-  fullName: Gw2Sharp.Models.Legend.Glint
-  nameWithType: Legend.Glint
-- uid: Gw2Sharp.Models.Legend.Jalis
+  href: api/Gw2Sharp.Models.LegendType.html#Gw2Sharp_Models_LegendType_Glint
+  commentId: F:Gw2Sharp.Models.LegendType.Glint
+  fullName: Gw2Sharp.Models.LegendType.Glint
+  nameWithType: LegendType.Glint
+- uid: Gw2Sharp.Models.LegendType.Jalis
   name: Jalis
-  href: api/Gw2Sharp.Models.Legend.html#Gw2Sharp_Models_Legend_Jalis
-  commentId: F:Gw2Sharp.Models.Legend.Jalis
-  fullName: Gw2Sharp.Models.Legend.Jalis
-  nameWithType: Legend.Jalis
-- uid: Gw2Sharp.Models.Legend.Kalla
+  href: api/Gw2Sharp.Models.LegendType.html#Gw2Sharp_Models_LegendType_Jalis
+  commentId: F:Gw2Sharp.Models.LegendType.Jalis
+  fullName: Gw2Sharp.Models.LegendType.Jalis
+  nameWithType: LegendType.Jalis
+- uid: Gw2Sharp.Models.LegendType.Kalla
   name: Kalla
-  href: api/Gw2Sharp.Models.Legend.html#Gw2Sharp_Models_Legend_Kalla
-  commentId: F:Gw2Sharp.Models.Legend.Kalla
-  fullName: Gw2Sharp.Models.Legend.Kalla
-  nameWithType: Legend.Kalla
-- uid: Gw2Sharp.Models.Legend.Legend1
+  href: api/Gw2Sharp.Models.LegendType.html#Gw2Sharp_Models_LegendType_Kalla
+  commentId: F:Gw2Sharp.Models.LegendType.Kalla
+  fullName: Gw2Sharp.Models.LegendType.Kalla
+  nameWithType: LegendType.Kalla
+- uid: Gw2Sharp.Models.LegendType.Legend1
   name: Legend1
-  href: api/Gw2Sharp.Models.Legend.html#Gw2Sharp_Models_Legend_Legend1
-  commentId: F:Gw2Sharp.Models.Legend.Legend1
-  fullName: Gw2Sharp.Models.Legend.Legend1
-  nameWithType: Legend.Legend1
-- uid: Gw2Sharp.Models.Legend.Legend2
+  href: api/Gw2Sharp.Models.LegendType.html#Gw2Sharp_Models_LegendType_Legend1
+  commentId: F:Gw2Sharp.Models.LegendType.Legend1
+  fullName: Gw2Sharp.Models.LegendType.Legend1
+  nameWithType: LegendType.Legend1
+- uid: Gw2Sharp.Models.LegendType.Legend2
   name: Legend2
-  href: api/Gw2Sharp.Models.Legend.html#Gw2Sharp_Models_Legend_Legend2
-  commentId: F:Gw2Sharp.Models.Legend.Legend2
-  fullName: Gw2Sharp.Models.Legend.Legend2
-  nameWithType: Legend.Legend2
-- uid: Gw2Sharp.Models.Legend.Legend3
+  href: api/Gw2Sharp.Models.LegendType.html#Gw2Sharp_Models_LegendType_Legend2
+  commentId: F:Gw2Sharp.Models.LegendType.Legend2
+  fullName: Gw2Sharp.Models.LegendType.Legend2
+  nameWithType: LegendType.Legend2
+- uid: Gw2Sharp.Models.LegendType.Legend3
   name: Legend3
-  href: api/Gw2Sharp.Models.Legend.html#Gw2Sharp_Models_Legend_Legend3
-  commentId: F:Gw2Sharp.Models.Legend.Legend3
-  fullName: Gw2Sharp.Models.Legend.Legend3
-  nameWithType: Legend.Legend3
-- uid: Gw2Sharp.Models.Legend.Legend4
+  href: api/Gw2Sharp.Models.LegendType.html#Gw2Sharp_Models_LegendType_Legend3
+  commentId: F:Gw2Sharp.Models.LegendType.Legend3
+  fullName: Gw2Sharp.Models.LegendType.Legend3
+  nameWithType: LegendType.Legend3
+- uid: Gw2Sharp.Models.LegendType.Legend4
   name: Legend4
-  href: api/Gw2Sharp.Models.Legend.html#Gw2Sharp_Models_Legend_Legend4
-  commentId: F:Gw2Sharp.Models.Legend.Legend4
-  fullName: Gw2Sharp.Models.Legend.Legend4
-  nameWithType: Legend.Legend4
-- uid: Gw2Sharp.Models.Legend.Legend5
+  href: api/Gw2Sharp.Models.LegendType.html#Gw2Sharp_Models_LegendType_Legend4
+  commentId: F:Gw2Sharp.Models.LegendType.Legend4
+  fullName: Gw2Sharp.Models.LegendType.Legend4
+  nameWithType: LegendType.Legend4
+- uid: Gw2Sharp.Models.LegendType.Legend5
   name: Legend5
-  href: api/Gw2Sharp.Models.Legend.html#Gw2Sharp_Models_Legend_Legend5
-  commentId: F:Gw2Sharp.Models.Legend.Legend5
-  fullName: Gw2Sharp.Models.Legend.Legend5
-  nameWithType: Legend.Legend5
-- uid: Gw2Sharp.Models.Legend.Legend6
+  href: api/Gw2Sharp.Models.LegendType.html#Gw2Sharp_Models_LegendType_Legend5
+  commentId: F:Gw2Sharp.Models.LegendType.Legend5
+  fullName: Gw2Sharp.Models.LegendType.Legend5
+  nameWithType: LegendType.Legend5
+- uid: Gw2Sharp.Models.LegendType.Legend6
   name: Legend6
-  href: api/Gw2Sharp.Models.Legend.html#Gw2Sharp_Models_Legend_Legend6
-  commentId: F:Gw2Sharp.Models.Legend.Legend6
-  fullName: Gw2Sharp.Models.Legend.Legend6
-  nameWithType: Legend.Legend6
-- uid: Gw2Sharp.Models.Legend.Mallyx
+  href: api/Gw2Sharp.Models.LegendType.html#Gw2Sharp_Models_LegendType_Legend6
+  commentId: F:Gw2Sharp.Models.LegendType.Legend6
+  fullName: Gw2Sharp.Models.LegendType.Legend6
+  nameWithType: LegendType.Legend6
+- uid: Gw2Sharp.Models.LegendType.Mallyx
   name: Mallyx
-  href: api/Gw2Sharp.Models.Legend.html#Gw2Sharp_Models_Legend_Mallyx
-  commentId: F:Gw2Sharp.Models.Legend.Mallyx
-  fullName: Gw2Sharp.Models.Legend.Mallyx
-  nameWithType: Legend.Mallyx
-- uid: Gw2Sharp.Models.Legend.Shiro
+  href: api/Gw2Sharp.Models.LegendType.html#Gw2Sharp_Models_LegendType_Mallyx
+  commentId: F:Gw2Sharp.Models.LegendType.Mallyx
+  fullName: Gw2Sharp.Models.LegendType.Mallyx
+  nameWithType: LegendType.Mallyx
+- uid: Gw2Sharp.Models.LegendType.Shiro
   name: Shiro
-  href: api/Gw2Sharp.Models.Legend.html#Gw2Sharp_Models_Legend_Shiro
-  commentId: F:Gw2Sharp.Models.Legend.Shiro
-  fullName: Gw2Sharp.Models.Legend.Shiro
-  nameWithType: Legend.Shiro
-- uid: Gw2Sharp.Models.Legend.Ventari
+  href: api/Gw2Sharp.Models.LegendType.html#Gw2Sharp_Models_LegendType_Shiro
+  commentId: F:Gw2Sharp.Models.LegendType.Shiro
+  fullName: Gw2Sharp.Models.LegendType.Shiro
+  nameWithType: LegendType.Shiro
+- uid: Gw2Sharp.Models.LegendType.Ventari
   name: Ventari
-  href: api/Gw2Sharp.Models.Legend.html#Gw2Sharp_Models_Legend_Ventari
-  commentId: F:Gw2Sharp.Models.Legend.Ventari
-  fullName: Gw2Sharp.Models.Legend.Ventari
-  nameWithType: Legend.Ventari
+  href: api/Gw2Sharp.Models.LegendType.html#Gw2Sharp_Models_LegendType_Ventari
+  commentId: F:Gw2Sharp.Models.LegendType.Ventari
+  fullName: Gw2Sharp.Models.LegendType.Ventari
+  nameWithType: LegendType.Ventari
 - uid: Gw2Sharp.Models.MapType
   name: MapType
   href: api/Gw2Sharp.Models.MapType.html
@@ -4093,66 +3994,102 @@ references:
   commentId: F:Gw2Sharp.Models.MapType.WvwLounge
   fullName: Gw2Sharp.Models.MapType.WvwLounge
   nameWithType: MapType.WvwLounge
-- uid: Gw2Sharp.Models.Profession
-  name: Profession
-  href: api/Gw2Sharp.Models.Profession.html
-  commentId: T:Gw2Sharp.Models.Profession
-  fullName: Gw2Sharp.Models.Profession
-  nameWithType: Profession
-- uid: Gw2Sharp.Models.Profession.Elementalist
+- uid: Gw2Sharp.Models.ProfessionType
+  name: ProfessionType
+  href: api/Gw2Sharp.Models.ProfessionType.html
+  commentId: T:Gw2Sharp.Models.ProfessionType
+  fullName: Gw2Sharp.Models.ProfessionType
+  nameWithType: ProfessionType
+- uid: Gw2Sharp.Models.ProfessionType.Elementalist
   name: Elementalist
-  href: api/Gw2Sharp.Models.Profession.html#Gw2Sharp_Models_Profession_Elementalist
-  commentId: F:Gw2Sharp.Models.Profession.Elementalist
-  fullName: Gw2Sharp.Models.Profession.Elementalist
-  nameWithType: Profession.Elementalist
-- uid: Gw2Sharp.Models.Profession.Engineer
+  href: api/Gw2Sharp.Models.ProfessionType.html#Gw2Sharp_Models_ProfessionType_Elementalist
+  commentId: F:Gw2Sharp.Models.ProfessionType.Elementalist
+  fullName: Gw2Sharp.Models.ProfessionType.Elementalist
+  nameWithType: ProfessionType.Elementalist
+- uid: Gw2Sharp.Models.ProfessionType.Engineer
   name: Engineer
-  href: api/Gw2Sharp.Models.Profession.html#Gw2Sharp_Models_Profession_Engineer
-  commentId: F:Gw2Sharp.Models.Profession.Engineer
-  fullName: Gw2Sharp.Models.Profession.Engineer
-  nameWithType: Profession.Engineer
-- uid: Gw2Sharp.Models.Profession.Guardian
+  href: api/Gw2Sharp.Models.ProfessionType.html#Gw2Sharp_Models_ProfessionType_Engineer
+  commentId: F:Gw2Sharp.Models.ProfessionType.Engineer
+  fullName: Gw2Sharp.Models.ProfessionType.Engineer
+  nameWithType: ProfessionType.Engineer
+- uid: Gw2Sharp.Models.ProfessionType.Guardian
   name: Guardian
-  href: api/Gw2Sharp.Models.Profession.html#Gw2Sharp_Models_Profession_Guardian
-  commentId: F:Gw2Sharp.Models.Profession.Guardian
-  fullName: Gw2Sharp.Models.Profession.Guardian
-  nameWithType: Profession.Guardian
-- uid: Gw2Sharp.Models.Profession.Mesmer
+  href: api/Gw2Sharp.Models.ProfessionType.html#Gw2Sharp_Models_ProfessionType_Guardian
+  commentId: F:Gw2Sharp.Models.ProfessionType.Guardian
+  fullName: Gw2Sharp.Models.ProfessionType.Guardian
+  nameWithType: ProfessionType.Guardian
+- uid: Gw2Sharp.Models.ProfessionType.Mesmer
   name: Mesmer
-  href: api/Gw2Sharp.Models.Profession.html#Gw2Sharp_Models_Profession_Mesmer
-  commentId: F:Gw2Sharp.Models.Profession.Mesmer
-  fullName: Gw2Sharp.Models.Profession.Mesmer
-  nameWithType: Profession.Mesmer
-- uid: Gw2Sharp.Models.Profession.Necromancer
+  href: api/Gw2Sharp.Models.ProfessionType.html#Gw2Sharp_Models_ProfessionType_Mesmer
+  commentId: F:Gw2Sharp.Models.ProfessionType.Mesmer
+  fullName: Gw2Sharp.Models.ProfessionType.Mesmer
+  nameWithType: ProfessionType.Mesmer
+- uid: Gw2Sharp.Models.ProfessionType.Necromancer
   name: Necromancer
-  href: api/Gw2Sharp.Models.Profession.html#Gw2Sharp_Models_Profession_Necromancer
-  commentId: F:Gw2Sharp.Models.Profession.Necromancer
-  fullName: Gw2Sharp.Models.Profession.Necromancer
-  nameWithType: Profession.Necromancer
-- uid: Gw2Sharp.Models.Profession.Ranger
+  href: api/Gw2Sharp.Models.ProfessionType.html#Gw2Sharp_Models_ProfessionType_Necromancer
+  commentId: F:Gw2Sharp.Models.ProfessionType.Necromancer
+  fullName: Gw2Sharp.Models.ProfessionType.Necromancer
+  nameWithType: ProfessionType.Necromancer
+- uid: Gw2Sharp.Models.ProfessionType.Ranger
   name: Ranger
-  href: api/Gw2Sharp.Models.Profession.html#Gw2Sharp_Models_Profession_Ranger
-  commentId: F:Gw2Sharp.Models.Profession.Ranger
-  fullName: Gw2Sharp.Models.Profession.Ranger
-  nameWithType: Profession.Ranger
-- uid: Gw2Sharp.Models.Profession.Revenant
+  href: api/Gw2Sharp.Models.ProfessionType.html#Gw2Sharp_Models_ProfessionType_Ranger
+  commentId: F:Gw2Sharp.Models.ProfessionType.Ranger
+  fullName: Gw2Sharp.Models.ProfessionType.Ranger
+  nameWithType: ProfessionType.Ranger
+- uid: Gw2Sharp.Models.ProfessionType.Revenant
   name: Revenant
-  href: api/Gw2Sharp.Models.Profession.html#Gw2Sharp_Models_Profession_Revenant
-  commentId: F:Gw2Sharp.Models.Profession.Revenant
-  fullName: Gw2Sharp.Models.Profession.Revenant
-  nameWithType: Profession.Revenant
-- uid: Gw2Sharp.Models.Profession.Thief
+  href: api/Gw2Sharp.Models.ProfessionType.html#Gw2Sharp_Models_ProfessionType_Revenant
+  commentId: F:Gw2Sharp.Models.ProfessionType.Revenant
+  fullName: Gw2Sharp.Models.ProfessionType.Revenant
+  nameWithType: ProfessionType.Revenant
+- uid: Gw2Sharp.Models.ProfessionType.Thief
   name: Thief
-  href: api/Gw2Sharp.Models.Profession.html#Gw2Sharp_Models_Profession_Thief
-  commentId: F:Gw2Sharp.Models.Profession.Thief
-  fullName: Gw2Sharp.Models.Profession.Thief
-  nameWithType: Profession.Thief
-- uid: Gw2Sharp.Models.Profession.Warrior
+  href: api/Gw2Sharp.Models.ProfessionType.html#Gw2Sharp_Models_ProfessionType_Thief
+  commentId: F:Gw2Sharp.Models.ProfessionType.Thief
+  fullName: Gw2Sharp.Models.ProfessionType.Thief
+  nameWithType: ProfessionType.Thief
+- uid: Gw2Sharp.Models.ProfessionType.Warrior
   name: Warrior
-  href: api/Gw2Sharp.Models.Profession.html#Gw2Sharp_Models_Profession_Warrior
-  commentId: F:Gw2Sharp.Models.Profession.Warrior
-  fullName: Gw2Sharp.Models.Profession.Warrior
-  nameWithType: Profession.Warrior
+  href: api/Gw2Sharp.Models.ProfessionType.html#Gw2Sharp_Models_ProfessionType_Warrior
+  commentId: F:Gw2Sharp.Models.ProfessionType.Warrior
+  fullName: Gw2Sharp.Models.ProfessionType.Warrior
+  nameWithType: ProfessionType.Warrior
+- uid: Gw2Sharp.Models.RaceType
+  name: RaceType
+  href: api/Gw2Sharp.Models.RaceType.html
+  commentId: T:Gw2Sharp.Models.RaceType
+  fullName: Gw2Sharp.Models.RaceType
+  nameWithType: RaceType
+- uid: Gw2Sharp.Models.RaceType.Asura
+  name: Asura
+  href: api/Gw2Sharp.Models.RaceType.html#Gw2Sharp_Models_RaceType_Asura
+  commentId: F:Gw2Sharp.Models.RaceType.Asura
+  fullName: Gw2Sharp.Models.RaceType.Asura
+  nameWithType: RaceType.Asura
+- uid: Gw2Sharp.Models.RaceType.Charr
+  name: Charr
+  href: api/Gw2Sharp.Models.RaceType.html#Gw2Sharp_Models_RaceType_Charr
+  commentId: F:Gw2Sharp.Models.RaceType.Charr
+  fullName: Gw2Sharp.Models.RaceType.Charr
+  nameWithType: RaceType.Charr
+- uid: Gw2Sharp.Models.RaceType.Human
+  name: Human
+  href: api/Gw2Sharp.Models.RaceType.html#Gw2Sharp_Models_RaceType_Human
+  commentId: F:Gw2Sharp.Models.RaceType.Human
+  fullName: Gw2Sharp.Models.RaceType.Human
+  nameWithType: RaceType.Human
+- uid: Gw2Sharp.Models.RaceType.Norn
+  name: Norn
+  href: api/Gw2Sharp.Models.RaceType.html#Gw2Sharp_Models_RaceType_Norn
+  commentId: F:Gw2Sharp.Models.RaceType.Norn
+  fullName: Gw2Sharp.Models.RaceType.Norn
+  nameWithType: RaceType.Norn
+- uid: Gw2Sharp.Models.RaceType.Sylvari
+  name: Sylvari
+  href: api/Gw2Sharp.Models.RaceType.html#Gw2Sharp_Models_RaceType_Sylvari
+  commentId: F:Gw2Sharp.Models.RaceType.Sylvari
+  fullName: Gw2Sharp.Models.RaceType.Sylvari
+  nameWithType: RaceType.Sylvari
 - uid: Gw2Sharp.Models.Size
   name: Size
   href: api/Gw2Sharp.Models.Size.html
@@ -4336,19 +4273,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Mumble.Gw2MumbleClient.AvatarPosition
   nameWithType: Gw2MumbleClient.AvatarPosition
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.BuildId
-  name: BuildId
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_BuildId
-  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.BuildId
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.BuildId
-  nameWithType: Gw2MumbleClient.BuildId
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.BuildId*
-  name: BuildId
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_BuildId_
-  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.BuildId
-  isSpec: "True"
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.BuildId
-  nameWithType: Gw2MumbleClient.BuildId
 - uid: Gw2Sharp.Mumble.Gw2MumbleClient.CameraFront
   name: CameraFront
   href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_CameraFront
@@ -4375,116 +4299,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Mumble.Gw2MumbleClient.CameraPosition
   nameWithType: Gw2MumbleClient.CameraPosition
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.CharacterName
-  name: CharacterName
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_CharacterName
-  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.CharacterName
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.CharacterName
-  nameWithType: Gw2MumbleClient.CharacterName
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.CharacterName*
-  name: CharacterName
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_CharacterName_
-  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.CharacterName
-  isSpec: "True"
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.CharacterName
-  nameWithType: Gw2MumbleClient.CharacterName
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.Compass
-  name: Compass
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Compass
-  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.Compass
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Compass
-  nameWithType: Gw2MumbleClient.Compass
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.Compass*
-  name: Compass
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Compass_
-  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.Compass
-  isSpec: "True"
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Compass
-  nameWithType: Gw2MumbleClient.Compass
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.CompassRotation
-  name: CompassRotation
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_CompassRotation
-  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.CompassRotation
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.CompassRotation
-  nameWithType: Gw2MumbleClient.CompassRotation
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.CompassRotation*
-  name: CompassRotation
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_CompassRotation_
-  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.CompassRotation
-  isSpec: "True"
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.CompassRotation
-  nameWithType: Gw2MumbleClient.CompassRotation
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.Dispose
-  name: Dispose()
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Dispose
-  commentId: M:Gw2Sharp.Mumble.Gw2MumbleClient.Dispose
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Dispose()
-  nameWithType: Gw2MumbleClient.Dispose()
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.Dispose(System.Boolean)
-  name: Dispose(Boolean)
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Dispose_System_Boolean_
-  commentId: M:Gw2Sharp.Mumble.Gw2MumbleClient.Dispose(System.Boolean)
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Dispose(System.Boolean)
-  nameWithType: Gw2MumbleClient.Dispose(Boolean)
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.Dispose*
-  name: Dispose
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Dispose_
-  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.Dispose
-  isSpec: "True"
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Dispose
-  nameWithType: Gw2MumbleClient.Dispose
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.DoesAnyInputHaveFocus
-  name: DoesAnyInputHaveFocus
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_DoesAnyInputHaveFocus
-  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.DoesAnyInputHaveFocus
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.DoesAnyInputHaveFocus
-  nameWithType: Gw2MumbleClient.DoesAnyInputHaveFocus
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.DoesAnyInputHaveFocus*
-  name: DoesAnyInputHaveFocus
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_DoesAnyInputHaveFocus_
-  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.DoesAnyInputHaveFocus
-  isSpec: "True"
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.DoesAnyInputHaveFocus
-  nameWithType: Gw2MumbleClient.DoesAnyInputHaveFocus
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.DoesGameHaveFocus
-  name: DoesGameHaveFocus
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_DoesGameHaveFocus
-  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.DoesGameHaveFocus
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.DoesGameHaveFocus
-  nameWithType: Gw2MumbleClient.DoesGameHaveFocus
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.DoesGameHaveFocus*
-  name: DoesGameHaveFocus
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_DoesGameHaveFocus_
-  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.DoesGameHaveFocus
-  isSpec: "True"
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.DoesGameHaveFocus
-  nameWithType: Gw2MumbleClient.DoesGameHaveFocus
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.FieldOfView
-  name: FieldOfView
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_FieldOfView
-  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.FieldOfView
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.FieldOfView
-  nameWithType: Gw2MumbleClient.FieldOfView
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.FieldOfView*
-  name: FieldOfView
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_FieldOfView_
-  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.FieldOfView
-  isSpec: "True"
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.FieldOfView
-  nameWithType: Gw2MumbleClient.FieldOfView
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.Instance
-  name: Instance
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Instance
-  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.Instance
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Instance
-  nameWithType: Gw2MumbleClient.Instance
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.Instance*
-  name: Instance
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Instance_
-  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.Instance
-  isSpec: "True"
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Instance
-  nameWithType: Gw2MumbleClient.Instance
 - uid: Gw2Sharp.Mumble.Gw2MumbleClient.IsAvailable
   name: IsAvailable
   href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_IsAvailable
@@ -4498,123 +4312,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Mumble.Gw2MumbleClient.IsAvailable
   nameWithType: Gw2MumbleClient.IsAvailable
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.IsCommander
-  name: IsCommander
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_IsCommander
-  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.IsCommander
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.IsCommander
-  nameWithType: Gw2MumbleClient.IsCommander
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.IsCommander*
-  name: IsCommander
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_IsCommander_
-  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.IsCommander
-  isSpec: "True"
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.IsCommander
-  nameWithType: Gw2MumbleClient.IsCommander
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.IsCompassRotationEnabled
-  name: IsCompassRotationEnabled
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_IsCompassRotationEnabled
-  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.IsCompassRotationEnabled
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.IsCompassRotationEnabled
-  nameWithType: Gw2MumbleClient.IsCompassRotationEnabled
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.IsCompassRotationEnabled*
-  name: IsCompassRotationEnabled
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_IsCompassRotationEnabled_
-  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.IsCompassRotationEnabled
-  isSpec: "True"
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.IsCompassRotationEnabled
-  nameWithType: Gw2MumbleClient.IsCompassRotationEnabled
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.IsCompassTopRight
-  name: IsCompassTopRight
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_IsCompassTopRight
-  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.IsCompassTopRight
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.IsCompassTopRight
-  nameWithType: Gw2MumbleClient.IsCompassTopRight
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.IsCompassTopRight*
-  name: IsCompassTopRight
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_IsCompassTopRight_
-  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.IsCompassTopRight
-  isSpec: "True"
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.IsCompassTopRight
-  nameWithType: Gw2MumbleClient.IsCompassTopRight
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.IsCompetitiveMode
-  name: IsCompetitiveMode
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_IsCompetitiveMode
-  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.IsCompetitiveMode
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.IsCompetitiveMode
-  nameWithType: Gw2MumbleClient.IsCompetitiveMode
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.IsCompetitiveMode*
-  name: IsCompetitiveMode
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_IsCompetitiveMode_
-  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.IsCompetitiveMode
-  isSpec: "True"
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.IsCompetitiveMode
-  nameWithType: Gw2MumbleClient.IsCompetitiveMode
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.IsMapOpen
-  name: IsMapOpen
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_IsMapOpen
-  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.IsMapOpen
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.IsMapOpen
-  nameWithType: Gw2MumbleClient.IsMapOpen
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.IsMapOpen*
-  name: IsMapOpen
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_IsMapOpen_
-  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.IsMapOpen
-  isSpec: "True"
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.IsMapOpen
-  nameWithType: Gw2MumbleClient.IsMapOpen
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.MapCenter
-  name: MapCenter
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_MapCenter
-  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.MapCenter
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.MapCenter
-  nameWithType: Gw2MumbleClient.MapCenter
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.MapCenter*
-  name: MapCenter
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_MapCenter_
-  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.MapCenter
-  isSpec: "True"
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.MapCenter
-  nameWithType: Gw2MumbleClient.MapCenter
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.MapId
-  name: MapId
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_MapId
-  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.MapId
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.MapId
-  nameWithType: Gw2MumbleClient.MapId
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.MapId*
-  name: MapId
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_MapId_
-  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.MapId
-  isSpec: "True"
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.MapId
-  nameWithType: Gw2MumbleClient.MapId
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.MapScale
-  name: MapScale
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_MapScale
-  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.MapScale
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.MapScale
-  nameWithType: Gw2MumbleClient.MapScale
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.MapScale*
-  name: MapScale
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_MapScale_
-  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.MapScale
-  isSpec: "True"
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.MapScale
-  nameWithType: Gw2MumbleClient.MapScale
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.MapType
-  name: MapType
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_MapType
-  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.MapType
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.MapType
-  nameWithType: Gw2MumbleClient.MapType
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.MapType*
-  name: MapType
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_MapType_
-  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.MapType
-  isSpec: "True"
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.MapType
-  nameWithType: Gw2MumbleClient.MapType
 - uid: Gw2Sharp.Mumble.Gw2MumbleClient.Name
   name: Name
   href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Name
@@ -4628,45 +4325,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Name
   nameWithType: Gw2MumbleClient.Name
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.PlayerLocationMap
-  name: PlayerLocationMap
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_PlayerLocationMap
-  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.PlayerLocationMap
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.PlayerLocationMap
-  nameWithType: Gw2MumbleClient.PlayerLocationMap
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.PlayerLocationMap*
-  name: PlayerLocationMap
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_PlayerLocationMap_
-  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.PlayerLocationMap
-  isSpec: "True"
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.PlayerLocationMap
-  nameWithType: Gw2MumbleClient.PlayerLocationMap
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.Profession
-  name: Profession
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Profession
-  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.Profession
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Profession
-  nameWithType: Gw2MumbleClient.Profession
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.Profession*
-  name: Profession
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Profession_
-  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.Profession
-  isSpec: "True"
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Profession
-  nameWithType: Gw2MumbleClient.Profession
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.Race
-  name: Race
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Race
-  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.Race
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Race
-  nameWithType: Gw2MumbleClient.Race
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.Race*
-  name: Race
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Race_
-  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.Race
-  isSpec: "True"
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Race
-  nameWithType: Gw2MumbleClient.Race
 - uid: Gw2Sharp.Mumble.Gw2MumbleClient.ServerAddress
   name: ServerAddress
   href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_ServerAddress
@@ -4680,58 +4338,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Mumble.Gw2MumbleClient.ServerAddress
   nameWithType: Gw2MumbleClient.ServerAddress
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.ServerPort
-  name: ServerPort
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_ServerPort
-  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.ServerPort
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.ServerPort
-  nameWithType: Gw2MumbleClient.ServerPort
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.ServerPort*
-  name: ServerPort
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_ServerPort_
-  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.ServerPort
-  isSpec: "True"
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.ServerPort
-  nameWithType: Gw2MumbleClient.ServerPort
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.ShardId
-  name: ShardId
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_ShardId
-  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.ShardId
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.ShardId
-  nameWithType: Gw2MumbleClient.ShardId
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.ShardId*
-  name: ShardId
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_ShardId_
-  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.ShardId
-  isSpec: "True"
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.ShardId
-  nameWithType: Gw2MumbleClient.ShardId
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.Specialization
-  name: Specialization
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Specialization
-  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.Specialization
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Specialization
-  nameWithType: Gw2MumbleClient.Specialization
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.Specialization*
-  name: Specialization
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Specialization_
-  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.Specialization
-  isSpec: "True"
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Specialization
-  nameWithType: Gw2MumbleClient.Specialization
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.TeamColorId
-  name: TeamColorId
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_TeamColorId
-  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.TeamColorId
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.TeamColorId
-  nameWithType: Gw2MumbleClient.TeamColorId
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.TeamColorId*
-  name: TeamColorId
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_TeamColorId_
-  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.TeamColorId
-  isSpec: "True"
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.TeamColorId
-  nameWithType: Gw2MumbleClient.TeamColorId
 - uid: Gw2Sharp.Mumble.Gw2MumbleClient.Tick
   name: Tick
   href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Tick
@@ -4745,32 +4351,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Tick
   nameWithType: Gw2MumbleClient.Tick
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.UiSize
-  name: UiSize
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_UiSize
-  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.UiSize
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.UiSize
-  nameWithType: Gw2MumbleClient.UiSize
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.UiSize*
-  name: UiSize
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_UiSize_
-  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.UiSize
-  isSpec: "True"
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.UiSize
-  nameWithType: Gw2MumbleClient.UiSize
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.Update
-  name: Update()
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Update
-  commentId: M:Gw2Sharp.Mumble.Gw2MumbleClient.Update
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Update()
-  nameWithType: Gw2MumbleClient.Update()
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.Update*
-  name: Update
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Update_
-  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.Update
-  isSpec: "True"
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Update
-  nameWithType: Gw2MumbleClient.Update
 - uid: Gw2Sharp.Mumble.Gw2MumbleClient.Version
   name: Version
   href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Version
@@ -5461,51 +5041,6 @@ references:
   commentId: F:Gw2Sharp.PvpSeasonLeaderboardScoringType.Unknown
   fullName: Gw2Sharp.PvpSeasonLeaderboardScoringType.Unknown
   nameWithType: PvpSeasonLeaderboardScoringType.Unknown
-- uid: Gw2Sharp.PvpSeasonLeaderboardSettingsTierRangeConverter
-  name: PvpSeasonLeaderboardSettingsTierRangeConverter
-  href: api/Gw2Sharp.PvpSeasonLeaderboardSettingsTierRangeConverter.html
-  commentId: T:Gw2Sharp.PvpSeasonLeaderboardSettingsTierRangeConverter
-  fullName: Gw2Sharp.PvpSeasonLeaderboardSettingsTierRangeConverter
-  nameWithType: PvpSeasonLeaderboardSettingsTierRangeConverter
-- uid: Gw2Sharp.PvpSeasonLeaderboardSettingsTierRangeConverter.CanWrite
-  name: CanWrite
-  href: api/Gw2Sharp.PvpSeasonLeaderboardSettingsTierRangeConverter.html#Gw2Sharp_PvpSeasonLeaderboardSettingsTierRangeConverter_CanWrite
-  commentId: P:Gw2Sharp.PvpSeasonLeaderboardSettingsTierRangeConverter.CanWrite
-  fullName: Gw2Sharp.PvpSeasonLeaderboardSettingsTierRangeConverter.CanWrite
-  nameWithType: PvpSeasonLeaderboardSettingsTierRangeConverter.CanWrite
-- uid: Gw2Sharp.PvpSeasonLeaderboardSettingsTierRangeConverter.CanWrite*
-  name: CanWrite
-  href: api/Gw2Sharp.PvpSeasonLeaderboardSettingsTierRangeConverter.html#Gw2Sharp_PvpSeasonLeaderboardSettingsTierRangeConverter_CanWrite_
-  commentId: Overload:Gw2Sharp.PvpSeasonLeaderboardSettingsTierRangeConverter.CanWrite
-  isSpec: "True"
-  fullName: Gw2Sharp.PvpSeasonLeaderboardSettingsTierRangeConverter.CanWrite
-  nameWithType: PvpSeasonLeaderboardSettingsTierRangeConverter.CanWrite
-- uid: Gw2Sharp.PvpSeasonLeaderboardSettingsTierRangeConverter.ReadJson(JsonReader,Type,Gw2Sharp.WebApi.V2.Models.PvpSeasonLeaderboardSettingsTierRange,System.Boolean,JsonSerializer)
-  name: ReadJson(JsonReader, Type, PvpSeasonLeaderboardSettingsTierRange, Boolean, JsonSerializer)
-  href: api/Gw2Sharp.PvpSeasonLeaderboardSettingsTierRangeConverter.html#Gw2Sharp_PvpSeasonLeaderboardSettingsTierRangeConverter_ReadJson_JsonReader_Type_Gw2Sharp_WebApi_V2_Models_PvpSeasonLeaderboardSettingsTierRange_System_Boolean_JsonSerializer_
-  commentId: M:Gw2Sharp.PvpSeasonLeaderboardSettingsTierRangeConverter.ReadJson(JsonReader,Type,Gw2Sharp.WebApi.V2.Models.PvpSeasonLeaderboardSettingsTierRange,System.Boolean,JsonSerializer)
-  fullName: Gw2Sharp.PvpSeasonLeaderboardSettingsTierRangeConverter.ReadJson(JsonReader, Type, Gw2Sharp.WebApi.V2.Models.PvpSeasonLeaderboardSettingsTierRange, System.Boolean, JsonSerializer)
-  nameWithType: PvpSeasonLeaderboardSettingsTierRangeConverter.ReadJson(JsonReader, Type, PvpSeasonLeaderboardSettingsTierRange, Boolean, JsonSerializer)
-- uid: Gw2Sharp.PvpSeasonLeaderboardSettingsTierRangeConverter.ReadJson*
-  name: ReadJson
-  href: api/Gw2Sharp.PvpSeasonLeaderboardSettingsTierRangeConverter.html#Gw2Sharp_PvpSeasonLeaderboardSettingsTierRangeConverter_ReadJson_
-  commentId: Overload:Gw2Sharp.PvpSeasonLeaderboardSettingsTierRangeConverter.ReadJson
-  isSpec: "True"
-  fullName: Gw2Sharp.PvpSeasonLeaderboardSettingsTierRangeConverter.ReadJson
-  nameWithType: PvpSeasonLeaderboardSettingsTierRangeConverter.ReadJson
-- uid: Gw2Sharp.PvpSeasonLeaderboardSettingsTierRangeConverter.WriteJson(JsonWriter,Gw2Sharp.WebApi.V2.Models.PvpSeasonLeaderboardSettingsTierRange,JsonSerializer)
-  name: WriteJson(JsonWriter, PvpSeasonLeaderboardSettingsTierRange, JsonSerializer)
-  href: api/Gw2Sharp.PvpSeasonLeaderboardSettingsTierRangeConverter.html#Gw2Sharp_PvpSeasonLeaderboardSettingsTierRangeConverter_WriteJson_JsonWriter_Gw2Sharp_WebApi_V2_Models_PvpSeasonLeaderboardSettingsTierRange_JsonSerializer_
-  commentId: M:Gw2Sharp.PvpSeasonLeaderboardSettingsTierRangeConverter.WriteJson(JsonWriter,Gw2Sharp.WebApi.V2.Models.PvpSeasonLeaderboardSettingsTierRange,JsonSerializer)
-  fullName: Gw2Sharp.PvpSeasonLeaderboardSettingsTierRangeConverter.WriteJson(JsonWriter, Gw2Sharp.WebApi.V2.Models.PvpSeasonLeaderboardSettingsTierRange, JsonSerializer)
-  nameWithType: PvpSeasonLeaderboardSettingsTierRangeConverter.WriteJson(JsonWriter, PvpSeasonLeaderboardSettingsTierRange, JsonSerializer)
-- uid: Gw2Sharp.PvpSeasonLeaderboardSettingsTierRangeConverter.WriteJson*
-  name: WriteJson
-  href: api/Gw2Sharp.PvpSeasonLeaderboardSettingsTierRangeConverter.html#Gw2Sharp_PvpSeasonLeaderboardSettingsTierRangeConverter_WriteJson_
-  commentId: Overload:Gw2Sharp.PvpSeasonLeaderboardSettingsTierRangeConverter.WriteJson
-  isSpec: "True"
-  fullName: Gw2Sharp.PvpSeasonLeaderboardSettingsTierRangeConverter.WriteJson
-  nameWithType: PvpSeasonLeaderboardSettingsTierRangeConverter.WriteJson
 - uid: Gw2Sharp.PvpSeasonLeaderboardSettingsTierType
   name: PvpSeasonLeaderboardSettingsTierType
   href: api/Gw2Sharp.PvpSeasonLeaderboardSettingsTierType.html
@@ -5781,19 +5316,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.Caching.BaseCacheMethod.Dispose
   nameWithType: BaseCacheMethod.Dispose
-- uid: Gw2Sharp.WebApi.Caching.BaseCacheMethod.FlushAsync
-  name: FlushAsync()
-  href: api/Gw2Sharp.WebApi.Caching.BaseCacheMethod.html#Gw2Sharp_WebApi_Caching_BaseCacheMethod_FlushAsync
-  commentId: M:Gw2Sharp.WebApi.Caching.BaseCacheMethod.FlushAsync
-  fullName: Gw2Sharp.WebApi.Caching.BaseCacheMethod.FlushAsync()
-  nameWithType: BaseCacheMethod.FlushAsync()
-- uid: Gw2Sharp.WebApi.Caching.BaseCacheMethod.FlushAsync*
-  name: FlushAsync
-  href: api/Gw2Sharp.WebApi.Caching.BaseCacheMethod.html#Gw2Sharp_WebApi_Caching_BaseCacheMethod_FlushAsync_
-  commentId: Overload:Gw2Sharp.WebApi.Caching.BaseCacheMethod.FlushAsync
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.Caching.BaseCacheMethod.FlushAsync
-  nameWithType: BaseCacheMethod.FlushAsync
 - uid: Gw2Sharp.WebApi.Caching.BaseCacheMethod.GetManyAsync*
   name: GetManyAsync
   href: api/Gw2Sharp.WebApi.Caching.BaseCacheMethod.html#Gw2Sharp_WebApi_Caching_BaseCacheMethod_GetManyAsync_
@@ -6129,19 +5651,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.Caching.ICacheMethod.ClearAsync
   nameWithType: ICacheMethod.ClearAsync
-- uid: Gw2Sharp.WebApi.Caching.ICacheMethod.FlushAsync
-  name: FlushAsync()
-  href: api/Gw2Sharp.WebApi.Caching.ICacheMethod.html#Gw2Sharp_WebApi_Caching_ICacheMethod_FlushAsync
-  commentId: M:Gw2Sharp.WebApi.Caching.ICacheMethod.FlushAsync
-  fullName: Gw2Sharp.WebApi.Caching.ICacheMethod.FlushAsync()
-  nameWithType: ICacheMethod.FlushAsync()
-- uid: Gw2Sharp.WebApi.Caching.ICacheMethod.FlushAsync*
-  name: FlushAsync
-  href: api/Gw2Sharp.WebApi.Caching.ICacheMethod.html#Gw2Sharp_WebApi_Caching_ICacheMethod_FlushAsync_
-  commentId: Overload:Gw2Sharp.WebApi.Caching.ICacheMethod.FlushAsync
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.Caching.ICacheMethod.FlushAsync
-  nameWithType: ICacheMethod.FlushAsync
 - uid: Gw2Sharp.WebApi.Caching.ICacheMethod.GetManyAsync*
   name: GetManyAsync
   href: api/Gw2Sharp.WebApi.Caching.ICacheMethod.html#Gw2Sharp_WebApi_Caching_ICacheMethod_GetManyAsync_
@@ -10757,32 +10266,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.Sab
   nameWithType: CharactersIdClient.Sab
-- uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.Skills
-  name: Skills
-  href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.html#Gw2Sharp_WebApi_V2_Clients_CharactersIdClient_Skills
-  commentId: P:Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.Skills
-  fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.Skills
-  nameWithType: CharactersIdClient.Skills
-- uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.Skills*
-  name: Skills
-  href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.html#Gw2Sharp_WebApi_V2_Clients_CharactersIdClient_Skills_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.Skills
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.Skills
-  nameWithType: CharactersIdClient.Skills
-- uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.Specializations
-  name: Specializations
-  href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.html#Gw2Sharp_WebApi_V2_Clients_CharactersIdClient_Specializations
-  commentId: P:Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.Specializations
-  fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.Specializations
-  nameWithType: CharactersIdClient.Specializations
-- uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.Specializations*
-  name: Specializations
-  href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.html#Gw2Sharp_WebApi_V2_Clients_CharactersIdClient_Specializations_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.Specializations
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.Specializations
-  nameWithType: CharactersIdClient.Specializations
 - uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.Training
   name: Training
   href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.html#Gw2Sharp_WebApi_V2_Clients_CharactersIdClient_Training
@@ -10999,44 +10482,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdSabClient.CharactersIdSabClient
   nameWithType: CharactersIdSabClient.CharactersIdSabClient
-- uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdSkillsClient
-  name: CharactersIdSkillsClient
-  href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdSkillsClient.html
-  commentId: T:Gw2Sharp.WebApi.V2.Clients.CharactersIdSkillsClient
-  fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdSkillsClient
-  nameWithType: CharactersIdSkillsClient
-- uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdSkillsClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client,System.String)
-  name: CharactersIdSkillsClient(IConnection, IGw2Client, String)
-  href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdSkillsClient.html#Gw2Sharp_WebApi_V2_Clients_CharactersIdSkillsClient__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_System_String_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.CharactersIdSkillsClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client,System.String)
-  fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdSkillsClient.CharactersIdSkillsClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client, System.String)
-  nameWithType: CharactersIdSkillsClient.CharactersIdSkillsClient(IConnection, IGw2Client, String)
-- uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdSkillsClient.#ctor*
-  name: CharactersIdSkillsClient
-  href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdSkillsClient.html#Gw2Sharp_WebApi_V2_Clients_CharactersIdSkillsClient__ctor_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.CharactersIdSkillsClient.#ctor
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdSkillsClient.CharactersIdSkillsClient
-  nameWithType: CharactersIdSkillsClient.CharactersIdSkillsClient
-- uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdSpecializationsClient
-  name: CharactersIdSpecializationsClient
-  href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdSpecializationsClient.html
-  commentId: T:Gw2Sharp.WebApi.V2.Clients.CharactersIdSpecializationsClient
-  fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdSpecializationsClient
-  nameWithType: CharactersIdSpecializationsClient
-- uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdSpecializationsClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client,System.String)
-  name: CharactersIdSpecializationsClient(IConnection, IGw2Client, String)
-  href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdSpecializationsClient.html#Gw2Sharp_WebApi_V2_Clients_CharactersIdSpecializationsClient__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_System_String_
-  commentId: M:Gw2Sharp.WebApi.V2.Clients.CharactersIdSpecializationsClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client,System.String)
-  fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdSpecializationsClient.CharactersIdSpecializationsClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client, System.String)
-  nameWithType: CharactersIdSpecializationsClient.CharactersIdSpecializationsClient(IConnection, IGw2Client, String)
-- uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdSpecializationsClient.#ctor*
-  name: CharactersIdSpecializationsClient
-  href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdSpecializationsClient.html#Gw2Sharp_WebApi_V2_Clients_CharactersIdSpecializationsClient__ctor_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.CharactersIdSpecializationsClient.#ctor
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.CharactersIdSpecializationsClient.CharactersIdSpecializationsClient
-  nameWithType: CharactersIdSpecializationsClient.CharactersIdSpecializationsClient
 - uid: Gw2Sharp.WebApi.V2.Clients.CharactersIdTrainingClient
   name: CharactersIdTrainingClient
   href: api/Gw2Sharp.WebApi.V2.Clients.CharactersIdTrainingClient.html
@@ -14614,6 +14059,50 @@ references:
   commentId: T:Gw2Sharp.WebApi.V2.Clients.IBuildClient
   fullName: Gw2Sharp.WebApi.V2.Clients.IBuildClient
   nameWithType: IBuildClient
+- uid: Gw2Sharp.WebApi.V2.Clients.IBulkAliasExpandableClient`2
+  name: IBulkAliasExpandableClient<TObject, TId>
+  href: api/Gw2Sharp.WebApi.V2.Clients.IBulkAliasExpandableClient-2.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.IBulkAliasExpandableClient`2
+  name.vb: IBulkAliasExpandableClient(Of TObject, TId)
+  fullName: Gw2Sharp.WebApi.V2.Clients.IBulkAliasExpandableClient<TObject, TId>
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.IBulkAliasExpandableClient(Of TObject, TId)
+  nameWithType: IBulkAliasExpandableClient<TObject, TId>
+  nameWithType.vb: IBulkAliasExpandableClient(Of TObject, TId)
+- uid: Gw2Sharp.WebApi.V2.Clients.IBulkAliasExpandableClient`2.GetAsync(`1,CancellationToken)
+  name: GetAsync(TId, CancellationToken)
+  href: api/Gw2Sharp.WebApi.V2.Clients.IBulkAliasExpandableClient-2.html#Gw2Sharp_WebApi_V2_Clients_IBulkAliasExpandableClient_2_GetAsync__1_CancellationToken_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.IBulkAliasExpandableClient`2.GetAsync(`1,CancellationToken)
+  fullName: Gw2Sharp.WebApi.V2.Clients.IBulkAliasExpandableClient<TObject, TId>.GetAsync(TId, CancellationToken)
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.IBulkAliasExpandableClient(Of TObject, TId).GetAsync(TId, CancellationToken)
+  nameWithType: IBulkAliasExpandableClient<TObject, TId>.GetAsync(TId, CancellationToken)
+  nameWithType.vb: IBulkAliasExpandableClient(Of TObject, TId).GetAsync(TId, CancellationToken)
+- uid: Gw2Sharp.WebApi.V2.Clients.IBulkAliasExpandableClient`2.GetAsync*
+  name: GetAsync
+  href: api/Gw2Sharp.WebApi.V2.Clients.IBulkAliasExpandableClient-2.html#Gw2Sharp_WebApi_V2_Clients_IBulkAliasExpandableClient_2_GetAsync_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.IBulkAliasExpandableClient`2.GetAsync
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.IBulkAliasExpandableClient<TObject, TId>.GetAsync
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.IBulkAliasExpandableClient(Of TObject, TId).GetAsync
+  nameWithType: IBulkAliasExpandableClient<TObject, TId>.GetAsync
+  nameWithType.vb: IBulkAliasExpandableClient(Of TObject, TId).GetAsync
+- uid: Gw2Sharp.WebApi.V2.Clients.IBulkAliasExpandableClient`2.ManyAsync(IEnumerable{`1},CancellationToken)
+  name: ManyAsync(IEnumerable<TId>, CancellationToken)
+  href: api/Gw2Sharp.WebApi.V2.Clients.IBulkAliasExpandableClient-2.html#Gw2Sharp_WebApi_V2_Clients_IBulkAliasExpandableClient_2_ManyAsync_IEnumerable__1__CancellationToken_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.IBulkAliasExpandableClient`2.ManyAsync(IEnumerable{`1},CancellationToken)
+  name.vb: ManyAsync(IEnumerable(Of TId), CancellationToken)
+  fullName: Gw2Sharp.WebApi.V2.Clients.IBulkAliasExpandableClient<TObject, TId>.ManyAsync(IEnumerable<TId>, CancellationToken)
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.IBulkAliasExpandableClient(Of TObject, TId).ManyAsync(IEnumerable(Of TId), CancellationToken)
+  nameWithType: IBulkAliasExpandableClient<TObject, TId>.ManyAsync(IEnumerable<TId>, CancellationToken)
+  nameWithType.vb: IBulkAliasExpandableClient(Of TObject, TId).ManyAsync(IEnumerable(Of TId), CancellationToken)
+- uid: Gw2Sharp.WebApi.V2.Clients.IBulkAliasExpandableClient`2.ManyAsync*
+  name: ManyAsync
+  href: api/Gw2Sharp.WebApi.V2.Clients.IBulkAliasExpandableClient-2.html#Gw2Sharp_WebApi_V2_Clients_IBulkAliasExpandableClient_2_ManyAsync_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.IBulkAliasExpandableClient`2.ManyAsync
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.IBulkAliasExpandableClient<TObject, TId>.ManyAsync
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.IBulkAliasExpandableClient(Of TObject, TId).ManyAsync
+  nameWithType: IBulkAliasExpandableClient<TObject, TId>.ManyAsync
+  nameWithType.vb: IBulkAliasExpandableClient(Of TObject, TId).ManyAsync
 - uid: Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient`2
   name: IBulkExpandableClient<TObject, TId>
   href: api/Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient-2.html
@@ -14916,32 +14405,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.Sab
   nameWithType: ICharactersIdClient.Sab
-- uid: Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.Skills
-  name: Skills
-  href: api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.html#Gw2Sharp_WebApi_V2_Clients_ICharactersIdClient_Skills
-  commentId: P:Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.Skills
-  fullName: Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.Skills
-  nameWithType: ICharactersIdClient.Skills
-- uid: Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.Skills*
-  name: Skills
-  href: api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.html#Gw2Sharp_WebApi_V2_Clients_ICharactersIdClient_Skills_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.Skills
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.Skills
-  nameWithType: ICharactersIdClient.Skills
-- uid: Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.Specializations
-  name: Specializations
-  href: api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.html#Gw2Sharp_WebApi_V2_Clients_ICharactersIdClient_Specializations
-  commentId: P:Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.Specializations
-  fullName: Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.Specializations
-  nameWithType: ICharactersIdClient.Specializations
-- uid: Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.Specializations*
-  name: Specializations
-  href: api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.html#Gw2Sharp_WebApi_V2_Clients_ICharactersIdClient_Specializations_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.Specializations
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.Specializations
-  nameWithType: ICharactersIdClient.Specializations
 - uid: Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.Training
   name: Training
   href: api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdClient.html#Gw2Sharp_WebApi_V2_Clients_ICharactersIdClient_Training
@@ -15145,44 +14608,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.ICharactersIdSabClient.CharacterName
   nameWithType: ICharactersIdSabClient.CharacterName
-- uid: Gw2Sharp.WebApi.V2.Clients.ICharactersIdSkillsClient
-  name: ICharactersIdSkillsClient
-  href: api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdSkillsClient.html
-  commentId: T:Gw2Sharp.WebApi.V2.Clients.ICharactersIdSkillsClient
-  fullName: Gw2Sharp.WebApi.V2.Clients.ICharactersIdSkillsClient
-  nameWithType: ICharactersIdSkillsClient
-- uid: Gw2Sharp.WebApi.V2.Clients.ICharactersIdSkillsClient.CharacterName
-  name: CharacterName
-  href: api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdSkillsClient.html#Gw2Sharp_WebApi_V2_Clients_ICharactersIdSkillsClient_CharacterName
-  commentId: P:Gw2Sharp.WebApi.V2.Clients.ICharactersIdSkillsClient.CharacterName
-  fullName: Gw2Sharp.WebApi.V2.Clients.ICharactersIdSkillsClient.CharacterName
-  nameWithType: ICharactersIdSkillsClient.CharacterName
-- uid: Gw2Sharp.WebApi.V2.Clients.ICharactersIdSkillsClient.CharacterName*
-  name: CharacterName
-  href: api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdSkillsClient.html#Gw2Sharp_WebApi_V2_Clients_ICharactersIdSkillsClient_CharacterName_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.ICharactersIdSkillsClient.CharacterName
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.ICharactersIdSkillsClient.CharacterName
-  nameWithType: ICharactersIdSkillsClient.CharacterName
-- uid: Gw2Sharp.WebApi.V2.Clients.ICharactersIdSpecializationsClient
-  name: ICharactersIdSpecializationsClient
-  href: api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdSpecializationsClient.html
-  commentId: T:Gw2Sharp.WebApi.V2.Clients.ICharactersIdSpecializationsClient
-  fullName: Gw2Sharp.WebApi.V2.Clients.ICharactersIdSpecializationsClient
-  nameWithType: ICharactersIdSpecializationsClient
-- uid: Gw2Sharp.WebApi.V2.Clients.ICharactersIdSpecializationsClient.CharacterName
-  name: CharacterName
-  href: api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdSpecializationsClient.html#Gw2Sharp_WebApi_V2_Clients_ICharactersIdSpecializationsClient_CharacterName
-  commentId: P:Gw2Sharp.WebApi.V2.Clients.ICharactersIdSpecializationsClient.CharacterName
-  fullName: Gw2Sharp.WebApi.V2.Clients.ICharactersIdSpecializationsClient.CharacterName
-  nameWithType: ICharactersIdSpecializationsClient.CharacterName
-- uid: Gw2Sharp.WebApi.V2.Clients.ICharactersIdSpecializationsClient.CharacterName*
-  name: CharacterName
-  href: api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdSpecializationsClient.html#Gw2Sharp_WebApi_V2_Clients_ICharactersIdSpecializationsClient_CharacterName_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.ICharactersIdSpecializationsClient.CharacterName
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Clients.ICharactersIdSpecializationsClient.CharacterName
-  nameWithType: ICharactersIdSpecializationsClient.CharacterName
 - uid: Gw2Sharp.WebApi.V2.Clients.ICharactersIdTrainingClient
   name: ICharactersIdTrainingClient
   href: api/Gw2Sharp.WebApi.V2.Clients.ICharactersIdTrainingClient.html
@@ -17652,6 +17077,35 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.LegendsClient.LegendsClient
   nameWithType: LegendsClient.LegendsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.LegendsClient.GetAsync(Gw2Sharp.Models.LegendType,CancellationToken)
+  name: GetAsync(LegendType, CancellationToken)
+  href: api/Gw2Sharp.WebApi.V2.Clients.LegendsClient.html#Gw2Sharp_WebApi_V2_Clients_LegendsClient_GetAsync_Gw2Sharp_Models_LegendType_CancellationToken_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.LegendsClient.GetAsync(Gw2Sharp.Models.LegendType,CancellationToken)
+  fullName: Gw2Sharp.WebApi.V2.Clients.LegendsClient.GetAsync(Gw2Sharp.Models.LegendType, CancellationToken)
+  nameWithType: LegendsClient.GetAsync(LegendType, CancellationToken)
+- uid: Gw2Sharp.WebApi.V2.Clients.LegendsClient.GetAsync*
+  name: GetAsync
+  href: api/Gw2Sharp.WebApi.V2.Clients.LegendsClient.html#Gw2Sharp_WebApi_V2_Clients_LegendsClient_GetAsync_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.LegendsClient.GetAsync
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.LegendsClient.GetAsync
+  nameWithType: LegendsClient.GetAsync
+- uid: Gw2Sharp.WebApi.V2.Clients.LegendsClient.ManyAsync(IEnumerable{Gw2Sharp.Models.LegendType},CancellationToken)
+  name: ManyAsync(IEnumerable<LegendType>, CancellationToken)
+  href: api/Gw2Sharp.WebApi.V2.Clients.LegendsClient.html#Gw2Sharp_WebApi_V2_Clients_LegendsClient_ManyAsync_IEnumerable_Gw2Sharp_Models_LegendType__CancellationToken_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.LegendsClient.ManyAsync(IEnumerable{Gw2Sharp.Models.LegendType},CancellationToken)
+  name.vb: ManyAsync(IEnumerable(Of LegendType), CancellationToken)
+  fullName: Gw2Sharp.WebApi.V2.Clients.LegendsClient.ManyAsync(IEnumerable<Gw2Sharp.Models.LegendType>, CancellationToken)
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.LegendsClient.ManyAsync(IEnumerable(Of Gw2Sharp.Models.LegendType), CancellationToken)
+  nameWithType: LegendsClient.ManyAsync(IEnumerable<LegendType>, CancellationToken)
+  nameWithType.vb: LegendsClient.ManyAsync(IEnumerable(Of LegendType), CancellationToken)
+- uid: Gw2Sharp.WebApi.V2.Clients.LegendsClient.ManyAsync*
+  name: ManyAsync
+  href: api/Gw2Sharp.WebApi.V2.Clients.LegendsClient.html#Gw2Sharp_WebApi_V2_Clients_LegendsClient_ManyAsync_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.LegendsClient.ManyAsync
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.LegendsClient.ManyAsync
+  nameWithType: LegendsClient.ManyAsync
 - uid: Gw2Sharp.WebApi.V2.Clients.MailCarriersClient
   name: MailCarriersClient
   href: api/Gw2Sharp.WebApi.V2.Clients.MailCarriersClient.html
@@ -17925,6 +17379,35 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.ProfessionsClient.ProfessionsClient
   nameWithType: ProfessionsClient.ProfessionsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.ProfessionsClient.GetAsync(Gw2Sharp.Models.ProfessionType,CancellationToken)
+  name: GetAsync(ProfessionType, CancellationToken)
+  href: api/Gw2Sharp.WebApi.V2.Clients.ProfessionsClient.html#Gw2Sharp_WebApi_V2_Clients_ProfessionsClient_GetAsync_Gw2Sharp_Models_ProfessionType_CancellationToken_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.ProfessionsClient.GetAsync(Gw2Sharp.Models.ProfessionType,CancellationToken)
+  fullName: Gw2Sharp.WebApi.V2.Clients.ProfessionsClient.GetAsync(Gw2Sharp.Models.ProfessionType, CancellationToken)
+  nameWithType: ProfessionsClient.GetAsync(ProfessionType, CancellationToken)
+- uid: Gw2Sharp.WebApi.V2.Clients.ProfessionsClient.GetAsync*
+  name: GetAsync
+  href: api/Gw2Sharp.WebApi.V2.Clients.ProfessionsClient.html#Gw2Sharp_WebApi_V2_Clients_ProfessionsClient_GetAsync_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.ProfessionsClient.GetAsync
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.ProfessionsClient.GetAsync
+  nameWithType: ProfessionsClient.GetAsync
+- uid: Gw2Sharp.WebApi.V2.Clients.ProfessionsClient.ManyAsync(IEnumerable{Gw2Sharp.Models.ProfessionType},CancellationToken)
+  name: ManyAsync(IEnumerable<ProfessionType>, CancellationToken)
+  href: api/Gw2Sharp.WebApi.V2.Clients.ProfessionsClient.html#Gw2Sharp_WebApi_V2_Clients_ProfessionsClient_ManyAsync_IEnumerable_Gw2Sharp_Models_ProfessionType__CancellationToken_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.ProfessionsClient.ManyAsync(IEnumerable{Gw2Sharp.Models.ProfessionType},CancellationToken)
+  name.vb: ManyAsync(IEnumerable(Of ProfessionType), CancellationToken)
+  fullName: Gw2Sharp.WebApi.V2.Clients.ProfessionsClient.ManyAsync(IEnumerable<Gw2Sharp.Models.ProfessionType>, CancellationToken)
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.ProfessionsClient.ManyAsync(IEnumerable(Of Gw2Sharp.Models.ProfessionType), CancellationToken)
+  nameWithType: ProfessionsClient.ManyAsync(IEnumerable<ProfessionType>, CancellationToken)
+  nameWithType.vb: ProfessionsClient.ManyAsync(IEnumerable(Of ProfessionType), CancellationToken)
+- uid: Gw2Sharp.WebApi.V2.Clients.ProfessionsClient.ManyAsync*
+  name: ManyAsync
+  href: api/Gw2Sharp.WebApi.V2.Clients.ProfessionsClient.html#Gw2Sharp_WebApi_V2_Clients_ProfessionsClient_ManyAsync_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.ProfessionsClient.ManyAsync
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.ProfessionsClient.ManyAsync
+  nameWithType: ProfessionsClient.ManyAsync
 - uid: Gw2Sharp.WebApi.V2.Clients.PvpAmuletsClient
   name: PvpAmuletsClient
   href: api/Gw2Sharp.WebApi.V2.Clients.PvpAmuletsClient.html
@@ -18462,6 +17945,35 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.RacesClient.RacesClient
   nameWithType: RacesClient.RacesClient
+- uid: Gw2Sharp.WebApi.V2.Clients.RacesClient.GetAsync(Gw2Sharp.Models.RaceType,CancellationToken)
+  name: GetAsync(RaceType, CancellationToken)
+  href: api/Gw2Sharp.WebApi.V2.Clients.RacesClient.html#Gw2Sharp_WebApi_V2_Clients_RacesClient_GetAsync_Gw2Sharp_Models_RaceType_CancellationToken_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.RacesClient.GetAsync(Gw2Sharp.Models.RaceType,CancellationToken)
+  fullName: Gw2Sharp.WebApi.V2.Clients.RacesClient.GetAsync(Gw2Sharp.Models.RaceType, CancellationToken)
+  nameWithType: RacesClient.GetAsync(RaceType, CancellationToken)
+- uid: Gw2Sharp.WebApi.V2.Clients.RacesClient.GetAsync*
+  name: GetAsync
+  href: api/Gw2Sharp.WebApi.V2.Clients.RacesClient.html#Gw2Sharp_WebApi_V2_Clients_RacesClient_GetAsync_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.RacesClient.GetAsync
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.RacesClient.GetAsync
+  nameWithType: RacesClient.GetAsync
+- uid: Gw2Sharp.WebApi.V2.Clients.RacesClient.ManyAsync(IEnumerable{Gw2Sharp.Models.RaceType},CancellationToken)
+  name: ManyAsync(IEnumerable<RaceType>, CancellationToken)
+  href: api/Gw2Sharp.WebApi.V2.Clients.RacesClient.html#Gw2Sharp_WebApi_V2_Clients_RacesClient_ManyAsync_IEnumerable_Gw2Sharp_Models_RaceType__CancellationToken_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.RacesClient.ManyAsync(IEnumerable{Gw2Sharp.Models.RaceType},CancellationToken)
+  name.vb: ManyAsync(IEnumerable(Of RaceType), CancellationToken)
+  fullName: Gw2Sharp.WebApi.V2.Clients.RacesClient.ManyAsync(IEnumerable<Gw2Sharp.Models.RaceType>, CancellationToken)
+  fullName.vb: Gw2Sharp.WebApi.V2.Clients.RacesClient.ManyAsync(IEnumerable(Of Gw2Sharp.Models.RaceType), CancellationToken)
+  nameWithType: RacesClient.ManyAsync(IEnumerable<RaceType>, CancellationToken)
+  nameWithType.vb: RacesClient.ManyAsync(IEnumerable(Of RaceType), CancellationToken)
+- uid: Gw2Sharp.WebApi.V2.Clients.RacesClient.ManyAsync*
+  name: ManyAsync
+  href: api/Gw2Sharp.WebApi.V2.Clients.RacesClient.html#Gw2Sharp_WebApi_V2_Clients_RacesClient_ManyAsync_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.RacesClient.ManyAsync
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.RacesClient.ManyAsync
+  nameWithType: RacesClient.ManyAsync
 - uid: Gw2Sharp.WebApi.V2.Clients.RaidsClient
   name: RaidsClient
   href: api/Gw2Sharp.WebApi.V2.Clients.RaidsClient.html
@@ -22950,32 +22462,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.Character.Recipes
   nameWithType: Character.Recipes
-- uid: Gw2Sharp.WebApi.V2.Models.Character.Skills
-  name: Skills
-  href: api/Gw2Sharp.WebApi.V2.Models.Character.html#Gw2Sharp_WebApi_V2_Models_Character_Skills
-  commentId: P:Gw2Sharp.WebApi.V2.Models.Character.Skills
-  fullName: Gw2Sharp.WebApi.V2.Models.Character.Skills
-  nameWithType: Character.Skills
-- uid: Gw2Sharp.WebApi.V2.Models.Character.Skills*
-  name: Skills
-  href: api/Gw2Sharp.WebApi.V2.Models.Character.html#Gw2Sharp_WebApi_V2_Models_Character_Skills_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Character.Skills
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Models.Character.Skills
-  nameWithType: Character.Skills
-- uid: Gw2Sharp.WebApi.V2.Models.Character.Specializations
-  name: Specializations
-  href: api/Gw2Sharp.WebApi.V2.Models.Character.html#Gw2Sharp_WebApi_V2_Models_Character_Specializations
-  commentId: P:Gw2Sharp.WebApi.V2.Models.Character.Specializations
-  fullName: Gw2Sharp.WebApi.V2.Models.Character.Specializations
-  nameWithType: Character.Specializations
-- uid: Gw2Sharp.WebApi.V2.Models.Character.Specializations*
-  name: Specializations
-  href: api/Gw2Sharp.WebApi.V2.Models.Character.html#Gw2Sharp_WebApi_V2_Models_Character_Specializations_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Character.Specializations
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Models.Character.Specializations
-  nameWithType: Character.Specializations
 - uid: Gw2Sharp.WebApi.V2.Models.Character.Title
   name: Title
   href: api/Gw2Sharp.WebApi.V2.Models.Character.html#Gw2Sharp_WebApi_V2_Models_Character_Title
@@ -23942,44 +23428,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.CharactersSab.Zones
   nameWithType: CharactersSab.Zones
-- uid: Gw2Sharp.WebApi.V2.Models.CharactersSkills
-  name: CharactersSkills
-  href: api/Gw2Sharp.WebApi.V2.Models.CharactersSkills.html
-  commentId: T:Gw2Sharp.WebApi.V2.Models.CharactersSkills
-  fullName: Gw2Sharp.WebApi.V2.Models.CharactersSkills
-  nameWithType: CharactersSkills
-- uid: Gw2Sharp.WebApi.V2.Models.CharactersSkills.Skills
-  name: Skills
-  href: api/Gw2Sharp.WebApi.V2.Models.CharactersSkills.html#Gw2Sharp_WebApi_V2_Models_CharactersSkills_Skills
-  commentId: P:Gw2Sharp.WebApi.V2.Models.CharactersSkills.Skills
-  fullName: Gw2Sharp.WebApi.V2.Models.CharactersSkills.Skills
-  nameWithType: CharactersSkills.Skills
-- uid: Gw2Sharp.WebApi.V2.Models.CharactersSkills.Skills*
-  name: Skills
-  href: api/Gw2Sharp.WebApi.V2.Models.CharactersSkills.html#Gw2Sharp_WebApi_V2_Models_CharactersSkills_Skills_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Models.CharactersSkills.Skills
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Models.CharactersSkills.Skills
-  nameWithType: CharactersSkills.Skills
-- uid: Gw2Sharp.WebApi.V2.Models.CharactersSpecializations
-  name: CharactersSpecializations
-  href: api/Gw2Sharp.WebApi.V2.Models.CharactersSpecializations.html
-  commentId: T:Gw2Sharp.WebApi.V2.Models.CharactersSpecializations
-  fullName: Gw2Sharp.WebApi.V2.Models.CharactersSpecializations
-  nameWithType: CharactersSpecializations
-- uid: Gw2Sharp.WebApi.V2.Models.CharactersSpecializations.Specializations
-  name: Specializations
-  href: api/Gw2Sharp.WebApi.V2.Models.CharactersSpecializations.html#Gw2Sharp_WebApi_V2_Models_CharactersSpecializations_Specializations
-  commentId: P:Gw2Sharp.WebApi.V2.Models.CharactersSpecializations.Specializations
-  fullName: Gw2Sharp.WebApi.V2.Models.CharactersSpecializations.Specializations
-  nameWithType: CharactersSpecializations.Specializations
-- uid: Gw2Sharp.WebApi.V2.Models.CharactersSpecializations.Specializations*
-  name: Specializations
-  href: api/Gw2Sharp.WebApi.V2.Models.CharactersSpecializations.html#Gw2Sharp_WebApi_V2_Models_CharactersSpecializations_Specializations_
-  commentId: Overload:Gw2Sharp.WebApi.V2.Models.CharactersSpecializations.Specializations
-  isSpec: "True"
-  fullName: Gw2Sharp.WebApi.V2.Models.CharactersSpecializations.Specializations
-  nameWithType: CharactersSpecializations.Specializations
 - uid: Gw2Sharp.WebApi.V2.Models.CharactersTraining
   name: CharactersTraining
   href: api/Gw2Sharp.WebApi.V2.Models.CharactersTraining.html
