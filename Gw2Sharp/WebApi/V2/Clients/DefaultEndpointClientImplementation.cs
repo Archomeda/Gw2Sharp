@@ -51,6 +51,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <inheritdoc />
         public virtual async Task<IApiV2ObjectList<TEndpointObject>> RequestAllAsync<TEndpointObject, TId>(CancellationToken cancellationToken = default)
             where TEndpointObject : IApiV2Object, IIdentifiable<TId>
+            where TId : notnull
         {
             var items = await this.GetOrUpdateAsync<IApiV2ObjectList<TEndpointObject>>(this.FormatUrlQueryAll(this.client.EndpointPath), "_all", cancellationToken).ConfigureAwait(false);
             await this.UpdateIndividualsAsync<TEndpointObject, TId>(items).ConfigureAwait(false);
@@ -59,6 +60,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
 
         /// <inheritdoc />
         public virtual async Task<IApiV2ObjectList<TId>> RequestIdsAsync<TId>(CancellationToken cancellationToken = default)
+            where TId : notnull
         {
             var ids = await this.GetOrUpdateAsync<IApiV2ObjectList<TId>>(this.FormatUrlQueryIds(this.client.EndpointPath), "_ids", cancellationToken).ConfigureAwait(false);
             return ids.Item;
@@ -74,6 +76,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <inheritdoc />
         public virtual Task<TEndpointObject> RequestGetAsync<TEndpointObject, TId>(TId id, CancellationToken cancellationToken = default)
             where TEndpointObject : IApiV2Object, IIdentifiable<TId>
+            where TId : notnull
         {
             if (id == null)
                 throw new ArgumentNullException(nameof(id));
@@ -91,6 +94,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <inheritdoc />
         public virtual Task<IReadOnlyList<TEndpointObject>> RequestManyAsync<TEndpointObject, TId>(IEnumerable<TId> ids, CancellationToken cancellationToken = default)
             where TEndpointObject : IApiV2Object, IIdentifiable<TId>
+                where TId : notnull
         {
             if (ids == null)
                 throw new ArgumentNullException(nameof(ids));
@@ -100,6 +104,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
 
         private async Task<IReadOnlyList<TEndpointObject>> RequestManyInternalAsync<TEndpointObject, TId>(IEnumerable<TId> ids, CancellationToken cancellationToken)
             where TEndpointObject : IApiV2Object, IIdentifiable<TId>
+            where TId : notnull
         {
             object lockObject = new object();
 
@@ -140,6 +145,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <inheritdoc />
         public virtual Task<IApiV2ObjectList<TEndpointObject>> RequestPageAsync<TEndpointObject, TId>(int page, int pageSize = MAX_PAGE_SIZE, CancellationToken cancellationToken = default)
             where TEndpointObject : IApiV2Object, IIdentifiable<TId>
+            where TId : notnull
         {
             if (pageSize < 1 || pageSize > MAX_PAGE_SIZE)
                 throw new ArgumentOutOfRangeException(nameof(pageSize), pageSize, $"Page size cannot be smaller than 1 or bigger than {MAX_PAGE_SIZE}");
@@ -149,6 +155,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
 
         private async Task<IApiV2ObjectList<TEndpointObject>> RequestPageInternalAsync<TEndpointObject, TId>(int page, int pageSize, CancellationToken cancellationToken = default)
             where TEndpointObject : IApiV2Object, IIdentifiable<TId>
+            where TId : notnull
         {
             var items = await this.GetOrUpdateAsync<IApiV2ObjectList<TEndpointObject>>(this.FormatUrlQueryPage(this.client.EndpointPath, page, pageSize), $"_page{page}-{pageSize}", cancellationToken).ConfigureAwait(false);
             await this.UpdateIndividualsAsync<TEndpointObject, TId>(items).ConfigureAwait(false);

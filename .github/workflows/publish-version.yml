@@ -1,0 +1,69 @@
+name: Publish version
+
+on:
+  push:
+    tags:
+      - v*
+
+jobs:
+  test:
+    name: Test
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+          - windows-latest
+        dotnet:
+          - netcoreapp3.1
+          - netcoreapp2.1
+          - net461
+        exclude:
+          - os: ubuntu-latest
+            dotnet: net461
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run dotnet test
+        run: dotnet test -c Release -f ${{ matrix.dotnet }}
+
+  release:
+    name: Release
+    runs-on: windows-latest
+    needs: [test]
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          git fetch --prune --unshallow
+      - name: Install InheritDocTool
+        shell: powershell
+        run: dotnet tool install --global InheritDocTool
+      - name: Patch release version
+        shell: powershell
+        run: |
+          $version = GitVersion /output json /updateassemblyinfo Gw2Sharp/Properties/AssemblyVersionInfo.cs /ensureassemblyinfo | ConvertFrom-Json
+          $nuget = $version.SemVer
+          Write-Output "Assembly version: $($version.AssemblySemVer)"
+          Write-Output "Assembly file version: $($version.AssemblySemFileVer)"
+          Write-Output "Informational version: $($version.InformationalVersion)"
+          Write-Output "NuGet version: $nuget"
+          echo "::set-env name=VERSION::$nuget"
+      - name: Run dotnet build
+        run: dotnet build -c Release -p:VERSIONED_BUILD=${{ env.VERSION }}
+      - name: Run InheritDocTool
+        shell: powershell
+        run: InheritDoc -o
+      - name: Zip binaries
+        shell: powershell
+        run: 7z a Gw2Sharp.zip ./Gw2Sharp/bin/Release/*
+      - name: Run dotnet pack
+        run: dotnet pack Gw2Sharp -c Release --no-build --include-symbols -p:SymbolPackageFormat=snupkg -p:VERSIONED_BUILD=${{ env.VERSION }} -o pack
+      - name: Create release
+        uses: softprops/action-gh-release@v1
+        with:
+          draft: true
+          files: |
+            Gw2Sharp.zip
+            pack/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

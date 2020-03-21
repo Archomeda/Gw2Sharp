@@ -1,5 +1,5 @@
+using System.Text.Json;
 using Gw2Sharp.Models;
-using Newtonsoft.Json;
 using Xunit;
 
 namespace Gw2Sharp.Tests.Models
@@ -19,7 +19,7 @@ namespace Gw2Sharp.Tests.Models
         public void DeserializeTest()
         {
             string json = "[4,2]";
-            var size = JsonConvert.DeserializeObject<Size>(json);
+            var size = JsonSerializer.Deserialize<Size>(json);
             Assert.Equal(4, size.Width);
             Assert.Equal(2, size.Height);
             Assert.Equal(new[] { 4, 2 }, size);

@@ -1,9 +1,10 @@
-namespace Gw2Sharp.Mumble.Models
+namespace Gw2Sharp.Models
 {
     /// <summary>
-    /// The race.
+    /// Represents a race.
+    /// Used by Mumble Link.
     /// </summary>
-    internal enum Race
+    public enum RaceType : byte
     {
         /// <summary>
         /// Asura.

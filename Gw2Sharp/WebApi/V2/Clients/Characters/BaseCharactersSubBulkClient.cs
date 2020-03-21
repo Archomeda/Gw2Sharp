@@ -11,6 +11,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     [EndpointPathSegment("id", 0)]
     public abstract class BaseCharactersSubBulkClient<TObject, TId> : BaseEndpointBulkAllClient<TObject, TId>
         where TObject : IApiV2Object, IIdentifiable<TId>
+        where TId : notnull
     {
         /// <summary>
         /// Creates a new base character subendpoint bulk client.

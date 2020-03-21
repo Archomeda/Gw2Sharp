@@ -1,132 +1,67 @@
 name: CI
 
-on: [push]
+on:
+  push:
+    branches:
+      - '**'
+    tags-ignore:
+      - v*
 
 jobs:
-  # Determine the build number
-  buildnumber:
-    name: Build number
-    runs-on: ubuntu-latest
-    steps:
-      - uses: einaregilsson/build-number@v1
-        name: Generate build number
-        id: buildnumber
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - uses: actions/upload-artifact@v1
-        name: Upload build number
-        with:
-          name: BUILD_NUMBER
-          path: BUILD_NUMBER
-
-  # Unit tests
   test:
     name: Test
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
-        dotnet:
-          - "3.1.102"
         os:
           - ubuntu-latest
           - windows-latest
-    steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-dotnet@v1
-        name: Install .NET Core ${{ matrix.dotnet }}
-        with:
-          dotnet-version: ${{ matrix.dotnet }}
-      - name: Run dotnet build
-        run: dotnet build Gw2Sharp -c Release
-      - name: Run dotnet test
-        run: dotnet test -c Release
-
-  # Nightly packaged builds
-  nightly:
-    name: Nightly build
-    runs-on: windows-latest
-    needs: [buildnumber, test]
-    strategy:
-      fail-fast: false
-      matrix:
         dotnet:
-          - "3.1.102"
+          - netcoreapp3.1
+          - netcoreapp2.1
+          - net461
+        exclude:
+          - os: ubuntu-latest
+            dotnet: net461
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/download-artifact@v1
-        name: Download build number
-        with:
-          name: BUILD_NUMBER
-      - uses: einaregilsson/build-number@v1
-        name: Restore build number
-        id: buildnumber
-      - uses: actions/setup-dotnet@v1
-        name: Install .NET Core ${{ matrix.dotnet }}
-        with:
-          dotnet-version: ${{ matrix.dotnet }}
-      - name: Install GitVersion
-        run: choco install GitVersion.Portable -y
-      - name: Patch assembly version
-        run: GitVersion /updateassemblyinfo Gw2Sharp/Properties/AssemblyVersionInfo.cs /ensureassemblyinfo
-      - name: Patch package version
+      - uses: actions/checkout@v2
+      - name: Run dotnet test
+        run: dotnet test -c Release -f ${{ matrix.dotnet }}
+
+  nightly:
+    name: Nightly
+    runs-on: windows-latest
+    needs: [test]
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          git fetch --prune --unshallow
+      - name: Install InheritDocTool
+        shell: powershell
+        run: dotnet tool install --global InheritDocTool
+      - name: Patch nightly version
         shell: powershell
         run: |
-          $version = (GitVersion /output json | ConvertFrom-Json).AssemblySemFileVer -replace "origin/","" -replace "[^a-zA-Z0-9-_.]","-" -replace "(\d+\.\d+\.\d+)(.*)","`$1.$env:BUILD_NUMBER`$2"
-          Write-Output "NuGet package version: $version"
+          $version = GitVersion /output json /updateassemblyinfo Gw2Sharp/Properties/AssemblyVersionInfo.cs /ensureassemblyinfo
+          Write-Output $version
+          $version = $version | ConvertFrom-Json
 
-          (Get-Content Gw2Sharp/Gw2Sharp.csproj) `
-            -replace '<Version>([^<]*)</Version>', "<Version>$version</Version>" |
-          Out-File Gw2Sharp/Gw2Sharp.csproj
+          $nuget = $version.SemVer
+          if ($version.BranchName -eq "master") {
+            $nuget += "-master.$($version.CommitsSinceVersionSource)"
+          }
+          Write-Output "Assembly version: $($version.AssemblySemVer)"
+          Write-Output "Assembly file version: $($version.AssemblySemFileVer)"
+          Write-Output "Informational version: $($version.InformationalVersion)"
+          Write-Output "NuGet version: $nuget"
+          echo "::set-env name=VERSION::$nuget"
       - name: Run dotnet build
-        run: dotnet build -c Debug -p:VERSIONED_BUILD=1
+        run: dotnet build -c Release -p:VERSIONED_BUILD=$env:VERSION
+      - name: Run InheritDocTool
+        shell: powershell
+        run: InheritDoc -o
       - name: Run dotnet pack
-        run: dotnet pack Gw2Sharp -c Debug --no-build -p:VERSIONED_BUILD=1
+        run: dotnet pack Gw2Sharp -c Release --no-build -p:VERSIONED_BUILD=$env:VERSION
       - name: Run dotnet nuget push
         run: dotnet nuget push **/*.symbols.nupkg -s "https://www.myget.org/F/gw2sharp/api/v2/package" -k "${{ secrets.MYGET_TOKEN }}"
-
-  # SonarCloud analysis
-  sonarcloud:
-    name: SonarCloud analysis
-    runs-on: windows-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        dotnet:
-          - "3.1.102"
-    steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-dotnet@v1
-        name: Install .NET Core ${{ matrix.dotnet }}
-        with:
-          dotnet-version: ${{ matrix.dotnet }}
-      - name: Install Coverlet
-        run: dotnet tool install --global coverlet.console
-      - name: Install SonarScanner
-        run: dotnet tool install --global dotnet-sonarscanner
-      - name: Start SonarScanner
-        shell: powershell
-        run: |
-          if ($env:GITHUB_REF -match "refs/([^/]*)/(.*)") {
-            if ($matches[1] -eq "tags") {
-              dotnet sonarscanner begin /k:"Archomeda_Gw2Sharp" /o:"archomeda-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.cs.opencover.reportsPaths="coverage.xml" /v:"$($matches[2])"
-            } elseif ($matches[1] -eq "heads") {
-              dotnet sonarscanner begin /k:"Archomeda_Gw2Sharp" /o:"archomeda-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.cs.opencover.reportsPaths="coverage.xml" /d:sonar.branch.name="$($matches[2])"
-            } else {
-              Write-Error "No valid ref found in $env:GITHUB_REF"
-              exit 1
-            }
-          } else {
-            Write-Error "No valid ref found in $env:GITHUB_REF"
-            exit 1
-          }
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Run dotnet build
-        run: dotnet build -c Debug
-      - name: Run Coverlet
-        run: coverlet Gw2Sharp.Tests/bin/Debug/netcoreapp3.0/Gw2Sharp.Tests.dll --target "dotnet.exe" --targetargs "test -c Debug --no-build" --format opencover --output "coverage.xml"
-      - name: End SonarScanner
-        run: dotnet sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

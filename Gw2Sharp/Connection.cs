@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Reflection;
+using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
 using Gw2Sharp.Extensions;
@@ -11,8 +12,6 @@ using Gw2Sharp.WebApi;
 using Gw2Sharp.WebApi.Caching;
 using Gw2Sharp.WebApi.Http;
 using Gw2Sharp.WebApi.V2.Models;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Serialization;
 
 namespace Gw2Sharp
 {
@@ -24,25 +23,25 @@ namespace Gw2Sharp
         /// <summary>
         /// The settings that are used when deserializing JSON objects.
         /// </summary>
-        internal static JsonSerializerSettings GetDeserializerSettings(IGw2Client client) => new JsonSerializerSettings
+        private static JsonSerializerOptions GetDeserializerSettings(IGw2Client client)
         {
-            ContractResolver = new Gw2ContractResolver(client)
+            var options = new JsonSerializerOptions
             {
-                NamingStrategy = new SnakeCaseNamingStrategy
-                {
-                    OverrideSpecifiedNames = false
-                }
-            },
-            Converters = new JsonConverter[]
-            {
-                new ApiObjectConverter(),
-                new ApiObjectListConverter(),
-                new ApiEnumConverter(),
-                new CastableTypeConverter(),
-                new GuidConverter(),
-                new TimeSpanConverter()
-            }
-        };
+                AllowTrailingCommas = true,
+                PropertyNameCaseInsensitive = true,
+                PropertyNamingPolicy = SnakeCaseNamingPolicy.SnakeCase
+            };
+            options.Converters.Add(new ApiEnumConverter());
+            options.Converters.Add(new ApiFlagsConverter());
+            options.Converters.Add(new ApiObjectConverter());
+            options.Converters.Add(new ApiObjectListConverter());
+            options.Converters.Add(new CastableTypeConverter());
+            options.Converters.Add(new DictionaryIntKeyConverter());
+            options.Converters.Add(new GuidConverter());
+            options.Converters.Add(new RenderUrlConverter(client));
+            options.Converters.Add(new TimeSpanConverter());
+            return options;
+        }
 
         private readonly Dictionary<string, string> requestHeaders;
         private IHttpClient httpClient;
@@ -200,7 +199,7 @@ namespace Gw2Sharp
             try
             {
                 var r = await this.HttpClient.RequestAsync(request, cancellationToken).ConfigureAwait(false);
-                var obj = JsonConvert.DeserializeObject<TResponse>(r.Content, deserializerSettings);
+                var obj = JsonSerializer.Deserialize<TResponse>(r.Content, deserializerSettings);
                 return new HttpResponse<TResponse>(obj, r.StatusCode, r.RequestHeaders, r.ResponseHeaders);
             }
             catch (UnexpectedStatusException ex)
@@ -209,7 +208,7 @@ namespace Gw2Sharp
                 try
                 {
                     if (ex.Response != null)
-                        error = JsonConvert.DeserializeObject<ErrorObject>(ex.Response.Content, deserializerSettings);
+                        error = JsonSerializer.Deserialize<ErrorObject>(ex.Response.Content, deserializerSettings);
                 }
                 catch (JsonException)
                 {

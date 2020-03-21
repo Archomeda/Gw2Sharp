@@ -1,6 +1,7 @@
 using System.ComponentModel;
+using System.Text.Json;
+using Gw2Sharp.Json.Converters;
 using Gw2Sharp.WebApi.V2.Models;
-using Newtonsoft.Json;
 using Xunit;
 
 namespace Gw2Sharp.Tests.WebApi.V2.Models
@@ -34,11 +35,13 @@ namespace Gw2Sharp.Tests.WebApi.V2.Models
         [InlineData("{\"Enum\":\"EnumValue2\"}", "EnumValue2", TestEnum.EnumValue2)]
         [InlineData("{\"Enum\":\"SomeRandomValue\"}", "SomeRandomValue", TestEnum.EnumValue3)]
         [InlineData("{\"Enum\":\"\"}", "", TestEnum.EnumValue3)]
-        [InlineData("{\"Enum\":undefined}", null, TestEnum.EnumValue3)]
+        [InlineData("{\"Enum\":null}", null, null)]
         [InlineData("{}", null, null)]
         public void DeserializeTest(string json, string expectedRaw, TestEnum? expected)
         {
-            var obj = JsonConvert.DeserializeObject<JsonObject>(json);
+            var options = new JsonSerializerOptions();
+            options.Converters.Add(new ApiEnumConverter());
+            var obj = JsonSerializer.Deserialize<JsonObject>(json, options);
             if (expected == null)
                 Assert.Null(obj.Enum);
             else

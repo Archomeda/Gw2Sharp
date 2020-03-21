@@ -1,8 +1,6 @@
 using System;
 using System.Collections.Generic;
 using Gw2Sharp.Extensions;
-using Gw2Sharp.Json.Converters;
-using Newtonsoft.Json;
 
 namespace Gw2Sharp.WebApi.V2.Models
 {
@@ -10,7 +8,6 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// Wraps an API enum to allow unsupported and/or future enum values.
     /// </summary>
     /// <typeparam name="T">The enum type.</typeparam>
-    [JsonConverter(typeof(ApiEnumConverter))]
     public class ApiEnum<T> : IEquatable<ApiEnum<T>> where T : Enum
     {
         /// <summary>
@@ -92,7 +89,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         {
             return !(other is null) &&
                 EqualityComparer<T>.Default.Equals(this.Value, other.Value) &&
-                EqualityComparer<string>.Default.Equals(this.RawValue?.ToLowerInvariant(), other.RawValue?.ToLowerInvariant());
+                EqualityComparer<string?>.Default.Equals(this.RawValue?.ToLowerInvariant(), other.RawValue?.ToLowerInvariant());
         }
 
         /// <inheritdoc />

@@ -1,6 +1,7 @@
 using System;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using Gw2Sharp.WebApi;
-using Newtonsoft.Json;
 
 namespace Gw2Sharp.Json.Converters
 {
@@ -22,14 +23,11 @@ namespace Gw2Sharp.Json.Converters
         }
 
         /// <inheritdoc />
-        public override bool CanWrite => false;
+        public override RenderUrl Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options) =>
+            new RenderUrl(this.gw2Client, reader.GetString());
 
         /// <inheritdoc />
-        public override RenderUrl ReadJson(JsonReader reader, Type objectType, RenderUrl existingValue, bool hasExistingValue, JsonSerializer serializer) =>
-            new RenderUrl(this.gw2Client, serializer.Deserialize<string>(reader));
-
-        /// <inheritdoc />
-        public override void WriteJson(JsonWriter writer, RenderUrl value, JsonSerializer serializer) =>
+        public override void Write(Utf8JsonWriter writer, RenderUrl value, JsonSerializerOptions options) =>
             throw new NotImplementedException("TODO: This should generally not be used since we only deserialize stuff from the API, and not serialize to it. Might add support later.");
     }
 }

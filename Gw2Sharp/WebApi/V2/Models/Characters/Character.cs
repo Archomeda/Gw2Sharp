@@ -99,52 +99,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         public IReadOnlyList<CharacterWvwAbility>? WvwAbilities { get; set; }
 
         /// <summary>
-        /// The character specializations.
-        /// Additionally requires scopes: builds.
-        /// If the required scopes are not met, this value is <c>null</c>.
-        /// </summary>
-        [Obsolete("Deprecated since the build template update on 2019-12-19. Use /v2/characters/:id/buildtabs instead. To be removed starting with version 0.9.0.")]
-        public CharacterSpecializations? Specializations
-        {
-            get
-            {
-                var specializations = this.ActiveBuildTab.HasValue ? this.BuildTabs?[this.ActiveBuildTab.Value].Build.Specializations : null;
-                if (specializations == null)
-                    return null;
-
-                return new CharacterSpecializations
-                {
-                    Pve = specializations,
-                    Pvp = specializations,
-                    Wvw = specializations
-                };
-            }
-        }
-
-        /// <summary>
-        /// The character skills.
-        /// Additionally requires scopes: builds.
-        /// If the required scopes are not met, this value is <c>null</c>.
-        /// </summary>
-        [Obsolete("Deprecated since the build template update on 2019-12-19. Use /v2/characters/:id/buildtabs instead. To be removed starting with version 0.9.0.")]
-        public CharacterSkills? Skills
-        {
-            get
-            {
-                var skills = this.ActiveBuildTab.HasValue ? this.BuildTabs?[this.ActiveBuildTab.Value].Build.Skills : null;
-                if (skills == null)
-                    return null;
-
-                return new CharacterSkills
-                {
-                    Pve = skills,
-                    Pvp = skills,
-                    Wvw = skills
-                };
-            }
-        }
-
-        /// <summary>
         /// The number of build tabs that this character has unlocked.
         /// Additionally requires scopes: builds.
         /// If the required scopes are not met, this value is <c>null</c>.

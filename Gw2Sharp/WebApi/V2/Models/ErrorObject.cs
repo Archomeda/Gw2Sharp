@@ -1,6 +1,6 @@
 using System;
 using System.Runtime.Serialization;
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace Gw2Sharp.WebApi.V2.Models
 {
@@ -11,7 +11,6 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// Because of how the API works, either <see cref="Text"/> or <see cref="Error"/> is set.
     /// You can use <see cref="Message"/> to prioritize <see cref="Text"/> above <see cref="Error"/>.
     /// </remarks>
-    [JsonObject]
     [Serializable]
     public class ErrorObject : ApiV2BaseObject, ISerializable
     {

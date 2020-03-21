@@ -1,7 +1,7 @@
 using System;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using Gw2Sharp.Models;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace Gw2Sharp.Json.Converters
 {
@@ -12,19 +12,31 @@ namespace Gw2Sharp.Json.Converters
     public sealed class SizeConverter : JsonConverter<Size>
     {
         /// <inheritdoc />
-        public override bool CanWrite => false;
-
-        /// <inheritdoc />
-        public override Size ReadJson(JsonReader reader, Type objectType, Size existingValue, bool hasExistingValue, JsonSerializer serializer)
+        public override Size Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
-            if (!(serializer.Deserialize<JToken>(reader) is JArray jArray))
-                throw new JsonSerializationException($"Expected {nameof(jArray)} to be an array");
+            if (reader.TokenType != JsonTokenType.StartArray)
+                throw new JsonException("Expected start of array");
 
-            return new Size(jArray[0].ToObject<int>(serializer), jArray[1].ToObject<int>(serializer));
+            int[] values = new int[2];
+            for (int i = 0; i < 2; i++)
+            {
+                if (!reader.Read())
+                    throw new JsonException("Unexpected end of array");
+
+                if (reader.TryGetInt32(out int value))
+                    values[i] = value;
+                else
+                    throw new JsonException("Expected an int");
+            }
+
+            if (!reader.Read() || reader.TokenType != JsonTokenType.EndArray)
+                throw new JsonException("Expected end of array");
+
+            return new Size(values[0], values[1]);
         }
 
         /// <inheritdoc />
-        public override void WriteJson(JsonWriter writer, Size value, JsonSerializer serializer) =>
+        public override void Write(Utf8JsonWriter writer, Size value, JsonSerializerOptions options) =>
             throw new NotImplementedException("TODO: This should generally not be used since we only deserialize stuff from the API, and not serialize to it. Might add support later.");
     }
 }

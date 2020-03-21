@@ -8,11 +8,11 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The daily achievement product requirement.
         /// </summary>
-        public GameAccess Product { get; set; }
+        public ApiEnum<GameAccess> Product { get; set; } = new ApiEnum<GameAccess>();
 
         /// <summary>
         /// The daily achievement condition requirement.
         /// </summary>
-        public AccessCondition Condition { get; set; }
+        public ApiEnum<AccessCondition> Condition { get; set; } = new ApiEnum<AccessCondition>();
     }
 }

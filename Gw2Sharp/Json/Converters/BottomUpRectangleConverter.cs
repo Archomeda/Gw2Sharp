@@ -1,6 +1,6 @@
 using System;
+using System.Text.Json;
 using Gw2Sharp.WebApi.V2.Models;
-using Newtonsoft.Json;
 
 namespace Gw2Sharp.Json.Converters
 {
@@ -11,7 +11,7 @@ namespace Gw2Sharp.Json.Converters
     public sealed class BottomUpRectangleConverter : RectangleConverter
     {
         /// <inheritdoc />
-        public override Rectangle ReadJson(JsonReader reader, Type objectType, Rectangle existingValue, bool hasExistingValue, JsonSerializer serializer) =>
-            this.ReadJson(reader, objectType, existingValue, hasExistingValue, serializer, RectangleDirectionType.BottomUp);
+        public override Rectangle Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options) =>
+            this.Read(ref reader, typeToConvert, options, RectangleDirectionType.BottomUp);
     }
 }

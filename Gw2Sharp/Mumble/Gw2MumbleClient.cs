@@ -1,9 +1,10 @@
 using System;
 using System.IO.MemoryMappedFiles;
 using System.Net.Sockets;
+using System.Text.Json;
+using Gw2Sharp.Json;
 using Gw2Sharp.Models;
 using Gw2Sharp.Mumble.Models;
-using Newtonsoft.Json;
 
 namespace Gw2Sharp.Mumble
 {
@@ -12,9 +13,22 @@ namespace Gw2Sharp.Mumble
     /// </summary>
     public class Gw2MumbleClient : BaseClient, IGw2MumbleClient
     {
+        /// <summary>
+        /// The settings that are used when deserializing JSON objects.
+        /// </summary>
+        private static readonly JsonSerializerOptions deserializerSettings = new JsonSerializerOptions
+        {
+            PropertyNameCaseInsensitive = true,
+            PropertyNamingPolicy = SnakeCaseNamingPolicy.SnakeCase
+        };
+
         internal const string MUMBLE_LINK_MAP_NAME = "MumbleLink";
-        internal const string MUMBLE_LINK_GAME_NAME = "Guild Wars 2";
+        internal const string MUMBLE_LINK_GAME_NAME_GUILD_WARS_2 = "Guild Wars 2";
+        internal static readonly char[] mumbleLinkGameName = new[] { 'G', 'u', 'i', 'l', 'd', ' ', 'W', 'a', 'r', 's', ' ', '2', '\0' };
         private const string EMPTY_IDENTITY = "{}";
+
+        private readonly object identityLock = new object();
+        private readonly object serverAddressLock = new object();
 
         private readonly Lazy<MemoryMappedFile> memoryMappedFile;
         private readonly Lazy<MemoryMappedViewAccessor> memoryMappedViewAccessor;
@@ -40,20 +54,38 @@ namespace Gw2Sharp.Mumble
                 () => this.memoryMappedFile.Value.CreateViewAccessor(), true);
         }
 
-        private string currentIdentityJson = EMPTY_IDENTITY;
-        private string? newIdentityJson;
-        private CharacterIdentity? identityObject;
-        private CharacterIdentity Identity
+        private string identityCache = EMPTY_IDENTITY;
+        private CharacterIdentity? identity;
+        private unsafe CharacterIdentity? Identity
         {
             get
             {
-                if (this.identityObject == null || (this.newIdentityJson != null && this.newIdentityJson != this.currentIdentityJson))
+                // Check if we're in the same frame update
+                if (this.linkedMem.identity[0] == '\0')
+                    return this.identity;
+
+                // Thread-safety
+                lock (this.identityLock)
                 {
-                    this.currentIdentityJson = this.newIdentityJson ?? EMPTY_IDENTITY;
-                    this.newIdentityJson = null;
-                    this.identityObject = JsonConvert.DeserializeObject<CharacterIdentity>(this.currentIdentityJson);
+                    // Check again
+                    if (this.linkedMem.identity[0] != '\0')
+                    {
+                        var cacheSpan = this.identityCache.AsSpan();
+                        fixed (char* ptr = this.linkedMem.identity)
+                        {
+                            // Check if the identity is different from last update
+                            var span = new ReadOnlySpan<char>(ptr, this.identityCache.Length);
+                            if (!span.SequenceEqual(cacheSpan))
+                            {
+                                // Update and parse JSON
+                                this.identityCache = new string(ptr);
+                                this.identity = JsonSerializer.Deserialize<CharacterIdentity>(this.identityCache, deserializerSettings);
+                            }
+                        }
+                        this.linkedMem.identity[0] = '\0';
+                    }
                 }
-                return this.identityObject;
+                return this.identity;
             }
         }
 
@@ -88,6 +120,9 @@ namespace Gw2Sharp.Mumble
         public unsafe Coordinates3 CameraFront =>
             this.IsAvailable ? new Coordinates3(this.linkedMem.fCameraFront[0], this.linkedMem.fCameraFront[1], this.linkedMem.fCameraFront[2]) : default;
 
+        private readonly byte[] serverAddressCache = new byte[Gw2Context.SOCKET_ADDRESS_SIZE];
+        private bool serverAddressCacheDirty = true;
+        private string? serverAddress;
         /// <inheritdoc />
         public unsafe string ServerAddress
         {
@@ -96,17 +131,45 @@ namespace Gw2Sharp.Mumble
                 if (!this.IsAvailable)
                     return string.Empty;
 
-                var context = this.linkedMem.context;
-                switch (context.socketAddressFamily)
+                // Check if we're in the same frame update
+                if (!this.serverAddressCacheDirty)
+                    return this.serverAddress ?? string.Empty;
+
+                // Thread-safety
+                lock (this.serverAddressLock)
                 {
-                    case AddressFamily.InterNetwork:
-                        return $"{context.socketAddress4[0]}.{context.socketAddress4[1]}.{context.socketAddress4[2]}.{context.socketAddress4[3]}";
-                    case AddressFamily.InterNetworkV6:
-                        return $"{context.socketAddress6[0]:X4}:{context.socketAddress6[1]:X4}:{context.socketAddress6[2]:X4}:{context.socketAddress6[3]:X4}:" +
-                        $"{context.socketAddress6[4]:X4}:{context.socketAddress6[5]:X4}:{context.socketAddress6[6]:X4}:{context.socketAddress6[7]:X4}";
-                    default:
-                        return string.Empty;
+                    var cacheSpan = this.serverAddressCache.AsSpan();
+                    fixed (byte* ptr = this.linkedMem.context.socketAddress)
+                    {
+                        // Check if the server address is different from last update
+                        var span = new ReadOnlySpan<byte>(ptr, Gw2Context.SOCKET_ADDRESS_SIZE);
+                        if (!span.SequenceEqual(cacheSpan))
+                        {
+                            // Update server address
+                            span.CopyTo(cacheSpan);
+                            this.serverAddressCacheDirty = false;
+                            this.serverAddress = this.linkedMem.context.socketAddressFamily switch
+                            {
+                                AddressFamily.InterNetwork =>
+                                    $"{this.linkedMem.context.socketAddress4[0]}." +
+                                    $"{this.linkedMem.context.socketAddress4[1]}." +
+                                    $"{this.linkedMem.context.socketAddress4[2]}." +
+                                    $"{this.linkedMem.context.socketAddress4[3]}",
+                                AddressFamily.InterNetworkV6 =>
+                                    $"{this.linkedMem.context.socketAddress6[0]:X4}:" +
+                                    $"{this.linkedMem.context.socketAddress6[1]:X4}:" +
+                                    $"{this.linkedMem.context.socketAddress6[2]:X4}:" +
+                                    $"{this.linkedMem.context.socketAddress6[3]:X4}:" +
+                                    $"{this.linkedMem.context.socketAddress6[4]:X4}:" +
+                                    $"{this.linkedMem.context.socketAddress6[5]:X4}:" +
+                                    $"{this.linkedMem.context.socketAddress6[6]:X4}:" +
+                                    $"{this.linkedMem.context.socketAddress6[7]:X4}",
+                                _ => string.Empty
+                            };
+                        }
+                    }
                 }
+                return this.serverAddress ?? string.Empty;
             }
         }
 
@@ -181,35 +244,35 @@ namespace Gw2Sharp.Mumble
 
         /// <inheritdoc />
         public string CharacterName =>
-            this.IsAvailable ? this.Identity.Name : string.Empty;
+            this.IsAvailable && this.Identity != null ? this.Identity.Name : string.Empty;
 
         /// <inheritdoc />
-        public Profession Profession =>
-            this.IsAvailable ? this.Identity.Profession : (Profession)0;
+        public ProfessionType Profession =>
+            this.IsAvailable && this.Identity != null ? this.Identity.Profession : 0;
 
         /// <inheritdoc />
         public int Specialization =>
-            this.IsAvailable ? this.Identity.Spec : 0;
+            this.IsAvailable && this.Identity != null ? this.Identity.Spec : 0;
 
         /// <inheritdoc />
-        public string Race =>
-            this.IsAvailable ? this.Identity.Race.ToString() : string.Empty;
+        public RaceType Race =>
+            this.IsAvailable && this.Identity != null ? this.Identity.Race : 0;
 
         /// <inheritdoc />
         public int TeamColorId =>
-            this.IsAvailable ? this.Identity.TeamColorId : default;
+            this.IsAvailable && this.Identity != null ? this.Identity.TeamColorId : default;
 
         /// <inheritdoc />
         public bool IsCommander =>
-            this.IsAvailable ? this.Identity.Commander : default;
+            this.IsAvailable && this.Identity != null ? this.Identity.Commander : default;
 
         /// <inheritdoc />
         public double FieldOfView =>
-            this.IsAvailable ? this.Identity.Fov : default;
+            this.IsAvailable && this.Identity != null ? this.Identity.Fov : default;
 
         /// <inheritdoc />
         public UiSize UiSize =>
-            this.IsAvailable ? this.Identity.Uisz : default;
+            this.IsAvailable && this.Identity != null ? this.Identity.Uisz : default;
 
 
         /// <inheritdoc />
@@ -218,21 +281,26 @@ namespace Gw2Sharp.Mumble
             if (this.isDisposed)
                 throw new ObjectDisposedException(nameof(Gw2MumbleClient));
 
+
+
             this.memoryMappedViewAccessor.Value.Read<Gw2LinkedMem>(0, out var linkedMem);
             int oldTick = this.Tick;
 
-            this.Name = new string(linkedMem.name);
-            this.IsAvailable = this.Name == MUMBLE_LINK_GAME_NAME;
+            if (linkedMem.uiTick != oldTick)
+            {
+                var gameNameSpan = new ReadOnlySpan<char>(mumbleLinkGameName);
+                var linkedNameSpan = new ReadOnlySpan<char>(linkedMem.name, mumbleLinkGameName.Length);
+                this.IsAvailable = gameNameSpan.SequenceEqual(linkedNameSpan);
 
-            if (this.IsAvailable && linkedMem.uiTick != oldTick)
-            {
-                // There's actually a possible identity update
-                this.newIdentityJson = new string(linkedMem.identity);
-            }
-            else if (!this.IsAvailable)
-            {
-                // Mumble Link isn't available, clear the identity
-                this.newIdentityJson = null;
+                if (this.IsAvailable)
+                {
+                    this.Name = MUMBLE_LINK_GAME_NAME_GUILD_WARS_2;
+                    this.serverAddressCacheDirty = true;
+                }
+                else
+                {
+                    this.Name = new string(linkedMem.name);
+                }
             }
 
             this.linkedMem = linkedMem;

@@ -37,7 +37,7 @@ namespace Gw2Sharp.Tests.Mumble
             Assert.Equal(0.8834972, client.AvatarFront.X, 7);
             Assert.Equal(0, client.AvatarFront.Y, 5);
             Assert.Equal(-0.4684365, client.AvatarFront.Z, 7);
-            Assert.Equal(Gw2MumbleClient.MUMBLE_LINK_GAME_NAME, client.Name);
+            Assert.Equal(Gw2MumbleClient.MUMBLE_LINK_GAME_NAME_GUILD_WARS_2, client.Name);
             Assert.Equal(-78.08988, client.CameraPosition.X, 5);
             Assert.Equal(126.4892, client.CameraPosition.Y, 4);
             Assert.Equal(-0.2525153, client.CameraPosition.Z, 7);
@@ -45,8 +45,8 @@ namespace Gw2Sharp.Tests.Mumble
             Assert.Equal(-0.3139677, client.CameraFront.Y, 7);
             Assert.Equal(-0.4892152, client.CameraFront.Z, 7);
             Assert.Equal("Reiga Fiercecrusher", client.CharacterName);
-            Assert.Equal(Profession.Warrior, client.Profession);
-            Assert.Equal("Charr", client.Race);
+            Assert.Equal(ProfessionType.Warrior, client.Profession);
+            Assert.Equal(RaceType.Charr, client.Race);
             Assert.Equal(18, client.Specialization);
             Assert.Equal(0, client.TeamColorId);
             Assert.False(client.IsCommander);

@@ -10,8 +10,7 @@ namespace Gw2Sharp.Tests.Json.Converters
         public void NoWriteTest()
         {
             var converter = new TimeSpanConverter();
-            Assert.False(converter.CanWrite);
-            Assert.Throws<NotImplementedException>(() => converter.WriteJson(default!, new TimeSpan(), default!));
+            Assert.Throws<NotImplementedException>(() => converter.Write(default!, default!, default!));
         }
 
         [Fact]
