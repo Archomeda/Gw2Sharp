@@ -45,5 +45,21 @@
       "red": 329,
       "blue": 502
     }
+  },
+  {
+    "id": "095D44FD-0C72-4176-A53D-D14E10EF413B",
+    "map_id": 1201,
+    "started": "2020-03-12T21:03:18.288Z",
+    "ended": "2020-03-12T21:04:26.288Z",
+    "result": "Victory",
+    "team": "Blue",
+    "profession": "Warrior",
+    "rating_type": "2v2Ranked",
+    "rating_change": 10,
+    "season": "91C6E5B8-6CA7-4C2B-9F8E-BCA8EDD0653A",
+    "scores": {
+      "red": 0,
+      "blue": 0
+    }
   }
 ]

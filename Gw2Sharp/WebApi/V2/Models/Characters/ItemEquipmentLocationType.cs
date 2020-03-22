@@ -18,6 +18,6 @@ namespace Gw2Sharp
         /// <summary>
         /// The armory location.
         /// </summary>
-        Armory,
+        Armory
     }
 }

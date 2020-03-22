@@ -1,3 +1,5 @@
+using System.Runtime.Serialization;
+
 namespace Gw2Sharp.WebApi.V2.Models
 {
     /// <summary>
@@ -23,6 +25,13 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// Unranked.
         /// </summary>
-        Unranked
+        Unranked,
+
+        /// <summary>
+        /// 2v2 ranked.
+        /// "2v2Ranked" in the API, but named differently in Gw2Sharp due to technical limitations.
+        /// </summary>
+        [EnumMember(Value = "2v2Ranked")]
+        TwoVTwoRanked
     }
 }
