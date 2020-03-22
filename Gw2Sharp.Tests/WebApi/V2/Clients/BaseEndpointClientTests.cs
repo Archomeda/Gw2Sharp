@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Reflection;
+using System.Runtime.Serialization;
 using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
@@ -398,7 +399,8 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                     Assert.Equal(expected.GetString(), @enum.RawValue);
                     if (@enum.IsUnknown)
                     {
-                        var enumNames = Enum.GetNames(enumType).Select(x => x.Replace("_", ""));
+                        var enumNames = Enum.GetNames(enumType).Select(x => x.Replace("_", ""))
+                            .Select(x => enumType.GetField(x).GetCustomAttribute<EnumMemberAttribute>()?.Value ?? x);
                         Assert.True(enumNames.Contains((string)@enum.RawValue, StringComparer.OrdinalIgnoreCase), $"Expected '{expected}' to be a value in enumerator {@enum.Value.GetType().FullName}; detected value '{@enum.Value}'");
                     }
                     Assert.Equal(expected.GetString().ParseEnum(enumType), @enum.Value);
