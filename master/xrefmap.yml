@@ -32953,6 +32953,12 @@ references:
   commentId: F:Gw2Sharp.WebApi.V2.Models.PvpRatingType.Ranked
   fullName: Gw2Sharp.WebApi.V2.Models.PvpRatingType.Ranked
   nameWithType: PvpRatingType.Ranked
+- uid: Gw2Sharp.WebApi.V2.Models.PvpRatingType.TwoVTwoRanked
+  name: TwoVTwoRanked
+  href: api/Gw2Sharp.WebApi.V2.Models.PvpRatingType.html#Gw2Sharp_WebApi_V2_Models_PvpRatingType_TwoVTwoRanked
+  commentId: F:Gw2Sharp.WebApi.V2.Models.PvpRatingType.TwoVTwoRanked
+  fullName: Gw2Sharp.WebApi.V2.Models.PvpRatingType.TwoVTwoRanked
+  nameWithType: PvpRatingType.TwoVTwoRanked
 - uid: Gw2Sharp.WebApi.V2.Models.PvpRatingType.Unknown
   name: Unknown
   href: api/Gw2Sharp.WebApi.V2.Models.PvpRatingType.html#Gw2Sharp_WebApi_V2_Models_PvpRatingType_Unknown
