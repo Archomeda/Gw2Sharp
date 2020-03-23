@@ -1,9 +1,7 @@
 using System;
-using System.ComponentModel;
 using System.Reflection;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using Gw2Sharp.Extensions;
 using Gw2Sharp.WebApi.V2.Models;
 
 namespace Gw2Sharp.Json.Converters
@@ -29,32 +27,19 @@ namespace Gw2Sharp.Json.Converters
         private sealed class ApiEnumConverterInner<T> : JsonConverter<ApiEnum<T>>
             where T : Enum
         {
-            private readonly Type type;
-            private readonly T defaultValue;
-
-            public ApiEnumConverterInner()
-            {
-                this.type = typeof(T);
-
-                var defaultValueAttribute = this.type.GetCustomAttribute<DefaultValueAttribute>();
-                this.defaultValue = (T)(defaultValueAttribute?.Value ?? Enum.ToObject(this.type, 0));
-            }
-
             public override ApiEnum<T> Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
             {
                 if (reader.TokenType == JsonTokenType.String)
                 {
                     // If it's a string, create an enum with that value
                     string rawValue = reader.GetString();
-                    var value = rawValue.ParseEnum<T>();
-                    return new ApiEnum<T>(value, rawValue);
+                    return new ApiEnum<T>(rawValue);
                 }
                 else if (reader.TokenType == JsonTokenType.Number)
                 {
                     // If it's a number, create an enum with that value
-                    int rawValue = reader.GetInt32();
-                    var value = (T)Enum.ToObject(this.type, rawValue);
-                    return new ApiEnum<T>(value, rawValue.ToString());
+                    ulong rawValue = reader.GetUInt64();
+                    return new ApiEnum<T>(rawValue);
                 }
 
                 throw new JsonException("Expected null, a string or a number to deserialize as enum");

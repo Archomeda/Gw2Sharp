@@ -77,8 +77,8 @@ namespace Gw2Sharp.Tests.WebApi.V2.Models
             Assert.Empty(flags.UnknownList);
 
             flags = new ApiFlags<TestEnum>(new[] { new ApiEnum<TestEnum>(TestEnum.EnumValue1, "enum_value_1") });
-            Assert.False(flags.HasUnknowns);
-            Assert.Empty(flags.UnknownList);
+            Assert.True(flags.HasUnknowns);
+            Assert.Equal(new[] { new ApiEnum<TestEnum>(TestEnum.EnumValue1, "enum_value_1") }, flags.UnknownList);
         }
 
         [Fact]

@@ -51,20 +51,24 @@ namespace Gw2Sharp.Tests.WebApi.V2.Models
             }
         }
 
-        [Fact]
-        public void IsUnknownTest()
+        [Theory]
+        [InlineData(TestEnum.EnumValue1, "SomeRandomValue", true)]
+        [InlineData(TestEnum.EnumValue1, "EnumValue1", false)]
+        [InlineData(TestEnum.EnumValue1, "enumValue1", false)]
+        [InlineData(TestEnum.EnumValue1, "enum_value_1", true)]
+        public void IsUnknownTest(TestEnum @enum, string @string, bool expected)
         {
-            var wrapper = new ApiEnum<TestEnum>(TestEnum.EnumValue1, "SomeRandomValue");
-            Assert.True(wrapper.IsUnknown);
+            var wrapper = new ApiEnum<TestEnum>(@enum, @string);
+            Assert.Equal(expected, wrapper.IsUnknown);
 
-            wrapper = new ApiEnum<TestEnum>(TestEnum.EnumValue1, TestEnum.EnumValue1.ToString());
-            Assert.False(wrapper.IsUnknown);
+            wrapper = new ApiEnum<TestEnum>(@enum, @string);
+            Assert.Equal(expected, wrapper.IsUnknown);
 
-            wrapper = new ApiEnum<TestEnum>(TestEnum.EnumValue1, "enumValue1");
-            Assert.False(wrapper.IsUnknown);
+            wrapper = new ApiEnum<TestEnum>(@enum, @string);
+            Assert.Equal(expected, wrapper.IsUnknown);
 
-            wrapper = new ApiEnum<TestEnum>(TestEnum.EnumValue1, "enum_value_1");
-            Assert.False(wrapper.IsUnknown);
+            wrapper = new ApiEnum<TestEnum>(@enum, @string);
+            Assert.Equal(expected, wrapper.IsUnknown);
         }
 
         [Fact]

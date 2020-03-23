@@ -1,10 +1,10 @@
 using System;
-using System.Collections.Concurrent;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.Serialization;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using Gw2Sharp.Extensions;
 using Gw2Sharp.WebApi.V2.Models;
 
 namespace Gw2Sharp.Json.Converters
@@ -34,12 +34,18 @@ namespace Gw2Sharp.Json.Converters
 
         private sealed class CastableTypeConverterInner<T> : JsonConverter<T>
         {
-            private readonly Type type;
-            private readonly ConcurrentDictionary<string, Type?> targetTypes = new ConcurrentDictionary<string, Type?>();
+            private static readonly Dictionary<string, Type> targetTypes;
 
-            public CastableTypeConverterInner()
+            static CastableTypeConverterInner()
             {
-                this.type = typeof(T);
+                targetTypes = typeof(T).GetCustomAttributes<CastableTypeAttribute>()
+                    .ToDictionary(x =>
+                    {
+                        string enumValue = x.Value.ToString();
+                        var field = x.Value.GetType().GetField(enumValue);
+                        var attribute = field?.GetCustomAttribute<EnumMemberAttribute>();
+                        return attribute?.Value ?? enumValue;
+                    }, x => x.ObjectType);
             }
 
             public override T Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
@@ -56,11 +62,15 @@ namespace Gw2Sharp.Json.Converters
                     throw new JsonException("Expected 'type' property to not be null or empty");
 
                 // Find the castable type
-                var targetType = this.targetTypes.GetOrAdd(type, x =>
-                    this.type.GetCustomAttributes<CastableTypeAttribute>().FirstOrDefault(a => a.Value.Equals(type.ParseEnum(a.Value.GetType())))?.ObjectType);
-                if (targetType == null)
-                    throw new JsonException($"Unsupported type {type}");
-                return (T)JsonSerializer.Deserialize(obj.RootElement.GetRawText(), targetType, options);
+                if (targetTypes.TryGetValue(type, out var targetType))
+                    return (T)JsonSerializer.Deserialize(obj.RootElement.GetRawText(), targetType, options);
+                foreach (var value in targetTypes)
+                {
+                    if (string.Equals(type, value.Key, StringComparison.OrdinalIgnoreCase))
+                        return (T)JsonSerializer.Deserialize(obj.RootElement.GetRawText(), value.Value, options);
+                }
+
+                throw new JsonException($"Unsupported type {type}");
             }
 
             public override void Write(Utf8JsonWriter writer, T value, JsonSerializerOptions options) =>
