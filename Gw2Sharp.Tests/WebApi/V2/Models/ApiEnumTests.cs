@@ -60,15 +60,6 @@ namespace Gw2Sharp.Tests.WebApi.V2.Models
         {
             var wrapper = new ApiEnum<TestEnum>(@enum, @string);
             Assert.Equal(expected, wrapper.IsUnknown);
-
-            wrapper = new ApiEnum<TestEnum>(@enum, @string);
-            Assert.Equal(expected, wrapper.IsUnknown);
-
-            wrapper = new ApiEnum<TestEnum>(@enum, @string);
-            Assert.Equal(expected, wrapper.IsUnknown);
-
-            wrapper = new ApiEnum<TestEnum>(@enum, @string);
-            Assert.Equal(expected, wrapper.IsUnknown);
         }
 
         [Fact]
