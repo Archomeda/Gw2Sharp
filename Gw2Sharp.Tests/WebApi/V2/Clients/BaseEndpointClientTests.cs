@@ -10,7 +10,6 @@ using System.Runtime.Serialization;
 using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
-using Gw2Sharp.Extensions;
 using Gw2Sharp.Tests.Helpers;
 using Gw2Sharp.WebApi;
 using Gw2Sharp.WebApi.Caching;
@@ -390,20 +389,22 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
 
             if (!switched)
             {
-                var typeInfo = actual!.GetType().GetTypeInfo();
-                if (typeInfo.IsGenericType && typeInfo.GetGenericTypeDefinition() == typeof(ApiEnum<>))
+                var type = actual!.GetType();
+                if (type.IsGenericType && type.GetGenericTypeDefinition() == typeof(ApiEnum<>))
                 {
-                    var enumType = typeInfo.GenericTypeArguments[0];
+                    var enumType = type.GenericTypeArguments[0];
                     dynamic @enum = actual; // Just for easiness
 
                     Assert.Equal(expected.GetString(), @enum.RawValue);
                     if (@enum.IsUnknown)
                     {
-                        var enumNames = Enum.GetNames(enumType).Select(x => x.Replace("_", ""))
+                        var enumNames = Enum.GetNames(enumType)
                             .Select(x => enumType.GetField(x).GetCustomAttribute<EnumMemberAttribute>()?.Value ?? x);
                         Assert.True(enumNames.Contains((string)@enum.RawValue, StringComparer.OrdinalIgnoreCase), $"Expected '{expected}' to be a value in enumerator {@enum.Value.GetType().FullName}; detected value '{@enum.Value}'");
                     }
-                    Assert.Equal(expected.GetString().ParseEnum(enumType), @enum.Value);
+
+                    dynamic expectedEnum = Activator.CreateInstance(type, BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public, null, new[] { expected.GetString() }, null);
+                    Assert.Equal(expectedEnum.Value, @enum.Value);
 
                     switched = true;
                 }

@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
-using Gw2Sharp.Extensions;
+using System.ComponentModel;
+using System.Reflection;
+using System.Runtime.Serialization;
 
 namespace Gw2Sharp.WebApi.V2.Models
 {
@@ -10,10 +12,40 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <typeparam name="T">The enum type.</typeparam>
     public class ApiEnum<T> : IEquatable<ApiEnum<T>> where T : Enum
     {
+        private static readonly T defaultValue;
+        private static readonly Dictionary<ulong, T> rawValues = new Dictionary<ulong, T>();
+        private static readonly Dictionary<string, T> stringValues = new Dictionary<string, T>();
+
+        static ApiEnum()
+        {
+            var type = typeof(T);
+
+            var defaultValueAttribute = type.GetCustomAttribute<DefaultValueAttribute>();
+            defaultValue = (T)(defaultValueAttribute?.Value ?? Enum.ToObject(type, 0));
+
+            string[] enumNames = type.GetEnumNames();
+            var enumValues = type.GetEnumValues();
+            for (int i = 0; i < enumNames.Length; i++)
+            {
+                string enumName = enumNames[i];
+                var enumValue = (Enum?)enumValues.GetValue(i);
+                if (enumValue == null)
+                    continue;
+                ulong rawValue = GetEnumValue(enumValue);
+
+                var field = type.GetField(enumNames[i]);
+                var attribute = field?.GetCustomAttribute<EnumMemberAttribute>();
+                string actualName = attribute?.Value ?? enumName;
+                stringValues[actualName] = (T)enumValue;
+                rawValues[rawValue] = (T)enumValue;
+            }
+        }
+
+
         /// <summary>
         /// Creates a new API enum.
         /// </summary>
-        public ApiEnum() : this(default!, null) { }
+        public ApiEnum() : this(defaultValue, null) { }
 
         /// <summary>
         /// Creates a new API enum.
@@ -31,6 +63,21 @@ namespace Gw2Sharp.WebApi.V2.Models
         {
             this.Value = value;
             this.RawValue = rawValue;
+            this.IsUnknown = rawValue == null || !ContainsValue(rawValue);
+        }
+
+        internal ApiEnum(string value)
+        {
+            this.Value = GetValue(value);
+            this.RawValue = value;
+            this.IsUnknown = !ContainsValue(value);
+        }
+
+        internal ApiEnum(ulong value)
+        {
+            this.Value = GetValue(value);
+            this.RawValue = value.ToString();
+            this.IsUnknown = !ContainsValue(value);
         }
 
 
@@ -38,7 +85,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// Whether the enum value is unknown to the library.
         /// If true, <see cref="RawValue" /> will contain the actual value whereas <see cref="Value" /> will have the default value.
         /// </summary>
-        public bool IsUnknown => !string.Equals(this.Value.ToString(), this.RawValue?.Replace("_", ""), StringComparison.OrdinalIgnoreCase);
+        public bool IsUnknown { get; }
 
         /// <summary>
         /// The actual enum value as interpreted by the library.
@@ -64,7 +111,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// </summary>
         /// <param name="e">The enum.</param>
         public static implicit operator ApiEnum<T>(string e) =>
-            new ApiEnum<T>(e.ParseEnum<T>(), e);
+            new ApiEnum<T>(GetValue(e), e);
 
         /// <summary>
         /// Converts an API enum to its normal enum.
@@ -116,5 +163,64 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <inheritdoc />
         public static bool operator !=(ApiEnum<T> enum1, ApiEnum<T> enum2) =>
             !(enum1 == enum2);
+
+
+        internal static ulong GetEnumValue(object value)
+        {
+            if (value == null)
+                throw new ArgumentNullException(nameof(value));
+
+            return Type.GetTypeCode(typeof(T)) switch
+            {
+                TypeCode.Int32 => (ulong)(int)value,
+                TypeCode.UInt32 => (uint)value,
+                TypeCode.UInt64 => (ulong)value,
+                TypeCode.Int64 => (ulong)(long)value,
+                TypeCode.SByte => (ulong)(sbyte)value,
+                TypeCode.Byte => (byte)value,
+                TypeCode.Int16 => (ulong)(short)value,
+                TypeCode.UInt16 => (ushort)value,
+                _ => throw new ArgumentException($"Invalid typecode {Type.GetTypeCode(typeof(T))}", nameof(value)),
+            };
+        }
+
+        internal static bool ContainsValue(string rawValue)
+        {
+            if (stringValues.ContainsKey(rawValue))
+                return true;
+
+            foreach (var value in stringValues)
+            {
+                if (string.Equals(rawValue, value.Key, StringComparison.OrdinalIgnoreCase))
+                    return true;
+            }
+
+            return false;
+        }
+
+        internal static bool ContainsValue(ulong rawValue) =>
+            rawValues.ContainsKey(rawValue);
+
+        internal static T GetValue(string rawValue)
+        {
+            if (stringValues.TryGetValue(rawValue, out var @enum))
+                return new ApiEnum<T>(@enum, rawValue);
+
+            foreach (var value in stringValues)
+            {
+                if (string.Equals(rawValue, value.Key, StringComparison.OrdinalIgnoreCase))
+                    return new ApiEnum<T>(value.Value, rawValue);
+            }
+
+            return new ApiEnum<T>(defaultValue, rawValue);
+        }
+
+        internal static T GetValue(ulong rawValue)
+        {
+            if (rawValues.TryGetValue(rawValue, out var @enum))
+                return new ApiEnum<T>(@enum, rawValue.ToString());
+
+            return new ApiEnum<T>(defaultValue, rawValue.ToString());
+        }
     }
 }

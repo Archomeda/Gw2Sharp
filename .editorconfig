@@ -310,6 +310,10 @@ dotnet_diagnostic.IDE0069.severity = warning
 dotnet_diagnostic.S1117.severity = silent
 # S2342: Enumeration types should comply with a naming convention
 dotnet_diagnostic.S2342.severity = silent
+# S2743: Static fields should not be used in generic types
+dotnet_diagnostic.S2743.severity = none
+# S3963: "static" fields should be initialized inline
+dotnet_diagnostic.S3963.severity = none
 # S3966: Objects should not be disposed more than once
 dotnet_diagnostic.S3966.severity = silent
 # S4136: Method overloads should be grouped together
