@@ -4,6 +4,9 @@
 ### Endpoints
 - Add missing enum `2v2Ranked` (as `TwoVTwoRanked`) in `Gw2Sharp.WebApi.V2.Models.PvpRatingType` ([#53](https://github.com/Archomeda/Gw2Sharp/pull/53))
 
+### Fixes
+- Improve enum deserialization performance ([#52](https://github.com/Archomeda/Gw2Sharp/issues/52), [#54](https://github.com/Archomeda/Gw2Sharp/pull/54))
+
 ## 0.9.0
 For this release, Gw2Sharp has swapped its JSON dependency from Newtonsoft.Json to System.Text.Json. This means that you can expect a performance increase ([#48](https://github.com/Archomeda/Gw2Sharp/pull/48)).
 
