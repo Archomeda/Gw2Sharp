@@ -1,5 +1,9 @@
 # Gw2Sharp History
 
+## 0.9.2
+### Fixes
+- Setting a custom user agent now properly sets a space inbetween the that and the one set by Gw2Sharp
+
 ## 0.9.1
 ### Endpoints
 - Add missing enum `2v2Ranked` (as `TwoVTwoRanked`) in `Gw2Sharp.WebApi.V2.Models.PvpRatingType` ([#53](https://github.com/Archomeda/Gw2Sharp/pull/53))
