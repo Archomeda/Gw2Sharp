@@ -104,7 +104,7 @@ namespace Gw2Sharp
         {
             this.accessToken = accessToken ?? string.Empty;
             this.Locale = locale;
-            this.UserAgent = $"{userAgent}{(string.IsNullOrWhiteSpace(userAgent) ? " " : "")}" +
+            this.UserAgent = $"{userAgent}{(!string.IsNullOrWhiteSpace(userAgent) ? " " : "")}" +
                 $"Gw2Sharp/{typeof(Connection).GetTypeInfo().Assembly.GetName().Version?.ToString(3)} (https://github.com/Archomeda/Gw2Sharp)";
             this.httpClient = httpClient ?? new HttpClient();
             this.cacheMethod = cacheMethod ?? new MemoryCacheMethod();
