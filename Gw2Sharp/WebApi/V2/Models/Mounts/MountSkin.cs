@@ -27,7 +27,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The mount skin dye slots.
         /// </summary>
-        public IReadOnlyList<MountSkinDyeSlot> DyeSlots { get; set; } = Array.Empty<MountSkinDyeSlot>();
+        public IReadOnlyList<SkinDyeSlot> DyeSlots { get; set; } = Array.Empty<SkinDyeSlot>();
 
         /// <summary>
         /// The mount type.

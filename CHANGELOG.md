@@ -1,5 +1,14 @@
 # Gw2Sharp History
 
+## 0.10.0
+### Endpoints
+- Add `/v2/skins`
+
+### Refactoring
+- **Breaking:** `Gw2Sharp.Models.MountSkinDyeSlot` has been renamed to `Gw2Sharp.Models.SkinDyeSlot`
+
+---
+
 ## 0.9.3
 ### Services
 - Exposed the raw JSON Mumble Link identity as `IGw2MumbleClient.RawIdentity`

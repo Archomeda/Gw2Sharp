@@ -210,6 +210,11 @@ namespace Gw2Sharp.WebApi.V2
         ISkillsClient Skills { get; }
 
         /// <summary>
+        /// Gets the skins.
+        /// </summary>
+        ISkinsClient Skins { get; }
+
+        /// <summary>
         /// Gets the token info.
         /// </summary>
         ITokenInfoClient TokenInfo { get; }

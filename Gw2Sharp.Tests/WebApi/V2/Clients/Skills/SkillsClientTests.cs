@@ -22,6 +22,10 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
         public Task BulkTestAsync(string file) => this.AssertBulkDataAsync(this.Client, file);
 
         [Theory]
+        [InlineData("TestFiles.Skills.Skills.bulk.json")]
+        public Task AllTestAsync(string file) => this.AssertAllDataAsync(this.Client, file);
+
+        [Theory]
         [InlineData("TestFiles.Skills.Skills.ids.json")]
         public Task IdsTestAsync(string file) => this.AssertIdsDataAsync(this.Client, file);
     }

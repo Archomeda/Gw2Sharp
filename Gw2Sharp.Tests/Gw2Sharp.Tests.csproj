@@ -258,6 +258,9 @@
     <None Remove="TestFiles\Skills\Skills.bulk.json" />
     <None Remove="TestFiles\Skills\Skills.ids.json" />
     <None Remove="TestFiles\Skills\Skills.single.json" />
+    <None Remove="TestFiles\Skins\Skins.bulk.json" />
+    <None Remove="TestFiles\Skins\Skins.ids.json" />
+    <None Remove="TestFiles\Skins\Skins.single.json" />
     <None Remove="TestFiles\TokenInfo\TokenInfo.ApiToken.json" />
     <None Remove="TestFiles\TokenInfo\TokenInfo.SubToken.json" />
     <None Remove="TestFiles\WorldBosses\WorldBosses.bulk.json" />
@@ -511,6 +514,9 @@
     <EmbeddedResource Include="TestFiles\Skills\Skills.bulk.json" />
     <EmbeddedResource Include="TestFiles\Skills\Skills.ids.json" />
     <EmbeddedResource Include="TestFiles\Skills\Skills.single.json" />
+    <EmbeddedResource Include="TestFiles\Skins\Skins.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Skins\Skins.ids.json" />
+    <EmbeddedResource Include="TestFiles\Skins\Skins.single.json" />
     <EmbeddedResource Include="TestFiles\TokenInfo\TokenInfo.ApiToken.json" />
     <EmbeddedResource Include="TestFiles\TokenInfo\TokenInfo.SubToken.json" />
     <EmbeddedResource Include="TestFiles\WorldBosses\WorldBosses.bulk.json" />

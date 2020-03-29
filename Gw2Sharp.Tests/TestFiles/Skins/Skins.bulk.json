@@ -1,0 +1,219 @@
+[
+  {
+    "name": "Fireworks Spaulders",
+    "description": "<c=@flavor>Always ready to celebrate in the new year.</c>",
+    "type": "Armor",
+    "flags": [
+      "ShowInWardrobe"
+    ],
+    "restrictions": [],
+    "rarity": "Basic",
+    "id": 9108,
+    "icon": "https://render.guildwars2.com/file/BE78170CE4AC0D75CF0AD592AEE507BD012851BB/2243001.png",
+    "details": {
+      "type": "Shoulders",
+      "weight_class": "Heavy",
+      "dye_slots": {
+        "default": [
+          {
+            "color_id": 1,
+            "material": "cloth"
+          },
+          {
+            "color_id": 1,
+            "material": "cloth"
+          },
+          {
+            "color_id": 1,
+            "material": "cloth"
+          },
+          null
+        ],
+        "overrides": {}
+      }
+    }
+  },
+  {
+    "name": "Shining Aureate Longbow",
+    "type": "Weapon",
+    "flags": [
+      "ShowInWardrobe"
+    ],
+    "restrictions": [],
+    "rarity": "Basic",
+    "id": 9112,
+    "icon": "https://render.guildwars2.com/file/2B954116557E617035DB27406FD8FB32D31578D2/2242605.png",
+    "details": {
+      "type": "Longbow",
+      "damage_type": "Physical"
+    }
+  },
+  {
+    "name": "Raven Ceremonial Gown",
+    "type": "Armor",
+    "flags": [
+      "ShowInWardrobe"
+    ],
+    "restrictions": [],
+    "rarity": "Exotic",
+    "id": 9143,
+    "icon": "https://render.guildwars2.com/file/5E1B939A1436CF6833C499A1D6FFD868CE6063E3/2247761.png",
+    "details": {
+      "type": "Leggings",
+      "weight_class": "Heavy",
+      "dye_slots": {
+        "default": [
+          {
+            "color_id": 82,
+            "material": "cloth"
+          },
+          {
+            "color_id": 143,
+            "material": "leather"
+          },
+          {
+            "color_id": 2,
+            "material": "leather"
+          },
+          null
+        ],
+        "overrides": {
+          "AsuraMale": [
+            {
+              "color_id": 82,
+              "material": "cloth"
+            },
+            {
+              "color_id": 143,
+              "material": "leather"
+            },
+            {
+              "color_id": 2,
+              "material": "leather"
+            },
+            {
+              "color_id": 76,
+              "material": "leather"
+            }
+          ],
+          "CharrMale": [
+            {
+              "color_id": 82,
+              "material": "cloth"
+            },
+            {
+              "color_id": 143,
+              "material": "leather"
+            },
+            {
+              "color_id": 2,
+              "material": "leather"
+            },
+            {
+              "color_id": 76,
+              "material": "leather"
+            }
+          ],
+          "HumanMale": [
+            {
+              "color_id": 82,
+              "material": "cloth"
+            },
+            {
+              "color_id": 143,
+              "material": "leather"
+            },
+            {
+              "color_id": 2,
+              "material": "leather"
+            },
+            {
+              "color_id": 76,
+              "material": "leather"
+            }
+          ],
+          "NornMale": [
+            {
+              "color_id": 82,
+              "material": "cloth"
+            },
+            {
+              "color_id": 143,
+              "material": "leather"
+            },
+            {
+              "color_id": 2,
+              "material": "leather"
+            },
+            {
+              "color_id": 76,
+              "material": "leather"
+            }
+          ],
+          "SylvariMale": [
+            {
+              "color_id": 82,
+              "material": "cloth"
+            },
+            {
+              "color_id": 143,
+              "material": "leather"
+            },
+            {
+              "color_id": 2,
+              "material": "leather"
+            },
+            {
+              "color_id": 76,
+              "material": "leather"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Open Warlord's Plate Helm",
+    "type": "Armor",
+    "flags": [
+      "ShowInWardrobe"
+    ],
+    "restrictions": [],
+    "rarity": "Basic",
+    "id": 9217,
+    "icon": "https://render.guildwars2.com/file/1FFB30E855B8461F14DB64199D2D4120DE1D7397/2261476.png",
+    "details": {
+      "type": "Helm",
+      "weight_class": "Heavy",
+      "dye_slots": {
+        "default": [
+          {
+            "color_id": 1,
+            "material": "metal"
+          },
+          {
+            "color_id": 1,
+            "material": "metal"
+          },
+          null,
+          null
+        ],
+        "overrides": {}
+      }
+    }
+  },
+  {
+    "name": "Glacial Mining Tool",
+    "type": "Gathering",
+    "flags": [
+      "ShowInWardrobe"
+    ],
+    "restrictions": [],
+    "rarity": "Basic",
+    "id": 9231,
+    "icon": "https://render.guildwars2.com/file/0923D9CC6D0BB7A2A0417F3B1C09A5BD426D6705/2261381.png",
+    "details": {
+      "type": "Mining"
+    }
+  }
+]
