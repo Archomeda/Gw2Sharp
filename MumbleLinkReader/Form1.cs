@@ -125,6 +125,7 @@ namespace MumbleLinkReader
                             this.textBoxCameraFront2.Text = m.CameraFront.Y.ToString();
                             this.textBoxCameraFront3.Text = m.CameraFront.Z.ToString();
 
+                            this.textBoxRawIdentity.Text = m.RawIdentity;
                             this.textBoxCharacterName.Text = m.CharacterName;
                             this.textBoxRace.Text = m.Race.ToString();
                             this.textBoxSpecialization.Text = m.Specialization.ToString();

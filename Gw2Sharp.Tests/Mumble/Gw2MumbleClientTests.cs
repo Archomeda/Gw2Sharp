@@ -44,6 +44,7 @@ namespace Gw2Sharp.Tests.Mumble
             Assert.Equal(0.8136908, client.CameraFront.X, 7);
             Assert.Equal(-0.3139677, client.CameraFront.Y, 7);
             Assert.Equal(-0.4892152, client.CameraFront.Z, 7);
+            Assert.Equal(@"{""name"":""Reiga Fiercecrusher"",""profession"":2,""spec"":18,""race"":1,""map_id"":1206,""world_id"":268435460,""team_color_id"":0,""commander"":false,""map"":1206,""fov"":0.960,""uisz"":1}", client.RawIdentity);
             Assert.Equal("Reiga Fiercecrusher", client.CharacterName);
             Assert.Equal(ProfessionType.Warrior, client.Profession);
             Assert.Equal(RaceType.Charr, client.Race);

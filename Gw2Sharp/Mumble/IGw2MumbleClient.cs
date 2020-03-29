@@ -166,6 +166,11 @@ namespace Gw2Sharp.Mumble
         uint Instance { get; }
 
         /// <summary>
+        /// The raw identity in JSON.
+        /// </summary>
+        string RawIdentity { get; }
+
+        /// <summary>
         /// The character name.
         /// </summary>
         string CharacterName { get; }

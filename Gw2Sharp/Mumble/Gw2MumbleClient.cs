@@ -27,6 +27,7 @@ namespace Gw2Sharp.Mumble
         internal static readonly char[] mumbleLinkGameName = new[] { 'G', 'u', 'i', 'l', 'd', ' ', 'W', 'a', 'r', 's', ' ', '2', '\0' };
         private const string EMPTY_IDENTITY = "{}";
 
+        private string rawIdentity = EMPTY_IDENTITY;
         private readonly object identityLock = new object();
         private readonly object serverAddressLock = new object();
 
@@ -54,37 +55,48 @@ namespace Gw2Sharp.Mumble
                 () => this.memoryMappedFile.Value.CreateViewAccessor(), true);
         }
 
-        private string identityCache = EMPTY_IDENTITY;
+        private unsafe void UpdateIdentityIfNeeded()
+        {
+            // Check if we're in the same frame update
+            if (this.linkedMem.identity[0] == '\0')
+                return;
+
+            // Thread-safety
+            lock (this.identityLock)
+            {
+                // Check again
+                if (this.linkedMem.identity[0] != '\0')
+                {
+                    var cacheSpan = this.rawIdentity.AsSpan();
+                    fixed (char* ptr = this.linkedMem.identity)
+                    {
+                        // Check if the identity is different from last update
+                        var span = new ReadOnlySpan<char>(ptr, this.rawIdentity.Length);
+                        if (!span.SequenceEqual(cacheSpan))
+                        {
+                            // Update cache
+                            this.rawIdentity = new string(ptr);
+                            try
+                            {
+                                this.identity = JsonSerializer.Deserialize<CharacterIdentity>(this.rawIdentity, deserializerSettings);
+                            }
+                            catch (JsonException)
+                            {
+                                this.identity = null;
+                            }
+                        }
+                    }
+                    this.linkedMem.identity[0] = '\0';
+                }
+            }
+        }
+
         private CharacterIdentity? identity;
         private unsafe CharacterIdentity? Identity
         {
             get
             {
-                // Check if we're in the same frame update
-                if (this.linkedMem.identity[0] == '\0')
-                    return this.identity;
-
-                // Thread-safety
-                lock (this.identityLock)
-                {
-                    // Check again
-                    if (this.linkedMem.identity[0] != '\0')
-                    {
-                        var cacheSpan = this.identityCache.AsSpan();
-                        fixed (char* ptr = this.linkedMem.identity)
-                        {
-                            // Check if the identity is different from last update
-                            var span = new ReadOnlySpan<char>(ptr, this.identityCache.Length);
-                            if (!span.SequenceEqual(cacheSpan))
-                            {
-                                // Update and parse JSON
-                                this.identityCache = new string(ptr);
-                                this.identity = JsonSerializer.Deserialize<CharacterIdentity>(this.identityCache, deserializerSettings);
-                            }
-                        }
-                        this.linkedMem.identity[0] = '\0';
-                    }
-                }
+                this.UpdateIdentityIfNeeded();
                 return this.identity;
             }
         }
@@ -241,6 +253,19 @@ namespace Gw2Sharp.Mumble
         /// <inheritdoc />
         public uint Instance =>
             this.IsAvailable ? this.linkedMem.context.instance : default;
+
+        /// <inheritdoc />
+        public unsafe string RawIdentity
+        {
+            get
+            {
+                if (!this.IsAvailable)
+                    return string.Empty;
+
+                this.UpdateIdentityIfNeeded();
+                return this.rawIdentity;
+            }
+        }
 
         /// <inheritdoc />
         public string CharacterName =>

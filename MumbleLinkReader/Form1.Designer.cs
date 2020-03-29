@@ -118,8 +118,10 @@
             this.textBoxFieldOfView = new System.Windows.Forms.TextBox();
             this.labelFieldOfView = new System.Windows.Forms.Label();
             this.checkBoxCommander = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelUiSize = new System.Windows.Forms.Label();
             this.textBoxUiSize = new System.Windows.Forms.TextBox();
+            this.labelRawIdentity = new System.Windows.Forms.Label();
+            this.textBoxRawIdentity = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // labelVersion
@@ -894,14 +896,14 @@
             this.checkBoxCommander.Text = "IsCommander";
             this.checkBoxCommander.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // labelUiSize
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 432);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "UiSize";
+            this.labelUiSize.AutoSize = true;
+            this.labelUiSize.Location = new System.Drawing.Point(12, 432);
+            this.labelUiSize.Name = "labelUiSize";
+            this.labelUiSize.Size = new System.Drawing.Size(38, 13);
+            this.labelUiSize.TabIndex = 0;
+            this.labelUiSize.Text = "UiSize";
             // 
             // textBoxUiSize
             // 
@@ -911,12 +913,32 @@
             this.textBoxUiSize.Size = new System.Drawing.Size(206, 22);
             this.textBoxUiSize.TabIndex = 1;
             // 
+            // labelRawIdentity
+            // 
+            this.labelRawIdentity.AutoSize = true;
+            this.labelRawIdentity.Location = new System.Drawing.Point(672, 269);
+            this.labelRawIdentity.Name = "labelRawIdentity";
+            this.labelRawIdentity.Size = new System.Drawing.Size(46, 13);
+            this.labelRawIdentity.TabIndex = 16;
+            this.labelRawIdentity.Text = "Identity";
+            // 
+            // textBoxRawIdentity
+            // 
+            this.textBoxRawIdentity.Location = new System.Drawing.Point(778, 266);
+            this.textBoxRawIdentity.Multiline = true;
+            this.textBoxRawIdentity.Name = "textBoxRawIdentity";
+            this.textBoxRawIdentity.ReadOnly = true;
+            this.textBoxRawIdentity.Size = new System.Drawing.Size(312, 73);
+            this.textBoxRawIdentity.TabIndex = 17;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1109, 460);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBoxRawIdentity);
+            this.Controls.Add(this.labelRawIdentity);
+            this.Controls.Add(this.labelUiSize);
             this.Controls.Add(this.textBoxUiSize);
             this.Controls.Add(this.textBoxFieldOfView);
             this.Controls.Add(this.labelFieldOfView);
@@ -1112,8 +1134,10 @@
         private System.Windows.Forms.TextBox textBoxFieldOfView;
         private System.Windows.Forms.Label labelFieldOfView;
         private System.Windows.Forms.CheckBox checkBoxCommander;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelUiSize;
         private System.Windows.Forms.TextBox textBoxUiSize;
+        private System.Windows.Forms.Label labelRawIdentity;
+        private System.Windows.Forms.TextBox textBoxRawIdentity;
     }
 }
 

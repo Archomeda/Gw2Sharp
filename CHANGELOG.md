@@ -1,8 +1,15 @@
 # Gw2Sharp History
 
+## 0.9.3
+### Services
+- Exposed the raw JSON Mumble Link identity as `IGw2MumbleClient.RawIdentity`
+
+### Fixes
+- When the Mumble Link identity contains an invalid JSON, it will no longer cause Gw2Sharp to throw a JsonException (this can happen when running multiple instances of Guild Wars 2 at the same time)
+
 ## 0.9.2
 ### Fixes
-- Setting a custom user agent now properly sets a space inbetween the that and the one set by Gw2Sharp
+- Setting a custom user agent now properly sets a space inbetween that and the one set by Gw2Sharp
 
 ## 0.9.1
 ### Endpoints
