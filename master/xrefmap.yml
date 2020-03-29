@@ -4708,6 +4708,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Mumble.IGw2MumbleClient.Race
   nameWithType: IGw2MumbleClient.Race
+- uid: Gw2Sharp.Mumble.IGw2MumbleClient.RawIdentity
+  name: RawIdentity
+  href: api/Gw2Sharp.Mumble.IGw2MumbleClient.html#Gw2Sharp_Mumble_IGw2MumbleClient_RawIdentity
+  commentId: P:Gw2Sharp.Mumble.IGw2MumbleClient.RawIdentity
+  fullName: Gw2Sharp.Mumble.IGw2MumbleClient.RawIdentity
+  nameWithType: IGw2MumbleClient.RawIdentity
+- uid: Gw2Sharp.Mumble.IGw2MumbleClient.RawIdentity*
+  name: RawIdentity
+  href: api/Gw2Sharp.Mumble.IGw2MumbleClient.html#Gw2Sharp_Mumble_IGw2MumbleClient_RawIdentity_
+  commentId: Overload:Gw2Sharp.Mumble.IGw2MumbleClient.RawIdentity
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.IGw2MumbleClient.RawIdentity
+  nameWithType: IGw2MumbleClient.RawIdentity
 - uid: Gw2Sharp.Mumble.IGw2MumbleClient.ServerAddress
   name: ServerAddress
   href: api/Gw2Sharp.Mumble.IGw2MumbleClient.html#Gw2Sharp_Mumble_IGw2MumbleClient_ServerAddress
