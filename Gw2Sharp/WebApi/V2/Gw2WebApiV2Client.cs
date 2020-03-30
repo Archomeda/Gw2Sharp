@@ -54,6 +54,7 @@ namespace Gw2Sharp.WebApi.V2
         private readonly IRecipesClient recipes;
         private readonly ISkillsClient skills;
         private readonly ISkinsClient skins;
+        private readonly ISpecializationsClient specializations;
         private readonly ITokenInfoClient tokenInfo;
         private readonly IWorldBossesClient worldBosses;
 
@@ -112,6 +113,7 @@ namespace Gw2Sharp.WebApi.V2
             this.recipes = new RecipesClient(connection, gw2Client);
             this.skills = new SkillsClient(connection, gw2Client);
             this.skins = new SkinsClient(connection, gw2Client);
+            this.specializations = new SpecializationsClient(connection, gw2Client);
             this.tokenInfo = new TokenInfoClient(connection, gw2Client);
             this.worldBosses = new WorldBossesClient(connection, gw2Client);
         }
@@ -238,6 +240,9 @@ namespace Gw2Sharp.WebApi.V2
 
         /// <inheritdoc />
         public virtual ISkinsClient Skins => this.skins;
+
+        /// <inheritdoc />
+        public virtual ISpecializationsClient Specializations => this.specializations;
 
         /// <inheritdoc />
         public virtual ITokenInfoClient TokenInfo => this.tokenInfo;

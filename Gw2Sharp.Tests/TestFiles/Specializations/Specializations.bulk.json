@@ -1,0 +1,104 @@
+[
+  {
+    "id": 1,
+    "name": "Dueling",
+    "profession": "Mesmer",
+    "elite": false,
+    "minor_traits": [
+      706,
+      710,
+      707
+    ],
+    "major_traits": [
+      701,
+      705,
+      700,
+      1889,
+      1960,
+      708,
+      692,
+      1950,
+      704
+    ],
+    "icon": "https://render.guildwars2.com/file/43C5400906A104C60F30DFE0A145D1E767353573/1012003.png",
+    "background": "https://render.guildwars2.com/file/992D53319C5FCD4AE841C592DC2AE91D5906AECF/1012057.png"
+  },
+  {
+    "id": 5,
+    "name": "Druid",
+    "profession": "Ranger",
+    "elite": true,
+    "minor_traits": [
+      1874,
+      1862,
+      1992
+    ],
+    "major_traits": [
+      1868,
+      2016,
+      1935,
+      2053,
+      2001,
+      2056,
+      2057,
+      2058,
+      2055
+    ],
+    "weapon_trait": 1965,
+    "icon": "https://render.guildwars2.com/file/BE10CB10D8446208729934F3F1BD3A54BEED9AD6/1012013.png",
+    "background": "https://render.guildwars2.com/file/306D6ED9D3F09FF5552609EC7DA2046ECD114F90/1012077.png",
+    "profession_icon_big": "https://render.guildwars2.com/file/F910F8BBCAF80355FFDB264160C899594300D7B2/1128574.png",
+    "profession_icon": "https://render.guildwars2.com/file/033CFD3270277F38215AE60574BCC2000873BDFF/1128575.png"
+  },
+  {
+    "id": 62,
+    "name": "Firebrand",
+    "profession": "Guardian",
+    "elite": true,
+    "minor_traits": [
+      2089,
+      2062,
+      2148
+    ],
+    "major_traits": [
+      2075,
+      2101,
+      2086,
+      2063,
+      2076,
+      2116,
+      2105,
+      2179,
+      2159
+    ],
+    "weapon_trait": 2073,
+    "icon": "https://render.guildwars2.com/file/6D18B2D3EE0BFA0E4BC851A7D3C39D4330250916/1769890.png",
+    "background": "https://render.guildwars2.com/file/7E6454FF9A13DBE93873AF72E192A74622990171/1769899.png",
+    "profession_icon_big": "https://render.guildwars2.com/file/AA12C93CBF5D25E40409060D5CD69E27F72B0892/1770210.png",
+    "profession_icon": "https://render.guildwars2.com/file/A1287D0FD1159CAC3A58C212C94A4BD0AB32A8D3/1770211.png"
+  },
+  {
+    "id": 49,
+    "name": "Honor",
+    "profession": "Guardian",
+    "elite": false,
+    "minor_traits": [
+      564,
+      551,
+      1685
+    ],
+    "major_traits": [
+      1899,
+      559,
+      654,
+      557,
+      549,
+      562,
+      553,
+      558,
+      1682
+    ],
+    "icon": "https://render.guildwars2.com/file/A4C0E39152B005EE226DA56D010DEEABB1ADBF2B/1011995.png",
+    "background": "https://render.guildwars2.com/file/98C3AB64254E61E59D03D3AF29D75314730E9E72/1012046.png"
+  }
+]

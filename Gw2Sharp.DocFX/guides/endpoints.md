@@ -169,7 +169,7 @@ For your convenience, the following list gives an overview of the web API endpoi
  /v2/recipes/search | ✔️ | [`Gw2Client.WebApi.V2.Recipes.Search`](../api/Gw2Sharp.WebApi.V2.Clients.RecipesSearchClient.html)
  /v2/skills | 🌐📄📚📦 | [`Gw2Client.WebApi.V2.Skills`](../api/Gw2Sharp.WebApi.V2.Clients.SkillsClient.html)
  /v2/skins | 🌐📄📚 | [`Gw2Client.WebApi.V2.Skins`](../api/Gw2Sharp.WebApi.V2.Clients.SkinsClient.html)
- /v2/specializations | ❌ |
+ /v2/specializations | 🌐📄📚📦 | [`Gw2Client.WebApi.V2.Specializations`](../api/Gw2Sharp.WebApi.V2.Clients.SpecializationsClient.html)
  /v2/stories | ❌ |
  /v2/stories/seasons | ❌ |
  /v2/titles | ❌ |

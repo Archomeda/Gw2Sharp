@@ -3,6 +3,7 @@
 ## 0.10.0
 ### Endpoints
 - Add `/v2/skins`
+- Add `/v2/specializations`
 
 ### Refactoring
 - **Breaking:** `Gw2Sharp.Models.MountSkinDyeSlot` has been renamed to `Gw2Sharp.Models.SkinDyeSlot`
