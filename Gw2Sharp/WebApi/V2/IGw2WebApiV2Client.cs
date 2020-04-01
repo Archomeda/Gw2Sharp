@@ -220,6 +220,11 @@ namespace Gw2Sharp.WebApi.V2
         ISpecializationsClient Specializations { get; }
 
         /// <summary>
+        /// Gets the stories.
+        /// </summary>
+        IStoriesClient Stories { get; }
+
+        /// <summary>
         /// Gets the token info.
         /// </summary>
         ITokenInfoClient TokenInfo { get; }

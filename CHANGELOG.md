@@ -4,6 +4,8 @@
 ### Endpoints
 - Add `/v2/skins`
 - Add `/v2/specializations`
+- Add `/v2/stories`
+- Add `/v2/stories/seasons`
 
 ### Refactoring
 - **Breaking:** `Gw2Sharp.Models.MountSkinDyeSlot` has been renamed to `Gw2Sharp.Models.SkinDyeSlot`

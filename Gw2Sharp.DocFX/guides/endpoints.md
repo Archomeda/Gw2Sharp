@@ -170,8 +170,8 @@ For your convenience, the following list gives an overview of the web API endpoi
  /v2/skills | 🌐📄📚📦 | [`Gw2Client.WebApi.V2.Skills`](../api/Gw2Sharp.WebApi.V2.Clients.SkillsClient.html)
  /v2/skins | 🌐📄📚 | [`Gw2Client.WebApi.V2.Skins`](../api/Gw2Sharp.WebApi.V2.Clients.SkinsClient.html)
  /v2/specializations | 🌐📄📚📦 | [`Gw2Client.WebApi.V2.Specializations`](../api/Gw2Sharp.WebApi.V2.Clients.SpecializationsClient.html)
- /v2/stories | ❌ |
- /v2/stories/seasons | ❌ |
+ /v2/stories | 🌐📄📚📦 | [`Gw2Client.WebApi.V2.Stories`](../api/Gw2Sharp.WebApi.V2.Clients.StoriesClient.html)
+ /v2/stories/seasons | 🌐📄📚📦 | [`Gw2Client.WebApi.V2.Stories.Seasons`](../api/Gw2Sharp.WebApi.V2.Clients.StoriesSeasonsClient.html)
  /v2/titles | ❌ |
  /v2/tokeninfo | 🔑 | [`Gw2Client.WebApi.V2.TokenInfo`](../api/Gw2Sharp.WebApi.V2.Clients.TokenInfoClient.html)
  /v2/traits | ❌ |

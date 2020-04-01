@@ -264,6 +264,12 @@
     <None Remove="TestFiles\Specializations\Specializations.bulk.json" />
     <None Remove="TestFiles\Specializations\Specializations.ids.json" />
     <None Remove="TestFiles\Specializations\Specializations.single.json" />
+    <None Remove="TestFiles\Stories\Stories.bulk.json" />
+    <None Remove="TestFiles\Stories\Stories.ids.json" />
+    <None Remove="TestFiles\Stories\Stories.single.json" />
+    <None Remove="TestFiles\Stories\StoriesSeasons.bulk.json" />
+    <None Remove="TestFiles\Stories\StoriesSeasons.ids.json" />
+    <None Remove="TestFiles\Stories\StoriesSeasons.single.json" />
     <None Remove="TestFiles\TokenInfo\TokenInfo.ApiToken.json" />
     <None Remove="TestFiles\TokenInfo\TokenInfo.SubToken.json" />
     <None Remove="TestFiles\WorldBosses\WorldBosses.bulk.json" />
@@ -523,6 +529,12 @@
     <EmbeddedResource Include="TestFiles\Specializations\Specializations.bulk.json" />
     <EmbeddedResource Include="TestFiles\Specializations\Specializations.ids.json" />
     <EmbeddedResource Include="TestFiles\Specializations\Specializations.single.json" />
+    <EmbeddedResource Include="TestFiles\Stories\Stories.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Stories\Stories.ids.json" />
+    <EmbeddedResource Include="TestFiles\Stories\Stories.single.json" />
+    <EmbeddedResource Include="TestFiles\Stories\StoriesSeasons.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Stories\StoriesSeasons.ids.json" />
+    <EmbeddedResource Include="TestFiles\Stories\StoriesSeasons.single.json" />
     <EmbeddedResource Include="TestFiles\TokenInfo\TokenInfo.ApiToken.json" />
     <EmbeddedResource Include="TestFiles\TokenInfo\TokenInfo.SubToken.json" />
     <EmbeddedResource Include="TestFiles\WorldBosses\WorldBosses.bulk.json" />

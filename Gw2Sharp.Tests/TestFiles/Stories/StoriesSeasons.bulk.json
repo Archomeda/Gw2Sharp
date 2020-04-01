@@ -1,0 +1,40 @@
+[
+  {
+    "id": "B8901E58-DC9D-4525-ADB2-79C93593291E",
+    "name": "Heart of Thorns",
+    "order": 4,
+    "stories": [
+      23,
+      32,
+      35
+    ]
+  },
+  {
+    "id": "215AAA0F-CDAC-4F93-86DA-C155A99B5784",
+    "name": "My Story",
+    "order": 1,
+    "stories": [
+      10,
+      9,
+      1
+    ]
+  },
+  {
+    "id": "002C2D90-69B5-41A2-A422-8DB6F2EFC53E",
+    "name": "Scarlet's War",
+    "order": 2,
+    "stories": [
+      39
+    ]
+  },
+  {
+    "id": "EAB597C0-C484-4FD3-9430-31433BAC81B6",
+    "name": "Path of Fire",
+    "order": 6,
+    "stories": [
+      68,
+      67,
+      69
+    ]
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "id": 1,
+  "season": "215AAA0F-CDAC-4F93-86DA-C155A99B5784",
+  "name": "My Story",
+  "description": "",
+  "timeline": "1325 AE",
+  "level": 1,
+  "races": [
+    "Charr"
+  ],
+  "order": 0,
+  "chapters": [
+    {
+      "name": "1. Getting the Band Back Together"
+    },
+    {
+      "name": "2. Sins of the Father"
+    },
+    {
+      "name": "3. Crystal Corruption"
+    }
+  ]
+}
