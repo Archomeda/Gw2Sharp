@@ -225,6 +225,11 @@ namespace Gw2Sharp.WebApi.V2
         IStoriesClient Stories { get; }
 
         /// <summary>
+        /// Gets the titles.
+        /// </summary>
+        ITitlesClient Titles { get; }
+
+        /// <summary>
         /// Gets the token info.
         /// </summary>
         ITokenInfoClient TokenInfo { get; }
