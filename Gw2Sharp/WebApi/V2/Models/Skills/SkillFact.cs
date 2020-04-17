@@ -19,6 +19,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     [CastableType(SkillFactType.Radius, typeof(SkillFactRadius))]
     [CastableType(SkillFactType.Range, typeof(SkillFactRange))]
     [CastableType(SkillFactType.Recharge, typeof(SkillFactRecharge))]
+    [CastableType(SkillFactType.StunBreak, typeof(SkillFactStunBreak))]
     [CastableType(SkillFactType.Time, typeof(SkillFactTime))]
     [CastableType(SkillFactType.Unblockable, typeof(SkillFactUnblockable))]
     public class SkillFact : ICastableType<SkillFact, SkillFactType>

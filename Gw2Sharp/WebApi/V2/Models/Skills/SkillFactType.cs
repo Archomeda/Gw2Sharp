@@ -91,6 +91,11 @@ namespace Gw2Sharp.WebApi.V2.Models
         Recharge,
 
         /// <summary>
+        /// Stun break fact type.
+        /// </summary>
+        StunBreak,
+
+        /// <summary>
         /// Time skill fact type.
         /// </summary>
         Time,

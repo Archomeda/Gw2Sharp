@@ -1,5 +1,9 @@
 # Gw2Sharp History
 
+## 0.9.4
+### Fixes
+- Add missing skill fact type `StunBreak` as `Gw2Sharp.WebApi.V2.Models.SkillFactStunBreak` for pattern matching
+
 ## 0.9.3
 ### Services
 - Exposed the raw JSON Mumble Link identity as `IGw2MumbleClient.RawIdentity`

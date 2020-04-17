@@ -740,5 +740,54 @@
         }
       }
     ]
+  },
+  {
+    "name": "Armor of Earth",
+    "facts": [
+      {
+        "text": "Recharge",
+        "type": "Recharge",
+        "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+        "value": 75
+      },
+      {
+        "text": "StunBreak",
+        "type": "StunBreak",
+        "icon": "https://render.guildwars2.com/file/DCF0719729165FD8910E034CA4E0780F90582D15/156654.png",
+        "value": true
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/CD77D1FAB7B270223538A8F8ECDA1CFB044D65F4/102834.png",
+        "duration": 6,
+        "status": "Protection",
+        "description": "Incoming damage decreased by 33%; stacks duration.",
+        "apply_count": 1
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/3D3A1C2D6D791C05179AB871902D28782C65C244/415959.png",
+        "duration": 6,
+        "status": "Stability",
+        "description": "Cannot be knocked down, pushed back, pulled, launched, stunned, dazed, floated, sunk, feared, or taunted.",
+        "apply_count": 10
+      },
+      {
+        "text": "Duration",
+        "type": "Time",
+        "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+        "duration": 6
+      }
+    ],
+    "description": "Cantrip. Protect yourself with earth armor and gain protection and stability.",
+    "icon": "https://render.guildwars2.com/file/C4FF5D0F0942BC27D7277CC9CB64280F451B16C5/103070.png",
+    "flags": [],
+    "id": 5777,
+    "chat_link": "[&BpEWAAA=]",
+    "categories": [
+      "Cantrip"
+    ]
   }
 ]
