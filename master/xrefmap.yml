@@ -36031,6 +36031,25 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.SkillFactRecharge.Value
   nameWithType: SkillFactRecharge.Value
+- uid: Gw2Sharp.WebApi.V2.Models.SkillFactStunBreak
+  name: SkillFactStunBreak
+  href: api/Gw2Sharp.WebApi.V2.Models.SkillFactStunBreak.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.SkillFactStunBreak
+  fullName: Gw2Sharp.WebApi.V2.Models.SkillFactStunBreak
+  nameWithType: SkillFactStunBreak
+- uid: Gw2Sharp.WebApi.V2.Models.SkillFactStunBreak.Value
+  name: Value
+  href: api/Gw2Sharp.WebApi.V2.Models.SkillFactStunBreak.html#Gw2Sharp_WebApi_V2_Models_SkillFactStunBreak_Value
+  commentId: P:Gw2Sharp.WebApi.V2.Models.SkillFactStunBreak.Value
+  fullName: Gw2Sharp.WebApi.V2.Models.SkillFactStunBreak.Value
+  nameWithType: SkillFactStunBreak.Value
+- uid: Gw2Sharp.WebApi.V2.Models.SkillFactStunBreak.Value*
+  name: Value
+  href: api/Gw2Sharp.WebApi.V2.Models.SkillFactStunBreak.html#Gw2Sharp_WebApi_V2_Models_SkillFactStunBreak_Value_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.SkillFactStunBreak.Value
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.SkillFactStunBreak.Value
+  nameWithType: SkillFactStunBreak.Value
 - uid: Gw2Sharp.WebApi.V2.Models.SkillFactTime
   name: SkillFactTime
   href: api/Gw2Sharp.WebApi.V2.Models.SkillFactTime.html
@@ -36152,6 +36171,12 @@ references:
   commentId: F:Gw2Sharp.WebApi.V2.Models.SkillFactType.Recharge
   fullName: Gw2Sharp.WebApi.V2.Models.SkillFactType.Recharge
   nameWithType: SkillFactType.Recharge
+- uid: Gw2Sharp.WebApi.V2.Models.SkillFactType.StunBreak
+  name: StunBreak
+  href: api/Gw2Sharp.WebApi.V2.Models.SkillFactType.html#Gw2Sharp_WebApi_V2_Models_SkillFactType_StunBreak
+  commentId: F:Gw2Sharp.WebApi.V2.Models.SkillFactType.StunBreak
+  fullName: Gw2Sharp.WebApi.V2.Models.SkillFactType.StunBreak
+  nameWithType: SkillFactType.StunBreak
 - uid: Gw2Sharp.WebApi.V2.Models.SkillFactType.Time
   name: Time
   href: api/Gw2Sharp.WebApi.V2.Models.SkillFactType.html#Gw2Sharp_WebApi_V2_Models_SkillFactType_Time
