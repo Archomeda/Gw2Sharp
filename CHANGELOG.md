@@ -3,6 +3,7 @@
 ## 0.9.4
 ### Fixes
 - Add missing skill fact type `StunBreak` as `Gw2Sharp.WebApi.V2.Models.SkillFactStunBreak` for pattern matching
+- Fix parsing `Cache-Control` response headers where it would fail if the value is surrounded with quotes
 
 ## 0.9.3
 ### Services

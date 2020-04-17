@@ -28,10 +28,18 @@ namespace Gw2Sharp.WebApi.Http
 
             this.Date = this.ParseResponseHeader(responseHeaders, "Date", value => DateTimeOffset.Parse(value));
             this.LastModified = this.ParseResponseHeader(responseHeaders, "Last-Modified", ParseNullableDateTime);
-            this.CacheMaxAge = this.ParseResponseHeader(responseHeaders, "Cache-Control", value => CacheControlHeaderValue.Parse(value).MaxAge);
+            this.CacheMaxAge = this.ParseResponseHeader(responseHeaders, "Cache-Control", ParseNullableMaxAgeCache);
             this.Expires = this.ParseResponseHeader(responseHeaders, "Expires", ParseNullableDateTime);
 
             static DateTimeOffset? ParseNullableDateTime(string value) => !string.IsNullOrWhiteSpace(value) ? (DateTimeOffset?)DateTimeOffset.Parse(value) : null;
+            static TimeSpan? ParseNullableMaxAgeCache(string value)
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                    return null;
+                if (value.StartsWith("\"", StringComparison.OrdinalIgnoreCase) && value.EndsWith("\"", StringComparison.OrdinalIgnoreCase))
+                    value = value.Substring(1, value.Length - 2);
+                return CacheControlHeaderValue.Parse(value).MaxAge;
+            }
         }
 
 
