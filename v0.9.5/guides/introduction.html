@@ -1,0 +1,314 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Gw2Sharp Introduction </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Gw2Sharp Introduction ">
+    <meta name="generator" content="docfx 2.43.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc">
+    <meta property="docfx:tocrel" content="toc">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+                
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../guides/introduction.html" title="Guides">Guides</a>
+                      </li>
+                      <li>
+                          <a href="../api/index.html" title="API Documentation">API Documentation</a>
+                      </li>
+                      <li>
+                          <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/CHANGELOG.md" title="Changelog">Changelog</a>
+                      </li>
+                </ul>    </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+                  
+                  <ul class="nav level1">
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Basic Guides</a>
+                        
+                        <ul class="nav level2">
+                          <li class="active">
+                            <a href="introduction.html" title="Introduction" class="active">Introduction</a>
+                          </li>
+                          <li class="">
+                            <a href="endpoints.html" title="Supported endpoints" class="">Supported endpoints</a>
+                          </li>
+                          <li class="">
+                            <a href="exception-handling.html" title="Exception handling" class="">Exception handling</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Advanced Guides</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="caching.html" title="Caching" class="">Caching</a>
+                          </li>
+                          <li class="">
+                            <a href="http-headers.html" title="HTTP headers" class="">HTTP headers</a>
+                          </li>
+                          <li class="">
+                            <a href="last-modified.html" title="Last-Modified" class="">Last-Modified</a>
+                          </li>
+                          <li class="">
+                            <a href="subtokens.html" title="Subtokens" class="">Subtokens</a>
+                          </li>
+                          <li class="">
+                            <a href="symbols.html" title="Debug symbols" class="">Debug symbols</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Tips</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="render-url.html" title="Using RenderUrl" class="">Using RenderUrl</a>
+                          </li>
+                        </ul>  </li>
+                  </ul>        </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Guides.Introduction">
+<h1 id="introduction">Introduction</h1>
+
+<p>The library is written to be as close as possible with the API endpoints.
+This means that the basic functionality is easy to understand.</p>
+<p>Start with creating a <code>Connection</code>:</p>
+<pre><code class="lang-cs">// The constructor also accepts overloads with an access token and locale
+var connection = new Gw2Sharp.Connection();
+</code></pre><p>Then, create the <code>Gw2Client</code>:</p>
+<pre><code class="lang-cs">using var client = new Gw2Sharp.Gw2Client(connection);
+// Note that Gw2Client implements IDisposable!
+// Make sure to dispose it explicitly by calling .Dispose(),
+// or use the using statement to dispose automatically
+</code></pre><p>Now you&#39;re ready!</p>
+<p>To get started with a specific service, go to one of the following services supported by Gw2Sharp:</p>
+<ul>
+<li><a href="#web-api-v2">WebAPI v2</a></li>
+<li><a href="#render-service">Render service</a></li>
+<li><a href="#mumble-link">Mumble Link</a></li>
+<li><a href="#chat-links">Chat links</a></li>
+</ul>
+<hr>
+<h2 id="web-api-v2">Web API v2</h2>
+<p>Accessing the web API v2 service is done through the main <code>Gw2Sharp.Gw2Client</code>:</p>
+<pre><code class="lang-cs">var webApiClient = client.WebApi.V2;
+</code></pre><p>This client exposes the web API endpoints that are available at <a href="https://api.guildwars2.com/v2">https://api.guildwars2.com/v2</a> in a 1:1 relation.
+This means that, for example if you want to access the unlocked mount skins on your account, you can access it in the same path as the web API:</p>
+<pre><code class="lang-cs">var unlockedMountSkinsClient = webApiClient.Account.Mounts.Skins;
+</code></pre><p>Next step is to actually get the information from the API.<br>Depending on the endpoint, you&#39;ll find that the following methods are available:</p>
+<ul>
+<li><code>IdsAsync()</code> - Gets the full list of ids</li>
+<li><code>GetAsync()</code> - Gets a single item or an API blob object</li>
+<li><code>ManyAsync()</code> - Gets multiple items at once (bulk)</li>
+<li><code>PageAsync()</code> - Gets a page</li>
+<li><code>AllAsync()</code> - Gets all items at once (bulk all)</li>
+</ul>
+<p>For example, you can do the following:</p>
+<pre><code class="lang-cs">// Get all item ids
+var ids = await client.WebApi.V2.Items.IdsAsync();
+
+// Get a single achievement
+var item = await client.WebApi.V2.Achievements.GetAsync(123);
+
+// Get multiple gliders
+var items = await client.WebApi.V2.Gliders.ManyAsync(new[] { 123, 456 });
+
+// Get itemstats by page (page numbers are 0-indexed)
+var page = await client.WebApi.V2.Itemstats.PageAsync(5);
+
+// Get all colors
+var all = await client.WebApi.V2.Colors.AllAsync();
+
+// Access account sub-endpoints (e.g. account/home/cats that contains blob data)
+var accountCats = await client.WebApi.V2.Account.Home.Cats.GetAsync();
+
+// Access sub-endpoints that require an id (e.g. characters/:id)
+var characters = await client.WebApi.V2.Characters.AllAsync();
+var tybaltLeftpaw = await client.WebApi.V2.Characters[&quot;Tybalt Leftpaw&quot;].GetAsync();
+
+// Accessing a nested sub-endpoint works as well
+var tybaltsSpecializations = await client.WebApi.V2.Characters[&quot;Tybalt Leftpaw&quot;].Specializations.GetAsync();
+</code></pre><p><strong>Related topics:</strong></p>
+<ul>
+<li><a class="xref" href="caching.html">Caching</a></li>
+<li><a class="xref" href="http-headers.html">Checking HTTP headers</a></li>
+<li><a class="xref" href="last-modified.html">Checking the Last-Modified header</a></li>
+<li><a class="xref" href="subtokens.html">Creating and using subtokens</a></li>
+<li><a class="xref" href="exception-handling.html">Exception handling</a></li>
+<li><a class="xref" href="endpoints.html">Supported endpoints</a></li>
+</ul>
+<h2 id="render-service">Render service</h2>
+<p>Accessing the render service is done through the main <code>Gw2Sharp.Gw2Client</code>:</p>
+<pre><code class="lang-cs">var renderClient = client.WebApi.Render;
+</code></pre><p>The render service client exposes a few methods that help with downloading image assets from the Guild Wars 2 render service.
+For example:</p>
+<pre><code class="lang-cs">var appleUrl = &quot;https://render.guildwars2.com/file/17520D2F53CF62BFA696EDE02DA1F77445A9F796/63265.png&quot;;
+
+// Downloads the apple icon into a byte array asynchronously
+var apple = await renderClient.DownloadToByteArrayAsync(appleUrl);
+
+// Downloads the apple icon into a stream asynchronously
+using var appleStream = new MemoryStream();
+await renderClient.DownloadToStreamAsync(appleStream, appleUrl);
+</code></pre><p><strong>Related topics:</strong></p>
+<ul>
+<li><a class="xref" href="caching.html">Caching</a></li>
+<li><a class="xref" href="exception-handling.html">Exception handling</a></li>
+<li><a class="xref" href="render-url.html">Using RenderUrl</a></li>
+</ul>
+<h2 id="mumble-link">Mumble Link</h2>
+<p>Accessing the Mumble Link service is done through the main <code>Gw2Sharp.Gw2Client</code>:</p>
+<pre><code class="lang-cs">var mumbleClient = client.Mumble;
+</code></pre><p><strong>Note:</strong> The Mumble Link service client requires Guild Wars 2 to be running on a Windows operating system.
+However, this validation is totally up to you.
+The property <code>IsAvailable</code> will return <code>true</code> if the Guild Wars 2 Mumble Link API is available.</p>
+<p>You are responsible for updating the Mumble Link values by calling the method <code>Update()</code>.
+The update tick rate depends on how fast the game is updating the frames.
+For example, if Guild Wars 2 is running at 60 frames per second, the Mumble Link API will be updated 60 times per second.</p>
+<p>Note that some of the values in <code>Gw2MumbleClient</code> are lazily evaluated.
+The reason is that these values are parsed from a JSON string that Guild Wars 2 provides through the Mumble Link.
+In order to keep performance to a maximum, the following JSON properties are only parsed when you request them:</p>
+<ul>
+<li><code>CharacterName</code></li>
+<li><code>Profession</code></li>
+<li><code>Specialization</code></li>
+<li><code>Race</code></li>
+<li><code>TeamColorId</code></li>
+<li><code>IsCommander</code></li>
+<li><code>FieldOfView</code></li>
+<li><code>UiSize</code></li>
+</ul>
+<p>If you need the performance, it&#39;s recommended to not request these values on every update, but to cache them locally, and only update once in a while.
+Any other value is safe to be read every tick without taking any additional performance hit.</p>
+<h2 id="chat-links">Chat links</h2>
+<p>Accessing the chat links is a bit different compared to the other services.
+Methods regarding chat link parsing are static, while creating chat links is done through the respective item link type classes:</p>
+<pre><code class="lang-cs">//
+// Parsing chat links
+//
+var chatLink = &quot;[&amp;AgH1WQAA]&quot;;
+
+// The following line may throw a FormatException if the chat link isn&#39;t valid 
+var chatLinkObject = Gw2Sharp.ChatLinks.Gw2ChatLink.Parse(chatLink);
+// OR use .TryParse(...) instead
+if (Gw2Sharp.ChatLinks.Gw2ChatLink.TryParse(chatLink, out var chatLinkObject2))
+{
+    // Valid chat link
+}
+else
+{
+    // Invalid chat link
+}
+
+//
+// Creating chat links
+//
+var chatLinkObject3 = new OutfitChatLink { OutfitId = 41 };
+var chatLink3 = chatLinkObject3.ToString();
+// chatLink3 == &quot;[&amp;CykAAAA=]&quot;
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Archomeda/Gw2Sharp/blob/c9d5f7d9376cae3dad6191745df308e11cbe0bb0/Gw2Sharp.DocFX/guides/introduction.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
