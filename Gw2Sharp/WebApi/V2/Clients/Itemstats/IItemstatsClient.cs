@@ -8,7 +8,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public interface IItemstatsClient :
         IAllExpandableClient<Itemstat>,
         IBulkExpandableClient<Itemstat, int>,
-        ILocalizedClient<Itemstat>,
+        ILocalizedClient,
         IPaginatedClient<Itemstat>
     {
     }

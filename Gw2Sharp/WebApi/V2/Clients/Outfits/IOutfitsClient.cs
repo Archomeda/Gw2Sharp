@@ -8,7 +8,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public interface IOutfitsClient :
         IAllExpandableClient<Outfit>,
         IBulkExpandableClient<Outfit, int>,
-        ILocalizedClient<Outfit>,
+        ILocalizedClient,
         IPaginatedClient<Outfit>
     {
     }

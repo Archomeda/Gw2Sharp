@@ -10,7 +10,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public interface IPvpHeroesClient :
         IAllExpandableClient<PvpHero>,
         IBulkExpandableClient<PvpHero, Guid>,
-        ILocalizedClient<PvpHero>,
+        ILocalizedClient,
         IPaginatedClient<PvpHero>
     {
     }

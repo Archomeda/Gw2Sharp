@@ -9,7 +9,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public interface IPvpRanksClient :
         IAllExpandableClient<PvpRank>,
         IBulkExpandableClient<PvpRank, int>,
-        ILocalizedClient<PvpRank>,
+        ILocalizedClient,
         IPaginatedClient<PvpRank>
     {
     }

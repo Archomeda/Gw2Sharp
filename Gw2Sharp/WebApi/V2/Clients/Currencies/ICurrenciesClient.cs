@@ -9,7 +9,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public interface ICurrenciesClient :
         IAllExpandableClient<Currency>,
         IBulkExpandableClient<Currency, int>,
-        ILocalizedClient<Currency>,
+        ILocalizedClient,
         IPaginatedClient<Currency>
     {
     }

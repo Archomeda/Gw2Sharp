@@ -9,7 +9,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public interface IMaterialsClient :
         IAllExpandableClient<MaterialCategory>,
         IBulkExpandableClient<MaterialCategory, int>,
-        ILocalizedClient<MaterialCategory>,
+        ILocalizedClient,
         IPaginatedClient<MaterialCategory>
     {
     }

@@ -9,7 +9,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public interface IFinishersClient :
         IAllExpandableClient<Finisher>,
         IBulkExpandableClient<Finisher, int>,
-        ILocalizedClient<Finisher>,
+        ILocalizedClient,
         IPaginatedClient<Finisher>
     {
     }

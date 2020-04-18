@@ -8,7 +8,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public interface IPetsClient :
         IAllExpandableClient<Pet>,
         IBulkExpandableClient<Pet, int>,
-        ILocalizedClient<Pet>,
+        ILocalizedClient,
         IPaginatedClient<Pet>
     {
     }

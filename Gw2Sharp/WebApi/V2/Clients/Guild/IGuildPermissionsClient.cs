@@ -8,7 +8,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public interface IGuildPermissionsClient :
         IAllExpandableClient<GuildPermission>,
         IBulkExpandableClient<GuildPermission, string>,
-        ILocalizedClient<GuildPermission>,
+        ILocalizedClient,
         IPaginatedClient<GuildPermission>
     {
     }

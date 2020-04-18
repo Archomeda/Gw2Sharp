@@ -7,7 +7,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// </summary>
     public interface IItemsClient :
         IBulkExpandableClient<Item, int>,
-        ILocalizedClient<Item>,
+        ILocalizedClient,
         IPaginatedClient<Item>
     {
     }

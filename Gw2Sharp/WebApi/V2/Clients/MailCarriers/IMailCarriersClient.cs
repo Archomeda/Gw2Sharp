@@ -9,7 +9,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public interface IMailCarriersClient :
         IAllExpandableClient<MailCarrier>,
         IBulkExpandableClient<MailCarrier, int>,
-        ILocalizedClient<MailCarrier>,
+        ILocalizedClient,
         IPaginatedClient<MailCarrier>
     {
     }

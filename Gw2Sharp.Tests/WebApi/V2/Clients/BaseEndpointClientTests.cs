@@ -55,7 +55,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
         {
             Assert.Equal(this.CheckIfImplementsGenericInterface(this.Client, typeof(IPaginatedClient<>)), this.Client.IsPaginated);
             Assert.Equal(this.Client is IAuthenticatedClient, this.Client.IsAuthenticated);
-            Assert.Equal(this.CheckIfImplementsGenericInterface(this.Client, typeof(ILocalizedClient<>)), this.Client.IsLocalized);
+            Assert.Equal(this.Client is ILocalizedClient, this.Client.IsLocalized);
             Assert.Equal(this.CheckIfImplementsGenericInterface(this.Client, typeof(IBlobClient<>)), this.Client.HasBlobData);
             Assert.Equal(this.CheckIfImplementsGenericInterface(this.Client, typeof(IAllExpandableClient<>)), this.Client.IsAllExpandable);
             Assert.Equal(this.CheckIfImplementsGenericInterface(this.Client, typeof(IBulkExpandableClient<,>)), this.Client.IsBulkExpandable);

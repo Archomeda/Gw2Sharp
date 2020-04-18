@@ -8,7 +8,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public interface ISkillsClient :
         IAllExpandableClient<Skill>,
         IBulkExpandableClient<Skill, int>,
-        ILocalizedClient<Skill>,
+        ILocalizedClient,
         IPaginatedClient<Skill>
     {
     }

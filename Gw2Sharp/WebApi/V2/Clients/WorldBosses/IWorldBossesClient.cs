@@ -9,7 +9,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public interface IWorldBossesClient :
         IAllExpandableClient<WorldBoss>,
         IBulkExpandableClient<WorldBoss, string>,
-        ILocalizedClient<WorldBoss>,
+        ILocalizedClient,
         IPaginatedClient<WorldBoss>
     {
     }
