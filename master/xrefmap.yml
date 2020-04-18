@@ -5168,6 +5168,12 @@ references:
   commentId: F:Gw2Sharp.SkillType.Toolbelt
   fullName: Gw2Sharp.SkillType.Toolbelt
   nameWithType: SkillType.Toolbelt
+- uid: Gw2Sharp.SkillType.Transform
+  name: Transform
+  href: api/Gw2Sharp.SkillType.html#Gw2Sharp_SkillType_Transform
+  commentId: F:Gw2Sharp.SkillType.Transform
+  fullName: Gw2Sharp.SkillType.Transform
+  nameWithType: SkillType.Transform
 - uid: Gw2Sharp.SkillType.Unknown
   name: Unknown
   href: api/Gw2Sharp.SkillType.html#Gw2Sharp_SkillType_Unknown
@@ -21578,6 +21584,12 @@ references:
   commentId: F:Gw2Sharp.WebApi.V2.Models.AttributeType.Healing
   fullName: Gw2Sharp.WebApi.V2.Models.AttributeType.Healing
   nameWithType: AttributeType.Healing
+- uid: Gw2Sharp.WebApi.V2.Models.AttributeType.None
+  name: None
+  href: api/Gw2Sharp.WebApi.V2.Models.AttributeType.html#Gw2Sharp_WebApi_V2_Models_AttributeType_None
+  commentId: F:Gw2Sharp.WebApi.V2.Models.AttributeType.None
+  fullName: Gw2Sharp.WebApi.V2.Models.AttributeType.None
+  nameWithType: AttributeType.None
 - uid: Gw2Sharp.WebApi.V2.Models.AttributeType.Power
   name: Power
   href: api/Gw2Sharp.WebApi.V2.Models.AttributeType.html#Gw2Sharp_WebApi_V2_Models_AttributeType_Power
@@ -35260,6 +35272,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.Skill.Description
   nameWithType: Skill.Description
+- uid: Gw2Sharp.WebApi.V2.Models.Skill.DualAttunement
+  name: DualAttunement
+  href: api/Gw2Sharp.WebApi.V2.Models.Skill.html#Gw2Sharp_WebApi_V2_Models_Skill_DualAttunement
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Skill.DualAttunement
+  fullName: Gw2Sharp.WebApi.V2.Models.Skill.DualAttunement
+  nameWithType: Skill.DualAttunement
+- uid: Gw2Sharp.WebApi.V2.Models.Skill.DualAttunement*
+  name: DualAttunement
+  href: api/Gw2Sharp.WebApi.V2.Models.Skill.html#Gw2Sharp_WebApi_V2_Models_Skill_DualAttunement_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Skill.DualAttunement
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Skill.DualAttunement
+  nameWithType: Skill.DualAttunement
 - uid: Gw2Sharp.WebApi.V2.Models.Skill.DualWield
   name: DualWield
   href: api/Gw2Sharp.WebApi.V2.Models.Skill.html#Gw2Sharp_WebApi_V2_Models_Skill_DualWield
@@ -35416,6 +35441,32 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.Skill.Slot
   nameWithType: Skill.Slot
+- uid: Gw2Sharp.WebApi.V2.Models.Skill.Specialization
+  name: Specialization
+  href: api/Gw2Sharp.WebApi.V2.Models.Skill.html#Gw2Sharp_WebApi_V2_Models_Skill_Specialization
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Skill.Specialization
+  fullName: Gw2Sharp.WebApi.V2.Models.Skill.Specialization
+  nameWithType: Skill.Specialization
+- uid: Gw2Sharp.WebApi.V2.Models.Skill.Specialization*
+  name: Specialization
+  href: api/Gw2Sharp.WebApi.V2.Models.Skill.html#Gw2Sharp_WebApi_V2_Models_Skill_Specialization_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Skill.Specialization
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Skill.Specialization
+  nameWithType: Skill.Specialization
+- uid: Gw2Sharp.WebApi.V2.Models.Skill.SubSkills
+  name: SubSkills
+  href: api/Gw2Sharp.WebApi.V2.Models.Skill.html#Gw2Sharp_WebApi_V2_Models_Skill_SubSkills
+  commentId: P:Gw2Sharp.WebApi.V2.Models.Skill.SubSkills
+  fullName: Gw2Sharp.WebApi.V2.Models.Skill.SubSkills
+  nameWithType: Skill.SubSkills
+- uid: Gw2Sharp.WebApi.V2.Models.Skill.SubSkills*
+  name: SubSkills
+  href: api/Gw2Sharp.WebApi.V2.Models.Skill.html#Gw2Sharp_WebApi_V2_Models_Skill_SubSkills_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.Skill.SubSkills
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.Skill.SubSkills
+  nameWithType: Skill.SubSkills
 - uid: Gw2Sharp.WebApi.V2.Models.Skill.ToolbeltSkill
   name: ToolbeltSkill
   href: api/Gw2Sharp.WebApi.V2.Models.Skill.html#Gw2Sharp_WebApi_V2_Models_Skill_ToolbeltSkill
@@ -35903,6 +35954,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.SkillFactPercent.Percent
   nameWithType: SkillFactPercent.Percent
+- uid: Gw2Sharp.WebApi.V2.Models.SkillFactPercent.Value
+  name: Value
+  href: api/Gw2Sharp.WebApi.V2.Models.SkillFactPercent.html#Gw2Sharp_WebApi_V2_Models_SkillFactPercent_Value
+  commentId: P:Gw2Sharp.WebApi.V2.Models.SkillFactPercent.Value
+  fullName: Gw2Sharp.WebApi.V2.Models.SkillFactPercent.Value
+  nameWithType: SkillFactPercent.Value
+- uid: Gw2Sharp.WebApi.V2.Models.SkillFactPercent.Value*
+  name: Value
+  href: api/Gw2Sharp.WebApi.V2.Models.SkillFactPercent.html#Gw2Sharp_WebApi_V2_Models_SkillFactPercent_Value_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.SkillFactPercent.Value
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.SkillFactPercent.Value
+  nameWithType: SkillFactPercent.Value
 - uid: Gw2Sharp.WebApi.V2.Models.SkillFactPrefixedBuff
   name: SkillFactPrefixedBuff
   href: api/Gw2Sharp.WebApi.V2.Models.SkillFactPrefixedBuff.html
@@ -36292,6 +36356,18 @@ references:
   commentId: F:Gw2Sharp.WebApi.V2.Models.SkillSlot.Profession5
   fullName: Gw2Sharp.WebApi.V2.Models.SkillSlot.Profession5
   nameWithType: SkillSlot.Profession5
+- uid: Gw2Sharp.WebApi.V2.Models.SkillSlot.Toolbelt
+  name: Toolbelt
+  href: api/Gw2Sharp.WebApi.V2.Models.SkillSlot.html#Gw2Sharp_WebApi_V2_Models_SkillSlot_Toolbelt
+  commentId: F:Gw2Sharp.WebApi.V2.Models.SkillSlot.Toolbelt
+  fullName: Gw2Sharp.WebApi.V2.Models.SkillSlot.Toolbelt
+  nameWithType: SkillSlot.Toolbelt
+- uid: Gw2Sharp.WebApi.V2.Models.SkillSlot.Transform1
+  name: Transform1
+  href: api/Gw2Sharp.WebApi.V2.Models.SkillSlot.html#Gw2Sharp_WebApi_V2_Models_SkillSlot_Transform1
+  commentId: F:Gw2Sharp.WebApi.V2.Models.SkillSlot.Transform1
+  fullName: Gw2Sharp.WebApi.V2.Models.SkillSlot.Transform1
+  nameWithType: SkillSlot.Transform1
 - uid: Gw2Sharp.WebApi.V2.Models.SkillSlot.Unknown
   name: Unknown
   href: api/Gw2Sharp.WebApi.V2.Models.SkillSlot.html#Gw2Sharp_WebApi_V2_Models_SkillSlot_Unknown
@@ -36334,6 +36410,51 @@ references:
   commentId: F:Gw2Sharp.WebApi.V2.Models.SkillSlot.Weapon5
   fullName: Gw2Sharp.WebApi.V2.Models.SkillSlot.Weapon5
   nameWithType: SkillSlot.Weapon5
+- uid: Gw2Sharp.WebApi.V2.Models.SkillSubSkill
+  name: SkillSubSkill
+  href: api/Gw2Sharp.WebApi.V2.Models.SkillSubSkill.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.SkillSubSkill
+  fullName: Gw2Sharp.WebApi.V2.Models.SkillSubSkill
+  nameWithType: SkillSubSkill
+- uid: Gw2Sharp.WebApi.V2.Models.SkillSubSkill.Attunement
+  name: Attunement
+  href: api/Gw2Sharp.WebApi.V2.Models.SkillSubSkill.html#Gw2Sharp_WebApi_V2_Models_SkillSubSkill_Attunement
+  commentId: P:Gw2Sharp.WebApi.V2.Models.SkillSubSkill.Attunement
+  fullName: Gw2Sharp.WebApi.V2.Models.SkillSubSkill.Attunement
+  nameWithType: SkillSubSkill.Attunement
+- uid: Gw2Sharp.WebApi.V2.Models.SkillSubSkill.Attunement*
+  name: Attunement
+  href: api/Gw2Sharp.WebApi.V2.Models.SkillSubSkill.html#Gw2Sharp_WebApi_V2_Models_SkillSubSkill_Attunement_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.SkillSubSkill.Attunement
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.SkillSubSkill.Attunement
+  nameWithType: SkillSubSkill.Attunement
+- uid: Gw2Sharp.WebApi.V2.Models.SkillSubSkill.Form
+  name: Form
+  href: api/Gw2Sharp.WebApi.V2.Models.SkillSubSkill.html#Gw2Sharp_WebApi_V2_Models_SkillSubSkill_Form
+  commentId: P:Gw2Sharp.WebApi.V2.Models.SkillSubSkill.Form
+  fullName: Gw2Sharp.WebApi.V2.Models.SkillSubSkill.Form
+  nameWithType: SkillSubSkill.Form
+- uid: Gw2Sharp.WebApi.V2.Models.SkillSubSkill.Form*
+  name: Form
+  href: api/Gw2Sharp.WebApi.V2.Models.SkillSubSkill.html#Gw2Sharp_WebApi_V2_Models_SkillSubSkill_Form_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.SkillSubSkill.Form
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.SkillSubSkill.Form
+  nameWithType: SkillSubSkill.Form
+- uid: Gw2Sharp.WebApi.V2.Models.SkillSubSkill.Id
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.SkillSubSkill.html#Gw2Sharp_WebApi_V2_Models_SkillSubSkill_Id
+  commentId: P:Gw2Sharp.WebApi.V2.Models.SkillSubSkill.Id
+  fullName: Gw2Sharp.WebApi.V2.Models.SkillSubSkill.Id
+  nameWithType: SkillSubSkill.Id
+- uid: Gw2Sharp.WebApi.V2.Models.SkillSubSkill.Id*
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.SkillSubSkill.html#Gw2Sharp_WebApi_V2_Models_SkillSubSkill_Id_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.SkillSubSkill.Id
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.SkillSubSkill.Id
+  nameWithType: SkillSubSkill.Id
 - uid: Gw2Sharp.WebApi.V2.Models.SkillWeaponType
   name: SkillWeaponType
   href: api/Gw2Sharp.WebApi.V2.Models.SkillWeaponType.html
@@ -36424,6 +36545,12 @@ references:
   commentId: F:Gw2Sharp.WebApi.V2.Models.SkillWeaponType.ShortBow
   fullName: Gw2Sharp.WebApi.V2.Models.SkillWeaponType.ShortBow
   nameWithType: SkillWeaponType.ShortBow
+- uid: Gw2Sharp.WebApi.V2.Models.SkillWeaponType.Spear
+  name: Spear
+  href: api/Gw2Sharp.WebApi.V2.Models.SkillWeaponType.html#Gw2Sharp_WebApi_V2_Models_SkillWeaponType_Spear
+  commentId: F:Gw2Sharp.WebApi.V2.Models.SkillWeaponType.Spear
+  fullName: Gw2Sharp.WebApi.V2.Models.SkillWeaponType.Spear
+  nameWithType: SkillWeaponType.Spear
 - uid: Gw2Sharp.WebApi.V2.Models.SkillWeaponType.Speargun
   name: Speargun
   href: api/Gw2Sharp.WebApi.V2.Models.SkillWeaponType.html#Gw2Sharp_WebApi_V2_Models_SkillWeaponType_Speargun
@@ -36665,6 +36792,24 @@ references:
   commentId: F:Gw2Sharp.WebApi.V2.Models.TokenType.Unknown
   fullName: Gw2Sharp.WebApi.V2.Models.TokenType.Unknown
   nameWithType: TokenType.Unknown
+- uid: Gw2Sharp.WebApi.V2.Models.TransformationForm
+  name: TransformationForm
+  href: api/Gw2Sharp.WebApi.V2.Models.TransformationForm.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.TransformationForm
+  fullName: Gw2Sharp.WebApi.V2.Models.TransformationForm
+  nameWithType: TransformationForm
+- uid: Gw2Sharp.WebApi.V2.Models.TransformationForm.CelestialAvatar
+  name: CelestialAvatar
+  href: api/Gw2Sharp.WebApi.V2.Models.TransformationForm.html#Gw2Sharp_WebApi_V2_Models_TransformationForm_CelestialAvatar
+  commentId: F:Gw2Sharp.WebApi.V2.Models.TransformationForm.CelestialAvatar
+  fullName: Gw2Sharp.WebApi.V2.Models.TransformationForm.CelestialAvatar
+  nameWithType: TransformationForm.CelestialAvatar
+- uid: Gw2Sharp.WebApi.V2.Models.TransformationForm.Unknown
+  name: Unknown
+  href: api/Gw2Sharp.WebApi.V2.Models.TransformationForm.html#Gw2Sharp_WebApi_V2_Models_TransformationForm_Unknown
+  commentId: F:Gw2Sharp.WebApi.V2.Models.TransformationForm.Unknown
+  fullName: Gw2Sharp.WebApi.V2.Models.TransformationForm.Unknown
+  nameWithType: TransformationForm.Unknown
 - uid: Gw2Sharp.WebApi.V2.Models.WeaponDamageType
   name: WeaponDamageType
   href: api/Gw2Sharp.WebApi.V2.Models.WeaponDamageType.html
