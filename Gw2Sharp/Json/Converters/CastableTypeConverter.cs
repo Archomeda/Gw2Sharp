@@ -56,7 +56,13 @@ namespace Gw2Sharp.Json.Converters
                 // Get the castable type as string
                 using var obj = JsonDocument.ParseValue(ref reader);
                 if (!obj.RootElement.TryGetProperty("type", out var typeProperty))
-                    throw new JsonException("Expected 'type' property to exist in object to support polymorphism");
+                {
+                    // We might get here when we can't deserialize into a more specific type, since the type parameter doesn't exist
+                    // Copy the serializer options, and remove the converter where we are currently in to prevent a stack overflow
+                    var innerOptions = CloneOptions(options);
+                    innerOptions.Converters.Remove(innerOptions.Converters.Single(x => x is CastableTypeConverter));
+                    return JsonSerializer.Deserialize<T>(obj.RootElement.GetRawText(), innerOptions);
+                }
                 string type = typeProperty.GetString();
                 if (string.IsNullOrWhiteSpace(type))
                     throw new JsonException("Expected 'type' property to not be null or empty");
@@ -75,6 +81,27 @@ namespace Gw2Sharp.Json.Converters
 
             public override void Write(Utf8JsonWriter writer, T value, JsonSerializerOptions options) =>
                 throw new NotImplementedException("TODO: This should generally not be used since we only deserialize stuff from the API, and not serialize to it. Might add support later.");
+
+            private static JsonSerializerOptions CloneOptions(JsonSerializerOptions options)
+            {
+                var newOptions = new JsonSerializerOptions
+                {
+                    AllowTrailingCommas = options.AllowTrailingCommas,
+                    DefaultBufferSize = options.DefaultBufferSize,
+                    DictionaryKeyPolicy = options.DictionaryKeyPolicy,
+                    Encoder = options.Encoder,
+                    IgnoreNullValues = options.IgnoreNullValues,
+                    IgnoreReadOnlyProperties = options.IgnoreReadOnlyProperties,
+                    MaxDepth = options.MaxDepth,
+                    PropertyNameCaseInsensitive = options.PropertyNameCaseInsensitive,
+                    PropertyNamingPolicy = options.PropertyNamingPolicy,
+                    ReadCommentHandling = options.ReadCommentHandling,
+                    WriteIndented = options.WriteIndented
+                };
+                foreach (var converter in options.Converters)
+                    newOptions.Converters.Add(converter);
+                return newOptions;
+            }
         }
     }
 }

@@ -114,6 +114,17 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// Pet slot.
         /// </summary>
-        Pet
+        Pet,
+
+        /// <summary>
+        /// Toolbelt slot
+        /// </summary>
+        Toolbelt,
+
+        /// <summary>
+        /// First transform slot.
+        /// </summary>
+        [EnumMember(Value = "Transform_1")]
+        Transform1,
     }
 }

@@ -8,6 +8,12 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The skill fact percentage.
         /// </summary>
-        public int Percent { get; set; }
+        public double Percent { get; set; }
+
+        /// <summary>
+        /// The skill fact value.
+        /// If the skill fact doesn't have a value, this value is <c>null</c>.
+        /// </summary>
+        public double? Value { get; set; }
     }
 }

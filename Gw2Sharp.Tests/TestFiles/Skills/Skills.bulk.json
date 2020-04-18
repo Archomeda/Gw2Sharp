@@ -789,5 +789,361 @@
     "categories": [
       "Cantrip"
     ]
+  },
+  {
+    "name": "Engage Photon Forge",
+    "facts": [
+      {
+        "text": "Recharge",
+        "type": "Recharge",
+        "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+        "value": 1
+      },
+      {
+        "text": "Heat per Second",
+        "type": "Percent",
+        "icon": "https://render.guildwars2.com/file/1BA1F3645206FB4BE92C5AD6326054250DC7D0DB/1770205.png",
+        "percent": 2
+      },
+      {
+        "text": "Maximum Heat",
+        "type": "Percent",
+        "icon": "https://render.guildwars2.com/file/1BA1F3645206FB4BE92C5AD6326054250DC7D0DB/1770205.png",
+        "value": 100
+      },
+      {
+        "text": "Kit disable time",
+        "type": "Time",
+        "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+        "duration": 6
+      }
+    ],
+    "description": "Activate your Photon Forge, gaining access to new skills. Generate heat while Photon Forge is active. Take damage if you overheat. Disables use of kits for a short duration.",
+    "icon": "https://render.guildwars2.com/file/1C35CD2D504EC3C5D25C43DFF808956751713E72/1770391.png",
+    "type": "Profession",
+    "weapon_type": "None",
+    "professions": [
+      "Engineer"
+    ],
+    "slot": "Profession_5",
+    "flip_skill": 41123,
+    "flags": [],
+    "specialization": 57,
+    "id": 42938,
+    "chat_link": "[&BrqnAAA=]",
+    "traited_facts": [
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/1C35CD2D504EC3C5D25C43DFF808956751713E72/1770391.png",
+        "duration": 0,
+        "status": "Photon Forge",
+        "description": "",
+        "apply_count": 1,
+        "requires_trait": 2114
+      },
+      {
+        "text": "Heat per Second",
+        "type": "Percent",
+        "icon": "https://render.guildwars2.com/file/1BA1F3645206FB4BE92C5AD6326054250DC7D0DB/1770205.png",
+        "percent": 3,
+        "requires_trait": 2114,
+        "overrides": 1
+      },
+      {
+        "text": "Maximum Heat",
+        "type": "Percent",
+        "icon": "https://render.guildwars2.com/file/1BA1F3645206FB4BE92C5AD6326054250DC7D0DB/1770205.png",
+        "value": 150,
+        "requires_trait": 2137,
+        "overrides": 2
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/19FE5C016ACFF174DE03752D40D202F9B75FB0C2/1769929.png",
+        "duration": 4,
+        "status": "Afterburner",
+        "description": "Your next attack sets the target on fire.",
+        "apply_count": 2,
+        "requires_trait": 2106
+      }
+    ]
+  },
+  {
+    "name": "Locked",
+    "description": "You cannot use skills while transformed.",
+    "icon": "https://render.guildwars2.com/file/A9050BAB0847390C0112694321B0F6AEDF7AE1FB/102804.png",
+    "type": "Transform",
+    "weapon_type": "None",
+    "professions": [
+      "Necromancer"
+    ],
+    "slot": "Transform_1",
+    "flags": [],
+    "id": 10586,
+    "chat_link": "[&BlopAAA=]"
+  },
+  {
+    "name": "Confusing Speech",
+    "facts": [
+      {
+        "text": "Range",
+        "type": "Range",
+        "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+        "value": 360
+      },
+      {
+        "text": "Recharge",
+        "type": "Recharge",
+        "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+        "value": 45
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/289AA0A4644F0E044DED3D3F39CED958E1DDFF53/102880.png",
+        "duration": 5,
+        "status": "Confusion",
+        "description": "Damage received on skill activation; stacks intensity.",
+        "apply_count": 3
+      },
+      {
+        "text": "Number of Targets",
+        "type": "Number",
+        "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+        "value": 5
+      }
+    ],
+    "description": "Confuse nearby foes with complex calculations.",
+    "icon": "https://render.guildwars2.com/file/BFBD285D7C5E70230EE0AD230BD44D0FC77E5AB4/240693.png",
+    "type": "Toolbelt",
+    "weapon_type": "None",
+    "slot": "Toolbelt",
+    "professions": [
+      "Engineer"
+    ],
+    "flags": [],
+    "id": 12334,
+    "chat_link": "[&Bi4wAAA=]"
+  },
+  {
+    "name": "\"Protect Me!\"",
+    "facts": [
+      {
+        "text": "Recharge",
+        "type": "Recharge",
+        "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+        "value": 30
+      },
+      {
+        "text": "StunBreak",
+        "type": "StunBreak",
+        "icon": "https://render.guildwars2.com/file/DCF0719729165FD8910E034CA4E0780F90582D15/156654.png",
+        "value": true
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/CD77D1FAB7B270223538A8F8ECDA1CFB044D65F4/102834.png",
+        "duration": 4,
+        "status": "Protection",
+        "description": "Incoming damage decreased by 33%; stacks duration.",
+        "apply_count": 1
+      },
+      {
+        "text": "Radius",
+        "type": "Distance",
+        "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+        "distance": 600
+      },
+      {
+        "text": "Number of Allied Targets",
+        "type": "Number",
+        "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+        "value": 5
+      },
+      {
+        "text": "Barrier",
+        "type": "AttributeAdjust",
+        "icon": "https://render.guildwars2.com/file/357922487919E8E84B914EAC13D5796DDDC42D14/1770209.png",
+        "value": 3973,
+        "target": "None"
+      }
+    ],
+    "description": "Command. Gain protection and barrier while breaking allies out of stuns.",
+    "icon": "https://render.guildwars2.com/file/41121EEEF99A6F50130E323EA107024C53A809BD/104023.png",
+    "type": "Utility",
+    "weapon_type": "None",
+    "professions": [
+      "Ranger"
+    ],
+    "slot": "Utility",
+    "flags": [],
+    "id": 12631,
+    "chat_link": "[&BlcxAAA=]"
+  },
+  {
+    "name": "Glyph of the Tides",
+    "facts": [
+      {
+        "text": "Recharge",
+        "type": "Recharge",
+        "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+        "value": 25
+      },
+      {
+        "text": "Number of Targets",
+        "type": "Number",
+        "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+        "value": 5
+      },
+      {
+        "text": "Radius",
+        "type": "Distance",
+        "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+        "distance": 360
+      }
+    ],
+    "description": "Glyph. Draw your enemies in or knock them away.",
+    "icon": "https://render.guildwars2.com/file/DA5EC8C2DF961ED9022B64F519053C0A406661EE/1128638.png",
+    "type": "Utility",
+    "weapon_type": "None",
+    "professions": [
+      "Ranger"
+    ],
+    "slot": "Utility",
+    "flags": [
+      "NoUnderwater"
+    ],
+    "specialization": 5,
+    "id": 30238,
+    "chat_link": "[&Bh52AAA=]",
+    "categories": [
+      "Glyph"
+    ],
+    "subskills": [
+      {
+        "id": 30448
+      },
+      {
+        "id": 29558,
+        "form": "CelestialAvatar"
+      }
+    ]
+  },
+  {
+    "name": "Glyph of Lesser Elementals",
+    "facts": [
+      {
+        "text": "Recharge",
+        "type": "Recharge",
+        "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+        "value": 40
+      },
+      {
+        "text": "Duration",
+        "type": "Time",
+        "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+        "duration": 120
+      }
+    ],
+    "description": "Glyph. Summon a lesser elemental based on your attunement.",
+    "icon": "https://render.guildwars2.com/file/45EC55C8CBDA67763A27690F38AD13D9A806F9ED/103320.png",
+    "type": "Utility",
+    "weapon_type": "None",
+    "professions": [
+      "Elementalist"
+    ],
+    "slot": "Utility",
+    "flags": [
+      "NoUnderwater"
+    ],
+    "id": 5502,
+    "chat_link": "[&Bn4VAAA=]",
+    "categories": [
+      "Glyph"
+    ],
+    "subskills": [
+      {
+        "id": 25486,
+        "attunement": "Fire"
+      },
+      {
+        "id": 25497,
+        "attunement": "Earth"
+      },
+      {
+        "id": 25495,
+        "attunement": "Air"
+      },
+      {
+        "id": 25487,
+        "attunement": "Water"
+      }
+    ]
+  },
+  {
+    "name": "Zealot's Flurry",
+    "facts": [
+      {
+        "text": "Range",
+        "type": "Range",
+        "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+        "value": 275
+      },
+      {
+        "text": "Recharge",
+        "type": "Recharge",
+        "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+        "value": 6
+      },
+      {
+        "text": "Damage",
+        "type": "Damage",
+        "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+        "hit_count": 8,
+        "dmg_multiplier": 0.3
+      },
+      {
+        "text": "Number of Targets",
+        "type": "Number",
+        "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+        "value": 3
+      }
+    ],
+    "description": "Strike foes in front of you with a storm of jabs.",
+    "icon": "https://render.guildwars2.com/file/C2231A914094E903355AFBCA550507507F00EEE8/103678.png",
+    "type": "Weapon",
+    "weapon_type": "Spear",
+    "professions": [
+      "Guardian"
+    ],
+    "slot": "Weapon_2",
+    "flags": [],
+    "id": 9190,
+    "chat_link": "[&BuYjAAA=]"
+  },
+  {
+    "name": "Maul",
+    "facts": [
+      {
+        "text": "Range",
+        "type": "Range",
+        "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+        "value": 300
+      },
+      {
+        "text": "Recharge",
+        "type": "Recharge",
+        "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+        "value": 1.5
+      }
+    ],
+    "description": "A series of melee attacks.",
+    "icon": "https://render.guildwars2.com/file/1D55D34FB4EE20B1962E315245E40CA5E1042D0E/62248.png",
+    "flags": [],
+    "id": 28405,
+    "chat_link": "[&BvVuAAA=]"
   }
 ]
