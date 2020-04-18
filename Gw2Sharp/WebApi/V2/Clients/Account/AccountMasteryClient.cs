@@ -6,7 +6,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 account mastery endpoint.
     /// </summary>
     [EndpointPath("account/mastery")]
-    public class AccountMasteryClient : BaseClient, IAccountMasteryClient
+    public class AccountMasteryClient : Gw2WebApiBaseClient, IAccountMasteryClient
     {
         private readonly IAccountMasteryPointsClient points;
 

@@ -10,7 +10,7 @@ namespace Gw2Sharp.WebApi.Render
     /// <summary>
     /// A client for the Guild Wars 2 API render service.
     /// </summary>
-    public class Gw2WebApiRenderClient : BaseClient, IGw2WebApiRenderClient
+    public class Gw2WebApiRenderClient : Gw2WebApiBaseClient, IGw2WebApiRenderClient
     {
         private const string CACHE_CATEGORY = "render";
 

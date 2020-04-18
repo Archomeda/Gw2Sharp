@@ -7,7 +7,7 @@ namespace Gw2Sharp
     /// <summary>
     /// A client for the Guild Wars 2 web API.
     /// </summary>
-    public class Gw2Client : BaseClient, IGw2Client
+    public class Gw2Client : IGw2Client
     {
         private readonly IGw2MumbleClient mumble;
         private readonly IGw2WebApiClient webApi;
@@ -22,15 +22,13 @@ namespace Gw2Sharp
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
         /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
-        public Gw2Client(IConnection connection) :
-            base(connection, null)
+        public Gw2Client(IConnection connection)
         {
             if (connection == null)
                 throw new ArgumentNullException(nameof(connection));
 
-            this.Gw2Client = this;
-            this.mumble = new Gw2MumbleClient(connection, this.Gw2Client);
-            this.webApi = new Gw2WebApiClient(connection, this.Gw2Client);
+            this.mumble = new Gw2MumbleClient();
+            this.webApi = new Gw2WebApiClient(connection, this);
         }
 
         /// <inheritdoc />

@@ -6,7 +6,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 commerce exchange coins endpoint.
     /// </summary>
     [EndpointPath("commerce/exchange/coins")]
-    public class CommerceExchangeCoinsClient : BaseClient, ICommerceExchangeCoinsClient
+    public class CommerceExchangeCoinsClient : Gw2WebApiBaseClient, ICommerceExchangeCoinsClient
     {
         /// <summary>
         /// Creates a new <see cref="CommerceExchangeCoinsClient"/> that is used for the API v2 commerce exchange coins endpoint.

@@ -4,7 +4,6 @@ using System.Reflection;
 using Gw2Sharp.Models;
 using Gw2Sharp.Mumble;
 using Gw2Sharp.Mumble.Models;
-using NSubstitute;
 using Xunit;
 
 namespace Gw2Sharp.Tests.Mumble
@@ -18,15 +17,12 @@ namespace Gw2Sharp.Tests.Mumble
             // So we need to skip this test.
             Skip.IfNot(Environment.OSVersion.Platform == PlatformID.Win32NT, "Mumble Link is only supported in Windows");
 
-            var connection = Substitute.For<IConnection>();
-            var gw2Client = Substitute.For<IGw2Client>();
-
             using var memorySource = Assembly.GetExecutingAssembly().GetManifestResourceStream($"Gw2Sharp.Tests.TestFiles.Mumble.MemoryMappedFile.bin");
             using var memoryMappedFile = MemoryMappedFile.CreateOrOpen(Gw2MumbleClient.DEFAULT_MUMBLE_LINK_MAP_NAME, memorySource.Length);
             using var stream = memoryMappedFile.CreateViewStream();
             memorySource.CopyTo(stream);
 
-            using var client = new Gw2MumbleClient(connection, gw2Client);
+            using var client = new Gw2MumbleClient();
             client.Update();
             Assert.True(client.IsAvailable);
             Assert.Equal(2, client.Version);

@@ -6,7 +6,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 recipes search endpoint.
     /// </summary>
     [EndpointPath("recipes/search")]
-    public class RecipesSearchClient : BaseClient, IRecipesSearchClient
+    public class RecipesSearchClient : Gw2WebApiBaseClient, IRecipesSearchClient
     {
         /// <summary>
         /// Creates a new <see cref="RecipesSearchClient"/> that is used for the API v2 recipes search endpoint.

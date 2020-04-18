@@ -7,7 +7,7 @@ namespace Gw2Sharp.WebApi.V2
     /// <summary>
     /// A client for the Guild Wars 2 web API v2.
     /// </summary>
-    public class Gw2WebApiV2Client : BaseClient, IGw2WebApiV2Client
+    public class Gw2WebApiV2Client : Gw2WebApiBaseClient, IGw2WebApiV2Client
     {
         /// <summary>
         /// The base URL for making Guild Wars 2 API v2 requests.

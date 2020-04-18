@@ -6,7 +6,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 account home endpoint.
     /// </summary>
     [EndpointPath("account/home")]
-    public class AccountHomeClient : BaseClient, IAccountHomeClient
+    public class AccountHomeClient : Gw2WebApiBaseClient, IAccountHomeClient
     {
         private readonly IAccountHomeCatsClient cats;
         private readonly IAccountHomeNodesClient nodes;

@@ -8,7 +8,7 @@ namespace Gw2Sharp.Mumble
     /// <summary>
     /// An interface for the client implementation of the Guild Wars 2 Mumble Link API service.
     /// </summary>
-    public interface IGw2MumbleClient : IClient, IDisposable
+    public interface IGw2MumbleClient : IDisposable
     {
         /// <summary>
         /// Gets a custom named Mumble Link client API.

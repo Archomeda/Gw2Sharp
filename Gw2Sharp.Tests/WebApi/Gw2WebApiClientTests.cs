@@ -15,7 +15,7 @@ namespace Gw2Sharp.Tests.WebApi
 
             var client = new Gw2WebApiClient(connection, gw2Client);
 
-            Assert.Same(connection, ((IClientInternal)client.V2.Account.Achievements).Connection);
+            Assert.Same(connection, ((Gw2WebApiBaseClient)client.V2.Account.Achievements).Connection);
             Assert.IsType<Gw2WebApiV2Client>(client.V2);
         }
     }

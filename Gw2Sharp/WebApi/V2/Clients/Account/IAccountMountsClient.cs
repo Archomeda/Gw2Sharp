@@ -3,7 +3,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// <summary>
     /// A client of the Guild Wars 2 API v2 account mounts endpoint.
     /// </summary>
-    public interface IAccountMountsClient : IClient
+    public interface IAccountMountsClient
     {
         /// <summary>
         /// Gets the unlocked mount skins.

@@ -3,7 +3,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// <summary>
     /// A client of the Guild Wars 2 API v2 PvP endpoint.
     /// </summary>
-    public interface IPvpClient : IClient
+    public interface IPvpClient
     {
         /// <summary>
         /// Gets the PvP amulets.

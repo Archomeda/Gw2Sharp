@@ -13,7 +13,7 @@ namespace Gw2Sharp.Mumble
     /// <summary>
     /// A client for the Guild Wars 2 Mumble Link API service.
     /// </summary>
-    public class Gw2MumbleClient : BaseClient, IGw2MumbleClient
+    public class Gw2MumbleClient : IGw2MumbleClient
     {
         /// <summary>
         /// The settings that are used when deserializing JSON objects.
