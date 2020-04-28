@@ -107,6 +107,11 @@ namespace Gw2Sharp.Mumble
         bool DoesAnyInputHaveFocus { get; }
 
         /// <summary>
+        /// Whether the player is currently in combat.
+        /// </summary>
+        bool IsInCombat { get; }
+
+        /// <summary>
         /// The compass size.
         /// </summary>
         Size Compass { get; }
@@ -133,6 +138,15 @@ namespace Gw2Sharp.Mumble
         /// </summary>
         double MapScale { get; }
 
+        /// <summary>
+        /// The client process id.
+        /// </summary>
+        uint ProcessId { get; }
+
+        /// <summary>
+        /// The mount that's currently used by the player.
+        /// </summary>
+        MountType Mount { get; }
 
         /// <summary>
         /// The current map id.

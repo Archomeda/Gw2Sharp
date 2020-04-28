@@ -218,6 +218,10 @@ namespace Gw2Sharp.Mumble
             this.IsAvailable ? this.linkedMem.context.uiState.HasFlag(UiState.DoesAnyInputHaveFocus) : default;
 
         /// <inheritdoc />
+        public bool IsInCombat =>
+            this.IsAvailable ? this.linkedMem.context.uiState.HasFlag(UiState.IsInCombat) : default;
+
+        /// <inheritdoc />
         public Size Compass =>
             this.IsAvailable ? new Size(this.linkedMem.context.compassWidth, this.linkedMem.context.compassHeight) : default;
 
@@ -236,6 +240,14 @@ namespace Gw2Sharp.Mumble
         /// <inheritdoc />
         public double MapScale =>
             this.IsAvailable ? this.linkedMem.context.mapScale : default;
+
+        /// <inheritdoc />
+        public uint ProcessId =>
+            this.IsAvailable ? this.linkedMem.context.processId : default;
+
+        /// <inheritdoc />
+        public MountType Mount =>
+            this.IsAvailable ? this.linkedMem.context.mount : default;
 
 
         /// <inheritdoc />

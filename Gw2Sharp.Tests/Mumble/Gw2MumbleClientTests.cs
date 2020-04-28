@@ -66,6 +66,7 @@ namespace Gw2Sharp.Tests.Mumble
             Assert.True(client.DoesGameHaveFocus);
             Assert.True(client.IsCompetitiveMode);
             Assert.True(client.DoesAnyInputHaveFocus);
+            Assert.False(client.IsInCombat);
             Assert.Equal(362, client.Compass.Width);
             Assert.Equal(229, client.Compass.Height);
             Assert.Equal(-2.11212, client.CompassRotation, 5);
@@ -74,6 +75,8 @@ namespace Gw2Sharp.Tests.Mumble
             Assert.Equal(14400.01, client.MapCenter.X, 2);
             Assert.Equal(18180.19, client.MapCenter.Y, 2);
             Assert.Equal(1, client.MapScale);
+            Assert.Equal(15101u, client.ProcessId);
+            Assert.Equal(MountType.Griffon, client.Mount);
         }
     }
 }
