@@ -79,9 +79,13 @@ namespace Gw2Sharp.Tests.Mumble
             Assert.Equal(MountType.Griffon, client.Mount);
         }
 
-        [Fact]
+        [SkippableFact]
         public void DisposeCorrectlyTest()
         {
+            // Named memory mapped files aren't supported on Unix based systems.
+            // So we need to skip this test.
+            Skip.IfNot(Environment.OSVersion.Platform == PlatformID.Win32NT, "Mumble Link is only supported in Windows");
+
             var connection = Substitute.For<IConnection>();
             var gw2Client = Substitute.For<IGw2Client>();
             var client = new Gw2MumbleClient(connection, gw2Client);
@@ -89,9 +93,13 @@ namespace Gw2Sharp.Tests.Mumble
             Assert.ThrowsAny<ObjectDisposedException>(() => client.Update());
         }
 
-        [Fact]
+        [SkippableFact]
         public void DisposeChildOnlyCorrectlyTest()
         {
+            // Named memory mapped files aren't supported on Unix based systems.
+            // So we need to skip this test.
+            Skip.IfNot(Environment.OSVersion.Platform == PlatformID.Win32NT, "Mumble Link is only supported in Windows");
+
             var connection = Substitute.For<IConnection>();
             var gw2Client = Substitute.For<IGw2Client>();
             using var rootClient = new Gw2MumbleClient(connection, gw2Client);
@@ -103,9 +111,13 @@ namespace Gw2Sharp.Tests.Mumble
             rootClient.Update(); // Root should not be disposed
         }
 
-        [Fact]
+        [SkippableFact]
         public void DisposeAllFromRootCorrectlyTest()
         {
+            // Named memory mapped files aren't supported on Unix based systems.
+            // So we need to skip this test.
+            Skip.IfNot(Environment.OSVersion.Platform == PlatformID.Win32NT, "Mumble Link is only supported in Windows");
+
             var connection = Substitute.For<IConnection>();
             var gw2Client = Substitute.For<IGw2Client>();
             var rootClient = new Gw2MumbleClient(connection, gw2Client);
