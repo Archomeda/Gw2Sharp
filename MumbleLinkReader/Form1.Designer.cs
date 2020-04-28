@@ -1,4 +1,4 @@
-﻿namespace MumbleLinkReader
+namespace MumbleLinkReader
 {
     partial class Form1
     {
@@ -122,6 +122,11 @@
             this.textBoxUiSize = new System.Windows.Forms.TextBox();
             this.labelRawIdentity = new System.Windows.Forms.Label();
             this.textBoxRawIdentity = new System.Windows.Forms.TextBox();
+            this.checkBoxUiStateInCombat = new System.Windows.Forms.CheckBox();
+            this.labelProcessId = new System.Windows.Forms.Label();
+            this.textBoxProcessId = new System.Windows.Forms.TextBox();
+            this.labelMount = new System.Windows.Forms.Label();
+            this.textBoxMount = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // labelVersion
@@ -626,9 +631,9 @@
             // labelStatus
             // 
             this.labelStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelStatus.Location = new System.Drawing.Point(442, 428);
+            this.labelStatus.Location = new System.Drawing.Point(611, 428);
             this.labelStatus.Name = "labelStatus";
-            this.labelStatus.Size = new System.Drawing.Size(655, 23);
+            this.labelStatus.Size = new System.Drawing.Size(486, 23);
             this.labelStatus.TabIndex = 91;
             this.labelStatus.Text = "status";
             this.labelStatus.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -649,7 +654,7 @@
             // 
             this.checkBoxUiStateCompassTopRight.AutoCheck = false;
             this.checkBoxUiStateCompassTopRight.AutoSize = true;
-            this.checkBoxUiStateCompassTopRight.Location = new System.Drawing.Point(436, 199);
+            this.checkBoxUiStateCompassTopRight.Location = new System.Drawing.Point(436, 196);
             this.checkBoxUiStateCompassTopRight.Name = "checkBoxUiStateCompassTopRight";
             this.checkBoxUiStateCompassTopRight.Size = new System.Drawing.Size(125, 17);
             this.checkBoxUiStateCompassTopRight.TabIndex = 51;
@@ -660,7 +665,7 @@
             // 
             this.checkBoxUiStateCompassRotationEnabled.AutoCheck = false;
             this.checkBoxUiStateCompassRotationEnabled.AutoSize = true;
-            this.checkBoxUiStateCompassRotationEnabled.Location = new System.Drawing.Point(436, 225);
+            this.checkBoxUiStateCompassRotationEnabled.Location = new System.Drawing.Point(436, 219);
             this.checkBoxUiStateCompassRotationEnabled.Name = "checkBoxUiStateCompassRotationEnabled";
             this.checkBoxUiStateCompassRotationEnabled.Size = new System.Drawing.Size(165, 17);
             this.checkBoxUiStateCompassRotationEnabled.TabIndex = 52;
@@ -669,7 +674,7 @@
             // 
             // textBoxCompassWidth
             // 
-            this.textBoxCompassWidth.Location = new System.Drawing.Point(525, 317);
+            this.textBoxCompassWidth.Location = new System.Drawing.Point(525, 288);
             this.textBoxCompassWidth.Name = "textBoxCompassWidth";
             this.textBoxCompassWidth.ReadOnly = true;
             this.textBoxCompassWidth.Size = new System.Drawing.Size(50, 22);
@@ -678,7 +683,7 @@
             // labelCompass
             // 
             this.labelCompass.AutoSize = true;
-            this.labelCompass.Location = new System.Drawing.Point(436, 320);
+            this.labelCompass.Location = new System.Drawing.Point(436, 291);
             this.labelCompass.Name = "labelCompass";
             this.labelCompass.Size = new System.Drawing.Size(53, 13);
             this.labelCompass.TabIndex = 53;
@@ -686,7 +691,7 @@
             // 
             // textBoxCompassHeight
             // 
-            this.textBoxCompassHeight.Location = new System.Drawing.Point(581, 317);
+            this.textBoxCompassHeight.Location = new System.Drawing.Point(581, 288);
             this.textBoxCompassHeight.Name = "textBoxCompassHeight";
             this.textBoxCompassHeight.ReadOnly = true;
             this.textBoxCompassHeight.Size = new System.Drawing.Size(50, 22);
@@ -694,7 +699,7 @@
             // 
             // textBoxCompassRotation
             // 
-            this.textBoxCompassRotation.Location = new System.Drawing.Point(637, 317);
+            this.textBoxCompassRotation.Location = new System.Drawing.Point(637, 288);
             this.textBoxCompassRotation.Name = "textBoxCompassRotation";
             this.textBoxCompassRotation.ReadOnly = true;
             this.textBoxCompassRotation.Size = new System.Drawing.Size(80, 22);
@@ -702,7 +707,7 @@
             // 
             // textBoxPlayerCoordsY
             // 
-            this.textBoxPlayerCoordsY.Location = new System.Drawing.Point(611, 343);
+            this.textBoxPlayerCoordsY.Location = new System.Drawing.Point(611, 314);
             this.textBoxPlayerCoordsY.Name = "textBoxPlayerCoordsY";
             this.textBoxPlayerCoordsY.ReadOnly = true;
             this.textBoxPlayerCoordsY.Size = new System.Drawing.Size(80, 22);
@@ -711,7 +716,7 @@
             // labelPlayerCoords
             // 
             this.labelPlayerCoords.AutoSize = true;
-            this.labelPlayerCoords.Location = new System.Drawing.Point(436, 346);
+            this.labelPlayerCoords.Location = new System.Drawing.Point(436, 317);
             this.labelPlayerCoords.Name = "labelPlayerCoords";
             this.labelPlayerCoords.Size = new System.Drawing.Size(77, 13);
             this.labelPlayerCoords.TabIndex = 57;
@@ -719,7 +724,7 @@
             // 
             // textBoxPlayerCoordsX
             // 
-            this.textBoxPlayerCoordsX.Location = new System.Drawing.Point(525, 343);
+            this.textBoxPlayerCoordsX.Location = new System.Drawing.Point(525, 314);
             this.textBoxPlayerCoordsX.Name = "textBoxPlayerCoordsX";
             this.textBoxPlayerCoordsX.ReadOnly = true;
             this.textBoxPlayerCoordsX.Size = new System.Drawing.Size(80, 22);
@@ -727,7 +732,7 @@
             // 
             // textBoxMapCenterY
             // 
-            this.textBoxMapCenterY.Location = new System.Drawing.Point(611, 369);
+            this.textBoxMapCenterY.Location = new System.Drawing.Point(611, 340);
             this.textBoxMapCenterY.Name = "textBoxMapCenterY";
             this.textBoxMapCenterY.ReadOnly = true;
             this.textBoxMapCenterY.Size = new System.Drawing.Size(80, 22);
@@ -736,7 +741,7 @@
             // labelMapCenter
             // 
             this.labelMapCenter.AutoSize = true;
-            this.labelMapCenter.Location = new System.Drawing.Point(436, 372);
+            this.labelMapCenter.Location = new System.Drawing.Point(436, 343);
             this.labelMapCenter.Name = "labelMapCenter";
             this.labelMapCenter.Size = new System.Drawing.Size(67, 13);
             this.labelMapCenter.TabIndex = 60;
@@ -744,7 +749,7 @@
             // 
             // textBoxMapCenterX
             // 
-            this.textBoxMapCenterX.Location = new System.Drawing.Point(525, 369);
+            this.textBoxMapCenterX.Location = new System.Drawing.Point(525, 340);
             this.textBoxMapCenterX.Name = "textBoxMapCenterX";
             this.textBoxMapCenterX.ReadOnly = true;
             this.textBoxMapCenterX.Size = new System.Drawing.Size(80, 22);
@@ -753,7 +758,7 @@
             // labelMapScale
             // 
             this.labelMapScale.AutoSize = true;
-            this.labelMapScale.Location = new System.Drawing.Point(436, 398);
+            this.labelMapScale.Location = new System.Drawing.Point(436, 369);
             this.labelMapScale.Name = "labelMapScale";
             this.labelMapScale.Size = new System.Drawing.Size(59, 13);
             this.labelMapScale.TabIndex = 63;
@@ -761,7 +766,7 @@
             // 
             // textBoxMapScale
             // 
-            this.textBoxMapScale.Location = new System.Drawing.Point(525, 395);
+            this.textBoxMapScale.Location = new System.Drawing.Point(525, 366);
             this.textBoxMapScale.Name = "textBoxMapScale";
             this.textBoxMapScale.ReadOnly = true;
             this.textBoxMapScale.Size = new System.Drawing.Size(80, 22);
@@ -771,7 +776,7 @@
             // 
             this.checkBoxUiStateGameFocus.AutoCheck = false;
             this.checkBoxUiStateGameFocus.AutoSize = true;
-            this.checkBoxUiStateGameFocus.Location = new System.Drawing.Point(436, 248);
+            this.checkBoxUiStateGameFocus.Location = new System.Drawing.Point(436, 242);
             this.checkBoxUiStateGameFocus.Name = "checkBoxUiStateGameFocus";
             this.checkBoxUiStateGameFocus.Size = new System.Drawing.Size(88, 17);
             this.checkBoxUiStateGameFocus.TabIndex = 52;
@@ -782,7 +787,7 @@
             // 
             this.checkBoxUiStateCompetitive.AutoCheck = false;
             this.checkBoxUiStateCompetitive.AutoSize = true;
-            this.checkBoxUiStateCompetitive.Location = new System.Drawing.Point(436, 271);
+            this.checkBoxUiStateCompetitive.Location = new System.Drawing.Point(436, 265);
             this.checkBoxUiStateCompetitive.Name = "checkBoxUiStateCompetitive";
             this.checkBoxUiStateCompetitive.Size = new System.Drawing.Size(87, 17);
             this.checkBoxUiStateCompetitive.TabIndex = 52;
@@ -793,7 +798,7 @@
             // 
             this.checkBoxUiStateInputFocus.AutoCheck = false;
             this.checkBoxUiStateInputFocus.AutoSize = true;
-            this.checkBoxUiStateInputFocus.Location = new System.Drawing.Point(436, 294);
+            this.checkBoxUiStateInputFocus.Location = new System.Drawing.Point(530, 242);
             this.checkBoxUiStateInputFocus.Name = "checkBoxUiStateInputFocus";
             this.checkBoxUiStateInputFocus.Size = new System.Drawing.Size(87, 17);
             this.checkBoxUiStateInputFocus.TabIndex = 52;
@@ -916,7 +921,7 @@
             // labelRawIdentity
             // 
             this.labelRawIdentity.AutoSize = true;
-            this.labelRawIdentity.Location = new System.Drawing.Point(672, 269);
+            this.labelRawIdentity.Location = new System.Drawing.Point(672, 246);
             this.labelRawIdentity.Name = "labelRawIdentity";
             this.labelRawIdentity.Size = new System.Drawing.Size(46, 13);
             this.labelRawIdentity.TabIndex = 16;
@@ -924,18 +929,68 @@
             // 
             // textBoxRawIdentity
             // 
-            this.textBoxRawIdentity.Location = new System.Drawing.Point(778, 266);
+            this.textBoxRawIdentity.Location = new System.Drawing.Point(778, 243);
             this.textBoxRawIdentity.Multiline = true;
             this.textBoxRawIdentity.Name = "textBoxRawIdentity";
             this.textBoxRawIdentity.ReadOnly = true;
             this.textBoxRawIdentity.Size = new System.Drawing.Size(312, 73);
             this.textBoxRawIdentity.TabIndex = 17;
             // 
+            // checkBoxUiStateInCombat
+            // 
+            this.checkBoxUiStateInCombat.AutoCheck = false;
+            this.checkBoxUiStateInCombat.AutoSize = true;
+            this.checkBoxUiStateInCombat.Location = new System.Drawing.Point(530, 265);
+            this.checkBoxUiStateInCombat.Name = "checkBoxUiStateInCombat";
+            this.checkBoxUiStateInCombat.Size = new System.Drawing.Size(79, 17);
+            this.checkBoxUiStateInCombat.TabIndex = 52;
+            this.checkBoxUiStateInCombat.Text = "In Combat";
+            this.checkBoxUiStateInCombat.UseVisualStyleBackColor = true;
+            // 
+            // labelProcessId
+            // 
+            this.labelProcessId.AutoSize = true;
+            this.labelProcessId.Location = new System.Drawing.Point(436, 397);
+            this.labelProcessId.Name = "labelProcessId";
+            this.labelProcessId.Size = new System.Drawing.Size(58, 13);
+            this.labelProcessId.TabIndex = 63;
+            this.labelProcessId.Text = "Process Id";
+            // 
+            // textBoxProcessId
+            // 
+            this.textBoxProcessId.Location = new System.Drawing.Point(525, 394);
+            this.textBoxProcessId.Name = "textBoxProcessId";
+            this.textBoxProcessId.ReadOnly = true;
+            this.textBoxProcessId.Size = new System.Drawing.Size(80, 22);
+            this.textBoxProcessId.TabIndex = 64;
+            // 
+            // labelMount
+            // 
+            this.labelMount.AutoSize = true;
+            this.labelMount.Location = new System.Drawing.Point(436, 425);
+            this.labelMount.Name = "labelMount";
+            this.labelMount.Size = new System.Drawing.Size(42, 13);
+            this.labelMount.TabIndex = 63;
+            this.labelMount.Text = "Mount";
+            // 
+            // textBoxMount
+            // 
+            this.textBoxMount.Location = new System.Drawing.Point(525, 422);
+            this.textBoxMount.Name = "textBoxMount";
+            this.textBoxMount.ReadOnly = true;
+            this.textBoxMount.Size = new System.Drawing.Size(80, 22);
+            this.textBoxMount.TabIndex = 64;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1109, 460);
+            this.Controls.Add(this.textBoxMount);
+            this.Controls.Add(this.labelMount);
+            this.Controls.Add(this.textBoxProcessId);
+            this.Controls.Add(this.labelProcessId);
+            this.Controls.Add(this.checkBoxUiStateInCombat);
             this.Controls.Add(this.textBoxRawIdentity);
             this.Controls.Add(this.labelRawIdentity);
             this.Controls.Add(this.labelUiSize);
@@ -1138,6 +1193,11 @@
         private System.Windows.Forms.TextBox textBoxUiSize;
         private System.Windows.Forms.Label labelRawIdentity;
         private System.Windows.Forms.TextBox textBoxRawIdentity;
+        private System.Windows.Forms.CheckBox checkBoxUiStateInCombat;
+        private System.Windows.Forms.Label labelProcessId;
+        private System.Windows.Forms.TextBox textBoxProcessId;
+        private System.Windows.Forms.Label labelMount;
+        private System.Windows.Forms.TextBox textBoxMount;
     }
 }
 

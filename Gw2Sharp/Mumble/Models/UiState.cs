@@ -36,6 +36,11 @@ namespace Gw2Sharp.Mumble.Models
         /// <summary>
         /// Whether any textbox input field has focus.
         /// </summary>
-        DoesAnyInputHaveFocus = 1 << 5
+        DoesAnyInputHaveFocus = 1 << 5,
+
+        /// <summary>
+        /// Whether the player is currently in combat.
+        /// </summary>
+        IsInCombat = 1 << 6
     }
 }

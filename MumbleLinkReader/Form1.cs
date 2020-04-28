@@ -146,6 +146,7 @@ namespace MumbleLinkReader
                             this.checkBoxUiStateGameFocus.Checked = m.DoesGameHaveFocus;
                             this.checkBoxUiStateCompetitive.Checked = m.IsCompetitiveMode;
                             this.checkBoxUiStateInputFocus.Checked = m.DoesAnyInputHaveFocus;
+                            this.checkBoxUiStateInCombat.Checked = m.IsInCombat;
                             this.textBoxCompassWidth.Text = m.Compass.Width.ToString();
                             this.textBoxCompassHeight.Text = m.Compass.Height.ToString();
                             this.textBoxCompassRotation.Text = m.CompassRotation.ToString();
@@ -154,6 +155,8 @@ namespace MumbleLinkReader
                             this.textBoxMapCenterX.Text = m.MapCenter.X.ToString();
                             this.textBoxMapCenterY.Text = m.MapCenter.Y.ToString();
                             this.textBoxMapScale.Text = m.MapScale.ToString();
+                            this.textBoxProcessId.Text = m.ProcessId.ToString();
+                            this.textBoxMount.Text = m.Mount.ToString();
 
                             if (this.maps.TryGetValue(m.MapId, out var map))
                             {

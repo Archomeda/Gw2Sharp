@@ -11,6 +11,13 @@ namespace Gw2Sharp.Mumble
     public interface IGw2MumbleClient : IClient, IDisposable
     {
         /// <summary>
+        /// Gets a custom named Mumble Link client API.
+        /// </summary>
+        /// <param name="mumbleLinkName">The custom name.</param>
+        /// <returns>The Mumble Link client API.</returns>
+        IGw2MumbleClient this[string mumbleLinkName] { get; }
+
+        /// <summary>
         /// Whether the Guild Wars 2 Mumble Link API is available or not.
         /// Use this to check if the Mumble Link API contains valid Guild Wars 2 data.
         /// </summary>
@@ -107,6 +114,11 @@ namespace Gw2Sharp.Mumble
         bool DoesAnyInputHaveFocus { get; }
 
         /// <summary>
+        /// Whether the player is currently in combat.
+        /// </summary>
+        bool IsInCombat { get; }
+
+        /// <summary>
         /// The compass size.
         /// </summary>
         Size Compass { get; }
@@ -133,6 +145,15 @@ namespace Gw2Sharp.Mumble
         /// </summary>
         double MapScale { get; }
 
+        /// <summary>
+        /// The client process id.
+        /// </summary>
+        uint ProcessId { get; }
+
+        /// <summary>
+        /// The mount that's currently used by the player.
+        /// </summary>
+        MountType Mount { get; }
 
         /// <summary>
         /// The current map id.

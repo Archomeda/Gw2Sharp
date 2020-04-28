@@ -1,5 +1,13 @@
 # Gw2Sharp History
 
+## 0.9.6
+### Services
+- Update MumbleLink to support new features ([#58](https://github.com/Archomeda/Gw2Sharp/issues/58), [#59](https://github.com/Archomeda/Gw2Sharp/pull/59)):
+  - Process id
+  - Mount
+  - UI states: IsInCombat
+- Add support for custom MumbleLink names through `IGw2MumbleClient[name]` (see documentation for more details)
+
 ## 0.9.5
 ### Endpoints
 - Add the following missing properties in `Gw2Sharp.WebApi.V2.Models.Skill`:

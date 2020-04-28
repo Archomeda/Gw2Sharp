@@ -10,7 +10,7 @@ namespace Gw2Sharp
     public interface IGw2Client : IDisposable
     {
         /// <summary>
-        /// Gets the Mumble Link API.
+        /// Gets the Mumble Link client API.
         /// </summary>
         IGw2MumbleClient Mumble { get; }
 
