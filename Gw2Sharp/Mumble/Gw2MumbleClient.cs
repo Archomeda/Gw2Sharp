@@ -275,8 +275,15 @@ namespace Gw2Sharp.Mumble
             this.IsAvailable ? this.linkedMem.context.processId : default;
 
         /// <inheritdoc />
-        public MountType Mount =>
-            this.IsAvailable ? this.linkedMem.context.mount : default;
+        public MountType Mount
+        {
+            get
+            {
+                // Currently mount 10 is actually None
+                // Since this might be fixed later, we just redirect 10 to None for now
+                return this.IsAvailable && this.linkedMem.context.mount != (MountType)10 ? this.linkedMem.context.mount : default;
+            }
+        }
 
 
         /// <inheritdoc />
