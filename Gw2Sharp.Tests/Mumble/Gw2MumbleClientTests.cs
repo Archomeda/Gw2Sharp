@@ -22,7 +22,7 @@ namespace Gw2Sharp.Tests.Mumble
             var gw2Client = Substitute.For<IGw2Client>();
 
             using var memorySource = Assembly.GetExecutingAssembly().GetManifestResourceStream($"Gw2Sharp.Tests.TestFiles.Mumble.MemoryMappedFile.bin");
-            using var memoryMappedFile = MemoryMappedFile.CreateOrOpen(Gw2MumbleClient.MUMBLE_LINK_MAP_NAME, memorySource.Length);
+            using var memoryMappedFile = MemoryMappedFile.CreateOrOpen(Gw2MumbleClient.DEFAULT_MUMBLE_LINK_MAP_NAME, memorySource.Length);
             using var stream = memoryMappedFile.CreateViewStream();
             memorySource.CopyTo(stream);
 
@@ -77,6 +77,44 @@ namespace Gw2Sharp.Tests.Mumble
             Assert.Equal(1, client.MapScale);
             Assert.Equal(15101u, client.ProcessId);
             Assert.Equal(MountType.Griffon, client.Mount);
+        }
+
+        [Fact]
+        public void DisposeCorrectlyTest()
+        {
+            var connection = Substitute.For<IConnection>();
+            var gw2Client = Substitute.For<IGw2Client>();
+            var client = new Gw2MumbleClient(connection, gw2Client);
+            client.Dispose();
+            Assert.ThrowsAny<ObjectDisposedException>(() => client.Update());
+        }
+
+        [Fact]
+        public void DisposeChildOnlyCorrectlyTest()
+        {
+            var connection = Substitute.For<IConnection>();
+            var gw2Client = Substitute.For<IGw2Client>();
+            using var rootClient = new Gw2MumbleClient(connection, gw2Client);
+            var childClientA = rootClient["CinderSteeltemper"];
+            var childClientB = rootClient["VishenSteelshot"];
+            childClientA.Dispose();
+            Assert.ThrowsAny<ObjectDisposedException>(() => childClientA.Update());
+            childClientB.Update(); // Sibling should not be disposed
+            rootClient.Update(); // Root should not be disposed
+        }
+
+        [Fact]
+        public void DisposeAllFromRootCorrectlyTest()
+        {
+            var connection = Substitute.For<IConnection>();
+            var gw2Client = Substitute.For<IGw2Client>();
+            var rootClient = new Gw2MumbleClient(connection, gw2Client);
+            var childClientA = rootClient["CinderSteeltemper"];
+            var childClientB = rootClient["VishenSteelshot"];
+            rootClient.Dispose();
+            Assert.ThrowsAny<ObjectDisposedException>(() => rootClient.Update());
+            Assert.ThrowsAny<ObjectDisposedException>(() => childClientA.Update());
+            Assert.ThrowsAny<ObjectDisposedException>(() => childClientB.Update());
         }
     }
 }

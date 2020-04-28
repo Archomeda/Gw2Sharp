@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Concurrent;
 using System.IO.MemoryMappedFiles;
+using System.Linq;
 using System.Net.Sockets;
 using System.Text.Json;
 using Gw2Sharp.Json;
@@ -22,7 +24,7 @@ namespace Gw2Sharp.Mumble
             PropertyNamingPolicy = SnakeCaseNamingPolicy.SnakeCase
         };
 
-        internal const string MUMBLE_LINK_MAP_NAME = "MumbleLink";
+        internal const string DEFAULT_MUMBLE_LINK_MAP_NAME = "MumbleLink";
         internal const string MUMBLE_LINK_GAME_NAME_GUILD_WARS_2 = "Guild Wars 2";
         internal static readonly char[] mumbleLinkGameName = new[] { 'G', 'u', 'i', 'l', 'd', ' ', 'W', 'a', 'r', 's', ' ', '2', '\0' };
         private const string EMPTY_IDENTITY = "{}";
@@ -36,21 +38,31 @@ namespace Gw2Sharp.Mumble
 
         private Gw2LinkedMem linkedMem;
 
+        private readonly ConcurrentDictionary<string, WeakReference<Gw2MumbleClient>> mumbleClientCache;
+        private readonly string mumbleLinkName;
+
         /// <summary>
         /// Creates a new <see cref="Gw2MumbleClient"/>.
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
         /// <param name="gw2Client">The Guild Wars 2 client.</param>
+        /// <param name="mumbleLinkName">The Mumble Link name.</param>
+        /// <param name="parent">The parent Mumble Link client to track child objects.</param>
         /// <exception cref="ArgumentNullException"><paramref name="connection"/> or <paramref name="gw2Client"/> is <c>null</c>.</exception>
-        protected internal Gw2MumbleClient(IConnection connection, IGw2Client gw2Client) : base(connection, gw2Client)
+        protected internal Gw2MumbleClient(IConnection connection, IGw2Client gw2Client, string mumbleLinkName = DEFAULT_MUMBLE_LINK_MAP_NAME, Gw2MumbleClient? parent = null) : base(connection, gw2Client)
         {
             if (connection == null)
                 throw new ArgumentNullException(nameof(connection));
             if (gw2Client == null)
                 throw new ArgumentNullException(nameof(gw2Client));
 
+            this.mumbleClientCache = parent?.mumbleClientCache ?? new ConcurrentDictionary<string, WeakReference<Gw2MumbleClient>>();
+            this.mumbleLinkName = !string.IsNullOrEmpty(mumbleLinkName) ? mumbleLinkName : DEFAULT_MUMBLE_LINK_MAP_NAME;
+            if (this.mumbleLinkName == DEFAULT_MUMBLE_LINK_MAP_NAME)
+                this.mumbleClientCache.TryAdd(DEFAULT_MUMBLE_LINK_MAP_NAME, new WeakReference<Gw2MumbleClient>(this, false));
+
             this.memoryMappedFile = new Lazy<MemoryMappedFile>(
-                () => MemoryMappedFile.CreateOrOpen(MUMBLE_LINK_MAP_NAME, Gw2LinkedMem.SIZE, MemoryMappedFileAccess.ReadWrite), true);
+                () => MemoryMappedFile.CreateOrOpen(this.mumbleLinkName, Gw2LinkedMem.SIZE, MemoryMappedFileAccess.ReadWrite), true);
             this.memoryMappedViewAccessor = new Lazy<MemoryMappedViewAccessor>(
                 () => this.memoryMappedFile.Value.CreateViewAccessor(), true);
         }
@@ -101,6 +113,23 @@ namespace Gw2Sharp.Mumble
             }
         }
 
+
+        /// <inheritdoc />
+        public IGw2MumbleClient this[string mumbleLinkName]
+        {
+            get
+            {
+                var reference = this.mumbleClientCache.GetOrAdd(mumbleLinkName,
+                    x => new WeakReference<Gw2MumbleClient>(new Gw2MumbleClient(this.Connection, this.Gw2Client!, mumbleLinkName, this), false));
+
+                if (!reference.TryGetTarget(out var client))
+                {
+                    client = new Gw2MumbleClient(this.Connection, this.Gw2Client!, mumbleLinkName, this);
+                    reference.SetTarget(client);
+                }
+                return client;
+            }
+        }
 
         /// <inheritdoc />
         public bool IsAvailable { get; private set; }
@@ -343,6 +372,7 @@ namespace Gw2Sharp.Mumble
             this.linkedMem = linkedMem;
         }
 
+
         #region IDisposable Support
 
         private bool isDisposed = false; // To detect redundant calls
@@ -361,6 +391,19 @@ namespace Gw2Sharp.Mumble
                         this.memoryMappedViewAccessor.Value.Dispose();
                     if (this.memoryMappedFile.IsValueCreated)
                         this.memoryMappedFile.Value.Dispose();
+
+                    // Only dispose the full client cache tree if we are the default one
+                    if (this.mumbleLinkName == DEFAULT_MUMBLE_LINK_MAP_NAME)
+                    {
+                        foreach (var reference in this.mumbleClientCache.Select(x => x.Value))
+                        {
+                            if (reference.TryGetTarget(out var client) && client != this)
+                                client?.Dispose();
+                        }
+                        this.mumbleClientCache.Clear();
+                    }
+                    // Otherwise only remove ourselves from the tree
+                    this.mumbleClientCache.TryRemove(this.mumbleLinkName, out _);
                 }
 
                 this.isDisposed = true;
