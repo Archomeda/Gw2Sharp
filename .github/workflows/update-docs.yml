@@ -19,12 +19,12 @@ jobs:
           Invoke-WebRequest https://github.com/dotnet/docfx/releases/download/v2.43.3/docfx.zip -OutFile docfx.zip
           7z e docfx.zip
       - name: Generate docs
-        run: ./docfx.exe Gw2Sharp.DocFX/docfx.json
+        run: ./docfx.exe docs/docfx.json
       - name: Upload docs
         uses: actions/upload-artifact@v1
         with:
           name: docs
-          path: Gw2Sharp.DocFX/_site/
+          path: docs/_site/
 
   push:
     name: Push
