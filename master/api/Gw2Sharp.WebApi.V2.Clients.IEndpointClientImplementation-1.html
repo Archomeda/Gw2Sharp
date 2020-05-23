@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Interface IEndpointClientImplementation&lt;TObject&gt;
    ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -166,6 +166,9 @@
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.ChatLinks.Gw2ChatLink.html" title="Gw2ChatLink" class="">Gw2ChatLink</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.ChatLinks.Gw2ChatLink-1.html" title="Gw2ChatLink&lt;T&gt;" class="">Gw2ChatLink&lt;T&gt;</a>
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.ChatLinks.IGw2ChatLink.html" title="IGw2ChatLink" class="">IGw2ChatLink</a>
@@ -2722,7 +2725,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">Task&lt;IApiV2ObjectList&lt;TEndpointObject&gt;&gt; RequestAllAsync&lt;TEndpointObject, TId&gt;(CancellationToken cancellationToken = null)
-    where TEndpointObject : IApiV2Object, IIdentifiable&lt;TId&gt; where TId : notnull</code></pre>
+    where TEndpointObject : IApiV2Object, IIdentifiable&lt;TId&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2844,7 +2847,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">Task&lt;TEndpointObject&gt; RequestGetAsync&lt;TEndpointObject, TId&gt;(TId id, CancellationToken cancellationToken = null)
-    where TEndpointObject : IApiV2Object, IIdentifiable&lt;TId&gt; where TId : notnull</code></pre>
+    where TEndpointObject : IApiV2Object, IIdentifiable&lt;TId&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2921,8 +2924,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;IApiV2ObjectList&lt;TId&gt;&gt; RequestIdsAsync&lt;TId&gt;(CancellationToken cancellationToken = null)
-    where TId : notnull</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IApiV2ObjectList&lt;TId&gt;&gt; RequestIdsAsync&lt;TId&gt;(CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2989,7 +2991,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">Task&lt;IReadOnlyList&lt;TEndpointObject&gt;&gt; RequestManyAsync&lt;TEndpointObject, TId&gt;(IEnumerable&lt;TId&gt; ids, CancellationToken cancellationToken = null)
-    where TEndpointObject : IApiV2Object, IIdentifiable&lt;TId&gt; where TId : notnull</code></pre>
+    where TEndpointObject : IApiV2Object, IIdentifiable&lt;TId&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3129,7 +3131,7 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">Task&lt;IApiV2ObjectList&lt;TEndpointObject&gt;&gt; RequestPageAsync&lt;TEndpointObject, TId&gt;(int page, int pageSize = null, CancellationToken cancellationToken = null)
-    where TEndpointObject : IApiV2Object, IIdentifiable&lt;TId&gt; where TId : notnull</code></pre>
+    where TEndpointObject : IApiV2Object, IIdentifiable&lt;TId&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

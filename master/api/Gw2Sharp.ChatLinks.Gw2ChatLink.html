@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Gw2ChatLink
    ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -166,6 +166,9 @@
                           </li>
                           <li class="active">
                             <a href="Gw2Sharp.ChatLinks.Gw2ChatLink.html" title="Gw2ChatLink" class="active">Gw2ChatLink</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.ChatLinks.Gw2ChatLink-1.html" title="Gw2ChatLink&lt;T&gt;" class="">Gw2ChatLink&lt;T&gt;</a>
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.ChatLinks.IGw2ChatLink.html" title="IGw2ChatLink" class="">IGw2ChatLink</a>
@@ -2686,6 +2689,7 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Gw2ChatLink</span></div>
+      <div class="level2"><a class="xref" href="Gw2Sharp.ChatLinks.Gw2ChatLink-1.html">Gw2ChatLink&lt;T&gt;</a></div>
       <div class="level2"><a class="xref" href="Gw2Sharp.ChatLinks.ItemChatLink.html">ItemChatLink</a></div>
   </div>
   <div classs="implements">
@@ -3147,6 +3151,63 @@ It&apos;s not required that the chat link is wrapped with the conventional &quot
       <tr>
         <td><span class="parametername">T</span></td>
         <td><p>The chat link type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_ChatLinks_Gw2ChatLink_TryParse_System_String_Gw2Sharp_ChatLinks_IGw2ChatLink__.md&amp;value=---%0Auid%3A%20Gw2Sharp.ChatLinks.Gw2ChatLink.TryParse(System.String%2CGw2Sharp.ChatLinks.IGw2ChatLink%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/ChatLinks/Gw2ChatLink.cs/#L145">View Source</a>
+  </span>
+  <a id="Gw2Sharp_ChatLinks_Gw2ChatLink_TryParse_" data-uid="Gw2Sharp.ChatLinks.Gw2ChatLink.TryParse*"></a>
+  <h4 id="Gw2Sharp_ChatLinks_Gw2ChatLink_TryParse_System_String_Gw2Sharp_ChatLinks_IGw2ChatLink__" data-uid="Gw2Sharp.ChatLinks.Gw2ChatLink.TryParse(System.String,Gw2Sharp.ChatLinks.IGw2ChatLink@)">TryParse(String, out IGw2ChatLink)</h4>
+  <div class="markdown level1 summary"><p>Tries to parse a Guild Wars 2 chat link from a string.
+It&apos;s not required that the chat link is wrapped with the conventional &quot;[&amp;&quot; and &quot;]&quot; characters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryParse(string chatLinkString, out IGw2ChatLink chatLink)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">chatLinkString</span></td>
+        <td><p>The chat link string.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Gw2Sharp.ChatLinks.IGw2ChatLink.html">IGw2ChatLink</a></td>
+        <td><span class="parametername">chatLink</span></td>
+        <td><p>The chat link if <code data-dev-comment-type="paramref" class="paramref">chatLinkString</code> is a valid chat link.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p><code>true</code> if <code data-dev-comment-type="paramref" class="paramref">chatLinkString</code> is a valid chat link; <code>false</code> otherwise.</p>
 </td>
       </tr>
     </tbody>

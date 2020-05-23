@@ -871,6 +871,22 @@ references:
   fullName.vb: Gw2Sharp.ChatLinks.Gw2ChatLink.ToString(Of T)(Gw2Sharp.ChatLinks.ChatLinkType, T)
   nameWithType: Gw2ChatLink.ToString<T>(ChatLinkType, T)
   nameWithType.vb: Gw2ChatLink.ToString(Of T)(ChatLinkType, T)
+- uid: Gw2Sharp.ChatLinks.Gw2ChatLink.TryParse(System.String,Gw2Sharp.ChatLinks.IGw2ChatLink@)
+  name: TryParse(String, out IGw2ChatLink)
+  href: api/Gw2Sharp.ChatLinks.Gw2ChatLink.html#Gw2Sharp_ChatLinks_Gw2ChatLink_TryParse_System_String_Gw2Sharp_ChatLinks_IGw2ChatLink__
+  commentId: M:Gw2Sharp.ChatLinks.Gw2ChatLink.TryParse(System.String,Gw2Sharp.ChatLinks.IGw2ChatLink@)
+  name.vb: TryParse(String, ByRef IGw2ChatLink)
+  fullName: Gw2Sharp.ChatLinks.Gw2ChatLink.TryParse(System.String, out Gw2Sharp.ChatLinks.IGw2ChatLink)
+  fullName.vb: Gw2Sharp.ChatLinks.Gw2ChatLink.TryParse(System.String, ByRef Gw2Sharp.ChatLinks.IGw2ChatLink)
+  nameWithType: Gw2ChatLink.TryParse(String, out IGw2ChatLink)
+  nameWithType.vb: Gw2ChatLink.TryParse(String, ByRef IGw2ChatLink)
+- uid: Gw2Sharp.ChatLinks.Gw2ChatLink.TryParse*
+  name: TryParse
+  href: api/Gw2Sharp.ChatLinks.Gw2ChatLink.html#Gw2Sharp_ChatLinks_Gw2ChatLink_TryParse_
+  commentId: Overload:Gw2Sharp.ChatLinks.Gw2ChatLink.TryParse
+  isSpec: "True"
+  fullName: Gw2Sharp.ChatLinks.Gw2ChatLink.TryParse
+  nameWithType: Gw2ChatLink.TryParse
 - uid: Gw2Sharp.ChatLinks.Gw2ChatLink.Type
   name: Type
   href: api/Gw2Sharp.ChatLinks.Gw2ChatLink.html#Gw2Sharp_ChatLinks_Gw2ChatLink_Type
@@ -884,6 +900,75 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.ChatLinks.Gw2ChatLink.Type
   nameWithType: Gw2ChatLink.Type
+- uid: Gw2Sharp.ChatLinks.Gw2ChatLink`1
+  name: Gw2ChatLink<T>
+  href: api/Gw2Sharp.ChatLinks.Gw2ChatLink-1.html
+  commentId: T:Gw2Sharp.ChatLinks.Gw2ChatLink`1
+  name.vb: Gw2ChatLink(Of T)
+  fullName: Gw2Sharp.ChatLinks.Gw2ChatLink<T>
+  fullName.vb: Gw2Sharp.ChatLinks.Gw2ChatLink(Of T)
+  nameWithType: Gw2ChatLink<T>
+  nameWithType.vb: Gw2ChatLink(Of T)
+- uid: Gw2Sharp.ChatLinks.Gw2ChatLink`1.data
+  name: data
+  href: api/Gw2Sharp.ChatLinks.Gw2ChatLink-1.html#Gw2Sharp_ChatLinks_Gw2ChatLink_1_data
+  commentId: F:Gw2Sharp.ChatLinks.Gw2ChatLink`1.data
+  fullName: Gw2Sharp.ChatLinks.Gw2ChatLink<T>.data
+  fullName.vb: Gw2Sharp.ChatLinks.Gw2ChatLink(Of T).data
+  nameWithType: Gw2ChatLink<T>.data
+  nameWithType.vb: Gw2ChatLink(Of T).data
+- uid: Gw2Sharp.ChatLinks.Gw2ChatLink`1.Parse(System.Byte[])
+  name: Parse(Byte[])
+  href: api/Gw2Sharp.ChatLinks.Gw2ChatLink-1.html#Gw2Sharp_ChatLinks_Gw2ChatLink_1_Parse_System_Byte___
+  commentId: M:Gw2Sharp.ChatLinks.Gw2ChatLink`1.Parse(System.Byte[])
+  name.vb: Parse(Byte())
+  fullName: Gw2Sharp.ChatLinks.Gw2ChatLink<T>.Parse(System.Byte[])
+  fullName.vb: Gw2Sharp.ChatLinks.Gw2ChatLink(Of T).Parse(System.Byte())
+  nameWithType: Gw2ChatLink<T>.Parse(Byte[])
+  nameWithType.vb: Gw2ChatLink(Of T).Parse(Byte())
+- uid: Gw2Sharp.ChatLinks.Gw2ChatLink`1.Parse*
+  name: Parse
+  href: api/Gw2Sharp.ChatLinks.Gw2ChatLink-1.html#Gw2Sharp_ChatLinks_Gw2ChatLink_1_Parse_
+  commentId: Overload:Gw2Sharp.ChatLinks.Gw2ChatLink`1.Parse
+  isSpec: "True"
+  fullName: Gw2Sharp.ChatLinks.Gw2ChatLink<T>.Parse
+  fullName.vb: Gw2Sharp.ChatLinks.Gw2ChatLink(Of T).Parse
+  nameWithType: Gw2ChatLink<T>.Parse
+  nameWithType.vb: Gw2ChatLink(Of T).Parse
+- uid: Gw2Sharp.ChatLinks.Gw2ChatLink`1.ToArray
+  name: ToArray()
+  href: api/Gw2Sharp.ChatLinks.Gw2ChatLink-1.html#Gw2Sharp_ChatLinks_Gw2ChatLink_1_ToArray
+  commentId: M:Gw2Sharp.ChatLinks.Gw2ChatLink`1.ToArray
+  fullName: Gw2Sharp.ChatLinks.Gw2ChatLink<T>.ToArray()
+  fullName.vb: Gw2Sharp.ChatLinks.Gw2ChatLink(Of T).ToArray()
+  nameWithType: Gw2ChatLink<T>.ToArray()
+  nameWithType.vb: Gw2ChatLink(Of T).ToArray()
+- uid: Gw2Sharp.ChatLinks.Gw2ChatLink`1.ToArray*
+  name: ToArray
+  href: api/Gw2Sharp.ChatLinks.Gw2ChatLink-1.html#Gw2Sharp_ChatLinks_Gw2ChatLink_1_ToArray_
+  commentId: Overload:Gw2Sharp.ChatLinks.Gw2ChatLink`1.ToArray
+  isSpec: "True"
+  fullName: Gw2Sharp.ChatLinks.Gw2ChatLink<T>.ToArray
+  fullName.vb: Gw2Sharp.ChatLinks.Gw2ChatLink(Of T).ToArray
+  nameWithType: Gw2ChatLink<T>.ToArray
+  nameWithType.vb: Gw2ChatLink(Of T).ToArray
+- uid: Gw2Sharp.ChatLinks.Gw2ChatLink`1.ToString
+  name: ToString()
+  href: api/Gw2Sharp.ChatLinks.Gw2ChatLink-1.html#Gw2Sharp_ChatLinks_Gw2ChatLink_1_ToString
+  commentId: M:Gw2Sharp.ChatLinks.Gw2ChatLink`1.ToString
+  fullName: Gw2Sharp.ChatLinks.Gw2ChatLink<T>.ToString()
+  fullName.vb: Gw2Sharp.ChatLinks.Gw2ChatLink(Of T).ToString()
+  nameWithType: Gw2ChatLink<T>.ToString()
+  nameWithType.vb: Gw2ChatLink(Of T).ToString()
+- uid: Gw2Sharp.ChatLinks.Gw2ChatLink`1.ToString*
+  name: ToString
+  href: api/Gw2Sharp.ChatLinks.Gw2ChatLink-1.html#Gw2Sharp_ChatLinks_Gw2ChatLink_1_ToString_
+  commentId: Overload:Gw2Sharp.ChatLinks.Gw2ChatLink`1.ToString
+  isSpec: "True"
+  fullName: Gw2Sharp.ChatLinks.Gw2ChatLink<T>.ToString
+  fullName.vb: Gw2Sharp.ChatLinks.Gw2ChatLink(Of T).ToString
+  nameWithType: Gw2ChatLink<T>.ToString
+  nameWithType.vb: Gw2ChatLink(Of T).ToString
 - uid: Gw2Sharp.ChatLinks.IGw2ChatLink
   name: IGw2ChatLink
   href: api/Gw2Sharp.ChatLinks.IGw2ChatLink.html
@@ -2447,15 +2532,15 @@ references:
   commentId: M:Gw2Sharp.Connection.#ctor(Gw2Sharp.WebApi.Locale)
   fullName: Gw2Sharp.Connection.Connection(Gw2Sharp.WebApi.Locale)
   nameWithType: Connection.Connection(Locale)
-- uid: Gw2Sharp.Connection.#ctor(System.Nullable{System.String},Gw2Sharp.WebApi.Locale,System.Nullable{Gw2Sharp.WebApi.Caching.ICacheMethod},System.Nullable{Gw2Sharp.WebApi.Caching.ICacheMethod},System.Nullable{TimeSpan},System.Nullable{System.String},System.Nullable{Gw2Sharp.WebApi.Http.IHttpClient})
-  name: Connection(Nullable<String>, Locale, Nullable<ICacheMethod>, Nullable<ICacheMethod>, Nullable<TimeSpan>, Nullable<String>, Nullable<IHttpClient>)
-  href: api/Gw2Sharp.Connection.html#Gw2Sharp_Connection__ctor_System_Nullable_System_String__Gw2Sharp_WebApi_Locale_System_Nullable_Gw2Sharp_WebApi_Caching_ICacheMethod__System_Nullable_Gw2Sharp_WebApi_Caching_ICacheMethod__System_Nullable_TimeSpan__System_Nullable_System_String__System_Nullable_Gw2Sharp_WebApi_Http_IHttpClient__
-  commentId: M:Gw2Sharp.Connection.#ctor(System.Nullable{System.String},Gw2Sharp.WebApi.Locale,System.Nullable{Gw2Sharp.WebApi.Caching.ICacheMethod},System.Nullable{Gw2Sharp.WebApi.Caching.ICacheMethod},System.Nullable{TimeSpan},System.Nullable{System.String},System.Nullable{Gw2Sharp.WebApi.Http.IHttpClient})
-  name.vb: Connection(Nullable(Of String), Locale, Nullable(Of ICacheMethod), Nullable(Of ICacheMethod), Nullable(Of TimeSpan), Nullable(Of String), Nullable(Of IHttpClient))
-  fullName: Gw2Sharp.Connection.Connection(System.Nullable<System.String>, Gw2Sharp.WebApi.Locale, System.Nullable<Gw2Sharp.WebApi.Caching.ICacheMethod>, System.Nullable<Gw2Sharp.WebApi.Caching.ICacheMethod>, System.Nullable<TimeSpan>, System.Nullable<System.String>, System.Nullable<Gw2Sharp.WebApi.Http.IHttpClient>)
-  fullName.vb: Gw2Sharp.Connection.Connection(System.Nullable(Of System.String), Gw2Sharp.WebApi.Locale, System.Nullable(Of Gw2Sharp.WebApi.Caching.ICacheMethod), System.Nullable(Of Gw2Sharp.WebApi.Caching.ICacheMethod), System.Nullable(Of TimeSpan), System.Nullable(Of System.String), System.Nullable(Of Gw2Sharp.WebApi.Http.IHttpClient))
-  nameWithType: Connection.Connection(Nullable<String>, Locale, Nullable<ICacheMethod>, Nullable<ICacheMethod>, Nullable<TimeSpan>, Nullable<String>, Nullable<IHttpClient>)
-  nameWithType.vb: Connection.Connection(Nullable(Of String), Locale, Nullable(Of ICacheMethod), Nullable(Of ICacheMethod), Nullable(Of TimeSpan), Nullable(Of String), Nullable(Of IHttpClient))
+- uid: Gw2Sharp.Connection.#ctor(System.Nullable{System.String},Gw2Sharp.WebApi.Locale,Gw2Sharp.WebApi.Caching.ICacheMethod,Gw2Sharp.WebApi.Caching.ICacheMethod,System.Nullable{TimeSpan},System.Nullable{System.String},Gw2Sharp.WebApi.Http.IHttpClient)
+  name: Connection(Nullable<String>, Locale, ICacheMethod, ICacheMethod, Nullable<TimeSpan>, Nullable<String>, IHttpClient)
+  href: api/Gw2Sharp.Connection.html#Gw2Sharp_Connection__ctor_System_Nullable_System_String__Gw2Sharp_WebApi_Locale_Gw2Sharp_WebApi_Caching_ICacheMethod_Gw2Sharp_WebApi_Caching_ICacheMethod_System_Nullable_TimeSpan__System_Nullable_System_String__Gw2Sharp_WebApi_Http_IHttpClient_
+  commentId: M:Gw2Sharp.Connection.#ctor(System.Nullable{System.String},Gw2Sharp.WebApi.Locale,Gw2Sharp.WebApi.Caching.ICacheMethod,Gw2Sharp.WebApi.Caching.ICacheMethod,System.Nullable{TimeSpan},System.Nullable{System.String},Gw2Sharp.WebApi.Http.IHttpClient)
+  name.vb: Connection(Nullable(Of String), Locale, ICacheMethod, ICacheMethod, Nullable(Of TimeSpan), Nullable(Of String), IHttpClient)
+  fullName: Gw2Sharp.Connection.Connection(System.Nullable<System.String>, Gw2Sharp.WebApi.Locale, Gw2Sharp.WebApi.Caching.ICacheMethod, Gw2Sharp.WebApi.Caching.ICacheMethod, System.Nullable<TimeSpan>, System.Nullable<System.String>, Gw2Sharp.WebApi.Http.IHttpClient)
+  fullName.vb: Gw2Sharp.Connection.Connection(System.Nullable(Of System.String), Gw2Sharp.WebApi.Locale, Gw2Sharp.WebApi.Caching.ICacheMethod, Gw2Sharp.WebApi.Caching.ICacheMethod, System.Nullable(Of TimeSpan), System.Nullable(Of System.String), Gw2Sharp.WebApi.Http.IHttpClient)
+  nameWithType: Connection.Connection(Nullable<String>, Locale, ICacheMethod, ICacheMethod, Nullable<TimeSpan>, Nullable<String>, IHttpClient)
+  nameWithType.vb: Connection.Connection(Nullable(Of String), Locale, ICacheMethod, ICacheMethod, Nullable(Of TimeSpan), Nullable(Of String), IHttpClient)
 - uid: Gw2Sharp.Connection.#ctor(System.String)
   name: Connection(String)
   href: api/Gw2Sharp.Connection.html#Gw2Sharp_Connection__ctor_System_String_
@@ -4266,15 +4351,12 @@ references:
   commentId: T:Gw2Sharp.Mumble.Gw2MumbleClient
   fullName: Gw2Sharp.Mumble.Gw2MumbleClient
   nameWithType: Gw2MumbleClient
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.#ctor(System.String,System.Nullable{Gw2Sharp.Mumble.Gw2MumbleClient})
-  name: Gw2MumbleClient(String, Nullable<Gw2MumbleClient>)
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient__ctor_System_String_System_Nullable_Gw2Sharp_Mumble_Gw2MumbleClient__
-  commentId: M:Gw2Sharp.Mumble.Gw2MumbleClient.#ctor(System.String,System.Nullable{Gw2Sharp.Mumble.Gw2MumbleClient})
-  name.vb: Gw2MumbleClient(String, Nullable(Of Gw2MumbleClient))
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Gw2MumbleClient(System.String, System.Nullable<Gw2Sharp.Mumble.Gw2MumbleClient>)
-  fullName.vb: Gw2Sharp.Mumble.Gw2MumbleClient.Gw2MumbleClient(System.String, System.Nullable(Of Gw2Sharp.Mumble.Gw2MumbleClient))
-  nameWithType: Gw2MumbleClient.Gw2MumbleClient(String, Nullable<Gw2MumbleClient>)
-  nameWithType.vb: Gw2MumbleClient.Gw2MumbleClient(String, Nullable(Of Gw2MumbleClient))
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.#ctor(System.String,Gw2Sharp.Mumble.Gw2MumbleClient)
+  name: Gw2MumbleClient(String, Gw2MumbleClient)
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient__ctor_System_String_Gw2Sharp_Mumble_Gw2MumbleClient_
+  commentId: M:Gw2Sharp.Mumble.Gw2MumbleClient.#ctor(System.String,Gw2Sharp.Mumble.Gw2MumbleClient)
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Gw2MumbleClient(System.String, Gw2Sharp.Mumble.Gw2MumbleClient)
+  nameWithType: Gw2MumbleClient.Gw2MumbleClient(String, Gw2MumbleClient)
 - uid: Gw2Sharp.Mumble.Gw2MumbleClient.#ctor*
   name: Gw2MumbleClient
   href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient__ctor_
@@ -4308,6 +4390,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Mumble.Gw2MumbleClient.AvatarPosition
   nameWithType: Gw2MumbleClient.AvatarPosition
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.BuildId
+  name: BuildId
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_BuildId
+  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.BuildId
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.BuildId
+  nameWithType: Gw2MumbleClient.BuildId
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.BuildId*
+  name: BuildId
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_BuildId_
+  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.BuildId
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.BuildId
+  nameWithType: Gw2MumbleClient.BuildId
 - uid: Gw2Sharp.Mumble.Gw2MumbleClient.CameraFront
   name: CameraFront
   href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_CameraFront
@@ -4334,6 +4429,116 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Mumble.Gw2MumbleClient.CameraPosition
   nameWithType: Gw2MumbleClient.CameraPosition
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.CharacterName
+  name: CharacterName
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_CharacterName
+  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.CharacterName
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.CharacterName
+  nameWithType: Gw2MumbleClient.CharacterName
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.CharacterName*
+  name: CharacterName
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_CharacterName_
+  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.CharacterName
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.CharacterName
+  nameWithType: Gw2MumbleClient.CharacterName
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.Compass
+  name: Compass
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Compass
+  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.Compass
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Compass
+  nameWithType: Gw2MumbleClient.Compass
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.Compass*
+  name: Compass
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Compass_
+  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.Compass
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Compass
+  nameWithType: Gw2MumbleClient.Compass
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.CompassRotation
+  name: CompassRotation
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_CompassRotation
+  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.CompassRotation
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.CompassRotation
+  nameWithType: Gw2MumbleClient.CompassRotation
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.CompassRotation*
+  name: CompassRotation
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_CompassRotation_
+  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.CompassRotation
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.CompassRotation
+  nameWithType: Gw2MumbleClient.CompassRotation
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.Dispose
+  name: Dispose()
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Dispose
+  commentId: M:Gw2Sharp.Mumble.Gw2MumbleClient.Dispose
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Dispose()
+  nameWithType: Gw2MumbleClient.Dispose()
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.Dispose(System.Boolean)
+  name: Dispose(Boolean)
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Dispose_System_Boolean_
+  commentId: M:Gw2Sharp.Mumble.Gw2MumbleClient.Dispose(System.Boolean)
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Dispose(System.Boolean)
+  nameWithType: Gw2MumbleClient.Dispose(Boolean)
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.Dispose*
+  name: Dispose
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Dispose_
+  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.Dispose
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Dispose
+  nameWithType: Gw2MumbleClient.Dispose
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.DoesAnyInputHaveFocus
+  name: DoesAnyInputHaveFocus
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_DoesAnyInputHaveFocus
+  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.DoesAnyInputHaveFocus
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.DoesAnyInputHaveFocus
+  nameWithType: Gw2MumbleClient.DoesAnyInputHaveFocus
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.DoesAnyInputHaveFocus*
+  name: DoesAnyInputHaveFocus
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_DoesAnyInputHaveFocus_
+  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.DoesAnyInputHaveFocus
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.DoesAnyInputHaveFocus
+  nameWithType: Gw2MumbleClient.DoesAnyInputHaveFocus
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.DoesGameHaveFocus
+  name: DoesGameHaveFocus
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_DoesGameHaveFocus
+  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.DoesGameHaveFocus
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.DoesGameHaveFocus
+  nameWithType: Gw2MumbleClient.DoesGameHaveFocus
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.DoesGameHaveFocus*
+  name: DoesGameHaveFocus
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_DoesGameHaveFocus_
+  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.DoesGameHaveFocus
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.DoesGameHaveFocus
+  nameWithType: Gw2MumbleClient.DoesGameHaveFocus
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.FieldOfView
+  name: FieldOfView
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_FieldOfView
+  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.FieldOfView
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.FieldOfView
+  nameWithType: Gw2MumbleClient.FieldOfView
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.FieldOfView*
+  name: FieldOfView
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_FieldOfView_
+  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.FieldOfView
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.FieldOfView
+  nameWithType: Gw2MumbleClient.FieldOfView
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.Instance
+  name: Instance
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Instance
+  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.Instance
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Instance
+  nameWithType: Gw2MumbleClient.Instance
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.Instance*
+  name: Instance
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Instance_
+  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.Instance
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Instance
+  nameWithType: Gw2MumbleClient.Instance
 - uid: Gw2Sharp.Mumble.Gw2MumbleClient.IsAvailable
   name: IsAvailable
   href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_IsAvailable
@@ -4347,6 +4552,84 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Mumble.Gw2MumbleClient.IsAvailable
   nameWithType: Gw2MumbleClient.IsAvailable
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.IsCommander
+  name: IsCommander
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_IsCommander
+  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.IsCommander
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.IsCommander
+  nameWithType: Gw2MumbleClient.IsCommander
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.IsCommander*
+  name: IsCommander
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_IsCommander_
+  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.IsCommander
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.IsCommander
+  nameWithType: Gw2MumbleClient.IsCommander
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.IsCompassRotationEnabled
+  name: IsCompassRotationEnabled
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_IsCompassRotationEnabled
+  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.IsCompassRotationEnabled
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.IsCompassRotationEnabled
+  nameWithType: Gw2MumbleClient.IsCompassRotationEnabled
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.IsCompassRotationEnabled*
+  name: IsCompassRotationEnabled
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_IsCompassRotationEnabled_
+  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.IsCompassRotationEnabled
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.IsCompassRotationEnabled
+  nameWithType: Gw2MumbleClient.IsCompassRotationEnabled
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.IsCompassTopRight
+  name: IsCompassTopRight
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_IsCompassTopRight
+  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.IsCompassTopRight
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.IsCompassTopRight
+  nameWithType: Gw2MumbleClient.IsCompassTopRight
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.IsCompassTopRight*
+  name: IsCompassTopRight
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_IsCompassTopRight_
+  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.IsCompassTopRight
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.IsCompassTopRight
+  nameWithType: Gw2MumbleClient.IsCompassTopRight
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.IsCompetitiveMode
+  name: IsCompetitiveMode
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_IsCompetitiveMode
+  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.IsCompetitiveMode
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.IsCompetitiveMode
+  nameWithType: Gw2MumbleClient.IsCompetitiveMode
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.IsCompetitiveMode*
+  name: IsCompetitiveMode
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_IsCompetitiveMode_
+  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.IsCompetitiveMode
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.IsCompetitiveMode
+  nameWithType: Gw2MumbleClient.IsCompetitiveMode
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.IsInCombat
+  name: IsInCombat
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_IsInCombat
+  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.IsInCombat
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.IsInCombat
+  nameWithType: Gw2MumbleClient.IsInCombat
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.IsInCombat*
+  name: IsInCombat
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_IsInCombat_
+  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.IsInCombat
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.IsInCombat
+  nameWithType: Gw2MumbleClient.IsInCombat
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.IsMapOpen
+  name: IsMapOpen
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_IsMapOpen
+  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.IsMapOpen
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.IsMapOpen
+  nameWithType: Gw2MumbleClient.IsMapOpen
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.IsMapOpen*
+  name: IsMapOpen
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_IsMapOpen_
+  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.IsMapOpen
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.IsMapOpen
+  nameWithType: Gw2MumbleClient.IsMapOpen
 - uid: Gw2Sharp.Mumble.Gw2MumbleClient.Item(System.String)
   name: Item[String]
   href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Item_System_String_
@@ -4363,6 +4646,71 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Item
   nameWithType: Gw2MumbleClient.Item
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.MapCenter
+  name: MapCenter
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_MapCenter
+  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.MapCenter
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.MapCenter
+  nameWithType: Gw2MumbleClient.MapCenter
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.MapCenter*
+  name: MapCenter
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_MapCenter_
+  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.MapCenter
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.MapCenter
+  nameWithType: Gw2MumbleClient.MapCenter
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.MapId
+  name: MapId
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_MapId
+  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.MapId
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.MapId
+  nameWithType: Gw2MumbleClient.MapId
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.MapId*
+  name: MapId
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_MapId_
+  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.MapId
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.MapId
+  nameWithType: Gw2MumbleClient.MapId
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.MapScale
+  name: MapScale
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_MapScale
+  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.MapScale
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.MapScale
+  nameWithType: Gw2MumbleClient.MapScale
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.MapScale*
+  name: MapScale
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_MapScale_
+  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.MapScale
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.MapScale
+  nameWithType: Gw2MumbleClient.MapScale
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.MapType
+  name: MapType
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_MapType
+  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.MapType
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.MapType
+  nameWithType: Gw2MumbleClient.MapType
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.MapType*
+  name: MapType
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_MapType_
+  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.MapType
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.MapType
+  nameWithType: Gw2MumbleClient.MapType
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.Mount
+  name: Mount
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Mount
+  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.Mount
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Mount
+  nameWithType: Gw2MumbleClient.Mount
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.Mount*
+  name: Mount
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Mount_
+  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.Mount
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Mount
+  nameWithType: Gw2MumbleClient.Mount
 - uid: Gw2Sharp.Mumble.Gw2MumbleClient.Name
   name: Name
   href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Name
@@ -4376,6 +4724,71 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Name
   nameWithType: Gw2MumbleClient.Name
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.PlayerLocationMap
+  name: PlayerLocationMap
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_PlayerLocationMap
+  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.PlayerLocationMap
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.PlayerLocationMap
+  nameWithType: Gw2MumbleClient.PlayerLocationMap
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.PlayerLocationMap*
+  name: PlayerLocationMap
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_PlayerLocationMap_
+  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.PlayerLocationMap
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.PlayerLocationMap
+  nameWithType: Gw2MumbleClient.PlayerLocationMap
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.ProcessId
+  name: ProcessId
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_ProcessId
+  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.ProcessId
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.ProcessId
+  nameWithType: Gw2MumbleClient.ProcessId
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.ProcessId*
+  name: ProcessId
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_ProcessId_
+  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.ProcessId
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.ProcessId
+  nameWithType: Gw2MumbleClient.ProcessId
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.Profession
+  name: Profession
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Profession
+  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.Profession
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Profession
+  nameWithType: Gw2MumbleClient.Profession
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.Profession*
+  name: Profession
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Profession_
+  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.Profession
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Profession
+  nameWithType: Gw2MumbleClient.Profession
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.Race
+  name: Race
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Race
+  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.Race
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Race
+  nameWithType: Gw2MumbleClient.Race
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.Race*
+  name: Race
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Race_
+  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.Race
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Race
+  nameWithType: Gw2MumbleClient.Race
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.RawIdentity
+  name: RawIdentity
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_RawIdentity
+  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.RawIdentity
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.RawIdentity
+  nameWithType: Gw2MumbleClient.RawIdentity
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.RawIdentity*
+  name: RawIdentity
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_RawIdentity_
+  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.RawIdentity
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.RawIdentity
+  nameWithType: Gw2MumbleClient.RawIdentity
 - uid: Gw2Sharp.Mumble.Gw2MumbleClient.ServerAddress
   name: ServerAddress
   href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_ServerAddress
@@ -4389,6 +4802,58 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Mumble.Gw2MumbleClient.ServerAddress
   nameWithType: Gw2MumbleClient.ServerAddress
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.ServerPort
+  name: ServerPort
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_ServerPort
+  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.ServerPort
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.ServerPort
+  nameWithType: Gw2MumbleClient.ServerPort
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.ServerPort*
+  name: ServerPort
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_ServerPort_
+  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.ServerPort
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.ServerPort
+  nameWithType: Gw2MumbleClient.ServerPort
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.ShardId
+  name: ShardId
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_ShardId
+  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.ShardId
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.ShardId
+  nameWithType: Gw2MumbleClient.ShardId
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.ShardId*
+  name: ShardId
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_ShardId_
+  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.ShardId
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.ShardId
+  nameWithType: Gw2MumbleClient.ShardId
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.Specialization
+  name: Specialization
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Specialization
+  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.Specialization
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Specialization
+  nameWithType: Gw2MumbleClient.Specialization
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.Specialization*
+  name: Specialization
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Specialization_
+  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.Specialization
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Specialization
+  nameWithType: Gw2MumbleClient.Specialization
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.TeamColorId
+  name: TeamColorId
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_TeamColorId
+  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.TeamColorId
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.TeamColorId
+  nameWithType: Gw2MumbleClient.TeamColorId
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.TeamColorId*
+  name: TeamColorId
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_TeamColorId_
+  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.TeamColorId
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.TeamColorId
+  nameWithType: Gw2MumbleClient.TeamColorId
 - uid: Gw2Sharp.Mumble.Gw2MumbleClient.Tick
   name: Tick
   href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Tick
@@ -4402,6 +4867,32 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Tick
   nameWithType: Gw2MumbleClient.Tick
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.UiSize
+  name: UiSize
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_UiSize
+  commentId: P:Gw2Sharp.Mumble.Gw2MumbleClient.UiSize
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.UiSize
+  nameWithType: Gw2MumbleClient.UiSize
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.UiSize*
+  name: UiSize
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_UiSize_
+  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.UiSize
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.UiSize
+  nameWithType: Gw2MumbleClient.UiSize
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.Update
+  name: Update()
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Update
+  commentId: M:Gw2Sharp.Mumble.Gw2MumbleClient.Update
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Update()
+  nameWithType: Gw2MumbleClient.Update()
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.Update*
+  name: Update
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Update_
+  commentId: Overload:Gw2Sharp.Mumble.Gw2MumbleClient.Update
+  isSpec: "True"
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Update
+  nameWithType: Gw2MumbleClient.Update
 - uid: Gw2Sharp.Mumble.Gw2MumbleClient.Version
   name: Version
   href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient_Version
@@ -7281,24 +7772,24 @@ references:
   commentId: T:Gw2Sharp.WebApi.Http.RequestException
   fullName: Gw2Sharp.WebApi.Http.RequestException
   nameWithType: RequestException
-- uid: Gw2Sharp.WebApi.Http.RequestException.#ctor(Gw2Sharp.WebApi.Http.IHttpRequest,System.Nullable{Gw2Sharp.WebApi.Http.IHttpResponse{System.String}},System.String)
-  name: RequestException(IHttpRequest, Nullable<IHttpResponse<String>>, String)
-  href: api/Gw2Sharp.WebApi.Http.RequestException.html#Gw2Sharp_WebApi_Http_RequestException__ctor_Gw2Sharp_WebApi_Http_IHttpRequest_System_Nullable_Gw2Sharp_WebApi_Http_IHttpResponse_System_String___System_String_
-  commentId: M:Gw2Sharp.WebApi.Http.RequestException.#ctor(Gw2Sharp.WebApi.Http.IHttpRequest,System.Nullable{Gw2Sharp.WebApi.Http.IHttpResponse{System.String}},System.String)
-  name.vb: RequestException(IHttpRequest, Nullable(Of IHttpResponse(Of String)), String)
-  fullName: Gw2Sharp.WebApi.Http.RequestException.RequestException(Gw2Sharp.WebApi.Http.IHttpRequest, System.Nullable<Gw2Sharp.WebApi.Http.IHttpResponse<System.String>>, System.String)
-  fullName.vb: Gw2Sharp.WebApi.Http.RequestException.RequestException(Gw2Sharp.WebApi.Http.IHttpRequest, System.Nullable(Of Gw2Sharp.WebApi.Http.IHttpResponse(Of System.String)), System.String)
-  nameWithType: RequestException.RequestException(IHttpRequest, Nullable<IHttpResponse<String>>, String)
-  nameWithType.vb: RequestException.RequestException(IHttpRequest, Nullable(Of IHttpResponse(Of String)), String)
-- uid: Gw2Sharp.WebApi.Http.RequestException.#ctor(Gw2Sharp.WebApi.Http.IHttpRequest,System.Nullable{Gw2Sharp.WebApi.Http.IHttpResponse{System.String}},System.String,Exception)
-  name: RequestException(IHttpRequest, Nullable<IHttpResponse<String>>, String, Exception)
-  href: api/Gw2Sharp.WebApi.Http.RequestException.html#Gw2Sharp_WebApi_Http_RequestException__ctor_Gw2Sharp_WebApi_Http_IHttpRequest_System_Nullable_Gw2Sharp_WebApi_Http_IHttpResponse_System_String___System_String_Exception_
-  commentId: M:Gw2Sharp.WebApi.Http.RequestException.#ctor(Gw2Sharp.WebApi.Http.IHttpRequest,System.Nullable{Gw2Sharp.WebApi.Http.IHttpResponse{System.String}},System.String,Exception)
-  name.vb: RequestException(IHttpRequest, Nullable(Of IHttpResponse(Of String)), String, Exception)
-  fullName: Gw2Sharp.WebApi.Http.RequestException.RequestException(Gw2Sharp.WebApi.Http.IHttpRequest, System.Nullable<Gw2Sharp.WebApi.Http.IHttpResponse<System.String>>, System.String, Exception)
-  fullName.vb: Gw2Sharp.WebApi.Http.RequestException.RequestException(Gw2Sharp.WebApi.Http.IHttpRequest, System.Nullable(Of Gw2Sharp.WebApi.Http.IHttpResponse(Of System.String)), System.String, Exception)
-  nameWithType: RequestException.RequestException(IHttpRequest, Nullable<IHttpResponse<String>>, String, Exception)
-  nameWithType.vb: RequestException.RequestException(IHttpRequest, Nullable(Of IHttpResponse(Of String)), String, Exception)
+- uid: Gw2Sharp.WebApi.Http.RequestException.#ctor(Gw2Sharp.WebApi.Http.IHttpRequest,Gw2Sharp.WebApi.Http.IHttpResponse{System.String},System.String)
+  name: RequestException(IHttpRequest, IHttpResponse<String>, String)
+  href: api/Gw2Sharp.WebApi.Http.RequestException.html#Gw2Sharp_WebApi_Http_RequestException__ctor_Gw2Sharp_WebApi_Http_IHttpRequest_Gw2Sharp_WebApi_Http_IHttpResponse_System_String__System_String_
+  commentId: M:Gw2Sharp.WebApi.Http.RequestException.#ctor(Gw2Sharp.WebApi.Http.IHttpRequest,Gw2Sharp.WebApi.Http.IHttpResponse{System.String},System.String)
+  name.vb: RequestException(IHttpRequest, IHttpResponse(Of String), String)
+  fullName: Gw2Sharp.WebApi.Http.RequestException.RequestException(Gw2Sharp.WebApi.Http.IHttpRequest, Gw2Sharp.WebApi.Http.IHttpResponse<System.String>, System.String)
+  fullName.vb: Gw2Sharp.WebApi.Http.RequestException.RequestException(Gw2Sharp.WebApi.Http.IHttpRequest, Gw2Sharp.WebApi.Http.IHttpResponse(Of System.String), System.String)
+  nameWithType: RequestException.RequestException(IHttpRequest, IHttpResponse<String>, String)
+  nameWithType.vb: RequestException.RequestException(IHttpRequest, IHttpResponse(Of String), String)
+- uid: Gw2Sharp.WebApi.Http.RequestException.#ctor(Gw2Sharp.WebApi.Http.IHttpRequest,Gw2Sharp.WebApi.Http.IHttpResponse{System.String},System.String,Exception)
+  name: RequestException(IHttpRequest, IHttpResponse<String>, String, Exception)
+  href: api/Gw2Sharp.WebApi.Http.RequestException.html#Gw2Sharp_WebApi_Http_RequestException__ctor_Gw2Sharp_WebApi_Http_IHttpRequest_Gw2Sharp_WebApi_Http_IHttpResponse_System_String__System_String_Exception_
+  commentId: M:Gw2Sharp.WebApi.Http.RequestException.#ctor(Gw2Sharp.WebApi.Http.IHttpRequest,Gw2Sharp.WebApi.Http.IHttpResponse{System.String},System.String,Exception)
+  name.vb: RequestException(IHttpRequest, IHttpResponse(Of String), String, Exception)
+  fullName: Gw2Sharp.WebApi.Http.RequestException.RequestException(Gw2Sharp.WebApi.Http.IHttpRequest, Gw2Sharp.WebApi.Http.IHttpResponse<System.String>, System.String, Exception)
+  fullName.vb: Gw2Sharp.WebApi.Http.RequestException.RequestException(Gw2Sharp.WebApi.Http.IHttpRequest, Gw2Sharp.WebApi.Http.IHttpResponse(Of System.String), System.String, Exception)
+  nameWithType: RequestException.RequestException(IHttpRequest, IHttpResponse<String>, String, Exception)
+  nameWithType.vb: RequestException.RequestException(IHttpRequest, IHttpResponse(Of String), String, Exception)
 - uid: Gw2Sharp.WebApi.Http.RequestException.#ctor(Gw2Sharp.WebApi.Http.IHttpRequest,System.String)
   name: RequestException(IHttpRequest, String)
   href: api/Gw2Sharp.WebApi.Http.RequestException.html#Gw2Sharp_WebApi_Http_RequestException__ctor_Gw2Sharp_WebApi_Http_IHttpRequest_System_String_
@@ -7336,24 +7827,24 @@ references:
   fullName.vb: Gw2Sharp.WebApi.Http.RequestException(Of TResponse)
   nameWithType: RequestException<TResponse>
   nameWithType.vb: RequestException(Of TResponse)
-- uid: Gw2Sharp.WebApi.Http.RequestException`1.#ctor(Gw2Sharp.WebApi.Http.IHttpRequest,System.Nullable{Gw2Sharp.WebApi.Http.IHttpResponse{`0}},System.String)
-  name: RequestException(IHttpRequest, Nullable<IHttpResponse<TResponse>>, String)
-  href: api/Gw2Sharp.WebApi.Http.RequestException-1.html#Gw2Sharp_WebApi_Http_RequestException_1__ctor_Gw2Sharp_WebApi_Http_IHttpRequest_System_Nullable_Gw2Sharp_WebApi_Http_IHttpResponse__0___System_String_
-  commentId: M:Gw2Sharp.WebApi.Http.RequestException`1.#ctor(Gw2Sharp.WebApi.Http.IHttpRequest,System.Nullable{Gw2Sharp.WebApi.Http.IHttpResponse{`0}},System.String)
-  name.vb: RequestException(IHttpRequest, Nullable(Of IHttpResponse(Of TResponse)), String)
-  fullName: Gw2Sharp.WebApi.Http.RequestException<TResponse>.RequestException(Gw2Sharp.WebApi.Http.IHttpRequest, System.Nullable<Gw2Sharp.WebApi.Http.IHttpResponse<TResponse>>, System.String)
-  fullName.vb: Gw2Sharp.WebApi.Http.RequestException(Of TResponse).RequestException(Gw2Sharp.WebApi.Http.IHttpRequest, System.Nullable(Of Gw2Sharp.WebApi.Http.IHttpResponse(Of TResponse)), System.String)
-  nameWithType: RequestException<TResponse>.RequestException(IHttpRequest, Nullable<IHttpResponse<TResponse>>, String)
-  nameWithType.vb: RequestException(Of TResponse).RequestException(IHttpRequest, Nullable(Of IHttpResponse(Of TResponse)), String)
-- uid: Gw2Sharp.WebApi.Http.RequestException`1.#ctor(Gw2Sharp.WebApi.Http.IHttpRequest,System.Nullable{Gw2Sharp.WebApi.Http.IHttpResponse{`0}},System.String,System.Nullable{Exception})
-  name: RequestException(IHttpRequest, Nullable<IHttpResponse<TResponse>>, String, Nullable<Exception>)
-  href: api/Gw2Sharp.WebApi.Http.RequestException-1.html#Gw2Sharp_WebApi_Http_RequestException_1__ctor_Gw2Sharp_WebApi_Http_IHttpRequest_System_Nullable_Gw2Sharp_WebApi_Http_IHttpResponse__0___System_String_System_Nullable_Exception__
-  commentId: M:Gw2Sharp.WebApi.Http.RequestException`1.#ctor(Gw2Sharp.WebApi.Http.IHttpRequest,System.Nullable{Gw2Sharp.WebApi.Http.IHttpResponse{`0}},System.String,System.Nullable{Exception})
-  name.vb: RequestException(IHttpRequest, Nullable(Of IHttpResponse(Of TResponse)), String, Nullable(Of Exception))
-  fullName: Gw2Sharp.WebApi.Http.RequestException<TResponse>.RequestException(Gw2Sharp.WebApi.Http.IHttpRequest, System.Nullable<Gw2Sharp.WebApi.Http.IHttpResponse<TResponse>>, System.String, System.Nullable<Exception>)
-  fullName.vb: Gw2Sharp.WebApi.Http.RequestException(Of TResponse).RequestException(Gw2Sharp.WebApi.Http.IHttpRequest, System.Nullable(Of Gw2Sharp.WebApi.Http.IHttpResponse(Of TResponse)), System.String, System.Nullable(Of Exception))
-  nameWithType: RequestException<TResponse>.RequestException(IHttpRequest, Nullable<IHttpResponse<TResponse>>, String, Nullable<Exception>)
-  nameWithType.vb: RequestException(Of TResponse).RequestException(IHttpRequest, Nullable(Of IHttpResponse(Of TResponse)), String, Nullable(Of Exception))
+- uid: Gw2Sharp.WebApi.Http.RequestException`1.#ctor(Gw2Sharp.WebApi.Http.IHttpRequest,Gw2Sharp.WebApi.Http.IHttpResponse{`0},System.String)
+  name: RequestException(IHttpRequest, IHttpResponse<TResponse>, String)
+  href: api/Gw2Sharp.WebApi.Http.RequestException-1.html#Gw2Sharp_WebApi_Http_RequestException_1__ctor_Gw2Sharp_WebApi_Http_IHttpRequest_Gw2Sharp_WebApi_Http_IHttpResponse__0__System_String_
+  commentId: M:Gw2Sharp.WebApi.Http.RequestException`1.#ctor(Gw2Sharp.WebApi.Http.IHttpRequest,Gw2Sharp.WebApi.Http.IHttpResponse{`0},System.String)
+  name.vb: RequestException(IHttpRequest, IHttpResponse(Of TResponse), String)
+  fullName: Gw2Sharp.WebApi.Http.RequestException<TResponse>.RequestException(Gw2Sharp.WebApi.Http.IHttpRequest, Gw2Sharp.WebApi.Http.IHttpResponse<TResponse>, System.String)
+  fullName.vb: Gw2Sharp.WebApi.Http.RequestException(Of TResponse).RequestException(Gw2Sharp.WebApi.Http.IHttpRequest, Gw2Sharp.WebApi.Http.IHttpResponse(Of TResponse), System.String)
+  nameWithType: RequestException<TResponse>.RequestException(IHttpRequest, IHttpResponse<TResponse>, String)
+  nameWithType.vb: RequestException(Of TResponse).RequestException(IHttpRequest, IHttpResponse(Of TResponse), String)
+- uid: Gw2Sharp.WebApi.Http.RequestException`1.#ctor(Gw2Sharp.WebApi.Http.IHttpRequest,Gw2Sharp.WebApi.Http.IHttpResponse{`0},System.String,System.Nullable{Exception})
+  name: RequestException(IHttpRequest, IHttpResponse<TResponse>, String, Nullable<Exception>)
+  href: api/Gw2Sharp.WebApi.Http.RequestException-1.html#Gw2Sharp_WebApi_Http_RequestException_1__ctor_Gw2Sharp_WebApi_Http_IHttpRequest_Gw2Sharp_WebApi_Http_IHttpResponse__0__System_String_System_Nullable_Exception__
+  commentId: M:Gw2Sharp.WebApi.Http.RequestException`1.#ctor(Gw2Sharp.WebApi.Http.IHttpRequest,Gw2Sharp.WebApi.Http.IHttpResponse{`0},System.String,System.Nullable{Exception})
+  name.vb: RequestException(IHttpRequest, IHttpResponse(Of TResponse), String, Nullable(Of Exception))
+  fullName: Gw2Sharp.WebApi.Http.RequestException<TResponse>.RequestException(Gw2Sharp.WebApi.Http.IHttpRequest, Gw2Sharp.WebApi.Http.IHttpResponse<TResponse>, System.String, System.Nullable<Exception>)
+  fullName.vb: Gw2Sharp.WebApi.Http.RequestException(Of TResponse).RequestException(Gw2Sharp.WebApi.Http.IHttpRequest, Gw2Sharp.WebApi.Http.IHttpResponse(Of TResponse), System.String, System.Nullable(Of Exception))
+  nameWithType: RequestException<TResponse>.RequestException(IHttpRequest, IHttpResponse<TResponse>, String, Nullable<Exception>)
+  nameWithType.vb: RequestException(Of TResponse).RequestException(IHttpRequest, IHttpResponse(Of TResponse), String, Nullable(Of Exception))
 - uid: Gw2Sharp.WebApi.Http.RequestException`1.#ctor(Gw2Sharp.WebApi.Http.IHttpRequest,System.String)
   name: RequestException(IHttpRequest, String)
   href: api/Gw2Sharp.WebApi.Http.RequestException-1.html#Gw2Sharp_WebApi_Http_RequestException_1__ctor_Gw2Sharp_WebApi_Http_IHttpRequest_System_String_
@@ -7566,15 +8057,15 @@ references:
   fullName.vb: Gw2Sharp.WebApi.Http.UnexpectedStatusException.UnexpectedStatusException(Gw2Sharp.WebApi.Http.IHttpRequest, Gw2Sharp.WebApi.Http.IHttpResponse(Of System.String))
   nameWithType: UnexpectedStatusException.UnexpectedStatusException(IHttpRequest, IHttpResponse<String>)
   nameWithType.vb: UnexpectedStatusException.UnexpectedStatusException(IHttpRequest, IHttpResponse(Of String))
-- uid: Gw2Sharp.WebApi.Http.UnexpectedStatusException.#ctor(Gw2Sharp.WebApi.Http.IHttpRequest,System.Nullable{Gw2Sharp.WebApi.Http.IHttpResponse{System.String}},System.String)
-  name: UnexpectedStatusException(IHttpRequest, Nullable<IHttpResponse<String>>, String)
-  href: api/Gw2Sharp.WebApi.Http.UnexpectedStatusException.html#Gw2Sharp_WebApi_Http_UnexpectedStatusException__ctor_Gw2Sharp_WebApi_Http_IHttpRequest_System_Nullable_Gw2Sharp_WebApi_Http_IHttpResponse_System_String___System_String_
-  commentId: M:Gw2Sharp.WebApi.Http.UnexpectedStatusException.#ctor(Gw2Sharp.WebApi.Http.IHttpRequest,System.Nullable{Gw2Sharp.WebApi.Http.IHttpResponse{System.String}},System.String)
-  name.vb: UnexpectedStatusException(IHttpRequest, Nullable(Of IHttpResponse(Of String)), String)
-  fullName: Gw2Sharp.WebApi.Http.UnexpectedStatusException.UnexpectedStatusException(Gw2Sharp.WebApi.Http.IHttpRequest, System.Nullable<Gw2Sharp.WebApi.Http.IHttpResponse<System.String>>, System.String)
-  fullName.vb: Gw2Sharp.WebApi.Http.UnexpectedStatusException.UnexpectedStatusException(Gw2Sharp.WebApi.Http.IHttpRequest, System.Nullable(Of Gw2Sharp.WebApi.Http.IHttpResponse(Of System.String)), System.String)
-  nameWithType: UnexpectedStatusException.UnexpectedStatusException(IHttpRequest, Nullable<IHttpResponse<String>>, String)
-  nameWithType.vb: UnexpectedStatusException.UnexpectedStatusException(IHttpRequest, Nullable(Of IHttpResponse(Of String)), String)
+- uid: Gw2Sharp.WebApi.Http.UnexpectedStatusException.#ctor(Gw2Sharp.WebApi.Http.IHttpRequest,Gw2Sharp.WebApi.Http.IHttpResponse{System.String},System.String)
+  name: UnexpectedStatusException(IHttpRequest, IHttpResponse<String>, String)
+  href: api/Gw2Sharp.WebApi.Http.UnexpectedStatusException.html#Gw2Sharp_WebApi_Http_UnexpectedStatusException__ctor_Gw2Sharp_WebApi_Http_IHttpRequest_Gw2Sharp_WebApi_Http_IHttpResponse_System_String__System_String_
+  commentId: M:Gw2Sharp.WebApi.Http.UnexpectedStatusException.#ctor(Gw2Sharp.WebApi.Http.IHttpRequest,Gw2Sharp.WebApi.Http.IHttpResponse{System.String},System.String)
+  name.vb: UnexpectedStatusException(IHttpRequest, IHttpResponse(Of String), String)
+  fullName: Gw2Sharp.WebApi.Http.UnexpectedStatusException.UnexpectedStatusException(Gw2Sharp.WebApi.Http.IHttpRequest, Gw2Sharp.WebApi.Http.IHttpResponse<System.String>, System.String)
+  fullName.vb: Gw2Sharp.WebApi.Http.UnexpectedStatusException.UnexpectedStatusException(Gw2Sharp.WebApi.Http.IHttpRequest, Gw2Sharp.WebApi.Http.IHttpResponse(Of System.String), System.String)
+  nameWithType: UnexpectedStatusException.UnexpectedStatusException(IHttpRequest, IHttpResponse<String>, String)
+  nameWithType.vb: UnexpectedStatusException.UnexpectedStatusException(IHttpRequest, IHttpResponse(Of String), String)
 - uid: Gw2Sharp.WebApi.Http.UnexpectedStatusException.#ctor(SerializationInfo,StreamingContext)
   name: UnexpectedStatusException(SerializationInfo, StreamingContext)
   href: api/Gw2Sharp.WebApi.Http.UnexpectedStatusException.html#Gw2Sharp_WebApi_Http_UnexpectedStatusException__ctor_SerializationInfo_StreamingContext_
@@ -7606,15 +8097,15 @@ references:
   fullName.vb: Gw2Sharp.WebApi.Http.UnexpectedStatusException(Of T).UnexpectedStatusException(Gw2Sharp.WebApi.Http.IHttpRequest, Gw2Sharp.WebApi.Http.IHttpResponse(Of T))
   nameWithType: UnexpectedStatusException<T>.UnexpectedStatusException(IHttpRequest, IHttpResponse<T>)
   nameWithType.vb: UnexpectedStatusException(Of T).UnexpectedStatusException(IHttpRequest, IHttpResponse(Of T))
-- uid: Gw2Sharp.WebApi.Http.UnexpectedStatusException`1.#ctor(Gw2Sharp.WebApi.Http.IHttpRequest,System.Nullable{Gw2Sharp.WebApi.Http.IHttpResponse{`0}},System.String)
-  name: UnexpectedStatusException(IHttpRequest, Nullable<IHttpResponse<T>>, String)
-  href: api/Gw2Sharp.WebApi.Http.UnexpectedStatusException-1.html#Gw2Sharp_WebApi_Http_UnexpectedStatusException_1__ctor_Gw2Sharp_WebApi_Http_IHttpRequest_System_Nullable_Gw2Sharp_WebApi_Http_IHttpResponse__0___System_String_
-  commentId: M:Gw2Sharp.WebApi.Http.UnexpectedStatusException`1.#ctor(Gw2Sharp.WebApi.Http.IHttpRequest,System.Nullable{Gw2Sharp.WebApi.Http.IHttpResponse{`0}},System.String)
-  name.vb: UnexpectedStatusException(IHttpRequest, Nullable(Of IHttpResponse(Of T)), String)
-  fullName: Gw2Sharp.WebApi.Http.UnexpectedStatusException<T>.UnexpectedStatusException(Gw2Sharp.WebApi.Http.IHttpRequest, System.Nullable<Gw2Sharp.WebApi.Http.IHttpResponse<T>>, System.String)
-  fullName.vb: Gw2Sharp.WebApi.Http.UnexpectedStatusException(Of T).UnexpectedStatusException(Gw2Sharp.WebApi.Http.IHttpRequest, System.Nullable(Of Gw2Sharp.WebApi.Http.IHttpResponse(Of T)), System.String)
-  nameWithType: UnexpectedStatusException<T>.UnexpectedStatusException(IHttpRequest, Nullable<IHttpResponse<T>>, String)
-  nameWithType.vb: UnexpectedStatusException(Of T).UnexpectedStatusException(IHttpRequest, Nullable(Of IHttpResponse(Of T)), String)
+- uid: Gw2Sharp.WebApi.Http.UnexpectedStatusException`1.#ctor(Gw2Sharp.WebApi.Http.IHttpRequest,Gw2Sharp.WebApi.Http.IHttpResponse{`0},System.String)
+  name: UnexpectedStatusException(IHttpRequest, IHttpResponse<T>, String)
+  href: api/Gw2Sharp.WebApi.Http.UnexpectedStatusException-1.html#Gw2Sharp_WebApi_Http_UnexpectedStatusException_1__ctor_Gw2Sharp_WebApi_Http_IHttpRequest_Gw2Sharp_WebApi_Http_IHttpResponse__0__System_String_
+  commentId: M:Gw2Sharp.WebApi.Http.UnexpectedStatusException`1.#ctor(Gw2Sharp.WebApi.Http.IHttpRequest,Gw2Sharp.WebApi.Http.IHttpResponse{`0},System.String)
+  name.vb: UnexpectedStatusException(IHttpRequest, IHttpResponse(Of T), String)
+  fullName: Gw2Sharp.WebApi.Http.UnexpectedStatusException<T>.UnexpectedStatusException(Gw2Sharp.WebApi.Http.IHttpRequest, Gw2Sharp.WebApi.Http.IHttpResponse<T>, System.String)
+  fullName.vb: Gw2Sharp.WebApi.Http.UnexpectedStatusException(Of T).UnexpectedStatusException(Gw2Sharp.WebApi.Http.IHttpRequest, Gw2Sharp.WebApi.Http.IHttpResponse(Of T), System.String)
+  nameWithType: UnexpectedStatusException<T>.UnexpectedStatusException(IHttpRequest, IHttpResponse<T>, String)
+  nameWithType.vb: UnexpectedStatusException(Of T).UnexpectedStatusException(IHttpRequest, IHttpResponse(Of T), String)
 - uid: Gw2Sharp.WebApi.Http.UnexpectedStatusException`1.#ctor(SerializationInfo,StreamingContext)
   name: UnexpectedStatusException(SerializationInfo, StreamingContext)
   href: api/Gw2Sharp.WebApi.Http.UnexpectedStatusException-1.html#Gw2Sharp_WebApi_Http_UnexpectedStatusException_1__ctor_SerializationInfo_StreamingContext_

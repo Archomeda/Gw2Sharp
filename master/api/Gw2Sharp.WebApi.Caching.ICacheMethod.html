@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Interface ICacheMethod
    ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -166,6 +166,9 @@
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.ChatLinks.Gw2ChatLink.html" title="Gw2ChatLink" class="">Gw2ChatLink</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.ChatLinks.Gw2ChatLink-1.html" title="Gw2ChatLink&lt;T&gt;" class="">Gw2ChatLink&lt;T&gt;</a>
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.ChatLinks.IGw2ChatLink.html" title="IGw2ChatLink" class="">IGw2ChatLink</a>
@@ -3353,7 +3356,7 @@ and stores them in the cache. Returns all cached items.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;CacheItem&lt;T&gt;? &gt; TryGetAsync&lt;T&gt;(string category, object id)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;CacheItem&lt;T&gt;&gt; TryGetAsync&lt;T&gt;(string category, object id)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3389,7 +3392,7 @@ and stores them in the cache. Returns all cached items.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">System.Nullable</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.Caching.CacheItem-1.html">CacheItem</a>&lt;T&gt;&gt;&gt;</td>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.Caching.CacheItem-1.html">CacheItem</a>&lt;T&gt;&gt;</td>
         <td><p>The task for this operation with a returned cached item if it exists and is not expired; <code>null</code> otherwise.</p>
 </td>
       </tr>

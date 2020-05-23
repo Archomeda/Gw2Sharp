@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BaseCacheMethod
    ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -166,6 +166,9 @@
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.ChatLinks.Gw2ChatLink.html" title="Gw2ChatLink" class="">Gw2ChatLink</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.ChatLinks.Gw2ChatLink-1.html" title="Gw2ChatLink&lt;T&gt;" class="">Gw2ChatLink&lt;T&gt;</a>
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.ChatLinks.IGw2ChatLink.html" title="IGw2ChatLink" class="">IGw2ChatLink</a>
@@ -2866,7 +2869,9 @@ Only items that exist are included in the returned dictionary.</p>
   </span>
   <a id="Gw2Sharp_WebApi_Caching_BaseCacheMethod_GetOrUpdateAsync_" data-uid="Gw2Sharp.WebApi.Caching.BaseCacheMethod.GetOrUpdateAsync*"></a>
   <h4 id="Gw2Sharp_WebApi_Caching_BaseCacheMethod_GetOrUpdateAsync__1_System_String_System_Object_DateTimeOffset_Func_Task___0___" data-uid="Gw2Sharp.WebApi.Caching.BaseCacheMethod.GetOrUpdateAsync``1(System.String,System.Object,DateTimeOffset,Func{Task{``0}})">GetOrUpdateAsync&lt;T&gt;(String, Object, DateTimeOffset, Func&lt;Task&lt;T&gt;&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets a cached item if it exists. If it doesn&apos;t exist, it calls <code data-dev-comment-type="paramref" class="paramref">updateFunc</code> to provide an updated value,
+stores this in the cache, and returns it.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2885,22 +2890,26 @@ Only items that exist are included in the returned dictionary.</p>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">category</span></td>
-        <td></td>
+        <td><p>The cache category.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Object</span></td>
         <td><span class="parametername">id</span></td>
-        <td></td>
+        <td><p>The cache id.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">DateTimeOffset</span></td>
         <td><span class="parametername">expiryTime</span></td>
-        <td></td>
+        <td><p>The expiry date.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">Func</span>&lt;<span class="xref">Task</span>&lt;T&gt;&gt;</td>
         <td><span class="parametername">updateFunc</span></td>
-        <td></td>
+        <td><p>The method that is called when no cache has been found.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2915,7 +2924,8 @@ Only items that exist are included in the returned dictionary.</p>
     <tbody>
       <tr>
         <td><span class="xref">Task</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.Caching.CacheItem-1.html">CacheItem</a>&lt;T&gt;&gt;</td>
-        <td></td>
+        <td><p>The item.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2930,7 +2940,8 @@ Only items that exist are included in the returned dictionary.</p>
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>The cache type.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2943,7 +2954,9 @@ Only items that exist are included in the returned dictionary.</p>
   </span>
   <a id="Gw2Sharp_WebApi_Caching_BaseCacheMethod_GetOrUpdateAsync_" data-uid="Gw2Sharp.WebApi.Caching.BaseCacheMethod.GetOrUpdateAsync*"></a>
   <h4 id="Gw2Sharp_WebApi_Caching_BaseCacheMethod_GetOrUpdateAsync__1_System_String_System_Object_Func_Task_System_ValueTuple___0_DateTimeOffset____" data-uid="Gw2Sharp.WebApi.Caching.BaseCacheMethod.GetOrUpdateAsync``1(System.String,System.Object,Func{Task{System.ValueTuple{``0,DateTimeOffset}}})">GetOrUpdateAsync&lt;T&gt;(String, Object, Func&lt;Task&lt;(T, DateTimeOffset)&gt;&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets a cached item if it exists. If it doesn&apos;t exist, it calls <code data-dev-comment-type="paramref" class="paramref">updateFunc</code> to provide an updated value and its expiry date,
+stores this in the cache, and returns it.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2962,17 +2975,20 @@ Only items that exist are included in the returned dictionary.</p>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">category</span></td>
-        <td></td>
+        <td><p>The cache category.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Object</span></td>
         <td><span class="parametername">id</span></td>
-        <td></td>
+        <td><p>The cache id.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">Func</span>&lt;<span class="xref">Task</span>&lt;<span class="xref">System.ValueTuple</span>&lt;T, <span class="xref">DateTimeOffset</span>&gt;&gt;&gt;</td>
         <td><span class="parametername">updateFunc</span></td>
-        <td></td>
+        <td><p>The method that is called when no cache has been found.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2987,7 +3003,8 @@ Only items that exist are included in the returned dictionary.</p>
     <tbody>
       <tr>
         <td><span class="xref">Task</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.Caching.CacheItem-1.html">CacheItem</a>&lt;T&gt;&gt;</td>
-        <td></td>
+        <td><p>The item.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3002,7 +3019,8 @@ Only items that exist are included in the returned dictionary.</p>
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>The cache type.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3015,7 +3033,9 @@ Only items that exist are included in the returned dictionary.</p>
   </span>
   <a id="Gw2Sharp_WebApi_Caching_BaseCacheMethod_GetOrUpdateManyAsync_" data-uid="Gw2Sharp.WebApi.Caching.BaseCacheMethod.GetOrUpdateManyAsync*"></a>
   <h4 id="Gw2Sharp_WebApi_Caching_BaseCacheMethod_GetOrUpdateManyAsync__1_System_String_IEnumerable_System_Object__DateTimeOffset_Func_IList_System_Object__Task_IDictionary_System_Object___0____" data-uid="Gw2Sharp.WebApi.Caching.BaseCacheMethod.GetOrUpdateManyAsync``1(System.String,IEnumerable{System.Object},DateTimeOffset,Func{IList{System.Object},Task{IDictionary{System.Object,``0}}})">GetOrUpdateManyAsync&lt;T&gt;(String, IEnumerable&lt;Object&gt;, DateTimeOffset, Func&lt;IList&lt;Object&gt;, Task&lt;IDictionary&lt;Object, T&gt;&gt;&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets cached items if they exist. If one or more don&apos;t exist, <code data-dev-comment-type="paramref" class="paramref">updateFunc</code> will be called to provide updated values
+and stores them in the cache. Returns all cached items.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3034,22 +3054,26 @@ Only items that exist are included in the returned dictionary.</p>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">category</span></td>
-        <td></td>
+        <td><p>The cache category.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">IEnumerable</span>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td><span class="parametername">ids</span></td>
-        <td></td>
+        <td><p>The list of cache ids.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">DateTimeOffset</span></td>
         <td><span class="parametername">expiryTime</span></td>
-        <td></td>
+        <td><p>The expiry date.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">Func</span>&lt;<span class="xref">IList</span>&lt;<span class="xref">System.Object</span>&gt;, <span class="xref">Task</span>&lt;<span class="xref">IDictionary</span>&lt;<span class="xref">System.Object</span>, T&gt;&gt;&gt;</td>
         <td><span class="parametername">updateFunc</span></td>
-        <td></td>
+        <td><p>The method that is called for items that are not cached, with as parameter the missing ids.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3064,7 +3088,8 @@ Only items that exist are included in the returned dictionary.</p>
     <tbody>
       <tr>
         <td><span class="xref">Task</span>&lt;<span class="xref">IList</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.Caching.CacheItem-1.html">CacheItem</a>&lt;T&gt;&gt;&gt;</td>
-        <td></td>
+        <td><p>The items.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3079,7 +3104,8 @@ Only items that exist are included in the returned dictionary.</p>
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>The cache type.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3092,7 +3118,9 @@ Only items that exist are included in the returned dictionary.</p>
   </span>
   <a id="Gw2Sharp_WebApi_Caching_BaseCacheMethod_GetOrUpdateManyAsync_" data-uid="Gw2Sharp.WebApi.Caching.BaseCacheMethod.GetOrUpdateManyAsync*"></a>
   <h4 id="Gw2Sharp_WebApi_Caching_BaseCacheMethod_GetOrUpdateManyAsync__1_System_String_IEnumerable_System_Object__Func_IList_System_Object__Task_System_ValueTuple_IDictionary_System_Object___0__DateTimeOffset____" data-uid="Gw2Sharp.WebApi.Caching.BaseCacheMethod.GetOrUpdateManyAsync``1(System.String,IEnumerable{System.Object},Func{IList{System.Object},Task{System.ValueTuple{IDictionary{System.Object,``0},DateTimeOffset}}})">GetOrUpdateManyAsync&lt;T&gt;(String, IEnumerable&lt;Object&gt;, Func&lt;IList&lt;Object&gt;, Task&lt;(IDictionary&lt;Object, T&gt;, DateTimeOffset)&gt;&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets cached items if they exist. If one or more don&apos;t exist, <code data-dev-comment-type="paramref" class="paramref">updateFunc</code> will be called to provide updated values and their expiry date,
+and stores them in the cache. Returns all cached items.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3111,17 +3139,20 @@ Only items that exist are included in the returned dictionary.</p>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">category</span></td>
-        <td></td>
+        <td><p>The cache category.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">IEnumerable</span>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td><span class="parametername">ids</span></td>
-        <td></td>
+        <td><p>The list of cache ids.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">Func</span>&lt;<span class="xref">IList</span>&lt;<span class="xref">System.Object</span>&gt;, <span class="xref">Task</span>&lt;<span class="xref">System.ValueTuple</span>&lt;<span class="xref">IDictionary</span>&lt;<span class="xref">System.Object</span>, T&gt;, <span class="xref">DateTimeOffset</span>&gt;&gt;&gt;</td>
         <td><span class="parametername">updateFunc</span></td>
-        <td></td>
+        <td><p>The method that is called for items that are not cached, with as parameter the missing ids.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3136,7 +3167,8 @@ Only items that exist are included in the returned dictionary.</p>
     <tbody>
       <tr>
         <td><span class="xref">Task</span>&lt;<span class="xref">IList</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.Caching.CacheItem-1.html">CacheItem</a>&lt;T&gt;&gt;&gt;</td>
-        <td></td>
+        <td><p>The items.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3151,7 +3183,8 @@ Only items that exist are included in the returned dictionary.</p>
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>The cache type.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3164,7 +3197,8 @@ Only items that exist are included in the returned dictionary.</p>
   </span>
   <a id="Gw2Sharp_WebApi_Caching_BaseCacheMethod_SetAsync_" data-uid="Gw2Sharp.WebApi.Caching.BaseCacheMethod.SetAsync*"></a>
   <h4 id="Gw2Sharp_WebApi_Caching_BaseCacheMethod_SetAsync__1_Gw2Sharp_WebApi_Caching_CacheItem___0__" data-uid="Gw2Sharp.WebApi.Caching.BaseCacheMethod.SetAsync``1(Gw2Sharp.WebApi.Caching.CacheItem{``0})">SetAsync&lt;T&gt;(CacheItem&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets a cached item.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3183,7 +3217,8 @@ Only items that exist are included in the returned dictionary.</p>
       <tr>
         <td><a class="xref" href="Gw2Sharp.WebApi.Caching.CacheItem-1.html">CacheItem</a>&lt;T&gt;</td>
         <td><span class="parametername">item</span></td>
-        <td></td>
+        <td><p>The item to cache.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3198,7 +3233,8 @@ Only items that exist are included in the returned dictionary.</p>
     <tbody>
       <tr>
         <td><span class="xref">Task</span></td>
-        <td></td>
+        <td><p>The task for this operation.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3213,7 +3249,8 @@ Only items that exist are included in the returned dictionary.</p>
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>The cache type.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3226,7 +3263,8 @@ Only items that exist are included in the returned dictionary.</p>
   </span>
   <a id="Gw2Sharp_WebApi_Caching_BaseCacheMethod_SetAsync_" data-uid="Gw2Sharp.WebApi.Caching.BaseCacheMethod.SetAsync*"></a>
   <h4 id="Gw2Sharp_WebApi_Caching_BaseCacheMethod_SetAsync__1_System_String_System_Object___0_DateTimeOffset_" data-uid="Gw2Sharp.WebApi.Caching.BaseCacheMethod.SetAsync``1(System.String,System.Object,``0,DateTimeOffset)">SetAsync&lt;T&gt;(String, Object, T, DateTimeOffset)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets a cached item.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3245,22 +3283,26 @@ Only items that exist are included in the returned dictionary.</p>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">category</span></td>
-        <td></td>
+        <td><p>The cache category.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Object</span></td>
         <td><span class="parametername">id</span></td>
-        <td></td>
+        <td><p>The id.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">T</span></td>
         <td><span class="parametername">item</span></td>
-        <td></td>
+        <td><p>The item to cache.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">DateTimeOffset</span></td>
         <td><span class="parametername">expiryTime</span></td>
-        <td></td>
+        <td><p>The expiry time.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3275,7 +3317,8 @@ Only items that exist are included in the returned dictionary.</p>
     <tbody>
       <tr>
         <td><span class="xref">Task</span></td>
-        <td></td>
+        <td><p>The task for this operation.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3290,7 +3333,8 @@ Only items that exist are included in the returned dictionary.</p>
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>The cache type.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3303,7 +3347,8 @@ Only items that exist are included in the returned dictionary.</p>
   </span>
   <a id="Gw2Sharp_WebApi_Caching_BaseCacheMethod_SetManyAsync_" data-uid="Gw2Sharp.WebApi.Caching.BaseCacheMethod.SetManyAsync*"></a>
   <h4 id="Gw2Sharp_WebApi_Caching_BaseCacheMethod_SetManyAsync__1_IEnumerable_Gw2Sharp_WebApi_Caching_CacheItem___0___" data-uid="Gw2Sharp.WebApi.Caching.BaseCacheMethod.SetManyAsync``1(IEnumerable{Gw2Sharp.WebApi.Caching.CacheItem{``0}})">SetManyAsync&lt;T&gt;(IEnumerable&lt;CacheItem&lt;T&gt;&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets many cached items of a given type at once.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3322,7 +3367,8 @@ Only items that exist are included in the returned dictionary.</p>
       <tr>
         <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.Caching.CacheItem-1.html">CacheItem</a>&lt;T&gt;&gt;</td>
         <td><span class="parametername">items</span></td>
-        <td></td>
+        <td><p>The items.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3337,7 +3383,8 @@ Only items that exist are included in the returned dictionary.</p>
     <tbody>
       <tr>
         <td><span class="xref">Task</span></td>
-        <td></td>
+        <td><p>The task for this operation.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3352,7 +3399,8 @@ Only items that exist are included in the returned dictionary.</p>
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>The cache type.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3370,7 +3418,7 @@ Only items that exist are included in the returned dictionary.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract Task&lt;CacheItem&lt;T&gt;? &gt; TryGetAsync&lt;T&gt;(string category, object id)</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract Task&lt;CacheItem&lt;T&gt;&gt; TryGetAsync&lt;T&gt;(string category, object id)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3406,7 +3454,7 @@ Only items that exist are included in the returned dictionary.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">System.Nullable</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.Caching.CacheItem-1.html">CacheItem</a>&lt;T&gt;&gt;&gt;</td>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.Caching.CacheItem-1.html">CacheItem</a>&lt;T&gt;&gt;</td>
         <td><p>The task for this operation with a returned cached item if it exists and is not expired; <code>null</code> otherwise.</p>
 </td>
       </tr>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BaseEndpointBulkAllClient&lt;TObject, TId&gt;
    ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -166,6 +166,9 @@
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.ChatLinks.Gw2ChatLink.html" title="Gw2ChatLink" class="">Gw2ChatLink</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.ChatLinks.Gw2ChatLink-1.html" title="Gw2ChatLink&lt;T&gt;" class="">Gw2ChatLink&lt;T&gt;</a>
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.ChatLinks.IGw2ChatLink.html" title="IGw2ChatLink" class="">IGw2ChatLink</a>
@@ -2798,7 +2801,7 @@
   <h6><strong>Assembly</strong>: Gw2Sharp.dll</h6>
   <h5 id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkAllClient_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class BaseEndpointBulkAllClient&lt;TObject, TId&gt; : BaseEndpointClient&lt;TObject&gt;, IAllExpandableClient&lt;TObject&gt;, IBulkExpandableClient&lt;TObject, TId&gt;, IPaginatedClient&lt;TObject&gt;, IEndpointClient where TObject : IApiV2Object, IIdentifiable&lt;TId&gt; where TId : notnull</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class BaseEndpointBulkAllClient&lt;TObject, TId&gt; : BaseEndpointClient&lt;TObject&gt;, IAllExpandableClient&lt;TObject&gt;, IBulkExpandableClient&lt;TObject, TId&gt;, IPaginatedClient&lt;TObject&gt;, IEndpointClient where TObject : IApiV2Object, IIdentifiable&lt;TId&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2880,7 +2883,8 @@
   </span>
   <a id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkAllClient_2_AllAsync_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.AllAsync*"></a>
   <h4 id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkAllClient_2_AllAsync_CancellationToken_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.AllAsync(CancellationToken)">AllAsync(CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Requests all entries.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2899,7 +2903,8 @@
       <tr>
         <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
+        <td><p>The cancellation token.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2914,7 +2919,8 @@
     <tbody>
       <tr>
         <td><span class="xref">Task</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.IApiV2ObjectList-1.html">IApiV2ObjectList</a>&lt;TObject&gt;&gt;</td>
-        <td></td>
+        <td><p>All entries.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2927,7 +2933,8 @@
   </span>
   <a id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkAllClient_2_GetAsync_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.GetAsync*"></a>
   <h4 id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkAllClient_2_GetAsync__1_CancellationToken_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.GetAsync(`1,CancellationToken)">GetAsync(TId, CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Requests a single entry by id.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2946,12 +2953,14 @@
       <tr>
         <td><span class="xref">TId</span></td>
         <td><span class="parametername">id</span></td>
-        <td></td>
+        <td><p>The entry id.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
+        <td><p>The cancellation token.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2966,7 +2975,8 @@
     <tbody>
       <tr>
         <td><span class="xref">Task</span>&lt;TObject&gt;</td>
-        <td></td>
+        <td><p>The entry.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2979,7 +2989,8 @@
   </span>
   <a id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkAllClient_2_IdsAsync_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.IdsAsync*"></a>
   <h4 id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkAllClient_2_IdsAsync_CancellationToken_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.IdsAsync(CancellationToken)">IdsAsync(CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Requests all ids.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2998,7 +3009,8 @@
       <tr>
         <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
+        <td><p>The cancellation token.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3013,7 +3025,8 @@
     <tbody>
       <tr>
         <td><span class="xref">Task</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.IApiV2ObjectList-1.html">IApiV2ObjectList</a>&lt;TId&gt;&gt;</td>
-        <td></td>
+        <td><p>The list of available ids.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3026,7 +3039,8 @@
   </span>
   <a id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkAllClient_2_ManyAsync_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.ManyAsync*"></a>
   <h4 id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkAllClient_2_ManyAsync_IEnumerable__1__CancellationToken_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.ManyAsync(IEnumerable{`1},CancellationToken)">ManyAsync(IEnumerable&lt;TId&gt;, CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Requests many entries by their id (a.k.a. bulk expansion).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3045,12 +3059,14 @@
       <tr>
         <td><span class="xref">IEnumerable</span>&lt;TId&gt;</td>
         <td><span class="parametername">ids</span></td>
-        <td></td>
+        <td><p>The entry ids.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
+        <td><p>The cancellation token.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3065,7 +3081,8 @@
     <tbody>
       <tr>
         <td><span class="xref">Task</span>&lt;<span class="xref">IReadOnlyList</span>&lt;TObject&gt;&gt;</td>
-        <td></td>
+        <td><p>The entries.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3078,7 +3095,8 @@
   </span>
   <a id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkAllClient_2_PageAsync_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.PageAsync*"></a>
   <h4 id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkAllClient_2_PageAsync_System_Int32_CancellationToken_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.PageAsync(System.Int32,CancellationToken)">PageAsync(Int32, CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Requests a page of entries with a specific page size.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3097,12 +3115,14 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">page</span></td>
-        <td></td>
+        <td><p>The page number (zero-indexed).</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
+        <td><p>The cancellation token.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3117,7 +3137,8 @@
     <tbody>
       <tr>
         <td><span class="xref">Task</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.IApiV2ObjectList-1.html">IApiV2ObjectList</a>&lt;TObject&gt;&gt;</td>
-        <td></td>
+        <td><p>The entries.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3130,7 +3151,8 @@
   </span>
   <a id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkAllClient_2_PageAsync_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.PageAsync*"></a>
   <h4 id="Gw2Sharp_WebApi_V2_Clients_BaseEndpointBulkAllClient_2_PageAsync_System_Int32_System_Int32_CancellationToken_" data-uid="Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient`2.PageAsync(System.Int32,System.Int32,CancellationToken)">PageAsync(Int32, Int32, CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Requests a page of entries with a specific page size.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3149,17 +3171,20 @@
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">page</span></td>
-        <td></td>
+        <td><p>The page number (zero-indexed).</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">pageSize</span></td>
-        <td></td>
+        <td><p>The page size.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
+        <td><p>The cancellation token.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3174,7 +3199,8 @@
     <tbody>
       <tr>
         <td><span class="xref">Task</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.IApiV2ObjectList-1.html">IApiV2ObjectList</a>&lt;TObject&gt;&gt;</td>
-        <td></td>
+        <td><p>The entries.</p>
+</td>
       </tr>
     </tbody>
   </table>

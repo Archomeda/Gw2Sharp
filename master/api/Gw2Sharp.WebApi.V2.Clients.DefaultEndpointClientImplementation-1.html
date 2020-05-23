@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class DefaultEndpointClientImplementation&lt;TObject&gt;
    ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -166,6 +166,9 @@
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.ChatLinks.Gw2ChatLink.html" title="Gw2ChatLink" class="">Gw2ChatLink</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.ChatLinks.Gw2ChatLink-1.html" title="Gw2ChatLink&lt;T&gt;" class="">Gw2ChatLink&lt;T&gt;</a>
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.ChatLinks.IGw2ChatLink.html" title="IGw2ChatLink" class="">IGw2ChatLink</a>
@@ -3420,12 +3423,13 @@ Non-expired items in the cache are skipped for requests and are taken from the c
   </span>
   <a id="Gw2Sharp_WebApi_V2_Clients_DefaultEndpointClientImplementation_1_RequestAllAsync_" data-uid="Gw2Sharp.WebApi.V2.Clients.DefaultEndpointClientImplementation`1.RequestAllAsync*"></a>
   <h4 id="Gw2Sharp_WebApi_V2_Clients_DefaultEndpointClientImplementation_1_RequestAllAsync__2_CancellationToken_" data-uid="Gw2Sharp.WebApi.V2.Clients.DefaultEndpointClientImplementation`1.RequestAllAsync``2(CancellationToken)">RequestAllAsync&lt;TEndpointObject, TId&gt;(CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Requests all entries from this endpoint.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public virtual Task&lt;IApiV2ObjectList&lt;TEndpointObject&gt;&gt; RequestAllAsync&lt;TEndpointObject, TId&gt;(CancellationToken cancellationToken = null)
-    where TEndpointObject : IApiV2Object, IIdentifiable&lt;TId&gt; where TId : notnull</code></pre>
+    where TEndpointObject : IApiV2Object, IIdentifiable&lt;TId&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3440,7 +3444,8 @@ Non-expired items in the cache are skipped for requests and are taken from the c
       <tr>
         <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
+        <td><p>The cancellation token.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3455,7 +3460,8 @@ Non-expired items in the cache are skipped for requests and are taken from the c
     <tbody>
       <tr>
         <td><span class="xref">Task</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.IApiV2ObjectList-1.html">IApiV2ObjectList</a>&lt;TEndpointObject&gt;&gt;</td>
-        <td></td>
+        <td><p>All entries.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3470,11 +3476,13 @@ Non-expired items in the cache are skipped for requests and are taken from the c
     <tbody>
       <tr>
         <td><span class="parametername">TEndpointObject</span></td>
-        <td></td>
+        <td><p>The endpoint return value type.</p>
+</td>
       </tr>
       <tr>
         <td><span class="parametername">TId</span></td>
-        <td></td>
+        <td><p>The entry id type.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3487,7 +3495,8 @@ Non-expired items in the cache are skipped for requests and are taken from the c
   </span>
   <a id="Gw2Sharp_WebApi_V2_Clients_DefaultEndpointClientImplementation_1_RequestGetAsync_" data-uid="Gw2Sharp.WebApi.V2.Clients.DefaultEndpointClientImplementation`1.RequestGetAsync*"></a>
   <h4 id="Gw2Sharp_WebApi_V2_Clients_DefaultEndpointClientImplementation_1_RequestGetAsync_CancellationToken_" data-uid="Gw2Sharp.WebApi.V2.Clients.DefaultEndpointClientImplementation`1.RequestGetAsync(CancellationToken)">RequestGetAsync(CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Requests the main blob data from this endpoint.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3506,7 +3515,8 @@ Non-expired items in the cache are skipped for requests and are taken from the c
       <tr>
         <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
+        <td><p>The cancellation token.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3521,7 +3531,8 @@ Non-expired items in the cache are skipped for requests and are taken from the c
     <tbody>
       <tr>
         <td><span class="xref">Task</span>&lt;TObject&gt;</td>
-        <td></td>
+        <td><p>The blob data.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3534,12 +3545,13 @@ Non-expired items in the cache are skipped for requests and are taken from the c
   </span>
   <a id="Gw2Sharp_WebApi_V2_Clients_DefaultEndpointClientImplementation_1_RequestGetAsync_" data-uid="Gw2Sharp.WebApi.V2.Clients.DefaultEndpointClientImplementation`1.RequestGetAsync*"></a>
   <h4 id="Gw2Sharp_WebApi_V2_Clients_DefaultEndpointClientImplementation_1_RequestGetAsync__2___1_CancellationToken_" data-uid="Gw2Sharp.WebApi.V2.Clients.DefaultEndpointClientImplementation`1.RequestGetAsync``2(``1,CancellationToken)">RequestGetAsync&lt;TEndpointObject, TId&gt;(TId, CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Requests a single entry by id.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public virtual Task&lt;TEndpointObject&gt; RequestGetAsync&lt;TEndpointObject, TId&gt;(TId id, CancellationToken cancellationToken = null)
-    where TEndpointObject : IApiV2Object, IIdentifiable&lt;TId&gt; where TId : notnull</code></pre>
+    where TEndpointObject : IApiV2Object, IIdentifiable&lt;TId&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3554,12 +3566,14 @@ Non-expired items in the cache are skipped for requests and are taken from the c
       <tr>
         <td><span class="xref">TId</span></td>
         <td><span class="parametername">id</span></td>
-        <td></td>
+        <td><p>The entry id.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
+        <td><p>The cancellation token.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3574,7 +3588,8 @@ Non-expired items in the cache are skipped for requests and are taken from the c
     <tbody>
       <tr>
         <td><span class="xref">Task</span>&lt;TEndpointObject&gt;</td>
-        <td></td>
+        <td><p>The entry.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3589,11 +3604,13 @@ Non-expired items in the cache are skipped for requests and are taken from the c
     <tbody>
       <tr>
         <td><span class="parametername">TEndpointObject</span></td>
-        <td></td>
+        <td><p>The endpoint return value type.</p>
+</td>
       </tr>
       <tr>
         <td><span class="parametername">TId</span></td>
-        <td></td>
+        <td><p>The id value type.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3606,12 +3623,12 @@ Non-expired items in the cache are skipped for requests and are taken from the c
   </span>
   <a id="Gw2Sharp_WebApi_V2_Clients_DefaultEndpointClientImplementation_1_RequestIdsAsync_" data-uid="Gw2Sharp.WebApi.V2.Clients.DefaultEndpointClientImplementation`1.RequestIdsAsync*"></a>
   <h4 id="Gw2Sharp_WebApi_V2_Clients_DefaultEndpointClientImplementation_1_RequestIdsAsync__1_CancellationToken_" data-uid="Gw2Sharp.WebApi.V2.Clients.DefaultEndpointClientImplementation`1.RequestIdsAsync``1(CancellationToken)">RequestIdsAsync&lt;TId&gt;(CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Requests the list of entry ids from this endpoint.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual Task&lt;IApiV2ObjectList&lt;TId&gt;&gt; RequestIdsAsync&lt;TId&gt;(CancellationToken cancellationToken = null)
-    where TId : notnull</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;IApiV2ObjectList&lt;TId&gt;&gt; RequestIdsAsync&lt;TId&gt;(CancellationToken cancellationToken = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3626,7 +3643,8 @@ Non-expired items in the cache are skipped for requests and are taken from the c
       <tr>
         <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
+        <td><p>The cancellation token.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3641,7 +3659,8 @@ Non-expired items in the cache are skipped for requests and are taken from the c
     <tbody>
       <tr>
         <td><span class="xref">Task</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.IApiV2ObjectList-1.html">IApiV2ObjectList</a>&lt;TId&gt;&gt;</td>
-        <td></td>
+        <td><p>Entry ids.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3656,7 +3675,8 @@ Non-expired items in the cache are skipped for requests and are taken from the c
     <tbody>
       <tr>
         <td><span class="parametername">TId</span></td>
-        <td></td>
+        <td><p>The entry id type.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3669,12 +3689,13 @@ Non-expired items in the cache are skipped for requests and are taken from the c
   </span>
   <a id="Gw2Sharp_WebApi_V2_Clients_DefaultEndpointClientImplementation_1_RequestManyAsync_" data-uid="Gw2Sharp.WebApi.V2.Clients.DefaultEndpointClientImplementation`1.RequestManyAsync*"></a>
   <h4 id="Gw2Sharp_WebApi_V2_Clients_DefaultEndpointClientImplementation_1_RequestManyAsync__2_IEnumerable___1__CancellationToken_" data-uid="Gw2Sharp.WebApi.V2.Clients.DefaultEndpointClientImplementation`1.RequestManyAsync``2(IEnumerable{``1},CancellationToken)">RequestManyAsync&lt;TEndpointObject, TId&gt;(IEnumerable&lt;TId&gt;, CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Requests many entries by their id (a.k.a. bulk expansion).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public virtual Task&lt;IReadOnlyList&lt;TEndpointObject&gt;&gt; RequestManyAsync&lt;TEndpointObject, TId&gt;(IEnumerable&lt;TId&gt; ids, CancellationToken cancellationToken = null)
-    where TEndpointObject : IApiV2Object, IIdentifiable&lt;TId&gt; where TId : notnull</code></pre>
+    where TEndpointObject : IApiV2Object, IIdentifiable&lt;TId&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3689,12 +3710,14 @@ Non-expired items in the cache are skipped for requests and are taken from the c
       <tr>
         <td><span class="xref">IEnumerable</span>&lt;TId&gt;</td>
         <td><span class="parametername">ids</span></td>
-        <td></td>
+        <td><p>The entry ids.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
+        <td><p>The cancellation token.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3709,7 +3732,8 @@ Non-expired items in the cache are skipped for requests and are taken from the c
     <tbody>
       <tr>
         <td><span class="xref">Task</span>&lt;<span class="xref">IReadOnlyList</span>&lt;TEndpointObject&gt;&gt;</td>
-        <td></td>
+        <td><p>The entries.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3724,11 +3748,13 @@ Non-expired items in the cache are skipped for requests and are taken from the c
     <tbody>
       <tr>
         <td><span class="parametername">TEndpointObject</span></td>
-        <td></td>
+        <td><p>The endpoint return value type.</p>
+</td>
       </tr>
       <tr>
         <td><span class="parametername">TId</span></td>
-        <td></td>
+        <td><p>The id value type.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3741,7 +3767,8 @@ Non-expired items in the cache are skipped for requests and are taken from the c
   </span>
   <a id="Gw2Sharp_WebApi_V2_Clients_DefaultEndpointClientImplementation_1_RequestPageAsync_" data-uid="Gw2Sharp.WebApi.V2.Clients.DefaultEndpointClientImplementation`1.RequestPageAsync*"></a>
   <h4 id="Gw2Sharp_WebApi_V2_Clients_DefaultEndpointClientImplementation_1_RequestPageAsync_System_Int32_System_Int32_CancellationToken_" data-uid="Gw2Sharp.WebApi.V2.Clients.DefaultEndpointClientImplementation`1.RequestPageAsync(System.Int32,System.Int32,CancellationToken)">RequestPageAsync(Int32, Int32, CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Requests a page of blob data with a specific page size.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -3760,17 +3787,20 @@ Non-expired items in the cache are skipped for requests and are taken from the c
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">page</span></td>
-        <td></td>
+        <td><p>The page number (zero-indexed).</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">pageSize</span></td>
-        <td></td>
+        <td><p>The page size (maximum 200).</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
+        <td><p>The cancellation token.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3785,7 +3815,8 @@ Non-expired items in the cache are skipped for requests and are taken from the c
     <tbody>
       <tr>
         <td><span class="xref">Task</span>&lt;TObject&gt;</td>
-        <td></td>
+        <td><p>The entries.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3798,12 +3829,13 @@ Non-expired items in the cache are skipped for requests and are taken from the c
   </span>
   <a id="Gw2Sharp_WebApi_V2_Clients_DefaultEndpointClientImplementation_1_RequestPageAsync_" data-uid="Gw2Sharp.WebApi.V2.Clients.DefaultEndpointClientImplementation`1.RequestPageAsync*"></a>
   <h4 id="Gw2Sharp_WebApi_V2_Clients_DefaultEndpointClientImplementation_1_RequestPageAsync__2_System_Int32_System_Int32_CancellationToken_" data-uid="Gw2Sharp.WebApi.V2.Clients.DefaultEndpointClientImplementation`1.RequestPageAsync``2(System.Int32,System.Int32,CancellationToken)">RequestPageAsync&lt;TEndpointObject, TId&gt;(Int32, Int32, CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Requests a page of entries with a specific page size.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public virtual Task&lt;IApiV2ObjectList&lt;TEndpointObject&gt;&gt; RequestPageAsync&lt;TEndpointObject, TId&gt;(int page, int pageSize = null, CancellationToken cancellationToken = null)
-    where TEndpointObject : IApiV2Object, IIdentifiable&lt;TId&gt; where TId : notnull</code></pre>
+    where TEndpointObject : IApiV2Object, IIdentifiable&lt;TId&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3818,17 +3850,20 @@ Non-expired items in the cache are skipped for requests and are taken from the c
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">page</span></td>
-        <td></td>
+        <td><p>The page number (zero-indexed).</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">pageSize</span></td>
-        <td></td>
+        <td><p>The page size (maximum 200).</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
+        <td><p>The cancellation token.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3843,7 +3878,8 @@ Non-expired items in the cache are skipped for requests and are taken from the c
     <tbody>
       <tr>
         <td><span class="xref">Task</span>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.IApiV2ObjectList-1.html">IApiV2ObjectList</a>&lt;TEndpointObject&gt;&gt;</td>
-        <td></td>
+        <td><p>The entries.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -3858,11 +3894,13 @@ Non-expired items in the cache are skipped for requests and are taken from the c
     <tbody>
       <tr>
         <td><span class="parametername">TEndpointObject</span></td>
-        <td></td>
+        <td><p>The endpoint return value type.</p>
+</td>
       </tr>
       <tr>
         <td><span class="parametername">TId</span></td>
-        <td></td>
+        <td><p>The id value type.</p>
+</td>
       </tr>
     </tbody>
   </table>
