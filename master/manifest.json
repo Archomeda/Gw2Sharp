@@ -9678,7 +9678,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Gw2Sharp.WebApi.V2.Models.SkillWeaponType.html",
-          "hash": "7G8LdHwtzcoxW5Z/LHz+MQ=="
+          "hash": "vQZWVYkFpkuE+8lHP3hZXQ=="
         }
       },
       "is_incremental": false,
@@ -10339,16 +10339,16 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 848,
-          "skipped_file_count": 0
-        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 11,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 848,
           "skipped_file_count": 0
         }
       }

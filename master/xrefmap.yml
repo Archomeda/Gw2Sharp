@@ -37004,12 +37004,6 @@ references:
   commentId: F:Gw2Sharp.WebApi.V2.Models.SkillWeaponType.Hammer
   fullName: Gw2Sharp.WebApi.V2.Models.SkillWeaponType.Hammer
   nameWithType: SkillWeaponType.Hammer
-- uid: Gw2Sharp.WebApi.V2.Models.SkillWeaponType.Harpoon
-  name: Harpoon
-  href: api/Gw2Sharp.WebApi.V2.Models.SkillWeaponType.html#Gw2Sharp_WebApi_V2_Models_SkillWeaponType_Harpoon
-  commentId: F:Gw2Sharp.WebApi.V2.Models.SkillWeaponType.Harpoon
-  fullName: Gw2Sharp.WebApi.V2.Models.SkillWeaponType.Harpoon
-  nameWithType: SkillWeaponType.Harpoon
 - uid: Gw2Sharp.WebApi.V2.Models.SkillWeaponType.LongBow
   name: LongBow
   href: api/Gw2Sharp.WebApi.V2.Models.SkillWeaponType.html#Gw2Sharp_WebApi_V2_Models_SkillWeaponType_LongBow
