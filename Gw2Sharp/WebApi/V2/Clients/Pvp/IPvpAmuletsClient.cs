@@ -9,7 +9,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public interface IPvpAmuletsClient :
         IAllExpandableClient<PvpAmulet>,
         IBulkExpandableClient<PvpAmulet, int>,
-        ILocalizedClient<PvpAmulet>,
+        ILocalizedClient,
         IPaginatedClient<PvpAmulet>
     {
     }

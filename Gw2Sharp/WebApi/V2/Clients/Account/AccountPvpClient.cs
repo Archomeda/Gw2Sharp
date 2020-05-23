@@ -7,7 +7,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// </summary>
     [EndpointPath("account/pvp")]
     [EndpointSchemaVersion("2019-02-21T00:00:00.000Z")]
-    public class AccountPvpClient : BaseClient, IAccountPvpClient
+    public class AccountPvpClient : Gw2WebApiBaseClient, IAccountPvpClient
     {
         private readonly IAccountPvpHeroesClient heroes;
 

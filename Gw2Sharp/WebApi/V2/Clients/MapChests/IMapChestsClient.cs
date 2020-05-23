@@ -9,7 +9,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public interface IMapChestsClient :
         IAllExpandableClient<MapChest>,
         IBulkExpandableClient<MapChest, string>,
-        ILocalizedClient<MapChest>,
+        ILocalizedClient,
         IPaginatedClient<MapChest>
     {
     }

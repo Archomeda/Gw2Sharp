@@ -6,7 +6,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 backstory endpoint.
     /// </summary>
     [EndpointPath("backstory")]
-    public class BackstoryClient : BaseClient, IBackstoryClient
+    public class BackstoryClient : Gw2WebApiBaseClient, IBackstoryClient
     {
         private readonly IBackstoryAnswersClient answers;
         private readonly IBackstoryQuestionsClient questions;

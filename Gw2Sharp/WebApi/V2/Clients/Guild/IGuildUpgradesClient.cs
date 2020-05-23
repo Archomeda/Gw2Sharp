@@ -8,7 +8,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public interface IGuildUpgradesClient :
         IAllExpandableClient<GuildUpgrade>,
         IBulkExpandableClient<GuildUpgrade, int>,
-        ILocalizedClient<GuildUpgrade>,
+        ILocalizedClient,
         IPaginatedClient<GuildUpgrade>
     {
     }

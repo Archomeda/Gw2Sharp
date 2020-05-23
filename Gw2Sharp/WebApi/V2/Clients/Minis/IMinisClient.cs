@@ -9,7 +9,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public interface IMinisClient :
         IAllExpandableClient<Mini>,
         IBulkExpandableClient<Mini, int>,
-        ILocalizedClient<Mini>,
+        ILocalizedClient,
         IPaginatedClient<Mini>
     {
     }

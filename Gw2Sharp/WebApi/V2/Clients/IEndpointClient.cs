@@ -5,7 +5,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// <summary>
     /// Implements an endpoint client.
     /// </summary>
-    public interface IEndpointClient : IClient
+    public interface IEndpointClient
     {
         /// <summary>
         /// The endpoint path used for this endpoint.

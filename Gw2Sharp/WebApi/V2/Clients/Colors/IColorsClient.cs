@@ -9,7 +9,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public interface IColorsClient :
         IAllExpandableClient<Color>,
         IBulkExpandableClient<Color, int>,
-        ILocalizedClient<Color>,
+        ILocalizedClient,
         IPaginatedClient<Color>
     {
     }

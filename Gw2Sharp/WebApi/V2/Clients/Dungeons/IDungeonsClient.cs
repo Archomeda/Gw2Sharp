@@ -9,7 +9,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public interface IDungeonsClient :
         IAllExpandableClient<Dungeon>,
         IBulkExpandableClient<Dungeon, string>,
-        ILocalizedClient<Dungeon>,
+        ILocalizedClient,
         IPaginatedClient<Dungeon>
     {
     }

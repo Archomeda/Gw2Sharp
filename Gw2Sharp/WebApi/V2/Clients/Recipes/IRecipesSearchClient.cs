@@ -3,7 +3,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// <summary>
     /// A client of the Guild Wars 2 API v2 recipes search endpoint.
     /// </summary>
-    public interface IRecipesSearchClient : IClient
+    public interface IRecipesSearchClient
     {
         /// <summary>
         /// Requests recipes with the specified input item id.

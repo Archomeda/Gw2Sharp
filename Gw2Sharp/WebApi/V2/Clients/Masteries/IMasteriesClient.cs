@@ -9,7 +9,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public interface IMasteriesClient :
         IAllExpandableClient<Mastery>,
         IBulkExpandableClient<Mastery, int>,
-        ILocalizedClient<Mastery>,
+        ILocalizedClient,
         IPaginatedClient<Mastery>
     {
     }

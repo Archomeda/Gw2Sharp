@@ -8,7 +8,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public interface IGlidersClient :
         IAllExpandableClient<Glider>,
         IBulkExpandableClient<Glider, int>,
-        ILocalizedClient<Glider>,
+        ILocalizedClient,
         IPaginatedClient<Glider>
     {
     }

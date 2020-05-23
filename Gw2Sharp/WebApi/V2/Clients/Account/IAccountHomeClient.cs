@@ -3,7 +3,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// <summary>
     /// A client of the Guild Wars 2 API v2 account home endpoint.
     /// </summary>
-    public interface IAccountHomeClient : IClient
+    public interface IAccountHomeClient
     {
         /// <summary>
         /// Gets the unlocked home cats.

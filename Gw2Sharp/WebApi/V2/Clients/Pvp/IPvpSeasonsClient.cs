@@ -10,7 +10,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public interface IPvpSeasonsClient :
         IAllExpandableClient<PvpSeason>,
         IBulkExpandableClient<PvpSeason, Guid>,
-        ILocalizedClient<PvpSeason>,
+        ILocalizedClient,
         IPaginatedClient<PvpSeason>
     {
         /// <summary>

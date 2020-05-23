@@ -9,7 +9,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// An abstract base class for implementing endpoint clients.
     /// </summary>
     /// <typeparam name="TObject">The response object type.</typeparam>
-    public abstract class BaseEndpointClient<TObject> : BaseClient, IEndpointClient
+    public abstract class BaseEndpointClient<TObject> : Gw2WebApiBaseClient, IEndpointClient
         where TObject : IApiV2Object
     {
         private readonly IReadOnlyList<(PropertyInfo Property, EndpointPathParameterAttribute Attribute)> parameterProperties;
@@ -48,8 +48,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
             this.BulkEndpointIdsParameterName = bulkIdAttribute?.Ids ?? "ids";
             this.SchemaVersion = this.GetAttribute<EndpointSchemaVersionAttribute>()?.SchemaVersion;
 
-            this.IsLocalized = this.ImplementsGenericInterface(typeof(ILocalizedClient<>));
 #pragma warning disable S3060 // "is" should not be used with "this"
+            this.IsLocalized = this is ILocalizedClient;
             this.IsAuthenticated = this is IAuthenticatedClient;
 #pragma warning restore S3060 // "is" should not be used with "this"
             this.IsPaginated = this.ImplementsGenericInterface(typeof(IPaginatedClient<>));

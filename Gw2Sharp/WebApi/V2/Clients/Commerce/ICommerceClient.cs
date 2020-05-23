@@ -3,7 +3,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// <summary>
     /// A client of the Guild Wars 2 API v2 commerce endpoint.
     /// </summary>
-    public interface ICommerceClient : IClient
+    public interface ICommerceClient
     {
         /// <summary>
         /// Gets the commerce delivery.

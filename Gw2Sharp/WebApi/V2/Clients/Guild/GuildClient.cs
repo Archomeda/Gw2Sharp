@@ -6,7 +6,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 guild endpoint.
     /// </summary>
     [EndpointPath("guild")]
-    public class GuildClient : BaseClient, IGuildClient
+    public class GuildClient : Gw2WebApiBaseClient, IGuildClient
     {
         private readonly IGuildPermissionsClient permissions;
         private readonly IGuildSearchClient search;

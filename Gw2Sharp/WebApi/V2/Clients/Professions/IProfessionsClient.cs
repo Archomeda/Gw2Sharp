@@ -10,7 +10,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         IAllExpandableClient<Profession>,
         IBulkExpandableClient<Profession, string>,
         IBulkAliasExpandableClient<Profession, ProfessionType>,
-        ILocalizedClient<Profession>,
+        ILocalizedClient,
         IPaginatedClient<Profession>
     {
     }

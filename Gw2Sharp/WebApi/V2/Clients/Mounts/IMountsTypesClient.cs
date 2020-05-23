@@ -9,7 +9,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public interface IMountsTypesClient :
         IAllExpandableClient<MountType>,
         IBulkExpandableClient<MountType, string>,
-        ILocalizedClient<MountType>,
+        ILocalizedClient,
         IPaginatedClient<MountType>
     {
     }

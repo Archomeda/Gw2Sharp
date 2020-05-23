@@ -9,7 +9,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public interface IMountsSkinsClient :
         IAllExpandableClient<MountSkin>,
         IBulkExpandableClient<MountSkin, int>,
-        ILocalizedClient<MountSkin>,
+        ILocalizedClient,
         IPaginatedClient<MountSkin>
     {
     }

@@ -12,6 +12,8 @@
 
 ### Refactoring
 - **Breaking:** `Gw2Sharp.Models.MountSkinDyeSlot` has been renamed to `Gw2Sharp.Models.SkinDyeSlot`
+- **Breaking:** `Gw2Sharp.WebApi.V2.Clients.ILocalizedClient` no longer accepts the object type as generic type parameter; it's now just an interface without any type parameters ([#57](https://github.com/Archomeda/Gw2Sharp/issues/57), [#61](https://github.com/Archomeda/Gw2Sharp/pull/61))
+- **Breaking:** Some internal reworkings of how the various endpoint clients are implemented; this includes the removal of the public `Gw2Sharp.IClient` interface ([#61](https://github.com/Archomeda/Gw2Sharp/pull/61))
 
 ### Deprecation removals
 - Following up on version 0.9.5, the enum value `Gw2Sharp.WebApi.V2.Models.SkillWeaponType.Harpoon` has been removed in favor of `Spear`

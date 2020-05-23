@@ -6,10 +6,10 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// <summary>
     /// A client of the Guild Wars 2 API v2 continents endpoint.
     /// </summary>
-    public interface IContinentsClient:
+    public interface IContinentsClient :
         IAllExpandableClient<Continent>,
         IBulkExpandableClient<Continent, int>,
-        ILocalizedClient<Continent>,
+        ILocalizedClient,
         IPaginatedClient<Continent>
     {
         /// <summary>

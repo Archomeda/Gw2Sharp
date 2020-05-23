@@ -8,7 +8,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public interface IContinentsFloorsRegionsMapsPoisClient :
         IAllExpandableClient<ContinentFloorRegionMapPoi>,
         IBulkExpandableClient<ContinentFloorRegionMapPoi, int>,
-        ILocalizedClient<ContinentFloorRegionMapPoi>,
+        ILocalizedClient,
         IPaginatedClient<ContinentFloorRegionMapPoi>
     {
         /// <summary>

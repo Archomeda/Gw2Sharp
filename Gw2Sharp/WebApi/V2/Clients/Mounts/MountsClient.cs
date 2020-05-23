@@ -6,7 +6,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 mounts endpoint.
     /// </summary>
     [EndpointPath("mounts")]
-    public class MountsClient : BaseClient, IMountsClient
+    public class MountsClient : Gw2WebApiBaseClient, IMountsClient
     {
         private readonly IMountsSkinsClient skins;
         private readonly IMountsTypesClient types;

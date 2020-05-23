@@ -8,7 +8,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public interface INoveltiesClient :
         IAllExpandableClient<Novelty>,
         IBulkExpandableClient<Novelty, int>,
-        ILocalizedClient<Novelty>,
+        ILocalizedClient,
         IPaginatedClient<Novelty>
     {
     }

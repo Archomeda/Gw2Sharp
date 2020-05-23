@@ -8,7 +8,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public interface IQuestsClient :
         IAllExpandableClient<Quest>,
         IBulkExpandableClient<Quest, int>,
-        ILocalizedClient<Quest>,
+        ILocalizedClient,
         IPaginatedClient<Quest>
     {
     }

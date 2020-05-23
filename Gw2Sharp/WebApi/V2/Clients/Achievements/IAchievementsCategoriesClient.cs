@@ -8,7 +8,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public interface IAchievementsCategoriesClient :
         IAllExpandableClient<AchievementCategory>,
         IBulkExpandableClient<AchievementCategory, int>,
-        ILocalizedClient<AchievementCategory>,
+        ILocalizedClient,
         IPaginatedClient<AchievementCategory>
     {
     }

@@ -8,7 +8,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public interface ITraitsClient :
         IAllExpandableClient<Trait>,
         IBulkExpandableClient<Trait, int>,
-        ILocalizedClient<Trait>,
+        ILocalizedClient,
         IPaginatedClient<Trait>
     {
     }

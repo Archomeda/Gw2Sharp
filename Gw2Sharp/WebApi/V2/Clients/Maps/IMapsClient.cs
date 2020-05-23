@@ -9,7 +9,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public interface IMapsClient :
         IAllExpandableClient<Map>,
         IBulkExpandableClient<Map, int>,
-        ILocalizedClient<Map>,
+        ILocalizedClient,
         IPaginatedClient<Map>
     {
     }

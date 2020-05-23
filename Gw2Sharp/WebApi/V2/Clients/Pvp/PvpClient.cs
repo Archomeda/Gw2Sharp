@@ -6,7 +6,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 PvP endpoint.
     /// </summary>
     [EndpointPath("pvp")]
-    public class PvpClient : BaseClient, IPvpClient
+    public class PvpClient : Gw2WebApiBaseClient, IPvpClient
     {
         private readonly IPvpAmuletsClient amulets;
         private readonly IPvpGamesClient games;

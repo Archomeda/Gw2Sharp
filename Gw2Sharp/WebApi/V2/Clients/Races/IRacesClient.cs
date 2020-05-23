@@ -10,7 +10,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         IAllExpandableClient<Race>,
         IBulkExpandableClient<Race, string>,
         IBulkAliasExpandableClient<Race, RaceType>,
-        ILocalizedClient<Race>,
+        ILocalizedClient,
         IPaginatedClient<Race>
     {
     }

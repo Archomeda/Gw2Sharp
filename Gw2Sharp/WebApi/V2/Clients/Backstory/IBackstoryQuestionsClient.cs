@@ -8,8 +8,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public interface IBackstoryQuestionsClient :
         IAllExpandableClient<BackstoryQuestion>,
         IBulkExpandableClient<BackstoryQuestion, int>,
-        ILocalizedClient<BackstoryQuestion>,
+        ILocalizedClient,
         IPaginatedClient<BackstoryQuestion>
-    { 
+    {
     }
 }

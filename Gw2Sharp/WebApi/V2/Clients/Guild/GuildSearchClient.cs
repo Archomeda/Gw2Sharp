@@ -6,7 +6,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 guild search endpoint.
     /// </summary>
     [EndpointPath("guild/search")]
-    public class GuildSearchClient : BaseClient, IGuildSearchClient
+    public class GuildSearchClient : Gw2WebApiBaseClient, IGuildSearchClient
     {
         /// <summary>
         /// Creates a new <see cref="GuildSearchClient"/> that is used for the API v2 guild search endpoint.
