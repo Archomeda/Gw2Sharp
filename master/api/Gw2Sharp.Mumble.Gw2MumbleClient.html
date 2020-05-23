@@ -90,9 +90,6 @@
                         
                         <ul class="nav level2">
                           <li class="">
-                            <a href="Gw2Sharp.BaseClient.html" title="BaseClient" class="">BaseClient</a>
-                          </li>
-                          <li class="">
                             <a href="Gw2Sharp.ComboFieldType.html" title="ComboFieldType" class="">ComboFieldType</a>
                           </li>
                           <li class="">
@@ -103,9 +100,6 @@
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.Gw2Client.html" title="Gw2Client" class="">Gw2Client</a>
-                          </li>
-                          <li class="">
-                            <a href="Gw2Sharp.IClient.html" title="IClient" class="">IClient</a>
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.IConnection.html" title="IConnection" class="">IConnection</a>
@@ -365,6 +359,9 @@
                       <a href="Gw2Sharp.WebApi.html" title="Gw2Sharp.WebApi" class="">Gw2Sharp.WebApi</a>
                         
                         <ul class="nav level2">
+                          <li class="">
+                            <a href="Gw2Sharp.WebApi.Gw2WebApiBaseClient.html" title="Gw2WebApiBaseClient" class="">Gw2WebApiBaseClient</a>
+                          </li>
                           <li class="">
                             <a href="Gw2Sharp.WebApi.Gw2WebApiClient.html" title="Gw2WebApiClient" class="">Gw2WebApiClient</a>
                           </li>
@@ -1305,7 +1302,7 @@
                             <a href="Gw2Sharp.WebApi.V2.Clients.ILegendsClient.html" title="ILegendsClient" class="">ILegendsClient</a>
                           </li>
                           <li class="">
-                            <a href="Gw2Sharp.WebApi.V2.Clients.ILocalizedClient-1.html" title="ILocalizedClient&lt;TObject&gt;" class="">ILocalizedClient&lt;TObject&gt;</a>
+                            <a href="Gw2Sharp.WebApi.V2.Clients.ILocalizedClient.html" title="ILocalizedClient" class="">ILocalizedClient</a>
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.WebApi.V2.Clients.IMailCarriersClient.html" title="IMailCarriersClient" class="">IMailCarriersClient</a>
@@ -2688,38 +2685,36 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="Gw2Sharp.BaseClient.html">BaseClient</a></div>
-    <div class="level2"><span class="xref">Gw2MumbleClient</span></div>
+    <div class="level1"><span class="xref">Gw2MumbleClient</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="Gw2Sharp.Mumble.IGw2MumbleClient.html">IGw2MumbleClient</a></div>
-    <div><a class="xref" href="Gw2Sharp.IClient.html">IClient</a></div>
     <div><span class="xref">IDisposable</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Gw2Sharp.Mumble.html">Gw2Sharp.Mumble</a></h6>
   <h6><strong>Assembly</strong>: Gw2Sharp.dll</h6>
   <h5 id="Gw2Sharp_Mumble_Gw2MumbleClient_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Gw2MumbleClient : BaseClient, IClientInternal, IGw2MumbleClient, IClient, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public class Gw2MumbleClient : object, IGw2MumbleClient, IDisposable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_Mumble_Gw2MumbleClient__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_System_String_System_Nullable_Gw2Sharp_Mumble_Gw2MumbleClient__.md&amp;value=---%0Auid%3A%20Gw2Sharp.Mumble.Gw2MumbleClient.%23ctor(Gw2Sharp.IConnection%2CGw2Sharp.IGw2Client%2CSystem.String%2CSystem.Nullable%7BGw2Sharp.Mumble.Gw2MumbleClient%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_Mumble_Gw2MumbleClient__ctor_System_String_System_Nullable_Gw2Sharp_Mumble_Gw2MumbleClient__.md&amp;value=---%0Auid%3A%20Gw2Sharp.Mumble.Gw2MumbleClient.%23ctor(System.String%2CSystem.Nullable%7BGw2Sharp.Mumble.Gw2MumbleClient%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/Mumble/Gw2MumbleClient.cs/#L52">View Source</a>
+    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/Mumble/Gw2MumbleClient.cs/#L49">View Source</a>
   </span>
   <a id="Gw2Sharp_Mumble_Gw2MumbleClient__ctor_" data-uid="Gw2Sharp.Mumble.Gw2MumbleClient.#ctor*"></a>
-  <h4 id="Gw2Sharp_Mumble_Gw2MumbleClient__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_System_String_System_Nullable_Gw2Sharp_Mumble_Gw2MumbleClient__" data-uid="Gw2Sharp.Mumble.Gw2MumbleClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client,System.String,System.Nullable{Gw2Sharp.Mumble.Gw2MumbleClient})">Gw2MumbleClient(IConnection, IGw2Client, String, Nullable&lt;Gw2MumbleClient&gt;)</h4>
+  <h4 id="Gw2Sharp_Mumble_Gw2MumbleClient__ctor_System_String_System_Nullable_Gw2Sharp_Mumble_Gw2MumbleClient__" data-uid="Gw2Sharp.Mumble.Gw2MumbleClient.#ctor(System.String,System.Nullable{Gw2Sharp.Mumble.Gw2MumbleClient})">Gw2MumbleClient(String, Nullable&lt;Gw2MumbleClient&gt;)</h4>
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Gw2Sharp.Mumble.Gw2MumbleClient.html">Gw2MumbleClient</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Gw2MumbleClient(IConnection connection, IGw2Client gw2Client, string mumbleLinkName = null, Gw2MumbleClient? parent = null)</code></pre>
+    <pre><code class="lang-csharp hljs">protected Gw2MumbleClient(string mumbleLinkName = null, Gw2MumbleClient? parent = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2731,18 +2726,6 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><a class="xref" href="Gw2Sharp.IConnection.html">IConnection</a></td>
-        <td><span class="parametername">connection</span></td>
-        <td><p>The connection used to make requests, see <a class="xref" href="Gw2Sharp.IConnection.html">IConnection</a>.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Gw2Sharp.IGw2Client.html">IGw2Client</a></td>
-        <td><span class="parametername">gw2Client</span></td>
-        <td><p>The Guild Wars 2 client.</p>
-</td>
-      </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">mumbleLinkName</span></td>
@@ -2764,7 +2747,7 @@
     <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_Mumble_Gw2MumbleClient_AvatarFront.md&amp;value=---%0Auid%3A%20Gw2Sharp.Mumble.Gw2MumbleClient.AvatarFront%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/Mumble/Gw2MumbleClient.cs/#L153">View Source</a>
+    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/Mumble/Gw2MumbleClient.cs/#L145">View Source</a>
   </span>
   <a id="Gw2Sharp_Mumble_Gw2MumbleClient_AvatarFront_" data-uid="Gw2Sharp.Mumble.Gw2MumbleClient.AvatarFront*"></a>
   <h4 id="Gw2Sharp_Mumble_Gw2MumbleClient_AvatarFront" data-uid="Gw2Sharp.Mumble.Gw2MumbleClient.AvatarFront">AvatarFront</h4>
@@ -2796,7 +2779,7 @@ These coordinates are left-handed.</p>
     <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_Mumble_Gw2MumbleClient_AvatarPosition.md&amp;value=---%0Auid%3A%20Gw2Sharp.Mumble.Gw2MumbleClient.AvatarPosition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/Mumble/Gw2MumbleClient.cs/#L149">View Source</a>
+    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/Mumble/Gw2MumbleClient.cs/#L141">View Source</a>
   </span>
   <a id="Gw2Sharp_Mumble_Gw2MumbleClient_AvatarPosition_" data-uid="Gw2Sharp.Mumble.Gw2MumbleClient.AvatarPosition*"></a>
   <h4 id="Gw2Sharp_Mumble_Gw2MumbleClient_AvatarPosition" data-uid="Gw2Sharp.Mumble.Gw2MumbleClient.AvatarPosition">AvatarPosition</h4>
@@ -2828,7 +2811,7 @@ These coordinates are left-handed.</p>
     <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_Mumble_Gw2MumbleClient_CameraFront.md&amp;value=---%0Auid%3A%20Gw2Sharp.Mumble.Gw2MumbleClient.CameraFront%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/Mumble/Gw2MumbleClient.cs/#L161">View Source</a>
+    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/Mumble/Gw2MumbleClient.cs/#L153">View Source</a>
   </span>
   <a id="Gw2Sharp_Mumble_Gw2MumbleClient_CameraFront_" data-uid="Gw2Sharp.Mumble.Gw2MumbleClient.CameraFront*"></a>
   <h4 id="Gw2Sharp_Mumble_Gw2MumbleClient_CameraFront" data-uid="Gw2Sharp.Mumble.Gw2MumbleClient.CameraFront">CameraFront</h4>
@@ -2860,7 +2843,7 @@ These coordinates are left-handed.</p>
     <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_Mumble_Gw2MumbleClient_CameraPosition.md&amp;value=---%0Auid%3A%20Gw2Sharp.Mumble.Gw2MumbleClient.CameraPosition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/Mumble/Gw2MumbleClient.cs/#L157">View Source</a>
+    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/Mumble/Gw2MumbleClient.cs/#L149">View Source</a>
   </span>
   <a id="Gw2Sharp_Mumble_Gw2MumbleClient_CameraPosition_" data-uid="Gw2Sharp.Mumble.Gw2MumbleClient.CameraPosition*"></a>
   <h4 id="Gw2Sharp_Mumble_Gw2MumbleClient_CameraPosition" data-uid="Gw2Sharp.Mumble.Gw2MumbleClient.CameraPosition">CameraPosition</h4>
@@ -2892,7 +2875,7 @@ These coordinates are left-handed.</p>
     <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_Mumble_Gw2MumbleClient_IsAvailable.md&amp;value=---%0Auid%3A%20Gw2Sharp.Mumble.Gw2MumbleClient.IsAvailable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/Mumble/Gw2MumbleClient.cs/#L135">View Source</a>
+    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/Mumble/Gw2MumbleClient.cs/#L127">View Source</a>
   </span>
   <a id="Gw2Sharp_Mumble_Gw2MumbleClient_IsAvailable_" data-uid="Gw2Sharp.Mumble.Gw2MumbleClient.IsAvailable*"></a>
   <h4 id="Gw2Sharp_Mumble_Gw2MumbleClient_IsAvailable" data-uid="Gw2Sharp.Mumble.Gw2MumbleClient.IsAvailable">IsAvailable</h4>
@@ -2924,7 +2907,7 @@ Use this to check if the Mumble Link API contains valid Guild Wars 2 data.</p>
     <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_Mumble_Gw2MumbleClient_Item_System_String_.md&amp;value=---%0Auid%3A%20Gw2Sharp.Mumble.Gw2MumbleClient.Item(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/Mumble/Gw2MumbleClient.cs/#L118">View Source</a>
+    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/Mumble/Gw2MumbleClient.cs/#L110">View Source</a>
   </span>
   <a id="Gw2Sharp_Mumble_Gw2MumbleClient_Item_" data-uid="Gw2Sharp.Mumble.Gw2MumbleClient.Item*"></a>
   <h4 id="Gw2Sharp_Mumble_Gw2MumbleClient_Item_System_String_" data-uid="Gw2Sharp.Mumble.Gw2MumbleClient.Item(System.String)">Item[String]</h4>
@@ -2974,7 +2957,7 @@ Use this to check if the Mumble Link API contains valid Guild Wars 2 data.</p>
     <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_Mumble_Gw2MumbleClient_Name.md&amp;value=---%0Auid%3A%20Gw2Sharp.Mumble.Gw2MumbleClient.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/Mumble/Gw2MumbleClient.cs/#L146">View Source</a>
+    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/Mumble/Gw2MumbleClient.cs/#L138">View Source</a>
   </span>
   <a id="Gw2Sharp_Mumble_Gw2MumbleClient_Name_" data-uid="Gw2Sharp.Mumble.Gw2MumbleClient.Name*"></a>
   <h4 id="Gw2Sharp_Mumble_Gw2MumbleClient_Name" data-uid="Gw2Sharp.Mumble.Gw2MumbleClient.Name">Name</h4>
@@ -3006,7 +2989,7 @@ Should be equal to &quot;Guild Wars 2&quot; when Guild Wars 2 is running.</p>
     <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_Mumble_Gw2MumbleClient_ServerAddress.md&amp;value=---%0Auid%3A%20Gw2Sharp.Mumble.Gw2MumbleClient.ServerAddress%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/Mumble/Gw2MumbleClient.cs/#L168">View Source</a>
+    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/Mumble/Gw2MumbleClient.cs/#L160">View Source</a>
   </span>
   <a id="Gw2Sharp_Mumble_Gw2MumbleClient_ServerAddress_" data-uid="Gw2Sharp.Mumble.Gw2MumbleClient.ServerAddress*"></a>
   <h4 id="Gw2Sharp_Mumble_Gw2MumbleClient_ServerAddress" data-uid="Gw2Sharp.Mumble.Gw2MumbleClient.ServerAddress">ServerAddress</h4>
@@ -3039,7 +3022,7 @@ However, this value may also be IPv6 if ArenaNet decides to support that.</p>
     <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_Mumble_Gw2MumbleClient_Tick.md&amp;value=---%0Auid%3A%20Gw2Sharp.Mumble.Gw2MumbleClient.Tick%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/Mumble/Gw2MumbleClient.cs/#L142">View Source</a>
+    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/Mumble/Gw2MumbleClient.cs/#L134">View Source</a>
   </span>
   <a id="Gw2Sharp_Mumble_Gw2MumbleClient_Tick_" data-uid="Gw2Sharp.Mumble.Gw2MumbleClient.Tick*"></a>
   <h4 id="Gw2Sharp_Mumble_Gw2MumbleClient_Tick" data-uid="Gw2Sharp.Mumble.Gw2MumbleClient.Tick">Tick</h4>
@@ -3071,7 +3054,7 @@ Every update to the Mumble Link from Guild Wars 2 increments this value.</p>
     <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_Mumble_Gw2MumbleClient_Version.md&amp;value=---%0Auid%3A%20Gw2Sharp.Mumble.Gw2MumbleClient.Version%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/Mumble/Gw2MumbleClient.cs/#L138">View Source</a>
+    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/Mumble/Gw2MumbleClient.cs/#L130">View Source</a>
   </span>
   <a id="Gw2Sharp_Mumble_Gw2MumbleClient_Version_" data-uid="Gw2Sharp.Mumble.Gw2MumbleClient.Version*"></a>
   <h4 id="Gw2Sharp_Mumble_Gw2MumbleClient_Version" data-uid="Gw2Sharp.Mumble.Gw2MumbleClient.Version">Version</h4>
@@ -3101,9 +3084,6 @@ Should be equal to 2.</p>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Gw2Sharp.Mumble.IGw2MumbleClient.html">IGw2MumbleClient</a>
-  </div>
-  <div>
-      <a class="xref" href="Gw2Sharp.IClient.html">IClient</a>
   </div>
   <div>
       <span class="xref">IDisposable</span>

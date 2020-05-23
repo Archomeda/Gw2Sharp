@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface IClient
+    <title>Interface ILocalizedClient
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface IClient
+    <meta name="title" content="Interface ILocalizedClient
    ">
     <meta name="generator" content="docfx 2.43.3.0">
     
@@ -90,9 +90,6 @@
                         
                         <ul class="nav level2">
                           <li class="">
-                            <a href="Gw2Sharp.BaseClient.html" title="BaseClient" class="">BaseClient</a>
-                          </li>
-                          <li class="">
                             <a href="Gw2Sharp.ComboFieldType.html" title="ComboFieldType" class="">ComboFieldType</a>
                           </li>
                           <li class="">
@@ -103,9 +100,6 @@
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.Gw2Client.html" title="Gw2Client" class="">Gw2Client</a>
-                          </li>
-                          <li class="active">
-                            <a href="Gw2Sharp.IClient.html" title="IClient" class="active">IClient</a>
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.IConnection.html" title="IConnection" class="">IConnection</a>
@@ -365,6 +359,9 @@
                       <a href="Gw2Sharp.WebApi.html" title="Gw2Sharp.WebApi" class="">Gw2Sharp.WebApi</a>
                         
                         <ul class="nav level2">
+                          <li class="">
+                            <a href="Gw2Sharp.WebApi.Gw2WebApiBaseClient.html" title="Gw2WebApiBaseClient" class="">Gw2WebApiBaseClient</a>
+                          </li>
                           <li class="">
                             <a href="Gw2Sharp.WebApi.Gw2WebApiClient.html" title="Gw2WebApiClient" class="">Gw2WebApiClient</a>
                           </li>
@@ -1304,8 +1301,8 @@
                           <li class="">
                             <a href="Gw2Sharp.WebApi.V2.Clients.ILegendsClient.html" title="ILegendsClient" class="">ILegendsClient</a>
                           </li>
-                          <li class="">
-                            <a href="Gw2Sharp.WebApi.V2.Clients.ILocalizedClient-1.html" title="ILocalizedClient&lt;TObject&gt;" class="">ILocalizedClient&lt;TObject&gt;</a>
+                          <li class="active">
+                            <a href="Gw2Sharp.WebApi.V2.Clients.ILocalizedClient.html" title="ILocalizedClient" class="active">ILocalizedClient</a>
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.WebApi.V2.Clients.IMailCarriersClient.html" title="IMailCarriersClient" class="">IMailCarriersClient</a>
@@ -2677,19 +2674,55 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Gw2Sharp.IClient">
+            <article class="content wrap" id="_content" data-uid="Gw2Sharp.WebApi.V2.Clients.ILocalizedClient">
   
   
-  <h1 id="Gw2Sharp_IClient" data-uid="Gw2Sharp.IClient" class="text-break">Interface IClient
+  <h1 id="Gw2Sharp_WebApi_V2_Clients_ILocalizedClient" data-uid="Gw2Sharp.WebApi.V2.Clients.ILocalizedClient" class="text-break">Interface ILocalizedClient
   </h1>
-  <div class="markdown level0 summary"><p>Implements a client.</p>
+  <div class="markdown level0 summary"><p>Implements an endpoint client that is localized.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Gw2Sharp.html">Gw2Sharp</a></h6>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IEndpointClient.html#Gw2Sharp_WebApi_V2_Clients_IEndpointClient_EndpointPath">IEndpointClient.EndpointPath</a>
+    </div>
+    <div>
+      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IEndpointClient.html#Gw2Sharp_WebApi_V2_Clients_IEndpointClient_EndpointPathParameters">IEndpointClient.EndpointPathParameters</a>
+    </div>
+    <div>
+      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IEndpointClient.html#Gw2Sharp_WebApi_V2_Clients_IEndpointClient_BulkEndpointIdParameterName">IEndpointClient.BulkEndpointIdParameterName</a>
+    </div>
+    <div>
+      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IEndpointClient.html#Gw2Sharp_WebApi_V2_Clients_IEndpointClient_BulkEndpointIdsParameterName">IEndpointClient.BulkEndpointIdsParameterName</a>
+    </div>
+    <div>
+      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IEndpointClient.html#Gw2Sharp_WebApi_V2_Clients_IEndpointClient_SchemaVersion">IEndpointClient.SchemaVersion</a>
+    </div>
+    <div>
+      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IEndpointClient.html#Gw2Sharp_WebApi_V2_Clients_IEndpointClient_IsLocalized">IEndpointClient.IsLocalized</a>
+    </div>
+    <div>
+      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IEndpointClient.html#Gw2Sharp_WebApi_V2_Clients_IEndpointClient_IsAuthenticated">IEndpointClient.IsAuthenticated</a>
+    </div>
+    <div>
+      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IEndpointClient.html#Gw2Sharp_WebApi_V2_Clients_IEndpointClient_IsPaginated">IEndpointClient.IsPaginated</a>
+    </div>
+    <div>
+      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IEndpointClient.html#Gw2Sharp_WebApi_V2_Clients_IEndpointClient_IsAllExpandable">IEndpointClient.IsAllExpandable</a>
+    </div>
+    <div>
+      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IEndpointClient.html#Gw2Sharp_WebApi_V2_Clients_IEndpointClient_IsBulkExpandable">IEndpointClient.IsBulkExpandable</a>
+    </div>
+    <div>
+      <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IEndpointClient.html#Gw2Sharp_WebApi_V2_Clients_IEndpointClient_HasBlobData">IEndpointClient.HasBlobData</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.html">Gw2Sharp.WebApi.V2.Clients</a></h6>
   <h6><strong>Assembly</strong>: Gw2Sharp.dll</h6>
-  <h5 id="Gw2Sharp_IClient_syntax">Syntax</h5>
+  <h5 id="Gw2Sharp_WebApi_V2_Clients_ILocalizedClient_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IClient</code></pre>
+    <pre><code class="lang-csharp hljs">public interface ILocalizedClient : IEndpointClient</code></pre>
   </div>
 </article>
           </div>
@@ -2699,10 +2732,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_IClient.md&amp;value=---%0Auid%3A%20Gw2Sharp.IClient%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_WebApi_V2_Clients_ILocalizedClient.md&amp;value=---%0Auid%3A%20Gw2Sharp.WebApi.V2.Clients.ILocalizedClient%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/IClient.cs/#L6" class="contribution-link">View Source</a>
+                    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/V2/Clients/ILocalizedClient.cs/#L6" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

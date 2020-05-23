@@ -37,28 +37,6 @@ references:
   commentId: N:Gw2Sharp
   fullName: Gw2Sharp
   nameWithType: Gw2Sharp
-- uid: Gw2Sharp.BaseClient
-  name: BaseClient
-  href: api/Gw2Sharp.BaseClient.html
-  commentId: T:Gw2Sharp.BaseClient
-  fullName: Gw2Sharp.BaseClient
-  nameWithType: BaseClient
-- uid: Gw2Sharp.BaseClient.#ctor(Gw2Sharp.IConnection,System.Nullable{Gw2Sharp.IGw2Client})
-  name: BaseClient(IConnection, Nullable<IGw2Client>)
-  href: api/Gw2Sharp.BaseClient.html#Gw2Sharp_BaseClient__ctor_Gw2Sharp_IConnection_System_Nullable_Gw2Sharp_IGw2Client__
-  commentId: M:Gw2Sharp.BaseClient.#ctor(Gw2Sharp.IConnection,System.Nullable{Gw2Sharp.IGw2Client})
-  name.vb: BaseClient(IConnection, Nullable(Of IGw2Client))
-  fullName: Gw2Sharp.BaseClient.BaseClient(Gw2Sharp.IConnection, System.Nullable<Gw2Sharp.IGw2Client>)
-  fullName.vb: Gw2Sharp.BaseClient.BaseClient(Gw2Sharp.IConnection, System.Nullable(Of Gw2Sharp.IGw2Client))
-  nameWithType: BaseClient.BaseClient(IConnection, Nullable<IGw2Client>)
-  nameWithType.vb: BaseClient.BaseClient(IConnection, Nullable(Of IGw2Client))
-- uid: Gw2Sharp.BaseClient.#ctor*
-  name: BaseClient
-  href: api/Gw2Sharp.BaseClient.html#Gw2Sharp_BaseClient__ctor_
-  commentId: Overload:Gw2Sharp.BaseClient.#ctor
-  isSpec: "True"
-  fullName: Gw2Sharp.BaseClient.BaseClient
-  nameWithType: BaseClient.BaseClient
 - uid: Gw2Sharp.ChatLinks
   name: Gw2Sharp.ChatLinks
   href: api/Gw2Sharp.ChatLinks.html
@@ -2681,12 +2659,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Gw2Client.WebApi
   nameWithType: Gw2Client.WebApi
-- uid: Gw2Sharp.IClient
-  name: IClient
-  href: api/Gw2Sharp.IClient.html
-  commentId: T:Gw2Sharp.IClient
-  fullName: Gw2Sharp.IClient
-  nameWithType: IClient
 - uid: Gw2Sharp.IConnection
   name: IConnection
   href: api/Gw2Sharp.IConnection.html
@@ -4294,15 +4266,15 @@ references:
   commentId: T:Gw2Sharp.Mumble.Gw2MumbleClient
   fullName: Gw2Sharp.Mumble.Gw2MumbleClient
   nameWithType: Gw2MumbleClient
-- uid: Gw2Sharp.Mumble.Gw2MumbleClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client,System.String,System.Nullable{Gw2Sharp.Mumble.Gw2MumbleClient})
-  name: Gw2MumbleClient(IConnection, IGw2Client, String, Nullable<Gw2MumbleClient>)
-  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_System_String_System_Nullable_Gw2Sharp_Mumble_Gw2MumbleClient__
-  commentId: M:Gw2Sharp.Mumble.Gw2MumbleClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client,System.String,System.Nullable{Gw2Sharp.Mumble.Gw2MumbleClient})
-  name.vb: Gw2MumbleClient(IConnection, IGw2Client, String, Nullable(Of Gw2MumbleClient))
-  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Gw2MumbleClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client, System.String, System.Nullable<Gw2Sharp.Mumble.Gw2MumbleClient>)
-  fullName.vb: Gw2Sharp.Mumble.Gw2MumbleClient.Gw2MumbleClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client, System.String, System.Nullable(Of Gw2Sharp.Mumble.Gw2MumbleClient))
-  nameWithType: Gw2MumbleClient.Gw2MumbleClient(IConnection, IGw2Client, String, Nullable<Gw2MumbleClient>)
-  nameWithType.vb: Gw2MumbleClient.Gw2MumbleClient(IConnection, IGw2Client, String, Nullable(Of Gw2MumbleClient))
+- uid: Gw2Sharp.Mumble.Gw2MumbleClient.#ctor(System.String,System.Nullable{Gw2Sharp.Mumble.Gw2MumbleClient})
+  name: Gw2MumbleClient(String, Nullable<Gw2MumbleClient>)
+  href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient__ctor_System_String_System_Nullable_Gw2Sharp_Mumble_Gw2MumbleClient__
+  commentId: M:Gw2Sharp.Mumble.Gw2MumbleClient.#ctor(System.String,System.Nullable{Gw2Sharp.Mumble.Gw2MumbleClient})
+  name.vb: Gw2MumbleClient(String, Nullable(Of Gw2MumbleClient))
+  fullName: Gw2Sharp.Mumble.Gw2MumbleClient.Gw2MumbleClient(System.String, System.Nullable<Gw2Sharp.Mumble.Gw2MumbleClient>)
+  fullName.vb: Gw2Sharp.Mumble.Gw2MumbleClient.Gw2MumbleClient(System.String, System.Nullable(Of Gw2Sharp.Mumble.Gw2MumbleClient))
+  nameWithType: Gw2MumbleClient.Gw2MumbleClient(String, Nullable<Gw2MumbleClient>)
+  nameWithType.vb: Gw2MumbleClient.Gw2MumbleClient(String, Nullable(Of Gw2MumbleClient))
 - uid: Gw2Sharp.Mumble.Gw2MumbleClient.#ctor*
   name: Gw2MumbleClient
   href: api/Gw2Sharp.Mumble.Gw2MumbleClient.html#Gw2Sharp_Mumble_Gw2MumbleClient__ctor_
@@ -6172,6 +6144,25 @@ references:
   fullName.vb: Gw2Sharp.WebApi.Caching.NullCacheMethod.TryGetAsync(Of T)(System.String, System.Object)
   nameWithType: NullCacheMethod.TryGetAsync<T>(String, Object)
   nameWithType.vb: NullCacheMethod.TryGetAsync(Of T)(String, Object)
+- uid: Gw2Sharp.WebApi.Gw2WebApiBaseClient
+  name: Gw2WebApiBaseClient
+  href: api/Gw2Sharp.WebApi.Gw2WebApiBaseClient.html
+  commentId: T:Gw2Sharp.WebApi.Gw2WebApiBaseClient
+  fullName: Gw2Sharp.WebApi.Gw2WebApiBaseClient
+  nameWithType: Gw2WebApiBaseClient
+- uid: Gw2Sharp.WebApi.Gw2WebApiBaseClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client)
+  name: Gw2WebApiBaseClient(IConnection, IGw2Client)
+  href: api/Gw2Sharp.WebApi.Gw2WebApiBaseClient.html#Gw2Sharp_WebApi_Gw2WebApiBaseClient__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_
+  commentId: M:Gw2Sharp.WebApi.Gw2WebApiBaseClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client)
+  fullName: Gw2Sharp.WebApi.Gw2WebApiBaseClient.Gw2WebApiBaseClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client)
+  nameWithType: Gw2WebApiBaseClient.Gw2WebApiBaseClient(IConnection, IGw2Client)
+- uid: Gw2Sharp.WebApi.Gw2WebApiBaseClient.#ctor*
+  name: Gw2WebApiBaseClient
+  href: api/Gw2Sharp.WebApi.Gw2WebApiBaseClient.html#Gw2Sharp_WebApi_Gw2WebApiBaseClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.Gw2WebApiBaseClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.Gw2WebApiBaseClient.Gw2WebApiBaseClient
+  nameWithType: Gw2WebApiBaseClient.Gw2WebApiBaseClient
 - uid: Gw2Sharp.WebApi.Gw2WebApiClient
   name: Gw2WebApiClient
   href: api/Gw2Sharp.WebApi.Gw2WebApiClient.html
@@ -16664,15 +16655,12 @@ references:
   commentId: T:Gw2Sharp.WebApi.V2.Clients.ILegendsClient
   fullName: Gw2Sharp.WebApi.V2.Clients.ILegendsClient
   nameWithType: ILegendsClient
-- uid: Gw2Sharp.WebApi.V2.Clients.ILocalizedClient`1
-  name: ILocalizedClient<TObject>
-  href: api/Gw2Sharp.WebApi.V2.Clients.ILocalizedClient-1.html
-  commentId: T:Gw2Sharp.WebApi.V2.Clients.ILocalizedClient`1
-  name.vb: ILocalizedClient(Of TObject)
-  fullName: Gw2Sharp.WebApi.V2.Clients.ILocalizedClient<TObject>
-  fullName.vb: Gw2Sharp.WebApi.V2.Clients.ILocalizedClient(Of TObject)
-  nameWithType: ILocalizedClient<TObject>
-  nameWithType.vb: ILocalizedClient(Of TObject)
+- uid: Gw2Sharp.WebApi.V2.Clients.ILocalizedClient
+  name: ILocalizedClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.ILocalizedClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.ILocalizedClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.ILocalizedClient
+  nameWithType: ILocalizedClient
 - uid: Gw2Sharp.WebApi.V2.Clients.IMailCarriersClient
   name: IMailCarriersClient
   href: api/Gw2Sharp.WebApi.V2.Clients.IMailCarriersClient.html

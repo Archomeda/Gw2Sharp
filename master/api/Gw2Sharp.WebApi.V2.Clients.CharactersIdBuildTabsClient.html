@@ -90,9 +90,6 @@
                         
                         <ul class="nav level2">
                           <li class="">
-                            <a href="Gw2Sharp.BaseClient.html" title="BaseClient" class="">BaseClient</a>
-                          </li>
-                          <li class="">
                             <a href="Gw2Sharp.ComboFieldType.html" title="ComboFieldType" class="">ComboFieldType</a>
                           </li>
                           <li class="">
@@ -103,9 +100,6 @@
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.Gw2Client.html" title="Gw2Client" class="">Gw2Client</a>
-                          </li>
-                          <li class="">
-                            <a href="Gw2Sharp.IClient.html" title="IClient" class="">IClient</a>
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.IConnection.html" title="IConnection" class="">IConnection</a>
@@ -365,6 +359,9 @@
                       <a href="Gw2Sharp.WebApi.html" title="Gw2Sharp.WebApi" class="">Gw2Sharp.WebApi</a>
                         
                         <ul class="nav level2">
+                          <li class="">
+                            <a href="Gw2Sharp.WebApi.Gw2WebApiBaseClient.html" title="Gw2WebApiBaseClient" class="">Gw2WebApiBaseClient</a>
+                          </li>
                           <li class="">
                             <a href="Gw2Sharp.WebApi.Gw2WebApiClient.html" title="Gw2WebApiClient" class="">Gw2WebApiClient</a>
                           </li>
@@ -1305,7 +1302,7 @@
                             <a href="Gw2Sharp.WebApi.V2.Clients.ILegendsClient.html" title="ILegendsClient" class="">ILegendsClient</a>
                           </li>
                           <li class="">
-                            <a href="Gw2Sharp.WebApi.V2.Clients.ILocalizedClient-1.html" title="ILocalizedClient&lt;TObject&gt;" class="">ILocalizedClient&lt;TObject&gt;</a>
+                            <a href="Gw2Sharp.WebApi.V2.Clients.ILocalizedClient.html" title="ILocalizedClient" class="">ILocalizedClient</a>
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.WebApi.V2.Clients.IMailCarriersClient.html" title="IMailCarriersClient" class="">IMailCarriersClient</a>
@@ -2688,7 +2685,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="Gw2Sharp.BaseClient.html">BaseClient</a></div>
+    <div class="level1"><a class="xref" href="Gw2Sharp.WebApi.Gw2WebApiBaseClient.html">Gw2WebApiBaseClient</a></div>
     <div class="level2"><a class="xref" href="Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient-1.html">BaseEndpointClient</a>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.Models.CharacterBuildTabSlot.html">CharacterBuildTabSlot</a>&gt;</div>
     <div class="level3"><a class="xref" href="Gw2Sharp.WebApi.V2.Clients.BaseEndpointBulkAllClient-2.html">BaseEndpointBulkAllClient</a>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.Models.CharacterBuildTabSlot.html">CharacterBuildTabSlot</a>, <span class="xref">System.Int32</span>&gt;</div>
     <div class="level4"><a class="xref" href="Gw2Sharp.WebApi.V2.Clients.BaseCharactersSubBulkClient-2.html">BaseCharactersSubBulkClient</a>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.Models.CharacterBuildTabSlot.html">CharacterBuildTabSlot</a>, <span class="xref">System.Int32</span>&gt;</div>
@@ -2702,7 +2699,6 @@
     <div><a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IBulkExpandableClient-2.html">IBulkExpandableClient</a>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.Models.CharacterBuildTabSlot.html">CharacterBuildTabSlot</a>, <span class="xref">System.Int32</span>&gt;</div>
     <div><a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IPaginatedClient-1.html">IPaginatedClient</a>&lt;<a class="xref" href="Gw2Sharp.WebApi.V2.Models.CharacterBuildTabSlot.html">CharacterBuildTabSlot</a>&gt;</div>
     <div><a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IEndpointClient.html">IEndpointClient</a></div>
-    <div><a class="xref" href="Gw2Sharp.IClient.html">IClient</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -2768,7 +2764,7 @@
   <h6><strong>Assembly</strong>: Gw2Sharp.dll</h6>
   <h5 id="Gw2Sharp_WebApi_V2_Clients_CharactersIdBuildTabsClient_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class CharactersIdBuildTabsClient : BaseCharactersSubBulkClient&lt;CharacterBuildTabSlot, int&gt;, IClientInternal, ICharactersIdBuildTabsClient, IAuthenticatedClient, IAllExpandableClient&lt;CharacterBuildTabSlot&gt;, IBulkExpandableClient&lt;CharacterBuildTabSlot, int&gt;, IPaginatedClient&lt;CharacterBuildTabSlot&gt;, IEndpointClient, IClient</code></pre>
+    <pre><code class="lang-csharp hljs">public class CharactersIdBuildTabsClient : BaseCharactersSubBulkClient&lt;CharacterBuildTabSlot, int&gt;, ICharactersIdBuildTabsClient, IAuthenticatedClient, IAllExpandableClient&lt;CharacterBuildTabSlot&gt;, IBulkExpandableClient&lt;CharacterBuildTabSlot, int&gt;, IPaginatedClient&lt;CharacterBuildTabSlot&gt;, IEndpointClient</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -2869,9 +2865,6 @@
   </div>
   <div>
       <a class="xref" href="Gw2Sharp.WebApi.V2.Clients.IEndpointClient.html">IEndpointClient</a>
-  </div>
-  <div>
-      <a class="xref" href="Gw2Sharp.IClient.html">IClient</a>
   </div>
 </article>
           </div>
