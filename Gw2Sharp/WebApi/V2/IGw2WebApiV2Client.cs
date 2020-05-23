@@ -243,5 +243,10 @@ namespace Gw2Sharp.WebApi.V2
         /// Gets the world bosses.
         /// </summary>
         IWorldBossesClient WorldBosses { get; }
+
+        /// <summary>
+        /// Gets the worlds.
+        /// </summary>
+        IWorldsClient Worlds { get; }
     }
 }

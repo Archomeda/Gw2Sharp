@@ -8,6 +8,7 @@
 - Add `/v2/stories/seasons`
 - Add `/v2/titles`
 - Add `/v2/traits`
+- Add `/v2/worlds`
 
 ### Refactoring
 - **Breaking:** `Gw2Sharp.Models.MountSkinDyeSlot` has been renamed to `Gw2Sharp.Models.SkinDyeSlot`

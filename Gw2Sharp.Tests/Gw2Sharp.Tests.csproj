@@ -281,6 +281,9 @@
     <None Remove="TestFiles\WorldBosses\WorldBosses.bulk.json" />
     <None Remove="TestFiles\WorldBosses\WorldBosses.ids.json" />
     <None Remove="TestFiles\WorldBosses\WorldBosses.single.json" />
+    <None Remove="TestFiles\Worlds\Worlds.bulk.json" />
+    <None Remove="TestFiles\Worlds\Worlds.ids.json" />
+    <None Remove="TestFiles\Worlds\Worlds.single.json" />
   </ItemGroup>
 
   <ItemGroup>
@@ -552,6 +555,9 @@
     <EmbeddedResource Include="TestFiles\WorldBosses\WorldBosses.bulk.json" />
     <EmbeddedResource Include="TestFiles\WorldBosses\WorldBosses.ids.json" />
     <EmbeddedResource Include="TestFiles\WorldBosses\WorldBosses.single.json" />
+    <EmbeddedResource Include="TestFiles\Worlds\Worlds.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Worlds\Worlds.ids.json" />
+    <EmbeddedResource Include="TestFiles\Worlds\Worlds.single.json" />
   </ItemGroup>
 
   <ItemGroup>

@@ -177,7 +177,7 @@ For your convenience, the following list gives an overview of the web API endpoi
  /v2/traits | 🌐📄📚📦 | [`Gw2Client.WebApi.V2.Traits`](../api/Gw2Sharp.WebApi.V2.Clients.TraitsClient.html)
  ~~/v2/vendors~~ | ✖️ |
  /v2/worldbosses | 📄📚📦 | [`Gw2Client.WebApi.V2.WorldBosses`](../api/Gw2Sharp.WebApi.V2.Clients.WorldBossesClient.html)
- /v2/worlds | ❌ |
+ /v2/worlds | 🌐📄📚📦 | [`Gw2Client.WebApi.V2.Worlds`](../api/Gw2Sharp.WebApi.V2.Clients.WorldsClient.html)
  /v2/wvw/abilities | ❌ |
  /v2/wvw/matches | ❌ |
  /v2/wvw/matches/overview | ❌ |

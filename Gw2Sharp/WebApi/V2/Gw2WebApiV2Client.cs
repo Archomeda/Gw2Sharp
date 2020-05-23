@@ -61,6 +61,7 @@ namespace Gw2Sharp.WebApi.V2
         private readonly ITokenInfoClient tokenInfo;
         private readonly ITraitsClient traits;
         private readonly IWorldBossesClient worldBosses;
+        private readonly IWorldsClient worlds;
 
         /// <summary>
         /// Creates a new <see cref="Gw2WebApiV2Client"/>.
@@ -123,6 +124,7 @@ namespace Gw2Sharp.WebApi.V2
             this.tokenInfo = new TokenInfoClient(connection, gw2Client);
             this.traits = new TraitsClient(connection, gw2Client);
             this.worldBosses = new WorldBossesClient(connection, gw2Client);
+            this.worlds = new WorldsClient(connection, gw2Client);
         }
 
         /// <inheritdoc />
@@ -265,5 +267,8 @@ namespace Gw2Sharp.WebApi.V2
 
         /// <inheritdoc />
         public virtual IWorldBossesClient WorldBosses => this.worldBosses;
+
+        /// <inheritdoc />
+        public virtual IWorldsClient Worlds => this.worlds;
     }
 }
