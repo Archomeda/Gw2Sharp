@@ -81,7 +81,7 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <summary>
         /// The character's current active title.
-        /// Can be resolved against <see cref="IGw2WebApiV2Client.Title"/>.
+        /// Can be resolved against <see cref="IGw2WebApiV2Client.Titles"/>.
         /// </summary>
         public int Title { get; set; }
 

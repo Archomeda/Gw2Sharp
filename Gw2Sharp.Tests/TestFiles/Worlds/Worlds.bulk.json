@@ -1,0 +1,257 @@
+[
+  {
+    "id": 1001,
+    "name": "Anvil Rock",
+    "population": "Full"
+  },
+  {
+    "id": 1002,
+    "name": "Borlis Pass",
+    "population": "High"
+  },
+  {
+    "id": 1003,
+    "name": "Yak's Bend",
+    "population": "Full"
+  },
+  {
+    "id": 1004,
+    "name": "Henge of Denravi",
+    "population": "VeryHigh"
+  },
+  {
+    "id": 1005,
+    "name": "Maguuma",
+    "population": "Full"
+  },
+  {
+    "id": 1006,
+    "name": "Sorrow's Furnace",
+    "population": "Medium"
+  },
+  {
+    "id": 1007,
+    "name": "Gate of Madness",
+    "population": "High"
+  },
+  {
+    "id": 1008,
+    "name": "Jade Quarry",
+    "population": "VeryHigh"
+  },
+  {
+    "id": 1009,
+    "name": "Fort Aspenwood",
+    "population": "Full"
+  },
+  {
+    "id": 1010,
+    "name": "Ehmry Bay",
+    "population": "Medium"
+  },
+  {
+    "id": 1011,
+    "name": "Stormbluff Isle",
+    "population": "Full"
+  },
+  {
+    "id": 1012,
+    "name": "Darkhaven",
+    "population": "Medium"
+  },
+  {
+    "id": 1013,
+    "name": "Sanctum of Rall",
+    "population": "Medium"
+  },
+  {
+    "id": 1014,
+    "name": "Crystal Desert",
+    "population": "High"
+  },
+  {
+    "id": 1015,
+    "name": "Isle of Janthir",
+    "population": "Medium"
+  },
+  {
+    "id": 1016,
+    "name": "Sea of Sorrows",
+    "population": "Full"
+  },
+  {
+    "id": 1017,
+    "name": "Tarnished Coast",
+    "population": "VeryHigh"
+  },
+  {
+    "id": 1018,
+    "name": "Northern Shiverpeaks",
+    "population": "High"
+  },
+  {
+    "id": 1019,
+    "name": "Blackgate",
+    "population": "Full"
+  },
+  {
+    "id": 1020,
+    "name": "Ferguson's Crossing",
+    "population": "VeryHigh"
+  },
+  {
+    "id": 1021,
+    "name": "Dragonbrand",
+    "population": "Full"
+  },
+  {
+    "id": 1022,
+    "name": "Kaineng",
+    "population": "Medium"
+  },
+  {
+    "id": 1023,
+    "name": "Devona's Rest",
+    "population": "Medium"
+  },
+  {
+    "id": 1024,
+    "name": "Eredon Terrace",
+    "population": "High"
+  },
+  {
+    "id": 2001,
+    "name": "Fissure of Woe",
+    "population": "Medium"
+  },
+  {
+    "id": 2002,
+    "name": "Desolation",
+    "population": "Full"
+  },
+  {
+    "id": 2003,
+    "name": "Gandara",
+    "population": "Full"
+  },
+  {
+    "id": 2004,
+    "name": "Blacktide",
+    "population": "Medium"
+  },
+  {
+    "id": 2005,
+    "name": "Ring of Fire",
+    "population": "Medium"
+  },
+  {
+    "id": 2006,
+    "name": "Underworld",
+    "population": "Medium"
+  },
+  {
+    "id": 2007,
+    "name": "Far Shiverpeaks",
+    "population": "VeryHigh"
+  },
+  {
+    "id": 2008,
+    "name": "Whiteside Ridge",
+    "population": "Full"
+  },
+  {
+    "id": 2009,
+    "name": "Ruins of Surmia",
+    "population": "Medium"
+  },
+  {
+    "id": 2010,
+    "name": "Seafarer's Rest",
+    "population": "Full"
+  },
+  {
+    "id": 2011,
+    "name": "Vabbi",
+    "population": "Medium"
+  },
+  {
+    "id": 2012,
+    "name": "Piken Square",
+    "population": "Full"
+  },
+  {
+    "id": 2013,
+    "name": "Aurora Glade",
+    "population": "High"
+  },
+  {
+    "id": 2014,
+    "name": "Gunnar's Hold",
+    "population": "High"
+  },
+  {
+    "id": 2101,
+    "name": "Jade Sea [FR]",
+    "population": "Full"
+  },
+  {
+    "id": 2102,
+    "name": "Fort Ranik [FR]",
+    "population": "Medium"
+  },
+  {
+    "id": 2103,
+    "name": "Augury Rock [FR]",
+    "population": "VeryHigh"
+  },
+  {
+    "id": 2104,
+    "name": "Vizunah Square [FR]",
+    "population": "Medium"
+  },
+  {
+    "id": 2105,
+    "name": "Arborstone [FR]",
+    "population": "Medium"
+  },
+  {
+    "id": 2201,
+    "name": "Kodash [DE]",
+    "population": "Medium"
+  },
+  {
+    "id": 2202,
+    "name": "Riverside [DE]",
+    "population": "High"
+  },
+  {
+    "id": 2203,
+    "name": "Elona Reach [DE]",
+    "population": "VeryHigh"
+  },
+  {
+    "id": 2204,
+    "name": "Abaddon's Mouth [DE]",
+    "population": "High"
+  },
+  {
+    "id": 2205,
+    "name": "Drakkar Lake [DE]",
+    "population": "High"
+  },
+  {
+    "id": 2206,
+    "name": "Miller's Sound [DE]",
+    "population": "Medium"
+  },
+  {
+    "id": 2207,
+    "name": "Dzagonur [DE]",
+    "population": "Full"
+  },
+  {
+    "id": 2301,
+    "name": "Baruch Bay [SP]",
+    "population": "VeryHigh"
+  }
+]

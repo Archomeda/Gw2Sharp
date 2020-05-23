@@ -210,13 +210,43 @@ namespace Gw2Sharp.WebApi.V2
         ISkillsClient Skills { get; }
 
         /// <summary>
+        /// Gets the skins.
+        /// </summary>
+        ISkinsClient Skins { get; }
+
+        /// <summary>
+        /// Gets the specializations.
+        /// </summary>
+        ISpecializationsClient Specializations { get; }
+
+        /// <summary>
+        /// Gets the stories.
+        /// </summary>
+        IStoriesClient Stories { get; }
+
+        /// <summary>
+        /// Gets the titles.
+        /// </summary>
+        ITitlesClient Titles { get; }
+
+        /// <summary>
         /// Gets the token info.
         /// </summary>
         ITokenInfoClient TokenInfo { get; }
 
         /// <summary>
+        /// Gets the traits.
+        /// </summary>
+        ITraitsClient Traits { get; }
+
+        /// <summary>
         /// Gets the world bosses.
         /// </summary>
         IWorldBossesClient WorldBosses { get; }
+
+        /// <summary>
+        /// Gets the worlds.
+        /// </summary>
+        IWorldsClient Worlds { get; }
     }
 }

@@ -1,0 +1,27 @@
+{
+  "id": 5,
+  "name": "Druid",
+  "profession": "Ranger",
+  "elite": true,
+  "minor_traits": [
+    1874,
+    1862,
+    1992
+  ],
+  "major_traits": [
+    1868,
+    2016,
+    1935,
+    2053,
+    2001,
+    2056,
+    2057,
+    2058,
+    2055
+  ],
+  "weapon_trait": 1965,
+  "icon": "https://render.guildwars2.com/file/BE10CB10D8446208729934F3F1BD3A54BEED9AD6/1012013.png",
+  "background": "https://render.guildwars2.com/file/306D6ED9D3F09FF5552609EC7DA2046ECD114F90/1012077.png",
+  "profession_icon_big": "https://render.guildwars2.com/file/F910F8BBCAF80355FFDB264160C899594300D7B2/1128574.png",
+  "profession_icon": "https://render.guildwars2.com/file/033CFD3270277F38215AE60574BCC2000873BDFF/1128575.png"
+}

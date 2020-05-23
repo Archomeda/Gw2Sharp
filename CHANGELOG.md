@@ -1,5 +1,20 @@
 # Gw2Sharp History
 
+## 0.10.0
+### Endpoints
+- Add `/v2/skins`
+- Add `/v2/specializations`
+- Add `/v2/stories`
+- Add `/v2/stories/seasons`
+- Add `/v2/titles`
+- Add `/v2/traits`
+- Add `/v2/worlds`
+
+### Refactoring
+- **Breaking:** `Gw2Sharp.Models.MountSkinDyeSlot` has been renamed to `Gw2Sharp.Models.SkinDyeSlot`
+
+---
+
 ## 0.9.6
 ### Services
 - Update MumbleLink to support new features ([#58](https://github.com/Archomeda/Gw2Sharp/issues/58), [#59](https://github.com/Archomeda/Gw2Sharp/pull/59)):

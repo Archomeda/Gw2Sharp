@@ -1,0 +1,34 @@
+{
+  "name": "Fireworks Spaulders",
+  "description": "<c=@flavor>Always ready to celebrate in the new year.</c>",
+  "type": "Armor",
+  "flags": [
+    "ShowInWardrobe"
+  ],
+  "restrictions": [],
+  "rarity": "Basic",
+  "id": 9101,
+  "icon": "https://render.guildwars2.com/file/BE78170CE4AC0D75CF0AD592AEE507BD012851BB/2243001.png",
+  "details": {
+    "type": "Shoulders",
+    "weight_class": "Light",
+    "dye_slots": {
+      "default": [
+        {
+          "color_id": 82,
+          "material": "cloth"
+        },
+        {
+          "color_id": 143,
+          "material": "cloth"
+        },
+        {
+          "color_id": 2,
+          "material": "cloth"
+        },
+        null
+      ],
+      "overrides": {}
+    }
+  }
+}

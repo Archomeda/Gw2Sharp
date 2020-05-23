@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "season": "215AAA0F-CDAC-4F93-86DA-C155A99B5784",
+    "name": "My Story",
+    "description": "",
+    "timeline": "1325 AE",
+    "level": 1,
+    "races": [
+      "Charr"
+    ],
+    "order": 0,
+    "chapters": [
+      {
+        "name": "1. Getting the Band Back Together"
+      },
+      {
+        "name": "2. Sins of the Father"
+      },
+      {
+        "name": "3. Crystal Corruption"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "season": "215AAA0F-CDAC-4F93-86DA-C155A99B5784",
+    "name": "My Story",
+    "description": "",
+    "timeline": "1325 AE",
+    "level": 1,
+    "races": [
+      "Norn"
+    ],
+    "order": 0,
+    "chapters": [
+      {
+        "name": "1. Forging a Legend"
+      },
+      {
+        "name": "2. Everyone Makes Mistakes"
+      },
+      {
+        "name": "3. Death from Below"
+      }
+    ]
+  },
+  {
+    "id": 85,
+    "season": "C22AFD21-667A-4AA8-8210-AC74EAEE58BB",
+    "name": "1. Daybreak",
+    "description": "Kralkatorrik is on the loose and Aurene is missing. But before you can deal with your dragon problems, Amnoon needs your help.",
+    "timeline": "1330 AE",
+    "level": 80,
+    "order": 1,
+    "chapters": [],
+    "flags": [
+      "RequiresUnlock"
+    ]
+  },
+  {
+    "id": 86,
+    "season": "C22AFD21-667A-4AA8-8210-AC74EAEE58BB",
+    "name": "2. A Bug in the System",
+    "description": "A scientist in the mysterious Inquest facility known as Rata Primus appears to hold the key to stopping Palawa Joko's vengeful invasion of Tyria, but infiltrating the enemy's stronghold will prove challenging.",
+    "timeline": "1331 AE",
+    "level": 80,
+    "order": 2,
+    "chapters": [],
+    "flags": [
+      "RequiresUnlock"
+    ]
+  }
+]

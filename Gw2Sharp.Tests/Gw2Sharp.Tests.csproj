@@ -258,11 +258,32 @@
     <None Remove="TestFiles\Skills\Skills.bulk.json" />
     <None Remove="TestFiles\Skills\Skills.ids.json" />
     <None Remove="TestFiles\Skills\Skills.single.json" />
+    <None Remove="TestFiles\Skins\Skins.bulk.json" />
+    <None Remove="TestFiles\Skins\Skins.ids.json" />
+    <None Remove="TestFiles\Skins\Skins.single.json" />
+    <None Remove="TestFiles\Specializations\Specializations.bulk.json" />
+    <None Remove="TestFiles\Specializations\Specializations.ids.json" />
+    <None Remove="TestFiles\Specializations\Specializations.single.json" />
+    <None Remove="TestFiles\Stories\Stories.bulk.json" />
+    <None Remove="TestFiles\Stories\Stories.ids.json" />
+    <None Remove="TestFiles\Stories\Stories.single.json" />
+    <None Remove="TestFiles\Stories\StoriesSeasons.bulk.json" />
+    <None Remove="TestFiles\Stories\StoriesSeasons.ids.json" />
+    <None Remove="TestFiles\Stories\StoriesSeasons.single.json" />
+    <None Remove="TestFiles\Titles\Titles.bulk.json" />
+    <None Remove="TestFiles\Titles\Titles.ids.json" />
+    <None Remove="TestFiles\Titles\Titles.single.json" />
     <None Remove="TestFiles\TokenInfo\TokenInfo.ApiToken.json" />
     <None Remove="TestFiles\TokenInfo\TokenInfo.SubToken.json" />
+    <None Remove="TestFiles\Traits\Traits.bulk.json" />
+    <None Remove="TestFiles\Traits\Traits.ids.json" />
+    <None Remove="TestFiles\Traits\Traits.single.json" />
     <None Remove="TestFiles\WorldBosses\WorldBosses.bulk.json" />
     <None Remove="TestFiles\WorldBosses\WorldBosses.ids.json" />
     <None Remove="TestFiles\WorldBosses\WorldBosses.single.json" />
+    <None Remove="TestFiles\Worlds\Worlds.bulk.json" />
+    <None Remove="TestFiles\Worlds\Worlds.ids.json" />
+    <None Remove="TestFiles\Worlds\Worlds.single.json" />
   </ItemGroup>
 
   <ItemGroup>
@@ -511,11 +532,32 @@
     <EmbeddedResource Include="TestFiles\Skills\Skills.bulk.json" />
     <EmbeddedResource Include="TestFiles\Skills\Skills.ids.json" />
     <EmbeddedResource Include="TestFiles\Skills\Skills.single.json" />
+    <EmbeddedResource Include="TestFiles\Skins\Skins.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Skins\Skins.ids.json" />
+    <EmbeddedResource Include="TestFiles\Skins\Skins.single.json" />
+    <EmbeddedResource Include="TestFiles\Specializations\Specializations.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Specializations\Specializations.ids.json" />
+    <EmbeddedResource Include="TestFiles\Specializations\Specializations.single.json" />
+    <EmbeddedResource Include="TestFiles\Stories\Stories.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Stories\Stories.ids.json" />
+    <EmbeddedResource Include="TestFiles\Stories\Stories.single.json" />
+    <EmbeddedResource Include="TestFiles\Stories\StoriesSeasons.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Stories\StoriesSeasons.ids.json" />
+    <EmbeddedResource Include="TestFiles\Stories\StoriesSeasons.single.json" />
+    <EmbeddedResource Include="TestFiles\Titles\Titles.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Titles\Titles.ids.json" />
+    <EmbeddedResource Include="TestFiles\Titles\Titles.single.json" />
     <EmbeddedResource Include="TestFiles\TokenInfo\TokenInfo.ApiToken.json" />
     <EmbeddedResource Include="TestFiles\TokenInfo\TokenInfo.SubToken.json" />
+    <EmbeddedResource Include="TestFiles\Traits\Traits.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Traits\Traits.ids.json" />
+    <EmbeddedResource Include="TestFiles\Traits\Traits.single.json" />
     <EmbeddedResource Include="TestFiles\WorldBosses\WorldBosses.bulk.json" />
     <EmbeddedResource Include="TestFiles\WorldBosses\WorldBosses.ids.json" />
     <EmbeddedResource Include="TestFiles\WorldBosses\WorldBosses.single.json" />
+    <EmbeddedResource Include="TestFiles\Worlds\Worlds.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Worlds\Worlds.ids.json" />
+    <EmbeddedResource Include="TestFiles\Worlds\Worlds.single.json" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,5 +1,6 @@
 using System;
 using Gw2Sharp.WebApi.V2.Clients;
+using Gw2Sharp.WebApi.V2.Models;
 
 namespace Gw2Sharp.WebApi.V2
 {
@@ -53,8 +54,14 @@ namespace Gw2Sharp.WebApi.V2
         private readonly IRaidsClient raids;
         private readonly IRecipesClient recipes;
         private readonly ISkillsClient skills;
+        private readonly ISkinsClient skins;
+        private readonly ISpecializationsClient specializations;
+        private readonly IStoriesClient stories;
+        private readonly ITitlesClient titles;
         private readonly ITokenInfoClient tokenInfo;
+        private readonly ITraitsClient traits;
         private readonly IWorldBossesClient worldBosses;
+        private readonly IWorldsClient worlds;
 
         /// <summary>
         /// Creates a new <see cref="Gw2WebApiV2Client"/>.
@@ -110,8 +117,14 @@ namespace Gw2Sharp.WebApi.V2
             this.raids = new RaidsClient(connection, gw2Client);
             this.recipes = new RecipesClient(connection, gw2Client);
             this.skills = new SkillsClient(connection, gw2Client);
+            this.skins = new SkinsClient(connection, gw2Client);
+            this.specializations = new SpecializationsClient(connection, gw2Client);
+            this.stories = new StoriesClient(connection, gw2Client);
+            this.titles = new TitlesClient(connection, gw2Client);
             this.tokenInfo = new TokenInfoClient(connection, gw2Client);
+            this.traits = new TraitsClient(connection, gw2Client);
             this.worldBosses = new WorldBossesClient(connection, gw2Client);
+            this.worlds = new WorldsClient(connection, gw2Client);
         }
 
         /// <inheritdoc />
@@ -235,9 +248,27 @@ namespace Gw2Sharp.WebApi.V2
         public virtual ISkillsClient Skills => this.skills;
 
         /// <inheritdoc />
+        public virtual ISkinsClient Skins => this.skins;
+
+        /// <inheritdoc />
+        public virtual ISpecializationsClient Specializations => this.specializations;
+
+        /// <inheritdoc />
+        public virtual IStoriesClient Stories => this.stories;
+
+        /// <inheritdoc />
+        public virtual ITitlesClient Titles => this.titles;
+
+        /// <inheritdoc />
         public virtual ITokenInfoClient TokenInfo => this.tokenInfo;
 
         /// <inheritdoc />
+        public virtual ITraitsClient Traits => this.traits;
+
+        /// <inheritdoc />
         public virtual IWorldBossesClient WorldBosses => this.worldBosses;
+
+        /// <inheritdoc />
+        public virtual IWorldsClient Worlds => this.worlds;
     }
 }

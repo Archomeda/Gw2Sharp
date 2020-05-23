@@ -3,7 +3,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents a mount skin dye slot.
     /// </summary>
-    public class MountSkinDyeSlot
+    public class SkinDyeSlot
     {
         /// <summary>
         /// The dye color id.

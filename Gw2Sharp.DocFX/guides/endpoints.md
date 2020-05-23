@@ -82,8 +82,6 @@ For your convenience, the following list gives an overview of the web API endpoi
  /v2/characters/`:id`/quests | 🔑 | [`Gw2Client.WebApi.V2.Characters[id].Quests`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdQuestsClient.html)
  /v2/characters/`:id`/recipes | 🔑📆 | [`Gw2Client.WebApi.V2.Characters[id].Recipes`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdRecipesClient.html)
  /v2/characters/`:id`/sab | 🔑 | [`Gw2Client.WebApi.V2.Characters[id].Sab`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdSabClient.html)
- /v2/characters/`:id`/skills | ⚠️🔑📆 | [`Gw2Client.WebApi.V2.Characters[id].Skills`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdSkillsClient.html)
- /v2/characters/`:id`/specializations | ⚠️🔑📆 | [`Gw2Client.WebApi.V2.Characters[id].Specializations`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdSpecializationsClient.html)
  /v2/characters/`:id`/training | 🔑📆 | [`Gw2Client.WebApi.V2.Characters[id].Training`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdTrainingClient.html)
  /v2/colors | 🌐📄📚📦 | [`Gw2Client.WebApi.V2.Colors`](../api/Gw2Sharp.WebApi.V2.Clients.ColorsClient.html)
  /v2/commerce/delivery | 🔑 | [`Gw2Client.WebApi.V2.Commerce.Delivery`](../api/Gw2Sharp.WebApi.V2.Clients.CommerceDeliveryClient.html)
@@ -170,16 +168,16 @@ For your convenience, the following list gives an overview of the web API endpoi
  /v2/recipes | 📄📚 | [`Gw2Client.WebApi.V2.Recipes`](../api/Gw2Sharp.WebApi.V2.Clients.RecipesClient.html)
  /v2/recipes/search | ✔️ | [`Gw2Client.WebApi.V2.Recipes.Search`](../api/Gw2Sharp.WebApi.V2.Clients.RecipesSearchClient.html)
  /v2/skills | 🌐📄📚📦 | [`Gw2Client.WebApi.V2.Skills`](../api/Gw2Sharp.WebApi.V2.Clients.SkillsClient.html)
- /v2/skins | ❌ |
- /v2/specializations | ❌ |
- /v2/stories | ❌ |
- /v2/stories/seasons | ❌ |
- /v2/titles | ❌ |
+ /v2/skins | 🌐📄📚 | [`Gw2Client.WebApi.V2.Skins`](../api/Gw2Sharp.WebApi.V2.Clients.SkinsClient.html)
+ /v2/specializations | 🌐📄📚📦 | [`Gw2Client.WebApi.V2.Specializations`](../api/Gw2Sharp.WebApi.V2.Clients.SpecializationsClient.html)
+ /v2/stories | 🌐📄📚📦 | [`Gw2Client.WebApi.V2.Stories`](../api/Gw2Sharp.WebApi.V2.Clients.StoriesClient.html)
+ /v2/stories/seasons | 🌐📄📚📦 | [`Gw2Client.WebApi.V2.Stories.Seasons`](../api/Gw2Sharp.WebApi.V2.Clients.StoriesSeasonsClient.html)
+ /v2/titles | 🌐📄📚📦 | [`Gw2Client.WebApi.V2.Titles`](../api/Gw2Sharp.WebApi.V2.Clients.TitlesClient.html)
  /v2/tokeninfo | 🔑 | [`Gw2Client.WebApi.V2.TokenInfo`](../api/Gw2Sharp.WebApi.V2.Clients.TokenInfoClient.html)
- /v2/traits | ❌ |
+ /v2/traits | 🌐📄📚📦 | [`Gw2Client.WebApi.V2.Traits`](../api/Gw2Sharp.WebApi.V2.Clients.TraitsClient.html)
  ~~/v2/vendors~~ | ✖️ |
  /v2/worldbosses | 📄📚📦 | [`Gw2Client.WebApi.V2.WorldBosses`](../api/Gw2Sharp.WebApi.V2.Clients.WorldBossesClient.html)
- /v2/worlds | ❌ |
+ /v2/worlds | 🌐📄📚📦 | [`Gw2Client.WebApi.V2.Worlds`](../api/Gw2Sharp.WebApi.V2.Clients.WorldsClient.html)
  /v2/wvw/abilities | ❌ |
  /v2/wvw/matches | ❌ |
  /v2/wvw/matches/overview | ❌ |
