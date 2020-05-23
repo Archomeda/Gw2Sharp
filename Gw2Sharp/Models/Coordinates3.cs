@@ -65,17 +65,8 @@ namespace Gw2Sharp.Models
             this.X == other.X && this.Y == other.Y && this.Z == other.Z;
 
         /// <inheritdoc />
-        public override int GetHashCode()
-        {
-            unchecked
-            {
-                int hashCode = -307843816;
-                hashCode = (hashCode * -1521134295) + this.X.GetHashCode();
-                hashCode = (hashCode * -1521134295) + this.Y.GetHashCode();
-                hashCode = (hashCode * -1521134295) + this.Z.GetHashCode();
-                return hashCode;
-            }
-        }
+        public override int GetHashCode() =>
+            HashCode.Combine(this.X, this.Y, this.Z);
 
         /// <summary>
         /// Implements the operator ==.

@@ -109,15 +109,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <inheritdoc />
         public override int GetHashCode()
         {
-            unchecked
-            {
-                int hashCode = -505697310;
-                hashCode = (hashCode * -1521134295) + EqualityComparer<Coordinates2>.Default.GetHashCode(this.TopLeft);
-                hashCode = (hashCode * -1521134295) + EqualityComparer<Coordinates2>.Default.GetHashCode(this.TopRight);
-                hashCode = (hashCode * -1521134295) + EqualityComparer<Coordinates2>.Default.GetHashCode(this.BottomLeft);
-                hashCode = (hashCode * -1521134295) + EqualityComparer<Coordinates2>.Default.GetHashCode(this.BottomRight);
-                return hashCode;
-            }
+            return HashCode.Combine(this.TopLeft, this.TopRight, this.BottomLeft, this.BottomRight);
         }
 
         /// <summary>

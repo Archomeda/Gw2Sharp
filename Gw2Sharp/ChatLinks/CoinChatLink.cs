@@ -35,16 +35,8 @@ namespace Gw2Sharp.ChatLinks
             this.Coins == other.Coins;
 
         /// <inheritdoc />
-        public override int GetHashCode()
-        {
-            unchecked
-            {
-                int hashCode = -1373618686;
-                hashCode = (hashCode * -1521134295) + this.Type.GetHashCode();
-                hashCode = (hashCode * -1521134295) + this.Coins.GetHashCode();
-                return hashCode;
-            }
-        }
+        public override int GetHashCode() =>
+            HashCode.Combine(this.Type, this.Coins);
 
         /// <summary>
         /// Implements the operator ==.

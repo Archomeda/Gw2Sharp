@@ -57,16 +57,8 @@ namespace Gw2Sharp.Models
             this.Width == other.Width && this.Height == other.Height;
 
         /// <inheritdoc />
-        public override int GetHashCode()
-        {
-            unchecked
-            {
-                int hashCode = 859600377;
-                hashCode = (hashCode * -1521134295) + this.Width.GetHashCode();
-                hashCode = (hashCode * -1521134295) + this.Height.GetHashCode();
-                return hashCode;
-            }
-        }
+        public override int GetHashCode() =>
+            HashCode.Combine(this.Width, this.Height);
 
         /// <summary>
         /// Implements the operator ==.

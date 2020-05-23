@@ -39,9 +39,9 @@ namespace Gw2Sharp.ChatLinks
         public override bool Equals(object? obj)
         {
             return obj is WvwObjectiveChatLink link &&
-                   this.Type == link.Type &&
-                   this.ObjectiveId == link.ObjectiveId &&
-                   this.MapId == link.MapId;
+                this.Type == link.Type &&
+                this.ObjectiveId == link.ObjectiveId &&
+                this.MapId == link.MapId;
         }
 
         /// <inheritdoc />
@@ -52,17 +52,8 @@ namespace Gw2Sharp.ChatLinks
             this.MapId == other.MapId;
 
         /// <inheritdoc />
-        public override int GetHashCode()
-        {
-            unchecked
-            {
-                int hashCode = 378941614;
-                hashCode = (hashCode * -1521134295) + this.Type.GetHashCode();
-                hashCode = (hashCode * -1521134295) + this.ObjectiveId.GetHashCode();
-                hashCode = (hashCode * -1521134295) + this.MapId.GetHashCode();
-                return hashCode;
-            }
-        }
+        public override int GetHashCode() =>
+            HashCode.Combine(this.Type, this.ObjectiveId, this.MapId);
 
         /// <summary>
         /// Implements the operator ==.

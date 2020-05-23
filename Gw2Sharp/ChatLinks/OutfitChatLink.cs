@@ -37,16 +37,8 @@ namespace Gw2Sharp.ChatLinks
             this.OutfitId == other.OutfitId;
 
         /// <inheritdoc />
-        public override int GetHashCode()
-        {
-            unchecked
-            {
-                int hashCode = 1806301648;
-                hashCode = (hashCode * -1521134295) + this.Type.GetHashCode();
-                hashCode = (hashCode * -1521134295) + this.OutfitId.GetHashCode();
-                return hashCode;
-            }
-        }
+        public override int GetHashCode() =>
+            HashCode.Combine(this.Type, this.OutfitId);
 
         /// <summary>
         /// Implements the operator ==.

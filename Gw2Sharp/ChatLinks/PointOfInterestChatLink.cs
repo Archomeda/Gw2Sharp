@@ -35,16 +35,8 @@ namespace Gw2Sharp.ChatLinks
             this.PointOfInterestId == other.PointOfInterestId;
 
         /// <inheritdoc />
-        public override int GetHashCode()
-        {
-            unchecked
-            {
-                int hashCode = 2118947312;
-                hashCode = (hashCode * -1521134295) + this.Type.GetHashCode();
-                hashCode = (hashCode * -1521134295) + this.PointOfInterestId.GetHashCode();
-                return hashCode;
-            }
-        }
+        public override int GetHashCode() =>
+            HashCode.Combine(this.Type, this.PointOfInterestId);
 
         /// <summary>
         /// Implements the operator ==.

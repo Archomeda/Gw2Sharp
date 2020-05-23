@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 
 namespace Gw2Sharp.WebApi.Caching
 {
@@ -46,15 +45,7 @@ namespace Gw2Sharp.WebApi.Caching
         /// <inheritdoc />
         public override int GetHashCode()
         {
-            unchecked
-            {
-                int hashCode = 212114582;
-                hashCode = (hashCode * -1521134295) + EqualityComparer<string>.Default.GetHashCode(this.Category);
-                hashCode = (hashCode * -1521134295) + EqualityComparer<object>.Default.GetHashCode(this.Id);
-                hashCode = (hashCode * -1521134295) + EqualityComparer<object>.Default.GetHashCode(this.Item);
-                hashCode = (hashCode * -1521134295) + this.ExpiryTime.GetHashCode();
-                return hashCode;
-            }
+            return HashCode.Combine(this.Category, this.Id, this.Item, this.ExpiryTime);
         }
 
         /// <inheritdoc />
@@ -98,15 +89,8 @@ namespace Gw2Sharp.WebApi.Caching
         public new T Item => (T)base.Item;
 
         /// <inheritdoc />
-        public override int GetHashCode()
-        {
-            unchecked
-            {
-                int hashCode = 1150702236;
-                hashCode = (hashCode * -1521134295) + base.GetHashCode();
-                return hashCode;
-            }
-        }
+        public override int GetHashCode() =>
+            HashCode.Combine(base.GetHashCode());
 
         /// <inheritdoc />
         public override bool Equals(object? obj) =>
