@@ -11,6 +11,11 @@ namespace Gw2Sharp.WebApi.V2.Models
         Unknown,
 
         /// <summary>
+        /// None.
+        /// </summary>
+        None,
+
+        /// <summary>
         /// Concentration.
         /// </summary>
         BoonDuration,

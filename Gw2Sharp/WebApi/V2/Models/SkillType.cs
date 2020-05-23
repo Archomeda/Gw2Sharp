@@ -51,6 +51,11 @@ namespace Gw2Sharp
         Toolbelt,
 
         /// <summary>
+        /// Transform type.
+        /// </summary>
+        Transform,
+
+        /// <summary>
         /// Monster type.
         /// </summary>
         Monster

@@ -13,6 +13,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The combo finisher trigger chance in percent.
         /// </summary>
-        public int Percent { get; set; }
+        public double Percent { get; set; }
     }
 }

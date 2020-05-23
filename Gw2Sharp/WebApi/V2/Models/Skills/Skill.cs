@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace Gw2Sharp.WebApi.V2.Models
 {
@@ -27,6 +28,13 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// The skill icon URL.
         /// </summary>
         public RenderUrl Icon { get; set; }
+
+        /// <summary>
+        /// The skill specialization.
+        /// Can be resolved against <see cref="IGw2WebApiV2Client.Specializations"/>.
+        /// If the skill is not associated with a specific specialization, this value is <c>null</c>.
+        /// </summary>
+        public int? Specialization { get; set; }
 
         /// <summary>
         /// The skill chat link.
@@ -58,6 +66,12 @@ namespace Gw2Sharp.WebApi.V2.Models
         public ApiEnum<SkillSlot>? Slot { get; set; }
 
         /// <summary>
+        /// The dual attunement.
+        /// If the skill does not have a dual attunement, this value is <c>null</c>.
+        /// </summary>
+        public ApiEnum<Attunement>? DualAttunement { get; set; }
+
+        /// <summary>
         /// The skill flags.
         /// </summary>
         public ApiFlags<SkillFlag> Flags { get; set; } = new ApiFlags<SkillFlag>();
@@ -66,19 +80,26 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// The list of skill facts.
         /// If the skill doesn't have any facts, this value is <c>null</c>.
         /// </summary>
-        public IReadOnlyList<SkillFact>? Facts { get; set; } = Array.Empty<SkillFact>();
+        public IReadOnlyList<SkillFact>? Facts { get; set; }
 
         /// <summary>
         /// The list of traited skill facts.
         /// If the skill doesn't have any traited facts, this value is <c>null</c>.
         /// </summary>
-        public IReadOnlyList<SkillFact>? TraitedFacts { get; set; } = Array.Empty<SkillFact>();
+        public IReadOnlyList<SkillFact>? TraitedFacts { get; set; }
 
         /// <summary>
         /// The list of skill categories.
         /// If the skill doesn't have any categories, this value is <c>null</c>.
         /// </summary>
-        public IReadOnlyList<string>? Categories { get; set; } = Array.Empty<string>();
+        public IReadOnlyList<string>? Categories { get; set; }
+
+        /// <summary>
+        /// The list of sub skills.
+        /// If the skill doesn't have any sub skills, this value is <c>null</c>.
+        /// </summary>
+        [JsonPropertyName("subskills")]
+        public IReadOnlyList<SkillSubSkill>? SubSkills { get; set; }
 
         /// <summary>
         /// The attunement for elementalist weapon skills.

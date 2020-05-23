@@ -1,12 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Net;
+using Gw2Sharp.Tests.WebApi.Http;
 using Gw2Sharp.WebApi.V2;
 using Xunit;
 
 namespace Gw2Sharp.Tests.WebApi.V2
 {
-    public class ApiV2ResponseTests
+    public class ApiV2ResponseTests : HttpResponseInfoTests
     {
         [Fact]
         public void ConstructorTest()

@@ -13,6 +13,35 @@
 
 ---
 
+## 0.9.6
+### Services
+- Update MumbleLink to support new features ([#58](https://github.com/Archomeda/Gw2Sharp/issues/58), [#59](https://github.com/Archomeda/Gw2Sharp/pull/59)):
+  - Process id
+  - Mount
+  - UI states: IsInCombat
+- Add support for custom MumbleLink names through `IGw2MumbleClient[name]` (see documentation for more details)
+
+## 0.9.5
+### Endpoints
+- Add the following missing properties in `Gw2Sharp.WebApi.V2.Models.Skill`:
+  - `Specialization`
+  - `DualAttunement`
+  - `SubSkills`
+- Change the following properties from `int` to `double`:
+  - `Gw2Sharp.WebApi.V2.Models.SkillFactComboFinisher.Percent`
+  - `Gw2Sharp.WebApi.V2.Models.SkillFactPercent.Percent`
+  - `Gw2Sharp.WebApi.V2.Models.SkillFactRecharge.Value`
+- Add missing property `Value` in `Gw2Sharp.WebApi.V2.Models.SkillFactPercent` (although this seems to be a bug in the API)
+- Deprecate `Gw2Sharp.WebApi.V2.Models.SkillWeaponType.Harpoon` in favor of `Spear` (still no consistency between harpoons, spears, harpoon guns and spear guns)
+- Add missing enum `None` in `Gw2Sharp.WebApi.V2.Models.AttributeType` (which is apparently used for skills that apply barrier)
+- Add missing enums `Toolbelt` and `Transform1` in `Gw2Sharp.WebApi.V2.Models.SkillSlot`
+- Add missing enum `Transform` in `Gw2Sharp.WebApi.V2.Models.SkillType`
+
+## 0.9.4
+### Fixes
+- Add missing skill fact type `StunBreak` as `Gw2Sharp.WebApi.V2.Models.SkillFactStunBreak` for pattern matching
+- Fix parsing `Cache-Control` response headers where it would fail if the value is surrounded with quotes
+
 ## 0.9.3
 ### Services
 - Exposed the raw JSON Mumble Link identity as `IGw2MumbleClient.RawIdentity`

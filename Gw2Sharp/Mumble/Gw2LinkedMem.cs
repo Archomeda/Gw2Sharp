@@ -1,5 +1,6 @@
 using System.Net.Sockets;
 using System.Runtime.InteropServices;
+using Gw2Sharp.Models;
 using Gw2Sharp.Mumble.Models;
 
 #pragma warning disable IDE0044
@@ -93,6 +94,10 @@ namespace Gw2Sharp.Mumble
         public float mapCenterY;
         [FieldOffset(76)]
         public float mapScale;
+        [FieldOffset(80)]
+        public uint processId;
+        [FieldOffset(84)]
+        public MountType mount;
 
         // Total struct size is 256 bytes
     }

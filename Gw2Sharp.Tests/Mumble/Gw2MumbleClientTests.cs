@@ -22,7 +22,7 @@ namespace Gw2Sharp.Tests.Mumble
             var gw2Client = Substitute.For<IGw2Client>();
 
             using var memorySource = Assembly.GetExecutingAssembly().GetManifestResourceStream($"Gw2Sharp.Tests.TestFiles.Mumble.MemoryMappedFile.bin");
-            using var memoryMappedFile = MemoryMappedFile.CreateOrOpen(Gw2MumbleClient.MUMBLE_LINK_MAP_NAME, memorySource.Length);
+            using var memoryMappedFile = MemoryMappedFile.CreateOrOpen(Gw2MumbleClient.DEFAULT_MUMBLE_LINK_MAP_NAME, memorySource.Length);
             using var stream = memoryMappedFile.CreateViewStream();
             memorySource.CopyTo(stream);
 
@@ -66,6 +66,7 @@ namespace Gw2Sharp.Tests.Mumble
             Assert.True(client.DoesGameHaveFocus);
             Assert.True(client.IsCompetitiveMode);
             Assert.True(client.DoesAnyInputHaveFocus);
+            Assert.False(client.IsInCombat);
             Assert.Equal(362, client.Compass.Width);
             Assert.Equal(229, client.Compass.Height);
             Assert.Equal(-2.11212, client.CompassRotation, 5);
@@ -74,6 +75,58 @@ namespace Gw2Sharp.Tests.Mumble
             Assert.Equal(14400.01, client.MapCenter.X, 2);
             Assert.Equal(18180.19, client.MapCenter.Y, 2);
             Assert.Equal(1, client.MapScale);
+            Assert.Equal(15101u, client.ProcessId);
+            Assert.Equal(MountType.Griffon, client.Mount);
+        }
+
+        [SkippableFact]
+        public void DisposeCorrectlyTest()
+        {
+            // Named memory mapped files aren't supported on Unix based systems.
+            // So we need to skip this test.
+            Skip.IfNot(Environment.OSVersion.Platform == PlatformID.Win32NT, "Mumble Link is only supported in Windows");
+
+            var connection = Substitute.For<IConnection>();
+            var gw2Client = Substitute.For<IGw2Client>();
+            var client = new Gw2MumbleClient(connection, gw2Client);
+            client.Dispose();
+            Assert.ThrowsAny<ObjectDisposedException>(() => client.Update());
+        }
+
+        [SkippableFact]
+        public void DisposeChildOnlyCorrectlyTest()
+        {
+            // Named memory mapped files aren't supported on Unix based systems.
+            // So we need to skip this test.
+            Skip.IfNot(Environment.OSVersion.Platform == PlatformID.Win32NT, "Mumble Link is only supported in Windows");
+
+            var connection = Substitute.For<IConnection>();
+            var gw2Client = Substitute.For<IGw2Client>();
+            using var rootClient = new Gw2MumbleClient(connection, gw2Client);
+            var childClientA = rootClient["CinderSteeltemper"];
+            var childClientB = rootClient["VishenSteelshot"];
+            childClientA.Dispose();
+            Assert.ThrowsAny<ObjectDisposedException>(() => childClientA.Update());
+            childClientB.Update(); // Sibling should not be disposed
+            rootClient.Update(); // Root should not be disposed
+        }
+
+        [SkippableFact]
+        public void DisposeAllFromRootCorrectlyTest()
+        {
+            // Named memory mapped files aren't supported on Unix based systems.
+            // So we need to skip this test.
+            Skip.IfNot(Environment.OSVersion.Platform == PlatformID.Win32NT, "Mumble Link is only supported in Windows");
+
+            var connection = Substitute.For<IConnection>();
+            var gw2Client = Substitute.For<IGw2Client>();
+            var rootClient = new Gw2MumbleClient(connection, gw2Client);
+            var childClientA = rootClient["CinderSteeltemper"];
+            var childClientB = rootClient["VishenSteelshot"];
+            rootClient.Dispose();
+            Assert.ThrowsAny<ObjectDisposedException>(() => rootClient.Update());
+            Assert.ThrowsAny<ObjectDisposedException>(() => childClientA.Update());
+            Assert.ThrowsAny<ObjectDisposedException>(() => childClientB.Update());
         }
     }
 }

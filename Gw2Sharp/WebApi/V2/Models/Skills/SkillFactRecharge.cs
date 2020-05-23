@@ -8,6 +8,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The skill fact recharge value.
         /// </summary>
-        public int Value { get; set; }
+        public double Value { get; set; }
     }
 }

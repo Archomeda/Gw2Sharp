@@ -8,6 +8,7 @@ using System.Net;
 using System.Reflection;
 using System.Runtime.Serialization;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Threading;
 using System.Threading.Tasks;
 using Gw2Sharp.Tests.Helpers;
@@ -311,12 +312,20 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                 // Specific object
                 foreach (var kvp in expected)
                 {
-                    string key = string.Concat(kvp.Name.Split('_').Select(s => string.Concat(
-                        s[0].ToString().ToUpper(),
-                        s.Substring(1))));
-                    var property = type.GetProperty(key);
+                    // Try matching with JsonPropertyNameAttribute first
+                    var property = type.GetProperties()
+                        .FirstOrDefault(x => x.GetCustomAttribute<JsonPropertyNameAttribute>()?.Name == kvp.Name);
                     if (property == null)
-                        throw new InvalidOperationException($"Expected property '{key}' to exist in type {type.FullName}");
+                    {
+                        // Try auto matching based on name
+                        string key = string.Concat(kvp.Name.Split('_').Select(s => string.Concat(
+                            s[0].ToString().ToUpper(),
+                            s.Substring(1))));
+                        property = type.GetProperty(key);
+                        if (property == null)
+                            throw new InvalidOperationException($"Expected property '{key}' to exist in type {type.FullName}");
+                    }
+
                     object actualValue = property.GetValue(actual);
                     this.AssertJsonObject(kvp.Value, actualValue);
                 }

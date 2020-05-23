@@ -89,6 +89,8 @@ var tybaltsSpecializations = await client.WebApi.V2.Characters["Tybalt Leftpaw"]
 - [Exception handling](xref:Guides.ExceptionHandling)
 - [Supported endpoints](xref:Guides.Endpoints)
 
+---
+
 ## Render service
 Accessing the render service is done through the main `Gw2Sharp.Gw2Client`:
 ```cs
@@ -112,6 +114,8 @@ await renderClient.DownloadToStreamAsync(appleStream, appleUrl);
 - [Caching](xref:Guides.Caching)
 - [Exception handling](xref:Guides.ExceptionHandling)
 - [Using RenderUrl](xref:Guides.RenderUrl)
+
+---
 
 ## Mumble Link
 Accessing the Mumble Link service is done through the main `Gw2Sharp.Gw2Client`:
@@ -139,8 +143,28 @@ In order to keep performance to a maximum, the following JSON properties are onl
 - `FieldOfView`
 - `UiSize`
 
-If you need the performance, it's recommended to not request these values on every update, but to cache them locally, and only update once in a while.
-Any other value is safe to be read every tick without taking any additional performance hit.
+*If you need the performance, it's recommended to not request these values on every update, but to cache them locally, and only update once in a while.*
+*Any other value is safe to be read every tick without taking any additional performance hit.*
+
+### Custom Mumble Link names
+Support for custom Mumble Link names has been added with the April 28th, 2020 update.
+This means that you can use any custom name that's different from the default (which is `MumbleLink`).
+In order to access any custom named Mumble Link, you can do the following:
+
+```cs
+var customMumbleClient = client.Mumble["AnyCustomNameHere"];
+
+// You can treat the custom client the same as the normal client in terms of accessible data
+```
+
+All calls to the indexer are redirected to an internal cache of the used clients.
+This is to make sure that only one instance of a given name is created to save resources, and that when the root client is disposed, all the child clients are disposed as well.
+If just a child client is disposed however, the root client is untouched.
+
+*Keep in mind that you don't want to dispose the root client manually.*
+*This is done automatically for you whenever you dispose the `IGw2Client` itself.*
+
+---
 
 ## Chat links
 Accessing the chat links is a bit different compared to the other services.
