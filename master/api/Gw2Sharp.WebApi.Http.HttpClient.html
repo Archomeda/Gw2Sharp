@@ -2542,7 +2542,7 @@
   <h4 id="Gw2Sharp_WebApi_Http_HttpClient__ctor" data-uid="Gw2Sharp.WebApi.Http.HttpClient.#ctor">HttpClient()</h4>
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Gw2Sharp.WebApi.Http.HttpClient.html">HttpClient</a> with a built-in <see cref="!:System.Net.Http.HttpClient"></see> instance.
 Not recommended if you are running Gw2Sharp for a longer period of time, because of possible DNS changes.
-Use <a class="xref" href="Gw2Sharp.WebApi.Http.HttpClient.html#Gw2Sharp_WebApi_Http_HttpClient__ctor_Func_System_Net_Http_HttpClient__">HttpClient(Func&lt;System.Net.Http.HttpClient&gt;)</a> instead that refreshes the HttpClient once in a while (e.g. by using Microsoft.Extensions.Http).</p>
+Use <a class="xref" href="Gw2Sharp.WebApi.Http.HttpClient.html#Gw2Sharp_WebApi_Http_HttpClient__ctor_Func_System_Net_Http_HttpClient__">HttpClient(Func&lt;Net.Http.HttpClient&gt;)</a> instead that refreshes the HttpClient once in a while (e.g. by using Microsoft.Extensions.Http).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2557,7 +2557,7 @@ Use <a class="xref" href="Gw2Sharp.WebApi.Http.HttpClient.html#Gw2Sharp_WebApi_H
     <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Http/HttpClient.cs/#L40">View Source</a>
   </span>
   <a id="Gw2Sharp_WebApi_Http_HttpClient__ctor_" data-uid="Gw2Sharp.WebApi.Http.HttpClient.#ctor*"></a>
-  <h4 id="Gw2Sharp_WebApi_Http_HttpClient__ctor_Func_System_Net_Http_HttpClient__" data-uid="Gw2Sharp.WebApi.Http.HttpClient.#ctor(Func{System.Net.Http.HttpClient})">HttpClient(Func&lt;System.Net.Http.HttpClient&gt;)</h4>
+  <h4 id="Gw2Sharp_WebApi_Http_HttpClient__ctor_Func_System_Net_Http_HttpClient__" data-uid="Gw2Sharp.WebApi.Http.HttpClient.#ctor(Func{System.Net.Http.HttpClient})">HttpClient(Func&lt;Net.Http.HttpClient&gt;)</h4>
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Gw2Sharp.WebApi.Http.HttpClient.html">HttpClient</a> with a provided function that returns a <see cref="!:System.Net.Http.HttpClient"></see> instance.
 After every request, the <see cref="!:System.Net.Http.HttpClient"></see> is automatically disposed.
 Be sure to prevent over-disposing by using e.g. Microsoft.Extensions.Http.</p>
@@ -2565,7 +2565,7 @@ Be sure to prevent over-disposing by using e.g. Microsoft.Extensions.Http.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public HttpClient(Func&lt;System.Net.Http.HttpClient&gt; getHttpClientFunc)</code></pre>
+    <pre><code class="lang-csharp hljs">public HttpClient(Func&lt;Net.Http.HttpClient&gt; getHttpClientFunc)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2592,15 +2592,15 @@ Be sure to prevent over-disposing by using e.g. Microsoft.Extensions.Http.</p>
     <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Http/HttpClient.cs/#L33">View Source</a>
   </span>
   <a id="Gw2Sharp_WebApi_Http_HttpClient__ctor_" data-uid="Gw2Sharp.WebApi.Http.HttpClient.#ctor*"></a>
-  <h4 id="Gw2Sharp_WebApi_Http_HttpClient__ctor_System_Net_Http_HttpClient_" data-uid="Gw2Sharp.WebApi.Http.HttpClient.#ctor(System.Net.Http.HttpClient)">HttpClient(System.Net.Http.HttpClient)</h4>
+  <h4 id="Gw2Sharp_WebApi_Http_HttpClient__ctor_System_Net_Http_HttpClient_" data-uid="Gw2Sharp.WebApi.Http.HttpClient.#ctor(System.Net.Http.HttpClient)">HttpClient(Net.Http.HttpClient)</h4>
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Gw2Sharp.WebApi.Http.HttpClient.html">HttpClient</a> with a provided <see cref="!:System.Net.Http.HttpClient"></see> instance.
 Not recommended if you are running Gw2Sharp for a longer period of time, because of possible DNS changes.
-Use <a class="xref" href="Gw2Sharp.WebApi.Http.HttpClient.html#Gw2Sharp_WebApi_Http_HttpClient__ctor_Func_System_Net_Http_HttpClient__">HttpClient(Func&lt;System.Net.Http.HttpClient&gt;)</a> instead that refreshes the HttpClient once in a while (e.g. by using Microsoft.Extensions.Http).</p>
+Use <a class="xref" href="Gw2Sharp.WebApi.Http.HttpClient.html#Gw2Sharp_WebApi_Http_HttpClient__ctor_Func_System_Net_Http_HttpClient__">HttpClient(Func&lt;Net.Http.HttpClient&gt;)</a> instead that refreshes the HttpClient once in a while (e.g. by using Microsoft.Extensions.Http).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public HttpClient(System.Net.Http.HttpClient httpClient)</code></pre>
+    <pre><code class="lang-csharp hljs">public HttpClient(Net.Http.HttpClient httpClient)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

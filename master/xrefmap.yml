@@ -3276,15 +3276,15 @@ references:
   commentId: T:Gw2Sharp.Json.Converters.RectangleConverter
   fullName: Gw2Sharp.Json.Converters.RectangleConverter
   nameWithType: RectangleConverter
-- uid: Gw2Sharp.Json.Converters.RectangleConverter.Read(Utf8JsonReader@,Type,JsonSerializerOptions,Gw2Sharp.WebApi.V2.Models.RectangleDirectionType)
-  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions, RectangleDirectionType)
-  href: api/Gw2Sharp.Json.Converters.RectangleConverter.html#Gw2Sharp_Json_Converters_RectangleConverter_Read_Utf8JsonReader__Type_JsonSerializerOptions_Gw2Sharp_WebApi_V2_Models_RectangleDirectionType_
-  commentId: M:Gw2Sharp.Json.Converters.RectangleConverter.Read(Utf8JsonReader@,Type,JsonSerializerOptions,Gw2Sharp.WebApi.V2.Models.RectangleDirectionType)
-  name.vb: Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions, RectangleDirectionType)
-  fullName: Gw2Sharp.Json.Converters.RectangleConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions, Gw2Sharp.WebApi.V2.Models.RectangleDirectionType)
-  fullName.vb: Gw2Sharp.Json.Converters.RectangleConverter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions, Gw2Sharp.WebApi.V2.Models.RectangleDirectionType)
-  nameWithType: RectangleConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions, RectangleDirectionType)
-  nameWithType.vb: RectangleConverter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions, RectangleDirectionType)
+- uid: Gw2Sharp.Json.Converters.RectangleConverter.Read(Utf8JsonReader@,JsonSerializerOptions,Gw2Sharp.WebApi.V2.Models.RectangleDirectionType)
+  name: Read(ref Utf8JsonReader, JsonSerializerOptions, RectangleDirectionType)
+  href: api/Gw2Sharp.Json.Converters.RectangleConverter.html#Gw2Sharp_Json_Converters_RectangleConverter_Read_Utf8JsonReader__JsonSerializerOptions_Gw2Sharp_WebApi_V2_Models_RectangleDirectionType_
+  commentId: M:Gw2Sharp.Json.Converters.RectangleConverter.Read(Utf8JsonReader@,JsonSerializerOptions,Gw2Sharp.WebApi.V2.Models.RectangleDirectionType)
+  name.vb: Read(ByRef Utf8JsonReader, JsonSerializerOptions, RectangleDirectionType)
+  fullName: Gw2Sharp.Json.Converters.RectangleConverter.Read(ref Utf8JsonReader, JsonSerializerOptions, Gw2Sharp.WebApi.V2.Models.RectangleDirectionType)
+  fullName.vb: Gw2Sharp.Json.Converters.RectangleConverter.Read(ByRef Utf8JsonReader, JsonSerializerOptions, Gw2Sharp.WebApi.V2.Models.RectangleDirectionType)
+  nameWithType: RectangleConverter.Read(ref Utf8JsonReader, JsonSerializerOptions, RectangleDirectionType)
+  nameWithType.vb: RectangleConverter.Read(ByRef Utf8JsonReader, JsonSerializerOptions, RectangleDirectionType)
 - uid: Gw2Sharp.Json.Converters.RectangleConverter.Read*
   name: Read
   href: api/Gw2Sharp.Json.Converters.RectangleConverter.html#Gw2Sharp_Json_Converters_RectangleConverter_Read_
@@ -6316,20 +6316,20 @@ references:
   fullName: Gw2Sharp.WebApi.Http.HttpClient.HttpClient()
   nameWithType: HttpClient.HttpClient()
 - uid: Gw2Sharp.WebApi.Http.HttpClient.#ctor(Func{System.Net.Http.HttpClient})
-  name: HttpClient(Func<System.Net.Http.HttpClient>)
+  name: HttpClient(Func<Net.Http.HttpClient>)
   href: api/Gw2Sharp.WebApi.Http.HttpClient.html#Gw2Sharp_WebApi_Http_HttpClient__ctor_Func_System_Net_Http_HttpClient__
   commentId: M:Gw2Sharp.WebApi.Http.HttpClient.#ctor(Func{System.Net.Http.HttpClient})
-  name.vb: HttpClient(Func(Of System.Net.Http.HttpClient))
+  name.vb: HttpClient(Func(Of Net.Http.HttpClient))
   fullName: Gw2Sharp.WebApi.Http.HttpClient.HttpClient(Func<System.Net.Http.HttpClient>)
   fullName.vb: Gw2Sharp.WebApi.Http.HttpClient.HttpClient(Func(Of System.Net.Http.HttpClient))
-  nameWithType: HttpClient.HttpClient(Func<System.Net.Http.HttpClient>)
-  nameWithType.vb: HttpClient.HttpClient(Func(Of System.Net.Http.HttpClient))
+  nameWithType: HttpClient.HttpClient(Func<Net.Http.HttpClient>)
+  nameWithType.vb: HttpClient.HttpClient(Func(Of Net.Http.HttpClient))
 - uid: Gw2Sharp.WebApi.Http.HttpClient.#ctor(System.Net.Http.HttpClient)
-  name: HttpClient(System.Net.Http.HttpClient)
+  name: HttpClient(Net.Http.HttpClient)
   href: api/Gw2Sharp.WebApi.Http.HttpClient.html#Gw2Sharp_WebApi_Http_HttpClient__ctor_System_Net_Http_HttpClient_
   commentId: M:Gw2Sharp.WebApi.Http.HttpClient.#ctor(System.Net.Http.HttpClient)
   fullName: Gw2Sharp.WebApi.Http.HttpClient.HttpClient(System.Net.Http.HttpClient)
-  nameWithType: HttpClient.HttpClient(System.Net.Http.HttpClient)
+  nameWithType: HttpClient.HttpClient(Net.Http.HttpClient)
 - uid: Gw2Sharp.WebApi.Http.HttpClient.#ctor*
   name: HttpClient
   href: api/Gw2Sharp.WebApi.Http.HttpClient.html#Gw2Sharp_WebApi_Http_HttpClient__ctor_
