@@ -82,9 +82,7 @@ namespace Gw2Sharp.Tests.Mumble
             // So we need to skip this test.
             Skip.IfNot(Environment.OSVersion.Platform == PlatformID.Win32NT, "Mumble Link is only supported in Windows");
 
-            var connection = Substitute.For<IConnection>();
-            var gw2Client = Substitute.For<IGw2Client>();
-            var client = new Gw2MumbleClient(connection, gw2Client);
+            var client = new Gw2MumbleClient();
             client.Dispose();
             Assert.ThrowsAny<ObjectDisposedException>(() => client.Update());
         }
@@ -96,9 +94,7 @@ namespace Gw2Sharp.Tests.Mumble
             // So we need to skip this test.
             Skip.IfNot(Environment.OSVersion.Platform == PlatformID.Win32NT, "Mumble Link is only supported in Windows");
 
-            var connection = Substitute.For<IConnection>();
-            var gw2Client = Substitute.For<IGw2Client>();
-            using var rootClient = new Gw2MumbleClient(connection, gw2Client);
+            using var rootClient = new Gw2MumbleClient();
             var childClientA = rootClient["CinderSteeltemper"];
             var childClientB = rootClient["VishenSteelshot"];
             childClientA.Dispose();
@@ -114,9 +110,7 @@ namespace Gw2Sharp.Tests.Mumble
             // So we need to skip this test.
             Skip.IfNot(Environment.OSVersion.Platform == PlatformID.Win32NT, "Mumble Link is only supported in Windows");
 
-            var connection = Substitute.For<IConnection>();
-            var gw2Client = Substitute.For<IGw2Client>();
-            var rootClient = new Gw2MumbleClient(connection, gw2Client);
+            var rootClient = new Gw2MumbleClient();
             var childClientA = rootClient["CinderSteeltemper"];
             var childClientB = rootClient["VishenSteelshot"];
             rootClient.Dispose();

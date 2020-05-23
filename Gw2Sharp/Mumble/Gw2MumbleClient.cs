@@ -44,18 +44,10 @@ namespace Gw2Sharp.Mumble
         /// <summary>
         /// Creates a new <see cref="Gw2MumbleClient"/>.
         /// </summary>
-        /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
-        /// <param name="gw2Client">The Guild Wars 2 client.</param>
         /// <param name="mumbleLinkName">The Mumble Link name.</param>
         /// <param name="parent">The parent Mumble Link client to track child objects.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="connection"/> or <paramref name="gw2Client"/> is <c>null</c>.</exception>
-        protected internal Gw2MumbleClient(IConnection connection, IGw2Client gw2Client, string mumbleLinkName = DEFAULT_MUMBLE_LINK_MAP_NAME, Gw2MumbleClient? parent = null) : base(connection, gw2Client)
+        protected internal Gw2MumbleClient(string mumbleLinkName = DEFAULT_MUMBLE_LINK_MAP_NAME, Gw2MumbleClient? parent = null)
         {
-            if (connection == null)
-                throw new ArgumentNullException(nameof(connection));
-            if (gw2Client == null)
-                throw new ArgumentNullException(nameof(gw2Client));
-
             this.mumbleClientCache = parent?.mumbleClientCache ?? new ConcurrentDictionary<string, WeakReference<Gw2MumbleClient>>();
             this.mumbleLinkName = !string.IsNullOrEmpty(mumbleLinkName) ? mumbleLinkName : DEFAULT_MUMBLE_LINK_MAP_NAME;
             if (this.mumbleLinkName == DEFAULT_MUMBLE_LINK_MAP_NAME)
@@ -120,11 +112,11 @@ namespace Gw2Sharp.Mumble
             get
             {
                 var reference = this.mumbleClientCache.GetOrAdd(mumbleLinkName,
-                    x => new WeakReference<Gw2MumbleClient>(new Gw2MumbleClient(this.Connection, this.Gw2Client!, mumbleLinkName, this), false));
+                    x => new WeakReference<Gw2MumbleClient>(new Gw2MumbleClient(mumbleLinkName, this), false));
 
                 if (!reference.TryGetTarget(out var client))
                 {
-                    client = new Gw2MumbleClient(this.Connection, this.Gw2Client!, mumbleLinkName, this);
+                    client = new Gw2MumbleClient(mumbleLinkName, this);
                     reference.SetTarget(client);
                 }
                 return client;
