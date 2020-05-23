@@ -16,7 +16,7 @@ jobs:
       - name: Download docfx
         shell: powershell
         run: |
-          Invoke-WebRequest https://github.com/dotnet/docfx/releases/download/v2.43.3/docfx.zip -OutFile docfx.zip
+          Invoke-WebRequest https://github.com/dotnet/docfx/releases/download/v2.53.1/docfx.zip -OutFile docfx.zip
           7z e docfx.zip
       - name: Generate docs
         run: ./docfx.exe docs/docfx.json
