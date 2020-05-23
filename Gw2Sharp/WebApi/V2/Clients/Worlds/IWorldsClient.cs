@@ -8,7 +8,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public interface IWorldsClient :
         IAllExpandableClient<World>,
         IBulkExpandableClient<World, int>,
-        ILocalizedClient<World>,
+        ILocalizedClient,
         IPaginatedClient<World>
     { }
 }

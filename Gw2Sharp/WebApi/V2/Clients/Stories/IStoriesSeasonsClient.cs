@@ -9,7 +9,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public interface IStoriesSeasonsClient :
         IAllExpandableClient<StorySeason>,
         IBulkExpandableClient<StorySeason, Guid>,
-        ILocalizedClient<StorySeason>,
+        ILocalizedClient,
         IPaginatedClient<StorySeason>
     {
     }

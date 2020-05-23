@@ -8,7 +8,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public interface IStoriesClient :
         IAllExpandableClient<Story>,
         IBulkExpandableClient<Story, int>,
-        ILocalizedClient<Story>,
+        ILocalizedClient,
         IPaginatedClient<Story>
     {
         /// <summary>

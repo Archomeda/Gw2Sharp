@@ -8,7 +8,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public interface ISpecializationsClient :
         IAllExpandableClient<Specialization>,
         IBulkExpandableClient<Specialization, int>,
-        ILocalizedClient<Specialization>,
+        ILocalizedClient,
         IPaginatedClient<Specialization>
     {
     }

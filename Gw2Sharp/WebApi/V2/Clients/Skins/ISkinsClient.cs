@@ -7,7 +7,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// </summary>
     public interface ISkinsClient :
         IBulkExpandableClient<Skin, int>,
-        ILocalizedClient<Skin>,
+        ILocalizedClient,
         IPaginatedClient<Skin>
     {
     }
