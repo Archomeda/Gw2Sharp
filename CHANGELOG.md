@@ -13,6 +13,9 @@
 ### Refactoring
 - **Breaking:** `Gw2Sharp.Models.MountSkinDyeSlot` has been renamed to `Gw2Sharp.Models.SkinDyeSlot`
 
+### Deprecation removals
+- Following up on version 0.9.5, the enum value `Gw2Sharp.WebApi.V2.Models.SkillWeaponType.Harpoon` has been removed in favor of `Spear`
+
 ---
 
 ## 0.9.6

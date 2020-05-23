@@ -1,5 +1,3 @@
-using System;
-
 namespace Gw2Sharp.WebApi.V2.Models
 {
     /// <summary>
@@ -98,15 +96,9 @@ namespace Gw2Sharp.WebApi.V2.Models
         Staff,
 
         /// <summary>
-        /// Harpoon weapon type.
-        /// </summary>
-        [Obsolete("Use Spear instead")]
-        Harpoon,
-
-        /// <summary>
         /// Spear weapon type.
         /// </summary>
-        Spear = Harpoon,
+        Spear,
 
         /// <summary>
         /// Speargun weapon type.
