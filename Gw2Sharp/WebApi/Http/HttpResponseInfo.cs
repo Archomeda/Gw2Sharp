@@ -37,7 +37,7 @@ namespace Gw2Sharp.WebApi.Http
                 if (string.IsNullOrWhiteSpace(value))
                     return null;
                 if (value.StartsWith("\"", StringComparison.OrdinalIgnoreCase) && value.EndsWith("\"", StringComparison.OrdinalIgnoreCase))
-                    value = value.Substring(1, value.Length - 2);
+                    value = value[1..^1];
                 return CacheControlHeaderValue.Parse(value).MaxAge;
             }
         }
