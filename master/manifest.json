@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "D:/a/Gw2Sharp/Gw2Sharp/Gw2Sharp.DocFX",
+  "source_base_path": "D:/a/Gw2Sharp/Gw2Sharp/docs",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "ya3LLFKVPls32m+I+2VinQ=="
+          "hash": "uaUs3dmPI//WD2dD1gCHLQ=="
         }
       },
       "is_incremental": false,
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "guides/caching.html",
-          "hash": "dh8vrafls87IaUKNzgKbhQ=="
+          "hash": "uqmolXVnbdoWKqZhY5eFBQ=="
         }
       },
       "is_incremental": false,
@@ -36,7 +36,7 @@
       "output": {
         ".html": {
           "relative_path": "guides/endpoints.html",
-          "hash": "uANkC5FAAj1Js9Axqkb9bA=="
+          "hash": "opPXAhZWW/lM4hgBLeT7EA=="
         }
       },
       "is_incremental": false,
@@ -51,7 +51,7 @@
       "output": {
         ".html": {
           "relative_path": "guides/exception-handling.html",
-          "hash": "kNWCYxRWDFDNnUFTAO3LPQ=="
+          "hash": "Ygtux+mKsCWQiwBSbgvzgw=="
         }
       },
       "is_incremental": false,
@@ -63,7 +63,7 @@
       "output": {
         ".html": {
           "relative_path": "guides/http-headers.html",
-          "hash": "2uq8pFmVQ81JY2y3+Phiyw=="
+          "hash": "1paqd5fQbUXPNL8o74QJXA=="
         }
       },
       "is_incremental": false,
@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "guides/introduction.html",
-          "hash": "qqaxN9SeAzteTZFxbE1Nlw=="
+          "hash": "6KRUaS044OXGQoLkWhZLhQ=="
         }
       },
       "is_incremental": false,
@@ -90,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "guides/last-modified.html",
-          "hash": "Z5+RUM1epgO7xv5Q/TFooQ=="
+          "hash": "9LxZlslhdmzfzsvKlF8uQA=="
         }
       },
       "is_incremental": false,
@@ -102,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "guides/render-url.html",
-          "hash": "ImpcLa5aRskSjNjLXJ+qCw=="
+          "hash": "LjyFOMCWQXGSmHBzaRaYyw=="
         }
       },
       "is_incremental": false,
@@ -114,7 +114,7 @@
       "output": {
         ".html": {
           "relative_path": "guides/subtokens.html",
-          "hash": "FjyCo2DHnVTtXfL5J4/HLg=="
+          "hash": "iHxYjC73CaVHy6e6gzK+ow=="
         }
       },
       "is_incremental": false,
@@ -126,7 +126,7 @@
       "output": {
         ".html": {
           "relative_path": "guides/symbols.html",
-          "hash": "HlH9DS0oNGMV7Zoa2c+n7g=="
+          "hash": "gQWC2tVe36etxBqc4px4Sg=="
         }
       },
       "is_incremental": false,
@@ -138,7 +138,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "dE2OG1i7lAt4FRW4Wc9l6w=="
+          "hash": "cgPSwZXvZA0GxcHhQtLybw=="
         }
       },
       "is_incremental": false,
