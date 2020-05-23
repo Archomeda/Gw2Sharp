@@ -21,11 +21,9 @@ namespace Gw2Sharp.Extensions
             if (str == null)
                 throw new ArgumentNullException(nameof(str));
 
-            using (var sha1 = new SHA1Managed())
-            {
-                byte[] hash = sha1.ComputeHash(Encoding.UTF8.GetBytes(str));
-                return string.Join("", hash.Select(x => x.ToString("X2")));
-            }
+            using var sha1 = new SHA1Managed();
+            byte[] hash = sha1.ComputeHash(Encoding.UTF8.GetBytes(str));
+            return string.Join("", hash.Select(x => x.ToString("X2")));
         }
     }
 }

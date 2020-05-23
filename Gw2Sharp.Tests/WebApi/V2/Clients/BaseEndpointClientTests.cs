@@ -244,16 +244,13 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
 
         protected (string, JsonDocument) GetTestData(string fileResourceName)
         {
-            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream($"Gw2Sharp.Tests.{fileResourceName}"))
-            {
-                if (stream == null)
-                    throw new FileNotFoundException($"Resource {fileResourceName} does not exist");
-                using (var reader = new StreamReader(stream))
-                {
-                    string data = reader.ReadToEnd();
-                    return (data, JsonDocument.Parse(data));
-                }
-            }
+            using var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream($"Gw2Sharp.Tests.{fileResourceName}");
+            if (stream == null)
+                throw new FileNotFoundException($"Resource {fileResourceName} does not exist");
+
+            using var reader = new StreamReader(stream);
+            string data = reader.ReadToEnd();
+            return (data, JsonDocument.Parse(data));
         }
 
         protected TObject GetId<TObject>(JsonElement id) =>

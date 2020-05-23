@@ -39,24 +39,22 @@ namespace Gw2Sharp.Tests.WebApi.Http
             string message = "Hello world";
             var (headerKey, headerValue) = ("X-Test", "Hello world");
 
-            using (var listener = this.CreateOneTimeListener(context =>
+            using var listener = this.CreateOneTimeListener(context =>
             {
                 byte[] buf = Encoding.UTF8.GetBytes(message);
                 context.Response.AddHeader(headerKey, headerValue);
                 context.Response.OutputStream.Write(buf, 0, buf.Length);
                 return true;
-            }))
-            {
-                var client = new HttpClient();
-                var request = Substitute.For<IHttpRequest>();
-                request.RequestHeaders.Returns(new Dictionary<string, string>() { { headerKey, headerValue } });
-                request.Url.Returns(new Uri(Url));
+            });
+            var client = new HttpClient();
+            var request = Substitute.For<IHttpRequest>();
+            request.RequestHeaders.Returns(new Dictionary<string, string>() { { headerKey, headerValue } });
+            request.Url.Returns(new Uri(Url));
 
-                var result = await client.RequestAsync(request, CancellationToken.None);
+            var result = await client.RequestAsync(request, CancellationToken.None);
 
-                Assert.Equal(message, result.Content);
-                Assert.Contains(new KeyValuePair<string, string>(headerKey, headerValue), result.ResponseHeaders);
-            }
+            Assert.Equal(message, result.Content);
+            Assert.Contains(new KeyValuePair<string, string>(headerKey, headerValue), result.ResponseHeaders);
         }
 
         [Fact]
@@ -64,36 +62,32 @@ namespace Gw2Sharp.Tests.WebApi.Http
         {
             var reset = new ManualResetEvent(false);
 
-            using (var listener = this.CreateOneTimeListener(context => { reset.WaitOne(); return false; }))
-            {
-                var client = new HttpClient();
-                var request = Substitute.For<IHttpRequest>();
-                request.RequestHeaders.Returns(new Dictionary<string, string>());
-                request.Url.Returns(new Uri(Url));
+            using var listener = this.CreateOneTimeListener(context => { reset.WaitOne(); return false; });
+            var client = new HttpClient();
+            var request = Substitute.For<IHttpRequest>();
+            request.RequestHeaders.Returns(new Dictionary<string, string>());
+            request.Url.Returns(new Uri(Url));
 
-                var tokenSource = new CancellationTokenSource(1000);
-                await Assert.ThrowsAsync<RequestCanceledException>(() => client.RequestAsync(request, tokenSource.Token));
-                reset.Set();
-            }
+            var tokenSource = new CancellationTokenSource(1000);
+            await Assert.ThrowsAsync<RequestCanceledException>(() => client.RequestAsync(request, tokenSource.Token));
+            reset.Set();
         }
 
         [Fact]
         public async Task RequestUnexpectedStatusTest()
         {
-            using (var listener = this.CreateOneTimeListener(context =>
+            using var listener = this.CreateOneTimeListener(context =>
             {
                 context.Response.StatusCode = 404;
                 return true;
-            }))
-            {
-                var client = new HttpClient();
-                var request = Substitute.For<IHttpRequest>();
-                request.RequestHeaders.Returns(new Dictionary<string, string>());
-                request.Url.Returns(new Uri(Url));
+            });
+            var client = new HttpClient();
+            var request = Substitute.For<IHttpRequest>();
+            request.RequestHeaders.Returns(new Dictionary<string, string>());
+            request.Url.Returns(new Uri(Url));
 
-                var ex = await Assert.ThrowsAsync<UnexpectedStatusException>(() => client.RequestAsync(request, CancellationToken.None));
-                Assert.Equal(HttpStatusCode.NotFound, ex.Response?.StatusCode);
-            }
+            var ex = await Assert.ThrowsAsync<UnexpectedStatusException>(() => client.RequestAsync(request, CancellationToken.None));
+            Assert.Equal(HttpStatusCode.NotFound, ex.Response?.StatusCode);
         }
     }
 }

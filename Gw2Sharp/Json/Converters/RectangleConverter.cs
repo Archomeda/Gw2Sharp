@@ -16,11 +16,10 @@ namespace Gw2Sharp.Json.Converters
         /// Reads and converts the JSON to type <see cref="Rectangle"/>.
         /// </summary>
         /// <param name="reader">The reader.</param>
-        /// <param name="typeToConvert">The type to convert.</param>
         /// <param name="options">An object that specifies serialization options to use.</param>
         /// <param name="directionType">The rectangle direction type.</param>
         /// <returns>The converted value.</returns>
-        public Rectangle Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options, RectangleDirectionType directionType)
+        public Rectangle Read(ref Utf8JsonReader reader, JsonSerializerOptions options, RectangleDirectionType directionType)
         {
             if (reader.TokenType != JsonTokenType.StartArray)
                 throw new JsonException("Expected start of array");

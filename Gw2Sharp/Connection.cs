@@ -218,32 +218,25 @@ namespace Gw2Sharp
 
                 var errorResponse = new HttpResponse<ErrorObject>(error, ex.Response?.StatusCode, ex.Response?.RequestHeaders, ex.Response?.RequestHeaders);
 
-                switch (ex.Response?.StatusCode)
+                throw ex.Response?.StatusCode switch
                 {
-                    case HttpStatusCode.BadRequest:
-                        // 400
-                        throw new BadRequestException(ex.Request, errorResponse);
-                    case HttpStatusCode.Unauthorized:
-                        // 401
-                        throw AuthorizationRequiredException.CreateFromResponse(ex.Request, errorResponse);
-                    case HttpStatusCode.Forbidden:
-                        // 403
-                        throw AuthorizationRequiredException.CreateFromResponse(ex.Request, errorResponse);
-                    case HttpStatusCode.NotFound:
-                        // 404
-                        throw new NotFoundException(ex.Request, errorResponse);
-                    case (HttpStatusCode)429:
-                        // 429
-                        throw new TooManyRequestsException(ex.Request, errorResponse);
-                    case HttpStatusCode.InternalServerError:
-                        // 500
-                        throw new ServerErrorException(ex.Request, errorResponse);
-                    case HttpStatusCode.ServiceUnavailable:
-                        // 503
-                        throw new ServiceUnavailableException(ex.Request, errorResponse);
-                    default:
-                        throw new UnexpectedStatusException(ex.Request, ex.Response, ex.Response?.Content ?? string.Empty);
-                }
+                    // 400
+                    HttpStatusCode.BadRequest => new BadRequestException(ex.Request, errorResponse),
+                    // 401
+                    HttpStatusCode.Unauthorized => AuthorizationRequiredException.CreateFromResponse(ex.Request, errorResponse),
+                    // 403
+                    HttpStatusCode.Forbidden => AuthorizationRequiredException.CreateFromResponse(ex.Request, errorResponse),
+                    // 404
+                    HttpStatusCode.NotFound => new NotFoundException(ex.Request, errorResponse),
+                    // 429
+                    (HttpStatusCode)429 => new TooManyRequestsException(ex.Request, errorResponse),
+                    // 500
+                    HttpStatusCode.InternalServerError => new ServerErrorException(ex.Request, errorResponse),
+                    // 503
+                    HttpStatusCode.ServiceUnavailable => new ServiceUnavailableException(ex.Request, errorResponse),
+
+                    _ => new UnexpectedStatusException(ex.Request, ex.Response, ex.Response?.Content ?? string.Empty),
+                };
             }
         }
     }

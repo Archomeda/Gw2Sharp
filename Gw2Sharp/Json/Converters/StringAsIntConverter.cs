@@ -7,7 +7,7 @@ namespace Gw2Sharp.Json.Converters
     /// <summary>
     /// A custom JSON converter that handles rectangle conversion.
     /// </summary>
-    /// <seealso cref="JsonConverter{int}" />
+    /// <seealso cref="JsonConverter{T}" />
     public class StringAsIntConverter : JsonConverter<int?>
     {
         /// <inheritdoc />

@@ -1,6 +1,7 @@
 using System.Runtime.InteropServices;
 using Gw2Sharp.Models;
 using Gw2Sharp.WebApi.V2;
+using Gw2Sharp.WebApi.V2.Models;
 
 namespace Gw2Sharp.ChatLinks.Structs
 {
@@ -12,7 +13,7 @@ namespace Gw2Sharp.ChatLinks.Structs
     {
         /// <summary>
         /// The profession id.
-        /// Matches <see cref="WebApi.V2.Models.Profession.Code"/> in <see cref="IGw2WebApiV2Client.Professions"/>.
+        /// Matches <see cref="Profession.Code"/> in <see cref="IGw2WebApiV2Client.Professions"/>.
         /// </summary>
         [FieldOffset(0)]
         public ProfessionType Profession;

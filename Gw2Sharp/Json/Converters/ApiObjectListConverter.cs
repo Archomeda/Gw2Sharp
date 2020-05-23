@@ -39,8 +39,7 @@ namespace Gw2Sharp.Json.Converters
             {
                 if (this.converter != null)
                     return this.converter.Read(ref reader, this.type, options);
-                else
-                    return JsonSerializer.Deserialize<ApiV2BaseObjectList<T>>(ref reader, options);
+                return JsonSerializer.Deserialize<ApiV2BaseObjectList<T>>(ref reader, options);
             }
 
             public override void Write(Utf8JsonWriter writer, ApiV2BaseObjectList<T> value, JsonSerializerOptions options) =>

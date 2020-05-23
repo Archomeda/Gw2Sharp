@@ -219,7 +219,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         {
             if (rawValues.TryGetValue(rawValue, out var @enum))
                 return new ApiEnum<T>(@enum, rawValue.ToString());
-
             return new ApiEnum<T>(defaultValue, rawValue.ToString());
         }
     }
