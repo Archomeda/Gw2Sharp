@@ -1,5 +1,6 @@
 using System;
 using Gw2Sharp.WebApi.V2.Clients;
+using Gw2Sharp.WebApi.V2.Models;
 
 namespace Gw2Sharp.WebApi.V2
 {
@@ -58,6 +59,7 @@ namespace Gw2Sharp.WebApi.V2
         private readonly IStoriesClient stories;
         private readonly ITitlesClient titles;
         private readonly ITokenInfoClient tokenInfo;
+        private readonly ITraitsClient traits;
         private readonly IWorldBossesClient worldBosses;
 
         /// <summary>
@@ -119,6 +121,7 @@ namespace Gw2Sharp.WebApi.V2
             this.stories = new StoriesClient(connection, gw2Client);
             this.titles = new TitlesClient(connection, gw2Client);
             this.tokenInfo = new TokenInfoClient(connection, gw2Client);
+            this.traits = new TraitsClient(connection, gw2Client);
             this.worldBosses = new WorldBossesClient(connection, gw2Client);
         }
 
@@ -256,6 +259,9 @@ namespace Gw2Sharp.WebApi.V2
 
         /// <inheritdoc />
         public virtual ITokenInfoClient TokenInfo => this.tokenInfo;
+
+        /// <inheritdoc />
+        public virtual ITraitsClient Traits => this.traits;
 
         /// <inheritdoc />
         public virtual IWorldBossesClient WorldBosses => this.worldBosses;

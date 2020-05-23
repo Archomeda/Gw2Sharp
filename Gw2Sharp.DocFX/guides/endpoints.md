@@ -174,7 +174,7 @@ For your convenience, the following list gives an overview of the web API endpoi
  /v2/stories/seasons | 🌐📄📚📦 | [`Gw2Client.WebApi.V2.Stories.Seasons`](../api/Gw2Sharp.WebApi.V2.Clients.StoriesSeasonsClient.html)
  /v2/titles | 🌐📄📚📦 | [`Gw2Client.WebApi.V2.Titles`](../api/Gw2Sharp.WebApi.V2.Clients.TitlesClient.html)
  /v2/tokeninfo | 🔑 | [`Gw2Client.WebApi.V2.TokenInfo`](../api/Gw2Sharp.WebApi.V2.Clients.TokenInfoClient.html)
- /v2/traits | ❌ |
+ /v2/traits | 🌐📄📚📦 | [`Gw2Client.WebApi.V2.Traits`](../api/Gw2Sharp.WebApi.V2.Clients.TraitsClient.html)
  ~~/v2/vendors~~ | ✖️ |
  /v2/worldbosses | 📄📚📦 | [`Gw2Client.WebApi.V2.WorldBosses`](../api/Gw2Sharp.WebApi.V2.Clients.WorldBossesClient.html)
  /v2/worlds | ❌ |

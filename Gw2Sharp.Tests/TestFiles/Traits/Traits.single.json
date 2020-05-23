@@ -1,0 +1,70 @@
+{
+  "id": 1479,
+  "tier": 2,
+  "order": 1,
+  "name": "Shrug It Off",
+  "description": "Use \"Shake It Off!\" automatically when you have a number of conditions on you. Removing a damaging condition from an ally heals them.",
+  "slot": "Major",
+  "facts": [
+    {
+      "text": "Conditions to Trigger",
+      "type": "Number",
+      "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+      "value": 1
+    },
+    {
+      "text": "Healing",
+      "type": "AttributeAdjust",
+      "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+      "value": 517,
+      "target": "Healing"
+    }
+  ],
+  "skills": [
+    {
+      "name": "\"Shake It Off!\"",
+      "facts": [
+        {
+          "text": "Recharge",
+          "type": "Recharge",
+          "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+          "value": 25
+        },
+        {
+          "text": "StunBreak",
+          "type": "StunBreak",
+          "icon": "https://render.guildwars2.com/file/DCF0719729165FD8910E034CA4E0780F90582D15/156654.png",
+          "value": true
+        },
+        {
+          "text": "Conditions Removed",
+          "type": "Number",
+          "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+          "value": 1
+        },
+        {
+          "text": "Radius",
+          "type": "Distance",
+          "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+          "distance": 600
+        },
+        {
+          "text": "Number of Targets",
+          "type": "Number",
+          "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+          "value": 5
+        }
+      ],
+      "description": "Shout. Cure a condition on yourself and nearby allies. Also breaks stuns.",
+      "icon": "https://render.guildwars2.com/file/E8D20BEE10E680A217A055CE62D938D97EA03B7A/103797.png",
+      "flags": [],
+      "id": 14568,
+      "chat_link": "[&Bug4AAA=]",
+      "categories": [
+        "Shout"
+      ]
+    }
+  ],
+  "specialization": 11,
+  "icon": "https://render.guildwars2.com/file/3D09CE385264C492CC3638AD3A7D753FC80A0D34/2207779.png"
+}

@@ -235,6 +235,11 @@ namespace Gw2Sharp.WebApi.V2
         ITokenInfoClient TokenInfo { get; }
 
         /// <summary>
+        /// Gets the traits.
+        /// </summary>
+        ITraitsClient Traits { get; }
+
+        /// <summary>
         /// Gets the world bosses.
         /// </summary>
         IWorldBossesClient WorldBosses { get; }

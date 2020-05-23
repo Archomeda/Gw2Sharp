@@ -275,6 +275,9 @@
     <None Remove="TestFiles\Titles\Titles.single.json" />
     <None Remove="TestFiles\TokenInfo\TokenInfo.ApiToken.json" />
     <None Remove="TestFiles\TokenInfo\TokenInfo.SubToken.json" />
+    <None Remove="TestFiles\Traits\Traits.bulk.json" />
+    <None Remove="TestFiles\Traits\Traits.ids.json" />
+    <None Remove="TestFiles\Traits\Traits.single.json" />
     <None Remove="TestFiles\WorldBosses\WorldBosses.bulk.json" />
     <None Remove="TestFiles\WorldBosses\WorldBosses.ids.json" />
     <None Remove="TestFiles\WorldBosses\WorldBosses.single.json" />
@@ -543,6 +546,9 @@
     <EmbeddedResource Include="TestFiles\Titles\Titles.single.json" />
     <EmbeddedResource Include="TestFiles\TokenInfo\TokenInfo.ApiToken.json" />
     <EmbeddedResource Include="TestFiles\TokenInfo\TokenInfo.SubToken.json" />
+    <EmbeddedResource Include="TestFiles\Traits\Traits.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Traits\Traits.ids.json" />
+    <EmbeddedResource Include="TestFiles\Traits\Traits.single.json" />
     <EmbeddedResource Include="TestFiles\WorldBosses\WorldBosses.bulk.json" />
     <EmbeddedResource Include="TestFiles\WorldBosses\WorldBosses.ids.json" />
     <EmbeddedResource Include="TestFiles\WorldBosses\WorldBosses.single.json" />

@@ -1,0 +1,467 @@
+[
+  {
+    "id": 214,
+    "tier": 2,
+    "order": 1,
+    "name": "Raging Storm",
+    "description": "Critically striking a foe grants fury. Gain ferocity while under the effects of fury.",
+    "slot": "Major",
+    "facts": [
+      {
+        "text": "Recharge",
+        "type": "Recharge",
+        "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+        "value": 3
+      },
+      {
+        "type": "AttributeAdjust",
+        "icon": "https://render.guildwars2.com/file/0658D833944E69E62E08EB18A0B5407F722125BC/2229320.png",
+        "value": 180,
+        "target": "CritDamage"
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/96D90DF84CAFE008233DD1C2606A12C1A0E68048/102842.png",
+        "duration": 2,
+        "status": "Fury",
+        "description": "Critical Chance increased by 20%; stacks duration.",
+        "apply_count": 1
+      }
+    ],
+    "specialization": 41,
+    "icon": "https://render.guildwars2.com/file/74A414B378B54431EF183A37DA37CCFFFC0E04BD/2175040.png"
+  },
+  {
+    "id": 222,
+    "tier": 2,
+    "order": 0,
+    "name": "Electric Discharge",
+    "description": "Strike your target with a bolt of lightning when attuning to air.<br><c=@reminder>Also triggers on overload skills.</c>",
+    "slot": "Minor",
+    "facts": [
+      {
+        "text": "Damage",
+        "type": "Damage",
+        "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+        "hit_count": 1,
+        "dmg_multiplier": 0.35
+      },
+      {
+        "text": "Damage",
+        "type": "Damage",
+        "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+        "hit_count": 1,
+        "dmg_multiplier": 0.05
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/3A394C1A0A3257EB27A44842DDEEF0DF000E1241/102850.png",
+        "duration": 8,
+        "status": "Vulnerability",
+        "description": "Damage and condition damage taken are increased; stacks intensity.",
+        "apply_count": 1
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "Buff",
+        "icon": "https://render.guildwars2.com/file/3A394C1A0A3257EB27A44842DDEEF0DF000E1241/102850.png",
+        "duration": 6,
+        "status": "Vulnerability",
+        "description": "Damage and condition damage taken are increased; stacks intensity.",
+        "apply_count": 8
+      },
+      {
+        "text": "Critical Damage Increase",
+        "type": "Percent",
+        "icon": "https://render.guildwars2.com/file/0658D833944E69E62E08EB18A0B5407F722125BC/2229320.png",
+        "percent": 100
+      },
+      {
+        "text": "Radius",
+        "type": "Distance",
+        "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+        "distance": 900
+      },
+      {
+        "text": "Number of Targets",
+        "type": "Number",
+        "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+        "value": 1
+      },
+      {
+        "text": "Combat Only",
+        "type": "NoData",
+        "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png"
+      }
+    ],
+    "specialization": 41,
+    "icon": "https://render.guildwars2.com/file/F4622EE8300028599369D4084EA7A2774D250DEA/1012280.png"
+  },
+  {
+    "id": 238,
+    "tier": 3,
+    "order": 0,
+    "name": "Evasive Arcana",
+    "description": "Cast a skill when you dodge based on your attunement.",
+    "slot": "Major",
+    "facts": [
+      {
+        "text": "Combat Only",
+        "type": "NoData",
+        "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Flame Burst",
+        "facts": [
+          {
+            "text": "Recharge",
+            "type": "Recharge",
+            "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+            "value": 10
+          },
+          {
+            "text": "Damage",
+            "type": "Damage",
+            "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+            "hit_count": 1,
+            "dmg_multiplier": 0.1
+          },
+          {
+            "text": "Apply Buff/Condition",
+            "type": "Buff",
+            "icon": "https://render.guildwars2.com/file/B47BF5803FED2718D7474EAF9617629AD068EE10/102849.png",
+            "duration": 6,
+            "status": "Burning",
+            "description": "Deals damage every second; stacks intensity.",
+            "apply_count": 2
+          },
+          {
+            "text": "Number of Targets",
+            "type": "Number",
+            "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+            "value": 5
+          },
+          {
+            "text": "Radius",
+            "type": "Radius",
+            "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+            "distance": 180
+          }
+        ],
+        "description": "Burn nearby foes.",
+        "icon": "https://render.guildwars2.com/file/610424237E18EA90F0D824454104355309FF5DDA/102959.png",
+        "flags": [],
+        "id": 5794,
+        "chat_link": "[&BqIWAAA=]"
+      },
+      {
+        "name": "Cleansing Wave",
+        "facts": [
+          {
+            "text": "Recharge",
+            "type": "Recharge",
+            "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+            "value": 10
+          },
+          {
+            "text": "Healing",
+            "type": "AttributeAdjust",
+            "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+            "value": 1558,
+            "target": "Healing"
+          },
+          {
+            "text": "Conditions Removed",
+            "type": "Number",
+            "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+            "value": 1
+          },
+          {
+            "text": "Number of Targets",
+            "type": "Number",
+            "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+            "value": 5
+          },
+          {
+            "text": "Radius",
+            "type": "Distance",
+            "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+            "distance": 180
+          }
+        ],
+        "description": "Heal yourself and nearby allies, curing a condition.",
+        "icon": "https://render.guildwars2.com/file/180D2C7CDB69E301401509737CEC35F90D57E358/102819.png",
+        "flags": [],
+        "id": 5793,
+        "chat_link": "[&BqEWAAA=]"
+      },
+      {
+        "name": "Blinding Flash",
+        "facts": [
+          {
+            "text": "Recharge",
+            "type": "Recharge",
+            "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+            "value": 10
+          },
+          {
+            "text": "Apply Buff/Condition",
+            "type": "Buff",
+            "icon": "https://render.guildwars2.com/file/09770136BB76FD0DBE1CC4267DEED54774CB20F6/102837.png",
+            "duration": 5,
+            "status": "Blinded",
+            "description": "Next outgoing attack misses; stacks duration.",
+            "apply_count": 1
+          },
+          {
+            "text": "Number of Targets",
+            "type": "Number",
+            "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+            "value": 5
+          },
+          {
+            "text": "Radius",
+            "type": "Distance",
+            "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+            "distance": 180
+          }
+        ],
+        "description": "Blind nearby foes.",
+        "icon": "https://render.guildwars2.com/file/2E2837AB65D4283DD23673CB21450A9CC5D2F07F/103384.png",
+        "flags": [],
+        "id": 5792,
+        "chat_link": "[&BqAWAAA=]"
+      },
+      {
+        "name": "Shock Wave",
+        "facts": [
+          {
+            "text": "Recharge",
+            "type": "Recharge",
+            "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+            "value": 10
+          },
+          {
+            "text": "Damage",
+            "type": "Damage",
+            "icon": "https://render.guildwars2.com/file/61AA4919C4A7990903241B680A69530121E994C7/156657.png",
+            "hit_count": 1,
+            "dmg_multiplier": 0.5
+          },
+          {
+            "text": "Apply Buff/Condition",
+            "type": "Buff",
+            "icon": "https://render.guildwars2.com/file/79FF0046A5F9ADA3B4C4EC19ADB4CB124D5F0021/102848.png",
+            "duration": 20,
+            "status": "Bleeding",
+            "description": "Deals damage every second; stacks intensity.",
+            "apply_count": 1
+          },
+          {
+            "text": "Apply Buff/Condition",
+            "type": "Buff",
+            "icon": "https://render.guildwars2.com/file/070325E519C178D502A8160523766070D30C0C19/102838.png",
+            "duration": 2,
+            "status": "Crippled",
+            "description": "Movement speed decreased by 50%; stacks duration.",
+            "apply_count": 1
+          },
+          {
+            "text": "Number of Targets",
+            "type": "Number",
+            "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+            "value": 5
+          },
+          {
+            "text": "Radius",
+            "type": "Distance",
+            "icon": "https://render.guildwars2.com/file/B0CD8077991E4FB1622D2930337ED7F9B54211D5/156665.png",
+            "distance": 180
+          },
+          {
+            "text": "Combo Finisher",
+            "type": "ComboFinisher",
+            "icon": "https://render.guildwars2.com/file/A513F3653D33FBA4220D2D307799F8A327A36A3B/156656.png",
+            "percent": 100,
+            "finisher_type": "Blast"
+          }
+        ],
+        "description": "Create a shock wave that bleeds and cripples nearby foes.",
+        "icon": "https://render.guildwars2.com/file/69CFF22DD8599E35164720AC02A5F2044C33C7DD/103136.png",
+        "flags": [],
+        "id": 5795,
+        "chat_link": "[&BqMWAAA=]"
+      }
+    ],
+    "specialization": 37,
+    "icon": "https://render.guildwars2.com/file/0B46175A2DCC7C396EEAA34B50DB6204390F0FE8/1012288.png"
+  },
+  {
+    "id": 265,
+    "tier": 2,
+    "order": 0,
+    "name": "Arcane Resurrection",
+    "description": "Cast Geyser when you begin reviving a downed ally. Geyser now partially revives downed allies. When you begin reviving an ally, you gain an aura based on your attunement.",
+    "slot": "Major",
+    "facts": [
+      {
+        "text": "Recharge",
+        "type": "Recharge",
+        "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+        "value": 20
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "PrefixedBuff",
+        "icon": "https://render.guildwars2.com/file/2E7050E44690AFE0A396FA0DAD526699392743F3/2261521.png",
+        "duration": 5,
+        "status": "Fire Aura",
+        "description": "Enveloped in a fiery shield that burns foes, grants might each time you are struck (1-second cooldown per attacker).",
+        "apply_count": 1,
+        "prefix": {
+          "text": "Apply Buff/Condition",
+          "icon": "https://render.guildwars2.com/file/1C91E9C799469ACC6EAF1ACD4B0AD8ACAB0C69A2/103035.png",
+          "status": "Fire Attunement",
+          "description": "Cast fire spells."
+        }
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "PrefixedBuff",
+        "icon": "https://render.guildwars2.com/file/719B80E35C276D68EF0AABB79126CF4CD42E3AF6/2261522.png",
+        "duration": 5,
+        "status": "Frost Aura",
+        "description": "Chill foes that strike you (only once per second for each attacker); incoming damage is reduced by 10%.",
+        "apply_count": 1,
+        "prefix": {
+          "text": "Apply Buff/Condition",
+          "icon": "https://render.guildwars2.com/file/737E1B9F7855B9F5D3DE1C990CD42118EF3D1C92/102820.png",
+          "status": "Water Attunement",
+          "description": "Cast water spells."
+        }
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "PrefixedBuff",
+        "icon": "https://render.guildwars2.com/file/79F60BF40AB3F306E7367CF3479A4163F76F3944/2261527.png",
+        "duration": 5,
+        "status": "Shocking Aura",
+        "description": "Stun nearby attacking foes with an electric shock (only once per 2 seconds for each attacker).",
+        "apply_count": 1,
+        "prefix": {
+          "text": "Apply Buff/Condition",
+          "icon": "https://render.guildwars2.com/file/4857F59020DE3B0950B9C91F3D234A1C1932984A/103048.png",
+          "status": "Air Attunement",
+          "description": "Cast air spells."
+        }
+      },
+      {
+        "text": "Apply Buff/Condition",
+        "type": "PrefixedBuff",
+        "icon": "https://render.guildwars2.com/file/33D27C7FE0017F70749DE84576F56F381DDF0C30/2261524.png",
+        "duration": 5,
+        "status": "Magnetic Aura",
+        "description": "Reflect projectiles with magnetic energy.",
+        "apply_count": 1,
+        "prefix": {
+          "text": "Apply Buff/Condition",
+          "icon": "https://render.guildwars2.com/file/4B8056D9BD080DC8E74AE6A57B2B383A2D4265C9/102870.png",
+          "status": "Earth Attunement",
+          "description": "Cast earth spells."
+        }
+      }
+    ],
+    "traited_facts": [
+      {
+        "text": "Apply Buff/Condition",
+        "type": "PrefixedBuff",
+        "icon": "https://render.guildwars2.com/file/2E7050E44690AFE0A396FA0DAD526699392743F3/2261521.png",
+        "duration": 7,
+        "status": "Fire Aura",
+        "description": "Enveloped in a fiery shield that burns foes, grants might each time you are struck (1-second cooldown per attacker).",
+        "apply_count": 1,
+        "requires_trait": 340,
+        "prefix": {
+          "text": "Apply Buff/Condition",
+          "icon": "https://render.guildwars2.com/file/1C91E9C799469ACC6EAF1ACD4B0AD8ACAB0C69A2/103035.png",
+          "status": "Fire Attunement",
+          "description": "Cast fire spells."
+        },
+        "overrides": 1
+      }
+    ],
+    "skills": [
+      {
+        "name": "Geyser",
+        "facts": [
+          {
+            "text": "Range",
+            "type": "Range",
+            "icon": "https://render.guildwars2.com/file/0AAB34BEB1C9F4A25EC612DDBEACF3E20B2810FA/156666.png",
+            "value": 1200
+          },
+          {
+            "text": "Recharge",
+            "type": "Recharge",
+            "icon": "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+            "value": 20
+          },
+          {
+            "text": "Healing",
+            "type": "AttributeAdjust",
+            "icon": "https://render.guildwars2.com/file/D4347C52157B040943051D7E09DEAD7AF63D4378/156662.png",
+            "value": 552,
+            "target": "Healing"
+          },
+          {
+            "text": "Duration",
+            "type": "Time",
+            "icon": "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+            "duration": 4
+          },
+          {
+            "text": "Interval",
+            "type": "Time",
+            "icon": "https://render.guildwars2.com/file/B75E91EB22E0DFCC1D08030204055946506D56F6/1770206.png",
+            "duration": 1
+          },
+          {
+            "text": "Revive Percentage",
+            "type": "Percent",
+            "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+            "percent": 7
+          },
+          {
+            "text": "Revive Percentage",
+            "type": "Percent",
+            "icon": "https://render.guildwars2.com/file/9352ED3244417304995F26CB01AE76BB7E547052/156661.png",
+            "percent": 1
+          },
+          {
+            "text": "Number of Targets",
+            "type": "Number",
+            "icon": "https://render.guildwars2.com/file/BBE8191A494B0352259C10EADFDACCE177E6DA5B/1770208.png",
+            "value": 5
+          },
+          {
+            "text": "Combo Field",
+            "type": "ComboField",
+            "icon": "https://render.guildwars2.com/file/59E0DB6A699810641C959926ADFEF73E08CC255B/156655.png",
+            "field_type": "Water"
+          }
+        ],
+        "description": "Create a geyser to heal nearby allies.",
+        "icon": "https://render.guildwars2.com/file/4CCE5E636B2FCD33495780FB1BCD02A3666DEEBC/103290.png",
+        "flags": [],
+        "id": 5782,
+        "chat_link": "[&BpYWAAA=]"
+      }
+    ],
+    "specialization": 37,
+    "icon": "https://render.guildwars2.com/file/E9BCF655FA539C1B0A1FDDCB52947542A1C6704B/1012285.png"
+  }
+]
