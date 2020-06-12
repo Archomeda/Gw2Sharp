@@ -8,7 +8,7 @@ namespace Gw2Sharp.Json.Converters
     /// <summary>
     /// A custom JSON converter that handles PvP season leaderboard settings tier range conversion.
     /// </summary>
-    /// <seealso cref="JsonConverter{PvpSeasonLeaderboardLadderSettingsTierRange}" />
+    /// <seealso cref="JsonConverter{T}" />
     public class PvpSeasonLeaderboardSettingsTierRangeConverter : JsonConverter<PvpSeasonLeaderboardSettingsTierRange>
     {
         /// <inheritdoc />

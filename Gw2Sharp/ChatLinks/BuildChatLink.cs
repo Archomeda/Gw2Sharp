@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using Gw2Sharp.ChatLinks.Structs;
 using Gw2Sharp.Models;
 using Gw2Sharp.WebApi.V2;
@@ -9,6 +10,7 @@ namespace Gw2Sharp.ChatLinks
     /// <summary>
     /// Represents a Guild Wars 2 build chat link.
     /// </summary>
+    [SuppressMessage("ReSharper", "MemberCanBePrivate.Global")]
     public sealed class BuildChatLink : Gw2ChatLink<BuildChatLinkStruct>, IEquatable<BuildChatLink>
     {
         /// <inheritdoc />
@@ -371,7 +373,7 @@ namespace Gw2Sharp.ChatLinks
             obj is BuildChatLink link && this.Equals(link);
 
         /// <inheritdoc />
-        public bool Equals(BuildChatLink other) =>
+        public bool Equals(BuildChatLink? other) =>
             !(other is null) &&
             this.Type == other.Type &&
             this.Profession == other.Profession &&

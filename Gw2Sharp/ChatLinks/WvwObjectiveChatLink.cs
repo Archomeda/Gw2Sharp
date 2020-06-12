@@ -36,16 +36,11 @@ namespace Gw2Sharp.ChatLinks
         #region Equality
 
         /// <inheritdoc />
-        public override bool Equals(object? obj)
-        {
-            return obj is WvwObjectiveChatLink link &&
-                this.Type == link.Type &&
-                this.ObjectiveId == link.ObjectiveId &&
-                this.MapId == link.MapId;
-        }
+        public override bool Equals(object? obj) =>
+            obj is WvwObjectiveChatLink link && this.Equals(link);
 
         /// <inheritdoc />
-        public bool Equals(WvwObjectiveChatLink other) =>
+        public bool Equals(WvwObjectiveChatLink? other) =>
             !(other is null) &&
             this.Type == other.Type &&
             this.ObjectiveId == other.ObjectiveId &&

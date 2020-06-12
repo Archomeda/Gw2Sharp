@@ -8,7 +8,7 @@ namespace Gw2Sharp.Json.Converters
     /// <summary>
     /// A custom JSON converter that handles 2D coordinates conversion.
     /// </summary>
-    /// <seealso cref="JsonConverter{Coordinates2}" />
+    /// <seealso cref="JsonConverter{T}" />
     public sealed class Coordinates2Converter : JsonConverter<Coordinates2>
     {
         /// <inheritdoc />

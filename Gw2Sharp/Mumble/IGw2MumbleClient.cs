@@ -13,9 +13,9 @@ namespace Gw2Sharp.Mumble
         /// <summary>
         /// Gets a custom named Mumble Link client API.
         /// </summary>
-        /// <param name="mumbleLinkName">The custom name.</param>
+        /// <param name="name">The custom name.</param>
         /// <returns>The Mumble Link client API.</returns>
-        IGw2MumbleClient this[string mumbleLinkName] { get; }
+        IGw2MumbleClient this[string name] { get; }
 
         /// <summary>
         /// Whether the Guild Wars 2 Mumble Link API is available or not.

@@ -1,320 +1,356 @@
-root = true
+root=true
 
 # All files
 [*]
-indent_style = space
-charset = utf-8
+indent_style=space
+charset=utf-8
 
 # Code files
 [*.{cs,csx,vb,vbx}]
-indent_size = 4
-trim_trailing_whitespace = true
-insert_final_newline = true
+indent_size=4
+trim_trailing_whitespace=true
+insert_final_newline=true
 
 # XML project files
 [*.{csproj,vbproj,vcxproj,vcxproj.filters,proj,projitems,shproj}]
-indent_size = 2
-trim_trailing_whitespace = true
-insert_final_newline = true
+indent_size=2
+trim_trailing_whitespace=true
+insert_final_newline=true
 
 # XML config files
 [*.{props,targets,ruleset,config,nuspec,resx,vsixmanifest,vsct}]
-indent_size = 2
-trim_trailing_whitespace = true
-insert_final_newline = true
+indent_size=2
+trim_trailing_whitespace=true
+insert_final_newline=true
 
 # JSON files
 [*.json]
-indent_size = 2
-trim_trailing_whitespace = true
-insert_final_newline = true
+indent_size=2
+trim_trailing_whitespace=true
+insert_final_newline=true
 
 # Markdown files
 [*.md]
-indent_size = 2
-trim_trailing_whitespace = false
-insert_final_newline = true
+indent_size=2
+trim_trailing_whitespace=false
+insert_final_newline=true
 
 # Powershell files
 [*.ps1]
-indent_size = 2
-trim_trailing_whitespace = true
-insert_final_newline = true
+indent_size=2
+trim_trailing_whitespace=true
+insert_final_newline=true
 
 # Shell script files
 [*.sh]
-end_of_line = lf
-indent_size = 2
-trim_trailing_whitespace = true
-insert_final_newline = true
+end_of_line=lf
+indent_size=2
+trim_trailing_whitespace=true
+insert_final_newline=true
 
 
 # Formatting conventions
 # More information: https://docs.microsoft.com/en-us/visualstudio/ide/editorconfig-code-style-settings-reference?view=vs-2019
 [*.cs]
 
+# ReSharper properties
+resharper_blank_lines_after_block_statements=0
+resharper_blank_lines_around_single_line_auto_property=1
+resharper_blank_lines_around_single_line_property=1
+resharper_blank_lines_before_single_line_comment=1
+resharper_braces_for_dowhile=required_for_multiline
+resharper_braces_for_fixed=required_for_multiline
+resharper_braces_for_for=required_for_multiline
+resharper_braces_for_foreach=required_for_multiline
+resharper_braces_for_ifelse=not_required_for_both
+resharper_braces_for_lock=required_for_multiline
+resharper_braces_for_using=required_for_multiline
+resharper_braces_for_while=required_for_multiline
+resharper_braces_redundant=true
+resharper_csharp_blank_lines_around_single_line_invocable=1
+resharper_keep_existing_embedded_arrangement=false
+resharper_keep_existing_embedded_block_arrangement=false
+resharper_keep_existing_switch_expression_arrangement=false
+resharper_parentheses_non_obvious_operations=none, multiplicative, additive, arithmetic, shift, relational, equality, bitwise_and, bitwise_exclusive_or, bitwise_inclusive_or, bitwise, null_coalescing, lowest
+resharper_place_simple_embedded_statement_on_same_line=false
+resharper_place_simple_initializer_on_single_line=true
+resharper_wrap_object_and_collection_initializer_style=chop_if_long
+
+# ReSharper inspection severities
+resharper_arrange_local_function_body_highlighting=suggestion
+resharper_enforce_do_while_statement_braces_highlighting=warning
+resharper_enforce_fixed_statement_braces_highlighting=warning
+resharper_enforce_foreach_statement_braces_highlighting=warning
+resharper_enforce_for_statement_braces_highlighting=warning
+resharper_enforce_if_statement_braces_highlighting=warning
+resharper_enforce_lock_statement_braces_highlighting=warning
+resharper_enforce_using_statement_braces_highlighting=warning
+resharper_enforce_while_statement_braces_highlighting=warning
+resharper_remove_redundant_braces_highlighting=hint
+
 # "This." and "Me." qualifiers
-dotnet_style_qualification_for_field = true:warning
-dotnet_style_qualification_for_property = true:warning
-dotnet_style_qualification_for_method = true:warning
-dotnet_style_qualification_for_event = true:warning
+dotnet_style_qualification_for_field=true:warning
+dotnet_style_qualification_for_property=true:warning
+dotnet_style_qualification_for_method=true:warning
+dotnet_style_qualification_for_event=true:warning
 
 # Language keywords instead of framework type names for type references
-dotnet_style_predefined_type_for_locals_parameters_members = true:warning
-dotnet_style_predefined_type_for_member_access = true:warning
+dotnet_style_predefined_type_for_locals_parameters_members=true:warning
+dotnet_style_predefined_type_for_member_access=true:warning
 
 # Modifier preferences
-dotnet_style_require_accessibility_modifiers = always:warning
-csharp_preferred_modifier_order = public,private,protected,internal,static,extern,new,virtual,abstract,sealed,override,readonly,unsafe,volatile,async:warning
-dotnet_style_readonly_field = true:warning
+dotnet_style_require_accessibility_modifiers=always:warning
+csharp_preferred_modifier_order=public,private,protected,internal,static,extern,new,virtual,abstract,sealed,override,readonly,unsafe,volatile,async:warning
+dotnet_style_readonly_field=true:warning
 
 # Parentheses preferences
-dotnet_style_parentheses_in_arithmetic_binary_operators = always_for_clarity:warning
-dotnet_style_parentheses_in_other_binary_operators = always_for_clarity:warning
-dotnet_style_parentheses_in_other_operators = never_if_unnecessary:warning
-dotnet_style_parentheses_in_relational_binary_operators = always_for_clarity:warning
+dotnet_style_parentheses_in_arithmetic_binary_operators=always_for_clarity:warning
+dotnet_style_parentheses_in_other_binary_operators=always_for_clarity:warning
+dotnet_style_parentheses_in_other_operators=never_if_unnecessary:warning
+dotnet_style_parentheses_in_relational_binary_operators=always_for_clarity:warning
 
 # Expression-level preferences
-dotnet_style_object_initializer = true:suggestion
-dotnet_style_collection_initializer = true:suggestion
-dotnet_style_explicit_tuple_names = true:suggestion
-dotnet_style_prefer_inferred_tuple_names = true:warning
-dotnet_style_prefer_inferred_anonymous_type_member_names = true:suggestion
-dotnet_style_prefer_auto_properties = true:warning
-dotnet_style_prefer_is_null_check_over_reference_equality_method = true:warning
-dotnet_style_prefer_conditional_expression_over_assignment = true:suggestion
-dotnet_style_prefer_conditional_expression_over_return = true:suggestion
+dotnet_style_object_initializer=true:suggestion
+dotnet_style_collection_initializer=true:suggestion
+dotnet_style_explicit_tuple_names=true:suggestion
+dotnet_style_prefer_inferred_tuple_names=true:warning
+dotnet_style_prefer_inferred_anonymous_type_member_names=true:suggestion
+dotnet_style_prefer_auto_properties=true:warning
+dotnet_style_prefer_is_null_check_over_reference_equality_method=true:warning
+dotnet_style_prefer_conditional_expression_over_assignment=true:suggestion
+dotnet_style_prefer_conditional_expression_over_return=true:suggestion
 
 # Null-checking preferences
-dotnet_style_coalesce_expression = true:warning
-dotnet_style_null_propagation = true:warning
+dotnet_style_coalesce_expression=true:warning
+dotnet_style_null_propagation=true:warning
 
 # Implicit and explicit types
-csharp_style_var_for_built_in_types = false:warning
-csharp_style_var_when_type_is_apparent = true:warning
-csharp_style_var_elsewhere = true:warning
+csharp_style_var_for_built_in_types=false:warning
+csharp_style_var_when_type_is_apparent=true:warning
+csharp_style_var_elsewhere=true:warning
 
 # Expression-bodied members
-csharp_style_expression_bodied_methods = when_on_single_line:suggestion
-csharp_style_expression_bodied_constructors = false:warning
-csharp_style_expression_bodied_operators = when_on_single_line:suggestion
-csharp_style_expression_bodied_properties = when_on_single_line:suggestion
-csharp_style_expression_bodied_indexers = when_on_single_line:suggestion
-csharp_style_expression_bodied_accessors = when_on_single_line:suggestion
+csharp_style_expression_bodied_methods=when_on_single_line:suggestion
+csharp_style_expression_bodied_constructors=false:suggestion
+csharp_style_expression_bodied_operators=when_on_single_line:suggestion
+csharp_style_expression_bodied_properties=when_on_single_line:suggestion
+csharp_style_expression_bodied_indexers=when_on_single_line:suggestion
+csharp_style_expression_bodied_accessors=when_on_single_line:suggestion
 
 # Pattern matching
-csharp_style_pattern_matching_over_is_with_cast_check = true:warning
-csharp_style_pattern_matching_over_as_with_null_check = true:warning
+csharp_style_pattern_matching_over_is_with_cast_check=true:warning
+csharp_style_pattern_matching_over_as_with_null_check=true:warning
 
 # Inlined variable declarations
-csharp_style_inlined_variable_declaration = true:warning
+csharp_style_inlined_variable_declaration=true:warning
 
 # Expression-level preferences
-csharp_prefer_simple_default_expression = true:warning
-csharp_style_deconstructed_variable_declaration = true:warning
-csharp_style_pattern_local_over_anonymous_function = true:warning
+csharp_prefer_simple_default_expression=true:warning
+csharp_style_deconstructed_variable_declaration=true:warning
+csharp_style_pattern_local_over_anonymous_function=true:warning
 
 # "Null" checking preferences
-csharp_style_throw_expression = true:warning
-csharp_style_conditional_delegate_call = true:warning
+csharp_style_throw_expression=true:warning
+csharp_style_conditional_delegate_call=true:warning
 
 # Code block preferences
-csharp_prefer_braces = false:suggestion
+csharp_prefer_braces=false:suggestion
 
 # Organize usings
-dotnet_sort_system_directives_first = true
-dotnet_separate_import_directive_groups = false
+dotnet_sort_system_directives_first=true
+dotnet_separate_import_directive_groups=false
 
 # Newline options
-csharp_new_line_before_open_brace = all
-csharp_new_line_before_else = true
-csharp_new_line_before_catch = true
-csharp_new_line_before_finally = true
-csharp_new_line_before_members_in_object_initializers = true
-csharp_new_line_before_members_in_anonymous_types = true
-csharp_new_line_between_query_expression_clauses = true
+csharp_new_line_before_open_brace=all
+csharp_new_line_before_else=true
+csharp_new_line_before_catch=true
+csharp_new_line_before_finally=true
+csharp_new_line_before_members_in_object_initializers=false
+csharp_new_line_before_members_in_anonymous_types=true
+csharp_new_line_between_query_expression_clauses=true
 
 # Indentation options
-csharp_indent_case_contents = true
-csharp_indent_switch_labels = true
-csharp_indent_labels = no_change
+csharp_indent_braces=false
+csharp_indent_case_contents=true
+csharp_indent_switch_labels=true
+csharp_indent_labels=no_change
 
 # Spacing options
-csharp_space_after_cast = false
-csharp_space_after_keywords_in_control_flow_statements = true
-csharp_space_between_method_declaration_parameter_list_parentheses = false
-csharp_space_between_method_call_parameter_list_parentheses = false
-csharp_space_between_parentheses = false
-csharp_space_before_colon_in_inheritance_clause = true
-csharp_space_after_colon_in_inheritance_clause = true
-csharp_space_around_binary_operators = before_and_after
-csharp_space_between_method_declaration_empty_parameter_list_parentheses = false
-csharp_space_between_method_call_name_and_opening_parenthesis = false
-csharp_space_between_method_call_empty_parameter_list_parentheses = false
+csharp_space_after_cast=false
+csharp_space_after_keywords_in_control_flow_statements=true
+csharp_space_between_method_declaration_parameter_list_parentheses=false
+csharp_space_between_method_call_parameter_list_parentheses=false
+csharp_space_between_parentheses=false
+csharp_space_before_colon_in_inheritance_clause=true
+csharp_space_after_colon_in_inheritance_clause=true
+csharp_space_around_binary_operators=before_and_after
+csharp_space_between_method_declaration_empty_parameter_list_parentheses=false
+csharp_space_between_method_call_name_and_opening_parenthesis=false
+csharp_space_between_method_call_empty_parameter_list_parentheses=false
 
 # Wrapping options
-csharp_preserve_single_line_statements = false
-csharp_preserve_single_line_blocks = true
+csharp_preserve_single_line_statements=false
+csharp_preserve_single_line_blocks=true
 
 # Naming conventions
 # More information: https://docs.microsoft.com/en-us/visualstudio/ide/editorconfig-naming-conventions?view=vs-2019
 #   Type parameters (prefix + pascal)
-dotnet_naming_rule.type_parameters_must_be_prefixed_with_a_t.symbols = type_parameters
-dotnet_naming_rule.type_parameters_must_be_prefixed_with_a_t.style = type_parameter_prefix
-dotnet_naming_rule.type_parameters_must_be_prefixed_with_a_t.severity = error
-dotnet_naming_symbols.type_parameters.applicable_kinds = type_parameter
-dotnet_naming_style.type_parameter_prefix.capitalization = pascal_case
-dotnet_naming_style.type_parameter_prefix.required_prefix = T
+dotnet_naming_rule.type_parameters_must_be_prefixed_with_a_t.symbols=type_parameters
+dotnet_naming_rule.type_parameters_must_be_prefixed_with_a_t.style=type_parameter_prefix
+dotnet_naming_rule.type_parameters_must_be_prefixed_with_a_t.severity=error
+dotnet_naming_symbols.type_parameters.applicable_kinds=type_parameter
+dotnet_naming_style.type_parameter_prefix.capitalization=pascal_case
+dotnet_naming_style.type_parameter_prefix.required_prefix=T
 
 #   Interfaces (prefix + pascal)
-dotnet_naming_rule.interfaces_must_be_prefixed_with_an_i.symbols = interfaces
-dotnet_naming_rule.interfaces_must_be_prefixed_with_an_i.style = interface_prefix
-dotnet_naming_rule.interfaces_must_be_prefixed_with_an_i.severity = error
-dotnet_naming_symbols.interfaces.applicable_kinds = interface
-dotnet_naming_style.interface_prefix.capitalization = pascal_case
-dotnet_naming_style.interface_prefix.required_prefix = I
+dotnet_naming_rule.interfaces_must_be_prefixed_with_an_i.symbols=interfaces
+dotnet_naming_rule.interfaces_must_be_prefixed_with_an_i.style=interface_prefix
+dotnet_naming_rule.interfaces_must_be_prefixed_with_an_i.severity=error
+dotnet_naming_symbols.interfaces.applicable_kinds=interface
+dotnet_naming_style.interface_prefix.capitalization=pascal_case
+dotnet_naming_style.interface_prefix.required_prefix=I
 
 #   Constants (all upper)
-dotnet_naming_rule.consts_must_be_all_upper.symbols = consts
-dotnet_naming_rule.consts_must_be_all_upper.style = upper
-dotnet_naming_rule.consts_must_be_all_upper.severity = warning
-dotnet_naming_symbols.consts.required_modifiers = const
+dotnet_naming_rule.consts_must_be_all_upper.symbols=consts
+dotnet_naming_rule.consts_must_be_all_upper.style=upper
+dotnet_naming_rule.consts_must_be_all_upper.severity=warning
+dotnet_naming_symbols.consts.required_modifiers=const
 
 #   Public symbols (pascal)
-dotnet_naming_rule.public_members_must_be_pascal_case.symbols = public_symbols
-dotnet_naming_rule.public_members_must_be_pascal_case.style = pascal_case
-dotnet_naming_rule.public_members_must_be_pascal_case.severity = error
-dotnet_naming_symbols.public_symbols.applicable_kinds = class,struct,interface,enum,property,method,field,event,delegate
-dotnet_naming_symbols.public_symbols.applicable_accessibilities = public
+dotnet_naming_rule.public_members_must_be_pascal_case.symbols=public_symbols
+dotnet_naming_rule.public_members_must_be_pascal_case.style=pascal_case
+dotnet_naming_rule.public_members_must_be_pascal_case.severity=error
+dotnet_naming_symbols.public_symbols.applicable_kinds=class,struct,interface,enum,property,method,field,event,delegate
+dotnet_naming_symbols.public_symbols.applicable_accessibilities=public
 
 #   Fields (camel)
-dotnet_naming_rule.private_fields_must_be_camel_case.symbols = fields
-dotnet_naming_rule.private_fields_must_be_camel_case.style = camel_case
-dotnet_naming_rule.private_fields_must_be_camel_case.severity = warning
-dotnet_naming_symbols.fields.applicable_kinds = field
+dotnet_naming_rule.private_fields_must_be_camel_case.symbols=fields
+dotnet_naming_rule.private_fields_must_be_camel_case.style=camel_case
+dotnet_naming_rule.private_fields_must_be_camel_case.severity=warning
+dotnet_naming_symbols.fields.applicable_kinds=field
 
 #   Parameters (camel)
-dotnet_naming_rule.parameters_must_be_camel_case.symbols = parameters
-dotnet_naming_rule.parameters_must_be_camel_case.style = camel_case
-dotnet_naming_rule.parameters_must_be_camel_case.severity = warning
-dotnet_naming_symbols.parameters.applicable_kinds = parameter
+dotnet_naming_rule.parameters_must_be_camel_case.symbols=parameters
+dotnet_naming_rule.parameters_must_be_camel_case.style=camel_case
+dotnet_naming_rule.parameters_must_be_camel_case.severity=warning
+dotnet_naming_symbols.parameters.applicable_kinds=parameter
 
 #   Locals (camel)
-dotnet_naming_rule.locals_must_be_camel_case.symbols = locals
-dotnet_naming_rule.locals_must_be_camel_case.style = local_prefix
-dotnet_naming_rule.locals_must_be_camel_case.severity = warning
-dotnet_naming_symbols.locals.applicable_kinds = local
+dotnet_naming_rule.locals_must_be_camel_case.symbols=locals
+dotnet_naming_rule.locals_must_be_camel_case.style=local_prefix
+dotnet_naming_rule.locals_must_be_camel_case.severity=warning
+dotnet_naming_symbols.locals.applicable_kinds=local
 
 #   Async methods (suffix + pascal)
-dotnet_naming_rule.async_methods_require_suffix.symbols = async_methods
-dotnet_naming_rule.async_methods_require_suffix.style = async_suffix
-dotnet_naming_rule.async_methods_require_suffix.severity = warning
-dotnet_naming_symbols.async_methods.kinds = method
-dotnet_naming_symbols.async_methods.required_modifiers = async
-dotnet_naming_style.async_suffix.capitalization = pascal_case
-dotnet_naming_style.async_suffix.required_suffix = Async
+dotnet_naming_rule.async_methods_require_suffix.symbols=async_methods
+dotnet_naming_rule.async_methods_require_suffix.style=async_suffix
+dotnet_naming_rule.async_methods_require_suffix.severity=warning
+dotnet_naming_symbols.async_methods.kinds=method
+dotnet_naming_symbols.async_methods.required_modifiers=async
+dotnet_naming_style.async_suffix.capitalization=pascal_case
+dotnet_naming_style.async_suffix.required_suffix=Async
 
 #   Other non-variable symbols (pascal)
-dotnet_naming_rule.non_variables_must_be_pascal_case.symbols = non_variables
-dotnet_naming_rule.non_variables_must_be_pascal_case.style = pascal_case
-dotnet_naming_rule.non_variables_must_be_pascal_case.severity = error
-dotnet_naming_symbols.non_variables.applicable_kinds = namespace,class,struct,interface,enum,property,method,event,delegate,type_parameter,local_function
+dotnet_naming_rule.non_variables_must_be_pascal_case.symbols=non_variables
+dotnet_naming_rule.non_variables_must_be_pascal_case.style=pascal_case
+dotnet_naming_rule.non_variables_must_be_pascal_case.severity=error
+dotnet_naming_symbols.non_variables.applicable_kinds=namespace,class,struct,interface,enum,property,method,event,delegate,type_parameter,local_function
 
-dotnet_naming_style.pascal_case.capitalization = pascal_case
-dotnet_naming_style.camel_case.capitalization = camel_case
-dotnet_naming_style.upper.capitalization = all_upper
+dotnet_naming_style.pascal_case.capitalization=pascal_case
+dotnet_naming_style.camel_case.capitalization=camel_case
+dotnet_naming_style.upper.capitalization=all_upper
 
 
 # Rule overrides
 # CA1303: Do not pass literals as localized parameters
-dotnet_diagnostic.CA1303.severity = none
+dotnet_diagnostic.ca1303.severity=none
 # CA1707: Identifiers should not contain underscores
-dotnet_diagnostic.CA1707.severity = none
+dotnet_diagnostic.ca1707.severity=none
 # CS8073: The result of the expression is always the same since a value of this type is never equal to 'null'.
-dotnet_diagnostic.CS8073.severity = warning
+dotnet_diagnostic.cs8073.severity=warning
 # CS8597: Thrown value may be null.
-dotnet_diagnostic.CS8597.severity = error
+dotnet_diagnostic.cs8597.severity=error
 # CS8600: Converting null literal or possible null value to non-nullable type.
-dotnet_diagnostic.CS8600.severity = error
+dotnet_diagnostic.cs8600.severity=error
 # CS8601: Possible null reference assignment.
-dotnet_diagnostic.CS8601.severity = error
+dotnet_diagnostic.cs8601.severity=error
 # CS8602: Possible dereference of a null reference.
-dotnet_diagnostic.CS8602.severity = error
+dotnet_diagnostic.cs8602.severity=error
 # CS8603: Possible null reference return.
-dotnet_diagnostic.CS8603.severity = error
+dotnet_diagnostic.cs8603.severity=error
 # CS8604: Possible null reference argument for a parameter.
-dotnet_diagnostic.CS8604.severity = error
+dotnet_diagnostic.cs8604.severity=error
 # CS8608: Nullability of reference types in type doesn't match overridden member.
-dotnet_diagnostic.CS8608.severity = error
+dotnet_diagnostic.cs8608.severity=error
 # CS8609: Nullability of reference types in return type doesn't match overridden member.
-dotnet_diagnostic.CS8609.severity = error
+dotnet_diagnostic.cs8609.severity=error
 # CS8610: Nullability of reference types in type of parameter doesn't match overridden member.
-dotnet_diagnostic.CS8610.severity = error
+dotnet_diagnostic.cs8610.severity=error
 # CS8611: Nullability of reference types in type of parameter doesn't match partial method declaration.
-dotnet_diagnostic.CS8611.severity = error
+dotnet_diagnostic.cs8611.severity=error
 # CS8612: Nullability of reference types in type doesn't match implicitly implemented member.
-dotnet_diagnostic.CS8612.severity = error
+dotnet_diagnostic.cs8612.severity=error
 # CS8613: Nullability of reference types in return type doesn't match implicitly implemented member.
-dotnet_diagnostic.CS8613.severity = error
+dotnet_diagnostic.cs8613.severity=error
 # CS8614: Nullability of reference types in type of parameter doesn't match implicitly implemented member.
-dotnet_diagnostic.CS8614.severity = error
+dotnet_diagnostic.cs8614.severity=error
 # CS8615: Nullability of reference types in type doesn't match implemented member.
-dotnet_diagnostic.CS8615.severity = error
+dotnet_diagnostic.cs8615.severity=error
 # CS8616: Nullability of reference types in return type doesn't match implemented member.
-dotnet_diagnostic.CS8616.severity = error
+dotnet_diagnostic.cs8616.severity=error
 # CS8617: Nullability of reference types in type of parameter doesn't match implemented member.
-dotnet_diagnostic.CS8617.severity = error
+dotnet_diagnostic.cs8617.severity=error
 # CS8618: Non-nullable field is uninitialized. Consider declaring as nullable.
-dotnet_diagnostic.CS8618.severity = error
+dotnet_diagnostic.cs8618.severity=error
 # CS8619: Nullability of reference types in value doesn't match target type.
-dotnet_diagnostic.CS8619.severity = error
+dotnet_diagnostic.cs8619.severity=error
 # CS8620: Nullability of reference types in argument doesn't match parameter type.
-dotnet_diagnostic.CS8620.severity = error
+dotnet_diagnostic.cs8620.severity=error
 # CS8621: Nullability of reference types in return type doesn't match the target delegate.
-dotnet_diagnostic.CS8621.severity = error
+dotnet_diagnostic.cs8621.severity=error
 # CS8622: Nullability of reference types in type of a parameter doesn't match the target delegate.
-dotnet_diagnostic.CS8622.severity = error
+dotnet_diagnostic.cs8622.severity=error
 # CS8625: Cannot convert null literal to non-nullable reference or unconstrained type parameter.
-dotnet_diagnostic.CS8625.severity = error
+dotnet_diagnostic.cs8625.severity=error
 # CS8629: Nullable value type may be null.
-dotnet_diagnostic.CS8629.severity = error
+dotnet_diagnostic.cs8629.severity=error
 # CS8631: The type cannot be used as type parameter in the generic type or method. Nullability of type argument doesn't match constraint type.
-dotnet_diagnostic.CS8631.severity = error
+dotnet_diagnostic.cs8631.severity=error
 # CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context.
-dotnet_diagnostic.CS8632.severity = error
+dotnet_diagnostic.cs8632.severity=error
 # CS8633: Nullability in constraints for type parameter doesn't match the constraints for type parameter in implicitly implemented interface method.
-dotnet_diagnostic.CS8633.severity = error
+dotnet_diagnostic.cs8633.severity=error
 # CS8634: The type cannot be used as type parameter in the generic type or method. Nullability of type argument doesn't match 'class' constraint.
-dotnet_diagnostic.CS8634.severity = error
+dotnet_diagnostic.cs8634.severity=error
 # CS8638: Conditional access may produce a null value for a type parameter.
-dotnet_diagnostic.CS8638.severity = error
+dotnet_diagnostic.cs8638.severity=error
 # CS8643: Nullability of reference types in explicit interface specifier doesn't match interface implemented by the type.
-dotnet_diagnostic.CS8643.severity = error
+dotnet_diagnostic.cs8643.severity=error
 # CS8644: Type does not implement interface member. Nullability of reference types in interface implemented by the base type doesn't match.
-dotnet_diagnostic.CS8644.severity = error
+dotnet_diagnostic.cs8644.severity=error
 # CS8645: Interface is already listed in the interface list with different nullability of reference types.
-dotnet_diagnostic.CS8645.severity = error
+dotnet_diagnostic.cs8645.severity=error
 # CS8653: A default expression introduces a null value for a type parameter.
-dotnet_diagnostic.CS8653.severity = error
+dotnet_diagnostic.cs8653.severity=error
 # CS8654: A null literal introduces a null value for a type parameter.
-dotnet_diagnostic.CS8654.severity = error
+dotnet_diagnostic.cs8654.severity=error
 # CS8655: The switch expression does not handle some null inputs.
-dotnet_diagnostic.CS8655.severity = error
+dotnet_diagnostic.cs8655.severity=error
 # CS8667: Partial method declarations have inconsistent nullability in constraints for type parameter.
-dotnet_diagnostic.CS8667.severity = error
+dotnet_diagnostic.cs8667.severity=error
 # CS8714: The type cannot be used as type parameter in the generic type or method. Nullability of type argument doesn't match 'notnull' constraint.
-dotnet_diagnostic.CS8714.severity = error
+dotnet_diagnostic.cs8714.severity=error
 # IDE0069: Disposable fields should be disposed
-dotnet_diagnostic.IDE0069.severity = warning
+dotnet_diagnostic.ide0069.severity=warning
 # S1117: Local variables should not shadow class fields
-dotnet_diagnostic.S1117.severity = silent
+dotnet_diagnostic.s1117.severity=silent
 # S2342: Enumeration types should comply with a naming convention
-dotnet_diagnostic.S2342.severity = silent
+dotnet_diagnostic.s2342.severity=silent
 # S2743: Static fields should not be used in generic types
-dotnet_diagnostic.S2743.severity = none
+dotnet_diagnostic.s2743.severity=none
 # S3963: "static" fields should be initialized inline
-dotnet_diagnostic.S3963.severity = none
+dotnet_diagnostic.s3963.severity=none
 # S3966: Objects should not be disposed more than once
-dotnet_diagnostic.S3966.severity = silent
+dotnet_diagnostic.s3966.severity=silent
 # S4136: Method overloads should be grouped together
-dotnet_diagnostic.S4136.severity = silent
+dotnet_diagnostic.s4136.severity=silent

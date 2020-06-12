@@ -34,6 +34,7 @@ namespace Gw2Sharp.Json.Converters
 
         private sealed class CastableTypeConverterInner<T> : JsonConverter<T>
         {
+            // ReSharper disable once StaticMemberInGenericType
             private static readonly Dictionary<string, Type> targetTypes;
 
             static CastableTypeConverterInner()
@@ -70,11 +71,8 @@ namespace Gw2Sharp.Json.Converters
                 // Find the castable type
                 if (targetTypes.TryGetValue(type, out var targetType))
                     return (T)JsonSerializer.Deserialize(obj.RootElement.GetRawText(), targetType, options);
-                foreach (var value in targetTypes)
-                {
-                    if (string.Equals(type, value.Key, StringComparison.OrdinalIgnoreCase))
-                        return (T)JsonSerializer.Deserialize(obj.RootElement.GetRawText(), value.Value, options);
-                }
+                foreach (var value in targetTypes.Where(value => type.Equals(value.Key, StringComparison.OrdinalIgnoreCase)))
+                    return (T)JsonSerializer.Deserialize(obj.RootElement.GetRawText(), value.Value, options);
 
                 throw new JsonException($"Unsupported type {type}");
             }

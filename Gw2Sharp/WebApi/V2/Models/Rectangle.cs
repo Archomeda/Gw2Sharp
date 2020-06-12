@@ -95,22 +95,17 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <inheritdoc />
         public override bool Equals(object? obj) =>
-            obj is Rectangle && this.Equals((Rectangle)obj);
+            obj is Rectangle rectangle && this.Equals(rectangle);
 
         /// <inheritdoc />
-        public bool Equals(Rectangle other)
-        {
-            return this.TopLeft.Equals(other.TopLeft) &&
-                this.TopRight.Equals(other.TopRight) &&
-                this.BottomLeft.Equals(other.BottomLeft) &&
-                this.BottomRight.Equals(other.BottomRight);
-        }
+        public bool Equals(Rectangle other) =>
+            this.TopLeft.Equals(other.TopLeft) &&
+            this.TopRight.Equals(other.TopRight) &&
+            this.BottomLeft.Equals(other.BottomLeft) &&
+            this.BottomRight.Equals(other.BottomRight);
 
         /// <inheritdoc />
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(this.TopLeft, this.TopRight, this.BottomLeft, this.BottomRight);
-        }
+        public override int GetHashCode() => HashCode.Combine(this.TopLeft, this.TopRight, this.BottomLeft, this.BottomRight);
 
         /// <summary>
         /// Implements the operator ==.

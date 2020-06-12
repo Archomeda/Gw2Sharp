@@ -84,8 +84,7 @@ namespace Gw2Sharp.WebApi.Caching
                 return;
 
             var expiryIndexEntry = this.archive.GetEntry(EXPIRY_DATE_INDEX_FILENAME);
-            if (expiryIndexEntry != null)
-                expiryIndexEntry.Delete();
+            expiryIndexEntry?.Delete();
             expiryIndexEntry = this.archive.CreateEntry(EXPIRY_DATE_INDEX_FILENAME, CompressionLevel.Fastest);
 
             using var entryStream = expiryIndexEntry.Open();
@@ -198,13 +197,11 @@ namespace Gw2Sharp.WebApi.Caching
             return this.GetManyInternalAsync<T>(category, ids);
         }
 
-        private async Task<IDictionary<object, CacheItem<T>>> GetManyInternalAsync<T>(string category, IEnumerable<object> ids)
-        {
-            return ids
+        private async Task<IDictionary<object, CacheItem<T>>> GetManyInternalAsync<T>(string category, IEnumerable<object> ids) =>
+            ids
                 .Select(id => this.TryGetInternal<T>(category, id))
                 .WhereNotNull()
                 .ToDictionary(x => x.Id);
-        }
 
         /// <inheritdoc />
         public override async Task ClearAsync()

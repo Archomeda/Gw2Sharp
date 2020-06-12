@@ -8,7 +8,7 @@ namespace Gw2Sharp.Json.Converters
     /// <summary>
     /// A custom JSON converter that handles API objects.
     /// </summary>
-    /// <seealso cref="JsonConverter{IApiV2Object}" />
+    /// <seealso cref="JsonConverter{T}" />
     public sealed class ApiObjectConverter : JsonConverter<IApiV2Object>
     {
         /// <inheritdoc />

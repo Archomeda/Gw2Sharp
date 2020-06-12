@@ -1,8 +1,11 @@
 // This file is from https://github.com/dotnet/runtime/blob/0f834db1fd80cf82e5ef27f72c48af1c911775da/src/libraries/System.Private.CoreLib/src/System/HashCode.cs
 // The alternative is to use https://www.nuget.org/packages/Microsoft.Bcl.HashCode but I don't want to include another dependency 
-#pragma warning disable
 
 #if NETSTANDARD
+#pragma warning disable
+
+// ReSharper disable All
+
 // Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for more information.
@@ -403,6 +406,7 @@ namespace System
         }
 
 #pragma warning disable 0809
+
         // Obsolete member 'memberA' overrides non-obsolete member 'memberB'.
         // Disallowing GetHashCode and Equals is by design
 

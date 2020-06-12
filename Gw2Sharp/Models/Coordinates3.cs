@@ -10,7 +10,7 @@ namespace Gw2Sharp.Models
     /// Represents a coordinates object in 3D space.
     /// </summary>
     [JsonConverter(typeof(Coordinates3Converter))]
-    public struct Coordinates3 : IEquatable<Coordinates3>, IEnumerable<double>
+    public readonly struct Coordinates3 : IEquatable<Coordinates3>, IEnumerable<double>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Coordinates3"/> struct.
@@ -58,7 +58,7 @@ namespace Gw2Sharp.Models
 
         /// <inheritdoc />
         public override bool Equals(object? obj) =>
-            obj is Coordinates3 && this.Equals((Coordinates3)obj);
+            obj is Coordinates3 coordinates && this.Equals(coordinates);
 
         /// <inheritdoc />
         public bool Equals(Coordinates3 other) =>

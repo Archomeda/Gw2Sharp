@@ -10,7 +10,7 @@ namespace Gw2Sharp.Models
     /// Represents a size object in 2D space.
     /// </summary>
     [JsonConverter(typeof(SizeConverter))]
-    public struct Size : IEquatable<Size>, IEnumerable<int>
+    public readonly struct Size : IEquatable<Size>, IEnumerable<int>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Size"/> struct.
@@ -26,12 +26,12 @@ namespace Gw2Sharp.Models
         /// <summary>
         /// The width.
         /// </summary>
-        public int Width { get; private set; }
+        public int Width { get; }
 
         /// <summary>
         /// The height.
         /// </summary>
-        public int Height { get; private set; }
+        public int Height { get; }
 
         /// <inheritdoc />
         public IEnumerator<int> GetEnumerator()
@@ -50,7 +50,7 @@ namespace Gw2Sharp.Models
 
         /// <inheritdoc />
         public override bool Equals(object? obj) =>
-            obj is Size && this.Equals((Size)obj);
+            obj is Size size && this.Equals(size);
 
         /// <inheritdoc />
         public bool Equals(Size other) =>

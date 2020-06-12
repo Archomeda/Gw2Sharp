@@ -8,7 +8,7 @@ namespace Gw2Sharp.Json.Converters
     /// <summary>
     /// A custom JSON converter that handles compact map conversion.
     /// </summary>
-    /// <seealso cref="JsonConverter{IDictionary}" />
+    /// <seealso cref="JsonConverter{T}" />
     public class CompactMapConverter : JsonConverter<IDictionary<int, int>>
     {
         /// <inheritdoc />

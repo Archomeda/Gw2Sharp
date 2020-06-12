@@ -43,14 +43,12 @@ namespace Gw2Sharp.WebApi.Caching
         public DateTimeOffset ExpiryTime { get; }
 
         /// <inheritdoc />
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(this.Category, this.Id, this.Item, this.ExpiryTime);
-        }
+        public override int GetHashCode() =>
+            HashCode.Combine(this.Category, this.Id, this.Item, this.ExpiryTime);
 
         /// <inheritdoc />
         public override bool Equals(object? obj) =>
-            obj != null && obj.GetType() == typeof(CacheItem) && this.Equals((CacheItem)obj);
+            obj is CacheItem cacheItem && this.Equals(cacheItem);
 
         /// <summary>
         /// Indicates whether the current object is equal to another object of the same type.
@@ -59,14 +57,12 @@ namespace Gw2Sharp.WebApi.Caching
         /// <returns>
         /// <c>true</c> if the current object is equal to the <paramref name="other" /> parameter; otherwise, <c>false</c>.
         /// </returns>
-        public virtual bool Equals(CacheItem other)
-        {
-            return other != null &&
-                Equals(this.Category, other.Category) &&
-                Equals(this.Id, other.Id) &&
-                Equals(this.Item, other.Item) &&
-                Equals(this.ExpiryTime, other.ExpiryTime);
-        }
+        public virtual bool Equals(CacheItem? other) =>
+            other != null &&
+            Equals(this.Category, other.Category) &&
+            Equals(this.Id, other.Id) &&
+            Equals(this.Item, other.Item) &&
+            Equals(this.ExpiryTime, other.ExpiryTime);
     }
 
     /// <summary>
@@ -97,7 +93,7 @@ namespace Gw2Sharp.WebApi.Caching
             obj != null && obj.GetType() == typeof(CacheItem<T>) && this.Equals((CacheItem<T>)obj);
 
         /// <inheritdoc />
-        public virtual bool Equals(CacheItem<T> other) =>
+        public virtual bool Equals(CacheItem<T>? other) =>
             this.Equals(other as CacheItem);
     }
 }

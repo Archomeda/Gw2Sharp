@@ -26,7 +26,7 @@ namespace Gw2Sharp.Mumble
 
         internal const string DEFAULT_MUMBLE_LINK_MAP_NAME = "MumbleLink";
         internal const string MUMBLE_LINK_GAME_NAME_GUILD_WARS_2 = "Guild Wars 2";
-        internal static readonly char[] mumbleLinkGameName = new[] { 'G', 'u', 'i', 'l', 'd', ' ', 'W', 'a', 'r', 's', ' ', '2', '\0' };
+        private static readonly char[] mumbleLinkGameName = { 'G', 'u', 'i', 'l', 'd', ' ', 'W', 'a', 'r', 's', ' ', '2', '\0' };
         private const string EMPTY_IDENTITY = "{}";
 
         private string rawIdentity = EMPTY_IDENTITY;
@@ -96,7 +96,8 @@ namespace Gw2Sharp.Mumble
         }
 
         private CharacterIdentity? identity;
-        private unsafe CharacterIdentity? Identity
+
+        private CharacterIdentity? Identity
         {
             get
             {
@@ -107,16 +108,16 @@ namespace Gw2Sharp.Mumble
 
 
         /// <inheritdoc />
-        public IGw2MumbleClient this[string mumbleLinkName]
+        public IGw2MumbleClient this[string name]
         {
             get
             {
-                var reference = this.mumbleClientCache.GetOrAdd(mumbleLinkName,
-                    x => new WeakReference<Gw2MumbleClient>(new Gw2MumbleClient(mumbleLinkName, this), false));
+                var reference = this.mumbleClientCache.GetOrAdd(name,
+                    x => new WeakReference<Gw2MumbleClient>(new Gw2MumbleClient(name, this), false));
 
                 if (!reference.TryGetTarget(out var client))
                 {
-                    client = new Gw2MumbleClient(mumbleLinkName, this);
+                    client = new Gw2MumbleClient(name, this);
                     reference.SetTarget(client);
                 }
                 return client;
@@ -156,6 +157,7 @@ namespace Gw2Sharp.Mumble
         private readonly byte[] serverAddressCache = new byte[Gw2Context.SOCKET_ADDRESS_SIZE];
         private bool serverAddressCacheDirty = true;
         private string? serverAddress;
+
         /// <inheritdoc />
         public unsafe string ServerAddress
         {
@@ -184,19 +186,19 @@ namespace Gw2Sharp.Mumble
                             this.serverAddress = this.linkedMem.context.socketAddressFamily switch
                             {
                                 AddressFamily.InterNetwork =>
-                                    $"{this.linkedMem.context.socketAddress4[0]}." +
-                                    $"{this.linkedMem.context.socketAddress4[1]}." +
-                                    $"{this.linkedMem.context.socketAddress4[2]}." +
-                                    $"{this.linkedMem.context.socketAddress4[3]}",
+                                $"{this.linkedMem.context.socketAddress4[0]}." +
+                                $"{this.linkedMem.context.socketAddress4[1]}." +
+                                $"{this.linkedMem.context.socketAddress4[2]}." +
+                                $"{this.linkedMem.context.socketAddress4[3]}",
                                 AddressFamily.InterNetworkV6 =>
-                                    $"{this.linkedMem.context.socketAddress6[0]:X4}:" +
-                                    $"{this.linkedMem.context.socketAddress6[1]:X4}:" +
-                                    $"{this.linkedMem.context.socketAddress6[2]:X4}:" +
-                                    $"{this.linkedMem.context.socketAddress6[3]:X4}:" +
-                                    $"{this.linkedMem.context.socketAddress6[4]:X4}:" +
-                                    $"{this.linkedMem.context.socketAddress6[5]:X4}:" +
-                                    $"{this.linkedMem.context.socketAddress6[6]:X4}:" +
-                                    $"{this.linkedMem.context.socketAddress6[7]:X4}",
+                                $"{this.linkedMem.context.socketAddress6[0]:X4}:" +
+                                $"{this.linkedMem.context.socketAddress6[1]:X4}:" +
+                                $"{this.linkedMem.context.socketAddress6[2]:X4}:" +
+                                $"{this.linkedMem.context.socketAddress6[3]:X4}:" +
+                                $"{this.linkedMem.context.socketAddress6[4]:X4}:" +
+                                $"{this.linkedMem.context.socketAddress6[5]:X4}:" +
+                                $"{this.linkedMem.context.socketAddress6[6]:X4}:" +
+                                $"{this.linkedMem.context.socketAddress6[7]:X4}",
                                 _ => string.Empty
                             };
                         }
@@ -216,31 +218,31 @@ namespace Gw2Sharp.Mumble
 
         /// <inheritdoc />
         public bool IsMapOpen =>
-            this.IsAvailable ? this.linkedMem.context.uiState.HasFlag(UiState.IsMapOpen) : default;
+            this.IsAvailable && this.linkedMem.context.uiState.HasFlag(UiState.IsMapOpen);
 
         /// <inheritdoc />
         public bool IsCompassTopRight =>
-            this.IsAvailable ? this.linkedMem.context.uiState.HasFlag(UiState.IsCompassTopRight) : default;
+            this.IsAvailable && this.linkedMem.context.uiState.HasFlag(UiState.IsCompassTopRight);
 
         /// <inheritdoc />
         public bool IsCompassRotationEnabled =>
-            this.IsAvailable ? this.linkedMem.context.uiState.HasFlag(UiState.IsCompassRotationEnabled) : default;
+            this.IsAvailable && this.linkedMem.context.uiState.HasFlag(UiState.IsCompassRotationEnabled);
 
         /// <inheritdoc />
         public bool DoesGameHaveFocus =>
-            this.IsAvailable ? this.linkedMem.context.uiState.HasFlag(UiState.DoesGameHaveFocus) : default;
+            this.IsAvailable && this.linkedMem.context.uiState.HasFlag(UiState.DoesGameHaveFocus);
 
         /// <inheritdoc />
         public bool IsCompetitiveMode =>
-            this.IsAvailable ? this.linkedMem.context.uiState.HasFlag(UiState.IsCompetitiveMode) : default;
+            this.IsAvailable && this.linkedMem.context.uiState.HasFlag(UiState.IsCompetitiveMode);
 
         /// <inheritdoc />
         public bool DoesAnyInputHaveFocus =>
-            this.IsAvailable ? this.linkedMem.context.uiState.HasFlag(UiState.DoesAnyInputHaveFocus) : default;
+            this.IsAvailable && this.linkedMem.context.uiState.HasFlag(UiState.DoesAnyInputHaveFocus);
 
         /// <inheritdoc />
         public bool IsInCombat =>
-            this.IsAvailable ? this.linkedMem.context.uiState.HasFlag(UiState.IsInCombat) : default;
+            this.IsAvailable && this.linkedMem.context.uiState.HasFlag(UiState.IsInCombat);
 
         /// <inheritdoc />
         public Size Compass =>
@@ -267,15 +269,11 @@ namespace Gw2Sharp.Mumble
             this.IsAvailable ? this.linkedMem.context.processId : default;
 
         /// <inheritdoc />
-        public MountType Mount
-        {
-            get
-            {
-                // Currently mount 10 is actually None
-                // Since this might be fixed later, we just redirect 10 to None for now
-                return this.IsAvailable && this.linkedMem.context.mount != (MountType)10 ? this.linkedMem.context.mount : default;
-            }
-        }
+        public MountType Mount =>
+
+            // Currently mount 10 is actually None
+            // Since this might be fixed later, we just redirect 10 to None for now
+            this.IsAvailable && this.linkedMem.context.mount != (MountType)10 ? this.linkedMem.context.mount : default;
 
 
         /// <inheritdoc />
@@ -295,7 +293,7 @@ namespace Gw2Sharp.Mumble
             this.IsAvailable ? this.linkedMem.context.instance : default;
 
         /// <inheritdoc />
-        public unsafe string RawIdentity
+        public string RawIdentity
         {
             get
             {
@@ -329,7 +327,7 @@ namespace Gw2Sharp.Mumble
 
         /// <inheritdoc />
         public bool IsCommander =>
-            this.IsAvailable && this.Identity != null ? this.Identity.Commander : default;
+            this.IsAvailable && this.Identity != null && this.Identity.Commander;
 
         /// <inheritdoc />
         public double FieldOfView =>
@@ -346,15 +344,13 @@ namespace Gw2Sharp.Mumble
             if (this.isDisposed)
                 throw new ObjectDisposedException(nameof(Gw2MumbleClient));
 
-
-
-            this.memoryMappedViewAccessor.Value.Read<Gw2LinkedMem>(0, out var linkedMem);
+            this.memoryMappedViewAccessor.Value.Read<Gw2LinkedMem>(0, out var mem);
             int oldTick = this.Tick;
 
-            if (linkedMem.uiTick != oldTick)
+            if (mem.uiTick != oldTick)
             {
                 var gameNameSpan = new ReadOnlySpan<char>(mumbleLinkGameName);
-                var linkedNameSpan = new ReadOnlySpan<char>(linkedMem.name, mumbleLinkGameName.Length);
+                var linkedNameSpan = new ReadOnlySpan<char>(mem.name, mumbleLinkGameName.Length);
                 this.IsAvailable = gameNameSpan.SequenceEqual(linkedNameSpan);
 
                 if (this.IsAvailable)
@@ -364,11 +360,11 @@ namespace Gw2Sharp.Mumble
                 }
                 else
                 {
-                    this.Name = new string(linkedMem.name);
+                    this.Name = new string(mem.name);
                 }
             }
 
-            this.linkedMem = linkedMem;
+            this.linkedMem = mem;
         }
 
 
@@ -382,31 +378,32 @@ namespace Gw2Sharp.Mumble
         /// <param name="disposing">Dispose managed resources.</param>
         protected virtual void Dispose(bool disposing)
         {
-            if (!this.isDisposed)
-            {
-                if (disposing)
-                {
-                    if (this.memoryMappedViewAccessor.IsValueCreated)
-                        this.memoryMappedViewAccessor.Value.Dispose();
-                    if (this.memoryMappedFile.IsValueCreated)
-                        this.memoryMappedFile.Value.Dispose();
+            if (this.isDisposed)
+                return;
 
-                    // Only dispose the full client cache tree if we are the default one
-                    if (this.mumbleLinkName == DEFAULT_MUMBLE_LINK_MAP_NAME)
+            if (disposing)
+            {
+                if (this.memoryMappedViewAccessor.IsValueCreated)
+                    this.memoryMappedViewAccessor.Value.Dispose();
+                if (this.memoryMappedFile.IsValueCreated)
+                    this.memoryMappedFile.Value.Dispose();
+
+                // Only dispose the full client cache tree if we are the default one
+                if (this.mumbleLinkName == DEFAULT_MUMBLE_LINK_MAP_NAME)
+                {
+                    foreach (var reference in this.mumbleClientCache.Select(x => x.Value))
                     {
-                        foreach (var reference in this.mumbleClientCache.Select(x => x.Value))
-                        {
-                            if (reference.TryGetTarget(out var client) && client != this)
-                                client?.Dispose();
-                        }
-                        this.mumbleClientCache.Clear();
+                        if (reference.TryGetTarget(out var client) && client != this)
+                            client?.Dispose();
                     }
-                    // Otherwise only remove ourselves from the tree
-                    this.mumbleClientCache.TryRemove(this.mumbleLinkName, out _);
+                    this.mumbleClientCache.Clear();
                 }
 
-                this.isDisposed = true;
+                // Otherwise only remove ourselves from the tree
+                this.mumbleClientCache.TryRemove(this.mumbleLinkName, out _);
             }
+
+            this.isDisposed = true;
         }
 
         /// <inheritdoc />

@@ -32,40 +32,42 @@ namespace Gw2Sharp.Json.Converters
         {
             public override ApiFlags<T>? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
             {
-                if (reader.TokenType == JsonTokenType.StartArray)
+                if (reader.TokenType != JsonTokenType.StartArray)
+                    throw new JsonException("Expected null or an array to deserialize as flags");
+
+                // If it's an array, create a flag with the values
+                var fEnums = new List<ApiEnum<T>>();
+
+                while (reader.Read())
                 {
-                    // If it's an array, create a flag with the values
-                    var fEnums = new List<ApiEnum<T>>();
-
-                    while (reader.Read())
+                    if (reader.TokenType == JsonTokenType.Null)
                     {
-                        if (reader.TokenType == JsonTokenType.Null)
-                        {
-                            // If it's explicitly defined as null, create an enum with null raw value and default enum value
-                            fEnums.Add(new ApiEnum<T>());
-                        }
-                        else if (reader.TokenType == JsonTokenType.String)
-                        {
-                            // If it's a string, create an enum with that value
-                            string rawValue = reader.GetString();
-                            fEnums.Add(new ApiEnum<T>(rawValue));
-                        }
-                        else if (reader.TokenType == JsonTokenType.Number)
-                        {
-                            // If it's a number, create an enum with that value
-                            ulong rawValue = reader.GetUInt64();
-                            fEnums.Add(new ApiEnum<T>(rawValue));
-                        }
-                        else if (reader.TokenType == JsonTokenType.EndArray)
-                            break;
-                        else
-                            throw new JsonException("Expected a string, a number, or the end of the array as an element in a of flags");
+                        // If it's explicitly defined as null, create an enum with null raw value and default enum value
+                        fEnums.Add(new ApiEnum<T>());
                     }
-
-                    return new ApiFlags<T>(fEnums);
+                    else if (reader.TokenType == JsonTokenType.String)
+                    {
+                        // If it's a string, create an enum with that value
+                        string rawValue = reader.GetString();
+                        fEnums.Add(new ApiEnum<T>(rawValue));
+                    }
+                    else if (reader.TokenType == JsonTokenType.Number)
+                    {
+                        // If it's a number, create an enum with that value
+                        ulong rawValue = reader.GetUInt64();
+                        fEnums.Add(new ApiEnum<T>(rawValue));
+                    }
+                    else if (reader.TokenType == JsonTokenType.EndArray)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        throw new JsonException("Expected a string, a number, or the end of the array as an element in a of flags");
+                    }
                 }
 
-                throw new JsonException($"Expected null or an array to deserialize as flags");
+                return new ApiFlags<T>(fEnums);
             }
 
             public override void Write(Utf8JsonWriter writer, ApiFlags<T>? value, JsonSerializerOptions options) =>

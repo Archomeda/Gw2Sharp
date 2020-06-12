@@ -7,7 +7,7 @@ namespace Gw2Sharp.Json.Converters
     /// <summary>
     /// A custom JSON converter that handles GUID conversions.
     /// </summary>
-    /// <seealso cref="JsonConverter{Guid}" />
+    /// <seealso cref="JsonConverter{T}" />
     public sealed class GuidConverter : JsonConverter<Guid>
     {
         /// <inheritdoc />

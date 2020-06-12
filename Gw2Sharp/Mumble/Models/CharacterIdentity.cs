@@ -1,6 +1,10 @@
 using Gw2Sharp.Models;
 using Gw2Sharp.WebApi.V2;
 
+// ReSharper disable ClassNeverInstantiated.Global
+// ReSharper disable AutoPropertyCanBeMadeGetOnly.Global
+// ReSharper disable UnusedAutoPropertyAccessor.Global
+
 namespace Gw2Sharp.Mumble.Models
 {
     /// <summary>

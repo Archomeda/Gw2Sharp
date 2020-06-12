@@ -8,7 +8,7 @@ namespace Gw2Sharp.Json.Converters
     /// <summary>
     /// A custom JSON converter that handles GUID conversions.
     /// </summary>
-    /// <seealso cref="JsonConverter{RenderUrl}" />
+    /// <seealso cref="JsonConverter{T}" />
     public sealed class RenderUrlConverter : JsonConverter<RenderUrl>
     {
         private readonly IGw2Client gw2Client;

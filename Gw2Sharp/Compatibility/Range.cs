@@ -1,7 +1,10 @@
 // This file is from https://gist.github.com/meziantou/177600eab9961f3296060d1b8bcd5f40
-#pragma warning disable
 
 #if NETSTANDARD
+#pragma warning disable
+
+// ReSharper disable All
+
 // https://github.com/dotnet/corefx/blob/1597b894a2e9cac668ce6e484506eca778a85197/src/Common/src/CoreLib/System/Index.cs
 // https://github.com/dotnet/corefx/blob/1597b894a2e9cac668ce6e484506eca778a85197/src/Common/src/CoreLib/System/Range.cs
 

@@ -51,7 +51,7 @@ namespace Gw2Sharp.WebApi.Caching
         {
             foreach (object key in cache.Keys.ToArray())
             {
-                if (!cache.TryGetValue(key, out object? obj))
+                if (!cache.TryGetValue(key, out var obj))
                     continue;
 
                 var item = (CacheItem)obj;
@@ -73,14 +73,13 @@ namespace Gw2Sharp.WebApi.Caching
             return this.TryGetInternalAsync<T>(category, id);
         }
 
-        private async Task<CacheItem<T>?> TryGetInternalAsync<T>(string category, object id)
-        {
-            return this.cachedItems.TryGetValue(category, out var cache) &&
-                 cache.TryGetValue(id, out object? obj) &&
-                 obj is CacheItem<T> item &&
-                 item.ExpiryTime > DateTimeOffset.Now
-                 ? item : null;
-        }
+        private async Task<CacheItem<T>?> TryGetInternalAsync<T>(string category, object id) =>
+            this.cachedItems.TryGetValue(category, out var cache) &&
+            cache.TryGetValue(id, out var obj) &&
+            obj is CacheItem<T> item &&
+            item.ExpiryTime > DateTimeOffset.Now
+                ? item
+                : null;
 
         /// <inheritdoc />
         public override Task SetAsync<T>(CacheItem<T> item)
@@ -112,13 +111,11 @@ namespace Gw2Sharp.WebApi.Caching
         {
             var items = new Dictionary<object, CacheItem<T>>();
             if (this.cachedItems.TryGetValue(category, out var cache))
-            {
                 items = ids
-                    .Select(id => cache.TryGetValue(id, out object? obj) ? obj : null)
+                    .Select(id => cache.TryGetValue(id, out var obj) ? obj : null)
                     .Where(x => x is CacheItem<T> item && item.ExpiryTime > DateTimeOffset.Now)
                     .Cast<CacheItem<T>>()
                     .ToDictionary(x => x.Id);
-            }
             return items;
         }
 
@@ -134,9 +131,7 @@ namespace Gw2Sharp.WebApi.Caching
             if (!this.isDisposed)
             {
                 if (isDisposing)
-                {
                     this.gcTimer.Dispose();
-                }
 
                 base.Dispose(isDisposing);
                 this.isDisposed = true;

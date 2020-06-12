@@ -51,7 +51,7 @@ namespace Gw2Sharp.Extensions
         }
 
         /// <summary>
-        /// Wraps a dictionary into a read-only dictionary by calling the <see cref="ReadOnlyDictionary{TKey, TValue}"/> constructor.
+        /// Wraps a dictionary into a read-only dictionary by calling the <see cref="ReadOnlyDictionary{TKey,TValue}"/> constructor.
         /// </summary>
         /// <typeparam name="TKey">The type of keys in the dictionary.</typeparam>
         /// <typeparam name="TValue">The type of values in the dictionary.</typeparam>

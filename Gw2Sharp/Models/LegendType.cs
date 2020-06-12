@@ -64,6 +64,6 @@ namespace Gw2Sharp.Models
         /// <summary>
         /// Ventari.
         /// </summary>
-        Ventari = Legend6,
+        Ventari = Legend6
     }
 }

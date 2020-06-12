@@ -29,7 +29,7 @@ namespace Gw2Sharp.ChatLinks
             obj is CoinChatLink link && this.Equals(link);
 
         /// <inheritdoc />
-        public bool Equals(CoinChatLink other) =>
+        public bool Equals(CoinChatLink? other) =>
             !(other is null) &&
             this.Type == other.Type &&
             this.Coins == other.Coins;

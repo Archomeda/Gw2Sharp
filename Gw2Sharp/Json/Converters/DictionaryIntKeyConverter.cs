@@ -40,7 +40,7 @@ namespace Gw2Sharp.Json.Converters
             }
 
             public override IDictionary<int, TValue> Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options) =>
-                DictionaryIntKeyConverter.ReadShared(this.valueConverter, this.valueType, ref reader, options);
+                ReadShared(this.valueConverter, this.valueType, ref reader, options);
 
             public override void Write(Utf8JsonWriter writer, IDictionary<int, TValue> value, JsonSerializerOptions options) =>
                 throw new NotImplementedException("TODO: This should generally not be used since we only deserialize stuff from the API, and not serialize to it. Might add support later.");
@@ -58,7 +58,7 @@ namespace Gw2Sharp.Json.Converters
             }
 
             public override IReadOnlyDictionary<int, TValue> Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options) =>
-                DictionaryIntKeyConverter.ReadShared(this.valueConverter, this.valueType, ref reader, options);
+                ReadShared(this.valueConverter, this.valueType, ref reader, options);
 
             public override void Write(Utf8JsonWriter writer, IReadOnlyDictionary<int, TValue> value, JsonSerializerOptions options) =>
                 throw new NotImplementedException("TODO: This should generally not be used since we only deserialize stuff from the API, and not serialize to it. Might add support later.");

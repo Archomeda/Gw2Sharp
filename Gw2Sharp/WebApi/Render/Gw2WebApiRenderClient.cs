@@ -30,9 +30,8 @@ namespace Gw2Sharp.WebApi.Render
         }
 
 
-        private Task<CacheItem<byte[]>> DownloadToCacheAsync(string renderUrl, CancellationToken cancellationToken)
-        {
-            return this.Connection.RenderCacheMethod.GetOrUpdateAsync<byte[]>(CACHE_CATEGORY, renderUrl, async () =>
+        private Task<CacheItem<byte[]>> DownloadToCacheAsync(string renderUrl, CancellationToken cancellationToken) =>
+            this.Connection.RenderCacheMethod.GetOrUpdateAsync<byte[]>(CACHE_CATEGORY, renderUrl, async () =>
             {
                 var request = new HttpRequest(new Uri(renderUrl));
                 using var response = await this.Connection.HttpClient.RequestStreamAsync(request, cancellationToken).ConfigureAwait(false);
@@ -40,9 +39,8 @@ namespace Gw2Sharp.WebApi.Render
                 using var memoryStream = new MemoryStream();
                 await response.ContentStream.CopyToAsync(memoryStream).ConfigureAwait(false);
                 var responseInfo = new HttpResponseInfo(response.StatusCode, response.RequestHeaders, response.ResponseHeaders);
-                return (memoryStream.ToArray(), responseInfo.Expires ?? responseInfo.Date + responseInfo.CacheMaxAge ?? DateTimeOffset.Now);
+                return (memoryStream.ToArray(), responseInfo.Expires ?? (responseInfo.Date + responseInfo.CacheMaxAge) ?? DateTimeOffset.Now);
             });
-        }
 
 
         /// <inheritdoc />

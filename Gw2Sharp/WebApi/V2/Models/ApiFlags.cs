@@ -36,8 +36,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <param name="list">The list of enum values.</param>
         /// <exception cref="ArgumentNullException"><paramref name="list"/> is <c>null</c>.</exception>
         internal ApiFlags(IEnumerable<object> list) :
-            this(list?.Cast<ApiEnum<T>>() ?? throw new ArgumentNullException(nameof(list)))
-        { }
+            this(list?.Cast<ApiEnum<T>>() ?? throw new ArgumentNullException(nameof(list))) { }
 
 
         /// <summary>
@@ -104,7 +103,7 @@ namespace Gw2Sharp.WebApi.V2.Models
             obj is ApiFlags<T> apiFlags && this.Equals(apiFlags);
 
         /// <inheritdoc />
-        public virtual bool Equals(ApiFlags<T> other) =>
+        public virtual bool Equals(ApiFlags<T>? other) =>
             !(other is null) && this.List.SequenceEqual(other.List);
 
         /// <inheritdoc />

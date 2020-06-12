@@ -12,6 +12,6 @@ namespace Gw2Sharp.Json.Converters
     {
         /// <inheritdoc />
         public override Rectangle Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options) =>
-            this.Read(ref reader, options, RectangleDirectionType.BottomUp);
+            Read(ref reader, options, RectangleDirectionType.BottomUp);
     }
 }

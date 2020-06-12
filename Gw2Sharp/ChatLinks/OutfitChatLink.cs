@@ -31,7 +31,7 @@ namespace Gw2Sharp.ChatLinks
             obj is OutfitChatLink link && this.Equals(link);
 
         /// <inheritdoc />
-        public bool Equals(OutfitChatLink other) =>
+        public bool Equals(OutfitChatLink? other) =>
             !(other is null) &&
             this.Type == other.Type &&
             this.OutfitId == other.OutfitId;

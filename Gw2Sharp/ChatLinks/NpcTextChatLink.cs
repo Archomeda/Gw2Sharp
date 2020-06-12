@@ -29,7 +29,7 @@ namespace Gw2Sharp.ChatLinks
             obj is NpcTextChatLink link && this.Equals(link);
 
         /// <inheritdoc />
-        public bool Equals(NpcTextChatLink other) =>
+        public bool Equals(NpcTextChatLink? other) =>
             !(other is null) &&
             this.Type == other.Type &&
             this.StringId == other.StringId;

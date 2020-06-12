@@ -8,7 +8,7 @@ namespace Gw2Sharp.Json.Converters
     /// <summary>
     /// A custom JSON converter that handles size conversion.
     /// </summary>
-    /// <seealso cref="JsonConverter{Size}" />
+    /// <seealso cref="JsonConverter{T}" />
     public sealed class SizeConverter : JsonConverter<Size>
     {
         /// <inheritdoc />

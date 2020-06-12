@@ -9,7 +9,7 @@ namespace Gw2Sharp.Json.Converters
     /// <summary>
     /// A custom JSON converter that handles rectangle conversion.
     /// </summary>
-    /// <seealso cref="JsonConverter{Rectangle}" />
+    /// <seealso cref="JsonConverter{T}" />
     public abstract class RectangleConverter : JsonConverter<Rectangle>
     {
         /// <summary>
@@ -19,7 +19,7 @@ namespace Gw2Sharp.Json.Converters
         /// <param name="options">An object that specifies serialization options to use.</param>
         /// <param name="directionType">The rectangle direction type.</param>
         /// <returns>The converted value.</returns>
-        public Rectangle Read(ref Utf8JsonReader reader, JsonSerializerOptions options, RectangleDirectionType directionType)
+        protected static Rectangle Read(ref Utf8JsonReader reader, JsonSerializerOptions options, RectangleDirectionType directionType)
         {
             if (reader.TokenType != JsonTokenType.StartArray)
                 throw new JsonException("Expected start of array");

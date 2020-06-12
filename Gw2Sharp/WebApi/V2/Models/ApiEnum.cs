@@ -132,12 +132,10 @@ namespace Gw2Sharp.WebApi.V2.Models
             obj is ApiEnum<T> apiEnum && this.Equals(apiEnum);
 
         /// <inheritdoc />
-        public virtual bool Equals(ApiEnum<T> other)
-        {
-            return !(other is null) &&
-                EqualityComparer<T>.Default.Equals(this.Value, other.Value) &&
-                EqualityComparer<string?>.Default.Equals(this.RawValue?.ToLowerInvariant(), other.RawValue?.ToLowerInvariant());
-        }
+        public virtual bool Equals(ApiEnum<T>? other) =>
+            !(other is null) &&
+            EqualityComparer<T>.Default.Equals(this.Value, other.Value) &&
+            EqualityComparer<string?>.Default.Equals(this.RawValue?.ToLowerInvariant(), other.RawValue?.ToLowerInvariant());
 
         /// <inheritdoc />
         public override int GetHashCode()
@@ -165,7 +163,7 @@ namespace Gw2Sharp.WebApi.V2.Models
             !(enum1 == enum2);
 
 
-        internal static ulong GetEnumValue(object value)
+        private static ulong GetEnumValue(object value)
         {
             if (value == null)
                 throw new ArgumentNullException(nameof(value));
@@ -180,11 +178,11 @@ namespace Gw2Sharp.WebApi.V2.Models
                 TypeCode.Byte => (byte)value,
                 TypeCode.Int16 => (ulong)(short)value,
                 TypeCode.UInt16 => (ushort)value,
-                _ => throw new ArgumentException($"Invalid typecode {Type.GetTypeCode(typeof(T))}", nameof(value)),
+                _ => throw new ArgumentException($"Invalid typecode {Type.GetTypeCode(typeof(T))}", nameof(value))
             };
         }
 
-        internal static bool ContainsValue(string rawValue)
+        private static bool ContainsValue(string rawValue)
         {
             if (stringValues.ContainsKey(rawValue))
                 return true;
@@ -198,10 +196,10 @@ namespace Gw2Sharp.WebApi.V2.Models
             return false;
         }
 
-        internal static bool ContainsValue(ulong rawValue) =>
+        private static bool ContainsValue(ulong rawValue) =>
             rawValues.ContainsKey(rawValue);
 
-        internal static T GetValue(string rawValue)
+        private static T GetValue(string rawValue)
         {
             if (stringValues.TryGetValue(rawValue, out var @enum))
                 return new ApiEnum<T>(@enum, rawValue);
@@ -215,7 +213,7 @@ namespace Gw2Sharp.WebApi.V2.Models
             return new ApiEnum<T>(defaultValue, rawValue);
         }
 
-        internal static T GetValue(ulong rawValue)
+        private static T GetValue(ulong rawValue)
         {
             if (rawValues.TryGetValue(rawValue, out var @enum))
                 return new ApiEnum<T>(@enum, rawValue.ToString());

@@ -7,7 +7,7 @@ namespace Gw2Sharp.Json.Converters
     /// <summary>
     /// A custom JSON converter that handles timespan conversions.
     /// </summary>
-    /// <seealso cref="JsonConverter{TimeSpan}" />
+    /// <seealso cref="JsonConverter{T}" />
     public sealed class TimeSpanConverter : JsonConverter<TimeSpan>
     {
         /// <inheritdoc />

@@ -106,7 +106,7 @@ namespace Gw2Sharp.ChatLinks
             obj is ItemChatLink link && this.Equals(link);
 
         /// <inheritdoc />
-        public bool Equals(ItemChatLink other) =>
+        public bool Equals(ItemChatLink? other) =>
             !(other is null) &&
             this.Type == other.Type &&
             this.Quantity == other.Quantity &&
@@ -116,23 +116,8 @@ namespace Gw2Sharp.ChatLinks
             EqualityComparer<int?>.Default.Equals(this.Upgrade2Id, other.Upgrade2Id);
 
         /// <inheritdoc />
-        public override int GetHashCode()
-        {
-            unchecked
-            {
-                int hashCode = -508909554;
-                hashCode = (hashCode * -1521134295) + this.Type.GetHashCode();
-                hashCode = (hashCode * -1521134295) + this.Quantity.GetHashCode();
-                hashCode = (hashCode * -1521134295) + this.ItemId.GetHashCode();
-                if (this.SkinId != null)
-                    hashCode = (hashCode * -1521134295) + EqualityComparer<int?>.Default.GetHashCode(this.SkinId);
-                if (this.Upgrade1Id != null)
-                    hashCode = (hashCode * -1521134295) + EqualityComparer<int?>.Default.GetHashCode(this.Upgrade1Id);
-                if (this.Upgrade2Id != null)
-                    hashCode = (hashCode * -1521134295) + EqualityComparer<int?>.Default.GetHashCode(this.Upgrade2Id);
-                return hashCode;
-            }
-        }
+        public override int GetHashCode() =>
+            HashCode.Combine(this.Type, this.Quantity, this.ItemId, this.SkinId, this.Upgrade1Id, this.Upgrade2Id);
 
         /// <summary>
         /// Implements the operator ==.
