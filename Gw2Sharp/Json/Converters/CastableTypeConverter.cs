@@ -46,7 +46,7 @@ namespace Gw2Sharp.Json.Converters
                         var field = x.Value.GetType().GetField(enumValue);
                         var attribute = field?.GetCustomAttribute<EnumMemberAttribute>();
                         return attribute?.Value ?? enumValue;
-                    }, x => x.ObjectType);
+                    }, x => x.ObjectType, StringComparer.OrdinalIgnoreCase)!;
             }
 
             public override T Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
@@ -71,8 +71,6 @@ namespace Gw2Sharp.Json.Converters
                 // Find the castable type
                 if (targetTypes.TryGetValue(type, out var targetType))
                     return (T)JsonSerializer.Deserialize(obj.RootElement.GetRawText(), targetType, options);
-                foreach (var value in targetTypes.Where(value => type.Equals(value.Key, StringComparison.OrdinalIgnoreCase)))
-                    return (T)JsonSerializer.Deserialize(obj.RootElement.GetRawText(), value.Value, options);
 
                 throw new JsonException($"Unsupported type {type}");
             }
