@@ -1,5 +1,20 @@
 # Gw2Sharp History
 
+## 0.11.0
+### Fixes
+- Fix possible memory leak when using the archive memory cache in combination with binary data (a `MemoryStream` was not being disposed)
+
+### Refactoring
+- **Breaking:** `Gw2Sharp.WebApi.V2.Models.Profession.SkillsByPalette` is now using a `IReadOnlyDictionary<int, int>` instead of `IDictionary<int, int>`
+- Breaking, but minimal impact unless you've been using some of the "public" internals provided by Gw2Sharp in your application:
+  - The following structs have been made readonly: `Gw2Sharp.Models.Coordinates2`, `Gw2Sharp.Models.Coordinates3`, `Gw2Sharp.Models.Size`
+  - All chat link structs that were in the namespace `Gw2Sharp.ChatLinks.Structs` have been moved to `Gw2Sharp.ChatLinks.Internal` to clarify that they are for internal use only
+  - The `Gw2Sharp.Json.Converters.CompactMapConverter` that's used for endpoints that return objects with skill palettes has been changed to deserialize to `IReadOnlyDictionary<K, V>` instead of `IDictionary<K, V>`
+- A bunch of internal code changes to conform ReSharper and Microsoft.CodeAnalysis.FxCopAnalyzers
+- All methods that compare strings, parse strings or create strings from other types have been updated to make sure that they ignore the system locale
+
+---
+
 ## 0.10.0
 ### Endpoints
 - Add `/v2/skins`
