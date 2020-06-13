@@ -26,6 +26,9 @@ namespace Gw2Sharp.ChatLinks
         /// <returns>The chat link as string.</returns>
         protected static unsafe T Parse<T>(byte[] chatLinkData, int startIndex = 1) where T : struct
         {
+            if (chatLinkData == null)
+                throw new ArgumentNullException(nameof(chatLinkData));
+
             int structSize = Marshal.SizeOf(typeof(T));
             if (chatLinkData.Length < structSize + startIndex)
             {
@@ -39,7 +42,7 @@ namespace Gw2Sharp.ChatLinks
             fixed (byte* ptr = &chatLinkData[startIndex])
             {
                 var intPtr = new IntPtr(ptr);
-                return Marshal.PtrToStructure<T>(intPtr);
+                return Marshal.PtrToStructure<T>(intPtr)!;
             }
         }
 
@@ -80,7 +83,7 @@ namespace Gw2Sharp.ChatLinks
         /// <param name="chatLinkType">The chat link type.</param>
         /// <param name="chatLinkStruct">The chat link struct.</param>
         /// <returns>The chat link as string.</returns>
-        protected static unsafe string ToString<T>(ChatLinkType chatLinkType, T chatLinkStruct) where T : struct =>
+        protected static string ToString<T>(ChatLinkType chatLinkType, T chatLinkStruct) where T : struct =>
             ToString(ToArray(chatLinkStruct, chatLinkType));
 
         /// <summary>
@@ -88,7 +91,7 @@ namespace Gw2Sharp.ChatLinks
         /// </summary>
         /// <param name="chatLinkData">The chat link byte array.</param>
         /// <returns>The chat link as string.</returns>
-        protected static unsafe string ToString(byte[] chatLinkData) =>
+        protected static string ToString(byte[] chatLinkData) =>
             $"[&{Convert.ToBase64String(chatLinkData)}]";
 
 
@@ -101,13 +104,16 @@ namespace Gw2Sharp.ChatLinks
         /// <exception cref="FormatException">The <paramref name="chatLinkString"/> is not in the correct format or is an unsupported chat link.</exception>
         public static IGw2ChatLink Parse(string chatLinkString)
         {
+            if (chatLinkString == null)
+                throw new ArgumentNullException(nameof(chatLinkString));
+
             try
             {
-                if (chatLinkString.StartsWith("["))
+                if (chatLinkString.StartsWith("[", StringComparison.OrdinalIgnoreCase))
                     chatLinkString = chatLinkString.Substring(1);
-                if (chatLinkString.StartsWith("&"))
+                if (chatLinkString.StartsWith("&", StringComparison.OrdinalIgnoreCase))
                     chatLinkString = chatLinkString.Substring(1);
-                if (chatLinkString.EndsWith("]"))
+                if (chatLinkString.EndsWith("]", StringComparison.OrdinalIgnoreCase))
                     chatLinkString = chatLinkString.Remove(chatLinkString.Length - 1);
 
                 byte[] bytes = Convert.FromBase64String(chatLinkString);
@@ -149,11 +155,13 @@ namespace Gw2Sharp.ChatLinks
                 chatLink = Parse(chatLinkString);
                 return true;
             }
+#pragma warning disable CA1031 // Do not catch general exception types
             catch
             {
                 chatLink = null;
                 return false;
             }
+#pragma warning restore CA1031 // Do not catch general exception types
         }
     }
 
@@ -166,7 +174,9 @@ namespace Gw2Sharp.ChatLinks
         /// <summary>
         /// The backing struct data.
         /// </summary>
+#pragma warning disable CA1051 // Do not declare visible instance fields
         protected T data;
+#pragma warning restore CA1051 // Do not declare visible instance fields
 
         /// <inheritdoc />
         public override void Parse(byte[] chatLinkData) =>

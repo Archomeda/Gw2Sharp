@@ -262,10 +262,32 @@ dotnet_naming_style.upper.capitalization=all_upper
 
 
 # Rule overrides
+# CA1032: Implement standard exception constructors
+dotnet_diagnostic.ca1032.severity=silent
+# CA1043: Use Integral Or String Argument For Indexers
+dotnet_diagnostic.ca1043.severity=none
+# CA1054: Uri parameters should not be strings
+dotnet_diagnostic.ca1054.severity=none
+# CA1055: Uri return values should not be strings
+dotnet_diagnostic.ca1055.severity=none
+# CA1056: Uri properties should not be strings
+dotnet_diagnostic.ca1056.severity=none
 # CA1303: Do not pass literals as localized parameters
 dotnet_diagnostic.ca1303.severity=none
+# CA1308: Normalize strings to uppercase
+dotnet_diagnostic.ca1308.severity=none
 # CA1707: Identifiers should not contain underscores
 dotnet_diagnostic.ca1707.severity=none
+# CA1720: Identifier contains type name
+dotnet_diagnostic.ca1720.severity=none
+# CA1810: Initialize reference type static fields inline
+dotnet_diagnostic.ca1810.severity=silent
+# CA1826: Do not use Enumerable methods on indexable collections. Instead use the collection directly
+dotnet_diagnostic.ca1826.severity=none
+# CA2007: Consider calling ConfigureAwait on the awaited task
+dotnet_diagnostic.ca2007.severity=error
+# CA2225: Operator overloads have named alternatives
+dotnet_diagnostic.ca2225.severity=suggestion
 # CS8073: The result of the expression is always the same since a value of this type is never equal to 'null'.
 dotnet_diagnostic.cs8073.severity=warning
 # CS8597: Thrown value may be null.

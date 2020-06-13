@@ -36,7 +36,8 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <param name="list">The list of enum values.</param>
         /// <exception cref="ArgumentNullException"><paramref name="list"/> is <c>null</c>.</exception>
         internal ApiFlags(IEnumerable<object> list) :
-            this(list?.Cast<ApiEnum<T>>() ?? throw new ArgumentNullException(nameof(list))) { }
+            this(list?.Cast<ApiEnum<T>>() ?? throw new ArgumentNullException(nameof(list)))
+        { }
 
 
         /// <summary>
@@ -84,6 +85,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         public static implicit operator ApiFlags<T>(HashSet<ApiEnum<T>> l) =>
             new ApiFlags<T>(l);
 
+#pragma warning disable CA1062 // Validate arguments of public methods
         /// <summary>
         /// Converts API flags to an array of enums.
         /// </summary>
@@ -97,6 +99,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <param name="e">The API enum.</param>
         public static implicit operator List<ApiEnum<T>>(ApiFlags<T> e) =>
             e.List.ToList();
+#pragma warning restore CA1062 // Validate arguments of public methods
 
         /// <inheritdoc />
         public override bool Equals(object? obj) =>

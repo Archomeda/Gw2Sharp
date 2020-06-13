@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Globalization;
 using System.Reflection;
 using System.Runtime.Serialization;
 
@@ -76,7 +77,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         internal ApiEnum(ulong value)
         {
             this.Value = GetValue(value);
-            this.RawValue = value.ToString();
+            this.RawValue = value.ToString(CultureInfo.InvariantCulture);
             this.IsUnknown = !ContainsValue(value);
         }
 
@@ -113,6 +114,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         public static implicit operator ApiEnum<T>(string e) =>
             new ApiEnum<T>(GetValue(e), e);
 
+#pragma warning disable CA1062 // Validate arguments of public methods
         /// <summary>
         /// Converts an API enum to its normal enum.
         /// </summary>
@@ -126,6 +128,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <param name="e">The API enum.</param>
         public static implicit operator string?(ApiEnum<T> e) =>
             e.RawValue;
+#pragma warning restore CA1062 // Validate arguments of public methods
 
         /// <inheritdoc />
         public override bool Equals(object? obj) =>
@@ -216,8 +219,8 @@ namespace Gw2Sharp.WebApi.V2.Models
         private static T GetValue(ulong rawValue)
         {
             if (rawValues.TryGetValue(rawValue, out var @enum))
-                return new ApiEnum<T>(@enum, rawValue.ToString());
-            return new ApiEnum<T>(defaultValue, rawValue.ToString());
+                return new ApiEnum<T>(@enum, rawValue.ToString(CultureInfo.InvariantCulture));
+            return new ApiEnum<T>(defaultValue, rawValue.ToString(CultureInfo.InvariantCulture));
         }
     }
 }

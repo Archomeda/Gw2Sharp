@@ -4,6 +4,8 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Gw2Sharp.WebApi.V2.Models;
 
+#pragma warning disable CA1062 // Validate arguments of public methods
+
 namespace Gw2Sharp.Json.Converters
 {
     /// <summary>
@@ -29,20 +31,15 @@ namespace Gw2Sharp.Json.Converters
         {
             public override ApiEnum<T> Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
             {
-                if (reader.TokenType == JsonTokenType.String)
+                switch (reader.TokenType)
                 {
-                    // If it's a string, create an enum with that value
-                    string rawValue = reader.GetString();
-                    return new ApiEnum<T>(rawValue);
+                    case JsonTokenType.String:
+                        return new ApiEnum<T>(reader.GetString());
+                    case JsonTokenType.Number:
+                        return new ApiEnum<T>(reader.GetUInt64());
+                    default:
+                        throw new JsonException("Expected null, a string or a number to deserialize as enum");
                 }
-                else if (reader.TokenType == JsonTokenType.Number)
-                {
-                    // If it's a number, create an enum with that value
-                    ulong rawValue = reader.GetUInt64();
-                    return new ApiEnum<T>(rawValue);
-                }
-
-                throw new JsonException("Expected null, a string or a number to deserialize as enum");
             }
 
             public override void Write(Utf8JsonWriter writer, ApiEnum<T> value, JsonSerializerOptions options) =>

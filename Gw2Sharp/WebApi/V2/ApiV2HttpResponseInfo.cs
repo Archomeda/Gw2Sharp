@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Net;
 using System.Text.RegularExpressions;
@@ -28,10 +29,10 @@ namespace Gw2Sharp.WebApi.V2
             requestHeaders ??= new Dictionary<string, string>();
             responseHeaders ??= new Dictionary<string, string>();
 
-            this.RateLimitLimit = this.ParseResponseHeader(responseHeaders, "X-Rate-Limit-Limit", ParseNullableInt);
-            this.ResultCount = this.ParseResponseHeader(responseHeaders, "X-Result-Count", ParseNullableInt);
-            this.ResultTotal = this.ParseResponseHeader(responseHeaders, "X-Result-Total", ParseNullableInt);
-            this.Links = this.ParseResponseHeader(responseHeaders, "Link", value => value
+            this.RateLimitLimit = ParseResponseHeader(responseHeaders, "X-Rate-Limit-Limit", ParseNullableInt);
+            this.ResultCount = ParseResponseHeader(responseHeaders, "X-Result-Count", ParseNullableInt);
+            this.ResultTotal = ParseResponseHeader(responseHeaders, "X-Result-Total", ParseNullableInt);
+            this.Links = ParseResponseHeader(responseHeaders, "Link", value => value
                 .Split(',')
                 .Select(link =>
                 {
@@ -46,10 +47,10 @@ namespace Gw2Sharp.WebApi.V2
                 .Where(link => link != null)
                 .ToDictionary(kvp => kvp!.Item1, kvp => kvp!.Item2)
                 .AsReadOnly());
-            this.PageSize = this.ParseResponseHeader(responseHeaders, "X-Page-Size", ParseNullableInt);
-            this.PageTotal = this.ParseResponseHeader(responseHeaders, "X-Page-Total", ParseNullableInt);
+            this.PageSize = ParseResponseHeader(responseHeaders, "X-Page-Size", ParseNullableInt);
+            this.PageTotal = ParseResponseHeader(responseHeaders, "X-Page-Total", ParseNullableInt);
 
-            static int? ParseNullableInt(string value) => !string.IsNullOrWhiteSpace(value) ? (int?)int.Parse(value) : null;
+            static int? ParseNullableInt(string value) => !string.IsNullOrWhiteSpace(value) ? (int?)int.Parse(value, CultureInfo.InvariantCulture) : null;
         }
 
 

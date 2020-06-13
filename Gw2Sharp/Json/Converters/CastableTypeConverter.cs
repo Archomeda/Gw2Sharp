@@ -7,6 +7,8 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Gw2Sharp.WebApi.V2.Models;
 
+#pragma warning disable CA1062 // Validate arguments of public methods
+
 namespace Gw2Sharp.Json.Converters
 {
     /// <summary>
@@ -35,19 +37,15 @@ namespace Gw2Sharp.Json.Converters
         private sealed class CastableTypeConverterInner<T> : JsonConverter<T>
         {
             // ReSharper disable once StaticMemberInGenericType
-            private static readonly Dictionary<string, Type> targetTypes;
+            private static readonly Dictionary<string, Type> targetTypes =
+                typeof(T).GetCustomAttributes<CastableTypeAttribute>().ToDictionary(x =>
+                {
+                    string enumValue = x.Value.ToString();
+                    var field = x.Value.GetType().GetField(enumValue);
+                    var attribute = field?.GetCustomAttribute<EnumMemberAttribute>();
+                    return attribute?.Value ?? enumValue;
+                }, x => x.ObjectType, StringComparer.OrdinalIgnoreCase)!;
 
-            static CastableTypeConverterInner()
-            {
-                targetTypes = typeof(T).GetCustomAttributes<CastableTypeAttribute>()
-                    .ToDictionary(x =>
-                    {
-                        string enumValue = x.Value.ToString();
-                        var field = x.Value.GetType().GetField(enumValue);
-                        var attribute = field?.GetCustomAttribute<EnumMemberAttribute>();
-                        return attribute?.Value ?? enumValue;
-                    }, x => x.ObjectType, StringComparer.OrdinalIgnoreCase)!;
-            }
 
             public override T Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
             {

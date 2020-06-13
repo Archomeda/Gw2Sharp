@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 using Gw2Sharp.WebApi.V2.Models;
 
 namespace Gw2Sharp.WebApi.V2.Clients
@@ -21,7 +22,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="continentId">The continent id.</param>
         /// <exception cref="ArgumentNullException"><paramref name="connection"/> or <paramref name="gw2Client"/> is <c>null</c>.</exception>
         protected internal ContinentsIdClient(IConnection connection, IGw2Client gw2Client, int continentId) :
-            base(connection, gw2Client, continentId.ToString())
+            base(connection, gw2Client, continentId.ToString(CultureInfo.InvariantCulture))
         {
             this.continentId = continentId;
             this.floors = new ContinentsFloorsClient(connection, gw2Client, continentId);

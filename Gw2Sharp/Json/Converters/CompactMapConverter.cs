@@ -9,10 +9,10 @@ namespace Gw2Sharp.Json.Converters
     /// A custom JSON converter that handles compact map conversion.
     /// </summary>
     /// <seealso cref="JsonConverter{T}" />
-    public class CompactMapConverter : JsonConverter<IDictionary<int, int>>
+    public class CompactMapConverter : JsonConverter<IReadOnlyDictionary<int, int>>
     {
         /// <inheritdoc />
-        public override IDictionary<int, int> Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+        public override IReadOnlyDictionary<int, int> Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
             if (reader.TokenType != JsonTokenType.StartArray)
                 throw new JsonException("Expected start of array");
@@ -47,7 +47,7 @@ namespace Gw2Sharp.Json.Converters
         }
 
         /// <inheritdoc />
-        public override void Write(Utf8JsonWriter writer, IDictionary<int, int> value, JsonSerializerOptions options) =>
+        public override void Write(Utf8JsonWriter writer, IReadOnlyDictionary<int, int> value, JsonSerializerOptions options) =>
             throw new NotImplementedException("TODO: This should generally not be used since we only deserialize stuff from the API, and not serialize to it. Might add support later.");
     }
 }

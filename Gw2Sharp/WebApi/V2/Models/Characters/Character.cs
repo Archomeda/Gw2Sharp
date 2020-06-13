@@ -9,11 +9,13 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// </summary>
     public class Character : ApiV2BaseObject, IIdentifiable<string>
     {
+#pragma warning disable CA1033 // Interface methods should be callable by child types
         string IIdentifiable<string>.Id
         {
             get => this.Name;
             set => this.Name = value;
         }
+#pragma warning restore CA1033 // Interface methods should be callable by child types
 
         /// <summary>
         /// The character name.

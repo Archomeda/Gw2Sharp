@@ -58,6 +58,9 @@ namespace Gw2Sharp.WebApi.Http
         /// <inheritdoc />
         public async Task<IHttpResponseStream> RequestStreamAsync(IHttpRequest request, CancellationToken cancellationToken = default)
         {
+            if (request == null)
+                throw new ArgumentNullException(nameof(request));
+
             using var cancellationTimeout = new CancellationTokenSource(this.Timeout);
             using var linkedCancellation = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken, cancellationTimeout.Token);
             using var message = new HttpRequestMessage(HttpMethod.Get, request.Url);
@@ -82,7 +85,10 @@ namespace Gw2Sharp.WebApi.Http
                 var responseHeaders = responseMessage.Headers.ToDictionary(kvp => kvp.Key, kvp => kvp.Value.First());
                 responseHeaders.AddRange(responseMessage.Content.Headers.ToDictionary(kvp => kvp.Key, kvp => kvp.Value.First()));
 
+#pragma warning disable CA2000 // Dispose objects before losing scope
+                // This is possibly returned from this method, the caller is responsible for disposing it
                 response = new HttpResponseStream(stream, responseMessage.StatusCode, requestHeaders, responseHeaders);
+#pragma warning restore CA2000 // Dispose objects before losing scope
             }
             catch (Exception ex)
             {
@@ -98,22 +104,22 @@ namespace Gw2Sharp.WebApi.Http
                     httpClient?.Dispose();
             }
 
-            if (!responseMessage.IsSuccessStatusCode)
-            {
-                try
-                {
-                    using var streamReader = new StreamReader(response.ContentStream);
-                    string responseText = await streamReader.ReadToEndAsync().ConfigureAwait(false);
-                    var httpResponseString = new HttpResponse<string>(responseText, response.StatusCode, response.RequestHeaders, response.ResponseHeaders);
-                    throw new UnexpectedStatusException(request, httpResponseString);
-                }
-                finally
-                {
-                    response.Dispose();
-                }
-            }
+            if (responseMessage.IsSuccessStatusCode)
+                return response;
 
-            return response;
+            try
+            {
+#pragma warning disable CA2000 // Dispose objects before losing scope
+                using var streamReader = new StreamReader(response.ContentStream);
+#pragma warning restore CA2000 // Dispose objects before losing scope
+                string responseText = await streamReader.ReadToEndAsync().ConfigureAwait(false);
+                var httpResponseString = new HttpResponse<string>(responseText, response.StatusCode, response.RequestHeaders, response.ResponseHeaders);
+                throw new UnexpectedStatusException(request, httpResponseString);
+            }
+            finally
+            {
+                response.Dispose();
+            }
         }
     }
 }

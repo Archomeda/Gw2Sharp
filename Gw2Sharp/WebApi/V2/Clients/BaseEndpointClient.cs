@@ -65,12 +65,17 @@ namespace Gw2Sharp.WebApi.V2.Clients
                 throw new InvalidOperationException($"The number of defined attribute path segments ({segments.Count}) does not equal the number of given replacement segments in the constructor ({replaceSegments.Length})");
 
             for (int i = 0; i < segments.Count; i++)
+#if NETSTANDARD
                 this.EndpointPath = this.EndpointPath.Replace($":{segments[i].PathSegment}", replaceSegments[i]);
+#else
+                this.EndpointPath = this.EndpointPath.Replace($":{segments[i].PathSegment}", replaceSegments[i], StringComparison.InvariantCulture);
+#endif
+
         }
 
 
         /// <summary>
-        /// Provides shared endpoint client implemenation functions.
+        /// Provides shared endpoint client implementation functions.
         /// </summary>
         protected IEndpointClientImplementation<TObject> Implementation { get; set; }
 

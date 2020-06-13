@@ -31,7 +31,7 @@ namespace Gw2Sharp.WebApi.Render
 
 
         private Task<CacheItem<byte[]>> DownloadToCacheAsync(string renderUrl, CancellationToken cancellationToken) =>
-            this.Connection.RenderCacheMethod.GetOrUpdateAsync<byte[]>(CACHE_CATEGORY, renderUrl, async () =>
+            this.Connection.RenderCacheMethod.GetOrUpdateAsync(CACHE_CATEGORY, renderUrl, async () =>
             {
                 var request = new HttpRequest(new Uri(renderUrl));
                 using var response = await this.Connection.HttpClient.RequestStreamAsync(request, cancellationToken).ConfigureAwait(false);
@@ -50,17 +50,22 @@ namespace Gw2Sharp.WebApi.Render
                 throw new ArgumentNullException(nameof(targetStream));
             if (renderUrl == null)
                 throw new ArgumentNullException(nameof(renderUrl));
-#pragma warning disable S2583 // Conditionally executed blocks should be reachable - false positive in SonarCloud (SonarSource/sonar-dotnet#1347)
             if (string.IsNullOrWhiteSpace(renderUrl))
                 throw new ArgumentException("Render URL may not be empty or only contain whitespaces", nameof(renderUrl));
-#pragma warning restore S2583 // Conditionally executed blocks should be reachable
 
             return this.DownloadToStreamInternalAsync(targetStream, renderUrl, cancellationToken);
         }
 
         /// <inheritdoc />
-        public Task DownloadToStreamAsync(Stream targetStream, Uri renderUrl, CancellationToken cancellationToken = default) =>
-            this.DownloadToStreamAsync(targetStream, renderUrl.AbsoluteUri, cancellationToken);
+        public Task DownloadToStreamAsync(Stream targetStream, Uri renderUrl, CancellationToken cancellationToken = default)
+        {
+            if (targetStream == null)
+                throw new ArgumentNullException(nameof(targetStream));
+            if (renderUrl == null)
+                throw new ArgumentNullException(nameof(renderUrl));
+
+            return this.DownloadToStreamAsync(targetStream, renderUrl.AbsoluteUri, cancellationToken);
+        }
 
         private async Task DownloadToStreamInternalAsync(Stream targetStream, string renderUrl, CancellationToken cancellationToken)
         {
@@ -75,10 +80,8 @@ namespace Gw2Sharp.WebApi.Render
         {
             if (renderUrl == null)
                 throw new ArgumentNullException(nameof(renderUrl));
-#pragma warning disable S2583 // Conditionally executed blocks should be reachable - false positive in SonarCloud (SonarSource/sonar-dotnet#1347)
             if (string.IsNullOrWhiteSpace(renderUrl))
                 throw new ArgumentException("Render URL may not be empty or only contain whitespaces", nameof(renderUrl));
-#pragma warning restore S2583 // Conditionally executed blocks should be reachable
 
             return this.DownloadToByteArrayInternalAsync(renderUrl, cancellationToken);
         }
@@ -91,7 +94,12 @@ namespace Gw2Sharp.WebApi.Render
         }
 
         /// <inheritdoc />
-        public Task<byte[]> DownloadToByteArrayAsync(Uri renderUrl, CancellationToken cancellationToken = default) =>
-            this.DownloadToByteArrayAsync(renderUrl.AbsoluteUri, cancellationToken);
+        public Task<byte[]> DownloadToByteArrayAsync(Uri renderUrl, CancellationToken cancellationToken = default)
+        {
+            if (renderUrl == null)
+                throw new ArgumentNullException(nameof(renderUrl));
+
+            return this.DownloadToByteArrayAsync(renderUrl.AbsoluteUri, cancellationToken);
+        }
     }
 }

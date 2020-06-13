@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Net;
 using System.Net.Http.Headers;
 using Gw2Sharp.Extensions;
@@ -26,12 +27,12 @@ namespace Gw2Sharp.WebApi.Http
             this.RawRequestHeaders = requestHeaders.ShallowCopy().AsReadOnly();
             this.RawResponseHeaders = responseHeaders.ShallowCopy().AsReadOnly();
 
-            this.Date = this.ParseResponseHeader(responseHeaders, "Date", value => DateTimeOffset.Parse(value));
-            this.LastModified = this.ParseResponseHeader(responseHeaders, "Last-Modified", ParseNullableDateTime);
-            this.CacheMaxAge = this.ParseResponseHeader(responseHeaders, "Cache-Control", ParseNullableMaxAgeCache);
-            this.Expires = this.ParseResponseHeader(responseHeaders, "Expires", ParseNullableDateTime);
+            this.Date = ParseResponseHeader(responseHeaders, "Date", value => DateTimeOffset.Parse(value, CultureInfo.InvariantCulture));
+            this.LastModified = ParseResponseHeader(responseHeaders, "Last-Modified", ParseNullableDateTime);
+            this.CacheMaxAge = ParseResponseHeader(responseHeaders, "Cache-Control", ParseNullableMaxAgeCache);
+            this.Expires = ParseResponseHeader(responseHeaders, "Expires", ParseNullableDateTime);
 
-            static DateTimeOffset? ParseNullableDateTime(string value) => !string.IsNullOrWhiteSpace(value) ? (DateTimeOffset?)DateTimeOffset.Parse(value) : null;
+            static DateTimeOffset? ParseNullableDateTime(string value) => !string.IsNullOrWhiteSpace(value) ? (DateTimeOffset?)DateTimeOffset.Parse(value, CultureInfo.InvariantCulture) : null;
             static TimeSpan? ParseNullableMaxAgeCache(string value)
             {
                 if (string.IsNullOrWhiteSpace(value))
@@ -93,10 +94,12 @@ namespace Gw2Sharp.WebApi.Http
         /// <param name="key">The key.</param>
         /// <param name="parser">The parser.</param>
         /// <returns>The parsed response header.</returns>
-        protected TResult ParseResponseHeader<TResult>(IReadOnlyDictionary<string, string> headers, string key, Func<string, TResult> parser)
+        protected static TResult ParseResponseHeader<TResult>(IReadOnlyDictionary<string, string> headers, string key, Func<string, TResult> parser)
         {
             if (headers == null)
                 return default!;
+            if (parser == null)
+                throw new ArgumentNullException(nameof(parser));
 
             headers.TryGetValue(key, out string? header);
             if (header == null)

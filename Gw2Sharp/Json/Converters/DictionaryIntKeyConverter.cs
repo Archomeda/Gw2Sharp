@@ -4,6 +4,8 @@ using System.Reflection;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
+#pragma warning disable CA1062 // Validate arguments of public methods
+
 namespace Gw2Sharp.Json.Converters
 {
     /// <summary>
@@ -25,12 +27,12 @@ namespace Gw2Sharp.Json.Converters
             var type = typeToConvert.GetGenericTypeDefinition() == typeof(IDictionary<,>)
                 ? typeof(DictionaryIntKeyConverterInner<>).MakeGenericType(valueType)
                 : typeof(DictionaryIntKeyConverterInnerReadOnly<>).MakeGenericType(valueType);
-            return (JsonConverter?)Activator.CreateInstance(type, BindingFlags.Instance | BindingFlags.Public, null, new[] { options }, null);
+            return (JsonConverter?)Activator.CreateInstance(type, BindingFlags.Instance | BindingFlags.Public, null, new object?[] { options }, null);
         }
 
         private sealed class DictionaryIntKeyConverterInner<TValue> : JsonConverter<IDictionary<int, TValue>>
         {
-            private readonly JsonConverter<TValue> valueConverter;
+            private readonly JsonConverter<TValue>? valueConverter;
             private readonly Type valueType;
 
             public DictionaryIntKeyConverterInner(JsonSerializerOptions options)
@@ -48,7 +50,7 @@ namespace Gw2Sharp.Json.Converters
 
         private sealed class DictionaryIntKeyConverterInnerReadOnly<TValue> : JsonConverter<IReadOnlyDictionary<int, TValue>>
         {
-            private readonly JsonConverter<TValue> valueConverter;
+            private readonly JsonConverter<TValue>? valueConverter;
             private readonly Type valueType;
 
             public DictionaryIntKeyConverterInnerReadOnly(JsonSerializerOptions options)
@@ -64,7 +66,7 @@ namespace Gw2Sharp.Json.Converters
                 throw new NotImplementedException("TODO: This should generally not be used since we only deserialize stuff from the API, and not serialize to it. Might add support later.");
         }
 
-        private static Dictionary<int, TValue> ReadShared<TValue>(JsonConverter<TValue> valueConverter, Type valueType, ref Utf8JsonReader reader, JsonSerializerOptions options)
+        private static Dictionary<int, TValue> ReadShared<TValue>(JsonConverter<TValue>? valueConverter, Type valueType, ref Utf8JsonReader reader, JsonSerializerOptions options)
         {
             if (reader.TokenType != JsonTokenType.StartObject)
                 throw new JsonException("Expected the start of an object");

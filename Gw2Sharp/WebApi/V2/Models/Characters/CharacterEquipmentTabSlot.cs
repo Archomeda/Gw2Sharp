@@ -8,14 +8,13 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// </summary>
     public class CharacterEquipmentTabSlot : ApiV2BaseObject, IIdentifiable<int>
     {
-        /// <summary>
-        /// The equipment tab slot id.
-        /// </summary>
+#pragma warning disable CA1033 // Interface methods should be callable by child types
         int IIdentifiable<int>.Id
         {
             get => this.Tab;
             set => this.Tab = value;
         }
+#pragma warning restore CA1033 // Interface methods should be callable by child types
 
         /// <summary>
         /// The equipment tab slot id.

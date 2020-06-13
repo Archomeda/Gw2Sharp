@@ -18,7 +18,7 @@ namespace Gw2Sharp.Tests.Json.Converters
         public void CanConvertTest()
         {
             var converter = new CompactMapConverter();
-            Assert.True(converter.CanConvert(typeof(IDictionary<int, int>)));
+            Assert.True(converter.CanConvert(typeof(IReadOnlyDictionary<int, int>)));
         }
     }
 }

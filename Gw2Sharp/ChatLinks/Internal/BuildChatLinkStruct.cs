@@ -3,7 +3,10 @@ using Gw2Sharp.Models;
 using Gw2Sharp.WebApi.V2;
 using Gw2Sharp.WebApi.V2.Models;
 
-namespace Gw2Sharp.ChatLinks.Structs
+#pragma warning disable CA1051 // Do not declare visible instance fields
+#pragma warning disable CA1815 // Override equals and operator equals on value types
+
+namespace Gw2Sharp.ChatLinks.Internal
 {
     /// <summary>
     /// Represents a Guild Wars 2 build chat link.

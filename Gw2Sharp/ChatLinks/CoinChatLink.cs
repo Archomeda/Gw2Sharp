@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using Gw2Sharp.ChatLinks.Structs;
+using Gw2Sharp.ChatLinks.Internal;
 
 namespace Gw2Sharp.ChatLinks
 {

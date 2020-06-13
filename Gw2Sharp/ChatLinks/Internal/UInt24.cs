@@ -1,13 +1,15 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace Gw2Sharp.ChatLinks.Structs
+#pragma warning disable CA1815 // Override equals and operator equals on value types
+
+namespace Gw2Sharp.ChatLinks.Internal
 {
     /// <summary>
     /// A UInt24 implementation used in chat links.
     /// </summary>
     [StructLayout(LayoutKind.Sequential)]
-    public struct UInt24
+    public readonly struct UInt24
     {
         private readonly byte b0;
         private readonly byte b1;
@@ -20,13 +22,13 @@ namespace Gw2Sharp.ChatLinks.Structs
         /// <exception cref="ArgumentOutOfRangeException"><paramref name="value"/> is greater than the maximum allowed value.</exception>
         public UInt24(int value)
         {
-            uint uvalue = (uint)value;
-            if ((uvalue >> 24) != 0)
+            uint u = (uint)value;
+            if ((u >> 24) != 0)
                 throw new ArgumentOutOfRangeException(nameof(value), value, "The value cannot be greater than 16777215");
 
-            this.b0 = (byte)(uvalue & 0xFF);
-            this.b1 = (byte)((uvalue >> 8) & 0xFF);
-            this.b2 = (byte)((uvalue >> 16) & 0xFF);
+            this.b0 = (byte)(u & 0xFF);
+            this.b1 = (byte)((u >> 8) & 0xFF);
+            this.b2 = (byte)((u >> 16) & 0xFF);
         }
 
         /// <summary>

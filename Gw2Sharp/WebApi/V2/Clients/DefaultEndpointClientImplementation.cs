@@ -260,7 +260,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <returns>The formatted cache id.</returns>
         protected internal virtual string FormatCacheId(object cacheId)
         {
-            string prefixedCacheId = cacheId.ToString()!;
+            string prefixedCacheId = cacheId?.ToString() ?? string.Empty;
 
             if (this.client.IsLocalized)
             {

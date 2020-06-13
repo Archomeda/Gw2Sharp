@@ -18,7 +18,7 @@ namespace Gw2Sharp.WebApi.Http
         /// <param name="response">The response.</param>
         /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="response"/> is <c>null</c>.</exception>
         public ServiceUnavailableException(IHttpRequest request, IHttpResponse<ErrorObject> response) :
-            base(request, response, response.Content.Message)
+            base(request, response, response?.Content.Message ?? string.Empty)
         { }
 
         /// <summary>

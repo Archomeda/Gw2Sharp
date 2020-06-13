@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using Gw2Sharp.WebApi.V2.Models;
 
@@ -48,7 +49,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
 
         /// <inheritdoc />
         public virtual ICreateSubtokenClient Expires(DateTimeOffset expire) =>
-            new CreateSubtokenClient(this) { ParamExpire = expire.ToString("o") };
+            new CreateSubtokenClient(this) { ParamExpire = expire.ToString("o", CultureInfo.InvariantCulture) };
 
         /// <inheritdoc />
         public virtual ICreateSubtokenClient WithPermissions(IEnumerable<string> permissions) =>

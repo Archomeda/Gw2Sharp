@@ -19,7 +19,7 @@ namespace Gw2Sharp.WebApi.Http
         /// <param name="error">The error.</param>
         /// <exception cref="ArgumentNullException"><paramref name="request"/>, <paramref name="response"/> or <paramref name="error"/> is <c>null</c>.</exception>
         public AuthorizationRequiredException(IHttpRequest request, IHttpResponse<ErrorObject> response, AuthorizationError error) :
-            base(request, response, response.Content.Message)
+            base(request, response, response?.Content.Message ?? string.Empty)
         {
             this.AuthorizationError = error;
         }
@@ -69,7 +69,7 @@ namespace Gw2Sharp.WebApi.Http
                 case "invalid key":
                 case "invalid access token":
                     return new InvalidAccessTokenException(request, response);
-                case var message when message.StartsWith("requires scope") || message.StartsWith("requires at least one scope from"):
+                case var message when message.StartsWith("requires scope", StringComparison.InvariantCultureIgnoreCase) || message.StartsWith("requires at least one scope from", StringComparison.InvariantCultureIgnoreCase):
                     return new MissingScopesException(request, response);
                 case "membership required":
                     return new MembershipRequiredException(request, response);

@@ -40,14 +40,14 @@ namespace Gw2Sharp.WebApi.Caching
                 if (!this.cachedItems.TryGetValue(category, out var cache))
                     continue;
 
-                this.CollectInnerGarbage(now, cache);
+                CollectInnerGarbage(now, cache);
 
                 if (cache.Count == 0)
                     this.cachedItems.TryRemove(category, out _);
             }
         }
 
-        private void CollectInnerGarbage(DateTimeOffset now, ConcurrentDictionary<object, object> cache)
+        private static void CollectInnerGarbage(DateTimeOffset now, ConcurrentDictionary<object, object> cache)
         {
             foreach (object key in cache.Keys.ToArray())
             {

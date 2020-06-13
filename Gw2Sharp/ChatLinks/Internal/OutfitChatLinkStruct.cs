@@ -1,6 +1,9 @@
 using System.Runtime.InteropServices;
 
-namespace Gw2Sharp.ChatLinks.Structs
+#pragma warning disable CA1051 // Do not declare visible instance fields
+#pragma warning disable CA1815 // Override equals and operator equals on value types
+
+namespace Gw2Sharp.ChatLinks.Internal
 {
     /// <summary>
     /// Represents a Guild Wars 2 outfit chat link.

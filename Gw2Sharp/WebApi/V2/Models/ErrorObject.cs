@@ -26,8 +26,10 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <param name="context">The streaming context.</param>
         protected ErrorObject(SerializationInfo info, StreamingContext context)
         {
+#pragma warning disable CA1062 // Validate arguments of public methods
             this.Text = info.GetString(nameof(this.Text));
             this.Error = info.GetString(nameof(this.Error));
+#pragma warning restore CA1062 // Validate arguments of public methods
         }
 
         /// <summary>

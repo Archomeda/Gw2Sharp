@@ -4,6 +4,8 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Gw2Sharp.WebApi.V2;
 
+#pragma warning disable CA1062 // Validate arguments of public methods
+
 namespace Gw2Sharp.Json.Converters
 {
     /// <summary>

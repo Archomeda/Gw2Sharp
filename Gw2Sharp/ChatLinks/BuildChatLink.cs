@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using Gw2Sharp.ChatLinks.Structs;
+using Gw2Sharp.ChatLinks.Internal;
 using Gw2Sharp.Models;
 using Gw2Sharp.WebApi.V2;
 

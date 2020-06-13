@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
@@ -40,10 +41,8 @@ namespace Gw2Sharp.WebApi.Caching
         {
             if (archiveFileName == null)
                 throw new ArgumentNullException(nameof(archiveFileName));
-#pragma warning disable S2583 // Conditionally executed blocks should be reachable - false positive in SonarCloud (SonarSource/sonar-dotnet#1347)
             if (string.IsNullOrWhiteSpace(archiveFileName))
                 throw new ArgumentException("File name cannot be empty or only contain whitespaces", nameof(archiveFileName));
-#pragma warning restore S2583 // Conditionally executed blocks should be reachable
 
             this.archiveStream = File.Open(archiveFileName, FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.None);
             this.archive = new ZipArchive(this.archiveStream, ZipArchiveMode.Update);
@@ -56,13 +55,16 @@ namespace Gw2Sharp.WebApi.Caching
             {
                 this.expiryCache = new Dictionary<string, DateTimeOffset>();
                 var expiryIndexEntry = this.archive.GetEntry(EXPIRY_DATE_INDEX_FILENAME);
-                using var entryStream = expiryIndexEntry.Open();
-                using var streamReader = new StreamReader(entryStream);
-                while (!streamReader.EndOfStream)
+                if (expiryIndexEntry != null)
                 {
-                    // ReadLine may return null if the end of the stream has been reached, but we're checking that case in the loop itself
-                    string[] line = streamReader.ReadLine()!.Split('=');
-                    this.expiryCache.Add(line[0], DateTimeOffset.Parse(line[1]));
+                    using var entryStream = expiryIndexEntry.Open();
+                    using var streamReader = new StreamReader(entryStream);
+                    while (!streamReader.EndOfStream)
+                    {
+                        // ReadLine may return null if the end of the stream has been reached, but we're checking that case in the loop itself
+                        string[] line = streamReader.ReadLine()!.Split('=');
+                        this.expiryCache.Add(line[0], DateTimeOffset.Parse(line[1], CultureInfo.InvariantCulture));
+                    }
                 }
             }
 
@@ -71,8 +73,7 @@ namespace Gw2Sharp.WebApi.Caching
 
         private void SetExpiryTime(string fileName, DateTimeOffset expiryTime)
         {
-            if (this.expiryCache == null)
-                this.expiryCache = new Dictionary<string, DateTimeOffset>();
+            this.expiryCache ??= new Dictionary<string, DateTimeOffset>();
 
             this.expiryCache[fileName] = expiryTime;
             this.StoreExpiryTimes();
@@ -162,15 +163,14 @@ namespace Gw2Sharp.WebApi.Caching
             lock (this.operationLock)
             {
                 var zipEntry = this.archive.GetEntry(fileName);
-                if (zipEntry != null)
-                    zipEntry.Delete();
+                zipEntry?.Delete();
 
                 zipEntry = this.archive.CreateEntry(fileName, CompressionLevel.Fastest);
                 using var zipStream = zipEntry.Open();
                 if (item.Item is byte[] byteArrayData)
                 {
                     // A byte array is stored
-                    var memoryStream = new MemoryStream(byteArrayData, false);
+                    using var memoryStream = new MemoryStream(byteArrayData, false);
                     memoryStream.CopyTo(zipStream);
                 }
                 else
@@ -197,11 +197,10 @@ namespace Gw2Sharp.WebApi.Caching
             return this.GetManyInternalAsync<T>(category, ids);
         }
 
-        private async Task<IDictionary<object, CacheItem<T>>> GetManyInternalAsync<T>(string category, IEnumerable<object> ids) =>
-            ids
-                .Select(id => this.TryGetInternal<T>(category, id))
-                .WhereNotNull()
-                .ToDictionary(x => x.Id);
+        private async Task<IDictionary<object, CacheItem<T>>> GetManyInternalAsync<T>(string category, IEnumerable<object> ids) => ids
+            .Select(id => this.TryGetInternal<T>(category, id))
+            .WhereNotNull()
+            .ToDictionary(x => x.Id);
 
         /// <inheritdoc />
         public override async Task ClearAsync()
@@ -222,17 +221,17 @@ namespace Gw2Sharp.WebApi.Caching
         /// <inheritdoc />
         protected override void Dispose(bool isDisposing)
         {
-            if (!this.isDisposed)
-            {
-                if (isDisposing)
-                {
-                    this.archive.Dispose();
-                    this.archiveStream.Dispose();
-                }
+            if (this.isDisposed)
+                return;
 
-                base.Dispose(isDisposing);
-                this.isDisposed = true;
+            if (isDisposing)
+            {
+                this.archive.Dispose();
+                this.archiveStream.Dispose();
             }
+
+            base.Dispose(isDisposing);
+            this.isDisposed = true;
         }
 
         #endregion

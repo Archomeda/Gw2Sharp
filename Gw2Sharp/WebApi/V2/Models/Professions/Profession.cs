@@ -65,6 +65,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// The map of skill palette ids to skill ids.
         /// </summary>
         [JsonConverter(typeof(CompactMapConverter))]
-        public IDictionary<int, int> SkillsByPalette { get; set; } = new Dictionary<int, int>();
+        public IReadOnlyDictionary<int, int> SkillsByPalette { get; set; } = new Dictionary<int, int>();
     }
 }

@@ -5,6 +5,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Gw2Sharp.WebApi.V2.Models;
 
+#pragma warning disable CA1062 // Validate arguments of public methods
 #pragma warning disable S1168 // Empty arrays and collections should be returned instead of null
 
 namespace Gw2Sharp.Json.Converters

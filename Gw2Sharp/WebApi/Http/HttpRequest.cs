@@ -45,8 +45,10 @@ namespace Gw2Sharp.WebApi.Http
         /// <param name="context">The streaming context.</param>
         protected HttpRequest(SerializationInfo info, StreamingContext context)
         {
+#pragma warning disable CA1062 // Validate arguments of public methods
             this.Url = (Uri?)info.GetValue(nameof(this.Url), typeof(Uri)) ?? throw new InvalidOperationException("Url cannot be null");
             this.RequestHeaders = (IReadOnlyDictionary<string, string>?)info.GetValue(nameof(this.RequestHeaders), typeof(IReadOnlyDictionary<string, string>)) ?? new Dictionary<string, string>();
+#pragma warning restore CA1062 // Validate arguments of public methods
         }
 
         /// <inheritdoc />
