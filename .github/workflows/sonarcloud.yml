@@ -8,8 +8,10 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
-      - run: |
-          git fetch --prune --unshallow
+      - run: git fetch --prune --unshallow
+      - uses: actions/setup-java@v1
+        with:
+          java-version: '>=11'
       - name: Install Coverlet
         run: dotnet tool install --global coverlet.console
       - name: Install SonarScanner
