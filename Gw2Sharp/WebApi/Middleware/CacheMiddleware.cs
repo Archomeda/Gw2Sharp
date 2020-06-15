@@ -17,6 +17,10 @@ namespace Gw2Sharp.WebApi.Middleware
     /// </summary>
     public class CacheMiddleware : IWebApiMiddleware
     {
+        private const string QUERY_PARAM_PAGE = "page";
+        private const string QUERY_PARAM_PAGE_SIZE = "page_size";
+        private const string ALL = "all";
+
         /// <inheritdoc />
         public virtual Task<IWebApiResponse> OnRequestAsync(IConnection connection, IWebApiRequest request, Func<IWebApiRequest, CancellationToken, Task<IWebApiResponse>> callNext, CancellationToken cancellationToken = default)
         {
@@ -27,20 +31,24 @@ namespace Gw2Sharp.WebApi.Middleware
             if (callNext is null)
                 throw new ArgumentNullException(nameof(callNext));
 
-            //TODO Cache results from paged requests
             //TODO Split requests with more than 200 ids
+
+            // Gw2Sharp only supports requesting pages separately, and not combined with a list of ids (or all).
+            // Even though it's supported by the API, it doesn't really make much sense to use it with a given list of ids
+            // (just split the list, or leave out all).
+            if (request.Options.EndpointQuery.ContainsKey(QUERY_PARAM_PAGE))
+                return OnPageRequestAsync(connection, request, callNext, cancellationToken);
 
             string[] idsList = Array.Empty<string>();
             if (request.Options.EndpointQuery.TryGetValue(request.Options.BulkQueryParameterIdsName, out string? ids))
                 idsList = ids.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
 
-            if (idsList.Contains("all", StringComparer.OrdinalIgnoreCase))
+            if (idsList.Contains(ALL, StringComparer.OrdinalIgnoreCase))
                 return OnAllRequestAsync(connection, request, callNext, cancellationToken);
 
             return idsList.Length switch
             {
                 0 => OnEndpointRequestAsync(connection, request, callNext, cancellationToken),
-                1 => OnSingleRequestAsync(connection, request, idsList[0], callNext, cancellationToken),
                 _ => OnManyRequestAsync(connection, request, idsList, callNext, cancellationToken)
             };
         }
@@ -48,13 +56,6 @@ namespace Gw2Sharp.WebApi.Middleware
         private static async Task<IWebApiResponse> OnEndpointRequestAsync(IConnection connection, IWebApiRequest request, Func<IWebApiRequest, CancellationToken, Task<IWebApiResponse>> callNext, CancellationToken cancellationToken)
         {
             var cacheItem = await connection.CacheMethod.GetOrUpdateAsync(request.Options.EndpointPath, "_index",
-                RequestGetAsync(request, callNext, cancellationToken)).ConfigureAwait(false);
-            return cacheItem.Item;
-        }
-
-        private static async Task<IWebApiResponse> OnSingleRequestAsync(IConnection connection, IWebApiRequest request, string id, Func<IWebApiRequest, CancellationToken, Task<IWebApiResponse>> callNext, CancellationToken cancellationToken)
-        {
-            var cacheItem = await connection.CacheMethod.GetOrUpdateAsync(request.Options.EndpointPath, id,
                 RequestGetAsync(request, callNext, cancellationToken)).ConfigureAwait(false);
             return cacheItem.Item;
         }
@@ -68,7 +69,7 @@ namespace Gw2Sharp.WebApi.Middleware
 
                 var response = await callNext(newRequest, cancellationToken).ConfigureAwait(false);
                 var responseInfo = new ApiV2HttpResponseInfo(response.StatusCode, response.ResponseHeaders);
-                return (SplitIntoIndividualResponses(response, request.Options.BulkObjectIdName), responseInfo.Expires ?? DateTimeOffset.Now);
+                return (SplitIntoIndividualResponses(response, request.Options.BulkObjectIdName), GetExpires(responseInfo));
             }).ConfigureAwait(false);
             return MergeIndividualResponses(cacheItems.Select(x => x.Item));
         }
@@ -86,13 +87,32 @@ namespace Gw2Sharp.WebApi.Middleware
             return cacheItem.Item;
         }
 
+        private static async Task<IWebApiResponse> OnPageRequestAsync(IConnection connection, IWebApiRequest request, Func<IWebApiRequest, CancellationToken, Task<IWebApiResponse>> callNext, CancellationToken cancellationToken)
+        {
+            request.Options.EndpointQuery.TryGetValue(QUERY_PARAM_PAGE, out string? page);
+            request.Options.EndpointQuery.TryGetValue(QUERY_PARAM_PAGE_SIZE, out string? pageSize);
+
+            var cacheItem = await connection.CacheMethod.GetOrUpdateAsync(request.Options.EndpointPath, $"_page{page}-{pageSize}",
+                RequestGetAsync(request, callNext, cancellationToken)).ConfigureAwait(false);
+
+            // Update individual items
+            var cacheItems = SplitIntoIndividualResponses(cacheItem.Item, request.Options.BulkObjectIdName)
+                .Select(x => new CacheItem<IWebApiResponse>(request.Options.EndpointPath, x.Key, x.Value, cacheItem.ExpiryTime));
+            await connection.CacheMethod.SetManyAsync(cacheItems).ConfigureAwait(false);
+
+            return cacheItem.Item;
+        }
+
         private static Func<Task<(IWebApiResponse, DateTimeOffset)>> RequestGetAsync(IWebApiRequest request, Func<IWebApiRequest, CancellationToken, Task<IWebApiResponse>> callNext, CancellationToken cancellationToken) =>
             async () =>
             {
                 var response = await callNext(request, cancellationToken).ConfigureAwait(false);
                 var responseInfo = new ApiV2HttpResponseInfo(response.StatusCode, response.ResponseHeaders);
-                return (response, responseInfo.Expires ?? DateTimeOffset.Now);
+                return (response, GetExpires(responseInfo));
             };
+
+        private static DateTimeOffset GetExpires(HttpResponseInfo responseInfo) =>
+            responseInfo.Expires ?? DateTimeOffset.Now;
 
         private static IDictionary<string, IWebApiResponse> SplitIntoIndividualResponses(IWebApiResponse response, string bulkObjectPropertyIdName)
         {
