@@ -33,12 +33,17 @@ namespace Gw2Sharp.WebApi.Render
         private Task<CacheItem<byte[]>> DownloadToCacheAsync(string renderUrl, CancellationToken cancellationToken) =>
             this.Connection.RenderCacheMethod.GetOrUpdateAsync(CACHE_CATEGORY, renderUrl, async () =>
             {
-                var request = new HttpRequest(new Uri(renderUrl));
+                var request = new WebApiRequest(new Uri(renderUrl), this.Connection, this.Gw2Client);
                 using var response = await this.Connection.HttpClient.RequestStreamAsync(request, cancellationToken).ConfigureAwait(false);
 
+#if !NETCOREAPP
                 using var memoryStream = new MemoryStream();
                 await response.ContentStream.CopyToAsync(memoryStream).ConfigureAwait(false);
-                var responseInfo = new HttpResponseInfo(response.StatusCode, response.RequestHeaders, response.ResponseHeaders);
+#else
+                await using var memoryStream = new MemoryStream();
+                await response.ContentStream.CopyToAsync(memoryStream, cancellationToken).ConfigureAwait(false);
+#endif
+                var responseInfo = new HttpResponseInfo(response.StatusCode, response.ResponseHeaders);
                 return (memoryStream.ToArray(), responseInfo.Expires ?? (responseInfo.Date + responseInfo.CacheMaxAge) ?? DateTimeOffset.Now);
             });
 
@@ -70,8 +75,13 @@ namespace Gw2Sharp.WebApi.Render
         private async Task DownloadToStreamInternalAsync(Stream targetStream, string renderUrl, CancellationToken cancellationToken)
         {
             var cacheItem = await this.DownloadToCacheAsync(renderUrl, cancellationToken).ConfigureAwait(false);
+#if !NETCOREAPP
             using var memoryStream = new MemoryStream(cacheItem.Item, false);
             await memoryStream.CopyToAsync(targetStream).ConfigureAwait(false);
+#else
+            await using var memoryStream = new MemoryStream(cacheItem.Item, false);
+            await memoryStream.CopyToAsync(targetStream, cancellationToken).ConfigureAwait(false);
+#endif
         }
 
 

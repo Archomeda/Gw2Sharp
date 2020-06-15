@@ -25,7 +25,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         }
 
         /// <inheritdoc />
-        [EndpointPathParameter("quantity")]
+        [EndpointQueryParameter("quantity")]
         public virtual int Quantity => this.quantity;
     }
 }

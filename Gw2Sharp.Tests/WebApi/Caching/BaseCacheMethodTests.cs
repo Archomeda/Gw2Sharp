@@ -13,10 +13,7 @@ namespace Gw2Sharp.Tests.WebApi.Caching
         protected ICacheMethod cacheMethod = null!;
 
         [Fact]
-        public async Task CategoryDoesNotExistTest()
-        {
-            Assert.Null(await this.cacheMethod.TryGetAsync<int>("unknown", "unknown"));
-        }
+        public async Task CategoryDoesNotExistTest() => Assert.Null(await this.cacheMethod.TryGetAsync<int>("unknown", "unknown"));
 
         [Fact]
         public async Task FlushTest()
@@ -31,10 +28,7 @@ namespace Gw2Sharp.Tests.WebApi.Caching
         }
 
         [Fact]
-        public async Task GetManyEmptyTest()
-        {
-            Assert.Empty(await this.cacheMethod.GetManyAsync<int>("Test category", new[] { "test1", "test2", "test3" }));
-        }
+        public async Task GetManyEmptyTest() => Assert.Empty(await this.cacheMethod.GetManyAsync<int>("Test category", new[] { "test1", "test2", "test3" }));
 
         [Fact]
         public async Task GetManyWithoutExpiredTest()
@@ -69,7 +63,7 @@ namespace Gw2Sharp.Tests.WebApi.Caching
             await this.cacheMethod.GetOrUpdateManyAsync(category, cacheItems.Select(x => x.Id), date, missingIds =>
             {
                 Assert.Equal(cacheItems.Select(x => x.Id), missingIds);
-                return Task.FromResult<IDictionary<object, int>>(cacheItems.ToDictionary(x => x.Id, x => x.Item));
+                return Task.FromResult<IDictionary<string, int>>(cacheItems.ToDictionary(x => x.Id, x => x.Item));
             });
             await AssertAsync.All(cacheItems.Select(async i => await this.cacheMethod.TryGetAsync<int>(i.Category, i.Id) != null), Assert.True);
             Assert.Equal(cacheItems, (await this.cacheMethod.GetManyAsync<int>(category, cacheItems.Select(x => x.Id))).Select(x => x.Value));
@@ -161,20 +155,16 @@ namespace Gw2Sharp.Tests.WebApi.Caching
         #region ArgumentNullException tests
 
         [Fact]
-        public async Task ArgumentNullGetTest()
-        {
+        public async Task ArgumentNullGetTest() =>
             await AssertArguments.ThrowsWhenNullAsync(
                 () => this.cacheMethod.TryGetAsync<object>("Test category", "test"),
                 new[] { true, true });
-        }
 
         [Fact]
-        public async Task ArgumentNullGetManyTest()
-        {
+        public async Task ArgumentNullGetManyTest() =>
             await AssertArguments.ThrowsWhenNullAsync(
-                () => this.cacheMethod.GetManyAsync<object>("Test category", new List<object>()),
+                () => this.cacheMethod.GetManyAsync<object>("Test category", Array.Empty<string>()),
                 new[] { true, true });
-        }
 
         [Fact]
         public async Task ArgumentNullSetTest()
@@ -188,28 +178,22 @@ namespace Gw2Sharp.Tests.WebApi.Caching
         }
 
         [Fact]
-        public async Task ArgumentNullSetManyTest()
-        {
+        public async Task ArgumentNullSetManyTest() =>
             await AssertArguments.ThrowsWhenNullAsync(
                 () => this.cacheMethod.SetManyAsync(new List<CacheItem<object>>()),
                 new[] { true });
-        }
 
         [Fact]
-        public async Task ArgumentNullGetOrUpdateTest()
-        {
+        public async Task ArgumentNullGetOrUpdateTest() =>
             await AssertArguments.ThrowsWhenNullAsync(
                 () => this.cacheMethod.GetOrUpdateAsync("Test category", "test", DateTime.Now, () => Task.FromResult(new object())),
                 new[] { true, true, false, true });
-        }
 
         [Fact]
-        public async Task ArgumentNullGetOrUpdateManyTest()
-        {
+        public async Task ArgumentNullGetOrUpdateManyTest() =>
             await AssertArguments.ThrowsWhenNullAsync(
-                () => this.cacheMethod.GetOrUpdateManyAsync("Test category", new List<object>(), DateTime.Now, obj => Task.FromResult((IDictionary<object, object>)new Dictionary<object, object>())),
+                () => this.cacheMethod.GetOrUpdateManyAsync("Test category", new List<string>(), DateTime.Now, obj => Task.FromResult((IDictionary<string, object>)new Dictionary<string, object>())),
                 new[] { true, true, false, true });
-        }
 
         #endregion
     }

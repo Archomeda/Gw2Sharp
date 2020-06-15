@@ -1,17 +1,10 @@
 using System;
 using System.Collections.Generic;
-using System.Net;
 using System.Reflection;
-using System.Text.Json;
-using System.Threading;
-using System.Threading.Tasks;
-using Gw2Sharp.Extensions;
-using Gw2Sharp.Json;
-using Gw2Sharp.Json.Converters;
 using Gw2Sharp.WebApi;
 using Gw2Sharp.WebApi.Caching;
 using Gw2Sharp.WebApi.Http;
-using Gw2Sharp.WebApi.V2.Models;
+using Gw2Sharp.WebApi.Middleware;
 
 namespace Gw2Sharp
 {
@@ -20,29 +13,6 @@ namespace Gw2Sharp
     /// </summary>
     public class Connection : IConnection
     {
-        /// <summary>
-        /// The settings that are used when deserializing JSON objects.
-        /// </summary>
-        private static JsonSerializerOptions GetDeserializerSettings(IGw2Client client)
-        {
-            var options = new JsonSerializerOptions
-            {
-                AllowTrailingCommas = true,
-                PropertyNameCaseInsensitive = true,
-                PropertyNamingPolicy = SnakeCaseNamingPolicy.SnakeCase
-            };
-            options.Converters.Add(new ApiEnumConverter());
-            options.Converters.Add(new ApiFlagsConverter());
-            options.Converters.Add(new ApiObjectConverter());
-            options.Converters.Add(new ApiObjectListConverter());
-            options.Converters.Add(new CastableTypeConverter());
-            options.Converters.Add(new DictionaryIntKeyConverter());
-            options.Converters.Add(new GuidConverter());
-            options.Converters.Add(new RenderUrlConverter(client));
-            options.Converters.Add(new TimeSpanConverter());
-            return options;
-        }
-
         private readonly Dictionary<string, string> requestHeaders;
         private IHttpClient httpClient;
         private ICacheMethod cacheMethod;
@@ -110,6 +80,7 @@ namespace Gw2Sharp
             this.cacheMethod = cacheMethod ?? new MemoryCacheMethod();
             this.renderCacheMethod = renderCacheMethod ?? new NullCacheMethod();
             this.RenderCacheDuration = renderCacheDuration ?? TimeSpan.Zero;
+            this.UseDefaultMiddleware();
 
             this.requestHeaders = new Dictionary<string, string>()
             {
@@ -134,18 +105,15 @@ namespace Gw2Sharp
         public Locale Locale { get; set; }
 
         /// <inheritdoc />
-        public string LocaleString
+        public string LocaleString => this.Locale switch
         {
-            get => this.Locale switch
-            {
-                Locale.German => "de",
-                Locale.French => "fr",
-                Locale.Spanish => "es",
-                Locale.Korean => "ko",
-                Locale.Chinese => "zh",
-                _ => "en"
-            };
-        }
+            Locale.German => "de",
+            Locale.French => "fr",
+            Locale.Spanish => "es",
+            Locale.Korean => "ko",
+            Locale.Chinese => "zh",
+            _ => "en"
+        };
 
         /// <inheritdoc />
         public string UserAgent { get; private set; }
@@ -174,70 +142,18 @@ namespace Gw2Sharp
             set => this.renderCacheMethod = value ?? throw new ArgumentNullException(nameof(value), "RenderCacheMethod cannot be null");
         }
 
-
+#pragma warning disable CA2227 // Collection properties should be read only
         /// <inheritdoc />
-        public Task<IHttpResponse<TResponse>> RequestAsync<TResponse>(IGw2Client client, Uri requestUri, IEnumerable<KeyValuePair<string, string>>? additionalHeaders, CancellationToken cancellationToken = default)
+        public IList<IWebApiMiddleware> Middleware { get; set; } = Array.Empty<IWebApiMiddleware>();
+#pragma warning restore CA2227 // Collection properties should be read only
+
+        /// <summary>
+        /// Resets this connection's middleware to the default list.
+        /// </summary>
+        public void UseDefaultMiddleware() => this.Middleware = new List<IWebApiMiddleware>
         {
-            if (requestUri == null)
-                throw new ArgumentNullException(nameof(requestUri));
-
-            return this.RequestInternalAsync<TResponse>(client, requestUri, additionalHeaders, cancellationToken);
-        }
-
-        private async Task<IHttpResponse<TResponse>> RequestInternalAsync<TResponse>(IGw2Client client, Uri requestUri, IEnumerable<KeyValuePair<string, string>>? additionalHeaders, CancellationToken cancellationToken)
-        {
-            IDictionary<string, string> headers = this.requestHeaders;
-            if (additionalHeaders != null)
-            {
-                headers = headers.ShallowCopy();
-                headers.AddRange(additionalHeaders);
-            }
-
-            var request = new HttpRequest(requestUri, headers);
-            var deserializerSettings = GetDeserializerSettings(client);
-
-            try
-            {
-                var r = await this.HttpClient.RequestAsync(request, cancellationToken).ConfigureAwait(false);
-                var obj = JsonSerializer.Deserialize<TResponse>(r.Content, deserializerSettings);
-                return new HttpResponse<TResponse>(obj, r.StatusCode, r.RequestHeaders, r.ResponseHeaders);
-            }
-            catch (UnexpectedStatusException ex)
-            {
-                var error = new ErrorObject();
-                try
-                {
-                    if (ex.Response != null)
-                        error = JsonSerializer.Deserialize<ErrorObject>(ex.Response.Content, deserializerSettings);
-                }
-                catch (JsonException)
-                {
-                    // Fallback message
-                    throw new UnexpectedStatusException(ex.Request, ex.Response, ex.Response?.Content ?? string.Empty);
-                }
-
-                var errorResponse = new HttpResponse<ErrorObject>(error, ex.Response?.StatusCode, ex.Response?.RequestHeaders, ex.Response?.RequestHeaders);
-
-                throw ex.Response?.StatusCode switch
-                {
-                    // 400
-                    HttpStatusCode.BadRequest => new BadRequestException(ex.Request, errorResponse),
-                    // 401
-                    HttpStatusCode.Unauthorized => AuthorizationRequiredException.CreateFromResponse(ex.Request, errorResponse),
-                    // 403
-                    HttpStatusCode.Forbidden => AuthorizationRequiredException.CreateFromResponse(ex.Request, errorResponse),
-                    // 404
-                    HttpStatusCode.NotFound => new NotFoundException(ex.Request, errorResponse),
-                    // 429
-                    (HttpStatusCode)429 => new TooManyRequestsException(ex.Request, errorResponse),
-                    // 500
-                    HttpStatusCode.InternalServerError => new ServerErrorException(ex.Request, errorResponse),
-                    // 503
-                    HttpStatusCode.ServiceUnavailable => new ServiceUnavailableException(ex.Request, errorResponse),
-
-                    _ => new UnexpectedStatusException(ex.Request, ex.Response, ex.Response?.Content ?? string.Empty),
-                };
-            }
-        }
+            new CacheMiddleware(),
+            new ExceptionMiddleware()
+        };
     }
 }

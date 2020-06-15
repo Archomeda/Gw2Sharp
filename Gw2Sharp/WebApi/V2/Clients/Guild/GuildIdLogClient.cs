@@ -32,7 +32,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
 
 
         /// <inheritdoc />
-        [EndpointPathParameter("since")]
+        [EndpointQueryParameter("since")]
         public int? ParamSince { get; protected set; }
 
         /// <inheritdoc />

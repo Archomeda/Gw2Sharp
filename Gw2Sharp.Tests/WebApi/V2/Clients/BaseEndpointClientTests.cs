@@ -45,7 +45,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
         {
             var cacheMethod = new NullCacheMethod();
             var httpClient = Substitute.For<IHttpClient>();
-            var connection = new Connection(this.IsAuthenticated ? "12345678-1234-1234-1234-12345678901234567890-1234-1234-1234-123456789012" : null, Locale.English, cacheMethod: cacheMethod, httpClient: httpClient);
+            var connection = new Connection(this.IsAuthenticated ? "12345678-1234-1234-1234-12345678901234567890-1234-1234-1234-123456789012" : null, Locale.English, cacheMethod, httpClient: httpClient);
             return new Gw2Client(connection);
         }
 
@@ -72,15 +72,15 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
         protected virtual async Task AssertPaginatedDataAsync<TObject>(IPaginatedClient<TObject> client, string file)
             where TObject : IApiV2Object
         {
-            var (data, expected) = this.GetTestData(file);
+            (string data, var expected) = this.GetTestData(file);
 
-            this.BaseClient.Connection.HttpClient.RequestAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Returns(callInfo =>
+            this.BaseClient.Connection.HttpClient.RequestAsync(Arg.Any<IWebApiRequest>(), CancellationToken.None).Returns(callInfo =>
             {
                 this.AssertRequest(callInfo, client, "?page=2&page_size=100");
                 this.AssertAuthenticatedRequest(callInfo, client);
                 this.AssertLocalizedRequest(callInfo, client);
                 this.AssertSchemaVersionRequest(callInfo, client);
-                return new HttpResponse(data, HttpStatusCode.OK, null, null);
+                return new WebApiResponse(data, HttpStatusCode.OK, null);
             });
 
             var actual = await client.PageAsync(2, 100);
@@ -90,14 +90,14 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
         protected virtual async Task AssertBlobDataAsync<TObject>(IBlobClient<TObject> client, string file)
             where TObject : IApiV2Object
         {
-            var (data, expected) = this.GetTestData(file);
-            this.BaseClient.Connection.HttpClient.RequestAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Returns(callInfo =>
+            (string data, var expected) = this.GetTestData(file);
+            this.BaseClient.Connection.HttpClient.RequestAsync(Arg.Any<IWebApiRequest>(), CancellationToken.None).Returns(callInfo =>
             {
                 this.AssertRequest(callInfo, client, string.Empty);
                 this.AssertAuthenticatedRequest(callInfo, client);
                 this.AssertLocalizedRequest(callInfo, client);
                 this.AssertSchemaVersionRequest(callInfo, client);
-                return new HttpResponse(data, HttpStatusCode.OK, null, null);
+                return new WebApiResponse(data, HttpStatusCode.OK, null);
             });
 
             var actual = await client.GetAsync();
@@ -107,10 +107,10 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
         protected virtual async Task AssertGetDataAsync<TObject, TId>(IBulkExpandableClient<TObject, TId> client, string file, string idName = "id")
             where TObject : IApiV2Object, IIdentifiable<TId>
         {
-            var (data, expected) = this.GetTestData(file);
+            (string data, var expected) = this.GetTestData(file);
             var id = this.GetId<TId>(expected.RootElement.GetProperty(idName));
 
-            this.BaseClient.Connection.HttpClient.RequestAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Returns(callInfo =>
+            this.BaseClient.Connection.HttpClient.RequestAsync(Arg.Any<IWebApiRequest>(), CancellationToken.None).Returns(callInfo =>
             {
                 string idString = id!.ToString()!;
                 if (id is Guid)
@@ -120,7 +120,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                 this.AssertAuthenticatedRequest(callInfo, client);
                 this.AssertLocalizedRequest(callInfo, client);
                 this.AssertSchemaVersionRequest(callInfo, client);
-                return new HttpResponse(data, HttpStatusCode.OK, null, null);
+                return new WebApiResponse(data, HttpStatusCode.OK, null);
             });
 
             var actual = await client.GetAsync(id);
@@ -130,14 +130,14 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
         protected virtual async Task AssertAllDataAsync<TObject>(IAllExpandableClient<TObject> client, string file, string idsName = "ids")
             where TObject : IApiV2Object
         {
-            var (data, expected) = this.GetTestData(file);
-            this.BaseClient.Connection.HttpClient.RequestAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Returns(callInfo =>
+            (string data, var expected) = this.GetTestData(file);
+            this.BaseClient.Connection.HttpClient.RequestAsync(Arg.Any<IWebApiRequest>(), CancellationToken.None).Returns(callInfo =>
             {
                 this.AssertRequest(callInfo, client, $"?{idsName}=all");
                 this.AssertAuthenticatedRequest(callInfo, client);
                 this.AssertLocalizedRequest(callInfo, client);
                 this.AssertSchemaVersionRequest(callInfo, client);
-                return new HttpResponse(data, HttpStatusCode.OK, null, null);
+                return new WebApiResponse(data, HttpStatusCode.OK, null);
             });
 
             var actual = await client.AllAsync();
@@ -147,10 +147,10 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
         protected virtual async Task AssertBulkDataAsync<TObject, TId>(IBulkExpandableClient<TObject, TId> client, string file, string idName = "id", string idsName = "ids")
             where TObject : IApiV2Object, IIdentifiable<TId>
         {
-            var (data, expected) = this.GetTestData(file);
+            (string data, var expected) = this.GetTestData(file);
             var ids = this.GetIds<TId>(expected.RootElement.EnumerateArray().Select(i => i.GetProperty(idName)));
 
-            this.BaseClient.Connection.HttpClient.RequestAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Returns(callInfo =>
+            this.BaseClient.Connection.HttpClient.RequestAsync(Arg.Any<IWebApiRequest>(), CancellationToken.None).Returns(callInfo =>
             {
                 var idStrings = ids.Select(i =>
                 {
@@ -160,11 +160,11 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                     return idString;
                 });
 
-                this.AssertRequest(callInfo, client, $"?{idsName}={string.Join(",", idStrings)}");
+                this.AssertRequest(callInfo, client, $"?{Uri.EscapeDataString(idsName)}={Uri.EscapeDataString(string.Join(",", idStrings))}");
                 this.AssertAuthenticatedRequest(callInfo, client);
                 this.AssertLocalizedRequest(callInfo, client);
                 this.AssertSchemaVersionRequest(callInfo, client);
-                return new HttpResponse(data, HttpStatusCode.OK, null, null);
+                return new WebApiResponse(data, HttpStatusCode.OK, null);
             });
 
             var actual = await client.ManyAsync(ids);
@@ -174,15 +174,15 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
         protected virtual async Task AssertIdsDataAsync<TObject, TId>(IBulkExpandableClient<TObject, TId> client, string file)
             where TObject : IApiV2Object, IIdentifiable<TId>
         {
-            var (data, expected) = this.GetTestData(file);
+            (string data, var expected) = this.GetTestData(file);
 
-            this.BaseClient.Connection.HttpClient.RequestAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Returns(callInfo =>
+            this.BaseClient.Connection.HttpClient.RequestAsync(Arg.Any<IWebApiRequest>(), CancellationToken.None).Returns(callInfo =>
             {
                 this.AssertRequest(callInfo, client, string.Empty);
                 this.AssertAuthenticatedRequest(callInfo, client);
                 this.AssertLocalizedRequest(callInfo, client);
                 this.AssertSchemaVersionRequest(callInfo, client);
-                return new HttpResponse(data, HttpStatusCode.OK, null, null);
+                return new WebApiResponse(data, HttpStatusCode.OK, null);
             });
 
             var actual = await client.IdsAsync();
@@ -195,14 +195,14 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
             var uri = new Uri(Gw2WebApiV2Client.UrlBase, $"{client.EndpointPath}{pathAndQuery}");
             var parameterProperties = client.GetType()
                 .GetProperties(BindingFlags.Public | BindingFlags.Instance)
-                .Where(p => p.GetCustomAttribute<EndpointPathParameterAttribute>() != null);
+                .Where(p => p.GetCustomAttribute<EndpointQueryParameterAttribute>() != null);
             if (parameterProperties.Any())
             {
                 var builder = new UriBuilder(uri);
                 foreach (var parameter in parameterProperties)
                 {
-                    var attr = parameter.GetCustomAttribute<EndpointPathParameterAttribute>();
-                    object value = parameter.GetValue(client);
+                    var attr = parameter.GetCustomAttribute<EndpointQueryParameterAttribute>();
+                    var value = parameter.GetValue(client);
                     if (value == null)
                         continue;
 
@@ -214,15 +214,15 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                 uri = builder.Uri;
             }
 
-            Assert.Equal(uri, callInfo.ArgAt<IHttpRequest>(0).Url);
-            var requestHeaders = callInfo.ArgAt<IHttpRequest>(0).RequestHeaders;
+            Assert.Equal(uri.AbsoluteUri, callInfo.ArgAt<IWebApiRequest>(0).Options.Url.AbsoluteUri);
+            var requestHeaders = callInfo.ArgAt<IWebApiRequest>(0).Options.RequestHeaders;
             Assert.Contains(new KeyValuePair<string, string>("Accept", "application/json"), requestHeaders);
             Assert.Contains(new KeyValuePair<string, string>("User-Agent", ((Gw2WebApiBaseClient)client).Connection.UserAgent), requestHeaders);
         }
 
         protected virtual void AssertAuthenticatedRequest(CallInfo callInfo, IEndpointClient client)
         {
-            var requestHeaders = callInfo.ArgAt<IHttpRequest>(0).RequestHeaders;
+            var requestHeaders = callInfo.ArgAt<IWebApiRequest>(0).Options.RequestHeaders;
             if (client.IsAuthenticated)
                 Assert.Contains(new KeyValuePair<string, string>("Authorization", $"Bearer {((Gw2WebApiBaseClient)client).Connection.AccessToken}"), requestHeaders);
             else
@@ -231,13 +231,16 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
 
         protected virtual void AssertLocalizedRequest(CallInfo callInfo, IEndpointClient client)
         {
-            var requestHeaders = callInfo.ArgAt<IHttpRequest>(0).RequestHeaders;
-            Assert.Contains(new KeyValuePair<string, string>("Accept-Language", ((Gw2WebApiBaseClient)client).Connection.LocaleString), requestHeaders);
+            var requestHeaders = callInfo.ArgAt<IWebApiRequest>(0).Options.RequestHeaders;
+            if (client.IsLocalized)
+                Assert.Contains(new KeyValuePair<string, string>("Accept-Language", ((Gw2WebApiBaseClient)client).Connection.LocaleString), requestHeaders);
+            else
+                Assert.DoesNotContain(requestHeaders, h => h.Key == "Accept-Language");
         }
 
         protected virtual void AssertSchemaVersionRequest(CallInfo callInfo, IEndpointClient client)
         {
-            var requestHeaders = callInfo.ArgAt<IHttpRequest>(0).RequestHeaders;
+            var requestHeaders = callInfo.ArgAt<IWebApiRequest>(0).Options.RequestHeaders;
             if (!string.IsNullOrWhiteSpace(client.SchemaVersion))
                 Assert.Contains(new KeyValuePair<string, string>("X-Schema-Version", client.SchemaVersion), requestHeaders);
             else
@@ -326,7 +329,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                             throw new InvalidOperationException($"Expected property '{key}' to exist in type {type.FullName}");
                     }
 
-                    object actualValue = property.GetValue(actual);
+                    var actualValue = property.GetValue(actual);
                     this.AssertJsonObject(kvp.Value, actualValue);
                 }
             }
@@ -429,14 +432,12 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
         #region ArgumentNullException tests
 
         [Fact]
-        public virtual void ArgumentNullConstructorTest()
-        {
+        public virtual void ArgumentNullConstructorTest() =>
             AssertArguments.ThrowsWhenNullConstructor(
                 this.Client.GetType(),
                 new[] { typeof(IConnection), typeof(IGw2Client) },
                 new object[] { new Connection(), new Gw2Client() },
                 new[] { true, true });
-        }
 
         #endregion
     }

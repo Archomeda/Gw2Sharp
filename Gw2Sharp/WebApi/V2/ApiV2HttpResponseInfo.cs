@@ -18,15 +18,13 @@ namespace Gw2Sharp.WebApi.V2
         private static readonly Regex linkUriRegex = new Regex("<(.+)>", RegexOptions.IgnoreCase);
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ApiV2HttpResponseInfo"/> class with a <see cref="IHttpResponse{T}"/> as base.
+        /// Initializes a new instance of the <see cref="ApiV2HttpResponseInfo"/> class with a <see cref="IWebApiResponse{T}"/> as base.
         /// </summary>
         /// <param name="statusCode">The HTTP status code.</param>
-        /// <param name="requestHeaders">The HTTP request headers.</param>
         /// <param name="responseHeaders">The HTTP response headers.</param>
-        public ApiV2HttpResponseInfo(HttpStatusCode statusCode, IReadOnlyDictionary<string, string>? requestHeaders, IReadOnlyDictionary<string, string>? responseHeaders) :
-            base(statusCode, requestHeaders, responseHeaders)
+        public ApiV2HttpResponseInfo(HttpStatusCode statusCode, IReadOnlyDictionary<string, string>? responseHeaders) :
+            base(statusCode, responseHeaders)
         {
-            requestHeaders ??= new Dictionary<string, string>();
             responseHeaders ??= new Dictionary<string, string>();
 
             this.RateLimitLimit = ParseResponseHeader(responseHeaders, "X-Rate-Limit-Limit", ParseNullableInt);

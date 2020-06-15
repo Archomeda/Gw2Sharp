@@ -14,7 +14,7 @@ namespace Gw2Sharp.WebApi.Caching
     /// </summary>
     public class MemoryCacheMethod : BaseCacheMethod
     {
-        private readonly ConcurrentDictionary<string, ConcurrentDictionary<object, object>> cachedItems = new ConcurrentDictionary<string, ConcurrentDictionary<object, object>>();
+        private readonly ConcurrentDictionary<string, ConcurrentDictionary<string, object>> cachedItems = new ConcurrentDictionary<string, ConcurrentDictionary<string, object>>();
 
         private readonly Timer gcTimer;
 
@@ -40,46 +40,48 @@ namespace Gw2Sharp.WebApi.Caching
                 if (!this.cachedItems.TryGetValue(category, out var cache))
                     continue;
 
-                CollectInnerGarbage(now, cache);
+                Collect(now, cache);
 
                 if (cache.Count == 0)
                     this.cachedItems.TryRemove(category, out _);
             }
-        }
 
-        private static void CollectInnerGarbage(DateTimeOffset now, ConcurrentDictionary<object, object> cache)
-        {
-            foreach (object key in cache.Keys.ToArray())
+            static void Collect(DateTimeOffset now, ConcurrentDictionary<string, object> cache)
             {
-                if (!cache.TryGetValue(key, out var obj))
-                    continue;
+                foreach (string key in cache.Keys.ToArray())
+                {
+                    if (!cache.TryGetValue(key, out var obj))
+                        continue;
 
-                var item = (CacheItem)obj;
-                if (item.ExpiryTime <= now)
-                    cache.TryRemove(key, out _);
+                    var item = (CacheItem)obj;
+                    if (item.ExpiryTime <= now)
+                        cache.TryRemove(key, out _);
+                }
             }
         }
 
         #region BaseCacheController overrides
 
         /// <inheritdoc />
-        public override Task<CacheItem<T>?> TryGetAsync<T>(string category, object id)
+        public override Task<CacheItem<T>?> TryGetAsync<T>(string category, string id)
         {
             if (category == null)
                 throw new ArgumentNullException(nameof(category));
             if (id == null)
                 throw new ArgumentNullException(nameof(id));
+            return ExecAsync();
 
-            return this.TryGetInternalAsync<T>(category, id);
+            async Task<CacheItem<T>?> ExecAsync()
+            {
+                if (this.cachedItems.TryGetValue(category, out var cache) &&
+                    cache.TryGetValue(id, out var obj) &&
+                    obj is CacheItem<T> item &&
+                    item.ExpiryTime > DateTimeOffset.Now)
+                    return item;
+                else
+                    return null;
+            }
         }
-
-        private async Task<CacheItem<T>?> TryGetInternalAsync<T>(string category, object id) =>
-            this.cachedItems.TryGetValue(category, out var cache) &&
-            cache.TryGetValue(id, out var obj) &&
-            obj is CacheItem<T> item &&
-            item.ExpiryTime > DateTimeOffset.Now
-                ? item
-                : null;
 
         /// <inheritdoc />
         public override Task SetAsync<T>(CacheItem<T> item)
@@ -87,36 +89,34 @@ namespace Gw2Sharp.WebApi.Caching
             if (item == null)
                 throw new ArgumentNullException(nameof(item));
 
-            return item.ExpiryTime <= DateTimeOffset.Now ? Task.CompletedTask : this.SetInternalAsync(item);
-        }
-
-        private async Task SetInternalAsync<T>(CacheItem<T> item)
-        {
-            var cache = this.cachedItems.GetOrAdd(item.Category, new ConcurrentDictionary<object, object>());
-            cache[item.Id] = item;
+            if (item.ExpiryTime > DateTimeOffset.Now)
+            {
+                var cache = this.cachedItems.GetOrAdd(item.Category, new ConcurrentDictionary<string, object>());
+                cache[item.Id] = item;
+            }
+            return Task.CompletedTask;
         }
 
         /// <inheritdoc />
-        public override Task<IDictionary<object, CacheItem<T>>> GetManyAsync<T>(string category, IEnumerable<object> ids)
+        public override Task<IDictionary<string, CacheItem<T>>> GetManyAsync<T>(string category, IEnumerable<string> ids)
         {
             if (category == null)
                 throw new ArgumentNullException(nameof(category));
             if (ids == null)
                 throw new ArgumentNullException(nameof(ids));
+            return ExecAsync();
 
-            return this.GetManyInternalAsync<T>(category, ids);
-        }
-
-        private async Task<IDictionary<object, CacheItem<T>>> GetManyInternalAsync<T>(string category, IEnumerable<object> ids)
-        {
-            var items = new Dictionary<object, CacheItem<T>>();
-            if (this.cachedItems.TryGetValue(category, out var cache))
-                items = ids
-                    .Select(id => cache.TryGetValue(id, out var obj) ? obj : null)
-                    .Where(x => x is CacheItem<T> item && item.ExpiryTime > DateTimeOffset.Now)
-                    .Cast<CacheItem<T>>()
-                    .ToDictionary(x => x.Id);
-            return items;
+            async Task<IDictionary<string, CacheItem<T>>> ExecAsync()
+            {
+                var items = new Dictionary<string, CacheItem<T>>();
+                if (this.cachedItems.TryGetValue(category, out var cache))
+                    items = ids
+                        .Select(id => cache.TryGetValue(id, out var obj) ? obj : null)
+                        .Where(x => x is CacheItem<T> item && item.ExpiryTime > DateTimeOffset.Now)
+                        .Cast<CacheItem<T>>()
+                        .ToDictionary(x => x.Id);
+                return items;
+            }
         }
 
         /// <inheritdoc />

@@ -13,18 +13,15 @@ namespace Gw2Sharp.WebApi.Http
     public class HttpResponseInfo
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="HttpResponseInfo"/> class with a <see cref="IHttpResponse{T}"/> as base.
+        /// Initializes a new instance of the <see cref="HttpResponseInfo"/> class with a <see cref="IWebApiResponse{T}"/> as base.
         /// </summary>
         /// <param name="statusCode">The HTTP status code.</param>
-        /// <param name="requestHeaders">The HTTP request headers.</param>
         /// <param name="responseHeaders">The HTTP response headers.</param>
-        public HttpResponseInfo(HttpStatusCode statusCode, IReadOnlyDictionary<string, string>? requestHeaders, IReadOnlyDictionary<string, string>? responseHeaders)
+        public HttpResponseInfo(HttpStatusCode statusCode, IReadOnlyDictionary<string, string>? responseHeaders)
         {
-            requestHeaders ??= new Dictionary<string, string>();
             responseHeaders ??= new Dictionary<string, string>();
 
             this.ResponseStatusCode = statusCode;
-            this.RawRequestHeaders = requestHeaders.ShallowCopy().AsReadOnly();
             this.RawResponseHeaders = responseHeaders.ShallowCopy().AsReadOnly();
 
             this.Date = ParseResponseHeader(responseHeaders, "Date", value => DateTimeOffset.Parse(value, CultureInfo.InvariantCulture));
@@ -48,11 +45,6 @@ namespace Gw2Sharp.WebApi.Http
         /// The response status code.
         /// </summary>
         public HttpStatusCode ResponseStatusCode { get; protected set; }
-
-        /// <summary>
-        /// The raw request headers.
-        /// </summary>
-        public IReadOnlyDictionary<string, string> RawRequestHeaders { get; protected set; }
 
         /// <summary>
         /// The raw response headers.

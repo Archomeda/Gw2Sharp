@@ -7,7 +7,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 characters id build tabs endpoint.
     /// </summary>
     [EndpointPath("characters/:id/buildtabs")]
-    [EndpointBulkIdName("tab", "tabs")]
+    [EndpointBulkIdName("tab", "tabs", "tab")]
     [EndpointSchemaVersion("2019-12-19T00:00:00.000Z")]
     public class CharactersIdBuildTabsClient : BaseCharactersSubBulkClient<CharacterBuildTabSlot, int>, ICharactersIdBuildTabsClient
     {

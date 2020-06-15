@@ -13,10 +13,6 @@ namespace Gw2Sharp.Tests.WebApi.V2
         public void ConstructorTest()
         {
             var statusCode = HttpStatusCode.OK;
-            var requestHeaders = new Dictionary<string, string>
-            {
-                { "X-Test", "Test" }
-            };
             var responseHeaders = new Dictionary<string, string>
             {
                 { "Cache-Control", "public,max-age=60" },
@@ -31,12 +27,11 @@ namespace Gw2Sharp.Tests.WebApi.V2
                 { "X-Page-Total", "20" }
             };
 
-            var response = new ApiV2HttpResponseInfo(statusCode, requestHeaders, responseHeaders);
+            var response = new ApiV2HttpResponseInfo(statusCode, responseHeaders);
             Assert.Equal(statusCode, response.ResponseStatusCode);
             Assert.Equal(new DateTime(2019, 5, 23, 22, 0, 0, DateTimeKind.Utc), response.Date.ToUniversalTime());
             Assert.Equal(new DateTime(2019, 5, 24, 0, 0, 0, DateTimeKind.Utc), response.Expires!.Value.ToUniversalTime());
             Assert.Equal(new DateTime(2019, 5, 23, 20, 0, 0, DateTimeKind.Utc), response.LastModified!.Value.ToUniversalTime());
-            Assert.Equal(requestHeaders, response.RawRequestHeaders);
             Assert.Equal(responseHeaders, response.RawResponseHeaders);
             Assert.Equal(TimeSpan.FromSeconds(60), response.CacheMaxAge);
             Assert.Equal(new Dictionary<string, Uri>
@@ -62,7 +57,7 @@ namespace Gw2Sharp.Tests.WebApi.V2
                 { "Link", "</boop>; rel=invalid, illegal_format; nope, rel=next; rel=previous, <?rel=self>; rel=self" },
             };
 
-            var response = new ApiV2HttpResponseInfo(HttpStatusCode.OK, null, responseHeaders);
+            var response = new ApiV2HttpResponseInfo(HttpStatusCode.OK, responseHeaders);
             Assert.Equal(responseHeaders, responseHeaders);
             Assert.Equal(new Dictionary<string, Uri>
             {
@@ -80,7 +75,7 @@ namespace Gw2Sharp.Tests.WebApi.V2
                 { "X-Result-Count", "2147483648" } // Int32.MaxValue + 1
             };
 
-            var response = new ApiV2HttpResponseInfo(HttpStatusCode.OK, null, responseHeaders);
+            var response = new ApiV2HttpResponseInfo(HttpStatusCode.OK, responseHeaders);
             Assert.Equal(responseHeaders, responseHeaders);
             Assert.Equal(default, response.CacheMaxAge);
             Assert.Equal(default, response.RateLimitLimit);

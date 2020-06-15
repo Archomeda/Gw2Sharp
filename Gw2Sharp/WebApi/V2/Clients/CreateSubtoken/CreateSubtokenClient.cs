@@ -36,15 +36,15 @@ namespace Gw2Sharp.WebApi.V2.Clients
 
 
         /// <inheritdoc />
-        [EndpointPathParameter("expire")]
+        [EndpointQueryParameter("expire")]
         public string? ParamExpire { get; protected set; }
 
         /// <inheritdoc />
-        [EndpointPathParameter("permissions")]
+        [EndpointQueryParameter("permissions")]
         public string? ParamPermissions { get; protected set; }
 
         /// <inheritdoc />
-        [EndpointPathParameter("urls")]
+        [EndpointQueryParameter("urls")]
         public string? ParamUrls { get; protected set; }
 
         /// <inheritdoc />

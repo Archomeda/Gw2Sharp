@@ -1,15 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Net;
-using System.Threading;
-using System.Threading.Tasks;
-using Gw2Sharp.Tests.Helpers;
 using Gw2Sharp.WebApi;
 using Gw2Sharp.WebApi.Caching;
 using Gw2Sharp.WebApi.Http;
-using Gw2Sharp.WebApi.V2.Models;
 using NSubstitute;
-using NSubstitute.ExceptionExtensions;
 using Xunit;
 
 namespace Gw2Sharp.Tests
@@ -84,107 +76,5 @@ namespace Gw2Sharp.Tests
             var connection = new Connection(locale);
             Assert.Equal(expected, connection.LocaleString);
         }
-
-        [Fact]
-        public async Task ValidRequestTest()
-        {
-            var httpClient = Substitute.For<IHttpClient>();
-            var httpResponse = Substitute.For<IHttpResponse>();
-            httpResponse.Content.Returns("{\"testkey\":\"testvalue\"}");
-            httpResponse.StatusCode.Returns(HttpStatusCode.OK);
-            httpResponse.RequestHeaders.Returns(new Dictionary<string, string> { { "request", "headers" } });
-            httpResponse.ResponseHeaders.Returns(new Dictionary<string, string> { { "response", "here" } });
-            httpClient.RequestAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Returns(Task.FromResult(httpResponse));
-            var content = new TestContentClass { Testkey = "testvalue" };
-
-            var connection = new Connection(string.Empty, default, cacheMethod: new NullCacheMethod(), httpClient: httpClient);
-            var response = await connection.RequestAsync<TestContentClass>(null, new Uri("http://localhost"), null, CancellationToken.None);
-
-            Assert.Equal(content.Testkey, response.Content.Testkey);
-            Assert.Equal(httpResponse.StatusCode, response.StatusCode);
-            Assert.Equal(httpResponse.RequestHeaders, response.RequestHeaders);
-            Assert.Equal(httpResponse.ResponseHeaders, response.ResponseHeaders);
-        }
-
-        [Theory]
-        [InlineData("bad request", HttpStatusCode.BadRequest, typeof(BadRequestException))]
-        [InlineData("Invalid access token", HttpStatusCode.Unauthorized, typeof(InvalidAccessTokenException))]
-        [InlineData("authorization failed", HttpStatusCode.Forbidden, typeof(AuthorizationRequiredException))]
-        [InlineData("invalid key", HttpStatusCode.Forbidden, typeof(InvalidAccessTokenException))]
-        [InlineData("requires scope inventories", HttpStatusCode.Forbidden, typeof(MissingScopesException))]
-        [InlineData("membership required", HttpStatusCode.Forbidden, typeof(MembershipRequiredException))]
-        [InlineData("access restricted to guild leaders", HttpStatusCode.Forbidden, typeof(RestrictedToGuildLeadersException))]
-        [InlineData("not found", HttpStatusCode.NotFound, typeof(NotFoundException))]
-#if NET461
-        [InlineData("too many requests", (HttpStatusCode)429, typeof(TooManyRequestsException))]
-#else
-        [InlineData("too many requests", HttpStatusCode.TooManyRequests, typeof(TooManyRequestsException))]
-#endif
-        [InlineData("server error", HttpStatusCode.InternalServerError, typeof(ServerErrorException))]
-        [InlineData("service unavailable", HttpStatusCode.ServiceUnavailable, typeof(ServiceUnavailableException))]
-        public async Task ExceptionRequestTest(string errorText, HttpStatusCode statusCode, Type exceptionType)
-        {
-            var httpClient = Substitute.For<IHttpClient>();
-            var httpRequest = Substitute.For<IHttpRequest>();
-            var httpResponse = Substitute.For<IHttpResponse>();
-            httpResponse.Content.Returns($"{{\"text\":\"{errorText}\"}}");
-            httpResponse.StatusCode.Returns(statusCode);
-            httpClient.RequestAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Throws(_ => new UnexpectedStatusException(httpRequest, httpResponse));
-
-            var connection = new Connection(string.Empty, default, cacheMethod: new NullCacheMethod(), httpClient: httpClient);
-            var exception = (UnexpectedStatusException<ErrorObject>)await Assert.ThrowsAsync(exceptionType, () => connection.RequestAsync<TestContentClass>(null, new Uri("http://localhost"), null, CancellationToken.None));
-            Assert.Equal(errorText, exception.Response?.Content.Text);
-        }
-
-        [Fact]
-        public async Task ExceptionNoJsonRequestTest()
-        {
-            string body = "<html><body>This is not JSON</body></html>";
-
-            var httpClient = Substitute.For<IHttpClient>();
-            var httpRequest = Substitute.For<IHttpRequest>();
-            var httpResponse = Substitute.For<IHttpResponse>();
-            httpResponse.Content.Returns(body);
-            httpResponse.StatusCode.Returns(HttpStatusCode.InternalServerError);
-            httpClient.RequestAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Throws(_ => new UnexpectedStatusException(httpRequest, httpResponse));
-
-            var connection = new Connection(string.Empty, default, cacheMethod: new NullCacheMethod(), httpClient: httpClient);
-            var exception = await Assert.ThrowsAsync<UnexpectedStatusException>(() => connection.RequestAsync<TestContentClass>(null, new Uri("http://localhost"), null, CancellationToken.None));
-            Assert.Equal(body, exception.Response?.Content);
-        }
-
-        [Fact]
-        public async Task UnexpectedStatusExceptionRequestTest()
-        {
-            string message = "{\"error\":\"Some nice error message\"}";
-            var httpClient = Substitute.For<IHttpClient>();
-            var httpRequest = Substitute.For<IHttpRequest>();
-            var httpResponse = Substitute.For<IHttpResponse>();
-            httpResponse.Content.Returns(message);
-            httpResponse.StatusCode.Returns((HttpStatusCode)499);
-            httpClient.RequestAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Throws(_ => new UnexpectedStatusException(httpRequest, httpResponse));
-
-            var connection = new Connection(string.Empty, default, cacheMethod: new NullCacheMethod(), httpClient: httpClient);
-            var exception = await Assert.ThrowsAsync<UnexpectedStatusException>(() => connection.RequestAsync<TestContentClass>(null, new Uri("http://localhost"), null, CancellationToken.None));
-            Assert.Equal(message, exception.Response?.Content);
-        }
-
-        public class TestContentClass
-        {
-            public string Testkey { get; set; } = string.Empty;
-        }
-
-        #region ArgumentNullException tests
-
-        [Fact]
-        public async Task ArgumentNullRequestAsyncTest()
-        {
-            var connection = new Connection();
-            await AssertArguments.ThrowsWhenNullAsync(
-                 () => connection.RequestAsync<object>(null, new Uri("http://localhost"), null, CancellationToken.None),
-                 new[] { false, true, false, false });
-        }
-
-        #endregion
     }
 }

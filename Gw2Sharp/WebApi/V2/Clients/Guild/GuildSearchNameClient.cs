@@ -24,7 +24,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         }
 
         /// <inheritdoc />
-        [EndpointPathParameter("name")]
+        [EndpointQueryParameter("name")]
         public virtual string Name => this.name;
     }
 }

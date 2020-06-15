@@ -29,7 +29,7 @@ namespace Gw2Sharp.Tests.WebApi.Render
         {
             byte[] file = this.GetTestData("TestFiles.Render.414998.png");
             using var expectedMemoryStream = new MemoryStream(file, false);
-            ((Gw2WebApiBaseClient)this.client).Connection.HttpClient.RequestStreamAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Returns(callInfo =>
+            ((Gw2WebApiBaseClient)this.client).Connection.HttpClient.RequestStreamAsync(Arg.Any<IWebApiRequest>(), CancellationToken.None).Returns(callInfo =>
             {
                 return new HttpResponseStream(expectedMemoryStream, HttpStatusCode.OK, null, null);
             });
@@ -46,7 +46,7 @@ namespace Gw2Sharp.Tests.WebApi.Render
         {
             byte[] file = this.GetTestData("TestFiles.Render.414998.png");
             using var expectedMemoryStream = new MemoryStream(file, false);
-            ((Gw2WebApiBaseClient)this.client).Connection.HttpClient.RequestStreamAsync(Arg.Any<IHttpRequest>(), CancellationToken.None).Returns(callInfo =>
+            ((Gw2WebApiBaseClient)this.client).Connection.HttpClient.RequestStreamAsync(Arg.Any<IWebApiRequest>(), CancellationToken.None).Returns(callInfo =>
             {
                 return new HttpResponseStream(expectedMemoryStream, HttpStatusCode.OK, null, null);
             });

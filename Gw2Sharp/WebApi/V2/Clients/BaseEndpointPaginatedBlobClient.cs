@@ -23,19 +23,18 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// or the number of replace segments does not equal the number of path segments given by <see cref="EndpointPathSegmentAttribute"/>.
         /// </exception>
         protected BaseEndpointPaginatedBlobClient(IConnection connection, IGw2Client gw2Client, params string[] replaceSegments) :
-            base(connection, gw2Client, replaceSegments)
-        { }
+            base(connection, gw2Client, replaceSegments) { }
 
         /// <inheritdoc />
-        public virtual Task<IApiV2ObjectList<TObject>> GetAsync(CancellationToken cancellationToken = default) =>
-            this.Implementation.RequestGetAsync(cancellationToken);
+        public virtual async Task<IApiV2ObjectList<TObject>> GetAsync(CancellationToken cancellationToken = default) =>
+            (await new RequestBuilder(this, this.Connection, this.Gw2Client).Blob().ExecuteAsync<IApiV2ObjectList<TObject>>(cancellationToken).ConfigureAwait(false)).Content;
 
         /// <inheritdoc />
-        public virtual Task<IApiV2ObjectList<TObject>> PageAsync(int page, CancellationToken cancellationToken = default) =>
-            this.Implementation.RequestPageAsync(page, cancellationToken: cancellationToken);
+        public virtual async Task<IApiV2ObjectList<TObject>> PageAsync(int page, CancellationToken cancellationToken = default) =>
+            (await new RequestBuilder(this, this.Connection, this.Gw2Client).Page(page).ExecuteAsync<IApiV2ObjectList<TObject>>(cancellationToken).ConfigureAwait(false)).Content;
 
         /// <inheritdoc />
-        public virtual Task<IApiV2ObjectList<TObject>> PageAsync(int page, int pageSize, CancellationToken cancellationToken = default) =>
-            this.Implementation.RequestPageAsync(page, pageSize, cancellationToken);
+        public virtual async Task<IApiV2ObjectList<TObject>> PageAsync(int page, int pageSize, CancellationToken cancellationToken = default) =>
+            (await new RequestBuilder(this, this.Connection, this.Gw2Client).Page(page, pageSize).ExecuteAsync<IApiV2ObjectList<TObject>>(cancellationToken).ConfigureAwait(false)).Content;
     }
 }

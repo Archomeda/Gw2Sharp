@@ -16,7 +16,7 @@ namespace Gw2Sharp.Tests.WebApi.Http
                 { "Cache-Control", "\"public, max-age=60\"" }
             };
 
-            var response = new HttpResponseInfo(HttpStatusCode.OK, null, responseHeaders);
+            var response = new HttpResponseInfo(HttpStatusCode.OK, responseHeaders);
             Assert.Equal(responseHeaders, responseHeaders);
             Assert.Equal(TimeSpan.FromSeconds(60), response.CacheMaxAge);
         }

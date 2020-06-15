@@ -23,11 +23,10 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// or the number of replace segments does not equal the number of path segments given by <see cref="EndpointPathSegmentAttribute"/>.
         /// </exception>
         protected BaseEndpointBlobClient(IConnection connection, IGw2Client gw2Client, params string[] replaceSegments) :
-            base(connection, gw2Client, replaceSegments)
-        { }
+            base(connection, gw2Client, replaceSegments) { }
 
         /// <inheritdoc />
-        public virtual Task<TObject> GetAsync(CancellationToken cancellationToken = default) =>
-            this.Implementation.RequestGetAsync(cancellationToken);
+        public virtual async Task<TObject> GetAsync(CancellationToken cancellationToken = default) =>
+            (await new RequestBuilder(this, this.Connection, this.Gw2Client).Blob().ExecuteAsync<TObject>(cancellationToken).ConfigureAwait(false)).Content;
     }
 }
