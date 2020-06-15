@@ -55,7 +55,7 @@ namespace Gw2Sharp.WebApi.Middleware
 
         private static async Task<IWebApiResponse> OnEndpointRequestAsync(IConnection connection, IWebApiRequest request, Func<IWebApiRequest, CancellationToken, Task<IWebApiResponse>> callNext, CancellationToken cancellationToken)
         {
-            var cacheItem = await connection.CacheMethod.GetOrUpdateAsync(request.Options.EndpointPath, "_index",
+            var cacheItem = await connection.CacheMethod.GetOrUpdateAsync(request.Options.EndpointPath, GetCacheId(request, "_index"),
                 RequestGetAsync(request, callNext, cancellationToken)).ConfigureAwait(false);
             return cacheItem.Item;
         }
@@ -76,7 +76,7 @@ namespace Gw2Sharp.WebApi.Middleware
 
         private static async Task<IWebApiResponse> OnAllRequestAsync(IConnection connection, IWebApiRequest request, Func<IWebApiRequest, CancellationToken, Task<IWebApiResponse>> callNext, CancellationToken cancellationToken)
         {
-            var cacheItem = await connection.CacheMethod.GetOrUpdateAsync(request.Options.EndpointPath, "_all",
+            var cacheItem = await connection.CacheMethod.GetOrUpdateAsync(request.Options.EndpointPath, GetCacheId(request, "_all"),
                 RequestGetAsync(request, callNext, cancellationToken)).ConfigureAwait(false);
 
             // Update individual items
@@ -92,7 +92,7 @@ namespace Gw2Sharp.WebApi.Middleware
             request.Options.EndpointQuery.TryGetValue(QUERY_PARAM_PAGE, out string? page);
             request.Options.EndpointQuery.TryGetValue(QUERY_PARAM_PAGE_SIZE, out string? pageSize);
 
-            var cacheItem = await connection.CacheMethod.GetOrUpdateAsync(request.Options.EndpointPath, $"_page{page}-{pageSize}",
+            var cacheItem = await connection.CacheMethod.GetOrUpdateAsync(request.Options.EndpointPath, GetCacheId(request, $"_page{page}-{pageSize}"),
                 RequestGetAsync(request, callNext, cancellationToken)).ConfigureAwait(false);
 
             // Update individual items
@@ -151,20 +151,19 @@ namespace Gw2Sharp.WebApi.Middleware
         /// Gets the cache id from a given request.
         /// </summary>
         /// <param name="request">The HTTP request.</param>
-        /// <param name="suffix">The suffix.</param>
+        /// <param name="id">The id.</param>
         /// <returns></returns>
-        protected virtual string GetCacheId(IWebApiRequest request, string suffix)
+        private static string GetCacheId(IWebApiRequest request, string id)
         {
             if (request == null)
                 throw new ArgumentNullException(nameof(request));
 
-            string id = suffix ?? string.Empty;
             request.Options.RequestHeaders.TryGetValue("Accept-Language", out string? language);
             request.Options.RequestHeaders.TryGetValue("Authorization", out string? authorization);
             if (!string.IsNullOrEmpty(language))
-                id = $"{language}_{id}";
+                id = $"{id}_{language}";
             if (!string.IsNullOrEmpty(authorization))
-                id = $"{authorization.GetSha1Hash()}_{id}";
+                id = $"{id}_{authorization.GetSha1Hash()}";
             return id;
         }
     }

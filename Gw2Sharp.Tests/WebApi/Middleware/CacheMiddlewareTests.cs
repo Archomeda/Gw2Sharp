@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+using AutoFixture;
 using AutoFixture.Xunit2;
 using FluentAssertions;
 using FluentAssertions.Extensions;
@@ -89,7 +90,7 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
 
         [Theory]
         [AutoMockData]
-        public async Task ExpiresTest([Frozen] IConnection connection, [Frozen] IWebApiRequest request, [Frozen] IWebApiResponse response)
+        public async Task ReadsExpiresTest([Frozen] IConnection connection, [Frozen] IWebApiRequest request, [Frozen] IWebApiResponse response)
         {
             var options = new WebApiRequestOptions
             {
@@ -98,17 +99,73 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
             request.Options.Returns(options);
 
             var expiresAt = 30.Minutes().After(DateTime.UtcNow);
-            var headers = new Dictionary<string, string>
+            var responseHeaders = new Dictionary<string, string>
             {
                 ["Expires"] = expiresAt.ToString("r")
             };
-            response.ResponseHeaders.Returns(headers);
+            response.ResponseHeaders.Returns(responseHeaders);
 
             var middleware = new CacheMiddleware();
             await middleware.OnRequestAsync(connection, request, (r, t) => Task.FromResult(response));
 
             var cachedItem = await connection.CacheMethod.TryGetAsync<IWebApiResponse>(options.EndpointPath, "_index");
             cachedItem.ExpiryTime.Should().BeSameDateAs(expiresAt);
+        }
+
+        [Theory]
+        [InlineAutoMockData("Accept-Language")]
+        [InlineAutoMockData("Authorization")]
+        public async Task TakesHeaderIntoAccountForCachingSeparatelyTest(string headerName, IList<string> headerValues,
+            [Frozen] IConnection connection, [Frozen] IWebApiRequest request, IFixture fixture)
+        {
+            var options = new WebApiRequestOptions
+            {
+                EndpointPath = "/some/endpoint"
+            };
+            request.Options.Returns(options);
+
+            var expiresAt = 30.Minutes().After(DateTime.UtcNow);
+            var responseHeaders = new Dictionary<string, string>
+            {
+                ["Expires"] = expiresAt.ToString("r")
+            };
+            var response = fixture.Create<IWebApiResponse>();
+            response.ResponseHeaders.Returns(responseHeaders);
+
+            // Call the requests with different headers, the results should be different from each other
+            var middleware = new CacheMiddleware();
+            var finalResponseWithoutHeader = await middleware.OnRequestAsync(connection, request, (r, t) => Task.FromResult(response));
+            var finalResponsesWithHeader = new List<IWebApiResponse>();
+            foreach (string headerValue in headerValues)
+            {
+                options.RequestHeaders.Clear();
+                options.RequestHeaders[headerName] = headerValue;
+                response = fixture.Create<IWebApiResponse>();
+                response.ResponseHeaders.Returns(responseHeaders);
+
+                finalResponsesWithHeader.Add(await middleware.OnRequestAsync(connection, request, (r, t) => Task.FromResult(response)));
+            }
+            finalResponsesWithHeader.Should().NotContain(finalResponseWithoutHeader);
+            finalResponsesWithHeader.Should().OnlyHaveUniqueItems();
+
+            // Call the requests again to see if the responses are the same as the first ones
+            options.RequestHeaders.Clear();
+            response = fixture.Create<IWebApiResponse>();
+            response.ResponseHeaders.Returns(responseHeaders);
+
+            var cachedFinalResponseWithoutHeader = await middleware.OnRequestAsync(connection, request, (r, t) => Task.FromResult(response));
+            var cachedFinalResponsesWithHeader = new List<IWebApiResponse>();
+            foreach (string headerValue in headerValues)
+            {
+                options.RequestHeaders.Clear();
+                options.RequestHeaders[headerName] = headerValue;
+                response = fixture.Create<IWebApiResponse>();
+                response.ResponseHeaders.Returns(responseHeaders);
+
+                cachedFinalResponsesWithHeader.Add(await middleware.OnRequestAsync(connection, request, (r, t) => Task.FromResult(response)));
+            }
+            cachedFinalResponseWithoutHeader.Should().BeSameAs(finalResponseWithoutHeader);
+            cachedFinalResponsesWithHeader.Should().BeEquivalentTo(finalResponsesWithHeader);
         }
     }
 }
