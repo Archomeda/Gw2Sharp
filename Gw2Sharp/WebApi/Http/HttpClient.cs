@@ -59,47 +59,51 @@ namespace Gw2Sharp.WebApi.Http
         }
 
         /// <inheritdoc />
-        public async Task<IHttpResponseStream> RequestStreamAsync(IWebApiRequest request, CancellationToken cancellationToken = default)
+        public Task<IHttpResponseStream> RequestStreamAsync(IWebApiRequest request, CancellationToken cancellationToken = default)
         {
             if (request == null)
                 throw new ArgumentNullException(nameof(request));
+            return ExecAsync();
 
-            using var cancellationTimeout = new CancellationTokenSource(this.Timeout);
-            using var linkedCancellation = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken, cancellationTimeout.Token);
-            using var message = new HttpRequestMessage(HttpMethod.Get, request.Options.Url);
-            message.Headers.AddRange(request.Options.RequestHeaders);
-
-            Task<HttpResponseMessage>? task = null;
-            SysHttpClient? httpClient = null;
-            try
+            async Task<IHttpResponseStream> ExecAsync()
             {
-                httpClient = this.getSysHttpClient();
-                if (httpClient == null)
-                    throw new InvalidOperationException("HttpClient is null");
+                using var cancellationTimeout = new CancellationTokenSource(this.Timeout);
+                using var linkedCancellation = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken, cancellationTimeout.Token);
+                using var message = new HttpRequestMessage(HttpMethod.Get, request.Options.Url);
+                message.Headers.AddRange(request.Options.RequestHeaders);
 
-                task = httpClient.SendAsync(message, linkedCancellation.Token);
-                var responseMessage = await task.ConfigureAwait(false);
+                Task<HttpResponseMessage>? task = null;
+                SysHttpClient? httpClient = null;
+                try
+                {
+                    httpClient = this.getSysHttpClient();
+                    if (httpClient == null)
+                        throw new InvalidOperationException("HttpClient is null");
 
-                await responseMessage.Content.LoadIntoBufferAsync().ConfigureAwait(false);
-                var stream = await responseMessage.Content.ReadAsStreamAsync().ConfigureAwait(false);
-                var requestHeaders = request.Options.RequestHeaders.ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
-                var responseHeaders = responseMessage.Headers.ToDictionary(kvp => kvp.Key, kvp => kvp.Value.First());
-                responseHeaders.AddRange(responseMessage.Content.Headers.ToDictionary(kvp => kvp.Key, kvp => kvp.Value.First()));
+                    task = httpClient.SendAsync(message, linkedCancellation.Token);
+                    var responseMessage = await task.ConfigureAwait(false);
 
-                return new HttpResponseStream(stream, responseMessage.StatusCode, requestHeaders, responseHeaders);
-            }
-            catch (Exception ex)
-            {
-                if (task == null)
-                    throw new RequestException(request, "Failed to create task", ex);
-                else if (task.IsCanceled)
-                    throw new RequestCanceledException(request);
-                throw new RequestException(request, $"Request error: {task?.Exception?.Message}", ex);
-            }
-            finally
-            {
-                if (this.shouldDisposeHttpClient)
-                    httpClient?.Dispose();
+                    await responseMessage.Content.LoadIntoBufferAsync().ConfigureAwait(false);
+                    var stream = await responseMessage.Content.ReadAsStreamAsync().ConfigureAwait(false);
+                    var requestHeaders = request.Options.RequestHeaders.ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
+                    var responseHeaders = responseMessage.Headers.ToDictionary(kvp => kvp.Key, kvp => kvp.Value.First());
+                    responseHeaders.AddRange(responseMessage.Content.Headers.ToDictionary(kvp => kvp.Key, kvp => kvp.Value.First()));
+
+                    return new HttpResponseStream(stream, responseMessage.StatusCode, requestHeaders, responseHeaders);
+                }
+                catch (Exception ex)
+                {
+                    if (task == null)
+                        throw new RequestException(request, "Failed to create task", ex);
+                    else if (task.IsCanceled)
+                        throw new RequestCanceledException(request);
+                    throw new RequestException(request, $"Request error: {task?.Exception?.Message}", ex);
+                }
+                finally
+                {
+                    if (this.shouldDisposeHttpClient)
+                        httpClient?.Dispose();
+                }
             }
         }
     }

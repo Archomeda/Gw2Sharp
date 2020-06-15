@@ -10,7 +10,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// </summary>
     [EndpointPath("account")]
     [EndpointSchemaVersion("2019-12-19T00:00:00.000Z")]
-    public class AccountClient : BaseEndpointClient<Account>, IAccountClient
+    public class AccountClient : BaseEndpointClient, IAccountClient
     {
         private readonly IAccountAchievementsClient achievements;
         private readonly IAccountBankClient bank;

@@ -8,7 +8,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// An abstract base class for implementing endpoint bulk with support for all clients.
     /// </summary>
     /// <typeparam name="TObject">The response object type.</typeparam>
-    public abstract class BaseEndpointPaginatedBlobClient<TObject> : BaseEndpointClient<IApiV2ObjectList<TObject>>, IBlobClient<IApiV2ObjectList<TObject>>, IPaginatedClient<TObject>
+    public abstract class BaseEndpointPaginatedBlobClient<TObject> : BaseEndpointClient, IBlobClient<IApiV2ObjectList<TObject>>, IPaginatedClient<TObject>
         where TObject : IApiV2Object
     {
         /// <summary>
@@ -23,7 +23,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// or the number of replace segments does not equal the number of path segments given by <see cref="EndpointPathSegmentAttribute"/>.
         /// </exception>
         protected BaseEndpointPaginatedBlobClient(IConnection connection, IGw2Client gw2Client, params string[] replaceSegments) :
-            base(connection, gw2Client, replaceSegments) { }
+            base(connection, gw2Client, replaceSegments)
+        { }
 
         /// <inheritdoc />
         public virtual async Task<IApiV2ObjectList<TObject>> GetAsync(CancellationToken cancellationToken = default) =>

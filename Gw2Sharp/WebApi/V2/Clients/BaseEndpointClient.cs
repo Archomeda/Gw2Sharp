@@ -8,9 +8,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// <summary>
     /// An abstract base class for implementing endpoint clients.
     /// </summary>
-    /// <typeparam name="TObject">The response object type.</typeparam>
-    public abstract class BaseEndpointClient<TObject> : Gw2WebApiBaseClient, IEndpointClient
-        where TObject : IApiV2Object
+    public abstract class BaseEndpointClient : Gw2WebApiBaseClient, IEndpointClient
     {
         private readonly IReadOnlyList<(PropertyInfo Property, EndpointQueryParameterAttribute Attribute)> parameterProperties;
 

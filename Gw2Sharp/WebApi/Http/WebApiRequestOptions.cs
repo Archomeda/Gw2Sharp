@@ -21,10 +21,12 @@ namespace Gw2Sharp.WebApi.Http
         /// </summary>
         public string EndpointPath { get; set; } = string.Empty;
 
+#pragma warning disable CA2227 // Collection properties should be read only
         /// <summary>
         /// The web API endpoint query parameters.
         /// </summary>
         public IDictionary<string, string> EndpointQuery { get; set; } = new Dictionary<string, string>();
+#pragma warning restore CA2227 // Collection properties should be read only
 
         /// <summary>
         /// The name of the query parameter that acts as the id.
@@ -55,10 +57,12 @@ namespace Gw2Sharp.WebApi.Http
             }
         }
 
+#pragma warning disable CA2227 // Collection properties should be read only
         /// <summary>
         /// The request headers to use in the web request.
         /// </summary>
         public IDictionary<string, string> RequestHeaders { get; set; } = new Dictionary<string, string>();
+#pragma warning restore CA2227 // Collection properties should be read only
 
 
         /// <summary>

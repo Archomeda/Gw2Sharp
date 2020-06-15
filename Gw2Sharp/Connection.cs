@@ -13,7 +13,6 @@ namespace Gw2Sharp
     /// </summary>
     public class Connection : IConnection
     {
-        private readonly Dictionary<string, string> requestHeaders;
         private IHttpClient httpClient;
         private ICacheMethod cacheMethod;
         private ICacheMethod renderCacheMethod;
@@ -81,16 +80,6 @@ namespace Gw2Sharp
             this.renderCacheMethod = renderCacheMethod ?? new NullCacheMethod();
             this.RenderCacheDuration = renderCacheDuration ?? TimeSpan.Zero;
             this.UseDefaultMiddleware();
-
-            this.requestHeaders = new Dictionary<string, string>()
-            {
-                { "Accept", "application/json" },
-                { "Accept-Language", this.LocaleString }
-            };
-            if (!string.IsNullOrWhiteSpace(this.AccessToken))
-                this.requestHeaders.Add("Authorization", $"Bearer {this.AccessToken}");
-            if (!string.IsNullOrWhiteSpace(this.UserAgent))
-                this.requestHeaders.Add("User-Agent", this.UserAgent);
         }
 
 
@@ -116,7 +105,7 @@ namespace Gw2Sharp
         };
 
         /// <inheritdoc />
-        public string UserAgent { get; private set; }
+        public string UserAgent { get; }
 
         /// <inheritdoc />
         public IHttpClient HttpClient
