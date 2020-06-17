@@ -55,7 +55,7 @@ namespace Gw2Sharp.WebApi.Middleware
 
         private static async Task<IWebApiResponse> OnEndpointRequestAsync(IConnection connection, IWebApiRequest request, Func<IWebApiRequest, CancellationToken, Task<IWebApiResponse>> callNext, CancellationToken cancellationToken)
         {
-            var cacheItem = await connection.CacheMethod.GetOrUpdateAsync(request.Options.EndpointPath, GetCacheId(request, "_index"),
+            var cacheItem = await connection.CacheMethod.GetOrUpdateAsync(request.Options.EndpointPath, GetCacheId(request, request.Options.PathSuffix.OrIfNullOrEmpty("_index")),
                 RequestGetAsync(request, callNext, cancellationToken)).ConfigureAwait(false);
             return cacheItem.Item;
         }

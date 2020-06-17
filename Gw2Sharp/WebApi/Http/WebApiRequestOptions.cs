@@ -21,6 +21,11 @@ namespace Gw2Sharp.WebApi.Http
         /// </summary>
         public string EndpointPath { get; set; } = string.Empty;
 
+        /// <summary>
+        /// The path suffix, a.k.a. used when an additional path string is appended to the endpoint path.
+        /// </summary>
+        public string PathSuffix { get; set; } = string.Empty;
+
 #pragma warning disable CA2227 // Collection properties should be read only
         /// <summary>
         /// The web API endpoint query parameters.
@@ -52,6 +57,8 @@ namespace Gw2Sharp.WebApi.Http
             {
                 var builder = new UriBuilder(this.BaseUrl);
                 builder.Path += this.EndpointPath;
+                if (!string.IsNullOrEmpty(this.PathSuffix))
+                    builder.Path += !this.PathSuffix.StartsWith("/", StringComparison.InvariantCulture) ? "/" : string.Empty + this.PathSuffix;
                 builder.Query = string.Join("&", this.EndpointQuery.Select(x => $"{Uri.EscapeDataString(x.Key)}{(x.Value != null ? $"={Uri.EscapeDataString(x.Value)}" : "")}"));
                 return builder.Uri;
             }
@@ -73,6 +80,7 @@ namespace Gw2Sharp.WebApi.Http
         {
             BaseUrl = this.BaseUrl,
             EndpointPath = this.EndpointPath,
+            PathSuffix = this.PathSuffix,
             EndpointQuery = this.EndpointQuery.ShallowCopy(),
             BulkQueryParameterIdName = this.BulkQueryParameterIdName,
             BulkQueryParameterIdsName = this.BulkQueryParameterIdsName,

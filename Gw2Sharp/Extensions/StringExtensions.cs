@@ -28,5 +28,15 @@ namespace Gw2Sharp.Extensions
             return string.Join("", hash.Select(x => x.ToString("X2", CultureInfo.InvariantCulture)));
 #pragma warning restore CA5350 // Do Not Use Weak Cryptographic Algorithms
         }
+
+        /// <summary>
+        /// Use a default string if the given string is <c>null</c> or empty.
+        /// Shorthand for <code>string.IsNullOrEmpty(str) ? "default" : str</code>
+        /// </summary>
+        /// <param name="str">The string to check.</param>
+        /// <param name="default">The default string if the given string is <c>null</c> or empty.</param>
+        /// <returns>The original string if it's not <c>null</c> or empty; <paramref name="default"/> otherwise.</returns>
+        public static string OrIfNullOrEmpty(this string? str, string @default) =>
+            !string.IsNullOrEmpty(str) ? str : @default;
     }
 }
