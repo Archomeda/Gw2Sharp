@@ -29,7 +29,7 @@ namespace Gw2Sharp.WebApi.Exceptions
         public AuthorizationError AuthorizationError { get; }
 
         /// <summary>
-        /// Creates a specific Exception derived from <see cref="AuthorizationRequiredException"/> from a response.
+        /// Creates a specific exception derived from <see cref="AuthorizationRequiredException"/> from a response.
         /// </summary>
         /// <param name="request">The request.</param>
         /// <param name="response">The response.</param>
@@ -47,9 +47,12 @@ namespace Gw2Sharp.WebApi.Exceptions
                 case "invalid key":
                 case "invalid access token":
                     return new InvalidAccessTokenException(request, response);
-                case var message when message.StartsWith("requires scope", StringComparison.InvariantCultureIgnoreCase) || message.StartsWith("requires at least one scope from", StringComparison.InvariantCultureIgnoreCase): return new MissingScopesException(request, response);
-                case "membership required": return new MembershipRequiredException(request, response);
-                case "access restricted to guild leaders": return new RestrictedToGuildLeadersException(request, response);
+                case var message when message.StartsWith("requires scope", StringComparison.InvariantCultureIgnoreCase) || message.StartsWith("requires at least one scope from", StringComparison.InvariantCultureIgnoreCase):
+                    return new MissingScopesException(request, response);
+                case "membership required":
+                    return new MembershipRequiredException(request, response);
+                case "access restricted to guild leaders":
+                    return new RestrictedToGuildLeadersException(request, response);
                 case "endpoint requires authentication":
                 default:
                     return new AuthorizationRequiredException(request, response, AuthorizationError.RequiresAuthorization);

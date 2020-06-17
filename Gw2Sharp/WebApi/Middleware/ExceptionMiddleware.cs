@@ -57,7 +57,7 @@ namespace Gw2Sharp.WebApi.Middleware
                 var errorResponse = new WebApiResponse<ErrorObject>(error, httpResponse.StatusCode, httpResponse.ResponseHeaders);
                 throw httpResponse.StatusCode switch
                 {
-                    HttpStatusCode.BadRequest => new BadRequestException(request, errorResponse),
+                    HttpStatusCode.BadRequest => BadRequestException.CreateFromResponse(request, errorResponse),
                     HttpStatusCode.Unauthorized => AuthorizationRequiredException.CreateFromResponse(request, errorResponse),
                     HttpStatusCode.Forbidden => AuthorizationRequiredException.CreateFromResponse(request, errorResponse),
                     HttpStatusCode.NotFound => new NotFoundException(request, errorResponse),

@@ -28,6 +28,8 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
 #endif
         [InlineData("server error", HttpStatusCode.InternalServerError, typeof(ServerErrorException))]
         [InlineData("service unavailable", HttpStatusCode.ServiceUnavailable, typeof(ServiceUnavailableException))]
+        [InlineData("id list too long; this endpoint is limited to 200 ids at once", HttpStatusCode.BadRequest, typeof(ListTooLongException))]
+        [InlineData("page out of range. Use page values 0 - 1175.", HttpStatusCode.BadRequest, typeof(PageOutOfRangeException))]
         public async Task ExceptionRequestTest(string errorText, HttpStatusCode statusCode, Type exceptionType)
         {
             var connection = Substitute.For<IConnection>();
