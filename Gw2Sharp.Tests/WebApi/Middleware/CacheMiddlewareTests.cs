@@ -152,8 +152,6 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
 
             // Call the requests again to see if the responses are the same as the first ones
             options.RequestHeaders.Clear();
-            response = fixture.Create<IWebApiResponse>();
-            response.ResponseHeaders.Returns(responseHeaders);
 
             // The result in the callNext parameter shouldn't matter, if the cache is used, that Func shouldn't even be called
             var cachedFinalResponseWithoutHeader = await middleware.OnRequestAsync(connection, request, (r, t) => Task.FromResult<IWebApiResponse>(default));
@@ -162,8 +160,6 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
             {
                 options.RequestHeaders.Clear();
                 options.RequestHeaders[headerName] = headerValue;
-                response = fixture.Create<IWebApiResponse>();
-                response.ResponseHeaders.Returns(responseHeaders);
 
                 // The result in the callNext parameter shouldn't matter, if the cache is used, that Func shouldn't even be called
                 cachedFinalResponsesWithHeader.Add(await middleware.OnRequestAsync(connection, request, (r, t) => Task.FromResult<IWebApiResponse>(default)));
