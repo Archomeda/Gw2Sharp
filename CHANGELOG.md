@@ -13,6 +13,7 @@
   - The `Gw2Sharp.Json.Converters.CompactMapConverter` that's used for endpoints that return objects with skill palettes has been changed to deserialize to `IReadOnlyDictionary<K, V>` instead of `IDictionary<K, V>`
 - A bunch of internal code changes to conform ReSharper and Microsoft.CodeAnalysis.FxCopAnalyzers
 - All methods that compare strings, parse strings or create strings from other types have been updated to make sure that they ignore the system locale
+- Mount type 10 in Mumble Link doesn't redirect to `MountType.None` anymore ([#64](https://github.com/Archomeda/Gw2Sharp/issues/64))
 
 ---
 
