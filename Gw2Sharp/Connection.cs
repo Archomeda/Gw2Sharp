@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Net;
+using System.Net.Http.Headers;
 using System.Reflection;
 using System.Text.Json;
 using System.Threading;
@@ -67,6 +68,7 @@ namespace Gw2Sharp
         /// and no caching method for render API requests.
         /// </summary>
         /// <param name="accessToken">The API key.</param>
+        /// <exception cref="ArgumentException"><paramref name="accessToken"/> is incorrectly formatted.</exception>
         public Connection(string accessToken) : this(accessToken, Locale.English) { }
 
         /// <summary>
@@ -93,6 +95,7 @@ namespace Gw2Sharp
         /// <param name="cacheMethod">The cache method.</param>
         /// <param name="renderCacheMethod">The render cache method.</param>
         /// <param name="renderCacheDuration">The render cache duration (defaults to render API headers)</param>
+        /// <exception cref="ArgumentException"><paramref name="accessToken"/> is incorrectly formatted.</exception>
         public Connection(
             string? accessToken,
             Locale locale,
@@ -102,6 +105,9 @@ namespace Gw2Sharp
             string? userAgent = null,
             IHttpClient? httpClient = null)
         {
+            if (!string.IsNullOrWhiteSpace(accessToken) && !IsAccessTokenValid(accessToken))
+                throw new ArgumentException("The access token is incorrectly formatted", nameof(accessToken));
+
             this.accessToken = accessToken ?? string.Empty;
             this.Locale = locale;
             this.UserAgent = $"{userAgent}{(!string.IsNullOrWhiteSpace(userAgent) ? " " : "")}" +
@@ -117,9 +123,9 @@ namespace Gw2Sharp
                 { "Accept-Language", this.LocaleString }
             };
             if (!string.IsNullOrWhiteSpace(this.AccessToken))
-                this.requestHeaders.Add("Authorization", $"Bearer {this.AccessToken}");
+                this.requestHeaders["Authorization"] = $"Bearer {this.AccessToken}";
             if (!string.IsNullOrWhiteSpace(this.UserAgent))
-                this.requestHeaders.Add("User-Agent", this.UserAgent);
+                this.requestHeaders["User-Agent"] = this.UserAgent;
         }
 
 
@@ -127,7 +133,17 @@ namespace Gw2Sharp
         public string AccessToken
         {
             get => this.accessToken;
-            set => this.accessToken = value ?? string.Empty;
+            set
+            {
+                if (!IsAccessTokenValid(value))
+                    throw new ArgumentException("The access token is incorrectly formatted", nameof(value));
+                this.accessToken = value ?? string.Empty;
+
+                if (!string.IsNullOrWhiteSpace(value))
+                    this.requestHeaders["Authorization"] = $"Bearer {value}";
+                else
+                    this.requestHeaders.Remove("Authorization");
+            }
         }
 
         /// <inheritdoc />
@@ -234,10 +250,12 @@ namespace Gw2Sharp
                     HttpStatusCode.InternalServerError => new ServerErrorException(ex.Request, errorResponse),
                     // 503
                     HttpStatusCode.ServiceUnavailable => new ServiceUnavailableException(ex.Request, errorResponse),
-
-                    _ => new UnexpectedStatusException(ex.Request, ex.Response, ex.Response?.Content ?? string.Empty),
+                    _ => new UnexpectedStatusException(ex.Request, ex.Response, ex.Response?.Content ?? string.Empty)
                 };
             }
         }
+
+        private static bool IsAccessTokenValid(string accessToken) =>
+            AuthenticationHeaderValue.TryParse($"Bearer {accessToken}", out _);
     }
 }

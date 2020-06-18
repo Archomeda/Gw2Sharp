@@ -8,6 +8,7 @@
 - Fix possible memory leak when using the archive memory cache in combination with binary data (a `MemoryStream` was not being disposed)
 - Fix `KeyNotFoundException` when performing a many request with at least one (but not all) invalid id ([#65](https://github.com/Archomeda/Gw2Sharp/issues/65), [#66](https://github.com/Archomeda/Gw2Sharp/pull/66))
 - Fix `LegendType` to start with 14 instead of 13 ([#63](https://github.com/Archomeda/Gw2Sharp/issues/63))
+- Fail early when an access token is incorrectly formatted by throwing an `ArgumentException` during constructing of the `Connection` object, and when setting it through the `Connection.AccessToken` property ([#62](https://github.com/Archomeda/Gw2Sharp/issues/62))
 
 ### Refactoring
 - **Breaking:** `Gw2Sharp.WebApi.V2.Models.Profession.SkillsByPalette` is now using a `IReadOnlyDictionary<int, int>` instead of `IDictionary<int, int>`
