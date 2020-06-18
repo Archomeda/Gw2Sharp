@@ -12,6 +12,8 @@ The following exceptions can be thrown from Gw2Sharp:
   - [`RequestCanceledException`](../api/Gw2Sharp.WebApi.Http.RequestCanceledException.html): The request has been canceled
   - [`UnexpectedStatusException`](../api/Gw2Sharp.WebApi.Http.UnexpectedStatusException.html): An unexpected HTTP status code was returned from the server
     - [`BadRequestException`](../api/Gw2Sharp.WebApi.Http.BadRequestException.html) (400): The client sent an invalid request
+      - [`ListTooLongException`](../api/Gw2Sharp.WebApi.Http.ListTooLongException.html) (400): The list of requested resources is too long
+      - [`PageOutOfRangeException`](../api/Gw2Sharp.WebApi.Http.PageOutOfRangeException.html) (400): The requested page is out of range
     - [`AuthorizationRequiredException`](../api/Gw2Sharp.WebApi.Http.AuthorizationRequiredException.html) (401, 403): The client is unauthorized
       - [`InvalidAccessTokenException`](../api/Gw2Sharp.WebApi.Http.InvalidAccessTokenException.html) (401, 403): The access token is invalid
       - [`MissingScopesException`](../api/Gw2Sharp.WebApi.Http.MissingScopesException.html) (403): The access token does not have the required scopes
