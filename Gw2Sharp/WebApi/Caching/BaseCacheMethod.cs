@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Gw2Sharp.Extensions;
 
 namespace Gw2Sharp.WebApi.Caching
 {
@@ -148,7 +149,10 @@ namespace Gw2Sharp.WebApi.Caching
             }
 
             // Return in the same order as requested
-            return idsList.Select(x => cache[x]).ToList();
+            return idsList
+                .Select(x => cache.TryGetValue(x, out var value) ? value : null)
+                .WhereNotNull()
+                .ToList();
         }
 
         /// <inheritdoc />

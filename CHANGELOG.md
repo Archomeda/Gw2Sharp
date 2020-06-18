@@ -3,6 +3,7 @@
 ## 0.11.0
 ### Fixes
 - Fix possible memory leak when using the archive memory cache in combination with binary data (a `MemoryStream` was not being disposed)
+- Fix `KeyNotFoundException` when performing a many request with at least one (but not all) invalid id ([#65](https://github.com/Archomeda/Gw2Sharp/issues/65), [#66](https://github.com/Archomeda/Gw2Sharp/pull/66))
 
 ### Refactoring
 - **Breaking:** `Gw2Sharp.WebApi.V2.Models.Profession.SkillsByPalette` is now using a `IReadOnlyDictionary<int, int>` instead of `IDictionary<int, int>`
