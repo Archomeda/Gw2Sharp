@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text.Json;
 using System.Threading;
@@ -30,8 +29,6 @@ namespace Gw2Sharp.WebApi.Middleware
                 throw new ArgumentNullException(nameof(request));
             if (callNext is null)
                 throw new ArgumentNullException(nameof(callNext));
-
-            //TODO Split requests with more than 200 ids
 
             // Gw2Sharp only supports requesting pages separately, and not combined with a list of ids (or all).
             // Even though it's supported by the API, it doesn't really make much sense to use it with a given list of ids
@@ -71,7 +68,7 @@ namespace Gw2Sharp.WebApi.Middleware
                 var responseInfo = new ApiV2HttpResponseInfo(response.StatusCode, response.ResponseHeaders);
                 return (SplitIntoIndividualResponses(response, request.Options.BulkObjectIdName), GetExpires(responseInfo));
             }).ConfigureAwait(false);
-            return MergeIndividualResponses(cacheItems.Select(x => x.Item));
+            return cacheItems.Select(x => x.Item).Merge();
         }
 
         private static async Task<IWebApiResponse> OnAllRequestAsync(IConnection connection, IWebApiRequest request, Func<IWebApiRequest, CancellationToken, Task<IWebApiResponse>> callNext, CancellationToken cancellationToken)
@@ -126,25 +123,6 @@ namespace Gw2Sharp.WebApi.Middleware
             }
 
             return items;
-        }
-
-        private static IWebApiResponse MergeIndividualResponses(IEnumerable<IWebApiResponse> responses)
-        {
-            using var stream = new MemoryStream();
-            using var writer = new Utf8JsonWriter(stream);
-            writer.WriteStartArray();
-            foreach (var response in responses)
-            {
-                using var doc = JsonDocument.Parse(response.Content);
-                doc.RootElement.WriteTo(writer);
-            }
-            writer.WriteEndArray();
-            writer.Flush();
-
-            stream.Position = 0;
-            var firstResponse = responses.FirstOrDefault();
-            using var reader = new StreamReader(stream);
-            return new WebApiResponse(reader.ReadToEnd(), firstResponse?.StatusCode, firstResponse?.ResponseHeaders);
         }
 
         /// <summary>

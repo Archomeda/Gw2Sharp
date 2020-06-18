@@ -142,6 +142,7 @@ namespace Gw2Sharp
         public void UseDefaultMiddleware() => this.Middleware = new List<IWebApiMiddleware>
         {
             new CacheMiddleware(),
+            new RequestSplitterMiddleware(),
             new ExceptionMiddleware()
         };
     }
