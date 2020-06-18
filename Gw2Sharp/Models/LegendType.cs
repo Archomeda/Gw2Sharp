@@ -11,7 +11,7 @@ namespace Gw2Sharp.Models
         /// <summary>
         /// Glint.
         /// </summary>
-        Legend1 = 13,
+        Legend1 = 14,
 
         /// <summary>
         /// Glint.
@@ -21,7 +21,7 @@ namespace Gw2Sharp.Models
         /// <summary>
         /// Shiro.
         /// </summary>
-        Legend2 = 14,
+        Legend2 = 15,
 
         /// <summary>
         /// Glint.
@@ -31,7 +31,7 @@ namespace Gw2Sharp.Models
         /// <summary>
         /// Jalis.
         /// </summary>
-        Legend3 = 15,
+        Legend3 = 16,
 
         /// <summary>
         /// Jalis.
@@ -41,7 +41,7 @@ namespace Gw2Sharp.Models
         /// <summary>
         /// Mallyx.
         /// </summary>
-        Legend4 = 16,
+        Legend4 = 17,
 
         /// <summary>
         /// Mallyx.
@@ -51,7 +51,7 @@ namespace Gw2Sharp.Models
         /// <summary>
         /// Kalla.
         /// </summary>
-        Legend5 = 17,
+        Legend5 = 18,
 
         /// <summary>
         /// Kalla.
@@ -61,7 +61,7 @@ namespace Gw2Sharp.Models
         /// <summary>
         /// Ventari.
         /// </summary>
-        Legend6 = 18,
+        Legend6 = 19,
 
         /// <summary>
         /// Ventari.
