@@ -15,18 +15,20 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
         [InlineData("TestFiles.Pvp.PvpLeaderboardsRegionId.json")]
         public Task BlobTest(string file) => this.AssertBlobDataAsync(this.Client, file);
 
+        [Theory]
+        [InlineData("TestFiles.Pvp.PvpLeaderboardsRegionId.json")]
+        public Task PaginatedTestAsync(string file) => this.AssertPaginatedDataAsync(this.Client, file);
+
 
         #region ArgumentNullException tests
 
         [Fact]
-        public override void ArgumentNullConstructorTest()
-        {
+        public override void ArgumentNullConstructorTest() =>
             AssertArguments.ThrowsWhenNullConstructor(
                 this.Client.GetType(),
                 new[] { typeof(IConnection), typeof(IGw2Client), typeof(Guid), typeof(string), typeof(string) },
                 new object[] { new Connection(), new Gw2Client(), Guid.Parse("11111111-2222-3333-4444-abcdeffedcba"), "ladder", "eu" },
                 new[] { true, true, false, true, true });
-        }
 
         #endregion
     }

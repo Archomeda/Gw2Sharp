@@ -1,6 +1,9 @@
 # Gw2Sharp History
 
 ## 0.11.0
+### Endpoints
+- Update `Gw2Sharp.WebApi.V2.Pvp.Seasons[id].Leaderboards[board][region]` to support pagination ([#55](https://github.com/Archomeda/Gw2Sharp/issues/55))
+
 ### Fixes
 - Fix possible memory leak when using the archive memory cache in combination with binary data (a `MemoryStream` was not being disposed)
 - Fix `KeyNotFoundException` when performing a many request with at least one (but not all) invalid id ([#65](https://github.com/Archomeda/Gw2Sharp/issues/65), [#66](https://github.com/Archomeda/Gw2Sharp/pull/66))
