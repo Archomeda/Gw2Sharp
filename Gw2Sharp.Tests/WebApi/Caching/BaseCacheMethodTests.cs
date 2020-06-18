@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FluentAssertions;
+using FluentAssertions.Extensions;
 using Gw2Sharp.Tests.Helpers;
 using Gw2Sharp.WebApi.Caching;
 using Xunit;
@@ -13,10 +15,8 @@ namespace Gw2Sharp.Tests.WebApi.Caching
         protected ICacheMethod cacheMethod = null!;
 
         [Fact]
-        public async Task CategoryDoesNotExistTest()
-        {
+        public async Task CategoryDoesNotExistTest() =>
             Assert.Null(await this.cacheMethod.TryGetAsync<int>("unknown", "unknown"));
-        }
 
         [Fact]
         public async Task FlushTest()
@@ -31,10 +31,8 @@ namespace Gw2Sharp.Tests.WebApi.Caching
         }
 
         [Fact]
-        public async Task GetManyEmptyTest()
-        {
+        public async Task GetManyEmptyTest() =>
             Assert.Empty(await this.cacheMethod.GetManyAsync<int>("Test category", new[] { "test1", "test2", "test3" }));
-        }
 
         [Fact]
         public async Task GetManyWithoutExpiredTest()
@@ -73,6 +71,30 @@ namespace Gw2Sharp.Tests.WebApi.Caching
             });
             await AssertAsync.All(cacheItems.Select(async i => await this.cacheMethod.TryGetAsync<int>(i.Category, i.Id) != null), Assert.True);
             Assert.Equal(cacheItems, (await this.cacheMethod.GetManyAsync<int>(category, cacheItems.Select(x => x.Id))).Select(x => x.Value));
+        }
+
+        [Fact]
+        public async Task GetOrUpdateManyPartlyTest()
+        {
+            const string CATEGORY = "Test category";
+            var expiresAt = 30.Minutes().After(DateTime.Now);
+            var cacheItems = new[]
+            {
+                new CacheItem<int>(CATEGORY, "test", 42, expiresAt),
+                new CacheItem<int>(CATEGORY, "test2", 84, expiresAt),
+                new CacheItem<int>(CATEGORY, "test3", 168, expiresAt)
+            };
+            var idsToGet = cacheItems.Select(x => x.Id).ToList();
+            idsToGet.Add("0");
+
+            // Set the cache items
+            await this.cacheMethod.SetManyAsync(cacheItems);
+
+            // Return an empty response to make sure that there's still an item missing, this should not throw any exception
+            var actual = await this.cacheMethod.GetOrUpdateManyAsync(CATEGORY, idsToGet, expiresAt, missingIds =>
+                Task.FromResult<IDictionary<object, int>>(new Dictionary<object, int>()));
+
+            actual.Should().BeEquivalentTo(cacheItems);
         }
 
         [Fact]
@@ -161,20 +183,16 @@ namespace Gw2Sharp.Tests.WebApi.Caching
         #region ArgumentNullException tests
 
         [Fact]
-        public async Task ArgumentNullGetTest()
-        {
+        public async Task ArgumentNullGetTest() =>
             await AssertArguments.ThrowsWhenNullAsync(
                 () => this.cacheMethod.TryGetAsync<object>("Test category", "test"),
                 new[] { true, true });
-        }
 
         [Fact]
-        public async Task ArgumentNullGetManyTest()
-        {
+        public async Task ArgumentNullGetManyTest() =>
             await AssertArguments.ThrowsWhenNullAsync(
                 () => this.cacheMethod.GetManyAsync<object>("Test category", new List<object>()),
                 new[] { true, true });
-        }
 
         [Fact]
         public async Task ArgumentNullSetTest()
@@ -188,28 +206,22 @@ namespace Gw2Sharp.Tests.WebApi.Caching
         }
 
         [Fact]
-        public async Task ArgumentNullSetManyTest()
-        {
+        public async Task ArgumentNullSetManyTest() =>
             await AssertArguments.ThrowsWhenNullAsync(
                 () => this.cacheMethod.SetManyAsync(new List<CacheItem<object>>()),
                 new[] { true });
-        }
 
         [Fact]
-        public async Task ArgumentNullGetOrUpdateTest()
-        {
+        public async Task ArgumentNullGetOrUpdateTest() =>
             await AssertArguments.ThrowsWhenNullAsync(
                 () => this.cacheMethod.GetOrUpdateAsync("Test category", "test", DateTime.Now, () => Task.FromResult(new object())),
                 new[] { true, true, false, true });
-        }
 
         [Fact]
-        public async Task ArgumentNullGetOrUpdateManyTest()
-        {
+        public async Task ArgumentNullGetOrUpdateManyTest() =>
             await AssertArguments.ThrowsWhenNullAsync(
                 () => this.cacheMethod.GetOrUpdateManyAsync("Test category", new List<object>(), DateTime.Now, obj => Task.FromResult((IDictionary<object, object>)new Dictionary<object, object>())),
                 new[] { true, true, false, true });
-        }
 
         #endregion
     }
