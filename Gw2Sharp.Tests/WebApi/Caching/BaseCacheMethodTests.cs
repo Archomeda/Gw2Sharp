@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FluentAssertions;
+using FluentAssertions.Extensions;
 using Gw2Sharp.Tests.Helpers;
 using Gw2Sharp.WebApi.Caching;
 using Xunit;
@@ -13,7 +15,8 @@ namespace Gw2Sharp.Tests.WebApi.Caching
         protected ICacheMethod cacheMethod = null!;
 
         [Fact]
-        public async Task CategoryDoesNotExistTest() => Assert.Null(await this.cacheMethod.TryGetAsync<int>("unknown", "unknown"));
+        public async Task CategoryDoesNotExistTest() =>
+            Assert.Null(await this.cacheMethod.TryGetAsync<int>("unknown", "unknown"));
 
         [Fact]
         public async Task FlushTest()
@@ -28,7 +31,8 @@ namespace Gw2Sharp.Tests.WebApi.Caching
         }
 
         [Fact]
-        public async Task GetManyEmptyTest() => Assert.Empty(await this.cacheMethod.GetManyAsync<int>("Test category", new[] { "test1", "test2", "test3" }));
+        public async Task GetManyEmptyTest() =>
+            Assert.Empty(await this.cacheMethod.GetManyAsync<int>("Test category", new[] { "test1", "test2", "test3" }));
 
         [Fact]
         public async Task GetManyWithoutExpiredTest()
@@ -67,6 +71,30 @@ namespace Gw2Sharp.Tests.WebApi.Caching
             });
             await AssertAsync.All(cacheItems.Select(async i => await this.cacheMethod.TryGetAsync<int>(i.Category, i.Id) != null), Assert.True);
             Assert.Equal(cacheItems, (await this.cacheMethod.GetManyAsync<int>(category, cacheItems.Select(x => x.Id))).Select(x => x.Value));
+        }
+
+        [Fact]
+        public async Task GetOrUpdateManyPartlyTest()
+        {
+            const string CATEGORY = "Test category";
+            var expiresAt = 30.Minutes().After(DateTime.Now);
+            var cacheItems = new[]
+            {
+                new CacheItem<int>(CATEGORY, "test", 42, expiresAt),
+                new CacheItem<int>(CATEGORY, "test2", 84, expiresAt),
+                new CacheItem<int>(CATEGORY, "test3", 168, expiresAt)
+            };
+            var idsToGet = cacheItems.Select(x => x.Id).ToList();
+            idsToGet.Add("0");
+
+            // Set the cache items
+            await this.cacheMethod.SetManyAsync(cacheItems);
+
+            // Return an empty response to make sure that there's still an item missing, this should not throw any exception
+            var actual = await this.cacheMethod.GetOrUpdateManyAsync(CATEGORY, idsToGet, expiresAt, missingIds =>
+                Task.FromResult<IDictionary<string, int>>(new Dictionary<string, int>()));
+
+            actual.Should().BeEquivalentTo(cacheItems);
         }
 
         [Fact]
