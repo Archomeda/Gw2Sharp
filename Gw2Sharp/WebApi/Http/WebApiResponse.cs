@@ -68,9 +68,6 @@ namespace Gw2Sharp.WebApi.Http
         public HttpStatusCode StatusCode { get; set; } = 0;
 
         /// <inheritdoc />
-        public IReadOnlyDictionary<string, string> RequestHeaders { get; } = new Dictionary<string, string>().AsReadOnly();
-
-        /// <inheritdoc />
         public IReadOnlyDictionary<string, string> ResponseHeaders { get; } = new Dictionary<string, string>().AsReadOnly();
     }
 }

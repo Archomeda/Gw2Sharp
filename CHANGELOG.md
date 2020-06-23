@@ -1,7 +1,33 @@
 # Gw2Sharp History
 
 ## 0.11.0
+This release includes the most breaking changes in Gw2Sharp so far in order to support middleware, which is a major change in how Gw2Sharp handles requests.
+If you're only using the surface API in Gw2Sharp, the impact will be very low.
+However, if you've been implementing some of the interfaces yourself in order to change Gw2Sharp's functionality, please review the changes listed for this release below to see how much you've been impacted.
+
+### Middleware
+By default, three middleware classes are enabled: `CacheMiddleware`, `RequestSplitterMiddleware` and `ExceptionMiddleware`.
+You can configure the middleware used when creating a `Connection` through the `Middleware` property.
+This property is an `IList`, and the order of execution follows the order of the list.
+This means that the first middleware that's in the list will be executed first, and the last middleware will be executed last.
+
+For more information, please check the [middleware documentation](https://archomeda.github.io/Gw2Sharp/master/guides/middleware.html).
+
+### Caching
+- **Breaking:** `Gw2Sharp.WebApi.Caching.ICacheMethod` (and its implementers `BaseCacheMethod`, `ArchiveCacheMethod`, `MemoryCacheMethod`) and `Gw2Sharp.WebApi.Caching.CacheItem` have had their keys changed from the `object` type to the `string` type
+
 ### Endpoints
+- **Breaking:** `Gw2Sharp.WebApi.V2.Models.Profession.SkillsByPalette` is now using a `IReadOnlyDictionary<int, int>` instead of `IDictionary<int, int>`
+- **Breaking:** `Gw2Sharp.WebApi.V2.Clients.BaseEndpointClient` has had its generic parameter removed as it's no longer necessary
+- **Breaking:** `Gw2Sharp.WebApi.V2.Clients.IEndpointClient` has been changed to better expose the endpoint metadata (all its implementers, basically all endpoint clients, have been updated to reflect these changes as well)
+- `Gw2Sharp.WebApi.V2.Clients.EndpointBulkIdNameAttribute` has been extended to support a different id name for the object in case it doesn't equal the id name of the query parameter (this is e.g. used in the middleware to split and merge responses and/or caching)
+- **Breaking:** `Gw2Sharp.WebApi.V2.Clients.EndpointPathParameterAttribute` has been renamed to `EndpointQueryParameterAttribute` to indicate it's actually a query parameter and not a URL path
+- **Breaking:** `Gw2Sharp.WebApi.V2.Clients.IEndpointClientImplementation` and its implementer `EndpointClientImplementation` has been removed in favor of middleware
+- **Breaking:** All custom request exceptions listed in the `Gw2Sharp.WebApi.Http` namespace have been moved into the `Gw2Sharp.WebApi.Exceptions` namespace
+- All custom request exceptions have had their `ISerializable` implementation removed because it's too tedious to maintain for now
+- Two new types of bad requests have been added in `Gw2Sharp.WebApi.Exceptions`:
+  - `ListTooLongException`: This will be thrown whenever the API request contains too many ids for the request to complete (this may happen when the `RequestSplitterMiddleware` isn't used)
+  - `PageOutOfRangeException`: The will be thrown whenever a paged API request is done for a page that doesn't exist, a.k.a. is out of range
 - Update `Gw2Sharp.WebApi.V2.Pvp.Seasons[id].Leaderboards[board][region]` to support pagination ([#55](https://github.com/Archomeda/Gw2Sharp/issues/55))
 
 ### Fixes
@@ -11,8 +37,14 @@
 - Fail early when an access token is incorrectly formatted by throwing an `ArgumentException` during constructing of the `Connection` object, and when setting it through the `Connection.AccessToken` property ([#62](https://github.com/Archomeda/Gw2Sharp/issues/62))
 
 ### Refactoring
-- **Breaking:** `Gw2Sharp.WebApi.V2.Models.Profession.SkillsByPalette` is now using a `IReadOnlyDictionary<int, int>` instead of `IDictionary<int, int>`
-- Breaking, but minimal impact unless you've been using some of the "public" internals provided by Gw2Sharp in your application:
+- **Breaking:** `Gw2Sharp.IConnection` no longer has `RequestAsync(...)` since this functionality has been rewritten to support middleware
+- **Breaking:** `Gw2Sharp.IConnection` now has the property `IList<Gw2Sharp.WebApi.Middleware.IWebApiMiddleware>` to configure the middleware
+- **Breaking:** `Gw2Sharp.WebApi.Http.HttpResponseInfo` has had its `RawRequestHeaders` property removed
+- **Breaking:** `Gw2Sharp.WebApi.Http.IHttpRequest` has been renamed to `IWebApiRequest`, its properties have been changed and moved into the property `Options` and the new method `ExecuteAsync(...)` has been added
+- **Breaking:** Following its interface, `Gw2Sharp.WebApi.Http.HttpRequest` has been renamed to `WebApiRequest` and its functionality has been adopted to the changes in the interface as well
+- **Breaking:** `Gw2Sharp.WebApi.Http.IHttpResponse` has been renamed to `IWebApiResponse` and no longer contains `RequestHeaders`
+- **Breaking:** Following its interface, `Gw2Sharp.WebApi.Http.HttpResponse` has been renamed to `WebApiResponse` and its functionality has been adopted to the changes in the interface as well
+- **Breaking**, but minimal impact unless you've been using some of the "public" internals provided by Gw2Sharp in your application:
   - The following structs have been made readonly: `Gw2Sharp.Models.Coordinates2`, `Gw2Sharp.Models.Coordinates3`, `Gw2Sharp.Models.Size`
   - All chat link structs that were in the namespace `Gw2Sharp.ChatLinks.Structs` have been moved to `Gw2Sharp.ChatLinks.Internal` to clarify that they are for internal use only
   - The `Gw2Sharp.Json.Converters.CompactMapConverter` that's used for endpoints that return objects with skill palettes has been changed to deserialize to `IReadOnlyDictionary<K, V>` instead of `IDictionary<K, V>`
