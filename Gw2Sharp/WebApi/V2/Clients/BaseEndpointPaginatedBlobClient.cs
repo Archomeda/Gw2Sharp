@@ -5,14 +5,14 @@ using System.Threading.Tasks;
 namespace Gw2Sharp.WebApi.V2.Clients
 {
     /// <summary>
-    /// An abstract base class for implementing endpoint bulk with support for all clients.
+    /// An abstract base class for implementing endpoint with pagination and bulk all support clients.
     /// </summary>
     /// <typeparam name="TObject">The response object type.</typeparam>
     public abstract class BaseEndpointPaginatedBlobClient<TObject> : BaseEndpointClient, IBlobClient<IApiV2ObjectList<TObject>>, IPaginatedClient<TObject>
         where TObject : IApiV2Object
     {
         /// <summary>
-        /// Creates a new base endpoint bulk with pagination support client.
+        /// Creates a new base endpoint bulk with pagination and bulk all support client.
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
         /// <param name="gw2Client">The Guild Wars 2 client.</param>
@@ -23,8 +23,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// or the number of replace segments does not equal the number of path segments given by <see cref="EndpointPathSegmentAttribute"/>.
         /// </exception>
         protected BaseEndpointPaginatedBlobClient(IConnection connection, IGw2Client gw2Client, params string[] replaceSegments) :
-            base(connection, gw2Client, replaceSegments)
-        { }
+            base(connection, gw2Client, replaceSegments) { }
 
         /// <inheritdoc />
         public virtual async Task<IApiV2ObjectList<TObject>> GetAsync(CancellationToken cancellationToken = default) =>

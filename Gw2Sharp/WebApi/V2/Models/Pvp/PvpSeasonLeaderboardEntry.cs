@@ -6,7 +6,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents a PvP season leaderboard entry.
     /// </summary>
-    public class PvpSeasonLeaderboardEntry
+    public class PvpSeasonLeaderboardEntry : ApiV2BaseObject
     {
         /// <summary>
         /// The account name.

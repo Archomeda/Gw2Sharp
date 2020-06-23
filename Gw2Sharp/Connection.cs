@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Net.Http.Headers;
 using System.Reflection;
 using Gw2Sharp.WebApi;
 using Gw2Sharp.WebApi.Caching;
@@ -36,6 +37,7 @@ namespace Gw2Sharp
         /// and no caching method for render API requests.
         /// </summary>
         /// <param name="accessToken">The API key.</param>
+        /// <exception cref="ArgumentException"><paramref name="accessToken"/> is incorrectly formatted.</exception>
         public Connection(string accessToken) : this(accessToken, Locale.English) { }
 
         /// <summary>
@@ -62,6 +64,7 @@ namespace Gw2Sharp
         /// <param name="cacheMethod">The cache method.</param>
         /// <param name="renderCacheMethod">The render cache method.</param>
         /// <param name="renderCacheDuration">The render cache duration (defaults to render API headers)</param>
+        /// <exception cref="ArgumentException"><paramref name="accessToken"/> is incorrectly formatted.</exception>
         public Connection(
             string? accessToken,
             Locale locale,
@@ -71,6 +74,9 @@ namespace Gw2Sharp
             string? userAgent = null,
             IHttpClient? httpClient = null)
         {
+            if (!string.IsNullOrWhiteSpace(accessToken) && !IsAccessTokenValid(accessToken))
+                throw new ArgumentException("The access token is incorrectly formatted", nameof(accessToken));
+
             this.accessToken = accessToken ?? string.Empty;
             this.Locale = locale;
             this.UserAgent = $"{userAgent}{(!string.IsNullOrWhiteSpace(userAgent) ? " " : "")}" +
@@ -87,7 +93,12 @@ namespace Gw2Sharp
         public string AccessToken
         {
             get => this.accessToken;
-            set => this.accessToken = value ?? string.Empty;
+            set
+            {
+                if (!IsAccessTokenValid(value))
+                    throw new ArgumentException("The access token is incorrectly formatted", nameof(value));
+                this.accessToken = value ?? string.Empty;
+            }
         }
 
         /// <inheritdoc />
@@ -145,5 +156,8 @@ namespace Gw2Sharp
             new RequestSplitterMiddleware(),
             new ExceptionMiddleware()
         };
+
+        private static bool IsAccessTokenValid(string accessToken) =>
+            AuthenticationHeaderValue.TryParse($"Bearer {accessToken}", out _);
     }
 }

@@ -118,8 +118,8 @@ namespace Gw2Sharp.WebApi.Middleware
             using var doc = JsonDocument.Parse(response.Content);
             foreach (var item in doc.RootElement.EnumerateArray())
             {
-                string id = item.GetProperty(bulkObjectPropertyIdName).ToString();
-                items[id] = new WebApiResponse(item.GetRawText(), response.StatusCode, response.ResponseHeaders);
+                if (item.TryGetProperty(bulkObjectPropertyIdName, out var id))
+                    items[id.ToString()] = new WebApiResponse(item.GetRawText(), response.StatusCode, response.ResponseHeaders);
             }
 
             return items;

@@ -1,3 +1,4 @@
+using System;
 using Gw2Sharp.WebApi;
 using Gw2Sharp.WebApi.Caching;
 using Gw2Sharp.WebApi.Http;
@@ -60,6 +61,24 @@ namespace Gw2Sharp.Tests
 
             Assert.Equal(string.Empty, connection7.AccessToken);
             Assert.NotEqual(string.Empty, connection8.UserAgent);
+        }
+
+        [Theory]
+        [InlineData("55BCD46F-B57C-469A-AE81-3B21B5583573", true)]
+        [InlineData("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c", true)]
+        [InlineData("\"", false)]
+        public void ValidAccessTokenTest(string accessToken, bool isValid)
+        {
+            if (!isValid)
+                Assert.Throws<ArgumentException>("accessToken", () => new Connection(accessToken));
+            else
+                new Connection(accessToken); // Should not throw
+
+            var connection = new Connection();
+            if (!isValid)
+                Assert.Throws<ArgumentException>("value", () => connection.AccessToken = accessToken);
+            else
+                connection.AccessToken = accessToken; // Should not throw
         }
 
         [Theory]

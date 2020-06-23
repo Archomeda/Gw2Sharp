@@ -10,7 +10,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     [EndpointPathSegment("id", 0)]
     [EndpointPathSegment("board", 1)]
     [EndpointPathSegment("region", 2)]
-    public class PvpSeasonsLeaderboardsRegionIdClient : BaseEndpointBlobClient<IApiV2ObjectList<PvpSeasonLeaderboardEntry>>, IPvpSeasonsLeaderboardsRegionIdClient
+    public class PvpSeasonsLeaderboardsRegionIdClient : BaseEndpointPaginatedBlobClient<PvpSeasonLeaderboardEntry>, IPvpSeasonsLeaderboardsRegionIdClient
     {
         private readonly Guid seasonId;
         private readonly string leaderboardId;

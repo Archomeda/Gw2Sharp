@@ -270,10 +270,7 @@ namespace Gw2Sharp.Mumble
 
         /// <inheritdoc />
         public MountType Mount =>
-
-            // Currently mount 10 is actually None
-            // Since this might be fixed later, we just redirect 10 to None for now
-            this.IsAvailable && this.linkedMem.context.mount != (MountType)10 ? this.linkedMem.context.mount : default;
+            this.IsAvailable ? this.linkedMem.context.mount : default;
 
 
         /// <inheritdoc />
