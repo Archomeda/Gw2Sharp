@@ -1,6 +1,9 @@
 name: SonarCloud
 
-on: [push]
+on:
+  push:
+  pull_request:
+    types: [opened, reopened, synchronize]
 
 jobs:
   sonarcloud:
@@ -8,43 +11,16 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
-      - run: git fetch --prune --unshallow
+        with:
+          fetch-depth: 0
       - uses: actions/setup-java@v1
         with:
           java-version: '>=11'
-      - name: Install Coverlet
-        run: dotnet tool install --global coverlet.console
-      - name: Install SonarScanner
-        run: dotnet tool install --global dotnet-sonarscanner
-      - name: Start SonarScanner
-        shell: powershell
-        run: |
-          if ($env:GITHUB_REF -match "refs/([^/]*)/(.*)") {
-            if ($matches[1] -eq "tags") {
-              Write-Output "Using tag $($matches[2])"
-              dotnet sonarscanner begin /k:"Archomeda_Gw2Sharp" /o:"archomeda-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.cs.opencover.reportsPaths="coverage.xml" /d:sonar.branch.name=master /v:"$($matches[2])"
-            } elseif ($matches[1] -eq "heads") {
-              Write-Output "Using branch $($matches[2])"
-              if ($matches[2] -eq "master") {
-                dotnet sonarscanner begin /k:"Archomeda_Gw2Sharp" /o:"archomeda-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.cs.opencover.reportsPaths="coverage.xml" /d:sonar.branch.name="$($matches[2])" /v:master
-              } else {
-                dotnet sonarscanner begin /k:"Archomeda_Gw2Sharp" /o:"archomeda-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.cs.opencover.reportsPaths="coverage.xml" /d:sonar.branch.name="$($matches[2])"
-              }
-            } else {
-              Write-Error "No valid ref found in $env:GITHUB_REF"
-              exit 1
-            }
-          } else {
-            Write-Error "No valid ref found in $env:GITHUB_REF"
-            exit 1
-          }
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Run dotnet build
-        run: dotnet build -c Debug
-      - name: Run Coverlet
-        run: coverlet Gw2Sharp.Tests/bin/Debug/netcoreapp3.1/Gw2Sharp.Tests.dll --target "dotnet.exe" --targetargs "test -c Debug --no-build" --format opencover --output "coverage.xml"
-      - name: End SonarScanner
-        run: dotnet sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: Archomeda/sonarcloud-dotnet-action@v1
+        with:
+          sonarToken: ${{ secrets.SONAR_TOKEN }}
+          sonarOrganization: 'archomeda-github'
+          sonarProject: 'Archomeda_Gw2Sharp'
+          sonarAdditionalArgs: '/d:sonar.cs.opencover.reportsPaths=**/coverage.opencover.xml'
+      - name: Run dotnet test
+        run: dotnet test --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
