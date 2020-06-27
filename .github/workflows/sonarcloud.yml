@@ -1,6 +1,9 @@
 name: SonarCloud
 
-on: [push]
+on:
+  push:
+  pull_request:
+    types: [opened, reopened, synchronize]
 
 jobs:
   sonarcloud:
