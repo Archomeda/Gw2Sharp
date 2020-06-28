@@ -1,0 +1,38 @@
+name: 'Command: Cleanup'
+
+on:
+  repository_dispatch:
+    types: [cleanup-command]
+
+jobs:
+  cleanup:
+    name: Cleanup
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          repository: ${{ github.event.client_payload.pull_request.head.repo.full_name }}
+          ref: ${{ github.event.client_payload.pull_request.head.ref }}
+          fetch-depth: 0
+      - uses: goit/setup-resharper@v1.0.0
+        with:
+          version: '2020.1.3'
+      - name: Get changed files
+        id: changed
+        run: echo "##[set-output name=files]$(git --no-pager diff -z --name-only ${{ github.event.client_payload.pull_request.base.sha }} ${{ github.event.client_payload.pull_request.head.sha }} | sed 's/\x0/;/g')"
+      - name: Run cleanup
+        run: 'cleanupcode.sh --profile="Built-in: Reformat Code" --include="${{ steps.changed.outputs.files }}" Gw2Sharp.sln'
+      - name: Commit changes
+        run: |
+          git add -A
+          if [[ `git status --porcelain` ]]; then
+            git config --local user.email "actions@github.com"
+            git config --local user.name "github-actions"
+            git commit -m "🧹 Clean up code"
+            git push
+          fi
+      - name: Add reaction
+        uses: peter-evans/create-or-update-comment@v1
+        with:
+          comment-id: ${{ github.event.client_payload.github.payload.comment.id }}
+          reactions: hooray
