@@ -151,7 +151,7 @@ namespace Gw2Sharp
         public IList<IWebApiMiddleware> Middleware => this.middleware;
 
         /// <inheritdoc />
-        public int MiddlewareHashCode { get; set; }
+        public int MiddlewareHashCode { get; protected set; }
 
         /// <summary>
         /// Resets this connection's middleware to the default list.
