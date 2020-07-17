@@ -14,6 +14,8 @@
       topicUid: Guides.HttpHeaders
     - name: Last-Modified
       topicUid: Guides.LastModified
+    - name: Middleware
+      topicUid: Guides.Middleware
     - name: Subtokens
       topicUid: Guides.Subtokens
     - name: Debug symbols
