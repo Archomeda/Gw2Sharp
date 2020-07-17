@@ -11,7 +11,7 @@ Render service calls do not use middleware.
 
 You are free to configure the middleware as you like, however it's recommended to keep the default ones.
 Accessing the list of middleware is done through the `Middleware` property in the `Connection` object.
-This property is an `IList` and can be manipulated as you like.
+This property is an `IList` and can be manipulated however you like.
 
 ```cs
 var connection = new Gw2Sharp.Connection();
@@ -46,7 +46,7 @@ This middleware supports configuring the maximum number of items per bulk reques
 This middleware checks the HTTP status codes and wraps possible errors in an exception that can be caught in your code.
 Check [the guide on exception handling](xref:Guides.ExceptionHandling) for the kinds of exceptions that Gw2Sharp can throw.
 
-This middleware does not hafve any customizable configuration.
+This middleware does not have any customizable configuration.
 
 ---
 
