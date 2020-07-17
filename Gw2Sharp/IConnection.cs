@@ -61,5 +61,11 @@ namespace Gw2Sharp
         /// The list determines the order of middleware execution.
         /// </summary>
         IList<IWebApiMiddleware> Middleware { get; }
+
+        /// <summary>
+        /// Gets the hash code of the list of middleware.
+        /// This value can be used to determine if the list has changed.
+        /// </summary>
+        int MiddlewareHashCode { get; }
     }
 }

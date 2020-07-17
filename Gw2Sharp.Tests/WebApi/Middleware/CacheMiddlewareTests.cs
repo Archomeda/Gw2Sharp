@@ -26,22 +26,22 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
 
         [Theory]
         [AutoMockData]
-        public async Task SingleRequestAsyncTest([Frozen] IConnection connection, [Frozen] IWebApiRequest request, [Frozen] IWebApiResponse response)
+        public async Task SingleRequestAsyncTest([Frozen] MiddlewareContext context, [Frozen] IWebApiResponse response)
         {
             var options = new WebApiRequestOptions
             {
                 EndpointPath = "/some/endpoint"
             };
-            request.Options.Returns(options);
+            context.Request.Options.Returns(options);
 
             // Do the request
             var middleware = new CacheMiddleware();
-            var finalResponse = await middleware.OnRequestAsync(connection, request, (r, t) => Task.FromResult(response));
+            var finalResponse = await middleware.OnRequestAsync(context, (r, t) => Task.FromResult(response));
             finalResponse.Should().BeSameAs(response);
 
             // Repeat the request to check for the header
             // The result in the callNext parameter shouldn't matter, if the cache is used, that Func shouldn't even be called
-            var cachedResponse = await middleware.OnRequestAsync(connection, request, (r, t) => Task.FromResult<IWebApiResponse>(default));
+            var cachedResponse = await middleware.OnRequestAsync(context, (r, t) => Task.FromResult<IWebApiResponse>(default));
             cachedResponse.Should().BeEquivalentTo(finalResponse);
         }
 
@@ -65,37 +65,37 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
         [Theory]
         [MemberAutoMockData(nameof(ManyRequestsAsyncCases))]
         public async Task ManyRequestAsyncTest(string queryParams, [Frozen] IList<Element> responseElements,
-            [Frozen] IConnection connection, [Frozen] IWebApiRequest request, [Frozen] IWebApiResponse response)
+            [Frozen] MiddlewareContext context, [Frozen] IWebApiResponse response)
         {
             var options = new WebApiRequestOptions
             {
                 EndpointPath = "/some/endpoint",
                 EndpointQuery = queryParams.Split('&').Select(x => x.Split('=')).ToDictionary(x => x[0], x => x.Skip(1).FirstOrDefault())
             };
-            request.Options.Returns(options);
+            context.Request.Options.Returns(options);
             string rawResponse = JsonSerializer.Serialize(responseElements);
             response.Content.Returns(rawResponse);
 
             // Do the request
             var middleware = new CacheMiddleware();
-            var finalResponse = await middleware.OnRequestAsync(connection, request, (r, t) => Task.FromResult(response));
+            var finalResponse = await middleware.OnRequestAsync(context, (r, t) => Task.FromResult(response));
             finalResponse.Should().BeSameAs(response);
 
             // Repeat the request to check for the header
             // The result in the callNext parameter shouldn't matter, if the cache is used, that Func shouldn't even be called
-            var cachedResponse = await middleware.OnRequestAsync(connection, request, (r, t) => Task.FromResult<IWebApiResponse>(default));
+            var cachedResponse = await middleware.OnRequestAsync(context, (r, t) => Task.FromResult<IWebApiResponse>(default));
             cachedResponse.Should().BeEquivalentTo(finalResponse);
         }
 
         [Theory]
         [AutoMockData]
-        public async Task ReadsExpiresTest([Frozen] IConnection connection, [Frozen] IWebApiRequest request, [Frozen] IWebApiResponse response)
+        public async Task ReadsExpiresTest([Frozen] MiddlewareContext context, [Frozen] IWebApiResponse response)
         {
             var options = new WebApiRequestOptions
             {
                 EndpointPath = "/some/endpoint"
             };
-            request.Options.Returns(options);
+            context.Request.Options.Returns(options);
 
             string expiresAt = 30.Minutes().After(DateTime.UtcNow).ToString("r");
             var responseHeaders = new Dictionary<string, string>
@@ -106,11 +106,11 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
 
             // Do the request
             var middleware = new CacheMiddleware();
-            await middleware.OnRequestAsync(connection, request, (r, t) => Task.FromResult(response));
+            await middleware.OnRequestAsync(context, (r, t) => Task.FromResult(response));
 
             // Repeat the request to check for the header
             // The result in the callNext parameter shouldn't matter, if the cache is used, that Func shouldn't even be called
-            var cachedResponse = await middleware.OnRequestAsync(connection, request, (r, t) => Task.FromResult<IWebApiResponse>(default));
+            var cachedResponse = await middleware.OnRequestAsync(context, (r, t) => Task.FromResult<IWebApiResponse>(default));
             cachedResponse.ResponseHeaders.Should().Contain(new KeyValuePair<string, string>("Expires", expiresAt));
         }
 
@@ -118,13 +118,13 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
         [InlineAutoMockData("Accept-Language")]
         [InlineAutoMockData("Authorization")]
         public async Task TakesHeaderIntoAccountForCachingSeparatelyTest(string headerName, IList<string> headerValues,
-            [Frozen] IConnection connection, [Frozen] IWebApiRequest request, IFixture fixture)
+            [Frozen] MiddlewareContext context, IFixture fixture)
         {
             var options = new WebApiRequestOptions
             {
                 EndpointPath = "/some/endpoint"
             };
-            request.Options.Returns(options);
+            context.Request.Options.Returns(options);
 
             var expiresAt = 30.Minutes().After(DateTime.UtcNow);
             var responseHeaders = new Dictionary<string, string>
@@ -136,7 +136,7 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
 
             // Call the requests with different headers, the results should be different from each other
             var middleware = new CacheMiddleware();
-            var finalResponseWithoutHeader = await middleware.OnRequestAsync(connection, request, (r, t) => Task.FromResult(response));
+            var finalResponseWithoutHeader = await middleware.OnRequestAsync(context, (r, t) => Task.FromResult(response));
             var finalResponsesWithHeader = new List<IWebApiResponse>();
             foreach (string headerValue in headerValues)
             {
@@ -145,7 +145,7 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
                 response = fixture.Create<IWebApiResponse>();
                 response.ResponseHeaders.Returns(responseHeaders);
 
-                finalResponsesWithHeader.Add(await middleware.OnRequestAsync(connection, request, (r, t) => Task.FromResult(response)));
+                finalResponsesWithHeader.Add(await middleware.OnRequestAsync(context, (r, t) => Task.FromResult(response)));
             }
             finalResponsesWithHeader.Should().NotContain(finalResponseWithoutHeader);
             finalResponsesWithHeader.Should().OnlyHaveUniqueItems();
@@ -154,7 +154,7 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
             options.RequestHeaders.Clear();
 
             // The result in the callNext parameter shouldn't matter, if the cache is used, that Func shouldn't even be called
-            var cachedFinalResponseWithoutHeader = await middleware.OnRequestAsync(connection, request, (r, t) => Task.FromResult<IWebApiResponse>(default));
+            var cachedFinalResponseWithoutHeader = await middleware.OnRequestAsync(context, (r, t) => Task.FromResult<IWebApiResponse>(default));
             var cachedFinalResponsesWithHeader = new List<IWebApiResponse>();
             foreach (string headerValue in headerValues)
             {
@@ -162,7 +162,7 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
                 options.RequestHeaders[headerName] = headerValue;
 
                 // The result in the callNext parameter shouldn't matter, if the cache is used, that Func shouldn't even be called
-                cachedFinalResponsesWithHeader.Add(await middleware.OnRequestAsync(connection, request, (r, t) => Task.FromResult<IWebApiResponse>(default)));
+                cachedFinalResponsesWithHeader.Add(await middleware.OnRequestAsync(context, (r, t) => Task.FromResult<IWebApiResponse>(default)));
             }
             cachedFinalResponseWithoutHeader.Should().BeSameAs(finalResponseWithoutHeader);
             cachedFinalResponsesWithHeader.Should().BeEquivalentTo(finalResponsesWithHeader);
@@ -205,7 +205,7 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
         [Theory]
         [MemberAutoMockData(nameof(ManyRequestCachesIndividualsFromManyRequestAsyncCases))]
         public async Task TakesHeaderIntoAccountForCachingSeparatelyFromManyRequestAsyncTest(string? headerName, [Frozen] IList<Element> responseElements,
-            string headerValue, [Frozen] IConnection connection, [Frozen] IWebApiRequest request, IFixture fixture)
+            string headerValue, [Frozen] MiddlewareContext context, IFixture fixture)
         {
             var options = new WebApiRequestOptions
             {
@@ -214,7 +214,7 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
             };
             if (!string.IsNullOrEmpty(headerName))
                 options.RequestHeaders[headerName] = headerValue;
-            request.Options.Returns(options);
+            context.Request.Options.Returns(options);
 
             string expiresAt = 30.Minutes().After(DateTime.UtcNow).ToString("r");
             var responseHeaders = new Dictionary<string, string>
@@ -228,7 +228,7 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
 
             // Do the many request first
             var middleware = new CacheMiddleware();
-            await middleware.OnRequestAsync(connection, request, (r, t) => Task.FromResult(response));
+            await middleware.OnRequestAsync(context, (r, t) => Task.FromResult(response));
 
             // Do individual requests to see if they are taken from the cache
             options.EndpointQuery.Clear();
@@ -238,7 +238,7 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
                 options.PathSuffix = element.Id;
 
                 // The result in the callNext parameter shouldn't matter, if the cache is used, that Func shouldn't even be called
-                var elementResponse = await middleware.OnRequestAsync(connection, request, (r, t) => Task.FromResult<IWebApiResponse>(default));
+                var elementResponse = await middleware.OnRequestAsync(context, (r, t) => Task.FromResult<IWebApiResponse>(default));
 
                 elementResponse.ResponseHeaders.Should().Contain(new KeyValuePair<string, string>("Expires", expiresAt));
                 var elementObject = JsonSerializer.Deserialize<Element>(elementResponse.Content);

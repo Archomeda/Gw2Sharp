@@ -31,7 +31,7 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
 
         [Theory]
         [AutoMockData]
-        public async Task RequestIsSplitIfMoreThanMaxTest([Frozen] IConnection connection, [Frozen] IWebApiRequest request)
+        public async Task RequestIsSplitIfMoreThanMaxTest([Frozen] MiddlewareContext context)
         {
             var options = new WebApiRequestOptions
             {
@@ -42,7 +42,7 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
                     ["ids"] = "K1,K2,K3"
                 }
             };
-            request.Options.Returns(options);
+            context.Request.Options.Returns(options);
             var elements = new[]
             {
                 new Element { Id = "K1", Value = "V1" },
@@ -51,9 +51,9 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
             };
 
             var middleware = new RequestSplitterMiddleware { MaxRequestSize = 2 };
-            var response = await middleware.OnRequestAsync(connection, request, (r, t) =>
+            var response = await middleware.OnRequestAsync(context, (c, t) =>
             {
-                var ids = r.Options.EndpointQuery["ids"].Split(',');
+                var ids = c.Request.Options.EndpointQuery["ids"].Split(',');
                 ids.Should().HaveCountLessOrEqualTo(middleware.MaxRequestSize);
 
                 var innerElements = ids.Select(x => elements.First(y => y.Id == x));
@@ -68,7 +68,7 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
         [Theory]
         [InlineAutoMockData(3)]
         [InlineAutoMockData(4)]
-        public async Task RequestIsNotSplitIfLessThanOrEqualToMaxTest(int maxRequestSize, [Frozen] IConnection connection, [Frozen] IWebApiRequest request)
+        public async Task RequestIsNotSplitIfLessThanOrEqualToMaxTest(int maxRequestSize, [Frozen] MiddlewareContext context)
         {
             var options = new WebApiRequestOptions
             {
@@ -79,7 +79,7 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
                     ["ids"] = "K1,K2,K3"
                 }
             };
-            request.Options.Returns(options);
+            context.Request.Options.Returns(options);
             var elements = new[]
             {
                 new Element { Id = "K1", Value = "V1" },
@@ -88,9 +88,9 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
             };
 
             var middleware = new RequestSplitterMiddleware { MaxRequestSize = maxRequestSize };
-            var response = await middleware.OnRequestAsync(connection, request, (r, t) =>
+            var response = await middleware.OnRequestAsync(context, (c, t) =>
             {
-                var ids = r.Options.EndpointQuery["ids"].Split(',');
+                var ids = c.Request.Options.EndpointQuery["ids"].Split(',');
                 ids.Should().HaveCountLessOrEqualTo(middleware.MaxRequestSize);
                 ids.Should().BeEquivalentTo(elements.Select(x => x.Id));
 
@@ -104,7 +104,7 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
 
         [Theory]
         [AutoMockData]
-        public async Task RequestIsNotSplitNotBulkTest([Frozen] IConnection connection, [Frozen] IWebApiRequest request, [Frozen] IWebApiResponse response, Element element)
+        public async Task RequestIsNotSplitNotBulkTest([Frozen] MiddlewareContext context, [Frozen] IWebApiResponse response, Element element)
         {
             var options = new WebApiRequestOptions
             {
@@ -112,12 +112,12 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
                 EndpointPath = "/some/endpoint",
                 EndpointQuery = new Dictionary<string, string>()
             };
-            request.Options.Returns(options);
+            context.Request.Options.Returns(options);
             string rawResponse = JsonSerializer.Serialize(element);
             response.Content.Returns(rawResponse);
 
             var middleware = new RequestSplitterMiddleware();
-            var finalResponse = await middleware.OnRequestAsync(connection, request, (r, t) => Task.FromResult(response));
+            var finalResponse = await middleware.OnRequestAsync(context, (c, t) => Task.FromResult(response));
             finalResponse.Should().BeEquivalentTo(response);
         }
     }

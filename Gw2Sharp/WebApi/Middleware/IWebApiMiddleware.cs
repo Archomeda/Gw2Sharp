@@ -16,11 +16,10 @@ namespace Gw2Sharp.WebApi.Middleware
         /// or you can short circuit the request by not calling <paramref name="callNext"/> at all.
         /// This should return the response.
         /// </summary>
-        /// <param name="connection">The connection.</param>
-        /// <param name="request">The request.</param>
+        /// <param name="context">The middleware context.</param>
         /// <param name="callNext">The function that calls the next middleware, if any, or executes the request.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The response.</returns>
-        Task<IWebApiResponse> OnRequestAsync(IConnection connection, IWebApiRequest request, Func<IWebApiRequest, CancellationToken, Task<IWebApiResponse>> callNext, CancellationToken cancellationToken = default);
+        Task<IWebApiResponse> OnRequestAsync(MiddlewareContext context, Func<MiddlewareContext, CancellationToken, Task<IWebApiResponse>> callNext, CancellationToken cancellationToken = default);
     }
 }

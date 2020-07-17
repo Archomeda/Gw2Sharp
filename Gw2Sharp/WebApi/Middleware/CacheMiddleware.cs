@@ -21,89 +21,90 @@ namespace Gw2Sharp.WebApi.Middleware
         private const string ALL = "all";
 
         /// <inheritdoc />
-        public virtual Task<IWebApiResponse> OnRequestAsync(IConnection connection, IWebApiRequest request, Func<IWebApiRequest, CancellationToken, Task<IWebApiResponse>> callNext, CancellationToken cancellationToken = default)
+        public virtual Task<IWebApiResponse> OnRequestAsync(MiddlewareContext context, Func<MiddlewareContext, CancellationToken, Task<IWebApiResponse>> callNext, CancellationToken cancellationToken = default)
         {
-            if (connection is null)
-                throw new ArgumentNullException(nameof(connection));
-            if (request is null)
-                throw new ArgumentNullException(nameof(request));
+            if (context is null)
+                throw new ArgumentNullException(nameof(context));
             if (callNext is null)
                 throw new ArgumentNullException(nameof(callNext));
 
             // Gw2Sharp only supports requesting pages separately, and not combined with a list of ids (or all).
             // Even though it's supported by the API, it doesn't really make much sense to use it with a given list of ids
             // (just split the list, or leave out all).
-            if (request.Options.EndpointQuery.ContainsKey(QUERY_PARAM_PAGE))
-                return OnPageRequestAsync(connection, request, callNext, cancellationToken);
+            if (context.Request.Options.EndpointQuery.ContainsKey(QUERY_PARAM_PAGE))
+                return OnPageRequestAsync(context, callNext, cancellationToken);
 
             string[] idsList = Array.Empty<string>();
-            if (request.Options.EndpointQuery.TryGetValue(request.Options.BulkQueryParameterIdsName, out string? ids))
+            if (context.Request.Options.EndpointQuery.TryGetValue(context.Request.Options.BulkQueryParameterIdsName, out string? ids))
                 idsList = ids.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
 
             if (idsList.Contains(ALL, StringComparer.OrdinalIgnoreCase))
-                return OnAllRequestAsync(connection, request, callNext, cancellationToken);
+                return OnAllRequestAsync(context, callNext, cancellationToken);
 
             return idsList.Length switch
             {
-                0 => OnEndpointRequestAsync(connection, request, callNext, cancellationToken),
-                _ => OnManyRequestAsync(connection, request, idsList, callNext, cancellationToken)
+                0 => OnEndpointRequestAsync(context, callNext, cancellationToken),
+                _ => OnManyRequestAsync(context, idsList, callNext, cancellationToken)
             };
         }
 
-        private static async Task<IWebApiResponse> OnEndpointRequestAsync(IConnection connection, IWebApiRequest request, Func<IWebApiRequest, CancellationToken, Task<IWebApiResponse>> callNext, CancellationToken cancellationToken)
+        private static async Task<IWebApiResponse> OnEndpointRequestAsync(MiddlewareContext context, Func<MiddlewareContext, CancellationToken, Task<IWebApiResponse>> callNext, CancellationToken cancellationToken)
         {
-            var cacheItem = await connection.CacheMethod.GetOrUpdateAsync(request.Options.EndpointPath, GetCacheId(request, request.Options.PathSuffix.OrIfNullOrEmpty("_index")),
-                RequestGetAsync(request, callNext, cancellationToken)).ConfigureAwait(false);
+            var cacheItem = await context.Connection.CacheMethod.GetOrUpdateAsync(context.Request.Options.EndpointPath,
+                GetCacheId(context.Request, context.Request.Options.PathSuffix.OrIfNullOrEmpty("_index")),
+                RequestGetAsync(context, callNext, cancellationToken)).ConfigureAwait(false);
             return cacheItem.Item;
         }
 
-        private static async Task<IWebApiResponse> OnManyRequestAsync(IConnection connection, IWebApiRequest request, IEnumerable<string> ids, Func<IWebApiRequest, CancellationToken, Task<IWebApiResponse>> callNext, CancellationToken cancellationToken)
+        private static async Task<IWebApiResponse> OnManyRequestAsync(MiddlewareContext context, IEnumerable<string> ids, Func<MiddlewareContext, CancellationToken, Task<IWebApiResponse>> callNext, CancellationToken cancellationToken)
         {
-            var cacheItems = await connection.CacheMethod.GetOrUpdateManyAsync(request.Options.EndpointPath, ids, async missingIds =>
+            var cacheItems = await context.Connection.CacheMethod.GetOrUpdateManyAsync(context.Request.Options.EndpointPath, ids, async missingIds =>
             {
-                var newRequest = request.DeepCopy();
-                newRequest.Options.EndpointQuery[request.Options.BulkQueryParameterIdsName] = string.Join(",", missingIds);
+                var newContext = new MiddlewareContext(context.Connection, context.Request.DeepCopy());
+                newContext.Request.Options.EndpointQuery[context.Request.Options.BulkQueryParameterIdsName] = string.Join(",", missingIds);
 
-                var response = await callNext(newRequest, cancellationToken).ConfigureAwait(false);
+                var response = await callNext(newContext, cancellationToken).ConfigureAwait(false);
                 var responseInfo = new ApiV2HttpResponseInfo(response.StatusCode, response.ResponseHeaders);
-                return (SplitIntoIndividualResponses(response, request.Options.BulkObjectIdName), GetExpires(responseInfo));
+                return (SplitIntoIndividualResponses(response, context.Request.Options.BulkObjectIdName), GetExpires(responseInfo));
             }).ConfigureAwait(false);
             return cacheItems.Select(x => x.Item).Merge();
         }
 
-        private static async Task<IWebApiResponse> OnAllRequestAsync(IConnection connection, IWebApiRequest request, Func<IWebApiRequest, CancellationToken, Task<IWebApiResponse>> callNext, CancellationToken cancellationToken)
+        private static async Task<IWebApiResponse> OnAllRequestAsync(MiddlewareContext context, Func<MiddlewareContext, CancellationToken, Task<IWebApiResponse>> callNext, CancellationToken cancellationToken)
         {
-            var cacheItem = await connection.CacheMethod.GetOrUpdateAsync(request.Options.EndpointPath, GetCacheId(request, "_all"),
-                RequestGetAsync(request, callNext, cancellationToken)).ConfigureAwait(false);
+            var cacheItem = await context.Connection.CacheMethod.GetOrUpdateAsync(context.Request.Options.EndpointPath,
+                GetCacheId(context.Request, "_all"),
+                RequestGetAsync(context, callNext, cancellationToken)).ConfigureAwait(false);
 
             // Update individual items
-            var cacheItems = SplitIntoIndividualResponses(cacheItem.Item, request.Options.BulkObjectIdName)
-                .Select(x => new CacheItem<IWebApiResponse>(request.Options.EndpointPath, x.Key, x.Value, cacheItem.ExpiryTime));
-            await connection.CacheMethod.SetManyAsync(cacheItems).ConfigureAwait(false);
+            var cacheItems = SplitIntoIndividualResponses(cacheItem.Item, context.Request.Options.BulkObjectIdName)
+                .Select(x => new CacheItem<IWebApiResponse>(context.Request.Options.EndpointPath, x.Key, x.Value, cacheItem.ExpiryTime));
+            await context.Connection.CacheMethod.SetManyAsync(cacheItems).ConfigureAwait(false);
 
             return cacheItem.Item;
         }
 
-        private static async Task<IWebApiResponse> OnPageRequestAsync(IConnection connection, IWebApiRequest request, Func<IWebApiRequest, CancellationToken, Task<IWebApiResponse>> callNext, CancellationToken cancellationToken)
+        private static async Task<IWebApiResponse> OnPageRequestAsync(MiddlewareContext context, Func<MiddlewareContext, CancellationToken, Task<IWebApiResponse>> callNext, CancellationToken cancellationToken)
         {
-            request.Options.EndpointQuery.TryGetValue(QUERY_PARAM_PAGE, out string? page);
-            request.Options.EndpointQuery.TryGetValue(QUERY_PARAM_PAGE_SIZE, out string? pageSize);
+            context.Request.Options.EndpointQuery.TryGetValue(QUERY_PARAM_PAGE, out string? page);
+            context.Request.Options.EndpointQuery.TryGetValue(QUERY_PARAM_PAGE_SIZE, out string? pageSize);
 
-            var cacheItem = await connection.CacheMethod.GetOrUpdateAsync(request.Options.EndpointPath, GetCacheId(request, $"_page{page}-{pageSize}"),
-                RequestGetAsync(request, callNext, cancellationToken)).ConfigureAwait(false);
+            var cacheItem = await context.Connection.CacheMethod.GetOrUpdateAsync(context.Request.Options.EndpointPath,
+                GetCacheId(context.Request, $"_page{page}-{pageSize}"),
+                RequestGetAsync(context, callNext, cancellationToken)).ConfigureAwait(false);
 
             // Update individual items
-            var cacheItems = SplitIntoIndividualResponses(cacheItem.Item, request.Options.BulkObjectIdName)
-                .Select(x => new CacheItem<IWebApiResponse>(request.Options.EndpointPath, x.Key, x.Value, cacheItem.ExpiryTime));
-            await connection.CacheMethod.SetManyAsync(cacheItems).ConfigureAwait(false);
+            var cacheItems = SplitIntoIndividualResponses(cacheItem.Item, context.Request.Options.BulkObjectIdName)
+                .Select(x => new CacheItem<IWebApiResponse>(context.Request.Options.EndpointPath, x.Key, x.Value, cacheItem.ExpiryTime));
+            await context.Connection.CacheMethod.SetManyAsync(cacheItems).ConfigureAwait(false);
 
             return cacheItem.Item;
         }
 
-        private static Func<Task<(IWebApiResponse, DateTimeOffset)>> RequestGetAsync(IWebApiRequest request, Func<IWebApiRequest, CancellationToken, Task<IWebApiResponse>> callNext, CancellationToken cancellationToken) =>
+        private static Func<Task<(IWebApiResponse, DateTimeOffset)>> RequestGetAsync(MiddlewareContext context, Func<MiddlewareContext, CancellationToken, Task<IWebApiResponse>> callNext, CancellationToken cancellationToken) =>
             async () =>
             {
-                var response = await callNext(request, cancellationToken).ConfigureAwait(false);
+                var response = await callNext(context, cancellationToken).ConfigureAwait(false);
                 var responseInfo = new ApiV2HttpResponseInfo(response.StatusCode, response.ResponseHeaders);
                 return (response, GetExpires(responseInfo));
             };

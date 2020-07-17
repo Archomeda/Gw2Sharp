@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Collections.Specialized;
 using System.Net.Http.Headers;
 using System.Reflection;
 using Gw2Sharp.WebApi;
@@ -18,6 +20,7 @@ namespace Gw2Sharp
         private ICacheMethod cacheMethod;
         private ICacheMethod renderCacheMethod;
         private string accessToken;
+        private readonly ObservableCollection<IWebApiMiddleware> middleware = new ObservableCollection<IWebApiMiddleware>();
 
 
         /// <summary>
@@ -85,6 +88,8 @@ namespace Gw2Sharp
             this.cacheMethod = cacheMethod ?? new MemoryCacheMethod();
             this.renderCacheMethod = renderCacheMethod ?? new NullCacheMethod();
             this.RenderCacheDuration = renderCacheDuration ?? TimeSpan.Zero;
+
+            this.middleware.CollectionChanged += this.Middleware_CollectionChanged;
             this.UseDefaultMiddleware();
         }
 
@@ -142,20 +147,30 @@ namespace Gw2Sharp
             set => this.renderCacheMethod = value ?? throw new ArgumentNullException(nameof(value), "RenderCacheMethod cannot be null");
         }
 
-#pragma warning disable CA2227 // Collection properties should be read only
         /// <inheritdoc />
-        public IList<IWebApiMiddleware> Middleware { get; set; } = Array.Empty<IWebApiMiddleware>();
-#pragma warning restore CA2227 // Collection properties should be read only
+        public IList<IWebApiMiddleware> Middleware => this.middleware;
+
+        /// <inheritdoc />
+        public int MiddlewareHashCode { get; set; }
 
         /// <summary>
         /// Resets this connection's middleware to the default list.
         /// </summary>
-        public void UseDefaultMiddleware() => this.Middleware = new List<IWebApiMiddleware>
+        public void UseDefaultMiddleware()
         {
-            new CacheMiddleware(),
-            new RequestSplitterMiddleware(),
-            new ExceptionMiddleware()
-        };
+            this.Middleware.Clear();
+            this.Middleware.Add(new CacheMiddleware());
+            this.Middleware.Add(new RequestSplitterMiddleware());
+            this.Middleware.Add(new ExceptionMiddleware());
+        }
+
+        private void Middleware_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
+        {
+            var hashCode = new HashCode();
+            foreach (var middleware in this.Middleware)
+                hashCode.Add(middleware);
+            this.MiddlewareHashCode = hashCode.ToHashCode();
+        }
 
         private static bool IsAccessTokenValid(string accessToken) =>
             AuthenticationHeaderValue.TryParse($"Bearer {accessToken}", out _);

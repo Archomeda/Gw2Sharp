@@ -1,12 +1,16 @@
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
+using System.Reflection;
 using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
 using Gw2Sharp.Extensions;
 using Gw2Sharp.Json;
 using Gw2Sharp.Json.Converters;
+using Gw2Sharp.WebApi.Middleware;
 
 namespace Gw2Sharp.WebApi.Http
 {
@@ -15,6 +19,9 @@ namespace Gw2Sharp.WebApi.Http
     /// </summary>
     public class WebApiRequest : IWebApiRequest
     {
+        private static readonly ConcurrentDictionary<int, Func<MiddlewareContext, CancellationToken, Task<IWebApiResponse>>> requestCalls =
+            new ConcurrentDictionary<int, Func<MiddlewareContext, CancellationToken, Task<IWebApiResponse>>>();
+
         private readonly IConnection connection;
         private readonly IGw2Client gw2Client;
 
@@ -104,17 +111,58 @@ namespace Gw2Sharp.WebApi.Http
         {
             var deserializerSettings = GetDeserializerSettings(this.gw2Client);
 
-            // Give the middleware an opportunity to do something with the request and/or response
-            var response = await RequestNextAsync(0, this, cancellationToken).ConfigureAwait(false);
-
-            async Task<IWebApiResponse> RequestNextAsync(int middlewareIndex, IWebApiRequest innerRequest, CancellationToken innerCancellationToken) =>
-                middlewareIndex < this.connection.Middleware.Count
-                    ? await this.connection.Middleware[middlewareIndex].OnRequestAsync(this.connection, innerRequest, (r, t) => RequestNextAsync(middlewareIndex + 1, r, t), innerCancellationToken).ConfigureAwait(false)
-                    : await this.connection.HttpClient.RequestAsync(innerRequest, innerCancellationToken).ConfigureAwait(false);
+            var call = requestCalls.GetOrAdd(this.connection.MiddlewareHashCode, _ => this.GenerateRequestCall());
+            var response = await call(new MiddlewareContext(this.connection, this), cancellationToken).ConfigureAwait(false);
 
             // Deserialize response
             var obj = JsonSerializer.Deserialize<TResponse>(response.Content, deserializerSettings);
             return new WebApiResponse<TResponse>(obj, response.StatusCode, response.ResponseHeaders);
+        }
+
+        private Func<MiddlewareContext, CancellationToken, Task<IWebApiResponse>> GenerateRequestCall()
+        {
+            // We have to build the expression tree from inside out
+
+            var contextParam = Expression.Parameter(typeof(MiddlewareContext), "context");
+            var cancellationTokenParam = Expression.Parameter(typeof(CancellationToken), "cancellationToken");
+
+            var chain = CreateRequestCallDelegate(
+                typeof(IHttpClient).GetMethod(nameof(IHttpClient.RequestAsync))!,
+                contextParam,
+                cancellationTokenParam);
+
+            foreach (var middleware in this.connection.Middleware.Reverse())
+            {
+                chain = CreateMiddlewareCallDelegate(
+                    middleware,
+                    middleware.GetType().GetMethod(nameof(IWebApiMiddleware.OnRequestAsync))!,
+                    Expression.Parameter(typeof(MiddlewareContext), "context"),
+                    Expression.Parameter(typeof(CancellationToken), "cancellationToken"),
+                    chain);
+            }
+
+            return chain;
+        }
+
+        private static Func<MiddlewareContext, CancellationToken, Task<IWebApiResponse>> CreateMiddlewareCallDelegate(IWebApiMiddleware currentMiddleware, MethodInfo middlewareOnRequestMethodInfo,
+            ParameterExpression contextParam, ParameterExpression cancellationTokenParam,
+            Func<MiddlewareContext, CancellationToken, Task<IWebApiResponse>> previousCall)
+        {
+            var expressionBody = Expression.Call(
+                Expression.Constant(currentMiddleware), middlewareOnRequestMethodInfo,
+                contextParam, Expression.Constant(previousCall), cancellationTokenParam);
+            var expressionLambda = Expression.Lambda<Func<MiddlewareContext, CancellationToken, Task<IWebApiResponse>>>(expressionBody, contextParam, cancellationTokenParam);
+            return expressionLambda.Compile();
+        }
+
+        private static Func<MiddlewareContext, CancellationToken, Task<IWebApiResponse>> CreateRequestCallDelegate(MethodInfo httpClientRequestMethodInfo,
+            ParameterExpression contextParam, ParameterExpression cancellationTokenParam)
+        {
+            var expressionBody = Expression.Call(
+                Expression.Property(Expression.Property(contextParam, nameof(MiddlewareContext.Connection)), nameof(MiddlewareContext.Connection.HttpClient)), httpClientRequestMethodInfo,
+                Expression.Property(contextParam, nameof(MiddlewareContext.Request)), cancellationTokenParam);
+            var expressionLambda = Expression.Lambda<Func<MiddlewareContext, CancellationToken, Task<IWebApiResponse>>>(expressionBody, contextParam, cancellationTokenParam);
+            return expressionLambda.Compile();
         }
     }
 }

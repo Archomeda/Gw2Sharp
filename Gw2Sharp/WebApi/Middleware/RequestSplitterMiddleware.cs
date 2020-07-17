@@ -31,12 +31,10 @@ namespace Gw2Sharp.WebApi.Middleware
         }
 
         /// <inheritdoc />
-        public virtual Task<IWebApiResponse> OnRequestAsync(IConnection connection, IWebApiRequest request, Func<IWebApiRequest, CancellationToken, Task<IWebApiResponse>> callNext, CancellationToken cancellationToken = default)
+        public virtual Task<IWebApiResponse> OnRequestAsync(MiddlewareContext context, Func<MiddlewareContext, CancellationToken, Task<IWebApiResponse>> callNext, CancellationToken cancellationToken = default)
         {
-            if (connection is null)
-                throw new ArgumentNullException(nameof(connection));
-            if (request is null)
-                throw new ArgumentNullException(nameof(request));
+            if (context is null)
+                throw new ArgumentNullException(nameof(context));
             if (callNext is null)
                 throw new ArgumentNullException(nameof(callNext));
             return ExecAsync();
@@ -44,19 +42,19 @@ namespace Gw2Sharp.WebApi.Middleware
             async Task<IWebApiResponse> ExecAsync()
             {
                 string[] idsList = Array.Empty<string>();
-                if (request.Options.EndpointQuery.TryGetValue(request.Options.BulkQueryParameterIdsName, out string? ids))
+                if (context.Request.Options.EndpointQuery.TryGetValue(context.Request.Options.BulkQueryParameterIdsName, out string? ids))
                     idsList = ids.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
 
                 if (idsList.Length <= this.MaxRequestSize)
-                    return await callNext(request, cancellationToken).ConfigureAwait(false);
+                    return await callNext(context, cancellationToken).ConfigureAwait(false);
 
                 var partitions = Partitioner.Create(0, idsList.Length, this.MaxRequestSize).GetDynamicPartitions();
                 var partitionRequests = partitions.Select(x =>
                 {
                     string[] partitionIds = idsList[x.Item1..x.Item2];
-                    var partitionRequest = request.DeepCopy();
-                    partitionRequest.Options.EndpointQuery[request.Options.BulkQueryParameterIdsName] = string.Join(",", partitionIds);
-                    return partitionRequest;
+                    var partitionContext = new MiddlewareContext(context.Connection, context.Request.DeepCopy());
+                    partitionContext.Request.Options.EndpointQuery[context.Request.Options.BulkQueryParameterIdsName] = string.Join(",", partitionIds);
+                    return partitionContext;
                 });
 
                 var partitionResponses = new List<IWebApiResponse>();

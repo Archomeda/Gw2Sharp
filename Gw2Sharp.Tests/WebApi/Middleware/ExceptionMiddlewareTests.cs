@@ -34,13 +34,14 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
         {
             var connection = Substitute.For<IConnection>();
             var request = Substitute.For<IWebApiRequest>();
+            var context = new MiddlewareContext(connection, request);
             var response = Substitute.For<IWebApiResponse>();
             response.Content.Returns($"{{\"text\":\"{errorText}\"}}");
             response.StatusCode.Returns(statusCode);
 
             var middleware = new ExceptionMiddleware();
             var exception = (UnexpectedStatusException<ErrorObject>)await Assert.ThrowsAsync(exceptionType,
-                () => middleware.OnRequestAsync(connection, request, (r, t) => Task.FromResult(response)));
+                () => middleware.OnRequestAsync(context, (c, t) => Task.FromResult(response)));
             Assert.Equal(errorText, exception.Response?.Content.Text);
         }
 
@@ -51,12 +52,13 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
 
             var connection = Substitute.For<IConnection>();
             var request = Substitute.For<IWebApiRequest>();
+            var context = new MiddlewareContext(connection, request);
             var response = Substitute.For<IWebApiResponse>();
             response.Content.Returns(BODY);
             response.StatusCode.Returns(HttpStatusCode.InternalServerError);
 
             var middleware = new ExceptionMiddleware();
-            var exception = await Assert.ThrowsAsync<UnexpectedStatusException>(() => middleware.OnRequestAsync(connection, request, (r, t) => Task.FromResult(response)));
+            var exception = await Assert.ThrowsAsync<UnexpectedStatusException>(() => middleware.OnRequestAsync(context, (c, t) => Task.FromResult(response)));
             Assert.Equal(BODY, exception.Response?.Content);
         }
 
@@ -67,12 +69,13 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
 
             var connection = Substitute.For<IConnection>();
             var request = Substitute.For<IWebApiRequest>();
+            var context = new MiddlewareContext(connection, request);
             var response = Substitute.For<IWebApiResponse>();
             response.Content.Returns(MESSAGE);
             response.StatusCode.Returns((HttpStatusCode)499);
 
             var middleware = new ExceptionMiddleware();
-            var exception = await Assert.ThrowsAsync<UnexpectedStatusException>(() => middleware.OnRequestAsync(connection, request, (r, t) => Task.FromResult(response)));
+            var exception = await Assert.ThrowsAsync<UnexpectedStatusException>(() => middleware.OnRequestAsync(context, (c, t) => Task.FromResult(response)));
             Assert.Equal(MESSAGE, exception.Response?.Content);
         }
     }
