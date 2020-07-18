@@ -163,8 +163,9 @@ var connectionWithCustomCache = new Connection
     // Persistent ZIP storage for render requests
     RenderCacheMethod = new ArchiveCacheMethod(&quot;render-cache.zip&quot;)
 };
-</code></pre><p><strong>Heads up!</strong><br>It&#39;s possible to share one instance of <code>MemoryCacheMethod</code> or <code>ArchiveCacheMethod</code> across different instances of <code>Connection</code>s.<br>In case of <code>ArchiveCacheMethod</code>, do <strong>not</strong> create <em>multiple</em> instances of this class with references to the same file.
+</code></pre><div class="IMPORTANT"><h5>Important</h5><p>It&#39;s possible to share one instance of <code>MemoryCacheMethod</code> or <code>ArchiveCacheMethod</code> across different instances of <code>Connection</code>s.<br>In case of <code>ArchiveCacheMethod</code>, do <strong>not</strong> create <em>multiple</em> instances of this class with references to the same file.
 A ZIP archive file can only be used by <em>one</em> instance of <code>ArchiveCacheMethod</code>.</p>
+</div>
 </article>
           </div>
           

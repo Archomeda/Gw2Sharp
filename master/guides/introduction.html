@@ -228,12 +228,14 @@ await renderClient.DownloadToStreamAsync(appleStream, appleUrl);
 <h2 id="mumble-link">Mumble Link</h2>
 <p>Accessing the Mumble Link service is done through the main <code>Gw2Sharp.Gw2Client</code>:</p>
 <pre><code class="lang-cs">var mumbleClient = client.Mumble;
-</code></pre><p><strong>Note:</strong> The Mumble Link service client requires Guild Wars 2 to be running on a Windows operating system.
+</code></pre><div class="WARNING"><h5>Warning</h5><p>The Mumble Link service client requires Guild Wars 2 to be running on a Windows operating system.
 However, this validation is totally up to you.
 The property <code>IsAvailable</code> will return <code>true</code> if the Guild Wars 2 Mumble Link API is available.</p>
-<p>You are responsible for updating the Mumble Link values by calling the method <code>Update()</code>.
+</div>
+<div class="NOTE"><h5>Note</h5><p>You are responsible for updating the Mumble Link values by calling the method <code>Update()</code>.
 The update tick rate depends on how fast the game is updating the frames.
 For example, if Guild Wars 2 is running at 60 frames per second, the Mumble Link API will be updated 60 times per second.</p>
+</div>
 <p>Note that some of the values in <code>Gw2MumbleClient</code> are lazily evaluated.
 The reason is that these values are parsed from a JSON string that Guild Wars 2 provides through the Mumble Link.
 In order to keep performance to a maximum, the following JSON properties are only parsed when you request them:</p>
@@ -247,8 +249,9 @@ In order to keep performance to a maximum, the following JSON properties are onl
 <li><code>FieldOfView</code></li>
 <li><code>UiSize</code></li>
 </ul>
-<p><em>If you need the performance, it&#39;s recommended to not request these values on every update, but to cache them locally, and only update once in a while.</em>
-<em>Any other value is safe to be read every tick without taking any additional performance hit.</em></p>
+<div class="TIP"><h5>Tip</h5><p>If you need the performance, it&#39;s recommended to not request these values on every update, but to cache them locally, and only update once in a while.
+Any other value is safe to be read every tick without taking any additional performance hit.</p>
+</div>
 <h3 id="custom-mumble-link-names">Custom Mumble Link names</h3>
 <p>Support for custom Mumble Link names has been added with the April 28th, 2020 update.
 This means that you can use any custom name that&#39;s different from the default (which is <code>MumbleLink</code>).
@@ -259,8 +262,9 @@ In order to access any custom named Mumble Link, you can do the following:</p>
 </code></pre><p>All calls to the indexer are redirected to an internal cache of the used clients.
 This is to make sure that only one instance of a given name is created to save resources, and that when the root client is disposed, all the child clients are disposed as well.
 If just a child client is disposed however, the root client is untouched.</p>
-<p><em>Keep in mind that you don&#39;t want to dispose the root client manually.</em>
-<em>This is done automatically for you whenever you dispose the <code>IGw2Client</code> itself.</em></p>
+<div class="TIP"><h5>Tip</h5><p>Keep in mind that while the root client is disposable, you don&#39;t want to dispose it yourself manually.
+Disposing is done automatically whenever the <code>IGw2Client</code> is disposed.</p>
+</div>
 <hr>
 <h2 id="chat-links">Chat links</h2>
 <p>Accessing the chat links is a bit different compared to the other services.
