@@ -32,18 +32,16 @@ Install-Package Gw2Sharp
 
 ### CI builds
 Whenever a new commit is pushed, a workflow will run on GitHub Actions.
-This will result in a new CI build that will be automatically uploaded to [MyGet](https://www.myget.org/feed/gw2sharp/package/nuget/Gw2Sharp).
+This will result in a new CI build that will be automatically uploaded to a [separate NuGet feed on Azure Artifacts](https://dev.azure.com/archomeda/Gw2Sharp/_packaging?_a=feed&feed=Nightly).
 Note that these builds are not considered to be stable, they are meant only for testing purposes.
 
-First, you'll have to create a new `nuget.config` file and add the MyGet package source to it:
+First, you'll have to create a new `nuget.config` file and add the package source to it:
 ```xml
-<add key="Gw2Sharp-MyGet" value="https://www.myget.org/F/gw2sharp/api/v3/index.json" />
+<add key="Gw2Sharp-Nightly" value="https://pkgs.dev.azure.com/Archomeda/Gw2Sharp/_packaging/Nightly/nuget/v3/index.json" />
 ```
 
 Afterwards, you can install a specific version by choosing one in your package manager.
-**Keep in mind that the versions uploaded to MyGet will not be available forever.**
-MyGet is very restrictive with storage capacity for free accounts.
-Therefore I will remove older versions that aren't relevant anymore.
+**Keep in mind that versions uploaded to this feed will not be available forever.**
 
 ## Usage
 For basic usage, check out the [introductory guide](https://archomeda.github.io/Gw2Sharp/master/guides/introduction.html).  
