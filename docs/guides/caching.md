@@ -34,7 +34,7 @@ var connectionWithCustomCache = new Connection
 };
 ```
 
-**Heads up!**  
-It's possible to share one instance of `MemoryCacheMethod` or `ArchiveCacheMethod` across different instances of `Connection`s.  
-In case of `ArchiveCacheMethod`, do **not** create *multiple* instances of this class with references to the same file.
-A ZIP archive file can only be used by *one* instance of `ArchiveCacheMethod`.
+> [!IMPORTANT]
+> It's possible to share one instance of `MemoryCacheMethod` or `ArchiveCacheMethod` across different instances of `Connection`s.  
+> In case of `ArchiveCacheMethod`, do **not** create *multiple* instances of this class with references to the same file.
+> A ZIP archive file can only be used by *one* instance of `ArchiveCacheMethod`.

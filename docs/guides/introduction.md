@@ -123,13 +123,15 @@ Accessing the Mumble Link service is done through the main `Gw2Sharp.Gw2Client`:
 var mumbleClient = client.Mumble;
 ```
 
-**Note:** The Mumble Link service client requires Guild Wars 2 to be running on a Windows operating system.
-However, this validation is totally up to you.
-The property `IsAvailable` will return `true` if the Guild Wars 2 Mumble Link API is available.
+> [!WARNING]
+> The Mumble Link service client requires Guild Wars 2 to be running on a Windows operating system.
+> However, this validation is totally up to you.
+> The property `IsAvailable` will return `true` if the Guild Wars 2 Mumble Link API is available.
 
-You are responsible for updating the Mumble Link values by calling the method `Update()`.
-The update tick rate depends on how fast the game is updating the frames.
-For example, if Guild Wars 2 is running at 60 frames per second, the Mumble Link API will be updated 60 times per second.
+> [!NOTE]
+> You are responsible for updating the Mumble Link values by calling the method `Update()`.
+> The update tick rate depends on how fast the game is updating the frames.
+> For example, if Guild Wars 2 is running at 60 frames per second, the Mumble Link API will be updated 60 times per second.
 
 Note that some of the values in `Gw2MumbleClient` are lazily evaluated.
 The reason is that these values are parsed from a JSON string that Guild Wars 2 provides through the Mumble Link.
@@ -143,8 +145,9 @@ In order to keep performance to a maximum, the following JSON properties are onl
 - `FieldOfView`
 - `UiSize`
 
-*If you need the performance, it's recommended to not request these values on every update, but to cache them locally, and only update once in a while.*
-*Any other value is safe to be read every tick without taking any additional performance hit.*
+> [!TIP]
+> If you need the performance, it's recommended to not request these values on every update, but to cache them locally, and only update once in a while.
+> Any other value is safe to be read every tick without taking any additional performance hit.
 
 ### Custom Mumble Link names
 Support for custom Mumble Link names has been added with the April 28th, 2020 update.
@@ -161,8 +164,9 @@ All calls to the indexer are redirected to an internal cache of the used clients
 This is to make sure that only one instance of a given name is created to save resources, and that when the root client is disposed, all the child clients are disposed as well.
 If just a child client is disposed however, the root client is untouched.
 
-*Keep in mind that you don't want to dispose the root client manually.*
-*This is done automatically for you whenever you dispose the `IGw2Client` itself.*
+> [!TIP]
+> Keep in mind that while the root client is disposable, you don't want to dispose it yourself manually.
+> Disposing is done automatically whenever the `IGw2Client` is disposed.
 
 ---
 

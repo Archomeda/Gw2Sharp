@@ -22,7 +22,8 @@ The following exceptions can be thrown from Gw2Sharp:
     - [`ServerErrorException`](../api/Gw2Sharp.WebApi.Http.ServerErrorException.html) (500): The server encountered an error
     - [`ServiceUnavailableException`](../api/Gw2Sharp.WebApi.Http.ServiceUnavailableException.html) (503): The server is temporarily unavailable
 
-As you can see, all custom exceptions inherit from `RequestException`.
-This makes it easier to have a generic catch-all statement for Gw2Sharp.
-However, certain exceptions may provide extra details as to why it has occured.
-If you need that information, it's recommended to catch the specific exceptions first, before the more generic ones.
+> [!TIP]
+> As you can see, all custom exceptions inherit from `RequestException`.
+> This makes it easier to have a generic catch-all statement for Gw2Sharp.
+> However, certain exceptions may provide extra details as to why it has occured.
+> If you need that information, it's recommended to catch the specific exceptions first, before the more generic ones.

@@ -34,6 +34,7 @@ Install-Package Gw2Sharp
 Whenever a new commit is pushed, a workflow will run on GitHub Actions.
 This will result in a new CI build that will be automatically uploaded to a [separate NuGet feed on Azure Artifacts](https://dev.azure.com/archomeda/Gw2Sharp/_packaging?_a=feed&feed=Nightly).
 Note that these builds are not considered to be stable, they are meant only for testing purposes.
+Therefore, these packages are also compiled in debug configuration and have their symbols included
 
 First, you'll have to create a new `nuget.config` file and add the package source to it:
 ```xml
