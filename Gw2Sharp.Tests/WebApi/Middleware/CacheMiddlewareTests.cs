@@ -1,17 +1,21 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using AutoFixture;
+using AutoFixture.Kernel;
 using AutoFixture.Xunit2;
 using FluentAssertions;
 using FluentAssertions.Extensions;
+using Gw2Sharp.WebApi.Caching;
 using Gw2Sharp.WebApi.Http;
 using Gw2Sharp.WebApi.Middleware;
 using NSubstitute;
 using Objectivity.AutoFixture.XUnit2.AutoNSubstitute.Attributes;
+using Objectivity.AutoFixture.XUnit2.Core.Attributes;
 using Xunit;
 
 namespace Gw2Sharp.Tests.WebApi.Middleware
@@ -27,28 +31,17 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
             public string Value { get; set; }
         }
 
-        [Theory]
-        [AutoMockData]
-        public async Task SingleRequestAsyncTest([Frozen] MiddlewareContext context, [Frozen] IWebApiResponse response)
+
+        #region Data
+
+        public static readonly object[] HeaderCases =
         {
-            var options = new WebApiRequestOptions
-            {
-                EndpointPath = "/some/endpoint"
-            };
-            context.Request.Options.Returns(options);
+            new[] { default(string) },
+            new[] { "Accept-Language" },
+            new[] { "Authorization" }
+        };
 
-            // Do the request
-            var middleware = new CacheMiddleware();
-            var finalResponse = await middleware.OnRequestAsync(context, (r, t) => Task.FromResult(response));
-            finalResponse.Should().BeSameAs(response);
-
-            // Repeat the request to check for the header
-            // The result in the callNext parameter shouldn't matter, if the cache is used, that Func shouldn't even be called
-            var cachedResponse = await middleware.OnRequestAsync(context, (r, t) => Task.FromResult<IWebApiResponse>(default));
-            cachedResponse.Should().BeEquivalentTo(finalResponse);
-        }
-
-        public static readonly object[] ManyRequestsAsyncCases =
+        public static readonly object[] QueryWithManyCases =
         {
             new[] { "ids=all" },
             new object[]
@@ -65,171 +58,113 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
             new[] { "page=3&page_size=40" }
         };
 
-        [Theory]
-        [MemberAutoMockData(nameof(ManyRequestsAsyncCases))]
-        public async Task ManyRequestAsyncTest(string queryParams, [Frozen] IList<Element> responseElements,
-            [Frozen] MiddlewareContext context, [Frozen] IWebApiResponse response)
+        public static IEnumerable<object[]> HeaderWithQueryWithManyMatrixCases()
         {
-            var options = new WebApiRequestOptions
-            {
-                EndpointPath = "/some/endpoint",
-                EndpointQuery = queryParams.Split('&').Select(x => x.Split('=')).ToDictionary(x => x[0], x => x.Skip(1).FirstOrDefault())
-            };
-            context.Request.Options.Returns(options);
-            string rawResponse = JsonSerializer.Serialize(responseElements);
-            response.Content.Returns(rawResponse);
+            foreach (object[] header in HeaderCases)
+            foreach (object[] queryWithMany in QueryWithManyCases)
+                yield return header.Concat(queryWithMany).ToArray();
+        }
+
+        #endregion
+
+
+        [Theory]
+        [MemberAutoMockData(nameof(HeaderCases), ShareFixture = false)]
+        public async Task SingleRequestAsyncTest(
+            string responseHeaderNameToAdd,
+            [CustomizeWith(typeof(MemoryCacheMethodAutoFixture))] [Frozen] MiddlewareContext context,
+            [Frozen] IWebApiResponse response,
+            IFixture fixture)
+        {
+            context.Request.Options.Returns(CreateRequestOptions());
+            SetResponseHeader(response, responseHeaderNameToAdd, fixture.Create<string>());
 
             // Do the request
             var middleware = new CacheMiddleware();
-            var finalResponse = await middleware.OnRequestAsync(context, (r, t) => Task.FromResult(response));
-            finalResponse.Should().BeEquivalentTo(response);
-
-            // Repeat the request to check for the header
-            // The result in the callNext parameter shouldn't matter, if the cache is used, that Func shouldn't even be called
-            var cachedResponse = await middleware.OnRequestAsync(context, (r, t) => Task.FromResult<IWebApiResponse>(default));
-            cachedResponse.Should().BeEquivalentTo(finalResponse);
+            var liveResponse = await middleware.OnRequestAsync(context, (r, t) => Task.FromResult(response));
+            liveResponse.Should().BeSameAs(response);
         }
 
         [Theory]
-        [AutoMockData]
-        public async Task ReadsExpiresTest([Frozen] MiddlewareContext context, [Frozen] IWebApiResponse response)
+        [MemberAutoMockData(nameof(HeaderCases), ShareFixture = false)]
+        public async Task CachesSingleRequestAsyncTest(
+            string responseHeaderNameToAdd,
+            [CustomizeWith(typeof(MemoryCacheMethodAutoFixture))] [Frozen] MiddlewareContext context,
+            [CustomizeWith(typeof(ExpiresHeaderAutoFixture))] [Frozen] IWebApiResponse response,
+            IFixture fixture)
         {
-            var options = new WebApiRequestOptions
-            {
-                EndpointPath = "/some/endpoint"
-            };
-            context.Request.Options.Returns(options);
+            context.Request.Options.Returns(CreateRequestOptions());
+            SetResponseHeader(response, responseHeaderNameToAdd, fixture.Create<string>());
 
-            string expiresAt = 30.Minutes().After(DateTime.UtcNow).ToString("r");
-            var responseHeaders = new Dictionary<string, string>
-            {
-                ["Expires"] = expiresAt
-            };
-            response.ResponseHeaders.Returns(responseHeaders);
-
-            // Do the request
+            // Do the first request
             var middleware = new CacheMiddleware();
             await middleware.OnRequestAsync(context, (r, t) => Task.FromResult(response));
 
-            // Repeat the request to check for the header
-            // The result in the callNext parameter shouldn't matter, if the cache is used, that Func shouldn't even be called
-            var cachedResponse = await middleware.OnRequestAsync(context, (r, t) => Task.FromResult<IWebApiResponse>(default));
-            cachedResponse.ResponseHeaders.Should().Contain(new KeyValuePair<string, string>("Expires", expiresAt));
+            // Repeat the request to see if it's taken from the cache
+            var cachedResponse = await middleware.OnRequestAsync(context, (r, t) => throw new InvalidOperationException("should not be hit"));
+            cachedResponse.Should().BeEquivalentTo(response);
         }
 
+
         [Theory]
-        [InlineAutoMockData("Accept-Language")]
-        [InlineAutoMockData("Authorization")]
-        public async Task TakesHeaderIntoAccountForCachingSeparatelyTest(string headerName, IList<string> headerValues,
-            [Frozen] MiddlewareContext context, IFixture fixture)
+        [MemberAutoMockData(nameof(HeaderWithQueryWithManyMatrixCases), ShareFixture = false)]
+        public async Task ManyRequestAsyncTest(
+            string responseHeaderNameToAdd,
+            string queryParams,
+            [Frozen] IList<Element> responseElements,
+            [CustomizeWith(typeof(MemoryCacheMethodAutoFixture))] [Frozen] MiddlewareContext context,
+            [Frozen] IWebApiResponse response,
+            IFixture fixture)
         {
-            var options = new WebApiRequestOptions
-            {
-                EndpointPath = "/some/endpoint"
-            };
-            context.Request.Options.Returns(options);
+            context.Request.Options.Returns(CreateRequestOptions(queryParams));
+            SetResponseHeader(response, responseHeaderNameToAdd, fixture.Create<string>());
+            SetResponseContent(response, responseElements);
 
-            var expiresAt = 30.Minutes().After(DateTime.UtcNow);
-            var responseHeaders = new Dictionary<string, string>
-            {
-                ["Expires"] = expiresAt.ToString("r")
-            };
-            var response = fixture.Create<IWebApiResponse>();
-            response.ResponseHeaders.Returns(responseHeaders);
-
-            // Call the requests with different headers, the results should be different from each other
+            // Do the request
             var middleware = new CacheMiddleware();
-            var finalResponseWithoutHeader = await middleware.OnRequestAsync(context, (r, t) => Task.FromResult(response));
-            var finalResponsesWithHeader = new List<IWebApiResponse>();
-            foreach (string headerValue in headerValues)
-            {
-                options.RequestHeaders.Clear();
-                options.RequestHeaders[headerName] = headerValue;
-                response = fixture.Create<IWebApiResponse>();
-                response.ResponseHeaders.Returns(responseHeaders);
-
-                finalResponsesWithHeader.Add(await middleware.OnRequestAsync(context, (r, t) => Task.FromResult(response)));
-            }
-            finalResponsesWithHeader.Should().NotContain(finalResponseWithoutHeader);
-            finalResponsesWithHeader.Should().OnlyHaveUniqueItems();
-
-            // Call the requests again to see if the responses are the same as the first ones
-            options.RequestHeaders.Clear();
-
-            // The result in the callNext parameter shouldn't matter, if the cache is used, that Func shouldn't even be called
-            var cachedFinalResponseWithoutHeader = await middleware.OnRequestAsync(context, (r, t) => Task.FromResult<IWebApiResponse>(default));
-            var cachedFinalResponsesWithHeader = new List<IWebApiResponse>();
-            foreach (string headerValue in headerValues)
-            {
-                options.RequestHeaders.Clear();
-                options.RequestHeaders[headerName] = headerValue;
-
-                // The result in the callNext parameter shouldn't matter, if the cache is used, that Func shouldn't even be called
-                cachedFinalResponsesWithHeader.Add(await middleware.OnRequestAsync(context, (r, t) => Task.FromResult<IWebApiResponse>(default)));
-            }
-            cachedFinalResponseWithoutHeader.Should().BeSameAs(finalResponseWithoutHeader);
-            cachedFinalResponsesWithHeader.Should().BeEquivalentTo(finalResponsesWithHeader);
+            var liveResponse = await middleware.OnRequestAsync(context, (r, t) => Task.FromResult(response));
+            liveResponse.Should().BeEquivalentTo(response);
         }
 
-        public static readonly object[] ManyRequestCachesIndividualsFromManyRequestAsyncCases =
+        [Theory]
+        [MemberAutoMockData(nameof(HeaderWithQueryWithManyMatrixCases), ShareFixture = false)]
+        public async Task CachesManyRequestAsyncTest(
+            string responseHeaderNameToAdd,
+            string queryParams,
+            [Frozen] IList<Element> responseElements,
+            [CustomizeWith(typeof(MemoryCacheMethodAutoFixture))] [Frozen] MiddlewareContext context,
+            [CustomizeWith(typeof(ExpiresHeaderAutoFixture))] [Frozen] IWebApiResponse response,
+            IFixture fixture)
         {
-            new object[]
-            {
-                null,
-                new[]
-                {
-                    new Element { Id = "14", Value = "Value14" },
-                    new Element { Id = "19", Value = "Value19" },
-                    new Element { Id = "20", Value = "Value20" }
-                }
-            },
-            new object[]
-            {
-                "Accept-Language",
-                new[]
-                {
-                    new Element { Id = "14", Value = "Value14" },
-                    new Element { Id = "19", Value = "Value19" },
-                    new Element { Id = "20", Value = "Value20" }
-                }
-            },
-            new object[]
-            {
-                "Authorization",
-                new[]
-                {
-                    new Element { Id = "14", Value = "Value14" },
-                    new Element { Id = "19", Value = "Value19" },
-                    new Element { Id = "20", Value = "Value20" }
-                }
-            }
-        };
+            context.Request.Options.Returns(CreateRequestOptions(queryParams));
+            SetResponseHeader(response, responseHeaderNameToAdd, fixture.Create<string>());
+            SetResponseContent(response, responseElements);
+
+            // Do the first request
+            var middleware = new CacheMiddleware();
+            await middleware.OnRequestAsync(context, (r, t) => Task.FromResult(response));
+
+            // Repeat the request to see if it's taken from the cache
+            var cachedResponse = await middleware.OnRequestAsync(context, (r, t) => throw new InvalidOperationException("should not be hit"));
+            cachedResponse.Should().BeEquivalentTo(response);
+        }
 
         [Theory]
-        [MemberAutoMockData(nameof(ManyRequestCachesIndividualsFromManyRequestAsyncCases))]
-        public async Task TakesHeaderIntoAccountForCachingSeparatelyFromManyRequestAsyncTest(string? headerName, [Frozen] IList<Element> responseElements,
-            string headerValue, [Frozen] MiddlewareContext context, IFixture fixture)
+        [MemberAutoMockData(nameof(HeaderWithQueryWithManyMatrixCases), ShareFixture = false)]
+        public async Task CachesManyRequestSeparatelyAsyncTest(
+            string responseHeaderNameToAdd,
+            string queryParams,
+            [Frozen] IList<Element> responseElements,
+            [CustomizeWith(typeof(MemoryCacheMethodAutoFixture))] [Frozen] MiddlewareContext context,
+            [CustomizeWith(typeof(ExpiresHeaderAutoFixture))] [Frozen] IWebApiResponse response,
+            IFixture fixture)
         {
-            var options = new WebApiRequestOptions
-            {
-                EndpointPath = "/some/endpoint",
-                EndpointQuery = new Dictionary<string, string> { ["ids"] = string.Join(",", responseElements.Select(x => x.Id)) }
-            };
-            if (!string.IsNullOrEmpty(headerName))
-                options.RequestHeaders[headerName] = headerValue;
+            var options = CreateRequestOptions(queryParams);
             context.Request.Options.Returns(options);
+            SetResponseHeader(response, responseHeaderNameToAdd, fixture.Create<string>());
+            SetResponseContent(response, responseElements);
 
-            string expiresAt = 30.Minutes().After(DateTime.UtcNow).ToString("r");
-            var responseHeaders = new Dictionary<string, string>
-            {
-                ["Expires"] = expiresAt
-            };
-            var response = fixture.Create<IWebApiResponse>();
-            response.ResponseHeaders.Returns(responseHeaders);
-            string rawResponse = JsonSerializer.Serialize(responseElements);
-            response.Content.Returns(rawResponse);
-
-            // Do the many request first
+            // Do the first request
             var middleware = new CacheMiddleware();
             await middleware.OnRequestAsync(context, (r, t) => Task.FromResult(response));
 
@@ -237,16 +172,88 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
             options.EndpointQuery.Clear();
             foreach (var element in responseElements)
             {
-                options.EndpointPath = "/some/endpoint";
                 options.PathSuffix = element.Id;
 
-                // The result in the callNext parameter shouldn't matter, if the cache is used, that Func shouldn't even be called
-                var elementResponse = await middleware.OnRequestAsync(context, (r, t) => Task.FromResult<IWebApiResponse>(default));
+                var elementResponse = await middleware.OnRequestAsync(context, (r, t) => throw new InvalidOperationException("should not be hit"));
 
-                elementResponse.ResponseHeaders.Should().Contain(new KeyValuePair<string, string>("Expires", expiresAt));
                 var elementObject = JsonSerializer.Deserialize<Element>(elementResponse.Content);
                 elementObject.Should().BeEquivalentTo(element);
             }
         }
+
+
+        #region Helpers
+
+        private static WebApiRequestOptions CreateRequestOptions(string queryParams = null)
+        {
+            var options = new WebApiRequestOptions
+            {
+                EndpointPath = "/some/endpoint"
+            };
+            if (!string.IsNullOrWhiteSpace(queryParams))
+                options.EndpointQuery = queryParams.Split('&').Select(x => x.Split('=')).ToDictionary(x => x[0], x => x.Skip(1).FirstOrDefault());
+            return options;
+        }
+
+        private static void SetResponseContent<T>(IWebApiResponse response, T content)
+        {
+            string rawResponse = JsonSerializer.Serialize(content);
+            response.Content.Returns(rawResponse);
+        }
+
+        private static void SetResponseHeader(IWebApiResponse response, string headerName, string headerValue)
+        {
+            if (string.IsNullOrEmpty(headerName))
+                return;
+
+            if (response.ResponseHeaders is Dictionary<string, string> dictionary)
+                dictionary[headerName] = headerValue;
+            else
+                response.ResponseHeaders.Returns(new Dictionary<string, string> { [headerName] = headerValue });
+        }
+
+        #endregion
+
+
+        #region AutoFixture customizations
+
+        private class MemoryCacheMethodAutoFixture : ICustomization
+        {
+            public void Customize(IFixture fixture) =>
+                fixture.Customizations.Add(new TypeRelay(typeof(ICacheMethod), typeof(MemoryCacheMethod)));
+        }
+
+        private class ExpiresHeaderAutoFixture : ICustomization
+        {
+            public void Customize(IFixture fixture) =>
+                fixture.Customizations.Add(new ExpiresHeaderAutoFixtureBuilder());
+        }
+
+        private class ExpiresHeaderAutoFixtureBuilder : ISpecimenBuilder
+        {
+            public object Create(object request, ISpecimenContext context)
+            {
+                if (!(request is PropertyInfo propertyInfo))
+                    return new NoSpecimen();
+
+                if (!propertyInfo.DeclaringType.IsGenericType)
+                    return new NoSpecimen();
+
+                var genericType = propertyInfo.DeclaringType.GetGenericTypeDefinition();
+                if (typeof(IWebApiResponse<>).IsAssignableFrom(genericType) && propertyInfo.Name == nameof(IWebApiResponse.ResponseHeaders))
+                {
+                    string expiresAt = 30.Minutes().After(DateTime.UtcNow).ToString("r");
+                    var responseHeaders = new Dictionary<string, string>
+                    {
+                        ["Expires"] = expiresAt
+                    };
+                    return responseHeaders;
+                }
+
+                return new NoSpecimen();
+            }
+        }
+
+        #endregion
     }
 }
