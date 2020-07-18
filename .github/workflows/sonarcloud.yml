@@ -19,8 +19,8 @@ jobs:
       - uses: Archomeda/sonarcloud-dotnet-action@v1
         with:
           sonarToken: ${{ secrets.SONAR_TOKEN }}
-          sonarOrganization: 'archomeda-github'
-          sonarProject: 'Archomeda_Gw2Sharp'
-          sonarAdditionalArgs: '/d:sonar.cs.opencover.reportsPaths=**/coverage.opencover.xml'
+          sonarOrganization: archomeda-github
+          sonarProject: Archomeda_Gw2Sharp
+          sonarAdditionalArgs: /d:sonar.cs.opencover.reportsPaths=**/coverage.opencover.xml
       - name: Run dotnet test
         run: dotnet test --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
