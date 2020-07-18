@@ -63,4 +63,6 @@ jobs:
       - name: Run dotnet pack
         run: dotnet pack Gw2Sharp -c Release --no-build -p:VERSIONED_BUILD=$env:VERSION
       - name: Run dotnet nuget push
-        run: dotnet nuget push **/*.symbols.nupkg -s "https://pkgs.dev.azure.com/Archomeda/Gw2Sharp/_packaging/Nightly/nuget/v3/index.json" -k "${{ secrets.DEVOPS_TOKEN }}"
+        run: |
+          dotnet nuget add source https://pkgs.dev.azure.com/Archomeda/Gw2Sharp/_packaging/Nightly/nuget/v3/index.json -n AzureDevOps -u github-actions -p "${{ secrets.DEVOPS_TOKEN }}"
+          dotnet nuget push **/*.symbols.nupkg -s AzureDevOps -k "${{ secrets.DEVOPS_TOKEN }}"
