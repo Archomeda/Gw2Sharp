@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Middleware </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Middleware ">
+    <meta name="generator" content="docfx 2.53.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc">
+    <meta property="docfx:tocrel" content="toc">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+                
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../guides/introduction.html" title="Guides">Guides</a>
+                      </li>
+                      <li>
+                          <a href="../api/index.html" title="API Documentation">API Documentation</a>
+                      </li>
+                      <li>
+                          <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/CHANGELOG.md" title="Changelog">Changelog</a>
+                      </li>
+                </ul>    </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+                  
+                  <ul class="nav level1">
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Basic Guides</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="introduction.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                          <li class="">
+                            <a href="endpoints.html" title="Supported endpoints" class="">Supported endpoints</a>
+                          </li>
+                          <li class="">
+                            <a href="exception-handling.html" title="Exception handling" class="">Exception handling</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Advanced Guides</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="caching.html" title="Caching" class="">Caching</a>
+                          </li>
+                          <li class="">
+                            <a href="http-headers.html" title="HTTP headers" class="">HTTP headers</a>
+                          </li>
+                          <li class="">
+                            <a href="last-modified.html" title="Last-Modified" class="">Last-Modified</a>
+                          </li>
+                          <li class="active">
+                            <a href="middleware.html" title="Middleware" class="active">Middleware</a>
+                          </li>
+                          <li class="">
+                            <a href="subtokens.html" title="Subtokens" class="">Subtokens</a>
+                          </li>
+                          <li class="">
+                            <a href="symbols.html" title="Debug symbols" class="">Debug symbols</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Tips</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="render-url.html" title="Using RenderUrl" class="">Using RenderUrl</a>
+                          </li>
+                        </ul>  </li>
+                  </ul>        </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Guides.Middleware">
+<h1 id="using-api-middleware">Using API middleware</h1>
+
+<p>Middleware can be used to change an API request before it&#39;s sent, or after it&#39;s been received.
+As an example, by default Gw2Sharp uses middleware to support <a class="xref" href="caching.html">caching</a>, <a class="xref" href="exception-handling.html">exception handling</a> and request splitting.
+Keep in mind that this middleware is only supported for web API calls.
+Render service calls do not use middleware.</p>
+<p>You are free to configure the middleware as you like, however it&#39;s recommended to keep the default ones.
+Accessing the list of middleware is done through the <code>Middleware</code> property in the <code>Connection</code> object.
+This property is an <code>IList</code> and can be manipulated however you like.</p>
+<pre><code class="lang-cs">var connection = new Gw2Sharp.Connection();
+var middleware = connection.Middleware;
+middleware.Add(newMiddlewareAtEnd);
+middleware.Insert(0, newMiddlewareAtStart);
+</code></pre><p>By default, <code>connection.Middleware</code> contains an instance of the following middleware in order:</p>
+<ul>
+<li><a href="#cachemiddleware"><code>CacheMiddleware</code></a></li>
+<li><a href="#requestsplittermiddleware"><code>RequestSplitterMiddleware</code></a></li>
+<li><a href="#exceptionmiddleware"><code>ExceptionMiddleware</code></a></li>
+</ul>
+<h2 id="cachemiddleware"><code>CacheMiddleware</code></h2>
+<p>This middleware is required if you want to use caching.
+It&#39;s only one part of the caching requirement.
+Check <a class="xref" href="caching.html">the guide on caching</a> for more information.</p>
+<p>This middleware does not have any customizable configuration.</p>
+<h2 id="requestsplittermiddleware"><code>RequestSplitterMiddleware</code></h2>
+<p>This middleware makes sure that any request that exceeds the maximum number of requested items in a bulk request, is split up in multiple smaller requests that the API can handle.
+Effectively, this means that if you request 500 items in any endpoint client that supports bulk expansion (e.g. <a href="../api/Gw2Sharp.WebApi.V2.Clients.ItemsClient.html"><code>Gw2Client.WebApi.V2.Items</code></a>), this middleware splits your request up into 3 smaller requests (200, 200 and 100 items) and merges them together when it returns.</p>
+<p>Currently, the requests are sent sequentially and not simultaneously.
+The reason why there is no bursting feature, is that some endpoints contain so many items that by requesting all of them, you&#39;ll hit the rate limit extremely fast.
+Because Gw2Sharp has no way to prevent this from happening at the moment (e.g. by artificially limiting requests client-sided or by listening to HTTP 429 responses), the request will most likely fail because of a very high chance of exceeding the rate limit with at least one splitted request.</p>
+<p>This middleware supports configuring the maximum number of items per bulk request through the <code>MaxRequestSize</code> property. However, it&#39;s recommended to keep this at most 200, because the API will deny requests that exceed this number anyway.</p>
+<h2 id="exceptionmiddleware"><code>ExceptionMiddleware</code></h2>
+<p>This middleware checks the HTTP status codes and wraps possible errors in an exception that can be caught in your code.
+Check <a class="xref" href="exception-handling.html">the guide on exception handling</a> for the kinds of exceptions that Gw2Sharp can throw.</p>
+<p>This middleware does not have any customizable configuration.</p>
+<hr>
+<h2 id="implementing-custom-middleware">Implementing custom middleware</h2>
+<p>It&#39;s possible to implement your own middleware.
+You do this by implementing the <code>IWebApiMiddleware</code> interface as follows:</p>
+<pre><code class="lang-cs">public class CustomMiddleware : Gw2Sharp.WebApi.Middleware.IWebApiMiddleware
+{
+    public async Task&lt;IWebApiResponse&gt; OnRequestAsync(MiddlewareContext context, Func&lt;MiddlewareContext, CancellationToken, Task&lt;IWebApiResponse&gt;&gt; callNext, CancellationToken cancellationToken = default)
+    {
+        // Your pre-request logic here
+        // If you desire, you can modify the context before sending it
+        // to the next middleware
+        // ...
+
+        // Pass the execution to the next middleware in line
+        var response = await callNext(context, cancellationToken);
+
+        // Your post-request logic here
+        // If you desire, you can modify the response before returning it
+        // to the previous middleware
+        // ...
+
+        return response;
+    }
+}
+</code></pre><p>After that, you&#39;ll need to add it to the list of middleware in the <code>Connection</code> instance:</p>
+<pre><code class="lang-cs">// Assuming you already have a connection instance
+var customMiddleware = new CustomMiddleware();
+connection.Middleware.Add(customMiddleware);
+</code></pre><p>Note that the order of the middleware in <code>connection.Middleware</code> is important.
+The execution is from first to last pre-request, and from last to first post-request.
+As an illustration:</p>
+<pre><code>    any request method, e.g. .GetAsync()
+                     |
+                     v
+               middleware[0]
+                     |
+                     v
+               middleware[1]
+                     |
+                     v
+               middleware[2]
+                     |
+                     v
+         executing web API request
+                     |
+                     v
+               middleware[2]
+                     |
+                     v
+               middleware[1]
+                     |
+                     v
+               middleware[0]
+                     |
+                     v         
+                  returns
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/docs/guides/middleware.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

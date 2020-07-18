@@ -112,6 +112,9 @@
                             <a href="last-modified.html" title="Last-Modified" class="">Last-Modified</a>
                           </li>
                           <li class="">
+                            <a href="middleware.html" title="Middleware" class="">Middleware</a>
+                          </li>
+                          <li class="">
                             <a href="subtokens.html" title="Subtokens" class="">Subtokens</a>
                           </li>
                           <li class="">
@@ -144,7 +147,11 @@ Whenever a request fails, a custom exception will be thrown for you to catch.</p
 <li><a href="../api/Gw2Sharp.WebApi.Http.RequestException.html"><code>RequestException</code></a>: An exception occured during the request<ul>
 <li><a href="../api/Gw2Sharp.WebApi.Http.RequestCanceledException.html"><code>RequestCanceledException</code></a>: The request has been canceled</li>
 <li><a href="../api/Gw2Sharp.WebApi.Http.UnexpectedStatusException.html"><code>UnexpectedStatusException</code></a>: An unexpected HTTP status code was returned from the server<ul>
-<li><a href="../api/Gw2Sharp.WebApi.Http.BadRequestException.html"><code>BadRequestException</code></a> (400): The client sent an invalid request</li>
+<li><a href="../api/Gw2Sharp.WebApi.Http.BadRequestException.html"><code>BadRequestException</code></a> (400): The client sent an invalid request<ul>
+<li><a href="../api/Gw2Sharp.WebApi.Http.ListTooLongException.html"><code>ListTooLongException</code></a> (400): The list of requested resources is too long</li>
+<li><a href="../api/Gw2Sharp.WebApi.Http.PageOutOfRangeException.html"><code>PageOutOfRangeException</code></a> (400): The requested page is out of range</li>
+</ul>
+</li>
 <li><a href="../api/Gw2Sharp.WebApi.Http.AuthorizationRequiredException.html"><code>AuthorizationRequiredException</code></a> (401, 403): The client is unauthorized<ul>
 <li><a href="../api/Gw2Sharp.WebApi.Http.InvalidAccessTokenException.html"><code>InvalidAccessTokenException</code></a> (401, 403): The access token is invalid</li>
 <li><a href="../api/Gw2Sharp.WebApi.Http.MissingScopesException.html"><code>MissingScopesException</code></a> (403): The access token does not have the required scopes</li>
