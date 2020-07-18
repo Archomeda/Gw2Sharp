@@ -36,7 +36,7 @@ namespace Gw2Sharp.WebApi.Render
                 var request = new WebApiRequest(new Uri(renderUrl), this.Connection, this.Gw2Client);
                 using var response = await this.Connection.HttpClient.RequestStreamAsync(request, cancellationToken).ConfigureAwait(false);
 
-#if !NETCOREAPP
+#if NETSTANDARD
                 using var memoryStream = new MemoryStream();
                 await response.ContentStream.CopyToAsync(memoryStream).ConfigureAwait(false);
 #else
@@ -75,7 +75,7 @@ namespace Gw2Sharp.WebApi.Render
         private async Task DownloadToStreamInternalAsync(Stream targetStream, string renderUrl, CancellationToken cancellationToken)
         {
             var cacheItem = await this.DownloadToCacheAsync(renderUrl, cancellationToken).ConfigureAwait(false);
-#if !NETCOREAPP
+#if NETSTANDARD
             using var memoryStream = new MemoryStream(cacheItem.Item, false);
             await memoryStream.CopyToAsync(targetStream).ConfigureAwait(false);
 #else

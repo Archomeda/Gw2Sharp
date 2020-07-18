@@ -61,10 +61,10 @@ namespace Gw2Sharp.WebApi.Middleware
                     HttpStatusCode.Unauthorized => AuthorizationRequiredException.CreateFromResponse(context.Request, errorResponse),
                     HttpStatusCode.Forbidden => AuthorizationRequiredException.CreateFromResponse(context.Request, errorResponse),
                     HttpStatusCode.NotFound => new NotFoundException(context.Request, errorResponse),
-#if NETCOREAPP
-                    HttpStatusCode.TooManyRequests => new TooManyRequestsException(context.Request, errorResponse),
-#else
+#if NETSTANDARD
                     (HttpStatusCode)429 => new TooManyRequestsException(context.Request, errorResponse),
+#else
+                    HttpStatusCode.TooManyRequests => new TooManyRequestsException(context.Request, errorResponse),
 #endif
                     HttpStatusCode.InternalServerError => new ServerErrorException(context.Request, errorResponse),
                     HttpStatusCode.ServiceUnavailable => new ServiceUnavailableException(context.Request, errorResponse),

@@ -30,10 +30,10 @@ namespace Gw2Sharp.WebApi.V2
         private readonly string bulkQueryParameterIdName;
         private readonly string bulkQueryParameterIdsName;
         private readonly string bulkObjectIdName;
-#if NETCOREAPP
-        private readonly IReadOnlyDictionary<string, string> queryParams;
-#else
+#if NETSTANDARD
         private readonly IDictionary<string, string> queryParams;
+#else
+        private readonly IReadOnlyDictionary<string, string> queryParams;
 #endif
 
         private readonly IConnection connection;
@@ -50,10 +50,10 @@ namespace Gw2Sharp.WebApi.V2
             this.bulkQueryParameterIdName = endpointClient.BulkEndpointIdParameterName;
             this.bulkQueryParameterIdsName = endpointClient.BulkEndpointIdsParameterName;
             this.bulkObjectIdName = endpointClient.BulkEndpointIdObjectName;
-#if NETCOREAPP
-            this.queryParams = endpointClient.EndpointQueryParameters.AsReadOnly();
-#else
+#if NETSTANDARD
             this.queryParams = endpointClient.EndpointQueryParameters.ShallowCopy();
+#else
+            this.queryParams = endpointClient.EndpointQueryParameters.AsReadOnly();
 #endif
 
             this.connection = connection;
