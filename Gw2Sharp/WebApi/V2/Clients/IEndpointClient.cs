@@ -8,24 +8,34 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public interface IEndpointClient
     {
         /// <summary>
+        /// The base URL used for this endpoint.
+        /// </summary>
+        string BaseUrl { get; }
+
+        /// <summary>
         /// The endpoint path used for this endpoint.
         /// </summary>
         string EndpointPath { get; }
 
         /// <summary>
-        /// The additional endpoint path parameters for this endpoint.
+        /// The additional endpoint query parameters for this endpoint.
         /// </summary>
-        IDictionary<string, string> EndpointPathParameters { get; }
+        IDictionary<string, string> EndpointQueryParameters { get; }
 
         /// <summary>
-        /// The bulk expandable endpoint "id" parameter name.
+        /// The name of the query parameter that acts as the id for a bulk expandable endpoint.
         /// </summary>
-        string? BulkEndpointIdParameterName { get; }
+        string BulkEndpointIdParameterName { get; }
 
         /// <summary>
-        /// The bulk expandable endpoint "ids" parameter name.
+        /// The name of the query parameter that acts as the ids for a bulk expandable endpoint.
         /// </summary>
-        string? BulkEndpointIdsParameterName { get; }
+        string BulkEndpointIdsParameterName { get; }
+
+        /// <summary>
+        /// The name of the property that acts as the id for a bulk expandable endpoint.
+        /// </summary>
+        string BulkEndpointIdObjectName { get; }
 
         /// <summary>
         /// The endpoint schema version override.

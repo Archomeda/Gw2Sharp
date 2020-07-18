@@ -67,7 +67,7 @@ namespace Gw2Sharp.Tests.WebApi.Caching
             await this.cacheMethod.GetOrUpdateManyAsync(category, cacheItems.Select(x => x.Id), date, missingIds =>
             {
                 Assert.Equal(cacheItems.Select(x => x.Id), missingIds);
-                return Task.FromResult<IDictionary<object, int>>(cacheItems.ToDictionary(x => x.Id, x => x.Item));
+                return Task.FromResult<IDictionary<string, int>>(cacheItems.ToDictionary(x => x.Id, x => x.Item));
             });
             await AssertAsync.All(cacheItems.Select(async i => await this.cacheMethod.TryGetAsync<int>(i.Category, i.Id) != null), Assert.True);
             Assert.Equal(cacheItems, (await this.cacheMethod.GetManyAsync<int>(category, cacheItems.Select(x => x.Id))).Select(x => x.Value));
@@ -92,7 +92,7 @@ namespace Gw2Sharp.Tests.WebApi.Caching
 
             // Return an empty response to make sure that there's still an item missing, this should not throw any exception
             var actual = await this.cacheMethod.GetOrUpdateManyAsync(CATEGORY, idsToGet, expiresAt, missingIds =>
-                Task.FromResult<IDictionary<object, int>>(new Dictionary<object, int>()));
+                Task.FromResult<IDictionary<string, int>>(new Dictionary<string, int>()));
 
             actual.Should().BeEquivalentTo(cacheItems);
         }
@@ -191,7 +191,7 @@ namespace Gw2Sharp.Tests.WebApi.Caching
         [Fact]
         public async Task ArgumentNullGetManyTest() =>
             await AssertArguments.ThrowsWhenNullAsync(
-                () => this.cacheMethod.GetManyAsync<object>("Test category", new List<object>()),
+                () => this.cacheMethod.GetManyAsync<object>("Test category", Array.Empty<string>()),
                 new[] { true, true });
 
         [Fact]
@@ -220,7 +220,7 @@ namespace Gw2Sharp.Tests.WebApi.Caching
         [Fact]
         public async Task ArgumentNullGetOrUpdateManyTest() =>
             await AssertArguments.ThrowsWhenNullAsync(
-                () => this.cacheMethod.GetOrUpdateManyAsync("Test category", new List<object>(), DateTime.Now, obj => Task.FromResult((IDictionary<object, object>)new Dictionary<object, object>())),
+                () => this.cacheMethod.GetOrUpdateManyAsync("Test category", new List<string>(), DateTime.Now, obj => Task.FromResult((IDictionary<string, object>)new Dictionary<string, object>())),
                 new[] { true, true, false, true });
 
         #endregion

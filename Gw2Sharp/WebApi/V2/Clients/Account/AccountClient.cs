@@ -10,7 +10,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// </summary>
     [EndpointPath("account")]
     [EndpointSchemaVersion("2019-12-19T00:00:00.000Z")]
-    public class AccountClient : BaseEndpointClient<Account>, IAccountClient
+    public class AccountClient : BaseEndpointClient, IAccountClient
     {
         private readonly IAccountAchievementsClient achievements;
         private readonly IAccountBankClient bank;
@@ -166,7 +166,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
 
 
         /// <inheritdoc />
-        public Task<Account> GetAsync(CancellationToken cancellationToken = default) =>
-            this.Implementation.RequestGetAsync(cancellationToken);
+        public async Task<Account> GetAsync(CancellationToken cancellationToken = default) =>
+            (await new RequestBuilder(this, this.Connection, this.Gw2Client).Blob().ExecuteAsync<Account>(cancellationToken).ConfigureAwait(false)).Content;
     }
 }

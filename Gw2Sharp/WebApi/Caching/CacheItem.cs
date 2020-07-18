@@ -14,7 +14,7 @@ namespace Gw2Sharp.WebApi.Caching
         /// <param name="id">The id.</param>
         /// <param name="item">The item.</param>
         /// <param name="expiryTime">The expiry time.</param>
-        public CacheItem(string category, object id, object item, DateTimeOffset expiryTime)
+        public CacheItem(string category, string id, object item, DateTimeOffset expiryTime)
         {
             this.Category = category ?? throw new ArgumentNullException(nameof(category));
             this.Id = id ?? throw new ArgumentNullException(nameof(id));
@@ -30,7 +30,7 @@ namespace Gw2Sharp.WebApi.Caching
         /// <summary>
         /// The id associated with the cache item.
         /// </summary>
-        public object Id { get; }
+        public string Id { get; }
 
         /// <summary>
         /// The cache item.
@@ -77,7 +77,7 @@ namespace Gw2Sharp.WebApi.Caching
         /// <param name="id">The id.</param>
         /// <param name="item">The item.</param>
         /// <param name="expiryTime">The expiry time.</param>
-        public CacheItem(string category, object id, T item, DateTimeOffset expiryTime) : base(category, id, item!, expiryTime) { }
+        public CacheItem(string category, string id, T item, DateTimeOffset expiryTime) : base(category, id, item!, expiryTime) { }
 
         /// <summary>
         /// The cache item.
@@ -90,7 +90,7 @@ namespace Gw2Sharp.WebApi.Caching
 
         /// <inheritdoc />
         public override bool Equals(object? obj) =>
-            obj != null && obj.GetType() == typeof(CacheItem<T>) && this.Equals((CacheItem<T>)obj);
+            obj is CacheItem<T> item && this.Equals(item);
 
         /// <inheritdoc />
         public virtual bool Equals(CacheItem<T>? other) =>

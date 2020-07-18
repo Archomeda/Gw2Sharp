@@ -68,9 +68,11 @@ resharper_braces_for_using=required_for_multiline
 resharper_braces_for_while=required_for_multiline
 resharper_braces_redundant=true
 resharper_csharp_blank_lines_around_single_line_invocable=1
+resharper_keep_existing_attribute_arrangement=true
 resharper_keep_existing_embedded_arrangement=false
 resharper_keep_existing_embedded_block_arrangement=false
 resharper_keep_existing_switch_expression_arrangement=false
+resharper_max_attribute_length_for_same_line=99999
 resharper_parentheses_non_obvious_operations=none, multiplicative, additive, arithmetic, shift, relational, equality, bitwise_and, bitwise_exclusive_or, bitwise_inclusive_or, bitwise, null_coalescing, lowest
 resharper_place_accessorholder_attribute_on_same_line=false
 resharper_place_field_attribute_on_same_line=false
@@ -373,6 +375,8 @@ dotnet_diagnostic.s1117.severity=silent
 dotnet_diagnostic.s2342.severity=silent
 # S2743: Static fields should not be used in generic types
 dotnet_diagnostic.s2743.severity=none
+# S3925: "ISerializable" should be implemented correctly
+dotnet_diagnostic.s3925.severity=none
 # S3963: "static" fields should be initialized inline
 dotnet_diagnostic.s3963.severity=none
 # S3966: Objects should not be disposed more than once

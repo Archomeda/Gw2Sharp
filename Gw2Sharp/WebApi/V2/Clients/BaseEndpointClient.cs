@@ -8,11 +8,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// <summary>
     /// An abstract base class for implementing endpoint clients.
     /// </summary>
-    /// <typeparam name="TObject">The response object type.</typeparam>
-    public abstract class BaseEndpointClient<TObject> : Gw2WebApiBaseClient, IEndpointClient
-        where TObject : IApiV2Object
+    public abstract class BaseEndpointClient : Gw2WebApiBaseClient, IEndpointClient
     {
-        private readonly IReadOnlyList<(PropertyInfo Property, EndpointPathParameterAttribute Attribute)> parameterProperties;
+        private readonly IReadOnlyList<(PropertyInfo Property, EndpointQueryParameterAttribute Attribute)> parameterProperties;
 
         /// <summary>
         /// Creates a new base endpoint client.
@@ -33,19 +31,19 @@ namespace Gw2Sharp.WebApi.V2.Clients
             if (gw2Client == null)
                 throw new ArgumentNullException(nameof(gw2Client));
 
-            this.Implementation = new DefaultEndpointClientImplementation<TObject>(this, connection, gw2Client);
-
+            this.BaseUrl = Gw2WebApiV2Client.UrlBase.AbsoluteUri;
             this.EndpointPath = this.GetRequiredAttribute<EndpointPathAttribute>().EndpointPath;
             this.parameterProperties = this.GetType()
                 .GetProperties(BindingFlags.Public | BindingFlags.Instance)
-                .Select(p => (Property: p, Attribute: p.GetCustomAttribute<EndpointPathParameterAttribute>()))
+                .Select(p => (Property: p, Attribute: p.GetCustomAttribute<EndpointQueryParameterAttribute>()))
                 .Where(x => x.Attribute != null)
                 .Select(x => (x.Property, x.Attribute!))
                 .ToList()
                 .AsReadOnly();
             var bulkIdAttribute = this.GetAttribute<EndpointBulkIdNameAttribute>();
-            this.BulkEndpointIdParameterName = bulkIdAttribute?.Id ?? "id";
-            this.BulkEndpointIdsParameterName = bulkIdAttribute?.Ids ?? "ids";
+            this.BulkEndpointIdParameterName = bulkIdAttribute?.Id ?? EndpointBulkIdNameAttribute.DEFAULT_PARAM_ID;
+            this.BulkEndpointIdsParameterName = bulkIdAttribute?.Ids ?? EndpointBulkIdNameAttribute.DEFAULT_PARAM_IDS;
+            this.BulkEndpointIdObjectName = bulkIdAttribute?.ObjectId ?? EndpointBulkIdNameAttribute.DEFAULT_OBJECT_ID;
             this.SchemaVersion = this.GetAttribute<EndpointSchemaVersionAttribute>()?.SchemaVersion;
 
 #pragma warning disable S3060 // "is" should not be used with "this"
@@ -70,55 +68,54 @@ namespace Gw2Sharp.WebApi.V2.Clients
 #else
                 this.EndpointPath = this.EndpointPath.Replace($":{segments[i].PathSegment}", replaceSegments[i], StringComparison.InvariantCulture);
 #endif
-
         }
-
-
-        /// <summary>
-        /// Provides shared endpoint client implementation functions.
-        /// </summary>
-        protected IEndpointClientImplementation<TObject> Implementation { get; set; }
 
 
         #region Properties
 
         /// <inheritdoc />
+        public string BaseUrl { get; }
+
+        /// <inheritdoc />
         public string EndpointPath { get; }
 
         /// <inheritdoc />
-        public IDictionary<string, string> EndpointPathParameters =>
+        public IDictionary<string, string> EndpointQueryParameters =>
             this.parameterProperties
                 .Select(x => new KeyValuePair<string, object?>(x.Attribute.ParameterName, x.Property.GetValue(this)))
                 .Where(x => x.Value != null) // Explicit check for null
                 .ToDictionary(x => x.Key, x => x.Value!.ToString()!);
 
         /// <inheritdoc />
-        public string? BulkEndpointIdParameterName { get; }
+        public string BulkEndpointIdParameterName { get; }
 
         /// <inheritdoc />
-        public string? BulkEndpointIdsParameterName { get; }
+        public string BulkEndpointIdsParameterName { get; }
+
+        /// <inheritdoc />
+        public string BulkEndpointIdObjectName { get; }
 
         /// <inheritdoc />
         public string? SchemaVersion { get; }
 
 
         /// <inheritdoc />
-        public bool IsPaginated { get; protected set; }
+        public bool IsPaginated { get; }
 
         /// <inheritdoc />
-        public bool IsAuthenticated { get; protected set; }
+        public bool IsAuthenticated { get; }
 
         /// <inheritdoc />
-        public bool IsLocalized { get; protected set; }
+        public bool IsLocalized { get; }
 
         /// <inheritdoc />
-        public bool HasBlobData { get; protected set; }
+        public bool HasBlobData { get; }
 
         /// <inheritdoc />
-        public bool IsAllExpandable { get; protected set; }
+        public bool IsAllExpandable { get; }
 
         /// <inheritdoc />
-        public bool IsBulkExpandable { get; protected set; }
+        public bool IsBulkExpandable { get; }
 
         #endregion
 

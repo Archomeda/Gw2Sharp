@@ -14,7 +14,7 @@ namespace Gw2Sharp.WebApi.Caching
         #region ICacheController members
 
         /// <inheritdoc />
-        public override async Task<CacheItem<T>?> TryGetAsync<T>(string category, object id) =>
+        public override async Task<CacheItem<T>?> TryGetAsync<T>(string category, string id) =>
             null;
 
         /// <inheritdoc />
@@ -24,14 +24,14 @@ namespace Gw2Sharp.WebApi.Caching
         }
 
         /// <inheritdoc />
-        public override async Task SetAsync<T>(string category, object id, T item, DateTimeOffset expiryTime)
+        public override async Task SetAsync<T>(string category, string id, T item, DateTimeOffset expiryTime)
         {
             // Nothing to do
         }
 
         /// <inheritdoc />
-        public override async Task<IDictionary<object, CacheItem<T>>> GetManyAsync<T>(string category, IEnumerable<object> ids) =>
-            new Dictionary<object, CacheItem<T>>();
+        public override async Task<IDictionary<string, CacheItem<T>>> GetManyAsync<T>(string category, IEnumerable<string> ids) =>
+            new Dictionary<string, CacheItem<T>>();
 
         /// <inheritdoc />
         public override async Task SetManyAsync<T>(IEnumerable<CacheItem<T>> items)

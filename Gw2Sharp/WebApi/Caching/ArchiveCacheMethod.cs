@@ -98,7 +98,7 @@ namespace Gw2Sharp.WebApi.Caching
         #region BaseCacheController overrides
 
         /// <inheritdoc />
-        public override Task<CacheItem<T>?> TryGetAsync<T>(string category, object id)
+        public override Task<CacheItem<T>?> TryGetAsync<T>(string category, string id)
         {
             if (category == null)
                 throw new ArgumentNullException(nameof(category));
@@ -108,7 +108,7 @@ namespace Gw2Sharp.WebApi.Caching
             return Task.FromResult(this.TryGetInternal<T>(category, id));
         }
 
-        private CacheItem<T>? TryGetInternal<T>(string category, object id)
+        private CacheItem<T>? TryGetInternal<T>(string category, string id)
         {
             string fileName = $"{category}/{id}";
             lock (this.operationLock)
@@ -187,7 +187,7 @@ namespace Gw2Sharp.WebApi.Caching
         }
 
         /// <inheritdoc />
-        public override Task<IDictionary<object, CacheItem<T>>> GetManyAsync<T>(string category, IEnumerable<object> ids)
+        public override Task<IDictionary<string, CacheItem<T>>> GetManyAsync<T>(string category, IEnumerable<string> ids)
         {
             if (category == null)
                 throw new ArgumentNullException(nameof(category));
@@ -197,7 +197,7 @@ namespace Gw2Sharp.WebApi.Caching
             return this.GetManyInternalAsync<T>(category, ids);
         }
 
-        private async Task<IDictionary<object, CacheItem<T>>> GetManyInternalAsync<T>(string category, IEnumerable<object> ids) => ids
+        private async Task<IDictionary<string, CacheItem<T>>> GetManyInternalAsync<T>(string category, IEnumerable<string> ids) => ids
             .Select(id => this.TryGetInternal<T>(category, id))
             .WhereNotNull()
             .ToDictionary(x => x.Id);

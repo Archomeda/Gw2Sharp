@@ -1,10 +1,13 @@
 using System;
 using System.IO;
 using System.Linq;
-using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using Gw2Sharp.Extensions;
+using Gw2Sharp.WebApi.Exceptions;
+using HttpMethod = System.Net.Http.HttpMethod;
+using HttpRequestMessage = System.Net.Http.HttpRequestMessage;
+using HttpResponseMessage = System.Net.Http.HttpResponseMessage;
 using SysHttpClient = System.Net.Http.HttpClient;
 
 namespace Gw2Sharp.WebApi.Http
@@ -47,78 +50,60 @@ namespace Gw2Sharp.WebApi.Http
         public TimeSpan Timeout { get; set; } = TimeSpan.FromSeconds(30);
 
         /// <inheritdoc />
-        public async Task<IHttpResponse> RequestAsync(IHttpRequest request, CancellationToken cancellationToken = default)
+        public async Task<IWebApiResponse> RequestAsync(IWebApiRequest request, CancellationToken cancellationToken = default)
         {
             using var responseStream = await this.RequestStreamAsync(request, cancellationToken).ConfigureAwait(false);
             using var streamReader = new StreamReader(responseStream.ContentStream);
             string responseText = await streamReader.ReadToEndAsync().ConfigureAwait(false);
-            return new HttpResponse(responseText, responseStream.StatusCode, responseStream.RequestHeaders, responseStream.ResponseHeaders);
+            return new WebApiResponse(responseText, responseStream.StatusCode, responseStream.ResponseHeaders);
         }
 
         /// <inheritdoc />
-        public async Task<IHttpResponseStream> RequestStreamAsync(IHttpRequest request, CancellationToken cancellationToken = default)
+        public Task<IHttpResponseStream> RequestStreamAsync(IWebApiRequest request, CancellationToken cancellationToken = default)
         {
             if (request == null)
                 throw new ArgumentNullException(nameof(request));
+            return ExecAsync();
 
-            using var cancellationTimeout = new CancellationTokenSource(this.Timeout);
-            using var linkedCancellation = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken, cancellationTimeout.Token);
-            using var message = new HttpRequestMessage(HttpMethod.Get, request.Url);
-            message.Headers.AddRange(request.RequestHeaders);
-
-            Task<HttpResponseMessage>? task = null;
-            SysHttpClient? httpClient = null;
-            HttpResponseMessage responseMessage;
-            HttpResponseStream response;
-            try
+            async Task<IHttpResponseStream> ExecAsync()
             {
-                httpClient = this.getSysHttpClient();
-                if (httpClient == null)
-                    throw new InvalidOperationException("HttpClient is null");
+                using var cancellationTimeout = new CancellationTokenSource(this.Timeout);
+                using var linkedCancellation = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken, cancellationTimeout.Token);
+                using var message = new HttpRequestMessage(HttpMethod.Get, request.Options.Url);
+                message.Headers.AddRange(request.Options.RequestHeaders);
 
-                task = httpClient.SendAsync(message, linkedCancellation.Token);
-                responseMessage = await task.ConfigureAwait(false);
+                Task<HttpResponseMessage>? task = null;
+                SysHttpClient? httpClient = null;
+                try
+                {
+                    httpClient = this.getSysHttpClient();
+                    if (httpClient == null)
+                        throw new InvalidOperationException("HttpClient is null");
 
-                await responseMessage.Content.LoadIntoBufferAsync().ConfigureAwait(false);
-                var stream = await responseMessage.Content.ReadAsStreamAsync().ConfigureAwait(false);
-                var requestHeaders = request.RequestHeaders.ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
-                var responseHeaders = responseMessage.Headers.ToDictionary(kvp => kvp.Key, kvp => kvp.Value.First());
-                responseHeaders.AddRange(responseMessage.Content.Headers.ToDictionary(kvp => kvp.Key, kvp => kvp.Value.First()));
+                    task = httpClient.SendAsync(message, linkedCancellation.Token);
+                    var responseMessage = await task.ConfigureAwait(false);
 
-#pragma warning disable CA2000 // Dispose objects before losing scope
-                // This is possibly returned from this method, the caller is responsible for disposing it
-                response = new HttpResponseStream(stream, responseMessage.StatusCode, requestHeaders, responseHeaders);
-#pragma warning restore CA2000 // Dispose objects before losing scope
-            }
-            catch (Exception ex)
-            {
-                if (task == null)
-                    throw new RequestException(request, $"Failed to create task", ex);
-                else if (task.IsCanceled)
-                    throw new RequestCanceledException(request);
-                throw new RequestException(request, $"Request error: {task?.Exception?.Message}", ex);
-            }
-            finally
-            {
-                if (this.shouldDisposeHttpClient)
-                    httpClient?.Dispose();
-            }
+                    await responseMessage.Content.LoadIntoBufferAsync().ConfigureAwait(false);
+                    var stream = await responseMessage.Content.ReadAsStreamAsync().ConfigureAwait(false);
+                    var requestHeaders = request.Options.RequestHeaders.ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
+                    var responseHeaders = responseMessage.Headers.ToDictionary(kvp => kvp.Key, kvp => kvp.Value.First());
+                    responseHeaders.AddRange(responseMessage.Content.Headers.ToDictionary(kvp => kvp.Key, kvp => kvp.Value.First()));
 
-            if (responseMessage.IsSuccessStatusCode)
-                return response;
-
-            try
-            {
-#pragma warning disable CA2000 // Dispose objects before losing scope
-                using var streamReader = new StreamReader(response.ContentStream);
-#pragma warning restore CA2000 // Dispose objects before losing scope
-                string responseText = await streamReader.ReadToEndAsync().ConfigureAwait(false);
-                var httpResponseString = new HttpResponse<string>(responseText, response.StatusCode, response.RequestHeaders, response.ResponseHeaders);
-                throw new UnexpectedStatusException(request, httpResponseString);
-            }
-            finally
-            {
-                response.Dispose();
+                    return new HttpResponseStream(stream, responseMessage.StatusCode, requestHeaders, responseHeaders);
+                }
+                catch (Exception ex)
+                {
+                    if (task == null)
+                        throw new RequestException(request, "Failed to create task", ex);
+                    else if (task.IsCanceled)
+                        throw new RequestCanceledException(request);
+                    throw new RequestException(request, $"Request error: {task?.Exception?.Message}", ex);
+                }
+                finally
+                {
+                    if (this.shouldDisposeHttpClient)
+                        httpClient?.Dispose();
+                }
             }
         }
     }

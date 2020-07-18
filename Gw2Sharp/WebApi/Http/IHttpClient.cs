@@ -1,6 +1,7 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Gw2Sharp.WebApi.Exceptions;
 
 namespace Gw2Sharp.WebApi.Http
 {
@@ -22,8 +23,7 @@ namespace Gw2Sharp.WebApi.Http
         /// <returns>The web response.</returns>
         /// <exception cref="RequestException">Thrown when a generic request error occurs.</exception>
         /// <exception cref="RequestCanceledException">Thrown when the request is canceled by the user or because of a timeout.</exception>
-        /// <exception cref="UnexpectedStatusException">Thrown when the server returns a non-successful HTTP status code.</exception>
-        Task<IHttpResponse> RequestAsync(IHttpRequest request, CancellationToken cancellationToken = default);
+        Task<IWebApiResponse> RequestAsync(IWebApiRequest request, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Sends a request and returns a response stream.
@@ -33,7 +33,6 @@ namespace Gw2Sharp.WebApi.Http
         /// <returns>The web response stream.</returns>
         /// <exception cref="RequestException">Thrown when a generic request error occurs.</exception>
         /// <exception cref="RequestCanceledException">Thrown when the request is canceled by the user or because of a timeout.</exception>
-        /// <exception cref="UnexpectedStatusException">Thrown when the server returns a non-successful HTTP status code.</exception>
-        Task<IHttpResponseStream> RequestStreamAsync(IHttpRequest request, CancellationToken cancellationToken = default);
+        Task<IHttpResponseStream> RequestStreamAsync(IWebApiRequest request, CancellationToken cancellationToken = default);
     }
 }
