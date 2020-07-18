@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using FluentAssertions;
 using Gw2Sharp.WebApi.Http;
+using Objectivity.AutoFixture.XUnit2.AutoNSubstitute.Attributes;
 using Xunit;
 
 namespace Gw2Sharp.Tests.WebApi.Http

@@ -11,6 +11,7 @@ using FluentAssertions.Extensions;
 using Gw2Sharp.WebApi.Http;
 using Gw2Sharp.WebApi.Middleware;
 using NSubstitute;
+using Objectivity.AutoFixture.XUnit2.AutoNSubstitute.Attributes;
 using Xunit;
 
 namespace Gw2Sharp.Tests.WebApi.Middleware
@@ -19,9 +20,11 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
     {
         public class Element
         {
-            [JsonPropertyName("id")] public string Id { get; set; }
+            [JsonPropertyName("id")]
+            public string Id { get; set; }
 
-            [JsonPropertyName("value")] public string Value { get; set; }
+            [JsonPropertyName("value")]
+            public string Value { get; set; }
         }
 
         [Theory]
@@ -79,7 +82,7 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
             // Do the request
             var middleware = new CacheMiddleware();
             var finalResponse = await middleware.OnRequestAsync(context, (r, t) => Task.FromResult(response));
-            finalResponse.Should().BeSameAs(response);
+            finalResponse.Should().BeEquivalentTo(response);
 
             // Repeat the request to check for the header
             // The result in the callNext parameter shouldn't matter, if the cache is used, that Func shouldn't even be called

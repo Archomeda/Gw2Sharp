@@ -9,6 +9,7 @@ using FluentAssertions;
 using Gw2Sharp.WebApi.Http;
 using Gw2Sharp.WebApi.Middleware;
 using NSubstitute;
+using Objectivity.AutoFixture.XUnit2.AutoNSubstitute.Attributes;
 using Xunit;
 
 namespace Gw2Sharp.Tests.WebApi.Middleware
@@ -17,9 +18,11 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
     {
         public class Element
         {
-            [JsonPropertyName("id")] public string Id { get; set; }
+            [JsonPropertyName("id")]
+            public string Id { get; set; }
 
-            [JsonPropertyName("value")] public string Value { get; set; }
+            [JsonPropertyName("value")]
+            public string Value { get; set; }
         }
 
         [Fact]
