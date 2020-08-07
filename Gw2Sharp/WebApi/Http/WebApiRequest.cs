@@ -11,6 +11,7 @@ using Gw2Sharp.Extensions;
 using Gw2Sharp.Json;
 using Gw2Sharp.Json.Converters;
 using Gw2Sharp.WebApi.Middleware;
+using Gw2Sharp.WebApi.V2;
 
 namespace Gw2Sharp.WebApi.Http
 {
@@ -116,6 +117,20 @@ namespace Gw2Sharp.WebApi.Http
 
             // Deserialize response
             var obj = JsonSerializer.Deserialize<TResponse>(response.Content, deserializerSettings);
+
+            // If the type is an API v2 object, set its response info property
+            switch (obj)
+            {
+                case IApiV2Object apiV2Object:
+                    apiV2Object.HttpResponseInfo ??= new ApiV2HttpResponseInfo(response.StatusCode, response.ResponseHeaders);
+                    break;
+                case IEnumerable<IApiV2Object> apiV2ObjectList:
+                    var responseInfo = new ApiV2HttpResponseInfo(response.StatusCode, response.ResponseHeaders);
+                    foreach (var apiV2Obj in apiV2ObjectList)
+                        apiV2Obj.HttpResponseInfo ??= responseInfo;
+                    break;
+            }
+
             return new WebApiResponse<TResponse>(obj, response.StatusCode, response.ResponseHeaders);
         }
 

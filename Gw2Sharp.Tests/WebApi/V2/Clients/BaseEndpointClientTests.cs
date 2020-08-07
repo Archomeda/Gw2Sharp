@@ -11,6 +11,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Threading;
 using System.Threading.Tasks;
+using FluentAssertions;
 using Gw2Sharp.Tests.Helpers;
 using Gw2Sharp.WebApi;
 using Gw2Sharp.WebApi.Caching;
@@ -85,6 +86,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
 
             var actual = await client.PageAsync(2, 100);
             this.AssertJsonObject(expected.RootElement, actual);
+            this.AssertResponseInfo(actual);
         }
 
         protected virtual async Task AssertBlobDataAsync<TObject>(IBlobClient<TObject> client, string file)
@@ -102,6 +104,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
 
             var actual = await client.GetAsync();
             this.AssertJsonObject(expected.RootElement, actual!);
+            this.AssertResponseInfo(actual);
         }
 
         protected virtual async Task AssertGetDataAsync<TObject, TId>(IBulkExpandableClient<TObject, TId> client, string file, string idName = "id")
@@ -125,6 +128,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
 
             var actual = await client.GetAsync(id);
             this.AssertJsonObject(expected.RootElement, actual);
+            this.AssertResponseInfo(actual);
         }
 
         protected virtual async Task AssertAllDataAsync<TObject>(IAllExpandableClient<TObject> client, string file, string idsName = "ids")
@@ -142,6 +146,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
 
             var actual = await client.AllAsync();
             this.AssertJsonObject(expected.RootElement, actual);
+            this.AssertResponseInfo(actual);
         }
 
         protected virtual async Task AssertBulkDataAsync<TObject, TId>(IBulkExpandableClient<TObject, TId> client, string file, string idName = "id", string idsName = "ids")
@@ -169,6 +174,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
 
             var actual = await client.ManyAsync(ids);
             this.AssertJsonObject(expected.RootElement, actual);
+            this.AssertResponseInfoList(actual);
         }
 
         protected virtual async Task AssertIdsDataAsync<TObject, TId>(IBulkExpandableClient<TObject, TId> client, string file)
@@ -187,6 +193,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
 
             var actual = await client.IdsAsync();
             this.AssertJsonObject(expected.RootElement, actual);
+            this.AssertResponseInfo(actual);
         }
 
         protected virtual void AssertRequest(CallInfo callInfo, IEndpointClient client, string pathAndQuery)
@@ -245,6 +252,16 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                 Assert.Contains(new KeyValuePair<string, string>("X-Schema-Version", client.SchemaVersion), requestHeaders);
             else
                 Assert.DoesNotContain(requestHeaders, h => h.Key == "X-Schema-Version");
+        }
+
+        protected virtual void AssertResponseInfo(IApiV2Object responseObject) =>
+            responseObject.HttpResponseInfo.Should().NotBeNull();
+
+        protected virtual void AssertResponseInfoList<TObject>(IEnumerable<TObject> responseList)
+            where TObject : IApiV2Object
+        {
+            foreach (var responseObject in responseList)
+                this.AssertResponseInfo(responseObject);
         }
 
 

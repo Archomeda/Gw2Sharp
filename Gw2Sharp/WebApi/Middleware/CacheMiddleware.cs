@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using Gw2Sharp.Extensions;
 using Gw2Sharp.WebApi.Caching;
 using Gw2Sharp.WebApi.Http;
-using Gw2Sharp.WebApi.V2;
 
 namespace Gw2Sharp.WebApi.Middleware
 {
@@ -64,8 +63,8 @@ namespace Gw2Sharp.WebApi.Middleware
                 newContext.Request.Options.EndpointQuery[context.Request.Options.BulkQueryParameterIdsName] = string.Join(",", missingIds);
 
                 var response = await callNext(newContext, cancellationToken).ConfigureAwait(false);
-                var responseInfo = new ApiV2HttpResponseInfo(response.StatusCode, response.ResponseHeaders);
-                return (SplitIntoIndividualResponses(response, context.Request.Options.BulkObjectIdName), GetExpires(responseInfo));
+                var responseInfo = new HttpResponseInfo(response.StatusCode, response.ResponseHeaders);
+                return (SplitIntoIndividualResponses(response, context.Request.Options.BulkObjectIdName), responseInfo.Expires.GetValueOrDefault(DateTimeOffset.Now));
             }).ConfigureAwait(false);
             return cacheItems.Select(x => x.Item).Merge();
         }
@@ -105,12 +104,9 @@ namespace Gw2Sharp.WebApi.Middleware
             async () =>
             {
                 var response = await callNext(context, cancellationToken).ConfigureAwait(false);
-                var responseInfo = new ApiV2HttpResponseInfo(response.StatusCode, response.ResponseHeaders);
-                return (response, GetExpires(responseInfo));
+                var responseInfo = new HttpResponseInfo(response.StatusCode, response.ResponseHeaders);
+                return (response, responseInfo.Expires.GetValueOrDefault(DateTimeOffset.Now));
             };
-
-        private static DateTimeOffset GetExpires(HttpResponseInfo responseInfo) =>
-            responseInfo.Expires ?? DateTimeOffset.Now;
 
         private static IDictionary<string, IWebApiResponse> SplitIntoIndividualResponses(IWebApiResponse response, string bulkObjectPropertyIdName)
         {
