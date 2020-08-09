@@ -7348,6 +7348,30 @@ references:
   commentId: N:Gw2Sharp.WebApi.Http
   fullName: Gw2Sharp.WebApi.Http
   nameWithType: Gw2Sharp.WebApi.Http
+- uid: Gw2Sharp.WebApi.Http.CacheState
+  name: CacheState
+  href: api/Gw2Sharp.WebApi.Http.CacheState.html
+  commentId: T:Gw2Sharp.WebApi.Http.CacheState
+  fullName: Gw2Sharp.WebApi.Http.CacheState
+  nameWithType: CacheState
+- uid: Gw2Sharp.WebApi.Http.CacheState.FromCache
+  name: FromCache
+  href: api/Gw2Sharp.WebApi.Http.CacheState.html#Gw2Sharp_WebApi_Http_CacheState_FromCache
+  commentId: F:Gw2Sharp.WebApi.Http.CacheState.FromCache
+  fullName: Gw2Sharp.WebApi.Http.CacheState.FromCache
+  nameWithType: CacheState.FromCache
+- uid: Gw2Sharp.WebApi.Http.CacheState.FromLive
+  name: FromLive
+  href: api/Gw2Sharp.WebApi.Http.CacheState.html#Gw2Sharp_WebApi_Http_CacheState_FromLive
+  commentId: F:Gw2Sharp.WebApi.Http.CacheState.FromLive
+  fullName: Gw2Sharp.WebApi.Http.CacheState.FromLive
+  nameWithType: CacheState.FromLive
+- uid: Gw2Sharp.WebApi.Http.CacheState.PartiallyFromCache
+  name: PartiallyFromCache
+  href: api/Gw2Sharp.WebApi.Http.CacheState.html#Gw2Sharp_WebApi_Http_CacheState_PartiallyFromCache
+  commentId: F:Gw2Sharp.WebApi.Http.CacheState.PartiallyFromCache
+  fullName: Gw2Sharp.WebApi.Http.CacheState.PartiallyFromCache
+  nameWithType: CacheState.PartiallyFromCache
 - uid: Gw2Sharp.WebApi.Http.HttpClient
   name: HttpClient
   href: api/Gw2Sharp.WebApi.Http.HttpClient.html
@@ -7456,6 +7480,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.Http.HttpResponseInfo.CacheMaxAge
   nameWithType: HttpResponseInfo.CacheMaxAge
+- uid: Gw2Sharp.WebApi.Http.HttpResponseInfo.CacheState
+  name: CacheState
+  href: api/Gw2Sharp.WebApi.Http.HttpResponseInfo.html#Gw2Sharp_WebApi_Http_HttpResponseInfo_CacheState
+  commentId: P:Gw2Sharp.WebApi.Http.HttpResponseInfo.CacheState
+  fullName: Gw2Sharp.WebApi.Http.HttpResponseInfo.CacheState
+  nameWithType: HttpResponseInfo.CacheState
+- uid: Gw2Sharp.WebApi.Http.HttpResponseInfo.CacheState*
+  name: CacheState
+  href: api/Gw2Sharp.WebApi.Http.HttpResponseInfo.html#Gw2Sharp_WebApi_Http_HttpResponseInfo_CacheState_
+  commentId: Overload:Gw2Sharp.WebApi.Http.HttpResponseInfo.CacheState
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.Http.HttpResponseInfo.CacheState
+  nameWithType: HttpResponseInfo.CacheState
 - uid: Gw2Sharp.WebApi.Http.HttpResponseInfo.Date
   name: Date
   href: api/Gw2Sharp.WebApi.Http.HttpResponseInfo.html#Gw2Sharp_WebApi_Http_HttpResponseInfo_Date
@@ -7802,6 +7839,19 @@ references:
   commentId: T:Gw2Sharp.WebApi.Http.IWebApiResponse
   fullName: Gw2Sharp.WebApi.Http.IWebApiResponse
   nameWithType: IWebApiResponse
+- uid: Gw2Sharp.WebApi.Http.IWebApiResponse.Copy
+  name: Copy()
+  href: api/Gw2Sharp.WebApi.Http.IWebApiResponse.html#Gw2Sharp_WebApi_Http_IWebApiResponse_Copy
+  commentId: M:Gw2Sharp.WebApi.Http.IWebApiResponse.Copy
+  fullName: Gw2Sharp.WebApi.Http.IWebApiResponse.Copy()
+  nameWithType: IWebApiResponse.Copy()
+- uid: Gw2Sharp.WebApi.Http.IWebApiResponse.Copy*
+  name: Copy
+  href: api/Gw2Sharp.WebApi.Http.IWebApiResponse.html#Gw2Sharp_WebApi_Http_IWebApiResponse_Copy_
+  commentId: Overload:Gw2Sharp.WebApi.Http.IWebApiResponse.Copy
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.Http.IWebApiResponse.Copy
+  nameWithType: IWebApiResponse.Copy
 - uid: Gw2Sharp.WebApi.Http.IWebApiResponse`1
   name: IWebApiResponse<T>
   href: api/Gw2Sharp.WebApi.Http.IWebApiResponse-1.html
@@ -7828,6 +7878,23 @@ references:
   fullName.vb: Gw2Sharp.WebApi.Http.IWebApiResponse(Of T).Content
   nameWithType: IWebApiResponse<T>.Content
   nameWithType.vb: IWebApiResponse(Of T).Content
+- uid: Gw2Sharp.WebApi.Http.IWebApiResponse`1.Copy
+  name: Copy()
+  href: api/Gw2Sharp.WebApi.Http.IWebApiResponse-1.html#Gw2Sharp_WebApi_Http_IWebApiResponse_1_Copy
+  commentId: M:Gw2Sharp.WebApi.Http.IWebApiResponse`1.Copy
+  fullName: Gw2Sharp.WebApi.Http.IWebApiResponse<T>.Copy()
+  fullName.vb: Gw2Sharp.WebApi.Http.IWebApiResponse(Of T).Copy()
+  nameWithType: IWebApiResponse<T>.Copy()
+  nameWithType.vb: IWebApiResponse(Of T).Copy()
+- uid: Gw2Sharp.WebApi.Http.IWebApiResponse`1.Copy*
+  name: Copy
+  href: api/Gw2Sharp.WebApi.Http.IWebApiResponse-1.html#Gw2Sharp_WebApi_Http_IWebApiResponse_1_Copy_
+  commentId: Overload:Gw2Sharp.WebApi.Http.IWebApiResponse`1.Copy
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.Http.IWebApiResponse<T>.Copy
+  fullName.vb: Gw2Sharp.WebApi.Http.IWebApiResponse(Of T).Copy
+  nameWithType: IWebApiResponse<T>.Copy
+  nameWithType.vb: IWebApiResponse(Of T).Copy
 - uid: Gw2Sharp.WebApi.Http.IWebApiResponse`1.ResponseHeaders
   name: ResponseHeaders
   href: api/Gw2Sharp.WebApi.Http.IWebApiResponse-1.html#Gw2Sharp_WebApi_Http_IWebApiResponse_1_ResponseHeaders
@@ -8105,6 +8172,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.Http.WebApiResponse.WebApiResponse
   nameWithType: WebApiResponse.WebApiResponse
+- uid: Gw2Sharp.WebApi.Http.WebApiResponse.Copy
+  name: Copy()
+  href: api/Gw2Sharp.WebApi.Http.WebApiResponse.html#Gw2Sharp_WebApi_Http_WebApiResponse_Copy
+  commentId: M:Gw2Sharp.WebApi.Http.WebApiResponse.Copy
+  fullName: Gw2Sharp.WebApi.Http.WebApiResponse.Copy()
+  nameWithType: WebApiResponse.Copy()
+- uid: Gw2Sharp.WebApi.Http.WebApiResponse.Copy*
+  name: Copy
+  href: api/Gw2Sharp.WebApi.Http.WebApiResponse.html#Gw2Sharp_WebApi_Http_WebApiResponse_Copy_
+  commentId: Overload:Gw2Sharp.WebApi.Http.WebApiResponse.Copy
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.Http.WebApiResponse.Copy
+  nameWithType: WebApiResponse.Copy
 - uid: Gw2Sharp.WebApi.Http.WebApiResponse`1
   name: WebApiResponse<T>
   href: api/Gw2Sharp.WebApi.Http.WebApiResponse-1.html
@@ -8166,6 +8246,23 @@ references:
   fullName.vb: Gw2Sharp.WebApi.Http.WebApiResponse(Of T).Content
   nameWithType: WebApiResponse<T>.Content
   nameWithType.vb: WebApiResponse(Of T).Content
+- uid: Gw2Sharp.WebApi.Http.WebApiResponse`1.Copy
+  name: Copy()
+  href: api/Gw2Sharp.WebApi.Http.WebApiResponse-1.html#Gw2Sharp_WebApi_Http_WebApiResponse_1_Copy
+  commentId: M:Gw2Sharp.WebApi.Http.WebApiResponse`1.Copy
+  fullName: Gw2Sharp.WebApi.Http.WebApiResponse<T>.Copy()
+  fullName.vb: Gw2Sharp.WebApi.Http.WebApiResponse(Of T).Copy()
+  nameWithType: WebApiResponse<T>.Copy()
+  nameWithType.vb: WebApiResponse(Of T).Copy()
+- uid: Gw2Sharp.WebApi.Http.WebApiResponse`1.Copy*
+  name: Copy
+  href: api/Gw2Sharp.WebApi.Http.WebApiResponse-1.html#Gw2Sharp_WebApi_Http_WebApiResponse_1_Copy_
+  commentId: Overload:Gw2Sharp.WebApi.Http.WebApiResponse`1.Copy
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.Http.WebApiResponse<T>.Copy
+  fullName.vb: Gw2Sharp.WebApi.Http.WebApiResponse(Of T).Copy
+  nameWithType: WebApiResponse<T>.Copy
+  nameWithType.vb: WebApiResponse(Of T).Copy
 - uid: Gw2Sharp.WebApi.Http.WebApiResponse`1.ResponseHeaders
   name: ResponseHeaders
   href: api/Gw2Sharp.WebApi.Http.WebApiResponse-1.html#Gw2Sharp_WebApi_Http_WebApiResponse_1_ResponseHeaders

@@ -151,6 +151,19 @@ var cacheAge = itemIds.HttpResponseInfo.CacheMaxAge;
 var itemsCount = itemIds.HttpResponseInfo.ResultCount;
 var itemsTotal = itemIds.HttpResponseInfo.ResultTotal;
 var pagesTotal = itemIds.HttpResponseInfo.PageTotal;
+</code></pre><div class="CAUTION"><h5>Caution</h5><p>Due to current technical limitations, performing a &quot;many&quot; request will only return the headers of the first item.
+These kind of requests will be performed as efficiently as possible, meaning that if the <a class="xref" href="middleware.html#cachemiddleware">cache middleware</a> is enabled, it will only request items from the live API server that are <em>not</em> available in the cache.
+Therefore, these headers might not reflect the actual response headers.</p>
+</div>
+<h2 id="additional-custom-gw2sharp-headers">Additional custom Gw2Sharp headers</h2>
+<p>Gw2Sharp currently adds one additional header if the <a class="xref" href="middleware.html#cachemiddleware">cache middleware</a> is enabled.
+This is useful to check whether the request was served from the cache, or from the live API server.</p>
+<div class="NOTE"><h5>Note</h5><p>This header is added by the cache middleware itself, and its value in <code>HttpResponseInfo</code> is <em>relatively</em> unaffected by the technical limitation mentioned in the section above.</p>
+<p>This means that the value will always reflect the correct cache state.
+However, you cannot identify which individual item was served from the cache, or from the live API server.
+Instead, it will take the value from the whole request instead, which has <code>FromLive</code>, <code>PartiallyFromCache</code> or <code>FromCache</code>.</p>
+</div>
+<pre><code class="lang-cs">var cacheState = itemIds.HttpResponseInfo.CacheState;
 </code></pre></article>
           </div>
           
