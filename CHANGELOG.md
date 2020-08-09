@@ -15,6 +15,7 @@ For more information, please check the [middleware documentation](https://archom
 
 ### Caching
 - **Breaking:** `Gw2Sharp.WebApi.Caching.ICacheMethod` (and its implementers `BaseCacheMethod`, `ArchiveCacheMethod`, `MemoryCacheMethod`) and `Gw2Sharp.WebApi.Caching.CacheItem` have had their keys changed from the `object` type to the `string` type
+- `Gw2Sharp.WebApi.Http.HttpResponseInfo` (that is set on all API return types as the `HttpResponseInfo` property) now includes an additional property called `CacheState` that indicates whether the request was served from cache or from the live API server (please be aware of the [current limitations](https://archomeda.github.io/Gw2Sharp/master/guides/http-headers.html#additional-custom-gw2sharp-headers)).
 
 ### Endpoints
 - **Breaking:** `Gw2Sharp.WebApi.V2.Models.Profession.SkillsByPalette` is now using a `IReadOnlyDictionary<int, int>` instead of `IDictionary<int, int>`
@@ -42,7 +43,7 @@ For more information, please check the [middleware documentation](https://archom
 - **Breaking:** `Gw2Sharp.WebApi.Http.HttpResponseInfo` has had its `RawRequestHeaders` property removed
 - **Breaking:** `Gw2Sharp.WebApi.Http.IHttpRequest` has been renamed to `IWebApiRequest`, its properties have been changed and moved into the property `Options` and the new method `ExecuteAsync(...)` has been added
 - **Breaking:** Following its interface, `Gw2Sharp.WebApi.Http.HttpRequest` has been renamed to `WebApiRequest` and its functionality has been adopted to the changes in the interface as well
-- **Breaking:** `Gw2Sharp.WebApi.Http.IHttpResponse` has been renamed to `IWebApiResponse` and no longer contains `RequestHeaders`
+- **Breaking:** `Gw2Sharp.WebApi.Http.IHttpResponse` has been renamed to `IWebApiResponse` and no longer contains `RequestHeaders`, while `ResponseHeaders` is no longer read-only (to allow middleware to change them if necessary) and has the additional method `Copy` (to allow middleware to copy a few properties by value into a new response object)
 - **Breaking:** Following its interface, `Gw2Sharp.WebApi.Http.HttpResponse` has been renamed to `WebApiResponse` and its functionality has been adopted to the changes in the interface as well
 - **Breaking**, but minimal impact unless you've been using some of the "public" internals provided by Gw2Sharp in your application:
   - The following structs have been made readonly: `Gw2Sharp.Models.Coordinates2`, `Gw2Sharp.Models.Coordinates3`, `Gw2Sharp.Models.Size`

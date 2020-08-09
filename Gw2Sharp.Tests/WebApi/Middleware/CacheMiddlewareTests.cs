@@ -123,6 +123,10 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
             // Do the request
             var middleware = new CacheMiddleware();
             var liveResponse = await middleware.OnRequestAsync(context, (r, t) => Task.FromResult(response));
+
+            // Expect the response headers to contain the cache state
+            response.ResponseHeaders["X-Gw2Sharp-Cache-State"] = CacheState.FromLive.ToString();
+
             liveResponse.Should().BeEquivalentTo(response);
         }
 
@@ -143,6 +147,9 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
             // Do the first request
             var middleware = new CacheMiddleware();
             await middleware.OnRequestAsync(context, (r, t) => Task.FromResult(response));
+
+            // Expect the response headers to contain the cache state
+            response.ResponseHeaders["X-Gw2Sharp-Cache-State"] = CacheState.FromCache.ToString();
 
             // Repeat the request to see if it's taken from the cache
             var cachedResponse = await middleware.OnRequestAsync(context, (r, t) => throw new InvalidOperationException("should not be hit"));

@@ -28,8 +28,11 @@ namespace Gw2Sharp.WebApi.Http
             this.LastModified = ParseResponseHeader(responseHeaders, "Last-Modified", ParseNullableDateTime);
             this.CacheMaxAge = ParseResponseHeader(responseHeaders, "Cache-Control", ParseNullableMaxAgeCache);
             this.Expires = ParseResponseHeader(responseHeaders, "Expires", ParseNullableDateTime);
+            this.CacheState = ParseResponseHeader(responseHeaders, "X-Gw2Sharp-Cache-State", ParseEnum<CacheState>);
 
-            static DateTimeOffset? ParseNullableDateTime(string value) => !string.IsNullOrWhiteSpace(value) ? (DateTimeOffset?)DateTimeOffset.Parse(value, CultureInfo.InvariantCulture) : null;
+            static DateTimeOffset? ParseNullableDateTime(string value) =>
+                !string.IsNullOrWhiteSpace(value) ? (DateTimeOffset?)DateTimeOffset.Parse(value, CultureInfo.InvariantCulture) : null;
+
             static TimeSpan? ParseNullableMaxAgeCache(string value)
             {
                 if (string.IsNullOrWhiteSpace(value))
@@ -38,6 +41,9 @@ namespace Gw2Sharp.WebApi.Http
                     value = value[1..^1];
                 return CacheControlHeaderValue.Parse(value).MaxAge;
             }
+
+            static T ParseEnum<T>(string value) where T : struct =>
+                Enum.TryParse<T>(value, out var @enum) ? @enum : default;
         }
 
 
@@ -77,6 +83,11 @@ namespace Gw2Sharp.WebApi.Http
         /// This value is <c>null</c> if the response didn't contain the appropriate header.
         /// </summary>
         public DateTimeOffset? Expires { get; protected set; }
+
+        /// <summary>
+        /// The cache state.
+        /// </summary>
+        public CacheState CacheState { get; set; }
 
         /// <summary>
         /// Parses a response header.

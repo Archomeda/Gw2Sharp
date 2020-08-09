@@ -122,10 +122,10 @@ namespace Gw2Sharp.WebApi.Http
             switch (obj)
             {
                 case IApiV2Object apiV2Object:
-                    apiV2Object.HttpResponseInfo ??= new ApiV2HttpResponseInfo(response.StatusCode, response.ResponseHeaders);
+                    apiV2Object.HttpResponseInfo ??= new ApiV2HttpResponseInfo(response.StatusCode, response.ResponseHeaders.AsReadOnly());
                     break;
                 case IEnumerable<IApiV2Object> apiV2ObjectList:
-                    var responseInfo = new ApiV2HttpResponseInfo(response.StatusCode, response.ResponseHeaders);
+                    var responseInfo = new ApiV2HttpResponseInfo(response.StatusCode, response.ResponseHeaders.AsReadOnly());
                     foreach (var apiV2Obj in apiV2ObjectList)
                         apiV2Obj.HttpResponseInfo ??= responseInfo;
                     break;

@@ -33,54 +33,82 @@ namespace Gw2Sharp.WebApi.Middleware
             if (context.Request.Options.EndpointQuery.ContainsKey(QUERY_PARAM_PAGE))
                 return OnPageRequestAsync(context, callNext, cancellationToken);
 
-            string[] idsList = Array.Empty<string>();
+            HashSet<string>? idsList = null;
             if (context.Request.Options.EndpointQuery.TryGetValue(context.Request.Options.BulkQueryParameterIdsName, out string? ids))
-                idsList = ids.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+                idsList = new HashSet<string>(ids.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries));
 
-            if (idsList.Contains(ALL, StringComparer.OrdinalIgnoreCase))
+            if (idsList?.Contains(ALL) == true)
                 return OnAllRequestAsync(context, callNext, cancellationToken);
 
-            return idsList.Length switch
+            return (idsList?.Count ?? 0) switch
             {
                 0 => OnEndpointRequestAsync(context, callNext, cancellationToken),
-                _ => OnManyRequestAsync(context, idsList, callNext, cancellationToken)
+                _ => OnManyRequestAsync(context, idsList!, callNext, cancellationToken)
             };
         }
 
         private static async Task<IWebApiResponse> OnEndpointRequestAsync(MiddlewareContext context, Func<MiddlewareContext, CancellationToken, Task<IWebApiResponse>> callNext, CancellationToken cancellationToken)
         {
-            var cacheItem = await context.Connection.CacheMethod.GetOrUpdateAsync(context.Request.Options.EndpointPath,
+            var cacheState = CacheState.FromCache;
+
+            var cacheItem = await context.Connection.CacheMethod.GetOrUpdateAsync(
+                context.Request.Options.EndpointPath,
                 GetCacheId(context.Request, context.Request.Options.PathSuffix.OrIfNullOrEmpty("_index")),
-                RequestGetAsync(context, callNext, cancellationToken)).ConfigureAwait(false);
-            return cacheItem.Item;
+                () =>
+                {
+                    cacheState = CacheState.FromLive;
+                    return RequestGetAsync(context, callNext, cancellationToken);
+                }
+            ).ConfigureAwait(false);
+
+            var response = cacheItem.Item.Copy();
+            response.ResponseHeaders["X-Gw2Sharp-Cache-State"] = cacheState.ToString();
+            return response;
         }
 
-        private static async Task<IWebApiResponse> OnManyRequestAsync(MiddlewareContext context, IEnumerable<string> ids, Func<MiddlewareContext, CancellationToken, Task<IWebApiResponse>> callNext, CancellationToken cancellationToken)
+        private static async Task<IWebApiResponse> OnManyRequestAsync(MiddlewareContext context, ISet<string> ids, Func<MiddlewareContext, CancellationToken, Task<IWebApiResponse>> callNext, CancellationToken cancellationToken)
         {
+            var cacheState = CacheState.FromCache;
+
             var cacheItems = await context.Connection.CacheMethod.GetOrUpdateManyAsync(context.Request.Options.EndpointPath, ids, async missingIds =>
             {
+                cacheState = ids.Count == missingIds.Count ? CacheState.FromLive : CacheState.PartiallyFromCache;
+
                 var newContext = new MiddlewareContext(context.Connection, context.Request.DeepCopy());
                 newContext.Request.Options.EndpointQuery[context.Request.Options.BulkQueryParameterIdsName] = string.Join(",", missingIds);
 
                 var response = await callNext(newContext, cancellationToken).ConfigureAwait(false);
-                var responseInfo = new HttpResponseInfo(response.StatusCode, response.ResponseHeaders);
+                var responseInfo = new HttpResponseInfo(response.StatusCode, response.ResponseHeaders.AsReadOnly());
                 return (SplitIntoIndividualResponses(response, context.Request.Options.BulkObjectIdName), responseInfo.Expires.GetValueOrDefault(DateTimeOffset.Now));
             }).ConfigureAwait(false);
-            return cacheItems.Select(x => x.Item).Merge();
+
+            var response = cacheItems.Select(x => x.Item).Merge();
+            response.ResponseHeaders["X-Gw2Sharp-Cache-State"] = cacheState.ToString();
+            return response;
         }
 
         private static async Task<IWebApiResponse> OnAllRequestAsync(MiddlewareContext context, Func<MiddlewareContext, CancellationToken, Task<IWebApiResponse>> callNext, CancellationToken cancellationToken)
         {
-            var cacheItem = await context.Connection.CacheMethod.GetOrUpdateAsync(context.Request.Options.EndpointPath,
+            var cacheState = CacheState.FromCache;
+
+            var cacheItem = await context.Connection.CacheMethod.GetOrUpdateAsync(
+                context.Request.Options.EndpointPath,
                 GetCacheId(context.Request, "_all"),
-                RequestGetAsync(context, callNext, cancellationToken)).ConfigureAwait(false);
+                () =>
+                {
+                    cacheState = CacheState.FromLive;
+                    return RequestGetAsync(context, callNext, cancellationToken);
+                }
+            ).ConfigureAwait(false);
 
             // Update individual items
             var cacheItems = SplitIntoIndividualResponses(cacheItem.Item, context.Request.Options.BulkObjectIdName)
                 .Select(x => new CacheItem<IWebApiResponse>(context.Request.Options.EndpointPath, x.Key, x.Value, cacheItem.ExpiryTime));
             await context.Connection.CacheMethod.SetManyAsync(cacheItems).ConfigureAwait(false);
 
-            return cacheItem.Item;
+            var response = cacheItem.Item.Copy();
+            response.ResponseHeaders["X-Gw2Sharp-Cache-State"] = cacheState.ToString();
+            return response;
         }
 
         private static async Task<IWebApiResponse> OnPageRequestAsync(MiddlewareContext context, Func<MiddlewareContext, CancellationToken, Task<IWebApiResponse>> callNext, CancellationToken cancellationToken)
@@ -88,25 +116,33 @@ namespace Gw2Sharp.WebApi.Middleware
             context.Request.Options.EndpointQuery.TryGetValue(QUERY_PARAM_PAGE, out string? page);
             context.Request.Options.EndpointQuery.TryGetValue(QUERY_PARAM_PAGE_SIZE, out string? pageSize);
 
+            var cacheState = CacheState.FromCache;
+
             var cacheItem = await context.Connection.CacheMethod.GetOrUpdateAsync(context.Request.Options.EndpointPath,
                 GetCacheId(context.Request, $"_page{page}-{pageSize}"),
-                RequestGetAsync(context, callNext, cancellationToken)).ConfigureAwait(false);
+                () =>
+                {
+                    cacheState = CacheState.FromLive;
+                    return RequestGetAsync(context, callNext, cancellationToken);
+                }
+            ).ConfigureAwait(false);
 
             // Update individual items
             var cacheItems = SplitIntoIndividualResponses(cacheItem.Item, context.Request.Options.BulkObjectIdName)
                 .Select(x => new CacheItem<IWebApiResponse>(context.Request.Options.EndpointPath, x.Key, x.Value, cacheItem.ExpiryTime));
             await context.Connection.CacheMethod.SetManyAsync(cacheItems).ConfigureAwait(false);
 
-            return cacheItem.Item;
+            var response = cacheItem.Item.Copy();
+            response.ResponseHeaders["X-Gw2Sharp-Cache-State"] = cacheState.ToString();
+            return response;
         }
 
-        private static Func<Task<(IWebApiResponse, DateTimeOffset)>> RequestGetAsync(MiddlewareContext context, Func<MiddlewareContext, CancellationToken, Task<IWebApiResponse>> callNext, CancellationToken cancellationToken) =>
-            async () =>
-            {
-                var response = await callNext(context, cancellationToken).ConfigureAwait(false);
-                var responseInfo = new HttpResponseInfo(response.StatusCode, response.ResponseHeaders);
-                return (response, responseInfo.Expires.GetValueOrDefault(DateTimeOffset.Now));
-            };
+        private static async Task<(IWebApiResponse, DateTimeOffset)> RequestGetAsync(MiddlewareContext context, Func<MiddlewareContext, CancellationToken, Task<IWebApiResponse>> callNext, CancellationToken cancellationToken)
+        {
+            var response = await callNext(context, cancellationToken).ConfigureAwait(false);
+            var responseInfo = new HttpResponseInfo(response.StatusCode, response.ResponseHeaders.AsReadOnly());
+            return (response, responseInfo.Expires.GetValueOrDefault(DateTimeOffset.Now));
+        }
 
         private static IDictionary<string, IWebApiResponse> SplitIntoIndividualResponses(IWebApiResponse response, string bulkObjectPropertyIdName)
         {

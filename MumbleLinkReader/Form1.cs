@@ -24,6 +24,8 @@ namespace MumbleLinkReader
         private readonly ConcurrentDictionary<int, ContinentFloor> floors = new ConcurrentDictionary<int, ContinentFloor>();
         private readonly AutoResetEvent apiMapDownloadEvent = new AutoResetEvent(false);
 
+        private readonly System.Windows.Forms.Timer mClearStatusTimer = new System.Windows.Forms.Timer();
+
         public Form1()
         {
             this.InitializeComponent();
@@ -33,6 +35,7 @@ namespace MumbleLinkReader
         {
             this.apiThread = new Thread(this.ApiLoopAsync);
             this.mumbleLoopThread = new Thread(this.MumbleLoop);
+            this.mClearStatusTimer.Tick += this.ClearStatus;
 
             this.apiThread.Start();
             this.mumbleLoopThread.Start();
@@ -45,14 +48,27 @@ namespace MumbleLinkReader
             this.apiMapDownloadEvent.Set();
         }
 
-        private void UpdateStatus(string? message)
+        private void UpdateStatus(string? message, TimeSpan? timeToShow = default)
         {
             this.labelStatus.Invoke(new Action<string>(m =>
             {
                 this.labelStatus.Text = m;
                 this.labelStatus.Visible = !string.IsNullOrWhiteSpace(m);
+
+                if (timeToShow?.TotalMilliseconds >= 1)
+                {
+                    this.mClearStatusTimer.Interval = (int)timeToShow.Value.TotalMilliseconds;
+                    this.mClearStatusTimer.Enabled = true;
+                }
+                else
+                {
+                    this.mClearStatusTimer.Enabled = false;
+                }
             }), message);
         }
+
+        private void ClearStatus(object? sender, EventArgs e) =>
+            this.UpdateStatus(null);
 
 
         private async void ApiLoopAsync()
@@ -79,12 +95,15 @@ namespace MumbleLinkReader
                     }
                 }
 
-                this.UpdateStatus(null);
+                this.apiMapDownloadBusy.Remove(mapId);
+                this.UpdateStatus($"Map download status: {map.HttpResponseInfo!.CacheState}", TimeSpan.FromSeconds(3));
             }
         }
 
         private void MumbleLoop()
         {
+            int mapId = 0;
+
             do
             {
                 bool shouldRun = true;
@@ -92,17 +111,18 @@ namespace MumbleLinkReader
                 if (!this.client.Mumble.IsAvailable)
                     shouldRun = false;
 
-                int mapId = this.client.Mumble.MapId;
-                if (mapId == 0)
+                int newMapId = this.client.Mumble.MapId;
+                if (newMapId == 0)
                     shouldRun = false;
 
                 if (shouldRun)
                 {
-                    if (!this.maps.ContainsKey(mapId) && !this.apiMapDownloadBusy.Contains(mapId))
+                    if (newMapId != mapId && !this.apiMapDownloadBusy.Contains(mapId))
                     {
-                        this.apiMapDownloadBusy.Add(mapId);
-                        this.apiMapDownloadQueue.Enqueue(mapId);
+                        this.apiMapDownloadBusy.Add(newMapId);
+                        this.apiMapDownloadQueue.Enqueue(newMapId);
                         this.apiMapDownloadEvent.Set();
+                        mapId = newMapId;
                     }
 
                     try

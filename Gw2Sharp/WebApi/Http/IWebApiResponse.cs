@@ -9,7 +9,15 @@ namespace Gw2Sharp.WebApi.Http
     /// <summary>
     /// An interface for implementing a generic JSON web API response.
     /// </summary>
-    public interface IWebApiResponse : IWebApiResponse<string> { }
+    public interface IWebApiResponse : IWebApiResponse<string>
+    {
+        /// <summary>
+        /// Creates a copy of the request.
+        /// This deep copies <see cref="IWebApiResponse{T}.ResponseHeaders" />.
+        /// </summary>
+        /// <returns>The cloned response.</returns>
+        new IWebApiResponse Copy();
+    }
 
     /// <summary>
     /// An interface for implementing a deserialized web API response.
@@ -30,7 +38,14 @@ namespace Gw2Sharp.WebApi.Http
         /// <summary>
         /// The response headers.
         /// </summary>
-        IReadOnlyDictionary<string, string> ResponseHeaders { get; }
+        IDictionary<string, string> ResponseHeaders { get; }
+
+        /// <summary>
+        /// Creates a copy of the request.
+        /// This deep copies <see cref="IWebApiResponse{T}.ResponseHeaders" />, but copies <see cref="Content" /> by reference.
+        /// </summary>
+        /// <returns>The cloned response.</returns>
+        IWebApiResponse<T> Copy();
     }
 
 

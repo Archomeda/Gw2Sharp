@@ -10,16 +10,36 @@ namespace Gw2Sharp.WebApi.Http
     /// </summary>
     public class WebApiResponse : WebApiResponse<string>, IWebApiResponse
     {
-        /// <inheritdoc />
+        /// <summary>
+        /// Creates a new <see cref="WebApiResponse" /> with a string as backing content.
+        /// </summary>
+        /// <param name="content">The content.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="content"/> is <c>null</c>.</exception>
         public WebApiResponse(string content) : base(content, null, null) { }
 
-        /// <inheritdoc />
+        /// <summary>
+        /// Creates a new <see cref="WebApiResponse" /> with a string as backing content.
+        /// </summary>
+        /// <param name="content">The content.</param>
+        /// <param name="statusCode">The status code.</param>
+        /// <param name="responseHeaders">The response headers.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="content"/> is <c>null</c>.</exception>
         public WebApiResponse(string content, HttpStatusCode? statusCode, IDictionary<string, string>? responseHeaders)
             : base(content, statusCode, responseHeaders) { }
 
-        /// <inheritdoc />
+        /// <summary>
+        /// Creates a new <see cref="WebApiResponse" /> with a string as backing content.
+        /// </summary>
+        /// <param name="content">The content.</param>
+        /// <param name="statusCode">The status code.</param>
+        /// <param name="responseHeaders">The response headers.</param>
+        /// <exception cref="ArgumentNullException"><paramref name="content"/> is <c>null</c>.</exception>
         public WebApiResponse(string content, HttpStatusCode? statusCode, IEnumerable<KeyValuePair<string, string>>? responseHeaders)
             : base(content, statusCode, responseHeaders) { }
+
+        /// <inheritdoc />
+        public new IWebApiResponse Copy() =>
+            new WebApiResponse(this.Content, this.StatusCode, this.ResponseHeaders);
     }
 
     /// <summary>
@@ -48,7 +68,7 @@ namespace Gw2Sharp.WebApi.Http
             if (statusCode != null)
                 this.StatusCode = statusCode.Value;
             if (responseHeaders != null)
-                this.ResponseHeaders = responseHeaders.ShallowCopy().AsReadOnly();
+                this.ResponseHeaders = responseHeaders.ShallowCopy();
         }
 
         /// <summary>
@@ -68,6 +88,10 @@ namespace Gw2Sharp.WebApi.Http
         public HttpStatusCode StatusCode { get; set; } = 0;
 
         /// <inheritdoc />
-        public IReadOnlyDictionary<string, string> ResponseHeaders { get; } = new Dictionary<string, string>().AsReadOnly();
+        public IDictionary<string, string> ResponseHeaders { get; } = new Dictionary<string, string>();
+
+        /// <inheritdoc />
+        public IWebApiResponse<T> Copy() =>
+            new WebApiResponse<T>(this.Content, this.StatusCode, this.ResponseHeaders);
     }
 }
