@@ -1,11 +1,14 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using FluentAssertions;
+using FluentAssertions.Extensions;
 using Gw2Sharp.Tests.Helpers;
 using Gw2Sharp.WebApi.Caching;
+using Gw2Sharp.WebApi.Http;
 using Xunit;
 
 #pragma warning disable S3881 // "IDisposable" should be implemented correctly
@@ -27,10 +30,10 @@ namespace Gw2Sharp.Tests.WebApi.Caching
         {
             string category = "testdata";
             string id = "bytearray.dat";
-            var expiryTime = DateTimeOffset.UtcNow.AddMinutes(1);
+            var expiresAt = 1.Minutes().After(DateTime.Now);
 
             byte[] data = new byte[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-            await this.cacheMethod.SetAsync(category, id, data, expiryTime);
+            await this.cacheMethod.SetAsync(category, id, data, expiresAt);
             var actualCache = await this.cacheMethod.TryGetAsync<byte[]>(category, id);
 
             Assert.Equal(data, actualCache?.Item);
@@ -47,17 +50,18 @@ namespace Gw2Sharp.Tests.WebApi.Caching
         }
 
         [Fact]
-        public async Task StoresArrayCacheIntoArchiveTest()
+        public async Task StoresStringCacheIntoArchiveTest()
         {
             string category = "testdata";
-            string id = "stringarray.dat";
-            var expiryTime = DateTimeOffset.UtcNow.AddMinutes(1);
+            string id = "string.dat";
+            var expiresAt = 1.Minutes().After(DateTime.Now);
 
-            string[] data = new[] { "Hello", "World!" };
-            await this.cacheMethod.SetAsync(category, id, data, expiryTime);
-            var actualCache = await this.cacheMethod.TryGetAsync<IEnumerable<string>>(category, id);
+            var cache = new WebApiResponse("Hello world", HttpStatusCode.OK, null);
+            await this.cacheMethod.SetAsync(category, id, cache, expiresAt);
+            var actualCache = await this.cacheMethod.TryGetAsync<IWebApiResponse>(category, id);
 
-            Assert.Equal(data, actualCache?.Item);
+            actualCache.Should().NotBeNull();
+            actualCache.Item.Should().BeEquivalentTo(cache);
             this.cacheMethod.Dispose();
 
             using var stream = File.OpenRead(ARCHIVE_FILENAME);
@@ -67,7 +71,7 @@ namespace Gw2Sharp.Tests.WebApi.Caching
             using var memoryStream = new MemoryStream();
             await entryStream.CopyToAsync(memoryStream);
 
-            string expected = $"[\"{data[0]}\",\"{data[1]}\"]";
+            string expected = "{\"content\":\"Hello world\",\"responseHeaders\":{},\"statusCode\":200}";
             string actual = Encoding.UTF8.GetString(memoryStream.ToArray());
             Assert.Equal(expected, actual);
         }
@@ -77,10 +81,10 @@ namespace Gw2Sharp.Tests.WebApi.Caching
         {
             string category = "testdata";
             string id = "bytearray.dat";
-            var expiryTime = DateTimeOffset.UtcNow.AddMinutes(1);
+            var expiresAt = 1.Minutes().After(DateTime.Now);
 
             byte[] data = new byte[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-            await this.cacheMethod.SetAsync(category, id, data, expiryTime);
+            await this.cacheMethod.SetAsync(category, id, data, expiresAt);
             var actualCache = await this.cacheMethod.TryGetAsync<byte[]>(category, id);
 
             Assert.Equal(data, actualCache?.Item);
@@ -89,7 +93,7 @@ namespace Gw2Sharp.Tests.WebApi.Caching
             this.cacheMethod = new ArchiveCacheMethod(ARCHIVE_FILENAME);
             actualCache = await this.cacheMethod.TryGetAsync<byte[]>(category, id);
             Assert.Equal(data, actualCache?.Item);
-            Assert.Equal(expiryTime, actualCache?.ExpiryTime);
+            Assert.Equal(expiresAt, actualCache?.ExpiryTime);
         }
 
 
