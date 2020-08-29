@@ -96,7 +96,32 @@ namespace Gw2Sharp.Tests.WebApi.Caching
             Assert.Equal(expiresAt, actualCache?.ExpiryTime);
         }
 
+        [Fact]
+        public async Task GetsUnsupportedTypeFromArchiveTest()
+        {
+            const string CATEGORY = "category";
+            const string ID = "id";
+            var expiresAt = 1.Minutes().After(DateTime.Now);
 
+            // We need to store something valid first
+            byte[] data = new byte[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            await this.cacheMethod.SetAsync(CATEGORY, ID, data, expiresAt);
+
+            await this.cacheMethod.Invoking(x => x.TryGetAsync<object>(CATEGORY, ID))
+                .Should().ThrowAsync<NotSupportedException>();
+        }
+
+        [Fact]
+        public async Task StoresUnsupportedTypeIntoArchiveTest()
+        {
+            const string CATEGORY = "category";
+            const string ID = "id";
+            var expiresAt = 1.Minutes().After(DateTime.Now);
+
+            object data = new object();
+            await this.cacheMethod.Invoking(x => x.SetAsync(CATEGORY, ID, data, expiresAt))
+                .Should().ThrowAsync<NotSupportedException>();
+        }
 
         public void Dispose()
         {
