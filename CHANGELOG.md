@@ -1,5 +1,16 @@
 # Gw2Sharp History
 
+## 0.11.1
+### Caching
+- Fix caching with an archive backing file (`ArchiveCacheMethod`) where it cannot (de)serialize the data ([#72](https://github.com/Archomeda/Gw2Sharp/pull/72))
+
+### Fixes
+- Fix `LegendType` to start with 1 instead of 14 ([#73](https://github.com/Archomeda/Gw2Sharp/pull/73))
+
+### Upcoming breaking changes
+While the `ArchiveCacheMethod` should be fixed for now, the upcoming version 0.12.0 will introduce an overhaul for all caching methods that will make them more reliable.
+This patch update should be regarded as an intermediate fix before that happens, without introducing breaking changes.
+
 ## 0.11.0
 This release includes the most breaking changes in Gw2Sharp so far in order to support middleware, which is a major change in how Gw2Sharp handles requests.
 If you're only using the surface API in Gw2Sharp, the impact will be very low.
