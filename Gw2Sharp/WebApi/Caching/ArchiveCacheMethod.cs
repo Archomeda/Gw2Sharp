@@ -4,9 +4,11 @@ using System.Globalization;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
+using System.Net;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Gw2Sharp.Extensions;
+using Gw2Sharp.WebApi.Http;
 
 #pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
 
@@ -105,10 +107,10 @@ namespace Gw2Sharp.WebApi.Caching
             if (id == null)
                 throw new ArgumentNullException(nameof(id));
 
-            return Task.FromResult(this.TryGetInternal<T>(category, id));
+            return Task.FromResult(this.TryGet<T>(category, id));
         }
 
-        private CacheItem<T>? TryGetInternal<T>(string category, string id)
+        private CacheItem<T>? TryGet<T>(string category, string id)
         {
             string fileName = $"{category}/{id}";
             lock (this.operationLock)
@@ -126,20 +128,30 @@ namespace Gw2Sharp.WebApi.Caching
 
                 object data;
                 using var zipStream = zipEntry.Open();
-                if (typeof(T) == typeof(byte[]))
+                var type = typeof(T);
+                if (type == typeof(byte[]))
                 {
                     // A byte array is requested
                     using var memoryStream = new MemoryStream();
                     zipStream.CopyTo(memoryStream);
                     data = memoryStream.ToArray();
                 }
-                else
+                else if (typeof(IWebApiResponse).IsAssignableFrom(type))
                 {
                     // Another type is requested, try deserializing it from JSON
                     // Sadly enough System.Text.Json doesn't yet support deserializing from streams
+
+                    // Temporary workaround until v0.12 to solve serializing/deserializing issues.
+                    // v0.12 will introduce a breaking change to the ICacheMethod that will no longer accept a generic type,
+                    // but instead only a byte array or a string, along with the response headers and status code.
                     using var streamReader = new StreamReader(zipStream);
                     string json = streamReader.ReadToEnd();
-                    data = JsonSerializer.Deserialize<T>(json, this.serializerSettings)!;
+                    var wrappedResponse = JsonSerializer.Deserialize<WrappedResponse>(json, this.serializerSettings);
+                    data = new WebApiResponse(wrappedResponse.Content, wrappedResponse.StatusCode, wrappedResponse.ResponseHeaders);
+                }
+                else
+                {
+                    throw new NotSupportedException($"Trying to deserialize unknown type {type.Name} from the cache archive");
                 }
 
                 return new CacheItem<T>(category, id, (T)data, expiryTime);
@@ -153,11 +165,11 @@ namespace Gw2Sharp.WebApi.Caching
                 throw new ArgumentNullException(nameof(item));
 
             if (item.ExpiryTime > DateTime.Now)
-                this.SetInternal(item);
+                this.Set(item);
             return Task.CompletedTask;
         }
 
-        private void SetInternal<T>(CacheItem<T> item)
+        private void Set<T>(CacheItem<T> item)
         {
             string fileName = $"{item.Category}/{item.Id}";
             lock (this.operationLock)
@@ -173,13 +185,27 @@ namespace Gw2Sharp.WebApi.Caching
                     using var memoryStream = new MemoryStream(byteArrayData, false);
                     memoryStream.CopyTo(zipStream);
                 }
-                else
+                else if (item.Item is IWebApiResponse response)
                 {
                     // Another type is stored, try serializing it to JSON
                     // Sadly enough System.Text.Json doesn't yet support serializing to streams
+
+                    // Temporary workaround until v0.12 to solve serializing/deserializing issues.
+                    // v0.12 will introduce a breaking change to the ICacheMethod that will no longer accept a generic type,
+                    // but instead only a byte array or a string, along with the response headers and status code.
+                    var wrappedResponse = new WrappedResponse
+                    {
+                        Content = response.Content,
+                        ResponseHeaders = response.ResponseHeaders.ToDictionary(x => x.Key, x => x.Value),
+                        StatusCode = response.StatusCode
+                    };
                     using var streamWriter = new StreamWriter(zipStream);
-                    string json = JsonSerializer.Serialize(item.Item, this.serializerSettings);
+                    string json = JsonSerializer.Serialize(wrappedResponse, this.serializerSettings);
                     streamWriter.Write(json);
+                }
+                else
+                {
+                    throw new NotSupportedException($"Trying to serialize unknown type {item.Item?.GetType().Name ?? "(null)"} to the cache archive");
                 }
 
                 this.SetExpiryTime(fileName, item.ExpiryTime);
@@ -193,14 +219,13 @@ namespace Gw2Sharp.WebApi.Caching
                 throw new ArgumentNullException(nameof(category));
             if (ids == null)
                 throw new ArgumentNullException(nameof(ids));
+            return ExecAsync();
 
-            return this.GetManyInternalAsync<T>(category, ids);
+            async Task<IDictionary<string, CacheItem<T>>> ExecAsync() => ids
+                .Select(id => this.TryGet<T>(category, id))
+                .WhereNotNull()
+                .ToDictionary(x => x.Id);
         }
-
-        private async Task<IDictionary<string, CacheItem<T>>> GetManyInternalAsync<T>(string category, IEnumerable<string> ids) => ids
-            .Select(id => this.TryGetInternal<T>(category, id))
-            .WhereNotNull()
-            .ToDictionary(x => x.Id);
 
         /// <inheritdoc />
         public override async Task ClearAsync()
@@ -235,5 +260,14 @@ namespace Gw2Sharp.WebApi.Caching
         }
 
         #endregion
+
+        private class WrappedResponse
+        {
+            public string Content { get; set; } = string.Empty;
+
+            public Dictionary<string, string> ResponseHeaders { get; set; } = new Dictionary<string, string>();
+
+            public HttpStatusCode StatusCode { get; set; }
+        }
     }
 }
