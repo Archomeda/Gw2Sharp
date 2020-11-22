@@ -48,7 +48,7 @@ jobs:
       - name: Create assembly info file for GitVersion
         shell: powershell
         run: |
-          New-Item -Path Gw2Sharp/Properties/AssemblyVersionInfo.cs -ItemType File
+          set-Content -Path Gw2Sharp/Properties/AssemblyVersionInfo.cs -Value 'using System.Reflection;'
       - uses: gittools/actions/gitversion/setup@v0.9.6
         with:
           versionSpec: '5.x'
