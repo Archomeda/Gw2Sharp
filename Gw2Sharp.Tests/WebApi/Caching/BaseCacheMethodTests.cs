@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using AutoFixture.Xunit2;
 using FluentAssertions;
 using FluentAssertions.Extensions;
 using Gw2Sharp.Tests.Helpers;
 using Gw2Sharp.WebApi.Caching;
-using Gw2Sharp.WebApi.Http;
 using Xunit;
 
 namespace Gw2Sharp.Tests.WebApi.Caching
@@ -16,92 +16,84 @@ namespace Gw2Sharp.Tests.WebApi.Caching
     {
         protected ICacheMethod cacheMethod = null!;
 
-        [Fact]
-        public async Task CategoryDoesNotExistTest()
+        [Theory]
+        [AutoData]
+        public async Task CategoryDoesNotExistTest(string category, string id)
         {
-            var actual = await this.cacheMethod.TryGetAsync<string>("unknown", "unknown");
+            var actual = await this.cacheMethod.TryGetAsync(category, id);
             actual.Should().BeNull();
         }
 
         [Theory]
         [AutoData]
-        public async Task FlushTest(WebApiResponse response)
+        public async Task FlushTest(string category, string id, string data)
         {
             var expiresAt = 30.Minutes().After(DateTime.Now);
-            var cacheItem = new CacheItem<IWebApiResponse>("Test category", "test", response, expiresAt);
+            var cacheItem = new CacheItem(category, id, data, HttpStatusCode.OK, expiresAt, CacheItemStatus.New);
 
             await this.cacheMethod.SetAsync(cacheItem);
-            var actual = await this.cacheMethod.TryGetAsync<IWebApiResponse>(cacheItem.Category, cacheItem.Id);
-            actual.Should().BeEquivalentTo(cacheItem, x => x.ComparingByMembers<CacheItem<IWebApiResponse>>());
+            var actual = await this.cacheMethod.TryGetAsync(cacheItem.Category, cacheItem.Id);
+            actual.Should().BeEquivalentTo(cacheItem, x => x.Excluding(y => y.RawItem).Excluding(y => y.Status));
+            actual.Status.Should().Be(CacheItemStatus.Cached);
 
             await this.cacheMethod.ClearAsync();
-            actual = await this.cacheMethod.TryGetAsync<IWebApiResponse>(cacheItem.Category, cacheItem.Id);
+            actual = await this.cacheMethod.TryGetAsync(cacheItem.Category, cacheItem.Id);
             actual.Should().BeNull();
         }
 
-        [Fact]
-        public async Task GetManyEmptyTest()
+        [Theory]
+        [AutoData]
+        public async Task GetManyEmptyTest(string category, string[] ids)
         {
-            var actual = await this.cacheMethod.GetManyAsync<string>("Test category", new[] { "test1", "test2", "test3" });
+            var actual = await this.cacheMethod.GetManyAsync(category, ids);
             actual.Should().BeEmpty();
         }
 
         [Theory]
         [AutoData]
-        public async Task GetManyWithoutExpiredTest(WebApiResponse response1, WebApiResponse response2)
+        public async Task GetManyWithoutExpiredTest(string category, (string Id, string Data)[] items)
         {
-            string category = "Test category";
-            var cacheItems = new[]
-            {
-                new CacheItem<IWebApiResponse>(category, "test", response1, 30.Minutes().After(DateTime.Now)),
-                new CacheItem<IWebApiResponse>(category, "test2", response2, 1750.Milliseconds().After(DateTime.Now))
-            };
+            var cacheItems = items
+                .Select((x, i) => new CacheItem(category, x.Id, x.Data, HttpStatusCode.OK, i == 0 ? 750.Milliseconds().After(DateTime.Now) : 30.Minutes().After(DateTime.Now), CacheItemStatus.New))
+                .ToList();
 
             await this.cacheMethod.SetManyAsync(cacheItems);
-            var actual = await Task.WhenAll(cacheItems.Select(async i => await this.cacheMethod.TryGetAsync<IWebApiResponse>(i.Category, i.Id)));
-            actual.Should().NotContainNulls();
-            await Task.Delay(2000);
+            var actual = await Task.WhenAll(cacheItems.Select(async i => await this.cacheMethod.TryGetAsync(i.Category, i.Id)));
+            actual.Should().BeEquivalentTo(cacheItems, x => x.Excluding(y => y.RawItem).Excluding(y => y.Status))
+                .And.OnlyContain(x => x.Status == CacheItemStatus.Cached);
+            await Task.Delay(1000);
 
-            var afterExpiryActual = await this.cacheMethod.GetManyAsync<IWebApiResponse>(category, cacheItems.Select(x => x.Id));
-            afterExpiryActual.Values.Should().BeEquivalentTo(cacheItems.Where(i => i.ExpiryTime > DateTime.Now), x => x.ComparingByMembers<CacheItem<IWebApiResponse>>());
+            var afterExpiryActual = await this.cacheMethod.GetManyAsync(category, cacheItems.Select(x => x.Id));
+            afterExpiryActual.Should().BeEquivalentTo(cacheItems.Where(i => i.ExpiryTime > DateTime.Now), x => x.Excluding(y => y.RawItem).Excluding(y => y.Status));
         }
 
         [Theory]
         [AutoData]
-        public async Task GetOrUpdateManyTest(WebApiResponse response1, WebApiResponse response2, WebApiResponse response3)
+        public async Task GetOrUpdateManyTest(string category, (string Id, string Data)[] items)
         {
-            string category = "Test category";
             var expiresAt = 30.Minutes().After(DateTime.Now);
-            var cacheItems = new[]
-            {
-                new CacheItem<IWebApiResponse>(category, "test", response1, expiresAt),
-                new CacheItem<IWebApiResponse>(category, "test2", response2, expiresAt),
-                new CacheItem<IWebApiResponse>(category, "test3", response3, expiresAt)
-            };
+            var cacheItems = items.Select(x => new CacheItem(category, x.Id, x.Data, HttpStatusCode.OK, expiresAt, CacheItemStatus.New)).ToList();
 
-            await this.cacheMethod.GetOrUpdateManyAsync(category, cacheItems.Select(x => x.Id), expiresAt, missingIds =>
+            await this.cacheMethod.GetOrUpdateManyAsync(category, cacheItems.Select(x => x.Id), (_, missingIds) =>
             {
                 missingIds.Should().BeEquivalentTo(cacheItems.Select(x => x.Id));
-                return Task.FromResult<IDictionary<string, IWebApiResponse>>(cacheItems.ToDictionary(x => x.Id, x => x.Item));
+                return Task.FromResult<IList<CacheItem>>(cacheItems);
             });
-            var individualActual = await Task.WhenAll(cacheItems.Select(async i => await this.cacheMethod.TryGetAsync<IWebApiResponse>(i.Category, i.Id)));
-            individualActual.Should().NotContainNulls();
-            var manyActual = await this.cacheMethod.GetManyAsync<IWebApiResponse>(category, cacheItems.Select(x => x.Id));
-            manyActual.Values.Should().BeEquivalentTo(cacheItems, x => x.ComparingByMembers<CacheItem<IWebApiResponse>>());
+
+            var individualActual = await Task.WhenAll(cacheItems.Select(async i => await this.cacheMethod.TryGetAsync(i.Category, i.Id)));
+            individualActual.Should().BeEquivalentTo(cacheItems, x => x.Excluding(y => y.RawItem).Excluding(y => y.Status))
+                .And.OnlyContain(x => x.Status == CacheItemStatus.Cached);
+            var manyActual = await this.cacheMethod.GetManyAsync(category, cacheItems.Select(x => x.Id));
+            manyActual.Should().BeEquivalentTo(cacheItems, x => x.Excluding(y => y.RawItem).Excluding(y => y.Status))
+                .And.OnlyContain(x => x.Status == CacheItemStatus.Cached);
         }
 
         [Theory]
         [AutoData]
-        public async Task GetOrUpdateManyPartlyTest(WebApiResponse response1, WebApiResponse response2, WebApiResponse response3)
+        public async Task GetOrUpdateManyPartlyTest(string category, (string Id, string Data)[] items)
         {
-            const string CATEGORY = "Test category";
             var expiresAt = 30.Minutes().After(DateTime.Now);
-            var cacheItems = new[]
-            {
-                new CacheItem<IWebApiResponse>(CATEGORY, "test", response1, expiresAt),
-                new CacheItem<IWebApiResponse>(CATEGORY, "test2", response2, expiresAt),
-                new CacheItem<IWebApiResponse>(CATEGORY, "test3", response3, expiresAt)
-            };
+            var cacheItems = items.Select(x => new CacheItem(category, x.Id, x.Data, HttpStatusCode.OK, expiresAt, CacheItemStatus.New)).ToList();
             var idsToGet = cacheItems.Select(x => x.Id).ToList();
             idsToGet.Add("0");
 
@@ -109,110 +101,101 @@ namespace Gw2Sharp.Tests.WebApi.Caching
             await this.cacheMethod.SetManyAsync(cacheItems);
 
             // Return an empty response to make sure that there's still an item missing, this should not throw any exception
-            var actual = await this.cacheMethod.GetOrUpdateManyAsync(CATEGORY, idsToGet, expiresAt, missingIds =>
-                Task.FromResult<IDictionary<string, IWebApiResponse>>(new Dictionary<string, IWebApiResponse>()));
+            var actual = await this.cacheMethod.GetOrUpdateManyAsync(category, idsToGet, (_, missingIds) =>
+                Task.FromResult<IList<CacheItem>>(Array.Empty<CacheItem>()));
 
-            actual.Should().BeEquivalentTo(cacheItems, x => x.ComparingByMembers<CacheItem<IWebApiResponse>>());
+            actual.Should().BeEquivalentTo(cacheItems, x => x.Excluding(y => y.RawItem).Excluding(y => y.Status))
+                .And.OnlyContain(x => x.Status == CacheItemStatus.Cached);
         }
 
         [Theory]
         [AutoData]
-        public async Task GetOrUpdateGetTest(WebApiResponse response)
+        public async Task GetOrUpdateGetTest(string category, string id, string data)
         {
-            string category = "Test category";
-            string id = "test";
             var expiresAt = 30.Minutes().After(DateTime.Now);
 
-            await this.cacheMethod.SetAsync(category, id, response, expiresAt);
-            var actual = await this.cacheMethod.GetOrUpdateAsync<WebApiResponse>(category, id, expiresAt, () => throw new Exception("Should not be called"));
-            actual.Item.Should().BeEquivalentTo(response);
+            var cacheItem = new CacheItem(category, id, data, HttpStatusCode.OK, expiresAt, CacheItemStatus.New);
+            await this.cacheMethod.SetAsync(cacheItem);
+
+            var actual = await this.cacheMethod.GetOrUpdateAsync(category, id, (_1, _2) => throw new Exception("Should not be called"));
+            actual.Should().BeEquivalentTo(cacheItem, x => x.Excluding(y => y.RawItem).Excluding(y => y.Status));
+            actual.Status.Should().Be(CacheItemStatus.Cached);
         }
 
         [Theory]
         [AutoData]
-        public async Task GetOrUpdateUpdateTest(WebApiResponse response)
+        public async Task GetOrUpdateUpdateTest(string category, string id, string data)
         {
-            string category = "Test category";
-            string id = "test";
             var expiresAt = 30.Minutes().After(DateTime.Now);
 
-            await this.cacheMethod.GetOrUpdateAsync(category, id, expiresAt, () => Task.FromResult(response));
-            var actual = await this.cacheMethod.TryGetAsync<WebApiResponse>(category, id);
-            actual.Should().NotBeNull();
-            actual.Item.Should().BeEquivalentTo(response);
+            var cacheItem = new CacheItem(category, id, data, HttpStatusCode.OK, expiresAt, CacheItemStatus.New);
+            await this.cacheMethod.GetOrUpdateAsync(category, id, (_1, _2) => Task.FromResult(cacheItem));
+
+            var actual = await this.cacheMethod.TryGetAsync(category, id);
+            actual.Should().BeEquivalentTo(cacheItem, x => x.Excluding(y => y.RawItem).Excluding(y => y.Status));
+            actual.Status.Should().Be(CacheItemStatus.Cached);
         }
 
         [Theory]
         [AutoData]
-        public async Task IdDoesNotExistTest(WebApiResponse response)
+        public async Task IdDoesNotExistTest(string category, string id, string data)
         {
-            string category = "Test category";
             var expiresAt = 30.Minutes().After(DateTime.Now);
 
-            await this.cacheMethod.SetAsync(new CacheItem<IWebApiResponse>(category, "test", response, expiresAt));
-            var actual = await this.cacheMethod.TryGetAsync<IWebApiResponse>(category, "unknown");
+            var cacheItem = new CacheItem(category, id, data, HttpStatusCode.OK, expiresAt, CacheItemStatus.New);
+            await this.cacheMethod.SetAsync(cacheItem);
+
+            var actual = await this.cacheMethod.TryGetAsync(category, $"{id}_nonexistent");
             actual.Should().BeNull();
         }
 
         [Theory]
         [AutoData]
-        public async Task StoreExpiredTest(WebApiResponse response)
+        public async Task StoreExpiredTest(string category, string id, string data)
         {
             var expiresAt = 30.Minutes().Before(DateTime.Now);
-            var cacheItem = new CacheItem<IWebApiResponse>("Test category", "test", response, expiresAt);
 
+            var cacheItem = new CacheItem(category, id, data, HttpStatusCode.OK, expiresAt, CacheItemStatus.New);
             await this.cacheMethod.SetAsync(cacheItem);
-            var actual = await this.cacheMethod.TryGetAsync<IWebApiResponse>(cacheItem.Category, cacheItem.Id);
+
+            var actual = await this.cacheMethod.TryGetAsync(category, id);
             actual.Should().BeNull();
         }
 
         [Theory]
         [AutoData]
-        public async Task StoreExpiresSoonTest(WebApiResponse response)
+        public async Task StoreExpiresSoonTest(string category, string id, string data)
         {
-            var expiresAt = 1.5.Seconds().After(DateTime.Now);
-            var cacheItem = new CacheItem<IWebApiResponse>("Test category", "test", response, expiresAt);
+            var expiresAt = 750.Milliseconds().After(DateTime.Now);
 
+            var cacheItem = new CacheItem(category, id, data, HttpStatusCode.OK, expiresAt, CacheItemStatus.New);
             await this.cacheMethod.SetAsync(cacheItem);
-            var actual = await this.cacheMethod.TryGetAsync<IWebApiResponse>(cacheItem.Category, cacheItem.Id);
-            actual.Should().BeEquivalentTo(cacheItem, x => x.ComparingByMembers<CacheItem<IWebApiResponse>>());
 
-            await Task.Delay(2000);
+            var actual = await this.cacheMethod.TryGetAsync(category, id);
+            actual.Should().BeEquivalentTo(cacheItem, x => x.Excluding(y => y.RawItem).Excluding(y => y.Status));
+            actual.Status.Should().Be(CacheItemStatus.Cached);
 
-            actual = await this.cacheMethod.TryGetAsync<IWebApiResponse>(cacheItem.Category, cacheItem.Id);
+            await Task.Delay(1000);
+
+            actual = await this.cacheMethod.TryGetAsync(category, id);
             actual.Should().BeNull();
         }
 
         [Theory]
         [AutoData]
-        public async Task StoreManyTest(WebApiResponse response1, WebApiResponse response2, WebApiResponse response3)
+        public async Task StoreManyTest(string category, (string Id, string Data)[] items)
         {
-            string category = "Test category";
             var expiresAt = 30.Minutes().After(DateTime.Now);
-            var cacheItems = new[]
-            {
-                new CacheItem<IWebApiResponse>(category, "test", response1, expiresAt),
-                new CacheItem<IWebApiResponse>(category, "test2", response2, expiresAt),
-                new CacheItem<IWebApiResponse>(category, "test3", response3, expiresAt)
-            };
 
+            var cacheItems = items.Select(x => new CacheItem(category, x.Id, x.Data, HttpStatusCode.OK, expiresAt, CacheItemStatus.New)).ToList();
             await this.cacheMethod.SetManyAsync(cacheItems);
-            await AssertAsync.All(cacheItems.Select(async i => await this.cacheMethod.TryGetAsync<IWebApiResponse>(i.Category, i.Id) != null), Assert.True);
-            var actual = (await this.cacheMethod.GetManyAsync<IWebApiResponse>(category, cacheItems.Select(x => x.Id))).Select(x => x.Value);
-            actual.Should().BeEquivalentTo(cacheItems, x => x.ComparingByMembers<CacheItem<IWebApiResponse>>());
-        }
 
-        [Theory]
-        [AutoData]
-        public async Task StoreValidTest(WebApiResponse response)
-        {
-            string category = "Test category";
-            var expiresAt = 30.Minutes().After(DateTime.Now);
-            var cacheItem = new CacheItem<IWebApiResponse>(category, "test", response, expiresAt);
-
-            await this.cacheMethod.SetAsync(cacheItem);
-            var actual = await this.cacheMethod.TryGetAsync<IWebApiResponse>(cacheItem.Category, cacheItem.Id);
-            actual.Should().BeEquivalentTo(cacheItem, x => x.ComparingByMembers<CacheItem<IWebApiResponse>>());
+            var individualActual = await Task.WhenAll(cacheItems.Select(async i => await this.cacheMethod.TryGetAsync(i.Category, i.Id)));
+            individualActual.Should().BeEquivalentTo(cacheItems, x => x.Excluding(y => y.RawItem).Excluding(y => y.Status));
+            individualActual.Should().OnlyContain(x => x.Status == CacheItemStatus.Cached);
+            var manyActual = await this.cacheMethod.GetManyAsync(category, cacheItems.Select(x => x.Id));
+            manyActual.Should().BeEquivalentTo(cacheItems, x => x.Excluding(y => y.RawItem).Excluding(y => y.Status))
+                .And.OnlyContain(x => x.Status == CacheItemStatus.Cached);
         }
 
         #region ArgumentNullException tests
@@ -220,43 +203,38 @@ namespace Gw2Sharp.Tests.WebApi.Caching
         [Fact]
         public async Task ArgumentNullGetTest() =>
             await AssertArguments.ThrowsWhenNullAsync(
-                () => this.cacheMethod.TryGetAsync<object>("Test category", "test"),
+                () => this.cacheMethod.TryGetAsync("Test category", "test"),
                 new[] { true, true });
 
         [Fact]
         public async Task ArgumentNullGetManyTest() =>
             await AssertArguments.ThrowsWhenNullAsync(
-                () => this.cacheMethod.GetManyAsync<object>("Test category", Array.Empty<string>()),
+                () => this.cacheMethod.GetManyAsync("Test category", Array.Empty<string>()),
                 new[] { true, true });
 
         [Fact]
-        public async Task ArgumentNullSetTest()
-        {
+        public async Task ArgumentNullSetTest() =>
             await AssertArguments.ThrowsWhenNullAsync(
-                () => this.cacheMethod.SetAsync(new CacheItem<object>("Test category", "test", new object(), DateTime.Now)),
+                () => this.cacheMethod.SetAsync(new CacheItem("Test category", "test", "data", HttpStatusCode.OK, DateTime.Now, CacheItemStatus.New, null)),
                 new[] { true });
-            await AssertArguments.ThrowsWhenNullAsync(
-                () => this.cacheMethod.SetAsync("Test category", "test", new object(), DateTime.Now),
-                new[] { true, true, false, false });
-        }
 
         [Fact]
         public async Task ArgumentNullSetManyTest() =>
             await AssertArguments.ThrowsWhenNullAsync(
-                () => this.cacheMethod.SetManyAsync(new List<CacheItem<object>>()),
+                () => this.cacheMethod.SetManyAsync(Array.Empty<CacheItem>()),
                 new[] { true });
 
         [Fact]
         public async Task ArgumentNullGetOrUpdateTest() =>
             await AssertArguments.ThrowsWhenNullAsync(
-                () => this.cacheMethod.GetOrUpdateAsync("Test category", "test", DateTime.Now, () => Task.FromResult(new object())),
-                new[] { true, true, false, true });
+                () => this.cacheMethod.GetOrUpdateAsync("Test category", "test", (_1, _2) => Task.FromResult<CacheItem>(null)),
+                new[] { true, true, true });
 
         [Fact]
         public async Task ArgumentNullGetOrUpdateManyTest() =>
             await AssertArguments.ThrowsWhenNullAsync(
-                () => this.cacheMethod.GetOrUpdateManyAsync("Test category", new List<string>(), DateTime.Now, obj => Task.FromResult((IDictionary<string, object>)new Dictionary<string, object>())),
-                new[] { true, true, false, true });
+                () => this.cacheMethod.GetOrUpdateManyAsync("Test category", new List<string>(), (_1, _2) => Task.FromResult<IList<CacheItem>>(null)),
+                new[] { true, true, true });
 
         #endregion
     }

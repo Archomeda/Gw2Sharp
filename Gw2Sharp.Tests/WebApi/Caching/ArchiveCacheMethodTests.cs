@@ -1,17 +1,16 @@
 using System;
 using System.IO;
 using System.IO.Compression;
+using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using AutoFixture.Xunit2;
 using FluentAssertions;
 using FluentAssertions.Extensions;
 using Gw2Sharp.Tests.Helpers;
 using Gw2Sharp.WebApi.Caching;
-using Gw2Sharp.WebApi.Http;
 using Xunit;
-
-#pragma warning disable S3881 // "IDisposable" should be implemented correctly
 
 namespace Gw2Sharp.Tests.WebApi.Caching
 {
@@ -25,18 +24,18 @@ namespace Gw2Sharp.Tests.WebApi.Caching
         }
 
 
-        [Fact]
-        public async Task StoresRawCacheIntoArchiveTest()
+        [Theory]
+        [AutoData]
+        public async Task StoresRawDataIntoArchiveTest(string category, string id, byte[] data)
         {
-            string category = "testdata";
-            string id = "bytearray.dat";
             var expiresAt = 1.Minutes().After(DateTime.Now);
 
-            byte[] data = new byte[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-            await this.cacheMethod.SetAsync(category, id, data, expiresAt);
-            var actualCache = await this.cacheMethod.TryGetAsync<byte[]>(category, id);
+            var cacheItem = new CacheItem(category, id, data, HttpStatusCode.OK, expiresAt, CacheItemStatus.New);
+            await this.cacheMethod.SetAsync(cacheItem);
+            var actualCache = await this.cacheMethod.TryGetAsync(category, id);
 
-            Assert.Equal(data, actualCache?.Item);
+            actualCache.Should().BeEquivalentTo(cacheItem, x => x.Excluding(y => y.StringItem).Excluding(y => y.Status));
+            actualCache.Status.Should().Be(CacheItemStatus.Cached);
             this.cacheMethod.Dispose();
 
             using var stream = File.OpenRead(ARCHIVE_FILENAME);
@@ -45,23 +44,24 @@ namespace Gw2Sharp.Tests.WebApi.Caching
             using var entryStream = entry.Open();
             using var memoryStream = new MemoryStream();
             await entryStream.CopyToAsync(memoryStream);
+
+            var expected = new[] { (byte)CacheItemType.Raw }.Concat(data);
             byte[] actual = memoryStream.ToArray();
-            Assert.Equal(data, actual);
+            actual.Should().BeEquivalentTo(expected);
         }
 
-        [Fact]
-        public async Task StoresStringCacheIntoArchiveTest()
+        [Theory]
+        [AutoData]
+        public async Task StoresStringDataIntoArchiveTest(string category, string id, string data)
         {
-            string category = "testdata";
-            string id = "string.dat";
             var expiresAt = 1.Minutes().After(DateTime.Now);
 
-            var cache = new WebApiResponse("Hello world", HttpStatusCode.OK, null);
-            await this.cacheMethod.SetAsync(category, id, cache, expiresAt);
-            var actualCache = await this.cacheMethod.TryGetAsync<IWebApiResponse>(category, id);
+            var cacheItem = new CacheItem(category, id, data, HttpStatusCode.OK, expiresAt, CacheItemStatus.New);
+            await this.cacheMethod.SetAsync(cacheItem);
+            var actualCache = await this.cacheMethod.TryGetAsync(category, id);
 
-            actualCache.Should().NotBeNull();
-            actualCache.Item.Should().BeEquivalentTo(cache);
+            actualCache.Should().BeEquivalentTo(cacheItem, x => x.Excluding(y => y.RawItem).Excluding(y => y.Status));
+            actualCache.Status.Should().Be(CacheItemStatus.Cached);
             this.cacheMethod.Dispose();
 
             using var stream = File.OpenRead(ARCHIVE_FILENAME);
@@ -71,56 +71,29 @@ namespace Gw2Sharp.Tests.WebApi.Caching
             using var memoryStream = new MemoryStream();
             await entryStream.CopyToAsync(memoryStream);
 
-            string expected = "{\"content\":\"Hello world\",\"responseHeaders\":{},\"statusCode\":200}";
+            string expected = $"{(char)CacheItemType.String}{data}";
             string actual = Encoding.UTF8.GetString(memoryStream.ToArray());
-            Assert.Equal(expected, actual);
+            actual.Should().BeEquivalentTo(expected);
         }
 
-        [Fact]
-        public async Task LoadExistingArchiveTest()
+        [Theory]
+        [AutoData]
+        public async Task LoadExistingArchiveTest(string category, string id, byte[] data)
         {
-            string category = "testdata";
-            string id = "bytearray.dat";
             var expiresAt = 1.Minutes().After(DateTime.Now);
 
-            byte[] data = new byte[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-            await this.cacheMethod.SetAsync(category, id, data, expiresAt);
-            var actualCache = await this.cacheMethod.TryGetAsync<byte[]>(category, id);
+            var cacheItem = new CacheItem(category, id, data, HttpStatusCode.OK, expiresAt, CacheItemStatus.New);
+            await this.cacheMethod.SetAsync(cacheItem);
+            var actualCache = await this.cacheMethod.TryGetAsync(category, id);
 
-            Assert.Equal(data, actualCache?.Item);
+            actualCache.Should().BeEquivalentTo(cacheItem, x => x.Excluding(y => y.StringItem).Excluding(y => y.Status));
+            actualCache.Status.Should().Be(CacheItemStatus.Cached);
             this.cacheMethod.Dispose();
 
             this.cacheMethod = new ArchiveCacheMethod(ARCHIVE_FILENAME);
-            actualCache = await this.cacheMethod.TryGetAsync<byte[]>(category, id);
-            Assert.Equal(data, actualCache?.Item);
-            Assert.Equal(expiresAt, actualCache?.ExpiryTime);
-        }
-
-        [Fact]
-        public async Task GetsUnsupportedTypeFromArchiveTest()
-        {
-            const string CATEGORY = "category";
-            const string ID = "id";
-            var expiresAt = 1.Minutes().After(DateTime.Now);
-
-            // We need to store something valid first
-            byte[] data = new byte[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-            await this.cacheMethod.SetAsync(CATEGORY, ID, data, expiresAt);
-
-            await this.cacheMethod.Invoking(x => x.TryGetAsync<object>(CATEGORY, ID))
-                .Should().ThrowAsync<NotSupportedException>();
-        }
-
-        [Fact]
-        public async Task StoresUnsupportedTypeIntoArchiveTest()
-        {
-            const string CATEGORY = "category";
-            const string ID = "id";
-            var expiresAt = 1.Minutes().After(DateTime.Now);
-
-            object data = new object();
-            await this.cacheMethod.Invoking(x => x.SetAsync(CATEGORY, ID, data, expiresAt))
-                .Should().ThrowAsync<NotSupportedException>();
+            actualCache = await this.cacheMethod.TryGetAsync(category, id);
+            actualCache.Status.Should().Be(CacheItemStatus.Cached);
+            actualCache.Should().BeEquivalentTo(cacheItem, x => x.Excluding(y => y.StringItem).Excluding(y => y.Status));
         }
 
         public void Dispose()

@@ -1,26 +1,78 @@
 using System;
+using System.Collections.Generic;
+using System.Net;
+#if !NETSTANDARD
+using System.Collections.Immutable;
+#endif
 
 namespace Gw2Sharp.WebApi.Caching
 {
     /// <summary>
     /// A default object cache item.
     /// </summary>
-    public class CacheItem : IEquatable<CacheItem>
+    public sealed class CacheItem
     {
+        private readonly object item;
+
+#if !NETSTANDARD
+        private static IDictionary<string, string> EmptyMetadata { get; } = new Dictionary<string, string>().ToImmutableDictionary();
+#else
+        private static IDictionary<string, string> EmptyMetadata => new Dictionary<string, string>();
+#endif
+
         /// <summary>
-        /// Creates a new cache item.
+        /// Creates a new raw cache item.
         /// </summary>
         /// <param name="category">The cache category.</param>
         /// <param name="id">The id.</param>
         /// <param name="item">The item.</param>
+        /// <param name="statusCode">The status code.</param>
         /// <param name="expiryTime">The expiry time.</param>
-        public CacheItem(string category, string id, object item, DateTimeOffset expiryTime)
+        /// <param name="status">The cache status.</param>
+        /// <param name="metadata">The cache metadata.</param>
+        public CacheItem(string category, string id, byte[] item, HttpStatusCode statusCode, DateTimeOffset expiryTime, CacheItemStatus status, IDictionary<string, string>? metadata = null)
         {
             this.Category = category ?? throw new ArgumentNullException(nameof(category));
             this.Id = id ?? throw new ArgumentNullException(nameof(id));
-            this.Item = item ?? throw new ArgumentNullException(nameof(item));
+            this.item = item ?? throw new ArgumentNullException(nameof(item));
+            this.StatusCode = statusCode;
             this.ExpiryTime = expiryTime;
+            this.Metadata = metadata ?? EmptyMetadata;
+            this.Type = CacheItemType.Raw;
+            this.Status = status;
         }
+
+        /// <summary>
+        /// Creates a new string cache item.
+        /// </summary>
+        /// <param name="category">The cache category.</param>
+        /// <param name="id">The id.</param>
+        /// <param name="item">The item.</param>
+        /// <param name="statusCode">The status code.</param>
+        /// <param name="expiryTime">The expiry time.</param>
+        /// <param name="status">The cache status.</param>
+        /// <param name="metadata">The cache metadata.</param>
+        public CacheItem(string category, string id, string item, HttpStatusCode statusCode, DateTimeOffset expiryTime, CacheItemStatus status, IDictionary<string, string>? metadata = null)
+        {
+            this.Category = category ?? throw new ArgumentNullException(nameof(category));
+            this.Id = id ?? throw new ArgumentNullException(nameof(id));
+            this.item = item ?? throw new ArgumentNullException(nameof(item));
+            this.StatusCode = statusCode;
+            this.ExpiryTime = expiryTime;
+            this.Metadata = metadata ?? EmptyMetadata;
+            this.Type = CacheItemType.String;
+            this.Status = status;
+        }
+
+        /// <summary>
+        /// The cache item type.
+        /// </summary>
+        public CacheItemType Type { get; }
+
+        /// <summary>
+        /// The cache item status.
+        /// </summary>
+        public CacheItemStatus Status { get; }
 
         /// <summary>
         /// The category associated with the cache item.
@@ -33,67 +85,32 @@ namespace Gw2Sharp.WebApi.Caching
         public string Id { get; }
 
         /// <summary>
-        /// The cache item.
+        /// The cache item as a raw byte array.
         /// </summary>
-        public object Item { get; }
+        /// <exception cref="InvalidOperationException">The cache item is not a raw byte array.</exception>
+        public byte[] RawItem =>
+            this.item as byte[] ?? throw new InvalidOperationException("The cache item is not a raw byte array.");
+
+        /// <summary>
+        /// The cache item as a string.
+        /// </summary>
+        /// <exception cref="InvalidOperationException">The cache item is not a string.</exception>
+        public string StringItem =>
+            this.item as string ?? throw new InvalidOperationException("The cache item is not a string.");
+
+        /// <summary>
+        /// The original response status code.
+        /// </summary>
+        public HttpStatusCode StatusCode { get; }
 
         /// <summary>
         /// The time when this cache item expires.
         /// </summary>
         public DateTimeOffset ExpiryTime { get; }
 
-        /// <inheritdoc />
-        public override int GetHashCode() =>
-            HashCode.Combine(this.Category, this.Id, this.Item, this.ExpiryTime);
-
-        /// <inheritdoc />
-        public override bool Equals(object? obj) =>
-            obj is CacheItem cacheItem && this.Equals(cacheItem);
-
         /// <summary>
-        /// Indicates whether the current object is equal to another object of the same type.
+        /// The metadata.
         /// </summary>
-        /// <param name="other">An object to compare with this object.</param>
-        /// <returns>
-        /// <c>true</c> if the current object is equal to the <paramref name="other" /> parameter; otherwise, <c>false</c>.
-        /// </returns>
-        public virtual bool Equals(CacheItem? other) =>
-            other != null &&
-            Equals(this.Category, other.Category) &&
-            Equals(this.Id, other.Id) &&
-            Equals(this.Item, other.Item) &&
-            Equals(this.ExpiryTime, other.ExpiryTime);
-    }
-
-    /// <summary>
-    /// A generic cache item.
-    /// </summary>
-    public class CacheItem<T> : CacheItem, IEquatable<CacheItem<T>>
-    {
-        /// <summary>
-        /// Creates a new cache item.
-        /// </summary>
-        /// <param name="category">The cache category.</param>
-        /// <param name="id">The id.</param>
-        /// <param name="item">The item.</param>
-        /// <param name="expiryTime">The expiry time.</param>
-        public CacheItem(string category, string id, T item, DateTimeOffset expiryTime) : base(category, id, item!, expiryTime) { }
-
-        /// <summary>
-        /// The cache item.
-        /// </summary>
-        public new T Item => (T)base.Item;
-
-        /// <inheritdoc />
-        public override int GetHashCode() =>
-            HashCode.Combine(base.GetHashCode());
-
-        /// <inheritdoc />
-        public override bool Equals(object? obj) =>
-            obj is CacheItem<T> item && this.Equals(item);
-
-        /// <inheritdoc />
-        public virtual bool Equals(CacheItem<T>? other) =>
-            this.Equals(other as CacheItem);
+        public IDictionary<string, string> Metadata { get; }
     }
 }

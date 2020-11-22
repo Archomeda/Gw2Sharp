@@ -1,6 +1,10 @@
 using System;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
+using AutoFixture.Xunit2;
+using FluentAssertions;
+using FluentAssertions.Extensions;
 using Gw2Sharp.WebApi.Caching;
 using Xunit;
 
@@ -8,79 +12,80 @@ namespace Gw2Sharp.Tests.WebApi.Caching
 {
     public class NullCacheMethodTests
     {
-        protected NullCacheMethod cacheMethod = new NullCacheMethod();
+        private readonly NullCacheMethod cacheMethod = new NullCacheMethod();
 
-        [Fact]
-        public async Task CategoryDoesNotExistTest()
+        [Theory]
+        [AutoData]
+        public async Task CategoryDoesNotExistTest(string category, string id)
         {
-            Assert.Null(await this.cacheMethod.TryGetAsync<int>("unknown", "unknown"));
+            var actual = await this.cacheMethod.TryGetAsync(category, id);
+            actual.Should().BeNull();
         }
 
-        [Fact]
-        public async Task FlushTest()
+        [Theory]
+        [AutoData]
+        public async Task FlushTest(string category, string id, string data)
         {
-            var cacheItem = new CacheItem<int>("Test category", "test", 42, DateTime.Now.AddMinutes(30));
+            var expiresAt = 30.Minutes().After(DateTime.Now);
+            var cacheItem = new CacheItem(category, id, data, HttpStatusCode.OK, expiresAt, CacheItemStatus.New);
 
             await this.cacheMethod.SetAsync(cacheItem);
-            Assert.Null(await this.cacheMethod.TryGetAsync<int>(cacheItem.Category, cacheItem.Id));
+            var actual = await this.cacheMethod.TryGetAsync(cacheItem.Category, cacheItem.Id);
+            actual.Should().BeNull();
 
             await this.cacheMethod.ClearAsync();
-            Assert.Null(await this.cacheMethod.TryGetAsync<int>(cacheItem.Category, cacheItem.Id));
+            actual = await this.cacheMethod.TryGetAsync(cacheItem.Category, cacheItem.Id);
+            actual.Should().BeNull();
         }
 
-        [Fact]
-        public async Task GetManyEmptyTest()
+        [Theory]
+        [AutoData]
+        public async Task GetManyEmptyTest(string category, string[] ids)
         {
-            Assert.Empty(await this.cacheMethod.GetManyAsync<int>("Test category", new[] { "test1", "test2", "test3" }));
+            var actual = await this.cacheMethod.GetManyAsync(category, ids);
+            actual.Should().BeEmpty();
         }
 
-        [Fact]
-        public async Task IdDoesNotExistTest()
+
+        [Theory]
+        [AutoData]
+        public async Task IdDoesNotExistTest(string category, string id, string data)
         {
-            string category = "Test category";
+            var expiresAt = 30.Minutes().After(DateTime.Now);
 
-            await this.cacheMethod.SetAsync(new CacheItem<int>(category, "test", 42, DateTime.Now.AddMinutes(30)));
-            Assert.Null(await this.cacheMethod.TryGetAsync<int>(category, "unknown"));
-        }
-
-        [Fact]
-        public async Task StoreExpiredTest()
-        {
-            var cacheItem = new CacheItem<int>("Test category", "test", 42, DateTime.Now.AddMinutes(-30));
-
+            var cacheItem = new CacheItem(category, id, data, HttpStatusCode.OK, expiresAt, CacheItemStatus.New);
             await this.cacheMethod.SetAsync(cacheItem);
-            Assert.Null(await this.cacheMethod.TryGetAsync<int>(cacheItem.Category, cacheItem.Id));
+
+            var actual = await this.cacheMethod.TryGetAsync(category, $"{id}_nonexistent");
+            actual.Should().BeNull();
         }
 
-        [Fact]
-        public async Task StoreManyTest()
+        [Theory]
+        [AutoData]
+        public async Task StoreExpiredTest(string category, string id, string data)
         {
-            string category = "Test category";
-            var cacheItems = new[]
-            {
-                new CacheItem<int>(category, "test", 42, DateTime.Now.AddMinutes(30)),
-                new CacheItem<int>(category, "test2", 84, DateTime.Now.AddMinutes(30)),
-                new CacheItem<int>(category, "test3", 168, DateTime.Now.AddMinutes(30))
-            };
+            var expiresAt = 30.Minutes().Before(DateTime.Now);
 
+            var cacheItem = new CacheItem(category, id, data, HttpStatusCode.OK, expiresAt, CacheItemStatus.New);
+            await this.cacheMethod.SetAsync(cacheItem);
+
+            var actual = await this.cacheMethod.TryGetAsync(category, id);
+            actual.Should().BeNull();
+        }
+
+        [Theory]
+        [AutoData]
+        public async Task StoreManyTest(string category, (string Id, string Data)[] items)
+        {
+            var expiresAt = 30.Minutes().After(DateTime.Now);
+
+            var cacheItems = items.Select(x => new CacheItem(category, x.Id, x.Data, HttpStatusCode.OK, expiresAt, CacheItemStatus.New)).ToList();
             await this.cacheMethod.SetManyAsync(cacheItems);
-            Assert.Null(await this.cacheMethod.TryGetAsync<int>(cacheItems[0].Category, cacheItems[0].Id));
-            Assert.Null(await this.cacheMethod.TryGetAsync<int>(cacheItems[1].Category, cacheItems[1].Id));
-            Assert.Null(await this.cacheMethod.TryGetAsync<int>(cacheItems[2].Category, cacheItems[2].Id));
-            Assert.Empty(await this.cacheMethod.GetManyAsync<int>(category, cacheItems.Select(x => x.Id)));
-        }
 
-        [Fact]
-        public async Task StoreValidTest()
-        {
-            string category = "Test category";
-            var cacheItem = new CacheItem<int>(category, "test", 42, DateTime.Now.AddMinutes(30));
-
-            await this.cacheMethod.SetAsync(cacheItem);
-            Assert.Null(await this.cacheMethod.TryGetAsync<int>(cacheItem.Category, cacheItem.Id));
-
-            await this.cacheMethod.SetAsync(cacheItem.Category, cacheItem.Id, cacheItem.Item, cacheItem.ExpiryTime);
-            Assert.Null(await this.cacheMethod.TryGetAsync<int>(cacheItem.Category, cacheItem.Id));
+            var individualActual = await Task.WhenAll(cacheItems.Select(async i => await this.cacheMethod.TryGetAsync(i.Category, i.Id)));
+            individualActual.Should().OnlyContain(x => x == null);
+            var manyActual = await this.cacheMethod.GetManyAsync(category, cacheItems.Select(x => x.Id));
+            manyActual.Should().BeEmpty();
         }
     }
 }

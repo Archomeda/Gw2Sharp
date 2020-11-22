@@ -61,8 +61,8 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
         public static IEnumerable<object[]> HeaderWithQueryWithManyMatrixCases()
         {
             foreach (object[] header in HeaderCases)
-            foreach (object[] queryWithMany in QueryWithManyCases)
-                yield return header.Concat(queryWithMany).ToArray();
+                foreach (object[] queryWithMany in QueryWithManyCases)
+                    yield return header.Concat(queryWithMany).ToArray();
         }
 
         #endregion
@@ -72,7 +72,7 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
         [MemberAutoMockData(nameof(HeaderCases), ShareFixture = false)]
         public async Task SingleRequestAsyncTest(
             string responseHeaderNameToAdd,
-            [CustomizeWith(typeof(MemoryCacheMethodAutoFixture))] [Frozen] MiddlewareContext context,
+            [CustomizeWith(typeof(MemoryCacheMethodAutoFixture)), Frozen] MiddlewareContext context,
             [Frozen] IWebApiResponse response,
             IFixture fixture)
         {
@@ -82,15 +82,19 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
             // Do the request
             var middleware = new CacheMiddleware();
             var liveResponse = await middleware.OnRequestAsync(context, (r, t) => Task.FromResult(response));
-            liveResponse.Should().BeSameAs(response);
+
+            // Expect the response headers to contain the cache state
+            response.ResponseHeaders[HttpResponseInfo.CACHE_STATE_HEADER] = CacheState.FromLive.ToString();
+
+            liveResponse.Should().BeEquivalentTo(response);
         }
 
         [Theory]
         [MemberAutoMockData(nameof(HeaderCases), ShareFixture = false)]
         public async Task CachesSingleRequestAsyncTest(
             string responseHeaderNameToAdd,
-            [CustomizeWith(typeof(MemoryCacheMethodAutoFixture))] [Frozen] MiddlewareContext context,
-            [CustomizeWith(typeof(ExpiresHeaderAutoFixture))] [Frozen] IWebApiResponse response,
+            [CustomizeWith(typeof(MemoryCacheMethodAutoFixture)), Frozen] MiddlewareContext context,
+            [CustomizeWith(typeof(ExpiresHeaderAutoFixture)), Frozen] IWebApiResponse response,
             IFixture fixture)
         {
             context.Request.Options.Returns(CreateRequestOptions());
@@ -102,6 +106,10 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
 
             // Repeat the request to see if it's taken from the cache
             var cachedResponse = await middleware.OnRequestAsync(context, (r, t) => throw new InvalidOperationException("should not be hit"));
+
+            // Expect the response headers to contain the cache state
+            response.ResponseHeaders[HttpResponseInfo.CACHE_STATE_HEADER] = CacheState.FromCache.ToString();
+
             cachedResponse.Should().BeEquivalentTo(response);
         }
 
@@ -112,7 +120,7 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
             string responseHeaderNameToAdd,
             string queryParams,
             [Frozen] IList<Element> responseElements,
-            [CustomizeWith(typeof(MemoryCacheMethodAutoFixture))] [Frozen] MiddlewareContext context,
+            [CustomizeWith(typeof(MemoryCacheMethodAutoFixture)), Frozen] MiddlewareContext context,
             [Frozen] IWebApiResponse response,
             IFixture fixture)
         {
@@ -125,7 +133,7 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
             var liveResponse = await middleware.OnRequestAsync(context, (r, t) => Task.FromResult(response));
 
             // Expect the response headers to contain the cache state
-            response.ResponseHeaders["X-Gw2Sharp-Cache-State"] = CacheState.FromLive.ToString();
+            response.ResponseHeaders[HttpResponseInfo.CACHE_STATE_HEADER] = CacheState.FromLive.ToString();
 
             liveResponse.Should().BeEquivalentTo(response);
         }
@@ -136,8 +144,8 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
             string responseHeaderNameToAdd,
             string queryParams,
             [Frozen] IList<Element> responseElements,
-            [CustomizeWith(typeof(MemoryCacheMethodAutoFixture))] [Frozen] MiddlewareContext context,
-            [CustomizeWith(typeof(ExpiresHeaderAutoFixture))] [Frozen] IWebApiResponse response,
+            [CustomizeWith(typeof(MemoryCacheMethodAutoFixture)), Frozen] MiddlewareContext context,
+            [CustomizeWith(typeof(ExpiresHeaderAutoFixture)), Frozen] IWebApiResponse response,
             IFixture fixture)
         {
             context.Request.Options.Returns(CreateRequestOptions(queryParams));
@@ -149,7 +157,7 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
             await middleware.OnRequestAsync(context, (r, t) => Task.FromResult(response));
 
             // Expect the response headers to contain the cache state
-            response.ResponseHeaders["X-Gw2Sharp-Cache-State"] = CacheState.FromCache.ToString();
+            response.ResponseHeaders[HttpResponseInfo.CACHE_STATE_HEADER] = CacheState.FromCache.ToString();
 
             // Repeat the request to see if it's taken from the cache
             var cachedResponse = await middleware.OnRequestAsync(context, (r, t) => throw new InvalidOperationException("should not be hit"));
@@ -162,8 +170,8 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
             string responseHeaderNameToAdd,
             string queryParams,
             [Frozen] IList<Element> responseElements,
-            [CustomizeWith(typeof(MemoryCacheMethodAutoFixture))] [Frozen] MiddlewareContext context,
-            [CustomizeWith(typeof(ExpiresHeaderAutoFixture))] [Frozen] IWebApiResponse response,
+            [CustomizeWith(typeof(MemoryCacheMethodAutoFixture)), Frozen] MiddlewareContext context,
+            [CustomizeWith(typeof(ExpiresHeaderAutoFixture)), Frozen] IWebApiResponse response,
             IFixture fixture)
         {
             var options = CreateRequestOptions(queryParams);

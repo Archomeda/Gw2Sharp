@@ -4,6 +4,7 @@ using System.Globalization;
 using System.Net;
 using System.Net.Http.Headers;
 using Gw2Sharp.Extensions;
+using Gw2Sharp.WebApi.Middleware;
 
 namespace Gw2Sharp.WebApi.Http
 {
@@ -12,6 +13,11 @@ namespace Gw2Sharp.WebApi.Http
     /// </summary>
     public class HttpResponseInfo
     {
+        /// <summary>
+        /// The custom Gw2Sharp cache state header that may be injected by <see cref="CacheMiddleware"/>.
+        /// </summary>
+        public const string CACHE_STATE_HEADER = "X-Gw2Sharp-Cache-State";
+
         /// <summary>
         /// Initializes a new instance of the <see cref="HttpResponseInfo"/> class with a <see cref="IWebApiResponse{T}"/> as base.
         /// </summary>
@@ -28,7 +34,7 @@ namespace Gw2Sharp.WebApi.Http
             this.LastModified = ParseResponseHeader(responseHeaders, "Last-Modified", ParseNullableDateTime);
             this.CacheMaxAge = ParseResponseHeader(responseHeaders, "Cache-Control", ParseNullableMaxAgeCache);
             this.Expires = ParseResponseHeader(responseHeaders, "Expires", ParseNullableDateTime);
-            this.CacheState = ParseResponseHeader(responseHeaders, "X-Gw2Sharp-Cache-State", ParseEnum<CacheState>);
+            this.CacheState = ParseResponseHeader(responseHeaders, CACHE_STATE_HEADER, ParseEnum<CacheState>);
 
             static DateTimeOffset? ParseNullableDateTime(string value) =>
                 !string.IsNullOrWhiteSpace(value) ? (DateTimeOffset?)DateTimeOffset.Parse(value, CultureInfo.InvariantCulture) : null;
