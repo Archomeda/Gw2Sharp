@@ -49,7 +49,7 @@ jobs:
         shell: powershell
         run: |
           New-Item -Path Gw2Sharp/Properties/AssemblyVersionInfo.cs -ItemType File
-      - uses: gittools/actions/gitversion/setup/v0.9.6
+      - uses: gittools/actions/gitversion/setup@v0.9.6
         with:
           versionSpec: '5.x'
       - uses: gittools/actions/gitversion/execute@v0.9.6
