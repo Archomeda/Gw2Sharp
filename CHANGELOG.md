@@ -1,5 +1,30 @@
 # Gw2Sharp History
 
+## 0.12.0
+As mentioned in 0.11.1, this version has a breaking change in the caching support in order to make them more reliable ([#71](https://github.com/Archomeda/Gw2Sharp/issues/71)).
+All interfaces and built-in caching classes have been overhauled.
+In short, the focus was to only support strings and raw byte arrays, instead of generic types that have to be converted back and forth between C# objects and JSON strings.
+
+Ironically, while the classes themselves have had their generic types removed, the cache objects are actually more generic since they support the raw responses instead of being bound to C# types.
+
+**Heads up:** If you've been using the `ArchiveCacheMethod`, keep in mind that 0.12.0 uses a new file structure and will fully clear the archive if it detects that the archive isn't in the structure it expects it to be.
+If you decide to revert to an older Gw2Sharp version, you may experience exceptions if you don't delete the archive manually before using it.
+Please do not report those issues as they will not be worked on.
+
+*If you haven't implemented your own caching method(s), you should have no issues updating.*
+
+### Caching
+- **Breaking:** `Gw2Sharp.WebApi.Caching.CacheItem<T>` has been removed
+- **Breaking:** `Gw2Sharp.WebApi.Caching.CacheItem` no longer implements `IEquatable<CacheItem>` since it's no longer used internally
+- **Breaking:** Since the generic version of `Gw2Sharp.WebApi.Caching.CacheItem` has been removed, the actual data can now be retrieved with the properties `RawItem` or `StringItem`, depending if it's a raw byte array or a string (accessing the wrong property will throw an `InvalidOperationException`)
+- `Gw2Sharp.WebApi.Caching.CacheItem` has additional properties `Status`, `Type` and `StatusCode`
+- The enums `Gw2Sharp.WebApi.Caching.CacheItemStatus` and `Gw2Sharp.WebApi.Caching.CacheItemType` have been added to support the previous mentioned properties
+- **Breaking:** In `Gw2Sharp.WebApi.Caching.ICacheMethod` (and their derivatives `BaseCacheMethod`, `ArchiveCacheMethod`, `MemoryCacheMethod` and `NullCacheMethod`), the methods `TryGetAsync`, `SetAsync`, `SetManyAsync`, `GetOrUpdateAsync` and `GetOrUpdateManyAsync` have been changed to non-generic versions of themselves and `CacheItem`
+- **Breaking:** In `Gw2Sharp.WebApi.Caching.ICacheMethod` (and their derivatives `BaseCacheMethod`, `ArchiveCacheMethod`, `MemoryCacheMethod` and `NullCacheMethod`), the methods `SetAsync`, `GetOrUpdateAsync` and `GetOrUpdateManyAsync` have had their signature changed to strip out redundant parameters that are now included in `CacheItem`
+- **Breaking:** The internal ZIP file structure used in `Gw2Sharp.WebApi.Caching.ArchiveCacheMethod` has been changed to support the caching changes, bumping it from no versioning to version 1
+
+---
+
 ## 0.11.1
 ### Caching
 - Fix caching with an archive backing file (`ArchiveCacheMethod`) where it cannot (de)serialize the data ([#72](https://github.com/Archomeda/Gw2Sharp/pull/72))
