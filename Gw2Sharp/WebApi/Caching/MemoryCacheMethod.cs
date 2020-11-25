@@ -4,8 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-
-#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
+using Gw2Sharp.Extensions;
 
 namespace Gw2Sharp.WebApi.Caching
 {
@@ -14,7 +13,7 @@ namespace Gw2Sharp.WebApi.Caching
     /// </summary>
     public class MemoryCacheMethod : BaseCacheMethod
     {
-        private readonly ConcurrentDictionary<string, ConcurrentDictionary<string, object>> cachedItems = new ConcurrentDictionary<string, ConcurrentDictionary<string, object>>();
+        private readonly ConcurrentDictionary<string, ConcurrentDictionary<string, CacheItem>> cachedItems = new ConcurrentDictionary<string, ConcurrentDictionary<string, CacheItem>>();
 
         private readonly Timer gcTimer;
 
@@ -46,84 +45,91 @@ namespace Gw2Sharp.WebApi.Caching
                     this.cachedItems.TryRemove(category, out _);
             }
 
-            static void Collect(DateTimeOffset now, ConcurrentDictionary<string, object> cache)
+            static void Collect(DateTimeOffset now, ConcurrentDictionary<string, CacheItem> cache)
             {
                 foreach (string key in cache.Keys.ToArray())
                 {
-                    if (!cache.TryGetValue(key, out var obj))
+                    if (!cache.TryGetValue(key, out var item))
                         continue;
 
-                    var item = (CacheItem)obj;
                     if (item.ExpiryTime <= now)
                         cache.TryRemove(key, out _);
                 }
             }
         }
 
-        #region BaseCacheController overrides
+        #region BaseCacheMethod overrides
 
         /// <inheritdoc />
-        public override Task<CacheItem<T>?> TryGetAsync<T>(string category, string id)
+        public override Task<CacheItem?> TryGetAsync(string category, string id)
         {
             if (category == null)
                 throw new ArgumentNullException(nameof(category));
             if (id == null)
                 throw new ArgumentNullException(nameof(id));
-            return ExecAsync();
 
-            async Task<CacheItem<T>?> ExecAsync()
-            {
-                if (this.cachedItems.TryGetValue(category, out var cache) &&
-                    cache.TryGetValue(id, out var obj) &&
-                    obj is CacheItem<T> item &&
-                    item.ExpiryTime > DateTimeOffset.Now)
-                    return item;
-                else
-                    return null;
-            }
+            if (this.cachedItems.TryGetValue(category, out var cache) &&
+                cache.TryGetValue(id, out var item) &&
+                item.ExpiryTime > DateTimeOffset.Now)
+                return Task.FromResult<CacheItem?>(CopyCacheItemWithStatus(item, CacheItemStatus.Cached));
+
+            return Task.FromResult<CacheItem?>(null);
         }
 
         /// <inheritdoc />
-        public override Task SetAsync<T>(CacheItem<T> item)
+        public override Task SetAsync(CacheItem item)
         {
             if (item == null)
                 throw new ArgumentNullException(nameof(item));
 
             if (item.ExpiryTime > DateTimeOffset.Now)
             {
-                var cache = this.cachedItems.GetOrAdd(item.Category, new ConcurrentDictionary<string, object>());
+                var cache = this.cachedItems.GetOrAdd(item.Category, new ConcurrentDictionary<string, CacheItem>());
                 cache[item.Id] = item;
             }
             return Task.CompletedTask;
         }
 
         /// <inheritdoc />
-        public override Task<IDictionary<string, CacheItem<T>>> GetManyAsync<T>(string category, IEnumerable<string> ids)
+        public override Task<IList<CacheItem>> GetManyAsync(string category, IEnumerable<string> ids)
         {
+            // Override for list optimizations
+
             if (category == null)
                 throw new ArgumentNullException(nameof(category));
             if (ids == null)
                 throw new ArgumentNullException(nameof(ids));
-            return ExecAsync();
 
-            async Task<IDictionary<string, CacheItem<T>>> ExecAsync()
-            {
-                var items = new Dictionary<string, CacheItem<T>>();
-                if (this.cachedItems.TryGetValue(category, out var cache))
-                    items = ids
-                        .Select(id => cache.TryGetValue(id, out var obj) ? obj : null)
-                        .Where(x => x is CacheItem<T> item && item.ExpiryTime > DateTimeOffset.Now)
-                        .Cast<CacheItem<T>>()
-                        .ToDictionary(x => x.Id);
-                return items;
-            }
+            if (!this.cachedItems.TryGetValue(category, out var cache))
+                return Task.FromResult<IList<CacheItem>>(Array.Empty<CacheItem>());
+
+            var items = ids
+                .Select(id => cache.TryGetValue(id, out var obj) ? obj : null)
+                .Where(x => x?.ExpiryTime > DateTimeOffset.Now)
+                .WhereNotNull()
+                .ToList();
+            return Task.FromResult<IList<CacheItem>>(items.Select(x => CopyCacheItemWithStatus(x, CacheItemStatus.Cached)).ToList());
         }
 
         /// <inheritdoc />
-        public override async Task ClearAsync() =>
+        public override Task ClearAsync()
+        {
             this.cachedItems.Clear();
+            return Task.CompletedTask;
+        }
 
         private bool isDisposed = false; // To detect redundant calls
+
+
+        private static CacheItem CopyCacheItemWithStatus(CacheItem item, CacheItemStatus status) => item.Type switch
+        {
+            CacheItemType.Raw => new CacheItem(item.Category, item.Id, item.RawItem, item.StatusCode, item.ExpiryTime, status, item.Metadata?.ShallowCopy()),
+            CacheItemType.String => new CacheItem(item.Category, item.Id, item.StringItem, item.StatusCode, item.ExpiryTime, status, item.Metadata?.ShallowCopy()),
+
+            // Should not happen
+            _ => throw new NotSupportedException("Unsupported cache type")
+        };
+
 
         /// <inheritdoc />
         protected override void Dispose(bool isDisposing)

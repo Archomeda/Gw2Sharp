@@ -20,6 +20,7 @@ namespace Gw2Sharp.Tests.WebApi.V2
             var httpResponse = new WebApiResponse(
                 "{\"testkey\":\"testvalue\"}",
                 HttpStatusCode.OK,
+                CacheState.FromLive,
                 new Dictionary<string, string> { { "response", "here" } });
             httpClient.RequestAsync(Arg.Any<IWebApiRequest>()).Returns(_ => httpResponse);
             var content = new TestContentClass { Testkey = "testvalue" };
@@ -31,8 +32,8 @@ namespace Gw2Sharp.Tests.WebApi.V2
 
             response.Content.Should().BeEquivalentTo(content);
             response.StatusCode.Should().Be(httpResponse.StatusCode);
+            response.CacheState.Should().Be(CacheState.FromLive);
             response.ResponseHeaders.Should().Contain(httpResponse.ResponseHeaders);
-            response.ResponseHeaders.Should().Contain("X-Gw2Sharp-Cache-State", CacheState.FromLive.ToString());
         }
 
 

@@ -55,7 +55,7 @@ namespace Gw2Sharp.WebApi.Http
             using var responseStream = await this.RequestStreamAsync(request, cancellationToken).ConfigureAwait(false);
             using var streamReader = new StreamReader(responseStream.ContentStream);
             string responseText = await streamReader.ReadToEndAsync().ConfigureAwait(false);
-            return new WebApiResponse(responseText, responseStream.StatusCode, responseStream.ResponseHeaders);
+            return new WebApiResponse(responseText, responseStream.StatusCode, responseStream.CacheState, responseStream.ResponseHeaders);
         }
 
         /// <inheritdoc />
@@ -77,7 +77,7 @@ namespace Gw2Sharp.WebApi.Http
                 try
                 {
                     httpClient = this.getSysHttpClient();
-                    if (httpClient == null)
+                    if (httpClient is null)
                         throw new InvalidOperationException("HttpClient is null");
 
                     task = httpClient.SendAsync(message, linkedCancellation.Token);
@@ -89,11 +89,11 @@ namespace Gw2Sharp.WebApi.Http
                     var responseHeaders = responseMessage.Headers.ToDictionary(kvp => kvp.Key, kvp => kvp.Value.First());
                     responseHeaders.AddRange(responseMessage.Content.Headers.ToDictionary(kvp => kvp.Key, kvp => kvp.Value.First()));
 
-                    return new HttpResponseStream(stream, responseMessage.StatusCode, requestHeaders, responseHeaders);
+                    return new HttpResponseStream(stream, responseMessage.StatusCode, CacheState.FromLive, requestHeaders, responseHeaders);
                 }
                 catch (Exception ex)
                 {
-                    if (task == null)
+                    if (task is null)
                         throw new RequestException(request, "Failed to create task", ex);
                     else if (task.IsCanceled)
                         throw new RequestCanceledException(request);

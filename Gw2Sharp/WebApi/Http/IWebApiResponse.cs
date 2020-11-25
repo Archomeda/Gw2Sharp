@@ -36,6 +36,11 @@ namespace Gw2Sharp.WebApi.Http
         HttpStatusCode StatusCode { get; }
 
         /// <summary>
+        /// The cache state.
+        /// </summary>
+        CacheState CacheState { get; }
+
+        /// <summary>
         /// The response headers.
         /// </summary>
         IDictionary<string, string> ResponseHeaders { get; }
@@ -76,7 +81,18 @@ namespace Gw2Sharp.WebApi.Http
             stream.Position = 0;
             var firstResponse = responses.FirstOrDefault();
             using var reader = new StreamReader(stream);
-            return new WebApiResponse(reader.ReadToEnd(), firstResponse?.StatusCode, firstResponse?.ResponseHeaders);
+            return new WebApiResponse(reader.ReadToEnd(), firstResponse?.StatusCode, GetCacheState(responses), firstResponse?.ResponseHeaders);
+        }
+
+        private static CacheState GetCacheState(IEnumerable<IWebApiResponse> responses)
+        {
+            if (responses.All(x => x.CacheState == CacheState.FromCache))
+                return CacheState.FromCache;
+
+            if (responses.All(x => x.CacheState == CacheState.FromLive))
+                return CacheState.FromLive;
+
+            return CacheState.PartiallyFromCache;
         }
     }
 }

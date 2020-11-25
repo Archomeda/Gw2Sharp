@@ -16,8 +16,9 @@ namespace Gw2Sharp.WebApi.Http
         /// Initializes a new instance of the <see cref="HttpResponseInfo"/> class with a <see cref="IWebApiResponse{T}"/> as base.
         /// </summary>
         /// <param name="statusCode">The HTTP status code.</param>
+        /// <param name="cacheState">The cache state.</param>
         /// <param name="responseHeaders">The HTTP response headers.</param>
-        public HttpResponseInfo(HttpStatusCode statusCode, IReadOnlyDictionary<string, string>? responseHeaders)
+        public HttpResponseInfo(HttpStatusCode statusCode, CacheState cacheState, IReadOnlyDictionary<string, string>? responseHeaders)
         {
             responseHeaders ??= new Dictionary<string, string>();
 
@@ -28,7 +29,7 @@ namespace Gw2Sharp.WebApi.Http
             this.LastModified = ParseResponseHeader(responseHeaders, "Last-Modified", ParseNullableDateTime);
             this.CacheMaxAge = ParseResponseHeader(responseHeaders, "Cache-Control", ParseNullableMaxAgeCache);
             this.Expires = ParseResponseHeader(responseHeaders, "Expires", ParseNullableDateTime);
-            this.CacheState = ParseResponseHeader(responseHeaders, "X-Gw2Sharp-Cache-State", ParseEnum<CacheState>);
+            this.CacheState = cacheState;
 
             static DateTimeOffset? ParseNullableDateTime(string value) =>
                 !string.IsNullOrWhiteSpace(value) ? (DateTimeOffset?)DateTimeOffset.Parse(value, CultureInfo.InvariantCulture) : null;
@@ -41,9 +42,6 @@ namespace Gw2Sharp.WebApi.Http
                     value = value[1..^1];
                 return CacheControlHeaderValue.Parse(value).MaxAge;
             }
-
-            static T ParseEnum<T>(string value) where T : struct =>
-                Enum.TryParse<T>(value, out var @enum) ? @enum : default;
         }
 
 

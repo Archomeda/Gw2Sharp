@@ -122,16 +122,16 @@ namespace Gw2Sharp.WebApi.Http
             switch (obj)
             {
                 case IApiV2Object apiV2Object:
-                    apiV2Object.HttpResponseInfo ??= new ApiV2HttpResponseInfo(response.StatusCode, response.ResponseHeaders.AsReadOnly());
+                    apiV2Object.HttpResponseInfo ??= new ApiV2HttpResponseInfo(response.StatusCode, response.CacheState, response.ResponseHeaders.AsReadOnly());
                     break;
                 case IEnumerable<IApiV2Object> apiV2ObjectList:
-                    var responseInfo = new ApiV2HttpResponseInfo(response.StatusCode, response.ResponseHeaders.AsReadOnly());
+                    var responseInfo = new ApiV2HttpResponseInfo(response.StatusCode, response.CacheState, response.ResponseHeaders.AsReadOnly());
                     foreach (var apiV2Obj in apiV2ObjectList)
                         apiV2Obj.HttpResponseInfo ??= responseInfo;
                     break;
             }
 
-            return new WebApiResponse<TResponse>(obj, response.StatusCode, response.ResponseHeaders);
+            return new WebApiResponse<TResponse>(obj, response.StatusCode, response.CacheState, response.ResponseHeaders);
         }
 
         private Func<MiddlewareContext, CancellationToken, Task<IWebApiResponse>> GenerateRequestCall()

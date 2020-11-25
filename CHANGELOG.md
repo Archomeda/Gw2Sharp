@@ -1,5 +1,35 @@
 # Gw2Sharp History
 
+## 0.12.0
+As mentioned in 0.11.1, this version has a breaking change in the caching support in order to make them more reliable ([#71](https://github.com/Archomeda/Gw2Sharp/issues/71)).
+All interfaces and built-in caching classes have been overhauled.
+In short, the focus was to only support strings and raw byte arrays, instead of generic types that have to be converted back and forth between C# objects and JSON strings.
+
+Ironically, while the classes themselves have had their generic types removed, the cache objects are actually more generic since they support the raw responses instead of being bound to C# types.
+
+**Heads up:** If you've been using the `ArchiveCacheMethod`, keep in mind that 0.12.0 uses a new file structure and will fully clear the archive if it detects that the archive isn't in the structure it expects it to be.
+If you decide to revert to an older Gw2Sharp version, you may experience exceptions if you don't delete the archive manually before using it.
+Please do not report those issues as they will not be worked on.
+
+*If you haven't implemented your own caching method(s), you should have no issues updating.*
+
+### Caching
+- **Breaking:** `Gw2Sharp.WebApi.Caching.CacheItem<T>` has been removed
+- **Breaking:** `Gw2Sharp.WebApi.Caching.CacheItem` no longer implements `IEquatable<CacheItem>` since it's no longer used internally
+- **Breaking:** Since the generic version of `Gw2Sharp.WebApi.Caching.CacheItem` has been removed, the actual data can now be retrieved with the properties `RawItem` or `StringItem`, depending if it's a raw byte array or a string (accessing the wrong property will throw an `InvalidOperationException`)
+- `Gw2Sharp.WebApi.Caching.CacheItem` has additional properties `Status`, `Type` and `StatusCode`
+- The enums `Gw2Sharp.WebApi.Caching.CacheItemStatus` and `Gw2Sharp.WebApi.Caching.CacheItemType` have been added to support the previous mentioned properties
+- **Breaking:** In `Gw2Sharp.WebApi.Caching.ICacheMethod` (and their derivatives `BaseCacheMethod`, `ArchiveCacheMethod`, `MemoryCacheMethod` and `NullCacheMethod`), the methods `TryGetAsync`, `SetAsync`, `SetManyAsync`, `GetOrUpdateAsync` and `GetOrUpdateManyAsync` have been changed to non-generic versions of themselves and `CacheItem`
+- **Breaking:** In `Gw2Sharp.WebApi.Caching.ICacheMethod` (and their derivatives `BaseCacheMethod`, `ArchiveCacheMethod`, `MemoryCacheMethod` and `NullCacheMethod`), the methods `SetAsync`, `GetOrUpdateAsync` and `GetOrUpdateManyAsync` have had their signature changed to strip out redundant parameters that are now included in `CacheItem`
+- **Breaking:** The internal ZIP file structure used in `Gw2Sharp.WebApi.Caching.ArchiveCacheMethod` has been changed to support the caching changes, bumping it from no versioning to version 1
+
+### HTTP
+- **Breaking:** The constant `CACHE_STATE_HEADER` in `Gw2Sharp.WebApi.Http.HttpResponseInfo` has been removed in favor of having a dedicated cache state property on various classes, instead of injecting it through a custom Gw2Sharp header
+- **Breaking:** `Gw2Sharp.WebApi.Http.IHttpResponseStream` and `Gw2Sharp.WebApi.Http.IWebApiResponse` have the additional property `CacheState`
+- **Breaking:** The constructors of `Gw2Sharp.WebApi.Http.HttpResponseInfo`, `Gw2Sharp.WebApi.Http.HttpResponseStream`, `Gw2Sharp.WebApi.Http.WebApiResponse` and `Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo` have been modified to accept the `CacheState` parameter
+
+---
+
 ## 0.11.1
 ### Caching
 - Fix caching with an archive backing file (`ArchiveCacheMethod`) where it cannot (de)serialize the data ([#72](https://github.com/Archomeda/Gw2Sharp/pull/72))
@@ -26,7 +56,7 @@ For more information, please check the [middleware documentation](https://archom
 
 ### Caching
 - **Breaking:** `Gw2Sharp.WebApi.Caching.ICacheMethod` (and its implementers `BaseCacheMethod`, `ArchiveCacheMethod`, `MemoryCacheMethod`) and `Gw2Sharp.WebApi.Caching.CacheItem` have had their keys changed from the `object` type to the `string` type
-- `Gw2Sharp.WebApi.Http.HttpResponseInfo` (that is set on all API return types as the `HttpResponseInfo` property) now includes an additional property called `CacheState` that indicates whether the request was served from cache or from the live API server (please be aware of the [current limitations](https://archomeda.github.io/Gw2Sharp/master/guides/http-headers.html#additional-custom-gw2sharp-headers)).
+- `Gw2Sharp.WebApi.Http.HttpResponseInfo` (that is set on all API return types as the `HttpResponseInfo` property) now includes an additional property called `CacheState` that indicates whether the request was served from cache or from the live API server (please be aware of the [current limitations](https://archomeda.github.io/Gw2Sharp/master/guides/response-info.html#checking-the-response-info)).
 
 ### Endpoints
 - **Breaking:** `Gw2Sharp.WebApi.V2.Models.Profession.SkillsByPalette` is now using a `IReadOnlyDictionary<int, int>` instead of `IDictionary<int, int>`

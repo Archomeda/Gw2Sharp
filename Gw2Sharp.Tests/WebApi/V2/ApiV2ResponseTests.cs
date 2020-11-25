@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Net;
 using Gw2Sharp.Tests.WebApi.Http;
+using Gw2Sharp.WebApi.Http;
 using Gw2Sharp.WebApi.V2;
 using Xunit;
 
@@ -27,7 +28,7 @@ namespace Gw2Sharp.Tests.WebApi.V2
                 { "X-Page-Total", "20" }
             };
 
-            var response = new ApiV2HttpResponseInfo(statusCode, responseHeaders);
+            var response = new ApiV2HttpResponseInfo(statusCode, CacheState.FromLive, responseHeaders);
             Assert.Equal(statusCode, response.ResponseStatusCode);
             Assert.Equal(new DateTime(2019, 5, 23, 22, 0, 0, DateTimeKind.Utc), response.Date.ToUniversalTime());
             Assert.Equal(new DateTime(2019, 5, 24, 0, 0, 0, DateTimeKind.Utc), response.Expires!.Value.ToUniversalTime());
@@ -57,7 +58,7 @@ namespace Gw2Sharp.Tests.WebApi.V2
                 { "Link", "</boop>; rel=invalid, illegal_format; nope, rel=next; rel=previous, <?rel=self>; rel=self" },
             };
 
-            var response = new ApiV2HttpResponseInfo(HttpStatusCode.OK, responseHeaders);
+            var response = new ApiV2HttpResponseInfo(HttpStatusCode.OK, CacheState.FromLive, responseHeaders);
             Assert.Equal(responseHeaders, responseHeaders);
             Assert.Equal(new Dictionary<string, Uri>
             {
@@ -75,7 +76,7 @@ namespace Gw2Sharp.Tests.WebApi.V2
                 { "X-Result-Count", "2147483648" } // Int32.MaxValue + 1
             };
 
-            var response = new ApiV2HttpResponseInfo(HttpStatusCode.OK, responseHeaders);
+            var response = new ApiV2HttpResponseInfo(HttpStatusCode.OK, CacheState.FromLive, responseHeaders);
             Assert.Equal(responseHeaders, responseHeaders);
             Assert.Equal(default, response.CacheMaxAge);
             Assert.Equal(default, response.RateLimitLimit);

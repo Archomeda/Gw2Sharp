@@ -30,8 +30,8 @@ namespace Gw2Sharp.WebApi.Render
         }
 
 
-        private Task<CacheItem<byte[]>> DownloadToCacheAsync(string renderUrl, CancellationToken cancellationToken) =>
-            this.Connection.RenderCacheMethod.GetOrUpdateAsync(CACHE_CATEGORY, renderUrl, async () =>
+        private Task<CacheItem> DownloadToCacheAsync(string renderUrl, CancellationToken cancellationToken) =>
+            this.Connection.RenderCacheMethod.GetOrUpdateAsync(CACHE_CATEGORY, renderUrl, async (cacheCategory, cacheId) =>
             {
                 var request = new WebApiRequest(new Uri(renderUrl), this.Connection, this.Gw2Client);
                 using var response = await this.Connection.HttpClient.RequestStreamAsync(request, cancellationToken).ConfigureAwait(false);
@@ -43,23 +43,11 @@ namespace Gw2Sharp.WebApi.Render
                 await using var memoryStream = new MemoryStream();
                 await response.ContentStream.CopyToAsync(memoryStream, cancellationToken).ConfigureAwait(false);
 #endif
-                var responseInfo = new HttpResponseInfo(response.StatusCode, response.ResponseHeaders);
-                return (memoryStream.ToArray(), responseInfo.Expires ?? (responseInfo.Date + responseInfo.CacheMaxAge) ?? DateTimeOffset.Now);
+                var responseInfo = new HttpResponseInfo(response.StatusCode, response.CacheState, response.ResponseHeaders);
+                return new CacheItem(cacheCategory, cacheId, memoryStream.ToArray(), response.StatusCode,
+                    responseInfo.Expires ?? (responseInfo.Date + responseInfo.CacheMaxAge) ?? DateTimeOffset.Now, CacheItemStatus.New);
             });
 
-
-        /// <inheritdoc />
-        public virtual Task DownloadToStreamAsync(Stream targetStream, string renderUrl, CancellationToken cancellationToken = default)
-        {
-            if (targetStream == null)
-                throw new ArgumentNullException(nameof(targetStream));
-            if (renderUrl == null)
-                throw new ArgumentNullException(nameof(renderUrl));
-            if (string.IsNullOrWhiteSpace(renderUrl))
-                throw new ArgumentException("Render URL may not be empty or only contain whitespaces", nameof(renderUrl));
-
-            return this.DownloadToStreamInternalAsync(targetStream, renderUrl, cancellationToken);
-        }
 
         /// <inheritdoc />
         public Task DownloadToStreamAsync(Stream targetStream, Uri renderUrl, CancellationToken cancellationToken = default)
@@ -72,36 +60,30 @@ namespace Gw2Sharp.WebApi.Render
             return this.DownloadToStreamAsync(targetStream, renderUrl.AbsoluteUri, cancellationToken);
         }
 
-        private async Task DownloadToStreamInternalAsync(Stream targetStream, string renderUrl, CancellationToken cancellationToken)
-        {
-            var cacheItem = await this.DownloadToCacheAsync(renderUrl, cancellationToken).ConfigureAwait(false);
-#if NETSTANDARD
-            using var memoryStream = new MemoryStream(cacheItem.Item, false);
-            await memoryStream.CopyToAsync(targetStream).ConfigureAwait(false);
-#else
-            await using var memoryStream = new MemoryStream(cacheItem.Item, false);
-            await memoryStream.CopyToAsync(targetStream, cancellationToken).ConfigureAwait(false);
-#endif
-        }
-
-
         /// <inheritdoc />
-        public virtual Task<byte[]> DownloadToByteArrayAsync(string renderUrl, CancellationToken cancellationToken = default)
+        public virtual Task DownloadToStreamAsync(Stream targetStream, string renderUrl, CancellationToken cancellationToken = default)
         {
+            if (targetStream == null)
+                throw new ArgumentNullException(nameof(targetStream));
             if (renderUrl == null)
                 throw new ArgumentNullException(nameof(renderUrl));
             if (string.IsNullOrWhiteSpace(renderUrl))
                 throw new ArgumentException("Render URL may not be empty or only contain whitespaces", nameof(renderUrl));
+            return ExecAsync();
 
-            return this.DownloadToByteArrayInternalAsync(renderUrl, cancellationToken);
+            async Task ExecAsync()
+            {
+                var cacheItem = await this.DownloadToCacheAsync(renderUrl, cancellationToken).ConfigureAwait(false);
+#if NETSTANDARD
+                using var memoryStream = new MemoryStream(cacheItem.RawItem, false);
+                await memoryStream.CopyToAsync(targetStream).ConfigureAwait(false);
+#else
+                await using var memoryStream = new MemoryStream(cacheItem.RawItem, false);
+                await memoryStream.CopyToAsync(targetStream, cancellationToken).ConfigureAwait(false);
+#endif
+            }
         }
 
-        private async Task<byte[]> DownloadToByteArrayInternalAsync(string renderUrl, CancellationToken cancellationToken)
-        {
-            var cacheItem = await this.DownloadToCacheAsync(renderUrl, cancellationToken).ConfigureAwait(false);
-            using var memoryStream = new MemoryStream(cacheItem.Item, false);
-            return memoryStream.ToArray();
-        }
 
         /// <inheritdoc />
         public Task<byte[]> DownloadToByteArrayAsync(Uri renderUrl, CancellationToken cancellationToken = default)
@@ -110,6 +92,28 @@ namespace Gw2Sharp.WebApi.Render
                 throw new ArgumentNullException(nameof(renderUrl));
 
             return this.DownloadToByteArrayAsync(renderUrl.AbsoluteUri, cancellationToken);
+        }
+
+        /// <inheritdoc />
+        public virtual Task<byte[]> DownloadToByteArrayAsync(string renderUrl, CancellationToken cancellationToken = default)
+        {
+            if (renderUrl == null)
+                throw new ArgumentNullException(nameof(renderUrl));
+            if (string.IsNullOrWhiteSpace(renderUrl))
+                throw new ArgumentException("Render URL may not be empty or only contain whitespaces", nameof(renderUrl));
+            return ExecAsync();
+
+            async Task<byte[]> ExecAsync()
+            {
+                var cacheItem = await this.DownloadToCacheAsync(renderUrl, cancellationToken).ConfigureAwait(false);
+#if NETSTANDARD
+                using var memoryStream = new MemoryStream(cacheItem.RawItem, false);
+                return memoryStream.ToArray();
+#else
+                await using var memoryStream = new MemoryStream(cacheItem.RawItem, false);
+                return memoryStream.ToArray();
+#endif
+            }
         }
     }
 }

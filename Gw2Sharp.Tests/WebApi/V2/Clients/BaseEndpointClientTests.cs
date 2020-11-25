@@ -81,7 +81,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                 this.AssertAuthenticatedRequest(callInfo, client);
                 this.AssertLocalizedRequest(callInfo, client);
                 this.AssertSchemaVersionRequest(callInfo, client);
-                return new WebApiResponse(data, HttpStatusCode.OK, null);
+                return new WebApiResponse(data, HttpStatusCode.OK, CacheState.FromLive, null);
             });
 
             var actual = await client.PageAsync(2, 100);
@@ -99,7 +99,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                 this.AssertAuthenticatedRequest(callInfo, client);
                 this.AssertLocalizedRequest(callInfo, client);
                 this.AssertSchemaVersionRequest(callInfo, client);
-                return new WebApiResponse(data, HttpStatusCode.OK, null);
+                return new WebApiResponse(data, HttpStatusCode.OK, CacheState.FromLive, null);
             });
 
             var actual = await client.GetAsync();
@@ -123,7 +123,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                 this.AssertAuthenticatedRequest(callInfo, client);
                 this.AssertLocalizedRequest(callInfo, client);
                 this.AssertSchemaVersionRequest(callInfo, client);
-                return new WebApiResponse(data, HttpStatusCode.OK, null);
+                return new WebApiResponse(data, HttpStatusCode.OK, CacheState.FromLive, null);
             });
 
             var actual = await client.GetAsync(id);
@@ -141,7 +141,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                 this.AssertAuthenticatedRequest(callInfo, client);
                 this.AssertLocalizedRequest(callInfo, client);
                 this.AssertSchemaVersionRequest(callInfo, client);
-                return new WebApiResponse(data, HttpStatusCode.OK, null);
+                return new WebApiResponse(data, HttpStatusCode.OK, CacheState.FromLive, null);
             });
 
             var actual = await client.AllAsync();
@@ -169,7 +169,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                 this.AssertAuthenticatedRequest(callInfo, client);
                 this.AssertLocalizedRequest(callInfo, client);
                 this.AssertSchemaVersionRequest(callInfo, client);
-                return new WebApiResponse(data, HttpStatusCode.OK, null);
+                return new WebApiResponse(data, HttpStatusCode.OK, CacheState.FromLive, null);
             });
 
             var actual = await client.ManyAsync(ids);
@@ -188,7 +188,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                 this.AssertAuthenticatedRequest(callInfo, client);
                 this.AssertLocalizedRequest(callInfo, client);
                 this.AssertSchemaVersionRequest(callInfo, client);
-                return new WebApiResponse(data, HttpStatusCode.OK, null);
+                return new WebApiResponse(data, HttpStatusCode.OK, CacheState.FromLive, null);
             });
 
             var actual = await client.IdsAsync();
