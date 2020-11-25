@@ -56,7 +56,7 @@ For more information, please check the [middleware documentation](https://archom
 
 ### Caching
 - **Breaking:** `Gw2Sharp.WebApi.Caching.ICacheMethod` (and its implementers `BaseCacheMethod`, `ArchiveCacheMethod`, `MemoryCacheMethod`) and `Gw2Sharp.WebApi.Caching.CacheItem` have had their keys changed from the `object` type to the `string` type
-- `Gw2Sharp.WebApi.Http.HttpResponseInfo` (that is set on all API return types as the `HttpResponseInfo` property) now includes an additional property called `CacheState` that indicates whether the request was served from cache or from the live API server (please be aware of the [current limitations](https://archomeda.github.io/Gw2Sharp/master/guides/http-headers.html#additional-custom-gw2sharp-headers)).
+- `Gw2Sharp.WebApi.Http.HttpResponseInfo` (that is set on all API return types as the `HttpResponseInfo` property) now includes an additional property called `CacheState` that indicates whether the request was served from cache or from the live API server (please be aware of the [current limitations](https://archomeda.github.io/Gw2Sharp/master/guides/response-info.html#checking-the-response-info)).
 
 ### Endpoints
 - **Breaking:** `Gw2Sharp.WebApi.V2.Models.Profession.SkillsByPalette` is now using a `IReadOnlyDictionary<int, int>` instead of `IDictionary<int, int>`
