@@ -43,7 +43,7 @@ namespace Gw2Sharp.WebApi.Render
                 await using var memoryStream = new MemoryStream();
                 await response.ContentStream.CopyToAsync(memoryStream, cancellationToken).ConfigureAwait(false);
 #endif
-                var responseInfo = new HttpResponseInfo(response.StatusCode, response.ResponseHeaders);
+                var responseInfo = new HttpResponseInfo(response.StatusCode, response.CacheState, response.ResponseHeaders);
                 return new CacheItem(cacheCategory, cacheId, memoryStream.ToArray(), response.StatusCode,
                     responseInfo.Expires ?? (responseInfo.Date + responseInfo.CacheMaxAge) ?? DateTimeOffset.Now, CacheItemStatus.New);
             });

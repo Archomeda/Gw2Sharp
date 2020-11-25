@@ -60,8 +60,7 @@ namespace Gw2Sharp.WebApi.Middleware
                     RequestGetAsync(cacheCategory, cacheId, context, callNext, cancellationToken))
                 .ConfigureAwait(false);
 
-            var response = new WebApiResponse(cacheItem.StringItem, cacheItem.StatusCode, cacheItem.Metadata);
-            response.ResponseHeaders[HttpResponseInfo.CACHE_STATE_HEADER] = GetCacheState(cacheItem).ToString();
+            var response = new WebApiResponse(cacheItem.StringItem, cacheItem.StatusCode, GetCacheState(cacheItem), cacheItem.Metadata);
             return response;
         }
 
@@ -76,8 +75,7 @@ namespace Gw2Sharp.WebApi.Middleware
                     RequestManyAsync(cacheCategory, missingIds, context, callNext, cancellationToken))
                 .ConfigureAwait(false);
 
-            var response = cacheItems.Select(x => new WebApiResponse(x.StringItem, x.StatusCode, x.Metadata)).Merge();
-            response.ResponseHeaders[HttpResponseInfo.CACHE_STATE_HEADER] = GetCacheState(cacheItems).ToString();
+            var response = cacheItems.Select(x => new WebApiResponse(x.StringItem, x.StatusCode, GetCacheState(x), x.Metadata)).Merge();
             return response;
         }
 
@@ -92,8 +90,7 @@ namespace Gw2Sharp.WebApi.Middleware
                     RequestGetAsync(cacheCategory, cacheId, context, callNext, cancellationToken))
                 .ConfigureAwait(false);
 
-            var response = new WebApiResponse(cacheItem.StringItem, cacheItem.StatusCode, cacheItem.Metadata);
-            response.ResponseHeaders[HttpResponseInfo.CACHE_STATE_HEADER] = GetCacheState(cacheItem).ToString();
+            var response = new WebApiResponse(cacheItem.StringItem, cacheItem.StatusCode, GetCacheState(cacheItem), cacheItem.Metadata);
 
             // Update individual items
             var cacheItems = SplitResponseIntoIndividualCacheObjects(cacheCategory, response, context.Request.Options.BulkObjectIdName);
@@ -116,8 +113,7 @@ namespace Gw2Sharp.WebApi.Middleware
                     RequestGetAsync(cacheCategory, cacheId, context, callNext, cancellationToken))
                 .ConfigureAwait(false);
 
-            var response = new WebApiResponse(cacheItem.StringItem, cacheItem.StatusCode, cacheItem.Metadata);
-            response.ResponseHeaders[HttpResponseInfo.CACHE_STATE_HEADER] = GetCacheState(cacheItem).ToString();
+            var response = new WebApiResponse(cacheItem.StringItem, cacheItem.StatusCode, GetCacheState(cacheItem), cacheItem.Metadata);
 
             // Update individual items
             var cacheItems = SplitResponseIntoIndividualCacheObjects(cacheCategory, response, context.Request.Options.BulkObjectIdName);
@@ -133,7 +129,7 @@ namespace Gw2Sharp.WebApi.Middleware
             CancellationToken cancellationToken)
         {
             var response = await callNext(context, cancellationToken).ConfigureAwait(false);
-            var responseInfo = new HttpResponseInfo(response.StatusCode, response.ResponseHeaders.AsReadOnly());
+            var responseInfo = new HttpResponseInfo(response.StatusCode, response.CacheState, response.ResponseHeaders.AsReadOnly());
             return new CacheItem(cacheCategory, cacheId, response.Content, response.StatusCode,
                 responseInfo.Expires.GetValueOrDefault(DateTimeOffset.Now), CacheItemStatus.New, response.ResponseHeaders);
         }
@@ -153,7 +149,7 @@ namespace Gw2Sharp.WebApi.Middleware
 
         private static IList<CacheItem> SplitResponseIntoIndividualCacheObjects(string cacheCategory, IWebApiResponse response, string bulkObjectPropertyIdName)
         {
-            var responseInfo = new HttpResponseInfo(response.StatusCode, response.ResponseHeaders.AsReadOnly());
+            var responseInfo = new HttpResponseInfo(response.StatusCode, response.CacheState, response.ResponseHeaders.AsReadOnly());
 
             var items = new List<CacheItem>();
 
@@ -195,16 +191,5 @@ namespace Gw2Sharp.WebApi.Middleware
             CacheItemStatus.Cached => CacheState.FromCache,
             _ => CacheState.FromLive
         };
-
-        private static CacheState GetCacheState(IList<CacheItem> cacheItems)
-        {
-            int fCacheCount = cacheItems.Count(x => GetCacheState(x) == CacheState.FromCache);
-            return fCacheCount switch
-            {
-                0 => CacheState.FromLive,
-                _ when fCacheCount == cacheItems.Count => CacheState.FromCache,
-                _ => CacheState.PartiallyFromCache
-            };
-        }
     }
 }

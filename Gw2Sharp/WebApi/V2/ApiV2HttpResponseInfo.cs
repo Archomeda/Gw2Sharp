@@ -21,9 +21,10 @@ namespace Gw2Sharp.WebApi.V2
         /// Initializes a new instance of the <see cref="ApiV2HttpResponseInfo"/> class with a <see cref="IWebApiResponse{T}"/> as base.
         /// </summary>
         /// <param name="statusCode">The HTTP status code.</param>
+        /// <param name="cacheState">The cache state.</param>
         /// <param name="responseHeaders">The HTTP response headers.</param>
-        public ApiV2HttpResponseInfo(HttpStatusCode statusCode, IReadOnlyDictionary<string, string>? responseHeaders) :
-            base(statusCode, responseHeaders)
+        public ApiV2HttpResponseInfo(HttpStatusCode statusCode, CacheState cacheState, IReadOnlyDictionary<string, string>? responseHeaders) :
+            base(statusCode, cacheState, responseHeaders)
         {
             responseHeaders ??= new Dictionary<string, string>();
 

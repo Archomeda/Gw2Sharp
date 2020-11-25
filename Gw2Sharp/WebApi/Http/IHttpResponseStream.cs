@@ -21,6 +21,11 @@ namespace Gw2Sharp.WebApi.Http
         HttpStatusCode StatusCode { get; }
 
         /// <summary>
+        /// The cache state.
+        /// </summary>
+        CacheState CacheState { get; }
+
+        /// <summary>
         /// The original headers that were used in the web request.
         /// </summary>
         IReadOnlyDictionary<string, string> RequestHeaders { get; }

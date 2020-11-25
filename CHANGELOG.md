@@ -23,6 +23,11 @@ Please do not report those issues as they will not be worked on.
 - **Breaking:** In `Gw2Sharp.WebApi.Caching.ICacheMethod` (and their derivatives `BaseCacheMethod`, `ArchiveCacheMethod`, `MemoryCacheMethod` and `NullCacheMethod`), the methods `SetAsync`, `GetOrUpdateAsync` and `GetOrUpdateManyAsync` have had their signature changed to strip out redundant parameters that are now included in `CacheItem`
 - **Breaking:** The internal ZIP file structure used in `Gw2Sharp.WebApi.Caching.ArchiveCacheMethod` has been changed to support the caching changes, bumping it from no versioning to version 1
 
+### HTTP
+- **Breaking:** The constant `CACHE_STATE_HEADER` in `Gw2Sharp.WebApi.Http.HttpResponseInfo` has been removed in favor of having a dedicated cache state property on various classes, instead of injecting it through a custom Gw2Sharp header
+- **Breaking:** `Gw2Sharp.WebApi.Http.IHttpResponseStream` and `Gw2Sharp.WebApi.Http.IWebApiResponse` have the additional property `CacheState`
+- **Breaking:** The constructors of `Gw2Sharp.WebApi.Http.HttpResponseInfo`, `Gw2Sharp.WebApi.Http.HttpResponseStream`, `Gw2Sharp.WebApi.Http.WebApiResponse` and `Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo` have been modified to accept the `CacheState` parameter
+
 ---
 
 ## 0.11.1
