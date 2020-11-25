@@ -71,7 +71,7 @@ namespace Gw2Sharp.WebApi.Caching
             if (this.cachedItems.TryGetValue(category, out var cache) &&
                 cache.TryGetValue(id, out var item) &&
                 item.ExpiryTime > DateTimeOffset.Now)
-                return Task.FromResult<CacheItem?>(this.CopyCacheItemWithStatus(item, CacheItemStatus.Cached));
+                return Task.FromResult<CacheItem?>(CopyCacheItemWithStatus(item, CacheItemStatus.Cached));
 
             return Task.FromResult<CacheItem?>(null);
         }
@@ -108,7 +108,7 @@ namespace Gw2Sharp.WebApi.Caching
                 .Where(x => x?.ExpiryTime > DateTimeOffset.Now)
                 .WhereNotNull()
                 .ToList();
-            return Task.FromResult<IList<CacheItem>>(items.Select(x => this.CopyCacheItemWithStatus(x, CacheItemStatus.Cached)).ToList());
+            return Task.FromResult<IList<CacheItem>>(items.Select(x => CopyCacheItemWithStatus(x, CacheItemStatus.Cached)).ToList());
         }
 
         /// <inheritdoc />
@@ -121,7 +121,7 @@ namespace Gw2Sharp.WebApi.Caching
         private bool isDisposed = false; // To detect redundant calls
 
 
-        private CacheItem CopyCacheItemWithStatus(CacheItem item, CacheItemStatus status) => item.Type switch
+        private static CacheItem CopyCacheItemWithStatus(CacheItem item, CacheItemStatus status) => item.Type switch
         {
             CacheItemType.Raw => new CacheItem(item.Category, item.Id, item.RawItem, item.StatusCode, item.ExpiryTime, status, item.Metadata?.ShallowCopy()),
             CacheItemType.String => new CacheItem(item.Category, item.Id, item.StringItem, item.StatusCode, item.ExpiryTime, status, item.Metadata?.ShallowCopy()),

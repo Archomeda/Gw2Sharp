@@ -141,7 +141,10 @@ namespace Gw2Sharp.WebApi.Caching
             if (metadata.TryGetValue(STATUS_CODE_KEY, out string? statusCodeString))
             {
                 metadata.Remove(STATUS_CODE_KEY); // Remove the key since it's redundant and unexpected for internal data to be exposed
+
+#pragma warning disable CA1806 // Do not ignore method results - We do not care if it succeeds or not, if it fails, we are fine with the default value
                 int.TryParse(statusCodeString, out statusCode);
+#pragma warning restore CA1806 // Do not ignore method results
             }
             return (metadata, (HttpStatusCode)statusCode);
         }

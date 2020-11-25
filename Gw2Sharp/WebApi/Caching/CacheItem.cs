@@ -88,8 +88,10 @@ namespace Gw2Sharp.WebApi.Caching
         /// The cache item as a raw byte array.
         /// </summary>
         /// <exception cref="InvalidOperationException">The cache item is not a raw byte array.</exception>
+#pragma warning disable CA1819 // Properties should not return arrays - How else are we returning the raw bytes?
         public byte[] RawItem =>
             this.item as byte[] ?? throw new InvalidOperationException("The cache item is not a raw byte array.");
+#pragma warning restore CA1819 // Properties should not return arrays
 
         /// <summary>
         /// The cache item as a string.

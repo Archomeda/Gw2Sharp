@@ -14,6 +14,7 @@ namespace Gw2Sharp.WebApi.Http
         /// Creates a new <see cref="WebApiResponse" /> with a string as backing content.
         /// </summary>
         /// <param name="content">The content.</param>
+        /// <param name="cacheState">The cache state.</param>
         /// <exception cref="ArgumentNullException"><paramref name="content"/> is <c>null</c>.</exception>
         public WebApiResponse(string content, CacheState cacheState) : base(content, null, cacheState, null) { }
 
@@ -22,6 +23,7 @@ namespace Gw2Sharp.WebApi.Http
         /// </summary>
         /// <param name="content">The content.</param>
         /// <param name="statusCode">The status code.</param>
+        /// <param name="cacheState">The cache state.</param>
         /// <param name="responseHeaders">The response headers.</param>
         /// <exception cref="ArgumentNullException"><paramref name="content"/> is <c>null</c>.</exception>
         public WebApiResponse(string content, HttpStatusCode? statusCode, CacheState cacheState, IDictionary<string, string>? responseHeaders)
@@ -32,6 +34,7 @@ namespace Gw2Sharp.WebApi.Http
         /// </summary>
         /// <param name="content">The content.</param>
         /// <param name="statusCode">The status code.</param>
+        /// <param name="cacheState">The cache state.</param>
         /// <param name="responseHeaders">The response headers.</param>
         /// <exception cref="ArgumentNullException"><paramref name="content"/> is <c>null</c>.</exception>
         public WebApiResponse(string content, HttpStatusCode? statusCode, CacheState cacheState, IEnumerable<KeyValuePair<string, string>>? responseHeaders)
