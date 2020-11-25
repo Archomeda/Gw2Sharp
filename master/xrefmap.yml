@@ -3481,44 +3481,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Json.Converters.SizeConverter.Write
   nameWithType: SizeConverter.Write
-- uid: Gw2Sharp.Json.Converters.StringAsIntConverter
-  name: StringAsIntConverter
-  href: api/Gw2Sharp.Json.Converters.StringAsIntConverter.html
-  commentId: T:Gw2Sharp.Json.Converters.StringAsIntConverter
-  fullName: Gw2Sharp.Json.Converters.StringAsIntConverter
-  nameWithType: StringAsIntConverter
-- uid: Gw2Sharp.Json.Converters.StringAsIntConverter.Read(Utf8JsonReader@,Type,JsonSerializerOptions)
-  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
-  href: api/Gw2Sharp.Json.Converters.StringAsIntConverter.html#Gw2Sharp_Json_Converters_StringAsIntConverter_Read_Utf8JsonReader__Type_JsonSerializerOptions_
-  commentId: M:Gw2Sharp.Json.Converters.StringAsIntConverter.Read(Utf8JsonReader@,Type,JsonSerializerOptions)
-  name.vb: Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
-  fullName: Gw2Sharp.Json.Converters.StringAsIntConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
-  fullName.vb: Gw2Sharp.Json.Converters.StringAsIntConverter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
-  nameWithType: StringAsIntConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
-  nameWithType.vb: StringAsIntConverter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
-- uid: Gw2Sharp.Json.Converters.StringAsIntConverter.Read*
-  name: Read
-  href: api/Gw2Sharp.Json.Converters.StringAsIntConverter.html#Gw2Sharp_Json_Converters_StringAsIntConverter_Read_
-  commentId: Overload:Gw2Sharp.Json.Converters.StringAsIntConverter.Read
-  isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.StringAsIntConverter.Read
-  nameWithType: StringAsIntConverter.Read
-- uid: Gw2Sharp.Json.Converters.StringAsIntConverter.Write(Utf8JsonWriter,System.Nullable{System.Int32},JsonSerializerOptions)
-  name: Write(Utf8JsonWriter, Nullable<Int32>, JsonSerializerOptions)
-  href: api/Gw2Sharp.Json.Converters.StringAsIntConverter.html#Gw2Sharp_Json_Converters_StringAsIntConverter_Write_Utf8JsonWriter_System_Nullable_System_Int32__JsonSerializerOptions_
-  commentId: M:Gw2Sharp.Json.Converters.StringAsIntConverter.Write(Utf8JsonWriter,System.Nullable{System.Int32},JsonSerializerOptions)
-  name.vb: Write(Utf8JsonWriter, Nullable(Of Int32), JsonSerializerOptions)
-  fullName: Gw2Sharp.Json.Converters.StringAsIntConverter.Write(Utf8JsonWriter, System.Nullable<System.Int32>, JsonSerializerOptions)
-  fullName.vb: Gw2Sharp.Json.Converters.StringAsIntConverter.Write(Utf8JsonWriter, System.Nullable(Of System.Int32), JsonSerializerOptions)
-  nameWithType: StringAsIntConverter.Write(Utf8JsonWriter, Nullable<Int32>, JsonSerializerOptions)
-  nameWithType.vb: StringAsIntConverter.Write(Utf8JsonWriter, Nullable(Of Int32), JsonSerializerOptions)
-- uid: Gw2Sharp.Json.Converters.StringAsIntConverter.Write*
-  name: Write
-  href: api/Gw2Sharp.Json.Converters.StringAsIntConverter.html#Gw2Sharp_Json_Converters_StringAsIntConverter_Write_
-  commentId: Overload:Gw2Sharp.Json.Converters.StringAsIntConverter.Write
-  isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.StringAsIntConverter.Write
-  nameWithType: StringAsIntConverter.Write
 - uid: Gw2Sharp.Json.Converters.TimeSpanConverter
   name: TimeSpanConverter
   href: api/Gw2Sharp.Json.Converters.TimeSpanConverter.html
