@@ -7,6 +7,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 items endpoint.
     /// </summary>
     [EndpointPath("items")]
+    [EndpointSchemaVersion("2020-11-17T00:30:00.000Z")]
     public class ItemsClient : BaseEndpointBulkClient<Item, int>, IItemsClient
     {
         /// <summary>

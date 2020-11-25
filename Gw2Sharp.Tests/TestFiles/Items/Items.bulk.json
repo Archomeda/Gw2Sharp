@@ -37,8 +37,7 @@
             "modifier": 4
           }
         ]
-      },
-      "secondary_suffix_item_id": ""
+      }
     }
   },
   {
@@ -81,8 +80,7 @@
             "modifier": 5
           }
         ]
-      },
-      "secondary_suffix_item_id": ""
+      }
     }
   },
   {
@@ -361,7 +359,6 @@
           ]
         }
       ],
-      "secondary_suffix_item_id": "",
       "stat_choices": [
         588,
         656,
@@ -592,8 +589,7 @@
           }
         ]
       },
-      "suffix_item_id": 24614,
-      "secondary_suffix_item_id": ""
+      "suffix_item_id": 24614
     }
   },
   {
@@ -648,7 +644,7 @@
         ]
       },
       "suffix_item_id": 24615,
-      "secondary_suffix_item_id": "24618"
+      "secondary_suffix_item_id": 24618
     }
   },
   {
@@ -689,7 +685,6 @@
         }
       ],
       "suffix_item_id": 24554,
-      "secondary_suffix_item_id": "",
       "stat_choices": [
         155,
         161,
