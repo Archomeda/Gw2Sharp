@@ -152,7 +152,7 @@ namespace Gw2Sharp.WebApi.Middleware
             foreach (var item in doc.RootElement.EnumerateArray())
             {
                 if (item.TryGetProperty(bulkObjectPropertyIdName, out var id))
-                    items[id.ToString()] = new WebApiResponse(item.GetRawText(), response.StatusCode, response.ResponseHeaders);
+                    items[id.ToString() ?? string.Empty] = new WebApiResponse(item.GetRawText(), response.StatusCode, response.ResponseHeaders);
             }
 
             return items;

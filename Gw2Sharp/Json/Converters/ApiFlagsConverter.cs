@@ -49,7 +49,7 @@ namespace Gw2Sharp.Json.Converters
                     else if (reader.TokenType == JsonTokenType.String)
                     {
                         // If it's a string, create an enum with that value
-                        string rawValue = reader.GetString();
+                        string rawValue = reader.GetString()!;
                         fEnums.Add(new ApiEnum<T>(rawValue));
                     }
                     else if (reader.TokenType == JsonTokenType.Number)

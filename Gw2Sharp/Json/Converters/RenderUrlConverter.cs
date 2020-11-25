@@ -23,8 +23,13 @@ namespace Gw2Sharp.Json.Converters
         }
 
         /// <inheritdoc />
-        public override RenderUrl Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options) =>
-            new RenderUrl(this.gw2Client, reader.GetString());
+        public override RenderUrl Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+        {
+            string? value = reader.GetString();
+            if (value is null)
+                throw new JsonException("Expected a string value");
+            return new RenderUrl(this.gw2Client, value);
+        }
 
         /// <inheritdoc />
         public override void Write(Utf8JsonWriter writer, RenderUrl value, JsonSerializerOptions options) =>

@@ -42,7 +42,7 @@ namespace Gw2Sharp.WebApi.Caching
 
                 Collect(now, cache);
 
-                if (cache.Count == 0)
+                if (cache.IsEmpty)
                     this.cachedItems.TryRemove(category, out _);
             }
 
@@ -50,7 +50,7 @@ namespace Gw2Sharp.WebApi.Caching
             {
                 foreach (string key in cache.Keys.ToArray())
                 {
-                    if (!cache.TryGetValue(key, out var obj))
+                    if (!cache.TryGetValue(key, out object? obj))
                         continue;
 
                     var item = (CacheItem)obj;
@@ -74,7 +74,7 @@ namespace Gw2Sharp.WebApi.Caching
             async Task<CacheItem<T>?> ExecAsync()
             {
                 if (this.cachedItems.TryGetValue(category, out var cache) &&
-                    cache.TryGetValue(id, out var obj) &&
+                    cache.TryGetValue(id, out object? obj) &&
                     obj is CacheItem<T> item &&
                     item.ExpiryTime > DateTimeOffset.Now)
                     return item;
@@ -111,7 +111,7 @@ namespace Gw2Sharp.WebApi.Caching
                 var items = new Dictionary<string, CacheItem<T>>();
                 if (this.cachedItems.TryGetValue(category, out var cache))
                     items = ids
-                        .Select(id => cache.TryGetValue(id, out var obj) ? obj : null)
+                        .Select(id => cache.TryGetValue(id, out object? obj) ? obj : null)
                         .Where(x => x is CacheItem<T> item && item.ExpiryTime > DateTimeOffset.Now)
                         .Cast<CacheItem<T>>()
                         .ToDictionary(x => x.Id);

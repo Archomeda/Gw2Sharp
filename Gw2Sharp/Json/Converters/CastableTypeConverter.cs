@@ -60,15 +60,15 @@ namespace Gw2Sharp.Json.Converters
                     // Copy the serializer options, and remove the converter where we are currently in to prevent a stack overflow
                     var innerOptions = CloneOptions(options);
                     innerOptions.Converters.Remove(innerOptions.Converters.Single(x => x is CastableTypeConverter));
-                    return JsonSerializer.Deserialize<T>(obj.RootElement.GetRawText(), innerOptions);
+                    return JsonSerializer.Deserialize<T>(obj.RootElement.GetRawText(), innerOptions)!;
                 }
-                string type = typeProperty.GetString();
+                string? type = typeProperty.GetString();
                 if (string.IsNullOrWhiteSpace(type))
                     throw new JsonException("Expected 'type' property to not be null or empty");
 
                 // Find the castable type
                 if (targetTypes.TryGetValue(type, out var targetType))
-                    return (T)JsonSerializer.Deserialize(obj.RootElement.GetRawText(), targetType, options);
+                    return (T)JsonSerializer.Deserialize(obj.RootElement.GetRawText(), targetType, options)!;
 
                 throw new JsonException($"Unsupported type {type}");
             }

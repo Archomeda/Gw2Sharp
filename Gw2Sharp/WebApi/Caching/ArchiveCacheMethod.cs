@@ -147,7 +147,7 @@ namespace Gw2Sharp.WebApi.Caching
                     using var streamReader = new StreamReader(zipStream);
                     string json = streamReader.ReadToEnd();
                     var wrappedResponse = JsonSerializer.Deserialize<WrappedResponse>(json, this.serializerSettings);
-                    data = new WebApiResponse(wrappedResponse.Content, wrappedResponse.StatusCode, wrappedResponse.ResponseHeaders);
+                    data = new WebApiResponse(wrappedResponse!.Content, wrappedResponse.StatusCode, wrappedResponse.ResponseHeaders);
                 }
                 else
                 {

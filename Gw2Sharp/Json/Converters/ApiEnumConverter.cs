@@ -29,18 +29,12 @@ namespace Gw2Sharp.Json.Converters
         private sealed class ApiEnumConverterInner<T> : JsonConverter<ApiEnum<T>>
             where T : Enum
         {
-            public override ApiEnum<T> Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+            public override ApiEnum<T> Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options) => reader.TokenType switch
             {
-                switch (reader.TokenType)
-                {
-                    case JsonTokenType.String:
-                        return new ApiEnum<T>(reader.GetString());
-                    case JsonTokenType.Number:
-                        return new ApiEnum<T>(reader.GetUInt64());
-                    default:
-                        throw new JsonException("Expected null, a string or a number to deserialize as enum");
-                }
-            }
+                JsonTokenType.String => new ApiEnum<T>(reader.GetString()!),
+                JsonTokenType.Number => new ApiEnum<T>(reader.GetUInt64()),
+                _ => throw new JsonException("Expected null, a string or a number to deserialize as enum")
+            };
 
             public override void Write(Utf8JsonWriter writer, ApiEnum<T> value, JsonSerializerOptions options) =>
                 throw new NotImplementedException("TODO: This should generally not be used since we only deserialize stuff from the API, and not serialize to it. Might add support later.");

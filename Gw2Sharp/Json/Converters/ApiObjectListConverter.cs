@@ -28,7 +28,7 @@ namespace Gw2Sharp.Json.Converters
 
         private sealed class ApiObjectListConverterInner<T> : JsonConverter<ApiV2BaseObjectList<T>>
         {
-            public override ApiV2BaseObjectList<T> Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options) =>
+            public override ApiV2BaseObjectList<T>? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options) =>
                 JsonSerializer.Deserialize<ApiV2BaseObjectList<T>>(ref reader, options);
 
             public override void Write(Utf8JsonWriter writer, ApiV2BaseObjectList<T> value, JsonSerializerOptions options) =>
