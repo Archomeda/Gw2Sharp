@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Checking the HTTP headers </title>
+    <title>Checking the response info </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Checking the HTTP headers ">
+    <meta name="title" content="Checking the response info ">
     <meta name="generator" content="docfx 2.53.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -106,7 +106,7 @@
                             <a href="caching.html" title="Caching" class="">Caching</a>
                           </li>
                           <li class="active">
-                            <a href="http-headers.html" title="HTTP headers" class="active">HTTP headers</a>
+                            <a href="response-info.html" title="Response info" class="active">Response info</a>
                           </li>
                           <li class="">
                             <a href="last-modified.html" title="Last-Modified" class="">Last-Modified</a>
@@ -137,11 +137,11 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Guides.HttpHeaders">
-<h1 id="checking-the-http-headers">Checking the HTTP headers</h1>
+            <article class="content wrap" id="_content" data-uid="Guides.ResponseInfo">
+<h1 id="checking-the-response-info">Checking the response info</h1>
 
 <p>Every response has the property <code>HttpResponseInfo</code>.
-This property allows you to access the HTTP headers that the response has returned.</p>
+This property allows you to access the HTTP headers and other information that the response has returned.</p>
 <p>An example:</p>
 <pre><code class="lang-cs">// Assuming you already have a client
 var itemIds = await client.WebApi.V2.Items.PageAsync(0);
@@ -151,20 +151,21 @@ var cacheAge = itemIds.HttpResponseInfo.CacheMaxAge;
 var itemsCount = itemIds.HttpResponseInfo.ResultCount;
 var itemsTotal = itemIds.HttpResponseInfo.ResultTotal;
 var pagesTotal = itemIds.HttpResponseInfo.PageTotal;
-</code></pre><div class="CAUTION"><h5>Caution</h5><p>Due to current technical limitations, performing a &quot;many&quot; request will only return the headers of the first item.
+
+// If the cache middleware is enabled, the following
+// can be used to determine if the request was served
+// from cache or from the live server
+var cacheState = itemIds.HttpResponseInfo.CacheState;
+</code></pre><div class="CAUTION"><h5>Caution</h5><p>Due to technical limitations, performing a &quot;many&quot; request will only return the headers of the first item.
 These kind of requests will be performed as efficiently as possible, meaning that if the <a class="xref" href="middleware.html#cachemiddleware">cache middleware</a> is enabled, it will only request items from the live API server that are <em>not</em> available in the cache.
 Therefore, these headers might not reflect the actual response headers.</p>
 </div>
-<h2 id="additional-custom-gw2sharp-headers">Additional custom Gw2Sharp headers</h2>
-<p>Gw2Sharp currently adds one additional header if the <a class="xref" href="middleware.html#cachemiddleware">cache middleware</a> is enabled.
-This is useful to check whether the request was served from the cache, or from the live API server.</p>
-<div class="NOTE"><h5>Note</h5><p>This header is added by the cache middleware itself, and its value in <code>HttpResponseInfo</code> is <em>relatively</em> unaffected by the technical limitation mentioned in the section above.</p>
-<p>This means that the value will always reflect the correct cache state.
-However, you cannot identify which individual item was served from the cache, or from the live API server.
-Instead, it will take the value from the whole request instead, which has <code>FromLive</code>, <code>PartiallyFromCache</code> or <code>FromCache</code>.</p>
+<div class="NOTE"><h5>Note</h5><p>The cache state is unaffected by the technical limitations mentioned above, because it&#39;s manually injected by the <a class="xref" href="middleware.html#cachemiddleware">cache middleware</a>.</p>
+<p>It does, however, has its own limitation that you cannot identify which individual item was served from the cache, or from the live API server.
+Instead, it will take the value from the whole request instead, which is <code>FromLive</code>, <code>PartiallyFromCache</code> or <code>FromCache</code>.</p>
+<p>So if some items from a many request has been served from cache, and some from the live server, it will have the value <code>PartiallyFromCache</code>.</p>
 </div>
-<pre><code class="lang-cs">var cacheState = itemIds.HttpResponseInfo.CacheState;
-</code></pre></article>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
@@ -172,7 +173,7 @@ Instead, it will take the value from the whole request instead, which has <code>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/docs/guides/http-headers.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/docs/guides/response-info.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

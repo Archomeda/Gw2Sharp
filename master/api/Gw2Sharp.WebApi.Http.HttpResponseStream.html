@@ -90,6 +90,12 @@
                         
                         <ul class="nav level2">
                           <li class="">
+                            <a href="Gw2Sharp.CacheItemStatus.html" title="CacheItemStatus" class="">CacheItemStatus</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.CacheItemType.html" title="CacheItemType" class="">CacheItemType</a>
+                          </li>
+                          <li class="">
                             <a href="Gw2Sharp.ComboFieldType.html" title="ComboFieldType" class="">ComboFieldType</a>
                           </li>
                           <li class="">
@@ -388,9 +394,6 @@
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.WebApi.Caching.CacheItem.html" title="CacheItem" class="">CacheItem</a>
-                          </li>
-                          <li class="">
-                            <a href="Gw2Sharp.WebApi.Caching.CacheItem-1.html" title="CacheItem&lt;T&gt;" class="">CacheItem&lt;T&gt;</a>
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.WebApi.Caching.ICacheMethod.html" title="ICacheMethod" class="">ICacheMethod</a>
@@ -2738,19 +2741,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_WebApi_Http_HttpResponseStream__ctor_Stream_.md&amp;value=---%0Auid%3A%20Gw2Sharp.WebApi.Http.HttpResponseStream.%23ctor(Stream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_WebApi_Http_HttpResponseStream__ctor_Stream_Gw2Sharp_WebApi_Http_CacheState_.md&amp;value=---%0Auid%3A%20Gw2Sharp.WebApi.Http.HttpResponseStream.%23ctor(Stream%2CGw2Sharp.WebApi.Http.CacheState)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Http/HttpResponseStream.cs/#L19">View Source</a>
+    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Http/HttpResponseStream.cs/#L20">View Source</a>
   </span>
   <a id="Gw2Sharp_WebApi_Http_HttpResponseStream__ctor_" data-uid="Gw2Sharp.WebApi.Http.HttpResponseStream.#ctor*"></a>
-  <h4 id="Gw2Sharp_WebApi_Http_HttpResponseStream__ctor_Stream_" data-uid="Gw2Sharp.WebApi.Http.HttpResponseStream.#ctor(Stream)">HttpResponseStream(Stream)</h4>
+  <h4 id="Gw2Sharp_WebApi_Http_HttpResponseStream__ctor_Stream_Gw2Sharp_WebApi_Http_CacheState_" data-uid="Gw2Sharp.WebApi.Http.HttpResponseStream.#ctor(Stream,Gw2Sharp.WebApi.Http.CacheState)">HttpResponseStream(Stream, CacheState)</h4>
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Gw2Sharp.WebApi.Http.HttpResponseStream.html">HttpResponseStream</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public HttpResponseStream(Stream contentStream)</code></pre>
+    <pre><code class="lang-csharp hljs">public HttpResponseStream(Stream contentStream, CacheState cacheState)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2768,23 +2771,29 @@
         <td><p>The content stream.</p>
 </td>
       </tr>
+      <tr>
+        <td><a class="xref" href="Gw2Sharp.WebApi.Http.CacheState.html">CacheState</a></td>
+        <td><span class="parametername">cacheState</span></td>
+        <td><p>The cache state.</p>
+</td>
+      </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_WebApi_Http_HttpResponseStream__ctor_Stream_System_Nullable_HttpStatusCode__System_Nullable_IDictionary_System_String_System_String___System_Nullable_IDictionary_System_String_System_String___.md&amp;value=---%0Auid%3A%20Gw2Sharp.WebApi.Http.HttpResponseStream.%23ctor(Stream%2CSystem.Nullable%7BHttpStatusCode%7D%2CSystem.Nullable%7BIDictionary%7BSystem.String%2CSystem.String%7D%7D%2CSystem.Nullable%7BIDictionary%7BSystem.String%2CSystem.String%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_WebApi_Http_HttpResponseStream__ctor_Stream_System_Nullable_HttpStatusCode__Gw2Sharp_WebApi_Http_CacheState_System_Nullable_IDictionary_System_String_System_String___System_Nullable_IDictionary_System_String_System_String___.md&amp;value=---%0Auid%3A%20Gw2Sharp.WebApi.Http.HttpResponseStream.%23ctor(Stream%2CSystem.Nullable%7BHttpStatusCode%7D%2CGw2Sharp.WebApi.Http.CacheState%2CSystem.Nullable%7BIDictionary%7BSystem.String%2CSystem.String%7D%7D%2CSystem.Nullable%7BIDictionary%7BSystem.String%2CSystem.String%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Http/HttpResponseStream.cs/#L29">View Source</a>
+    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Http/HttpResponseStream.cs/#L31">View Source</a>
   </span>
   <a id="Gw2Sharp_WebApi_Http_HttpResponseStream__ctor_" data-uid="Gw2Sharp.WebApi.Http.HttpResponseStream.#ctor*"></a>
-  <h4 id="Gw2Sharp_WebApi_Http_HttpResponseStream__ctor_Stream_System_Nullable_HttpStatusCode__System_Nullable_IDictionary_System_String_System_String___System_Nullable_IDictionary_System_String_System_String___" data-uid="Gw2Sharp.WebApi.Http.HttpResponseStream.#ctor(Stream,System.Nullable{HttpStatusCode},System.Nullable{IDictionary{System.String,System.String}},System.Nullable{IDictionary{System.String,System.String}})">HttpResponseStream(Stream, Nullable&lt;HttpStatusCode&gt;, Nullable&lt;IDictionary&lt;String, String&gt;&gt;, Nullable&lt;IDictionary&lt;String, String&gt;&gt;)</h4>
+  <h4 id="Gw2Sharp_WebApi_Http_HttpResponseStream__ctor_Stream_System_Nullable_HttpStatusCode__Gw2Sharp_WebApi_Http_CacheState_System_Nullable_IDictionary_System_String_System_String___System_Nullable_IDictionary_System_String_System_String___" data-uid="Gw2Sharp.WebApi.Http.HttpResponseStream.#ctor(Stream,System.Nullable{HttpStatusCode},Gw2Sharp.WebApi.Http.CacheState,System.Nullable{IDictionary{System.String,System.String}},System.Nullable{IDictionary{System.String,System.String}})">HttpResponseStream(Stream, Nullable&lt;HttpStatusCode&gt;, CacheState, Nullable&lt;IDictionary&lt;String, String&gt;&gt;, Nullable&lt;IDictionary&lt;String, String&gt;&gt;)</h4>
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Gw2Sharp.WebApi.Http.HttpResponseStream.html">HttpResponseStream</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public HttpResponseStream(Stream contentStream, HttpStatusCode? statusCode, IDictionary&lt;string, string&gt;? requestHeaders, IDictionary&lt;string, string&gt;? responseHeaders)</code></pre>
+    <pre><code class="lang-csharp hljs">public HttpResponseStream(Stream contentStream, HttpStatusCode? statusCode, CacheState cacheState, IDictionary&lt;string, string&gt;? requestHeaders, IDictionary&lt;string, string&gt;? responseHeaders)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2806,6 +2815,12 @@
         <td><span class="xref">System.Nullable</span>&lt;<span class="xref">HttpStatusCode</span>&gt;</td>
         <td><span class="parametername">statusCode</span></td>
         <td><p>The status code.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Gw2Sharp.WebApi.Http.CacheState.html">CacheState</a></td>
+        <td><span class="parametername">cacheState</span></td>
+        <td><p>The cache state.</p>
 </td>
       </tr>
       <tr>
@@ -2824,19 +2839,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_WebApi_Http_HttpResponseStream__ctor_Stream_System_Nullable_HttpStatusCode__System_Nullable_IEnumerable_KeyValuePair_System_String_System_String____System_Nullable_IEnumerable_KeyValuePair_System_String_System_String____.md&amp;value=---%0Auid%3A%20Gw2Sharp.WebApi.Http.HttpResponseStream.%23ctor(Stream%2CSystem.Nullable%7BHttpStatusCode%7D%2CSystem.Nullable%7BIEnumerable%7BKeyValuePair%7BSystem.String%2CSystem.String%7D%7D%7D%2CSystem.Nullable%7BIEnumerable%7BKeyValuePair%7BSystem.String%2CSystem.String%7D%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_WebApi_Http_HttpResponseStream__ctor_Stream_System_Nullable_HttpStatusCode__Gw2Sharp_WebApi_Http_CacheState_System_Nullable_IEnumerable_KeyValuePair_System_String_System_String____System_Nullable_IEnumerable_KeyValuePair_System_String_System_String____.md&amp;value=---%0Auid%3A%20Gw2Sharp.WebApi.Http.HttpResponseStream.%23ctor(Stream%2CSystem.Nullable%7BHttpStatusCode%7D%2CGw2Sharp.WebApi.Http.CacheState%2CSystem.Nullable%7BIEnumerable%7BKeyValuePair%7BSystem.String%2CSystem.String%7D%7D%7D%2CSystem.Nullable%7BIEnumerable%7BKeyValuePair%7BSystem.String%2CSystem.String%7D%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Http/HttpResponseStream.cs/#L48">View Source</a>
+    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Http/HttpResponseStream.cs/#L53">View Source</a>
   </span>
   <a id="Gw2Sharp_WebApi_Http_HttpResponseStream__ctor_" data-uid="Gw2Sharp.WebApi.Http.HttpResponseStream.#ctor*"></a>
-  <h4 id="Gw2Sharp_WebApi_Http_HttpResponseStream__ctor_Stream_System_Nullable_HttpStatusCode__System_Nullable_IEnumerable_KeyValuePair_System_String_System_String____System_Nullable_IEnumerable_KeyValuePair_System_String_System_String____" data-uid="Gw2Sharp.WebApi.Http.HttpResponseStream.#ctor(Stream,System.Nullable{HttpStatusCode},System.Nullable{IEnumerable{KeyValuePair{System.String,System.String}}},System.Nullable{IEnumerable{KeyValuePair{System.String,System.String}}})">HttpResponseStream(Stream, Nullable&lt;HttpStatusCode&gt;, Nullable&lt;IEnumerable&lt;KeyValuePair&lt;String, String&gt;&gt;&gt;, Nullable&lt;IEnumerable&lt;KeyValuePair&lt;String, String&gt;&gt;&gt;)</h4>
+  <h4 id="Gw2Sharp_WebApi_Http_HttpResponseStream__ctor_Stream_System_Nullable_HttpStatusCode__Gw2Sharp_WebApi_Http_CacheState_System_Nullable_IEnumerable_KeyValuePair_System_String_System_String____System_Nullable_IEnumerable_KeyValuePair_System_String_System_String____" data-uid="Gw2Sharp.WebApi.Http.HttpResponseStream.#ctor(Stream,System.Nullable{HttpStatusCode},Gw2Sharp.WebApi.Http.CacheState,System.Nullable{IEnumerable{KeyValuePair{System.String,System.String}}},System.Nullable{IEnumerable{KeyValuePair{System.String,System.String}}})">HttpResponseStream(Stream, Nullable&lt;HttpStatusCode&gt;, CacheState, Nullable&lt;IEnumerable&lt;KeyValuePair&lt;String, String&gt;&gt;&gt;, Nullable&lt;IEnumerable&lt;KeyValuePair&lt;String, String&gt;&gt;&gt;)</h4>
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Gw2Sharp.WebApi.Http.HttpResponseStream.html">HttpResponseStream</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public HttpResponseStream(Stream contentStream, HttpStatusCode? statusCode, IEnumerable&lt;KeyValuePair&lt;string, string&gt;&gt;? requestHeaders, IEnumerable&lt;KeyValuePair&lt;string, string&gt;&gt;? responseHeaders)</code></pre>
+    <pre><code class="lang-csharp hljs">public HttpResponseStream(Stream contentStream, HttpStatusCode? statusCode, CacheState cacheState, IEnumerable&lt;KeyValuePair&lt;string, string&gt;&gt;? requestHeaders, IEnumerable&lt;KeyValuePair&lt;string, string&gt;&gt;? responseHeaders)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2858,6 +2873,12 @@
         <td><span class="xref">System.Nullable</span>&lt;<span class="xref">HttpStatusCode</span>&gt;</td>
         <td><span class="parametername">statusCode</span></td>
         <td><p>The status code.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Gw2Sharp.WebApi.Http.CacheState.html">CacheState</a></td>
+        <td><span class="parametername">cacheState</span></td>
+        <td><p>The cache state.</p>
 </td>
       </tr>
       <tr>
@@ -2878,10 +2899,41 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_WebApi_Http_HttpResponseStream_CacheState.md&amp;value=---%0Auid%3A%20Gw2Sharp.WebApi.Http.HttpResponseStream.CacheState%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Http/HttpResponseStream.cs/#L65">View Source</a>
+  </span>
+  <a id="Gw2Sharp_WebApi_Http_HttpResponseStream_CacheState_" data-uid="Gw2Sharp.WebApi.Http.HttpResponseStream.CacheState*"></a>
+  <h4 id="Gw2Sharp_WebApi_Http_HttpResponseStream_CacheState" data-uid="Gw2Sharp.WebApi.Http.HttpResponseStream.CacheState">CacheState</h4>
+  <div class="markdown level1 summary"><p>The cache state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CacheState CacheState { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Gw2Sharp.WebApi.Http.CacheState.html">CacheState</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_WebApi_Http_HttpResponseStream_ContentStream.md&amp;value=---%0Auid%3A%20Gw2Sharp.WebApi.Http.HttpResponseStream.ContentStream%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Http/HttpResponseStream.cs/#L53">View Source</a>
+    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Http/HttpResponseStream.cs/#L59">View Source</a>
   </span>
   <a id="Gw2Sharp_WebApi_Http_HttpResponseStream_ContentStream_" data-uid="Gw2Sharp.WebApi.Http.HttpResponseStream.ContentStream*"></a>
   <h4 id="Gw2Sharp_WebApi_Http_HttpResponseStream_ContentStream" data-uid="Gw2Sharp.WebApi.Http.HttpResponseStream.ContentStream">ContentStream</h4>
@@ -2912,7 +2964,7 @@
     <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_WebApi_Http_HttpResponseStream_RequestHeaders.md&amp;value=---%0Auid%3A%20Gw2Sharp.WebApi.Http.HttpResponseStream.RequestHeaders%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Http/HttpResponseStream.cs/#L59">View Source</a>
+    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Http/HttpResponseStream.cs/#L68">View Source</a>
   </span>
   <a id="Gw2Sharp_WebApi_Http_HttpResponseStream_RequestHeaders_" data-uid="Gw2Sharp.WebApi.Http.HttpResponseStream.RequestHeaders*"></a>
   <h4 id="Gw2Sharp_WebApi_Http_HttpResponseStream_RequestHeaders" data-uid="Gw2Sharp.WebApi.Http.HttpResponseStream.RequestHeaders">RequestHeaders</h4>
@@ -2943,7 +2995,7 @@
     <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_WebApi_Http_HttpResponseStream_ResponseHeaders.md&amp;value=---%0Auid%3A%20Gw2Sharp.WebApi.Http.HttpResponseStream.ResponseHeaders%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Http/HttpResponseStream.cs/#L62">View Source</a>
+    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Http/HttpResponseStream.cs/#L71">View Source</a>
   </span>
   <a id="Gw2Sharp_WebApi_Http_HttpResponseStream_ResponseHeaders_" data-uid="Gw2Sharp.WebApi.Http.HttpResponseStream.ResponseHeaders*"></a>
   <h4 id="Gw2Sharp_WebApi_Http_HttpResponseStream_ResponseHeaders" data-uid="Gw2Sharp.WebApi.Http.HttpResponseStream.ResponseHeaders">ResponseHeaders</h4>
@@ -2974,7 +3026,7 @@
     <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_WebApi_Http_HttpResponseStream_StatusCode.md&amp;value=---%0Auid%3A%20Gw2Sharp.WebApi.Http.HttpResponseStream.StatusCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Http/HttpResponseStream.cs/#L56">View Source</a>
+    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Http/HttpResponseStream.cs/#L62">View Source</a>
   </span>
   <a id="Gw2Sharp_WebApi_Http_HttpResponseStream_StatusCode_" data-uid="Gw2Sharp.WebApi.Http.HttpResponseStream.StatusCode*"></a>
   <h4 id="Gw2Sharp_WebApi_Http_HttpResponseStream_StatusCode" data-uid="Gw2Sharp.WebApi.Http.HttpResponseStream.StatusCode">StatusCode</h4>
@@ -3007,7 +3059,7 @@
     <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_WebApi_Http_HttpResponseStream_Dispose.md&amp;value=---%0Auid%3A%20Gw2Sharp.WebApi.Http.HttpResponseStream.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Http/HttpResponseStream.cs/#L84">View Source</a>
+    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Http/HttpResponseStream.cs/#L91">View Source</a>
   </span>
   <a id="Gw2Sharp_WebApi_Http_HttpResponseStream_Dispose_" data-uid="Gw2Sharp.WebApi.Http.HttpResponseStream.Dispose*"></a>
   <h4 id="Gw2Sharp_WebApi_Http_HttpResponseStream_Dispose" data-uid="Gw2Sharp.WebApi.Http.HttpResponseStream.Dispose">Dispose()</h4>
@@ -3022,7 +3074,7 @@
     <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_WebApi_Http_HttpResponseStream_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20Gw2Sharp.WebApi.Http.HttpResponseStream.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Http/HttpResponseStream.cs/#L71">View Source</a>
+    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Http/HttpResponseStream.cs/#L80">View Source</a>
   </span>
   <a id="Gw2Sharp_WebApi_Http_HttpResponseStream_Dispose_" data-uid="Gw2Sharp.WebApi.Http.HttpResponseStream.Dispose*"></a>
   <h4 id="Gw2Sharp_WebApi_Http_HttpResponseStream_Dispose_System_Boolean_" data-uid="Gw2Sharp.WebApi.Http.HttpResponseStream.Dispose(System.Boolean)">Dispose(Boolean)</h4>

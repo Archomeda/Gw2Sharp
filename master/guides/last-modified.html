@@ -106,7 +106,7 @@
                             <a href="caching.html" title="Caching" class="">Caching</a>
                           </li>
                           <li class="">
-                            <a href="http-headers.html" title="HTTP headers" class="">HTTP headers</a>
+                            <a href="response-info.html" title="Response info" class="">Response info</a>
                           </li>
                           <li class="active">
                             <a href="last-modified.html" title="Last-Modified" class="active">Last-Modified</a>
@@ -143,7 +143,7 @@
 <p>This header is used to check the last time the content you&#39;re accessing has been changed.
 It was added to the API on March 22nd, 2019.
 You can read up on it <a href="https://en-forum.guildwars2.com/discussion/72091/api-updates-march-22-2019">on the forums</a>.</p>
-<p>Gw2Sharp allows you to check this header through the same way as <a class="xref" href="http-headers.html">the other headers</a>.</p>
+<p>Gw2Sharp allows you to check this header through the same way as <a href="xref:Guides.HttpHeaders">the other headers</a>.</p>
 <p>An example:</p>
 <pre><code class="lang-cs">// Assuming you already have a client
 var character = await client.WebApi.V2.Characters[&quot;Your Character Name&quot;].GetAsync();

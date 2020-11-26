@@ -90,6 +90,12 @@
                         
                         <ul class="nav level2">
                           <li class="">
+                            <a href="Gw2Sharp.CacheItemStatus.html" title="CacheItemStatus" class="">CacheItemStatus</a>
+                          </li>
+                          <li class="">
+                            <a href="Gw2Sharp.CacheItemType.html" title="CacheItemType" class="">CacheItemType</a>
+                          </li>
+                          <li class="">
                             <a href="Gw2Sharp.ComboFieldType.html" title="ComboFieldType" class="">ComboFieldType</a>
                           </li>
                           <li class="">
@@ -388,9 +394,6 @@
                           </li>
                           <li class="active">
                             <a href="Gw2Sharp.WebApi.Caching.CacheItem.html" title="CacheItem" class="active">CacheItem</a>
-                          </li>
-                          <li class="">
-                            <a href="Gw2Sharp.WebApi.Caching.CacheItem-1.html" title="CacheItem&lt;T&gt;" class="">CacheItem&lt;T&gt;</a>
                           </li>
                           <li class="">
                             <a href="Gw2Sharp.WebApi.Caching.ICacheMethod.html" title="ICacheMethod" class="">ICacheMethod</a>
@@ -2722,31 +2725,30 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">CacheItem</span></div>
-      <div class="level2"><a class="xref" href="Gw2Sharp.WebApi.Caching.CacheItem-1.html">CacheItem&lt;T&gt;</a></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Gw2Sharp.WebApi.Caching.html">Gw2Sharp.WebApi.Caching</a></h6>
   <h6><strong>Assembly</strong>: Gw2Sharp.dll</h6>
   <h5 id="Gw2Sharp_WebApi_Caching_CacheItem_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class CacheItem : IEquatable&lt;CacheItem&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class CacheItem : object</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_WebApi_Caching_CacheItem__ctor_System_String_System_String_System_Object_DateTimeOffset_.md&amp;value=---%0Auid%3A%20Gw2Sharp.WebApi.Caching.CacheItem.%23ctor(System.String%2CSystem.String%2CSystem.Object%2CDateTimeOffset)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_WebApi_Caching_CacheItem__ctor_System_String_System_String_System_Byte___HttpStatusCode_DateTimeOffset_Gw2Sharp_CacheItemStatus_System_Nullable_IDictionary_System_String_System_String___.md&amp;value=---%0Auid%3A%20Gw2Sharp.WebApi.Caching.CacheItem.%23ctor(System.String%2CSystem.String%2CSystem.Byte%5B%5D%2CHttpStatusCode%2CDateTimeOffset%2CGw2Sharp.CacheItemStatus%2CSystem.Nullable%7BIDictionary%7BSystem.String%2CSystem.String%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Caching/CacheItem.cs/#L17">View Source</a>
+    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Caching/CacheItem.cs/#L33">View Source</a>
   </span>
   <a id="Gw2Sharp_WebApi_Caching_CacheItem__ctor_" data-uid="Gw2Sharp.WebApi.Caching.CacheItem.#ctor*"></a>
-  <h4 id="Gw2Sharp_WebApi_Caching_CacheItem__ctor_System_String_System_String_System_Object_DateTimeOffset_" data-uid="Gw2Sharp.WebApi.Caching.CacheItem.#ctor(System.String,System.String,System.Object,DateTimeOffset)">CacheItem(String, String, Object, DateTimeOffset)</h4>
-  <div class="markdown level1 summary"><p>Creates a new cache item.</p>
+  <h4 id="Gw2Sharp_WebApi_Caching_CacheItem__ctor_System_String_System_String_System_Byte___HttpStatusCode_DateTimeOffset_Gw2Sharp_CacheItemStatus_System_Nullable_IDictionary_System_String_System_String___" data-uid="Gw2Sharp.WebApi.Caching.CacheItem.#ctor(System.String,System.String,System.Byte[],HttpStatusCode,DateTimeOffset,Gw2Sharp.CacheItemStatus,System.Nullable{IDictionary{System.String,System.String}})">CacheItem(String, String, Byte[], HttpStatusCode, DateTimeOffset, CacheItemStatus, Nullable&lt;IDictionary&lt;String, String&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Creates a new raw cache item.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CacheItem(string category, string id, object item, DateTimeOffset expiryTime)</code></pre>
+    <pre><code class="lang-csharp hljs">public CacheItem(string category, string id, byte[] item, HttpStatusCode statusCode, DateTimeOffset expiryTime, CacheItemStatus status, IDictionary&lt;string, string&gt;? metadata = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2771,15 +2773,103 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Object</span></td>
+        <td><span class="xref">System.Byte</span>[]</td>
         <td><span class="parametername">item</span></td>
         <td><p>The item.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">HttpStatusCode</span></td>
+        <td><span class="parametername">statusCode</span></td>
+        <td><p>The status code.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">DateTimeOffset</span></td>
         <td><span class="parametername">expiryTime</span></td>
         <td><p>The expiry time.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Gw2Sharp.CacheItemStatus.html">CacheItemStatus</a></td>
+        <td><span class="parametername">status</span></td>
+        <td><p>The cache status.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="parametername">metadata</span></td>
+        <td><p>The cache metadata.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_WebApi_Caching_CacheItem__ctor_System_String_System_String_System_String_HttpStatusCode_DateTimeOffset_Gw2Sharp_CacheItemStatus_System_Nullable_IDictionary_System_String_System_String___.md&amp;value=---%0Auid%3A%20Gw2Sharp.WebApi.Caching.CacheItem.%23ctor(System.String%2CSystem.String%2CSystem.String%2CHttpStatusCode%2CDateTimeOffset%2CGw2Sharp.CacheItemStatus%2CSystem.Nullable%7BIDictionary%7BSystem.String%2CSystem.String%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Caching/CacheItem.cs/#L55">View Source</a>
+  </span>
+  <a id="Gw2Sharp_WebApi_Caching_CacheItem__ctor_" data-uid="Gw2Sharp.WebApi.Caching.CacheItem.#ctor*"></a>
+  <h4 id="Gw2Sharp_WebApi_Caching_CacheItem__ctor_System_String_System_String_System_String_HttpStatusCode_DateTimeOffset_Gw2Sharp_CacheItemStatus_System_Nullable_IDictionary_System_String_System_String___" data-uid="Gw2Sharp.WebApi.Caching.CacheItem.#ctor(System.String,System.String,System.String,HttpStatusCode,DateTimeOffset,Gw2Sharp.CacheItemStatus,System.Nullable{IDictionary{System.String,System.String}})">CacheItem(String, String, String, HttpStatusCode, DateTimeOffset, CacheItemStatus, Nullable&lt;IDictionary&lt;String, String&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Creates a new string cache item.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CacheItem(string category, string id, string item, HttpStatusCode statusCode, DateTimeOffset expiryTime, CacheItemStatus status, IDictionary&lt;string, string&gt;? metadata = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">category</span></td>
+        <td><p>The cache category.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The id.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>The item.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">HttpStatusCode</span></td>
+        <td><span class="parametername">statusCode</span></td>
+        <td><p>The status code.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">DateTimeOffset</span></td>
+        <td><span class="parametername">expiryTime</span></td>
+        <td><p>The expiry time.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Gw2Sharp.CacheItemStatus.html">CacheItemStatus</a></td>
+        <td><span class="parametername">status</span></td>
+        <td><p>The cache status.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="parametername">metadata</span></td>
+        <td><p>The cache metadata.</p>
 </td>
       </tr>
     </tbody>
@@ -2791,7 +2881,7 @@
     <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_WebApi_Caching_CacheItem_Category.md&amp;value=---%0Auid%3A%20Gw2Sharp.WebApi.Caching.CacheItem.Category%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Caching/CacheItem.cs/#L28">View Source</a>
+    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Caching/CacheItem.cs/#L80">View Source</a>
   </span>
   <a id="Gw2Sharp_WebApi_Caching_CacheItem_Category_" data-uid="Gw2Sharp.WebApi.Caching.CacheItem.Category*"></a>
   <h4 id="Gw2Sharp_WebApi_Caching_CacheItem_Category" data-uid="Gw2Sharp.WebApi.Caching.CacheItem.Category">Category</h4>
@@ -2822,7 +2912,7 @@
     <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_WebApi_Caching_CacheItem_ExpiryTime.md&amp;value=---%0Auid%3A%20Gw2Sharp.WebApi.Caching.CacheItem.ExpiryTime%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Caching/CacheItem.cs/#L43">View Source</a>
+    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Caching/CacheItem.cs/#L111">View Source</a>
   </span>
   <a id="Gw2Sharp_WebApi_Caching_CacheItem_ExpiryTime_" data-uid="Gw2Sharp.WebApi.Caching.CacheItem.ExpiryTime*"></a>
   <h4 id="Gw2Sharp_WebApi_Caching_CacheItem_ExpiryTime" data-uid="Gw2Sharp.WebApi.Caching.CacheItem.ExpiryTime">ExpiryTime</h4>
@@ -2853,7 +2943,7 @@
     <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_WebApi_Caching_CacheItem_Id.md&amp;value=---%0Auid%3A%20Gw2Sharp.WebApi.Caching.CacheItem.Id%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Caching/CacheItem.cs/#L33">View Source</a>
+    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Caching/CacheItem.cs/#L85">View Source</a>
   </span>
   <a id="Gw2Sharp_WebApi_Caching_CacheItem_Id_" data-uid="Gw2Sharp.WebApi.Caching.CacheItem.Id*"></a>
   <h4 id="Gw2Sharp_WebApi_Caching_CacheItem_Id" data-uid="Gw2Sharp.WebApi.Caching.CacheItem.Id">Id</h4>
@@ -2881,19 +2971,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_WebApi_Caching_CacheItem_Item.md&amp;value=---%0Auid%3A%20Gw2Sharp.WebApi.Caching.CacheItem.Item%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_WebApi_Caching_CacheItem_Metadata.md&amp;value=---%0Auid%3A%20Gw2Sharp.WebApi.Caching.CacheItem.Metadata%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Caching/CacheItem.cs/#L38">View Source</a>
+    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Caching/CacheItem.cs/#L116">View Source</a>
   </span>
-  <a id="Gw2Sharp_WebApi_Caching_CacheItem_Item_" data-uid="Gw2Sharp.WebApi.Caching.CacheItem.Item*"></a>
-  <h4 id="Gw2Sharp_WebApi_Caching_CacheItem_Item" data-uid="Gw2Sharp.WebApi.Caching.CacheItem.Item">Item</h4>
-  <div class="markdown level1 summary"><p>The cache item.</p>
+  <a id="Gw2Sharp_WebApi_Caching_CacheItem_Metadata_" data-uid="Gw2Sharp.WebApi.Caching.CacheItem.Metadata*"></a>
+  <h4 id="Gw2Sharp_WebApi_Caching_CacheItem_Metadata" data-uid="Gw2Sharp.WebApi.Caching.CacheItem.Metadata">Metadata</h4>
+  <div class="markdown level1 summary"><p>The metadata.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public object Item { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IDictionary&lt;string, string&gt; Metadata { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2905,48 +2995,28 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Object</span></td>
+        <td><span class="xref">IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="methods">Methods
-  </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_WebApi_Caching_CacheItem_Equals_Gw2Sharp_WebApi_Caching_CacheItem_.md&amp;value=---%0Auid%3A%20Gw2Sharp.WebApi.Caching.CacheItem.Equals(Gw2Sharp.WebApi.Caching.CacheItem)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_WebApi_Caching_CacheItem_RawItem.md&amp;value=---%0Auid%3A%20Gw2Sharp.WebApi.Caching.CacheItem.RawItem%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Caching/CacheItem.cs/#L60">View Source</a>
+    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Caching/CacheItem.cs/#L92">View Source</a>
   </span>
-  <a id="Gw2Sharp_WebApi_Caching_CacheItem_Equals_" data-uid="Gw2Sharp.WebApi.Caching.CacheItem.Equals*"></a>
-  <h4 id="Gw2Sharp_WebApi_Caching_CacheItem_Equals_Gw2Sharp_WebApi_Caching_CacheItem_" data-uid="Gw2Sharp.WebApi.Caching.CacheItem.Equals(Gw2Sharp.WebApi.Caching.CacheItem)">Equals(CacheItem)</h4>
-  <div class="markdown level1 summary"><p>Indicates whether the current object is equal to another object of the same type.</p>
+  <a id="Gw2Sharp_WebApi_Caching_CacheItem_RawItem_" data-uid="Gw2Sharp.WebApi.Caching.CacheItem.RawItem*"></a>
+  <h4 id="Gw2Sharp_WebApi_Caching_CacheItem_RawItem" data-uid="Gw2Sharp.WebApi.Caching.CacheItem.RawItem">RawItem</h4>
+  <div class="markdown level1 summary"><p>The cache item as a raw byte array.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual bool Equals(CacheItem other)</code></pre>
+    <pre><code class="lang-csharp hljs">public byte[] RawItem { get; }</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Gw2Sharp.WebApi.Caching.CacheItem.html">CacheItem</a></td>
-        <td><span class="parametername">other</span></td>
-        <td><p>An object to compare with this object.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -2956,75 +3026,28 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><p><code>true</code> if the current object is equal to the <code data-dev-comment-type="paramref" class="paramref">other</code> parameter; otherwise, <code>false</code>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_WebApi_Caching_CacheItem_Equals_System_Nullable_System_Object__.md&amp;value=---%0Auid%3A%20Gw2Sharp.WebApi.Caching.CacheItem.Equals(System.Nullable%7BSystem.Object%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Caching/CacheItem.cs/#L50">View Source</a>
-  </span>
-  <a id="Gw2Sharp_WebApi_Caching_CacheItem_Equals_" data-uid="Gw2Sharp.WebApi.Caching.CacheItem.Equals*"></a>
-  <h4 id="Gw2Sharp_WebApi_Caching_CacheItem_Equals_System_Nullable_System_Object__" data-uid="Gw2Sharp.WebApi.Caching.CacheItem.Equals(System.Nullable{System.Object})">Equals(Nullable&lt;Object&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool Equals(object? obj)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Object</span>&gt;</td>
-        <td><span class="parametername">obj</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="xref">System.Byte</span>[]</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_WebApi_Caching_CacheItem_GetHashCode.md&amp;value=---%0Auid%3A%20Gw2Sharp.WebApi.Caching.CacheItem.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_WebApi_Caching_CacheItem_Status.md&amp;value=---%0Auid%3A%20Gw2Sharp.WebApi.Caching.CacheItem.Status%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Caching/CacheItem.cs/#L46">View Source</a>
+    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Caching/CacheItem.cs/#L75">View Source</a>
   </span>
-  <a id="Gw2Sharp_WebApi_Caching_CacheItem_GetHashCode_" data-uid="Gw2Sharp.WebApi.Caching.CacheItem.GetHashCode*"></a>
-  <h4 id="Gw2Sharp_WebApi_Caching_CacheItem_GetHashCode" data-uid="Gw2Sharp.WebApi.Caching.CacheItem.GetHashCode">GetHashCode()</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Gw2Sharp_WebApi_Caching_CacheItem_Status_" data-uid="Gw2Sharp.WebApi.Caching.CacheItem.Status*"></a>
+  <h4 id="Gw2Sharp_WebApi_Caching_CacheItem_Status" data-uid="Gw2Sharp.WebApi.Caching.CacheItem.Status">Status</h4>
+  <div class="markdown level1 summary"><p>The cache item status.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+    <pre><code class="lang-csharp hljs">public CacheItemStatus Status { get; }</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -3034,7 +3057,100 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
+        <td><a class="xref" href="Gw2Sharp.CacheItemStatus.html">CacheItemStatus</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_WebApi_Caching_CacheItem_StatusCode.md&amp;value=---%0Auid%3A%20Gw2Sharp.WebApi.Caching.CacheItem.StatusCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Caching/CacheItem.cs/#L106">View Source</a>
+  </span>
+  <a id="Gw2Sharp_WebApi_Caching_CacheItem_StatusCode_" data-uid="Gw2Sharp.WebApi.Caching.CacheItem.StatusCode*"></a>
+  <h4 id="Gw2Sharp_WebApi_Caching_CacheItem_StatusCode" data-uid="Gw2Sharp.WebApi.Caching.CacheItem.StatusCode">StatusCode</h4>
+  <div class="markdown level1 summary"><p>The original response status code.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HttpStatusCode StatusCode { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">HttpStatusCode</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_WebApi_Caching_CacheItem_StringItem.md&amp;value=---%0Auid%3A%20Gw2Sharp.WebApi.Caching.CacheItem.StringItem%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Caching/CacheItem.cs/#L100">View Source</a>
+  </span>
+  <a id="Gw2Sharp_WebApi_Caching_CacheItem_StringItem_" data-uid="Gw2Sharp.WebApi.Caching.CacheItem.StringItem*"></a>
+  <h4 id="Gw2Sharp_WebApi_Caching_CacheItem_StringItem" data-uid="Gw2Sharp.WebApi.Caching.CacheItem.StringItem">StringItem</h4>
+  <div class="markdown level1 summary"><p>The cache item as a string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string StringItem { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_WebApi_Caching_CacheItem_Type.md&amp;value=---%0Auid%3A%20Gw2Sharp.WebApi.Caching.CacheItem.Type%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Caching/CacheItem.cs/#L70">View Source</a>
+  </span>
+  <a id="Gw2Sharp_WebApi_Caching_CacheItem_Type_" data-uid="Gw2Sharp.WebApi.Caching.CacheItem.Type*"></a>
+  <h4 id="Gw2Sharp_WebApi_Caching_CacheItem_Type" data-uid="Gw2Sharp.WebApi.Caching.CacheItem.Type">Type</h4>
+  <div class="markdown level1 summary"><p>The cache item type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CacheItemType Type { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Gw2Sharp.CacheItemType.html">CacheItemType</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -3050,7 +3166,7 @@
                     <a href="https://github.com/Archomeda/Gw2Sharp/new/master/apiSpec/new?filename=Gw2Sharp_WebApi_Caching_CacheItem.md&amp;value=---%0Auid%3A%20Gw2Sharp.WebApi.Caching.CacheItem%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Caching/CacheItem.cs/#L8" class="contribution-link">View Source</a>
+                    <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/Gw2Sharp/WebApi/Caching/CacheItem.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
