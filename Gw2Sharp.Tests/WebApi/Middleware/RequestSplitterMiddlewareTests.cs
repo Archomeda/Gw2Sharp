@@ -60,7 +60,7 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
                 ids.Should().HaveCountLessOrEqualTo(middleware.MaxRequestSize);
 
                 var innerElements = ids.Select(x => elements.First(y => y.Id == x));
-                IWebApiResponse innerResponse = new WebApiResponse(JsonSerializer.Serialize(innerElements));
+                IWebApiResponse innerResponse = new WebApiResponse(JsonSerializer.Serialize(innerElements), CacheState.FromLive);
                 return Task.FromResult(innerResponse);
             });
 
@@ -97,7 +97,7 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
                 ids.Should().HaveCountLessOrEqualTo(middleware.MaxRequestSize);
                 ids.Should().BeEquivalentTo(elements.Select(x => x.Id));
 
-                IWebApiResponse innerResponse = new WebApiResponse(JsonSerializer.Serialize(elements));
+                IWebApiResponse innerResponse = new WebApiResponse(JsonSerializer.Serialize(elements), CacheState.FromLive);
                 return Task.FromResult(innerResponse);
             });
 

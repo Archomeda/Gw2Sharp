@@ -10,8 +10,8 @@
   items:
     - name: Caching
       topicUid: Guides.Caching
-    - name: HTTP headers
-      topicUid: Guides.HttpHeaders
+    - name: Response info
+      topicUid: Guides.ResponseInfo
     - name: Last-Modified
       topicUid: Guides.LastModified
     - name: Middleware

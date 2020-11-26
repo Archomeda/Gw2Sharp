@@ -30,9 +30,7 @@ namespace Gw2Sharp.Tests.WebApi.Render
             byte[] file = this.GetTestData("TestFiles.Render.414998.png");
             using var expectedMemoryStream = new MemoryStream(file, false);
             ((Gw2WebApiBaseClient)this.client).Connection.HttpClient.RequestStreamAsync(Arg.Any<IWebApiRequest>(), CancellationToken.None).Returns(callInfo =>
-            {
-                return new HttpResponseStream(expectedMemoryStream, HttpStatusCode.OK, null, null);
-            });
+                new HttpResponseStream(expectedMemoryStream, HttpStatusCode.OK, CacheState.FromLive, null, null));
 
             using var actualMemoryStream = new MemoryStream();
             await this.client.DownloadToStreamAsync(actualMemoryStream, "https://should.not.matter/");
@@ -47,9 +45,7 @@ namespace Gw2Sharp.Tests.WebApi.Render
             byte[] file = this.GetTestData("TestFiles.Render.414998.png");
             using var expectedMemoryStream = new MemoryStream(file, false);
             ((Gw2WebApiBaseClient)this.client).Connection.HttpClient.RequestStreamAsync(Arg.Any<IWebApiRequest>(), CancellationToken.None).Returns(callInfo =>
-            {
-                return new HttpResponseStream(expectedMemoryStream, HttpStatusCode.OK, null, null);
-            });
+                new HttpResponseStream(expectedMemoryStream, HttpStatusCode.OK, CacheState.FromLive, null, null));
 
             byte[] actual = await this.client.DownloadToByteArrayAsync("https://should.not.matter/");
             Assert.Equal(file, actual);

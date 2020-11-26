@@ -6,19 +6,18 @@ namespace Gw2Sharp.Tests.WebApi.Caching
 {
     public class TestCacheMethod : BaseCacheMethod
     {
-        private readonly Dictionary<string, object> cacheItems = new Dictionary<string, object>();
+        private readonly Dictionary<string, CacheItem> cacheItems = new Dictionary<string, CacheItem>();
 
-        public IReadOnlyDictionary<string, object> CacheItems => this.cacheItems;
+        public IReadOnlyDictionary<string, CacheItem> CacheItems => this.cacheItems;
 
 
-        public override Task<CacheItem<T>?> TryGetAsync<T>(string category, string id)
+        public override Task<CacheItem?> TryGetAsync(string category, string id)
         {
-            if (this.cacheItems.TryGetValue($"{category}_{id}", out var result))
-                return Task.FromResult((CacheItem<T>)result);
-            return Task.FromResult(default(CacheItem<T>));
+            var item = this.cacheItems.TryGetValue($"{category}_{id}", out var result) ? result : null;
+            return Task.FromResult(item);
         }
 
-        public override Task SetAsync<T>(CacheItem<T> item)
+        public override Task SetAsync(CacheItem item)
         {
             this.cacheItems[$"{item.Category}_{item.Id}"] = item;
             return Task.CompletedTask;

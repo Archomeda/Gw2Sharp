@@ -56,7 +56,7 @@ namespace Gw2Sharp.WebApi.Middleware
                     throw new UnexpectedStatusException(context.Request, httpResponse, httpResponse.Content);
                 }
 
-                var errorResponse = new WebApiResponse<ErrorObject>(error, httpResponse.StatusCode, httpResponse.ResponseHeaders);
+                var errorResponse = new WebApiResponse<ErrorObject>(error, httpResponse.StatusCode, httpResponse.CacheState, httpResponse.ResponseHeaders);
                 throw httpResponse.StatusCode switch
                 {
                     HttpStatusCode.BadRequest => BadRequestException.CreateFromResponse(context.Request, errorResponse),
