@@ -3,7 +3,7 @@ using System;
 namespace Gw2Sharp.WebApi.V2.Clients
 {
     /// <summary>
-    /// A client of the Guild Wars 2 API v2 commerce endpoint.
+    /// A client of the Guild Wars 2 API v2 wvw endpoint.
     /// </summary>
     [EndpointPath("wvw")]
     public class WvwClient : Gw2WebApiBaseClient, IWvwClient
