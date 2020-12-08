@@ -1,0 +1,527 @@
+[
+  {
+    "id": 1,
+    "title": "Invader",
+    "min_rank": 1
+  },
+  {
+    "id": 2,
+    "title": "Assaulter",
+    "min_rank": 5
+  },
+  {
+    "id": 3,
+    "title": "Raider",
+    "min_rank": 10
+  },
+  {
+    "id": 4,
+    "title": "Recruit",
+    "min_rank": 15
+  },
+  {
+    "id": 5,
+    "title": "Scout",
+    "min_rank": 20
+  },
+  {
+    "id": 6,
+    "title": "Soldier",
+    "min_rank": 30
+  },
+  {
+    "id": 7,
+    "title": "Squire",
+    "min_rank": 40
+  },
+  {
+    "id": 8,
+    "title": "Footman",
+    "min_rank": 50
+  },
+  {
+    "id": 9,
+    "title": "Knight",
+    "min_rank": 60
+  },
+  {
+    "id": 10,
+    "title": "Major",
+    "min_rank": 70
+  },
+  {
+    "id": 11,
+    "title": "Colonel",
+    "min_rank": 80
+  },
+  {
+    "id": 12,
+    "title": "General",
+    "min_rank": 90
+  },
+  {
+    "id": 13,
+    "title": "Veteran",
+    "min_rank": 100
+  },
+  {
+    "id": 14,
+    "title": "Champion",
+    "min_rank": 110
+  },
+  {
+    "id": 15,
+    "title": "Legend",
+    "min_rank": 120
+  },
+  {
+    "id": 16,
+    "title": "Bronze Invader",
+    "min_rank": 150
+  },
+  {
+    "id": 17,
+    "title": "Bronze Assaulter",
+    "min_rank": 180
+  },
+  {
+    "id": 18,
+    "title": "Bronze Raider",
+    "min_rank": 210
+  },
+  {
+    "id": 19,
+    "title": "Bronze Recruit",
+    "min_rank": 240
+  },
+  {
+    "id": 20,
+    "title": "Bronze Scout",
+    "min_rank": 270
+  },
+  {
+    "id": 21,
+    "title": "Bronze Soldier",
+    "min_rank": 300
+  },
+  {
+    "id": 22,
+    "title": "Bronze Squire",
+    "min_rank": 330
+  },
+  {
+    "id": 23,
+    "title": "Bronze Footman",
+    "min_rank": 360
+  },
+  {
+    "id": 24,
+    "title": "Bronze Knight",
+    "min_rank": 390
+  },
+  {
+    "id": 25,
+    "title": "Bronze Major",
+    "min_rank": 420
+  },
+  {
+    "id": 26,
+    "title": "Bronze Colonel",
+    "min_rank": 450
+  },
+  {
+    "id": 27,
+    "title": "Bronze General",
+    "min_rank": 480
+  },
+  {
+    "id": 28,
+    "title": "Bronze Veteran",
+    "min_rank": 510
+  },
+  {
+    "id": 29,
+    "title": "Bronze Champion",
+    "min_rank": 540
+  },
+  {
+    "id": 30,
+    "title": "Bronze Legend",
+    "min_rank": 570
+  },
+  {
+    "id": 31,
+    "title": "Silver Invader",
+    "min_rank": 620
+  },
+  {
+    "id": 32,
+    "title": "Silver Assaulter",
+    "min_rank": 670
+  },
+  {
+    "id": 33,
+    "title": "Silver Raider",
+    "min_rank": 720
+  },
+  {
+    "id": 34,
+    "title": "Silver Recruit",
+    "min_rank": 770
+  },
+  {
+    "id": 35,
+    "title": "Silver Scout",
+    "min_rank": 820
+  },
+  {
+    "id": 36,
+    "title": "Silver Soldier",
+    "min_rank": 870
+  },
+  {
+    "id": 37,
+    "title": "Silver Squire",
+    "min_rank": 920
+  },
+  {
+    "id": 38,
+    "title": "Silver Footman",
+    "min_rank": 970
+  },
+  {
+    "id": 39,
+    "title": "Silver Knight",
+    "min_rank": 1020
+  },
+  {
+    "id": 40,
+    "title": "Silver Major",
+    "min_rank": 1070
+  },
+  {
+    "id": 41,
+    "title": "Silver Colonel",
+    "min_rank": 1120
+  },
+  {
+    "id": 42,
+    "title": "Silver General",
+    "min_rank": 1170
+  },
+  {
+    "id": 43,
+    "title": "Silver Veteran",
+    "min_rank": 1220
+  },
+  {
+    "id": 44,
+    "title": "Silver Champion",
+    "min_rank": 1270
+  },
+  {
+    "id": 45,
+    "title": "Silver Legend",
+    "min_rank": 1320
+  },
+  {
+    "id": 46,
+    "title": "Gold Invader",
+    "min_rank": 1395
+  },
+  {
+    "id": 47,
+    "title": "Gold Assaulter",
+    "min_rank": 1470
+  },
+  {
+    "id": 48,
+    "title": "Gold Raider",
+    "min_rank": 1545
+  },
+  {
+    "id": 49,
+    "title": "Gold Recruit",
+    "min_rank": 1620
+  },
+  {
+    "id": 50,
+    "title": "Gold Scout",
+    "min_rank": 1695
+  },
+  {
+    "id": 51,
+    "title": "Gold Soldier",
+    "min_rank": 1770
+  },
+  {
+    "id": 52,
+    "title": "Gold Squire",
+    "min_rank": 1845
+  },
+  {
+    "id": 53,
+    "title": "Gold Footman",
+    "min_rank": 1920
+  },
+  {
+    "id": 54,
+    "title": "Gold Knight",
+    "min_rank": 1995
+  },
+  {
+    "id": 55,
+    "title": "Gold Major",
+    "min_rank": 2070
+  },
+  {
+    "id": 56,
+    "title": "Gold Colonel",
+    "min_rank": 2145
+  },
+  {
+    "id": 57,
+    "title": "Gold General",
+    "min_rank": 2220
+  },
+  {
+    "id": 58,
+    "title": "Gold Veteran",
+    "min_rank": 2295
+  },
+  {
+    "id": 59,
+    "title": "Gold Champion",
+    "min_rank": 2370
+  },
+  {
+    "id": 60,
+    "title": "Gold Legend",
+    "min_rank": 2445
+  },
+  {
+    "id": 61,
+    "title": "Platinum Invader",
+    "min_rank": 2545
+  },
+  {
+    "id": 62,
+    "title": "Platinum Assaulter",
+    "min_rank": 2645
+  },
+  {
+    "id": 63,
+    "title": "Platinum Raider",
+    "min_rank": 2745
+  },
+  {
+    "id": 64,
+    "title": "Platinum Recruit",
+    "min_rank": 2845
+  },
+  {
+    "id": 65,
+    "title": "Platinum Scout",
+    "min_rank": 2945
+  },
+  {
+    "id": 66,
+    "title": "Platinum Soldier",
+    "min_rank": 3045
+  },
+  {
+    "id": 67,
+    "title": "Platinum Squire",
+    "min_rank": 3145
+  },
+  {
+    "id": 68,
+    "title": "Platinum Footman",
+    "min_rank": 3245
+  },
+  {
+    "id": 69,
+    "title": "Platinum Knight",
+    "min_rank": 3345
+  },
+  {
+    "id": 70,
+    "title": "Platinum Major",
+    "min_rank": 3445
+  },
+  {
+    "id": 71,
+    "title": "Platinum Colonel",
+    "min_rank": 3545
+  },
+  {
+    "id": 72,
+    "title": "Platinum General",
+    "min_rank": 3645
+  },
+  {
+    "id": 73,
+    "title": "Platinum Veteran",
+    "min_rank": 3745
+  },
+  {
+    "id": 74,
+    "title": "Platinum Champion",
+    "min_rank": 3845
+  },
+  {
+    "id": 75,
+    "title": "Platinum Legend",
+    "min_rank": 3945
+  },
+  {
+    "id": 76,
+    "title": "Mithril Invader",
+    "min_rank": 4095
+  },
+  {
+    "id": 77,
+    "title": "Mithril Assaulter",
+    "min_rank": 4245
+  },
+  {
+    "id": 78,
+    "title": "Mithril Raider",
+    "min_rank": 4395
+  },
+  {
+    "id": 79,
+    "title": "Mithril Recruit",
+    "min_rank": 4545
+  },
+  {
+    "id": 80,
+    "title": "Mithril Scout",
+    "min_rank": 4695
+  },
+  {
+    "id": 81,
+    "title": "Mithril Soldier",
+    "min_rank": 4845
+  },
+  {
+    "id": 82,
+    "title": "Mithril Squire",
+    "min_rank": 4995
+  },
+  {
+    "id": 83,
+    "title": "Mithril Footman",
+    "min_rank": 5145
+  },
+  {
+    "id": 84,
+    "title": "Mithril Knight",
+    "min_rank": 5295
+  },
+  {
+    "id": 85,
+    "title": "Mithril Major",
+    "min_rank": 5445
+  },
+  {
+    "id": 86,
+    "title": "Mithril Colonel",
+    "min_rank": 5595
+  },
+  {
+    "id": 87,
+    "title": "Mithril General",
+    "min_rank": 5745
+  },
+  {
+    "id": 88,
+    "title": "Mithril Veteran",
+    "min_rank": 5895
+  },
+  {
+    "id": 89,
+    "title": "Mithril Champion",
+    "min_rank": 6045
+  },
+  {
+    "id": 90,
+    "title": "Mithril Legend",
+    "min_rank": 6195
+  },
+  {
+    "id": 91,
+    "title": "Diamond Invader",
+    "min_rank": 6445
+  },
+  {
+    "id": 92,
+    "title": "Diamond Assaulter",
+    "min_rank": 6695
+  },
+  {
+    "id": 93,
+    "title": "Diamond Raider",
+    "min_rank": 6945
+  },
+  {
+    "id": 94,
+    "title": "Diamond Recruit",
+    "min_rank": 7195
+  },
+  {
+    "id": 95,
+    "title": "Diamond Scout",
+    "min_rank": 7445
+  },
+  {
+    "id": 96,
+    "title": "Diamond Soldier",
+    "min_rank": 7695
+  },
+  {
+    "id": 97,
+    "title": "Diamond Squire",
+    "min_rank": 7945
+  },
+  {
+    "id": 98,
+    "title": "Diamond Footman",
+    "min_rank": 8195
+  },
+  {
+    "id": 99,
+    "title": "Diamond Knight",
+    "min_rank": 8445
+  },
+  {
+    "id": 100,
+    "title": "Diamond Major",
+    "min_rank": 8695
+  },
+  {
+    "id": 101,
+    "title": "Diamond Colonel",
+    "min_rank": 8945
+  },
+  {
+    "id": 102,
+    "title": "Diamond General",
+    "min_rank": 9195
+  },
+  {
+    "id": 103,
+    "title": "Diamond Veteran",
+    "min_rank": 9445
+  },
+  {
+    "id": 104,
+    "title": "Diamond Champion",
+    "min_rank": 9695
+  },
+  {
+    "id": 105,
+    "title": "Diamond Legend",
+    "min_rank": 9945
+  }
+]

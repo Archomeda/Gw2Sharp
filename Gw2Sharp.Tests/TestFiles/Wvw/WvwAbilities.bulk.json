@@ -1,0 +1,622 @@
+[
+  {
+    "id": 2,
+    "name": "Guard Killer",
+    "description": "Increases damage to enemy guards",
+    "icon": "https://render.guildwars2.com/file/C5E6E906927E2C6311036C11F1306CCF57CBF259/544537.png",
+    "ranks": [
+      {
+        "cost": 1,
+        "effect": "4% damage to guards"
+      },
+      {
+        "cost": 3,
+        "effect": "8% (total) damage to guards"
+      },
+      {
+        "cost": 6,
+        "effect": "12% (total) damage to guards"
+      },
+      {
+        "cost": 10,
+        "effect": "16% (total) damage to guards. All Guard Killer bonuses now also affect enemy lords and supervisors."
+      },
+      {
+        "cost": 15,
+        "effect": "20% (total) damage to guards, lords, and supervisors. Gain 50% of your endurance back after killing guards, lords, and supervisors."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Defense Against Guards",
+    "description": "Reduces the damage you take from enemy guards",
+    "icon": "https://render.guildwars2.com/file/0C450AE1344F410E08D0E4A851F0EFD77210D615/544541.png",
+    "ranks": [
+      {
+        "cost": 1,
+        "effect": "4% reduced damage from guards"
+      },
+      {
+        "cost": 3,
+        "effect": "8% reduced damage (total) from guards"
+      },
+      {
+        "cost": 6,
+        "effect": "12% reduced damage (total) from guards"
+      },
+      {
+        "cost": 10,
+        "effect": "16% reduced damage (total) from guards. All Defense Against Guards bonuses apply to lords and supervisors."
+      },
+      {
+        "cost": 15,
+        "effect": "20% reduced damage (total) from guards, lords, and supervisors. Gain retaliation for 10 seconds when you take damage from guards, lords, or supervisors. This effect triggers once every 20 seconds."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Mercenary's Bane",
+    "description": "Increases damage to and reduces damage from mercenaries",
+    "icon": "https://render.guildwars2.com/file/33E377E353512ACD4AB52F4DEFA41B58EF73A92D/544538.png",
+    "ranks": [
+      {
+        "cost": 1,
+        "effect": "4% increase to damage and defense against mercenaries"
+      },
+      {
+        "cost": 2,
+        "effect": "8% (total) increase to damage and defense against mercenaries"
+      },
+      {
+        "cost": 3,
+        "effect": "12% (total) increase to damage and defense against mercenaries"
+      },
+      {
+        "cost": 4,
+        "effect": "16% (total) increase to damage and defense against mercenaries"
+      },
+      {
+        "cost": 5,
+        "effect": "20% (total) increase to damage and defense against mercenaries"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Siege Bunker",
+    "description": "Reduces the siege damage you take",
+    "icon": "https://render.guildwars2.com/file/A1B55D6AC11CA15BB6D84E040D7841E741446E7F/544539.png",
+    "ranks": [
+      {
+        "cost": 1,
+        "effect": "2% increased siege defense"
+      },
+      {
+        "cost": 3,
+        "effect": "4% (total) increased siege defense"
+      },
+      {
+        "cost": 6,
+        "effect": "6% (total) increased siege defense"
+      },
+      {
+        "cost": 10,
+        "effect": "8% (total) increased siege defense"
+      },
+      {
+        "cost": 15,
+        "effect": "10% (total) increased siege defense"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Siege Might",
+    "description": "Increases damage done with siege-engine attacks",
+    "icon": "https://render.guildwars2.com/file/A45EE7F1D2C6DD654F1868EAFC5BFF400395CA40/544535.png",
+    "ranks": [
+      {
+        "cost": 1,
+        "effect": "2% increased siege damage"
+      },
+      {
+        "cost": 3,
+        "effect": "4% (total) increased siege damage"
+      },
+      {
+        "cost": 6,
+        "effect": "6% (total) increased siege damage"
+      },
+      {
+        "cost": 10,
+        "effect": "8% (total) increased siege damage"
+      },
+      {
+        "cost": 15,
+        "effect": "10% (total) increased siege damage"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Supply Capacity",
+    "description": "Increases the amount of supply you can carry",
+    "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png",
+    "ranks": [
+      {
+        "cost": 5,
+        "effect": "Increases supply capacity by 1"
+      },
+      {
+        "cost": 15,
+        "effect": "Increases supply capacity by 2 (total)"
+      },
+      {
+        "cost": 25,
+        "effect": "Increases supply capacity by 3 (total)"
+      },
+      {
+        "cost": 40,
+        "effect": "Increases supply capacity by 4 (total)"
+      },
+      {
+        "cost": 60,
+        "effect": "Increases supply capacity by 5 (total)"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Cannon Mastery",
+    "description": "Improve cannon use",
+    "icon": "https://render.guildwars2.com/file/9E9ACBCE363F1BBA0F3B7DA9B51CDE1564C03429/563937.png",
+    "ranks": [
+      {
+        "cost": 3,
+        "effect": "Basic fire removes boons"
+      },
+      {
+        "cost": 7,
+        "effect": "Increases cannon damage"
+      },
+      {
+        "cost": 10,
+        "effect": "Grapeshot does more bleed damage"
+      },
+      {
+        "cost": 15,
+        "effect": "Increases all blast radii"
+      },
+      {
+        "cost": 25,
+        "effect": "Increases chill duration"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Ballista Mastery",
+    "description": "Improve ballista skills",
+    "icon": "https://render.guildwars2.com/file/A8976E2E0A69085CF1435E71CB805EBFC557FDA1/563938.png",
+    "ranks": [
+      {
+        "cost": 3,
+        "effect": "Skill: Antiair Bolt—Fires a projectile that knocks enemies out of the air and immobilizes them. Dismounts enemies."
+      },
+      {
+        "cost": 7,
+        "effect": "Increases ballista damage"
+      },
+      {
+        "cost": 10,
+        "effect": "Fires faster bolts"
+      },
+      {
+        "cost": 15,
+        "effect": "Increases ballista range"
+      },
+      {
+        "cost": 25,
+        "effect": "Increases Shatter Shot radius"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Arrow Cart Mastery",
+    "description": "Improve arrow cart skills",
+    "icon": "https://render.guildwars2.com/file/B45865C5B4955BAD3098A54CE7FAF95CD6B3A828/575721.png",
+    "ranks": [
+      {
+        "cost": 3,
+        "effect": "Increases range on all arrow cart skills"
+      },
+      {
+        "cost": 7,
+        "effect": "Increases damage on all arrow cart skills"
+      },
+      {
+        "cost": 10,
+        "effect": "Increases effectiveness of applied conditions"
+      },
+      {
+        "cost": 15,
+        "effect": "Increases radius on all arrow cart skills"
+      },
+      {
+        "cost": 25,
+        "effect": "Skill: Toxic Unveiling Shot—Removes stealth and applies poison to targets"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Burning Oil Mastery",
+    "description": "Improves all Burning Oil skills and unlocks new abilities",
+    "icon": "https://render.guildwars2.com/file/F5AC92A6AE1503EE3B0A940EEE6768C928396663/587138.png",
+    "ranks": [
+      {
+        "cost": 3,
+        "effect": "Increases Burning Oil radius by 25%"
+      },
+      {
+        "cost": 7,
+        "effect": "Increases burning oil damage"
+      },
+      {
+        "cost": 10,
+        "effect": "Reduces the damage received by the oil pot and the user. The user cannot be knocked down, pushed back, pulled, launched, stunned, dazed, floated, sunk, feared, or taunted."
+      },
+      {
+        "cost": 15,
+        "effect": "Basic Burning Oil attacks burn one supply from target"
+      },
+      {
+        "cost": 25,
+        "effect": "Burning Shell: Creates a fiery dome that reflects projectiles"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Mortar Mastery",
+    "description": "Improve mortar skills",
+    "icon": "https://render.guildwars2.com/file/049438CC945BD99676B30DC3FFB67E74CA2FACDC/598970.png",
+    "ranks": [
+      {
+        "cost": 3,
+        "effect": "Increase blast radius on all mortar skills"
+      },
+      {
+        "cost": 7,
+        "effect": "Increased mortar burn field duration"
+      },
+      {
+        "cost": 10,
+        "effect": "Reduce the recharge of all mortar skills"
+      },
+      {
+        "cost": 15,
+        "effect": "Increase damage on all mortar skills"
+      },
+      {
+        "cost": 25,
+        "effect": "New Skill: Concussion Barrage—Launch a barrage of rounds that push back foes where they land"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Build Master",
+    "description": "Improves your building capabilities",
+    "icon": "https://render.guildwars2.com/file/7717E220C5B9E924CA5C2D59B8C4EB48B1BDACE8/603546.png",
+    "ranks": [
+      {
+        "cost": 1,
+        "effect": "Spend 4 supply at a time when building siege"
+      },
+      {
+        "cost": 2,
+        "effect": "Spend 6 supply at a time when building siege"
+      },
+      {
+        "cost": 4,
+        "effect": "Spend 8 supply at a time when building siege"
+      },
+      {
+        "cost": 8,
+        "effect": "Spend 10 supply at a time when building siege"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Repair Master",
+    "description": "Improves your repairing capabilities",
+    "icon": "https://render.guildwars2.com/file/99901DE8AA78E7187E0D1AAE48E9EDD45BBBDFCC/603547.png",
+    "ranks": [
+      {
+        "cost": 1,
+        "effect": "Spend 4 supply at a time when repairing"
+      },
+      {
+        "cost": 2,
+        "effect": "Spend 6 supply at a time when repairing"
+      },
+      {
+        "cost": 4,
+        "effect": "Spend 8 supply at a time when repairing"
+      },
+      {
+        "cost": 8,
+        "effect": "Spend 10 supply at a time when repairing"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Catapult Mastery",
+    "description": "Improve catapult skills",
+    "icon": "https://render.guildwars2.com/file/00DAD338D5BC516B6AE4DADD3CABE713F9450815/607809.png",
+    "ranks": [
+      {
+        "cost": 3,
+        "effect": "Increases damage done to walls by 20%"
+      },
+      {
+        "cost": 7,
+        "effect": "Gravel Shot now applies bleeding"
+      },
+      {
+        "cost": 10,
+        "effect": "Increases radius of all catapult skills"
+      },
+      {
+        "cost": 15,
+        "effect": "Increases catapult damage"
+      },
+      {
+        "cost": 25,
+        "effect": "Skill: Siege Bubble—Creates a dome that destroys projectiles on impact"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Supply Master",
+    "description": "Improve your ability in gathering, spending, and running supply",
+    "icon": "https://render.guildwars2.com/file/47192E4E7341912E95AEBEB5030E2FD64621CF46/620207.png",
+    "ranks": [
+      {
+        "cost": 1,
+        "effect": "Pick up supply faster"
+      },
+      {
+        "cost": 2,
+        "effect": "Gain swiftness after spending all of your supply"
+      },
+      {
+        "cost": 3,
+        "effect": "Gain improved swiftness when picking up supply"
+      },
+      {
+        "cost": 4,
+        "effect": "Have a chance to recover spent supply when spending supply"
+      },
+      {
+        "cost": 5,
+        "effect": "Deployed siege sites are invulnerable for a short duration"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Trebuchet Mastery",
+    "description": "Improve trebuchet skills",
+    "icon": "https://render.guildwars2.com/file/00454D1C18D66B0A24EC3A0D483D07D2F29C7C59/626149.png",
+    "ranks": [
+      {
+        "cost": 3,
+        "effect": "Increases damage on trebuchet skills"
+      },
+      {
+        "cost": 7,
+        "effect": "Cow ammo now drains supply from enemy players"
+      },
+      {
+        "cost": 10,
+        "effect": "Increases the radius of trebuchet skills"
+      },
+      {
+        "cost": 15,
+        "effect": "Skill: Healing Oasis. Creates a water field that heals allies"
+      },
+      {
+        "cost": 25,
+        "effect": "Basic shots that hit enemy supply depots will destroy some of the objective's supply"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Flame Ram Mastery",
+    "description": "Improve flame ram skills",
+    "icon": "https://render.guildwars2.com/file/FBFE762F0D78F49014A42CB5085AD9602E4F216E/638748.png",
+    "ranks": [
+      {
+        "cost": 3,
+        "effect": "Gain Iron Hide while interacting with the flame ram"
+      },
+      {
+        "cost": 7,
+        "effect": "Flame Blast now applies Structural Vulnerability to gates"
+      },
+      {
+        "cost": 10,
+        "effect": "Reduce recharge of flame ram skills"
+      },
+      {
+        "cost": 15,
+        "effect": "Skill: Slam Impact—Launch enemies on the other side of the door"
+      },
+      {
+        "cost": 25,
+        "effect": "Skill: Iron Will—Support skill that applies Iron Hide to nearby allies"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Siege Golem Mastery",
+    "description": "Improve siege golem skills",
+    "icon": "https://render.guildwars2.com/file/FDE14C4F28D26613642135107CCAFEF1A36CE70F/867453.png",
+    "ranks": [
+      {
+        "cost": 3,
+        "effect": "Increases your piloted golem's movement speed for 15 seconds after destroying a gate or wall"
+      },
+      {
+        "cost": 7,
+        "effect": "Increases your piloted golem's base power and precision by 10%"
+      },
+      {
+        "cost": 10,
+        "effect": "The shield bubble skill now also heals nearby allies"
+      },
+      {
+        "cost": 15,
+        "effect": "Increases your piloted golem's base vitality and toughness by 15%"
+      },
+      {
+        "cost": 25,
+        "effect": "Your piloted golem will safely eject you once it's defeated"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Shield Generator Mastery",
+    "description": "Improve shield generator skills",
+    "icon": "https://render.guildwars2.com/file/7C97FD990E1A091B370F4270E05C48409BE82500/1302780.png",
+    "ranks": [
+      {
+        "cost": 3,
+        "effect": "Force Ball grants aegis to allies on impact"
+      },
+      {
+        "cost": 7,
+        "effect": "Force Dome grants twice as much stability per pulse"
+      },
+      {
+        "cost": 10,
+        "effect": "Increases radius for all shield generator skills"
+      },
+      {
+        "cost": 15,
+        "effect": "Increases duration for Force Wall and Force Dome and increases the average number of Force Ball bounces"
+      },
+      {
+        "cost": 25,
+        "effect": "Prevents damage from arrow cart fire to allies inside Force Dome"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Provisions Master",
+    "description": "Improves your ability to gather loot and grants access to the wares of the portable provisioner.",
+    "icon": "https://render.guildwars2.com/file/0DD75CD712BC0BB74A4B2A0C19C0E25063339497/1424246.png",
+    "ranks": [
+      {
+        "cost": 1,
+        "effect": "Allows you to purchase a portable provisioner from any WvW outfitter. This item allows you to purchase siege-weapon blueprints from anywhere."
+      },
+      {
+        "cost": 3,
+        "effect": "Allows you to also purchase tricks and traps from the portable provisioner."
+      },
+      {
+        "cost": 6,
+        "effect": "Allows you to also purchase food and utility consumables from the portable provisioner."
+      },
+      {
+        "cost": 10,
+        "effect": "Learn to automatically pick up loot from fallen foes."
+      },
+      {
+        "cost": 15,
+        "effect": "Increases the number of Badges of Honor found when looting fallen foes."
+      },
+      {
+        "cost": 20,
+        "effect": "Unlocks Heart of Thorns recipes, sigils, and runes for the Heroics Notary vendor."
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "name": "War Gliding Mastery",
+    "description": "Glide in your world's territories.",
+    "icon": "https://render.guildwars2.com/file/6990AF5143E231DD1AF6435875954C01BE4FEA3B/1770715.png",
+    "ranks": [
+      {
+        "cost": 3,
+        "effect": "Allowed to glide in territories your world owns."
+      },
+      {
+        "cost": 7,
+        "effect": "You can now slow down in midair."
+      },
+      {
+        "cost": 10,
+        "effect": " You can now lean forward, increasing gliding speed."
+      },
+      {
+        "cost": 15,
+        "effect": "You can now evade while gliding."
+      },
+      {
+        "cost": 25,
+        "effect": "Learn to glide with such efficiency that you no longer use endurance except when leaning forward."
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Warclaw Mastery",
+    "description": "Unlock the warclaw mount, its skills, and its abilities.",
+    "icon": "https://render.guildwars2.com/file/C626481CA9D2AF32BEE4BC02ACE0E53306E6BF0C/2110171.png",
+    "ranks": [
+      {
+        "cost": 1,
+        "effect": "Unlock the Warclaw Companion achievement."
+      },
+      {
+        "cost": 15,
+        "effect": "While mounted, periodically grant nearby allies the ability to run at warclaw speed."
+      },
+      {
+        "cost": 20,
+        "effect": "Your warclaw gains an extra stamina bar."
+      },
+      {
+        "cost": 25,
+        "effect": "Battle Maul deals increased damage to enemies who are in a downed state."
+      },
+      {
+        "cost": 30,
+        "effect": "Unlock a second skill that allows your warclaw to detect enemies."
+      },
+      {
+        "cost": 35,
+        "effect": "Unlock a third skill that allows your warclaw to pull on gates to damage them."
+      },
+      {
+        "cost": 40,
+        "effect": "Unlock a fourth skill that enables you to throw a spear at a mounted player, dismounting you both."
+      }
+    ]
+  }
+]

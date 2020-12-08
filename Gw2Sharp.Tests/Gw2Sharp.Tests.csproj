@@ -284,6 +284,21 @@
     <None Remove="TestFiles\Worlds\Worlds.bulk.json" />
     <None Remove="TestFiles\Worlds\Worlds.ids.json" />
     <None Remove="TestFiles\Worlds\Worlds.single.json" />
+    <None Remove="TestFiles\Wvw\WvwAbilities.bulk.json" />
+    <None Remove="TestFiles\Wvw\WvwAbilities.ids.json" />
+    <None Remove="TestFiles\Wvw\WvwAbilities.single.json" />
+    <None Remove="TestFiles\Wvw\WvwMatches.bulk.json" />
+    <None Remove="TestFiles\Wvw\WvwMatches.ids.json" />
+    <None Remove="TestFiles\Wvw\WvwMatches.single.json" />
+    <None Remove="TestFiles\Wvw\WvwObjectives.bulk.json" />
+    <None Remove="TestFiles\Wvw\WvwObjectives.ids.json" />
+    <None Remove="TestFiles\Wvw\WvwObjectives.single.json" />
+    <None Remove="TestFiles\Wvw\WvwRanks.bulk.json" />
+    <None Remove="TestFiles\Wvw\WvwRanks.ids.json" />
+    <None Remove="TestFiles\Wvw\WvwRanks.single.json" />
+    <None Remove="TestFiles\Wvw\WvwUpgrades.bulk.json" />
+    <None Remove="TestFiles\Wvw\WvwUpgrades.ids.json" />
+    <None Remove="TestFiles\Wvw\WvwUpgrades.single.json" />
   </ItemGroup>
 
   <ItemGroup>
@@ -558,6 +573,21 @@
     <EmbeddedResource Include="TestFiles\Worlds\Worlds.bulk.json" />
     <EmbeddedResource Include="TestFiles\Worlds\Worlds.ids.json" />
     <EmbeddedResource Include="TestFiles\Worlds\Worlds.single.json" />
+    <EmbeddedResource Include="TestFiles\Wvw\WvwAbilities.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Wvw\WvwAbilities.ids.json" />
+    <EmbeddedResource Include="TestFiles\Wvw\WvwAbilities.single.json" />
+    <EmbeddedResource Include="TestFiles\Wvw\WvwMatches.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Wvw\WvwMatches.ids.json" />
+    <EmbeddedResource Include="TestFiles\Wvw\WvwMatches.single.json" />
+    <EmbeddedResource Include="TestFiles\Wvw\WvwObjectives.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Wvw\WvwObjectives.ids.json" />
+    <EmbeddedResource Include="TestFiles\Wvw\WvwObjectives.single.json" />
+    <EmbeddedResource Include="TestFiles\Wvw\WvwRanks.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Wvw\WvwRanks.ids.json" />
+    <EmbeddedResource Include="TestFiles\Wvw\WvwRanks.single.json" />
+    <EmbeddedResource Include="TestFiles\Wvw\WvwUpgrades.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Wvw\WvwUpgrades.ids.json" />
+    <EmbeddedResource Include="TestFiles\Wvw\WvwUpgrades.single.json" />
   </ItemGroup>
 
   <ItemGroup>

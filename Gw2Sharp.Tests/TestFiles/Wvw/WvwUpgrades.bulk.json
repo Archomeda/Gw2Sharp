@@ -1,0 +1,3446 @@
+[
+  {
+    "id": 3,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Build Pots of Oil",
+            "description": "Fortifies the objective with pots of burning oil.",
+            "icon": "https://render.guildwars2.com/file/F5AC92A6AE1503EE3B0A940EEE6768C928396663/587138.png"
+          },
+          {
+            "name": "Build Cannons",
+            "description": "Fortifies the objective with cannons.",
+            "icon": "https://render.guildwars2.com/file/CFA860C6D3AC505CFA2C4B644A64459E9FEED114/105217.png"
+          },
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 400.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Reinforced Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to reinforced levels.",
+            "icon": "https://render.guildwars2.com/file/0D354B0726B363BC0CC8F3E02F3209993C79351D/105214.png"
+          },
+          {
+            "name": "Build Mortars",
+            "description": "Fortifies the objective with mortars.",
+            "icon": "https://render.guildwars2.com/file/049438CC945BD99676B30DC3FFB67E74CA2FACDC/598970.png"
+          },
+          {
+            "name": "Recruit Services",
+            "description": "Recruits a siege-weapon vendor, a banker, and an armor repairer to the objective.",
+            "icon": "https://render.guildwars2.com/file/7393E6E9F421E2D75EF17C3C6DDBBFEE0D2CA0B1/105222.png"
+          },
+          {
+            "name": "Recruit Patrols",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Fortified Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to fortified levels.",
+            "icon": "https://render.guildwars2.com/file/24069AEFB574400F4E3CAE081D71E1B10BE402FB/105216.png"
+          },
+          {
+            "name": "Build Waypoint",
+            "description": "Fortifies the objective with a waypoint.",
+            "icon": "https://render.guildwars2.com/file/FB06F90A5AAFE819959C3523B2A22B120E38C05D/105224.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 400.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Caravan Guards",
+            "description": "Recruits guards to escort the camp's dolyak caravans.",
+            "icon": "https://render.guildwars2.com/file/A81310D55E7BEA075E2F739A43E223070414EFE3/105225.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 100.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Recruit Patrol",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 100.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Build Pot of Oil",
+            "description": "Fortifies the objective with a pot of burning oil.",
+            "icon": "https://render.guildwars2.com/file/F5AC92A6AE1503EE3B0A940EEE6768C928396663/587138.png"
+          },
+          {
+            "name": "Build Cannon",
+            "description": "Fortifies the objective with a cannon.",
+            "icon": "https://render.guildwars2.com/file/CFA860C6D3AC505CFA2C4B644A64459E9FEED114/105217.png"
+          },
+          {
+            "name": "Recruit Outfitter",
+            "description": "Recruits a general-goods vendor to the objective.",
+            "icon": "https://render.guildwars2.com/file/10ADAF395F3FA119FB2F9D6E9E923D201C9D3A76/105221.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 200.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Reinforced Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to reinforced levels.",
+            "icon": "https://render.guildwars2.com/file/0D354B0726B363BC0CC8F3E02F3209993C79351D/105214.png"
+          },
+          {
+            "name": "Build Mortar",
+            "description": "Fortifies the objective with a mortar.",
+            "icon": "https://render.guildwars2.com/file/049438CC945BD99676B30DC3FFB67E74CA2FACDC/598970.png"
+          },
+          {
+            "name": "Recruit Siegemaster",
+            "description": "Recruits a siege-weapon vendor to the objective.",
+            "icon": "https://render.guildwars2.com/file/7393E6E9F421E2D75EF17C3C6DDBBFEE0D2CA0B1/105222.png"
+          },
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Fortified Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to fortified levels.",
+            "icon": "https://render.guildwars2.com/file/24069AEFB574400F4E3CAE081D71E1B10BE402FB/105216.png"
+          },
+          {
+            "name": "Recruit Patrol",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 200.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Build Pots of Oil",
+            "description": "Fortifies the objective with pots of burning oil.",
+            "icon": "https://render.guildwars2.com/file/F5AC92A6AE1503EE3B0A940EEE6768C928396663/587138.png"
+          },
+          {
+            "name": "Build Cannons",
+            "description": "Fortifies the objective with cannons.",
+            "icon": "https://render.guildwars2.com/file/CFA860C6D3AC505CFA2C4B644A64459E9FEED114/105217.png"
+          },
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 400.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Reinforced Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to reinforced levels.",
+            "icon": "https://render.guildwars2.com/file/0D354B0726B363BC0CC8F3E02F3209993C79351D/105214.png"
+          },
+          {
+            "name": "Build Mortars",
+            "description": "Fortifies the objective with mortars.",
+            "icon": "https://render.guildwars2.com/file/049438CC945BD99676B30DC3FFB67E74CA2FACDC/598970.png"
+          },
+          {
+            "name": "Recruit Services",
+            "description": "Recruits a siege-weapon vendor, a banker, and an armor repairer to the objective.",
+            "icon": "https://render.guildwars2.com/file/7393E6E9F421E2D75EF17C3C6DDBBFEE0D2CA0B1/105222.png"
+          },
+          {
+            "name": "Recruit Patrols",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Fortified Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to fortified levels.",
+            "icon": "https://render.guildwars2.com/file/24069AEFB574400F4E3CAE081D71E1B10BE402FB/105216.png"
+          },
+          {
+            "name": "Build Waypoint",
+            "description": "Fortifies the objective with a waypoint.",
+            "icon": "https://render.guildwars2.com/file/FB06F90A5AAFE819959C3523B2A22B120E38C05D/105224.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 400.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Build Pot of Oil",
+            "description": "Fortifies the objective with a pot of burning oil.",
+            "icon": "https://render.guildwars2.com/file/F5AC92A6AE1503EE3B0A940EEE6768C928396663/587138.png"
+          },
+          {
+            "name": "Build Cannon",
+            "description": "Fortifies the objective with a cannon.",
+            "icon": "https://render.guildwars2.com/file/CFA860C6D3AC505CFA2C4B644A64459E9FEED114/105217.png"
+          },
+          {
+            "name": "Recruit Outfitter",
+            "description": "Recruits a general-goods vendor to the objective.",
+            "icon": "https://render.guildwars2.com/file/10ADAF395F3FA119FB2F9D6E9E923D201C9D3A76/105221.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 200.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Reinforced Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to reinforced levels.",
+            "icon": "https://render.guildwars2.com/file/0D354B0726B363BC0CC8F3E02F3209993C79351D/105214.png"
+          },
+          {
+            "name": "Build Mortar",
+            "description": "Fortifies the objective with a mortar.",
+            "icon": "https://render.guildwars2.com/file/049438CC945BD99676B30DC3FFB67E74CA2FACDC/598970.png"
+          },
+          {
+            "name": "Recruit Siegemaster",
+            "description": "Recruits a siege-weapon vendor to the objective.",
+            "icon": "https://render.guildwars2.com/file/7393E6E9F421E2D75EF17C3C6DDBBFEE0D2CA0B1/105222.png"
+          },
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Fortified Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to fortified levels.",
+            "icon": "https://render.guildwars2.com/file/24069AEFB574400F4E3CAE081D71E1B10BE402FB/105216.png"
+          },
+          {
+            "name": "Recruit Patrol",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 200.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Caravan Guards",
+            "description": "Recruits guards to escort the camp's dolyak caravans.",
+            "icon": "https://render.guildwars2.com/file/A81310D55E7BEA075E2F739A43E223070414EFE3/105225.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 100.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Recruit Patrol",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 100.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Caravan Guards",
+            "description": "Recruits guards to escort the camp's dolyak caravans.",
+            "icon": "https://render.guildwars2.com/file/A81310D55E7BEA075E2F739A43E223070414EFE3/105225.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 100.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Recruit Patrol",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 100.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Caravan Guards",
+            "description": "Recruits guards to escort the camp's dolyak caravans.",
+            "icon": "https://render.guildwars2.com/file/A81310D55E7BEA075E2F739A43E223070414EFE3/105225.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 100.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Recruit Patrol",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 100.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Build Pot of Oil",
+            "description": "Fortifies the objective with a pot of burning oil.",
+            "icon": "https://render.guildwars2.com/file/F5AC92A6AE1503EE3B0A940EEE6768C928396663/587138.png"
+          },
+          {
+            "name": "Build Cannon",
+            "description": "Fortifies the objective with a cannon.",
+            "icon": "https://render.guildwars2.com/file/CFA860C6D3AC505CFA2C4B644A64459E9FEED114/105217.png"
+          },
+          {
+            "name": "Recruit Outfitter",
+            "description": "Recruits a general-goods vendor to the objective.",
+            "icon": "https://render.guildwars2.com/file/10ADAF395F3FA119FB2F9D6E9E923D201C9D3A76/105221.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 200.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Reinforced Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to reinforced levels.",
+            "icon": "https://render.guildwars2.com/file/0D354B0726B363BC0CC8F3E02F3209993C79351D/105214.png"
+          },
+          {
+            "name": "Build Mortar",
+            "description": "Fortifies the objective with a mortar.",
+            "icon": "https://render.guildwars2.com/file/049438CC945BD99676B30DC3FFB67E74CA2FACDC/598970.png"
+          },
+          {
+            "name": "Recruit Siegemaster",
+            "description": "Recruits a siege-weapon vendor to the objective.",
+            "icon": "https://render.guildwars2.com/file/7393E6E9F421E2D75EF17C3C6DDBBFEE0D2CA0B1/105222.png"
+          },
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Fortified Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to fortified levels.",
+            "icon": "https://render.guildwars2.com/file/24069AEFB574400F4E3CAE081D71E1B10BE402FB/105216.png"
+          },
+          {
+            "name": "Recruit Patrol",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 200.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Caravan Guards",
+            "description": "Recruits guards to escort the camp's dolyak caravans.",
+            "icon": "https://render.guildwars2.com/file/A81310D55E7BEA075E2F739A43E223070414EFE3/105225.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 100.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Recruit Patrol",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 100.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Build Pot of Oil",
+            "description": "Fortifies the objective with a pot of burning oil.",
+            "icon": "https://render.guildwars2.com/file/F5AC92A6AE1503EE3B0A940EEE6768C928396663/587138.png"
+          },
+          {
+            "name": "Build Cannon",
+            "description": "Fortifies the objective with a cannon.",
+            "icon": "https://render.guildwars2.com/file/CFA860C6D3AC505CFA2C4B644A64459E9FEED114/105217.png"
+          },
+          {
+            "name": "Recruit Outfitter",
+            "description": "Recruits a general-goods vendor to the objective.",
+            "icon": "https://render.guildwars2.com/file/10ADAF395F3FA119FB2F9D6E9E923D201C9D3A76/105221.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 200.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Reinforced Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to reinforced levels.",
+            "icon": "https://render.guildwars2.com/file/0D354B0726B363BC0CC8F3E02F3209993C79351D/105214.png"
+          },
+          {
+            "name": "Build Mortar",
+            "description": "Fortifies the objective with a mortar.",
+            "icon": "https://render.guildwars2.com/file/049438CC945BD99676B30DC3FFB67E74CA2FACDC/598970.png"
+          },
+          {
+            "name": "Recruit Siegemaster",
+            "description": "Recruits a siege-weapon vendor to the objective.",
+            "icon": "https://render.guildwars2.com/file/7393E6E9F421E2D75EF17C3C6DDBBFEE0D2CA0B1/105222.png"
+          },
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Fortified Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to fortified levels.",
+            "icon": "https://render.guildwars2.com/file/24069AEFB574400F4E3CAE081D71E1B10BE402FB/105216.png"
+          },
+          {
+            "name": "Recruit Patrol",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 200.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Build Pots of Oil",
+            "description": "Fortifies the objective with pots of burning oil.",
+            "icon": "https://render.guildwars2.com/file/F5AC92A6AE1503EE3B0A940EEE6768C928396663/587138.png"
+          },
+          {
+            "name": "Build Cannons",
+            "description": "Fortifies the objective with cannons.",
+            "icon": "https://render.guildwars2.com/file/CFA860C6D3AC505CFA2C4B644A64459E9FEED114/105217.png"
+          },
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 400.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Reinforced Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to reinforced levels.",
+            "icon": "https://render.guildwars2.com/file/0D354B0726B363BC0CC8F3E02F3209993C79351D/105214.png"
+          },
+          {
+            "name": "Build Mortars",
+            "description": "Fortifies the objective with mortars.",
+            "icon": "https://render.guildwars2.com/file/049438CC945BD99676B30DC3FFB67E74CA2FACDC/598970.png"
+          },
+          {
+            "name": "Recruit Services",
+            "description": "Recruits a siege-weapon vendor, a banker, and an armor repairer to the objective.",
+            "icon": "https://render.guildwars2.com/file/7393E6E9F421E2D75EF17C3C6DDBBFEE0D2CA0B1/105222.png"
+          },
+          {
+            "name": "Recruit Patrols",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Fortified Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to fortified levels.",
+            "icon": "https://render.guildwars2.com/file/24069AEFB574400F4E3CAE081D71E1B10BE402FB/105216.png"
+          },
+          {
+            "name": "Build Waypoint",
+            "description": "Fortifies the objective with a waypoint.",
+            "icon": "https://render.guildwars2.com/file/FB06F90A5AAFE819959C3523B2A22B120E38C05D/105224.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 400.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Caravan Guards",
+            "description": "Recruits guards to escort the camp's dolyak caravans.",
+            "icon": "https://render.guildwars2.com/file/A81310D55E7BEA075E2F739A43E223070414EFE3/105225.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 100.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Recruit Patrol",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 100.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Caravan Guards",
+            "description": "Recruits guards to escort the camp's dolyak caravans.",
+            "icon": "https://render.guildwars2.com/file/A81310D55E7BEA075E2F739A43E223070414EFE3/105225.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 100.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Recruit Patrol",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 100.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Build Pot of Oil",
+            "description": "Fortifies the objective with a pot of burning oil.",
+            "icon": "https://render.guildwars2.com/file/F5AC92A6AE1503EE3B0A940EEE6768C928396663/587138.png"
+          },
+          {
+            "name": "Build Cannon",
+            "description": "Fortifies the objective with a cannon.",
+            "icon": "https://render.guildwars2.com/file/CFA860C6D3AC505CFA2C4B644A64459E9FEED114/105217.png"
+          },
+          {
+            "name": "Recruit Outfitter",
+            "description": "Recruits a general-goods vendor to the objective.",
+            "icon": "https://render.guildwars2.com/file/10ADAF395F3FA119FB2F9D6E9E923D201C9D3A76/105221.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 200.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Reinforced Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to reinforced levels.",
+            "icon": "https://render.guildwars2.com/file/0D354B0726B363BC0CC8F3E02F3209993C79351D/105214.png"
+          },
+          {
+            "name": "Build Mortar",
+            "description": "Fortifies the objective with a mortar.",
+            "icon": "https://render.guildwars2.com/file/049438CC945BD99676B30DC3FFB67E74CA2FACDC/598970.png"
+          },
+          {
+            "name": "Recruit Siegemaster",
+            "description": "Recruits a siege-weapon vendor to the objective.",
+            "icon": "https://render.guildwars2.com/file/7393E6E9F421E2D75EF17C3C6DDBBFEE0D2CA0B1/105222.png"
+          },
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Fortified Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to fortified levels.",
+            "icon": "https://render.guildwars2.com/file/24069AEFB574400F4E3CAE081D71E1B10BE402FB/105216.png"
+          },
+          {
+            "name": "Recruit Patrol",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 200.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Caravan Guards",
+            "description": "Recruits guards to escort the camp's dolyak caravans.",
+            "icon": "https://render.guildwars2.com/file/A81310D55E7BEA075E2F739A43E223070414EFE3/105225.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 100.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Recruit Patrol",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 100.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Build Pots of Oil",
+            "description": "Fortifies the objective with pots of burning oil.",
+            "icon": "https://render.guildwars2.com/file/F5AC92A6AE1503EE3B0A940EEE6768C928396663/587138.png"
+          },
+          {
+            "name": "Build Cannons",
+            "description": "Fortifies the objective with cannons.",
+            "icon": "https://render.guildwars2.com/file/CFA860C6D3AC505CFA2C4B644A64459E9FEED114/105217.png"
+          },
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 400.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Reinforced Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to reinforced levels.",
+            "icon": "https://render.guildwars2.com/file/0D354B0726B363BC0CC8F3E02F3209993C79351D/105214.png"
+          },
+          {
+            "name": "Build Mortars",
+            "description": "Fortifies the objective with mortars.",
+            "icon": "https://render.guildwars2.com/file/049438CC945BD99676B30DC3FFB67E74CA2FACDC/598970.png"
+          },
+          {
+            "name": "Recruit Services",
+            "description": "Recruits a siege-weapon vendor, a banker, and an armor repairer to the objective.",
+            "icon": "https://render.guildwars2.com/file/7393E6E9F421E2D75EF17C3C6DDBBFEE0D2CA0B1/105222.png"
+          },
+          {
+            "name": "Recruit Patrols",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Fortified Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to fortified levels.",
+            "icon": "https://render.guildwars2.com/file/24069AEFB574400F4E3CAE081D71E1B10BE402FB/105216.png"
+          },
+          {
+            "name": "Build Waypoint",
+            "description": "Fortifies the objective with a waypoint.",
+            "icon": "https://render.guildwars2.com/file/FB06F90A5AAFE819959C3523B2A22B120E38C05D/105224.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 400.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Build Pot of Oil",
+            "description": "Fortifies the objective with a pot of burning oil.",
+            "icon": "https://render.guildwars2.com/file/F5AC92A6AE1503EE3B0A940EEE6768C928396663/587138.png"
+          },
+          {
+            "name": "Build Cannon",
+            "description": "Fortifies the objective with a cannon.",
+            "icon": "https://render.guildwars2.com/file/CFA860C6D3AC505CFA2C4B644A64459E9FEED114/105217.png"
+          },
+          {
+            "name": "Recruit Outfitter",
+            "description": "Recruits a general-goods vendor to the objective.",
+            "icon": "https://render.guildwars2.com/file/10ADAF395F3FA119FB2F9D6E9E923D201C9D3A76/105221.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 200.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Reinforced Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to reinforced levels.",
+            "icon": "https://render.guildwars2.com/file/0D354B0726B363BC0CC8F3E02F3209993C79351D/105214.png"
+          },
+          {
+            "name": "Build Mortar",
+            "description": "Fortifies the objective with a mortar.",
+            "icon": "https://render.guildwars2.com/file/049438CC945BD99676B30DC3FFB67E74CA2FACDC/598970.png"
+          },
+          {
+            "name": "Recruit Siegemaster",
+            "description": "Recruits a siege-weapon vendor to the objective.",
+            "icon": "https://render.guildwars2.com/file/7393E6E9F421E2D75EF17C3C6DDBBFEE0D2CA0B1/105222.png"
+          },
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Fortified Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to fortified levels.",
+            "icon": "https://render.guildwars2.com/file/24069AEFB574400F4E3CAE081D71E1B10BE402FB/105216.png"
+          },
+          {
+            "name": "Recruit Patrol",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 200.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Build Pot of Oil",
+            "description": "Fortifies the objective with a pot of burning oil.",
+            "icon": "https://render.guildwars2.com/file/F5AC92A6AE1503EE3B0A940EEE6768C928396663/587138.png"
+          },
+          {
+            "name": "Build Cannon",
+            "description": "Fortifies the objective with a cannon.",
+            "icon": "https://render.guildwars2.com/file/CFA860C6D3AC505CFA2C4B644A64459E9FEED114/105217.png"
+          },
+          {
+            "name": "Recruit Outfitter",
+            "description": "Recruits a general-goods vendor to the objective.",
+            "icon": "https://render.guildwars2.com/file/10ADAF395F3FA119FB2F9D6E9E923D201C9D3A76/105221.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 200.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Reinforced Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to reinforced levels.",
+            "icon": "https://render.guildwars2.com/file/0D354B0726B363BC0CC8F3E02F3209993C79351D/105214.png"
+          },
+          {
+            "name": "Build Mortar",
+            "description": "Fortifies the objective with a mortar.",
+            "icon": "https://render.guildwars2.com/file/049438CC945BD99676B30DC3FFB67E74CA2FACDC/598970.png"
+          },
+          {
+            "name": "Recruit Siegemaster",
+            "description": "Recruits a siege-weapon vendor to the objective.",
+            "icon": "https://render.guildwars2.com/file/7393E6E9F421E2D75EF17C3C6DDBBFEE0D2CA0B1/105222.png"
+          },
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Fortified Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to fortified levels.",
+            "icon": "https://render.guildwars2.com/file/24069AEFB574400F4E3CAE081D71E1B10BE402FB/105216.png"
+          },
+          {
+            "name": "Recruit Patrol",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 200.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Build Pot of Oil",
+            "description": "Fortifies the objective with a pot of burning oil.",
+            "icon": "https://render.guildwars2.com/file/F5AC92A6AE1503EE3B0A940EEE6768C928396663/587138.png"
+          },
+          {
+            "name": "Build Cannon",
+            "description": "Fortifies the objective with a cannon.",
+            "icon": "https://render.guildwars2.com/file/CFA860C6D3AC505CFA2C4B644A64459E9FEED114/105217.png"
+          },
+          {
+            "name": "Recruit Outfitter",
+            "description": "Recruits a general-goods vendor to the objective.",
+            "icon": "https://render.guildwars2.com/file/10ADAF395F3FA119FB2F9D6E9E923D201C9D3A76/105221.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 200.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Reinforced Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to reinforced levels.",
+            "icon": "https://render.guildwars2.com/file/0D354B0726B363BC0CC8F3E02F3209993C79351D/105214.png"
+          },
+          {
+            "name": "Build Mortar",
+            "description": "Fortifies the objective with a mortar.",
+            "icon": "https://render.guildwars2.com/file/049438CC945BD99676B30DC3FFB67E74CA2FACDC/598970.png"
+          },
+          {
+            "name": "Recruit Siegemaster",
+            "description": "Recruits a siege-weapon vendor to the objective.",
+            "icon": "https://render.guildwars2.com/file/7393E6E9F421E2D75EF17C3C6DDBBFEE0D2CA0B1/105222.png"
+          },
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Fortified Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to fortified levels.",
+            "icon": "https://render.guildwars2.com/file/24069AEFB574400F4E3CAE081D71E1B10BE402FB/105216.png"
+          },
+          {
+            "name": "Recruit Patrol",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 200.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Build Pot of Oil",
+            "description": "Fortifies the objective with a pot of burning oil.",
+            "icon": "https://render.guildwars2.com/file/F5AC92A6AE1503EE3B0A940EEE6768C928396663/587138.png"
+          },
+          {
+            "name": "Build Cannon",
+            "description": "Fortifies the objective with a cannon.",
+            "icon": "https://render.guildwars2.com/file/CFA860C6D3AC505CFA2C4B644A64459E9FEED114/105217.png"
+          },
+          {
+            "name": "Recruit Outfitter",
+            "description": "Recruits a general-goods vendor to the objective.",
+            "icon": "https://render.guildwars2.com/file/10ADAF395F3FA119FB2F9D6E9E923D201C9D3A76/105221.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 200.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Reinforced Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to reinforced levels.",
+            "icon": "https://render.guildwars2.com/file/0D354B0726B363BC0CC8F3E02F3209993C79351D/105214.png"
+          },
+          {
+            "name": "Build Mortar",
+            "description": "Fortifies the objective with a mortar.",
+            "icon": "https://render.guildwars2.com/file/049438CC945BD99676B30DC3FFB67E74CA2FACDC/598970.png"
+          },
+          {
+            "name": "Recruit Siegemaster",
+            "description": "Recruits a siege-weapon vendor to the objective.",
+            "icon": "https://render.guildwars2.com/file/7393E6E9F421E2D75EF17C3C6DDBBFEE0D2CA0B1/105222.png"
+          },
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Fortified Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to fortified levels.",
+            "icon": "https://render.guildwars2.com/file/24069AEFB574400F4E3CAE081D71E1B10BE402FB/105216.png"
+          },
+          {
+            "name": "Recruit Patrol",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 200.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Build Pot of Oil",
+            "description": "Fortifies the objective with a pot of burning oil.",
+            "icon": "https://render.guildwars2.com/file/F5AC92A6AE1503EE3B0A940EEE6768C928396663/587138.png"
+          },
+          {
+            "name": "Build Cannon",
+            "description": "Fortifies the objective with a cannon.",
+            "icon": "https://render.guildwars2.com/file/CFA860C6D3AC505CFA2C4B644A64459E9FEED114/105217.png"
+          },
+          {
+            "name": "Recruit Outfitter",
+            "description": "Recruits a general-goods vendor to the objective.",
+            "icon": "https://render.guildwars2.com/file/10ADAF395F3FA119FB2F9D6E9E923D201C9D3A76/105221.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 200.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Reinforced Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to reinforced levels.",
+            "icon": "https://render.guildwars2.com/file/0D354B0726B363BC0CC8F3E02F3209993C79351D/105214.png"
+          },
+          {
+            "name": "Build Mortar",
+            "description": "Fortifies the objective with a mortar.",
+            "icon": "https://render.guildwars2.com/file/049438CC945BD99676B30DC3FFB67E74CA2FACDC/598970.png"
+          },
+          {
+            "name": "Recruit Siegemaster",
+            "description": "Recruits a siege-weapon vendor to the objective.",
+            "icon": "https://render.guildwars2.com/file/7393E6E9F421E2D75EF17C3C6DDBBFEE0D2CA0B1/105222.png"
+          },
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Fortified Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to fortified levels.",
+            "icon": "https://render.guildwars2.com/file/24069AEFB574400F4E3CAE081D71E1B10BE402FB/105216.png"
+          },
+          {
+            "name": "Recruit Patrol",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 200.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Build Pot of Oil",
+            "description": "Fortifies the objective with a pot of burning oil.",
+            "icon": "https://render.guildwars2.com/file/F5AC92A6AE1503EE3B0A940EEE6768C928396663/587138.png"
+          },
+          {
+            "name": "Build Cannon",
+            "description": "Fortifies the objective with a cannon.",
+            "icon": "https://render.guildwars2.com/file/CFA860C6D3AC505CFA2C4B644A64459E9FEED114/105217.png"
+          },
+          {
+            "name": "Recruit Outfitter",
+            "description": "Recruits a general-goods vendor to the objective.",
+            "icon": "https://render.guildwars2.com/file/10ADAF395F3FA119FB2F9D6E9E923D201C9D3A76/105221.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 200.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Reinforced Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to reinforced levels.",
+            "icon": "https://render.guildwars2.com/file/0D354B0726B363BC0CC8F3E02F3209993C79351D/105214.png"
+          },
+          {
+            "name": "Build Mortar",
+            "description": "Fortifies the objective with a mortar.",
+            "icon": "https://render.guildwars2.com/file/049438CC945BD99676B30DC3FFB67E74CA2FACDC/598970.png"
+          },
+          {
+            "name": "Recruit Siegemaster",
+            "description": "Recruits a siege-weapon vendor to the objective.",
+            "icon": "https://render.guildwars2.com/file/7393E6E9F421E2D75EF17C3C6DDBBFEE0D2CA0B1/105222.png"
+          },
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Fortified Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to fortified levels.",
+            "icon": "https://render.guildwars2.com/file/24069AEFB574400F4E3CAE081D71E1B10BE402FB/105216.png"
+          },
+          {
+            "name": "Recruit Patrol",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 200.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Build Pot of Oil",
+            "description": "Fortifies the objective with a pot of burning oil.",
+            "icon": "https://render.guildwars2.com/file/F5AC92A6AE1503EE3B0A940EEE6768C928396663/587138.png"
+          },
+          {
+            "name": "Build Cannon",
+            "description": "Fortifies the objective with a cannon.",
+            "icon": "https://render.guildwars2.com/file/CFA860C6D3AC505CFA2C4B644A64459E9FEED114/105217.png"
+          },
+          {
+            "name": "Recruit Outfitter",
+            "description": "Recruits a general-goods vendor to the objective.",
+            "icon": "https://render.guildwars2.com/file/10ADAF395F3FA119FB2F9D6E9E923D201C9D3A76/105221.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 200.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Reinforced Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to reinforced levels.",
+            "icon": "https://render.guildwars2.com/file/0D354B0726B363BC0CC8F3E02F3209993C79351D/105214.png"
+          },
+          {
+            "name": "Build Mortar",
+            "description": "Fortifies the objective with a mortar.",
+            "icon": "https://render.guildwars2.com/file/049438CC945BD99676B30DC3FFB67E74CA2FACDC/598970.png"
+          },
+          {
+            "name": "Recruit Siegemaster",
+            "description": "Recruits a siege-weapon vendor to the objective.",
+            "icon": "https://render.guildwars2.com/file/7393E6E9F421E2D75EF17C3C6DDBBFEE0D2CA0B1/105222.png"
+          },
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Fortified Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to fortified levels.",
+            "icon": "https://render.guildwars2.com/file/24069AEFB574400F4E3CAE081D71E1B10BE402FB/105216.png"
+          },
+          {
+            "name": "Recruit Patrol",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 200.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Caravan Guards",
+            "description": "Recruits guards to escort the camp's dolyak caravans.",
+            "icon": "https://render.guildwars2.com/file/A81310D55E7BEA075E2F739A43E223070414EFE3/105225.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 100.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Recruit Patrol",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 100.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Build Pots of Oil",
+            "description": "Fortifies the objective with pots of burning oil.",
+            "icon": "https://render.guildwars2.com/file/F5AC92A6AE1503EE3B0A940EEE6768C928396663/587138.png"
+          },
+          {
+            "name": "Build Cannons",
+            "description": "Fortifies the objective with cannons.",
+            "icon": "https://render.guildwars2.com/file/CFA860C6D3AC505CFA2C4B644A64459E9FEED114/105217.png"
+          },
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 400.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Reinforced Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to reinforced levels.",
+            "icon": "https://render.guildwars2.com/file/0D354B0726B363BC0CC8F3E02F3209993C79351D/105214.png"
+          },
+          {
+            "name": "Build Mortars",
+            "description": "Fortifies the objective with mortars.",
+            "icon": "https://render.guildwars2.com/file/049438CC945BD99676B30DC3FFB67E74CA2FACDC/598970.png"
+          },
+          {
+            "name": "Recruit Services",
+            "description": "Recruits a siege-weapon vendor, a banker, and an armor repairer to the objective.",
+            "icon": "https://render.guildwars2.com/file/7393E6E9F421E2D75EF17C3C6DDBBFEE0D2CA0B1/105222.png"
+          },
+          {
+            "name": "Recruit Patrols",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Fortified Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to fortified levels.",
+            "icon": "https://render.guildwars2.com/file/24069AEFB574400F4E3CAE081D71E1B10BE402FB/105216.png"
+          },
+          {
+            "name": "Build Waypoint",
+            "description": "Fortifies the objective with a waypoint.",
+            "icon": "https://render.guildwars2.com/file/FB06F90A5AAFE819959C3523B2A22B120E38C05D/105224.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 400.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Build Pot of Oil",
+            "description": "Fortifies the objective with a pot of burning oil.",
+            "icon": "https://render.guildwars2.com/file/F5AC92A6AE1503EE3B0A940EEE6768C928396663/587138.png"
+          },
+          {
+            "name": "Build Cannon",
+            "description": "Fortifies the objective with a cannon.",
+            "icon": "https://render.guildwars2.com/file/CFA860C6D3AC505CFA2C4B644A64459E9FEED114/105217.png"
+          },
+          {
+            "name": "Recruit Outfitter",
+            "description": "Recruits a general-goods vendor to the objective.",
+            "icon": "https://render.guildwars2.com/file/10ADAF395F3FA119FB2F9D6E9E923D201C9D3A76/105221.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 200.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Reinforced Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to reinforced levels.",
+            "icon": "https://render.guildwars2.com/file/0D354B0726B363BC0CC8F3E02F3209993C79351D/105214.png"
+          },
+          {
+            "name": "Build Mortar",
+            "description": "Fortifies the objective with a mortar.",
+            "icon": "https://render.guildwars2.com/file/049438CC945BD99676B30DC3FFB67E74CA2FACDC/598970.png"
+          },
+          {
+            "name": "Recruit Siegemaster",
+            "description": "Recruits a siege-weapon vendor to the objective.",
+            "icon": "https://render.guildwars2.com/file/7393E6E9F421E2D75EF17C3C6DDBBFEE0D2CA0B1/105222.png"
+          },
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Fortified Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to fortified levels.",
+            "icon": "https://render.guildwars2.com/file/24069AEFB574400F4E3CAE081D71E1B10BE402FB/105216.png"
+          },
+          {
+            "name": "Recruit Patrol",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 200.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Build Pot of Oil",
+            "description": "Fortifies the objective with a pot of burning oil.",
+            "icon": "https://render.guildwars2.com/file/F5AC92A6AE1503EE3B0A940EEE6768C928396663/587138.png"
+          },
+          {
+            "name": "Build Cannon",
+            "description": "Fortifies the objective with a cannon.",
+            "icon": "https://render.guildwars2.com/file/CFA860C6D3AC505CFA2C4B644A64459E9FEED114/105217.png"
+          },
+          {
+            "name": "Recruit Outfitter",
+            "description": "Recruits a general-goods vendor to the objective.",
+            "icon": "https://render.guildwars2.com/file/10ADAF395F3FA119FB2F9D6E9E923D201C9D3A76/105221.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 200.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Reinforced Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to reinforced levels.",
+            "icon": "https://render.guildwars2.com/file/0D354B0726B363BC0CC8F3E02F3209993C79351D/105214.png"
+          },
+          {
+            "name": "Build Mortar",
+            "description": "Fortifies the objective with a mortar.",
+            "icon": "https://render.guildwars2.com/file/049438CC945BD99676B30DC3FFB67E74CA2FACDC/598970.png"
+          },
+          {
+            "name": "Recruit Siegemaster",
+            "description": "Recruits a siege-weapon vendor to the objective.",
+            "icon": "https://render.guildwars2.com/file/7393E6E9F421E2D75EF17C3C6DDBBFEE0D2CA0B1/105222.png"
+          },
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Fortified Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to fortified levels.",
+            "icon": "https://render.guildwars2.com/file/24069AEFB574400F4E3CAE081D71E1B10BE402FB/105216.png"
+          },
+          {
+            "name": "Recruit Patrol",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 200.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Build Pots of Oil",
+            "description": "Fortifies the objective with pots of burning oil.",
+            "icon": "https://render.guildwars2.com/file/F5AC92A6AE1503EE3B0A940EEE6768C928396663/587138.png"
+          },
+          {
+            "name": "Build Cannons",
+            "description": "Fortifies the objective with cannons.",
+            "icon": "https://render.guildwars2.com/file/CFA860C6D3AC505CFA2C4B644A64459E9FEED114/105217.png"
+          },
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 400.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Reinforced Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to reinforced levels.",
+            "icon": "https://render.guildwars2.com/file/0D354B0726B363BC0CC8F3E02F3209993C79351D/105214.png"
+          },
+          {
+            "name": "Build Mortars",
+            "description": "Fortifies the objective with mortars.",
+            "icon": "https://render.guildwars2.com/file/049438CC945BD99676B30DC3FFB67E74CA2FACDC/598970.png"
+          },
+          {
+            "name": "Recruit Services",
+            "description": "Recruits a siege-weapon vendor, a banker, and an armor repairer to the objective.",
+            "icon": "https://render.guildwars2.com/file/7393E6E9F421E2D75EF17C3C6DDBBFEE0D2CA0B1/105222.png"
+          },
+          {
+            "name": "Recruit Patrols",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Fortified Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to fortified levels.",
+            "icon": "https://render.guildwars2.com/file/24069AEFB574400F4E3CAE081D71E1B10BE402FB/105216.png"
+          },
+          {
+            "name": "Build Waypoint",
+            "description": "Fortifies the objective with a waypoint.",
+            "icon": "https://render.guildwars2.com/file/FB06F90A5AAFE819959C3523B2A22B120E38C05D/105224.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 400.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Build Pot of Oil",
+            "description": "Fortifies the objective with a pot of burning oil.",
+            "icon": "https://render.guildwars2.com/file/F5AC92A6AE1503EE3B0A940EEE6768C928396663/587138.png"
+          },
+          {
+            "name": "Build Cannon",
+            "description": "Fortifies the objective with a cannon.",
+            "icon": "https://render.guildwars2.com/file/CFA860C6D3AC505CFA2C4B644A64459E9FEED114/105217.png"
+          },
+          {
+            "name": "Recruit Outfitter",
+            "description": "Recruits a general-goods vendor to the objective.",
+            "icon": "https://render.guildwars2.com/file/10ADAF395F3FA119FB2F9D6E9E923D201C9D3A76/105221.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 200.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Reinforced Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to reinforced levels.",
+            "icon": "https://render.guildwars2.com/file/0D354B0726B363BC0CC8F3E02F3209993C79351D/105214.png"
+          },
+          {
+            "name": "Build Mortar",
+            "description": "Fortifies the objective with a mortar.",
+            "icon": "https://render.guildwars2.com/file/049438CC945BD99676B30DC3FFB67E74CA2FACDC/598970.png"
+          },
+          {
+            "name": "Recruit Siegemaster",
+            "description": "Recruits a siege-weapon vendor to the objective.",
+            "icon": "https://render.guildwars2.com/file/7393E6E9F421E2D75EF17C3C6DDBBFEE0D2CA0B1/105222.png"
+          },
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Fortified Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to fortified levels.",
+            "icon": "https://render.guildwars2.com/file/24069AEFB574400F4E3CAE081D71E1B10BE402FB/105216.png"
+          },
+          {
+            "name": "Recruit Patrol",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 200.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Build Pots of Oil",
+            "description": "Fortifies the objective with pots of burning oil.",
+            "icon": "https://render.guildwars2.com/file/F5AC92A6AE1503EE3B0A940EEE6768C928396663/587138.png"
+          },
+          {
+            "name": "Build Cannons",
+            "description": "Fortifies the objective with cannons.",
+            "icon": "https://render.guildwars2.com/file/CFA860C6D3AC505CFA2C4B644A64459E9FEED114/105217.png"
+          },
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 400.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Reinforced Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to reinforced levels.",
+            "icon": "https://render.guildwars2.com/file/0D354B0726B363BC0CC8F3E02F3209993C79351D/105214.png"
+          },
+          {
+            "name": "Build Mortars",
+            "description": "Fortifies the objective with mortars.",
+            "icon": "https://render.guildwars2.com/file/049438CC945BD99676B30DC3FFB67E74CA2FACDC/598970.png"
+          },
+          {
+            "name": "Recruit Services",
+            "description": "Recruits a siege-weapon vendor, a banker, and an armor repairer to the objective.",
+            "icon": "https://render.guildwars2.com/file/7393E6E9F421E2D75EF17C3C6DDBBFEE0D2CA0B1/105222.png"
+          },
+          {
+            "name": "Recruit Patrols",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Fortified Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to fortified levels.",
+            "icon": "https://render.guildwars2.com/file/24069AEFB574400F4E3CAE081D71E1B10BE402FB/105216.png"
+          },
+          {
+            "name": "Build Waypoint",
+            "description": "Fortifies the objective with a waypoint.",
+            "icon": "https://render.guildwars2.com/file/FB06F90A5AAFE819959C3523B2A22B120E38C05D/105224.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 400.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Caravan Guards",
+            "description": "Recruits guards to escort the camp's dolyak caravans.",
+            "icon": "https://render.guildwars2.com/file/A81310D55E7BEA075E2F739A43E223070414EFE3/105225.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 100.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Recruit Patrol",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 100.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Caravan Guards",
+            "description": "Recruits guards to escort the camp's dolyak caravans.",
+            "icon": "https://render.guildwars2.com/file/A81310D55E7BEA075E2F739A43E223070414EFE3/105225.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 100.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Recruit Patrol",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 100.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Build Pot of Oil",
+            "description": "Fortifies the objective with a pot of burning oil.",
+            "icon": "https://render.guildwars2.com/file/F5AC92A6AE1503EE3B0A940EEE6768C928396663/587138.png"
+          },
+          {
+            "name": "Build Cannon",
+            "description": "Fortifies the objective with a cannon.",
+            "icon": "https://render.guildwars2.com/file/CFA860C6D3AC505CFA2C4B644A64459E9FEED114/105217.png"
+          },
+          {
+            "name": "Recruit Outfitter",
+            "description": "Recruits a general-goods vendor to the objective.",
+            "icon": "https://render.guildwars2.com/file/10ADAF395F3FA119FB2F9D6E9E923D201C9D3A76/105221.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 200.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Reinforced Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to reinforced levels.",
+            "icon": "https://render.guildwars2.com/file/0D354B0726B363BC0CC8F3E02F3209993C79351D/105214.png"
+          },
+          {
+            "name": "Build Mortar",
+            "description": "Fortifies the objective with a mortar.",
+            "icon": "https://render.guildwars2.com/file/049438CC945BD99676B30DC3FFB67E74CA2FACDC/598970.png"
+          },
+          {
+            "name": "Recruit Siegemaster",
+            "description": "Recruits a siege-weapon vendor to the objective.",
+            "icon": "https://render.guildwars2.com/file/7393E6E9F421E2D75EF17C3C6DDBBFEE0D2CA0B1/105222.png"
+          },
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Fortified Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to fortified levels.",
+            "icon": "https://render.guildwars2.com/file/24069AEFB574400F4E3CAE081D71E1B10BE402FB/105216.png"
+          },
+          {
+            "name": "Recruit Patrol",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 200.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Caravan Guards",
+            "description": "Recruits guards to escort the camp's dolyak caravans.",
+            "icon": "https://render.guildwars2.com/file/A81310D55E7BEA075E2F739A43E223070414EFE3/105225.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 100.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Recruit Patrol",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 100.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Caravan Guards",
+            "description": "Recruits guards to escort the camp's dolyak caravans.",
+            "icon": "https://render.guildwars2.com/file/A81310D55E7BEA075E2F739A43E223070414EFE3/105225.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 100.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Recruit Patrol",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 100.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Caravan Guards",
+            "description": "Recruits guards to escort the camp's dolyak caravans.",
+            "icon": "https://render.guildwars2.com/file/A81310D55E7BEA075E2F739A43E223070414EFE3/105225.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 100.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Recruit Patrol",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 100.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Caravan Guards",
+            "description": "Recruits guards to escort the camp's dolyak caravans.",
+            "icon": "https://render.guildwars2.com/file/A81310D55E7BEA075E2F739A43E223070414EFE3/105225.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 100.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Recruit Patrol",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 100.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Build Pots of Oil",
+            "description": "Fortifies the objective with pots of burning oil.",
+            "icon": "https://render.guildwars2.com/file/F5AC92A6AE1503EE3B0A940EEE6768C928396663/587138.png"
+          },
+          {
+            "name": "Build Cannons",
+            "description": "Fortifies the objective with cannons.",
+            "icon": "https://render.guildwars2.com/file/CFA860C6D3AC505CFA2C4B644A64459E9FEED114/105217.png"
+          },
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 400.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Reinforced Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to reinforced levels.",
+            "icon": "https://render.guildwars2.com/file/0D354B0726B363BC0CC8F3E02F3209993C79351D/105214.png"
+          },
+          {
+            "name": "Build Mortars",
+            "description": "Fortifies the objective with mortars.",
+            "icon": "https://render.guildwars2.com/file/049438CC945BD99676B30DC3FFB67E74CA2FACDC/598970.png"
+          },
+          {
+            "name": "Recruit Services",
+            "description": "Recruits a siege-weapon vendor, a banker, and an armor repairer to the objective.",
+            "icon": "https://render.guildwars2.com/file/7393E6E9F421E2D75EF17C3C6DDBBFEE0D2CA0B1/105222.png"
+          },
+          {
+            "name": "Recruit Patrols",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Fortified Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to fortified levels.",
+            "icon": "https://render.guildwars2.com/file/24069AEFB574400F4E3CAE081D71E1B10BE402FB/105216.png"
+          },
+          {
+            "name": "Build Waypoint",
+            "description": "Fortifies the objective with a waypoint.",
+            "icon": "https://render.guildwars2.com/file/FB06F90A5AAFE819959C3523B2A22B120E38C05D/105224.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 400.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Build Pots of Oil",
+            "description": "Fortifies the objective with pots of burning oil.",
+            "icon": "https://render.guildwars2.com/file/F5AC92A6AE1503EE3B0A940EEE6768C928396663/587138.png"
+          },
+          {
+            "name": "Build Cannons",
+            "description": "Fortifies the objective with cannons.",
+            "icon": "https://render.guildwars2.com/file/CFA860C6D3AC505CFA2C4B644A64459E9FEED114/105217.png"
+          },
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 400.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Reinforced Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to reinforced levels.",
+            "icon": "https://render.guildwars2.com/file/0D354B0726B363BC0CC8F3E02F3209993C79351D/105214.png"
+          },
+          {
+            "name": "Build Mortars",
+            "description": "Fortifies the objective with mortars.",
+            "icon": "https://render.guildwars2.com/file/049438CC945BD99676B30DC3FFB67E74CA2FACDC/598970.png"
+          },
+          {
+            "name": "Recruit Services",
+            "description": "Recruits a siege-weapon vendor, a banker, and an armor repairer to the objective.",
+            "icon": "https://render.guildwars2.com/file/7393E6E9F421E2D75EF17C3C6DDBBFEE0D2CA0B1/105222.png"
+          },
+          {
+            "name": "Recruit Patrols",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Fortified Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to fortified levels.",
+            "icon": "https://render.guildwars2.com/file/24069AEFB574400F4E3CAE081D71E1B10BE402FB/105216.png"
+          },
+          {
+            "name": "Build Waypoint",
+            "description": "Fortifies the objective with a waypoint.",
+            "icon": "https://render.guildwars2.com/file/FB06F90A5AAFE819959C3523B2A22B120E38C05D/105224.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 400.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Caravan Guards",
+            "description": "Recruits guards to escort the camp's dolyak caravans.",
+            "icon": "https://render.guildwars2.com/file/A81310D55E7BEA075E2F739A43E223070414EFE3/105225.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 100.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Recruit Patrol",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 100.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Build Pot of Oil",
+            "description": "Fortifies the objective with a pot of burning oil.",
+            "icon": "https://render.guildwars2.com/file/F5AC92A6AE1503EE3B0A940EEE6768C928396663/587138.png"
+          },
+          {
+            "name": "Build Cannon",
+            "description": "Fortifies the objective with a cannon.",
+            "icon": "https://render.guildwars2.com/file/CFA860C6D3AC505CFA2C4B644A64459E9FEED114/105217.png"
+          },
+          {
+            "name": "Recruit Outfitter",
+            "description": "Recruits a general-goods vendor to the objective.",
+            "icon": "https://render.guildwars2.com/file/10ADAF395F3FA119FB2F9D6E9E923D201C9D3A76/105221.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 200.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Reinforced Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to reinforced levels.",
+            "icon": "https://render.guildwars2.com/file/0D354B0726B363BC0CC8F3E02F3209993C79351D/105214.png"
+          },
+          {
+            "name": "Build Mortar",
+            "description": "Fortifies the objective with a mortar.",
+            "icon": "https://render.guildwars2.com/file/049438CC945BD99676B30DC3FFB67E74CA2FACDC/598970.png"
+          },
+          {
+            "name": "Recruit Siegemaster",
+            "description": "Recruits a siege-weapon vendor to the objective.",
+            "icon": "https://render.guildwars2.com/file/7393E6E9F421E2D75EF17C3C6DDBBFEE0D2CA0B1/105222.png"
+          },
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Fortified Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to fortified levels.",
+            "icon": "https://render.guildwars2.com/file/24069AEFB574400F4E3CAE081D71E1B10BE402FB/105216.png"
+          },
+          {
+            "name": "Recruit Patrol",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 200.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Caravan Guards",
+            "description": "Recruits guards to escort the camp's dolyak caravans.",
+            "icon": "https://render.guildwars2.com/file/A81310D55E7BEA075E2F739A43E223070414EFE3/105225.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 100.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Recruit Patrol",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 100.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Caravan Guards",
+            "description": "Recruits guards to escort the camp's dolyak caravans.",
+            "icon": "https://render.guildwars2.com/file/A81310D55E7BEA075E2F739A43E223070414EFE3/105225.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 100.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Recruit Patrol",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 100.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Build Pot of Oil",
+            "description": "Fortifies the objective with a pot of burning oil.",
+            "icon": "https://render.guildwars2.com/file/F5AC92A6AE1503EE3B0A940EEE6768C928396663/587138.png"
+          },
+          {
+            "name": "Build Cannon",
+            "description": "Fortifies the objective with a cannon.",
+            "icon": "https://render.guildwars2.com/file/CFA860C6D3AC505CFA2C4B644A64459E9FEED114/105217.png"
+          },
+          {
+            "name": "Recruit Outfitter",
+            "description": "Recruits a general-goods vendor to the objective.",
+            "icon": "https://render.guildwars2.com/file/10ADAF395F3FA119FB2F9D6E9E923D201C9D3A76/105221.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 200.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Reinforced Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to reinforced levels.",
+            "icon": "https://render.guildwars2.com/file/0D354B0726B363BC0CC8F3E02F3209993C79351D/105214.png"
+          },
+          {
+            "name": "Build Mortar",
+            "description": "Fortifies the objective with a mortar.",
+            "icon": "https://render.guildwars2.com/file/049438CC945BD99676B30DC3FFB67E74CA2FACDC/598970.png"
+          },
+          {
+            "name": "Recruit Siegemaster",
+            "description": "Recruits a siege-weapon vendor to the objective.",
+            "icon": "https://render.guildwars2.com/file/7393E6E9F421E2D75EF17C3C6DDBBFEE0D2CA0B1/105222.png"
+          },
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Fortified Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to fortified levels.",
+            "icon": "https://render.guildwars2.com/file/24069AEFB574400F4E3CAE081D71E1B10BE402FB/105216.png"
+          },
+          {
+            "name": "Recruit Patrol",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 200.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Build Pot of Oil",
+            "description": "Fortifies the objective with a pot of burning oil.",
+            "icon": "https://render.guildwars2.com/file/F5AC92A6AE1503EE3B0A940EEE6768C928396663/587138.png"
+          },
+          {
+            "name": "Build Cannon",
+            "description": "Fortifies the objective with a cannon.",
+            "icon": "https://render.guildwars2.com/file/CFA860C6D3AC505CFA2C4B644A64459E9FEED114/105217.png"
+          },
+          {
+            "name": "Recruit Outfitter",
+            "description": "Recruits a general-goods vendor to the objective.",
+            "icon": "https://render.guildwars2.com/file/10ADAF395F3FA119FB2F9D6E9E923D201C9D3A76/105221.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 200.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Reinforced Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to reinforced levels.",
+            "icon": "https://render.guildwars2.com/file/0D354B0726B363BC0CC8F3E02F3209993C79351D/105214.png"
+          },
+          {
+            "name": "Build Mortar",
+            "description": "Fortifies the objective with a mortar.",
+            "icon": "https://render.guildwars2.com/file/049438CC945BD99676B30DC3FFB67E74CA2FACDC/598970.png"
+          },
+          {
+            "name": "Recruit Siegemaster",
+            "description": "Recruits a siege-weapon vendor to the objective.",
+            "icon": "https://render.guildwars2.com/file/7393E6E9F421E2D75EF17C3C6DDBBFEE0D2CA0B1/105222.png"
+          },
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Fortified Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to fortified levels.",
+            "icon": "https://render.guildwars2.com/file/24069AEFB574400F4E3CAE081D71E1B10BE402FB/105216.png"
+          },
+          {
+            "name": "Recruit Patrol",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 200.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Build Pot of Oil",
+            "description": "Fortifies the objective with a pot of burning oil.",
+            "icon": "https://render.guildwars2.com/file/F5AC92A6AE1503EE3B0A940EEE6768C928396663/587138.png"
+          },
+          {
+            "name": "Build Cannon",
+            "description": "Fortifies the objective with a cannon.",
+            "icon": "https://render.guildwars2.com/file/CFA860C6D3AC505CFA2C4B644A64459E9FEED114/105217.png"
+          },
+          {
+            "name": "Recruit Outfitter",
+            "description": "Recruits a general-goods vendor to the objective.",
+            "icon": "https://render.guildwars2.com/file/10ADAF395F3FA119FB2F9D6E9E923D201C9D3A76/105221.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 200.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Reinforced Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to reinforced levels.",
+            "icon": "https://render.guildwars2.com/file/0D354B0726B363BC0CC8F3E02F3209993C79351D/105214.png"
+          },
+          {
+            "name": "Build Mortar",
+            "description": "Fortifies the objective with a mortar.",
+            "icon": "https://render.guildwars2.com/file/049438CC945BD99676B30DC3FFB67E74CA2FACDC/598970.png"
+          },
+          {
+            "name": "Recruit Siegemaster",
+            "description": "Recruits a siege-weapon vendor to the objective.",
+            "icon": "https://render.guildwars2.com/file/7393E6E9F421E2D75EF17C3C6DDBBFEE0D2CA0B1/105222.png"
+          },
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Fortified Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to fortified levels.",
+            "icon": "https://render.guildwars2.com/file/24069AEFB574400F4E3CAE081D71E1B10BE402FB/105216.png"
+          },
+          {
+            "name": "Recruit Patrol",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 200.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "tiers": [
+      {
+        "name": "Secured",
+        "yaks_required": 20,
+        "upgrades": [
+          {
+            "name": "Build Pots of Oil",
+            "description": "Fortifies the objective with pots of burning oil.",
+            "icon": "https://render.guildwars2.com/file/F5AC92A6AE1503EE3B0A940EEE6768C928396663/587138.png"
+          },
+          {
+            "name": "Build Cannons",
+            "description": "Fortifies the objective with cannons.",
+            "icon": "https://render.guildwars2.com/file/CFA860C6D3AC505CFA2C4B644A64459E9FEED114/105217.png"
+          },
+          {
+            "name": "Additional Guards",
+            "description": "Recruits additional guards to protect the objective.",
+            "icon": "https://render.guildwars2.com/file/D77C0CDB74642221B0F50BAE2EB50DD90A134C2D/105219.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 400.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      },
+      {
+        "name": "Reinforced",
+        "yaks_required": 40,
+        "upgrades": [
+          {
+            "name": "Reinforced Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to reinforced levels.",
+            "icon": "https://render.guildwars2.com/file/0D354B0726B363BC0CC8F3E02F3209993C79351D/105214.png"
+          },
+          {
+            "name": "Build Mortars",
+            "description": "Fortifies the objective with mortars.",
+            "icon": "https://render.guildwars2.com/file/049438CC945BD99676B30DC3FFB67E74CA2FACDC/598970.png"
+          },
+          {
+            "name": "Recruit Services",
+            "description": "Recruits a siege-weapon vendor, a banker, and an armor repairer to the objective.",
+            "icon": "https://render.guildwars2.com/file/7393E6E9F421E2D75EF17C3C6DDBBFEE0D2CA0B1/105222.png"
+          },
+          {
+            "name": "Recruit Patrols",
+            "description": "Recruit guards to patrol the objective",
+            "icon": "https://render.guildwars2.com/file/7754BEF9551B719EA003EE7435BB76BAA3F73015/105223.png"
+          }
+        ]
+      },
+      {
+        "name": "Fortified",
+        "yaks_required": 80,
+        "upgrades": [
+          {
+            "name": "Fortified Walls",
+            "description": "Increases the health and defense values of the objective's walls and gates to fortified levels.",
+            "icon": "https://render.guildwars2.com/file/24069AEFB574400F4E3CAE081D71E1B10BE402FB/105216.png"
+          },
+          {
+            "name": "Build Waypoint",
+            "description": "Fortifies the objective with a waypoint.",
+            "icon": "https://render.guildwars2.com/file/FB06F90A5AAFE819959C3523B2A22B120E38C05D/105224.png"
+          },
+          {
+            "name": "Guard Training",
+            "description": "Increases the level of all guards at the objective.",
+            "icon": "https://render.guildwars2.com/file/FBA615BBE324B39DB2616C0B45BBA45E446D16D1/105220.png"
+          },
+          {
+            "name": "Storage Expansion",
+            "description": "Increases the objective's maximum supply hold size by 400.",
+            "icon": "https://render.guildwars2.com/file/A73BF1A307D62B047B913DBBAE7409089DFE4DC9/544540.png"
+          }
+        ]
+      }
+    ]
+  }
+]
