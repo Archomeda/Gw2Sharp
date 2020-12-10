@@ -9,6 +9,7 @@ jobs:
   sonarcloud:
     name: Analysis
     runs-on: windows-latest
+    if: github.repository == 'Archomeda/Gw2Sharp'
     steps:
       - uses: actions/checkout@v2
         with:
