@@ -14,7 +14,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     public class WvwRanksClient : BaseEndpointBulkAllClient<WvwRank, int>, IWvwRanksClient
     {
         /// <summary>
-        /// Creates a new <see cref="WvwAbilitiesClient"/> that is used for the API v2 WvW ranks endpoint.
+        /// Creates a new <see cref="WvwRanksClient"/> that is used for the API v2 WvW ranks endpoint.
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
         /// <param name="gw2Client">The Guild Wars 2 client.</param>

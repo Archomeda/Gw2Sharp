@@ -3,7 +3,7 @@ using System;
 namespace Gw2Sharp.WebApi.V2.Models
 {
     /// <summary>
-    /// Represents a Wvw Ability.
+    /// Represents a Wvw ability rank.
     /// </summary>
     public class WvwAbilityRank : ApiV2BaseObject
     {

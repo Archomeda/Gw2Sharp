@@ -15,7 +15,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         private readonly IWvwUpgradesClient upgrades;
 
         /// <summary>
-        /// Creates a new <see cref="WvwClient"/> that is used for the API v2 commerce endpoint.
+        /// Creates a new <see cref="WvwClient"/> that is used for the API v2 wvw endpoint.
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
         /// <param name="gw2Client">The Guild Wars 2 client.</param>
