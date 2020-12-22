@@ -10,5 +10,19 @@ namespace Gw2Sharp.WebApi.V2.Clients
         IBulkExpandableClient<WvwMatch, string>,
         IAllExpandableClient<WvwMatch>
     {
+        /// <summary>
+        /// Gets the WvW matches overview.
+        /// </summary>
+        IWvwMatchesOverviewClient Overview { get; }
+
+        /// <summary>
+        /// Gets the WvW matches scores.
+        /// </summary>
+        IWvwMatchesScoresClient Scores { get; }
+
+        /// <summary>
+        /// Gets the WvW matches stats.
+        /// </summary>
+        IWvwMatchesStatsClient Stats { get; }
     }
 }
