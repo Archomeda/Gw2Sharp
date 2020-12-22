@@ -1,0 +1,641 @@
+[
+  {
+    "id": "2-1",
+    "deaths": {
+      "red": 35321,
+      "blue": 28637,
+      "green": 37194
+    },
+    "kills": {
+      "red": 33975,
+      "blue": 36754,
+      "green": 26761
+    },
+    "maps": [
+      {
+        "id": 38,
+        "type": "Center",
+        "deaths": {
+          "red": 15130,
+          "blue": 11239,
+          "green": 13335
+        },
+        "kills": {
+          "red": 13138,
+          "blue": 14989,
+          "green": 10735
+        }
+      },
+      {
+        "id": 1099,
+        "type": "RedHome",
+        "deaths": {
+          "red": 4517,
+          "blue": 3650,
+          "green": 5452
+        },
+        "kills": {
+          "red": 5783,
+          "blue": 2842,
+          "green": 3936
+        }
+      },
+      {
+        "id": 96,
+        "type": "BlueHome",
+        "deaths": {
+          "red": 7719,
+          "blue": 7794,
+          "green": 8933
+        },
+        "kills": {
+          "red": 8236,
+          "blue": 10008,
+          "green": 5335
+        }
+      },
+      {
+        "id": 95,
+        "type": "GreenHome",
+        "deaths": {
+          "red": 7955,
+          "blue": 5954,
+          "green": 9474
+        },
+        "kills": {
+          "red": 6818,
+          "blue": 8915,
+          "green": 6755
+        }
+      }
+    ]
+  },
+  {
+    "id": "2-2",
+    "deaths": {
+      "red": 30628,
+      "blue": 32559,
+      "green": 32297
+    },
+    "kills": {
+      "red": 39528,
+      "blue": 26601,
+      "green": 26012
+    },
+    "maps": [
+      {
+        "id": 38,
+        "type": "Center",
+        "deaths": {
+          "red": 11145,
+          "blue": 12643,
+          "green": 12599
+        },
+        "kills": {
+          "red": 16494,
+          "blue": 9027,
+          "green": 10235
+        }
+      },
+      {
+        "id": 1099,
+        "type": "RedHome",
+        "deaths": {
+          "red": 5429,
+          "blue": 3732,
+          "green": 4668
+        },
+        "kills": {
+          "red": 5892,
+          "blue": 2682,
+          "green": 4177
+        }
+      },
+      {
+        "id": 96,
+        "type": "BlueHome",
+        "deaths": {
+          "red": 6476,
+          "blue": 7362,
+          "green": 5789
+        },
+        "kills": {
+          "red": 6511,
+          "blue": 7236,
+          "green": 5091
+        }
+      },
+      {
+        "id": 95,
+        "type": "GreenHome",
+        "deaths": {
+          "red": 7578,
+          "blue": 8822,
+          "green": 9241
+        },
+        "kills": {
+          "red": 10631,
+          "blue": 7656,
+          "green": 6509
+        }
+      }
+    ]
+  },
+  {
+    "id": "2-3",
+    "deaths": {
+      "red": 25324,
+      "blue": 28871,
+      "green": 24603
+    },
+    "kills": {
+      "red": 29264,
+      "blue": 23567,
+      "green": 22679
+    },
+    "maps": [
+      {
+        "id": 38,
+        "type": "Center",
+        "deaths": {
+          "red": 12065,
+          "blue": 9299,
+          "green": 10654
+        },
+        "kills": {
+          "red": 12641,
+          "blue": 8874,
+          "green": 9804
+        }
+      },
+      {
+        "id": 1099,
+        "type": "RedHome",
+        "deaths": {
+          "red": 4795,
+          "blue": 5455,
+          "green": 2688
+        },
+        "kills": {
+          "red": 5691,
+          "blue": 4295,
+          "green": 1923
+        }
+      },
+      {
+        "id": 96,
+        "type": "BlueHome",
+        "deaths": {
+          "red": 4056,
+          "blue": 8307,
+          "green": 4262
+        },
+        "kills": {
+          "red": 5425,
+          "blue": 5280,
+          "green": 5153
+        }
+      },
+      {
+        "id": 95,
+        "type": "GreenHome",
+        "deaths": {
+          "red": 4408,
+          "blue": 5810,
+          "green": 6999
+        },
+        "kills": {
+          "red": 5507,
+          "blue": 5118,
+          "green": 5799
+        }
+      }
+    ]
+  },
+  {
+    "id": "2-4",
+    "deaths": {
+      "red": 27131,
+      "blue": 28674,
+      "green": 26550
+    },
+    "kills": {
+      "red": 30467,
+      "blue": 28150,
+      "green": 20860
+    },
+    "maps": [
+      {
+        "id": 38,
+        "type": "Center",
+        "deaths": {
+          "red": 12001,
+          "blue": 13166,
+          "green": 10882
+        },
+        "kills": {
+          "red": 15302,
+          "blue": 12125,
+          "green": 7896
+        }
+      },
+      {
+        "id": 1099,
+        "type": "RedHome",
+        "deaths": {
+          "red": 3101,
+          "blue": 3679,
+          "green": 2734
+        },
+        "kills": {
+          "red": 4219,
+          "blue": 2618,
+          "green": 1842
+        }
+      },
+      {
+        "id": 96,
+        "type": "BlueHome",
+        "deaths": {
+          "red": 6027,
+          "blue": 5759,
+          "green": 5091
+        },
+        "kills": {
+          "red": 4239,
+          "blue": 8556,
+          "green": 3516
+        }
+      },
+      {
+        "id": 95,
+        "type": "GreenHome",
+        "deaths": {
+          "red": 6002,
+          "blue": 6070,
+          "green": 7843
+        },
+        "kills": {
+          "red": 6707,
+          "blue": 4851,
+          "green": 7606
+        }
+      }
+    ]
+  },
+  {
+    "id": "2-5",
+    "deaths": {
+      "red": 4068,
+      "blue": 15498,
+      "green": 15020
+    },
+    "kills": {
+      "red": 5006,
+      "blue": 16059,
+      "green": 11680
+    },
+    "maps": [
+      {
+        "id": 38,
+        "type": "Center",
+        "deaths": {
+          "red": 2536,
+          "blue": 7044,
+          "green": 5050
+        },
+        "kills": {
+          "red": 3402,
+          "blue": 6097,
+          "green": 4665
+        }
+      },
+      {
+        "id": 1099,
+        "type": "RedHome",
+        "deaths": {
+          "red": 488,
+          "blue": 1084,
+          "green": 988
+        },
+        "kills": {
+          "red": 498,
+          "blue": 1113,
+          "green": 588
+        }
+      },
+      {
+        "id": 96,
+        "type": "BlueHome",
+        "deaths": {
+          "red": 391,
+          "blue": 1805,
+          "green": 2076
+        },
+        "kills": {
+          "red": 462,
+          "blue": 2110,
+          "green": 1412
+        }
+      },
+      {
+        "id": 95,
+        "type": "GreenHome",
+        "deaths": {
+          "red": 653,
+          "blue": 5565,
+          "green": 6906
+        },
+        "kills": {
+          "red": 644,
+          "blue": 6739,
+          "green": 5015
+        }
+      }
+    ]
+  },
+  {
+    "id": "1-1",
+    "deaths": {
+      "red": 19376,
+      "blue": 27913,
+      "green": 18008
+    },
+    "kills": {
+      "red": 20949,
+      "blue": 13628,
+      "green": 28030
+    },
+    "maps": [
+      {
+        "id": 38,
+        "type": "Center",
+        "deaths": {
+          "red": 10745,
+          "blue": 11822,
+          "green": 8389
+        },
+        "kills": {
+          "red": 11811,
+          "blue": 5709,
+          "green": 12655
+        }
+      },
+      {
+        "id": 1099,
+        "type": "RedHome",
+        "deaths": {
+          "red": 3066,
+          "blue": 3424,
+          "green": 2794
+        },
+        "kills": {
+          "red": 2321,
+          "blue": 2335,
+          "green": 3850
+        }
+      },
+      {
+        "id": 96,
+        "type": "BlueHome",
+        "deaths": {
+          "red": 3457,
+          "blue": 7839,
+          "green": 4349
+        },
+        "kills": {
+          "red": 3859,
+          "blue": 3986,
+          "green": 6984
+        }
+      },
+      {
+        "id": 95,
+        "type": "GreenHome",
+        "deaths": {
+          "red": 2108,
+          "blue": 4828,
+          "green": 2476
+        },
+        "kills": {
+          "red": 2958,
+          "blue": 1598,
+          "green": 4541
+        }
+      }
+    ]
+  },
+  {
+    "id": "1-2",
+    "deaths": {
+      "red": 17570,
+      "blue": 22289,
+      "green": 19239
+    },
+    "kills": {
+      "red": 21773,
+      "blue": 15412,
+      "green": 19202
+    },
+    "maps": [
+      {
+        "id": 38,
+        "type": "Center",
+        "deaths": {
+          "red": 8706,
+          "blue": 9477,
+          "green": 8829
+        },
+        "kills": {
+          "red": 11191,
+          "blue": 5604,
+          "green": 9534
+        }
+      },
+      {
+        "id": 1099,
+        "type": "RedHome",
+        "deaths": {
+          "red": 4040,
+          "blue": 4169,
+          "green": 2537
+        },
+        "kills": {
+          "red": 4853,
+          "blue": 3129,
+          "green": 1797
+        }
+      },
+      {
+        "id": 96,
+        "type": "BlueHome",
+        "deaths": {
+          "red": 2217,
+          "blue": 4385,
+          "green": 3783
+        },
+        "kills": {
+          "red": 3357,
+          "blue": 3473,
+          "green": 2966
+        }
+      },
+      {
+        "id": 95,
+        "type": "GreenHome",
+        "deaths": {
+          "red": 2607,
+          "blue": 4258,
+          "green": 4090
+        },
+        "kills": {
+          "red": 2372,
+          "blue": 3206,
+          "green": 4905
+        }
+      }
+    ]
+  },
+  {
+    "id": "1-3",
+    "deaths": {
+      "red": 23259,
+      "blue": 18803,
+      "green": 19694
+    },
+    "kills": {
+      "red": 23705,
+      "blue": 14814,
+      "green": 20385
+    },
+    "maps": [
+      {
+        "id": 38,
+        "type": "Center",
+        "deaths": {
+          "red": 10888,
+          "blue": 7376,
+          "green": 8974
+        },
+        "kills": {
+          "red": 9464,
+          "blue": 6089,
+          "green": 10854
+        }
+      },
+      {
+        "id": 1099,
+        "type": "RedHome",
+        "deaths": {
+          "red": 2557,
+          "blue": 2482,
+          "green": 2471
+        },
+        "kills": {
+          "red": 3187,
+          "blue": 1676,
+          "green": 1928
+        }
+      },
+      {
+        "id": 96,
+        "type": "BlueHome",
+        "deaths": {
+          "red": 5159,
+          "blue": 6178,
+          "green": 3557
+        },
+        "kills": {
+          "red": 6362,
+          "blue": 5118,
+          "green": 2694
+        }
+      },
+      {
+        "id": 95,
+        "type": "GreenHome",
+        "deaths": {
+          "red": 4655,
+          "blue": 2767,
+          "green": 4692
+        },
+        "kills": {
+          "red": 4692,
+          "blue": 1931,
+          "green": 4909
+        }
+      }
+    ]
+  },
+  {
+    "id": "1-4",
+    "deaths": {
+      "red": 18181,
+      "blue": 19786,
+      "green": 14087
+    },
+    "kills": {
+      "red": 14624,
+      "blue": 16229,
+      "green": 19077
+    },
+    "maps": [
+      {
+        "id": 38,
+        "type": "Center",
+        "deaths": {
+          "red": 9147,
+          "blue": 8889,
+          "green": 7136
+        },
+        "kills": {
+          "red": 8351,
+          "blue": 6234,
+          "green": 9921
+        }
+      },
+      {
+        "id": 1099,
+        "type": "RedHome",
+        "deaths": {
+          "red": 3015,
+          "blue": 2989,
+          "green": 1066
+        },
+        "kills": {
+          "red": 2747,
+          "blue": 2382,
+          "green": 1324
+        }
+      },
+      {
+        "id": 96,
+        "type": "BlueHome",
+        "deaths": {
+          "red": 3064,
+          "blue": 3925,
+          "green": 2320
+        },
+        "kills": {
+          "red": 1936,
+          "blue": 3934,
+          "green": 3072
+        }
+      },
+      {
+        "id": 95,
+        "type": "GreenHome",
+        "deaths": {
+          "red": 2955,
+          "blue": 3983,
+          "green": 3565
+        },
+        "kills": {
+          "red": 1590,
+          "blue": 3679,
+          "green": 4760
+        }
+      }
+    ]
+  }
+]
