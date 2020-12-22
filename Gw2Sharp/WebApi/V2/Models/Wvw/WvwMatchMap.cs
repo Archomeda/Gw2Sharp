@@ -4,44 +4,44 @@ using System.Collections.Generic;
 namespace Gw2Sharp.WebApi.V2.Models
 {
     /// <summary>
-    /// Represents a Wvw match map.
+    /// Represents a WvW match map.
     /// </summary>
     public class WvwMatchMap : ApiV2BaseObject
     {
         /// <summary>
-        /// The map id
+        /// The map id.
         /// </summary>
         public int Id { get; set; }
 
         /// <summary>
-        /// The map type
+        /// The map type.
         /// </summary>
         public ApiEnum<WvwMapType> Type { get; set; } = new ApiEnum<WvwMapType>();
 
         /// <summary>
-        /// The map's score distribution by color
+        /// The map score distribution per team.
         /// </summary>
-        public WvwMatchWorldValueContainer? Scores { get; set; }
+        public WvwMatchTeamValues Scores { get; set; } = new WvwMatchTeamValues();
 
         /// <summary>
-        /// The map's bonuses
+        /// The map bonuses.
         /// </summary>
         public IReadOnlyList<WvwMatchMapBonus> Bonuses { get; set; } = Array.Empty<WvwMatchMapBonus>();
 
         /// <summary>
-        /// the map's objectives
+        /// The map objectives.
         /// </summary>
         public IReadOnlyList<WvwMatchMapObjective> Objectives { get; set; } = Array.Empty<WvwMatchMapObjective>();
 
         /// <summary>
-        /// The map's kill distribution by color
+        /// The map kill distribution per team.
         /// </summary>
-        public WvwMatchWorldValueContainer? Kills { get; set; }
+        public WvwMatchTeamValues Kills { get; set; } = new WvwMatchTeamValues();
 
         /// <summary>
-        /// The map's death distribution by color
+        /// The map death distribution per team.
         /// </summary>
-        public WvwMatchWorldValueContainer? Deaths { get; set; }
+        public WvwMatchTeamValues Deaths { get; set; } = new WvwMatchTeamValues();
 
     }
 }

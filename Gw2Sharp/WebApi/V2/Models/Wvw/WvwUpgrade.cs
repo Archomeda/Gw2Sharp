@@ -4,17 +4,17 @@ using System.Collections.Generic;
 namespace Gw2Sharp.WebApi.V2.Models
 {
     /// <summary>
-    /// Represents a Wvw upgrade.
+    /// Represents a WvW upgrade.
     /// </summary>
     public class WvwUpgrade : ApiV2BaseObject, IIdentifiable<int>
     {
         /// <summary>
-        /// The upgrade id
+        /// The upgrade id.
         /// </summary>
         public int Id { get; set; }
 
         /// <summary>
-        /// The upgrade tiers
+        /// The upgrade tiers.
         /// </summary>
         public IReadOnlyList<WvwUpgradeTier> Tiers { get; set; } = Array.Empty<WvwUpgradeTier>();
     }

@@ -1,21 +1,18 @@
-using System;
-
 namespace Gw2Sharp.WebApi.V2.Models
 {
     /// <summary>
-    /// Represents a Wvw ability rank.
+    /// Represents a WvW ability rank.
     /// </summary>
     public class WvwAbilityRank : ApiV2BaseObject
     {
         /// <summary>
-        /// The point cost of this rank
+        /// The ability rank point cost.
         /// </summary>
         public int Cost { get; set; }
 
         /// <summary>
-        /// The effect description of this ability rank
+        /// The ability rank effect description.
         /// </summary>
         public string Effect { get; set; } = string.Empty;
-
     }
 }

@@ -4,22 +4,22 @@ using System.Collections.Generic;
 namespace Gw2Sharp.WebApi.V2.Models
 {
     /// <summary>
-    /// Represents a Wvw match world id container.
+    /// Represents lists of team values of a WvW match.
     /// </summary>
-    public class WvwMatchWorldIdContainer : ApiV2BaseObject
+    public class WvwMatchTeamList : ApiV2BaseObject
     {
         /// <summary>
-        /// The Ids of the red worlds
+        /// The red team values.
         /// </summary>
         public IReadOnlyList<int> Red { get; set; } = Array.Empty<int>();
 
         /// <summary>
-        /// The Ids of the blue worlds
+        /// The blue team values.
         /// </summary>
         public IReadOnlyList<int> Blue { get; set; } = Array.Empty<int>();
 
         /// <summary>
-        /// The Ids of the green worlds
+        /// The green team values.
         /// </summary>
         public IReadOnlyList<int> Green { get; set; } = Array.Empty<int>();
     }

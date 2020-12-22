@@ -4,22 +4,22 @@ using System.Collections.Generic;
 namespace Gw2Sharp.WebApi.V2.Models
 {
     /// <summary>
-    /// Represents a Wvw match skirmish.
+    /// Represents a WvW match skirmish.
     /// </summary>
     public class WvwMatchSkirmish : ApiV2BaseObject
     {
         /// <summary>
-        /// The ability id
+        /// The ability id.
         /// </summary>
         public int Id { get; set; }
 
         /// <summary>
-        /// Skirmish score by color
+        /// Skirmish scores per team.
         /// </summary>
-        public WvwMatchWorldValueContainer? Scores { get; set; }
+        public WvwMatchTeamValues Scores { get; set; } = new WvwMatchTeamValues();
 
         /// <summary>
-        /// Map Scores
+        /// Map scores.
         /// </summary>
         public IReadOnlyList<WvwMatchSkirmishMapScore> MapScores { get; set; } = Array.Empty<WvwMatchSkirmishMapScore>();
     }

@@ -1,10 +1,15 @@
 namespace Gw2Sharp.WebApi.V2.Models
 {
     /// <summary>
-    /// A WvW owner
+    /// A WvW owner.
     /// </summary>
     public enum WvwOwner
     {
+        /// <summary>
+        /// Unknown owner.
+        /// </summary>
+        Unknown,
+
         /// <summary>
         /// Neutral owner.
         /// </summary>

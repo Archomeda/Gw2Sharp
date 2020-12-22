@@ -1,25 +1,22 @@
-using System;
-using System.Collections.Generic;
-
 namespace Gw2Sharp.WebApi.V2.Models
 {
     /// <summary>
-    /// Represents a Wvw match value (kills/deaths/worldId) container.
+    /// Represents team values of a WvW match.
     /// </summary>
-    public class WvwMatchWorldValueContainer : ApiV2BaseObject
+    public class WvwMatchTeamValues : ApiV2BaseObject
     {
         /// <summary>
-        /// The value of the red worlds
+        /// The red team value.
         /// </summary>
         public int Red { get; set; }
 
         /// <summary>
-        /// The value of the blue worlds
+        /// The blue team value.
         /// </summary>
         public int Blue { get; set; }
 
         /// <summary>
-        /// The value of the green worlds
+        /// The green team value.
         /// </summary>
         public int Green { get; set; }
     }

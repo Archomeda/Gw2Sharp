@@ -1,5 +1,3 @@
-using System.Runtime.Serialization;
-
 namespace Gw2Sharp.WebApi.V2.Models
 {
     /// <summary>

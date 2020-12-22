@@ -6,27 +6,52 @@ namespace Gw2Sharp.WebApi.V2.Models
     public enum WvwMapType
     {
         /// <summary>
-        /// Green home map type
+        /// Unknown map type.
+        /// </summary>
+        Unknown,
+
+        /// <summary>
+        /// Green Borderlands map type.
         /// </summary>
         GreenHome,
 
         /// <summary>
-        /// Blue home map type
+        /// Green Borderlands map type.
+        /// </summary>
+        GreenBorderlands = GreenHome,
+
+        /// <summary>
+        /// Blue Borderlands map type.
         /// </summary>
         BlueHome,
 
         /// <summary>
-        /// Red home map type
+        /// Blue Borderlands map type.
         /// </summary>
-        RedHome,
+        BlueBorderlands = BlueHome,
 
         /// <summary>
-        /// Eternal Battlegrounds (center) map type
+        /// Red Borderlands map type.
+        /// </summary>
+        RedHome = 12,
+
+        /// <summary>
+        /// Red Borderlands map type.
+        /// </summary>
+        RedBorderlands = RedHome,
+
+        /// <summary>
+        /// Eternal Battlegrounds map type.
         /// </summary>
         Center,
 
         /// <summary>
-        /// Edge of the Mists map type
+        /// Eternal Battlegrounds (WvW) map type.
+        /// </summary>
+        EternalBattlegrounds = Center,
+
+        /// <summary>
+        /// Edge of the Mists map type.
         /// </summary>
         EdgeOfTheMists
     }

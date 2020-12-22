@@ -250,7 +250,7 @@ namespace Gw2Sharp.WebApi.V2
         IWorldsClient Worlds { get; }
 
         /// <summary>
-        /// Gets WvW info
+        /// Gets the WvW.
         /// </summary>
         IWvwClient Wvw { get; }
     }

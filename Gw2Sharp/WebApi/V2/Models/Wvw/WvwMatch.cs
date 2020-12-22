@@ -4,67 +4,65 @@ using System.Collections.Generic;
 namespace Gw2Sharp.WebApi.V2.Models
 {
     /// <summary>
-    /// Represents a Wvw match.
+    /// Represents a WvW match.
     /// </summary>
     public class WvwMatch : ApiV2BaseObject, IIdentifiable<string>
     {
         /// <summary>
-        /// The match id
+        /// The match id.
         /// </summary>
         public string Id { get; set; } = string.Empty;
 
         /// <summary>
-        /// The match start time
+        /// The match start time.
         /// </summary>
         public DateTime StartTime { get; set; }
 
         /// <summary>
-        /// The match end time
+        /// The match end time.
         /// </summary>
         public DateTime EndTime { get; set; }
 
         /// <summary>
-        /// The gained scores by color
+        /// The team scores.
         /// </summary>
-        public WvwMatchWorldValueContainer? Scores { get; set; }
+        public WvwMatchTeamValues Scores { get; set; } = new WvwMatchTeamValues();
 
         /// <summary>
-        /// The participating host worlds (represented by their id) by color
-        /// Can be resolved against <see cref="IGw2WebApiV2Client.Worlds"/>
+        /// The participating host worlds (represented by their id) per team.
+        /// Each id can be resolved against <see cref="IGw2WebApiV2Client.Worlds"/>.
         /// </summary>
-        public WvwMatchWorldValueContainer? Worlds { get; set; }
+        public WvwMatchTeamValues Worlds { get; set; } = new WvwMatchTeamValues();
 
         /// <summary>
-        /// The participating worlds (represented by their id) by color
-        /// Can be resolved against <see cref="IGw2WebApiV2Client.Worlds"/>
+        /// All participating worlds (represented by their id) per team.
+        /// Each id can be resolved against <see cref="IGw2WebApiV2Client.Worlds"/>.
         /// </summary>
-        public WvwMatchWorldIdContainer? AllWorlds { get; set; }
+        public WvwMatchTeamList AllWorlds { get; set; } = new WvwMatchTeamList();
 
         /// <summary>
-        /// The occured kills by color
+        /// The number of kills per team.
         /// </summary>
-        public WvwMatchWorldValueContainer? Kills { get; set; }
+        public WvwMatchTeamValues Kills { get; set; } = new WvwMatchTeamValues();
 
         /// <summary>
-        /// The occured deaths by color
+        /// The number of deaths per team.
         /// </summary>
-        public WvwMatchWorldValueContainer? Deaths { get; set; }
+        public WvwMatchTeamValues Deaths { get; set; } = new WvwMatchTeamValues();
 
         /// <summary>
-        /// The gained victory points by color
+        /// The number of gained victory points per team.
         /// </summary>
-        public WvwMatchWorldValueContainer? VictoryPoints { get; set; }
+        public WvwMatchTeamValues VictoryPoints { get; set; } = new WvwMatchTeamValues();
 
         /// <summary>
-        /// The match map states
+        /// The match map states.
         /// </summary>
         public IReadOnlyList<WvwMatchMap> Maps { get; set; } = Array.Empty<WvwMatchMap>();
 
         /// <summary>
-        /// The match skirmishes
+        /// The match skirmishes.
         /// </summary>
         public IReadOnlyList<WvwMatchSkirmish> Skirmishes { get; set; } = Array.Empty<WvwMatchSkirmish>();
-
-
     }
 }

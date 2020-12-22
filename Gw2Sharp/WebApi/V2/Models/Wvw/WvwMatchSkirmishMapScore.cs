@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 namespace Gw2Sharp.WebApi.V2.Models
 {
     /// <summary>
@@ -9,13 +6,13 @@ namespace Gw2Sharp.WebApi.V2.Models
     public class WvwMatchSkirmishMapScore : ApiV2BaseObject
     {
         /// <summary>
-        /// The type of the map
+        /// The map type.
         /// </summary>
         public ApiEnum<WvwMapType> Type { get; set; } = new ApiEnum<WvwMapType>();
 
         /// <summary>
-        /// the scores of the map by color
+        /// Scores per team.
         /// </summary>
-        public WvwMatchWorldValueContainer? Scores { get; set; }
+        public WvwMatchTeamValues Scores { get; set; } = new WvwMatchTeamValues();
     }
 }

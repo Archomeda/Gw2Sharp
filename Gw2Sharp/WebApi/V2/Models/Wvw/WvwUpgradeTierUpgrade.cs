@@ -1,27 +1,23 @@
-using System;
-using System.Collections.Generic;
-
 namespace Gw2Sharp.WebApi.V2.Models
 {
     /// <summary>
-    /// Represents a Wvw upgrade tier upgrade.
+    /// Represents a WvW upgrade tier upgrade.
     /// </summary>
     public class WvwUpgradeTierUpgrade : ApiV2BaseObject
     {
         /// <summary>
-        /// The upgrade name
+        /// The upgrade name.
         /// </summary>
         public string Name { get; set; } = string.Empty;
 
         /// <summary>
-        /// The upgrade description
+        /// The upgrade description.
         /// </summary>
         public string Description { get; set; } = string.Empty;
 
         /// <summary>
-        /// The render url of the upgrade icon
+        /// The upgrade icon URL.
         /// </summary>
-        public string Icon { get; set; } = string.Empty;
-
+        public RenderUrl Icon { get; set; }
     }
 }
