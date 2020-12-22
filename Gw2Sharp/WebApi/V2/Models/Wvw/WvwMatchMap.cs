@@ -42,6 +42,5 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// The map death distribution per team.
         /// </summary>
         public WvwMatchTeamValues Deaths { get; set; } = new WvwMatchTeamValues();
-
     }
 }

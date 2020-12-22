@@ -16,12 +16,12 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The match start time.
         /// </summary>
-        public DateTime StartTime { get; set; }
+        public DateTimeOffset StartTime { get; set; }
 
         /// <summary>
         /// The match end time.
         /// </summary>
-        public DateTime EndTime { get; set; }
+        public DateTimeOffset EndTime { get; set; }
 
         /// <summary>
         /// The team scores.
