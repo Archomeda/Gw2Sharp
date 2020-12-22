@@ -114,6 +114,12 @@ namespace Gw2Sharp.WebApi
         public static implicit operator Uri(RenderUrl renderUrl) =>
             new Uri(renderUrl.Url.AbsoluteUri, UriKind.Absolute);
 
+        /// <summary>
+        /// Gets the URL as <see cref="Uri"/>.
+        /// </summary>
+        /// <returns>The URL as <see cref="Uri"/>.</returns>
+        public Uri ToUri() => this;
+
         #endregion
     }
 }

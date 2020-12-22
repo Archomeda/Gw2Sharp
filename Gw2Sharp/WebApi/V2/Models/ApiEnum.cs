@@ -108,19 +108,38 @@ namespace Gw2Sharp.WebApi.V2.Models
             new ApiEnum<T>(e, e.ToString());
 
         /// <summary>
+        /// Converts an enum to an API enum.
+        /// </summary>
+        /// <param name="e">The enum.</param>
+        public static ApiEnum<T> From(T e) => e;
+
+        /// <summary>
         /// Converts a string to an API enum.
         /// </summary>
         /// <param name="e">The enum.</param>
         public static implicit operator ApiEnum<T>(string e) =>
             new ApiEnum<T>(GetValue(e), e);
 
-#pragma warning disable CA1062 // Validate arguments of public methods
+        /// <summary>
+        /// Converts an enum to an API enum.
+        /// </summary>
+        /// <param name="e">The enum.</param>
+        public static ApiEnum<T> From(string e) => e;
+
         /// <summary>
         /// Converts an API enum to its normal enum.
         /// </summary>
         /// <param name="e">The API enum.</param>
+#pragma warning disable CA2225 // Operator overloads have named alternates
         public static implicit operator T(ApiEnum<T> e) =>
             e.Value;
+#pragma warning restore CA2225 // Operator overloads have named alternates
+
+        /// <summary>
+        /// Converts an API enum to its normal enum.
+        /// </summary>
+        /// <returns>The enum.</returns>
+        public T ToEnum() => this;
 
         /// <summary>
         /// Converts an API enum to its raw string form.
@@ -128,7 +147,12 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <param name="e">The API enum.</param>
         public static implicit operator string?(ApiEnum<T> e) =>
             e.RawValue;
-#pragma warning restore CA1062 // Validate arguments of public methods
+
+        /// <summary>
+        /// Converts an API enum to its normal enum.
+        /// </summary>
+        /// <returns>The enum.</returns>
+        public string? ToEnumString() => this;
 
         /// <inheritdoc />
         public override bool Equals(object? obj) =>
