@@ -41,7 +41,7 @@ namespace Gw2Sharp.WebApi.Caching
 
                 Collect(now, cache);
 
-                if (cache.Count == 0)
+                if (cache.IsEmpty)
                     this.cachedItems.TryRemove(category, out _);
             }
 
