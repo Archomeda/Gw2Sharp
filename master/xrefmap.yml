@@ -29240,6 +29240,19 @@ references:
   commentId: T:Gw2Sharp.WebApi.V2.Models.ItemArmorDetails
   fullName: Gw2Sharp.WebApi.V2.Models.ItemArmorDetails
   nameWithType: ItemArmorDetails
+- uid: Gw2Sharp.WebApi.V2.Models.ItemArmorDetails.AttributeAdjustment
+  name: AttributeAdjustment
+  href: api/Gw2Sharp.WebApi.V2.Models.ItemArmorDetails.html#Gw2Sharp_WebApi_V2_Models_ItemArmorDetails_AttributeAdjustment
+  commentId: P:Gw2Sharp.WebApi.V2.Models.ItemArmorDetails.AttributeAdjustment
+  fullName: Gw2Sharp.WebApi.V2.Models.ItemArmorDetails.AttributeAdjustment
+  nameWithType: ItemArmorDetails.AttributeAdjustment
+- uid: Gw2Sharp.WebApi.V2.Models.ItemArmorDetails.AttributeAdjustment*
+  name: AttributeAdjustment
+  href: api/Gw2Sharp.WebApi.V2.Models.ItemArmorDetails.html#Gw2Sharp_WebApi_V2_Models_ItemArmorDetails_AttributeAdjustment_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.ItemArmorDetails.AttributeAdjustment
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.ItemArmorDetails.AttributeAdjustment
+  nameWithType: ItemArmorDetails.AttributeAdjustment
 - uid: Gw2Sharp.WebApi.V2.Models.ItemArmorDetails.Defense
   name: Defense
   href: api/Gw2Sharp.WebApi.V2.Models.ItemArmorDetails.html#Gw2Sharp_WebApi_V2_Models_ItemArmorDetails_Defense
@@ -29552,6 +29565,19 @@ references:
   commentId: T:Gw2Sharp.WebApi.V2.Models.ItemBackDetails
   fullName: Gw2Sharp.WebApi.V2.Models.ItemBackDetails
   nameWithType: ItemBackDetails
+- uid: Gw2Sharp.WebApi.V2.Models.ItemBackDetails.AttributeAdjustment
+  name: AttributeAdjustment
+  href: api/Gw2Sharp.WebApi.V2.Models.ItemBackDetails.html#Gw2Sharp_WebApi_V2_Models_ItemBackDetails_AttributeAdjustment
+  commentId: P:Gw2Sharp.WebApi.V2.Models.ItemBackDetails.AttributeAdjustment
+  fullName: Gw2Sharp.WebApi.V2.Models.ItemBackDetails.AttributeAdjustment
+  nameWithType: ItemBackDetails.AttributeAdjustment
+- uid: Gw2Sharp.WebApi.V2.Models.ItemBackDetails.AttributeAdjustment*
+  name: AttributeAdjustment
+  href: api/Gw2Sharp.WebApi.V2.Models.ItemBackDetails.html#Gw2Sharp_WebApi_V2_Models_ItemBackDetails_AttributeAdjustment_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.ItemBackDetails.AttributeAdjustment
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.ItemBackDetails.AttributeAdjustment
+  nameWithType: ItemBackDetails.AttributeAdjustment
 - uid: Gw2Sharp.WebApi.V2.Models.ItemBackDetails.InfixUpgrade
   name: InfixUpgrade
   href: api/Gw2Sharp.WebApi.V2.Models.ItemBackDetails.html#Gw2Sharp_WebApi_V2_Models_ItemBackDetails_InfixUpgrade
@@ -31030,6 +31056,19 @@ references:
   commentId: T:Gw2Sharp.WebApi.V2.Models.ItemTrinketDetails
   fullName: Gw2Sharp.WebApi.V2.Models.ItemTrinketDetails
   nameWithType: ItemTrinketDetails
+- uid: Gw2Sharp.WebApi.V2.Models.ItemTrinketDetails.AttributeAdjustment
+  name: AttributeAdjustment
+  href: api/Gw2Sharp.WebApi.V2.Models.ItemTrinketDetails.html#Gw2Sharp_WebApi_V2_Models_ItemTrinketDetails_AttributeAdjustment
+  commentId: P:Gw2Sharp.WebApi.V2.Models.ItemTrinketDetails.AttributeAdjustment
+  fullName: Gw2Sharp.WebApi.V2.Models.ItemTrinketDetails.AttributeAdjustment
+  nameWithType: ItemTrinketDetails.AttributeAdjustment
+- uid: Gw2Sharp.WebApi.V2.Models.ItemTrinketDetails.AttributeAdjustment*
+  name: AttributeAdjustment
+  href: api/Gw2Sharp.WebApi.V2.Models.ItemTrinketDetails.html#Gw2Sharp_WebApi_V2_Models_ItemTrinketDetails_AttributeAdjustment_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.ItemTrinketDetails.AttributeAdjustment
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.ItemTrinketDetails.AttributeAdjustment
+  nameWithType: ItemTrinketDetails.AttributeAdjustment
 - uid: Gw2Sharp.WebApi.V2.Models.ItemTrinketDetails.InfixUpgrade
   name: InfixUpgrade
   href: api/Gw2Sharp.WebApi.V2.Models.ItemTrinketDetails.html#Gw2Sharp_WebApi_V2_Models_ItemTrinketDetails_InfixUpgrade
@@ -31399,6 +31438,19 @@ references:
   commentId: T:Gw2Sharp.WebApi.V2.Models.ItemUpgradeComponentDetails
   fullName: Gw2Sharp.WebApi.V2.Models.ItemUpgradeComponentDetails
   nameWithType: ItemUpgradeComponentDetails
+- uid: Gw2Sharp.WebApi.V2.Models.ItemUpgradeComponentDetails.AttributeAdjustment
+  name: AttributeAdjustment
+  href: api/Gw2Sharp.WebApi.V2.Models.ItemUpgradeComponentDetails.html#Gw2Sharp_WebApi_V2_Models_ItemUpgradeComponentDetails_AttributeAdjustment
+  commentId: P:Gw2Sharp.WebApi.V2.Models.ItemUpgradeComponentDetails.AttributeAdjustment
+  fullName: Gw2Sharp.WebApi.V2.Models.ItemUpgradeComponentDetails.AttributeAdjustment
+  nameWithType: ItemUpgradeComponentDetails.AttributeAdjustment
+- uid: Gw2Sharp.WebApi.V2.Models.ItemUpgradeComponentDetails.AttributeAdjustment*
+  name: AttributeAdjustment
+  href: api/Gw2Sharp.WebApi.V2.Models.ItemUpgradeComponentDetails.html#Gw2Sharp_WebApi_V2_Models_ItemUpgradeComponentDetails_AttributeAdjustment_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.ItemUpgradeComponentDetails.AttributeAdjustment
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.ItemUpgradeComponentDetails.AttributeAdjustment
+  nameWithType: ItemUpgradeComponentDetails.AttributeAdjustment
 - uid: Gw2Sharp.WebApi.V2.Models.ItemUpgradeComponentDetails.Bonuses
   name: Bonuses
   href: api/Gw2Sharp.WebApi.V2.Models.ItemUpgradeComponentDetails.html#Gw2Sharp_WebApi_V2_Models_ItemUpgradeComponentDetails_Bonuses
@@ -31688,6 +31740,19 @@ references:
   commentId: T:Gw2Sharp.WebApi.V2.Models.ItemWeaponDetails
   fullName: Gw2Sharp.WebApi.V2.Models.ItemWeaponDetails
   nameWithType: ItemWeaponDetails
+- uid: Gw2Sharp.WebApi.V2.Models.ItemWeaponDetails.AttributeAdjustment
+  name: AttributeAdjustment
+  href: api/Gw2Sharp.WebApi.V2.Models.ItemWeaponDetails.html#Gw2Sharp_WebApi_V2_Models_ItemWeaponDetails_AttributeAdjustment
+  commentId: P:Gw2Sharp.WebApi.V2.Models.ItemWeaponDetails.AttributeAdjustment
+  fullName: Gw2Sharp.WebApi.V2.Models.ItemWeaponDetails.AttributeAdjustment
+  nameWithType: ItemWeaponDetails.AttributeAdjustment
+- uid: Gw2Sharp.WebApi.V2.Models.ItemWeaponDetails.AttributeAdjustment*
+  name: AttributeAdjustment
+  href: api/Gw2Sharp.WebApi.V2.Models.ItemWeaponDetails.html#Gw2Sharp_WebApi_V2_Models_ItemWeaponDetails_AttributeAdjustment_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.ItemWeaponDetails.AttributeAdjustment
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.ItemWeaponDetails.AttributeAdjustment
+  nameWithType: ItemWeaponDetails.AttributeAdjustment
 - uid: Gw2Sharp.WebApi.V2.Models.ItemWeaponDetails.DamageType
   name: DamageType
   href: api/Gw2Sharp.WebApi.V2.Models.ItemWeaponDetails.html#Gw2Sharp_WebApi_V2_Models_ItemWeaponDetails_DamageType
