@@ -1,7 +1,16 @@
 # Gw2Sharp History
 
 ## 0.12.0
-As mentioned in 0.11.1, this version has a breaking change in the caching support in order to make them more reliable ([#71](https://github.com/Archomeda/Gw2Sharp/issues/71)).
+*After 2 years of development, this version marks a milestone for Gw2Sharp.*
+
+It is now feature complete, with thanks to [@werdes](https://github.com/werdes) for setting up WvW support that I have postponed for quite a while.
+
+What does this mean for the future for Gw2Sharp?
+Well, there is at least one additional thing I still want to finish, and that's updating the System.Text.Json dependency to version 5.
+Once I've finished that, Gw2Sharp 1.0.0 is around the corner, and it's pretty much done until ArenaNet adds additional endpoints or makes additional changes to the API.
+
+Besides feature completing Gw2Sharp, this version also includes a major update regarding caching support as mentioned in 0.11.1.
+This is a breaking change, but it will make caching more reliable ([#71](https://github.com/Archomeda/Gw2Sharp/issues/71)).
 All interfaces and built-in caching classes have been overhauled.
 In short, the focus was to only support strings and raw byte arrays, instead of generic types that have to be converted back and forth between C# objects and JSON strings.
 
@@ -27,6 +36,17 @@ Please do not report those issues as they will not be worked on.
 - **Breaking:** The constant `CACHE_STATE_HEADER` in `Gw2Sharp.WebApi.Http.HttpResponseInfo` has been removed in favor of having a dedicated cache state property on various classes, instead of injecting it through a custom Gw2Sharp header
 - **Breaking:** `Gw2Sharp.WebApi.Http.IHttpResponseStream` and `Gw2Sharp.WebApi.Http.IWebApiResponse` have the additional property `CacheState`
 - **Breaking:** The constructors of `Gw2Sharp.WebApi.Http.HttpResponseInfo`, `Gw2Sharp.WebApi.Http.HttpResponseStream`, `Gw2Sharp.WebApi.Http.WebApiResponse` and `Gw2Sharp.WebApi.V2.ApiV2HttpResponseInfo` have been modified to accept the `CacheState` parameter
+
+### Endpoints
+- Add `/v2/wvw/abilities` ([#80](https://github.com/Archomeda/Gw2Sharp/pull/80) by [@werdes](https://github.com/werdes))
+- Add `/v2/wvw/matches` ([#80](https://github.com/Archomeda/Gw2Sharp/pull/80) by [@werdes](https://github.com/werdes))
+- Add `/v2/wvw/matches/overview` ([#80](https://github.com/Archomeda/Gw2Sharp/pull/80))
+- Add `/v2/wvw/matches/scores` ([#80](https://github.com/Archomeda/Gw2Sharp/pull/80))
+- Add `/v2/wvw/matches/stats` ([#80](https://github.com/Archomeda/Gw2Sharp/pull/80))
+- Add `/v2/wvw/objectives` ([#80](https://github.com/Archomeda/Gw2Sharp/pull/80) by [@werdes](https://github.com/werdes))
+- Add `/v2/wvw/ranks` ([#80](https://github.com/Archomeda/Gw2Sharp/pull/80) by [@werdes](https://github.com/werdes))
+- Add `/v2/wvw/upgrades` ([#80](https://github.com/Archomeda/Gw2Sharp/pull/80) by [@werdes](https://github.com/werdes))
+- Add `AttributeAdjustment` property to various item related models (`Gw2Sharp.WebApi.V2.Models.ItemArmorDetails`, `Gw2Sharp.WebApi.V2.Models.ItemBackDetails`, `Gw2Sharp.WebApi.V2.Models.ItemTrinketDetails`, `Gw2Sharp.WebApi.V2.Models.ItemUpgradeComponentDetails`, `Gw2Sharp.WebApi.V2.Models.ItemWeaponDetails`) ([#70](https://github.com/Archomeda/Gw2Sharp/issues/70), [#84](https://github.com/Archomeda/Gw2Sharp/pull/84))
 
 ---
 

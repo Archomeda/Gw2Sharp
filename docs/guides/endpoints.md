@@ -178,15 +178,15 @@ For your convenience, the following list gives an overview of the web API endpoi
  ~~/v2/vendors~~ | ✖️ |
  /v2/worldbosses | 📄📚📦 | [`Gw2Client.WebApi.V2.WorldBosses`](../api/Gw2Sharp.WebApi.V2.Clients.WorldBossesClient.html)
  /v2/worlds | 🌐📄📚📦 | [`Gw2Client.WebApi.V2.Worlds`](../api/Gw2Sharp.WebApi.V2.Clients.WorldsClient.html)
- /v2/wvw/abilities | ❌ |
- /v2/wvw/matches | ❌ |
- /v2/wvw/matches/overview | ❌ |
- /v2/wvw/matches/scores | ❌ |
- /v2/wvw/matches/stats | ❌ |
- /v2/wvw/matches/stats/`:id`/guilds/`:guild_id` | ❌ |
- /v2/wvw/matches/stats/`:id`/teams/`:team`/top/kdr | ❌ |
- /v2/wvw/matches/stats/`:id`/teams/`:team`/top/kills | ❌ |
- /v2/wvw/objectives | ❌ |
- /v2/wvw/ranks | ❌ |
+ /v2/wvw/abilities | 🌐📄📚📦 | [`Gw2Client.WebApi.V2.Wvw.Abilities`](../api/Gw2Sharp.WebApi.V2.Clients.WvwAbilitiesClient.html)
+ /v2/wvw/matches | 📄📚📦 | [`Gw2Client.WebApi.V2.Wvw.Matches`](../api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesClient.html)
+ /v2/wvw/matches/overview | 📄📚📦 | [`Gw2Client.WebApi.V2.Wvw.Matches.Overview`](../api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesOverviewClient.html)
+ /v2/wvw/matches/scores | 📄📚📦 | [`Gw2Client.WebApi.V2.Wvw.Matches.Scores`](../api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesScoresClient.html)
+ /v2/wvw/matches/stats | 📄📚📦 | [`Gw2Client.WebApi.V2.Wvw.Matches.Stats`](../api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesStatsClient.html)
+ ~~/v2/wvw/matches/stats/`:id`/guilds/`:guild_id`~~ | ✖️ | *Broken on the API as of 2012-12-22*
+ ~~/v2/wvw/matches/stats/`:id`/teams/`:team`/top/kdr~~ | ✖️ | *Broken on the API as of 2012-12-22*
+ ~~/v2/wvw/matches/stats/`:id`/teams/`:team`/top/kills~~ | ✖️ | *Broken on the API as of 2012-12-22*
+ /v2/wvw/objectives | 🌐📄📚📦 | [`Gw2Client.WebApi.V2.Wvw.Objectives`](../api/Gw2Sharp.WebApi.V2.Clients.WvwObjectivesClient.html)
+ /v2/wvw/ranks | 🌐📄📚📦 | [`Gw2Client.WebApi.V2.Wvw.Ranks`](../api/Gw2Sharp.WebApi.V2.Clients.WvwRanksClient.html)
  ~~/v2/wvw/rewardtracks~~ | ✖️ |
- /v2/wvw/upgrades | ❌ |
+ /v2/wvw/upgrades | 🌐📄📚📦 | [`Gw2Client.WebApi.V2.Wvw.Upgrades`](../api/Gw2Sharp.WebApi.V2.Clients.WvwUpgradesClient.html)
