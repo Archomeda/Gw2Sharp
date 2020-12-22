@@ -1442,6 +1442,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.ChatLinks.Internal.UInt24.UInt24
   nameWithType: UInt24.UInt24
+- uid: Gw2Sharp.ChatLinks.Internal.UInt24.FromInt32(System.Int32)
+  name: FromInt32(Int32)
+  href: api/Gw2Sharp.ChatLinks.Internal.UInt24.html#Gw2Sharp_ChatLinks_Internal_UInt24_FromInt32_System_Int32_
+  commentId: M:Gw2Sharp.ChatLinks.Internal.UInt24.FromInt32(System.Int32)
+  fullName: Gw2Sharp.ChatLinks.Internal.UInt24.FromInt32(System.Int32)
+  nameWithType: UInt24.FromInt32(Int32)
+- uid: Gw2Sharp.ChatLinks.Internal.UInt24.FromInt32*
+  name: FromInt32
+  href: api/Gw2Sharp.ChatLinks.Internal.UInt24.html#Gw2Sharp_ChatLinks_Internal_UInt24_FromInt32_
+  commentId: Overload:Gw2Sharp.ChatLinks.Internal.UInt24.FromInt32
+  isSpec: "True"
+  fullName: Gw2Sharp.ChatLinks.Internal.UInt24.FromInt32
+  nameWithType: UInt24.FromInt32
 - uid: Gw2Sharp.ChatLinks.Internal.UInt24.op_Implicit(Gw2Sharp.ChatLinks.Internal.UInt24)~System.Int32
   name: Implicit(UInt24 to Int32)
   href: api/Gw2Sharp.ChatLinks.Internal.UInt24.html#Gw2Sharp_ChatLinks_Internal_UInt24_op_Implicit_Gw2Sharp_ChatLinks_Internal_UInt24__System_Int32
@@ -1470,6 +1483,19 @@ references:
   fullName.vb: Gw2Sharp.ChatLinks.Internal.UInt24.Widening
   nameWithType: UInt24.Implicit
   nameWithType.vb: UInt24.Widening
+- uid: Gw2Sharp.ChatLinks.Internal.UInt24.ToInt32
+  name: ToInt32()
+  href: api/Gw2Sharp.ChatLinks.Internal.UInt24.html#Gw2Sharp_ChatLinks_Internal_UInt24_ToInt32
+  commentId: M:Gw2Sharp.ChatLinks.Internal.UInt24.ToInt32
+  fullName: Gw2Sharp.ChatLinks.Internal.UInt24.ToInt32()
+  nameWithType: UInt24.ToInt32()
+- uid: Gw2Sharp.ChatLinks.Internal.UInt24.ToInt32*
+  name: ToInt32
+  href: api/Gw2Sharp.ChatLinks.Internal.UInt24.html#Gw2Sharp_ChatLinks_Internal_UInt24_ToInt32_
+  commentId: Overload:Gw2Sharp.ChatLinks.Internal.UInt24.ToInt32
+  isSpec: "True"
+  fullName: Gw2Sharp.ChatLinks.Internal.UInt24.ToInt32
+  nameWithType: UInt24.ToInt32
 - uid: Gw2Sharp.ChatLinks.Internal.UInt24.Value
   name: Value
   href: api/Gw2Sharp.ChatLinks.Internal.UInt24.html#Gw2Sharp_ChatLinks_Internal_UInt24_Value
@@ -8668,6 +8694,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.RenderUrl.ToString
   nameWithType: RenderUrl.ToString
+- uid: Gw2Sharp.WebApi.RenderUrl.ToUri
+  name: ToUri()
+  href: api/Gw2Sharp.WebApi.RenderUrl.html#Gw2Sharp_WebApi_RenderUrl_ToUri
+  commentId: M:Gw2Sharp.WebApi.RenderUrl.ToUri
+  fullName: Gw2Sharp.WebApi.RenderUrl.ToUri()
+  nameWithType: RenderUrl.ToUri()
+- uid: Gw2Sharp.WebApi.RenderUrl.ToUri*
+  name: ToUri
+  href: api/Gw2Sharp.WebApi.RenderUrl.html#Gw2Sharp_WebApi_RenderUrl_ToUri_
+  commentId: Overload:Gw2Sharp.WebApi.RenderUrl.ToUri
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.RenderUrl.ToUri
+  nameWithType: RenderUrl.ToUri
 - uid: Gw2Sharp.WebApi.RenderUrl.Url
   name: Url
   href: api/Gw2Sharp.WebApi.RenderUrl.html#Gw2Sharp_WebApi_RenderUrl_Url
@@ -22391,6 +22430,31 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Models.ApiEnum(Of T).Equals
   nameWithType: ApiEnum<T>.Equals
   nameWithType.vb: ApiEnum(Of T).Equals
+- uid: Gw2Sharp.WebApi.V2.Models.ApiEnum`1.From(`0)
+  name: From(T)
+  href: api/Gw2Sharp.WebApi.V2.Models.ApiEnum-1.html#Gw2Sharp_WebApi_V2_Models_ApiEnum_1_From__0_
+  commentId: M:Gw2Sharp.WebApi.V2.Models.ApiEnum`1.From(`0)
+  fullName: Gw2Sharp.WebApi.V2.Models.ApiEnum<T>.From(T)
+  fullName.vb: Gw2Sharp.WebApi.V2.Models.ApiEnum(Of T).From(T)
+  nameWithType: ApiEnum<T>.From(T)
+  nameWithType.vb: ApiEnum(Of T).From(T)
+- uid: Gw2Sharp.WebApi.V2.Models.ApiEnum`1.From(System.String)
+  name: From(String)
+  href: api/Gw2Sharp.WebApi.V2.Models.ApiEnum-1.html#Gw2Sharp_WebApi_V2_Models_ApiEnum_1_From_System_String_
+  commentId: M:Gw2Sharp.WebApi.V2.Models.ApiEnum`1.From(System.String)
+  fullName: Gw2Sharp.WebApi.V2.Models.ApiEnum<T>.From(System.String)
+  fullName.vb: Gw2Sharp.WebApi.V2.Models.ApiEnum(Of T).From(System.String)
+  nameWithType: ApiEnum<T>.From(String)
+  nameWithType.vb: ApiEnum(Of T).From(String)
+- uid: Gw2Sharp.WebApi.V2.Models.ApiEnum`1.From*
+  name: From
+  href: api/Gw2Sharp.WebApi.V2.Models.ApiEnum-1.html#Gw2Sharp_WebApi_V2_Models_ApiEnum_1_From_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.ApiEnum`1.From
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.ApiEnum<T>.From
+  fullName.vb: Gw2Sharp.WebApi.V2.Models.ApiEnum(Of T).From
+  nameWithType: ApiEnum<T>.From
+  nameWithType.vb: ApiEnum(Of T).From
 - uid: Gw2Sharp.WebApi.V2.Models.ApiEnum`1.GetHashCode
   name: GetHashCode()
   href: api/Gw2Sharp.WebApi.V2.Models.ApiEnum-1.html#Gw2Sharp_WebApi_V2_Models_ApiEnum_1_GetHashCode
@@ -22524,6 +22588,40 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Models.ApiEnum(Of T).RawValue
   nameWithType: ApiEnum<T>.RawValue
   nameWithType.vb: ApiEnum(Of T).RawValue
+- uid: Gw2Sharp.WebApi.V2.Models.ApiEnum`1.ToEnum
+  name: ToEnum()
+  href: api/Gw2Sharp.WebApi.V2.Models.ApiEnum-1.html#Gw2Sharp_WebApi_V2_Models_ApiEnum_1_ToEnum
+  commentId: M:Gw2Sharp.WebApi.V2.Models.ApiEnum`1.ToEnum
+  fullName: Gw2Sharp.WebApi.V2.Models.ApiEnum<T>.ToEnum()
+  fullName.vb: Gw2Sharp.WebApi.V2.Models.ApiEnum(Of T).ToEnum()
+  nameWithType: ApiEnum<T>.ToEnum()
+  nameWithType.vb: ApiEnum(Of T).ToEnum()
+- uid: Gw2Sharp.WebApi.V2.Models.ApiEnum`1.ToEnum*
+  name: ToEnum
+  href: api/Gw2Sharp.WebApi.V2.Models.ApiEnum-1.html#Gw2Sharp_WebApi_V2_Models_ApiEnum_1_ToEnum_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.ApiEnum`1.ToEnum
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.ApiEnum<T>.ToEnum
+  fullName.vb: Gw2Sharp.WebApi.V2.Models.ApiEnum(Of T).ToEnum
+  nameWithType: ApiEnum<T>.ToEnum
+  nameWithType.vb: ApiEnum(Of T).ToEnum
+- uid: Gw2Sharp.WebApi.V2.Models.ApiEnum`1.ToEnumString
+  name: ToEnumString()
+  href: api/Gw2Sharp.WebApi.V2.Models.ApiEnum-1.html#Gw2Sharp_WebApi_V2_Models_ApiEnum_1_ToEnumString
+  commentId: M:Gw2Sharp.WebApi.V2.Models.ApiEnum`1.ToEnumString
+  fullName: Gw2Sharp.WebApi.V2.Models.ApiEnum<T>.ToEnumString()
+  fullName.vb: Gw2Sharp.WebApi.V2.Models.ApiEnum(Of T).ToEnumString()
+  nameWithType: ApiEnum<T>.ToEnumString()
+  nameWithType.vb: ApiEnum(Of T).ToEnumString()
+- uid: Gw2Sharp.WebApi.V2.Models.ApiEnum`1.ToEnumString*
+  name: ToEnumString
+  href: api/Gw2Sharp.WebApi.V2.Models.ApiEnum-1.html#Gw2Sharp_WebApi_V2_Models_ApiEnum_1_ToEnumString_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.ApiEnum`1.ToEnumString
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.ApiEnum<T>.ToEnumString
+  fullName.vb: Gw2Sharp.WebApi.V2.Models.ApiEnum(Of T).ToEnumString
+  nameWithType: ApiEnum<T>.ToEnumString
+  nameWithType.vb: ApiEnum(Of T).ToEnumString
 - uid: Gw2Sharp.WebApi.V2.Models.ApiEnum`1.ToString
   name: ToString()
   href: api/Gw2Sharp.WebApi.V2.Models.ApiEnum-1.html#Gw2Sharp_WebApi_V2_Models_ApiEnum_1_ToString
@@ -22620,6 +22718,51 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Models.ApiFlags(Of T).Equals
   nameWithType: ApiFlags<T>.Equals
   nameWithType.vb: ApiFlags(Of T).Equals
+- uid: Gw2Sharp.WebApi.V2.Models.ApiFlags`1.From(Collection{Gw2Sharp.WebApi.V2.Models.ApiEnum{`0}})
+  name: From(Collection<ApiEnum<T>>)
+  href: api/Gw2Sharp.WebApi.V2.Models.ApiFlags-1.html#Gw2Sharp_WebApi_V2_Models_ApiFlags_1_From_Collection_Gw2Sharp_WebApi_V2_Models_ApiEnum__0___
+  commentId: M:Gw2Sharp.WebApi.V2.Models.ApiFlags`1.From(Collection{Gw2Sharp.WebApi.V2.Models.ApiEnum{`0}})
+  name.vb: From(Collection(Of ApiEnum(Of T)))
+  fullName: Gw2Sharp.WebApi.V2.Models.ApiFlags<T>.From(Collection<Gw2Sharp.WebApi.V2.Models.ApiEnum<T>>)
+  fullName.vb: Gw2Sharp.WebApi.V2.Models.ApiFlags(Of T).From(Collection(Of Gw2Sharp.WebApi.V2.Models.ApiEnum(Of T)))
+  nameWithType: ApiFlags<T>.From(Collection<ApiEnum<T>>)
+  nameWithType.vb: ApiFlags(Of T).From(Collection(Of ApiEnum(Of T)))
+- uid: Gw2Sharp.WebApi.V2.Models.ApiFlags`1.From(Gw2Sharp.WebApi.V2.Models.ApiEnum{`0}[])
+  name: From(ApiEnum<T>[])
+  href: api/Gw2Sharp.WebApi.V2.Models.ApiFlags-1.html#Gw2Sharp_WebApi_V2_Models_ApiFlags_1_From_Gw2Sharp_WebApi_V2_Models_ApiEnum__0____
+  commentId: M:Gw2Sharp.WebApi.V2.Models.ApiFlags`1.From(Gw2Sharp.WebApi.V2.Models.ApiEnum{`0}[])
+  name.vb: From(ApiEnum(Of T)())
+  fullName: Gw2Sharp.WebApi.V2.Models.ApiFlags<T>.From(Gw2Sharp.WebApi.V2.Models.ApiEnum<T>[])
+  fullName.vb: Gw2Sharp.WebApi.V2.Models.ApiFlags(Of T).From(Gw2Sharp.WebApi.V2.Models.ApiEnum(Of T)())
+  nameWithType: ApiFlags<T>.From(ApiEnum<T>[])
+  nameWithType.vb: ApiFlags(Of T).From(ApiEnum(Of T)())
+- uid: Gw2Sharp.WebApi.V2.Models.ApiFlags`1.From(HashSet{Gw2Sharp.WebApi.V2.Models.ApiEnum{`0}})
+  name: From(HashSet<ApiEnum<T>>)
+  href: api/Gw2Sharp.WebApi.V2.Models.ApiFlags-1.html#Gw2Sharp_WebApi_V2_Models_ApiFlags_1_From_HashSet_Gw2Sharp_WebApi_V2_Models_ApiEnum__0___
+  commentId: M:Gw2Sharp.WebApi.V2.Models.ApiFlags`1.From(HashSet{Gw2Sharp.WebApi.V2.Models.ApiEnum{`0}})
+  name.vb: From(HashSet(Of ApiEnum(Of T)))
+  fullName: Gw2Sharp.WebApi.V2.Models.ApiFlags<T>.From(HashSet<Gw2Sharp.WebApi.V2.Models.ApiEnum<T>>)
+  fullName.vb: Gw2Sharp.WebApi.V2.Models.ApiFlags(Of T).From(HashSet(Of Gw2Sharp.WebApi.V2.Models.ApiEnum(Of T)))
+  nameWithType: ApiFlags<T>.From(HashSet<ApiEnum<T>>)
+  nameWithType.vb: ApiFlags(Of T).From(HashSet(Of ApiEnum(Of T)))
+- uid: Gw2Sharp.WebApi.V2.Models.ApiFlags`1.From(List{Gw2Sharp.WebApi.V2.Models.ApiEnum{`0}})
+  name: From(List<ApiEnum<T>>)
+  href: api/Gw2Sharp.WebApi.V2.Models.ApiFlags-1.html#Gw2Sharp_WebApi_V2_Models_ApiFlags_1_From_List_Gw2Sharp_WebApi_V2_Models_ApiEnum__0___
+  commentId: M:Gw2Sharp.WebApi.V2.Models.ApiFlags`1.From(List{Gw2Sharp.WebApi.V2.Models.ApiEnum{`0}})
+  name.vb: From(List(Of ApiEnum(Of T)))
+  fullName: Gw2Sharp.WebApi.V2.Models.ApiFlags<T>.From(List<Gw2Sharp.WebApi.V2.Models.ApiEnum<T>>)
+  fullName.vb: Gw2Sharp.WebApi.V2.Models.ApiFlags(Of T).From(List(Of Gw2Sharp.WebApi.V2.Models.ApiEnum(Of T)))
+  nameWithType: ApiFlags<T>.From(List<ApiEnum<T>>)
+  nameWithType.vb: ApiFlags(Of T).From(List(Of ApiEnum(Of T)))
+- uid: Gw2Sharp.WebApi.V2.Models.ApiFlags`1.From*
+  name: From
+  href: api/Gw2Sharp.WebApi.V2.Models.ApiFlags-1.html#Gw2Sharp_WebApi_V2_Models_ApiFlags_1_From_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.ApiFlags`1.From
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.ApiFlags<T>.From
+  fullName.vb: Gw2Sharp.WebApi.V2.Models.ApiFlags(Of T).From
+  nameWithType: ApiFlags<T>.From
+  nameWithType.vb: ApiFlags(Of T).From
 - uid: Gw2Sharp.WebApi.V2.Models.ApiFlags`1.GetEnumerator
   name: GetEnumerator()
   href: api/Gw2Sharp.WebApi.V2.Models.ApiFlags-1.html#Gw2Sharp_WebApi_V2_Models_ApiFlags_1_GetEnumerator
@@ -22788,6 +22931,40 @@ references:
   fullName.vb: Gw2Sharp.WebApi.V2.Models.ApiFlags(Of T).Inequality
   nameWithType: ApiFlags<T>.Inequality
   nameWithType.vb: ApiFlags(Of T).Inequality
+- uid: Gw2Sharp.WebApi.V2.Models.ApiFlags`1.ToArray
+  name: ToArray()
+  href: api/Gw2Sharp.WebApi.V2.Models.ApiFlags-1.html#Gw2Sharp_WebApi_V2_Models_ApiFlags_1_ToArray
+  commentId: M:Gw2Sharp.WebApi.V2.Models.ApiFlags`1.ToArray
+  fullName: Gw2Sharp.WebApi.V2.Models.ApiFlags<T>.ToArray()
+  fullName.vb: Gw2Sharp.WebApi.V2.Models.ApiFlags(Of T).ToArray()
+  nameWithType: ApiFlags<T>.ToArray()
+  nameWithType.vb: ApiFlags(Of T).ToArray()
+- uid: Gw2Sharp.WebApi.V2.Models.ApiFlags`1.ToArray*
+  name: ToArray
+  href: api/Gw2Sharp.WebApi.V2.Models.ApiFlags-1.html#Gw2Sharp_WebApi_V2_Models_ApiFlags_1_ToArray_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.ApiFlags`1.ToArray
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.ApiFlags<T>.ToArray
+  fullName.vb: Gw2Sharp.WebApi.V2.Models.ApiFlags(Of T).ToArray
+  nameWithType: ApiFlags<T>.ToArray
+  nameWithType.vb: ApiFlags(Of T).ToArray
+- uid: Gw2Sharp.WebApi.V2.Models.ApiFlags`1.ToList
+  name: ToList()
+  href: api/Gw2Sharp.WebApi.V2.Models.ApiFlags-1.html#Gw2Sharp_WebApi_V2_Models_ApiFlags_1_ToList
+  commentId: M:Gw2Sharp.WebApi.V2.Models.ApiFlags`1.ToList
+  fullName: Gw2Sharp.WebApi.V2.Models.ApiFlags<T>.ToList()
+  fullName.vb: Gw2Sharp.WebApi.V2.Models.ApiFlags(Of T).ToList()
+  nameWithType: ApiFlags<T>.ToList()
+  nameWithType.vb: ApiFlags(Of T).ToList()
+- uid: Gw2Sharp.WebApi.V2.Models.ApiFlags`1.ToList*
+  name: ToList
+  href: api/Gw2Sharp.WebApi.V2.Models.ApiFlags-1.html#Gw2Sharp_WebApi_V2_Models_ApiFlags_1_ToList_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.ApiFlags`1.ToList
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.ApiFlags<T>.ToList
+  fullName.vb: Gw2Sharp.WebApi.V2.Models.ApiFlags(Of T).ToList
+  nameWithType: ApiFlags<T>.ToList
+  nameWithType.vb: ApiFlags(Of T).ToList
 - uid: Gw2Sharp.WebApi.V2.Models.ApiFlags`1.UnknownList
   name: UnknownList
   href: api/Gw2Sharp.WebApi.V2.Models.ApiFlags-1.html#Gw2Sharp_WebApi_V2_Models_ApiFlags_1_UnknownList
