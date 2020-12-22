@@ -28,7 +28,7 @@ namespace Gw2Sharp.WebApi
         /// <summary>
         /// The URL to a resource on the Guild Wars 2 render service API.
         /// </summary>
-        public Uri Url { get; private set; }
+        public Uri Url { get; }
 
 
         /// <inheritdoc />
