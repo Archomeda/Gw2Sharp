@@ -14,6 +14,11 @@ namespace Gw2Sharp.WebApi.V2.Models
         public IReadOnlyList<ItemInfusionSlot> InfusionSlots { get; set; } = Array.Empty<ItemInfusionSlot>();
 
         /// <summary>
+        /// The item attribute adjustment value.
+        /// </summary>
+        public double AttributeAdjustment { get; set; }
+
+        /// <summary>
         /// The item infix upgrade.
         /// If the item does not have a infix upgrade, this value is <c>null</c>.
         /// </summary>
