@@ -46,10 +46,23 @@ namespace Gw2Sharp.ChatLinks.Internal
             new UInt24(value);
 
         /// <summary>
+        /// Gets the <see cref="UInt24"/> value of an integer.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        /// <returns>The value.</returns>
+        public static UInt24 FromInt32(int value) => value;
+
+        /// <summary>
         /// Gets the integer value of <see cref="UInt24"/>.
         /// </summary>
         /// <param name="value">The value.</param>
         public static implicit operator int(UInt24 value) =>
             value.Value;
+
+        /// <summary>
+        /// Gets the integer value of <see cref="UInt24"/>.
+        /// </summary>
+        /// <returns>The value.</returns>
+        public int ToInt32() => this;
     }
 }

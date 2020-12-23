@@ -65,11 +65,23 @@ namespace Gw2Sharp.WebApi.V2.Models
             new ApiFlags<T>(l);
 
         /// <summary>
+        /// Converts an array of enums to API flags.
+        /// </summary>
+        /// <param name="l">The list of enums.</param>
+        public static ApiFlags<T> From(ApiEnum<T>[] l) => l;
+
+        /// <summary>
         /// Converts a list of enums to API flags.
         /// </summary>
         /// <param name="l">The list of enums.</param>
         public static implicit operator ApiFlags<T>(List<ApiEnum<T>> l) =>
             new ApiFlags<T>(l);
+
+        /// <summary>
+        /// Converts an array of enums to API flags.
+        /// </summary>
+        /// <param name="l">The list of enums.</param>
+        public static ApiFlags<T> From(List<ApiEnum<T>> l) => l;
 
         /// <summary>
         /// Converts a collection of enums to API flags.
@@ -79,19 +91,38 @@ namespace Gw2Sharp.WebApi.V2.Models
             new ApiFlags<T>(l);
 
         /// <summary>
+        /// Converts a collection of enums to API flags.
+        /// </summary>
+        /// <param name="l">The list of enums.</param>
+        public static ApiFlags<T> From(Collection<ApiEnum<T>> l) => l;
+
+        /// <summary>
         /// Converts a set of enums to API flags.
         /// </summary>
         /// <param name="l">The set of enums.</param>
         public static implicit operator ApiFlags<T>(HashSet<ApiEnum<T>> l) =>
             new ApiFlags<T>(l);
 
-#pragma warning disable CA1062 // Validate arguments of public methods
+        /// <summary>
+        /// Converts a set of enums to API flags.
+        /// </summary>
+        /// <param name="l">The list of enums.</param>
+        public static ApiFlags<T> From(HashSet<ApiEnum<T>> l) => l;
+
         /// <summary>
         /// Converts API flags to an array of enums.
         /// </summary>
         /// <param name="e">The API enum.</param>
+#pragma warning disable CA2225 // Operator overloads have named alternates
         public static implicit operator ApiEnum<T>[](ApiFlags<T> e) =>
             e.List.ToArray();
+#pragma warning restore CA2225 // Operator overloads have named alternates
+
+        /// <summary>
+        /// Converts API flags to an array of enums.
+        /// </summary>
+        /// <returns>The enum.</returns>
+        public ApiEnum<T>[] ToArray() => this;
 
         /// <summary>
         /// Converts API flags to a list of enums.
@@ -99,7 +130,12 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <param name="e">The API enum.</param>
         public static implicit operator List<ApiEnum<T>>(ApiFlags<T> e) =>
             e.List.ToList();
-#pragma warning restore CA1062 // Validate arguments of public methods
+
+        /// <summary>
+        /// Converts API flags to a list of enums.
+        /// </summary>
+        /// <returns>The enum.</returns>
+        public List<ApiEnum<T>> ToList() => this;
 
         /// <inheritdoc />
         public override bool Equals(object? obj) =>

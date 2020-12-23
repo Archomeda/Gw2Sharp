@@ -28,6 +28,11 @@ namespace Gw2Sharp.WebApi.V2.Models
         public string Suffix { get; set; } = string.Empty;
 
         /// <summary>
+        /// The item attribute adjustment value.
+        /// </summary>
+        public double AttributeAdjustment { get; set; }
+
+        /// <summary>
         /// The item infix upgrade.
         /// If the item does not have a infix upgrade, this value is <c>null</c>.
         /// </summary>

@@ -1,0 +1,28 @@
+{
+  "id": 2,
+  "name": "Wachenschinder",
+  "description": "Erhöht den Schaden an feindlichen Wachen",
+  "icon": "https://render.guildwars2.com/file/C5E6E906927E2C6311036C11F1306CCF57CBF259/544537.png",
+  "ranks": [
+    {
+      "cost": 1,
+      "effect": "4 % Schaden an Wachen"
+    },
+    {
+      "cost": 3,
+      "effect": "8 % Schaden (gesamt) an Wachen"
+    },
+    {
+      "cost": 6,
+      "effect": "12 % Schaden (gesamt) an Wachen"
+    },
+    {
+      "cost": 10,
+      "effect": "16 % Schaden (gesamt) an Wachen. Alle Wachenschinder-Boni wirken nun auch bei gegnerischen Herren und Aufsehern."
+    },
+    {
+      "cost": 15,
+      "effect": "20 % Schaden (gesamt) an Wachen, Herren und Aufsehern. Erhaltet 50 % Eurer Ausdauer zurück, wenn Ihr Wachen, Herren oder Aufseher tötet."
+    }
+  ]
+}

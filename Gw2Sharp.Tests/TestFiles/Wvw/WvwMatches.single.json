@@ -1,0 +1,3344 @@
+{
+  "id": "2-1",
+  "start_time": "2020-12-04T18:00:00Z",
+  "end_time": "2020-12-11T17:58:00Z",
+  "scores": {
+    "red": 301196,
+    "blue": 278689,
+    "green": 261388
+  },
+  "worlds": {
+    "red": 2007,
+    "blue": 2202,
+    "green": 2010
+  },
+  "all_worlds": {
+    "red": [
+      2005,
+      2007
+    ],
+    "blue": [
+      2001,
+      2202
+    ],
+    "green": [
+      2004,
+      2010
+    ]
+  },
+  "deaths": {
+    "red": 36377,
+    "blue": 25020,
+    "green": 32611
+  },
+  "kills": {
+    "red": 33428,
+    "blue": 31074,
+    "green": 25947
+  },
+  "victory_points": {
+    "red": 196,
+    "blue": 184,
+    "green": 184
+  },
+  "skirmishes": [
+    {
+      "id": 1,
+      "scores": {
+        "red": 8567,
+        "blue": 7969,
+        "green": 6328
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 1488,
+            "blue": 3621,
+            "green": 2245
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 2488,
+            "blue": 1530,
+            "green": 1613
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 2448,
+            "blue": 1826,
+            "green": 1800
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2143,
+            "blue": 992,
+            "green": 670
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "scores": {
+        "red": 7809,
+        "blue": 7727,
+        "green": 7898
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2184,
+            "blue": 3799,
+            "green": 2799
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 1196,
+            "blue": 1380,
+            "green": 1600
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 2058,
+            "blue": 1711,
+            "green": 1876
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2371,
+            "blue": 837,
+            "green": 1623
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "scores": {
+        "red": 7779,
+        "blue": 6355,
+        "green": 7018
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 3191,
+            "blue": 4266,
+            "green": 2872
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 840,
+            "blue": 1284,
+            "green": 1003
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 790,
+            "blue": 457,
+            "green": 2228
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2958,
+            "blue": 348,
+            "green": 915
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "scores": {
+        "red": 5035,
+        "blue": 4729,
+        "green": 5515
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 1718,
+            "blue": 2230,
+            "green": 2352
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 345,
+            "blue": 1931,
+            "green": 599
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 544,
+            "blue": 368,
+            "green": 2097
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2428,
+            "blue": 200,
+            "green": 467
+          }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "scores": {
+        "red": 5438,
+        "blue": 3551,
+        "green": 4435
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 1960,
+            "blue": 1511,
+            "green": 2116
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 506,
+            "blue": 1561,
+            "green": 354
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 506,
+            "blue": 148,
+            "green": 1779
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2466,
+            "blue": 331,
+            "green": 186
+          }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "scores": {
+        "red": 5611,
+        "blue": 5887,
+        "green": 1077
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 1833,
+            "blue": 2728,
+            "green": 195
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 151,
+            "blue": 2325,
+            "green": 80
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 1460,
+            "blue": 172,
+            "green": 740
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2167,
+            "blue": 662,
+            "green": 62
+          }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "scores": {
+        "red": 4324,
+        "blue": 5557,
+        "green": 3537
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 1831,
+            "blue": 2117,
+            "green": 1321
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 240,
+            "blue": 2764,
+            "green": 251
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 351,
+            "blue": 231,
+            "green": 1735
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 1902,
+            "blue": 445,
+            "green": 230
+          }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "scores": {
+        "red": 5795,
+        "blue": 5852,
+        "green": 4838
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2175,
+            "blue": 2803,
+            "green": 2134
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 770,
+            "blue": 2384,
+            "green": 732
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 771,
+            "blue": 383,
+            "green": 1622
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2079,
+            "blue": 282,
+            "green": 350
+          }
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "scores": {
+        "red": 5860,
+        "blue": 6636,
+        "green": 6475
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2861,
+            "blue": 3441,
+            "green": 3130
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 1045,
+            "blue": 2057,
+            "green": 867
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 574,
+            "blue": 384,
+            "green": 1931
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 1380,
+            "blue": 754,
+            "green": 547
+          }
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "scores": {
+        "red": 6026,
+        "blue": 6443,
+        "green": 6934
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2726,
+            "blue": 3727,
+            "green": 2740
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 838,
+            "blue": 1892,
+            "green": 1562
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 579,
+            "blue": 455,
+            "green": 2069
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 1883,
+            "blue": 369,
+            "green": 563
+          }
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "scores": {
+        "red": 6543,
+        "blue": 6086,
+        "green": 7854
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2824,
+            "blue": 3643,
+            "green": 3456
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 523,
+            "blue": 1657,
+            "green": 1783
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 635,
+            "blue": 410,
+            "green": 2084
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2561,
+            "blue": 376,
+            "green": 531
+          }
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "scores": {
+        "red": 6330,
+        "blue": 6317,
+        "green": 6638
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2141,
+            "blue": 4219,
+            "green": 2498
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 1126,
+            "blue": 1398,
+            "green": 1195
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 657,
+            "blue": 375,
+            "green": 2296
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2406,
+            "blue": 325,
+            "green": 649
+          }
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "scores": {
+        "red": 6929,
+        "blue": 6954,
+        "green": 7653
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2345,
+            "blue": 3371,
+            "green": 3022
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 757,
+            "blue": 1997,
+            "green": 1435
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 1345,
+            "blue": 1128,
+            "green": 2501
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2482,
+            "blue": 458,
+            "green": 695
+          }
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "scores": {
+        "red": 9805,
+        "blue": 8202,
+        "green": 7304
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 3051,
+            "blue": 3057,
+            "green": 2450
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 2191,
+            "blue": 2732,
+            "green": 1862
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 1704,
+            "blue": 1837,
+            "green": 1969
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2859,
+            "blue": 576,
+            "green": 1023
+          }
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "scores": {
+        "red": 8366,
+        "blue": 6360,
+        "green": 6792
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 4191,
+            "blue": 3657,
+            "green": 2796
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 1061,
+            "blue": 1762,
+            "green": 1369
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 570,
+            "blue": 469,
+            "green": 2072
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2544,
+            "blue": 472,
+            "green": 555
+          }
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "scores": {
+        "red": 5682,
+        "blue": 5656,
+        "green": 5489
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2309,
+            "blue": 3333,
+            "green": 2234
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 222,
+            "blue": 1527,
+            "green": 1241
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 583,
+            "blue": 486,
+            "green": 1651
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2568,
+            "blue": 310,
+            "green": 363
+          }
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "scores": {
+        "red": 5209,
+        "blue": 2830,
+        "green": 4729
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 1661,
+            "blue": 1601,
+            "green": 1716
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 520,
+            "blue": 848,
+            "green": 1172
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 290,
+            "blue": 269,
+            "green": 1516
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2738,
+            "blue": 112,
+            "green": 325
+          }
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "scores": {
+        "red": 4604,
+        "blue": 5135,
+        "green": 3364
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2111,
+            "blue": 1719,
+            "green": 1420
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 264,
+            "blue": 1851,
+            "green": 315
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 320,
+            "blue": 962,
+            "green": 1202
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 1909,
+            "blue": 603,
+            "green": 427
+          }
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "scores": {
+        "red": 4249,
+        "blue": 6412,
+        "green": 3498
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 1815,
+            "blue": 1985,
+            "green": 1331
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 224,
+            "blue": 2398,
+            "green": 406
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 265,
+            "blue": 1501,
+            "green": 1376
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 1945,
+            "blue": 528,
+            "green": 385
+          }
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "scores": {
+        "red": 6266,
+        "blue": 5200,
+        "green": 4369
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2521,
+            "blue": 1514,
+            "green": 1500
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 607,
+            "blue": 2425,
+            "green": 520
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 815,
+            "blue": 596,
+            "green": 1846
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2323,
+            "blue": 665,
+            "green": 503
+          }
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "scores": {
+        "red": 7476,
+        "blue": 5823,
+        "green": 4524
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 3141,
+            "blue": 2219,
+            "green": 1833
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 607,
+            "blue": 2404,
+            "green": 559
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 1166,
+            "blue": 750,
+            "green": 1763
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2562,
+            "blue": 450,
+            "green": 369
+          }
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "scores": {
+        "red": 7985,
+        "blue": 8655,
+        "green": 5199
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 3093,
+            "blue": 3102,
+            "green": 1748
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 626,
+            "blue": 2619,
+            "green": 781
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 1642,
+            "blue": 2454,
+            "green": 2211
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2624,
+            "blue": 480,
+            "green": 459
+          }
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "scores": {
+        "red": 9529,
+        "blue": 8058,
+        "green": 5504
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 3069,
+            "blue": 2215,
+            "green": 2532
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 1434,
+            "blue": 3407,
+            "green": 603
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 2264,
+            "blue": 1884,
+            "green": 1874
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2762,
+            "blue": 552,
+            "green": 495
+          }
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "scores": {
+        "red": 8491,
+        "blue": 8877,
+        "green": 5512
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 3071,
+            "blue": 3236,
+            "green": 2352
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 782,
+            "blue": 2494,
+            "green": 759
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 1650,
+            "blue": 2696,
+            "green": 2013
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2988,
+            "blue": 451,
+            "green": 388
+          }
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "scores": {
+        "red": 9251,
+        "blue": 9018,
+        "green": 5465
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2892,
+            "blue": 2472,
+            "green": 2169
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 916,
+            "blue": 3279,
+            "green": 1233
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 2027,
+            "blue": 2344,
+            "green": 1521
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 3416,
+            "blue": 923,
+            "green": 542
+          }
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "scores": {
+        "red": 11441,
+        "blue": 6466,
+        "green": 7304
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 3583,
+            "blue": 2300,
+            "green": 2362
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 1409,
+            "blue": 2847,
+            "green": 1223
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 3001,
+            "blue": 965,
+            "green": 2503
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 3448,
+            "blue": 354,
+            "green": 1216
+          }
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "scores": {
+        "red": 8202,
+        "blue": 4627,
+        "green": 5744
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 3233,
+            "blue": 1913,
+            "green": 1945
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 528,
+            "blue": 2192,
+            "green": 618
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 1818,
+            "blue": 227,
+            "green": 2622
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2623,
+            "blue": 295,
+            "green": 559
+          }
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "scores": {
+        "red": 7214,
+        "blue": 3845,
+        "green": 4010
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 3162,
+            "blue": 1418,
+            "green": 1495
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 325,
+            "blue": 1950,
+            "green": 511
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 1702,
+            "blue": 163,
+            "green": 1639
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2025,
+            "blue": 314,
+            "green": 365
+          }
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "scores": {
+        "red": 6917,
+        "blue": 3115,
+        "green": 3262
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 3240,
+            "blue": 903,
+            "green": 659
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 225,
+            "blue": 2014,
+            "green": 448
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 1110,
+            "blue": 129,
+            "green": 1767
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2342,
+            "blue": 69,
+            "green": 388
+          }
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "scores": {
+        "red": 4803,
+        "blue": 5551,
+        "green": 3096
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2163,
+            "blue": 2234,
+            "green": 849
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 135,
+            "blue": 2542,
+            "green": 252
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 529,
+            "blue": 266,
+            "green": 1697
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 1976,
+            "blue": 509,
+            "green": 298
+          }
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "scores": {
+        "red": 4676,
+        "blue": 5177,
+        "green": 5066
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2006,
+            "blue": 1946,
+            "green": 1879
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 247,
+            "blue": 2671,
+            "green": 460
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 470,
+            "blue": 171,
+            "green": 2193
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 1953,
+            "blue": 389,
+            "green": 534
+          }
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "scores": {
+        "red": 4805,
+        "blue": 5812,
+        "green": 4811
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 1869,
+            "blue": 2117,
+            "green": 1912
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 211,
+            "blue": 2597,
+            "green": 440
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 779,
+            "blue": 508,
+            "green": 1763
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 1946,
+            "blue": 590,
+            "green": 696
+          }
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "scores": {
+        "red": 5282,
+        "blue": 5853,
+        "green": 4981
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2427,
+            "blue": 2196,
+            "green": 1668
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 389,
+            "blue": 2779,
+            "green": 1056
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 394,
+            "blue": 427,
+            "green": 1926
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2072,
+            "blue": 451,
+            "green": 331
+          }
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "scores": {
+        "red": 5660,
+        "blue": 4590,
+        "green": 4957
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2750,
+            "blue": 1475,
+            "green": 1937
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 343,
+            "blue": 2172,
+            "green": 621
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 685,
+            "blue": 466,
+            "green": 1893
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 1882,
+            "blue": 477,
+            "green": 506
+          }
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "scores": {
+        "red": 5946,
+        "blue": 6886,
+        "green": 5357
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2618,
+            "blue": 3543,
+            "green": 2068
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 659,
+            "blue": 2292,
+            "green": 762
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 817,
+            "blue": 428,
+            "green": 2161
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 1852,
+            "blue": 623,
+            "green": 366
+          }
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "scores": {
+        "red": 6809,
+        "blue": 5733,
+        "green": 6075
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2265,
+            "blue": 2484,
+            "green": 2096
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 728,
+            "blue": 2248,
+            "green": 729
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 1524,
+            "blue": 620,
+            "green": 2846
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2292,
+            "blue": 381,
+            "green": 404
+          }
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "scores": {
+        "red": 6856,
+        "blue": 7521,
+        "green": 7807
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 3068,
+            "blue": 2397,
+            "green": 2398
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 844,
+            "blue": 3264,
+            "green": 1497
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 853,
+            "blue": 866,
+            "green": 3111
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2091,
+            "blue": 994,
+            "green": 801
+          }
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "scores": {
+        "red": 7290,
+        "blue": 6355,
+        "green": 7795
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2660,
+            "blue": 2414,
+            "green": 2358
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 1259,
+            "blue": 2429,
+            "green": 1881
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 1267,
+            "blue": 861,
+            "green": 2786
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 2104,
+            "blue": 651,
+            "green": 770
+          }
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "scores": {
+        "red": 6905,
+        "blue": 4717,
+        "green": 5960
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2973,
+            "blue": 1808,
+            "green": 2062
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 1614,
+            "blue": 1795,
+            "green": 1127
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 869,
+            "blue": 456,
+            "green": 2323
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 1449,
+            "blue": 658,
+            "green": 448
+          }
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "scores": {
+        "red": 4763,
+        "blue": 4416,
+        "green": 5269
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2965,
+            "blue": 1536,
+            "green": 2187
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 974,
+            "blue": 1457,
+            "green": 388
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 307,
+            "blue": 341,
+            "green": 2180
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 517,
+            "blue": 1082,
+            "green": 514
+          }
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "scores": {
+        "red": 4650,
+        "blue": 3265,
+        "green": 5740
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2411,
+            "blue": 1447,
+            "green": 1837
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 828,
+            "blue": 1206,
+            "green": 671
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 339,
+            "blue": 199,
+            "green": 2244
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 1072,
+            "blue": 413,
+            "green": 988
+          }
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "scores": {
+        "red": 3529,
+        "blue": 4845,
+        "green": 4863
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 1641,
+            "blue": 1962,
+            "green": 1804
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 125,
+            "blue": 2127,
+            "green": 478
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 209,
+            "blue": 426,
+            "green": 2062
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 1554,
+            "blue": 330,
+            "green": 519
+          }
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "scores": {
+        "red": 3374,
+        "blue": 4761,
+        "green": 5613
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 1514,
+            "blue": 1703,
+            "green": 2511
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 197,
+            "blue": 2072,
+            "green": 443
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 418,
+            "blue": 323,
+            "green": 2067
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 1245,
+            "blue": 663,
+            "green": 592
+          }
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "scores": {
+        "red": 3672,
+        "blue": 5119,
+        "green": 5815
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 1885,
+            "blue": 1955,
+            "green": 2606
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 245,
+            "blue": 2221,
+            "green": 427
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 268,
+            "blue": 564,
+            "green": 1964
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 1274,
+            "blue": 379,
+            "green": 818
+          }
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "scores": {
+        "red": 4996,
+        "blue": 5580,
+        "green": 4616
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2099,
+            "blue": 2006,
+            "green": 1974
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 399,
+            "blue": 2166,
+            "green": 512
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 1370,
+            "blue": 803,
+            "green": 1541
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 1128,
+            "blue": 605,
+            "green": 589
+          }
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "scores": {
+        "red": 5095,
+        "blue": 6347,
+        "green": 5176
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2495,
+            "blue": 3380,
+            "green": 1972
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 382,
+            "blue": 2175,
+            "green": 572
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 835,
+            "blue": 324,
+            "green": 1856
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 1383,
+            "blue": 468,
+            "green": 776
+          }
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "scores": {
+        "red": 5864,
+        "blue": 5691,
+        "green": 6947
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 2541,
+            "blue": 3427,
+            "green": 2395
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 404,
+            "blue": 1746,
+            "green": 1245
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 983,
+            "blue": 250,
+            "green": 2761
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 1936,
+            "blue": 268,
+            "green": 546
+          }
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "scores": {
+        "red": 3488,
+        "blue": 2128,
+        "green": 3175
+      },
+      "map_scores": [
+        {
+          "type": "Center",
+          "scores": {
+            "red": 1154,
+            "blue": 1011,
+            "green": 1155
+          }
+        },
+        {
+          "type": "BlueHome",
+          "scores": {
+            "red": 231,
+            "blue": 837,
+            "green": 581
+          }
+        },
+        {
+          "type": "GreenHome",
+          "scores": {
+            "red": 623,
+            "blue": 123,
+            "green": 1340
+          }
+        },
+        {
+          "type": "RedHome",
+          "scores": {
+            "red": 1480,
+            "blue": 157,
+            "green": 99
+          }
+        }
+      ]
+    }
+  ],
+  "maps": [
+    {
+      "id": 38,
+      "type": "Center",
+      "scores": {
+        "red": 118924,
+        "blue": 119161,
+        "green": 99090
+      },
+      "bonuses": [],
+      "objectives": [
+        {
+          "id": "38-131",
+          "type": "Spawn",
+          "owner": "Green",
+          "last_flipped": "2020-12-04T18:03:54Z",
+          "points_tick": 0,
+          "points_capture": 0
+        },
+        {
+          "id": "38-20",
+          "type": "Tower",
+          "owner": "Red",
+          "last_flipped": "2020-12-06T07:00:01Z",
+          "claimed_by": "B0050D16-6CE3-E311-88E3-AC162DC0E835",
+          "claimed_at": "2020-12-07T20:28:10Z",
+          "points_tick": 10,
+          "points_capture": 10,
+          "yaks_delivered": 140,
+          "guild_upgrades": [
+            583,
+            147,
+            559,
+            513,
+            590,
+            306
+          ]
+        },
+        {
+          "id": "38-10",
+          "type": "Camp",
+          "owner": "Green",
+          "last_flipped": "2020-12-08T15:28:44Z",
+          "claimed_by": "03D85780-98A2-E511-80D3-E83935B5B448",
+          "claimed_at": "2020-12-08T15:35:50Z",
+          "points_tick": 4,
+          "points_capture": 4,
+          "yaks_delivered": 104,
+          "guild_upgrades": []
+        },
+        {
+          "id": "38-9",
+          "type": "Castle",
+          "owner": "Red",
+          "last_flipped": "2020-12-08T16:26:10Z",
+          "claimed_by": "CEEEA982-E8B5-E411-A278-AC162DC0070D",
+          "claimed_at": "2020-12-08T16:26:13Z",
+          "points_tick": 12,
+          "points_capture": 12,
+          "yaks_delivered": 1,
+          "guild_upgrades": []
+        },
+        {
+          "id": "38-4",
+          "type": "Camp",
+          "owner": "Green",
+          "last_flipped": "2020-12-08T16:45:59Z",
+          "claimed_by": null,
+          "claimed_at": null,
+          "points_tick": 2,
+          "points_capture": 2,
+          "yaks_delivered": 9,
+          "guild_upgrades": []
+        },
+        {
+          "id": "38-6",
+          "type": "Camp",
+          "owner": "Green",
+          "last_flipped": "2020-12-08T16:53:29Z",
+          "claimed_by": null,
+          "claimed_at": null,
+          "points_tick": 2,
+          "points_capture": 2,
+          "yaks_delivered": 0,
+          "guild_upgrades": []
+        },
+        {
+          "id": "38-124",
+          "type": "Spawn",
+          "owner": "Red",
+          "last_flipped": "2020-12-04T18:03:54Z",
+          "points_tick": 0,
+          "points_capture": 0
+        },
+        {
+          "id": "38-11",
+          "type": "Tower",
+          "owner": "Green",
+          "last_flipped": "2020-12-08T00:43:15Z",
+          "claimed_by": "17CE3E82-AD13-E911-81A8-F161567B2263",
+          "claimed_at": "2020-12-08T00:43:33Z",
+          "points_tick": 10,
+          "points_capture": 10,
+          "yaks_delivered": 140,
+          "guild_upgrades": [
+            583,
+            329,
+            483,
+            178,
+            590,
+            306
+          ]
+        },
+        {
+          "id": "38-12",
+          "type": "Tower",
+          "owner": "Green",
+          "last_flipped": "2020-12-07T23:37:42Z",
+          "claimed_by": "A1EE560A-D374-E511-A2AD-AC162DC0A8ED",
+          "claimed_at": "2020-12-08T00:47:29Z",
+          "points_tick": 10,
+          "points_capture": 10,
+          "yaks_delivered": 140,
+          "guild_upgrades": [
+            583,
+            329,
+            483,
+            178,
+            590,
+            389
+          ]
+        },
+        {
+          "id": "38-5",
+          "type": "Camp",
+          "owner": "Red",
+          "last_flipped": "2020-12-08T16:50:16Z",
+          "claimed_by": "F847CF88-4E2E-E511-A2AD-AC162DC0A8ED",
+          "claimed_at": "2020-12-08T16:50:20Z",
+          "points_tick": 2,
+          "points_capture": 2,
+          "yaks_delivered": 6,
+          "guild_upgrades": []
+        },
+        {
+          "id": "38-16",
+          "type": "Tower",
+          "owner": "Blue",
+          "last_flipped": "2020-12-08T12:05:37Z",
+          "claimed_by": "AF9A4B6B-E4C1-43E3-93C4-EF905313DD8E",
+          "claimed_at": "2020-12-08T12:16:59Z",
+          "points_tick": 8,
+          "points_capture": 8,
+          "yaks_delivered": 96,
+          "guild_upgrades": [
+            583,
+            147,
+            483,
+            513,
+            590,
+            389
+          ]
+        },
+        {
+          "id": "38-8",
+          "type": "Camp",
+          "owner": "Blue",
+          "last_flipped": "2020-12-08T16:44:33Z",
+          "claimed_by": "2F23D369-8729-E511-AEFB-AC162DC05865",
+          "claimed_at": "2020-12-08T16:44:52Z",
+          "points_tick": 2,
+          "points_capture": 2,
+          "yaks_delivered": 10,
+          "guild_upgrades": []
+        },
+        {
+          "id": "38-1",
+          "type": "Keep",
+          "owner": "Red",
+          "last_flipped": "2020-12-06T01:52:30Z",
+          "claimed_by": "C1993C11-8695-E611-80D3-441EA14F1E40",
+          "claimed_at": "2020-12-06T15:09:46Z",
+          "points_tick": 20,
+          "points_capture": 20,
+          "yaks_delivered": 140,
+          "guild_upgrades": [
+            418,
+            147,
+            559,
+            178,
+            590,
+            389
+          ]
+        },
+        {
+          "id": "38-123",
+          "type": "Mercenary",
+          "owner": "Red",
+          "last_flipped": "2020-12-08T16:46:11Z",
+          "points_tick": 0,
+          "points_capture": 0
+        },
+        {
+          "id": "38-22",
+          "type": "Tower",
+          "owner": "Blue",
+          "last_flipped": "2020-12-08T01:35:53Z",
+          "claimed_by": "3C34FC0A-CFB2-4F43-A12C-FBDEDA2B836B",
+          "claimed_at": "2020-12-08T03:52:03Z",
+          "points_tick": 10,
+          "points_capture": 10,
+          "yaks_delivered": 140,
+          "guild_upgrades": [
+            583,
+            147,
+            559,
+            513,
+            590,
+            306
+          ]
+        },
+        {
+          "id": "38-126",
+          "type": "Mercenary",
+          "owner": "Green",
+          "last_flipped": "2020-12-08T14:51:19Z",
+          "points_tick": 0,
+          "points_capture": 0
+        },
+        {
+          "id": "38-17",
+          "type": "Tower",
+          "owner": "Red",
+          "last_flipped": "2020-12-08T04:21:44Z",
+          "claimed_by": "841D0110-957F-E311-88E3-AC162DC0E835",
+          "claimed_at": "2020-12-08T04:21:49Z",
+          "points_tick": 10,
+          "points_capture": 10,
+          "yaks_delivered": 140,
+          "guild_upgrades": [
+            583,
+            329,
+            559,
+            513,
+            590,
+            306
+          ]
+        },
+        {
+          "id": "38-14",
+          "type": "Tower",
+          "owner": "Green",
+          "last_flipped": "2020-12-08T12:02:31Z",
+          "claimed_by": "9B665122-BA17-480A-9ECE-308992D1BE20",
+          "claimed_at": "2020-12-08T12:10:17Z",
+          "points_tick": 10,
+          "points_capture": 10,
+          "yaks_delivered": 140,
+          "guild_upgrades": [
+            183,
+            329,
+            559,
+            178,
+            590
+          ]
+        },
+        {
+          "id": "38-125",
+          "type": "Mercenary",
+          "owner": "Red",
+          "last_flipped": "2020-12-08T16:53:21Z",
+          "points_tick": 0,
+          "points_capture": 0
+        },
+        {
+          "id": "38-19",
+          "type": "Tower",
+          "owner": "Red",
+          "last_flipped": "2020-12-08T15:13:28Z",
+          "claimed_by": "52E59078-0AF4-E411-925A-AC162DAE5AD5",
+          "claimed_at": "2020-12-08T15:14:04Z",
+          "points_tick": 6,
+          "points_capture": 6,
+          "yaks_delivered": 47,
+          "guild_upgrades": [
+            583,
+            147,
+            483,
+            513,
+            590,
+            306
+          ]
+        },
+        {
+          "id": "38-3",
+          "type": "Keep",
+          "owner": "Green",
+          "last_flipped": "2020-12-07T04:50:35Z",
+          "claimed_by": "8BCFA258-DB43-478E-B8B6-3A05F58A82FC",
+          "claimed_at": "2020-12-07T04:50:43Z",
+          "points_tick": 20,
+          "points_capture": 20,
+          "yaks_delivered": 140,
+          "guild_upgrades": [
+            418,
+            147,
+            483,
+            178,
+            590,
+            389
+          ]
+        },
+        {
+          "id": "38-130",
+          "type": "Spawn",
+          "owner": "Blue",
+          "last_flipped": "2020-12-04T18:03:54Z",
+          "points_tick": 0,
+          "points_capture": 0
+        },
+        {
+          "id": "38-21",
+          "type": "Tower",
+          "owner": "Blue",
+          "last_flipped": "2020-12-08T16:35:36Z",
+          "claimed_by": "5501E20E-5BDC-E411-A278-AC162DC0070D",
+          "claimed_at": "2020-12-08T16:35:40Z",
+          "points_tick": 4,
+          "points_capture": 4,
+          "yaks_delivered": 4,
+          "guild_upgrades": []
+        },
+        {
+          "id": "38-18",
+          "type": "Tower",
+          "owner": "Red",
+          "last_flipped": "2020-12-08T15:24:04Z",
+          "claimed_by": "ED47ACDB-D884-E411-A3E6-AC162DC0E835",
+          "claimed_at": "2020-12-08T16:03:01Z",
+          "points_tick": 4,
+          "points_capture": 4,
+          "yaks_delivered": 6,
+          "guild_upgrades": [
+            306
+          ]
+        },
+        {
+          "id": "38-2",
+          "type": "Keep",
+          "owner": "Blue",
+          "last_flipped": "2020-12-07T03:07:23Z",
+          "claimed_by": "1C857F8A-B2B3-E311-BE98-E4115BDFC985",
+          "claimed_at": "2020-12-07T03:07:27Z",
+          "points_tick": 20,
+          "points_capture": 20,
+          "yaks_delivered": 140,
+          "guild_upgrades": [
+            418,
+            147,
+            559,
+            513,
+            590,
+            389
+          ]
+        },
+        {
+          "id": "38-7",
+          "type": "Camp",
+          "owner": "Blue",
+          "last_flipped": "2020-12-08T16:25:51Z",
+          "claimed_by": "40B5BE13-AF0C-E611-80D3-AC162DC085C0",
+          "claimed_at": "2020-12-08T16:30:56Z",
+          "points_tick": 3,
+          "points_capture": 3,
+          "yaks_delivered": 31,
+          "guild_upgrades": []
+        },
+        {
+          "id": "38-13",
+          "type": "Tower",
+          "owner": "Green",
+          "last_flipped": "2020-12-08T11:57:47Z",
+          "claimed_by": "1FBD6FD5-F4A6-E411-A3E6-AC162DC0E835",
+          "claimed_at": "2020-12-08T12:03:01Z",
+          "points_tick": 10,
+          "points_capture": 10,
+          "yaks_delivered": 140,
+          "guild_upgrades": [
+            329,
+            559,
+            590,
+            389
+          ]
+        },
+        {
+          "id": "38-15",
+          "type": "Tower",
+          "owner": "Blue",
+          "last_flipped": "2020-12-08T12:03:40Z",
+          "claimed_by": "FB3BC82D-ADDC-4BC0-938D-AAE5026B537E",
+          "claimed_at": "2020-12-08T12:05:57Z",
+          "points_tick": 8,
+          "points_capture": 8,
+          "yaks_delivered": 127,
+          "guild_upgrades": [
+            583,
+            483,
+            306
+          ]
+        }
+      ],
+      "deaths": {
+        "red": 14857,
+        "blue": 9927,
+        "green": 12038
+      },
+      "kills": {
+        "red": 13071,
+        "blue": 14924,
+        "green": 7994
+      }
+    },
+    {
+      "id": 96,
+      "type": "BlueHome",
+      "scores": {
+        "red": 32980,
+        "blue": 101705,
+        "green": 40836
+      },
+      "bonuses": [
+        {
+          "type": "Bloodlust",
+          "owner": "Green"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "96-53",
+          "type": "Camp",
+          "owner": "Red",
+          "last_flipped": "2020-12-08T16:51:09Z",
+          "claimed_by": "C6AC72BB-8D5E-4163-96A1-A8E8A801CB42",
+          "claimed_at": "2020-12-08T16:51:44Z",
+          "points_tick": 2,
+          "points_capture": 2,
+          "yaks_delivered": 2,
+          "guild_upgrades": []
+        },
+        {
+          "id": "96-40",
+          "type": "Tower",
+          "owner": "Blue",
+          "last_flipped": "2020-12-07T23:09:22Z",
+          "claimed_by": "0CF09357-FB85-4E67-A535-CA24FE4B188D",
+          "claimed_at": "2020-12-07T23:09:43Z",
+          "points_tick": 10,
+          "points_capture": 10,
+          "yaks_delivered": 140,
+          "guild_upgrades": [
+            583,
+            147,
+            483,
+            513,
+            590,
+            306
+          ]
+        },
+        {
+          "id": "96-35",
+          "type": "Tower",
+          "owner": "Red",
+          "last_flipped": "2020-12-08T16:17:05Z",
+          "claimed_by": "7B5A534F-EA4D-4F7E-809D-5D144F7D339B",
+          "claimed_at": "2020-12-08T16:18:16Z",
+          "points_tick": 4,
+          "points_capture": 4,
+          "yaks_delivered": 4,
+          "guild_upgrades": []
+        },
+        {
+          "id": "96-36",
+          "type": "Tower",
+          "owner": "Green",
+          "last_flipped": "2020-12-08T11:29:27Z",
+          "claimed_by": "4FBF8489-5FAF-4FD2-B7C6-EB6C187078F9",
+          "claimed_at": "2020-12-08T11:29:46Z",
+          "points_tick": 8,
+          "points_capture": 8,
+          "yaks_delivered": 126,
+          "guild_upgrades": [
+            583,
+            147,
+            483,
+            178,
+            590,
+            389
+          ]
+        },
+        {
+          "id": "96-33",
+          "type": "Keep",
+          "owner": "Blue",
+          "last_flipped": "2020-12-08T15:33:00Z",
+          "claimed_by": "EF791FEC-20AA-4295-A406-14F13300EA7C",
+          "claimed_at": "2020-12-08T15:33:03Z",
+          "points_tick": 8,
+          "points_capture": 8,
+          "yaks_delivered": 11,
+          "guild_upgrades": [
+            418,
+            147,
+            559,
+            178,
+            590,
+            306
+          ]
+        },
+        {
+          "id": "96-111",
+          "type": "Spawn",
+          "owner": "Blue",
+          "last_flipped": "2020-12-04T18:04:01Z",
+          "points_tick": 0,
+          "points_capture": 0
+        },
+        {
+          "id": "96-64",
+          "type": "Ruins",
+          "owner": "Green",
+          "last_flipped": "2020-12-08T16:43:27Z",
+          "points_tick": 0,
+          "points_capture": 0
+        },
+        {
+          "id": "96-39",
+          "type": "Camp",
+          "owner": "Blue",
+          "last_flipped": "2020-12-08T16:51:57Z",
+          "claimed_by": null,
+          "claimed_at": null,
+          "points_tick": 2,
+          "points_capture": 2,
+          "yaks_delivered": 0,
+          "guild_upgrades": []
+        },
+        {
+          "id": "96-52",
+          "type": "Camp",
+          "owner": "Green",
+          "last_flipped": "2020-12-08T16:54:26Z",
+          "claimed_by": "75945181-D443-47DF-AFD8-6492D6B23D83",
+          "claimed_at": "2020-12-08T16:54:31Z",
+          "points_tick": 2,
+          "points_capture": 2,
+          "yaks_delivered": 0,
+          "guild_upgrades": []
+        },
+        {
+          "id": "96-66",
+          "type": "Ruins",
+          "owner": "Green",
+          "last_flipped": "2020-12-08T15:12:10Z",
+          "points_tick": 0,
+          "points_capture": 0
+        },
+        {
+          "id": "96-112",
+          "type": "Spawn",
+          "owner": "Red",
+          "last_flipped": "2020-12-04T18:04:01Z",
+          "points_tick": 0,
+          "points_capture": 0
+        },
+        {
+          "id": "96-34",
+          "type": "Camp",
+          "owner": "Green",
+          "last_flipped": "2020-12-08T16:52:03Z",
+          "claimed_by": null,
+          "claimed_at": null,
+          "points_tick": 2,
+          "points_capture": 2,
+          "yaks_delivered": 0,
+          "guild_upgrades": []
+        },
+        {
+          "id": "96-32",
+          "type": "Keep",
+          "owner": "Green",
+          "last_flipped": "2020-12-08T12:54:14Z",
+          "claimed_by": "CE11B8C6-EA86-E311-9621-AC162DAE8ACD",
+          "claimed_at": "2020-12-08T12:54:16Z",
+          "points_tick": 16,
+          "points_capture": 16,
+          "yaks_delivered": 97,
+          "guild_upgrades": [
+            418,
+            147,
+            483,
+            178,
+            590,
+            306
+          ]
+        },
+        {
+          "id": "96-62",
+          "type": "Ruins",
+          "owner": "Green",
+          "last_flipped": "2020-12-08T16:47:25Z",
+          "points_tick": 0,
+          "points_capture": 0
+        },
+        {
+          "id": "96-51",
+          "type": "Camp",
+          "owner": "Blue",
+          "last_flipped": "2020-12-08T16:54:51Z",
+          "claimed_by": "FFD3DD47-9EC1-45FC-9D42-795FC999687F",
+          "claimed_at": "2020-12-08T16:55:09Z",
+          "points_tick": 2,
+          "points_capture": 2,
+          "yaks_delivered": 0,
+          "guild_upgrades": []
+        },
+        {
+          "id": "96-37",
+          "type": "Keep",
+          "owner": "Blue",
+          "last_flipped": "2020-12-08T00:02:44Z",
+          "claimed_by": "B13A22E6-20CB-462B-8495-CBD4AFB6D90A",
+          "claimed_at": "2020-12-08T00:03:01Z",
+          "points_tick": 20,
+          "points_capture": 20,
+          "yaks_delivered": 140,
+          "guild_upgrades": [
+            418,
+            147,
+            483,
+            178,
+            590,
+            389
+          ]
+        },
+        {
+          "id": "96-103",
+          "type": "Spawn",
+          "owner": "Green",
+          "last_flipped": "2020-12-04T18:04:01Z",
+          "points_tick": 0,
+          "points_capture": 0
+        },
+        {
+          "id": "96-65",
+          "type": "Ruins",
+          "owner": "Green",
+          "last_flipped": "2020-12-08T16:24:04Z",
+          "points_tick": 0,
+          "points_capture": 0
+        },
+        {
+          "id": "96-38",
+          "type": "Tower",
+          "owner": "Blue",
+          "last_flipped": "2020-12-06T21:00:04Z",
+          "claimed_by": "E1FC7AB2-B880-42B6-B63B-C4A152904588",
+          "claimed_at": "2020-12-06T21:00:38Z",
+          "points_tick": 10,
+          "points_capture": 10,
+          "yaks_delivered": 140,
+          "guild_upgrades": [
+            583,
+            147,
+            483,
+            513,
+            590,
+            306
+          ]
+        },
+        {
+          "id": "96-50",
+          "type": "Camp",
+          "owner": "Green",
+          "last_flipped": "2020-12-08T15:34:55Z",
+          "claimed_by": "6BA2221C-F15A-E511-A2AD-AC162DC0A8ED",
+          "claimed_at": "2020-12-08T15:34:58Z",
+          "points_tick": 4,
+          "points_capture": 4,
+          "yaks_delivered": 132,
+          "guild_upgrades": [
+            383,
+            365
+          ]
+        },
+        {
+          "id": "96-63",
+          "type": "Ruins",
+          "owner": "Green",
+          "last_flipped": "2020-12-08T15:24:39Z",
+          "points_tick": 0,
+          "points_capture": 0
+        }
+      ],
+      "deaths": {
+        "red": 8198,
+        "blue": 6859,
+        "green": 6175
+      },
+      "kills": {
+        "red": 6939,
+        "blue": 6975,
+        "green": 6617
+      }
+    },
+    {
+      "id": 95,
+      "type": "GreenHome",
+      "scores": {
+        "red": 47184,
+        "blue": 34202,
+        "green": 95017
+      },
+      "bonuses": [
+        {
+          "type": "Bloodlust",
+          "owner": "Green"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "95-53",
+          "type": "Camp",
+          "owner": "Blue",
+          "last_flipped": "2020-12-08T16:51:30Z",
+          "claimed_by": null,
+          "claimed_at": null,
+          "points_tick": 2,
+          "points_capture": 2,
+          "yaks_delivered": 0,
+          "guild_upgrades": []
+        },
+        {
+          "id": "95-40",
+          "type": "Tower",
+          "owner": "Green",
+          "last_flipped": "2020-12-07T09:30:04Z",
+          "claimed_by": "DFA1F37B-57A0-E311-A8E7-AC162DAE5A05",
+          "claimed_at": "2020-12-07T09:30:20Z",
+          "points_tick": 10,
+          "points_capture": 10,
+          "yaks_delivered": 140,
+          "guild_upgrades": [
+            583,
+            147,
+            483,
+            513,
+            345,
+            306
+          ]
+        },
+        {
+          "id": "95-35",
+          "type": "Tower",
+          "owner": "Red",
+          "last_flipped": "2020-12-08T16:05:42Z",
+          "claimed_by": null,
+          "claimed_at": null,
+          "points_tick": 4,
+          "points_capture": 4,
+          "yaks_delivered": 1,
+          "guild_upgrades": []
+        },
+        {
+          "id": "95-36",
+          "type": "Tower",
+          "owner": "Green",
+          "last_flipped": "2020-12-08T16:49:01Z",
+          "claimed_by": null,
+          "claimed_at": null,
+          "points_tick": 4,
+          "points_capture": 4,
+          "yaks_delivered": 0,
+          "guild_upgrades": []
+        },
+        {
+          "id": "95-33",
+          "type": "Keep",
+          "owner": "Green",
+          "last_flipped": "2020-12-08T12:12:06Z",
+          "claimed_by": "C8A6ABC1-71C3-E411-AA11-AC162DAAE275",
+          "claimed_at": "2020-12-08T12:12:10Z",
+          "points_tick": 12,
+          "points_capture": 12,
+          "yaks_delivered": 35,
+          "guild_upgrades": [
+            418,
+            147,
+            559,
+            178,
+            590,
+            306
+          ]
+        },
+        {
+          "id": "95-111",
+          "type": "Spawn",
+          "owner": "Green",
+          "last_flipped": "2020-12-04T18:04:03Z",
+          "points_tick": 0,
+          "points_capture": 0
+        },
+        {
+          "id": "95-64",
+          "type": "Ruins",
+          "owner": "Green",
+          "last_flipped": "2020-12-08T16:32:56Z",
+          "points_tick": 0,
+          "points_capture": 0
+        },
+        {
+          "id": "95-39",
+          "type": "Camp",
+          "owner": "Green",
+          "last_flipped": "2020-12-08T16:52:10Z",
+          "claimed_by": "525EA510-B526-E711-80D3-E83935B5B448",
+          "claimed_at": "2020-12-08T16:52:15Z",
+          "points_tick": 2,
+          "points_capture": 2,
+          "yaks_delivered": 0,
+          "guild_upgrades": []
+        },
+        {
+          "id": "95-52",
+          "type": "Camp",
+          "owner": "Green",
+          "last_flipped": "2020-12-08T16:43:22Z",
+          "claimed_by": null,
+          "claimed_at": null,
+          "points_tick": 2,
+          "points_capture": 2,
+          "yaks_delivered": 4,
+          "guild_upgrades": []
+        },
+        {
+          "id": "95-66",
+          "type": "Ruins",
+          "owner": "Green",
+          "last_flipped": "2020-12-08T16:45:31Z",
+          "points_tick": 0,
+          "points_capture": 0
+        },
+        {
+          "id": "95-112",
+          "type": "Spawn",
+          "owner": "Blue",
+          "last_flipped": "2020-12-04T18:04:03Z",
+          "points_tick": 0,
+          "points_capture": 0
+        },
+        {
+          "id": "95-34",
+          "type": "Camp",
+          "owner": "Blue",
+          "last_flipped": "2020-12-08T16:55:13Z",
+          "claimed_by": null,
+          "claimed_at": null,
+          "points_tick": 2,
+          "points_capture": 2,
+          "yaks_delivered": 0,
+          "guild_upgrades": []
+        },
+        {
+          "id": "95-32",
+          "type": "Keep",
+          "owner": "Green",
+          "last_flipped": "2020-12-08T13:50:25Z",
+          "claimed_by": "5CEB6CD5-65ED-432E-88FC-ACF1F1310BFD",
+          "claimed_at": "2020-12-08T13:50:35Z",
+          "points_tick": 8,
+          "points_capture": 8,
+          "yaks_delivered": 17,
+          "guild_upgrades": [
+            418,
+            147,
+            559,
+            178,
+            590,
+            306
+          ]
+        },
+        {
+          "id": "95-62",
+          "type": "Ruins",
+          "owner": "Green",
+          "last_flipped": "2020-12-08T16:43:28Z",
+          "points_tick": 0,
+          "points_capture": 0
+        },
+        {
+          "id": "95-51",
+          "type": "Camp",
+          "owner": "Blue",
+          "last_flipped": "2020-12-08T16:51:03Z",
+          "claimed_by": "BEB84BB9-1E02-4DB5-8E63-52CFE678706F",
+          "claimed_at": "2020-12-08T16:51:07Z",
+          "points_tick": 2,
+          "points_capture": 2,
+          "yaks_delivered": 0,
+          "guild_upgrades": []
+        },
+        {
+          "id": "95-37",
+          "type": "Keep",
+          "owner": "Green",
+          "last_flipped": "2020-12-06T19:50:54Z",
+          "claimed_by": "4136858D-3C44-E511-A3E6-AC162DC0E835",
+          "claimed_at": "2020-12-06T19:50:58Z",
+          "points_tick": 20,
+          "points_capture": 20,
+          "yaks_delivered": 140,
+          "guild_upgrades": [
+            418,
+            147,
+            483,
+            178,
+            590,
+            389
+          ]
+        },
+        {
+          "id": "95-103",
+          "type": "Spawn",
+          "owner": "Red",
+          "last_flipped": "2020-12-04T18:04:03Z",
+          "points_tick": 0,
+          "points_capture": 0
+        },
+        {
+          "id": "95-65",
+          "type": "Ruins",
+          "owner": "Green",
+          "last_flipped": "2020-12-08T16:46:40Z",
+          "points_tick": 0,
+          "points_capture": 0
+        },
+        {
+          "id": "95-38",
+          "type": "Tower",
+          "owner": "Green",
+          "last_flipped": "2020-12-08T12:05:43Z",
+          "claimed_by": "3E773462-B5F9-E811-81A8-CD1049069AE5",
+          "claimed_at": "2020-12-08T12:06:15Z",
+          "points_tick": 6,
+          "points_capture": 6,
+          "yaks_delivered": 45,
+          "guild_upgrades": [
+            583,
+            329,
+            559,
+            513,
+            590,
+            389
+          ]
+        },
+        {
+          "id": "95-50",
+          "type": "Camp",
+          "owner": "Red",
+          "last_flipped": "2020-12-08T16:50:12Z",
+          "claimed_by": "B0050D16-6CE3-E311-88E3-AC162DC0E835",
+          "claimed_at": "2020-12-08T16:50:54Z",
+          "points_tick": 2,
+          "points_capture": 2,
+          "yaks_delivered": 0,
+          "guild_upgrades": []
+        },
+        {
+          "id": "95-63",
+          "type": "Ruins",
+          "owner": "Green",
+          "last_flipped": "2020-12-08T16:36:12Z",
+          "points_tick": 0,
+          "points_capture": 0
+        }
+      ],
+      "deaths": {
+        "red": 8953,
+        "blue": 5059,
+        "green": 10519
+      },
+      "kills": {
+        "red": 8023,
+        "blue": 7171,
+        "green": 8243
+      }
+    },
+    {
+      "id": 1099,
+      "type": "RedHome",
+      "scores": {
+        "red": 102108,
+        "blue": 23621,
+        "green": 26445
+      },
+      "bonuses": [
+        {
+          "type": "Bloodlust",
+          "owner": "Red"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "1099-116",
+          "type": "Camp",
+          "owner": "Red",
+          "last_flipped": "2020-12-08T16:54:14Z",
+          "claimed_by": null,
+          "claimed_at": null,
+          "points_tick": 2,
+          "points_capture": 2,
+          "yaks_delivered": 0,
+          "guild_upgrades": []
+        },
+        {
+          "id": "1099-118",
+          "type": "Ruins",
+          "owner": "Red",
+          "last_flipped": "2020-12-08T15:20:55Z",
+          "points_tick": 0,
+          "points_capture": 0
+        },
+        {
+          "id": "1099-114",
+          "type": "Keep",
+          "owner": "Red",
+          "last_flipped": "2020-12-08T13:47:05Z",
+          "claimed_by": "6384CBDE-D86A-E911-81A8-B942C6BB2B96",
+          "claimed_at": "2020-12-08T13:47:38Z",
+          "points_tick": 12,
+          "points_capture": 12,
+          "yaks_delivered": 44,
+          "guild_upgrades": [
+            418,
+            147,
+            559,
+            178,
+            590,
+            306
+          ]
+        },
+        {
+          "id": "1099-107",
+          "type": "Spawn",
+          "owner": "Blue",
+          "last_flipped": "2020-12-04T18:05:04Z",
+          "points_tick": 0,
+          "points_capture": 0
+        },
+        {
+          "id": "1099-99",
+          "type": "Camp",
+          "owner": "Red",
+          "last_flipped": "2020-12-08T14:59:35Z",
+          "claimed_by": "65FA6C7C-DF04-E611-80D3-E4115BD7B405",
+          "claimed_at": "2020-12-08T14:59:44Z",
+          "points_tick": 5,
+          "points_capture": 5,
+          "yaks_delivered": 140,
+          "guild_upgrades": [
+            383,
+            562
+          ]
+        },
+        {
+          "id": "1099-113",
+          "type": "Keep",
+          "owner": "Red",
+          "last_flipped": "2020-12-08T10:32:14Z",
+          "claimed_by": "017C2E3E-C03C-E611-80D3-AC162DC085C0",
+          "claimed_at": "2020-12-08T10:32:33Z",
+          "points_tick": 20,
+          "points_capture": 20,
+          "yaks_delivered": 140,
+          "guild_upgrades": [
+            418,
+            147,
+            483,
+            178,
+            590,
+            389
+          ]
+        },
+        {
+          "id": "1099-119",
+          "type": "Ruins",
+          "owner": "Red",
+          "last_flipped": "2020-12-08T15:23:28Z",
+          "points_tick": 0,
+          "points_capture": 0
+        },
+        {
+          "id": "1099-115",
+          "type": "Camp",
+          "owner": "Green",
+          "last_flipped": "2020-12-08T16:52:36Z",
+          "claimed_by": "91056A93-378F-44A4-88F2-9171E7B99867",
+          "claimed_at": "2020-12-08T16:52:40Z",
+          "points_tick": 2,
+          "points_capture": 2,
+          "yaks_delivered": 0,
+          "guild_upgrades": []
+        },
+        {
+          "id": "1099-110",
+          "type": "Tower",
+          "owner": "Red",
+          "last_flipped": "2020-12-08T16:49:30Z",
+          "claimed_by": null,
+          "claimed_at": null,
+          "points_tick": 4,
+          "points_capture": 4,
+          "yaks_delivered": 0,
+          "guild_upgrades": []
+        },
+        {
+          "id": "1099-106",
+          "type": "Keep",
+          "owner": "Red",
+          "last_flipped": "2020-12-08T13:05:42Z",
+          "claimed_by": "E5CE9F6F-268C-E711-80D5-E4115BE8BBE8",
+          "claimed_at": "2020-12-08T13:05:51Z",
+          "points_tick": 16,
+          "points_capture": 16,
+          "yaks_delivered": 86,
+          "guild_upgrades": [
+            418,
+            147,
+            559,
+            178,
+            590,
+            306
+          ]
+        },
+        {
+          "id": "1099-122",
+          "type": "Ruins",
+          "owner": "Red",
+          "last_flipped": "2020-12-08T15:22:45Z",
+          "points_tick": 0,
+          "points_capture": 0
+        },
+        {
+          "id": "1099-105",
+          "type": "Tower",
+          "owner": "Blue",
+          "last_flipped": "2020-12-08T16:09:15Z",
+          "claimed_by": "174E4329-A9CA-4A69-A69B-4D3E9F5882EF",
+          "claimed_at": "2020-12-08T16:30:07Z",
+          "points_tick": 4,
+          "points_capture": 4,
+          "yaks_delivered": 9,
+          "guild_upgrades": []
+        },
+        {
+          "id": "1099-102",
+          "type": "Tower",
+          "owner": "Red",
+          "last_flipped": "2020-12-08T10:38:48Z",
+          "claimed_by": "6CE7AD26-DC61-401D-BF34-79E469E31AF5",
+          "claimed_at": "2020-12-08T10:38:57Z",
+          "points_tick": 10,
+          "points_capture": 10,
+          "yaks_delivered": 140,
+          "guild_upgrades": [
+            583,
+            147,
+            559,
+            513,
+            590,
+            389
+          ]
+        },
+        {
+          "id": "1099-117",
+          "type": "Spawn",
+          "owner": "Red",
+          "last_flipped": "2020-12-04T18:05:04Z",
+          "points_tick": 0,
+          "points_capture": 0
+        },
+        {
+          "id": "1099-120",
+          "type": "Ruins",
+          "owner": "Red",
+          "last_flipped": "2020-12-08T15:22:12Z",
+          "points_tick": 0,
+          "points_capture": 0
+        },
+        {
+          "id": "1099-109",
+          "type": "Camp",
+          "owner": "Blue",
+          "last_flipped": "2020-12-08T16:50:09Z",
+          "claimed_by": null,
+          "claimed_at": null,
+          "points_tick": 2,
+          "points_capture": 2,
+          "yaks_delivered": 0,
+          "guild_upgrades": []
+        },
+        {
+          "id": "1099-101",
+          "type": "Camp",
+          "owner": "Red",
+          "last_flipped": "2020-12-08T16:42:44Z",
+          "claimed_by": "EA0CEE16-5F47-E711-80D3-AC162DC085C0",
+          "claimed_at": "2020-12-08T16:46:02Z",
+          "points_tick": 2,
+          "points_capture": 2,
+          "yaks_delivered": 1,
+          "guild_upgrades": []
+        },
+        {
+          "id": "1099-121",
+          "type": "Ruins",
+          "owner": "Red",
+          "last_flipped": "2020-12-08T15:25:29Z",
+          "points_tick": 0,
+          "points_capture": 0
+        },
+        {
+          "id": "1099-104",
+          "type": "Tower",
+          "owner": "Red",
+          "last_flipped": "2020-12-08T10:24:02Z",
+          "claimed_by": "D6223D2A-6CAE-E611-80D3-441EA14F1E40",
+          "claimed_at": "2020-12-08T11:32:57Z",
+          "points_tick": 8,
+          "points_capture": 8,
+          "yaks_delivered": 127,
+          "guild_upgrades": [
+            583,
+            147,
+            559,
+            178,
+            590,
+            389
+          ]
+        },
+        {
+          "id": "1099-108",
+          "type": "Spawn",
+          "owner": "Green",
+          "last_flipped": "2020-12-04T18:05:04Z",
+          "points_tick": 0,
+          "points_capture": 0
+        },
+        {
+          "id": "1099-100",
+          "type": "Camp",
+          "owner": "Blue",
+          "last_flipped": "2020-12-08T16:44:53Z",
+          "claimed_by": "CD62235F-2BB3-4D90-A25B-9D4BD86139DA",
+          "claimed_at": "2020-12-08T16:44:57Z",
+          "points_tick": 2,
+          "points_capture": 2,
+          "yaks_delivered": 4,
+          "guild_upgrades": []
+        }
+      ],
+      "deaths": {
+        "red": 4369,
+        "blue": 3175,
+        "green": 3879
+      },
+      "kills": {
+        "red": 5395,
+        "blue": 2004,
+        "green": 3093
+      }
+    }
+  ]
+}

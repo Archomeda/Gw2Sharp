@@ -16,9 +16,7 @@
     "flags": [
       "NotUpgradeable"
     ],
-    "restrictions": [
-
-    ],
+    "restrictions": [],
     "id": 68,
     "chat_link": "[&AgFEAAAA]",
     "icon": "https://render.guildwars2.com/file/F03808FFE89B40044671EED2E427053B389BE0A1/61007.png",
@@ -26,9 +24,8 @@
       "type": "Coat",
       "weight_class": "Light",
       "defense": 23,
-      "infusion_slots": [
-
-      ],
+      "infusion_slots": [],
+      "attribute_adjustment": 11.583,
       "infix_upgrade": {
         "id": 137,
         "attributes": [
@@ -58,16 +55,13 @@
       "SoulbindOnAcquire",
       "SoulBindOnUse"
     ],
-    "restrictions": [
-
-    ],
+    "restrictions": [],
     "id": 57,
     "chat_link": "[&AgE5AAAA]",
     "icon": "https://render.guildwars2.com/file/03B65C435B15EB2C10E04F3454B03718AAF3AE90/61004.png",
     "details": {
-      "infusion_slots": [
-
-      ],
+      "infusion_slots": [],
+      "attribute_adjustment": 13.585,
       "infix_upgrade": {
         "id": 149,
         "attributes": [
@@ -104,9 +98,7 @@
       "DeleteWarning",
       "AccountBindOnUse"
     ],
-    "restrictions": [
-
-    ],
+    "restrictions": [],
     "id": 87225,
     "chat_link": "[&AgG5VAEA]",
     "icon": "https://render.guildwars2.com/file/FC337DDC25A72FBC0470FCC3973332B098C9F70C/1947050.png",
@@ -137,9 +129,7 @@
       "DeleteWarning",
       "AccountBindOnUse"
     ],
-    "restrictions": [
-
-    ],
+    "restrictions": [],
     "id": 20002,
     "chat_link": "[&AgEiTgAA]",
     "icon": "https://render.guildwars2.com/file/433FE6E01CDA243EDBDC24F96F06D5FC2FAF195A/66584.png",
@@ -161,12 +151,8 @@
       "Dungeon",
       "Pve"
     ],
-    "flags": [
-
-    ],
-    "restrictions": [
-
-    ],
+    "flags": [],
+    "restrictions": [],
     "id": 8918,
     "chat_link": "[&AgHWIgAA]",
     "icon": "https://render.guildwars2.com/file/EBC5CEC199D1E51B02756A1C796A65E9D24F04B5/63171.png",
@@ -187,12 +173,8 @@
       "Dungeon",
       "Pve"
     ],
-    "flags": [
-
-    ],
-    "restrictions": [
-
-    ],
+    "flags": [],
+    "restrictions": [],
     "id": 19701,
     "chat_link": "[&AgH1TAAA]",
     "icon": "https://render.guildwars2.com/file/A6E2C82153BA684E2D05D3FCA09F3E02431366ED/220461.png"
@@ -220,9 +202,7 @@
       "DeleteWarning",
       "AccountBindOnUse"
     ],
-    "restrictions": [
-
-    ],
+    "restrictions": [],
     "id": 87397,
     "chat_link": "[&AgFlVQEA]",
     "icon": "https://render.guildwars2.com/file/3C707A22CA60ABB4034B14C14FEF7A6A0B53DCE5/1938455.png",
@@ -249,9 +229,7 @@
       "NoSell",
       "AccountBindOnUse"
     ],
-    "restrictions": [
-
-    ],
+    "restrictions": [],
     "id": 67981,
     "chat_link": "[&AgGNCQEA]",
     "icon": "https://render.guildwars2.com/file/45C5CF0E1730741F3BD0C1115AF7C45E2EB955B8/915568.png",
@@ -281,9 +259,7 @@
       "DeleteWarning",
       "AccountBindOnUse"
     ],
-    "restrictions": [
-
-    ],
+    "restrictions": [],
     "id": 78458,
     "chat_link": "[&AgF6MgEA]",
     "icon": "https://render.guildwars2.com/file/029363EA0E557035DE0319B63EC855E7FB41217B/1423835.png",
@@ -313,9 +289,7 @@
       "DeleteWarning",
       "AccountBindOnUse"
     ],
-    "restrictions": [
-
-    ],
+    "restrictions": [],
     "id": 19986,
     "chat_link": "[&AgESTgAA]",
     "icon": "https://render.guildwars2.com/file/2204EE5D7B1F7BEE9261CBAE3BF1DB5B027EE607/66551.png",
@@ -344,9 +318,7 @@
       "Unique",
       "AccountBindOnUse"
     ],
-    "restrictions": [
-
-    ],
+    "restrictions": [],
     "id": 77482,
     "chat_link": "[&AgGqLgEA]",
     "icon": "https://render.guildwars2.com/file/5C6AC7BB0B70C95D4DD4D07209546B6FB56A1E0D/1313083.png",
@@ -359,20 +331,48 @@
           ]
         }
       ],
+      "attribute_adjustment": 358.512,
       "stat_choices": [
-        588,
-        656,
-        659,
-        658,
-        660,
         584,
-        586,
-        583,
+        656,
+        658,
+        1119,
         657,
+        1038,
+        1097,
+        659,
+        690,
+        583,
         585,
-        592,
+        1037,
+        586,
+        1035,
+        588,
+        1114,
+        1128,
+        1163,
+        1066,
+        1064,
+        660,
+        1430,
+        1436,
+        591,
         581,
-        591
+        592,
+        1263,
+        1271,
+        1265,
+        1270,
+        1262,
+        1268,
+        1264,
+        1267,
+        1269,
+        1366,
+        1367,
+        1374,
+        1549,
+        1566
       ]
     }
   },
@@ -393,9 +393,7 @@
       "SoulbindOnAcquire",
       "SoulBindOnUse"
     ],
-    "restrictions": [
-
-    ],
+    "restrictions": [],
     "id": 19561,
     "chat_link": "[&AgFpTAAA]",
     "icon": "https://render.guildwars2.com/file/3DB4A867BC18AD1D7BFE1C91EC9EC7C1B13B7F01/65900.png"
@@ -420,9 +418,7 @@
       "NoSell",
       "AccountBindOnUse"
     ],
-    "restrictions": [
-
-    ],
+    "restrictions": [],
     "id": 77682,
     "chat_link": "[&AgFyLwEA]",
     "icon": "https://render.guildwars2.com/file/0B2000BE572ACDC30F1C4CBAFCE440092A9649AA/1341255.png",
@@ -447,9 +443,7 @@
       "SoulbindOnAcquire",
       "SoulBindOnUse"
     ],
-    "restrictions": [
-
-    ],
+    "restrictions": [],
     "id": 21133,
     "chat_link": "[&AgGNUgAA]",
     "icon": "https://render.guildwars2.com/file/A7AE0E9D0DF64B69EF309D93E44FFAA90859ABA0/220670.png",
@@ -476,25 +470,22 @@
         "Warhorn",
         "LongBow"
       ],
-      "infusion_upgrade_flags": [
-
-      ],
+      "infusion_upgrade_flags": [],
+      "attribute_adjustment": 0,
       "infix_upgrade": {
         "id": 227,
         "buff": {
           "skill_id": 9389,
           "description": "Gain a charge of +10 healing each time you kill a foe, five charges if you kill an enemy player. <c=@reminder>(Max 25 stacks; ends on down.)</c> <br><c=@reminder>(Only one attribute-stacking sigil can be active at a time.)</c>"
         },
-        "attributes": [
-
-        ]
+        "attributes": []
       },
       "suffix": "of Life"
     }
   },
   {
     "name": "Superior Rune of the Chronomancer",
-    "description": "Double-click to apply to a piece of armor.",
+    "description": "<c=@abilitytype>Element: </c>Brilliance<br>Double-click to apply to a piece of armor.",
     "type": "UpgradeComponent",
     "level": 60,
     "rarity": "Exotic",
@@ -505,12 +496,8 @@
       "Dungeon",
       "Pve"
     ],
-    "flags": [
-
-    ],
-    "restrictions": [
-
-    ],
+    "flags": [],
+    "restrictions": [],
     "id": 73399,
     "chat_link": "[&AgG3HgEA]",
     "icon": "https://render.guildwars2.com/file/80FE6B56334AB53830DD2D0F61992DF4CC44A710/1201519.png",
@@ -521,9 +508,7 @@
         "LightArmor",
         "MediumArmor"
       ],
-      "infusion_upgrade_flags": [
-
-      ],
+      "infusion_upgrade_flags": [],
       "bonuses": [
         "+25 Power",
         "+35 Precision",
@@ -532,11 +517,10 @@
         "+100 Power",
         "Apply 2 seconds of quickness when you cast a well."
       ],
+      "attribute_adjustment": 0,
       "infix_upgrade": {
         "id": 112,
-        "attributes": [
-
-        ]
+        "attributes": []
       },
       "suffix": "of the Chronomancer"
     }
@@ -561,9 +545,7 @@
       "SoulbindOnAcquire",
       "SoulBindOnUse"
     ],
-    "restrictions": [
-
-    ],
+    "restrictions": [],
     "id": 35649,
     "chat_link": "[&AgFBiwAA]",
     "icon": "https://render.guildwars2.com/file/FC26BFB3280B24576762056838F7BDCF6243E1BD/61644.png",
@@ -573,9 +555,8 @@
       "min_power": 358,
       "max_power": 437,
       "defense": 0,
-      "infusion_slots": [
-
-      ],
+      "infusion_slots": [],
+      "attribute_adjustment": 117.144,
       "infix_upgrade": {
         "id": 151,
         "attributes": [
@@ -611,9 +592,7 @@
       "SoulbindOnAcquire",
       "SoulBindOnUse"
     ],
-    "restrictions": [
-
-    ],
+    "restrictions": [],
     "id": 78154,
     "chat_link": "[&AgFKMQEA]",
     "icon": "https://render.guildwars2.com/file/9AC302D1031B5C31806D0703FBC1944C01D4A240/561998.png",
@@ -623,9 +602,8 @@
       "min_power": 905,
       "max_power": 1000,
       "defense": 0,
-      "infusion_slots": [
-
-      ],
+      "infusion_slots": [],
+      "attribute_adjustment": 682.88,
       "infix_upgrade": {
         "id": 162,
         "attributes": [
@@ -684,10 +662,11 @@
           ]
         }
       ],
+      "attribute_adjustment": 358.512,
       "suffix_item_id": 24554,
       "stat_choices": [
-        155,
         161,
+        155,
         159,
         157,
         158,
@@ -706,22 +685,24 @@
         799,
         1026,
         1067,
+        628,
+        1032,
+        1111,
+        1109,
         1123,
         1140,
         1085,
         1153,
         1118,
         1131,
-        1111,
-        1109,
         1222,
         1344,
         1363,
         1364,
-        628,
-        1032,
-        1484
+        1559,
+        1556
       ]
     }
   }
 ]
+

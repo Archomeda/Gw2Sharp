@@ -28,7 +28,7 @@ namespace Gw2Sharp.WebApi
         /// <summary>
         /// The URL to a resource on the Guild Wars 2 render service API.
         /// </summary>
-        public Uri Url { get; private set; }
+        public Uri Url { get; }
 
 
         /// <inheritdoc />
@@ -113,6 +113,12 @@ namespace Gw2Sharp.WebApi
         /// <param name="renderUrl">The render URL object.</param>
         public static implicit operator Uri(RenderUrl renderUrl) =>
             new Uri(renderUrl.Url.AbsoluteUri, UriKind.Absolute);
+
+        /// <summary>
+        /// Gets the URL as <see cref="Uri"/>.
+        /// </summary>
+        /// <returns>The URL as <see cref="Uri"/>.</returns>
+        public Uri ToUri() => this;
 
         #endregion
     }

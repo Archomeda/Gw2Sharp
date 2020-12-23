@@ -1,6 +1,5 @@
 using System;
 using Gw2Sharp.WebApi.V2.Clients;
-using Gw2Sharp.WebApi.V2.Models;
 
 namespace Gw2Sharp.WebApi.V2
 {
@@ -62,6 +61,7 @@ namespace Gw2Sharp.WebApi.V2
         private readonly ITraitsClient traits;
         private readonly IWorldBossesClient worldBosses;
         private readonly IWorldsClient worlds;
+        private readonly IWvwClient wvw;
 
         /// <summary>
         /// Creates a new <see cref="Gw2WebApiV2Client"/>.
@@ -125,6 +125,7 @@ namespace Gw2Sharp.WebApi.V2
             this.traits = new TraitsClient(connection, gw2Client);
             this.worldBosses = new WorldBossesClient(connection, gw2Client);
             this.worlds = new WorldsClient(connection, gw2Client);
+            this.wvw = new WvwClient(connection, gw2Client);
         }
 
         /// <inheritdoc />
@@ -270,5 +271,10 @@ namespace Gw2Sharp.WebApi.V2
 
         /// <inheritdoc />
         public virtual IWorldsClient Worlds => this.worlds;
+
+        /// <inheritdoc />
+        public virtual IWvwClient Wvw => this.wvw;
+
+
     }
 }
