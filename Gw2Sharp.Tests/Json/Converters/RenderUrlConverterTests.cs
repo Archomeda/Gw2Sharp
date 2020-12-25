@@ -51,6 +51,7 @@ namespace Gw2Sharp.Tests.Json.Converters
         [InlineData("{}")]
         [InlineData("[]")]
         [InlineData("undefined")]
+        [InlineData("null")]
         public void DeserializeThrowsException(string json)
         {
             Action action = () => JsonSerializer.Deserialize<RenderUrl>(json, new JsonSerializerOptions
