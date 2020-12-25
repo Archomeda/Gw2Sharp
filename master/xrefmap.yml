@@ -3355,41 +3355,6 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Json.Converters.DictionaryIntKeyConverter.CreateConverter
   nameWithType: DictionaryIntKeyConverter.CreateConverter
-- uid: Gw2Sharp.Json.Converters.GuidConverter
-  name: GuidConverter
-  href: api/Gw2Sharp.Json.Converters.GuidConverter.html
-  commentId: T:Gw2Sharp.Json.Converters.GuidConverter
-  fullName: Gw2Sharp.Json.Converters.GuidConverter
-  nameWithType: GuidConverter
-- uid: Gw2Sharp.Json.Converters.GuidConverter.Read(Utf8JsonReader@,Type,JsonSerializerOptions)
-  name: Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
-  href: api/Gw2Sharp.Json.Converters.GuidConverter.html#Gw2Sharp_Json_Converters_GuidConverter_Read_Utf8JsonReader__Type_JsonSerializerOptions_
-  commentId: M:Gw2Sharp.Json.Converters.GuidConverter.Read(Utf8JsonReader@,Type,JsonSerializerOptions)
-  name.vb: Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
-  fullName: Gw2Sharp.Json.Converters.GuidConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
-  fullName.vb: Gw2Sharp.Json.Converters.GuidConverter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
-  nameWithType: GuidConverter.Read(ref Utf8JsonReader, Type, JsonSerializerOptions)
-  nameWithType.vb: GuidConverter.Read(ByRef Utf8JsonReader, Type, JsonSerializerOptions)
-- uid: Gw2Sharp.Json.Converters.GuidConverter.Read*
-  name: Read
-  href: api/Gw2Sharp.Json.Converters.GuidConverter.html#Gw2Sharp_Json_Converters_GuidConverter_Read_
-  commentId: Overload:Gw2Sharp.Json.Converters.GuidConverter.Read
-  isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.GuidConverter.Read
-  nameWithType: GuidConverter.Read
-- uid: Gw2Sharp.Json.Converters.GuidConverter.Write(Utf8JsonWriter,Guid,JsonSerializerOptions)
-  name: Write(Utf8JsonWriter, Guid, JsonSerializerOptions)
-  href: api/Gw2Sharp.Json.Converters.GuidConverter.html#Gw2Sharp_Json_Converters_GuidConverter_Write_Utf8JsonWriter_Guid_JsonSerializerOptions_
-  commentId: M:Gw2Sharp.Json.Converters.GuidConverter.Write(Utf8JsonWriter,Guid,JsonSerializerOptions)
-  fullName: Gw2Sharp.Json.Converters.GuidConverter.Write(Utf8JsonWriter, Guid, JsonSerializerOptions)
-  nameWithType: GuidConverter.Write(Utf8JsonWriter, Guid, JsonSerializerOptions)
-- uid: Gw2Sharp.Json.Converters.GuidConverter.Write*
-  name: Write
-  href: api/Gw2Sharp.Json.Converters.GuidConverter.html#Gw2Sharp_Json_Converters_GuidConverter_Write_
-  commentId: Overload:Gw2Sharp.Json.Converters.GuidConverter.Write
-  isSpec: "True"
-  fullName: Gw2Sharp.Json.Converters.GuidConverter.Write
-  nameWithType: GuidConverter.Write
 - uid: Gw2Sharp.Json.Converters.PvpSeasonLeaderboardSettingsTierRangeConverter
   name: PvpSeasonLeaderboardSettingsTierRangeConverter
   href: api/Gw2Sharp.Json.Converters.PvpSeasonLeaderboardSettingsTierRangeConverter.html
