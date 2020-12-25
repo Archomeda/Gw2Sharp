@@ -58,7 +58,7 @@ namespace Gw2Sharp.Json.Converters
                 {
                     // We might get here when we can't deserialize into a more specific type, since the type parameter doesn't exist
                     // Copy the serializer options, and remove the converter where we are currently in to prevent a stack overflow
-                    var innerOptions = CloneOptions(options);
+                    var innerOptions = new JsonSerializerOptions(options);
                     innerOptions.Converters.Remove(innerOptions.Converters.Single(x => x is CastableTypeConverter));
                     return JsonSerializer.Deserialize<T>(obj.RootElement.GetRawText(), innerOptions)!;
                 }
@@ -75,27 +75,6 @@ namespace Gw2Sharp.Json.Converters
 
             public override void Write(Utf8JsonWriter writer, T value, JsonSerializerOptions options) =>
                 throw new NotImplementedException("TODO: This should generally not be used since we only deserialize stuff from the API, and not serialize to it. Might add support later.");
-
-            private static JsonSerializerOptions CloneOptions(JsonSerializerOptions options)
-            {
-                var newOptions = new JsonSerializerOptions
-                {
-                    AllowTrailingCommas = options.AllowTrailingCommas,
-                    DefaultBufferSize = options.DefaultBufferSize,
-                    DictionaryKeyPolicy = options.DictionaryKeyPolicy,
-                    Encoder = options.Encoder,
-                    IgnoreNullValues = options.IgnoreNullValues,
-                    IgnoreReadOnlyProperties = options.IgnoreReadOnlyProperties,
-                    MaxDepth = options.MaxDepth,
-                    PropertyNameCaseInsensitive = options.PropertyNameCaseInsensitive,
-                    PropertyNamingPolicy = options.PropertyNamingPolicy,
-                    ReadCommentHandling = options.ReadCommentHandling,
-                    WriteIndented = options.WriteIndented
-                };
-                foreach (var converter in options.Converters)
-                    newOptions.Converters.Add(converter);
-                return newOptions;
-            }
         }
     }
 }
