@@ -12,7 +12,7 @@ namespace Gw2Sharp.Json.Converters
     public sealed class ApiObjectConverter : JsonConverter<IApiV2Object>
     {
         /// <inheritdoc />
-        public override IApiV2Object Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options) =>
+        public override IApiV2Object? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options) =>
             JsonSerializer.Deserialize<ApiV2BaseObject>(ref reader, options);
 
         /// <inheritdoc />

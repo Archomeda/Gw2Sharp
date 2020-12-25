@@ -55,10 +55,10 @@ namespace Gw2Sharp.Tests.WebApi.V2.Models
             options.Converters.Add(new ApiFlagsConverter());
             var obj = JsonSerializer.Deserialize<JsonObject>(json, options);
 
-            if (expected == null)
-                Assert.Null(obj.Flags);
+            if (expected is null)
+                Assert.Null(obj!.Flags);
             else
-                Assert.Equal(expected, obj.Flags.List);
+                Assert.Equal(expected, obj!.Flags.List);
         }
 
         [Fact]

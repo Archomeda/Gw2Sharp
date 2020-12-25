@@ -43,15 +43,17 @@ namespace Gw2Sharp.WebApi.Middleware
                 if ((int)httpResponse.StatusCode >= 200 && (int)httpResponse.StatusCode <= 299)
                     return httpResponse;
 
-                ErrorObject error;
+                ErrorObject? error;
                 try
                 {
                     error = JsonSerializer.Deserialize<ErrorObject>(httpResponse.Content, deserializerOptions);
+                    if (error is null)
+                        throw new InvalidOperationException("Unexpected null value from deserialized JSON");
                 }
                 catch (JsonException)
                 {
                     // Fallback message
-                    throw new UnexpectedStatusException(context.Request, httpResponse, httpResponse.Content ?? string.Empty);
+                    throw new UnexpectedStatusException(context.Request, httpResponse, httpResponse.Content);
                 }
 
                 var errorResponse = new WebApiResponse<ErrorObject>(error, httpResponse.StatusCode, httpResponse.CacheState, httpResponse.ResponseHeaders);
@@ -68,7 +70,7 @@ namespace Gw2Sharp.WebApi.Middleware
 #endif
                     HttpStatusCode.InternalServerError => new ServerErrorException(context.Request, errorResponse),
                     HttpStatusCode.ServiceUnavailable => new ServiceUnavailableException(context.Request, errorResponse),
-                    _ => new UnexpectedStatusException(context.Request, httpResponse, httpResponse.Content ?? string.Empty)
+                    _ => new UnexpectedStatusException(context.Request, httpResponse, httpResponse.Content)
                 };
             }
         }

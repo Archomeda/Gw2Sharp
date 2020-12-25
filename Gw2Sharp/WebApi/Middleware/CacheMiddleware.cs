@@ -158,8 +158,12 @@ namespace Gw2Sharp.WebApi.Middleware
             {
                 if (item.TryGetProperty(bulkObjectPropertyIdName, out var id))
                 {
-                    items.Add(new CacheItem(cacheCategory, id.ToString(), item.GetRawText(), response.StatusCode,
-                        responseInfo.Expires.GetValueOrDefault(DateTimeOffset.Now), CacheItemStatus.New, response.ResponseHeaders));
+                    string? idString = id.ToString();
+                    if (!(idString is null))
+                    {
+                        items.Add(new CacheItem(cacheCategory, idString, item.GetRawText(), response.StatusCode,
+                            responseInfo.Expires.GetValueOrDefault(DateTimeOffset.Now), CacheItemStatus.New, response.ResponseHeaders));
+                    }
                 }
             }
 

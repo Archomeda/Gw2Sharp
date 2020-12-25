@@ -43,7 +43,6 @@ namespace Gw2Sharp.WebApi.Http
             options.Converters.Add(new ApiObjectListConverter());
             options.Converters.Add(new CastableTypeConverter());
             options.Converters.Add(new DictionaryIntKeyConverter());
-            options.Converters.Add(new GuidConverter());
             options.Converters.Add(new RenderUrlConverter(client));
             options.Converters.Add(new TimeSpanConverter());
             return options;
@@ -129,6 +128,8 @@ namespace Gw2Sharp.WebApi.Http
                     foreach (var apiV2Obj in apiV2ObjectList)
                         apiV2Obj.HttpResponseInfo ??= responseInfo;
                     break;
+                case null:
+                    throw new InvalidOperationException("Unexpected null response");
             }
 
             return new WebApiResponse<TResponse>(obj, response.StatusCode, response.CacheState, response.ResponseHeaders);

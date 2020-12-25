@@ -95,6 +95,8 @@ namespace Gw2Sharp.Json.Converters
                     value = JsonSerializer.Deserialize<TValue>(ref reader, options);
                 }
 
+                if (value is null)
+                    throw new JsonException("Unexpected null value");
                 result.Add(key, value);
             }
 
