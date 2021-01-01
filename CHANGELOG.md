@@ -1,6 +1,26 @@
 # Gw2Sharp History
 
-## 0.12.0
+## 1.0.0 (1 January 2021)
+*Gw2Sharp can now be considered feature complete.*
+
+Happy new year everyone 🎆  
+Let's celebrate 2021 with the first non-prerelease version of Gw2Sharp!
+
+Despite this being a major version increment, there have been no public facing code changes compared to 0.12.0; your code should still compile without any issues.
+
+Given that we have reached version 1, I'm changing the way how the versioning works.  
+Previously, when Gw2Sharp was still in version 0.x.y, any breaking change would increment the minor number and any non-breaking change would increment the patch number.  
+Now, starting with version 1, Gw2Sharp will follow semver properly.
+Breaking changes will increment the major version.
+Non-breaking additions will increment the minor version.
+Non-breaking fixes will increment the patch version.
+
+### Dependencies
+- System.Text.Json has been updated to 5.0.0 with some additional internal changes to support the transition from 4.7.1
+
+---
+
+## 0.12.0 (22 December 2020)
 *After 2 years of development, this version marks a milestone for Gw2Sharp.*
 
 It is now feature complete, with thanks to [@werdes](https://github.com/werdes) for setting up WvW support that I have postponed for quite a while.
@@ -50,7 +70,7 @@ Please do not report those issues as they will not be worked on.
 
 ---
 
-## 0.11.1
+## 0.11.1 (29 August 2020)
 ### Caching
 - Fix caching with an archive backing file (`ArchiveCacheMethod`) where it cannot (de)serialize the data ([#72](https://github.com/Archomeda/Gw2Sharp/pull/72))
 
@@ -61,7 +81,7 @@ Please do not report those issues as they will not be worked on.
 While the `ArchiveCacheMethod` should be fixed for now, the upcoming version 0.12.0 will introduce an overhaul for all caching methods that will make them more reliable.
 This patch update should be regarded as an intermediate fix before that happens, without introducing breaking changes.
 
-## 0.11.0
+## 0.11.0 (9 August 2020)
 This release includes the most breaking changes in Gw2Sharp so far in order to support middleware, which is a major change in how Gw2Sharp handles requests.
 If you're only using the surface API in Gw2Sharp, the impact will be very low.
 However, if you've been implementing some of the interfaces yourself in order to change Gw2Sharp's functionality, please review the changes listed for this release below to see how much you've been impacted.
@@ -116,7 +136,7 @@ For more information, please check the [middleware documentation](https://archom
 
 ---
 
-## 0.10.0
+## 0.10.0 (24 May 2020)
 ### Endpoints
 - Add `/v2/skins`
 - Add `/v2/specializations`
@@ -136,7 +156,7 @@ For more information, please check the [middleware documentation](https://archom
 
 ---
 
-## 0.9.6
+## 0.9.6 (28 April 2020)
 ### Services
 - Update MumbleLink to support new features ([#58](https://github.com/Archomeda/Gw2Sharp/issues/58), [#59](https://github.com/Archomeda/Gw2Sharp/pull/59)):
   - Process id
@@ -144,7 +164,7 @@ For more information, please check the [middleware documentation](https://archom
   - UI states: IsInCombat
 - Add support for custom MumbleLink names through `IGw2MumbleClient[name]` (see documentation for more details)
 
-## 0.9.5
+## 0.9.5 (18 April 2020)
 ### Endpoints
 - Add the following missing properties in `Gw2Sharp.WebApi.V2.Models.Skill`:
   - `Specialization`
@@ -160,30 +180,30 @@ For more information, please check the [middleware documentation](https://archom
 - Add missing enums `Toolbelt` and `Transform1` in `Gw2Sharp.WebApi.V2.Models.SkillSlot`
 - Add missing enum `Transform` in `Gw2Sharp.WebApi.V2.Models.SkillType`
 
-## 0.9.4
+## 0.9.4 (18 April 2020)
 ### Fixes
 - Add missing skill fact type `StunBreak` as `Gw2Sharp.WebApi.V2.Models.SkillFactStunBreak` for pattern matching
 - Fix parsing `Cache-Control` response headers where it would fail if the value is surrounded with quotes
 
-## 0.9.3
+## 0.9.3 (29 March 2020)
 ### Services
 - Exposed the raw JSON Mumble Link identity as `IGw2MumbleClient.RawIdentity`
 
 ### Fixes
 - When the Mumble Link identity contains an invalid JSON, it will no longer cause Gw2Sharp to throw a JsonException (this can happen when running multiple instances of Guild Wars 2 at the same time)
 
-## 0.9.2
+## 0.9.2 (26 March 2020)
 ### Fixes
 - Setting a custom user agent now properly sets a space inbetween that and the one set by Gw2Sharp
 
-## 0.9.1
+## 0.9.1 (23 March 2020)
 ### Endpoints
 - Add missing enum `2v2Ranked` (as `TwoVTwoRanked`) in `Gw2Sharp.WebApi.V2.Models.PvpRatingType` ([#53](https://github.com/Archomeda/Gw2Sharp/pull/53))
 
 ### Fixes
 - Improve enum deserialization performance ([#52](https://github.com/Archomeda/Gw2Sharp/issues/52), [#54](https://github.com/Archomeda/Gw2Sharp/pull/54))
 
-## 0.9.0
+## 0.9.0 (21 March 2020)
 For this release, Gw2Sharp has swapped its JSON dependency from Newtonsoft.Json to System.Text.Json. This means that you can expect a performance increase ([#48](https://github.com/Archomeda/Gw2Sharp/pull/48)).
 
 ### Services
@@ -211,16 +231,16 @@ For this release, Gw2Sharp has swapped its JSON dependency from Newtonsoft.Json 
 
 ---
 
-## 0.8.2
+## 0.8.2 (24 February 2020)
 ### Fixes
 - Fix API enum comparison with different character casings ([#36](https://github.com/Archomeda/Gw2Sharp/pull/36))
 
-## 0.8.1
+## 0.8.1 (20 February 2020)
 ### Fixes
 - Fix struct size when creating the Mumble Link memory mapped file ([#35](https://github.com/Archomeda/Gw2Sharp/pull/35))
   - It was initialized with a struct size that was too small for Guild Wars 2 to write to, causing funky stuff
 
-## 0.8.0
+## 0.8.0 (20 February 2020)
 This release applies the schema changes of 2019-12-19, which includes the build and equipment template update from October 2019.
 
 ### Endpoints
@@ -260,11 +280,11 @@ However, it's advised to update as soon as possible, as these deprecations will 
 
 ---
 
-## 0.7.4
+## 0.7.4 (6 November 2019)
 ### Services
 - Chat link parsing and rendering is now supported ([#23](https://github.com/Archomeda/Gw2Sharp/issues/23), [#24](https://github.com/Archomeda/Gw2Sharp/pull/24))
 
-## 0.7.3
+## 0.7.3 (21 October 2019)
 Gw2Sharp has moved to the release version of .NET Core 3.0.
 This only means that .NET Core 3.0 is used for compiling, while .NET Standard 2.0 is still targeted.
 From now on, at least Visual Studio 2019 16.3 is required when working with the source code.
@@ -292,7 +312,7 @@ This shouldn't impact any NuGet package users.
 - `IHttpResponseStream` now implements `IDisposable` because it's assumed that it owns the stream that's passed in the constructor
 - GUID ids are converted to uppercase before being used in API request URLs ([#22](https://github.com/Archomeda/Gw2Sharp/issues/22))
 
-## 0.7.1
+## 0.7.1 (3 September 2019)
 ### Services
 - Add Mumble Link client as `Gw2MumbleClient`, which can be accessed through `Gw2Client.Mumble` ([#7](https://github.com/Archomeda/Gw2Sharp/issues/7), [#16](https://github.com/Archomeda/Gw2Sharp/pull/16))
 
@@ -303,7 +323,7 @@ This shouldn't impact any NuGet package users.
 ### Fixes
 - Fix `RecipesClient` to correctly inherit from `BaseEndpointBulkClient` instead of `BaseEndpointBulkAllClient` (`/v2/recipes` doesn't support expanding all items at once, and this was incorrectly set on the implementation, the interface was correct) ([#14](https://github.com/Archomeda/Gw2Sharp/pull/14) by [@darthmaim](https://github.com/darthmaim))
 
-## 0.7.0
+## 0.7.0 (16 August 2019)
 ### Endpoints
 - **Breaking:** `Gw2Sharp.WebApi.V2.Models.CharacterCraftingDiscipline` has had the type of its property `Discipline` changed from `string` to `ApiEnum<CraftingDisciplineType>`
 - **Breaking:** `Gw2Sharp.WebApi.V2.Models.MasteryLevel` has had the type of its property `Icon` fixed from `string` to `RenderUrl`
@@ -326,14 +346,14 @@ This shouldn't impact any NuGet package users.
 
 ---
 
-## 0.6.1
+## 0.6.1 (10 August 2019)
 ### Endpoints
 - Change property `Emblem` in `Gw2Sharp.WebApi.V2.Models.Guild` to be nullable because the API might leave this property out ([#10](https://github.com/Archomeda/Gw2Sharp/issues/10))
 
 ### Fixes
 - Fix default instantiations of `ApiEnum` and `ApiFlags` that might cause `InvalidCastException`s when requesting data by removing the non-generic `ApiEnum` and `ApiFlags` variants (they were only used internally for easy casting when deserializing) ([#10](https://github.com/Archomeda/Gw2Sharp/issues/10))
 
-## 0.6.0
+## 0.6.0 (9 August 2019)
 ### Endpoints
 - **Breaking:** `Gw2Sharp.WebApi.V2.Models.GuildTeam` has had the type of its property `Ladders` changed from `PvpStatsLadders` to `IReadOnlyDictionary<string, PvpStatsAggregate>`
   (reason: the keys in this property of this endpoint (`/v2/guild/:id/teams`) are actually dynamic, just like the ones in `/v2/pvp/stats`)
@@ -379,7 +399,7 @@ This shouldn't impact any NuGet package users.
 
 ---
 
-## 0.5.0
+## 0.5.0 (28 July 2019)
 ### Endpoints
 - Add render service which can be found under `IGw2WebApiClient.Render` (right next to `IGw2WebApiClient.V2`) ([#6](https://github.com/Archomeda/Gw2Sharp/issues/6))
 - Add `RenderUrl` type to directly access download methods from the render client
@@ -409,11 +429,11 @@ This shouldn't impact any NuGet package users.
 
 ---
 
-## 0.4.1
+## 0.4.1 (22 June 2019)
 ### Fixes
 - Fix memory cache garbage collection with keys other than a string causing InvalidCastExceptions
 
-## 0.4.0
+## 0.4.0 (21 June 2019)
 ### Endpoints
 - Add `/v2/account/novelties`
 - Add `/v2/characters/:id/quests`
@@ -449,12 +469,12 @@ This shouldn't impact any NuGet package users.
 
 ---
 
-## 0.3.1
+## 0.3.1 (13 June 2019)
 ### Fixes
 - Don't leak cached authenticated requests ([#1](https://github.com/Archomeda/Gw2Sharp/issues/1))
 - Use ConcurrentDictionary for MemoryCacheMethod for thread-safety ([#2](https://github.com/Archomeda/Gw2Sharp/issues/2))
 
-## 0.3.0
+## 0.3.0 (27 May 2019)
 ### Endpoints
 - **Breaking:** Update `/v2/account` and all subendpoints to a minimum schema version of `2019-02-21T00:00:00.000Z`
 - **Breaking:** Update `/v2/characters` and all subendpoints to schema version `2019-02-21T00:00:00.000Z`
@@ -477,7 +497,7 @@ This shouldn't impact any NuGet package users.
 
 ---
 
-## 0.2.0
+## 0.2.0 (23 May 2019)
 ### Endpoints
 - **Breaking:** Update `/v2/account/home/cats` to schema version `2019-03-22T00:00:00.000Z`
 - **Breaking:** Update `/v2/achievements/daily` to schema version `2019-05-16T00:00:00.000Z`
@@ -488,5 +508,5 @@ This shouldn't impact any NuGet package users.
 
 ---
 
-## 0.1.0
+## 0.1.0 (20 May 2019)
 - Test release with support for a bunch of endpoints
