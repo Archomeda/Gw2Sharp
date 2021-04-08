@@ -17,7 +17,7 @@ namespace Gw2Sharp.Tests.Json.Converters
             Assert.True(converter.CanConvert(typeof(ApiFlags<>)));
         }
 
-        public static readonly object[] DeserializeCorrectlyWithoutUnknownsCases =
+        public static readonly object[][] DeserializeCorrectlyWithoutUnknownsCases =
         {
             new object[]
             {
@@ -74,7 +74,7 @@ namespace Gw2Sharp.Tests.Json.Converters
             actual.List.Should().BeEquivalentTo(expectedEnums);
         }
 
-        public static readonly object[] DeserializeCorrectlyWithUnknownsCases =
+        public static readonly object[][] DeserializeCorrectlyWithUnknownsCases =
         {
             new object[]
             {

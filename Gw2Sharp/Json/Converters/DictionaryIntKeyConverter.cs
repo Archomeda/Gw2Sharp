@@ -84,7 +84,7 @@ namespace Gw2Sharp.Json.Converters
                 if (!int.TryParse(reader.GetString(), out int key))
                     throw new JsonException("Expected a number as property name");
 
-                TValue value;
+                TValue? value;
                 if (valueConverter != null)
                 {
                     reader.Read();
