@@ -24257,6 +24257,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.Equipment
   nameWithType: CharacterEquipmentTabSlot.Equipment
+- uid: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.EquipmentPvp
+  name: EquipmentPvp
+  href: api/Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.html#Gw2Sharp_WebApi_V2_Models_CharacterEquipmentTabSlot_EquipmentPvp
+  commentId: P:Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.EquipmentPvp
+  fullName: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.EquipmentPvp
+  nameWithType: CharacterEquipmentTabSlot.EquipmentPvp
+- uid: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.EquipmentPvp*
+  name: EquipmentPvp
+  href: api/Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.html#Gw2Sharp_WebApi_V2_Models_CharacterEquipmentTabSlot_EquipmentPvp_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.EquipmentPvp
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.EquipmentPvp
+  nameWithType: CharacterEquipmentTabSlot.EquipmentPvp
 - uid: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.Gw2Sharp#WebApi#V2#Models#IIdentifiable{System#Int32}#Id
   name: IIdentifiable<Int32>.Id
   href: api/Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.html#Gw2Sharp_WebApi_V2_Models_CharacterEquipmentTabSlot_Gw2Sharp_WebApi_V2_Models_IIdentifiable_System_Int32__Id
