@@ -1,0 +1,660 @@
+{
+  "name": "Bob",
+  "race": "Human",
+  "gender": "Male",
+  "flags": [
+
+  ],
+  "profession": "Warrior",
+  "level": 80,
+  "guild": "F00FF00F-F00F-F00F-F00F-F00FF00FF00F",
+  "age": 7441000,
+  "last_modified": "2019-05-22T22:51:00Z",
+  "created": "2014-01-31T18:00:00Z",
+  "deaths": 4100,
+  "crafting": [
+    {
+      "discipline": "Armorsmith",
+      "rating": 500,
+      "active": true
+    },
+    {
+      "discipline": "Weaponsmith",
+      "rating": 500,
+      "active": true
+    }
+  ],
+  "title": 225,
+  "backstory": [
+    "1-2",
+    "3-4",
+    "5-6",
+    "7-8",
+    "9-10"
+  ],
+  "wvw_abilities": [
+    {
+      "id": 1,
+      "rank": 4
+    },
+    {
+      "id": 2,
+      "rank": 5
+    }
+  ],
+  "build_tabs_unlocked": 1,
+  "active_build_tab": 1,
+  "build_tabs": [
+    {
+      "tab": 1,
+      "is_active": true,
+      "build": {
+        "name": "Non-existent warrior build",
+        "profession": "Warrior",
+        "specializations": [
+          {
+            "id": 36,
+            "traits": [
+              1455,
+              1333,
+              1346
+            ]
+          },
+          {
+            "id": 11,
+            "traits": [
+              1471,
+              1482,
+              1667
+            ]
+          },
+          {
+            "id": 18,
+            "traits": [
+              2039,
+              2042,
+              2038
+            ]
+          }
+        ],
+        "skills": {
+          "heal": 30189,
+          "utilities": [
+            30074,
+            14405,
+            14407
+          ],
+          "elite": 30343
+        },
+        "aquatic_skills": {
+          "heal": 22222,
+          "utilities": [
+            33333,
+            44444,
+            55555
+          ],
+          "elite": null
+        }
+      }
+    }
+  ],
+  "equipment_tabs_unlocked": 1,
+  "active_equipment_tab": 1,
+  "equipment_tabs": [
+    {
+      "tab": 1,
+      "is_active": true,
+      "equipment": [
+        {
+          "id": 6479,
+          "slot": "HelmAquatic",
+          "binding": "Character",
+          "bound_to": "Bob"
+        },
+        {
+          "id": 77474,
+          "slot": "Backpack",
+          "infusions": [
+            78052,
+            78028
+          ],
+          "skin": 2352,
+          "stats": {
+            "id": 1130,
+            "attributes": {
+              "Power": 52,
+              "Precision": 27,
+              "ConditionDamage": 52,
+              "ConditionDuration": 27
+            }
+          },
+          "binding": "Account"
+        },
+        {
+          "id": 80254,
+          "slot": "Coat",
+          "upgrades": [
+            83502
+          ],
+          "infusions": [
+            70852
+          ],
+          "stats": {
+            "id": 1153,
+            "attributes": {
+              "Power": 121,
+              "Precision": 67,
+              "ConditionDamage": 121,
+              "ConditionDuration": 67
+            }
+          },
+          "binding": "Account",
+          "dyes": [
+            11,
+            1155,
+            6,
+            null
+          ]
+        },
+        {
+          "id": 80557,
+          "slot": "Boots",
+          "upgrades": [
+            83502
+          ],
+          "infusions": [
+            70852
+          ],
+          "stats": {
+            "id": 1153,
+            "attributes": {
+              "Power": 40,
+              "Precision": 22,
+              "ConditionDamage": 40,
+              "ConditionDuration": 22
+            }
+          },
+          "binding": "Account",
+          "dyes": [
+            11,
+            1155,
+            6,
+            null
+          ]
+        },
+        {
+          "id": 78984,
+          "slot": "WeaponA1",
+          "upgrades": [
+            24605
+          ],
+          "infusions": [
+            49432
+          ],
+          "skin": 6588,
+          "stats": {
+            "id": 1224,
+            "attributes": {
+              "Power": 108,
+              "Precision": 59,
+              "ConditionDamage": 108,
+              "ConditionDuration": 59
+            }
+          },
+          "binding": "Account"
+        },
+        {
+          "id": 49308,
+          "slot": "Sickle",
+          "binding": "Account"
+        },
+        {
+          "id": 48931,
+          "slot": "Axe",
+          "skin": 8087,
+          "binding": "Account"
+        },
+        {
+          "id": 87422,
+          "slot": "Pick",
+          "skin": 8097,
+          "binding": "Account"
+        }
+      ],
+      "equipment_pvp": {
+        "amulet": 14,
+        "rune": 21172,
+        "sigils": [
+          21152,
+          21150,
+          21152,
+          null
+        ]
+      }
+    }
+  ],
+  "equipment": [
+    {
+      "id": 6479,
+      "location": "Equipped",
+      "slot": "HelmAquatic",
+      "tabs": [ 1 ],
+      "binding": "Character",
+      "bound_to": "Bob"
+    },
+    {
+      "id": 77474,
+      "location": "Equipped",
+      "slot": "Backpack",
+      "tabs": [ 1 ],
+      "infusions": [
+        78052,
+        78028
+      ],
+      "skin": 2352,
+      "stats": {
+        "id": 1130,
+        "attributes": {
+          "Power": 52,
+          "Precision": 27,
+          "ConditionDamage": 52,
+          "ConditionDuration": 27
+        }
+      },
+      "binding": "Account"
+    },
+    {
+      "id": 80254,
+      "location": "Equipped",
+      "slot": "Coat",
+      "tabs": [ 1 ],
+      "upgrades": [
+        83502
+      ],
+      "infusions": [
+        70852
+      ],
+      "stats": {
+        "id": 1153,
+        "attributes": {
+          "Power": 121,
+          "Precision": 67,
+          "ConditionDamage": 121,
+          "ConditionDuration": 67
+        }
+      },
+      "binding": "Account",
+      "dyes": [
+        11,
+        1155,
+        6,
+        null
+      ]
+    },
+    {
+      "id": 80557,
+      "location": "Equipped",
+      "slot": "Boots",
+      "tabs": [ 1 ],
+      "upgrades": [
+        83502
+      ],
+      "infusions": [
+        70852
+      ],
+      "stats": {
+        "id": 1153,
+        "attributes": {
+          "Power": 40,
+          "Precision": 22,
+          "ConditionDamage": 40,
+          "ConditionDuration": 22
+        }
+      },
+      "binding": "Account",
+      "dyes": [
+        11,
+        1155,
+        6,
+        null
+      ]
+    },
+    {
+      "id": 78984,
+      "location": "Equipped",
+      "slot": "WeaponA1",
+      "tabs": [ 1 ],
+      "upgrades": [
+        24605
+      ],
+      "infusions": [
+        49432
+      ],
+      "skin": 6588,
+      "stats": {
+        "id": 1224,
+        "attributes": {
+          "Power": 108,
+          "Precision": 59,
+          "ConditionDamage": 108,
+          "ConditionDuration": 59
+        }
+      },
+      "binding": "Account"
+    },
+    {
+      "id": 49308,
+      "location": "Equipped",
+      "slot": "Sickle",
+      "binding": "Account"
+    },
+    {
+      "id": 48931,
+      "location": "Equipped",
+      "slot": "Axe",
+      "skin": 8087,
+      "binding": "Account"
+    },
+    {
+      "id": 87422,
+      "location": "Equipped",
+      "slot": "Pick",
+      "skin": 8097,
+      "binding": "Account"
+    }
+  ],
+  "recipes": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "training": [
+    {
+      "id": 72,
+      "spent": 22,
+      "done": true
+    },
+    {
+      "id": 76,
+      "spent": 24,
+      "done": true
+    },
+    {
+      "id": 50,
+      "spent": 15,
+      "done": true
+    },
+    {
+      "id": 64,
+      "spent": 15,
+      "done": true
+    },
+    {
+      "id": 117,
+      "spent": 22,
+      "done": true
+    },
+    {
+      "id": 27,
+      "spent": 60,
+      "done": true
+    },
+    {
+      "id": 87,
+      "spent": 60,
+      "done": true
+    },
+    {
+      "id": 109,
+      "spent": 10,
+      "done": false
+    },
+    {
+      "id": 55,
+      "spent": 60,
+      "done": true
+    }
+  ],
+  "bags": [
+    {
+      "id": 8932,
+      "size": 20,
+      "inventory": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 48715,
+      "size": 20,
+      "inventory": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "id": 19620,
+          "count": 1,
+          "binding": "Character",
+          "bound_to": "Bob"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 48715,
+      "size": 20,
+      "inventory": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 48715,
+      "size": 20,
+      "inventory": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 9594,
+      "size": 20,
+      "inventory": [
+        {
+          "id": 85016,
+          "count": 250
+        },
+        null,
+        {
+          "id": 85016,
+          "count": 93
+        },
+        null,
+        {
+          "id": 84731,
+          "count": 98
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "id": 73653,
+          "count": 6,
+          "binding": "Account"
+        },
+        null,
+        {
+          "id": 24836,
+          "count": 6
+        },
+        null,
+        null,
+        null,
+        null,
+        {
+          "id": 78963,
+          "count": 1,
+          "skin": 5871,
+          "upgrades": [
+            24615
+          ],
+          "binding": "Account",
+          "stats": {
+            "id": 161,
+            "attributes": {
+              "Power": 125,
+              "Precision": 90,
+              "CritDamage": 90
+            }
+          }
+        },
+        {
+          "id": 46759,
+          "count": 1,
+          "skin": 5871,
+          "upgrades": [
+            24618
+          ],
+          "binding": "Account"
+        }
+      ]
+    },
+    {
+      "id": 87225,
+      "size": 32,
+      "inventory": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "id": 87695,
+          "count": 1,
+          "binding": "Character",
+          "bound_to": "Bob"
+        },
+        {
+          "id": 88023,
+          "count": 1,
+          "binding": "Account"
+        },
+        {
+          "id": 87630,
+          "count": 72,
+          "binding": "Account"
+        },
+        {
+          "id": 86793,
+          "count": 1,
+          "binding": "Account"
+        },
+        {
+          "id": 87517,
+          "count": 8,
+          "binding": "Account"
+        },
+        {
+          "id": 79626,
+          "count": 1,
+          "binding": "Character",
+          "bound_to": "Bob"
+        }
+      ]
+    }
+  ]
+}
