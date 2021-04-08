@@ -65,6 +65,8 @@
     <None Remove="TestFiles\Backstory\BackstoryQuestions.single.json" />
     <None Remove="TestFiles\Build\Build.json" />
     <None Remove="TestFiles\Characters\Characters.bulk.json" />
+    <None Remove="TestFiles\Characters\Characters.EquipmentTabs.json" />
+    <None Remove="TestFiles\Characters\Characters.EquipmentTabs.Null.json" />
     <None Remove="TestFiles\Characters\Characters.ids.json" />
     <None Remove="TestFiles\Characters\Characters.single.json" />
     <None Remove="TestFiles\Characters\CharactersIdBackstory.json" />
@@ -362,6 +364,8 @@
     <EmbeddedResource Include="TestFiles\Backstory\BackstoryQuestions.ids.json" />
     <EmbeddedResource Include="TestFiles\Backstory\BackstoryQuestions.single.json" />
     <EmbeddedResource Include="TestFiles\Build\Build.json" />
+    <EmbeddedResource Include="TestFiles\Characters\Characters.EquipmentTabs.json" />
+    <EmbeddedResource Include="TestFiles\Characters\Characters.EquipmentTabs.Null.json" />
     <EmbeddedResource Include="TestFiles\Characters\Characters.bulk.json" />
     <EmbeddedResource Include="TestFiles\Characters\Characters.ids.json" />
     <EmbeddedResource Include="TestFiles\Characters\Characters.single.json" />

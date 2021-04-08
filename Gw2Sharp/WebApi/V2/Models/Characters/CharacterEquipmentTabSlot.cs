@@ -30,5 +30,12 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// The equipment.
         /// </summary>
         public IReadOnlyList<CharacterEquipmentItem> Equipment { get; set; } = Array.Empty<CharacterEquipmentItem>();
+
+        /// <summary>
+        /// The PvP equipment.
+        /// Additionally requires scopes: builds.
+        /// If the required scopes are not met, this value is <c>null</c>.
+        /// </summary>
+        public CharacterEquipmentPvp? EquipmentPvp { get; set; }
     }
 }

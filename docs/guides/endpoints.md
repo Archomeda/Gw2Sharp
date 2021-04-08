@@ -75,7 +75,7 @@ For your convenience, the following list gives an overview of the web API endpoi
  /v2/characters/`:id`/crafting | 🔑📆 | [`Gw2Client.WebApi.V2.Characters[id].Crafting`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdCraftingClient.html)
  ~~/v2/characters/`:id`/dungeons~~ | ✖️ |
  /v2/characters/`:id`/equipment | 🔑📆 | [`Gw2Client.WebApi.V2.Characters[id].Equipment`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentClient.html)
- /v2/characters/`:id`/equipmenttabs | 🔑 | [`Gw2Client.WebApi.V2.Characters[id].EquipmentTabs`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsActiveClient.html)
+ /v2/characters/`:id`/equipmenttabs | 🔑 | [`Gw2Client.WebApi.V2.Characters[id].EquipmentTabs`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsClient.html)
  /v2/characters/`:id`/equipmenttabs/active | 🔑 | [`Gw2Client.WebApi.V2.Characters[id].EquipmentTabs.Active`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsActiveClient.html)
  /v2/characters/`:id`/heropoints | 🔑 | [`Gw2Client.WebApi.V2.Characters[id].HeroPoints`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdHeroPointsClient.html)
  /v2/characters/`:id`/inventory | 🔑📆 | [`Gw2Client.WebApi.V2.Characters[id].Inventory`](../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdInventoryClient.html)

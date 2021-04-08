@@ -1,5 +1,15 @@
 # Gw2Sharp History
 
+## 1.1.0 (8 April 2021)
+This release applies the schema changes of 2021-04-06, which has moved the PvP equipment details to the proper equipment tabs information.
+
+### Endpoints
+- Move `EquipmentPvp` from `Gw2Sharp.WebApi.V2.Models.Character` to `Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot` ([#85](https://github.com/Archomeda/Gw2Sharp/issues/85)).
+  - This deprecates `EquipmentPvp` from `Gw2Sharp.WebApi.V2.Models.Character` and will finally be removed from Gw2Sharp starting from version 2.0
+  - This makes `EquipmentPvp` also available under the `/v2/characters/:id/equipmenttabs` sub-endpoint, which can be reached from [`Gw2Client.WebApi.V2.Characters[id].EquipmentTabs`](https://archomeda.github.io/Gw2Sharp/master/api/Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsClient.html)
+
+---
+
 ## 1.0.0 (1 January 2021)
 *Gw2Sharp can now be considered feature complete.*
 
