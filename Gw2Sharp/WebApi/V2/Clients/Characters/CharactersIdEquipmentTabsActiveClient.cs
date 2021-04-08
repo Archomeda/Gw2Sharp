@@ -7,7 +7,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 characters id equipment tabs active client.
     /// </summary>
     [EndpointPath("characters/:id/equipmenttabs/active")]
-    [EndpointSchemaVersion("2019-12-19T00:00:00.000Z")]
+    [EndpointSchemaVersion("2021-04-06T21:00:00.000Z")]
     public class CharactersIdEquipmentTabsActiveClient : BaseCharactersSubBlobClient<CharacterEquipmentTabSlot>, ICharactersIdEquipmentTabsActiveClient
     {
         /// <summary>

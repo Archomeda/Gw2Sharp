@@ -70,7 +70,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
 
         #region Request Assertions
 
-        protected virtual async Task AssertPaginatedDataAsync<TObject>(IPaginatedClient<TObject> client, string file)
+        protected virtual async Task<IApiV2ObjectList<TObject>> AssertPaginatedDataAsync<TObject>(IPaginatedClient<TObject> client, string file)
             where TObject : IApiV2Object
         {
             (string data, var expected) = this.GetTestData(file);
@@ -87,9 +87,10 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
             var actual = await client.PageAsync(2, 100);
             this.AssertJsonObject(expected.RootElement, actual);
             this.AssertResponseInfo(actual);
+            return actual;
         }
 
-        protected virtual async Task AssertBlobDataAsync<TObject>(IBlobClient<TObject> client, string file)
+        protected virtual async Task<TObject> AssertBlobDataAsync<TObject>(IBlobClient<TObject> client, string file)
             where TObject : IApiV2Object
         {
             (string data, var expected) = this.GetTestData(file);
@@ -105,9 +106,10 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
             var actual = await client.GetAsync();
             this.AssertJsonObject(expected.RootElement, actual!);
             this.AssertResponseInfo(actual);
+            return actual;
         }
 
-        protected virtual async Task AssertGetDataAsync<TObject, TId>(IBulkExpandableClient<TObject, TId> client, string file, string idName = "id")
+        protected virtual async Task<TObject> AssertGetDataAsync<TObject, TId>(IBulkExpandableClient<TObject, TId> client, string file, string idName = "id")
             where TObject : IApiV2Object, IIdentifiable<TId>
         {
             (string data, var expected) = this.GetTestData(file);
@@ -129,9 +131,10 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
             var actual = await client.GetAsync(id);
             this.AssertJsonObject(expected.RootElement, actual);
             this.AssertResponseInfo(actual);
+            return actual;
         }
 
-        protected virtual async Task AssertAllDataAsync<TObject>(IAllExpandableClient<TObject> client, string file, string idsName = "ids")
+        protected virtual async Task<IApiV2ObjectList<TObject>> AssertAllDataAsync<TObject>(IAllExpandableClient<TObject> client, string file, string idsName = "ids")
             where TObject : IApiV2Object
         {
             (string data, var expected) = this.GetTestData(file);
@@ -147,9 +150,10 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
             var actual = await client.AllAsync();
             this.AssertJsonObject(expected.RootElement, actual);
             this.AssertResponseInfo(actual);
+            return actual;
         }
 
-        protected virtual async Task AssertBulkDataAsync<TObject, TId>(IBulkExpandableClient<TObject, TId> client, string file, string idName = "id", string idsName = "ids")
+        protected virtual async Task<IReadOnlyList<TObject>> AssertBulkDataAsync<TObject, TId>(IBulkExpandableClient<TObject, TId> client, string file, string idName = "id", string idsName = "ids")
             where TObject : IApiV2Object, IIdentifiable<TId>
         {
             (string data, var expected) = this.GetTestData(file);
@@ -175,9 +179,10 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
             var actual = await client.ManyAsync(ids);
             this.AssertJsonObject(expected.RootElement, actual);
             this.AssertResponseInfoList(actual);
+            return actual;
         }
 
-        protected virtual async Task AssertIdsDataAsync<TObject, TId>(IBulkExpandableClient<TObject, TId> client, string file)
+        protected virtual async Task<IApiV2ObjectList<TId>> AssertIdsDataAsync<TObject, TId>(IBulkExpandableClient<TObject, TId> client, string file)
             where TObject : IApiV2Object, IIdentifiable<TId>
         {
             (string data, var expected) = this.GetTestData(file);
@@ -194,6 +199,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
             var actual = await client.IdsAsync();
             this.AssertJsonObject(expected.RootElement, actual);
             this.AssertResponseInfo(actual);
+            return actual;
         }
 
         protected virtual void AssertRequest(CallInfo callInfo, IEndpointClient client, string pathAndQuery)

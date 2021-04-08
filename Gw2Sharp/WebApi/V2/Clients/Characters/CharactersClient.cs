@@ -8,7 +8,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// </summary>
     [EndpointPath("characters")]
     [EndpointBulkIdName("name")]
-    [EndpointSchemaVersion("2019-12-19T00:00:00.000Z")]
+    [EndpointSchemaVersion("2021-04-06T21:00:00.000Z")]
     public class CharactersClient : BaseEndpointBulkAllClient<Character, string>, ICharactersClient
     {
         /// <summary>
@@ -18,7 +18,8 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="gw2Client">The Guild Wars 2 client.</param>
         /// <exception cref="ArgumentNullException"><paramref name="connection"/> or <paramref name="gw2Client"/> is <c>null</c>.</exception>
         protected internal CharactersClient(IConnection connection, IGw2Client gw2Client) :
-            base(connection, gw2Client) { }
+            base(connection, gw2Client)
+        { }
 
         /// <inheritdoc />
         public virtual ICharactersIdClient this[string characterName] => new CharactersIdClient(this.Connection, this.Gw2Client!, characterName);

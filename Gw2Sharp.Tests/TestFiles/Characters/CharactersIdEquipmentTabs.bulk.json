@@ -111,7 +111,17 @@
         },
         "binding": "Account"
       }
-    ]
+    ],
+    "equipment_pvp": {
+      "amulet": 14,
+      "rune": 21172,
+      "sigils": [
+        21152,
+        21150,
+        21152,
+        null
+      ]
+    }
   },
   {
     "tab": 2,
@@ -200,6 +210,16 @@
         "binding": "Character",
         "bound_to": "Bob"
       }
-    ]
+    ],
+    "equipment_pvp": {
+      "amulet": 14,
+      "rune": 21172,
+      "sigils": [
+        21152,
+        21150,
+        21152,
+        null
+      ]
+    }
   }
 ]

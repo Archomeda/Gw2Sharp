@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Gw2Sharp.WebApi.V2.Clients;
 
 namespace Gw2Sharp.WebApi.V2.Models
@@ -162,7 +163,11 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// Additionally requires scopes: builds.
         /// If the required scopes are not met, this value is <c>null</c>.
         /// </summary>
-        public CharacterEquipmentPvp? EquipmentPvp { get; set; }
+        [Obsolete("Deprecated since schema version 2021-04-06T21:00:00.000Z. Use EquipmentTabs[i].EquipmentPvp instead. This will be removed from Gw2Sharp starting from version 2.0.")]
+        public CharacterEquipmentPvp? EquipmentPvp =>
+            // Instead of using the old schema version to pull this information while also supporting the latest schema,
+            // we emulate the migration roll-forward ability ourselves by grabbing the current active tab information.
+            this.EquipmentTabs?.FirstOrDefault(x => x.Tab == this.ActiveEquipmentTab)?.EquipmentPvp;
 
         /// <summary>
         /// The list of character trainings.

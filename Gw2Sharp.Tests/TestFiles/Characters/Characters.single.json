@@ -220,7 +220,17 @@
           "skin": 8097,
           "binding": "Account"
         }
-      ]
+      ],
+      "equipment_pvp": {
+        "amulet": 14,
+        "rune": 21172,
+        "sigils": [
+          21152,
+          21150,
+          21152,
+          null
+        ]
+      }
     }
   ],
   "equipment": [
@@ -359,16 +369,6 @@
     3,
     4
   ],
-  "equipment_pvp": {
-    "amulet": 14,
-    "rune": 21172,
-    "sigils": [
-      21152,
-      21150,
-      21152,
-      null
-    ]
-  },
   "training": [
     {
       "id": 72,
