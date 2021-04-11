@@ -170,7 +170,7 @@ namespace Gw2Sharp
             this.Middleware.Add(new ExceptionMiddleware());
         }
 
-        private void Middleware_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
+        private void Middleware_CollectionChanged(object? sender, NotifyCollectionChangedEventArgs e)
         {
             var hashCode = new HashCode();
             foreach (var middleware in this.Middleware)

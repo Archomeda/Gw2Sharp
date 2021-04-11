@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.Versioning;
 using Gw2Sharp.Mumble;
 using Gw2Sharp.WebApi;
 
@@ -12,6 +13,10 @@ namespace Gw2Sharp
         /// <summary>
         /// Gets the Mumble Link client API.
         /// </summary>
+        /// <exception cref="PlatformNotSupportedException">Mumble Link is not available on non-Windows platforms.</exception>
+#if NET5_0_OR_GREATER
+        [SupportedOSPlatform("windows")]
+#endif
         IGw2MumbleClient Mumble { get; }
 
         /// <summary>

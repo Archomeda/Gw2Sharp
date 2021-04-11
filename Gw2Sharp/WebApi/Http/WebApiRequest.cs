@@ -70,7 +70,7 @@ namespace Gw2Sharp.WebApi.Http
                 ? url.Query[1..]
                     .Split(new[] { '&' }, StringSplitOptions.RemoveEmptyEntries)
                     .Select(x => x.Split('='))
-                    .ToDictionary(x => x[0], x => x.Skip(1).FirstOrDefault())
+                    .ToDictionary(x => x[0], x => x.Skip(1).FirstOrDefault() ?? string.Empty)
                 : new Dictionary<string, string>();
             requestHeaders = requestHeaders?.ShallowCopy() ?? new Dictionary<string, string>();
 
