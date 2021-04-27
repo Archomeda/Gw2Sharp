@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
+using System.Diagnostics;
 using System.Net.Http.Headers;
-using System.Reflection;
 using Gw2Sharp.WebApi;
 using Gw2Sharp.WebApi.Caching;
 using Gw2Sharp.WebApi.Http;
@@ -82,8 +82,9 @@ namespace Gw2Sharp
 
             this.accessToken = accessToken ?? string.Empty;
             this.Locale = locale;
+            string version = new Version(FileVersionInfo.GetVersionInfo(typeof(Gw2Client).Assembly.Location).FileVersion).ToString(3);
             this.UserAgent = $"{userAgent}{(!string.IsNullOrWhiteSpace(userAgent) ? " " : "")}" +
-                $"Gw2Sharp/{typeof(Connection).GetTypeInfo().Assembly.GetName().Version?.ToString(3)} (https://github.com/Archomeda/Gw2Sharp)";
+                $"Gw2Sharp/{version} (https://github.com/Archomeda/Gw2Sharp)";
             this.httpClient = httpClient ?? new HttpClient();
             this.cacheMethod = cacheMethod ?? new MemoryCacheMethod();
             this.renderCacheMethod = renderCacheMethod ?? new NullCacheMethod();
