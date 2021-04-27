@@ -1,6 +1,8 @@
 using System;
 using System.Net;
 using System.Threading.Tasks;
+using FluentAssertions;
+using FluentAssertions.Execution;
 using Gw2Sharp.WebApi.Exceptions;
 using Gw2Sharp.WebApi.Http;
 using Gw2Sharp.WebApi.Middleware;
@@ -40,26 +42,42 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
             response.StatusCode.Returns(statusCode);
 
             var middleware = new ExceptionMiddleware();
-            var exception = (UnexpectedStatusException<ErrorObject>)await Assert.ThrowsAsync(exceptionType,
-                () => middleware.OnRequestAsync(context, (c, t) => Task.FromResult(response)));
-            Assert.Equal(errorText, exception.Response?.Content.Text);
+
+            using (new AssertionScope())
+            {
+                Func<Task> act = () => middleware.OnRequestAsync(context, (c, t) => Task.FromResult(response));
+                var exception = (await act.Should().ThrowAsync<UnexpectedStatusException<ErrorObject>>()
+                    .WithMessage(errorText))
+                    .Which;
+
+                exception.Response?.Content.Text.Should().Be(errorText);
+                exception.Should().BeOfType(exceptionType);
+            }
         }
 
-        [Fact]
-        public async Task ExceptionNoJsonRequestTest()
+        [Theory]
+        [InlineData("<html><body>This is not JSON</body></html>", HttpStatusCode.InternalServerError, typeof(ServerErrorException))]
+        public async Task ExceptionNoJsonRequestTest(string body, HttpStatusCode statusCode, Type exceptionType)
         {
-            const string BODY = "<html><body>This is not JSON</body></html>";
-
             var connection = Substitute.For<IConnection>();
             var request = Substitute.For<IWebApiRequest>();
             var context = new MiddlewareContext(connection, request);
             var response = Substitute.For<IWebApiResponse>();
-            response.Content.Returns(BODY);
-            response.StatusCode.Returns(HttpStatusCode.InternalServerError);
+            response.Content.Returns(body);
+            response.StatusCode.Returns(statusCode);
 
             var middleware = new ExceptionMiddleware();
-            var exception = await Assert.ThrowsAsync<UnexpectedStatusException>(() => middleware.OnRequestAsync(context, (c, t) => Task.FromResult(response)));
-            Assert.Equal(BODY, exception.Response?.Content);
+
+            using (new AssertionScope())
+            {
+                Func<Task> act = () => middleware.OnRequestAsync(context, (c, t) => Task.FromResult(response));
+                var exception = (await act.Should().ThrowAsync<UnexpectedStatusException<ErrorObject>>()
+                    .WithMessage(body))
+                    .Which;
+
+                exception.Response?.Content.Text.Should().Be(body);
+                exception.Should().BeOfType(exceptionType);
+            }
         }
 
         [Fact]
@@ -75,8 +93,11 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
             response.StatusCode.Returns((HttpStatusCode)499);
 
             var middleware = new ExceptionMiddleware();
-            var exception = await Assert.ThrowsAsync<UnexpectedStatusException>(() => middleware.OnRequestAsync(context, (c, t) => Task.FromResult(response)));
-            Assert.Equal(MESSAGE, exception.Response?.Content);
+
+            Func<Task> act = () => middleware.OnRequestAsync(context, (c, t) => Task.FromResult(response));
+            (await act.Should().ThrowAsync<UnexpectedStatusException>())
+                .WithMessage(MESSAGE)
+                .Which.Response?.Content.Should().Be(MESSAGE);
         }
     }
 }

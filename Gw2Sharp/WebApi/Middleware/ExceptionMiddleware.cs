@@ -53,7 +53,7 @@ namespace Gw2Sharp.WebApi.Middleware
                 catch (JsonException)
                 {
                     // Fallback message
-                    throw new UnexpectedStatusException(context.Request, httpResponse, httpResponse.Content);
+                    error = new ErrorObject { Text = httpResponse.Content };
                 }
 
                 var errorResponse = new WebApiResponse<ErrorObject>(error, httpResponse.StatusCode, httpResponse.CacheState, httpResponse.ResponseHeaders);
