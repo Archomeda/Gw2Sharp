@@ -115,6 +115,11 @@ namespace Gw2Sharp.WebApi.V2
         IItemstatsClient Itemstats { get; }
 
         /// <summary>
+        /// Gets the legendary armory.
+        /// </summary>
+        ILegendaryArmoryClient LegendaryArmory { get; }
+
+        /// <summary>
         /// Gets the legends.
         /// </summary>
         ILegendsClient Legends { get; }

@@ -80,6 +80,12 @@ namespace Gw2Sharp.WebApi.V2.Clients
         IAccountInventoryClient Inventory { get; }
 
         /// <summary>
+        /// Gets the legendary armory.
+        /// Requires scopes: account, inventories, unlocks.
+        /// </summary>
+        IAccountLegendaryArmoryClient LegendaryArmory { get; }
+
+        /// <summary>
         /// Gets the luck progression.
         /// Requires scores: account, progression, unlocks.
         /// </summary>

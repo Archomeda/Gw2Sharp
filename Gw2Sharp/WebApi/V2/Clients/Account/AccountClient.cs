@@ -23,6 +23,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         private readonly IAccountGlidersClient gliders;
         private readonly IAccountHomeClient home;
         private readonly IAccountInventoryClient inventory;
+        private readonly IAccountLegendaryArmoryClient legendaryArmory;
         private readonly IAccountLuckClient luck;
         private readonly IAccountMailCarriersClient mailCarriers;
         private readonly IAccountMapChestsClient mapChests;
@@ -61,6 +62,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
             this.gliders = new AccountGlidersClient(connection, gw2Client);
             this.home = new AccountHomeClient(connection, gw2Client);
             this.inventory = new AccountInventoryClient(connection, gw2Client);
+            this.legendaryArmory = new AccountLegendaryArmoryClient(connection, gw2Client);
             this.luck = new AccountLuckClient(connection, gw2Client);
             this.mailCarriers = new AccountMailCarriersClient(connection, gw2Client);
             this.mapChests = new AccountMapChestsClient(connection, gw2Client);
@@ -112,6 +114,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
 
         /// <inheritdoc />
         public virtual IAccountInventoryClient Inventory => this.inventory;
+
+        /// <inheritdoc />
+        public virtual IAccountLegendaryArmoryClient LegendaryArmory => this.legendaryArmory;
 
         /// <inheritdoc />
         public virtual IAccountLuckClient Luck => this.luck;
