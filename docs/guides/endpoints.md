@@ -35,6 +35,7 @@ For your convenience, the following list gives an overview of the web API endpoi
  /v2/account/home/cats | 🔑 | [`Gw2Client.WebApi.V2.Account.Home.Cats`](../api/Gw2Sharp.WebApi.V2.Clients.AccountHomeCatsClient.html)
  /v2/account/home/nodes | 🔑 | [`Gw2Client.WebApi.V2.Account.Home.Nodes`](../api/Gw2Sharp.WebApi.V2.Clients.AccountHomeNodesClient.html)
  /v2/account/inventory | 🔑📆 | [`Gw2Client.WebApi.V2.Account.Inventory`](../api/Gw2Sharp.WebApi.V2.Clients.AccountInventoryClient.html)
+ /v2/account/legendaryarmory | 🔑 | [`Gw2Client.WebApi.V2.Account.LegendaryArmory`](../api/Gw2Sharp.WebApi.V2.Clients.AccountLegendaryArmoryClient.html)
  /v2/account/luck | 🔑 | [`Gw2Client.WebApi.V2.Account.Luck`](../api/Gw2Sharp.WebApi.V2.Clients.AccountLuckClient.html)
  ~~/v2/account/mail~~ | ✖️ |
  /v2/account/mailcarriers | 🔑 | [`Gw2Client.WebApi.V2.Account.MailCarriers`](../api/Gw2Sharp.WebApi.V2.Clients.AccountMailCarriersClient.html)
@@ -134,6 +135,7 @@ For your convenience, the following list gives an overview of the web API endpoi
  /v2/home/nodes | 📄📚📦 | [`Gw2Client.WebApi.V2.Home.Nodes`](../api/Gw2Sharp.WebApi.V2.Clients.HomeNodesClient.html)
  /v2/items | 🌐📄📚 | [`Gw2Client.WebApi.V2.Items`](../api/Gw2Sharp.WebApi.V2.Clients.ItemsClient.html)
  /v2/itemstats | 🌐📄📚📦 | [`Gw2Client.WebApi.V2.Itemstats`](../api/Gw2Sharp.WebApi.V2.Clients.ItemstatsClient.html)
+ /v2/legendaryarmory | 📄📚📦 | [`Gw2Client.WebApi.V2.LegendaryArmory`](../api/Gw2Sharp.WebApi.V2.Clients.LegendaryArmoryClient.html)
  /v2/legends | 📄📚📦 | [`Gw2Client.WebApi.V2.Legends`](../api/Gw2Sharp.WebApi.V2.Clients.LegendsClient.html)
  /v2/mailcarriers | 🌐📄📚📦 | [`Gw2Client.WebApi.V2.MailCarriers`](../api/Gw2Sharp.WebApi.V2.Clients.MailCarriersClient.html)
  /v2/mapchests | 📄📚📦 | [`Gw2Client.WebApi.V2.MapChests`](../api/Gw2Sharp.WebApi.V2.Clients.MapChestsClient.html)

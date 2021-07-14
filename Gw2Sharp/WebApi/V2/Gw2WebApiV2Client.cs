@@ -34,6 +34,7 @@ namespace Gw2Sharp.WebApi.V2
         private readonly IHomeClient home;
         private readonly IItemsClient items;
         private readonly IItemstatsClient itemstats;
+        private readonly ILegendaryArmoryClient legendaryArmory;
         private readonly ILegendsClient legends;
         private readonly IMapChestsClient mapChests;
         private readonly IMailCarriersClient mailCarriers;
@@ -98,6 +99,7 @@ namespace Gw2Sharp.WebApi.V2
             this.home = new HomeClient(connection, gw2Client);
             this.items = new ItemsClient(connection, gw2Client);
             this.itemstats = new ItemstatsClient(connection, gw2Client);
+            this.legendaryArmory = new LegendaryArmoryClient(connection, gw2Client);
             this.legends = new LegendsClient(connection, gw2Client);
             this.mailCarriers = new MailCarriersClient(connection, gw2Client);
             this.mapChests = new MapChestsClient(connection, gw2Client);
@@ -190,6 +192,9 @@ namespace Gw2Sharp.WebApi.V2
 
         /// <inheritdoc />
         public virtual IItemstatsClient Itemstats => this.itemstats;
+
+        /// <inheritdoc />
+        public virtual ILegendaryArmoryClient LegendaryArmory => this.legendaryArmory;
 
         /// <inheritdoc />
         public virtual ILegendsClient Legends => this.legends;
