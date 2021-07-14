@@ -231,9 +231,11 @@ await renderClient.DownloadToStreamAsync(appleStream, appleUrl);
 <h2 id="mumble-link">Mumble Link</h2>
 <p>Accessing the Mumble Link service is done through the main <code>Gw2Sharp.Gw2Client</code>:</p>
 <pre><code class="lang-cs">var mumbleClient = client.Mumble;
-</code></pre><div class="WARNING"><h5>Warning</h5><p>The Mumble Link service client requires Guild Wars 2 to be running on a Windows operating system.
-However, this validation is totally up to you.
-The property <code>IsAvailable</code> will return <code>true</code> if the Guild Wars 2 Mumble Link API is available.</p>
+</code></pre><div class="WARNING"><h5>Warning</h5><p>The Mumble Link service client requires Guild Wars 2 to be running on a Windows operating system.</p>
+<p>Starting with .NET 5, using this property without checking if you&#39;re targeting a Windows platform, <a href="https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1416">will raise a warning</a>.
+Accessing the property will throw a <code>PlatformNotSupportedException</code>.</p>
+<p>In .NET Framework and .NET Core however, <code>PlatformNotSupportedException</code> is thrown as soon as you&#39;re calling <code>Update()</code> after accessing the property.</p>
+<p>The property <code>IsAvailable</code> will return <code>true</code> if the Guild Wars 2 client is running and the Mumble Link API is available.</p>
 </div>
 <div class="NOTE"><h5>Note</h5><p>You are responsible for updating the Mumble Link values by calling the method <code>Update()</code>.
 The update tick rate depends on how fast the game is updating the frames.
