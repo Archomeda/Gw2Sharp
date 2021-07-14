@@ -1,6 +1,7 @@
 using System;
 using System.IO.MemoryMappedFiles;
 using System.Reflection;
+using FluentAssertions;
 using Gw2Sharp.Models;
 using Gw2Sharp.Mumble;
 using Gw2Sharp.Mumble.Models;
@@ -10,12 +11,29 @@ namespace Gw2Sharp.Tests.Mumble
 {
     public class Gw2MumbleClientTests
     {
+        private bool isWindows = Environment.OSVersion.Platform == PlatformID.Win32NT;
+
+        [Fact]
+        public void ThrowsPlatformNotSupportedExceptionIfNotWindowsTest()
+        {
+            Action createClient = () =>
+            {
+                using var client = new Gw2MumbleClient();
+                client.Update();
+            };
+
+            if (this.isWindows)
+                createClient.Should().NotThrow<PlatformNotSupportedException>();
+            else
+                createClient.Should().Throw<PlatformNotSupportedException>();
+        }
+
         [SkippableFact]
         public void ReadStructCorrectlyTest()
         {
             // Named memory mapped files aren't supported on Unix based systems.
             // So we need to skip this test.
-            Skip.IfNot(Environment.OSVersion.Platform == PlatformID.Win32NT, "Mumble Link is only supported in Windows");
+            Skip.IfNot(this.isWindows, "Mumble Link is only supported in Windows");
 
             using var memorySource = Assembly.GetExecutingAssembly().GetManifestResourceStream($"Gw2Sharp.Tests.TestFiles.Mumble.MemoryMappedFile.bin");
             using var memoryMappedFile = MemoryMappedFile.CreateOrOpen(Gw2MumbleClient.DEFAULT_MUMBLE_LINK_MAP_NAME, memorySource.Length);
@@ -80,7 +98,7 @@ namespace Gw2Sharp.Tests.Mumble
         {
             // Named memory mapped files aren't supported on Unix based systems.
             // So we need to skip this test.
-            Skip.IfNot(Environment.OSVersion.Platform == PlatformID.Win32NT, "Mumble Link is only supported in Windows");
+            Skip.IfNot(this.isWindows, "Mumble Link is only supported in Windows");
 
             var client = new Gw2MumbleClient();
             client.Dispose();
@@ -92,7 +110,7 @@ namespace Gw2Sharp.Tests.Mumble
         {
             // Named memory mapped files aren't supported on Unix based systems.
             // So we need to skip this test.
-            Skip.IfNot(Environment.OSVersion.Platform == PlatformID.Win32NT, "Mumble Link is only supported in Windows");
+            Skip.IfNot(this.isWindows, "Mumble Link is only supported in Windows");
 
             using var rootClient = new Gw2MumbleClient();
             var childClientA = rootClient["CinderSteeltemper"];
@@ -108,7 +126,7 @@ namespace Gw2Sharp.Tests.Mumble
         {
             // Named memory mapped files aren't supported on Unix based systems.
             // So we need to skip this test.
-            Skip.IfNot(Environment.OSVersion.Platform == PlatformID.Win32NT, "Mumble Link is only supported in Windows");
+            Skip.IfNot(this.isWindows, "Mumble Link is only supported in Windows");
 
             var rootClient = new Gw2MumbleClient();
             var childClientA = rootClient["CinderSteeltemper"];

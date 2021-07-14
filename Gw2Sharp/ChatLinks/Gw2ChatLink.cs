@@ -117,7 +117,7 @@ namespace Gw2Sharp.ChatLinks
                     chatLinkString = chatLinkString.Remove(chatLinkString.Length - 1);
 
                 byte[] bytes = Convert.FromBase64String(chatLinkString);
-                var chatLink = ((ChatLinkType)bytes[0]) switch
+                var chatLink = (ChatLinkType)bytes[0] switch
                 {
                     ChatLinkType.Coin => (Gw2ChatLink)new CoinChatLink(),
                     ChatLinkType.Item => new ItemChatLink(),

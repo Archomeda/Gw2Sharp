@@ -85,7 +85,9 @@ namespace Gw2Sharp
             string userAgentProduct = "Gw2Sharp";
             try
             {
-                userAgentProduct = $"Gw2Sharp/{new Version(FileVersionInfo.GetVersionInfo(typeof(Gw2Client).Assembly.Location).FileVersion).ToString(3)}";
+                string? fileVersion = FileVersionInfo.GetVersionInfo(typeof(Gw2Client).Assembly.Location).FileVersion;
+                if (!string.IsNullOrWhiteSpace(fileVersion))
+                    userAgentProduct = $"Gw2Sharp/{new Version(fileVersion).ToString(3)}";
             }
             catch { /* Ignore */ }
             this.UserAgent = $"{userAgent}{(!string.IsNullOrWhiteSpace(userAgent) ? " " : "")}" +
@@ -170,7 +172,7 @@ namespace Gw2Sharp
             this.Middleware.Add(new ExceptionMiddleware());
         }
 
-        private void Middleware_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
+        private void Middleware_CollectionChanged(object? sender, NotifyCollectionChangedEventArgs e)
         {
             var hashCode = new HashCode();
             foreach (var middleware in this.Middleware)

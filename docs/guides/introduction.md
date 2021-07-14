@@ -125,8 +125,13 @@ var mumbleClient = client.Mumble;
 
 > [!WARNING]
 > The Mumble Link service client requires Guild Wars 2 to be running on a Windows operating system.
-> However, this validation is totally up to you.
-> The property `IsAvailable` will return `true` if the Guild Wars 2 Mumble Link API is available.
+>
+> Starting with .NET 5, using this property without checking if you're targeting a Windows platform, [will raise a warning](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1416).
+> Accessing the property will throw a `PlatformNotSupportedException`.
+> 
+> In .NET Framework and .NET Core however, `PlatformNotSupportedException` is thrown as soon as you're calling `Update()` after accessing the property.
+>
+> The property `IsAvailable` will return `true` if the Guild Wars 2 client is running and the Mumble Link API is available.
 
 > [!NOTE]
 > You are responsible for updating the Mumble Link values by calling the method `Update()`.

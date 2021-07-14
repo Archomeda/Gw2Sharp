@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.Versioning;
 using Gw2Sharp.Mumble;
 using Gw2Sharp.WebApi;
 
@@ -9,7 +10,7 @@ namespace Gw2Sharp
     /// </summary>
     public class Gw2Client : IGw2Client
     {
-        private readonly IGw2MumbleClient mumble;
+        private readonly IGw2MumbleClient? mumble;
         private readonly IGw2WebApiClient webApi;
 
         /// <summary>
@@ -27,12 +28,21 @@ namespace Gw2Sharp
             if (connection == null)
                 throw new ArgumentNullException(nameof(connection));
 
+#if NET5_0_OR_GREATER
+            if (OperatingSystem.IsWindows())
+                this.mumble = new Gw2MumbleClient();
+#else
             this.mumble = new Gw2MumbleClient();
+#endif
             this.webApi = new Gw2WebApiClient(connection, this);
         }
 
         /// <inheritdoc />
-        public virtual IGw2MumbleClient Mumble => this.mumble;
+#if NET5_0_OR_GREATER
+        [SupportedOSPlatform("windows")]
+#endif
+        public virtual IGw2MumbleClient Mumble =>
+            this.mumble ?? throw new PlatformNotSupportedException("Mumble Link is only available on Windows platforms");
 
         /// <inheritdoc />
         public virtual IGw2WebApiClient WebApi => this.webApi;
@@ -51,7 +61,7 @@ namespace Gw2Sharp
             {
                 if (disposing)
                 {
-                    this.mumble.Dispose();
+                    this.mumble?.Dispose();
                 }
 
                 this.isDisposed = true;

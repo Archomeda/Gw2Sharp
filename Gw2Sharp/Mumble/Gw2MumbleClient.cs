@@ -3,6 +3,7 @@ using System.Collections.Concurrent;
 using System.IO.MemoryMappedFiles;
 using System.Linq;
 using System.Net.Sockets;
+using System.Runtime.Versioning;
 using System.Text.Json;
 using Gw2Sharp.Json;
 using Gw2Sharp.Models;
@@ -13,6 +14,9 @@ namespace Gw2Sharp.Mumble
     /// <summary>
     /// A client for the Guild Wars 2 Mumble Link API service.
     /// </summary>
+#if NET5_0_OR_GREATER
+    [SupportedOSPlatform("windows")]
+#endif
     public class Gw2MumbleClient : IGw2MumbleClient
     {
         /// <summary>
