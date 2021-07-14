@@ -14,7 +14,7 @@ jobs:
         run: |
           $assetsUrl = "${{ github.event.release.assets_url }}"
           $assets = Invoke-WebRequest $assetsUrl | ConvertFrom-Json
-          $packageUrls = $assets | Where { $_.name -Match 'Gw2Sharp\.[0-9\.]+\.s?nupkg' }
+          $packageUrls = $assets | Where { $_.name -Match 'Gw2Sharp\.[0-9\.-]+\.s?nupkg' }
           $packageUrls | ForEach { Invoke-WebRequest $_.browser_download_url -OutFile $_.name }
       - name: Run dotnet nuget push
         run: dotnet nuget push Gw2Sharp.*.nupkg -s https://api.nuget.org/v3/index.json -k "${{ secrets.NUGET_TOKEN }}"
