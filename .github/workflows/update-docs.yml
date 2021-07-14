@@ -19,7 +19,7 @@ jobs:
           Invoke-WebRequest https://github.com/dotnet/docfx/releases/download/v2.58/docfx.zip -OutFile docfx.zip
           mkdir docfx
           cd docfx
-          7z e docfx.zip
+          7z e ../docfx.zip
       - name: Generate docs
         run: docfx/docfx.exe docs/docfx.json
       - name: Upload docs
