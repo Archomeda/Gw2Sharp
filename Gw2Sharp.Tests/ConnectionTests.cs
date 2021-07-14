@@ -1,4 +1,7 @@
 using System;
+using System.Diagnostics;
+using FluentAssertions;
+using FluentAssertions.Execution;
 using Gw2Sharp.WebApi;
 using Gw2Sharp.WebApi.Caching;
 using Gw2Sharp.WebApi.Http;
@@ -17,6 +20,8 @@ namespace Gw2Sharp.Tests
             string userAgent = "HelloTyria";
             var httpClient = Substitute.For<IHttpClient>();
             var cacheMethod = Substitute.For<ICacheMethod>();
+            string version = new Version(FileVersionInfo.GetVersionInfo(typeof(Gw2Client).Assembly.Location).FileVersion).ToString(3);
+            string expectedUserAgent = $"Gw2Sharp/{version} (https://github.com/Archomeda/Gw2Sharp)";
 
             var connection1 = new Connection();
             var connection2 = new Connection(key);
@@ -27,40 +32,48 @@ namespace Gw2Sharp.Tests
             var connection7 = new Connection(null!);
             var connection8 = new Connection(null!, Locale.English, httpClient: httpClient, cacheMethod: cacheMethod);
 
-            Assert.Equal(string.Empty, connection1.AccessToken);
-            Assert.Equal(Locale.English, connection1.Locale);
-            Assert.IsType<HttpClient>(connection1.HttpClient);
-            Assert.IsType<MemoryCacheMethod>(connection1.CacheMethod);
+            using (new AssertionScope())
+            {
+                connection1.AccessToken.Should().BeEmpty();
+                connection1.Locale.Should().Be(Locale.English);
+                connection1.UserAgent.Should().Be(expectedUserAgent);
+                connection1.HttpClient.Should().BeOfType<HttpClient>();
+                connection1.CacheMethod.Should().BeOfType<MemoryCacheMethod>();
 
-            Assert.Equal(key, connection2.AccessToken);
-            Assert.Equal(Locale.English, connection2.Locale);
-            Assert.IsType<HttpClient>(connection2.HttpClient);
-            Assert.IsType<MemoryCacheMethod>(connection2.CacheMethod);
+                connection2.AccessToken.Should().Be(key);
+                connection2.Locale.Should().Be(Locale.English);
+                connection2.UserAgent.Should().Be(expectedUserAgent);
+                connection2.HttpClient.Should().BeOfType<HttpClient>();
+                connection2.CacheMethod.Should().BeOfType<MemoryCacheMethod>();
 
-            Assert.Equal(string.Empty, connection3.AccessToken);
-            Assert.Equal(locale, connection3.Locale);
-            Assert.IsType<HttpClient>(connection3.HttpClient);
-            Assert.IsType<MemoryCacheMethod>(connection3.CacheMethod);
+                connection3.AccessToken.Should().BeEmpty();
+                connection3.Locale.Should().Be(locale);
+                connection3.UserAgent.Should().Be(expectedUserAgent);
+                connection3.HttpClient.Should().BeOfType<HttpClient>();
+                connection3.CacheMethod.Should().BeOfType<MemoryCacheMethod>();
 
-            Assert.Equal(key, connection4.AccessToken);
-            Assert.Equal(locale, connection4.Locale);
-            Assert.IsType<HttpClient>(connection4.HttpClient);
-            Assert.IsType<MemoryCacheMethod>(connection4.CacheMethod);
+                connection4.AccessToken.Should().Be(key);
+                connection4.Locale.Should().Be(locale);
+                connection4.UserAgent.Should().Be(expectedUserAgent);
+                connection4.HttpClient.Should().BeOfType<HttpClient>();
+                connection4.CacheMethod.Should().BeOfType<MemoryCacheMethod>();
 
-            Assert.Equal(key, connection5.AccessToken);
-            Assert.Equal(locale, connection5.Locale);
-            Assert.Same(httpClient, connection5.HttpClient);
-            Assert.Same(cacheMethod, connection5.CacheMethod);
+                connection5.AccessToken.Should().Be(key);
+                connection5.Locale.Should().Be(locale);
+                connection5.UserAgent.Should().Be(expectedUserAgent);
+                connection5.HttpClient.Should().Be(httpClient);
+                connection5.CacheMethod.Should().Be(cacheMethod);
 
-            Assert.Equal(key, connection6.AccessToken);
-            Assert.Equal(locale, connection6.Locale);
-            Assert.StartsWith(userAgent, connection6.UserAgent);
-            Assert.True(connection6.UserAgent.Length > userAgent.Length);
-            Assert.Same(httpClient, connection6.HttpClient);
-            Assert.Same(cacheMethod, connection6.CacheMethod);
+                connection6.AccessToken.Should().Be(key);
+                connection6.Locale.Should().Be(locale);
+                connection6.UserAgent.Should().Be($"{userAgent} {expectedUserAgent}");
+                connection6.HttpClient.Should().Be(httpClient);
+                connection6.CacheMethod.Should().Be(cacheMethod);
 
-            Assert.Equal(string.Empty, connection7.AccessToken);
-            Assert.NotEqual(string.Empty, connection8.UserAgent);
+                connection7.AccessToken.Should().BeEmpty();
+
+                connection8.UserAgent.Should().NotBeNullOrEmpty();
+            }
         }
 
         [Theory]
