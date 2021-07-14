@@ -1,5 +1,22 @@
 # Gw2Sharp History
 
+## 1.2.0
+This release focuses on the new legendary armory addition, introduced in the game on 13 July 2021, along with some minor bug fixes.
+
+### Endpoints
+- Add `/v2/account/legendaryarmory` ([#86](https://github.com/Archomeda/Gw2Sharp/pull/86))
+- Add `/v2/legendaryarmory` ([#86](https://github.com/Archomeda/Gw2Sharp/pull/86))
+
+### Fixes
+- Failing responses that don't have a JSON body now have the correct exception type based on the HTTP status code (was always `UnexpectedStatusException` before, instead of e.g. `ServerErrorException` for a 500) ([#89](https://github.com/Archomeda/Gw2Sharp/pull/89))
+- The version reported in the user agent is now the correct version (file version instead of assembly version) ([#88](https://github.com/Archomeda/Gw2Sharp/pull/88))
+
+### Miscellaneous
+- .NET 5 is explicitly targeted in order to make use of the cross-platform attributes ([#90](https://github.com/Archomeda/Gw2Sharp/pull/90))
+  - We are using this to warn users when accessing the Mumble Link client on a non-Windows platform (this is only supported when your project targets .NET 5 or higher)
+
+---
+
 ## 1.1.0 (8 April 2021)
 This release applies the schema changes of 2021-04-06, which has moved the PvP equipment details to the proper equipment tabs information.
 
