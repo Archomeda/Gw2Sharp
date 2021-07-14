@@ -144,25 +144,25 @@
 Whenever a request fails, a custom exception will be thrown for you to catch.</p>
 <p>The following exceptions can be thrown from Gw2Sharp:</p>
 <ul>
-<li><a href="../api/Gw2Sharp.WebApi.Http.RequestException.html"><code>RequestException</code></a>: An exception occured during the request<ul>
-<li><a href="../api/Gw2Sharp.WebApi.Http.RequestCanceledException.html"><code>RequestCanceledException</code></a>: The request has been canceled</li>
-<li><a href="../api/Gw2Sharp.WebApi.Http.UnexpectedStatusException.html"><code>UnexpectedStatusException</code></a>: An unexpected HTTP status code was returned from the server<ul>
-<li><a href="../api/Gw2Sharp.WebApi.Http.BadRequestException.html"><code>BadRequestException</code></a> (400): The client sent an invalid request<ul>
-<li><a href="../api/Gw2Sharp.WebApi.Http.ListTooLongException.html"><code>ListTooLongException</code></a> (400): The list of requested resources is too long</li>
-<li><a href="../api/Gw2Sharp.WebApi.Http.PageOutOfRangeException.html"><code>PageOutOfRangeException</code></a> (400): The requested page is out of range</li>
+<li><a href="../api/Gw2Sharp.WebApi.Exceptions.RequestException.html"><code>RequestException</code></a>: An exception occured during the request<ul>
+<li><a href="../api/Gw2Sharp.WebApi.Exceptions.RequestCanceledException.html"><code>RequestCanceledException</code></a>: The request has been canceled</li>
+<li><a href="../api/Gw2Sharp.WebApi.Exceptions.UnexpectedStatusException.html"><code>UnexpectedStatusException</code></a>: An unexpected HTTP status code was returned from the server<ul>
+<li><a href="../api/Gw2Sharp.WebApi.Exceptions.BadRequestException.html"><code>BadRequestException</code></a> (400): The client sent an invalid request<ul>
+<li><a href="../api/Gw2Sharp.WebApi.Exceptions.ListTooLongException.html"><code>ListTooLongException</code></a> (400): The list of requested resources is too long</li>
+<li><a href="../api/Gw2Sharp.WebApi.Exceptions.PageOutOfRangeException.html"><code>PageOutOfRangeException</code></a> (400): The requested page is out of range</li>
 </ul>
 </li>
-<li><a href="../api/Gw2Sharp.WebApi.Http.AuthorizationRequiredException.html"><code>AuthorizationRequiredException</code></a> (401, 403): The client is unauthorized<ul>
-<li><a href="../api/Gw2Sharp.WebApi.Http.InvalidAccessTokenException.html"><code>InvalidAccessTokenException</code></a> (401, 403): The access token is invalid</li>
-<li><a href="../api/Gw2Sharp.WebApi.Http.MissingScopesException.html"><code>MissingScopesException</code></a> (403): The access token does not have the required scopes</li>
-<li><a href="../api/Gw2Sharp.WebApi.Http.MembershipRequiredException.html"><code>MembershipRequiredException</code></a> (403): The user is not a member of the guild</li>
-<li><a href="../api/Gw2Sharp.WebApi.Http.RestrictedToGuildLeadersException.html"><code>RestrictedToGuildLeadersException</code></a> (403): The user is not a leader of the guild</li>
+<li><a href="../api/Gw2Sharp.WebApi.Exceptions.AuthorizationRequiredException.html"><code>AuthorizationRequiredException</code></a> (401, 403): The client is unauthorized<ul>
+<li><a href="../api/Gw2Sharp.WebApi.Exceptions.InvalidAccessTokenException.html"><code>InvalidAccessTokenException</code></a> (401, 403): The access token is invalid</li>
+<li><a href="../api/Gw2Sharp.WebApi.Exceptions.MissingScopesException.html"><code>MissingScopesException</code></a> (403): The access token does not have the required scopes</li>
+<li><a href="../api/Gw2Sharp.WebApi.Exceptions.MembershipRequiredException.html"><code>MembershipRequiredException</code></a> (403): The user is not a member of the guild</li>
+<li><a href="../api/Gw2Sharp.WebApi.Exceptions.RestrictedToGuildLeadersException.html"><code>RestrictedToGuildLeadersException</code></a> (403): The user is not a leader of the guild</li>
 </ul>
 </li>
-<li><a href="../api/Gw2Sharp.WebApi.Http.NotFoundException.html"><code>NotFoundException</code></a> (404): The requested resource has not been found</li>
-<li><a href="../api/Gw2Sharp.WebApi.Http.TooManyRequestsException.html"><code>TooManyRequestsException</code></a> (429): Too many requests have been issued in a short period of time</li>
-<li><a href="../api/Gw2Sharp.WebApi.Http.ServerErrorException.html"><code>ServerErrorException</code></a> (500): The server encountered an error</li>
-<li><a href="../api/Gw2Sharp.WebApi.Http.ServiceUnavailableException.html"><code>ServiceUnavailableException</code></a> (503): The server is temporarily unavailable</li>
+<li><a href="../api/Gw2Sharp.WebApi.Exceptions.NotFoundException.html"><code>NotFoundException</code></a> (404): The requested resource has not been found</li>
+<li><a href="../api/Gw2Sharp.WebApi.Exceptions.TooManyRequestsException.html"><code>TooManyRequestsException</code></a> (429): Too many requests have been issued in a short period of time</li>
+<li><a href="../api/Gw2Sharp.WebApi.Exceptions.ServerErrorException.html"><code>ServerErrorException</code></a> (500): The server encountered an error</li>
+<li><a href="../api/Gw2Sharp.WebApi.Exceptions.ServiceUnavailableException.html"><code>ServiceUnavailableException</code></a> (503): The server is temporarily unavailable</li>
 </ul>
 </li>
 </ul>
