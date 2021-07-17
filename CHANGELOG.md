@@ -6,8 +6,10 @@ This release focuses on the new legendary armory addition, introduced in the gam
 ### Endpoints
 - Add `/v2/account/legendaryarmory` ([#86](https://github.com/Archomeda/Gw2Sharp/pull/86))
 - Add `/v2/legendaryarmory` ([#86](https://github.com/Archomeda/Gw2Sharp/pull/86))
+- Apply schema changes of 2021-07-15 that updates the equipment location type ([`Gw2Sharp.WebApi.V2.Models.ItemEquipmentLocationType`](https://archomeda.github.io/Gw2Sharp/master/api/Gw2Sharp.WebApi.V2.Models.ItemEquipmentLocationType.html)) to include `EquippedFromLegendaryArmory` and `LegendaryArmory` for `/v2/characters`, `/v2/characters/:id`, `/v2/characters/:id/equipment` and `/v2/characters/:id/equipmenttabs` ([#91](https://github.com/Archomeda/Gw2Sharp/pull/91))
 
 ### Fixes
+- Due to an oversight, [`Gw2Sharp.WebApi.V2.Clients.CharactersIdClient`](https://archomeda.github.io/Gw2Sharp/master/api/Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.html) didn't properly expose `EquipmentPvp` that was made available with the previous schema update, which is corrected along with the latest schema update ([#91](https://github.com/Archomeda/Gw2Sharp/pull/91))
 - Failing responses that don't have a JSON body now have the correct exception type based on the HTTP status code (was always `UnexpectedStatusException` before, instead of e.g. `ServerErrorException` for a 500) ([#89](https://github.com/Archomeda/Gw2Sharp/pull/89))
 - The version reported in the user agent is now the correct version (file version instead of assembly version) ([#88](https://github.com/Archomeda/Gw2Sharp/pull/88))
 
