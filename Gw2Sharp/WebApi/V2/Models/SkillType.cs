@@ -1,4 +1,4 @@
-namespace Gw2Sharp
+namespace Gw2Sharp.WebApi.V2.Models
 {
     /// <summary>
     /// The skill type.
