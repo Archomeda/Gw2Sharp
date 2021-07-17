@@ -1,4 +1,4 @@
-namespace Gw2Sharp
+namespace Gw2Sharp.WebApi.Caching
 {
     /// <summary>
     /// The cache item type.
