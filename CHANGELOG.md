@@ -1,6 +1,6 @@
 # Gw2Sharp History
 
-## 1.2.0
+## 1.2.0 (17 July 2021)
 This release focuses on the new legendary armory addition, introduced in the game on 13 July 2021, along with some minor bug fixes.
 
 ### Endpoints
