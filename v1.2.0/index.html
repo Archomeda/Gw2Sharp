@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Gw2Sharp Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Gw2Sharp Documentation ">
+    <meta name="generator" content="docfx 2.58.0.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc">
+    <meta property="docfx:tocrel" content="toc">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+                
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="guides/introduction.html" title="Guides">Guides</a>
+                      </li>
+                      <li>
+                          <a href="api/index.html" title="API Documentation">API Documentation</a>
+                      </li>
+                      <li>
+                          <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/CHANGELOG.md" title="Changelog">Changelog</a>
+                      </li>
+                </ul>    </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="gw2sharp-documentation">Gw2Sharp Documentation</h1>
+
+<p>Gw2Sharp is a cross-platform .NET wrapper library for the <a href="https://wiki.guildwars2.com/wiki/API">official Guild Wars 2 API</a> written in C#.</p>
+<p>This library has been written to be as close as possible to the official API structure, with a few exceptions to make life easier.
+<em>Make sure to read the <a class="xref" href="guides/introduction.html">introductory guide</a> to get started.</em></p>
+<h2 id="supported-services">Supported services</h2>
+<p>The following services are supported by Gw2Sharp:</p>
+<ul>
+<li>WebAPI v2 - <a class="xref" href="guides/introduction.html#web-api-v2">introduction</a>, <a class="xref" href="guides/endpoints.html">endpoints</a></li>
+<li>Render service - <a class="xref" href="guides/introduction.html#render-service">introduction</a></li>
+<li>Mumble service - <a class="xref" href="guides/introduction.html#mumble-link">introduction</a></li>
+<li>Chat links - <a class="xref" href="guides/introduction.html#chat-links">introduction</a></li>
+</ul>
+<h2 id="requirements">Requirements</h2>
+<p>This project targets .NET Core 3.1 and .NET Standard 2.0 for compatibility with older .NET Frameworks.
+It supports the C# 8.0 nullable reference types feature for your convenience, but it&#39;s not required when consuming the library.</p>
+<h2 id="installing">Installing</h2>
+<h3 id="release-builds">Release builds</h3>
+<p>You can find the library on <a href="https://www.nuget.org/packages/Gw2Sharp/">NuGet</a>, or you can install it by running the following command in the package manager console:</p>
+<pre><code class="lang-powershell">Install-Package Gw2Sharp
+</code></pre><h3 id="ci-builds">CI builds</h3>
+<p>Whenever a new commit is pushed, a workflow will run on GitHub Actions.
+This will result in a new CI build that will be automatically uploaded to a <a href="https://dev.azure.com/archomeda/Gw2Sharp/_packaging?_a=feed&amp;feed=Nightly">separate NuGet feed on Azure Artifacts</a>.
+Note that these builds are not considered to be stable, they are meant only for testing purposes.
+Therefore, these packages are also compiled in debug configuration and have their symbols included.</p>
+<p>First, you&#39;ll have to create a new <code>nuget.config</code> file and add the package source to it:</p>
+<pre><code class="lang-xml">&lt;add key=&quot;Gw2Sharp-Nightly&quot; value=&quot;https://pkgs.dev.azure.com/Archomeda/Gw2Sharp/_packaging/Nightly/nuget/v3/index.json&quot; /&gt;
+</code></pre><p>Afterwards, you can install a specific version by choosing one in your package manager.
+<strong>Keep in mind that versions uploaded to this feed will not be available forever.</strong></p>
+<h2 id="additional-resources">Additional resources</h2>
+<ul>
+<li><a href="https://discord.gg/hNcpDT3">GW2 Development Community Discord</a> - Discussions about Gw2Sharp and other API related projects</li>
+<li><a href="https://wiki.guildwars2.com/wiki/API">Guild Wars 2 Wiki</a> - Community Wiki articles about the API</li>
+<li><a href="https://github.com/Archomeda/Gw2Sharp">GitHub repository</a></li>
+<li><a href="https://www.nuget.org/packages/Gw2Sharp/">NuGet feed</a></li>
+<li><a href="https://dev.azure.com/archomeda/Gw2Sharp/_packaging?_a=feed&amp;feed=Nightly">Azure Artifacts NuGet feed</a> - CI builds</li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Archomeda/Gw2Sharp/blob/e4af2720c6b587059b46f8f9d620a760e7d5c6da/docs/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>
