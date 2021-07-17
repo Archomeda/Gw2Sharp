@@ -1,6 +1,7 @@
 using System;
 using System.Text.Json;
 using FluentAssertions;
+using FluentAssertions.Execution;
 using Gw2Sharp.Json.Converters;
 using Gw2Sharp.WebApi.V2.Models;
 using Xunit;
@@ -26,9 +27,12 @@ namespace Gw2Sharp.Tests.Json.Converters
                 Converters = { new ApiEnumConverter() }
             });
 
-            actual.IsUnknown.Should().BeFalse();
-            actual.Value.Should().Be(expectedValue);
-            actual.RawValue.Should().Be(expectedRaw);
+            using (new AssertionScope())
+            {
+                actual.IsUnknown.Should().BeFalse();
+                actual.Value.Should().Be(expectedValue);
+                actual.RawValue.Should().Be(expectedRaw);
+            }
         }
 
         [Theory]
@@ -41,9 +45,12 @@ namespace Gw2Sharp.Tests.Json.Converters
                 Converters = { new ApiEnumConverter() }
             });
 
-            actual.IsUnknown.Should().BeTrue();
-            actual.Value.Should().Be(expectedValue);
-            actual.RawValue.Should().Be(expectedRaw);
+            using (new AssertionScope())
+            {
+                actual.IsUnknown.Should().BeTrue();
+                actual.Value.Should().Be(expectedValue);
+                actual.RawValue.Should().Be(expectedRaw);
+            }
         }
 
         [Theory]

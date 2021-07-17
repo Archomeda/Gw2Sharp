@@ -6,18 +6,28 @@ namespace Gw2Sharp
     public enum ItemEquipmentLocationType
     {
         /// <summary>
-        /// Unknown location.
+        /// Unknown location type.
         /// </summary>
         Unknown,
 
         /// <summary>
-        /// The equipped location.
+        /// The equipped location type.
         /// </summary>
         Equipped,
 
         /// <summary>
-        /// The armory location.
+        /// The armory location type.
         /// </summary>
-        Armory
+        Armory,
+
+        /// <summary>
+        /// The equipped from legendary armory location type.
+        /// </summary>
+        EquippedFromLegendaryArmory,
+
+        /// <summary>
+        /// The legendary armory location type.
+        /// </summary>
+        LegendaryArmory
     }
 }

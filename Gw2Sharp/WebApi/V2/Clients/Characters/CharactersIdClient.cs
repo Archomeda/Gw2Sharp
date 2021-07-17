@@ -8,7 +8,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// </summary>
     [EndpointPath("characters/:id")]
     [EndpointPathSegment("id", 0)]
-    [EndpointSchemaVersion("2019-12-19T00:00:00.000Z")]
+    [EndpointSchemaVersion("2021-07-15T13:00:00.000Z")]
     public class CharactersIdClient : BaseEndpointBlobClient<Character>, ICharactersIdClient
     {
         private readonly string characterName;

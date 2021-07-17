@@ -109,7 +109,8 @@
           "id": 6479,
           "slot": "HelmAquatic",
           "binding": "Character",
-          "bound_to": "Bob"
+          "bound_to": "Bob",
+          "location": "Equipped"
         },
         {
           "id": 77474,
@@ -128,7 +129,8 @@
               "ConditionDuration": 27
             }
           },
-          "binding": "Account"
+          "binding": "Account",
+          "location": "EquippedFromLegendaryArmory"
         },
         {
           "id": 80254,
@@ -154,7 +156,8 @@
             1155,
             6,
             null
-          ]
+          ],
+          "location": "Equipped"
         },
         {
           "id": 80557,
@@ -180,7 +183,8 @@
             1155,
             6,
             null
-          ]
+          ],
+          "location": "Equipped"
         },
         {
           "id": 78984,
@@ -201,24 +205,127 @@
               "ConditionDuration": 59
             }
           },
-          "binding": "Account"
+          "binding": "Account",
+          "location": "Equipped"
+        }
+      ],
+      "equipment_pvp": {
+        "amulet": 14,
+        "rune": 21172,
+        "sigils": [
+          21152,
+          21150,
+          21152,
+          null
+        ]
+      }
+    },
+    {
+      "tab": 2,
+      "is_active": false,
+      "equipment": [
+        {
+          "id": 6479,
+          "slot": "HelmAquatic",
+          "binding": "Character",
+          "bound_to": "Bob",
+          "location": "Armory"
         },
         {
-          "id": 49308,
-          "slot": "Sickle",
-          "binding": "Account"
+          "id": 77474,
+          "slot": "Backpack",
+          "infusions": [
+            78052,
+            78028
+          ],
+          "skin": 2352,
+          "stats": {
+            "id": 1130,
+            "attributes": {
+              "Power": 52,
+              "Precision": 27,
+              "ConditionDamage": 52,
+              "ConditionDuration": 27
+            }
+          },
+          "binding": "Account",
+          "location": "LegendaryArmory"
         },
         {
-          "id": 48931,
-          "slot": "Axe",
-          "skin": 8087,
-          "binding": "Account"
+          "id": 80254,
+          "slot": "Coat",
+          "upgrades": [
+            83502
+          ],
+          "infusions": [
+            70852
+          ],
+          "stats": {
+            "id": 1153,
+            "attributes": {
+              "Power": 121,
+              "Precision": 67,
+              "ConditionDamage": 121,
+              "ConditionDuration": 67
+            }
+          },
+          "binding": "Account",
+          "dyes": [
+            11,
+            1155,
+            6,
+            null
+          ],
+          "location": "Armory"
         },
         {
-          "id": 87422,
-          "slot": "Pick",
-          "skin": 8097,
-          "binding": "Account"
+          "id": 80557,
+          "slot": "Boots",
+          "upgrades": [
+            83502
+          ],
+          "infusions": [
+            70852
+          ],
+          "stats": {
+            "id": 1153,
+            "attributes": {
+              "Power": 40,
+              "Precision": 22,
+              "ConditionDamage": 40,
+              "ConditionDuration": 22
+            }
+          },
+          "binding": "Account",
+          "dyes": [
+            11,
+            1155,
+            6,
+            null
+          ],
+          "location": "Armory"
+        },
+        {
+          "id": 78984,
+          "slot": "WeaponA1",
+          "upgrades": [
+            24605
+          ],
+          "infusions": [
+            49432
+          ],
+          "skin": 6588,
+          "stats": {
+            "id": 1224,
+            "attributes": {
+              "Power": 108,
+              "Precision": 59,
+              "ConditionDamage": 108,
+              "ConditionDuration": 59
+            }
+          },
+          "binding": "Account",
+          "location": "Armory"
         }
       ],
       "equipment_pvp": {
@@ -244,7 +351,7 @@
     },
     {
       "id": 77474,
-      "location": "Equipped",
+      "location": "EquippedFromLegendaryArmory",
       "slot": "Backpack",
       "tabs": [ 1 ],
       "infusions": [

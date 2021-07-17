@@ -13,7 +13,7 @@
       },
       {
         "id": 77474,
-        "location": "Equipped",
+        "location": "EquippedFromLegendaryArmory",
         "slot": "Backpack",
         "tabs": [ 1 ],
         "infusions": [
@@ -204,7 +204,7 @@
       },
       {
         "id": 42024,
-        "location": "Armory",
+        "location": "LegendaryArmory",
         "slot": "WeaponAquaticA",
         "tabs": [ 2 ],
         "binding": "Character",
