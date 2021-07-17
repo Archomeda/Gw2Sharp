@@ -8,7 +8,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// </summary>
     [EndpointPath("characters")]
     [EndpointBulkIdName("name")]
-    [EndpointSchemaVersion("2021-04-06T21:00:00.000Z")]
+    [EndpointSchemaVersion("2021-07-15T13:00:00.000Z")]
     public class CharactersClient : BaseEndpointBulkAllClient<Character, string>, ICharactersClient
     {
         /// <summary>
