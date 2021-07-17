@@ -1,5 +1,34 @@
 # Gw2Sharp History
 
+## 2.0.0
+This version includes breaking changes.
+
+### Fixes
+- **Breaking:** The following enums have moved namespaces from the root Gw2Sharp into their proper namespaces ([#93](https://github.com/Archomeda/Gw2Sharp/pull/93)):
+  - `Gw2Sharp.WebApi.Caching.CacheItemStatus`
+  - `Gw2Sharp.WebApi.Caching.CacheItemType`
+  - `Gw2Sharp.WebApi.Models.ComboFieldType`
+  - `Gw2Sharp.WebApi.Models.ComboFinisherType`
+  - `Gw2Sharp.WebApi.Models.ItemEquipmentLocationType`
+  - `Gw2Sharp.WebApi.Models.ProfessionFlag`
+  - `Gw2Sharp.WebApi.Models.ProfessionTrainingCategory`
+  - `Gw2Sharp.WebApi.Models.ProfessionTrainingTrackStepType`
+  - `Gw2Sharp.WebApi.Models.ProfessionWeaponFlag`
+  - `Gw2Sharp.WebApi.Models.PvpSeasonDivisionFlag`
+  - `Gw2Sharp.WebApi.Models.PvpSeasonLeaderboardScoringOrder`
+  - `Gw2Sharp.WebApi.Models.PvpSeasonLeaderboardScoringType`
+  - `Gw2Sharp.WebApi.Models.PvpSeasonLeaderboardSettingsTierType`
+  - `Gw2Sharp.WebApi.Models.RaidWingEventType`
+  - `Gw2Sharp.WebApi.Models.SkillFlag`
+  - `Gw2Sharp.WebApi.Models.SkillType`
+  - `Gw2Sharp.WebApi.Models.SkinFlag`
+  - `Gw2Sharp.WebApi.Models.StoryFlag`
+
+### Deprecation removals
+- Following up on version 1.1.0, `EquipmentPvp` has been removed from `Gw2Sharp.WebApi.V2.Models.Character` ([#92](https://github.com/Archomeda/Gw2Sharp/pull/92))
+
+---
+
 ## 1.7.4 (28 February 2023)
 This release fixes some of the high priority bugs.
 
