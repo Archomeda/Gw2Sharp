@@ -3018,6 +3018,18 @@ references:
   commentId: F:Gw2Sharp.ItemEquipmentLocationType.Equipped
   fullName: Gw2Sharp.ItemEquipmentLocationType.Equipped
   nameWithType: ItemEquipmentLocationType.Equipped
+- uid: Gw2Sharp.ItemEquipmentLocationType.EquippedFromLegendaryArmory
+  name: EquippedFromLegendaryArmory
+  href: api/Gw2Sharp.ItemEquipmentLocationType.html#Gw2Sharp_ItemEquipmentLocationType_EquippedFromLegendaryArmory
+  commentId: F:Gw2Sharp.ItemEquipmentLocationType.EquippedFromLegendaryArmory
+  fullName: Gw2Sharp.ItemEquipmentLocationType.EquippedFromLegendaryArmory
+  nameWithType: ItemEquipmentLocationType.EquippedFromLegendaryArmory
+- uid: Gw2Sharp.ItemEquipmentLocationType.LegendaryArmory
+  name: LegendaryArmory
+  href: api/Gw2Sharp.ItemEquipmentLocationType.html#Gw2Sharp_ItemEquipmentLocationType_LegendaryArmory
+  commentId: F:Gw2Sharp.ItemEquipmentLocationType.LegendaryArmory
+  fullName: Gw2Sharp.ItemEquipmentLocationType.LegendaryArmory
+  nameWithType: ItemEquipmentLocationType.LegendaryArmory
 - uid: Gw2Sharp.ItemEquipmentLocationType.Unknown
   name: Unknown
   href: api/Gw2Sharp.ItemEquipmentLocationType.html#Gw2Sharp_ItemEquipmentLocationType_Unknown
