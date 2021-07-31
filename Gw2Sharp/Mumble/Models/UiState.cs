@@ -6,7 +6,7 @@ namespace Gw2Sharp.Mumble.Models
     /// The UI state.
     /// </summary>
     [Flags]
-    internal enum UiState : uint
+    public enum UiState : uint
     {
         /// <summary>
         /// Whether the map is currently open.

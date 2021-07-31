@@ -1,9 +1,7 @@
 using System;
 using System.Collections.Concurrent;
-using System.IO.MemoryMappedFiles;
 using System.Linq;
 using System.Net.Sockets;
-using System.Runtime.Versioning;
 using System.Text.Json;
 using Gw2Sharp.Json;
 using Gw2Sharp.Models;
@@ -14,9 +12,6 @@ namespace Gw2Sharp.Mumble
     /// <summary>
     /// A client for the Guild Wars 2 Mumble Link API service.
     /// </summary>
-#if NET5_0_OR_GREATER
-    [SupportedOSPlatform("windows")]
-#endif
     public class Gw2MumbleClient : IGw2MumbleClient
     {
         /// <summary>
@@ -37,9 +32,6 @@ namespace Gw2Sharp.Mumble
         private readonly object identityLock = new object();
         private readonly object serverAddressLock = new object();
 
-        private readonly Lazy<MemoryMappedFile> memoryMappedFile;
-        private readonly Lazy<MemoryMappedViewAccessor> memoryMappedViewAccessor;
-
         private Gw2LinkedMem linkedMem;
 
         private readonly ConcurrentDictionary<string, WeakReference<Gw2MumbleClient>> mumbleClientCache;
@@ -57,10 +49,12 @@ namespace Gw2Sharp.Mumble
             if (this.mumbleLinkName == DEFAULT_MUMBLE_LINK_MAP_NAME)
                 this.mumbleClientCache.TryAdd(DEFAULT_MUMBLE_LINK_MAP_NAME, new WeakReference<Gw2MumbleClient>(this, false));
 
-            this.memoryMappedFile = new Lazy<MemoryMappedFile>(
-                () => MemoryMappedFile.CreateOrOpen(this.mumbleLinkName, Gw2LinkedMem.SIZE, MemoryMappedFileAccess.ReadWrite), true);
-            this.memoryMappedViewAccessor = new Lazy<MemoryMappedViewAccessor>(
-                () => this.memoryMappedFile.Value.CreateViewAccessor(), true);
+#if NET5_0_OR_GREATER
+            if (OperatingSystem.IsWindows())
+#else
+            if (Environment.OSVersion.Platform == PlatformID.Win32NT)
+#endif
+                this.Reader = new Gw2MumbleClientReader();
         }
 
         private unsafe void UpdateIdentityIfNeeded()
@@ -109,6 +103,10 @@ namespace Gw2Sharp.Mumble
                 return this.identity;
             }
         }
+
+
+        /// <inheritdoc />
+        public IGw2MumbleClientReader? Reader { get; private set; }
 
 
         /// <inheritdoc />
@@ -344,8 +342,12 @@ namespace Gw2Sharp.Mumble
         {
             if (this.isDisposed)
                 throw new ObjectDisposedException(nameof(Gw2MumbleClient));
+            if (this.Reader is null)
+                throw new InvalidOperationException("No reader was defined. Make sure to set the reader through .WithReader<T>() before calling .Update()");
 
-            this.memoryMappedViewAccessor.Value.Read<Gw2LinkedMem>(0, out var mem);
+            if (!this.Reader.IsOpen)
+                this.Reader.Open(this.mumbleLinkName);
+            var mem = this.Reader.Read();
             int oldTick = this.Tick;
 
             if (mem.uiTick != oldTick)
@@ -368,6 +370,13 @@ namespace Gw2Sharp.Mumble
             this.linkedMem = mem;
         }
 
+        /// <inheritdoc />
+        public IGw2MumbleClient WithReader<T>() where T : IGw2MumbleClientReader, new()
+        {
+            this.Reader = new T();
+            return this;
+        }
+
 
         #region IDisposable Support
 
@@ -384,10 +393,7 @@ namespace Gw2Sharp.Mumble
 
             if (disposing)
             {
-                if (this.memoryMappedViewAccessor.IsValueCreated)
-                    this.memoryMappedViewAccessor.Value.Dispose();
-                if (this.memoryMappedFile.IsValueCreated)
-                    this.memoryMappedFile.Value.Dispose();
+                this.Reader?.Dispose();
 
                 // Only dispose the full client cache tree if we are the default one
                 if (this.mumbleLinkName == DEFAULT_MUMBLE_LINK_MAP_NAME)
