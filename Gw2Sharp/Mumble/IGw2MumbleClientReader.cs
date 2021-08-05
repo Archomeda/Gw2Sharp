@@ -8,6 +8,13 @@ namespace Gw2Sharp.Mumble
     public interface IGw2MumbleClientReader : IDisposable
     {
         /// <summary>
+        /// A delegate for creating a new <see cref="IGw2MumbleClientReader"/> with a Mumble Link name as parameter.
+        /// </summary>
+        /// <param name="mumbleLinkName">The Mumble Link name.</param>
+        /// <returns>A new <see cref="IGw2MumbleClientReader"/> instance specifically for this Mumble Link name.</returns>
+        public delegate IGw2MumbleClientReader Gw2MumbleLinkReaderFactory(string mumbleLinkName);
+
+        /// <summary>
         /// Whether this reader is open.
         /// </summary>
         bool IsOpen { get; }
@@ -15,8 +22,7 @@ namespace Gw2Sharp.Mumble
         /// <summary>
         /// Opens the reader.
         /// </summary>
-        /// <param name="mumbleLinkName">The Mumble Link name.</param>
-        void Open(string mumbleLinkName);
+        void Open();
 
         /// <summary>
         /// Closes the reader.

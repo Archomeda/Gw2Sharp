@@ -2,6 +2,7 @@ using System;
 using System.IO.MemoryMappedFiles;
 using System.Net.Sockets;
 using System.Reflection;
+using AutoFixture.Xunit2;
 using FluentAssertions;
 using FluentAssertions.Execution;
 using Gw2Sharp.Models;
@@ -13,14 +14,19 @@ namespace Gw2Sharp.Tests.Mumble
 {
     public class Gw2MumbleClientReaderTests
     {
+#if NET5_0_OR_GREATER
+        private bool isWindows = OperatingSystem.IsWindows();
+#else
         private bool isWindows = Environment.OSVersion.Platform == PlatformID.Win32NT;
+#endif
 
-        [Fact]
-        public void ThrowsPlatformNotSupportedExceptionIfNotWindowsTest()
+        [Theory]
+        [AutoData]
+        public void ThrowsPlatformNotSupportedExceptionIfNotWindowsTest(string mumbleLinkName)
         {
             Action createClient = () =>
             {
-                using var reader = new Gw2MumbleClientReader();
+                using var reader = new Gw2MumbleClientReader(mumbleLinkName);
             };
 
             if (this.isWindows)
@@ -41,8 +47,8 @@ namespace Gw2Sharp.Tests.Mumble
             using var stream = memoryMappedFile.CreateViewStream();
             memorySource.CopyTo(stream);
 
-            using var client = new Gw2MumbleClientReader();
-            client.Open(Gw2MumbleClient.DEFAULT_MUMBLE_LINK_MAP_NAME);
+            using var client = new Gw2MumbleClientReader(Gw2MumbleClient.DEFAULT_MUMBLE_LINK_MAP_NAME);
+            client.Open();
             var mem = client.Read();
 
             using (new AssertionScope())
@@ -88,14 +94,15 @@ namespace Gw2Sharp.Tests.Mumble
             }
         }
 
-        [SkippableFact]
-        public void DisposeCorrectlyTest()
+        [SkippableTheory]
+        [AutoData]
+        public void DisposeCorrectlyTest(string mumbleLinkName)
         {
             // Named memory mapped files aren't supported on Unix based systems.
             // So we need to skip this test.
             Skip.IfNot(this.isWindows, "Mumble Link is only supported in Windows");
 
-            var reader = new Gw2MumbleClientReader();
+            var reader = new Gw2MumbleClientReader(mumbleLinkName);
             reader.Dispose();
             Assert.ThrowsAny<ObjectDisposedException>(() => reader.Read());
         }

@@ -11,11 +11,6 @@ namespace Gw2Sharp.Mumble
     public interface IGw2MumbleClient : IDisposable
     {
         /// <summary>
-        /// The Mumble client reader instance.
-        /// </summary>
-        IGw2MumbleClientReader Reader { get; }
-
-        /// <summary>
         /// Gets a custom named Mumble Link client API.
         /// </summary>
         /// <param name="name">The custom name.</param>
@@ -248,12 +243,5 @@ namespace Gw2Sharp.Mumble
         /// Call this every frame and/or every time you want to update the Mumble Link data before reading.
         /// </summary>
         void Update();
-
-        /// <summary>
-        /// Sets a custom Mumble client reader.
-        /// </summary>
-        /// <typeparam name="T">The reader type.</typeparam>
-        /// <returns>This <see cref="IGw2MumbleClient"/> instance.</returns>
-        IGw2MumbleClient WithReader<T>() where T : IGw2MumbleClientReader, new();
     }
 }

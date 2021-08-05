@@ -1,10 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Threading;
+using Gw2Sharp.Mumble;
 using Gw2Sharp.WebApi;
 using Gw2Sharp.WebApi.Caching;
 using Gw2Sharp.WebApi.Http;
 using Gw2Sharp.WebApi.Middleware;
+using static Gw2Sharp.Mumble.IGw2MumbleClientReader;
 
 namespace Gw2Sharp
 {
@@ -55,13 +57,11 @@ namespace Gw2Sharp
         /// <summary>
         /// Gets the HTTP client that's used for the API requests.
         /// </summary>
-        /// <exception cref="ArgumentNullException"><c>value</c> is <see langword="null"/>.</exception>
         IHttpClient HttpClient { get; }
 
         /// <summary>
         /// Gets the cache controller that's used for API requests.
         /// </summary>
-        /// <exception cref="ArgumentNullException"><c>value</c> is <see langword="null"/>.</exception>
         ICacheMethod CacheMethod { get; }
 
         /// <summary>
@@ -73,7 +73,6 @@ namespace Gw2Sharp
         /// <summary>
         /// Gets the cache controller that's used for render file API requests.
         /// </summary>
-        /// <exception cref="ArgumentNullException"><c>value</c> is <see langword="null"/>.</exception>
         ICacheMethod RenderCacheMethod { get; }
 
         /// <summary>
@@ -87,5 +86,12 @@ namespace Gw2Sharp
         /// This value can be used to determine if the list has changed.
         /// </summary>
         int MiddlewareHashCode { get; }
+
+        /// <summary>
+        /// Gets the Mumble client reader factory.
+        /// This factory has the Mumble Link name as parameter, and should return a new instance of <see cref="IGw2MumbleClientReader"/>.
+        /// Defaults to <see cref="Gw2MumbleClientReader"/> on Windows.
+        /// </summary>
+        Gw2MumbleLinkReaderFactory MumbleClientReaderFactory { get; }
     }
 }

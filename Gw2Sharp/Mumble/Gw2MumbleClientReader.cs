@@ -15,11 +15,16 @@ namespace Gw2Sharp.Mumble
         private MemoryMappedFile? file;
         private MemoryMappedViewAccessor? accessor;
 
+        private readonly string mumbleLinkName;
+
         /// <summary>
         /// Creates a new <see cref="Gw2MumbleClientReader"/>.
         /// </summary>
+        /// <param name="mumbleLinkName">The Mumble Link name.</param>
         /// <exception cref="PlatformNotSupportedException">Only Windows operating systems are supported.</exception>
-        public Gw2MumbleClientReader()
+        /// <exception cref="ArgumentNullException"><paramref name="mumbleLinkName"/> is <see langword="null"/>.</exception>
+        /// <exception cref="ArgumentException"><paramref name="mumbleLinkName"/> is an empty string or only contains whitespaces.</exception>
+        public Gw2MumbleClientReader(string mumbleLinkName)
         {
 #if NET5_0_OR_GREATER
             if (!OperatingSystem.IsWindows())
@@ -27,15 +32,22 @@ namespace Gw2Sharp.Mumble
             if (Environment.OSVersion.Platform != PlatformID.Win32NT)
 #endif
                 throw new PlatformNotSupportedException("Only Windows operating systems support the Mumble Link");
+
+            if (mumbleLinkName is null)
+                throw new ArgumentNullException(nameof(mumbleLinkName));
+            if (string.IsNullOrWhiteSpace(mumbleLinkName))
+                throw new ArgumentException($"'{nameof(mumbleLinkName)}' may not be empty or only contain whitespaces", nameof(mumbleLinkName));
+
+            this.mumbleLinkName = mumbleLinkName;
         }
 
         /// <inheritdoc/>
         public bool IsOpen { get; private set; }
 
         /// <inheritdoc/>
-        public void Open(string mumbleLinkName)
+        public void Open()
         {
-            this.file = MemoryMappedFile.CreateOrOpen(mumbleLinkName, Gw2LinkedMem.SIZE, MemoryMappedFileAccess.ReadWrite);
+            this.file = MemoryMappedFile.CreateOrOpen(this.mumbleLinkName, Gw2LinkedMem.SIZE, MemoryMappedFileAccess.ReadWrite);
             this.accessor = this.file.CreateViewAccessor();
             this.IsOpen = true;
         }
@@ -64,7 +76,7 @@ namespace Gw2Sharp.Mumble
         }
 
 
-#region IDisposable Support
+        #region IDisposable Support
 
         private bool isDisposed = false; // To detect redundant calls
 
@@ -92,6 +104,6 @@ namespace Gw2Sharp.Mumble
             GC.SuppressFinalize(this);
         }
 
-#endregion
+        #endregion
     }
 }

@@ -1,7 +1,9 @@
 using System;
 using System.Diagnostics;
+using AutoFixture.Xunit2;
 using FluentAssertions;
 using FluentAssertions.Execution;
+using Gw2Sharp.Mumble;
 using Gw2Sharp.WebApi;
 using Gw2Sharp.WebApi.Caching;
 using Gw2Sharp.WebApi.Http;
@@ -107,6 +109,23 @@ namespace Gw2Sharp.Tests
             // so we don't have to manually test every enum with custom string values in existence.
             var connection = new Connection(locale);
             Assert.Equal(expected, connection.LocaleString);
+        }
+
+        [Theory]
+        [AutoData]
+        public void UsesCorrectMumbleClientReaderFactoryTest(string mumbleLinkName)
+        {
+            var connection = new Connection();
+            using var actual = connection.MumbleClientReaderFactory(mumbleLinkName);
+
+#if NET5_0_OR_GREATER
+            if (OperatingSystem.IsWindows())
+#else
+            if (Environment.OSVersion.Platform == PlatformID.Win32NT)
+#endif
+                actual.Should().BeOfType<Gw2MumbleClientReader>();
+            else
+                actual.Should().BeOfType<UnsupportedMumblePlatformClientReader>();
         }
     }
 }
