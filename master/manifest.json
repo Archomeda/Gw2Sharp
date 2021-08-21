@@ -59,15 +59,14 @@
     },
     {
       "log_codes": [
-        "InvalidYamlHeader",
-        "UidNotFound"
+        "InvalidYamlHeader"
       ],
       "type": "Conceptual",
       "source_relative_path": "guides/introduction.md",
       "output": {
         ".html": {
           "relative_path": "guides/introduction.html",
-          "hash": "ldSRTeUJescxjjSoMPHelIksZDXWMsZVBCOmR8OzYSQ="
+          "hash": "P+IbOLfwrl2uLzzKc864TUMSVkb5OZk6iWOv9JNyHCc="
         }
       },
       "is_incremental": false,
