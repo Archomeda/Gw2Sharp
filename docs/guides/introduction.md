@@ -83,7 +83,7 @@ var tybaltsSpecializations = await client.WebApi.V2.Characters["Tybalt Leftpaw"]
 
 **Related topics:**
 - [Caching](xref:Guides.Caching)
-- [Checking HTTP headers](xref:Guides.HttpHeaders)
+- [Checking the response info](xref:Guides.ResponseInfo)
 - [Checking the Last-Modified header](xref:Guides.LastModified)
 - [Creating and using subtokens](xref:Guides.Subtokens)
 - [Exception handling](xref:Guides.ExceptionHandling)
