@@ -1,4 +1,3 @@
-
 using Gw2Sharp.WebApi.V2.Models;
 
 namespace Gw2Sharp.WebApi.V2.Clients
@@ -10,5 +9,11 @@ namespace Gw2Sharp.WebApi.V2.Clients
         IBulkExpandableClient<WvwMatchStats, string>,
         IAllExpandableClient<WvwMatchStats>
     {
+        /// <summary>
+        /// Requests WvW match stats information with the specified world id.
+        /// </summary>
+        /// <param name="world">The world id.</param>
+        /// <returns>The WvW matches stats with world endpoint client.</returns>
+        IWvwMatchesStatsWorldClient World(int world);
     }
 }

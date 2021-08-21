@@ -4,7 +4,7 @@ using Xunit;
 
 namespace Gw2Sharp.Tests.WebApi.V2.Clients
 {
-    public abstract class BaseCommerceExchangeClientTests<T> : BaseEndpointClientTests<T> where T : IEndpointClient
+    public abstract class BaseWvwMatchesWorldClientTests<T> : BaseEndpointClientTests<T> where T : IEndpointClient
     {
         #region ArgumentNullException tests
 
@@ -14,7 +14,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
             AssertArguments.ThrowsWhenNullConstructor(
                 this.Client.GetType(),
                 new[] { typeof(IConnection), typeof(IGw2Client), typeof(int) },
-                new object[] { new Connection(), new Gw2Client(), 42 },
+                new object[] { new Connection(), new Gw2Client(), 1001 },
                 new[] { true, true, false });
         }
 

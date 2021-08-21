@@ -18,5 +18,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
         protected internal WvwMatchesOverviewClient(IConnection connection, IGw2Client gw2Client) :
             base(connection, gw2Client)
         { }
+
+        /// <inheritdoc />
+        public virtual IWvwMatchesOverviewWorldClient World(int world) =>
+            new WvwMatchesOverviewWorldClient(this.Connection, this.Gw2Client!, world);
     }
 }
