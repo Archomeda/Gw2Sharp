@@ -14,14 +14,16 @@ jobs:
           repository: ${{ github.event.client_payload.pull_request.head.repo.full_name }}
           ref: ${{ github.event.client_payload.pull_request.head.ref }}
           fetch-depth: 0
-      - uses: goit/setup-resharper@v1.0.0
+      - uses: goit/setup-resharper@v2
         with:
-          version: '2020.1.3'
+          version: '2021.2'
       - name: Get changed files
         id: changed
         run: echo "##[set-output name=files]$(git --no-pager diff -z --name-only ${{ github.event.client_payload.pull_request.base.sha }} ${{ github.event.client_payload.pull_request.head.sha }} | sed 's/\x0/;/g')"
+      - name: Run dotnet build
+        run: dotnet build -f net5.0
       - name: Run cleanup
-        run: 'cleanupcode.sh --profile="Built-in: Reformat Code" --include="${{ steps.changed.outputs.files }}" Gw2Sharp.sln'
+        run: 'cleanupcode.sh --profile="Built-in: Reformat Code" --include="${{ steps.changed.outputs.files }}" --exclude="**/*.json" Gw2Sharp.sln'
       - name: Commit changes
         run: |
           git add -A
