@@ -88,25 +88,13 @@
 <p>This project targets .NET Core 3.1 and .NET Standard 2.0 for compatibility with older .NET Frameworks.
 It supports the C# 8.0 nullable reference types feature for your convenience, but it&#39;s not required when consuming the library.</p>
 <h2 id="installing">Installing</h2>
-<h3 id="release-builds">Release builds</h3>
-<p>You can find the library on <a href="https://www.nuget.org/packages/Gw2Sharp/">NuGet</a>, or you can install it by running the following command in the package manager console:</p>
-<pre><code class="lang-powershell">Install-Package Gw2Sharp
-</code></pre><h3 id="ci-builds">CI builds</h3>
-<p>Whenever a new commit is pushed, a workflow will run on GitHub Actions.
-This will result in a new CI build that will be automatically uploaded to a <a href="https://dev.azure.com/archomeda/Gw2Sharp/_packaging?_a=feed&amp;feed=Nightly">separate NuGet feed on Azure Artifacts</a>.
-Note that these builds are not considered to be stable, they are meant only for testing purposes.
-Therefore, these packages are also compiled in debug configuration and have their symbols included.</p>
-<p>First, you&#39;ll have to create a new <code>nuget.config</code> file and add the package source to it:</p>
-<pre><code class="lang-xml">&lt;add key=&quot;Gw2Sharp-Nightly&quot; value=&quot;https://pkgs.dev.azure.com/Archomeda/Gw2Sharp/_packaging/Nightly/nuget/v3/index.json&quot; /&gt;
-</code></pre><p>Afterwards, you can install a specific version by choosing one in your package manager.
-<strong>Keep in mind that versions uploaded to this feed will not be available forever.</strong></p>
+<p>You can find the library on <a href="https://www.nuget.org/packages/Gw2Sharp/">NuGet</a>. Or, alternatively, you can install it by running <code>dotnet add package Gw2Sharp</code> in a console, or <code>Install-Package Gw2Sharp</code> in the package manager console.</p>
 <h2 id="additional-resources">Additional resources</h2>
 <ul>
 <li><a href="https://discord.gg/hNcpDT3">GW2 Development Community Discord</a> - Discussions about Gw2Sharp and other API related projects</li>
 <li><a href="https://wiki.guildwars2.com/wiki/API">Guild Wars 2 Wiki</a> - Community Wiki articles about the API</li>
 <li><a href="https://github.com/Archomeda/Gw2Sharp">GitHub repository</a></li>
 <li><a href="https://www.nuget.org/packages/Gw2Sharp/">NuGet feed</a></li>
-<li><a href="https://dev.azure.com/archomeda/Gw2Sharp/_packaging?_a=feed&amp;feed=Nightly">Azure Artifacts NuGet feed</a> - CI builds</li>
 </ul>
 </article>
           </div>
