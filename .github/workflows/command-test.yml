@@ -29,6 +29,7 @@ jobs:
           - ubuntu-latest
           - windows-latest
         dotnet:
+          - net5.0
           - netcoreapp3.1
           - netcoreapp2.1
           - net461
