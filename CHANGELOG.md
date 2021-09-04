@@ -1,5 +1,14 @@
 # Gw2Sharp History
 
+## 1.3.0 (4 September 2021)
+This release includes a single addition to the WvW match endpoints, which is the ability to request a match by world id for the following endpoints:
+- `/v2/wvw/matches`
+- `/v2/wvw/matches/overview`
+- `/v2/wvw/matches/scores`
+- `/v2/wvw/matches/stats`
+
+---
+
 ## 1.2.0 (17 July 2021)
 This release focuses on the new legendary armory addition, introduced in the game on 13 July 2021, along with some minor bug fixes.
 
