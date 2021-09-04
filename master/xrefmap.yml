@@ -17780,24 +17780,152 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesClient.Stats
   nameWithType: IWvwMatchesClient.Stats
+- uid: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesClient.World(System.Int32)
+  name: World(Int32)
+  href: api/Gw2Sharp.WebApi.V2.Clients.IWvwMatchesClient.html#Gw2Sharp_WebApi_V2_Clients_IWvwMatchesClient_World_System_Int32_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.IWvwMatchesClient.World(System.Int32)
+  fullName: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesClient.World(System.Int32)
+  nameWithType: IWvwMatchesClient.World(Int32)
+- uid: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesClient.World*
+  name: World
+  href: api/Gw2Sharp.WebApi.V2.Clients.IWvwMatchesClient.html#Gw2Sharp_WebApi_V2_Clients_IWvwMatchesClient_World_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.IWvwMatchesClient.World
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesClient.World
+  nameWithType: IWvwMatchesClient.World
 - uid: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesOverviewClient
   name: IWvwMatchesOverviewClient
   href: api/Gw2Sharp.WebApi.V2.Clients.IWvwMatchesOverviewClient.html
   commentId: T:Gw2Sharp.WebApi.V2.Clients.IWvwMatchesOverviewClient
   fullName: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesOverviewClient
   nameWithType: IWvwMatchesOverviewClient
+- uid: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesOverviewClient.World(System.Int32)
+  name: World(Int32)
+  href: api/Gw2Sharp.WebApi.V2.Clients.IWvwMatchesOverviewClient.html#Gw2Sharp_WebApi_V2_Clients_IWvwMatchesOverviewClient_World_System_Int32_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.IWvwMatchesOverviewClient.World(System.Int32)
+  fullName: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesOverviewClient.World(System.Int32)
+  nameWithType: IWvwMatchesOverviewClient.World(Int32)
+- uid: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesOverviewClient.World*
+  name: World
+  href: api/Gw2Sharp.WebApi.V2.Clients.IWvwMatchesOverviewClient.html#Gw2Sharp_WebApi_V2_Clients_IWvwMatchesOverviewClient_World_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.IWvwMatchesOverviewClient.World
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesOverviewClient.World
+  nameWithType: IWvwMatchesOverviewClient.World
+- uid: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesOverviewWorldClient
+  name: IWvwMatchesOverviewWorldClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.IWvwMatchesOverviewWorldClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.IWvwMatchesOverviewWorldClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesOverviewWorldClient
+  nameWithType: IWvwMatchesOverviewWorldClient
+- uid: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesOverviewWorldClient.World
+  name: World
+  href: api/Gw2Sharp.WebApi.V2.Clients.IWvwMatchesOverviewWorldClient.html#Gw2Sharp_WebApi_V2_Clients_IWvwMatchesOverviewWorldClient_World
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.IWvwMatchesOverviewWorldClient.World
+  fullName: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesOverviewWorldClient.World
+  nameWithType: IWvwMatchesOverviewWorldClient.World
+- uid: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesOverviewWorldClient.World*
+  name: World
+  href: api/Gw2Sharp.WebApi.V2.Clients.IWvwMatchesOverviewWorldClient.html#Gw2Sharp_WebApi_V2_Clients_IWvwMatchesOverviewWorldClient_World_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.IWvwMatchesOverviewWorldClient.World
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesOverviewWorldClient.World
+  nameWithType: IWvwMatchesOverviewWorldClient.World
 - uid: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesScoresClient
   name: IWvwMatchesScoresClient
   href: api/Gw2Sharp.WebApi.V2.Clients.IWvwMatchesScoresClient.html
   commentId: T:Gw2Sharp.WebApi.V2.Clients.IWvwMatchesScoresClient
   fullName: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesScoresClient
   nameWithType: IWvwMatchesScoresClient
+- uid: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesScoresClient.World(System.Int32)
+  name: World(Int32)
+  href: api/Gw2Sharp.WebApi.V2.Clients.IWvwMatchesScoresClient.html#Gw2Sharp_WebApi_V2_Clients_IWvwMatchesScoresClient_World_System_Int32_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.IWvwMatchesScoresClient.World(System.Int32)
+  fullName: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesScoresClient.World(System.Int32)
+  nameWithType: IWvwMatchesScoresClient.World(Int32)
+- uid: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesScoresClient.World*
+  name: World
+  href: api/Gw2Sharp.WebApi.V2.Clients.IWvwMatchesScoresClient.html#Gw2Sharp_WebApi_V2_Clients_IWvwMatchesScoresClient_World_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.IWvwMatchesScoresClient.World
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesScoresClient.World
+  nameWithType: IWvwMatchesScoresClient.World
+- uid: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesScoresWorldClient
+  name: IWvwMatchesScoresWorldClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.IWvwMatchesScoresWorldClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.IWvwMatchesScoresWorldClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesScoresWorldClient
+  nameWithType: IWvwMatchesScoresWorldClient
+- uid: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesScoresWorldClient.World
+  name: World
+  href: api/Gw2Sharp.WebApi.V2.Clients.IWvwMatchesScoresWorldClient.html#Gw2Sharp_WebApi_V2_Clients_IWvwMatchesScoresWorldClient_World
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.IWvwMatchesScoresWorldClient.World
+  fullName: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesScoresWorldClient.World
+  nameWithType: IWvwMatchesScoresWorldClient.World
+- uid: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesScoresWorldClient.World*
+  name: World
+  href: api/Gw2Sharp.WebApi.V2.Clients.IWvwMatchesScoresWorldClient.html#Gw2Sharp_WebApi_V2_Clients_IWvwMatchesScoresWorldClient_World_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.IWvwMatchesScoresWorldClient.World
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesScoresWorldClient.World
+  nameWithType: IWvwMatchesScoresWorldClient.World
 - uid: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesStatsClient
   name: IWvwMatchesStatsClient
   href: api/Gw2Sharp.WebApi.V2.Clients.IWvwMatchesStatsClient.html
   commentId: T:Gw2Sharp.WebApi.V2.Clients.IWvwMatchesStatsClient
   fullName: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesStatsClient
   nameWithType: IWvwMatchesStatsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesStatsClient.World(System.Int32)
+  name: World(Int32)
+  href: api/Gw2Sharp.WebApi.V2.Clients.IWvwMatchesStatsClient.html#Gw2Sharp_WebApi_V2_Clients_IWvwMatchesStatsClient_World_System_Int32_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.IWvwMatchesStatsClient.World(System.Int32)
+  fullName: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesStatsClient.World(System.Int32)
+  nameWithType: IWvwMatchesStatsClient.World(Int32)
+- uid: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesStatsClient.World*
+  name: World
+  href: api/Gw2Sharp.WebApi.V2.Clients.IWvwMatchesStatsClient.html#Gw2Sharp_WebApi_V2_Clients_IWvwMatchesStatsClient_World_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.IWvwMatchesStatsClient.World
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesStatsClient.World
+  nameWithType: IWvwMatchesStatsClient.World
+- uid: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesStatsWorldClient
+  name: IWvwMatchesStatsWorldClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.IWvwMatchesStatsWorldClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.IWvwMatchesStatsWorldClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesStatsWorldClient
+  nameWithType: IWvwMatchesStatsWorldClient
+- uid: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesStatsWorldClient.World
+  name: World
+  href: api/Gw2Sharp.WebApi.V2.Clients.IWvwMatchesStatsWorldClient.html#Gw2Sharp_WebApi_V2_Clients_IWvwMatchesStatsWorldClient_World
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.IWvwMatchesStatsWorldClient.World
+  fullName: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesStatsWorldClient.World
+  nameWithType: IWvwMatchesStatsWorldClient.World
+- uid: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesStatsWorldClient.World*
+  name: World
+  href: api/Gw2Sharp.WebApi.V2.Clients.IWvwMatchesStatsWorldClient.html#Gw2Sharp_WebApi_V2_Clients_IWvwMatchesStatsWorldClient_World_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.IWvwMatchesStatsWorldClient.World
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesStatsWorldClient.World
+  nameWithType: IWvwMatchesStatsWorldClient.World
+- uid: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesWorldClient
+  name: IWvwMatchesWorldClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.IWvwMatchesWorldClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.IWvwMatchesWorldClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesWorldClient
+  nameWithType: IWvwMatchesWorldClient
+- uid: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesWorldClient.World
+  name: World
+  href: api/Gw2Sharp.WebApi.V2.Clients.IWvwMatchesWorldClient.html#Gw2Sharp_WebApi_V2_Clients_IWvwMatchesWorldClient_World
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.IWvwMatchesWorldClient.World
+  fullName: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesWorldClient.World
+  nameWithType: IWvwMatchesWorldClient.World
+- uid: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesWorldClient.World*
+  name: World
+  href: api/Gw2Sharp.WebApi.V2.Clients.IWvwMatchesWorldClient.html#Gw2Sharp_WebApi_V2_Clients_IWvwMatchesWorldClient_World_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.IWvwMatchesWorldClient.World
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.IWvwMatchesWorldClient.World
+  nameWithType: IWvwMatchesWorldClient.World
 - uid: Gw2Sharp.WebApi.V2.Clients.IWvwObjectivesClient
   name: IWvwObjectivesClient
   href: api/Gw2Sharp.WebApi.V2.Clients.IWvwObjectivesClient.html
@@ -19275,6 +19403,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.WvwMatchesClient.Stats
   nameWithType: WvwMatchesClient.Stats
+- uid: Gw2Sharp.WebApi.V2.Clients.WvwMatchesClient.World(System.Int32)
+  name: World(Int32)
+  href: api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesClient.html#Gw2Sharp_WebApi_V2_Clients_WvwMatchesClient_World_System_Int32_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.WvwMatchesClient.World(System.Int32)
+  fullName: Gw2Sharp.WebApi.V2.Clients.WvwMatchesClient.World(System.Int32)
+  nameWithType: WvwMatchesClient.World(Int32)
+- uid: Gw2Sharp.WebApi.V2.Clients.WvwMatchesClient.World*
+  name: World
+  href: api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesClient.html#Gw2Sharp_WebApi_V2_Clients_WvwMatchesClient_World_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.WvwMatchesClient.World
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.WvwMatchesClient.World
+  nameWithType: WvwMatchesClient.World
 - uid: Gw2Sharp.WebApi.V2.Clients.WvwMatchesOverviewClient
   name: WvwMatchesOverviewClient
   href: api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesOverviewClient.html
@@ -19294,6 +19435,51 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.WvwMatchesOverviewClient.WvwMatchesOverviewClient
   nameWithType: WvwMatchesOverviewClient.WvwMatchesOverviewClient
+- uid: Gw2Sharp.WebApi.V2.Clients.WvwMatchesOverviewClient.World(System.Int32)
+  name: World(Int32)
+  href: api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesOverviewClient.html#Gw2Sharp_WebApi_V2_Clients_WvwMatchesOverviewClient_World_System_Int32_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.WvwMatchesOverviewClient.World(System.Int32)
+  fullName: Gw2Sharp.WebApi.V2.Clients.WvwMatchesOverviewClient.World(System.Int32)
+  nameWithType: WvwMatchesOverviewClient.World(Int32)
+- uid: Gw2Sharp.WebApi.V2.Clients.WvwMatchesOverviewClient.World*
+  name: World
+  href: api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesOverviewClient.html#Gw2Sharp_WebApi_V2_Clients_WvwMatchesOverviewClient_World_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.WvwMatchesOverviewClient.World
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.WvwMatchesOverviewClient.World
+  nameWithType: WvwMatchesOverviewClient.World
+- uid: Gw2Sharp.WebApi.V2.Clients.WvwMatchesOverviewWorldClient
+  name: WvwMatchesOverviewWorldClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesOverviewWorldClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.WvwMatchesOverviewWorldClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.WvwMatchesOverviewWorldClient
+  nameWithType: WvwMatchesOverviewWorldClient
+- uid: Gw2Sharp.WebApi.V2.Clients.WvwMatchesOverviewWorldClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client,System.Int32)
+  name: WvwMatchesOverviewWorldClient(IConnection, IGw2Client, Int32)
+  href: api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesOverviewWorldClient.html#Gw2Sharp_WebApi_V2_Clients_WvwMatchesOverviewWorldClient__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_System_Int32_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.WvwMatchesOverviewWorldClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client,System.Int32)
+  fullName: Gw2Sharp.WebApi.V2.Clients.WvwMatchesOverviewWorldClient.WvwMatchesOverviewWorldClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client, System.Int32)
+  nameWithType: WvwMatchesOverviewWorldClient.WvwMatchesOverviewWorldClient(IConnection, IGw2Client, Int32)
+- uid: Gw2Sharp.WebApi.V2.Clients.WvwMatchesOverviewWorldClient.#ctor*
+  name: WvwMatchesOverviewWorldClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesOverviewWorldClient.html#Gw2Sharp_WebApi_V2_Clients_WvwMatchesOverviewWorldClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.WvwMatchesOverviewWorldClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.WvwMatchesOverviewWorldClient.WvwMatchesOverviewWorldClient
+  nameWithType: WvwMatchesOverviewWorldClient.WvwMatchesOverviewWorldClient
+- uid: Gw2Sharp.WebApi.V2.Clients.WvwMatchesOverviewWorldClient.World
+  name: World
+  href: api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesOverviewWorldClient.html#Gw2Sharp_WebApi_V2_Clients_WvwMatchesOverviewWorldClient_World
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.WvwMatchesOverviewWorldClient.World
+  fullName: Gw2Sharp.WebApi.V2.Clients.WvwMatchesOverviewWorldClient.World
+  nameWithType: WvwMatchesOverviewWorldClient.World
+- uid: Gw2Sharp.WebApi.V2.Clients.WvwMatchesOverviewWorldClient.World*
+  name: World
+  href: api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesOverviewWorldClient.html#Gw2Sharp_WebApi_V2_Clients_WvwMatchesOverviewWorldClient_World_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.WvwMatchesOverviewWorldClient.World
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.WvwMatchesOverviewWorldClient.World
+  nameWithType: WvwMatchesOverviewWorldClient.World
 - uid: Gw2Sharp.WebApi.V2.Clients.WvwMatchesScoresClient
   name: WvwMatchesScoresClient
   href: api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesScoresClient.html
@@ -19313,6 +19499,51 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.WvwMatchesScoresClient.WvwMatchesScoresClient
   nameWithType: WvwMatchesScoresClient.WvwMatchesScoresClient
+- uid: Gw2Sharp.WebApi.V2.Clients.WvwMatchesScoresClient.World(System.Int32)
+  name: World(Int32)
+  href: api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesScoresClient.html#Gw2Sharp_WebApi_V2_Clients_WvwMatchesScoresClient_World_System_Int32_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.WvwMatchesScoresClient.World(System.Int32)
+  fullName: Gw2Sharp.WebApi.V2.Clients.WvwMatchesScoresClient.World(System.Int32)
+  nameWithType: WvwMatchesScoresClient.World(Int32)
+- uid: Gw2Sharp.WebApi.V2.Clients.WvwMatchesScoresClient.World*
+  name: World
+  href: api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesScoresClient.html#Gw2Sharp_WebApi_V2_Clients_WvwMatchesScoresClient_World_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.WvwMatchesScoresClient.World
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.WvwMatchesScoresClient.World
+  nameWithType: WvwMatchesScoresClient.World
+- uid: Gw2Sharp.WebApi.V2.Clients.WvwMatchesScoresWorldClient
+  name: WvwMatchesScoresWorldClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesScoresWorldClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.WvwMatchesScoresWorldClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.WvwMatchesScoresWorldClient
+  nameWithType: WvwMatchesScoresWorldClient
+- uid: Gw2Sharp.WebApi.V2.Clients.WvwMatchesScoresWorldClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client,System.Int32)
+  name: WvwMatchesScoresWorldClient(IConnection, IGw2Client, Int32)
+  href: api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesScoresWorldClient.html#Gw2Sharp_WebApi_V2_Clients_WvwMatchesScoresWorldClient__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_System_Int32_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.WvwMatchesScoresWorldClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client,System.Int32)
+  fullName: Gw2Sharp.WebApi.V2.Clients.WvwMatchesScoresWorldClient.WvwMatchesScoresWorldClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client, System.Int32)
+  nameWithType: WvwMatchesScoresWorldClient.WvwMatchesScoresWorldClient(IConnection, IGw2Client, Int32)
+- uid: Gw2Sharp.WebApi.V2.Clients.WvwMatchesScoresWorldClient.#ctor*
+  name: WvwMatchesScoresWorldClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesScoresWorldClient.html#Gw2Sharp_WebApi_V2_Clients_WvwMatchesScoresWorldClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.WvwMatchesScoresWorldClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.WvwMatchesScoresWorldClient.WvwMatchesScoresWorldClient
+  nameWithType: WvwMatchesScoresWorldClient.WvwMatchesScoresWorldClient
+- uid: Gw2Sharp.WebApi.V2.Clients.WvwMatchesScoresWorldClient.World
+  name: World
+  href: api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesScoresWorldClient.html#Gw2Sharp_WebApi_V2_Clients_WvwMatchesScoresWorldClient_World
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.WvwMatchesScoresWorldClient.World
+  fullName: Gw2Sharp.WebApi.V2.Clients.WvwMatchesScoresWorldClient.World
+  nameWithType: WvwMatchesScoresWorldClient.World
+- uid: Gw2Sharp.WebApi.V2.Clients.WvwMatchesScoresWorldClient.World*
+  name: World
+  href: api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesScoresWorldClient.html#Gw2Sharp_WebApi_V2_Clients_WvwMatchesScoresWorldClient_World_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.WvwMatchesScoresWorldClient.World
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.WvwMatchesScoresWorldClient.World
+  nameWithType: WvwMatchesScoresWorldClient.World
 - uid: Gw2Sharp.WebApi.V2.Clients.WvwMatchesStatsClient
   name: WvwMatchesStatsClient
   href: api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesStatsClient.html
@@ -19332,6 +19563,83 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.WvwMatchesStatsClient.WvwMatchesStatsClient
   nameWithType: WvwMatchesStatsClient.WvwMatchesStatsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.WvwMatchesStatsClient.World(System.Int32)
+  name: World(Int32)
+  href: api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesStatsClient.html#Gw2Sharp_WebApi_V2_Clients_WvwMatchesStatsClient_World_System_Int32_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.WvwMatchesStatsClient.World(System.Int32)
+  fullName: Gw2Sharp.WebApi.V2.Clients.WvwMatchesStatsClient.World(System.Int32)
+  nameWithType: WvwMatchesStatsClient.World(Int32)
+- uid: Gw2Sharp.WebApi.V2.Clients.WvwMatchesStatsClient.World*
+  name: World
+  href: api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesStatsClient.html#Gw2Sharp_WebApi_V2_Clients_WvwMatchesStatsClient_World_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.WvwMatchesStatsClient.World
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.WvwMatchesStatsClient.World
+  nameWithType: WvwMatchesStatsClient.World
+- uid: Gw2Sharp.WebApi.V2.Clients.WvwMatchesStatsWorldClient
+  name: WvwMatchesStatsWorldClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesStatsWorldClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.WvwMatchesStatsWorldClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.WvwMatchesStatsWorldClient
+  nameWithType: WvwMatchesStatsWorldClient
+- uid: Gw2Sharp.WebApi.V2.Clients.WvwMatchesStatsWorldClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client,System.Int32)
+  name: WvwMatchesStatsWorldClient(IConnection, IGw2Client, Int32)
+  href: api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesStatsWorldClient.html#Gw2Sharp_WebApi_V2_Clients_WvwMatchesStatsWorldClient__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_System_Int32_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.WvwMatchesStatsWorldClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client,System.Int32)
+  fullName: Gw2Sharp.WebApi.V2.Clients.WvwMatchesStatsWorldClient.WvwMatchesStatsWorldClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client, System.Int32)
+  nameWithType: WvwMatchesStatsWorldClient.WvwMatchesStatsWorldClient(IConnection, IGw2Client, Int32)
+- uid: Gw2Sharp.WebApi.V2.Clients.WvwMatchesStatsWorldClient.#ctor*
+  name: WvwMatchesStatsWorldClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesStatsWorldClient.html#Gw2Sharp_WebApi_V2_Clients_WvwMatchesStatsWorldClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.WvwMatchesStatsWorldClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.WvwMatchesStatsWorldClient.WvwMatchesStatsWorldClient
+  nameWithType: WvwMatchesStatsWorldClient.WvwMatchesStatsWorldClient
+- uid: Gw2Sharp.WebApi.V2.Clients.WvwMatchesStatsWorldClient.World
+  name: World
+  href: api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesStatsWorldClient.html#Gw2Sharp_WebApi_V2_Clients_WvwMatchesStatsWorldClient_World
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.WvwMatchesStatsWorldClient.World
+  fullName: Gw2Sharp.WebApi.V2.Clients.WvwMatchesStatsWorldClient.World
+  nameWithType: WvwMatchesStatsWorldClient.World
+- uid: Gw2Sharp.WebApi.V2.Clients.WvwMatchesStatsWorldClient.World*
+  name: World
+  href: api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesStatsWorldClient.html#Gw2Sharp_WebApi_V2_Clients_WvwMatchesStatsWorldClient_World_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.WvwMatchesStatsWorldClient.World
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.WvwMatchesStatsWorldClient.World
+  nameWithType: WvwMatchesStatsWorldClient.World
+- uid: Gw2Sharp.WebApi.V2.Clients.WvwMatchesWorldClient
+  name: WvwMatchesWorldClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesWorldClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.WvwMatchesWorldClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.WvwMatchesWorldClient
+  nameWithType: WvwMatchesWorldClient
+- uid: Gw2Sharp.WebApi.V2.Clients.WvwMatchesWorldClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client,System.Int32)
+  name: WvwMatchesWorldClient(IConnection, IGw2Client, Int32)
+  href: api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesWorldClient.html#Gw2Sharp_WebApi_V2_Clients_WvwMatchesWorldClient__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_System_Int32_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.WvwMatchesWorldClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client,System.Int32)
+  fullName: Gw2Sharp.WebApi.V2.Clients.WvwMatchesWorldClient.WvwMatchesWorldClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client, System.Int32)
+  nameWithType: WvwMatchesWorldClient.WvwMatchesWorldClient(IConnection, IGw2Client, Int32)
+- uid: Gw2Sharp.WebApi.V2.Clients.WvwMatchesWorldClient.#ctor*
+  name: WvwMatchesWorldClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesWorldClient.html#Gw2Sharp_WebApi_V2_Clients_WvwMatchesWorldClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.WvwMatchesWorldClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.WvwMatchesWorldClient.WvwMatchesWorldClient
+  nameWithType: WvwMatchesWorldClient.WvwMatchesWorldClient
+- uid: Gw2Sharp.WebApi.V2.Clients.WvwMatchesWorldClient.World
+  name: World
+  href: api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesWorldClient.html#Gw2Sharp_WebApi_V2_Clients_WvwMatchesWorldClient_World
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.WvwMatchesWorldClient.World
+  fullName: Gw2Sharp.WebApi.V2.Clients.WvwMatchesWorldClient.World
+  nameWithType: WvwMatchesWorldClient.World
+- uid: Gw2Sharp.WebApi.V2.Clients.WvwMatchesWorldClient.World*
+  name: World
+  href: api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesWorldClient.html#Gw2Sharp_WebApi_V2_Clients_WvwMatchesWorldClient_World_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.WvwMatchesWorldClient.World
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.WvwMatchesWorldClient.World
+  nameWithType: WvwMatchesWorldClient.World
 - uid: Gw2Sharp.WebApi.V2.Clients.WvwObjectivesClient
   name: WvwObjectivesClient
   href: api/Gw2Sharp.WebApi.V2.Clients.WvwObjectivesClient.html
