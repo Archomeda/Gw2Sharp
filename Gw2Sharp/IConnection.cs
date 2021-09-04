@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Threading;
 using Gw2Sharp.WebApi;
 using Gw2Sharp.WebApi.Caching;
 using Gw2Sharp.WebApi.Http;
@@ -31,6 +32,14 @@ namespace Gw2Sharp
         /// The User-Agent used to make requests.
         /// </summary>
         string UserAgent { get; }
+
+        /// <summary>
+        /// Gets the request timeout that's used for the API requests.
+        /// If <see cref="TimeSpan.Zero"/> or less, the default timeout is used.
+        /// This value can be <see cref="Timeout.InfiniteTimeSpan"/> to have no timeout.
+        /// Defaults to the same value as <see cref="IHttpClient.Timeout"/> in <see cref="HttpClient"/>.
+        /// </summary>
+        TimeSpan RequestTimeout { get; }
 
         /// <summary>
         /// Gets the HTTP client that's used for the API requests.
