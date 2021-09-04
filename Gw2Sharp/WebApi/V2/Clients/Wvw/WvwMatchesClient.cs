@@ -28,6 +28,10 @@ namespace Gw2Sharp.WebApi.V2.Clients
         }
 
         /// <inheritdoc />
+        public virtual IWvwMatchesWorldClient World(int world) =>
+            new WvwMatchesWorldClient(this.Connection, this.Gw2Client!, world);
+
+        /// <inheritdoc />
         public virtual IWvwMatchesOverviewClient Overview => this.overview;
 
         /// <inheritdoc />
