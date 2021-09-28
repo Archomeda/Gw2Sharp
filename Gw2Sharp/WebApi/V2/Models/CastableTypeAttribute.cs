@@ -13,7 +13,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// Creates a new instance of the <see cref="CastableTypeAttribute"/> class.
         /// </summary>
-        /// <exception cref="ArgumentNullException"><paramref name="value"/> or <paramref name="objectType"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="value"/> or <paramref name="objectType"/> is <see langword="null"/>.</exception>
         public CastableTypeAttribute(object value, Type objectType)
         {
             if (value == null)

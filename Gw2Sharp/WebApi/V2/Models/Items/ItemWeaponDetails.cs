@@ -45,19 +45,19 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <summary>
         /// The item infix upgrade.
-        /// If the item does not have a infix upgrade, this value is <c>null</c>.
+        /// If the item does not have a infix upgrade, this value is <see langword="null"/>.
         /// </summary>
         public ItemInfixUpgrade? InfixUpgrade { get; set; }
 
         /// <summary>
         /// The id of the suffix item.
-        /// If the item does not have a suffix item, this value is <c>null</c>.
+        /// If the item does not have a suffix item, this value is <see langword="null"/>.
         /// </summary>
         public int? SuffixItemId { get; set; }
 
         /// <summary>
         /// The id of the secondary suffix item.
-        /// If the item does not have a secondary suffix item, this value is <c>null</c>.
+        /// If the item does not have a secondary suffix item, this value is <see langword="null"/>.
         /// </summary>
         public int? SecondarySuffixItemId { get; set; }
 

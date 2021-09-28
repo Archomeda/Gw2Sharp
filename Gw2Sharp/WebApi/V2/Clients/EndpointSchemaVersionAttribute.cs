@@ -13,7 +13,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Creates a new instance of the <see cref="EndpointSchemaVersionAttribute"/> class.
         /// </summary>
         /// <param name="schemaVersion">The schema version.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="schemaVersion"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="schemaVersion"/> is <see langword="null"/>.</exception>
         public EndpointSchemaVersionAttribute(string schemaVersion)
         {
             this.SchemaVersion = schemaVersion ?? throw new ArgumentNullException(nameof(schemaVersion));

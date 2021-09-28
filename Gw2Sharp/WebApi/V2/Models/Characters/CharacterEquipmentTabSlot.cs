@@ -34,7 +34,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The PvP equipment.
         /// Additionally requires scopes: builds.
-        /// If the required scopes are not met, this value is <c>null</c>.
+        /// If the required scopes are not met, this value is <see langword="null"/>.
         /// </summary>
         public CharacterEquipmentPvp? EquipmentPvp { get; set; }
     }

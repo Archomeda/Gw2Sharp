@@ -15,7 +15,7 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <summary>
         /// The leaderboard duration.
-        /// This value is <c>null</c> if it's unavailable.
+        /// This value is <see langword="null"/> if it's unavailable.
         /// </summary>
         public int? Duration { get; set; }
 

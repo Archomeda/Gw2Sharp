@@ -28,7 +28,7 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <summary>
         /// The trait fact icon URL.
-        /// If the trait fact doesn't have an icon, this value is <c>null</c>.
+        /// If the trait fact doesn't have an icon, this value is <see langword="null"/>.
         /// </summary>
         public RenderUrl? Icon { get; set; }
 
@@ -40,14 +40,14 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// Only used in <see cref="Trait.TraitedFacts"/>.
         /// The trait that's required for this trait fact to be used.
-        /// If the trait fact isn't a traited trait fact, this value is <c>null</c>.
+        /// If the trait fact isn't a traited trait fact, this value is <see langword="null"/>.
         /// </summary>
         public int? RequiresTrait { get; set; }
 
         /// <summary>
         /// Only used in <see cref="Trait.TraitedFacts"/>.
         /// The index of <see cref="Trait.Facts"/> that this trait fact overrides when active.
-        /// If the trait fact isn't a traited trait fact, or if the traited trait fact doesn't override an existing trait fact, this value is <c>null</c>.
+        /// If the trait fact isn't a traited trait fact, or if the traited trait fact doesn't override an existing trait fact, this value is <see langword="null"/>.
         /// </summary>
         public int? Overrides { get; set; }
     }

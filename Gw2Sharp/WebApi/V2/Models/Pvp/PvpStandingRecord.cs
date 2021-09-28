@@ -32,7 +32,7 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <summary>
         /// The PvP standing rating.
-        /// This value is <c>null</c> when the record doesn't track the rating.
+        /// This value is <see langword="null"/> when the record doesn't track the rating.
         /// </summary>
         public int? Rating { get; set; }
     }

@@ -42,7 +42,7 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <summary>
         /// The races that have access to this story.
-        /// If this story has no racial restriction, this value is <c>null</c>.
+        /// If this story has no racial restriction, this value is <see langword="null"/>.
         /// Each element can be resolved against <see cref="IGw2WebApiV2Client.Races"/>.
         /// </summary>
         public IReadOnlyList<string>? Races { get; set; }

@@ -30,7 +30,7 @@ namespace Gw2Sharp.WebApi.Caching
         /// Creates a new file archive caching method with the default cache duration (one day).
         /// </summary>
         /// <param name="archiveFileName">The file name of the archive.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="archiveFileName"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="archiveFileName"/> is <see langword="null"/>.</exception>
         /// <exception cref="ArgumentException"><paramref name="archiveFileName"/> is empty or contains only whitespaces.</exception>
         public ArchiveCacheMethod(string archiveFileName)
         {

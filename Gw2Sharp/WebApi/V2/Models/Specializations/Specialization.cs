@@ -45,7 +45,7 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <summary>
         /// The weapon trait associated with the specialization.
-        /// If the specialization does not have an associated weapon trait, this value is <c>null</c>.
+        /// If the specialization does not have an associated weapon trait, this value is <see langword="null"/>.
         /// Can be resolved against <see cref="ITraitsClient"/>.
         /// </summary>
         public int? WeaponTrait { get; set; }
@@ -62,13 +62,13 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <summary>
         /// The big specialization profession icon URL.
-        /// If the specialization does not have a profession icon, this value is <c>null</c>.
+        /// If the specialization does not have a profession icon, this value is <see langword="null"/>.
         /// </summary>
         public RenderUrl? ProfessionIconBig { get; set; }
 
         /// <summary>
         /// The specialization profession icon URL.
-        /// If the specialization does not have a profession icon, this value is <c>null</c>.
+        /// If the specialization does not have a profession icon, this value is <see langword="null"/>.
         /// </summary>
         public RenderUrl? ProfessionIcon { get; set; }
     }

@@ -55,7 +55,7 @@ namespace Gw2Sharp.WebApi.Http
         /// <param name="connection">The connection.</param>
         /// <param name="gw2Client">The GW2 client.</param>
         /// <param name="requestHeaders">The request headers to use in the web request.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="url"/>, <paramref name="connection"/> or <paramref name="gw2Client"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="url"/>, <paramref name="connection"/> or <paramref name="gw2Client"/> is <see langword="null"/>.</exception>
         public WebApiRequest(Uri url, IConnection connection, IGw2Client gw2Client, IDictionary<string, string>? requestHeaders = default)
         {
             if (url is null)
@@ -89,7 +89,7 @@ namespace Gw2Sharp.WebApi.Http
         /// <param name="options">The request options.</param>
         /// <param name="connection">The connection.</param>
         /// <param name="gw2Client">The GW2 client.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="options"/>, <paramref name="connection"/> or <paramref name="gw2Client"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="options"/>, <paramref name="connection"/> or <paramref name="gw2Client"/> is <see langword="null"/>.</exception>
         public WebApiRequest(WebApiRequestOptions options, IConnection connection, IGw2Client gw2Client)
         {
             this.Options = options ?? throw new ArgumentNullException(nameof(options));

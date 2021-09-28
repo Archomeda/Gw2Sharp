@@ -147,7 +147,7 @@ namespace Gw2Sharp.ChatLinks
         /// </summary>
         /// <param name="chatLinkString">The chat link string.</param>
         /// <param name="chatLink">The chat link if <paramref name="chatLinkString"/> is a valid chat link.</param>
-        /// <returns><c>true</c> if <paramref name="chatLinkString"/> is a valid chat link; <c>false</c> otherwise.</returns>
+        /// <returns><see langword="true"/> if <paramref name="chatLinkString"/> is a valid chat link; <see langword="false"/> otherwise.</returns>
         public static bool TryParse(string chatLinkString, [NotNullWhen(true)] out IGw2ChatLink? chatLink)
         {
             try

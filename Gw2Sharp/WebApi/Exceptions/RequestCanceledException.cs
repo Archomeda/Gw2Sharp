@@ -12,7 +12,7 @@ namespace Gw2Sharp.WebApi.Exceptions
         /// Creates a new <see cref="RequestCanceledException" />.
         /// </summary>
         /// <param name="request">The original request.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="request"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="request"/> is <see langword="null"/>.</exception>
         public RequestCanceledException(IWebApiRequest request) :
             base(request, "Request was canceled") { }
     }

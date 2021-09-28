@@ -9,7 +9,7 @@ namespace Gw2Sharp.WebApi.V2
     {
         /// <summary>
         /// Gets or sets the associated HTTP response information.
-        /// When the request info isn't available, this value is <c>null</c>.
+        /// When the request info isn't available, this value is <see langword="null"/>.
         /// </summary>
         [JsonIgnore]
         ApiV2HttpResponseInfo? HttpResponseInfo { get; set; }

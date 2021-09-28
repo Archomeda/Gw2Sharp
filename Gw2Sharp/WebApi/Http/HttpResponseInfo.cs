@@ -71,14 +71,14 @@ namespace Gw2Sharp.WebApi.Http
         /// <summary>
         /// The cache age.
         /// This is returned by the value max-age in the header Cache-Control.
-        /// This value is <c>null</c> if the response didn't contain the appropriate header.
+        /// This value is <see langword="null"/> if the response didn't contain the appropriate header.
         /// </summary>
         public TimeSpan? CacheMaxAge { get; protected set; }
 
         /// <summary>
         /// The cache expiry date.
         /// This is returned by the header Expires.
-        /// This value is <c>null</c> if the response didn't contain the appropriate header.
+        /// This value is <see langword="null"/> if the response didn't contain the appropriate header.
         /// </summary>
         public DateTimeOffset? Expires { get; protected set; }
 

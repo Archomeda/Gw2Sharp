@@ -16,7 +16,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
         /// <param name="characterName">The character name.</param>
         /// <param name="gw2Client">The Guild Wars 2 client.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="connection"/>, <paramref name="gw2Client"/> or <paramref name="characterName"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="connection"/>, <paramref name="gw2Client"/> or <paramref name="characterName"/> is <see langword="null"/>.</exception>
         protected internal CharactersIdBackstoryClient(IConnection connection, IGw2Client gw2Client, string characterName) :
             base(connection, gw2Client, characterName)
         { }

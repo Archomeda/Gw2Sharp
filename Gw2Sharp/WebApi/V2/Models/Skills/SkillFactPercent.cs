@@ -12,7 +12,7 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <summary>
         /// The skill fact value.
-        /// If the skill fact doesn't have a value, this value is <c>null</c>.
+        /// If the skill fact doesn't have a value, this value is <see langword="null"/>.
         /// </summary>
         public double? Value { get; set; }
     }

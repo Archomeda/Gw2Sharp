@@ -44,7 +44,7 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <summary>
         /// The guild log originating user.
-        /// If no user is associated with this log, this value is <c>null</c>.
+        /// If no user is associated with this log, this value is <see langword="null"/>.
         /// </summary>
         public string? User { get; set; }
     }

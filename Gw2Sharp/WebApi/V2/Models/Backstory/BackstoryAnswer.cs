@@ -36,14 +36,14 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <summary>
         /// The list of races to which the backstory answer applies to.
-        /// If the backstory answer applies to all races, this value is <c>null</c>.
+        /// If the backstory answer applies to all races, this value is <see langword="null"/>.
         /// Each element can be resolved against <see cref="IGw2WebApiV2Client.Races"/>.
         /// </summary>
         public IReadOnlyList<string>? Races { get; set; }
 
         /// <summary>
         /// The list of professions to which the backstory answer applies to.
-        /// If the backstory answer applies to all professions, this value is <c>null</c>.
+        /// If the backstory answer applies to all professions, this value is <see langword="null"/>.
         /// Each element can be resolved against <see cref="IGw2WebApiV2Client.Professions"/>.
         /// </summary>
         public IReadOnlyList<string>? Professions { get; set; }

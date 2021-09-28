@@ -18,7 +18,7 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <summary>
         /// The required off-hand weapon id.
-        /// This value is <c>null</c> if the skill doesn't require an off-hand weapon.
+        /// This value is <see langword="null"/> if the skill doesn't require an off-hand weapon.
         /// </summary>
         public string Offhand { get; set; } = string.Empty;
     }

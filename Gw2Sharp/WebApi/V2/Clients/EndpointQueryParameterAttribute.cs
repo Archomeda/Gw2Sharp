@@ -13,7 +13,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Creates a new instance of the <see cref="EndpointQueryParameterAttribute"/> class.
         /// </summary>
         /// <param name="parameterName">The query parameter name.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="parameterName"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="parameterName"/> is <see langword="null"/>.</exception>
         public EndpointQueryParameterAttribute(string parameterName)
         {
             this.ParameterName = parameterName ?? throw new ArgumentNullException(nameof(parameterName));

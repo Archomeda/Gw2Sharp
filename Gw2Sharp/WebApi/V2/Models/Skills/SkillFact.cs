@@ -31,7 +31,7 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <summary>
         /// The skill fact icon URL.
-        /// If the skill fact doesn't have an icon, this value is <c>null</c>.
+        /// If the skill fact doesn't have an icon, this value is <see langword="null"/>.
         /// </summary>
         public RenderUrl? Icon { get; set; }
 
@@ -43,14 +43,14 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// Only used in <see cref="Skill.TraitedFacts"/>.
         /// The trait that's required for this skill fact to be used.
-        /// If the skill fact isn't a traited skill fact, this value is <c>null</c>.
+        /// If the skill fact isn't a traited skill fact, this value is <see langword="null"/>.
         /// </summary>
         public int? RequiresTrait { get; set; }
 
         /// <summary>
         /// Only used in <see cref="Skill.TraitedFacts"/>.
         /// The index of <see cref="Skill.Facts"/> that this skill fact overrides when active.
-        /// If the skill fact isn't a traited skill fact, or if the traited skill fact doesn't override an existing skill fact, this value is <c>null</c>.
+        /// If the skill fact isn't a traited skill fact, or if the traited skill fact doesn't override an existing skill fact, this value is <see langword="null"/>.
         /// </summary>
         public int? Overrides { get; set; }
     }

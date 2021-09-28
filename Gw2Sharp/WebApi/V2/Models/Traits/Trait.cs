@@ -45,25 +45,25 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <summary>
         /// The trait slot.
-        /// If the trait does not have a slot, this value is <c>null</c>.
+        /// If the trait does not have a slot, this value is <see langword="null"/>.
         /// </summary>
         public ApiEnum<TraitSlot>? Slot { get; set; }
 
         /// <summary>
         /// The list of trait facts.
-        /// If the trait doesn't have any facts, this value is <c>null</c>.
+        /// If the trait doesn't have any facts, this value is <see langword="null"/>.
         /// </summary>
         public IReadOnlyList<TraitFact>? Facts { get; set; }
 
         /// <summary>
         /// The list of traited skill facts.
-        /// If the skill doesn't have any traited facts, this value is <c>null</c>.
+        /// If the skill doesn't have any traited facts, this value is <see langword="null"/>.
         /// </summary>
         public IReadOnlyList<TraitFact>? TraitedFacts { get; set; }
 
         /// <summary>
         /// The list of trait skills.
-        /// If the trait doesn't have any skills, this value is <c>null</c>.
+        /// If the trait doesn't have any skills, this value is <see langword="null"/>.
         /// </summary>
         public IReadOnlyList<TraitSkill>? Skills { get; set; }
     }

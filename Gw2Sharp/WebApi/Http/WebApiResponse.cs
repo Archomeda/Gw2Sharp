@@ -15,7 +15,7 @@ namespace Gw2Sharp.WebApi.Http
         /// </summary>
         /// <param name="content">The content.</param>
         /// <param name="cacheState">The cache state.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="content"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="content"/> is <see langword="null"/>.</exception>
         public WebApiResponse(string content, CacheState cacheState) : base(content, null, cacheState, null) { }
 
         /// <summary>
@@ -25,7 +25,7 @@ namespace Gw2Sharp.WebApi.Http
         /// <param name="statusCode">The status code.</param>
         /// <param name="cacheState">The cache state.</param>
         /// <param name="responseHeaders">The response headers.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="content"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="content"/> is <see langword="null"/>.</exception>
         public WebApiResponse(string content, HttpStatusCode? statusCode, CacheState cacheState, IDictionary<string, string>? responseHeaders)
             : base(content, statusCode, cacheState, responseHeaders) { }
 
@@ -36,7 +36,7 @@ namespace Gw2Sharp.WebApi.Http
         /// <param name="statusCode">The status code.</param>
         /// <param name="cacheState">The cache state.</param>
         /// <param name="responseHeaders">The response headers.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="content"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="content"/> is <see langword="null"/>.</exception>
         public WebApiResponse(string content, HttpStatusCode? statusCode, CacheState cacheState, IEnumerable<KeyValuePair<string, string>>? responseHeaders)
             : base(content, statusCode, cacheState, responseHeaders) { }
 
@@ -56,7 +56,7 @@ namespace Gw2Sharp.WebApi.Http
         /// </summary>
         /// <param name="content">The content.</param>
         /// <param name="cacheState">The cache state.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="content"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="content"/> is <see langword="null"/>.</exception>
         public WebApiResponse(T content, CacheState cacheState) : this(content, null, cacheState, null) { }
 
         /// <summary>
@@ -66,7 +66,7 @@ namespace Gw2Sharp.WebApi.Http
         /// <param name="statusCode">The status code.</param>
         /// <param name="cacheState">The cache state.</param>
         /// <param name="responseHeaders">The response headers.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="content"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="content"/> is <see langword="null"/>.</exception>
         public WebApiResponse(T content, HttpStatusCode? statusCode, CacheState cacheState, IDictionary<string, string>? responseHeaders)
         {
             this.Content = content ?? throw new ArgumentNullException(nameof(content));
@@ -84,7 +84,7 @@ namespace Gw2Sharp.WebApi.Http
         /// <param name="statusCode">The status code.</param>
         /// <param name="cacheState">The cache state.</param>
         /// <param name="responseHeaders">The response headers.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="content"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="content"/> is <see langword="null"/>.</exception>
         public WebApiResponse(T content, HttpStatusCode? statusCode, CacheState cacheState, IEnumerable<KeyValuePair<string, string>>? responseHeaders) :
             this(content, statusCode, cacheState, responseHeaders?.ShallowCopy())
         { }

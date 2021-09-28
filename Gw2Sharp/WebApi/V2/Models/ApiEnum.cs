@@ -52,7 +52,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// Creates a new API enum.
         /// </summary>
         /// <param name="value">The enum value.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="value"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="value"/> is <see langword="null"/>.</exception>
         public ApiEnum(T value) : this(value, Enum.GetName(typeof(T), value)) { }
 
         /// <summary>
@@ -95,7 +95,7 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <summary>
         /// The raw enum value.
-        /// If the original value was <c>undefined</c> or <c>null</c>, this value is <c>null</c>.
+        /// If the original value was <c>undefined</c> or <see langword="null"/>, this value is <see langword="null"/>.
         /// </summary>
         public string? RawValue { get; }
 

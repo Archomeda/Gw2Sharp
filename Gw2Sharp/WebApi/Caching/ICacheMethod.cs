@@ -14,7 +14,7 @@ namespace Gw2Sharp.WebApi.Caching
         /// </summary>
         /// <param name="category">The cache category.</param>
         /// <param name="id">The id.</param>
-        /// <returns>The task for this operation with a returned cached item if it exists and has not expired; <c>null</c> otherwise.</returns>
+        /// <returns>The task for this operation with a returned cached item if it exists and has not expired; <see langword="null"/> otherwise.</returns>
         Task<CacheItem?> TryGetAsync(string category, string id);
 
         /// <summary>

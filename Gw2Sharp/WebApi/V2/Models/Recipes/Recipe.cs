@@ -62,14 +62,14 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <summary>
         /// The recipe ingredients from the guild.
-        /// If the recipe doesn't require any guild ingredients, this value is <c>null</c>.
+        /// If the recipe doesn't require any guild ingredients, this value is <see langword="null"/>.
         /// </summary>
         public IReadOnlyList<RecipeGuildIngredient>? GuildIngredients { get; set; }
 
         /// <summary>
         /// The output guild upgrade id.
         /// Can be resolved against <see cref="IGuildClient.Upgrades"/>.
-        /// If the recipe doesn't output any guild upgrade, this value is <c>null</c>.
+        /// If the recipe doesn't output any guild upgrade, this value is <see langword="null"/>.
         /// </summary>
         public int OutputUpgradeId { get; set; }
     }

@@ -12,19 +12,19 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <summary>
         /// The trait fact description.
-        /// If the trait fact doesn't have a description, this value is <c>null</c>.
+        /// If the trait fact doesn't have a description, this value is <see langword="null"/>.
         /// </summary>
         public string? Description { get; set; }
 
         /// <summary>
         /// The number of stacks applied.
-        /// If the trait fact doesn't apply stacks, this value is <c>null</c>.
+        /// If the trait fact doesn't apply stacks, this value is <see langword="null"/>.
         /// </summary>
         public int? ApplyCount { get; set; }
 
         /// <summary>
         /// The duration of the effect in seconds.
-        /// If the trait fact doesn't have a duration, this value is <c>null</c>.
+        /// If the trait fact doesn't have a duration, this value is <see langword="null"/>.
         /// </summary>
         public int? Duration { get; set; }
 

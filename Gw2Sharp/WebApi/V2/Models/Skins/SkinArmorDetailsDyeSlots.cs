@@ -10,7 +10,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     {
         /// <summary>
         /// The default dye slots.
-        /// If a dye slot isn't available, that element is <c>null</c>.
+        /// If a dye slot isn't available, that element is <see langword="null"/>.
         /// </summary>
         public IReadOnlyList<SkinDyeSlot?> Default { get; set; } = Array.Empty<SkinDyeSlot?>();
 

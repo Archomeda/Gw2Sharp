@@ -10,14 +10,14 @@ namespace Gw2Sharp.WebApi.V2.Models
     {
         /// <summary>
         /// The build template name.
-        /// If the build template isn't set, this value is <c>null</c>.
+        /// If the build template isn't set, this value is <see langword="null"/>.
         /// </summary>
         public string? Name { get; set; }
 
         /// <summary>
         /// The build template profession.
         /// Can be resolved against <see cref="IGw2WebApiV2Client.Professions"/>.
-        /// If the build template isn't set, this value is <c>null</c>.
+        /// If the build template isn't set, this value is <see langword="null"/>.
         /// </summary>
         public string? Profession { get; set; }
 
@@ -38,22 +38,22 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <summary>
         /// The pet skills.
-        /// If the profession is not a ranger, this value is <c>null</c>.
+        /// If the profession is not a ranger, this value is <see langword="null"/>.
         /// </summary>
         public BuildTemplatePets Pets { get; set; } = new BuildTemplatePets();
 
         /// <summary>
         /// The list of revenant skills.
-        /// If the profession is not a revenant, this value is <c>null</c>.
-        /// If a legend is not selected in a specific slot, that element is <c>null</c>.
+        /// If the profession is not a revenant, this value is <see langword="null"/>.
+        /// If a legend is not selected in a specific slot, that element is <see langword="null"/>.
         /// Each element can be resolved against <see cref="IGw2WebApiV2Client.Legends"/>.
         /// </summary>
         public IReadOnlyList<string?>? Legends { get; set; }
 
         /// <summary>
         /// The list of aquatic revenant skills.
-        /// If the profession is not a revenant, this value is <c>null</c>.
-        /// If a legend is not selected in a specific slot, that element is <c>null</c>.
+        /// If the profession is not a revenant, this value is <see langword="null"/>.
+        /// If a legend is not selected in a specific slot, that element is <see langword="null"/>.
         /// Each element can be resolved against <see cref="IGw2WebApiV2Client.Legends"/>.
         /// </summary>
         public IReadOnlyList<string?>? AquaticLegends { get; set; }
