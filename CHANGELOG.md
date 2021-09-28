@@ -4,6 +4,10 @@
 This version includes breaking changes.
 
 ### Fixes
+- **Breaking:** The custom exceptions thrown from Gw2Sharp have been simplified ([#96](https://github.com/Archomeda/Gw2Sharp/issues/96), [#104](https://github.com/Archomeda/Gw2Sharp/pull/104))
+  - Previously there were generic and non-generic variants of `UnexpectedStatusException` and `RequestException`. When designing these exceptions, the idea was to have the response type included in the exception. However, it turned out that only the `ErrorObject` was used, making it redundant. And on top of that, it made catching the exceptions unnecessarily difficult.
+  - So in order to simplify this, the generic type variants have been removed, while the non-generic variants are now linked directly to `ErrorObject`
+  - You may have to update your try-catch statements if you have been using the generic variants
 - **Breaking:** The following enums have moved namespaces from the root Gw2Sharp into their proper namespaces ([#92](https://github.com/Archomeda/Gw2Sharp/pull/92)):
   - `Gw2Sharp.WebApi.Caching.CacheItemStatus`
   - `Gw2Sharp.WebApi.Caching.CacheItemType`
