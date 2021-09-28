@@ -36,7 +36,7 @@ For your convenience, the following list gives an overview of the web API endpoi
  /v2/account/home/nodes | 🔑 | [`Gw2Client.WebApi.V2.Account.Home.Nodes`](../api/Gw2Sharp.WebApi.V2.Clients.AccountHomeNodesClient.html)
  /v2/account/inventory | 🔑📆 | [`Gw2Client.WebApi.V2.Account.Inventory`](../api/Gw2Sharp.WebApi.V2.Clients.AccountInventoryClient.html)
  /v2/account/legendaryarmory | 🔑 | [`Gw2Client.WebApi.V2.Account.LegendaryArmory`](../api/Gw2Sharp.WebApi.V2.Clients.AccountLegendaryArmoryClient.html)
- /v2/account/luck | 🔑 | [`Gw2Client.WebApi.V2.Account.Luck`](../api/Gw2Sharp.WebApi.V2.Clients.AccountLuckClient.html)
+ /v2/account/luck<br>➡️ /v2/account/progression | 🔑⚠️ | [`Gw2Client.WebApi.V2.Account.Luck`](../api/Gw2Sharp.WebApi.V2.Clients.AccountLuckClient.html)
  ~~/v2/account/mail~~ | ✖️ |
  /v2/account/mailcarriers | 🔑 | [`Gw2Client.WebApi.V2.Account.MailCarriers`](../api/Gw2Sharp.WebApi.V2.Clients.AccountMailCarriersClient.html)
  /v2/account/mapchests | 🔑 | [`Gw2Client.WebApi.V2.Account.MapChests`](../api/Gw2Sharp.WebApi.V2.Clients.AccountMapChestsClient.html)
@@ -49,6 +49,7 @@ For your convenience, the following list gives an overview of the web API endpoi
  /v2/account/mounts/types | 🔑 | [`Gw2Client.WebApi.V2.Account.Mounts.Types`](../api/Gw2Sharp.WebApi.V2.Clients.AccountMountsTypesClient.html)
  /v2/account/novelties | 🔑 | [`Gw2Client.WebApi.V2.Account.Novelties.Types`](../api/Gw2Sharp.WebApi.V2.Clients.AccountNoveltiesClient.html)
  /v2/account/outfits | 🔑📆 | [`Gw2Client.WebApi.V2.Account.Outfits`](../api/Gw2Sharp.WebApi.V2.Clients.AccountOutfitsClient.html)
+ /v2/account/progression | 🔑 | [`Gw2Client.WebApi.V2.Account.Progression`](../api/Gw2Sharp.WebApi.V2.Clients.AccountProgressionClient.html)
  /v2/account/pvp/heroes | 🔑 | [`Gw2Client.WebApi.V2.Account.Pvp.Heroes`](../api/Gw2Sharp.WebApi.V2.Clients.AccountPvpHeroesClient.html)
  /v2/account/raids | 🔑 | [`Gw2Client.WebApi.V2.Account.Raids`](../api/Gw2Sharp.WebApi.V2.Clients.AccountRaidsClient.html)
  /v2/account/recipes | 🔑📆 | [`Gw2Client.WebApi.V2.Account.Recipes`](../api/Gw2Sharp.WebApi.V2.Clients.AccountRecipesClient.html)
@@ -185,9 +186,9 @@ For your convenience, the following list gives an overview of the web API endpoi
  /v2/wvw/matches/overview | 📄📚📦 | [`Gw2Client.WebApi.V2.Wvw.Matches.Overview`](../api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesOverviewClient.html)
  /v2/wvw/matches/scores | 📄📚📦 | [`Gw2Client.WebApi.V2.Wvw.Matches.Scores`](../api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesScoresClient.html)
  /v2/wvw/matches/stats | 📄📚📦 | [`Gw2Client.WebApi.V2.Wvw.Matches.Stats`](../api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesStatsClient.html)
- ~~/v2/wvw/matches/stats/`:id`/guilds/`:guild_id`~~ | ✖️ | *Broken on the API as of 2012-12-22*
- ~~/v2/wvw/matches/stats/`:id`/teams/`:team`/top/kdr~~ | ✖️ | *Broken on the API as of 2012-12-22*
- ~~/v2/wvw/matches/stats/`:id`/teams/`:team`/top/kills~~ | ✖️ | *Broken on the API as of 2012-12-22*
+ ~~/v2/wvw/matches/stats/`:id`/guilds/`:guild_id`~~ | ✖️ | *Broken on the API as of 2020-12-22*
+ ~~/v2/wvw/matches/stats/`:id`/teams/`:team`/top/kdr~~ | ✖️ | *Broken on the API as of 2020-12-22*
+ ~~/v2/wvw/matches/stats/`:id`/teams/`:team`/top/kills~~ | ✖️ | *Broken on the API as of 2020-12-22*
  /v2/wvw/objectives | 🌐📄📚📦 | [`Gw2Client.WebApi.V2.Wvw.Objectives`](../api/Gw2Sharp.WebApi.V2.Clients.WvwObjectivesClient.html)
  /v2/wvw/ranks | 🌐📄📚📦 | [`Gw2Client.WebApi.V2.Wvw.Ranks`](../api/Gw2Sharp.WebApi.V2.Clients.WvwRanksClient.html)
  ~~/v2/wvw/rewardtracks~~ | ✖️ |

@@ -1,5 +1,16 @@
 # Gw2Sharp History
 
+## 1.4.0 (28 September 2021)
+This release focuses on the new account progression addition, introduced on 28 September 2021.
+
+### Endpoints
+- Add `/v2/account/progression` ([#101](https://github.com/Archomeda/Gw2Sharp/issues/101), [#103](https://github.com/Archomeda/Gw2Sharp/pull/103))
+- Mark `/v2/account/luck` as deprecated (progression is the replacement) ([#102](https://github.com/Archomeda/Gw2Sharp/issues/102), [#103](https://github.com/Archomeda/Gw2Sharp/pull/103))
+
+*Note: All deprecations in version 1.x will be removed in version 2.0. Make sure that you update the references.*
+
+---
+
 ## 1.3.0 (4 September 2021)
 This release includes a single addition to the WvW match endpoints, which is the ability to request a match by world id for the following endpoints:
 - `/v2/wvw/matches`
