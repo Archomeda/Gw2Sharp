@@ -1,3 +1,4 @@
+using System;
 using Gw2Sharp.WebApi.V2.Models;
 
 namespace Gw2Sharp.WebApi.V2.Clients
@@ -89,6 +90,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Gets the luck progression.
         /// Requires scores: account, progression, unlocks.
         /// </summary>
+        [Obsolete("Deprecated since 2021-09-28. Use Account.Progression instead. This will be removed from Gw2Sharp starting from version 2.0.")]
         IAccountLuckClient Luck { get; }
 
         /// <summary>
@@ -147,6 +149,12 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Requires scopes: account, unlocks.
         /// </summary>
         IAccountOutfitsClient Outfits { get; }
+
+        /// <summary>
+        /// Gets the progression.
+        /// Requires scopes: account, progression.
+        /// </summary>
+        IAccountProgressionClient Progression { get; }
 
         /// <summary>
         /// Gets the PvP.

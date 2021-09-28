@@ -8,6 +8,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// </summary>
     [EndpointPath("account/luck")]
     [EndpointSchemaVersion("2019-02-21T00:00:00.000Z")]
+    [Obsolete("Deprecated since 2021-09-28. Use Account.Progression instead. This will be removed from Gw2Sharp starting from version 2.0.")]
     public class AccountLuckClient : BaseEndpointBlobClient<IApiV2ObjectList<AccountLuck>>, IAccountLuckClient
     {
         /// <summary>
