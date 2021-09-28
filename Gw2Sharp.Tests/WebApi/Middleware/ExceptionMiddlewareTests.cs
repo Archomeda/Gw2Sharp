@@ -6,7 +6,6 @@ using FluentAssertions.Execution;
 using Gw2Sharp.WebApi.Exceptions;
 using Gw2Sharp.WebApi.Http;
 using Gw2Sharp.WebApi.Middleware;
-using Gw2Sharp.WebApi.V2.Models;
 using NSubstitute;
 using Xunit;
 
@@ -46,7 +45,7 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
             using (new AssertionScope())
             {
                 Func<Task> act = () => middleware.OnRequestAsync(context, (c, t) => Task.FromResult(response));
-                var exception = (await act.Should().ThrowAsync<UnexpectedStatusException<ErrorObject>>()
+                var exception = (await act.Should().ThrowAsync<UnexpectedStatusException>()
                     .WithMessage(errorText))
                     .Which;
 
@@ -71,7 +70,7 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
             using (new AssertionScope())
             {
                 Func<Task> act = () => middleware.OnRequestAsync(context, (c, t) => Task.FromResult(response));
-                var exception = (await act.Should().ThrowAsync<UnexpectedStatusException<ErrorObject>>()
+                var exception = (await act.Should().ThrowAsync<UnexpectedStatusException>()
                     .WithMessage(body))
                     .Which;
 
@@ -83,13 +82,14 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
         [Fact]
         public async Task UnexpectedStatusExceptionRequestTest()
         {
-            const string MESSAGE = "{\"error\":\"Some nice error message\"}";
+            const string MESSAGE = "Some nice error message";
+            const string JSON = "{\"error\":\"" + MESSAGE + "\"}";
 
             var connection = Substitute.For<IConnection>();
             var request = Substitute.For<IWebApiRequest>();
             var context = new MiddlewareContext(connection, request);
             var response = Substitute.For<IWebApiResponse>();
-            response.Content.Returns(MESSAGE);
+            response.Content.Returns(JSON);
             response.StatusCode.Returns((HttpStatusCode)499);
 
             var middleware = new ExceptionMiddleware();
@@ -97,7 +97,7 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
             Func<Task> act = () => middleware.OnRequestAsync(context, (c, t) => Task.FromResult(response));
             (await act.Should().ThrowAsync<UnexpectedStatusException>())
                 .WithMessage(MESSAGE)
-                .Which.Response?.Content.Should().Be(MESSAGE);
+                .Which.Response?.Content.Message.Should().Be(MESSAGE);
         }
     }
 }

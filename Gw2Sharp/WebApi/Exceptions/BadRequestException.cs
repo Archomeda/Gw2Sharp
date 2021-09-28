@@ -7,8 +7,8 @@ namespace Gw2Sharp.WebApi.Exceptions
     /// <summary>
     /// A web API specific exception that's used when a bad request was done (code 400).
     /// </summary>
-    /// <seealso cref="UnexpectedStatusException{Error}" />
-    public class BadRequestException : UnexpectedStatusException<ErrorObject>
+    /// <seealso cref="UnexpectedStatusException" />
+    public class BadRequestException : UnexpectedStatusException
     {
         /// <summary>
         /// Creates a new <see cref="BadRequestException"/>.
@@ -18,7 +18,7 @@ namespace Gw2Sharp.WebApi.Exceptions
         /// <param name="error">The error.</param>
         /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="response"/> is <see langword="null"/>.</exception>
         public BadRequestException(IWebApiRequest request, IWebApiResponse<ErrorObject> response, BadRequestError error) :
-            base(request, response, response?.Content.Message ?? string.Empty)
+            base(request, response)
         {
             this.BadRequestError = error;
         }

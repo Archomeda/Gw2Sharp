@@ -70,7 +70,7 @@ namespace Gw2Sharp.WebApi.Middleware
 #endif
                     HttpStatusCode.InternalServerError => new ServerErrorException(context.Request, errorResponse),
                     HttpStatusCode.ServiceUnavailable => new ServiceUnavailableException(context.Request, errorResponse),
-                    _ => new UnexpectedStatusException(context.Request, httpResponse, httpResponse.Content)
+                    _ => new UnexpectedStatusException(context.Request, errorResponse)
                 };
             }
         }

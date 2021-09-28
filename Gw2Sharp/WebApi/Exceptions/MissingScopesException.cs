@@ -7,7 +7,7 @@ namespace Gw2Sharp.WebApi.Exceptions
     /// <summary>
     /// A web API specific exception that's used when a request fails to authorize due to missing permissions (code 403).
     /// </summary>
-    /// <seealso cref="UnexpectedStatusException{Error}" />
+    /// <seealso cref="AuthorizationRequiredException" />
     public class MissingScopesException : AuthorizationRequiredException
     {
         /// <summary>
@@ -17,6 +17,7 @@ namespace Gw2Sharp.WebApi.Exceptions
         /// <param name="response">The response.</param>
         /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="response"/> is <see langword="null"/>.</exception>
         public MissingScopesException(IWebApiRequest request, IWebApiResponse<ErrorObject> response) :
-            base(request, response, AuthorizationError.MissingScopes) { }
+            base(request, response, AuthorizationError.MissingScopes)
+        { }
     }
 }

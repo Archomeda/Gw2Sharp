@@ -1,5 +1,6 @@
 using Gw2Sharp.WebApi.Exceptions;
 using Gw2Sharp.WebApi.Http;
+using Gw2Sharp.WebApi.V2.Models;
 using NSubstitute;
 using Xunit;
 
@@ -11,7 +12,7 @@ namespace Gw2Sharp.Tests.WebApi.Exceptions
         public void ConstructorTest()
         {
             var request = Substitute.For<IWebApiRequest>();
-            var response = Substitute.For<IWebApiResponse>();
+            var response = Substitute.For<IWebApiResponse<ErrorObject>>();
             string message = "test exception";
 
             var exception = new UnexpectedStatusException(request, response);

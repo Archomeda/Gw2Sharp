@@ -7,8 +7,8 @@ namespace Gw2Sharp.WebApi.Exceptions
     /// <summary>
     /// A web API specific exception that's used when a request fails due to an internal server error (code 500).
     /// </summary>
-    /// <seealso cref="UnexpectedStatusException{Error}" />
-    public class ServerErrorException : UnexpectedStatusException<ErrorObject>
+    /// <seealso cref="UnexpectedStatusException" />
+    public class ServerErrorException : UnexpectedStatusException
     {
         /// <summary>
         /// Creates a new <see cref="ServerErrorException"/>.
@@ -17,6 +17,7 @@ namespace Gw2Sharp.WebApi.Exceptions
         /// <param name="response">The response.</param>
         /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="response"/> is <see langword="null"/>.</exception>
         public ServerErrorException(IWebApiRequest request, IWebApiResponse<ErrorObject> response) :
-            base(request, response, response?.Content.Message ?? string.Empty) { }
+            base(request, response)
+        { }
     }
 }
