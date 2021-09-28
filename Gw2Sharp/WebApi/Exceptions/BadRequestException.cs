@@ -16,7 +16,7 @@ namespace Gw2Sharp.WebApi.Exceptions
         /// <param name="request">The original request.</param>
         /// <param name="response">The response.</param>
         /// <param name="error">The error.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="response"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="response"/> is <see langword="null"/>.</exception>
         public BadRequestException(IWebApiRequest request, IWebApiResponse<ErrorObject> response, BadRequestError error) :
             base(request, response, response?.Content.Message ?? string.Empty)
         {
@@ -34,7 +34,7 @@ namespace Gw2Sharp.WebApi.Exceptions
         /// <param name="request">The request.</param>
         /// <param name="response">The response.</param>
         /// <returns>The exception.</returns>
-        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="response"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="response"/> is <see langword="null"/>.</exception>
         public static BadRequestException CreateFromResponse(IWebApiRequest request, IWebApiResponse<ErrorObject> response)
         {
             if (request == null)

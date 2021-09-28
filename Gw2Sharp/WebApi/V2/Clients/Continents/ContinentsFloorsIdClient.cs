@@ -23,7 +23,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="gw2Client">The Guild Wars 2 client.</param>
         /// <param name="continentId">The continent id.</param>
         /// <param name="floorId">The floor id.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="connection"/> or <paramref name="gw2Client"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="connection"/> or <paramref name="gw2Client"/> is <see langword="null"/>.</exception>
         protected internal ContinentsFloorsIdClient(IConnection connection, IGw2Client gw2Client, int continentId, int floorId) :
             base(connection, gw2Client, continentId.ToString(CultureInfo.InvariantCulture), floorId.ToString(CultureInfo.InvariantCulture))
         {

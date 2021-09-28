@@ -45,7 +45,7 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <summary>
         /// The team seasons.
-        /// If no seasons are available, this value is <c>null</c>.
+        /// If no seasons are available, this value is <see langword="null"/>.
         /// </summary>
         public IReadOnlyList<GuildTeamSeason> Seasons { get; set; } = Array.Empty<GuildTeamSeason>();
     }

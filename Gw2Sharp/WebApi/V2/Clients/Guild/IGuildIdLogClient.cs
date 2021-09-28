@@ -17,14 +17,14 @@ namespace Gw2Sharp.WebApi.V2.Clients
 
         /// <summary>
         /// The parameter for requesting logs with an id higher than the given id.
-        /// Use <c>null</c> to unset the parameter.
+        /// Use <see langword="null"/> to unset the parameter.
         /// </summary>
         int? ParamSince { get; }
 
         /// <summary>
         /// Sets the parameter for requesting logs with an id higher than the given id.
         /// </summary>
-        /// <param name="since">The id. Use <c>null</c> to unset the parameter.</param>
+        /// <param name="since">The id. Use <see langword="null"/> to unset the parameter.</param>
         /// <returns><c>this</c> to allow method chaining.</returns>
         IGuildIdLogClient Since(int? since);
     }

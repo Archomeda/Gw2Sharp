@@ -10,56 +10,56 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The guild level.
         /// Additionally requires scopes: guilds.
-        /// If the required scopes are not met, this value is <c>null</c>.
+        /// If the required scopes are not met, this value is <see langword="null"/>.
         /// </summary>
         public int? Level { get; set; }
 
         /// <summary>
         /// The guild message of the day.
         /// Additionally requires scopes: guilds.
-        /// If the required scopes are not met, this value is <c>null</c>.
+        /// If the required scopes are not met, this value is <see langword="null"/>.
         /// </summary>
         public string? Motd { get; set; }
 
         /// <summary>
         /// The amount of influence.
         /// Additionally requires scopes: guilds.
-        /// If the required scopes are not met, this value is <c>null</c>.
+        /// If the required scopes are not met, this value is <see langword="null"/>.
         /// </summary>
         public int? Influence { get; set; }
 
         /// <summary>
         /// The amount of aetherium.
         /// Additionally requires scopes: guilds.
-        /// If the required scopes are not met, this value is <c>null</c>.
+        /// If the required scopes are not met, this value is <see langword="null"/>.
         /// </summary>
         public int? Aetherium { get; set; }
 
         /// <summary>
         /// The amount of resonance.
         /// Additionally requires scopes: guilds.
-        /// If the required scopes are not met, this value is <c>null</c>.
+        /// If the required scopes are not met, this value is <see langword="null"/>.
         /// </summary>
         public int? Resonance { get; set; }
 
         /// <summary>
         /// The amount of favor.
         /// Additionally requires scopes: guilds.
-        /// If the required scopes are not met, this value is <c>null</c>.
+        /// If the required scopes are not met, this value is <see langword="null"/>.
         /// </summary>
         public int? Favor { get; set; }
 
         /// <summary>
         /// The member count.
         /// Additionally requires scopes: guilds.
-        /// If the required scopes are not met, this value is <c>null</c>.
+        /// If the required scopes are not met, this value is <see langword="null"/>.
         /// </summary>
         public int? MemberCount { get; set; }
 
         /// <summary>
         /// The member capacity.
         /// Additionally requires scoeps: guilds.
-        /// If the required scopes are not met, this value is <c>null</c>.
+        /// If the required scopes are not met, this value is <see langword="null"/>.
         /// </summary>
         public int? MemberCapacity { get; set; }
 
@@ -84,7 +84,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The guild emblem.
         /// No authentication required.
-        /// If the guild does not have an emblem, this value is <c>null</c>.
+        /// If the guild does not have an emblem, this value is <see langword="null"/>.
         /// </summary>
         public GuildEmblem? Emblem { get; set; }
     }

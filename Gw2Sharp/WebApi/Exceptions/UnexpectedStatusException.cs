@@ -13,7 +13,7 @@ namespace Gw2Sharp.WebApi.Exceptions
         /// </summary>
         /// <param name="request">The original request.</param>
         /// <param name="response">The response.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="response"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="response"/> is <see langword="null"/>.</exception>
         public UnexpectedStatusException(IWebApiRequest request, IWebApiResponse<string> response) :
             this(request, response, $"Unexpected HTTP status code: {(int?)response?.StatusCode ?? 0}") { }
 
@@ -23,7 +23,7 @@ namespace Gw2Sharp.WebApi.Exceptions
         /// <param name="request">The original request.</param>
         /// <param name="response">The response.</param>
         /// <param name="message">The message.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="message"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="message"/> is <see langword="null"/>.</exception>
         public UnexpectedStatusException(IWebApiRequest request, IWebApiResponse<string>? response, string message) :
             base(request, response, message) { }
     }
@@ -47,7 +47,7 @@ namespace Gw2Sharp.WebApi.Exceptions
         /// <param name="request">The original request.</param>
         /// <param name="response">The response.</param>
         /// <param name="message">The message.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="message"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="message"/> is <see langword="null"/>.</exception>
         public UnexpectedStatusException(IWebApiRequest request, IWebApiResponse<T>? response, string message) :
             base(request, response, message) { }
     }

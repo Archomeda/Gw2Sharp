@@ -16,7 +16,7 @@ namespace Gw2Sharp.Extensions
         /// </summary>
         /// <param name="str">The string.</param>
         /// <returns>The SHA-1 hash.</returns>
-        /// <exception cref="ArgumentNullException"><paramref name="str"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="str"/> is <see langword="null"/>.</exception>
         public static string GetSha1Hash(this string str)
         {
             if (str == null)
@@ -30,12 +30,12 @@ namespace Gw2Sharp.Extensions
         }
 
         /// <summary>
-        /// Use a default string if the given string is <c>null</c> or empty.
+        /// Use a default string if the given string is <see langword="null"/> or empty.
         /// Shorthand for <code>string.IsNullOrEmpty(str) ? "default" : str</code>
         /// </summary>
         /// <param name="str">The string to check.</param>
-        /// <param name="default">The default string if the given string is <c>null</c> or empty.</param>
-        /// <returns>The original string if it's not <c>null</c> or empty; <paramref name="default"/> otherwise.</returns>
+        /// <param name="default">The default string if the given string is <see langword="null"/> or empty.</param>
+        /// <returns>The original string if it's not <see langword="null"/> or empty; <paramref name="default"/> otherwise.</returns>
         public static string OrIfNullOrEmpty(this string? str, string @default) =>
             !string.IsNullOrEmpty(str) ? str : @default;
     }

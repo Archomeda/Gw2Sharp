@@ -32,7 +32,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// </summary>
         /// <param name="id">The name of the query parameter that acts as the id.</param>
         /// <param name="ids">The name of the query parameter that acts as the ids.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="id"/> or <paramref name="ids"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="id"/> or <paramref name="ids"/> is <see langword="null"/>.</exception>
         public EndpointBulkIdNameAttribute(string id, string ids)
         {
             this.Id = id ?? throw new ArgumentNullException(nameof(id));
@@ -43,7 +43,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// Creates a new instance of the <see cref="EndpointBulkIdNameAttribute"/> class.
         /// </summary>
         /// <param name="objectId">The name of the property in the object returned by the API that acts as the id.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="objectId"/>is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="objectId"/>is <see langword="null"/>.</exception>
         public EndpointBulkIdNameAttribute(string objectId)
         {
             this.ObjectId = objectId ?? throw new ArgumentNullException(nameof(objectId));
@@ -55,7 +55,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="id">The name of the query parameter that acts as the id.</param>
         /// <param name="ids">The name of the query parameter that acts as the ids.</param>
         /// <param name="objectId">The name of the property in the object returned by the API that acts as the id.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="id"/> or <paramref name="ids"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="id"/> or <paramref name="ids"/> is <see langword="null"/>.</exception>
         public EndpointBulkIdNameAttribute(string id, string ids, string objectId)
         {
             this.Id = id ?? throw new ArgumentNullException(nameof(id));

@@ -31,13 +31,13 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <summary>
         /// The id of the guild that has claimed the objective.
-        /// If no guild has claimed the objective, this value is <c>null</c>.
+        /// If no guild has claimed the objective, this value is <see langword="null"/>.
         /// </summary>
         public Guid? ClaimedBy { get; set; }
 
         /// <summary>
         /// The timestamp of when the objective has been claimed.
-        /// If no guild has claimed the objective, this value is <c>null</c>.
+        /// If no guild has claimed the objective, this value is <see langword="null"/>.
         /// </summary>
         public DateTime? ClaimedAt { get; set; }
 

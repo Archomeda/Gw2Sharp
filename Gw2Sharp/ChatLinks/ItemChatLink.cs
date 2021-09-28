@@ -28,21 +28,21 @@ namespace Gw2Sharp.ChatLinks
 
         /// <summary>
         /// The skin id.
-        /// If the chat link doesn't contain a skin, this value is <c>null</c>.
+        /// If the chat link doesn't contain a skin, this value is <see langword="null"/>.
         /// Can be resolved against <see cref="IGw2WebApiV2Client.Skins"/>.
         /// </summary>
         public int? SkinId { get; set; }
 
         /// <summary>
         /// The first upgrade id.
-        /// If the chat link doesn't contain a first upgrade, this value is <c>null</c>.
+        /// If the chat link doesn't contain a first upgrade, this value is <see langword="null"/>.
         /// Can be resolved against <see cref="IGw2WebApiV2Client.Items"/>.
         /// </summary>
         public int? Upgrade1Id { get; set; }
 
         /// <summary>
         /// The second upgrade id.
-        /// If the chat link doesn't contain a second upgrade, this value is <c>null</c>.
+        /// If the chat link doesn't contain a second upgrade, this value is <see langword="null"/>.
         /// Can be resolved against <see cref="IGw2WebApiV2Client.Items"/>.
         /// </summary>
         public int? Upgrade2Id { get; set; }

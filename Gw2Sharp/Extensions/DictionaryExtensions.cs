@@ -19,7 +19,7 @@ namespace Gw2Sharp.Extensions
         /// <param name="source">The source enumerable.</param>
         /// <returns>A shallow copy in the form of a dictionary.</returns>
         /// <exception cref="ArgumentException"><paramref name="source"/> contains duplicate keys.</exception>
-        /// <exception cref="ArgumentNullException"><paramref name="source"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="source"/> is <see langword="null"/>.</exception>
         public static IDictionary<TKey, TValue> ShallowCopy<TKey, TValue>(this IEnumerable<KeyValuePair<TKey, TValue>> source)
             where TKey : notnull
         {
@@ -36,7 +36,7 @@ namespace Gw2Sharp.Extensions
         /// <typeparam name="TValue">The type of values in the dictionary.</typeparam>
         /// <param name="dictionary">The dictionary.</param>
         /// <param name="values">The values to add.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="dictionary"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="dictionary"/> is <see langword="null"/>.</exception>
         public static void AddRange<TKey, TValue>(this IDictionary<TKey, TValue> dictionary, IEnumerable<KeyValuePair<TKey, TValue>> values)
             where TKey : notnull
         {
@@ -57,7 +57,7 @@ namespace Gw2Sharp.Extensions
         /// <typeparam name="TValue">The type of values in the dictionary.</typeparam>
         /// <param name="dictionary">The dictionary.</param>
         /// <returns>The read-only dictionary.</returns>
-        /// <exception cref="ArgumentNullException"><paramref name="dictionary"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="dictionary"/> is <see langword="null"/>.</exception>
         public static IReadOnlyDictionary<TKey, TValue> AsReadOnly<TKey, TValue>(this IDictionary<TKey, TValue> dictionary)
             where TKey : notnull
         {

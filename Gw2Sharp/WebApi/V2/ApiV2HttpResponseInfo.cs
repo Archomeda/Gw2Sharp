@@ -56,21 +56,21 @@ namespace Gw2Sharp.WebApi.V2
         /// <summary>
         /// The rate limit limit.
         /// This is returned by the header X-Rate-Limit-Limit.
-        /// This value is <c>null</c> if the response didn't contain the appropriate header.
+        /// This value is <see langword="null"/> if the response didn't contain the appropriate header.
         /// </summary>
         public int? RateLimitLimit { get; protected set; }
 
         /// <summary>
         /// The result count.
         /// This is returned by the header X-Result-Count.
-        /// This value is <c>null</c> if the response didn't contain the appropriate header.
+        /// This value is <see langword="null"/> if the response didn't contain the appropriate header.
         /// </summary>
         public int? ResultCount { get; protected set; }
 
         /// <summary>
         /// The result total.
         /// This is returned by the header X-Result-Total.
-        /// This value is <c>null</c> if the response didn't contain the appropriate header.
+        /// This value is <see langword="null"/> if the response didn't contain the appropriate header.
         /// </summary>
         public int? ResultTotal { get; protected set; }
 
@@ -83,14 +83,14 @@ namespace Gw2Sharp.WebApi.V2
         /// <summary>
         /// The page size.
         /// This is returned by the header X-Page-Size.
-        /// This value is <c>null</c> if the response didn't contain the appropriate header.
+        /// This value is <see langword="null"/> if the response didn't contain the appropriate header.
         /// </summary>
         public int? PageSize { get; protected set; }
 
         /// <summary>
         /// The page total.
         /// This is returned by the header X-Page-Total.
-        /// This value is <c>null</c> if the response didn't contain the appropriate header.
+        /// This value is <see langword="null"/> if the response didn't contain the appropriate header.
         /// </summary>
         public int? PageTotal { get; protected set; }
     }

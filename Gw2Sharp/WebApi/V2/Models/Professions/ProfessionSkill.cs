@@ -23,7 +23,7 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <summary>
         /// The required source profession id.
-        /// This value is <c>null</c> if the profession skill doesn't require a specific profession.
+        /// This value is <see langword="null"/> if the profession skill doesn't require a specific profession.
         /// </summary>
         public string Source { get; set; } = string.Empty;
     }

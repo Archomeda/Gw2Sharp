@@ -49,32 +49,32 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <summary>
         /// Gets the achievement bits.
-        /// If the achievement does not have any bits, this value is <c>null</c>.
+        /// If the achievement does not have any bits, this value is <see langword="null"/>.
         /// </summary>
         public IReadOnlyList<AchievementBit>? Bits { get; set; }
 
         /// <summary>
         /// The achievement tiers.
-        /// If the achievement does not have any tiers, this value is <c>null</c>.
+        /// If the achievement does not have any tiers, this value is <see langword="null"/>.
         /// </summary>
         public IReadOnlyList<AchievementTier>? Tiers { get; set; }
 
         /// <summary>
         /// The achievement prerequisites.
         /// Can be resolved against <see cref="IGw2WebApiV2Client.Achievements"/>.
-        /// If the achievement does not have any prerequisites, this value is <c>null</c>.
+        /// If the achievement does not have any prerequisites, this value is <see langword="null"/>.
         /// </summary>
         public IReadOnlyList<int>? Prerequisites { get; set; }
 
         /// <summary>
         /// The maximum amount of achievement points that can be awarded from repeatedly completing the achievement.
-        /// If the achievement is not repeatable, this value is <c>null</c>.
+        /// If the achievement is not repeatable, this value is <see langword="null"/>.
         /// </summary>
         public int? PointCap { get; set; }
 
         /// <summary>
         /// The achievement rewards.
-        /// If the achievement does not have any rewards, this value is <c>null</c>.
+        /// If the achievement does not have any rewards, this value is <see langword="null"/>.
         /// </summary>
         public IReadOnlyList<AchievementReward>? Rewards { get; set; }
     }

@@ -35,13 +35,13 @@ namespace Gw2Sharp
         /// <summary>
         /// Gets the HTTP client that's used for the API requests.
         /// </summary>
-        /// <exception cref="ArgumentNullException"><c>value</c> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><c>value</c> is <see langword="null"/>.</exception>
         IHttpClient HttpClient { get; }
 
         /// <summary>
         /// Gets the cache controller that's used for API requests.
         /// </summary>
-        /// <exception cref="ArgumentNullException"><c>value</c> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><c>value</c> is <see langword="null"/>.</exception>
         ICacheMethod CacheMethod { get; }
 
         /// <summary>
@@ -53,7 +53,7 @@ namespace Gw2Sharp
         /// <summary>
         /// Gets the cache controller that's used for render file API requests.
         /// </summary>
-        /// <exception cref="ArgumentNullException"><c>value</c> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><c>value</c> is <see langword="null"/>.</exception>
         ICacheMethod RenderCacheMethod { get; }
 
         /// <summary>

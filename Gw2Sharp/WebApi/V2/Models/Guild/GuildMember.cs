@@ -19,7 +19,7 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <summary>
         /// The time the guild member joined.
-        /// If the member joined before this was tracked, this value is <c>null</c>.
+        /// If the member joined before this was tracked, this value is <see langword="null"/>.
         /// </summary>
         public DateTimeOffset? Joined { get; set; }
     }

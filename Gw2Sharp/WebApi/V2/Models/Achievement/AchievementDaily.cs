@@ -18,7 +18,7 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <summary>
         /// The daily achievement game access requirement.
-        /// If there are no game access requirements, this value is <c>null</c>.
+        /// If there are no game access requirements, this value is <see langword="null"/>.
         /// </summary>
         public AchievementDailyAccess? RequiredAccess { get; set; }
     }

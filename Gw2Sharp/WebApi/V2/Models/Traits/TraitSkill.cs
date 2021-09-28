@@ -41,19 +41,19 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <summary>
         /// The list of skill facts.
-        /// If the skill doesn't have any facts, this value is <c>null</c>.
+        /// If the skill doesn't have any facts, this value is <see langword="null"/>.
         /// </summary>
         public IReadOnlyList<SkillFact>? Facts { get; set; } = Array.Empty<SkillFact>();
 
         /// <summary>
         /// The list of traited skill facts.
-        /// If the skill doesn't have any traited facts, this value is <c>null</c>.
+        /// If the skill doesn't have any traited facts, this value is <see langword="null"/>.
         /// </summary>
         public IReadOnlyList<SkillFact>? TraitedFacts { get; set; } = Array.Empty<SkillFact>();
 
         /// <summary>
         /// The list of skill categories.
-        /// If the skill doesn't have any categories, this value is <c>null</c>.
+        /// If the skill doesn't have any categories, this value is <see langword="null"/>.
         /// </summary>
         public IReadOnlyList<string>? Categories { get; set; } = Array.Empty<string>();
     }

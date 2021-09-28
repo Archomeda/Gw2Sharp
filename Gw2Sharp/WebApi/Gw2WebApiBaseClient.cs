@@ -12,7 +12,7 @@ namespace Gw2Sharp.WebApi
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
         /// <param name="gw2Client">The Guild Wars 2 client.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="connection"/> or <paramref name="gw2Client"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="connection"/> or <paramref name="gw2Client"/> is <see langword="null"/>.</exception>
         protected Gw2WebApiBaseClient(IConnection connection, IGw2Client gw2Client)
         {
             this.Connection = connection ?? throw new ArgumentNullException(nameof(connection));

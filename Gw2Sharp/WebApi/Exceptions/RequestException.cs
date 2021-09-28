@@ -13,7 +13,7 @@ namespace Gw2Sharp.WebApi.Exceptions
         /// </summary>
         /// <param name="request">The original request.</param>
         /// <param name="message">The message.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="message"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="message"/> is <see langword="null"/>.</exception>
         public RequestException(IWebApiRequest request, string message) :
             base(request, message) { }
 
@@ -23,7 +23,7 @@ namespace Gw2Sharp.WebApi.Exceptions
         /// <param name="request">The original request.</param>
         /// <param name="response">The response.</param>
         /// <param name="message">The message.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="message"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="message"/> is <see langword="null"/>.</exception>
         public RequestException(IWebApiRequest request, IWebApiResponse<string>? response, string message) :
             base(request, response, message) { }
 
@@ -33,7 +33,7 @@ namespace Gw2Sharp.WebApi.Exceptions
         /// <param name="request">The original request.</param>
         /// <param name="message">The message.</param>
         /// <param name="innerException">The inner exception.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="message"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="message"/> is <see langword="null"/>.</exception>
         public RequestException(IWebApiRequest request, string message, Exception? innerException) :
             base(request, message, innerException) { }
 
@@ -44,7 +44,7 @@ namespace Gw2Sharp.WebApi.Exceptions
         /// <param name="response">The response.</param>
         /// <param name="message">The message.</param>
         /// <param name="innerException">The inner exception.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="message"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="message"/> is <see langword="null"/>.</exception>
         public RequestException(IWebApiRequest request, IWebApiResponse<string>? response, string message, Exception innerException) :
             base(request, response, message, innerException) { }
     }
@@ -61,7 +61,7 @@ namespace Gw2Sharp.WebApi.Exceptions
         /// </summary>
         /// <param name="request">The original request.</param>
         /// <param name="message">The message.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="message"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="message"/> is <see langword="null"/>.</exception>
         public RequestException(IWebApiRequest request, string message) :
             this(request, null, message, null) { }
 
@@ -71,7 +71,7 @@ namespace Gw2Sharp.WebApi.Exceptions
         /// <param name="request">The original request.</param>
         /// <param name="response">The response.</param>
         /// <param name="message">The message.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="message"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="message"/> is <see langword="null"/>.</exception>
         public RequestException(IWebApiRequest request, IWebApiResponse<TResponse>? response, string message) :
             this(request, response, message, null) { }
 
@@ -81,7 +81,7 @@ namespace Gw2Sharp.WebApi.Exceptions
         /// <param name="request">The original request.</param>
         /// <param name="message">The message.</param>
         /// <param name="innerException">The inner exception.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="message"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="message"/> is <see langword="null"/>.</exception>
         public RequestException(IWebApiRequest request, string message, Exception? innerException) :
             this(request, null, message, innerException) { }
 

@@ -17,7 +17,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
         /// <param name="gw2Client">The Guild Wars 2 client.</param>
         /// <param name="replaceSegments">The path segments to replace.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="connection"/> or <paramref name="gw2Client"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="connection"/> or <paramref name="gw2Client"/> is <see langword="null"/>.</exception>
         /// <exception cref="InvalidOperationException">
         /// The client implements an invalid combination of <see cref="IEndpointClient"/> interfaces,
         /// or the number of replace segments does not equal the number of path segments given by <see cref="EndpointPathSegmentAttribute"/>.

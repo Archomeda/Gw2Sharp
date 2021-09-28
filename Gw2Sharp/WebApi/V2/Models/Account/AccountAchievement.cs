@@ -15,7 +15,7 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <summary>
         /// Gets the unlocked achievement bits.
-        /// If the achievement does not support bits, this value is <c>null</c>.
+        /// If the achievement does not support bits, this value is <see langword="null"/>.
         /// </summary>
         public IReadOnlyList<int>? Bits { get; set; }
 
@@ -36,13 +36,13 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <summary>
         /// The number of times the achievement has been repeatedly completed.
-        /// If the achievement is not repeatable, this value is <c>null</c>.
+        /// If the achievement is not repeatable, this value is <see langword="null"/>.
         /// </summary>
         public int? Repeated { get; set; }
 
         /// <summary>
         /// Whether or not the achievement is unlocked.
-        /// If the achievement is does not support locking, this value is <c>null</c> and the achievement is not locked.
+        /// If the achievement is does not support locking, this value is <see langword="null"/> and the achievement is not locked.
         /// </summary>
         public bool? Unlocked { get; set; }
     }

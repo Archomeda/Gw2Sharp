@@ -21,20 +21,20 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The item id.
         /// Can be resolved against <see cref="IGw2WebApiV2Client.Items"/>.
-        /// If no item is associated with this upgrade, this value is <c>null</c>.
+        /// If no item is associated with this upgrade, this value is <see langword="null"/>.
         /// </summary>
         public int? ItemId { get; set; }
 
         /// <summary>
         /// The recipe id.
         /// Can be resolved against <see cref="IGw2WebApiV2Client.Recipes"/>.
-        /// If no recipe is associated with this upgrade, this value is <c>null</c>.
+        /// If no recipe is associated with this upgrade, this value is <see langword="null"/>.
         /// </summary>
         public int? RecipeId { get; set; }
 
         /// <summary>
         /// The amount of items.
-        /// If no item is associated with this upgrade, this value is <c>null</c>.
+        /// If no item is associated with this upgrade, this value is <see langword="null"/>.
         /// </summary>
         public int? Count { get; set; }
 

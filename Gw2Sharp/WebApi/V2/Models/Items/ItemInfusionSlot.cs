@@ -12,7 +12,7 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <summary>
         /// The infusion item id.
-        /// If the item has no infusions, this value is <c>null</c>.
+        /// If the item has no infusions, this value is <see langword="null"/>.
         /// </summary>
         public int? ItemId { get; set; }
     }

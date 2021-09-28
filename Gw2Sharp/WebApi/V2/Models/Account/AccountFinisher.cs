@@ -18,7 +18,7 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <summary>
         /// The number of finishers remaining.
-        /// If the finisher is not temporary, this value is <c>null</c>.
+        /// If the finisher is not temporary, this value is <see langword="null"/>.
         /// </summary>
         public int? Quantity { get; set; }
     }

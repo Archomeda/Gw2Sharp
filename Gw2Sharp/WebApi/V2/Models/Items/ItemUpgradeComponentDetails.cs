@@ -34,13 +34,13 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <summary>
         /// The item infix upgrade.
-        /// If the item does not have a infix upgrade, this value is <c>null</c>.
+        /// If the item does not have a infix upgrade, this value is <see langword="null"/>.
         /// </summary>
         public ItemInfixUpgrade? InfixUpgrade { get; set; }
 
         /// <summary>
         /// The item bonuses in case the item is a rune, check <see cref="Type"/>.
-        /// If the item is not a rune, this value is <c>null</c>.
+        /// If the item is not a rune, this value is <see langword="null"/>.
         /// </summary>
         public IReadOnlyList<string>? Bonuses { get; set; }
     }

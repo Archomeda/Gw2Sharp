@@ -20,7 +20,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="id">The entry id.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The entry.</returns>
-        /// <exception cref="ArgumentNullException"><paramref name="id"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="id"/> is <see langword="null"/>.</exception>
         Task<TObject> GetAsync(TId id, CancellationToken cancellationToken = default);
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="ids">The entry ids.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The entries.</returns>
-        /// <exception cref="ArgumentNullException"><paramref name="ids"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="ids"/> is <see langword="null"/>.</exception>
         Task<IReadOnlyList<TObject>> ManyAsync(IEnumerable<TId> ids, CancellationToken cancellationToken = default);
     }
 }

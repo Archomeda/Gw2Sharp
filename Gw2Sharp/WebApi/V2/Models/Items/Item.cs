@@ -44,7 +44,7 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <summary>
         /// The item description.
-        /// If the item does not have a description, this value is <c>null</c>.
+        /// If the item does not have a description, this value is <see langword="null"/>.
         /// </summary>
         public string? Description { get; set; }
 
@@ -71,7 +71,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The item default skin.
         /// Can be resolved against <see cref="IGw2WebApiV2Client.Skins"/>.
-        /// If the item does not have a default skin, this value is <c>null</c>.
+        /// If the item does not have a default skin, this value is <see langword="null"/>.
         /// </summary>
         public int? DefaultSkin { get; set; }
 

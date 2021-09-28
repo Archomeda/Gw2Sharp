@@ -22,7 +22,7 @@ namespace Gw2Sharp
         /// Creates a new <see cref="Gw2Client"/>.
         /// </summary>
         /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <see langword="null"/>.</exception>
         public Gw2Client(IConnection connection)
         {
             if (connection == null)

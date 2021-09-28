@@ -20,7 +20,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
         /// <param name="gw2Client">The Guild Wars 2 client.</param>
         /// <param name="seasonId">The PvP season id.</param>
         /// <param name="leaderboardId">The PvP season leaderboard id.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="connection"/> is <see langword="null"/>.</exception>
         public PvpSeasonsLeaderboardsIdClient(IConnection connection, IGw2Client gw2Client, Guid seasonId, string leaderboardId) :
             base(connection, gw2Client, seasonId.ToString(), leaderboardId)
         {

@@ -10,80 +10,80 @@ namespace Gw2Sharp.WebApi.V2.Models
     {
         /// <summary>
         /// The overridden dye slots for male asura.
-        /// If no overrides have been defined, this value is <c>null</c>.
-        /// If a dye slot isn't available, that element is <c>null</c>.
+        /// If no overrides have been defined, this value is <see langword="null"/>.
+        /// If a dye slot isn't available, that element is <see langword="null"/>.
         /// </summary>
         [JsonPropertyName("AsuraMale")]
         public IReadOnlyList<SkinDyeSlot?>? AsuraMale { get; set; }
 
         /// <summary>
         /// The overridden dye slots for female asura.
-        /// If no overrides have been defined, this value is <c>null</c>.
-        /// If a dye slot isn't available, that element is <c>null</c>.
+        /// If no overrides have been defined, this value is <see langword="null"/>.
+        /// If a dye slot isn't available, that element is <see langword="null"/>.
         /// </summary>
         [JsonPropertyName("AsuraFemale")]
         public IReadOnlyList<SkinDyeSlot?>? AsuraFemale { get; set; }
 
         /// <summary>
         /// The overridden dye slots for male charr.
-        /// If no overrides have been defined, this value is <c>null</c>.
-        /// If a dye slot isn't available, that element is <c>null</c>.
+        /// If no overrides have been defined, this value is <see langword="null"/>.
+        /// If a dye slot isn't available, that element is <see langword="null"/>.
         /// </summary>
         [JsonPropertyName("CharrMale")]
         public IReadOnlyList<SkinDyeSlot?>? CharrMale { get; set; }
 
         /// <summary>
         /// The overridden dye slots for female charr.
-        /// If no overrides have been defined, this value is <c>null</c>.
-        /// If a dye slot isn't available, that element is <c>null</c>.
+        /// If no overrides have been defined, this value is <see langword="null"/>.
+        /// If a dye slot isn't available, that element is <see langword="null"/>.
         /// </summary>
         [JsonPropertyName("CharrFemale")]
         public IReadOnlyList<SkinDyeSlot?>? CharrFemale { get; set; }
 
         /// <summary>
         /// The overridden dye slots for male humans.
-        /// If no overrides have been defined, this value is <c>null</c>.
-        /// If a dye slot isn't available, that element is <c>null</c>.
+        /// If no overrides have been defined, this value is <see langword="null"/>.
+        /// If a dye slot isn't available, that element is <see langword="null"/>.
         /// </summary>
         [JsonPropertyName("HumanMale")]
         public IReadOnlyList<SkinDyeSlot?>? HumanMale { get; set; }
 
         /// <summary>
         /// The overridden dye slots for female humans.
-        /// If no overrides have been defined, this value is <c>null</c>.
-        /// If a dye slot isn't available, that element is <c>null</c>.
+        /// If no overrides have been defined, this value is <see langword="null"/>.
+        /// If a dye slot isn't available, that element is <see langword="null"/>.
         /// </summary>
         [JsonPropertyName("HumanFemale")]
         public IReadOnlyList<SkinDyeSlot?>? HumanFemale { get; set; }
 
         /// <summary>
         /// The overridden dye slots for male norn.
-        /// If no overrides have been defined, this value is <c>null</c>.
-        /// If a dye slot isn't available, that element is <c>null</c>.
+        /// If no overrides have been defined, this value is <see langword="null"/>.
+        /// If a dye slot isn't available, that element is <see langword="null"/>.
         /// </summary>
         [JsonPropertyName("NornMale")]
         public IReadOnlyList<SkinDyeSlot?>? NornMale { get; set; }
 
         /// <summary>
         /// The overridden dye slots for female norn.
-        /// If no overrides have been defined, this value is <c>null</c>.
-        /// If a dye slot isn't available, that element is <c>null</c>.
+        /// If no overrides have been defined, this value is <see langword="null"/>.
+        /// If a dye slot isn't available, that element is <see langword="null"/>.
         /// </summary>
         [JsonPropertyName("NornFemale")]
         public IReadOnlyList<SkinDyeSlot?>? NornFemale { get; set; }
 
         /// <summary>
         /// The overridden dye slots for male sylvari.
-        /// If no overrides have been defined, this value is <c>null</c>.
-        /// If a dye slot isn't available, that element is <c>null</c>.
+        /// If no overrides have been defined, this value is <see langword="null"/>.
+        /// If a dye slot isn't available, that element is <see langword="null"/>.
         /// </summary>
         [JsonPropertyName("SylvariMale")]
         public IReadOnlyList<SkinDyeSlot?>? SylvariMale { get; set; }
 
         /// <summary>
         /// The overridden dye slots for female sylvari.
-        /// If no overrides have been defined, this value is <c>null</c>.
-        /// If a dye slot isn't available, that element is <c>null</c>.
+        /// If no overrides have been defined, this value is <see langword="null"/>.
+        /// If a dye slot isn't available, that element is <see langword="null"/>.
         /// </summary>
         [JsonPropertyName("SylvariFemale")]
         public IReadOnlyList<SkinDyeSlot?>? SylvariFemale { get; set; }

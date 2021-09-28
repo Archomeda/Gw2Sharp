@@ -14,7 +14,7 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <summary>
         /// The point of interest name.
-        /// If it has no name, this value is <c>null</c>.
+        /// If it has no name, this value is <see langword="null"/>.
         /// </summary>
         public string? Name { get; set; }
 
@@ -40,7 +40,7 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <summary>
         /// The point of interest icon.
-        /// If the point of interest has no icon, this value is <c>null</c>.
+        /// If the point of interest has no icon, this value is <see langword="null"/>.
         /// </summary>
         public RenderUrl? Icon { get; set; }
     }

@@ -22,7 +22,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// Creates new API flags.
         /// </summary>
         /// <param name="list">The list of enum values.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="list"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="list"/> is <see langword="null"/>.</exception>
         public ApiFlags(IEnumerable<ApiEnum<T>> list)
         {
             this.List = list?.ToList()?.AsReadOnly() ?? throw new ArgumentNullException(nameof(list));
@@ -34,7 +34,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// Used internally by <see cref="ApiFlagsConverter"/>.
         /// </summary>
         /// <param name="list">The list of enum values.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="list"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="list"/> is <see langword="null"/>.</exception>
         internal ApiFlags(IEnumerable<object> list) :
             this(list?.Cast<ApiEnum<T>>() ?? throw new ArgumentNullException(nameof(list)))
         { }

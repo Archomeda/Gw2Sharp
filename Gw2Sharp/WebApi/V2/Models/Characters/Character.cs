@@ -53,7 +53,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The character's guild.
         /// Can be resolved against <see cref="IGw2WebApiV2Client.Guild"/>.
-        /// If the character is not representing a guild, this value is <c>null</c>.
+        /// If the character is not representing a guild, this value is <see langword="null"/>.
         /// </summary>
         public Guid? Guild { get; set; }
 
@@ -97,63 +97,63 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The character's WvW abilities.
         /// Additionally requires scopes: progression.
-        /// If the required scopes are not met, this value is <c>null</c>.
+        /// If the required scopes are not met, this value is <see langword="null"/>.
         /// </summary>
         public IReadOnlyList<CharacterWvwAbility>? WvwAbilities { get; set; }
 
         /// <summary>
         /// The number of build tabs that this character has unlocked.
         /// Additionally requires scopes: builds.
-        /// If the required scopes are not met, this value is <c>null</c>.
+        /// If the required scopes are not met, this value is <see langword="null"/>.
         /// </summary>
         public int? BuildTabsUnlocked { get; set; }
 
         /// <summary>
         /// The current active build tab index. To be used as index in <see cref="BuildTabs"/>.
         /// Additionally requires scopes: builds.
-        /// If the required scopes are not met, this value is <c>null</c>.
+        /// If the required scopes are not met, this value is <see langword="null"/>.
         /// </summary>
         public int? ActiveBuildTab { get; set; }
 
         /// <summary>
         /// The list of character build tabs.
         /// Additionally requires scopes: builds.
-        /// If the required scopes are not met, this value is <c>null</c>.
+        /// If the required scopes are not met, this value is <see langword="null"/>.
         /// </summary>
         public IReadOnlyList<CharacterBuildTabSlot>? BuildTabs { get; set; }
 
         /// <summary>
         /// The list of the character equipment.
         /// Additionally requires scopes: builds and/or inventories.
-        /// If the required scopes are not met, this value is <c>null</c>.
+        /// If the required scopes are not met, this value is <see langword="null"/>.
         /// </summary>
         public IReadOnlyList<CharacterEquipmentItem>? Equipment { get; set; }
 
         /// <summary>
         /// The number of equipment tabs that this character has unlocked.
         /// Additionally requires scopes: builds and/or inventories.
-        /// If the required scopes are not met, this value is <c>null</c>.
+        /// If the required scopes are not met, this value is <see langword="null"/>.
         /// </summary>
         public int? EquipmentTabsUnlocked { get; set; }
 
         /// <summary>
         /// The current active equipment tab index. To be used as index in <see cref="EquipmentTabs"/>.
         /// Additionally requires scopes: builds and/or inventories.
-        /// If the required scopes are not met, this value is <c>null</c>.
+        /// If the required scopes are not met, this value is <see langword="null"/>.
         /// </summary>
         public int? ActiveEquipmentTab { get; set; }
 
         /// <summary>
         /// The list of the character equipment tabs.
         /// Additionally requires scopes: builds and/or inventories.
-        /// If the required scopes are not met, this value is <c>null</c>.
+        /// If the required scopes are not met, this value is <see langword="null"/>.
         /// </summary>
         public IReadOnlyList<CharacterEquipmentTabSlot>? EquipmentTabs { get; set; }
 
         /// <summary>
         /// The list of learned recipes.
         /// Additionally requires scopes: inventories.
-        /// If the required scopes are not met, this value is <c>null</c>.
+        /// If the required scopes are not met, this value is <see langword="null"/>.
         /// Each element can be resolved against <see cref="IGw2WebApiV2Client.Recipes"/>.
         /// </summary>
         public IReadOnlyList<int>? Recipes { get; set; }
@@ -161,7 +161,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The character PvP equipment.
         /// Additionally requires scopes: builds.
-        /// If the required scopes are not met, this value is <c>null</c>.
+        /// If the required scopes are not met, this value is <see langword="null"/>.
         /// </summary>
         [Obsolete("Deprecated since schema version 2021-04-06T21:00:00.000Z. Use EquipmentTabs[i].EquipmentPvp instead. This will be removed from Gw2Sharp starting from version 2.0.")]
         public CharacterEquipmentPvp? EquipmentPvp =>
@@ -172,14 +172,14 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The list of character trainings.
         /// Additionally requires scopes: builds.
-        /// If the required scopes are not met, this value is <c>null</c>.
+        /// If the required scopes are not met, this value is <see langword="null"/>.
         /// </summary>
         public IReadOnlyList<CharacterTraining>? Training { get; set; }
 
         /// <summary>
         /// The list of the character inventory bags.
         /// Additionally requires scopes: inventories.
-        /// If the required scopes are not met, this value is <c>null</c>.
+        /// If the required scopes are not met, this value is <see langword="null"/>.
         /// </summary>
         public IReadOnlyList<CharacterInventoryBag>? Bags { get; set; }
     }

@@ -10,7 +10,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     {
         /// <summary>
         /// The specialization that unlocks this weapon for the profession.
-        /// If no specialization is required, this value is <c>null</c>.
+        /// If no specialization is required, this value is <see langword="null"/>.
         /// Can be resolved against <see cref="IGw2WebApiV2Client.Specializations"/>.
         /// </summary>
         public int Specialization { get; set; }

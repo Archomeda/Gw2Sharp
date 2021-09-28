@@ -15,7 +15,7 @@ namespace Gw2Sharp.WebApi.Exceptions
         /// </summary>
         /// <param name="request">The original request.</param>
         /// <param name="response">The response.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="response"/> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="response"/> is <see langword="null"/>.</exception>
         public PageOutOfRangeException(IWebApiRequest request, IWebApiResponse<ErrorObject> response) :
             base(request, response, BadRequestError.PageOutOfRange) { }
     }
