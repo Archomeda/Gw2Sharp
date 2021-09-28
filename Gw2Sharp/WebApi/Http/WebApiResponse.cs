@@ -39,10 +39,6 @@ namespace Gw2Sharp.WebApi.Http
         /// <exception cref="ArgumentNullException"><paramref name="content"/> is <c>null</c>.</exception>
         public WebApiResponse(string content, HttpStatusCode? statusCode, CacheState cacheState, IEnumerable<KeyValuePair<string, string>>? responseHeaders)
             : base(content, statusCode, cacheState, responseHeaders) { }
-
-        /// <inheritdoc />
-        public new IWebApiResponse Copy() =>
-            new WebApiResponse(this.Content, this.StatusCode, this.CacheState, this.ResponseHeaders);
     }
 
     /// <summary>
@@ -100,9 +96,5 @@ namespace Gw2Sharp.WebApi.Http
 
         /// <inheritdoc />
         public IDictionary<string, string> ResponseHeaders { get; } = new Dictionary<string, string>();
-
-        /// <inheritdoc />
-        public IWebApiResponse<T> Copy() =>
-            new WebApiResponse<T>(this.Content, this.StatusCode, this.CacheState, this.ResponseHeaders);
     }
 }

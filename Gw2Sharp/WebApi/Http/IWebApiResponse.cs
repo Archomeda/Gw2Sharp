@@ -11,12 +11,6 @@ namespace Gw2Sharp.WebApi.Http
     /// </summary>
     public interface IWebApiResponse : IWebApiResponse<string>
     {
-        /// <summary>
-        /// Creates a copy of the request.
-        /// This deep copies <see cref="IWebApiResponse{T}.ResponseHeaders" />.
-        /// </summary>
-        /// <returns>The cloned response.</returns>
-        new IWebApiResponse Copy();
     }
 
     /// <summary>
@@ -44,13 +38,6 @@ namespace Gw2Sharp.WebApi.Http
         /// The response headers.
         /// </summary>
         IDictionary<string, string> ResponseHeaders { get; }
-
-        /// <summary>
-        /// Creates a copy of the request.
-        /// This deep copies <see cref="IWebApiResponse{T}.ResponseHeaders" />, but copies <see cref="Content" /> by reference.
-        /// </summary>
-        /// <returns>The cloned response.</returns>
-        IWebApiResponse<T> Copy();
     }
 
 
