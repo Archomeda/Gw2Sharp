@@ -87,10 +87,10 @@ namespace Gw2Sharp.WebApi.V2.Clients
         IAccountLegendaryArmoryClient LegendaryArmory { get; }
 
         /// <summary>
-        /// Gets the luck progression.
-        /// Requires scores: account, progression, unlocks.
+        /// Deprecated. Use <see cref="Progression"/> instead.
         /// </summary>
-        [Obsolete("Deprecated since 2021-09-28. Use Account.Progression instead. This will be removed from Gw2Sharp starting from version 2.0.")]
+        /// <exception cref="NotSupportedException">This is deprecated and throws <see cref="NotSupportedException"/> instead.</exception>
+        [Obsolete("This has been deprecated since version 2.0. Use Account.Progression instead.", true)]
         IAccountLuckClient Luck { get; }
 
         /// <summary>

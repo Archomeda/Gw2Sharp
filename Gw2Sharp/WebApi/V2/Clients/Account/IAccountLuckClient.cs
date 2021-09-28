@@ -4,9 +4,9 @@ using Gw2Sharp.WebApi.V2.Models;
 namespace Gw2Sharp.WebApi.V2.Clients
 {
     /// <summary>
-    /// A client of the Guild Wars 2 API v2 account luck endpoint.
+    /// Deprecated. Use <see cref="IAccountProgressionClient"/> instead.
     /// </summary>
-    [Obsolete("Deprecated since 2021-09-28. Use Account.Progression instead. This will be removed from Gw2Sharp starting from version 2.0.")]
+    [Obsolete("This has been deprecated since version 2.0. Use Account.Progression instead.", true)]
     public interface IAccountLuckClient :
         IAuthenticatedClient,
         IBlobClient<IApiV2ObjectList<AccountLuck>>

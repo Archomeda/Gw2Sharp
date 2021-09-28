@@ -24,9 +24,6 @@ namespace Gw2Sharp.WebApi.V2.Clients
         private readonly IAccountHomeClient home;
         private readonly IAccountInventoryClient inventory;
         private readonly IAccountLegendaryArmoryClient legendaryArmory;
-#pragma warning disable CS0618 // Type or member is obsolete
-        private readonly IAccountLuckClient luck;
-#pragma warning restore CS0618 // Type or member is obsolete
         private readonly IAccountMailCarriersClient mailCarriers;
         private readonly IAccountMapChestsClient mapChests;
         private readonly IAccountMasteriesClient masteries;
@@ -66,9 +63,6 @@ namespace Gw2Sharp.WebApi.V2.Clients
             this.home = new AccountHomeClient(connection, gw2Client);
             this.inventory = new AccountInventoryClient(connection, gw2Client);
             this.legendaryArmory = new AccountLegendaryArmoryClient(connection, gw2Client);
-#pragma warning disable CS0618 // Type or member is obsolete
-            this.luck = new AccountLuckClient(connection, gw2Client);
-#pragma warning restore CS0618 // Type or member is obsolete
             this.mailCarriers = new AccountMailCarriersClient(connection, gw2Client);
             this.mapChests = new AccountMapChestsClient(connection, gw2Client);
             this.masteries = new AccountMasteriesClient(connection, gw2Client);
@@ -125,8 +119,9 @@ namespace Gw2Sharp.WebApi.V2.Clients
         public virtual IAccountLegendaryArmoryClient LegendaryArmory => this.legendaryArmory;
 
         /// <inheritdoc />
-        [Obsolete("Deprecated since 2021-09-28. Use Account.Progression instead. This will be removed from Gw2Sharp starting from version 2.0.")]
-        public virtual IAccountLuckClient Luck => this.luck;
+        [Obsolete("This has been deprecated since version 2.0. Use Account.Progression instead.", true)]
+        public virtual IAccountLuckClient Luck =>
+            throw new NotSupportedException("This has been deprecated since version 2.0. Use Account.Progression instead.");
 
         /// <inheritdoc />
         public virtual IAccountMailCarriersClient MailCarriers => this.mailCarriers;

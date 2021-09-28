@@ -3,9 +3,9 @@ using System;
 namespace Gw2Sharp.WebApi.V2.Models
 {
     /// <summary>
-    /// Represents an account luck.
+    /// Deprecated. Use <see cref="AccountProgression"/> instead.
     /// </summary>
-    [Obsolete("Deprecated since 2021-09-28. Use Account.Progression instead. This will be removed from Gw2Sharp starting from version 2.0.")]
+    [Obsolete("This has been deprecated since version 2.0. Use Account.Progression instead.", true)]
     public class AccountLuck
     {
         /// <summary>
