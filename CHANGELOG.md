@@ -4,7 +4,7 @@
 This version includes breaking changes.
 
 ### Fixes
-- **Breaking:** The following enums have moved namespaces from the root Gw2Sharp into their proper namespaces ([#93](https://github.com/Archomeda/Gw2Sharp/pull/93)):
+- **Breaking:** The following enums have moved namespaces from the root Gw2Sharp into their proper namespaces ([#92](https://github.com/Archomeda/Gw2Sharp/pull/92)):
   - `Gw2Sharp.WebApi.Caching.CacheItemStatus`
   - `Gw2Sharp.WebApi.Caching.CacheItemType`
   - `Gw2Sharp.WebApi.Models.ComboFieldType`
@@ -25,7 +25,8 @@ This version includes breaking changes.
   - `Gw2Sharp.WebApi.Models.StoryFlag`
 
 ### Deprecation removals
-- Following up on version 1.1.0, `EquipmentPvp` has been removed from `Gw2Sharp.WebApi.V2.Models.Character` ([#92](https://github.com/Archomeda/Gw2Sharp/pull/92))
+- Following up on version 1.1.0, `EquipmentPvp` has been removed from `Gw2Sharp.WebApi.V2.Models.Character` ([#93](https://github.com/Archomeda/Gw2Sharp/pull/93))
+- Following up on version 1.4.0, `Luck` has been removed from `Gw2Sharp.WebApi.V2.Clients.IAccountClient`, including all related references to this endpoint
 
 ---
 
