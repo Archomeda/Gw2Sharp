@@ -7,7 +7,7 @@ namespace Gw2Sharp.WebApi.Exceptions
     /// <summary>
     /// A web API specific exception that's used when a request fails to authorize due to the owner not being a guild leader (code 403).
     /// </summary>
-    /// <seealso cref="UnexpectedStatusException{Error}" />
+    /// <seealso cref="AuthorizationRequiredException" />
     public class RestrictedToGuildLeadersException : AuthorizationRequiredException
     {
         /// <summary>
@@ -17,6 +17,7 @@ namespace Gw2Sharp.WebApi.Exceptions
         /// <param name="response">The response.</param>
         /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="response"/> is <c>null</c>.</exception>
         public RestrictedToGuildLeadersException(IWebApiRequest request, IWebApiResponse<ErrorObject> response) :
-            base(request, response, AuthorizationError.AccessRestrictedToGuildLeaders) { }
+            base(request, response, AuthorizationError.AccessRestrictedToGuildLeaders)
+        { }
     }
 }

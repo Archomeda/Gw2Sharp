@@ -7,8 +7,8 @@ namespace Gw2Sharp.WebApi.Exceptions
     /// <summary>
     /// A web API specific exception that's used when a response cannot be found (code 404).
     /// </summary>
-    /// <seealso cref="UnexpectedStatusException{Error}" />
-    public class NotFoundException : UnexpectedStatusException<ErrorObject>
+    /// <seealso cref="UnexpectedStatusException" />
+    public class NotFoundException : UnexpectedStatusException
     {
         /// <summary>
         /// Creates a new <see cref="NotFoundException"/>.
@@ -17,6 +17,7 @@ namespace Gw2Sharp.WebApi.Exceptions
         /// <param name="response">The response.</param>
         /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="response"/> is <c>null</c>.</exception>
         public NotFoundException(IWebApiRequest request, IWebApiResponse<ErrorObject> response) :
-            base(request, response, response?.Content.Message ?? string.Empty) { }
+            base(request, response)
+        { }
     }
 }

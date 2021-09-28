@@ -7,7 +7,7 @@ namespace Gw2Sharp.WebApi.Exceptions
     /// <summary>
     /// A web API specific exception that's used when a request fails to authorize due to the owner of the API key not being a member of the guild (code 403).
     /// </summary>
-    /// <seealso cref="UnexpectedStatusException{Error}" />
+    /// <seealso cref="AuthorizationRequiredException" />
     public class MembershipRequiredException : AuthorizationRequiredException
     {
         /// <summary>
@@ -17,6 +17,7 @@ namespace Gw2Sharp.WebApi.Exceptions
         /// <param name="response">The response.</param>
         /// <exception cref="ArgumentNullException"><paramref name="request"/> or <paramref name="response"/> is <c>null</c>.</exception>
         public MembershipRequiredException(IWebApiRequest request, IWebApiResponse<ErrorObject> response) :
-            base(request, response, AuthorizationError.MembershipRequired) { }
+            base(request, response, AuthorizationError.MembershipRequired)
+        { }
     }
 }

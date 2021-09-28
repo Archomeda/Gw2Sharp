@@ -7,8 +7,8 @@ namespace Gw2Sharp.WebApi.Exceptions
     /// <summary>
     /// A web API specific exception that's used when a request fails to authorize (code 403).
     /// </summary>
-    /// <seealso cref="UnexpectedStatusException{Error}" />
-    public class AuthorizationRequiredException : UnexpectedStatusException<ErrorObject>
+    /// <seealso cref="UnexpectedStatusException" />
+    public class AuthorizationRequiredException : UnexpectedStatusException
     {
         /// <summary>
         /// Creates a new <see cref="AuthorizationRequiredException"/>.
@@ -18,7 +18,7 @@ namespace Gw2Sharp.WebApi.Exceptions
         /// <param name="error">The error.</param>
         /// <exception cref="ArgumentNullException"><paramref name="request"/>, <paramref name="response"/> or <paramref name="error"/> is <c>null</c>.</exception>
         public AuthorizationRequiredException(IWebApiRequest request, IWebApiResponse<ErrorObject> response, AuthorizationError error) :
-            base(request, response, response?.Content.Message ?? string.Empty)
+            base(request, response)
         {
             this.AuthorizationError = error;
         }
