@@ -9229,6 +9229,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.AccountClient.Outfits
   nameWithType: AccountClient.Outfits
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountClient.Progression
+  name: Progression
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountClient.html#Gw2Sharp_WebApi_V2_Clients_AccountClient_Progression
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.AccountClient.Progression
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountClient.Progression
+  nameWithType: AccountClient.Progression
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountClient.Progression*
+  name: Progression
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountClient.html#Gw2Sharp_WebApi_V2_Clients_AccountClient_Progression_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.AccountClient.Progression
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountClient.Progression
+  nameWithType: AccountClient.Progression
 - uid: Gw2Sharp.WebApi.V2.Clients.AccountClient.Pvp
   name: Pvp
   href: api/Gw2Sharp.WebApi.V2.Clients.AccountClient.html#Gw2Sharp_WebApi_V2_Clients_AccountClient_Pvp
@@ -9841,6 +9854,25 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.AccountOutfitsClient.AccountOutfitsClient
   nameWithType: AccountOutfitsClient.AccountOutfitsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountProgressionClient
+  name: AccountProgressionClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountProgressionClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.AccountProgressionClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountProgressionClient
+  nameWithType: AccountProgressionClient
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountProgressionClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client)
+  name: AccountProgressionClient(IConnection, IGw2Client)
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountProgressionClient.html#Gw2Sharp_WebApi_V2_Clients_AccountProgressionClient__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_
+  commentId: M:Gw2Sharp.WebApi.V2.Clients.AccountProgressionClient.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client)
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountProgressionClient.AccountProgressionClient(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client)
+  nameWithType: AccountProgressionClient.AccountProgressionClient(IConnection, IGw2Client)
+- uid: Gw2Sharp.WebApi.V2.Clients.AccountProgressionClient.#ctor*
+  name: AccountProgressionClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.AccountProgressionClient.html#Gw2Sharp_WebApi_V2_Clients_AccountProgressionClient__ctor_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.AccountProgressionClient.#ctor
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.AccountProgressionClient.AccountProgressionClient
+  nameWithType: AccountProgressionClient.AccountProgressionClient
 - uid: Gw2Sharp.WebApi.V2.Clients.AccountPvpClient
   name: AccountPvpClient
   href: api/Gw2Sharp.WebApi.V2.Clients.AccountPvpClient.html
@@ -14139,6 +14171,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Clients.IAccountClient.Outfits
   nameWithType: IAccountClient.Outfits
+- uid: Gw2Sharp.WebApi.V2.Clients.IAccountClient.Progression
+  name: Progression
+  href: api/Gw2Sharp.WebApi.V2.Clients.IAccountClient.html#Gw2Sharp_WebApi_V2_Clients_IAccountClient_Progression
+  commentId: P:Gw2Sharp.WebApi.V2.Clients.IAccountClient.Progression
+  fullName: Gw2Sharp.WebApi.V2.Clients.IAccountClient.Progression
+  nameWithType: IAccountClient.Progression
+- uid: Gw2Sharp.WebApi.V2.Clients.IAccountClient.Progression*
+  name: Progression
+  href: api/Gw2Sharp.WebApi.V2.Clients.IAccountClient.html#Gw2Sharp_WebApi_V2_Clients_IAccountClient_Progression_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Clients.IAccountClient.Progression
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Clients.IAccountClient.Progression
+  nameWithType: IAccountClient.Progression
 - uid: Gw2Sharp.WebApi.V2.Clients.IAccountClient.Pvp
   name: Pvp
   href: api/Gw2Sharp.WebApi.V2.Clients.IAccountClient.html#Gw2Sharp_WebApi_V2_Clients_IAccountClient_Pvp
@@ -14439,6 +14484,12 @@ references:
   commentId: T:Gw2Sharp.WebApi.V2.Clients.IAccountOutfitsClient
   fullName: Gw2Sharp.WebApi.V2.Clients.IAccountOutfitsClient
   nameWithType: IAccountOutfitsClient
+- uid: Gw2Sharp.WebApi.V2.Clients.IAccountProgressionClient
+  name: IAccountProgressionClient
+  href: api/Gw2Sharp.WebApi.V2.Clients.IAccountProgressionClient.html
+  commentId: T:Gw2Sharp.WebApi.V2.Clients.IAccountProgressionClient
+  fullName: Gw2Sharp.WebApi.V2.Clients.IAccountProgressionClient
+  nameWithType: IAccountProgressionClient
 - uid: Gw2Sharp.WebApi.V2.Clients.IAccountPvpClient
   name: IAccountPvpClient
   href: api/Gw2Sharp.WebApi.V2.Clients.IAccountPvpClient.html
@@ -21841,6 +21892,38 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.AccountMaterial.Id
   nameWithType: AccountMaterial.Id
+- uid: Gw2Sharp.WebApi.V2.Models.AccountProgression
+  name: AccountProgression
+  href: api/Gw2Sharp.WebApi.V2.Models.AccountProgression.html
+  commentId: T:Gw2Sharp.WebApi.V2.Models.AccountProgression
+  fullName: Gw2Sharp.WebApi.V2.Models.AccountProgression
+  nameWithType: AccountProgression
+- uid: Gw2Sharp.WebApi.V2.Models.AccountProgression.Id
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.AccountProgression.html#Gw2Sharp_WebApi_V2_Models_AccountProgression_Id
+  commentId: P:Gw2Sharp.WebApi.V2.Models.AccountProgression.Id
+  fullName: Gw2Sharp.WebApi.V2.Models.AccountProgression.Id
+  nameWithType: AccountProgression.Id
+- uid: Gw2Sharp.WebApi.V2.Models.AccountProgression.Id*
+  name: Id
+  href: api/Gw2Sharp.WebApi.V2.Models.AccountProgression.html#Gw2Sharp_WebApi_V2_Models_AccountProgression_Id_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.AccountProgression.Id
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.AccountProgression.Id
+  nameWithType: AccountProgression.Id
+- uid: Gw2Sharp.WebApi.V2.Models.AccountProgression.Value
+  name: Value
+  href: api/Gw2Sharp.WebApi.V2.Models.AccountProgression.html#Gw2Sharp_WebApi_V2_Models_AccountProgression_Value
+  commentId: P:Gw2Sharp.WebApi.V2.Models.AccountProgression.Value
+  fullName: Gw2Sharp.WebApi.V2.Models.AccountProgression.Value
+  nameWithType: AccountProgression.Value
+- uid: Gw2Sharp.WebApi.V2.Models.AccountProgression.Value*
+  name: Value
+  href: api/Gw2Sharp.WebApi.V2.Models.AccountProgression.html#Gw2Sharp_WebApi_V2_Models_AccountProgression_Value_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.AccountProgression.Value
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.AccountProgression.Value
+  nameWithType: AccountProgression.Value
 - uid: Gw2Sharp.WebApi.V2.Models.Achievement
   name: Achievement
   href: api/Gw2Sharp.WebApi.V2.Models.Achievement.html
