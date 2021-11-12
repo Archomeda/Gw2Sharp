@@ -1,16 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net5.0;netcoreapp3.1;netstandard2.0</TargetFrameworks>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <LangVersion>preview</LangVersion>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Nullable>enable</Nullable>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
 
-    <PackageId>Gw2Sharp</PackageId>
+    <PackageId>Gw2Sharp.DependencyInjection.Microsoft</PackageId>
     <Authors>Archomeda</Authors>
-    <Description>Gw2Sharp is a cross-platform .NET wrapper library for the official Guild Wars 2 API.</Description>
+    <Description>Provides an easy way to use Gw2Sharp with Microsoft.Extensions.DependencyInjection.</Description>
     <PackageTags>Guild Wars 2;GW2</PackageTags>
     <PackageProjectUrl>https://archomeda.github.io/Gw2Sharp</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Archomeda/Gw2Sharp</RepositoryUrl>
@@ -28,17 +27,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Gw2Sharp" Version="1.4.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="2.1.0" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="all" />
-  </ItemGroup>
-
-  <ItemGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
-    <PackageReference Include="TunnelVisionLabs.ReferenceAssemblyAnnotator" Version="1.0.0-alpha.154" PrivateAssets="all" />
-    <PackageDownload Include="Microsoft.NETCore.App.Ref" Version="[3.1.0]" />
-    <PackageReference Include="System.Text.Json" Version="5.0.0" />
-  </ItemGroup>
-
-  <ItemGroup Condition="'$(TargetFramework)'=='netcoreapp3.1'">
-    <PackageReference Include="System.Text.Json" Version="5.0.0" />
   </ItemGroup>
 
   <PropertyGroup Condition="'$(VERSIONED_BUILD)'!=''">
