@@ -2736,6 +2736,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Connection.RenderCacheMethod
   nameWithType: Connection.RenderCacheMethod
+- uid: Gw2Sharp.Connection.RequestTimeout
+  name: RequestTimeout
+  href: api/Gw2Sharp.Connection.html#Gw2Sharp_Connection_RequestTimeout
+  commentId: P:Gw2Sharp.Connection.RequestTimeout
+  fullName: Gw2Sharp.Connection.RequestTimeout
+  nameWithType: Connection.RequestTimeout
+- uid: Gw2Sharp.Connection.RequestTimeout*
+  name: RequestTimeout
+  href: api/Gw2Sharp.Connection.html#Gw2Sharp_Connection_RequestTimeout_
+  commentId: Overload:Gw2Sharp.Connection.RequestTimeout
+  isSpec: "True"
+  fullName: Gw2Sharp.Connection.RequestTimeout
+  nameWithType: Connection.RequestTimeout
 - uid: Gw2Sharp.Connection.UseDefaultMiddleware
   name: UseDefaultMiddleware()
   href: api/Gw2Sharp.Connection.html#Gw2Sharp_Connection_UseDefaultMiddleware
@@ -2955,6 +2968,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.IConnection.RenderCacheMethod
   nameWithType: IConnection.RenderCacheMethod
+- uid: Gw2Sharp.IConnection.RequestTimeout
+  name: RequestTimeout
+  href: api/Gw2Sharp.IConnection.html#Gw2Sharp_IConnection_RequestTimeout
+  commentId: P:Gw2Sharp.IConnection.RequestTimeout
+  fullName: Gw2Sharp.IConnection.RequestTimeout
+  nameWithType: IConnection.RequestTimeout
+- uid: Gw2Sharp.IConnection.RequestTimeout*
+  name: RequestTimeout
+  href: api/Gw2Sharp.IConnection.html#Gw2Sharp_IConnection_RequestTimeout_
+  commentId: Overload:Gw2Sharp.IConnection.RequestTimeout
+  isSpec: "True"
+  fullName: Gw2Sharp.IConnection.RequestTimeout
+  nameWithType: IConnection.RequestTimeout
 - uid: Gw2Sharp.IConnection.UserAgent
   name: UserAgent
   href: api/Gw2Sharp.IConnection.html#Gw2Sharp_IConnection_UserAgent
