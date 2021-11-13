@@ -85,7 +85,11 @@ namespace Gw2Sharp.WebApi.Http
                     var responseMessage = await task.ConfigureAwait(false);
 
                     await responseMessage.Content.LoadIntoBufferAsync().ConfigureAwait(false);
+#if NET5_0_OR_GREATER
+                    var stream = await responseMessage.Content.ReadAsStreamAsync(cancellationToken).ConfigureAwait(false);
+#else
                     var stream = await responseMessage.Content.ReadAsStreamAsync().ConfigureAwait(false);
+#endif
                     var requestHeaders = request.Options.RequestHeaders.ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
                     var responseHeaders = responseMessage.Headers.ToDictionary(kvp => kvp.Key, kvp => kvp.Value.First());
                     responseHeaders.AddRange(responseMessage.Content.Headers.ToDictionary(kvp => kvp.Key, kvp => kvp.Value.First()));
