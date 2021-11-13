@@ -40,7 +40,8 @@ namespace Gw2Sharp.WebApi.Render
                 using var memoryStream = new MemoryStream();
                 await response.ContentStream.CopyToAsync(memoryStream).ConfigureAwait(false);
 #else
-                await using var memoryStream = new MemoryStream();
+                var memoryStream = new MemoryStream();
+                await using var _ = memoryStream.ConfigureAwait(false);
                 await response.ContentStream.CopyToAsync(memoryStream, cancellationToken).ConfigureAwait(false);
 #endif
                 var responseInfo = new HttpResponseInfo(response.StatusCode, response.CacheState, response.ResponseHeaders);
@@ -78,8 +79,9 @@ namespace Gw2Sharp.WebApi.Render
                 using var memoryStream = new MemoryStream(cacheItem.RawItem, false);
                 await memoryStream.CopyToAsync(targetStream).ConfigureAwait(false);
 #else
-                await using var memoryStream = new MemoryStream(cacheItem.RawItem, false);
-                await memoryStream.CopyToAsync(targetStream, cancellationToken).ConfigureAwait(false);
+                var memoryStream = new MemoryStream(cacheItem.RawItem, false);
+                await using (memoryStream.ConfigureAwait(false))
+                    await memoryStream.CopyToAsync(targetStream, cancellationToken).ConfigureAwait(false);
 #endif
             }
         }
@@ -110,8 +112,9 @@ namespace Gw2Sharp.WebApi.Render
                 using var memoryStream = new MemoryStream(cacheItem.RawItem, false);
                 return memoryStream.ToArray();
 #else
-                await using var memoryStream = new MemoryStream(cacheItem.RawItem, false);
-                return memoryStream.ToArray();
+                var memoryStream = new MemoryStream(cacheItem.RawItem, false);
+                await using (memoryStream.ConfigureAwait(false))
+                    return memoryStream.ToArray();
 #endif
             }
         }

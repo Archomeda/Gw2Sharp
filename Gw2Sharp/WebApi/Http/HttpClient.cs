@@ -47,7 +47,7 @@ namespace Gw2Sharp.WebApi.Http
         }
 
         /// <inheritdoc />
-        public TimeSpan Timeout { get; set; } = TimeSpan.FromSeconds(30);
+        public TimeSpan Timeout { get; set; } = TimeSpan.Zero;
 
         /// <inheritdoc />
         public async Task<IWebApiResponse> RequestAsync(IWebApiRequest request, CancellationToken cancellationToken = default)
@@ -67,8 +67,6 @@ namespace Gw2Sharp.WebApi.Http
 
             async Task<IHttpResponseStream> ExecAsync()
             {
-                using var cancellationTimeout = new CancellationTokenSource(this.Timeout);
-                using var linkedCancellation = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken, cancellationTimeout.Token);
                 using var message = new HttpRequestMessage(HttpMethod.Get, request.Options.Url);
                 message.Headers.AddRange(request.Options.RequestHeaders);
 
@@ -80,11 +78,18 @@ namespace Gw2Sharp.WebApi.Http
                     if (httpClient is null)
                         throw new InvalidOperationException("HttpClient is null");
 
-                    task = httpClient.SendAsync(message, linkedCancellation.Token);
+                    if (this.Timeout > TimeSpan.Zero || this.Timeout == System.Threading.Timeout.InfiniteTimeSpan)
+                        httpClient.Timeout = this.Timeout;
+
+                    task = httpClient.SendAsync(message, cancellationToken);
                     var responseMessage = await task.ConfigureAwait(false);
 
                     await responseMessage.Content.LoadIntoBufferAsync().ConfigureAwait(false);
+#if NET5_0_OR_GREATER
+                    var stream = await responseMessage.Content.ReadAsStreamAsync(cancellationToken).ConfigureAwait(false);
+#else
                     var stream = await responseMessage.Content.ReadAsStreamAsync().ConfigureAwait(false);
+#endif
                     var requestHeaders = request.Options.RequestHeaders.ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
                     var responseHeaders = responseMessage.Headers.ToDictionary(kvp => kvp.Key, kvp => kvp.Value.First());
                     responseHeaders.AddRange(responseMessage.Content.Headers.ToDictionary(kvp => kvp.Key, kvp => kvp.Value.First()));

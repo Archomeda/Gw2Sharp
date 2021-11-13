@@ -12,6 +12,9 @@ namespace Gw2Sharp.WebApi.Http
     {
         /// <summary>
         /// The timeout for every request.
+        /// If <see cref="TimeSpan.Zero"/> or less, the default timeout is used (in case of <see cref="System.Net.Http.HttpClient"/>,
+        /// this is 100 seconds; see <seealso cref="System.Net.Http.HttpClient.Timeout"/>).
+        /// This value can be <see cref="Timeout.InfiniteTimeSpan"/> to have no timeout.
         /// </summary>
         TimeSpan Timeout { get; set; }
 

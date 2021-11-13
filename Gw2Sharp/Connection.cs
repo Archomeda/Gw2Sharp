@@ -132,6 +132,13 @@ namespace Gw2Sharp
         public string UserAgent { get; }
 
         /// <inheritdoc />
+        public TimeSpan RequestTimeout
+        {
+            get => this.HttpClient.Timeout;
+            set => this.HttpClient.Timeout = value;
+        }
+
+        /// <inheritdoc />
         public IHttpClient HttpClient
         {
             get => this.httpClient;
