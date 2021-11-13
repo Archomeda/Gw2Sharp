@@ -1,5 +1,13 @@
 # Gw2Sharp History
 
+## 1.5.0 (13 November 2021)
+This release contains one small addition to make changing the request timeout easier.
+
+### Generic
+- Add `RequestTimeout` property to `Gw2Sharp.IConnection` ([#97](https://github.com/Archomeda/Gw2Sharp/issues/97), [#107](https://github.com/Archomeda/Gw2Sharp/pull/107))
+
+---
+
 ## 1.4.0 (28 September 2021)
 This release focuses on the new account progression addition, introduced on 28 September 2021.
 
