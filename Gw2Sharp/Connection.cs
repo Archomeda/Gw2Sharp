@@ -20,6 +20,7 @@ namespace Gw2Sharp
         private ICacheMethod cacheMethod;
         private ICacheMethod renderCacheMethod;
         private string accessToken;
+        private string apiBaseUrl = "https://api.guildwars2.com/";
         private readonly ObservableCollection<IWebApiMiddleware> middleware = new ObservableCollection<IWebApiMiddleware>();
 
 
@@ -132,7 +133,11 @@ namespace Gw2Sharp
         public string UserAgent { get; }
 
         /// <inheritdoc />
-        public string ApiBaseUrl { get; set; } = "https://api.guildwars2.com/";
+        public string ApiBaseUrl
+        {
+            get => this.apiBaseUrl;
+            set => this.apiBaseUrl = value ?? throw new ArgumentNullException(nameof(value), "ApiBaseUrl cannot be null");
+        }
 
         /// <inheritdoc />
         public string? RenderBaseUrl { get; set; }
