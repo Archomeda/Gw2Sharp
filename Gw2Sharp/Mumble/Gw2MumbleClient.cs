@@ -385,7 +385,7 @@ namespace Gw2Sharp.Mumble
                 this.reader.Dispose();
 
                 // Only dispose the full client cache tree if we are the default one and are the root
-                if (this.mumbleLinkName == DEFAULT_MUMBLE_LINK_MAP_NAME)
+                if (this.mumbleLinkName == DEFAULT_MUMBLE_LINK_MAP_NAME && this.isRoot)
                 {
                     foreach (var reference in this.mumbleClientCache.Select(x => x.Value))
                     {
