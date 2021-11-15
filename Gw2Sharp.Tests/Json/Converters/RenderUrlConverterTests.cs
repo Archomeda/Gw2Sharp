@@ -11,10 +11,12 @@ namespace Gw2Sharp.Tests.Json.Converters
 {
     public class RenderUrlConverterTests
     {
+        private readonly IConnection connection;
         private readonly IGw2Client client;
 
         public RenderUrlConverterTests()
         {
+            this.connection = new Connection();
             this.client = Substitute.For<IGw2Client>();
             this.client.WebApi.Returns(Substitute.For<IGw2WebApiClient>());
             this.client.WebApi.Render.Returns(Substitute.For<IGw2WebApiRenderClient>());
@@ -23,14 +25,14 @@ namespace Gw2Sharp.Tests.Json.Converters
         [Fact]
         public void NoWriteTest()
         {
-            var converter = new RenderUrlConverter(this.client);
+            var converter = new RenderUrlConverter(this.connection, this.client);
             Assert.Throws<NotImplementedException>(() => converter.Write(default!, default!, default!));
         }
 
         [Fact]
         public void CanConvertTest()
         {
-            var converter = new RenderUrlConverter(this.client);
+            var converter = new RenderUrlConverter(this.connection, this.client);
             Assert.True(converter.CanConvert(typeof(RenderUrl)));
         }
 
@@ -40,7 +42,7 @@ namespace Gw2Sharp.Tests.Json.Converters
         {
             var actual = JsonSerializer.Deserialize<RenderUrl>(json, new JsonSerializerOptions
             {
-                Converters = { new RenderUrlConverter(this.client) }
+                Converters = { new RenderUrlConverter(this.connection, this.client) }
             });
 
             actual.Url.AbsoluteUri.Should().Be(expected);
@@ -56,7 +58,7 @@ namespace Gw2Sharp.Tests.Json.Converters
         {
             Action action = () => JsonSerializer.Deserialize<RenderUrl>(json, new JsonSerializerOptions
             {
-                Converters = { new RenderUrlConverter(this.client) }
+                Converters = { new RenderUrlConverter(this.connection, this.client) }
             });
             action.Should().Throw<JsonException>();
         }

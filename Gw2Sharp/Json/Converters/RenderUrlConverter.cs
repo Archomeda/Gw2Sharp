@@ -11,14 +11,17 @@ namespace Gw2Sharp.Json.Converters
     /// <seealso cref="JsonConverter{T}" />
     public sealed class RenderUrlConverter : JsonConverter<RenderUrl>
     {
+        private readonly IConnection connection;
         private readonly IGw2Client gw2Client;
 
         /// <summary>
         /// Creates a new <see cref="RenderUrlConverter"/>
         /// </summary>
+        /// <param name="connection">The connection used to make requests, see <see cref="IConnection"/>.</param>
         /// <param name="gw2Client">The Guild Wars 2 client.</param>
-        public RenderUrlConverter(IGw2Client gw2Client)
+        public RenderUrlConverter(IConnection connection, IGw2Client gw2Client)
         {
+            this.connection = connection;
             this.gw2Client = gw2Client;
         }
 
@@ -27,7 +30,7 @@ namespace Gw2Sharp.Json.Converters
         {
             if (reader.TokenType != JsonTokenType.String)
                 throw new JsonException("Expected a string value");
-            return new RenderUrl(this.gw2Client, reader.GetString()!);
+            return new RenderUrl(this.gw2Client, reader.GetString()!, this.connection.RenderBaseUrl);
         }
 
         /// <inheritdoc />

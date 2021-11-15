@@ -9,9 +9,9 @@ namespace Gw2Sharp.WebApi.V2
     public class Gw2WebApiV2Client : Gw2WebApiBaseClient, IGw2WebApiV2Client
     {
         /// <summary>
-        /// The base URL for making Guild Wars 2 API v2 requests.
+        /// The path that the v2 endpoints can be accessed.
         /// </summary>
-        internal static Uri UrlBase => new Uri(Gw2WebApiClient.UrlBase, "v2/");
+        internal const string URL_PATH = "v2/";
 
         private readonly IAccountClient account;
         private readonly IAchievementsClient achievements;

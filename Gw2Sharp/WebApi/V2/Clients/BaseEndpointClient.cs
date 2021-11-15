@@ -31,7 +31,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
             if (gw2Client == null)
                 throw new ArgumentNullException(nameof(gw2Client));
 
-            this.BaseUrl = Gw2WebApiV2Client.UrlBase.AbsoluteUri;
+            this.BaseUrl = new Uri(new Uri(connection.ApiBaseUrl), Gw2WebApiV2Client.URL_PATH).ToString();
             this.EndpointPath = this.GetRequiredAttribute<EndpointPathAttribute>().EndpointPath;
             this.parameterProperties = this.GetType()
                 .GetProperties(BindingFlags.Public | BindingFlags.Instance)

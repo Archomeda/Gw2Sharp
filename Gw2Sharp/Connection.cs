@@ -132,6 +132,12 @@ namespace Gw2Sharp
         public string UserAgent { get; }
 
         /// <inheritdoc />
+        public string ApiBaseUrl { get; set; } = "https://api.guildwars2.com/";
+
+        /// <inheritdoc />
+        public string? RenderBaseUrl { get; set; }
+
+        /// <inheritdoc />
         public TimeSpan RequestTimeout
         {
             get => this.HttpClient.Timeout;
