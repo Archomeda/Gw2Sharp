@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DisposeGenerator.Attributes;
 using Gw2Sharp.Extensions;
 
 namespace Gw2Sharp.WebApi.Caching
@@ -9,7 +10,8 @@ namespace Gw2Sharp.WebApi.Caching
     /// <summary>
     /// Provides basic implementation for non-standard methods in a cache method.
     /// </summary>
-    public abstract class BaseCacheMethod : ICacheMethod
+    [DisposeAll]
+    public abstract partial class BaseCacheMethod : ICacheMethod
     {
         /// <inheritdoc />
         public abstract Task<CacheItem?> TryGetAsync(string category, string id);
@@ -113,18 +115,5 @@ namespace Gw2Sharp.WebApi.Caching
 
         /// <inheritdoc />
         public abstract Task ClearAsync();
-
-        /// <summary>
-        /// Disposes the object.
-        /// </summary>
-        /// <param name="isDisposing">Dispose managed resources.</param>
-        protected virtual void Dispose(bool isDisposing) { }
-
-        /// <inheritdoc />
-        public void Dispose()
-        {
-            this.Dispose(true);
-            GC.SuppressFinalize(this);
-        }
     }
 }

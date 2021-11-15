@@ -1,5 +1,6 @@
 using System;
 using System.Runtime.Versioning;
+using DisposeGenerator.Attributes;
 using Gw2Sharp.Mumble;
 using Gw2Sharp.WebApi;
 
@@ -8,9 +9,10 @@ namespace Gw2Sharp
     /// <summary>
     /// A client for the Guild Wars 2 web API.
     /// </summary>
-    public class Gw2Client : IGw2Client
+    [DisposeAll]
+    public partial class Gw2Client : IGw2Client
     {
-        private readonly IGw2MumbleClient? mumble;
+        private IGw2MumbleClient? mumble;
         private readonly IGw2WebApiClient webApi;
 
         /// <summary>
@@ -46,35 +48,5 @@ namespace Gw2Sharp
 
         /// <inheritdoc />
         public virtual IGw2WebApiClient WebApi => this.webApi;
-
-        #region IDisposable Support
-
-        private bool isDisposed = false; // To detect redundant calls
-
-        /// <summary>
-        /// Disposes the object.
-        /// </summary>
-        /// <param name="disposing">Dispose managed resources.</param>
-        protected virtual void Dispose(bool disposing)
-        {
-            if (!this.isDisposed)
-            {
-                if (disposing)
-                {
-                    this.mumble?.Dispose();
-                }
-
-                this.isDisposed = true;
-            }
-        }
-
-        /// <inheritdoc />
-        public void Dispose()
-        {
-            this.Dispose(true);
-            GC.SuppressFinalize(this);
-        }
-
-        #endregion
     }
 }

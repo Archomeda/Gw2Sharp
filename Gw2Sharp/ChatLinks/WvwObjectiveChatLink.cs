@@ -42,7 +42,7 @@ namespace Gw2Sharp.ChatLinks
 
         /// <inheritdoc />
         public bool Equals(WvwObjectiveChatLink? other) =>
-            !(other is null) &&
+            other is not null &&
             this.Type == other.Type &&
             this.ObjectiveId == other.ObjectiveId &&
             this.MapId == other.MapId;

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFrameworks>net5.0;netcoreapp3.1;netstandard2.0</TargetFrameworks>
@@ -30,6 +30,10 @@ Check the changelog at https://github.com/Archomeda/Gw2Sharp/blob/master/CHANGEL
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="DisposeGenerator" Version="0.1.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="all" />
   </ItemGroup>
 

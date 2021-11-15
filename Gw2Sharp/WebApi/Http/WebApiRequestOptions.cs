@@ -76,7 +76,7 @@ namespace Gw2Sharp.WebApi.Http
         /// Performs a deep clone of the request.
         /// </summary>
         /// <returns>The cloned request.</returns>
-        public WebApiRequestOptions DeepCopy() => new WebApiRequestOptions
+        public WebApiRequestOptions DeepCopy() => new()
         {
             BaseUrl = this.BaseUrl,
             EndpointPath = this.EndpointPath,

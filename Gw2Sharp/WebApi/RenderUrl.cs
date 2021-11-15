@@ -114,7 +114,7 @@ namespace Gw2Sharp.WebApi
         /// </summary>
         /// <param name="renderUrl">The render URL object.</param>
         public static implicit operator Uri(RenderUrl renderUrl) =>
-            new Uri(renderUrl.Url.AbsoluteUri, UriKind.Absolute);
+            new(renderUrl.Url.AbsoluteUri, UriKind.Absolute);
 
         /// <summary>
         /// Gets the URL as <see cref="Uri"/>.

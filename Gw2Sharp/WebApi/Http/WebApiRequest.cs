@@ -20,8 +20,7 @@ namespace Gw2Sharp.WebApi.Http
     /// </summary>
     public class WebApiRequest : IWebApiRequest
     {
-        private static readonly ConcurrentDictionary<int, Func<MiddlewareContext, CancellationToken, Task<IWebApiResponse>>> requestCalls =
-            new ConcurrentDictionary<int, Func<MiddlewareContext, CancellationToken, Task<IWebApiResponse>>>();
+        private static readonly ConcurrentDictionary<int, Func<MiddlewareContext, CancellationToken, Task<IWebApiResponse>>> requestCalls = new();
 
         private readonly IConnection connection;
         private readonly IGw2Client gw2Client;

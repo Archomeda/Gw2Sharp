@@ -14,8 +14,8 @@ namespace Gw2Sharp.WebApi.V2
     /// </summary>
     public class ApiV2HttpResponseInfo : HttpResponseInfo
     {
-        private static readonly Regex linkRelRegex = new Regex("rel=\"?(previous|next|self|first|last)\"?", RegexOptions.IgnoreCase);
-        private static readonly Regex linkUriRegex = new Regex("<(.+)>", RegexOptions.IgnoreCase);
+        private static readonly Regex linkRelRegex = new("rel=\"?(previous|next|self|first|last)\"?", RegexOptions.IgnoreCase);
+        private static readonly Regex linkUriRegex = new("<(.+)>", RegexOptions.IgnoreCase);
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiV2HttpResponseInfo"/> class with a <see cref="IWebApiResponse{T}"/> as base.

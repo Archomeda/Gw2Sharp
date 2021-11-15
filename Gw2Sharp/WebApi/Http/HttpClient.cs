@@ -17,7 +17,7 @@ namespace Gw2Sharp.WebApi.Http
     /// </summary>
     public class HttpClient : IHttpClient
     {
-        private static readonly SysHttpClient sysHttpClient = new SysHttpClient();
+        private static readonly SysHttpClient sysHttpClient = new();
         private readonly Func<SysHttpClient> getSysHttpClient = () => sysHttpClient;
         private readonly bool shouldDisposeHttpClient = false;
 

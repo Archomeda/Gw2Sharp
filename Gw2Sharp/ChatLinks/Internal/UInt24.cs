@@ -43,7 +43,7 @@ namespace Gw2Sharp.ChatLinks.Internal
         /// </summary>
         /// <param name="value">The value.</param>
         public static implicit operator UInt24(int value) =>
-            new UInt24(value);
+            new(value);
 
         /// <summary>
         /// Gets the <see cref="UInt24"/> value of an integer.

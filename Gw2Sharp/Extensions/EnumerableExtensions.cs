@@ -22,7 +22,7 @@ namespace Gw2Sharp.Extensions
                 throw new ArgumentNullException(nameof(source));
 
 #pragma warning disable CS8619 // Nullability of reference types in value doesn't match target type.
-            return source.Where(x => !(x is null));
+            return source.Where(x => x is not null);
 #pragma warning restore CS8619 // Nullability of reference types in value doesn't match target type.
         }
 

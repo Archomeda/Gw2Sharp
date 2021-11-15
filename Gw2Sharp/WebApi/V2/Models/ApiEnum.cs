@@ -14,8 +14,8 @@ namespace Gw2Sharp.WebApi.V2.Models
     public class ApiEnum<T> : IEquatable<ApiEnum<T>> where T : Enum
     {
         private static readonly T defaultValue;
-        private static readonly Dictionary<ulong, T> rawValues = new Dictionary<ulong, T>();
-        private static readonly Dictionary<string, T> stringValues = new Dictionary<string, T>();
+        private static readonly Dictionary<ulong, T> rawValues = new();
+        private static readonly Dictionary<string, T> stringValues = new();
 
         static ApiEnum()
         {
@@ -105,7 +105,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// </summary>
         /// <param name="e">The enum.</param>
         public static implicit operator ApiEnum<T>(T e) =>
-            new ApiEnum<T>(e, e.ToString());
+            new(e, e.ToString());
 
         /// <summary>
         /// Converts an enum to an API enum.
@@ -118,7 +118,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// </summary>
         /// <param name="e">The enum.</param>
         public static implicit operator ApiEnum<T>(string e) =>
-            new ApiEnum<T>(GetValue(e), e);
+            new(GetValue(e), e);
 
         /// <summary>
         /// Converts an enum to an API enum.
@@ -160,7 +160,7 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <inheritdoc />
         public virtual bool Equals(ApiEnum<T>? other) =>
-            !(other is null) &&
+            other is not null &&
             EqualityComparer<T>.Default.Equals(this.Value, other.Value) &&
             EqualityComparer<string?>.Default.Equals(this.RawValue?.ToLowerInvariant(), other.RawValue?.ToLowerInvariant());
 

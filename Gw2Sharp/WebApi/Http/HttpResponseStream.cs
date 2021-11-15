@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
+using DisposeGenerator.Attributes;
 using Gw2Sharp.Extensions;
 
 namespace Gw2Sharp.WebApi.Http
@@ -9,7 +10,8 @@ namespace Gw2Sharp.WebApi.Http
     /// <summary>
     /// A streaming web response.
     /// </summary>
-    public class HttpResponseStream : IHttpResponseStream
+    [DisposeAll]
+    public partial class HttpResponseStream : IHttpResponseStream
     {
         /// <summary>
         /// Creates a new <see cref="HttpResponseStream" />.
@@ -37,7 +39,7 @@ namespace Gw2Sharp.WebApi.Http
             this.CacheState = cacheState;
             if (requestHeaders != null)
                 this.RequestHeaders = requestHeaders.ShallowCopy().AsReadOnly();
-            if (!(responseHeaders is null))
+            if (responseHeaders is not null)
                 this.ResponseHeaders = responseHeaders.ShallowCopy().AsReadOnly();
         }
 
@@ -71,27 +73,10 @@ namespace Gw2Sharp.WebApi.Http
         public IReadOnlyDictionary<string, string> ResponseHeaders { get; } = new Dictionary<string, string>().AsReadOnly();
 
 
-        private bool isDisposed = false; // To detect redundant calls
-
-        /// <summary>
-        /// Disposes the object.
-        /// </summary>
-        /// <param name="isDisposing">Dispose managed resources.</param>
-        protected virtual void Dispose(bool isDisposing)
+        [Disposer]
+        private void DisposeStreams()
         {
-            if (!this.isDisposed)
-            {
-                if (isDisposing)
-                    this.ContentStream?.Dispose();
-                this.isDisposed = true;
-            }
-        }
-
-        /// <inheritdoc />
-        public void Dispose()
-        {
-            this.Dispose(true);
-            GC.SuppressFinalize(this);
+            this.ContentStream?.Dispose();
         }
     }
 }

@@ -62,7 +62,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// </summary>
         /// <param name="l">The list of enums.</param>
         public static implicit operator ApiFlags<T>(ApiEnum<T>[] l) =>
-            new ApiFlags<T>(l);
+            new(l);
 
         /// <summary>
         /// Converts an array of enums to API flags.
@@ -75,7 +75,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// </summary>
         /// <param name="l">The list of enums.</param>
         public static implicit operator ApiFlags<T>(List<ApiEnum<T>> l) =>
-            new ApiFlags<T>(l);
+            new(l);
 
         /// <summary>
         /// Converts an array of enums to API flags.
@@ -88,7 +88,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// </summary>
         /// <param name="l">The collection of enums.</param>
         public static implicit operator ApiFlags<T>(Collection<ApiEnum<T>> l) =>
-            new ApiFlags<T>(l);
+            new(l);
 
         /// <summary>
         /// Converts a collection of enums to API flags.
@@ -101,7 +101,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// </summary>
         /// <param name="l">The set of enums.</param>
         public static implicit operator ApiFlags<T>(HashSet<ApiEnum<T>> l) =>
-            new ApiFlags<T>(l);
+            new(l);
 
         /// <summary>
         /// Converts a set of enums to API flags.
@@ -143,7 +143,7 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <inheritdoc />
         public virtual bool Equals(ApiFlags<T>? other) =>
-            !(other is null) && this.List.SequenceEqual(other.List);
+            other is not null && this.List.SequenceEqual(other.List);
 
         /// <inheritdoc />
         public override int GetHashCode()

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net.Sockets;
 using System.Runtime.Versioning;
 using System.Text.Json;
+using DisposeGenerator.Attributes;
 using Gw2Sharp.Json;
 using Gw2Sharp.Models;
 using Gw2Sharp.Mumble.Models;
@@ -17,12 +18,13 @@ namespace Gw2Sharp.Mumble
 #if NET5_0_OR_GREATER
     [SupportedOSPlatform("windows")]
 #endif
-    public class Gw2MumbleClient : IGw2MumbleClient
+    [DisposeAll]
+    public partial class Gw2MumbleClient : IGw2MumbleClient
     {
         /// <summary>
         /// The settings that are used when deserializing JSON objects.
         /// </summary>
-        private static readonly JsonSerializerOptions deserializerSettings = new JsonSerializerOptions
+        private static readonly JsonSerializerOptions deserializerSettings = new()
         {
             PropertyNameCaseInsensitive = true,
             PropertyNamingPolicy = SnakeCaseNamingPolicy.SnakeCase
@@ -34,8 +36,8 @@ namespace Gw2Sharp.Mumble
         private const string EMPTY_IDENTITY = "{}";
 
         private string rawIdentity = EMPTY_IDENTITY;
-        private readonly object identityLock = new object();
-        private readonly object serverAddressLock = new object();
+        private readonly object identityLock = new();
+        private readonly object serverAddressLock = new();
 
         private readonly Lazy<MemoryMappedFile> memoryMappedFile;
         private readonly Lazy<MemoryMappedViewAccessor> memoryMappedViewAccessor;
@@ -369,51 +371,27 @@ namespace Gw2Sharp.Mumble
         }
 
 
-        #region IDisposable Support
-
-        private bool isDisposed = false; // To detect redundant calls
-
-        /// <summary>
-        /// Disposes the object.
-        /// </summary>
-        /// <param name="disposing">Dispose managed resources.</param>
-        protected virtual void Dispose(bool disposing)
+        [Disposer]
+        private void DisposeMumble()
         {
-            if (this.isDisposed)
-                return;
+            if (this.memoryMappedViewAccessor.IsValueCreated)
+                this.memoryMappedViewAccessor.Value.Dispose();
+            if (this.memoryMappedFile.IsValueCreated)
+                this.memoryMappedFile.Value.Dispose();
 
-            if (disposing)
+            // Only dispose the full client cache tree if we are the default one
+            if (this.mumbleLinkName == DEFAULT_MUMBLE_LINK_MAP_NAME)
             {
-                if (this.memoryMappedViewAccessor.IsValueCreated)
-                    this.memoryMappedViewAccessor.Value.Dispose();
-                if (this.memoryMappedFile.IsValueCreated)
-                    this.memoryMappedFile.Value.Dispose();
-
-                // Only dispose the full client cache tree if we are the default one
-                if (this.mumbleLinkName == DEFAULT_MUMBLE_LINK_MAP_NAME)
+                foreach (var reference in this.mumbleClientCache.Select(x => x.Value))
                 {
-                    foreach (var reference in this.mumbleClientCache.Select(x => x.Value))
-                    {
-                        if (reference.TryGetTarget(out var client) && client != this)
-                            client?.Dispose();
-                    }
-                    this.mumbleClientCache.Clear();
+                    if (reference.TryGetTarget(out var client) && client != this)
+                        client?.Dispose();
                 }
-
-                // Otherwise only remove ourselves from the tree
-                this.mumbleClientCache.TryRemove(this.mumbleLinkName, out _);
+                this.mumbleClientCache.Clear();
             }
 
-            this.isDisposed = true;
+            // Otherwise only remove ourselves from the tree
+            this.mumbleClientCache.TryRemove(this.mumbleLinkName, out _);
         }
-
-        /// <inheritdoc />
-        public void Dispose()
-        {
-            this.Dispose(true);
-            GC.SuppressFinalize(this);
-        }
-
-        #endregion
     }
 }

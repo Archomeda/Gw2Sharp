@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using DisposeGenerator.Attributes;
 using Gw2Sharp.Extensions;
 
 namespace Gw2Sharp.WebApi.Caching
@@ -11,11 +12,12 @@ namespace Gw2Sharp.WebApi.Caching
     /// <summary>
     /// A in-memory caching method.
     /// </summary>
-    public class MemoryCacheMethod : BaseCacheMethod
+    [DisposeAll]
+    public partial class MemoryCacheMethod : BaseCacheMethod
     {
-        private readonly ConcurrentDictionary<string, ConcurrentDictionary<string, CacheItem>> cachedItems = new ConcurrentDictionary<string, ConcurrentDictionary<string, CacheItem>>();
+        private readonly ConcurrentDictionary<string, ConcurrentDictionary<string, CacheItem>> cachedItems = new();
 
-        private readonly Timer gcTimer;
+        private Timer gcTimer;
 
         /// <summary>
         /// Creates a new in-memory caching method.
@@ -71,7 +73,9 @@ namespace Gw2Sharp.WebApi.Caching
             if (this.cachedItems.TryGetValue(category, out var cache) &&
                 cache.TryGetValue(id, out var item) &&
                 item.ExpiryTime > DateTimeOffset.Now)
+            {
                 return Task.FromResult<CacheItem?>(CopyCacheItemWithStatus(item, CacheItemStatus.Cached));
+            }
 
             return Task.FromResult<CacheItem?>(null);
         }
@@ -118,9 +122,6 @@ namespace Gw2Sharp.WebApi.Caching
             return Task.CompletedTask;
         }
 
-        private bool isDisposed = false; // To detect redundant calls
-
-
         private static CacheItem CopyCacheItemWithStatus(CacheItem item, CacheItemStatus status) => item.Type switch
         {
             CacheItemType.Raw => new CacheItem(item.Category, item.Id, item.RawItem, item.StatusCode, item.ExpiryTime, status, item.Metadata?.ShallowCopy()),
@@ -129,20 +130,6 @@ namespace Gw2Sharp.WebApi.Caching
             // Should not happen
             _ => throw new NotSupportedException("Unsupported cache type")
         };
-
-
-        /// <inheritdoc />
-        protected override void Dispose(bool isDisposing)
-        {
-            if (!this.isDisposed)
-            {
-                if (isDisposing)
-                    this.gcTimer.Dispose();
-
-                base.Dispose(isDisposing);
-                this.isDisposed = true;
-            }
-        }
 
         #endregion
     }

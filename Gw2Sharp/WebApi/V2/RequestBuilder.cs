@@ -120,7 +120,7 @@ namespace Gw2Sharp.WebApi.V2
         }
 
 
-        private WebApiRequestOptions BuildRequestOptions(IDictionary<string, string>? query, IDictionary<string, string> headers, string appendPath = "") => new WebApiRequestOptions
+        private WebApiRequestOptions BuildRequestOptions(IDictionary<string, string>? query, IDictionary<string, string> headers, string appendPath = "") => new()
         {
             BaseUrl = this.baseUrl,
             EndpointPath = $"{this.endpointPath}{appendPath}",

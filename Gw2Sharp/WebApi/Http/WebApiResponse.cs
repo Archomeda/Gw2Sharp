@@ -73,7 +73,7 @@ namespace Gw2Sharp.WebApi.Http
             if (statusCode.HasValue)
                 this.StatusCode = statusCode.Value;
             this.CacheState = cacheState;
-            if (!(responseHeaders is null))
+            if (responseHeaders is not null)
                 this.ResponseHeaders = responseHeaders.ShallowCopy();
         }
 

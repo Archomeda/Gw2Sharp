@@ -374,7 +374,7 @@ namespace Gw2Sharp.ChatLinks
 
         /// <inheritdoc />
         public bool Equals(BuildChatLink? other) =>
-            !(other is null) &&
+            other is not null &&
             this.Type == other.Type &&
             this.Profession == other.Profession &&
             this.Specialization1Id == other.Specialization1Id &&

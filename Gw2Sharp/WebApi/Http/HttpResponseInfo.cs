@@ -112,7 +112,7 @@ namespace Gw2Sharp.WebApi.Http
             }
             catch (Exception ex)
             {
-                if (ex is FormatException || ex is OverflowException)
+                if (ex is FormatException or OverflowException)
                     return default!;
                 throw;
             }

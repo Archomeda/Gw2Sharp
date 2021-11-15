@@ -21,7 +21,7 @@ namespace Gw2Sharp
         private ICacheMethod renderCacheMethod;
         private string accessToken;
         private string apiBaseUrl = "https://api.guildwars2.com/";
-        private readonly ObservableCollection<IWebApiMiddleware> middleware = new ObservableCollection<IWebApiMiddleware>();
+        private readonly ObservableCollection<IWebApiMiddleware> middleware = new();
 
 
         /// <summary>

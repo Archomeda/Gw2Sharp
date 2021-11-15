@@ -18,7 +18,7 @@ namespace Gw2Sharp.WebApi.Middleware
         /// <summary>
         /// The settings that are used when deserializing JSON error objects.
         /// </summary>
-        private static readonly JsonSerializerOptions deserializerOptions = new JsonSerializerOptions
+        private static readonly JsonSerializerOptions deserializerOptions = new()
         {
             AllowTrailingCommas = true,
             PropertyNameCaseInsensitive = true,
@@ -40,7 +40,7 @@ namespace Gw2Sharp.WebApi.Middleware
                 if (httpResponse == null)
                     return null!;
 
-                if ((int)httpResponse.StatusCode >= 200 && (int)httpResponse.StatusCode <= 299)
+                if ((int)httpResponse.StatusCode is >= 200 and <= 299)
                     return httpResponse;
 
                 ErrorObject? error;

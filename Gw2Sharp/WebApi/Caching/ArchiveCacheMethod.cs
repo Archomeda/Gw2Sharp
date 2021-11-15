@@ -5,6 +5,7 @@ using System.IO;
 using System.IO.Compression;
 using System.Net;
 using System.Threading.Tasks;
+using DisposeGenerator.Attributes;
 
 namespace Gw2Sharp.WebApi.Caching
 {
@@ -12,7 +13,8 @@ namespace Gw2Sharp.WebApi.Caching
     /// A file archive caching method.
     /// Particularly useful for caching files for a longer period of time, such as files from the render API.
     /// </summary>
-    public class ArchiveCacheMethod : BaseCacheMethod
+    [DisposeAll]
+    public partial class ArchiveCacheMethod : BaseCacheMethod
     {
         private const int ARCHIVE_VERSION = 1;
 
@@ -21,10 +23,10 @@ namespace Gw2Sharp.WebApi.Caching
         private const string METADATA_EXTENSION = ".metadata";
         private const string STATUS_CODE_KEY = "_statuscode";
 
-        private FileStream archiveStream;
         private ZipArchive archive;
+        private FileStream archiveStream;
         private Dictionary<string, DateTimeOffset>? expiryCache;
-        private readonly object operationLock = new object();
+        private readonly object operationLock = new();
 
         /// <summary>
         /// Creates a new file archive caching method with the default cache duration (one day).
@@ -49,7 +51,7 @@ namespace Gw2Sharp.WebApi.Caching
             lock (this.operationLock)
             {
                 var versionEntry = this.archive.GetEntry(ARCHIVE_VERSION_FILENAME);
-                if (!(versionEntry is null))
+                if (versionEntry is not null)
                 {
                     using var stream = versionEntry.Open();
                     using var reader = new StreamReader(stream);
@@ -76,7 +78,7 @@ namespace Gw2Sharp.WebApi.Caching
             {
                 this.expiryCache = new Dictionary<string, DateTimeOffset>();
                 var expiryIndexEntry = this.archive.GetEntry(EXPIRY_INDEX_FILENAME);
-                if (!(expiryIndexEntry is null))
+                if (expiryIndexEntry is not null)
                 {
                     using var entryStream = expiryIndexEntry.Open();
                     using var streamReader = new StreamReader(entryStream);
@@ -160,7 +162,7 @@ namespace Gw2Sharp.WebApi.Caching
             using var entryStream = zipEntry.Open();
             using var writer = new StreamWriter(entryStream);
 
-            if (!(cacheItem.Metadata is null))
+            if (cacheItem.Metadata is not null)
             {
                 foreach (var kvp in cacheItem.Metadata)
                     writer.WriteLine($"{kvp.Key}={kvp.Value}");
@@ -307,24 +309,6 @@ namespace Gw2Sharp.WebApi.Caching
             this.archiveStream.Dispose();
             this.archiveStream = File.Open(fileName, FileMode.Truncate, FileAccess.ReadWrite, FileShare.None);
             this.archive = new ZipArchive(this.archiveStream, ZipArchiveMode.Update);
-        }
-
-        private bool isDisposed = false; // To detect redundant calls
-
-        /// <inheritdoc />
-        protected override void Dispose(bool isDisposing)
-        {
-            if (this.isDisposed)
-                return;
-
-            if (isDisposing)
-            {
-                this.archive.Dispose();
-                this.archiveStream.Dispose();
-            }
-
-            base.Dispose(isDisposing);
-            this.isDisposed = true;
         }
     }
 }
