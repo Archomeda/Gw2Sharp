@@ -10,7 +10,9 @@
 
     <PackageId>Gw2Sharp</PackageId>
     <Authors>Archomeda</Authors>
-    <Description>Gw2Sharp is a cross-platform .NET wrapper library for the official Guild Wars 2 API.</Description>
+    <Description>Gw2Sharp is a cross-platform .NET wrapper library for the official Guild Wars 2 API.
+
+Check the changelog at https://github.com/Archomeda/Gw2Sharp/blob/master/CHANGELOG.md</Description>
     <PackageTags>Guild Wars 2;GW2</PackageTags>
     <PackageProjectUrl>https://archomeda.github.io/Gw2Sharp</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Archomeda/Gw2Sharp</RepositoryUrl>
