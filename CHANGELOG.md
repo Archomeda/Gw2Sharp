@@ -1,5 +1,13 @@
 # Gw2Sharp History
 
+## 1.6.0 (15 November 2021)
+This release includes a feature to change the API hostname(s) in case you want to run a proxy API server. See [the documentation](https://archomeda.github.io/Gw2Sharp/master/guides/proxy.html) for more information.
+
+### HTTP
+- Add `ApiBaseUrl` and `RenderBaseUrl` properties to `Gw2Sharp.IConnection` ([#108](https://github.com/Archomeda/Gw2Sharp/issues/108), [#107](https://github.com/Archomeda/Gw2Sharp/pull/109))
+
+---
+
 ## 1.5.0 (13 November 2021)
 This release contains one small addition to make changing the request timeout easier.
 

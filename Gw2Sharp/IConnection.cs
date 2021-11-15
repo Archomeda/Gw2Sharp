@@ -34,6 +34,17 @@ namespace Gw2Sharp
         string UserAgent { get; }
 
         /// <summary>
+        /// The API base URL that is used to construct the final URL for the API requests.
+        /// </summary>
+        string ApiBaseUrl { get; }
+
+        /// <summary>
+        /// The render base URL that is used to replace the render API hostname that are returned from the API.
+        /// If <see langword="null"/>, the hostname is not replaced.
+        /// </summary>
+        string? RenderBaseUrl { get; }
+
+        /// <summary>
         /// Gets the request timeout that's used for the API requests.
         /// If <see cref="TimeSpan.Zero"/> or less, the default timeout is used.
         /// This value can be <see cref="Timeout.InfiniteTimeSpan"/> to have no timeout.

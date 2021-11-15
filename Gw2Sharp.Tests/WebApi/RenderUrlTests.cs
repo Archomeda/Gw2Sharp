@@ -21,15 +21,16 @@ namespace Gw2Sharp.Tests.WebApi
             this.client.WebApi.Render.Returns(Substitute.For<IGw2WebApiRenderClient>());
         }
 
-        [Fact]
-        public void ConstructorTest()
+        [Theory]
+        [InlineData("https://render.guildwars2.com/file/test/1234.png", null, "https://render.guildwars2.com/file/test/1234.png")]
+        [InlineData("https://render.guildwars2.com/file/test/1234.png", "https://proxy.render.example.com/", "https://proxy.render.example.com/file/test/1234.png")]
+        public void ConstructorTest(string url, string? hostnameReplacement, string expected)
         {
-            string url = "https://render.guildwars2.com/file/test/1234.png";
-            var renderUrl = new RenderUrl(this.client, url);
+            var renderUrl = new RenderUrl(this.client, url, hostnameReplacement);
 
-            Assert.Equal(url, renderUrl.Url.ToString());
-            Assert.Equal(url, renderUrl.ToString());
-            Assert.Equal(url, renderUrl);
+            Assert.Equal(expected, renderUrl.Url.ToString());
+            Assert.Equal(expected, renderUrl.ToString());
+            Assert.Equal(expected, renderUrl);
             Assert.Equal(this.client, renderUrl.Gw2Client);
         }
 
@@ -43,7 +44,7 @@ namespace Gw2Sharp.Tests.WebApi
             this.client.WebApi.Render.DownloadToByteArrayAsync(Arg.Any<Uri>()).Returns(expected);
             this.client.WebApi.Render.DownloadToByteArrayAsync(Arg.Any<Uri>(), Arg.Any<CancellationToken>()).Returns(expected);
 
-            var renderUrl = new RenderUrl(this.client, url);
+            var renderUrl = new RenderUrl(this.client, url, null);
             byte[] actual = await renderUrl.DownloadToByteArrayAsync();
 
             Assert.Equal(expected, actual);
@@ -55,7 +56,7 @@ namespace Gw2Sharp.Tests.WebApi
             string url = "https://render.guildwars2.com/file/test/1234.png";
             using var memoryStream = new MemoryStream();
 
-            var renderUrl = new RenderUrl(this.client, url);
+            var renderUrl = new RenderUrl(this.client, url, null);
             await renderUrl.DownloadToStreamAsync(memoryStream);
 
             int notReceived = 0;

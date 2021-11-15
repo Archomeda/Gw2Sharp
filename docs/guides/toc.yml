@@ -16,6 +16,8 @@
       topicUid: Guides.LastModified
     - name: Middleware
       topicUid: Guides.Middleware
+    - name: Proxying the API
+      topicUid: Guides.Proxy
     - name: Subtokens
       topicUid: Guides.Subtokens
     - name: Debug symbols

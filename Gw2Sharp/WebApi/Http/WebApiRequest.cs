@@ -29,7 +29,7 @@ namespace Gw2Sharp.WebApi.Http
         /// <summary>
         /// The settings that are used when deserializing JSON objects.
         /// </summary>
-        private static JsonSerializerOptions GetDeserializerSettings(IGw2Client client)
+        private static JsonSerializerOptions GetDeserializerSettings(IConnection connection, IGw2Client client)
         {
             var options = new JsonSerializerOptions
             {
@@ -43,7 +43,7 @@ namespace Gw2Sharp.WebApi.Http
             options.Converters.Add(new ApiObjectListConverter());
             options.Converters.Add(new CastableTypeConverter());
             options.Converters.Add(new DictionaryIntKeyConverter());
-            options.Converters.Add(new RenderUrlConverter(client));
+            options.Converters.Add(new RenderUrlConverter(connection, client));
             options.Converters.Add(new TimeSpanConverter());
             return options;
         }
@@ -109,7 +109,7 @@ namespace Gw2Sharp.WebApi.Http
         /// <inheritdoc />
         public async Task<IWebApiResponse<TResponse>> ExecuteAsync<TResponse>(CancellationToken cancellationToken = default)
         {
-            var deserializerSettings = GetDeserializerSettings(this.gw2Client);
+            var deserializerSettings = GetDeserializerSettings(this.connection, this.gw2Client);
 
             var call = requestCalls.GetOrAdd(this.connection.MiddlewareHashCode, _ => this.GenerateRequestCall());
             var response = await call(new MiddlewareContext(this.connection, this), cancellationToken).ConfigureAwait(false);

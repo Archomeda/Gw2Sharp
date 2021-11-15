@@ -9,11 +9,6 @@ namespace Gw2Sharp.WebApi
     /// </summary>
     public class Gw2WebApiClient : IGw2WebApiClient
     {
-        /// <summary>
-        /// The base URL for making Guild Wars 2 API requests.
-        /// </summary>
-        internal static Uri UrlBase => new Uri("https://api.guildwars2.com");
-
         private readonly IGw2WebApiRenderClient render;
         private readonly IGw2WebApiV2Client v2;
 

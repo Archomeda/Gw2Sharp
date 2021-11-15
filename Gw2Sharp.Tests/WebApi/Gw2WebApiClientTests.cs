@@ -10,7 +10,7 @@ namespace Gw2Sharp.Tests.WebApi
         [Fact]
         public void ConstructorTest()
         {
-            var connection = Substitute.For<IConnection>();
+            var connection = new Connection();
             var gw2Client = Substitute.For<IGw2Client>();
 
             var client = new Gw2WebApiClient(connection, gw2Client);

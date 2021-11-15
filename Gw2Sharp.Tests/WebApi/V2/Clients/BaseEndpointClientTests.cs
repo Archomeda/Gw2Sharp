@@ -205,7 +205,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
         protected virtual void AssertRequest(CallInfo callInfo, IEndpointClient client, string pathAndQuery)
         {
             // Format the URI to how it's supposed to be
-            var uri = new Uri(Gw2WebApiV2Client.UrlBase, $"{client.EndpointPath}{pathAndQuery}");
+            var uri = new Uri(new Uri(client.BaseUrl), $"{client.EndpointPath}{pathAndQuery}");
             var parameterProperties = client.GetType()
                 .GetProperties(BindingFlags.Public | BindingFlags.Instance)
                 .Where(p => p.GetCustomAttribute<EndpointQueryParameterAttribute>() != null);

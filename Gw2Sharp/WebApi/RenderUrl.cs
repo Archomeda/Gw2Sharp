@@ -18,10 +18,12 @@ namespace Gw2Sharp.WebApi
         /// </summary>
         /// <param name="client">The Guild Wars 2 client.</param>
         /// <param name="url">The URL to a resource on the Guild Wars 2 render service API.</param>
-        internal RenderUrl(IGw2Client client, string url)
+        /// <param name="baseUrl">The base URL that is used instead of the hostname. If <see langword="null"/>, the hostname isn't replaced.</param>
+        internal RenderUrl(IGw2Client client, string url, string? baseUrl)
         {
             this.Gw2Client = client;
-            this.Url = new Uri(url);
+            var uri = new Uri(url);
+            this.Url = baseUrl is null ? uri : new Uri(new Uri(baseUrl), uri.PathAndQuery);
         }
 
 
