@@ -22,6 +22,9 @@ references:
 - uid: Guides.Middleware
   name: Middleware
   href: guides/middleware.html
+- uid: Guides.Proxy
+  name: Proxying the API
+  href: guides/proxy.html
 - uid: Guides.RenderUrl
   name: Using RenderUrl
   href: guides/render-url.html
@@ -2632,6 +2635,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Connection.AccessToken
   nameWithType: Connection.AccessToken
+- uid: Gw2Sharp.Connection.ApiBaseUrl
+  name: ApiBaseUrl
+  href: api/Gw2Sharp.Connection.html#Gw2Sharp_Connection_ApiBaseUrl
+  commentId: P:Gw2Sharp.Connection.ApiBaseUrl
+  fullName: Gw2Sharp.Connection.ApiBaseUrl
+  nameWithType: Connection.ApiBaseUrl
+- uid: Gw2Sharp.Connection.ApiBaseUrl*
+  name: ApiBaseUrl
+  href: api/Gw2Sharp.Connection.html#Gw2Sharp_Connection_ApiBaseUrl_
+  commentId: Overload:Gw2Sharp.Connection.ApiBaseUrl
+  isSpec: "True"
+  fullName: Gw2Sharp.Connection.ApiBaseUrl
+  nameWithType: Connection.ApiBaseUrl
 - uid: Gw2Sharp.Connection.CacheMethod
   name: CacheMethod
   href: api/Gw2Sharp.Connection.html#Gw2Sharp_Connection_CacheMethod
@@ -2710,6 +2726,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.Connection.MiddlewareHashCode
   nameWithType: Connection.MiddlewareHashCode
+- uid: Gw2Sharp.Connection.RenderBaseUrl
+  name: RenderBaseUrl
+  href: api/Gw2Sharp.Connection.html#Gw2Sharp_Connection_RenderBaseUrl
+  commentId: P:Gw2Sharp.Connection.RenderBaseUrl
+  fullName: Gw2Sharp.Connection.RenderBaseUrl
+  nameWithType: Connection.RenderBaseUrl
+- uid: Gw2Sharp.Connection.RenderBaseUrl*
+  name: RenderBaseUrl
+  href: api/Gw2Sharp.Connection.html#Gw2Sharp_Connection_RenderBaseUrl_
+  commentId: Overload:Gw2Sharp.Connection.RenderBaseUrl
+  isSpec: "True"
+  fullName: Gw2Sharp.Connection.RenderBaseUrl
+  nameWithType: Connection.RenderBaseUrl
 - uid: Gw2Sharp.Connection.RenderCacheDuration
   name: RenderCacheDuration
   href: api/Gw2Sharp.Connection.html#Gw2Sharp_Connection_RenderCacheDuration
@@ -2864,6 +2893,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.IConnection.AccessToken
   nameWithType: IConnection.AccessToken
+- uid: Gw2Sharp.IConnection.ApiBaseUrl
+  name: ApiBaseUrl
+  href: api/Gw2Sharp.IConnection.html#Gw2Sharp_IConnection_ApiBaseUrl
+  commentId: P:Gw2Sharp.IConnection.ApiBaseUrl
+  fullName: Gw2Sharp.IConnection.ApiBaseUrl
+  nameWithType: IConnection.ApiBaseUrl
+- uid: Gw2Sharp.IConnection.ApiBaseUrl*
+  name: ApiBaseUrl
+  href: api/Gw2Sharp.IConnection.html#Gw2Sharp_IConnection_ApiBaseUrl_
+  commentId: Overload:Gw2Sharp.IConnection.ApiBaseUrl
+  isSpec: "True"
+  fullName: Gw2Sharp.IConnection.ApiBaseUrl
+  nameWithType: IConnection.ApiBaseUrl
 - uid: Gw2Sharp.IConnection.CacheMethod
   name: CacheMethod
   href: api/Gw2Sharp.IConnection.html#Gw2Sharp_IConnection_CacheMethod
@@ -2942,6 +2984,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.IConnection.MiddlewareHashCode
   nameWithType: IConnection.MiddlewareHashCode
+- uid: Gw2Sharp.IConnection.RenderBaseUrl
+  name: RenderBaseUrl
+  href: api/Gw2Sharp.IConnection.html#Gw2Sharp_IConnection_RenderBaseUrl
+  commentId: P:Gw2Sharp.IConnection.RenderBaseUrl
+  fullName: Gw2Sharp.IConnection.RenderBaseUrl
+  nameWithType: IConnection.RenderBaseUrl
+- uid: Gw2Sharp.IConnection.RenderBaseUrl*
+  name: RenderBaseUrl
+  href: api/Gw2Sharp.IConnection.html#Gw2Sharp_IConnection_RenderBaseUrl_
+  commentId: Overload:Gw2Sharp.IConnection.RenderBaseUrl
+  isSpec: "True"
+  fullName: Gw2Sharp.IConnection.RenderBaseUrl
+  nameWithType: IConnection.RenderBaseUrl
 - uid: Gw2Sharp.IConnection.RenderCacheDuration
   name: RenderCacheDuration
   href: api/Gw2Sharp.IConnection.html#Gw2Sharp_IConnection_RenderCacheDuration
@@ -3469,12 +3524,12 @@ references:
   commentId: T:Gw2Sharp.Json.Converters.RenderUrlConverter
   fullName: Gw2Sharp.Json.Converters.RenderUrlConverter
   nameWithType: RenderUrlConverter
-- uid: Gw2Sharp.Json.Converters.RenderUrlConverter.#ctor(Gw2Sharp.IGw2Client)
-  name: RenderUrlConverter(IGw2Client)
-  href: api/Gw2Sharp.Json.Converters.RenderUrlConverter.html#Gw2Sharp_Json_Converters_RenderUrlConverter__ctor_Gw2Sharp_IGw2Client_
-  commentId: M:Gw2Sharp.Json.Converters.RenderUrlConverter.#ctor(Gw2Sharp.IGw2Client)
-  fullName: Gw2Sharp.Json.Converters.RenderUrlConverter.RenderUrlConverter(Gw2Sharp.IGw2Client)
-  nameWithType: RenderUrlConverter.RenderUrlConverter(IGw2Client)
+- uid: Gw2Sharp.Json.Converters.RenderUrlConverter.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client)
+  name: RenderUrlConverter(IConnection, IGw2Client)
+  href: api/Gw2Sharp.Json.Converters.RenderUrlConverter.html#Gw2Sharp_Json_Converters_RenderUrlConverter__ctor_Gw2Sharp_IConnection_Gw2Sharp_IGw2Client_
+  commentId: M:Gw2Sharp.Json.Converters.RenderUrlConverter.#ctor(Gw2Sharp.IConnection,Gw2Sharp.IGw2Client)
+  fullName: Gw2Sharp.Json.Converters.RenderUrlConverter.RenderUrlConverter(Gw2Sharp.IConnection, Gw2Sharp.IGw2Client)
+  nameWithType: RenderUrlConverter.RenderUrlConverter(IConnection, IGw2Client)
 - uid: Gw2Sharp.Json.Converters.RenderUrlConverter.#ctor*
   name: RenderUrlConverter
   href: api/Gw2Sharp.Json.Converters.RenderUrlConverter.html#Gw2Sharp_Json_Converters_RenderUrlConverter__ctor_
