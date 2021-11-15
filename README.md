@@ -20,7 +20,7 @@ The following services supported by Gw2Sharp:
 - Chat links - [introduction](https://archomeda.github.io/Gw2Sharp/master/guides/introduction.html#chat-links)
 
 ## Requirements
-This project targets .NET Core 3.1 and .NET Standard 2.0 for compatibility with older .NET Frameworks.
+This project targets .NET 5, .NET Core 3.1 and .NET Standard 2.0 for compatibility with older .NET Frameworks (check the [.NET Standard 2.0 compatibility table](https://docs.microsoft.com/en-us/dotnet/standard/net-standard#net-implementation-support))
 It supports the C# 8.0 nullable reference types feature for your convenience, but it's not required when consuming the library.
 
 ## Installing
@@ -31,8 +31,8 @@ For basic usage, check out the [introductory guide](https://archomeda.github.io/
 You can find the other guides there as well to help you get started on the advanced usage of Gw2Sharp, such as caching and exception handling.
 
 ## Compiling
-Visual Studio 2019 (16.10) or later is required, along with the .NET 5 SDK and .NET Core 3.1 SDK. 
-If the [.NET Core SDK 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1) isn't installed automatically for some reason, make sure to install that as well.
+Visual Studio 2019 (16.10) or later is required, along with the [.NET 5 SDK](https://dotnet.microsoft.com/download/dotnet/5.0) and [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet/3.1). 
+If they aren't installed automatically for some reason, make sure to install them manually.
 
 ## Contributing
 Contributing is always welcome, but please keep them in scope of this project.

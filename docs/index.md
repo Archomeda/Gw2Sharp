@@ -12,7 +12,7 @@ The following services are supported by Gw2Sharp:
 - Chat links - [introduction](xref:Guides.Introduction#chat-links)
 
 ## Requirements
-This project targets .NET Core 3.1 and .NET Standard 2.0 for compatibility with older .NET Frameworks.
+This project targets .NET 5, .NET Core 3.1 and .NET Standard 2.0 for compatibility with older .NET Frameworks (check the [.NET Standard 2.0 compatibility table](https://docs.microsoft.com/en-us/dotnet/standard/net-standard#net-implementation-support))
 It supports the C# 8.0 nullable reference types feature for your convenience, but it's not required when consuming the library.
 
 ## Installing
