@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using DisposeGenerator.Attributes;
+using DisposeGenerator;
 using Gw2Sharp.Extensions;
 
 namespace Gw2Sharp.WebApi.Caching

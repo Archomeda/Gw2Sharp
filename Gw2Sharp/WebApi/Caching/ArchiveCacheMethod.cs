@@ -5,7 +5,7 @@ using System.IO;
 using System.IO.Compression;
 using System.Net;
 using System.Threading.Tasks;
-using DisposeGenerator.Attributes;
+using DisposeGenerator;
 
 namespace Gw2Sharp.WebApi.Caching
 {

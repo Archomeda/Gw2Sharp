@@ -1,6 +1,6 @@
 using System;
 using System.Runtime.Versioning;
-using DisposeGenerator.Attributes;
+using DisposeGenerator;
 using Gw2Sharp.Mumble;
 using Gw2Sharp.WebApi;
 

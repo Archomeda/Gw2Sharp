@@ -5,7 +5,7 @@ using System.Linq;
 using System.Net.Sockets;
 using System.Runtime.Versioning;
 using System.Text.Json;
-using DisposeGenerator.Attributes;
+using DisposeGenerator;
 using Gw2Sharp.Json;
 using Gw2Sharp.Models;
 using Gw2Sharp.Mumble.Models;

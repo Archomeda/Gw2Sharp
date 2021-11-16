@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
-using DisposeGenerator.Attributes;
+using DisposeGenerator;
 using Gw2Sharp.Extensions;
 
 namespace Gw2Sharp.WebApi.Http
@@ -58,6 +58,7 @@ namespace Gw2Sharp.WebApi.Http
         { }
 
         /// <inheritdoc />
+        [IncludeDispose]
         public Stream ContentStream { get; set; }
 
         /// <inheritdoc />
@@ -71,12 +72,5 @@ namespace Gw2Sharp.WebApi.Http
 
         /// <inheritdoc />
         public IReadOnlyDictionary<string, string> ResponseHeaders { get; } = new Dictionary<string, string>().AsReadOnly();
-
-
-        [Disposer]
-        private void DisposeStreams()
-        {
-            this.ContentStream?.Dispose();
-        }
     }
 }
