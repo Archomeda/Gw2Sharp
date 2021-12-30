@@ -1,22 +1,18 @@
 using System;
 using System.Collections.Concurrent;
-using System.IO.MemoryMappedFiles;
 using System.Linq;
 using System.Net.Sockets;
-using System.Runtime.Versioning;
 using System.Text.Json;
 using Gw2Sharp.Json;
 using Gw2Sharp.Models;
 using Gw2Sharp.Mumble.Models;
+using static Gw2Sharp.Mumble.IGw2MumbleClientReader;
 
 namespace Gw2Sharp.Mumble
 {
     /// <summary>
     /// A client for the Guild Wars 2 Mumble Link API service.
     /// </summary>
-#if NET5_0_OR_GREATER
-    [SupportedOSPlatform("windows")]
-#endif
     public class Gw2MumbleClient : IGw2MumbleClient
     {
         /// <summary>
@@ -37,10 +33,10 @@ namespace Gw2Sharp.Mumble
         private readonly object identityLock = new object();
         private readonly object serverAddressLock = new object();
 
-        private readonly Lazy<MemoryMappedFile> memoryMappedFile;
-        private readonly Lazy<MemoryMappedViewAccessor> memoryMappedViewAccessor;
-
         private Gw2LinkedMem linkedMem;
+        private readonly Gw2MumbleLinkReaderFactory readerFactory;
+        private readonly IGw2MumbleClientReader reader;
+        private readonly bool isRoot = false;
 
         private readonly ConcurrentDictionary<string, WeakReference<Gw2MumbleClient>> mumbleClientCache;
         private readonly string mumbleLinkName;
@@ -48,19 +44,19 @@ namespace Gw2Sharp.Mumble
         /// <summary>
         /// Creates a new <see cref="Gw2MumbleClient"/>.
         /// </summary>
+        /// <param name="readerFactory">The reader factory.</param>
         /// <param name="mumbleLinkName">The Mumble Link name.</param>
         /// <param name="parent">The parent Mumble Link client to track child objects.</param>
-        protected internal Gw2MumbleClient(string mumbleLinkName = DEFAULT_MUMBLE_LINK_MAP_NAME, Gw2MumbleClient? parent = null)
+        protected internal Gw2MumbleClient(Gw2MumbleLinkReaderFactory readerFactory, string mumbleLinkName = DEFAULT_MUMBLE_LINK_MAP_NAME, Gw2MumbleClient? parent = null)
         {
+            this.readerFactory = readerFactory ?? throw new ArgumentNullException(nameof(readerFactory));
+            this.reader = this.readerFactory(mumbleLinkName);
+            this.isRoot = parent is null;
+
             this.mumbleClientCache = parent?.mumbleClientCache ?? new ConcurrentDictionary<string, WeakReference<Gw2MumbleClient>>();
             this.mumbleLinkName = !string.IsNullOrEmpty(mumbleLinkName) ? mumbleLinkName : DEFAULT_MUMBLE_LINK_MAP_NAME;
             if (this.mumbleLinkName == DEFAULT_MUMBLE_LINK_MAP_NAME)
                 this.mumbleClientCache.TryAdd(DEFAULT_MUMBLE_LINK_MAP_NAME, new WeakReference<Gw2MumbleClient>(this, false));
-
-            this.memoryMappedFile = new Lazy<MemoryMappedFile>(
-                () => MemoryMappedFile.CreateOrOpen(this.mumbleLinkName, Gw2LinkedMem.SIZE, MemoryMappedFileAccess.ReadWrite), true);
-            this.memoryMappedViewAccessor = new Lazy<MemoryMappedViewAccessor>(
-                () => this.memoryMappedFile.Value.CreateViewAccessor(), true);
         }
 
         private unsafe void UpdateIdentityIfNeeded()
@@ -117,11 +113,11 @@ namespace Gw2Sharp.Mumble
             get
             {
                 var reference = this.mumbleClientCache.GetOrAdd(name,
-                    x => new WeakReference<Gw2MumbleClient>(new Gw2MumbleClient(name, this), false));
+                    x => new WeakReference<Gw2MumbleClient>(new Gw2MumbleClient(this.readerFactory, name, this), false));
 
                 if (!reference.TryGetTarget(out var client))
                 {
-                    client = new Gw2MumbleClient(name, this);
+                    client = new Gw2MumbleClient(this.readerFactory, name, this);
                     reference.SetTarget(client);
                 }
                 return client;
@@ -345,7 +341,9 @@ namespace Gw2Sharp.Mumble
             if (this.isDisposed)
                 throw new ObjectDisposedException(nameof(Gw2MumbleClient));
 
-            this.memoryMappedViewAccessor.Value.Read<Gw2LinkedMem>(0, out var mem);
+            if (!this.reader.IsOpen)
+                this.reader.Open();
+            var mem = this.reader.Read();
             int oldTick = this.Tick;
 
             if (mem.uiTick != oldTick)
@@ -384,13 +382,10 @@ namespace Gw2Sharp.Mumble
 
             if (disposing)
             {
-                if (this.memoryMappedViewAccessor.IsValueCreated)
-                    this.memoryMappedViewAccessor.Value.Dispose();
-                if (this.memoryMappedFile.IsValueCreated)
-                    this.memoryMappedFile.Value.Dispose();
+                this.reader.Dispose();
 
-                // Only dispose the full client cache tree if we are the default one
-                if (this.mumbleLinkName == DEFAULT_MUMBLE_LINK_MAP_NAME)
+                // Only dispose the full client cache tree if we are the default one and are the root
+                if (this.mumbleLinkName == DEFAULT_MUMBLE_LINK_MAP_NAME && this.isRoot)
                 {
                     foreach (var reference in this.mumbleClientCache.Select(x => x.Value))
                     {

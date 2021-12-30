@@ -4,10 +4,12 @@ using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.Diagnostics;
 using System.Net.Http.Headers;
+using Gw2Sharp.Mumble;
 using Gw2Sharp.WebApi;
 using Gw2Sharp.WebApi.Caching;
 using Gw2Sharp.WebApi.Http;
 using Gw2Sharp.WebApi.Middleware;
+using static Gw2Sharp.Mumble.IGw2MumbleClientReader;
 
 namespace Gw2Sharp
 {
@@ -100,6 +102,21 @@ namespace Gw2Sharp
 
             this.middleware.CollectionChanged += this.Middleware_CollectionChanged;
             this.UseDefaultMiddleware();
+
+#if NET5_0_OR_GREATER
+            if (OperatingSystem.IsWindows())
+#else
+            if (Environment.OSVersion.Platform == PlatformID.Win32NT)
+#endif
+            {
+#pragma warning disable CA1416 // We can't get a different platform than Windows here, but the analyzer doesn't understand this
+                this.MumbleClientReaderFactory = x => new Gw2MumbleClientReader(x);
+#pragma warning restore CA1416
+            }
+            else
+            {
+                this.MumbleClientReaderFactory = _ => new UnsupportedMumblePlatformClientReader();
+            }
         }
 
 
@@ -178,6 +195,10 @@ namespace Gw2Sharp
 
         /// <inheritdoc />
         public int MiddlewareHashCode { get; protected set; }
+
+        /// <inheritdoc />
+        public Gw2MumbleLinkReaderFactory MumbleClientReaderFactory { get; set; }
+
 
         /// <summary>
         /// Resets this connection's middleware to the default list.

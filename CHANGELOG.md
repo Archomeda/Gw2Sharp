@@ -1,10 +1,18 @@
 # Gw2Sharp History
 
-## 1.6.0 (15 November 2021)
-This release includes a feature to change the API hostname(s) in case you want to run a proxy API server. See [the documentation](https://archomeda.github.io/Gw2Sharp/master/guides/proxy.html) for more information.
+## 1.6.0 (30 December 2021)
+This release includes support for a couple of additional customizations:
+- Ability to change the API hostname(s) in case you want to run a proxy API server (see [the documentation](https://archomeda.github.io/Gw2Sharp/master/guides/proxy.html) for more information)
+- Ability to change the Mumble Link reader for mocking, or to use a different method and/or source for Mumble Link
 
 ### HTTP
-- Add `ApiBaseUrl` and `RenderBaseUrl` properties to `Gw2Sharp.IConnection` ([#108](https://github.com/Archomeda/Gw2Sharp/issues/108), [#107](https://github.com/Archomeda/Gw2Sharp/pull/109))
+- Add `ApiBaseUrl` and `RenderBaseUrl` properties to `Gw2Sharp.IConnection` ([#108](https://github.com/Archomeda/Gw2Sharp/issues/108), [#109](https://github.com/Archomeda/Gw2Sharp/pull/109))
+
+### Mumble Link
+- Add support for custom Mumble Link readers ([#110](https://github.com/Archomeda/Gw2Sharp/pull/110))
+  -  Add `MumbleClientReaderFactory` property to `Gw2Sharp.IConnection` that constructs a new Mumble Link reader that implements `Gw2Sharp.Mumble.IGw2MumbleClientReader`
+  - .NET 5 and up: `SupportedOSPlatformAttribute`s have been moved around to support these changes
+  - The following structs that are used in the reader have been made public: `Gw2Sharp.Mumble.Gw2LinkedMem`, `Gw2Sharp.Mumble.Gw2Context` and `Gw2Sharp.Mumble.Models.UiState`
 
 ---
 
