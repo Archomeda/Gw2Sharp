@@ -27,7 +27,7 @@ jobs:
       matrix:
         os:
           - ubuntu-latest
-          - windows-latest
+          - windows-2022
         dotnet:
           - net6.0
           - net5.0
@@ -45,7 +45,7 @@ jobs:
 
   sonarcloud:
     name: Analysis
-    runs-on: windows-latest
+    runs-on: windows-2022
     needs: [pre]
     steps:
       - uses: actions/checkout@v2
