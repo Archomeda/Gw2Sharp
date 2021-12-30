@@ -1,5 +1,8 @@
 # Gw2Sharp History
 
+## 1.6.1 (30 December 2021)
+This is a hotfix release that actually includes the Mumble Link additions as listed in v1.6.0.
+
 ## 1.6.0 (30 December 2021)
 This release includes support for a couple of additional customizations:
 - Ability to change the API hostname(s) in case you want to run a proxy API server (see [the documentation](https://archomeda.github.io/Gw2Sharp/master/guides/proxy.html) for more information)
