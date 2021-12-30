@@ -30,7 +30,7 @@ Check the changelog at https://github.com/Archomeda/Gw2Sharp/blob/master/CHANGEL
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DisposeGenerator" Version="0.2.0">
+    <PackageReference Include="DisposeGenerator" Version="0.2.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
