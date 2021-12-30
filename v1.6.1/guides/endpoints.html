@@ -1,0 +1,1107 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Supported web API endpoints </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Supported web API endpoints ">
+    <meta name="generator" content="docfx 2.58.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc">
+    <meta property="docfx:tocrel" content="toc">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+                
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../guides/introduction.html" title="Guides">Guides</a>
+                      </li>
+                      <li>
+                          <a href="../api/index.html" title="API Documentation">API Documentation</a>
+                      </li>
+                      <li>
+                          <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/CHANGELOG.md" title="Changelog">Changelog</a>
+                      </li>
+                </ul>    </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+                  
+                  <ul class="nav level1">
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Basic Guides</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="introduction.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                          <li class="active">
+                            <a href="endpoints.html" title="Supported endpoints" class="active">Supported endpoints</a>
+                          </li>
+                          <li class="">
+                            <a href="exception-handling.html" title="Exception handling" class="">Exception handling</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Advanced Guides</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="caching.html" title="Caching" class="">Caching</a>
+                          </li>
+                          <li class="">
+                            <a href="response-info.html" title="Response info" class="">Response info</a>
+                          </li>
+                          <li class="">
+                            <a href="last-modified.html" title="Last-Modified" class="">Last-Modified</a>
+                          </li>
+                          <li class="">
+                            <a href="middleware.html" title="Middleware" class="">Middleware</a>
+                          </li>
+                          <li class="">
+                            <a href="proxy.html" title="Proxying the API" class="">Proxying the API</a>
+                          </li>
+                          <li class="">
+                            <a href="subtokens.html" title="Subtokens" class="">Subtokens</a>
+                          </li>
+                          <li class="">
+                            <a href="symbols.html" title="Debug symbols" class="">Debug symbols</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Tips</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="render-url.html" title="Using RenderUrl" class="">Using RenderUrl</a>
+                          </li>
+                        </ul>  </li>
+                  </ul>        </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Guides.Endpoints">
+<h1 id="supported-web-api-endpoints">Supported web API endpoints</h1>
+
+<p>For your convenience, the following list gives an overview of the web API endpoints that are available in Gw2Sharp:</p>
+<table>
+<thead>
+<tr>
+<th>Icon</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>✔️</td>
+<td>Implemented; no additional endpoint features</td>
+</tr>
+<tr>
+<td>❌</td>
+<td>Not implemented yet, but is available on API</td>
+</tr>
+<tr>
+<td>✖️</td>
+<td>Missing on API</td>
+</tr>
+<tr>
+<td>⚠️</td>
+<td>Deprecated; scheduled for removal in next major release</td>
+</tr>
+<tr>
+<td>🔑</td>
+<td>Endpoint with authentication</td>
+</tr>
+<tr>
+<td>🌐</td>
+<td>Endpoint with locale support</td>
+</tr>
+<tr>
+<td>📆</td>
+<td>Endpoint with <code>Last-Modified</code> support</td>
+</tr>
+<tr>
+<td>📄</td>
+<td>Endpoint with pagination support</td>
+</tr>
+<tr>
+<td>📚</td>
+<td>Endpoint with bulk support</td>
+</tr>
+<tr>
+<td>📦</td>
+<td>Endpoint with bulk all support</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Availability</th>
+<th>Class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> /v2/account</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AccountClient.html"><code>Gw2Client.WebApi.V2.Account</code></a></td>
+</tr>
+<tr>
+<td> /v2/account/achievements</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AccountAchievementsClient.html"><code>Gw2Client.WebApi.V2.Account.Achievements</code></a></td>
+</tr>
+<tr>
+<td> /v2/account/bank</td>
+<td>🔑📆</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AccountBankClient.html"><code>Gw2Client.WebApi.V2.Account.Bank</code></a></td>
+</tr>
+<tr>
+<td> /v2/account/buildstorage</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AccountBuildStorageClient.html"><code>Gw2Client.WebApi.V2.Account.BuildStorage</code></a></td>
+</tr>
+<tr>
+<td> /v2/account/dailycrafting</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AccountDailyCraftingClient.html"><code>Gw2Client.WebApi.V2.Account.DailyCrafting</code></a></td>
+</tr>
+<tr>
+<td> /v2/account/dungeons</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AccountDungeonsClient.html"><code>Gw2Client.WebApi.V2.Account.Dungeons</code></a></td>
+</tr>
+<tr>
+<td> /v2/account/dyes</td>
+<td>🔑📆</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AccountDyesClient.html"><code>Gw2Client.WebApi.V2.Account.Dyes</code></a></td>
+</tr>
+<tr>
+<td> /v2/account/emotes</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AccountEmotesClient.html"><code>Gw2Client.WebApi.V2.Account.Emotes</code></a></td>
+</tr>
+<tr>
+<td> /v2/account/finishers</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AccountFinishersClient.html"><code>Gw2Client.WebApi.V2.Account.Finishers</code></a></td>
+</tr>
+<tr>
+<td> /v2/account/gliders</td>
+<td>🔑📆</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AccountGlidersClient.html"><code>Gw2Client.WebApi.V2.Account.Gliders</code></a></td>
+</tr>
+<tr>
+<td> /v2/account/home</td>
+<td>✔️</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AccountHomeClient.html"><code>Gw2Client.WebApi.V2.Account.Home</code></a></td>
+</tr>
+<tr>
+<td> /v2/account/home/cats</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AccountHomeCatsClient.html"><code>Gw2Client.WebApi.V2.Account.Home.Cats</code></a></td>
+</tr>
+<tr>
+<td> /v2/account/home/nodes</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AccountHomeNodesClient.html"><code>Gw2Client.WebApi.V2.Account.Home.Nodes</code></a></td>
+</tr>
+<tr>
+<td> /v2/account/inventory</td>
+<td>🔑📆</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AccountInventoryClient.html"><code>Gw2Client.WebApi.V2.Account.Inventory</code></a></td>
+</tr>
+<tr>
+<td> /v2/account/legendaryarmory</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AccountLegendaryArmoryClient.html"><code>Gw2Client.WebApi.V2.Account.LegendaryArmory</code></a></td>
+</tr>
+<tr>
+<td> /v2/account/luck<br>➡️ /v2/account/progression</td>
+<td>🔑⚠️</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AccountLuckClient.html"><code>Gw2Client.WebApi.V2.Account.Luck</code></a></td>
+</tr>
+<tr>
+<td> <del>/v2/account/mail</del></td>
+<td>✖️</td>
+<td></td>
+</tr>
+<tr>
+<td> /v2/account/mailcarriers</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AccountMailCarriersClient.html"><code>Gw2Client.WebApi.V2.Account.MailCarriers</code></a></td>
+</tr>
+<tr>
+<td> /v2/account/mapchests</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AccountMapChestsClient.html"><code>Gw2Client.WebApi.V2.Account.MapChests</code></a></td>
+</tr>
+<tr>
+<td> /v2/account/masteries</td>
+<td>🔑📆</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AccountMasteriesClient.html"><code>Gw2Client.WebApi.V2.Account.Masteries</code></a></td>
+</tr>
+<tr>
+<td> /v2/account/mastery/points</td>
+<td>🔑📆</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AccountMasteryPointsClient.html"><code>Gw2Client.WebApi.V2.Account.Mastery.Points</code></a></td>
+</tr>
+<tr>
+<td> /v2/account/materials</td>
+<td>🔑📆</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AccountMaterialsClient.html"><code>Gw2Client.WebApi.V2.Account.Materials</code></a></td>
+</tr>
+<tr>
+<td> /v2/account/minis</td>
+<td>🔑📆</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AccountMinisClient.html"><code>Gw2Client.WebApi.V2.Account.Minis</code></a></td>
+</tr>
+<tr>
+<td> /v2/account/mounts</td>
+<td>✔️</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AccountMountsClient.html"><code>Gw2Client.WebApi.V2.Account.Mounts</code></a></td>
+</tr>
+<tr>
+<td> /v2/account/mounts/skins</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AccountMountsSkinsClient.html"><code>Gw2Client.WebApi.V2.Account.Mounts.Skins</code></a></td>
+</tr>
+<tr>
+<td> /v2/account/mounts/types</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AccountMountsTypesClient.html"><code>Gw2Client.WebApi.V2.Account.Mounts.Types</code></a></td>
+</tr>
+<tr>
+<td> /v2/account/novelties</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AccountNoveltiesClient.html"><code>Gw2Client.WebApi.V2.Account.Novelties.Types</code></a></td>
+</tr>
+<tr>
+<td> /v2/account/outfits</td>
+<td>🔑📆</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AccountOutfitsClient.html"><code>Gw2Client.WebApi.V2.Account.Outfits</code></a></td>
+</tr>
+<tr>
+<td> /v2/account/progression</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AccountProgressionClient.html"><code>Gw2Client.WebApi.V2.Account.Progression</code></a></td>
+</tr>
+<tr>
+<td> /v2/account/pvp/heroes</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AccountPvpHeroesClient.html"><code>Gw2Client.WebApi.V2.Account.Pvp.Heroes</code></a></td>
+</tr>
+<tr>
+<td> /v2/account/raids</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AccountRaidsClient.html"><code>Gw2Client.WebApi.V2.Account.Raids</code></a></td>
+</tr>
+<tr>
+<td> /v2/account/recipes</td>
+<td>🔑📆</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AccountRecipesClient.html"><code>Gw2Client.WebApi.V2.Account.Recipes</code></a></td>
+</tr>
+<tr>
+<td> /v2/account/skins</td>
+<td>🔑📆</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AccountSkinsClient.html"><code>Gw2Client.WebApi.V2.Account.Skins</code></a></td>
+</tr>
+<tr>
+<td> /v2/account/titles</td>
+<td>🔑📆</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AccountTitlesClient.html"><code>Gw2Client.WebApi.V2.Account.Titles</code></a></td>
+</tr>
+<tr>
+<td> /v2/account/wallet</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AccountWalletClient.html"><code>Gw2Client.WebApi.V2.Account.Wallet</code></a></td>
+</tr>
+<tr>
+<td> /v2/account/worldbosses</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AccountWorldBossesClient.html"><code>Gw2Client.WebApi.V2.Account.WorldBosses</code></a></td>
+</tr>
+<tr>
+<td> /v2/achievements</td>
+<td>🌐📄📚</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AchievementsClient.html"><code>Gw2Client.WebApi.V2.Achievements</code></a></td>
+</tr>
+<tr>
+<td> /v2/achievements/categories</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AchievementsCategoriesClient.html"><code>Gw2Client.WebApi.V2.Achievements.Categories</code></a></td>
+</tr>
+<tr>
+<td> /v2/achievements/daily</td>
+<td>✔️</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AchievementsDailyClient.html"><code>Gw2Client.WebApi.V2.Achievements.Daily</code></a></td>
+</tr>
+<tr>
+<td> /v2/achievements/daily/tomorrow</td>
+<td>✔️</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AchievementsDailyTomorrowClient.html"><code>Gw2Client.WebApi.V2.Achievements.Daily.Tomorrow</code></a></td>
+</tr>
+<tr>
+<td> /v2/achievements/groups</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AchievementsGroupsClient.html"><code>Gw2Client.WebApi.V2.Achievements.Groups</code></a></td>
+</tr>
+<tr>
+<td> <del>/v2/adventures</del></td>
+<td>✖️</td>
+<td></td>
+</tr>
+<tr>
+<td> <del>/v2/adventures/<code>:id</code>/leaderboards</del></td>
+<td>✖️</td>
+<td></td>
+</tr>
+<tr>
+<td> <del>/v2/adventures/<code>:id</code>/leaderboards/:board/:region</del></td>
+<td>✖️</td>
+<td></td>
+</tr>
+<tr>
+<td> /v2/backstory/answers</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.BackstoryAnswersClient.html"><code>Gw2Client.WebApi.V2.Backstory.Answers</code></a></td>
+</tr>
+<tr>
+<td> /v2/backstory/questions</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.BackstoryQuestionsClient.html"><code>Gw2Client.WebApi.V2.Backstory.Questions</code></a></td>
+</tr>
+<tr>
+<td> /v2/build</td>
+<td>✔️</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.BuildClient.html"><code>Gw2Client.WebApi.V2.Build</code></a></td>
+</tr>
+<tr>
+<td> /v2/characters</td>
+<td>🔑📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.CharactersClient.html"><code>Gw2Client.WebApi.V2.Characters</code></a></td>
+</tr>
+<tr>
+<td> /v2/characters/<code>:id</code></td>
+<td>🔑📆</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdClient.html"><code>Gw2Client.WebApi.V2.Characters[id]</code></a></td>
+</tr>
+<tr>
+<td> /v2/characters/<code>:id</code>/backstory</td>
+<td>🔑📆</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdBackstoryClient.html"><code>Gw2Client.WebApi.V2.Characters[id].Backstory</code></a></td>
+</tr>
+<tr>
+<td> /v2/characters/<code>:id</code>/buildtabs</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdBuildTabsActiveClient.html"><code>Gw2Client.WebApi.V2.Characters[id].BuildTabs</code></a></td>
+</tr>
+<tr>
+<td> /v2/characters/<code>:id</code>/buildtabs/active</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdBuildTabsActiveClient.html"><code>Gw2Client.WebApi.V2.Characters[id].BuildTabs.Active</code></a></td>
+</tr>
+<tr>
+<td> /v2/characters/<code>:id</code>/core</td>
+<td>🔑📆</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdCoreClient.html"><code>Gw2Client.WebApi.V2.Characters[id].Core</code></a></td>
+</tr>
+<tr>
+<td> /v2/characters/<code>:id</code>/crafting</td>
+<td>🔑📆</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdCraftingClient.html"><code>Gw2Client.WebApi.V2.Characters[id].Crafting</code></a></td>
+</tr>
+<tr>
+<td> <del>/v2/characters/<code>:id</code>/dungeons</del></td>
+<td>✖️</td>
+<td></td>
+</tr>
+<tr>
+<td> /v2/characters/<code>:id</code>/equipment</td>
+<td>🔑📆</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentClient.html"><code>Gw2Client.WebApi.V2.Characters[id].Equipment</code></a></td>
+</tr>
+<tr>
+<td> /v2/characters/<code>:id</code>/equipmenttabs</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsClient.html"><code>Gw2Client.WebApi.V2.Characters[id].EquipmentTabs</code></a></td>
+</tr>
+<tr>
+<td> /v2/characters/<code>:id</code>/equipmenttabs/active</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsActiveClient.html"><code>Gw2Client.WebApi.V2.Characters[id].EquipmentTabs.Active</code></a></td>
+</tr>
+<tr>
+<td> /v2/characters/<code>:id</code>/heropoints</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdHeroPointsClient.html"><code>Gw2Client.WebApi.V2.Characters[id].HeroPoints</code></a></td>
+</tr>
+<tr>
+<td> /v2/characters/<code>:id</code>/inventory</td>
+<td>🔑📆</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdInventoryClient.html"><code>Gw2Client.WebApi.V2.Characters[id].Inventory</code></a></td>
+</tr>
+<tr>
+<td> /v2/characters/<code>:id</code>/quests</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdQuestsClient.html"><code>Gw2Client.WebApi.V2.Characters[id].Quests</code></a></td>
+</tr>
+<tr>
+<td> /v2/characters/<code>:id</code>/recipes</td>
+<td>🔑📆</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdRecipesClient.html"><code>Gw2Client.WebApi.V2.Characters[id].Recipes</code></a></td>
+</tr>
+<tr>
+<td> /v2/characters/<code>:id</code>/sab</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdSabClient.html"><code>Gw2Client.WebApi.V2.Characters[id].Sab</code></a></td>
+</tr>
+<tr>
+<td> /v2/characters/<code>:id</code>/training</td>
+<td>🔑📆</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdTrainingClient.html"><code>Gw2Client.WebApi.V2.Characters[id].Training</code></a></td>
+</tr>
+<tr>
+<td> /v2/colors</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.ColorsClient.html"><code>Gw2Client.WebApi.V2.Colors</code></a></td>
+</tr>
+<tr>
+<td> /v2/commerce/delivery</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.CommerceDeliveryClient.html"><code>Gw2Client.WebApi.V2.Commerce.Delivery</code></a></td>
+</tr>
+<tr>
+<td> /v2/commerce/exchange</td>
+<td>✔️</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.CommerceExchangeClient.html"><code>Gw2Client.WebApi.V2.Commerce.Exchange</code></a></td>
+</tr>
+<tr>
+<td> /v2/commerce/exchange/coins</td>
+<td>✔️</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.CommerceExchangeCoinsClient.html"><code>Gw2Client.WebApi.V2.Commerce.Exchange.Coins</code></a></td>
+</tr>
+<tr>
+<td> /v2/commerce/exchange/gems</td>
+<td>✔️</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.CommerceExchangeGemsClient.html"><code>Gw2Client.WebApi.V2.Commerce.Exchange.Gems</code></a></td>
+</tr>
+<tr>
+<td> /v2/commerce/listings</td>
+<td>📄📚</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.CommerceListingsClient.html"><code>Gw2Client.WebApi.V2.Commerce.Listings</code></a></td>
+</tr>
+<tr>
+<td> /v2/commerce/prices</td>
+<td>📄📚</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.CommercePricesClient.html"><code>Gw2Client.WebApi.V2.Commerce.Prices</code></a></td>
+</tr>
+<tr>
+<td> /v2/commerce/transactions</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.CommerceTransactionsClient.html"><code>Gw2Client.WebApi.V2.Commerce.Transactions</code></a></td>
+</tr>
+<tr>
+<td> /v2/commerce/transactions/current</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.CommerceTransactionsCurrentClient.html"><code>Gw2Client.WebApi.V2.Commerce.Transactions.Current</code></a></td>
+</tr>
+<tr>
+<td> /v2/commerce/transactions/current/buys</td>
+<td>🔑📄</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.CommerceTransactionsCurrentBuysClient.html"><code>Gw2Client.WebApi.V2.Commerce.Transactions.Current.Buys</code></a></td>
+</tr>
+<tr>
+<td> /v2/commerce/transactions/current/sells</td>
+<td>🔑📄</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.CommerceTransactionsCurrentSellsClient.html"><code>Gw2Client.WebApi.V2.Commerce.Transactions.Current.Sells</code></a></td>
+</tr>
+<tr>
+<td> /v2/commerce/transactions/history</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.CommerceTransactionsHistoryClient.html"><code>Gw2Client.WebApi.V2.Commerce.Transactions.History</code></a></td>
+</tr>
+<tr>
+<td> /v2/commerce/transactions/history/buys</td>
+<td>🔑📄</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.CommerceTransactionsHistoryBuysClient.html"><code>Gw2Client.WebApi.V2.Commerce.Transactions.History.Buys</code></a></td>
+</tr>
+<tr>
+<td> /v2/commerce/transactions/history/sells</td>
+<td>🔑📄</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.CommerceTransactionsHistorySellsClient.html"><code>Gw2Client.WebApi.V2.Commerce.Transactions.History.Sells</code></a></td>
+</tr>
+<tr>
+<td> /v2/continents</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.ContinentsClient.html"><code>Gw2Client.WebApi.V2.Continents</code></a></td>
+</tr>
+<tr>
+<td> /v2/continents/<code>:continent</code>/<br>floors</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.ContinentsFloorsClient.html"><code>Gw2Client.WebApi.V2.Continents[continent]</code><br><code>.Floors</code></a></td>
+</tr>
+<tr>
+<td> /v2/continents/<code>:continent</code>/<br>floors/<code>:floor</code>/<br>regions</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.ContinentsFloorsRegionsClient.html"><code>Gw2Client.WebApi.V2.Continents[continent]</code><br><code>.Floors[floor]</code><br><code>.Regions</code></a></td>
+</tr>
+<tr>
+<td> /v2/continents/<code>:continent</code>/<br>floors/<code>:floor</code>/<br>regions/<code>:region</code>/<br>maps</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.ContinentsFloorsRegionsMapsClient.html"><code>Gw2Client.WebApi.V2.Continents[continent]</code><br><code>.Floors[floor]</code><br><code>.Regions[region]</code><br><code>.Maps</code></a></td>
+</tr>
+<tr>
+<td> /v2/continents/<code>:continent</code>/<br>floors/<code>:floor</code>/<br>regions/<code>:region</code>/<br>maps/<code>:map</code>/<br>pois</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.ContinentsFloorsRegionsMapsPoisClient.html"><code>Gw2Client.WebApi.V2.Continents[continent]</code><br><code>.Floors[floor]</code><br><code>.Regions[region]</code><br><code>.Maps[map]</code><br><code>.Pois</code></a></td>
+</tr>
+<tr>
+<td> /v2/continents/<code>:continent</code>/<br>floors/<code>:floor</code>/<br>regions/<code>:region</code>/<br>maps/<code>:map</code>/<br>sectors</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.ContinentsFloorsRegionsMapsSectorsClient.html"><code>Gw2Client.WebApi.V2.Continents[continent]</code><br><code>.Floors[floor]</code><br><code>.Regions[region]</code><br><code>.Maps[map]</code><br><code>.Sectors</code></a></td>
+</tr>
+<tr>
+<td> /v2/continents/<code>:continent</code>/<br>floors/<code>:floor</code>/<br>regions/<code>:region</code>/<br>maps/<code>:map</code>/<br>tasks</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.ContinentsFloorsRegionsMapsTasksClient.html"><code>Gw2Client.WebApi.V2.Continents[continent]</code><br><code>.Floors[floor]</code><br><code>.Regions[region]</code><br><code>.Maps[map]</code><br><code>.Tasks</code></a></td>
+</tr>
+<tr>
+<td> /v2/createsubtoken</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.CreateSubtokenClient.html"><code>Gw2Client.WebApi.V2.CreateSubtoken</code></a></td>
+</tr>
+<tr>
+<td> /v2/currencies</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.CurrenciesClient.html"><code>Gw2Client.WebApi.V2.Currencies</code></a></td>
+</tr>
+<tr>
+<td> /v2/dailycrafting</td>
+<td>📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.DailyCraftingClient.html"><code>Gw2Client.WebApi.V2.DailyCrafting</code></a></td>
+</tr>
+<tr>
+<td> /v2/dungeons</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.DungeonsClient.html"><code>Gw2Client.WebApi.V2.Dungeons</code></a></td>
+</tr>
+<tr>
+<td> /v2/emblem</td>
+<td>✔️</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.EmblemClient.html"><code>Gw2Client.WebApi.V2.Emblem</code></a></td>
+</tr>
+<tr>
+<td> /v2/emblem/backgrounds</td>
+<td>📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.EmblemBackgroundsClient.html"><code>Gw2Client.WebApi.V2.Emblem.Backgrounds</code></a></td>
+</tr>
+<tr>
+<td> /v2/emblem/foregrounds</td>
+<td>📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.EmblemForegroundsClient.html"><code>Gw2Client.WebApi.V2.Emblem.Foregrounds</code></a></td>
+</tr>
+<tr>
+<td> <del>/v2/events</del></td>
+<td>✖️</td>
+<td></td>
+</tr>
+<tr>
+<td> <del>/v2/events-state</del></td>
+<td>✖️</td>
+<td></td>
+</tr>
+<tr>
+<td> /v2/files</td>
+<td>📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.FilesClient.html"><code>Gw2Client.WebApi.V2.Files</code></a></td>
+</tr>
+<tr>
+<td> /v2/finishers</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.FinishersClient.html"><code>Gw2Client.WebApi.V2.Finishers</code></a></td>
+</tr>
+<tr>
+<td> <del>/v2/gemstore/catalog</del></td>
+<td>✖️</td>
+<td></td>
+</tr>
+<tr>
+<td> /v2/gliders</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.GlidersClient.html"><code>Gw2Client.WebApi.V2.Gliders</code></a></td>
+</tr>
+<tr>
+<td> /v2/guild/<code>:id</code></td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.GuildIdClient.html"><code>Gw2Client.WebApi.V2.Guild[id]</code></a></td>
+</tr>
+<tr>
+<td> /v2/guild/<code>:id</code>/log</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.GuildIdClient.html"><code>Gw2Client.WebApi.V2.Guild[id].Log</code></a></td>
+</tr>
+<tr>
+<td> /v2/guild/<code>:id</code>/members</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.GuildIdMembersClient.html"><code>Gw2Client.WebApi.V2.Guild[id].Members</code></a></td>
+</tr>
+<tr>
+<td> /v2/guild/<code>:id</code>/ranks</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.GuildIdRanksClient.html"><code>Gw2Client.WebApi.V2.Guild[id].Ranks</code></a></td>
+</tr>
+<tr>
+<td> /v2/guild/<code>:id</code>/stash</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.GuildIdStashClient.html"><code>Gw2Client.WebApi.V2.Guild[id].Stash</code></a></td>
+</tr>
+<tr>
+<td> /v2/guild/<code>:id</code>/storage</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.GuildIdStorageClient.html"><code>Gw2Client.WebApi.V2.Guild[id].Storage</code></a></td>
+</tr>
+<tr>
+<td> /v2/guild/<code>:id</code>/teams</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.GuildIdTeamsClient.html"><code>Gw2Client.WebApi.V2.Guild[id].Teams</code></a></td>
+</tr>
+<tr>
+<td> /v2/guild/<code>:id</code>/treasury</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.GuildIdTreasuryClient.html"><code>Gw2Client.WebApi.V2.Guild[id].Treasury</code></a></td>
+</tr>
+<tr>
+<td> /v2/guild/<code>:id</code>/upgrades</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.GuildIdUpgradesClient.html"><code>Gw2Client.WebApi.V2.Guild[id].Upgrades</code></a></td>
+</tr>
+<tr>
+<td> /v2/guild/permissions</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.GuildPermissionsClient.html"><code>Gw2Client.WebApi.V2.Guild.Permissions</code></a></td>
+</tr>
+<tr>
+<td> /v2/guild/search</td>
+<td>✔️</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.GuildSearchClient.html"><code>Gw2Client.WebApi.V2.Guild.Search</code></a></td>
+</tr>
+<tr>
+<td> /v2/guild/upgrades</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.GuildUpgradesClient.html"><code>Gw2Client.WebApi.V2.Guild.Upgrades</code></a></td>
+</tr>
+<tr>
+<td> /v2/home</td>
+<td>✔️</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.HomeClient.html"><code>Gw2Client.WebApi.V2.Home</code></a></td>
+</tr>
+<tr>
+<td> /v2/home/cats</td>
+<td>📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.HomeCatsClient.html"><code>Gw2Client.WebApi.V2.Home.Cats</code></a></td>
+</tr>
+<tr>
+<td> /v2/home/nodes</td>
+<td>📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.HomeNodesClient.html"><code>Gw2Client.WebApi.V2.Home.Nodes</code></a></td>
+</tr>
+<tr>
+<td> /v2/items</td>
+<td>🌐📄📚</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.ItemsClient.html"><code>Gw2Client.WebApi.V2.Items</code></a></td>
+</tr>
+<tr>
+<td> /v2/itemstats</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.ItemstatsClient.html"><code>Gw2Client.WebApi.V2.Itemstats</code></a></td>
+</tr>
+<tr>
+<td> /v2/legendaryarmory</td>
+<td>📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.LegendaryArmoryClient.html"><code>Gw2Client.WebApi.V2.LegendaryArmory</code></a></td>
+</tr>
+<tr>
+<td> /v2/legends</td>
+<td>📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.LegendsClient.html"><code>Gw2Client.WebApi.V2.Legends</code></a></td>
+</tr>
+<tr>
+<td> /v2/mailcarriers</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.MailCarriersClient.html"><code>Gw2Client.WebApi.V2.MailCarriers</code></a></td>
+</tr>
+<tr>
+<td> /v2/mapchests</td>
+<td>📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.MapChestsClient.html"><code>Gw2Client.WebApi.V2.MapChests</code></a></td>
+</tr>
+<tr>
+<td> /v2/maps</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.MapsClient.html"><code>Gw2Client.WebApi.V2.Maps</code></a></td>
+</tr>
+<tr>
+<td> /v2/masteries</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.MasteriesClient.html"><code>Gw2Client.WebApi.V2.Masteries</code></a></td>
+</tr>
+<tr>
+<td> /v2/materials</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.MaterialsClient.html"><code>Gw2Client.WebApi.V2.Materials</code></a></td>
+</tr>
+<tr>
+<td> /v2/minis</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.MinisClient.html"><code>Gw2Client.WebApi.V2.Minis</code></a></td>
+</tr>
+<tr>
+<td> /v2/mounts</td>
+<td>✔️</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.MountsClient.html"><code>Gw2Client.WebApi.V2.Mounts</code></a></td>
+</tr>
+<tr>
+<td> /v2/mounts/skins</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.MountsSkinsClient.html"><code>Gw2Client.WebApi.V2.Mounts.Skins</code></a></td>
+</tr>
+<tr>
+<td> /v2/mounts/types</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.MountsTypesClient.html"><code>Gw2Client.WebApi.V2.Mounts.Types</code></a></td>
+</tr>
+<tr>
+<td> /v2/novelties</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.NoveltiesClient.html"><code>Gw2Client.WebApi.V2.Novelties</code></a></td>
+</tr>
+<tr>
+<td> /v2/outfits</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.OutfitsClient.html"><code>Gw2Client.WebApi.V2.Outfits</code></a></td>
+</tr>
+<tr>
+<td> /v2/pets</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.PetsClient.html"><code>Gw2Client.WebApi.V2.Pets</code></a></td>
+</tr>
+<tr>
+<td> /v2/professions</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.ProfessionsClient.html"><code>Gw2Client.WebApi.V2.Professions</code></a></td>
+</tr>
+<tr>
+<td> /v2/pvp</td>
+<td>✔️</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.PvpClient.html"><code>Gw2Client.WebApi.V2.Pvp</code></a></td>
+</tr>
+<tr>
+<td> /v2/pvp/amulets</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.PvpAmuletsClient.html"><code>Gw2Client.WebApi.V2.Pvp.Amulets</code></a></td>
+</tr>
+<tr>
+<td> /v2/pvp/games</td>
+<td>🔑📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.PvpGamesClient.html"><code>Gw2Client.WebApi.V2.Pvp.Games</code></a></td>
+</tr>
+<tr>
+<td> /v2/pvp/heroes</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.PvpHeroesClient.html"><code>Gw2Client.WebApi.V2.Pvp.Heroes</code></a></td>
+</tr>
+<tr>
+<td> /v2/pvp/ranks</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.PvpRanksClient.html"><code>Gw2Client.WebApi.V2.Pvp.Ranks</code></a></td>
+</tr>
+<tr>
+<td> <del>/v2/pvp/rewardtracks</del></td>
+<td>✖️</td>
+<td></td>
+</tr>
+<tr>
+<td> <del>/v2/pvp/runes</del></td>
+<td>✖️</td>
+<td></td>
+</tr>
+<tr>
+<td> /v2/pvp/seasons</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.PvpSeasonsClient.html"><code>Gw2Client.WebApi.V2.Pvp.Seasons</code></a></td>
+</tr>
+<tr>
+<td> /v2/pvp/seasons/<code>:id</code>/leaderboards</td>
+<td>✔️</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.PvpSeasonsLeaderboardsClient.html"><code>Gw2Client.WebApi.V2.Pvp.Seasons[id].Leaderboards</code></a></td>
+</tr>
+<tr>
+<td> /v2/pvp/seasons/<code>:id</code>/leaderboards/<code>:board</code>/<code>:region</code></td>
+<td>📄</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.PvpSeasonsLeaderboardsRegionIdClient.html"><code>Gw2Client.WebApi.V2.Pvp.Seasons[id].Leaderboards[board][region]</code></a></td>
+</tr>
+<tr>
+<td> <del>/v2/pvp/sigils</del></td>
+<td>✖️</td>
+<td></td>
+</tr>
+<tr>
+<td> /v2/pvp/standings</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.PvpStandingsClient.html"><code>Gw2Client.WebApi.V2.Pvp.Standings</code></a></td>
+</tr>
+<tr>
+<td> /v2/pvp/stats</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.PvpStatsClient.html"><code>Gw2Client.WebApi.V2.Pvp.Stats</code></a></td>
+</tr>
+<tr>
+<td> /v2/quaggans</td>
+<td>📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.QuaggansClient.html"><code>Gw2Client.WebApi.V2.Quaggans</code></a></td>
+</tr>
+<tr>
+<td> /v2/quests</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.QuestsClient.html"><code>Gw2Client.WebApi.V2.Quests</code></a></td>
+</tr>
+<tr>
+<td> /v2/races</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.RacesClient.html"><code>Gw2Client.WebApi.V2.Races</code></a></td>
+</tr>
+<tr>
+<td> /v2/raids</td>
+<td>📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.RaidsClient.html"><code>Gw2Client.WebApi.V2.Raids</code></a></td>
+</tr>
+<tr>
+<td> /v2/recipes</td>
+<td>📄📚</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.RecipesClient.html"><code>Gw2Client.WebApi.V2.Recipes</code></a></td>
+</tr>
+<tr>
+<td> /v2/recipes/search</td>
+<td>✔️</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.RecipesSearchClient.html"><code>Gw2Client.WebApi.V2.Recipes.Search</code></a></td>
+</tr>
+<tr>
+<td> /v2/skills</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.SkillsClient.html"><code>Gw2Client.WebApi.V2.Skills</code></a></td>
+</tr>
+<tr>
+<td> /v2/skins</td>
+<td>🌐📄📚</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.SkinsClient.html"><code>Gw2Client.WebApi.V2.Skins</code></a></td>
+</tr>
+<tr>
+<td> /v2/specializations</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.SpecializationsClient.html"><code>Gw2Client.WebApi.V2.Specializations</code></a></td>
+</tr>
+<tr>
+<td> /v2/stories</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.StoriesClient.html"><code>Gw2Client.WebApi.V2.Stories</code></a></td>
+</tr>
+<tr>
+<td> /v2/stories/seasons</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.StoriesSeasonsClient.html"><code>Gw2Client.WebApi.V2.Stories.Seasons</code></a></td>
+</tr>
+<tr>
+<td> /v2/titles</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.TitlesClient.html"><code>Gw2Client.WebApi.V2.Titles</code></a></td>
+</tr>
+<tr>
+<td> /v2/tokeninfo</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.TokenInfoClient.html"><code>Gw2Client.WebApi.V2.TokenInfo</code></a></td>
+</tr>
+<tr>
+<td> /v2/traits</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.TraitsClient.html"><code>Gw2Client.WebApi.V2.Traits</code></a></td>
+</tr>
+<tr>
+<td> <del>/v2/vendors</del></td>
+<td>✖️</td>
+<td></td>
+</tr>
+<tr>
+<td> /v2/worldbosses</td>
+<td>📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.WorldBossesClient.html"><code>Gw2Client.WebApi.V2.WorldBosses</code></a></td>
+</tr>
+<tr>
+<td> /v2/worlds</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.WorldsClient.html"><code>Gw2Client.WebApi.V2.Worlds</code></a></td>
+</tr>
+<tr>
+<td> /v2/wvw/abilities</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.WvwAbilitiesClient.html"><code>Gw2Client.WebApi.V2.Wvw.Abilities</code></a></td>
+</tr>
+<tr>
+<td> /v2/wvw/matches</td>
+<td>📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesClient.html"><code>Gw2Client.WebApi.V2.Wvw.Matches</code></a></td>
+</tr>
+<tr>
+<td> /v2/wvw/matches/overview</td>
+<td>📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesOverviewClient.html"><code>Gw2Client.WebApi.V2.Wvw.Matches.Overview</code></a></td>
+</tr>
+<tr>
+<td> /v2/wvw/matches/scores</td>
+<td>📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesScoresClient.html"><code>Gw2Client.WebApi.V2.Wvw.Matches.Scores</code></a></td>
+</tr>
+<tr>
+<td> /v2/wvw/matches/stats</td>
+<td>📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesStatsClient.html"><code>Gw2Client.WebApi.V2.Wvw.Matches.Stats</code></a></td>
+</tr>
+<tr>
+<td> <del>/v2/wvw/matches/stats/<code>:id</code>/guilds/<code>:guild_id</code></del></td>
+<td>✖️</td>
+<td><em>Broken on the API as of 2020-12-22</em></td>
+</tr>
+<tr>
+<td> <del>/v2/wvw/matches/stats/<code>:id</code>/teams/<code>:team</code>/top/kdr</del></td>
+<td>✖️</td>
+<td><em>Broken on the API as of 2020-12-22</em></td>
+</tr>
+<tr>
+<td> <del>/v2/wvw/matches/stats/<code>:id</code>/teams/<code>:team</code>/top/kills</del></td>
+<td>✖️</td>
+<td><em>Broken on the API as of 2020-12-22</em></td>
+</tr>
+<tr>
+<td> /v2/wvw/objectives</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.WvwObjectivesClient.html"><code>Gw2Client.WebApi.V2.Wvw.Objectives</code></a></td>
+</tr>
+<tr>
+<td> /v2/wvw/ranks</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.WvwRanksClient.html"><code>Gw2Client.WebApi.V2.Wvw.Ranks</code></a></td>
+</tr>
+<tr>
+<td> <del>/v2/wvw/rewardtracks</del></td>
+<td>✖️</td>
+<td></td>
+</tr>
+<tr>
+<td> /v2/wvw/upgrades</td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.WvwUpgradesClient.html"><code>Gw2Client.WebApi.V2.Wvw.Upgrades</code></a></td>
+</tr>
+</tbody>
+</table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Archomeda/Gw2Sharp/blob/3c99ca1e14696a5f43ee674b0ac6558fa44725b4/docs/guides/endpoints.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
