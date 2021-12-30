@@ -1,6 +1,6 @@
 # Gw2Sharp History
 
-## 1.6.0 (15 November 2021)
+## 1.6.0 (30 December 2021)
 This release includes support for a couple of additional customizations:
 - Ability to change the API hostname(s) in case you want to run a proxy API server (see [the documentation](https://archomeda.github.io/Gw2Sharp/master/guides/proxy.html) for more information)
 - Ability to change the Mumble Link reader for mocking, or to use a different method and/or source for Mumble Link
