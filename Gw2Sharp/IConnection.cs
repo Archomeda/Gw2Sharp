@@ -36,6 +36,12 @@ namespace Gw2Sharp
         string UserAgent { get; }
 
         /// <summary>
+        /// Whether to use simple requests to bypass CORS pre-flight requests when using Gw2Sharp in web assembly.
+        /// See bug <see href="https://github.com/gw2-api/issues/issues/19"/>.
+        /// </summary>
+        bool UseSimpleRequests { get; }
+
+        /// <summary>
         /// The API base URL that is used to construct the final URL for the API requests.
         /// </summary>
         string ApiBaseUrl { get; }

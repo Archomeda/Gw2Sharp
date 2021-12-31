@@ -150,6 +150,9 @@ namespace Gw2Sharp
         public string UserAgent { get; }
 
         /// <inheritdoc />
+        public bool UseSimpleRequests { get; set; }
+
+        /// <inheritdoc />
         public string ApiBaseUrl
         {
             get => this.apiBaseUrl;

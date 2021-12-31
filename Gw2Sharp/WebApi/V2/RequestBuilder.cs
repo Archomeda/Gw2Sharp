@@ -15,6 +15,8 @@ namespace Gw2Sharp.WebApi.V2
         private const string QUERY_PARAM_PAGE = "page";
         private const string QUERY_PARAM_PAGE_SIZE = "page_size";
         private const string ALL = "all";
+        private const string QUERY_PARAM_ACCESS_TOKEN = "access_token";
+        private const string QUERY_PARAM_SCHEMA_VERSION = "v";
 
         private const string HEADER_SCHEMA_VERSION = "X-Schema-Version";
         private const string HEADER_ACCEPT = "Accept";
@@ -38,6 +40,8 @@ namespace Gw2Sharp.WebApi.V2
 
         private readonly IConnection connection;
         private readonly IGw2Client gw2Client;
+        private readonly bool useSimpleRequests;
+        private readonly string? accessToken;
         private readonly string? authorization;
         private readonly string? locale;
         private readonly string userAgent;
@@ -59,6 +63,8 @@ namespace Gw2Sharp.WebApi.V2
             this.connection = connection;
             this.gw2Client = gw2Client;
 
+            this.useSimpleRequests = connection.UseSimpleRequests;
+            this.accessToken = endpointClient.IsAuthenticated ? connection.AccessToken : null;
             this.authorization = endpointClient.IsAuthenticated ? $"{BEARER} {connection.AccessToken}" : null;
             this.locale = endpointClient.IsLocalized ? connection.LocaleString : null;
             this.userAgent = connection.UserAgent;
@@ -133,10 +139,18 @@ namespace Gw2Sharp.WebApi.V2
 
         private IDictionary<string, string>? BuildQueryParams(IDictionary<string, string>? additionalQueryParams = null)
         {
-            if (this.queryParams.Count == 0)
-                return additionalQueryParams;
             var combinedQueryParams = new Dictionary<string, string>(this.queryParams);
-            if (additionalQueryParams != null)
+            if (this.useSimpleRequests)
+            {
+                if (!string.IsNullOrWhiteSpace(this.accessToken))
+                    combinedQueryParams[QUERY_PARAM_ACCESS_TOKEN] = this.accessToken;
+                if (!string.IsNullOrWhiteSpace(this.schemaVersion))
+                    combinedQueryParams[QUERY_PARAM_SCHEMA_VERSION] = this.schemaVersion;
+            }
+
+            if (combinedQueryParams.Count == 0)
+                return additionalQueryParams;
+            if (additionalQueryParams?.Count > 0)
                 combinedQueryParams.AddRange(additionalQueryParams);
             return combinedQueryParams;
         }
@@ -151,10 +165,13 @@ namespace Gw2Sharp.WebApi.V2
                 headers[HEADER_AUTHORIZATION] = this.authorization;
             if (!string.IsNullOrWhiteSpace(this.locale))
                 headers[HEADER_ACCEPT_LANGUAGE] = this.locale;
-            if (!string.IsNullOrWhiteSpace(this.userAgent))
-                headers[HEADER_USER_AGENT] = this.userAgent;
-            if (!string.IsNullOrWhiteSpace(this.schemaVersion))
-                headers[HEADER_SCHEMA_VERSION] = this.schemaVersion;
+            if (!this.useSimpleRequests)
+            {
+                if (!string.IsNullOrWhiteSpace(this.userAgent))
+                    headers[HEADER_USER_AGENT] = this.userAgent;
+                if (!string.IsNullOrWhiteSpace(this.schemaVersion))
+                    headers[HEADER_SCHEMA_VERSION] = this.schemaVersion;
+            }
             return headers;
         }
 
