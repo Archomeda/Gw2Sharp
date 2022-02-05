@@ -51,6 +51,16 @@ namespace Gw2Sharp.Models
         /// <summary>
         /// The skyscale mount.
         /// </summary>
-        Skyscale
+        Skyscale,
+
+        /// <summary>
+        /// The skiff.
+        /// </summary>
+        Skiff,
+
+        /// <summary>
+        /// The siege turtle mount.
+        /// </summary>
+        SiegeTurtle
     }
 }
