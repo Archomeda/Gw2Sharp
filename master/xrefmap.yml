@@ -25363,6 +25363,19 @@ references:
   isSpec: "True"
   fullName: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.IsActive
   nameWithType: CharacterEquipmentTabSlot.IsActive
+- uid: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.Name
+  name: Name
+  href: api/Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.html#Gw2Sharp_WebApi_V2_Models_CharacterEquipmentTabSlot_Name
+  commentId: P:Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.Name
+  fullName: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.Name
+  nameWithType: CharacterEquipmentTabSlot.Name
+- uid: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.Name*
+  name: Name
+  href: api/Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.html#Gw2Sharp_WebApi_V2_Models_CharacterEquipmentTabSlot_Name_
+  commentId: Overload:Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.Name
+  isSpec: "True"
+  fullName: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.Name
+  nameWithType: CharacterEquipmentTabSlot.Name
 - uid: Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.Tab
   name: Tab
   href: api/Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot.html#Gw2Sharp_WebApi_V2_Models_CharacterEquipmentTabSlot_Tab
