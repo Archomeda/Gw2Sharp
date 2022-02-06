@@ -7,7 +7,7 @@ on:
 jobs:
   nuget:
     name: NuGet
-    runs-on: windows-latest
+    runs-on: windows-2022
     steps:
       - name: Download NuGet packages
         shell: powershell

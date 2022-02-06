@@ -14,10 +14,11 @@ jobs:
       matrix:
         os:
           - ubuntu-latest
-          - windows-latest
+          - windows-2022
         dotnet:
+          - net6.0
+          - net5.0
           - netcoreapp3.1
-          - netcoreapp2.1
           - net461
         exclude:
           - os: ubuntu-latest
@@ -29,7 +30,7 @@ jobs:
 
   release:
     name: Release
-    runs-on: windows-latest
+    runs-on: windows-2022
     needs: [test]
     steps:
       - uses: actions/checkout@v2
