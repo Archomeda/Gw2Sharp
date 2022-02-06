@@ -4231,6 +4231,18 @@ references:
   commentId: F:Gw2Sharp.Models.MountType.RollerBeetle
   fullName: Gw2Sharp.Models.MountType.RollerBeetle
   nameWithType: MountType.RollerBeetle
+- uid: Gw2Sharp.Models.MountType.SiegeTurtle
+  name: SiegeTurtle
+  href: api/Gw2Sharp.Models.MountType.html#Gw2Sharp_Models_MountType_SiegeTurtle
+  commentId: F:Gw2Sharp.Models.MountType.SiegeTurtle
+  fullName: Gw2Sharp.Models.MountType.SiegeTurtle
+  nameWithType: MountType.SiegeTurtle
+- uid: Gw2Sharp.Models.MountType.Skiff
+  name: Skiff
+  href: api/Gw2Sharp.Models.MountType.html#Gw2Sharp_Models_MountType_Skiff
+  commentId: F:Gw2Sharp.Models.MountType.Skiff
+  fullName: Gw2Sharp.Models.MountType.Skiff
+  nameWithType: MountType.Skiff
 - uid: Gw2Sharp.Models.MountType.Skimmer
   name: Skimmer
   href: api/Gw2Sharp.Models.MountType.html#Gw2Sharp_Models_MountType_Skimmer
