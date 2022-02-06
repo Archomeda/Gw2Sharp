@@ -22,6 +22,11 @@ namespace Gw2Sharp.WebApi.V2.Models
         public int Tab { get; set; }
 
         /// <summary>
+        /// The equipment template name.
+        /// </summary>
+        public string Name { get; set; } = string.Empty;
+
+        /// <summary>
         /// Whether this equipment tab slot is current active.
         /// </summary>
         public bool IsActive { get; set; }

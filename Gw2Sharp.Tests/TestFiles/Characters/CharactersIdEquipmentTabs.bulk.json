@@ -1,6 +1,7 @@
 [
   {
     "tab": 1,
+    "name": "Tab 1",
     "is_active": true,
     "equipment": [
       {
@@ -125,6 +126,7 @@
   },
   {
     "tab": 2,
+    "name": "Tab 2",
     "is_active": false,
     "equipment": [
       {
