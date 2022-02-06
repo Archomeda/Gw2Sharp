@@ -1,5 +1,19 @@
 # Gw2Sharp History
 
+## 1.7.0 (6 February 2022)
+This release is a small feature update for End of Dragons and a forgotten name property in the equipment tab response.
+
+### Endpoints
+- Add `Name` property to `Gw2Sharp.WebApi.V2.Models.CharacterEquipmentTabSlot` ([#115](https://github.com/Archomeda/Gw2Sharp/pull/115))
+
+### Mumble Link
+- Add support for the Skiff and the Siege Turtle mount enums ([#114](https://github.com/Archomeda/Gw2Sharp/pull/114) by [@TheMrMilchmann](https://github.com/TheMrMilchmann))
+
+### Miscellaneous
+- Testing against .NET Core 2.1 has been removed as this version has been end of life for quite some time now. Instead, testing against .NET 6 has now been added. This doesn't have any impact for any consumers of Gw2Sharp. ([#111](https://github.com/Archomeda/Gw2Sharp/pull/111))
+
+---
+
 ## 1.6.1 (30 December 2021)
 This is a hotfix release that actually includes the Mumble Link additions as listed in v1.6.0.
 
