@@ -1,5 +1,11 @@
 # Gw2Sharp History
 
+## 1.7.1 (9 April 2022)
+This includes a small fix for the Icon property on skills, which can be null.
+
+### Endpoints
+- Change `Icon` property on `Gw2Sharp.WebApi.V2.Models.Skill` to be nullable ([#118](https://github.com/Archomeda/Gw2Sharp/pull/118) by [@dlamkins](https://github.com/dlamkins))
+
 ## 1.7.0 (6 February 2022)
 This release is a small feature update for End of Dragons and a forgotten name property in the equipment tab response.
 
