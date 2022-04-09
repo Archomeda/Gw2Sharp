@@ -27,7 +27,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The skill icon URL.
         /// </summary>
-        public RenderUrl Icon { get; set; }
+        public RenderUrl? Icon { get; set; }
 
         /// <summary>
         /// The skill specialization.
