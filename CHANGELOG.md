@@ -1,5 +1,11 @@
 # Gw2Sharp History
 
+## 1.7.2 (22 May 2022)
+This is a small bugfix for the caching component.
+
+### Caching
+- Fix separate item caching for bulk endpoints where the request headers that may produce different responses, were not taken into account ([#119](https://github.com/Archomeda/Gw2Sharp/issues/119), [#121](https://github.com/Archomeda/Gw2Sharp/pull/121))
+
 ## 1.7.1 (9 April 2022)
 This includes a small fix for the Icon property on skills, which can be null.
 
