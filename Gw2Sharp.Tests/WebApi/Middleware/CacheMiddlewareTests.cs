@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using System.Threading;
 using System.Threading.Tasks;
 using AutoFixture;
 using AutoFixture.Kernel;
@@ -34,16 +35,17 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
 
         #region Data
 
-        public static readonly object[] HeaderCases =
+        public static readonly string[] HeadersToCacheSeparately = new[]
         {
-            new[] { default(string) },
-            new[] { "Accept-Language" },
-            new[] { "Authorization" }
+            "Accept-Language",
+            "Authorization"
         };
 
         public static readonly object[] QueryWithManyCases =
         {
+            // All
             new[] { "ids=all" },
+            // Many
             new object[]
             {
                 "ids=14,19,20",
@@ -54,30 +56,23 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
                     new Element { Id = "20", Value = "Value20" }
                 }
             },
+            // Page
             new[] { "page=0" },
+            // Page + custom page size
             new[] { "page=3&page_size=40" }
         };
-
-        public static IEnumerable<object[]> HeaderWithQueryWithManyMatrixCases()
-        {
-            foreach (object[] header in HeaderCases)
-                foreach (object[] queryWithMany in QueryWithManyCases)
-                    yield return header.Concat(queryWithMany).ToArray();
-        }
 
         #endregion
 
 
         [Theory]
-        [MemberAutoMockData(nameof(HeaderCases), ShareFixture = false)]
+        [AutoMockData]
         public async Task SingleRequestAsyncTest(
-            string responseHeaderNameToAdd,
             [CustomizeWith(typeof(MemoryCacheMethodAutoFixture)), Frozen] MiddlewareContext context,
             [Frozen] IWebApiResponse response,
             IFixture fixture)
         {
             context.Request.Options.Returns(CreateRequestOptions());
-            SetResponseHeader(response, responseHeaderNameToAdd, fixture.Create<string>());
             response.CacheState.Returns(CacheState.FromLive);
 
             // Do the request
@@ -88,15 +83,13 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
         }
 
         [Theory]
-        [MemberAutoMockData(nameof(HeaderCases), ShareFixture = false)]
+        [AutoMockData]
         public async Task CachesSingleRequestAsyncTest(
-            string responseHeaderNameToAdd,
             [CustomizeWith(typeof(MemoryCacheMethodAutoFixture)), Frozen] MiddlewareContext context,
             [CustomizeWith(typeof(ExpiresHeaderAutoFixture)), Frozen] IWebApiResponse response,
             IFixture fixture)
         {
             context.Request.Options.Returns(CreateRequestOptions());
-            SetResponseHeader(response, responseHeaderNameToAdd, fixture.Create<string>());
             response.CacheState.Returns(CacheState.FromCache);
 
             // Do the first request
@@ -109,11 +102,42 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
             cachedResponse.Should().BeEquivalentTo(response);
         }
 
+        [Theory]
+        [AutoMockData]
+        public async Task CachesSingleRequestSeparatelyHeaderAsyncTest(
+            [CustomizeWith(typeof(MemoryCacheMethodAutoFixture)), Frozen] MiddlewareContext context,
+            [CustomizeWith(typeof(ExpiresHeaderAutoFixture)), Frozen] IWebApiResponse response,
+            IFixture fixture)
+        {
+            context.Request.Options.Returns(CreateRequestOptions());
+            response.CacheState.Returns(CacheState.FromLive);
+
+            // Do the first request without specific headers
+            var middleware = new CacheMiddleware();
+            await middleware.OnRequestAsync(context, (r, t) => Task.FromResult(response));
+
+            // Repeat the request for every header to see if it's taken from live
+            foreach (var cacheHeader in HeadersToCacheSeparately)
+            {
+                context.Request.Options.RequestHeaders = new Dictionary<string, string>()
+                {
+                    [cacheHeader] = fixture.Create<string>()
+                };
+
+                var nextMock = Substitute.For<Func<MiddlewareContext, CancellationToken, Task<IWebApiResponse>>>();
+                nextMock(Arg.Any<MiddlewareContext>(), Arg.Any<CancellationToken>()).Returns(Task.FromResult(response));
+                await middleware.OnRequestAsync(context, nextMock);
+
+                // Because the middleware passes the request to the next middleware if the response wasn't cached,
+                // we can check here if that call has arrived
+                await nextMock.Received(1)(Arg.Any<MiddlewareContext>(), Arg.Any<CancellationToken>());
+            }
+        }
+
 
         [Theory]
-        [MemberAutoMockData(nameof(HeaderWithQueryWithManyMatrixCases), ShareFixture = false)]
+        [AutoMockData]
         public async Task ManyRequestAsyncTest(
-            string responseHeaderNameToAdd,
             string queryParams,
             [Frozen] IList<Element> responseElements,
             [CustomizeWith(typeof(MemoryCacheMethodAutoFixture)), Frozen] MiddlewareContext context,
@@ -121,7 +145,6 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
             IFixture fixture)
         {
             context.Request.Options.Returns(CreateRequestOptions(queryParams));
-            SetResponseHeader(response, responseHeaderNameToAdd, fixture.Create<string>());
             SetResponseContent(response, responseElements);
             response.CacheState.Returns(CacheState.FromLive);
 
@@ -133,9 +156,8 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
         }
 
         [Theory]
-        [MemberAutoMockData(nameof(HeaderWithQueryWithManyMatrixCases), ShareFixture = false)]
+        [MemberAutoMockData(nameof(QueryWithManyCases), ShareFixture = false)]
         public async Task CachesManyRequestAsyncTest(
-            string responseHeaderNameToAdd,
             string queryParams,
             [Frozen] IList<Element> responseElements,
             [CustomizeWith(typeof(MemoryCacheMethodAutoFixture)), Frozen] MiddlewareContext context,
@@ -143,7 +165,6 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
             IFixture fixture)
         {
             context.Request.Options.Returns(CreateRequestOptions(queryParams));
-            SetResponseHeader(response, responseHeaderNameToAdd, fixture.Create<string>());
             SetResponseContent(response, responseElements);
             response.CacheState.Returns(CacheState.FromCache);
 
@@ -157,9 +178,8 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
         }
 
         [Theory]
-        [MemberAutoMockData(nameof(HeaderWithQueryWithManyMatrixCases), ShareFixture = false)]
+        [MemberAutoMockData(nameof(QueryWithManyCases), ShareFixture = false)]
         public async Task CachesManyRequestSeparatelyAsyncTest(
-            string responseHeaderNameToAdd,
             string queryParams,
             [Frozen] IList<Element> responseElements,
             [CustomizeWith(typeof(MemoryCacheMethodAutoFixture)), Frozen] MiddlewareContext context,
@@ -168,7 +188,6 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
         {
             var options = CreateRequestOptions(queryParams);
             context.Request.Options.Returns(options);
-            SetResponseHeader(response, responseHeaderNameToAdd, fixture.Create<string>());
             SetResponseContent(response, responseElements);
             response.CacheState.Returns(CacheState.FromLive);
 
@@ -190,6 +209,42 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
         }
 
 
+        [Theory]
+        [MemberAutoMockData(nameof(QueryWithManyCases), ShareFixture = false)]
+        public async Task CachesManyRequestSeparatelyHeaderAsyncTest(
+            string queryParams,
+            [Frozen] IList<Element> responseElements,
+            [CustomizeWith(typeof(MemoryCacheMethodAutoFixture)), Frozen] MiddlewareContext context,
+            [CustomizeWith(typeof(ExpiresHeaderAutoFixture)), Frozen] IWebApiResponse response,
+            IFixture fixture)
+        {
+            context.Request.Options.Returns(CreateRequestOptions(queryParams));
+            SetResponseContent(response, responseElements);
+            response.CacheState.Returns(CacheState.FromCache);
+
+            // Do the first request without specific headers
+            var middleware = new CacheMiddleware();
+            await middleware.OnRequestAsync(context, (r, t) => Task.FromResult(response));
+
+            // Repeat the request for every header to see if it's taken from live
+            foreach (var cacheHeader in HeadersToCacheSeparately)
+            {
+                context.Request.Options.RequestHeaders = new Dictionary<string, string>()
+                {
+                    [cacheHeader] = fixture.Create<string>()
+                };
+
+                var nextMock = Substitute.For<Func<MiddlewareContext, CancellationToken, Task<IWebApiResponse>>>();
+                nextMock(Arg.Any<MiddlewareContext>(), Arg.Any<CancellationToken>()).Returns(x => Task.FromResult(response));
+                await middleware.OnRequestAsync(context, nextMock);
+
+                // Because the middleware passes the request to the next middleware if the response wasn't cached,
+                // we can check here if that call has arrived
+                await nextMock.Received(1)(Arg.Any<MiddlewareContext>(), Arg.Any<CancellationToken>());
+            }
+        }
+
+
         #region Helpers
 
         private static WebApiRequestOptions CreateRequestOptions(string queryParams = null)
@@ -207,17 +262,6 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
         {
             string rawResponse = JsonSerializer.Serialize(content);
             response.Content.Returns(rawResponse);
-        }
-
-        private static void SetResponseHeader(IWebApiResponse response, string headerName, string headerValue)
-        {
-            if (string.IsNullOrEmpty(headerName))
-                return;
-
-            if (response.ResponseHeaders is Dictionary<string, string> dictionary)
-                dictionary[headerName] = headerValue;
-            else
-                response.ResponseHeaders.Returns(new Dictionary<string, string> { [headerName] = headerValue });
         }
 
         #endregion
