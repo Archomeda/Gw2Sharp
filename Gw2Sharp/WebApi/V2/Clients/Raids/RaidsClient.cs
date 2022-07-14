@@ -6,7 +6,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// <summary>
     /// A client of the Guild Wars 2 API v2 raid endpoint.
     /// </summary>
-    [EndpointPath("raid")]
+    [EndpointPath("raids")]
     public class RaidsClient : BaseEndpointBulkAllClient<Raid, string>, IRaidsClient
     {
         /// <summary>
