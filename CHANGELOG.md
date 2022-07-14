@@ -1,5 +1,11 @@
 # Gw2Sharp History
 
+## 1.7.3 (14 July 2022)
+This is a small bugfix for a typo in the `/v2/raids` endpoint, causing a 404.
+
+### Endpoints
+- Fix `/v2/raids` endpoint returning a 404 ([#122](https://github.com/Archomeda/Gw2Sharp/issues/122), [#123](https://github.com/Archomeda/Gw2Sharp/pull/123))
+
 ## 1.7.2 (22 May 2022)
 This is a small bugfix for the caching component.
 
