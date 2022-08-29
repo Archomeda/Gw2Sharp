@@ -152,7 +152,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
 
         /// <summary>
         /// Gets the progression.
-        /// Requires scopes: account, progression.
+        /// Requires scopes: account, progression, unlocks.
         /// </summary>
         IAccountProgressionClient Progression { get; }
 
