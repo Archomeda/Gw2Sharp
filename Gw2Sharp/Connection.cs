@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.Diagnostics;
+using System.Linq;
 using System.Net.Http.Headers;
+using System.Reflection;
 using Gw2Sharp.Mumble;
 using Gw2Sharp.WebApi;
 using Gw2Sharp.WebApi.Caching;
@@ -88,9 +90,10 @@ namespace Gw2Sharp
             string userAgentProduct = "Gw2Sharp";
             try
             {
-                string? fileVersion = FileVersionInfo.GetVersionInfo(typeof(Gw2Client).Assembly.Location).FileVersion;
-                if (!string.IsNullOrWhiteSpace(fileVersion))
-                    userAgentProduct = $"Gw2Sharp/{new Version(fileVersion).ToString(3)}";
+                var attribute = typeof(Gw2Client).Assembly.GetCustomAttributes(typeof(AssemblyFileVersionAttribute), true).FirstOrDefault();
+
+                if (attribute is AssemblyFileVersionAttribute assemblyFileVersionAttribute)
+                    userAgentProduct = $"Gw2Sharp/{new Version(assemblyFileVersionAttribute.Version).ToString(3)}";
             }
             catch { /* Ignore */ }
             this.UserAgent = $"{userAgent}{(!string.IsNullOrWhiteSpace(userAgent) ? " " : "")}" +
