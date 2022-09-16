@@ -1,0 +1,5522 @@
+[
+  {
+    "name": "Jatoro's Leggings",
+    "description": "",
+    "type": "Armor",
+    "level": 80,
+    "rarity": "Exotic",
+    "vendor_value": 370,
+    "default_skin": 10,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "HideSuffix",
+      "SoulBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45146,
+    "chat_link": "[&AgFasAAA]",
+    "icon": "https://render.guildwars2.com/file/1920ACA302E656B60C38605521760351F147809D/61088.png",
+    "details": {
+      "type": "Leggings",
+      "weight_class": "Light",
+      "defense": 194,
+      "infusion_slots": [],
+      "attribute_adjustment": 256.08,
+      "infix_upgrade": {
+        "id": 754,
+        "attributes": [
+          {
+            "attribute": "Toughness",
+            "modifier": 64
+          },
+          {
+            "attribute": "Vitality",
+            "modifier": 64
+          },
+          {
+            "attribute": "ConditionDamage",
+            "modifier": 90
+          }
+        ]
+      },
+      "suffix_item_id": 24738,
+      "secondary_suffix_item_id": ""
+    }
+  },
+  {
+    "name": "Jatoro's Mantle",
+    "description": "",
+    "type": "Armor",
+    "level": 80,
+    "rarity": "Exotic",
+    "vendor_value": 291,
+    "default_skin": 45,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "HideSuffix",
+      "SoulBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45147,
+    "chat_link": "[&AgFbsAAA]",
+    "icon": "https://render.guildwars2.com/file/0F6E6E6F4D0802BD4FBB9425BDBDD476B704D9C8/61092.png",
+    "details": {
+      "type": "Shoulders",
+      "weight_class": "Light",
+      "defense": 73,
+      "infusion_slots": [],
+      "attribute_adjustment": 128.04,
+      "infix_upgrade": {
+        "id": 754,
+        "attributes": [
+          {
+            "attribute": "Toughness",
+            "modifier": 32
+          },
+          {
+            "attribute": "Vitality",
+            "modifier": 32
+          },
+          {
+            "attribute": "ConditionDamage",
+            "modifier": 45
+          }
+        ]
+      },
+      "suffix_item_id": 24738,
+      "secondary_suffix_item_id": ""
+    }
+  },
+  {
+    "name": "Errol's Boots",
+    "description": "",
+    "type": "Armor",
+    "level": 80,
+    "rarity": "Exotic",
+    "vendor_value": 264,
+    "default_skin": 35,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "HideSuffix",
+      "SoulBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45148,
+    "chat_link": "[&AgFcsAAA]",
+    "icon": "https://render.guildwars2.com/file/B7D77D6B1735D07F4AB93DE2DED06A1FEBB7F3EE/561550.png",
+    "details": {
+      "type": "Boots",
+      "weight_class": "Medium",
+      "defense": 157,
+      "infusion_slots": [],
+      "attribute_adjustment": 128.04,
+      "infix_upgrade": {
+        "id": 754,
+        "attributes": [
+          {
+            "attribute": "Toughness",
+            "modifier": 32
+          },
+          {
+            "attribute": "Vitality",
+            "modifier": 32
+          },
+          {
+            "attribute": "ConditionDamage",
+            "modifier": 45
+          }
+        ]
+      },
+      "suffix_item_id": 24723,
+      "secondary_suffix_item_id": ""
+    }
+  },
+  {
+    "name": "Errol's Coat",
+    "description": "",
+    "type": "Armor",
+    "level": 80,
+    "rarity": "Exotic",
+    "vendor_value": 396,
+    "default_skin": 12,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "HideSuffix",
+      "SoulBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45149,
+    "chat_link": "[&AgFdsAAA]",
+    "icon": "https://render.guildwars2.com/file/142DBA7E1144E3A61A02D9C8EC44225F327597F2/561549.png",
+    "details": {
+      "type": "Coat",
+      "weight_class": "Medium",
+      "defense": 338,
+      "infusion_slots": [],
+      "attribute_adjustment": 384.12,
+      "infix_upgrade": {
+        "id": 754,
+        "attributes": [
+          {
+            "attribute": "Toughness",
+            "modifier": 96
+          },
+          {
+            "attribute": "Vitality",
+            "modifier": 96
+          },
+          {
+            "attribute": "ConditionDamage",
+            "modifier": 134
+          }
+        ]
+      },
+      "suffix_item_id": 24723,
+      "secondary_suffix_item_id": ""
+    }
+  },
+  {
+    "name": "Errol's Gloves",
+    "description": "",
+    "type": "Armor",
+    "level": 80,
+    "rarity": "Exotic",
+    "vendor_value": 238,
+    "default_skin": 43,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "HideSuffix",
+      "SoulBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45150,
+    "chat_link": "[&AgFesAAA]",
+    "icon": "https://render.guildwars2.com/file/3F385C09CDDF9F5509E4C79F66B1733F186D3D6F/561552.png",
+    "details": {
+      "type": "Gloves",
+      "weight_class": "Medium",
+      "defense": 157,
+      "infusion_slots": [],
+      "attribute_adjustment": 128.04,
+      "infix_upgrade": {
+        "id": 754,
+        "attributes": [
+          {
+            "attribute": "Toughness",
+            "modifier": 32
+          },
+          {
+            "attribute": "Vitality",
+            "modifier": 32
+          },
+          {
+            "attribute": "ConditionDamage",
+            "modifier": 45
+          }
+        ]
+      },
+      "suffix_item_id": 24723,
+      "secondary_suffix_item_id": ""
+    }
+  },
+  {
+    "name": "Errol's Mask",
+    "description": "",
+    "type": "Armor",
+    "level": 80,
+    "rarity": "Exotic",
+    "vendor_value": 330,
+    "default_skin": 95,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "HideSuffix",
+      "SoulBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45151,
+    "chat_link": "[&AgFfsAAA]",
+    "icon": "https://render.guildwars2.com/file/65A0C7367206E6CE4EC7C8CBE07EABAE0191BFBA/561548.png",
+    "details": {
+      "type": "Helm",
+      "weight_class": "Medium",
+      "defense": 97,
+      "infusion_slots": [],
+      "attribute_adjustment": 170.72,
+      "infix_upgrade": {
+        "id": 754,
+        "attributes": [
+          {
+            "attribute": "Toughness",
+            "modifier": 43
+          },
+          {
+            "attribute": "Vitality",
+            "modifier": 43
+          },
+          {
+            "attribute": "ConditionDamage",
+            "modifier": 60
+          }
+        ]
+      },
+      "suffix_item_id": 24723,
+      "secondary_suffix_item_id": ""
+    }
+  },
+  {
+    "name": "Errol's Leggings",
+    "description": "",
+    "type": "Armor",
+    "level": 80,
+    "rarity": "Exotic",
+    "vendor_value": 370,
+    "default_skin": 11,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "HideSuffix",
+      "SoulBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45152,
+    "chat_link": "[&AgFgsAAA]",
+    "icon": "https://render.guildwars2.com/file/DD4D5CEC01DD45E656A7B6DA540161385D78B2B8/561553.png",
+    "details": {
+      "type": "Leggings",
+      "weight_class": "Medium",
+      "defense": 218,
+      "infusion_slots": [],
+      "attribute_adjustment": 256.08,
+      "infix_upgrade": {
+        "id": 754,
+        "attributes": [
+          {
+            "attribute": "Toughness",
+            "modifier": 64
+          },
+          {
+            "attribute": "Vitality",
+            "modifier": 64
+          },
+          {
+            "attribute": "ConditionDamage",
+            "modifier": 90
+          }
+        ]
+      },
+      "suffix_item_id": 24723,
+      "secondary_suffix_item_id": ""
+    }
+  },
+  {
+    "name": "Errol's Pauldrons",
+    "description": "",
+    "type": "Armor",
+    "level": 80,
+    "rarity": "Exotic",
+    "vendor_value": 291,
+    "default_skin": 47,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "HideSuffix",
+      "SoulBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45153,
+    "chat_link": "[&AgFhsAAA]",
+    "icon": "https://render.guildwars2.com/file/EF97346C5442020AFAAAF016182F0CF00E989703/561551.png",
+    "details": {
+      "type": "Shoulders",
+      "weight_class": "Medium",
+      "defense": 97,
+      "infusion_slots": [],
+      "attribute_adjustment": 128.04,
+      "infix_upgrade": {
+        "id": 754,
+        "attributes": [
+          {
+            "attribute": "Toughness",
+            "modifier": 32
+          },
+          {
+            "attribute": "Vitality",
+            "modifier": 32
+          },
+          {
+            "attribute": "ConditionDamage",
+            "modifier": 45
+          }
+        ]
+      },
+      "suffix_item_id": 24723,
+      "secondary_suffix_item_id": ""
+    }
+  },
+  {
+    "name": "Essence of Luck",
+    "description": "Double-click to gain 10 luck.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Fine",
+    "vendor_value": 0,
+    "game_types": [
+      "Pvp",
+      "PvpLobby",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "BulkConsume",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45175,
+    "chat_link": "[&AgF3sAAA]",
+    "icon": "https://render.guildwars2.com/file/1BF5D192EE5DAF97A7F4090461C450DA00F8FFAC/631148.png",
+    "details": {
+      "type": "Generic"
+    }
+  },
+  {
+    "name": "Essence of Luck",
+    "description": "Double-click to gain 50 luck.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Masterwork",
+    "vendor_value": 0,
+    "game_types": [
+      "Pvp",
+      "PvpLobby",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "BulkConsume",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45176,
+    "chat_link": "[&AgF4sAAA]",
+    "icon": "https://render.guildwars2.com/file/07450110280000435FBA2B4BE57DE6DCE86E22AC/631149.png",
+    "details": {
+      "type": "Generic"
+    }
+  },
+  {
+    "name": "Essence of Luck",
+    "description": "Double-click to gain 100 luck.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Rare",
+    "vendor_value": 0,
+    "game_types": [
+      "Pvp",
+      "PvpLobby",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "BulkConsume",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45177,
+    "chat_link": "[&AgF5sAAA]",
+    "icon": "https://render.guildwars2.com/file/4FA2D6CEF9039B402F2695CF2E740B4CF6F50753/631150.png",
+    "details": {
+      "type": "Generic"
+    }
+  },
+  {
+    "name": "Essence of Luck",
+    "description": "Double-click to gain 200 luck.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Exotic",
+    "vendor_value": 0,
+    "game_types": [
+      "Pvp",
+      "PvpLobby",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "BulkConsume",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45178,
+    "chat_link": "[&AgF6sAAA]",
+    "icon": "https://render.guildwars2.com/file/DAB46301D2175B2CAAC4BACBA02F6A0A2F1DBEB8/631151.png",
+    "details": {
+      "type": "Generic"
+    }
+  },
+  {
+    "name": "Essence of Luck",
+    "description": "Double-click to gain 500 luck.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Legendary",
+    "vendor_value": 0,
+    "game_types": [
+      "Pvp",
+      "PvpLobby",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "BulkConsume",
+      "AccountBindOnUse",
+      "DeleteWarning"
+    ],
+    "restrictions": [],
+    "id": 45179,
+    "chat_link": "[&AgF7sAAA]",
+    "icon": "https://render.guildwars2.com/file/DB6E0EFF01587F1C44DD131DCBB34BA7D27CC7EF/631152.png",
+    "details": {
+      "type": "Generic"
+    }
+  },
+  {
+    "name": "Wupwup Weapon Chest",
+    "description": "Double-click to choose an ascended weapon with Celestial stats.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 320,
+    "game_types": [
+      "PvpLobby",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45181,
+    "chat_link": "[&AgF9sAAA]",
+    "icon": "https://render.guildwars2.com/file/2E684B7FFB18C9A780413F21F4613BD71A2DE92F/631153.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Occam's Weapon Chest",
+    "description": "Double-click to choose an ascended weapon with Carrion stats.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 320,
+    "game_types": [
+      "PvpLobby",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45182,
+    "chat_link": "[&AgF+sAAA]",
+    "icon": "https://render.guildwars2.com/file/EF343D1E706DD5290693FDBD7FB01B4952050C21/631154.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Grizzlemouth's Weapon Chest",
+    "description": "Double-click to choose an ascended weapon with Rabid stats.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 320,
+    "game_types": [
+      "PvpLobby",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45183,
+    "chat_link": "[&AgF/sAAA]",
+    "icon": "https://render.guildwars2.com/file/E532C0CC9CBDAC3FE867EC7C4CF8FD09011D6F1B/631155.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Mathilde's Weapon Chest",
+    "description": "Double-click to choose an ascended weapon with Dire stats.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 320,
+    "game_types": [
+      "PvpLobby",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45184,
+    "chat_link": "[&AgGAsAAA]",
+    "icon": "https://render.guildwars2.com/file/922DD2A8365A48C36812EA0D94CEDFD7F50F3908/631156.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Theodosus's Weapon Chest",
+    "description": "Double-click to choose an ascended weapon with Cleric stats.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 320,
+    "game_types": [
+      "PvpLobby",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45185,
+    "chat_link": "[&AgGBsAAA]",
+    "icon": "https://render.guildwars2.com/file/5E032A630EDA99C24B1713FFFE9BD6222D5F6CD4/631157.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Hronk's Weapon Chest",
+    "description": "Double-click to choose an ascended weapon with Magi stats.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 320,
+    "game_types": [
+      "PvpLobby",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45186,
+    "chat_link": "[&AgGCsAAA]",
+    "icon": "https://render.guildwars2.com/file/DE075DCD059DD31F1011BAE5A0C63D0302CBC10C/631158.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Ebonmane's Weapon Chest",
+    "description": "Double-click to choose an ascended weapon with Apothecary stats.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 320,
+    "game_types": [
+      "PvpLobby",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45187,
+    "chat_link": "[&AgGDsAAA]",
+    "icon": "https://render.guildwars2.com/file/41805700F65A4A249D2352D35D0336BA40E5F909/631159.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Stonecleaver's Weapon Chest",
+    "description": "Double-click to choose an ascended weapon with Valkyrie stats.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 320,
+    "game_types": [
+      "PvpLobby",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45188,
+    "chat_link": "[&AgGEsAAA]",
+    "icon": "https://render.guildwars2.com/file/F9F35E94C10F1809906275299408477F2B09C906/631160.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Zojja's Weapon Chest",
+    "description": "Double-click to choose an ascended weapon with Berserker stats.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 320,
+    "game_types": [
+      "PvpLobby",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45189,
+    "chat_link": "[&AgGFsAAA]",
+    "icon": "https://render.guildwars2.com/file/54C42771DFFCDC579D050BD51C1D3DA800120623/631161.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Chorben's Weapon Chest",
+    "description": "Double-click to choose an ascended weapon with Soldier stats.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 320,
+    "game_types": [
+      "PvpLobby",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45190,
+    "chat_link": "[&AgGGsAAA]",
+    "icon": "https://render.guildwars2.com/file/11541098AA6030E4FB0797B3FEFDA0ED090CE3F5/631162.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Coalforge's Weapon Chest",
+    "description": "Double-click to choose an ascended weapon with Rampager stats.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 320,
+    "game_types": [
+      "PvpLobby",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45191,
+    "chat_link": "[&AgGHsAAA]",
+    "icon": "https://render.guildwars2.com/file/D1ADE9C9CD4D013B06E901412B24C35DFF25EE02/631163.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Soros's Weapon Chest",
+    "description": "Double-click to choose an ascended weapon with Assassin stats.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 320,
+    "game_types": [
+      "PvpLobby",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45192,
+    "chat_link": "[&AgGIsAAA]",
+    "icon": "https://render.guildwars2.com/file/610FAD0507DCCB6845025303673D78F8B8C461CD/631164.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Leftpaw's Weapon Chest",
+    "description": "Double-click to choose an ascended weapon with Settler stats.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 320,
+    "game_types": [
+      "PvpLobby",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45193,
+    "chat_link": "[&AgGJsAAA]",
+    "icon": "https://render.guildwars2.com/file/48071CFCFEC1E9FD079C78B6D30198B657B4073F/631165.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Angchu Weapon Chest",
+    "description": "Double-click to choose an ascended weapon with Cavalier stats.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 320,
+    "game_types": [
+      "PvpLobby",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45194,
+    "chat_link": "[&AgGKsAAA]",
+    "icon": "https://render.guildwars2.com/file/0F0E9BF9DFAAED023029DA4EC9B81FE0EE140613/631166.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Beigarth's Weapon Chest",
+    "description": "Double-click to choose an ascended weapon with Knight stats.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 320,
+    "game_types": [
+      "PvpLobby",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45195,
+    "chat_link": "[&AgGLsAAA]",
+    "icon": "https://render.guildwars2.com/file/B3D1BCA875590CB29E980E4DE5CBAF649CE1E592/631167.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Zintl Weapon Chest",
+    "description": "Double-click to choose an ascended weapon with Shaman stats.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 320,
+    "game_types": [
+      "PvpLobby",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45196,
+    "chat_link": "[&AgGMsAAA]",
+    "icon": "https://render.guildwars2.com/file/A10BAD75B4F075F7B75B1A7BF6E10F0EFA1F2621/631168.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Tonn's Weapon Chest",
+    "description": "Double-click to choose an ascended weapon with Sentinel stats.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 320,
+    "game_types": [
+      "PvpLobby",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45197,
+    "chat_link": "[&AgGNsAAA]",
+    "icon": "https://render.guildwars2.com/file/FC500935FF4ADB22A0E3B7C62218E9EE4516004E/631169.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Recipe: Ascended Inscription",
+    "description": "Double-click and choose which Ascended Inscription recipe to receive.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 110,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45198,
+    "chat_link": "[&AgGOsAAA]",
+    "icon": "https://render.guildwars2.com/file/162616E65F5D247791C12B0BA27442536637E1D8/631170.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Recipe: Ascended Axe",
+    "description": "Double-click and choose which Ascended Axe recipe to receive.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 110,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45199,
+    "chat_link": "[&AgGPsAAA]",
+    "icon": "https://render.guildwars2.com/file/162616E65F5D247791C12B0BA27442536637E1D8/631170.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Recipe: Ascended Dagger",
+    "description": "Double-click and choose which Ascended Dagger recipe to receive.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 110,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45200,
+    "chat_link": "[&AgGQsAAA]",
+    "icon": "https://render.guildwars2.com/file/162616E65F5D247791C12B0BA27442536637E1D8/631170.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Recipe: Ascended Focus",
+    "description": "Double-click and choose which Ascended Focus recipe to receive.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 110,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45201,
+    "chat_link": "[&AgGRsAAA]",
+    "icon": "https://render.guildwars2.com/file/162616E65F5D247791C12B0BA27442536637E1D8/631170.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Recipe: Ascended Greatsword",
+    "description": "Double-click and choose which Ascended Greatsword recipe to receive.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 110,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45202,
+    "chat_link": "[&AgGSsAAA]",
+    "icon": "https://render.guildwars2.com/file/162616E65F5D247791C12B0BA27442536637E1D8/631170.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Recipe: Ascended Hammer",
+    "description": "Double-click and choose which Ascended Hammer recipe to receive.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 110,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45203,
+    "chat_link": "[&AgGTsAAA]",
+    "icon": "https://render.guildwars2.com/file/162616E65F5D247791C12B0BA27442536637E1D8/631170.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Recipe: Ascended Spear",
+    "description": "Double-click and choose which Ascended Spear recipe to receive.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 110,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45204,
+    "chat_link": "[&AgGUsAAA]",
+    "icon": "https://render.guildwars2.com/file/162616E65F5D247791C12B0BA27442536637E1D8/631170.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Recipe: Ascended Longbow",
+    "description": "Double-click and choose which Ascended Longbow recipe to receive.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 110,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45205,
+    "chat_link": "[&AgGVsAAA]",
+    "icon": "https://render.guildwars2.com/file/162616E65F5D247791C12B0BA27442536637E1D8/631170.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Recipe: Ascended Mace",
+    "description": "Double-click and choose which Ascended Mace recipe to receive.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 110,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45206,
+    "chat_link": "[&AgGWsAAA]",
+    "icon": "https://render.guildwars2.com/file/162616E65F5D247791C12B0BA27442536637E1D8/631170.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Recipe: Ascended Pistol",
+    "description": "Double-click and choose which Ascended Pistol recipe to receive.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 110,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45207,
+    "chat_link": "[&AgGXsAAA]",
+    "icon": "https://render.guildwars2.com/file/162616E65F5D247791C12B0BA27442536637E1D8/631170.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Recipe: Ascended Rifle",
+    "description": "Double-click and choose which Ascended Rifle recipe to receive.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 110,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45208,
+    "chat_link": "[&AgGYsAAA]",
+    "icon": "https://render.guildwars2.com/file/162616E65F5D247791C12B0BA27442536637E1D8/631170.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Recipe: Ascended Scepter",
+    "description": "Double-click and choose which Ascended Scepter recipe to receive.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 110,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45209,
+    "chat_link": "[&AgGZsAAA]",
+    "icon": "https://render.guildwars2.com/file/162616E65F5D247791C12B0BA27442536637E1D8/631170.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Recipe: Ascended Shield",
+    "description": "Double-click and choose which Ascended Shield recipe to receive.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 110,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45210,
+    "chat_link": "[&AgGasAAA]",
+    "icon": "https://render.guildwars2.com/file/162616E65F5D247791C12B0BA27442536637E1D8/631170.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Recipe: Ascended Short Bow",
+    "description": "Double-click and choose which Ascended Short Bow recipe to receive.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 110,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45211,
+    "chat_link": "[&AgGbsAAA]",
+    "icon": "https://render.guildwars2.com/file/162616E65F5D247791C12B0BA27442536637E1D8/631170.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Recipe: Ascended Harpoon Gun",
+    "description": "Double-click and choose which Ascended Harpoon Gun recipe to receive.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 110,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45212,
+    "chat_link": "[&AgGcsAAA]",
+    "icon": "https://render.guildwars2.com/file/162616E65F5D247791C12B0BA27442536637E1D8/631170.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Recipe: Ascended Staff",
+    "description": "Double-click and choose which Ascended Staff recipe to receive.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 110,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45213,
+    "chat_link": "[&AgGdsAAA]",
+    "icon": "https://render.guildwars2.com/file/162616E65F5D247791C12B0BA27442536637E1D8/631170.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Recipe: Ascended Sword",
+    "description": "Double-click and choose which Ascended Sword recipe to receive.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 110,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45214,
+    "chat_link": "[&AgGesAAA]",
+    "icon": "https://render.guildwars2.com/file/162616E65F5D247791C12B0BA27442536637E1D8/631170.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Recipe: Ascended Torch",
+    "description": "Double-click and choose which Ascended Torch recipe to receive.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 110,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45215,
+    "chat_link": "[&AgGfsAAA]",
+    "icon": "https://render.guildwars2.com/file/162616E65F5D247791C12B0BA27442536637E1D8/631170.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Recipe: Ascended Trident",
+    "description": "Double-click and choose which Ascended Trident recipe to receive.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 110,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45216,
+    "chat_link": "[&AgGgsAAA]",
+    "icon": "https://render.guildwars2.com/file/162616E65F5D247791C12B0BA27442536637E1D8/631170.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Recipe: Ascended Warhorn",
+    "description": "Double-click and choose which Ascended Warhorn recipe to receive.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 110,
+    "game_types": [
+      "Activity",
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45217,
+    "chat_link": "[&AgGhsAAA]",
+    "icon": "https://render.guildwars2.com/file/162616E65F5D247791C12B0BA27442536637E1D8/631170.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Box of Hunter's Scale Armor",
+    "description": "Double-click to unpack a full set of level 25 armor.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Fine",
+    "vendor_value": 26,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 45218,
+    "chat_link": "[&AgGisAAA]",
+    "icon": "https://render.guildwars2.com/file/18AB9C1B05A82D5EF6CA4B16E2F7D4309BE705CF/63203.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Box of Hunter's Scale Armor",
+    "description": "Double-click to unpack a full set of level 35 armor.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Masterwork",
+    "vendor_value": 66,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 45219,
+    "chat_link": "[&AgGjsAAA]",
+    "icon": "https://render.guildwars2.com/file/18AB9C1B05A82D5EF6CA4B16E2F7D4309BE705CF/63203.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Box of Hunter's Gladiator Armor",
+    "description": "Double-click to unpack a full set of level 35 armor.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Rare",
+    "vendor_value": 99,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 45220,
+    "chat_link": "[&AgGksAAA]",
+    "icon": "https://render.guildwars2.com/file/18AB9C1B05A82D5EF6CA4B16E2F7D4309BE705CF/63203.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Box of Hunter's Splint Armor",
+    "description": "Double-click to unpack a full set of level 40 armor.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Fine",
+    "vendor_value": 36,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 45221,
+    "chat_link": "[&AgGlsAAA]",
+    "icon": "https://render.guildwars2.com/file/72D04673660ECB7FD904680D487030A41106F952/63218.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Box of Hunter's Splint Armor",
+    "description": "Double-click to unpack a full set of level 50 armor.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Masterwork",
+    "vendor_value": 86,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 45222,
+    "chat_link": "[&AgGmsAAA]",
+    "icon": "https://render.guildwars2.com/file/72D04673660ECB7FD904680D487030A41106F952/63218.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Box of Hunter's Gladiator Armor",
+    "description": "Double-click to unpack a full set of level 50 armor.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Rare",
+    "vendor_value": 129,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 45223,
+    "chat_link": "[&AgGnsAAA]",
+    "icon": "https://render.guildwars2.com/file/72D04673660ECB7FD904680D487030A41106F952/63218.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Box of Assassin's Reinforced Scale Armor",
+    "description": "Double-click to unpack a full set of level 60 armor.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Fine",
+    "vendor_value": 50,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 45224,
+    "chat_link": "[&AgGosAAA]",
+    "icon": "https://render.guildwars2.com/file/4C264FCC91D1034307CBBD0738656647DD67C467/63227.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Box of Assassin's Reinforced Scale Armor",
+    "description": "Double-click to unpack a full set of level 65 armor.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Masterwork",
+    "vendor_value": 108,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 45225,
+    "chat_link": "[&AgGpsAAA]",
+    "icon": "https://render.guildwars2.com/file/4C264FCC91D1034307CBBD0738656647DD67C467/63227.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Box of Assassin's Gladiator Armor",
+    "description": "Double-click to unpack a full set of level 65 armor.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Rare",
+    "vendor_value": 162,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 45226,
+    "chat_link": "[&AgGqsAAA]",
+    "icon": "https://render.guildwars2.com/file/4C264FCC91D1034307CBBD0738656647DD67C467/63227.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Box of Assassin's Barbaric Armor",
+    "description": "Double-click to unpack a full set of level 75 armor.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Fine",
+    "vendor_value": 61,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 45227,
+    "chat_link": "[&AgGrsAAA]",
+    "icon": "https://render.guildwars2.com/file/70CA307D3B2B740C71D19CDB20030C51EBE8F6E8/63222.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Box of Assassin's Barbaric Armor",
+    "description": "Double-click to unpack a full set of level 80 armor.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Masterwork",
+    "vendor_value": 128,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 45228,
+    "chat_link": "[&AgGssAAA]",
+    "icon": "https://render.guildwars2.com/file/70CA307D3B2B740C71D19CDB20030C51EBE8F6E8/63222.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Box of Assassin's Gladiator Armor",
+    "description": "Double-click to unpack a full set of level 80 armor.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Rare",
+    "vendor_value": 192,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 45229,
+    "chat_link": "[&AgGtsAAA]",
+    "icon": "https://render.guildwars2.com/file/70CA307D3B2B740C71D19CDB20030C51EBE8F6E8/63222.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Box of Assassin's Draconic Armor",
+    "description": "Double-click to unpack a full set of level 80 armor.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Exotic",
+    "vendor_value": 256,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 45230,
+    "chat_link": "[&AgGusAAA]",
+    "icon": "https://render.guildwars2.com/file/726C070116A6D2DE16E07F4E56001240D70BD097/63223.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Satchel of Hunter's Student Armor",
+    "description": "Double-click to unpack a full set of level 25 armor.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Fine",
+    "vendor_value": 0,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 45231,
+    "chat_link": "[&AgGvsAAA]",
+    "icon": "https://render.guildwars2.com/file/04F3F7DD14F20DB1146C0B3B0A54D5A216B55551/63199.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Satchel of Hunter's Student Armor",
+    "description": "Double-click to unpack a full set of level 35 armor.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Masterwork",
+    "vendor_value": 0,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 45232,
+    "chat_link": "[&AgGwsAAA]",
+    "icon": "https://render.guildwars2.com/file/04F3F7DD14F20DB1146C0B3B0A54D5A216B55551/63199.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Satchel of Hunter's Masquerade Armor",
+    "description": "Double-click to unpack a full set of level 35 armor.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Rare",
+    "vendor_value": 0,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 45233,
+    "chat_link": "[&AgGxsAAA]",
+    "icon": "https://render.guildwars2.com/file/04F3F7DD14F20DB1146C0B3B0A54D5A216B55551/63199.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Satchel of Hunter's Acolyte Armor",
+    "description": "Double-click to unpack a full set of level 40 armor.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Fine",
+    "vendor_value": 0,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 45234,
+    "chat_link": "[&AgGysAAA]",
+    "icon": "https://render.guildwars2.com/file/04F3F7DD14F20DB1146C0B3B0A54D5A216B55551/63199.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Satchel of Hunter's Acolyte Armor",
+    "description": "Double-click to unpack a full set of level 50 armor.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Masterwork",
+    "vendor_value": 0,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 45235,
+    "chat_link": "[&AgGzsAAA]",
+    "icon": "https://render.guildwars2.com/file/04F3F7DD14F20DB1146C0B3B0A54D5A216B55551/63199.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Satchel of Hunter's Masquerade Armor",
+    "description": "Double-click to unpack a full set of level 50 armor.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Rare",
+    "vendor_value": 0,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 45236,
+    "chat_link": "[&AgG0sAAA]",
+    "icon": "https://render.guildwars2.com/file/04F3F7DD14F20DB1146C0B3B0A54D5A216B55551/63199.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Satchel of Assassin's Winged Armor",
+    "description": "Double-click to unpack a full set of level 60 armor.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Fine",
+    "vendor_value": 0,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 45237,
+    "chat_link": "[&AgG1sAAA]",
+    "icon": "https://render.guildwars2.com/file/04F3F7DD14F20DB1146C0B3B0A54D5A216B55551/63199.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Satchel of Assassin's Winged Armor",
+    "description": "Double-click to unpack a full set of level 65 armor.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Masterwork",
+    "vendor_value": 0,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 45238,
+    "chat_link": "[&AgG2sAAA]",
+    "icon": "https://render.guildwars2.com/file/04F3F7DD14F20DB1146C0B3B0A54D5A216B55551/63199.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Satchel of Assassin's Masquerade Armor",
+    "description": "Double-click to unpack a full set of level 65 armor.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Rare",
+    "vendor_value": 0,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 45239,
+    "chat_link": "[&AgG3sAAA]",
+    "icon": "https://render.guildwars2.com/file/04F3F7DD14F20DB1146C0B3B0A54D5A216B55551/63199.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Satchel of Assassin's Feathered Armor",
+    "description": "Double-click to unpack a full set of level 75 armor.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Fine",
+    "vendor_value": 0,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 45240,
+    "chat_link": "[&AgG4sAAA]",
+    "icon": "https://render.guildwars2.com/file/04F3F7DD14F20DB1146C0B3B0A54D5A216B55551/63199.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Satchel of Assassin's Feathered Armor",
+    "description": "Double-click to unpack a full set of level 80 armor.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Masterwork",
+    "vendor_value": 0,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 45241,
+    "chat_link": "[&AgG5sAAA]",
+    "icon": "https://render.guildwars2.com/file/04F3F7DD14F20DB1146C0B3B0A54D5A216B55551/63199.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Satchel of Assassin's Masquerade Armor",
+    "description": "Double-click to unpack a full set of level 80 armor.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Rare",
+    "vendor_value": 0,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 45242,
+    "chat_link": "[&AgG6sAAA]",
+    "icon": "https://render.guildwars2.com/file/04F3F7DD14F20DB1146C0B3B0A54D5A216B55551/63199.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Satchel of Assassin's Exalted Armor",
+    "description": "Double-click to unpack a full set of level 80 armor.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Exotic",
+    "vendor_value": 0,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 45243,
+    "chat_link": "[&AgG7sAAA]",
+    "icon": "https://render.guildwars2.com/file/04F3F7DD14F20DB1146C0B3B0A54D5A216B55551/63199.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Satchel of Hunter's Outlaw Armor",
+    "description": "Double-click to unpack a full set of level 25 armor.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Fine",
+    "vendor_value": 0,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 45244,
+    "chat_link": "[&AgG8sAAA]",
+    "icon": "https://render.guildwars2.com/file/04F3F7DD14F20DB1146C0B3B0A54D5A216B55551/63199.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Satchel of Hunter's Outlaw Armor",
+    "description": "Double-click to unpack a full set of level 35 armor.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Masterwork",
+    "vendor_value": 0,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 45245,
+    "chat_link": "[&AgG9sAAA]",
+    "icon": "https://render.guildwars2.com/file/04F3F7DD14F20DB1146C0B3B0A54D5A216B55551/63199.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Satchel of Hunter's Noble Armor",
+    "description": "Double-click to unpack a full set of level 35 armor.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Rare",
+    "vendor_value": 0,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 45246,
+    "chat_link": "[&AgG+sAAA]",
+    "icon": "https://render.guildwars2.com/file/04F3F7DD14F20DB1146C0B3B0A54D5A216B55551/63199.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Satchel of Hunter's Leather Armor",
+    "description": "Double-click to unpack a full set of level 40 armor.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Fine",
+    "vendor_value": 0,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 45247,
+    "chat_link": "[&AgG/sAAA]",
+    "icon": "https://render.guildwars2.com/file/04F3F7DD14F20DB1146C0B3B0A54D5A216B55551/63199.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Satchel of Hunter's Leather Armor",
+    "description": "Double-click to unpack a full set of level 50 armor.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Masterwork",
+    "vendor_value": 0,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 45248,
+    "chat_link": "[&AgHAsAAA]",
+    "icon": "https://render.guildwars2.com/file/04F3F7DD14F20DB1146C0B3B0A54D5A216B55551/63199.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Satchel of Hunter's Noble Armor",
+    "description": "Double-click to unpack a full set of level 50 armor.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Rare",
+    "vendor_value": 0,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 45249,
+    "chat_link": "[&AgHBsAAA]",
+    "icon": "https://render.guildwars2.com/file/04F3F7DD14F20DB1146C0B3B0A54D5A216B55551/63199.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Satchel of Assassin's Rascal Armor",
+    "description": "Double-click to unpack a full set of level 60 armor.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Fine",
+    "vendor_value": 0,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 45250,
+    "chat_link": "[&AgHCsAAA]",
+    "icon": "https://render.guildwars2.com/file/04F3F7DD14F20DB1146C0B3B0A54D5A216B55551/63199.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Satchel of Assassin's Rascal Armor",
+    "description": "Double-click to unpack a full set of level 65 armor.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Masterwork",
+    "vendor_value": 0,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 45251,
+    "chat_link": "[&AgHDsAAA]",
+    "icon": "https://render.guildwars2.com/file/04F3F7DD14F20DB1146C0B3B0A54D5A216B55551/63199.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Satchel of Assassin's Noble Armor",
+    "description": "Double-click to unpack a full set of level 65 armor.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Rare",
+    "vendor_value": 0,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 45252,
+    "chat_link": "[&AgHEsAAA]",
+    "icon": "https://render.guildwars2.com/file/04F3F7DD14F20DB1146C0B3B0A54D5A216B55551/63199.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Satchel of Assassin's Prowler Armor",
+    "description": "Double-click to unpack a full set of level 75 armor.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Fine",
+    "vendor_value": 0,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 45253,
+    "chat_link": "[&AgHFsAAA]",
+    "icon": "https://render.guildwars2.com/file/04F3F7DD14F20DB1146C0B3B0A54D5A216B55551/63199.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Satchel of Assassin's Prowler Armor",
+    "description": "Double-click to unpack a full set of level 80 armor.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Masterwork",
+    "vendor_value": 0,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 45254,
+    "chat_link": "[&AgHGsAAA]",
+    "icon": "https://render.guildwars2.com/file/04F3F7DD14F20DB1146C0B3B0A54D5A216B55551/63199.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Satchel of Assassin's Noble Armor",
+    "description": "Double-click to unpack a full set of level 80 armor.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Rare",
+    "vendor_value": 0,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 45255,
+    "chat_link": "[&AgHHsAAA]",
+    "icon": "https://render.guildwars2.com/file/04F3F7DD14F20DB1146C0B3B0A54D5A216B55551/63199.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Satchel of Assassin's Emblazoned Armor",
+    "description": "Double-click to unpack a full set of level 80 armor.",
+    "type": "Container",
+    "level": 0,
+    "rarity": "Exotic",
+    "vendor_value": 0,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "NoSalvage"
+    ],
+    "restrictions": [],
+    "id": 45256,
+    "chat_link": "[&AgHIsAAA]",
+    "icon": "https://render.guildwars2.com/file/04F3F7DD14F20DB1146C0B3B0A54D5A216B55551/63199.png",
+    "details": {
+      "type": "Default"
+    }
+  },
+  {
+    "name": "Recipe: Wupwup Blade",
+    "description": "A recipe to make an ascended sword with Celestial (+All) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45257,
+    "chat_link": "[&AgHJsAAA]",
+    "icon": "https://render.guildwars2.com/file/6D0D731F0DB34D90B72CD1FC79340CC00C91C1D2/849314.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7658
+    }
+  },
+  {
+    "name": "Recipe: Occam's Blade",
+    "description": "A recipe to make an ascended sword with Carrion (+Condition Damage, +Power, and +Vitality) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45258,
+    "chat_link": "[&AgHKsAAA]",
+    "icon": "https://render.guildwars2.com/file/6D0D731F0DB34D90B72CD1FC79340CC00C91C1D2/849314.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7659
+    }
+  },
+  {
+    "name": "Recipe: Grizzlemouth's Blade",
+    "description": "A recipe to make an ascended sword with Rabid (+Condition Damage, +Precision, and +Toughness) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45259,
+    "chat_link": "[&AgHLsAAA]",
+    "icon": "https://render.guildwars2.com/file/6D0D731F0DB34D90B72CD1FC79340CC00C91C1D2/849314.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7660
+    }
+  },
+  {
+    "name": "Recipe: Mathilde's Blade",
+    "description": "A recipe to make an ascended sword with Dire (+Condition Damage, +Vitality, and +Toughness) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45260,
+    "chat_link": "[&AgHMsAAA]",
+    "icon": "https://render.guildwars2.com/file/6D0D731F0DB34D90B72CD1FC79340CC00C91C1D2/849314.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7661
+    }
+  },
+  {
+    "name": "Recipe: Theodosus's Blade",
+    "description": "A recipe to make an ascended sword with Cleric (+Healing Power, +Power, and +Toughness) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45261,
+    "chat_link": "[&AgHNsAAA]",
+    "icon": "https://render.guildwars2.com/file/6D0D731F0DB34D90B72CD1FC79340CC00C91C1D2/849314.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7662
+    }
+  },
+  {
+    "name": "Recipe: Hronk's Blade",
+    "description": "A recipe to make an ascended sword with Magi (+Healing Power, +Precision, and +Vitality) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45262,
+    "chat_link": "[&AgHOsAAA]",
+    "icon": "https://render.guildwars2.com/file/6D0D731F0DB34D90B72CD1FC79340CC00C91C1D2/849314.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7663
+    }
+  },
+  {
+    "name": "Recipe: Ebonmane's Blade",
+    "description": "A recipe to make an ascended sword with Apothecary (+Healing Power, +Toughness, and +Condition Damage) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45263,
+    "chat_link": "[&AgHPsAAA]",
+    "icon": "https://render.guildwars2.com/file/6D0D731F0DB34D90B72CD1FC79340CC00C91C1D2/849314.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7664
+    }
+  },
+  {
+    "name": "Recipe: Stonecleaver's Blade",
+    "description": "A recipe to make an ascended sword with Valkyrie (+Power, +Ferocity, and +Vitality) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45264,
+    "chat_link": "[&AgHQsAAA]",
+    "icon": "https://render.guildwars2.com/file/6D0D731F0DB34D90B72CD1FC79340CC00C91C1D2/849314.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7667
+    }
+  },
+  {
+    "name": "Recipe: Zojja's Blade",
+    "description": "A recipe to make an ascended sword with Berserker (+Power, +Ferocity, and +Precision) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45265,
+    "chat_link": "[&AgHRsAAA]",
+    "icon": "https://render.guildwars2.com/file/6D0D731F0DB34D90B72CD1FC79340CC00C91C1D2/849314.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7665
+    }
+  },
+  {
+    "name": "Recipe: Chorben's Blade",
+    "description": "A recipe to make an ascended sword with Soldier (+Power, +Vitality, and +Toughness) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45266,
+    "chat_link": "[&AgHSsAAA]",
+    "icon": "https://render.guildwars2.com/file/6D0D731F0DB34D90B72CD1FC79340CC00C91C1D2/849314.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7666
+    }
+  },
+  {
+    "name": "Recipe: Coalforge's Blade",
+    "description": "A recipe to make an ascended sword with Rampager (+Precision, +Condition Damage, and +Power) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45267,
+    "chat_link": "[&AgHTsAAA]",
+    "icon": "https://render.guildwars2.com/file/6D0D731F0DB34D90B72CD1FC79340CC00C91C1D2/849314.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7668
+    }
+  },
+  {
+    "name": "Recipe: Soros's Blade",
+    "description": "A recipe to make an ascended sword with Assassin (+Precision, +Power, and +Ferocity) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45268,
+    "chat_link": "[&AgHUsAAA]",
+    "icon": "https://render.guildwars2.com/file/6D0D731F0DB34D90B72CD1FC79340CC00C91C1D2/849314.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7669
+    }
+  },
+  {
+    "name": "Recipe: Leftpaw's Blade",
+    "description": "A recipe to make an ascended sword with Settler (+Toughness, +Healing Power, and +Condition Damage) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45269,
+    "chat_link": "[&AgHVsAAA]",
+    "icon": "https://render.guildwars2.com/file/6D0D731F0DB34D90B72CD1FC79340CC00C91C1D2/849314.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7670
+    }
+  },
+  {
+    "name": "Recipe: Angchu Blade",
+    "description": "A recipe to make an ascended sword with Cavalier (+Toughness, +Power, and +Ferocity) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45270,
+    "chat_link": "[&AgHWsAAA]",
+    "icon": "https://render.guildwars2.com/file/6D0D731F0DB34D90B72CD1FC79340CC00C91C1D2/849314.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7671
+    }
+  },
+  {
+    "name": "Recipe: Beigarth's Blade",
+    "description": "A recipe to make an ascended sword with Knight (+Toughness, +Power, and +Precision) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45271,
+    "chat_link": "[&AgHXsAAA]",
+    "icon": "https://render.guildwars2.com/file/6D0D731F0DB34D90B72CD1FC79340CC00C91C1D2/849314.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7672
+    }
+  },
+  {
+    "name": "Recipe: Zintl Blade",
+    "description": "A recipe to make an ascended sword with Shaman (+Vitality, +Condition Damage, and +Healing Power) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45272,
+    "chat_link": "[&AgHYsAAA]",
+    "icon": "https://render.guildwars2.com/file/6D0D731F0DB34D90B72CD1FC79340CC00C91C1D2/849314.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7673
+    }
+  },
+  {
+    "name": "Recipe: Tonn's Blade",
+    "description": "A recipe to make an ascended sword with Sentinel (+Vitality, +Power, and +Toughness) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45273,
+    "chat_link": "[&AgHZsAAA]",
+    "icon": "https://render.guildwars2.com/file/6D0D731F0DB34D90B72CD1FC79340CC00C91C1D2/849314.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7674
+    }
+  },
+  {
+    "name": "Recipe: Wupwup Reaver",
+    "description": "A recipe to make an ascended axe with Celestial (+All) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45274,
+    "chat_link": "[&AgHasAAA]",
+    "icon": "https://render.guildwars2.com/file/07D213ECABAE4201A04809374424ACCB7FC6989B/849313.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7730
+    }
+  },
+  {
+    "name": "Recipe: Occam's Reaver",
+    "description": "A recipe to make an ascended axe with Carrion (+Condition Damage, +Power, and +Vitality) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45275,
+    "chat_link": "[&AgHbsAAA]",
+    "icon": "https://render.guildwars2.com/file/07D213ECABAE4201A04809374424ACCB7FC6989B/849313.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7731
+    }
+  },
+  {
+    "name": "Recipe: Grizzlemouth's Reaver",
+    "description": "A recipe to make an ascended axe with Rabid (+Condition Damage, +Precision, and +Toughness) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45276,
+    "chat_link": "[&AgHcsAAA]",
+    "icon": "https://render.guildwars2.com/file/07D213ECABAE4201A04809374424ACCB7FC6989B/849313.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7732
+    }
+  },
+  {
+    "name": "Recipe: Mathilde's Reaver",
+    "description": "A recipe to make an ascended axe with Dire (+Condition Damage, +Vitality, and +Toughness) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45277,
+    "chat_link": "[&AgHdsAAA]",
+    "icon": "https://render.guildwars2.com/file/07D213ECABAE4201A04809374424ACCB7FC6989B/849313.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7733
+    }
+  },
+  {
+    "name": "Recipe: Theodosus's Reaver",
+    "description": "A recipe to make an ascended axe with Cleric (+Healing Power, +Power, and +Toughness) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45278,
+    "chat_link": "[&AgHesAAA]",
+    "icon": "https://render.guildwars2.com/file/07D213ECABAE4201A04809374424ACCB7FC6989B/849313.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7734
+    }
+  },
+  {
+    "name": "Recipe: Hronk's Reaver",
+    "description": "A recipe to make an ascended axe with Magi (+Healing Power, +Precision, and +Vitality) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45279,
+    "chat_link": "[&AgHfsAAA]",
+    "icon": "https://render.guildwars2.com/file/07D213ECABAE4201A04809374424ACCB7FC6989B/849313.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7735
+    }
+  },
+  {
+    "name": "Recipe: Ebonmane's Reaver",
+    "description": "A recipe to make an ascended axe with Apothecary (+Healing Power, +Toughness, and +Condition Damage) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45280,
+    "chat_link": "[&AgHgsAAA]",
+    "icon": "https://render.guildwars2.com/file/07D213ECABAE4201A04809374424ACCB7FC6989B/849313.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7736
+    }
+  },
+  {
+    "name": "Recipe: Stonecleaver's Reaver",
+    "description": "A recipe to make an ascended axe with Valkyrie (+Power, +Ferocity, and +Vitality) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45281,
+    "chat_link": "[&AgHhsAAA]",
+    "icon": "https://render.guildwars2.com/file/07D213ECABAE4201A04809374424ACCB7FC6989B/849313.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7739
+    }
+  },
+  {
+    "name": "Recipe: Zojja's Reaver",
+    "description": "A recipe to make an ascended axe with Berserker (+Power, +Ferocity, and +Precision) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45282,
+    "chat_link": "[&AgHisAAA]",
+    "icon": "https://render.guildwars2.com/file/07D213ECABAE4201A04809374424ACCB7FC6989B/849313.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7737
+    }
+  },
+  {
+    "name": "Recipe: Chorben's Reaver",
+    "description": "A recipe to make an ascended axe with Soldier (+Power, +Vitality, and +Toughness) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45283,
+    "chat_link": "[&AgHjsAAA]",
+    "icon": "https://render.guildwars2.com/file/07D213ECABAE4201A04809374424ACCB7FC6989B/849313.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7738
+    }
+  },
+  {
+    "name": "Recipe: Coalforge's Reaver",
+    "description": "A recipe to make an ascended axe with Rampager (+Precision, +Condition Damage, and +Power) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45284,
+    "chat_link": "[&AgHksAAA]",
+    "icon": "https://render.guildwars2.com/file/07D213ECABAE4201A04809374424ACCB7FC6989B/849313.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7740
+    }
+  },
+  {
+    "name": "Recipe: Soros's Reaver",
+    "description": "A recipe to make an ascended axe with Assassin (+Precision, +Power, and +Ferocity) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45285,
+    "chat_link": "[&AgHlsAAA]",
+    "icon": "https://render.guildwars2.com/file/07D213ECABAE4201A04809374424ACCB7FC6989B/849313.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7741
+    }
+  },
+  {
+    "name": "Recipe: Leftpaw's Reaver",
+    "description": "A recipe to make an ascended axe with Settler (+Toughness, +Healing Power, and +Condition Damage) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45286,
+    "chat_link": "[&AgHmsAAA]",
+    "icon": "https://render.guildwars2.com/file/07D213ECABAE4201A04809374424ACCB7FC6989B/849313.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7742
+    }
+  },
+  {
+    "name": "Recipe: Angchu Reaver",
+    "description": "A recipe to make an ascended axe with Cavalier (+Toughness, +Power, and +Ferocity) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45287,
+    "chat_link": "[&AgHnsAAA]",
+    "icon": "https://render.guildwars2.com/file/07D213ECABAE4201A04809374424ACCB7FC6989B/849313.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7743
+    }
+  },
+  {
+    "name": "Recipe: Beigarth's Reaver",
+    "description": "A recipe to make an ascended axe with Knight (+Toughness, +Power, and +Precision) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45288,
+    "chat_link": "[&AgHosAAA]",
+    "icon": "https://render.guildwars2.com/file/07D213ECABAE4201A04809374424ACCB7FC6989B/849313.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7744
+    }
+  },
+  {
+    "name": "Recipe: Zintl Reaver",
+    "description": "A recipe to make an ascended axe with Shaman (+Vitality, +Condition Damage, and +Healing Power) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45289,
+    "chat_link": "[&AgHpsAAA]",
+    "icon": "https://render.guildwars2.com/file/07D213ECABAE4201A04809374424ACCB7FC6989B/849313.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7745
+    }
+  },
+  {
+    "name": "Recipe: Tonn's Reaver",
+    "description": "A recipe to make an ascended axe with Sentinel (+Vitality, +Power, and +Toughness) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45290,
+    "chat_link": "[&AgHqsAAA]",
+    "icon": "https://render.guildwars2.com/file/07D213ECABAE4201A04809374424ACCB7FC6989B/849313.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7746
+    }
+  },
+  {
+    "name": "Recipe: Wupwup Razor",
+    "description": "A recipe to make an ascended dagger with Celestial (+All) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45291,
+    "chat_link": "[&AgHrsAAA]",
+    "icon": "https://render.guildwars2.com/file/D7ABB45DB032945542623BABC6291639C0B4C7B2/849317.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7754
+    }
+  },
+  {
+    "name": "Recipe: Occam's Razor",
+    "description": "A recipe to make an ascended dagger with Carrion (+Condition Damage, +Power, and +Vitality) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45292,
+    "chat_link": "[&AgHssAAA]",
+    "icon": "https://render.guildwars2.com/file/D7ABB45DB032945542623BABC6291639C0B4C7B2/849317.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7755
+    }
+  },
+  {
+    "name": "Recipe: Grizzlemouth's Razor",
+    "description": "A recipe to make an ascended dagger with Rabid (+Condition Damage, +Precision, and +Toughness) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45293,
+    "chat_link": "[&AgHtsAAA]",
+    "icon": "https://render.guildwars2.com/file/D7ABB45DB032945542623BABC6291639C0B4C7B2/849317.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7756
+    }
+  },
+  {
+    "name": "Recipe: Mathilde's Razor",
+    "description": "A recipe to make an ascended dagger with Dire (+Condition Damage, +Vitality, and +Toughness) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45294,
+    "chat_link": "[&AgHusAAA]",
+    "icon": "https://render.guildwars2.com/file/D7ABB45DB032945542623BABC6291639C0B4C7B2/849317.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7757
+    }
+  },
+  {
+    "name": "Recipe: Theodosus's Razor",
+    "description": "A recipe to make an ascended dagger with Cleric (+Healing Power, +Power, and +Toughness) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45295,
+    "chat_link": "[&AgHvsAAA]",
+    "icon": "https://render.guildwars2.com/file/D7ABB45DB032945542623BABC6291639C0B4C7B2/849317.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7758
+    }
+  },
+  {
+    "name": "Recipe: Hronk's Razor",
+    "description": "A recipe to make an ascended dagger with Magi (+Healing Power, +Precision, and +Vitality) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45296,
+    "chat_link": "[&AgHwsAAA]",
+    "icon": "https://render.guildwars2.com/file/D7ABB45DB032945542623BABC6291639C0B4C7B2/849317.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7759
+    }
+  },
+  {
+    "name": "Recipe: Ebonmane's Razor",
+    "description": "A recipe to make an ascended dagger with Apothecary (+Healing Power, +Toughness, and +Condition Damage) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45297,
+    "chat_link": "[&AgHxsAAA]",
+    "icon": "https://render.guildwars2.com/file/D7ABB45DB032945542623BABC6291639C0B4C7B2/849317.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7760
+    }
+  },
+  {
+    "name": "Recipe: Stonecleaver's Razor",
+    "description": "A recipe to make an ascended dagger with Valkyrie (+Power, +Ferocity, and +Vitality) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45298,
+    "chat_link": "[&AgHysAAA]",
+    "icon": "https://render.guildwars2.com/file/D7ABB45DB032945542623BABC6291639C0B4C7B2/849317.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7763
+    }
+  },
+  {
+    "name": "Recipe: Zojja's Razor",
+    "description": "A recipe to make an ascended dagger with Berserker (+Power, +Ferocity, and +Precision) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45299,
+    "chat_link": "[&AgHzsAAA]",
+    "icon": "https://render.guildwars2.com/file/D7ABB45DB032945542623BABC6291639C0B4C7B2/849317.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7761
+    }
+  },
+  {
+    "name": "Recipe: Chorben's Razor",
+    "description": "A recipe to make an ascended dagger with Soldier (+Power, +Vitality, and +Toughness) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45300,
+    "chat_link": "[&AgH0sAAA]",
+    "icon": "https://render.guildwars2.com/file/D7ABB45DB032945542623BABC6291639C0B4C7B2/849317.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7762
+    }
+  },
+  {
+    "name": "Recipe: Coalforge's Razor",
+    "description": "A recipe to make an ascended dagger with Rampager (+Precision, +Condition Damage, and +Power) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45301,
+    "chat_link": "[&AgH1sAAA]",
+    "icon": "https://render.guildwars2.com/file/D7ABB45DB032945542623BABC6291639C0B4C7B2/849317.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7764
+    }
+  },
+  {
+    "name": "Recipe: Soros's Razor",
+    "description": "A recipe to make an ascended dagger with Assassin (+Precision, +Power, and +Ferocity) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45302,
+    "chat_link": "[&AgH2sAAA]",
+    "icon": "https://render.guildwars2.com/file/D7ABB45DB032945542623BABC6291639C0B4C7B2/849317.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7765
+    }
+  },
+  {
+    "name": "Recipe: Leftpaw's Razor",
+    "description": "A recipe to make an ascended dagger with Settler (+Toughness, +Healing Power, and +Condition Damage) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45303,
+    "chat_link": "[&AgH3sAAA]",
+    "icon": "https://render.guildwars2.com/file/D7ABB45DB032945542623BABC6291639C0B4C7B2/849317.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7766
+    }
+  },
+  {
+    "name": "Recipe: Angchu Razor",
+    "description": "A recipe to make an ascended dagger with Cavalier (+Toughness, +Power, and +Ferocity) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45304,
+    "chat_link": "[&AgH4sAAA]",
+    "icon": "https://render.guildwars2.com/file/D7ABB45DB032945542623BABC6291639C0B4C7B2/849317.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7767
+    }
+  },
+  {
+    "name": "Recipe: Beigarth's Razor",
+    "description": "A recipe to make an ascended dagger with Knight (+Toughness, +Power, and +Precision) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45305,
+    "chat_link": "[&AgH5sAAA]",
+    "icon": "https://render.guildwars2.com/file/D7ABB45DB032945542623BABC6291639C0B4C7B2/849317.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7768
+    }
+  },
+  {
+    "name": "Recipe: Zintl Razor",
+    "description": "A recipe to make an ascended dagger with Shaman (+Vitality, +Condition Damage, and +Healing Power) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45306,
+    "chat_link": "[&AgH6sAAA]",
+    "icon": "https://render.guildwars2.com/file/D7ABB45DB032945542623BABC6291639C0B4C7B2/849317.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7769
+    }
+  },
+  {
+    "name": "Recipe: Tonn's Razor",
+    "description": "A recipe to make an ascended dagger with Sentinel (+Vitality, +Power, and +Toughness) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45307,
+    "chat_link": "[&AgH7sAAA]",
+    "icon": "https://render.guildwars2.com/file/D7ABB45DB032945542623BABC6291639C0B4C7B2/849317.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7770
+    }
+  },
+  {
+    "name": "Recipe: Wupwup Artifact",
+    "description": "A recipe to make an ascended focus with Celestial (+All) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45308,
+    "chat_link": "[&AgH8sAAA]",
+    "icon": "https://render.guildwars2.com/file/077B91E457CFA9ABE67DAFF923570A4BDB974D47/849320.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7382
+    }
+  },
+  {
+    "name": "Recipe: Occam's Artifact",
+    "description": "A recipe to make an ascended focus with Carrion (+Condition Damage, +Power, and +Vitality) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45309,
+    "chat_link": "[&AgH9sAAA]",
+    "icon": "https://render.guildwars2.com/file/077B91E457CFA9ABE67DAFF923570A4BDB974D47/849320.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7383
+    }
+  },
+  {
+    "name": "Recipe: Grizzlemouth's Artifact",
+    "description": "A recipe to make an ascended focus with Rabid (+Condition Damage, +Precision, and +Toughness) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45310,
+    "chat_link": "[&AgH+sAAA]",
+    "icon": "https://render.guildwars2.com/file/077B91E457CFA9ABE67DAFF923570A4BDB974D47/849320.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7384
+    }
+  },
+  {
+    "name": "Recipe: Mathilde's Artifact",
+    "description": "A recipe to make an ascended focus with Dire (+Condition Damage, +Vitality, and +Toughness) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45311,
+    "chat_link": "[&AgH/sAAA]",
+    "icon": "https://render.guildwars2.com/file/077B91E457CFA9ABE67DAFF923570A4BDB974D47/849320.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7385
+    }
+  },
+  {
+    "name": "Recipe: Theodosus's Artifact",
+    "description": "A recipe to make an ascended focus with Cleric (+Healing Power, +Power, and +Toughness) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45312,
+    "chat_link": "[&AgEAsQAA]",
+    "icon": "https://render.guildwars2.com/file/077B91E457CFA9ABE67DAFF923570A4BDB974D47/849320.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7386
+    }
+  },
+  {
+    "name": "Recipe: Hronk's Artifact",
+    "description": "A recipe to make an ascended focus with Magi (+Healing Power, +Precision, and +Vitality) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45313,
+    "chat_link": "[&AgEBsQAA]",
+    "icon": "https://render.guildwars2.com/file/077B91E457CFA9ABE67DAFF923570A4BDB974D47/849320.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7387
+    }
+  },
+  {
+    "name": "Recipe: Ebonmane's Artifact",
+    "description": "A recipe to make an ascended focus with Apothecary (+Healing Power, +Toughness, and +Condition Damage) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45314,
+    "chat_link": "[&AgECsQAA]",
+    "icon": "https://render.guildwars2.com/file/077B91E457CFA9ABE67DAFF923570A4BDB974D47/849320.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7388
+    }
+  },
+  {
+    "name": "Recipe: Stonecleaver's Artifact",
+    "description": "A recipe to make an ascended focus with Valkyrie (+Power, +Ferocity, and +Vitality) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45315,
+    "chat_link": "[&AgEDsQAA]",
+    "icon": "https://render.guildwars2.com/file/077B91E457CFA9ABE67DAFF923570A4BDB974D47/849320.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7391
+    }
+  },
+  {
+    "name": "Recipe: Zojja's Artifact",
+    "description": "A recipe to make an ascended focus with Berserker (+Power, +Ferocity, and +Precision) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45316,
+    "chat_link": "[&AgEEsQAA]",
+    "icon": "https://render.guildwars2.com/file/077B91E457CFA9ABE67DAFF923570A4BDB974D47/849320.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7389
+    }
+  },
+  {
+    "name": "Recipe: Chorben's Artifact",
+    "description": "A recipe to make an ascended focus with Soldier (+Power, +Vitality, and +Toughness) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45317,
+    "chat_link": "[&AgEFsQAA]",
+    "icon": "https://render.guildwars2.com/file/077B91E457CFA9ABE67DAFF923570A4BDB974D47/849320.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7390
+    }
+  },
+  {
+    "name": "Recipe: Coalforge's Artifact",
+    "description": "A recipe to make an ascended focus with Rampager (+Precision, +Condition Damage, and +Power) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45318,
+    "chat_link": "[&AgEGsQAA]",
+    "icon": "https://render.guildwars2.com/file/077B91E457CFA9ABE67DAFF923570A4BDB974D47/849320.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7392
+    }
+  },
+  {
+    "name": "Recipe: Soros's Artifact",
+    "description": "A recipe to make an ascended focus with Assassin (+Precision, +Power, and +Ferocity) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45319,
+    "chat_link": "[&AgEHsQAA]",
+    "icon": "https://render.guildwars2.com/file/077B91E457CFA9ABE67DAFF923570A4BDB974D47/849320.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7393
+    }
+  },
+  {
+    "name": "Recipe: Leftpaw's Artifact",
+    "description": "A recipe to make an ascended focus with Settler (+Toughness, +Healing Power, and +Condition Damage) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45320,
+    "chat_link": "[&AgEIsQAA]",
+    "icon": "https://render.guildwars2.com/file/077B91E457CFA9ABE67DAFF923570A4BDB974D47/849320.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7394
+    }
+  },
+  {
+    "name": "Recipe: Angchu Artifact",
+    "description": "A recipe to make an ascended focus with Cavalier (+Toughness, +Power, and +Ferocity) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45321,
+    "chat_link": "[&AgEJsQAA]",
+    "icon": "https://render.guildwars2.com/file/077B91E457CFA9ABE67DAFF923570A4BDB974D47/849320.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7395
+    }
+  },
+  {
+    "name": "Recipe: Beigarth's Artifact",
+    "description": "A recipe to make an ascended focus with Knight (+Toughness, +Power, and +Precision) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45322,
+    "chat_link": "[&AgEKsQAA]",
+    "icon": "https://render.guildwars2.com/file/077B91E457CFA9ABE67DAFF923570A4BDB974D47/849320.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7396
+    }
+  },
+  {
+    "name": "Recipe: Zintl Artifact",
+    "description": "A recipe to make an ascended focus with Shaman (+Vitality, +Condition Damage, and +Healing Power) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45323,
+    "chat_link": "[&AgELsQAA]",
+    "icon": "https://render.guildwars2.com/file/077B91E457CFA9ABE67DAFF923570A4BDB974D47/849320.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7397
+    }
+  },
+  {
+    "name": "Recipe: Tonn's Artifact",
+    "description": "A recipe to make an ascended focus with Sentinel (+Vitality, +Power, and +Toughness) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45324,
+    "chat_link": "[&AgEMsQAA]",
+    "icon": "https://render.guildwars2.com/file/077B91E457CFA9ABE67DAFF923570A4BDB974D47/849320.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7398
+    }
+  },
+  {
+    "name": "Recipe: Wupwup Claymore",
+    "description": "A recipe to make an ascended greatsword with Celestial (+All) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45325,
+    "chat_link": "[&AgENsQAA]",
+    "icon": "https://render.guildwars2.com/file/04ADE6C44959217F7B2A05720DBFB25B55AA42E4/849318.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7778
+    }
+  },
+  {
+    "name": "Recipe: Occam's Claymore",
+    "description": "A recipe to make an ascended greatsword with Carrion (+Condition Damage, +Power, and +Vitality) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45326,
+    "chat_link": "[&AgEOsQAA]",
+    "icon": "https://render.guildwars2.com/file/04ADE6C44959217F7B2A05720DBFB25B55AA42E4/849318.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7779
+    }
+  },
+  {
+    "name": "Recipe: Grizzlemouth's Claymore",
+    "description": "A recipe to make an ascended greatsword with Rabid (+Condition Damage, +Precision, and +Toughness) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45327,
+    "chat_link": "[&AgEPsQAA]",
+    "icon": "https://render.guildwars2.com/file/04ADE6C44959217F7B2A05720DBFB25B55AA42E4/849318.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7780
+    }
+  },
+  {
+    "name": "Recipe: Mathilde's Claymore",
+    "description": "A recipe to make an ascended greatsword with Dire (+Condition Damage, +Vitality, and +Toughness) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45328,
+    "chat_link": "[&AgEQsQAA]",
+    "icon": "https://render.guildwars2.com/file/04ADE6C44959217F7B2A05720DBFB25B55AA42E4/849318.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7781
+    }
+  },
+  {
+    "name": "Recipe: Theodosus's Claymore",
+    "description": "A recipe to make an ascended greatsword with Cleric (+Healing Power, +Power, and +Toughness) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45329,
+    "chat_link": "[&AgERsQAA]",
+    "icon": "https://render.guildwars2.com/file/04ADE6C44959217F7B2A05720DBFB25B55AA42E4/849318.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7782
+    }
+  },
+  {
+    "name": "Recipe: Hronk's Claymore",
+    "description": "A recipe to make an ascended greatsword with Magi (+Healing Power, +Precision, and +Vitality) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45330,
+    "chat_link": "[&AgESsQAA]",
+    "icon": "https://render.guildwars2.com/file/04ADE6C44959217F7B2A05720DBFB25B55AA42E4/849318.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7783
+    }
+  },
+  {
+    "name": "Recipe: Ebonmane's Claymore",
+    "description": "A recipe to make an ascended greatsword with Apothecary (+Healing Power, +Toughness, and +Condition Damage) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45331,
+    "chat_link": "[&AgETsQAA]",
+    "icon": "https://render.guildwars2.com/file/04ADE6C44959217F7B2A05720DBFB25B55AA42E4/849318.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7784
+    }
+  },
+  {
+    "name": "Recipe: Stonecleaver's Claymore",
+    "description": "A recipe to make an ascended greatsword with Valkyrie (+Power, +Ferocity, and +Vitality) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45332,
+    "chat_link": "[&AgEUsQAA]",
+    "icon": "https://render.guildwars2.com/file/04ADE6C44959217F7B2A05720DBFB25B55AA42E4/849318.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7787
+    }
+  },
+  {
+    "name": "Recipe: Zojja's Claymore",
+    "description": "A recipe to make an ascended greatsword with Berserker (+Power, +Ferocity, and +Precision) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45333,
+    "chat_link": "[&AgEVsQAA]",
+    "icon": "https://render.guildwars2.com/file/04ADE6C44959217F7B2A05720DBFB25B55AA42E4/849318.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7785
+    }
+  },
+  {
+    "name": "Recipe: Chorben's Claymore",
+    "description": "A recipe to make an ascended greatsword with Soldier (+Power, +Vitality, and +Toughness) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45334,
+    "chat_link": "[&AgEWsQAA]",
+    "icon": "https://render.guildwars2.com/file/04ADE6C44959217F7B2A05720DBFB25B55AA42E4/849318.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7786
+    }
+  },
+  {
+    "name": "Recipe: Coalforge's Claymore",
+    "description": "A recipe to make an ascended greatsword with Rampager (+Precision, +Condition Damage, and +Power) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45335,
+    "chat_link": "[&AgEXsQAA]",
+    "icon": "https://render.guildwars2.com/file/04ADE6C44959217F7B2A05720DBFB25B55AA42E4/849318.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7788
+    }
+  },
+  {
+    "name": "Recipe: Soros's Claymore",
+    "description": "A recipe to make an ascended greatsword with Assassin (+Precision, +Power, and +Ferocity) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45336,
+    "chat_link": "[&AgEYsQAA]",
+    "icon": "https://render.guildwars2.com/file/04ADE6C44959217F7B2A05720DBFB25B55AA42E4/849318.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7789
+    }
+  },
+  {
+    "name": "Recipe: Leftpaw's Claymore",
+    "description": "A recipe to make an ascended greatsword with Settler (+Toughness, +Healing Power, and +Condition Damage) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45337,
+    "chat_link": "[&AgEZsQAA]",
+    "icon": "https://render.guildwars2.com/file/04ADE6C44959217F7B2A05720DBFB25B55AA42E4/849318.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7790
+    }
+  },
+  {
+    "name": "Recipe: Angchu Claymore",
+    "description": "A recipe to make an ascended greatsword with Cavalier (+Toughness, +Power, and +Ferocity) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45338,
+    "chat_link": "[&AgEasQAA]",
+    "icon": "https://render.guildwars2.com/file/04ADE6C44959217F7B2A05720DBFB25B55AA42E4/849318.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7791
+    }
+  },
+  {
+    "name": "Recipe: Beigarth's Claymore",
+    "description": "A recipe to make an ascended greatsword with Knight (+Toughness, +Power, and +Precision) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45339,
+    "chat_link": "[&AgEbsQAA]",
+    "icon": "https://render.guildwars2.com/file/04ADE6C44959217F7B2A05720DBFB25B55AA42E4/849318.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7792
+    }
+  },
+  {
+    "name": "Recipe: Zintl Claymore",
+    "description": "A recipe to make an ascended greatsword with Shaman (+Vitality, +Condition Damage, and +Healing Power) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45340,
+    "chat_link": "[&AgEcsQAA]",
+    "icon": "https://render.guildwars2.com/file/04ADE6C44959217F7B2A05720DBFB25B55AA42E4/849318.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7793
+    }
+  },
+  {
+    "name": "Recipe: Tonn's Claymore",
+    "description": "A recipe to make an ascended greatsword with Sentinel (+Vitality, +Power, and +Toughness) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45341,
+    "chat_link": "[&AgEdsQAA]",
+    "icon": "https://render.guildwars2.com/file/04ADE6C44959217F7B2A05720DBFB25B55AA42E4/849318.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7794
+    }
+  },
+  {
+    "name": "Recipe: Wupwup Warhammer",
+    "description": "A recipe to make an ascended hammer with Celestial (+All) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45342,
+    "chat_link": "[&AgEesQAA]",
+    "icon": "https://render.guildwars2.com/file/3520E022E7E669026648DC6A280B3CDD7DBE1302/849327.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7682
+    }
+  },
+  {
+    "name": "Recipe: Occam's Warhammer",
+    "description": "A recipe to make an ascended hammer with Carrion (+Condition Damage, +Power, and +Vitality) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45343,
+    "chat_link": "[&AgEfsQAA]",
+    "icon": "https://render.guildwars2.com/file/3520E022E7E669026648DC6A280B3CDD7DBE1302/849327.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7683
+    }
+  },
+  {
+    "name": "Recipe: Grizzlemouth's Warhammer",
+    "description": "A recipe to make an ascended hammer with Rabid (+Condition Damage, +Precision, and +Toughness) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45344,
+    "chat_link": "[&AgEgsQAA]",
+    "icon": "https://render.guildwars2.com/file/3520E022E7E669026648DC6A280B3CDD7DBE1302/849327.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7684
+    }
+  },
+  {
+    "name": "Recipe: Mathilde's Warhammer",
+    "description": "A recipe to make an ascended hammer with Dire (+Condition Damage, +Vitality, and +Toughness) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45345,
+    "chat_link": "[&AgEhsQAA]",
+    "icon": "https://render.guildwars2.com/file/3520E022E7E669026648DC6A280B3CDD7DBE1302/849327.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7685
+    }
+  },
+  {
+    "name": "Recipe: Theodosus's Warhammer",
+    "description": "A recipe to make an ascended hammer with Cleric (+Healing Power, +Power, and +Toughness) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45346,
+    "chat_link": "[&AgEisQAA]",
+    "icon": "https://render.guildwars2.com/file/3520E022E7E669026648DC6A280B3CDD7DBE1302/849327.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7686
+    }
+  },
+  {
+    "name": "Recipe: Hronk's Warhammer",
+    "description": "A recipe to make an ascended hammer with Magi (+Healing Power, +Precision, and +Vitality) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45347,
+    "chat_link": "[&AgEjsQAA]",
+    "icon": "https://render.guildwars2.com/file/3520E022E7E669026648DC6A280B3CDD7DBE1302/849327.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7687
+    }
+  },
+  {
+    "name": "Recipe: Ebonmane's Warhammer",
+    "description": "A recipe to make an ascended hammer with Apothecary (+Healing Power, +Toughness, and +Condition Damage) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45348,
+    "chat_link": "[&AgEksQAA]",
+    "icon": "https://render.guildwars2.com/file/3520E022E7E669026648DC6A280B3CDD7DBE1302/849327.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7688
+    }
+  },
+  {
+    "name": "Recipe: Stonecleaver's Warhammer",
+    "description": "A recipe to make an ascended hammer with Valkyrie (+Power, +Ferocity, and +Vitality) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45349,
+    "chat_link": "[&AgElsQAA]",
+    "icon": "https://render.guildwars2.com/file/3520E022E7E669026648DC6A280B3CDD7DBE1302/849327.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7691
+    }
+  },
+  {
+    "name": "Recipe: Zojja's Warhammer",
+    "description": "A recipe to make an ascended hammer with Berserker (+Power, +Ferocity, and +Precision) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45350,
+    "chat_link": "[&AgEmsQAA]",
+    "icon": "https://render.guildwars2.com/file/3520E022E7E669026648DC6A280B3CDD7DBE1302/849327.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7689
+    }
+  },
+  {
+    "name": "Recipe: Chorben's Warhammer",
+    "description": "A recipe to make an ascended hammer with Soldier (+Power, +Vitality, and +Toughness) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45351,
+    "chat_link": "[&AgEnsQAA]",
+    "icon": "https://render.guildwars2.com/file/3520E022E7E669026648DC6A280B3CDD7DBE1302/849327.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7690
+    }
+  },
+  {
+    "name": "Recipe: Coalforge's Warhammer",
+    "description": "A recipe to make an ascended hammer with Rampager (+Precision, +Condition Damage, and +Power) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45352,
+    "chat_link": "[&AgEosQAA]",
+    "icon": "https://render.guildwars2.com/file/3520E022E7E669026648DC6A280B3CDD7DBE1302/849327.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7692
+    }
+  },
+  {
+    "name": "Recipe: Soros's Warhammer",
+    "description": "A recipe to make an ascended hammer with Assassin (+Precision, +Power, and +Ferocity) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45353,
+    "chat_link": "[&AgEpsQAA]",
+    "icon": "https://render.guildwars2.com/file/3520E022E7E669026648DC6A280B3CDD7DBE1302/849327.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7693
+    }
+  },
+  {
+    "name": "Recipe: Leftpaw's Warhammer",
+    "description": "A recipe to make an ascended hammer with Settler (+Toughness, +Healing Power, and +Condition Damage) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45354,
+    "chat_link": "[&AgEqsQAA]",
+    "icon": "https://render.guildwars2.com/file/3520E022E7E669026648DC6A280B3CDD7DBE1302/849327.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7694
+    }
+  },
+  {
+    "name": "Recipe: Angchu Warhammer",
+    "description": "A recipe to make an ascended hammer with Cavalier (+Toughness, +Power, and +Ferocity) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45355,
+    "chat_link": "[&AgErsQAA]",
+    "icon": "https://render.guildwars2.com/file/3520E022E7E669026648DC6A280B3CDD7DBE1302/849327.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7695
+    }
+  },
+  {
+    "name": "Recipe: Beigarth's Warhammer",
+    "description": "A recipe to make an ascended hammer with Knight (+Toughness, +Power, and +Precision) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45356,
+    "chat_link": "[&AgEssQAA]",
+    "icon": "https://render.guildwars2.com/file/3520E022E7E669026648DC6A280B3CDD7DBE1302/849327.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7696
+    }
+  },
+  {
+    "name": "Recipe: Zintl Warhammer",
+    "description": "A recipe to make an ascended hammer with Shaman (+Vitality, +Condition Damage, and +Healing Power) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45357,
+    "chat_link": "[&AgEtsQAA]",
+    "icon": "https://render.guildwars2.com/file/3520E022E7E669026648DC6A280B3CDD7DBE1302/849327.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7697
+    }
+  },
+  {
+    "name": "Recipe: Tonn's Warhammer",
+    "description": "A recipe to make an ascended hammer with Sentinel (+Vitality, +Power, and +Toughness) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45358,
+    "chat_link": "[&AgEusQAA]",
+    "icon": "https://render.guildwars2.com/file/3520E022E7E669026648DC6A280B3CDD7DBE1302/849327.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7698
+    }
+  },
+  {
+    "name": "Recipe: Wupwup Impaler",
+    "description": "A recipe to make an ascended spear with Celestial (+All) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45359,
+    "chat_link": "[&AgEvsQAA]",
+    "icon": "https://render.guildwars2.com/file/915013AA311A6EBD77FBE4786F674275D4219DA8/849326.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7816
+    }
+  },
+  {
+    "name": "Recipe: Occam's Impaler",
+    "description": "A recipe to make an ascended spear with Carrion (+Condition Damage, +Power, and +Vitality) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45360,
+    "chat_link": "[&AgEwsQAA]",
+    "icon": "https://render.guildwars2.com/file/915013AA311A6EBD77FBE4786F674275D4219DA8/849326.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7817
+    }
+  },
+  {
+    "name": "Recipe: Grizzlemouth's Impaler",
+    "description": "A recipe to make an ascended spear with Rabid (+Condition Damage, +Precision, and +Toughness) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45361,
+    "chat_link": "[&AgExsQAA]",
+    "icon": "https://render.guildwars2.com/file/915013AA311A6EBD77FBE4786F674275D4219DA8/849326.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7818
+    }
+  },
+  {
+    "name": "Recipe: Mathilde's Impaler",
+    "description": "A recipe to make an ascended spear with Dire (+Condition Damage, +Vitality, and +Toughness) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45362,
+    "chat_link": "[&AgEysQAA]",
+    "icon": "https://render.guildwars2.com/file/915013AA311A6EBD77FBE4786F674275D4219DA8/849326.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7819
+    }
+  },
+  {
+    "name": "Recipe: Theodosus's Impaler",
+    "description": "A recipe to make an ascended spear with Cleric (+Healing Power, +Power, and +Toughness) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45363,
+    "chat_link": "[&AgEzsQAA]",
+    "icon": "https://render.guildwars2.com/file/915013AA311A6EBD77FBE4786F674275D4219DA8/849326.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7820
+    }
+  },
+  {
+    "name": "Recipe: Hronk's Impaler",
+    "description": "A recipe to make an ascended spear with Magi (+Healing Power, +Precision, and +Vitality) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45364,
+    "chat_link": "[&AgE0sQAA]",
+    "icon": "https://render.guildwars2.com/file/915013AA311A6EBD77FBE4786F674275D4219DA8/849326.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7821
+    }
+  },
+  {
+    "name": "Recipe: Ebonmane's Impaler",
+    "description": "A recipe to make an ascended spear with Apothecary (+Healing Power, +Toughness, and +Condition Damage) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45365,
+    "chat_link": "[&AgE1sQAA]",
+    "icon": "https://render.guildwars2.com/file/915013AA311A6EBD77FBE4786F674275D4219DA8/849326.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7822
+    }
+  },
+  {
+    "name": "Recipe: Stonecleaver's Impaler",
+    "description": "A recipe to make an ascended spear with Valkyrie (+Power, +Ferocity, and +Vitality) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45366,
+    "chat_link": "[&AgE2sQAA]",
+    "icon": "https://render.guildwars2.com/file/915013AA311A6EBD77FBE4786F674275D4219DA8/849326.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7825
+    }
+  },
+  {
+    "name": "Recipe: Zojja's Impaler",
+    "description": "A recipe to make an ascended spear with Berserker (+Power, +Ferocity, and +Precision) stats.",
+    "type": "Consumable",
+    "level": 0,
+    "rarity": "Ascended",
+    "vendor_value": 45,
+    "game_types": [
+      "Wvw",
+      "Dungeon",
+      "Pve"
+    ],
+    "flags": [
+      "AccountBound",
+      "NoSalvage",
+      "NoSell",
+      "AccountBindOnUse"
+    ],
+    "restrictions": [],
+    "id": 45367,
+    "chat_link": "[&AgE3sQAA]",
+    "icon": "https://render.guildwars2.com/file/915013AA311A6EBD77FBE4786F674275D4219DA8/849326.png",
+    "details": {
+      "type": "Unlock",
+      "unlock_type": "CraftingRecipe",
+      "recipe_id": 7823
+    }
+  }
+]
