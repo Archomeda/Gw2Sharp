@@ -31,14 +31,14 @@ namespace Gw2Sharp.WebApi.V2.Models
         Consumable,
 
         /// <summary>
-        /// Crafting material type.
-        /// </summary>
-        CraftingMaterial,
-
-        /// <summary>
         /// Container type.
         /// </summary>
         Container,
+
+        /// <summary>
+        /// Crafting material type.
+        /// </summary>
+        CraftingMaterial,
 
         /// <summary>
         /// Gathering type.
@@ -51,9 +51,24 @@ namespace Gw2Sharp.WebApi.V2.Models
         Gizmo,
 
         /// <summary>
+        /// Jade tech module type.
+        /// </summary>
+        JadeTechModule,
+
+        /// <summary>
+        /// Key type.
+        /// </summary>
+        Key,
+
+        /// <summary>
         /// Mini pet type.
         /// </summary>
         MiniPet,
+
+        /// <summary>
+        /// Power core type.
+        /// </summary>
+        PowerCore,
 
         /// <summary>
         /// Tool type.
@@ -83,11 +98,6 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// Weapon type.
         /// </summary>
-        Weapon,
-
-        /// <summary>
-        /// Key type.
-        /// </summary>
-        Key
+        Weapon
     }
 }
