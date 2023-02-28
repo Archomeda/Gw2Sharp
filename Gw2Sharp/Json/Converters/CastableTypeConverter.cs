@@ -54,23 +54,23 @@ namespace Gw2Sharp.Json.Converters
 
                 // Get the castable type as string
                 using var obj = JsonDocument.ParseValue(ref reader);
-                if (!obj.RootElement.TryGetProperty("type", out var typeProperty))
+                if (obj.RootElement.TryGetProperty("type", out var typeProperty))
                 {
-                    // We might get here when we can't deserialize into a more specific type, since the type parameter doesn't exist
-                    // Copy the serializer options, and remove the converter where we are currently in to prevent a stack overflow
-                    var innerOptions = new JsonSerializerOptions(options);
-                    innerOptions.Converters.Remove(innerOptions.Converters.Single(x => x is CastableTypeConverter));
-                    return JsonSerializer.Deserialize<T>(obj.RootElement.GetRawText(), innerOptions)!;
+                    string? type = typeProperty.GetString();
+                    if (string.IsNullOrWhiteSpace(type))
+                        throw new JsonException("Expected 'type' property to not be null or empty");
+
+                    // Find the castable type
+                    if (targetTypes.TryGetValue(type, out var targetType))
+                        return (T)JsonSerializer.Deserialize(obj.RootElement.GetRawText(), targetType, options)!;
                 }
-                string? type = typeProperty.GetString();
-                if (string.IsNullOrWhiteSpace(type))
-                    throw new JsonException("Expected 'type' property to not be null or empty");
 
-                // Find the castable type
-                if (targetTypes.TryGetValue(type, out var targetType))
-                    return (T)JsonSerializer.Deserialize(obj.RootElement.GetRawText(), targetType, options)!;
-
-                throw new JsonException($"Unsupported type {type}");
+                // We might get here when we can't deserialize into a more specific type,
+                // either when the type parameter cannot be found, or when no castable type could be found for the specified type.
+                // Copy the serializer options, and remove the converter where we are currently in to prevent a stack overflow
+                var innerOptions = new JsonSerializerOptions(options);
+                innerOptions.Converters.Remove(innerOptions.Converters.Single(x => x is CastableTypeConverter));
+                return JsonSerializer.Deserialize<T>(obj.RootElement.GetRawText(), innerOptions)!;
             }
 
             public override void Write(Utf8JsonWriter writer, T value, JsonSerializerOptions options) =>
