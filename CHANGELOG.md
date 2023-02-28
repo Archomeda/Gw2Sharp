@@ -1,6 +1,6 @@
 # Gw2Sharp History
 
-## 2.0.0
+## 2.0.0-preview.1 (28 February 2023)
 This version includes breaking changes.
 
 ### Fixes
