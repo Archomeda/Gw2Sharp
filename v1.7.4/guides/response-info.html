@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Checking the response info </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Checking the response info ">
+    <meta name="generator" content="docfx 2.58.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc">
+    <meta property="docfx:tocrel" content="toc">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+                
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../guides/introduction.html" title="Guides">Guides</a>
+                      </li>
+                      <li>
+                          <a href="../api/index.html" title="API Documentation">API Documentation</a>
+                      </li>
+                      <li>
+                          <a href="https://github.com/Archomeda/Gw2Sharp/blob/master/CHANGELOG.md" title="Changelog">Changelog</a>
+                      </li>
+                </ul>    </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+                  
+                  <ul class="nav level1">
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Basic Guides</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="introduction.html" title="Introduction" class="">Introduction</a>
+                          </li>
+                          <li class="">
+                            <a href="endpoints.html" title="Supported endpoints" class="">Supported endpoints</a>
+                          </li>
+                          <li class="">
+                            <a href="exception-handling.html" title="Exception handling" class="">Exception handling</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Advanced Guides</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="caching.html" title="Caching" class="">Caching</a>
+                          </li>
+                          <li class="active">
+                            <a href="response-info.html" title="Response info" class="active">Response info</a>
+                          </li>
+                          <li class="">
+                            <a href="last-modified.html" title="Last-Modified" class="">Last-Modified</a>
+                          </li>
+                          <li class="">
+                            <a href="middleware.html" title="Middleware" class="">Middleware</a>
+                          </li>
+                          <li class="">
+                            <a href="proxy.html" title="Proxying the API" class="">Proxying the API</a>
+                          </li>
+                          <li class="">
+                            <a href="subtokens.html" title="Subtokens" class="">Subtokens</a>
+                          </li>
+                          <li class="">
+                            <a href="symbols.html" title="Debug symbols" class="">Debug symbols</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Tips</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="render-url.html" title="Using RenderUrl" class="">Using RenderUrl</a>
+                          </li>
+                        </ul>  </li>
+                  </ul>        </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Guides.ResponseInfo">
+<h1 id="checking-the-response-info">Checking the response info</h1>
+
+<p>Every response has the property <code>HttpResponseInfo</code>.
+This property allows you to access the HTTP headers and other information that the response has returned.</p>
+<p>An example:</p>
+<pre><code class="lang-cs">// Assuming you already have a client
+var itemIds = await client.WebApi.V2.Items.PageAsync(0);
+
+var cacheExpires = itemIds.HttpResponseInfo.Expires;
+var cacheAge = itemIds.HttpResponseInfo.CacheMaxAge;
+var itemsCount = itemIds.HttpResponseInfo.ResultCount;
+var itemsTotal = itemIds.HttpResponseInfo.ResultTotal;
+var pagesTotal = itemIds.HttpResponseInfo.PageTotal;
+
+// If the cache middleware is enabled, the following
+// can be used to determine if the request was served
+// from cache or from the live server
+var cacheState = itemIds.HttpResponseInfo.CacheState;
+</code></pre><div class="CAUTION"><h5>Caution</h5><p>Due to technical limitations, performing a &quot;many&quot; request will only return the headers of the first item.
+These kind of requests will be performed as efficiently as possible, meaning that if the <a class="xref" href="middleware.html#cachemiddleware">cache middleware</a> is enabled, it will only request items from the live API server that are <em>not</em> available in the cache.
+Therefore, these headers might not reflect the actual response headers.</p>
+</div>
+<div class="NOTE"><h5>Note</h5><p>The cache state is unaffected by the technical limitations mentioned above, because it&#39;s manually injected by the <a class="xref" href="middleware.html#cachemiddleware">cache middleware</a>.</p>
+<p>It does, however, has its own limitation that you cannot identify which individual item was served from the cache, or from the live API server.
+Instead, it will take the value from the whole request instead, which is <code>FromLive</code>, <code>PartiallyFromCache</code> or <code>FromCache</code>.</p>
+<p>So if some items from a many request has been served from cache, and some from the live server, it will have the value <code>PartiallyFromCache</code>.</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Archomeda/Gw2Sharp/blob/4715fb1672dc66313c7c5f747c2c4b097c8c5533/docs/guides/response-info.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

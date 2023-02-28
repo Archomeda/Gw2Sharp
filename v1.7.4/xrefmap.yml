@@ -1,0 +1,39 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: API.Index
+  name: API Documentation
+  href: api/index.html
+- uid: Guides.Caching
+  name: Gw2Sharp Caching
+  href: guides/caching.html
+- uid: Guides.Endpoints
+  name: Supported web API endpoints
+  href: guides/endpoints.html
+- uid: Guides.ExceptionHandling
+  name: Exception handling
+  href: guides/exception-handling.html
+- uid: Guides.Introduction
+  name: Gw2Sharp Introduction
+  href: guides/introduction.html
+- uid: Guides.LastModified
+  name: Checking the Last-Modified header
+  href: guides/last-modified.html
+- uid: Guides.Middleware
+  name: Middleware
+  href: guides/middleware.html
+- uid: Guides.Proxy
+  name: Proxying the API
+  href: guides/proxy.html
+- uid: Guides.RenderUrl
+  name: Using RenderUrl
+  href: guides/render-url.html
+- uid: Guides.ResponseInfo
+  name: Checking the response info
+  href: guides/response-info.html
+- uid: Guides.Subtokens
+  name: Creating and using subtokens
+  href: guides/subtokens.html
+- uid: Guides.Symbols
+  name: Debug symbols
+  href: guides/symbols.html
