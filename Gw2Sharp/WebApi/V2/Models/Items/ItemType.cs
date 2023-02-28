@@ -88,6 +88,16 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// Key type.
         /// </summary>
-        Key
+        Key,
+
+        /// <summary>
+        /// Jade tech module type.
+        /// </summary>
+        JadeTechModule,
+
+        /// <summary>
+        /// Power core type.
+        /// </summary>
+        PowerCore
     }
 }
