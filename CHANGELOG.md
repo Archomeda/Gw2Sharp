@@ -1,5 +1,17 @@
 # Gw2Sharp History
 
+## 1.7.4 (28 February 2023)
+This release fixes some of the high priority bugs.
+
+### Endpoints
+- Add missing End of Dragons item type `JadeTechModule` as `Gw2Sharp.WebApi.V2.Models.ItemJadeTechModule` for pattern matching ([#127](https://github.com/Archomeda/Gw2Sharp/pull/127) by [@dlamkins](https://github.com/dlamkins))
+- Add missing End of Dragons item type `PowerCore` as `Gw2Sharp.WebApi.V2.Models.ItemPowerCore` for pattern matching ([#127](https://github.com/Archomeda/Gw2Sharp/pull/127) by [@dlamkins](https://github.com/dlamkins))
+
+### Miscellaneous
+- Fix an ArgumentException when embedding Gw2Sharp in a single executable ([#125](https://github.com/Archomeda/Gw2Sharp/pull/125) by [@Taschenbuch](https://github.com/Taschenbuch))
+- Fix docs to clarify that the `/v2/account/progression` endpoint also requires the unlcoks permission ([#124](https://github.com/Archomeda/Gw2Sharp/pull/124) by [@Taschenbuch](https://github.com/Taschenbuch))
+- From now on, every missing class type that's used for polymorphic deserializing will not throw a JsonException with the message "Unsupported type \<type\>" anymore (for example with item types) ([#120](https://github.com/Archomeda/Gw2Sharp/issues/120), [#128](https://github.com/Archomeda/Gw2Sharp/pull/128))
+
 ## 1.7.3 (14 July 2022)
 This is a small bugfix for a typo in the `/v2/raids` endpoint, causing a 404.
 
