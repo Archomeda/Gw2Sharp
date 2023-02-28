@@ -1,0 +1,224 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/a/Gw2Sharp/Gw2Sharp/docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "kqOribS9Ip2Au5oGQ8kKhy8DqRx4AjiKC9t3XgBaflo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "guides/caching.md",
+      "output": {
+        ".html": {
+          "relative_path": "guides/caching.html",
+          "hash": "FRedyFE++7hEOcAb34xAsttPgzq7RQf9N8FOZyGQXjc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "guides/endpoints.md",
+      "output": {
+        ".html": {
+          "relative_path": "guides/endpoints.html",
+          "hash": "569fJko4hxB6BeM7jVthZb92dca1Bep6tbJ+muVcBQA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "guides/exception-handling.md",
+      "output": {
+        ".html": {
+          "relative_path": "guides/exception-handling.html",
+          "hash": "tQ3wzWiPh9ECHgt310XiMgwmcdHn3FmfrnCSyq1sh4E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidYamlHeader"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "guides/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "guides/introduction.html",
+          "hash": "Nyh8uTGF1+zFZiJ7HyQ1B8J+fFKm2fJIya3kemxGVO0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "UidNotFound"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "guides/last-modified.md",
+      "output": {
+        ".html": {
+          "relative_path": "guides/last-modified.html",
+          "hash": "A3mieMXMsxobNlAcjsM8+PdMeU1poKrfriJX0vBBxbg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "guides/middleware.md",
+      "output": {
+        ".html": {
+          "relative_path": "guides/middleware.html",
+          "hash": "tMIh0T3PJTKnJlD2bvIndOL0q+6gjIWYRGQN4Db4w2s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "guides/proxy.md",
+      "output": {
+        ".html": {
+          "relative_path": "guides/proxy.html",
+          "hash": "XRDkggBCiqVE6ayMYGVK2RhT8Yi/eHaijAWyoMwz29I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "guides/render-url.md",
+      "output": {
+        ".html": {
+          "relative_path": "guides/render-url.html",
+          "hash": "5JXNc6wwYA4LuWKXbqujqMYLTKsBf+gmV8ksT41pjtg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "guides/response-info.md",
+      "output": {
+        ".html": {
+          "relative_path": "guides/response-info.html",
+          "hash": "Ama0sMgIzcE4dbRWcyiEFQnR5bPpfaRLDs+JtDjN5+Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "guides/subtokens.md",
+      "output": {
+        ".html": {
+          "relative_path": "guides/subtokens.html",
+          "hash": "bNZjcs2kBUZ3pzfXPEPl1uBA2Q/0vsx5C8jOVHd3WUM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "guides/symbols.md",
+      "output": {
+        ".html": {
+          "relative_path": "guides/symbols.html",
+          "hash": "25R/R5tOY2xBYvRdUVESp0S3ukGzMmstSRhSk5uSbXY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "trrTP+/6860tnQUadAsLzbk98IN4KZkW7FCY3Sd+aWQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 13,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
