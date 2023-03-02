@@ -3,7 +3,7 @@ name: Publish version
 on:
   push:
     tags:
-      - v*
+      - v*.*.*
 
 jobs:
   test:
@@ -32,27 +32,18 @@ jobs:
     needs: [test]
     steps:
       - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
+      - name: Generate version
+        id: version
+        shell: powershell
+        run: |
+          $version = $env:GITHUB_REF_NAME -match "^v(\d+\.\d+\.\d+(-[\w\d]+(\.[\w\d]+)*)?)$"
+          echo "Version derived from tag: $version"
+          echo "value=$version" >> $GITHUB_OUTPUT
       - name: Install InheritDocTool
         shell: powershell
         run: dotnet tool install --global InheritDocTool
-      # GitVersion action doesn't support /ensureassemblyinfo, see https://github.com/GitTools/actions/issues/220
-      # So we need to create a new file to let GitVersion populate it
-      - name: Create assembly info file for GitVersion
-        shell: powershell
-        run: |
-          set-Content -Path Gw2Sharp/Properties/AssemblyVersionInfo.cs -Value 'using System.Reflection;'
-      - uses: gittools/actions/gitversion/setup@v0.9.11
-        with:
-          versionSpec: '5.x'
-      - uses: gittools/actions/gitversion/execute@v0.9.11
-        id: gitversion
-        with:
-          updateAssemblyInfo: true
-          updateAssemblyInfoFilename: Gw2Sharp/Properties/AssemblyVersionInfo.cs
       - name: Run dotnet build
-        run: dotnet build -c Release -p:VERSIONED_BUILD=${{ steps.gitversion.outputs.semVer }}
+        run: dotnet build -c Release -p:Version=${{ steps.version.outputs.value }}
       - name: Run InheritDocTool
         shell: powershell
         run: InheritDoc -o
@@ -60,7 +51,7 @@ jobs:
         shell: powershell
         run: 7z a Gw2Sharp.zip ./Gw2Sharp/bin/Release/*
       - name: Run dotnet pack
-        run: dotnet pack Gw2Sharp -c Release --no-build --include-symbols -p:SymbolPackageFormat=snupkg -p:VERSIONED_BUILD=${{ steps.gitversion.outputs.semVer }} -o pack
+        run: dotnet pack Gw2Sharp -c Release --no-build --include-symbols -p:SymbolPackageFormat=snupkg -p:Version=${{ steps.version.outputs.value }} -o pack
       - name: Create release
         uses: softprops/action-gh-release@v1
         with:
@@ -68,5 +59,3 @@ jobs:
           files: |
             Gw2Sharp.zip
             pack/*
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

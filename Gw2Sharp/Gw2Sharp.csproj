@@ -43,15 +43,7 @@ Check the changelog at https://github.com/Archomeda/Gw2Sharp/blob/master/CHANGEL
     <PackageReference Include="System.Text.Json" Version="5.0.0" />
   </ItemGroup>
 
-  <PropertyGroup Condition="'$(VERSIONED_BUILD)'!=''">
-    <Version>$(VERSIONED_BUILD)</Version>
-    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
-    <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
-    <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
-    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(VERSIONED_BUILD)'!='' And '$(CI)'=='true'">
+  <PropertyGroup Condition="'$(CI)'=='true'">
     <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
