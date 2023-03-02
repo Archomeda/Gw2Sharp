@@ -12,7 +12,7 @@ jobs:
     name: Build
     runs-on: windows-2022
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Download docfx
         shell: powershell
         run: |
@@ -34,7 +34,7 @@ jobs:
     needs: [build]
     concurrency: docs-push
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           ref: gh-pages
       - name: Download docs

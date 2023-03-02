@@ -31,7 +31,7 @@ jobs:
     runs-on: windows-2022
     needs: [test]
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Generate version
         id: version
         shell: powershell
