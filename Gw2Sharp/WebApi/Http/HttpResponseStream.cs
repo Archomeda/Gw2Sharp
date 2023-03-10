@@ -37,7 +37,7 @@ namespace Gw2Sharp.WebApi.Http
             this.CacheState = cacheState;
             if (requestHeaders != null)
                 this.RequestHeaders = requestHeaders.ShallowCopy().AsReadOnly();
-            if (!(responseHeaders is null))
+            if (responseHeaders is not null)
                 this.ResponseHeaders = responseHeaders.ShallowCopy().AsReadOnly();
         }
 

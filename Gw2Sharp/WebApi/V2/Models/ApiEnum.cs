@@ -160,7 +160,7 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <inheritdoc />
         public virtual bool Equals(ApiEnum<T>? other) =>
-            !(other is null) &&
+            other is not null &&
             EqualityComparer<T>.Default.Equals(this.Value, other.Value) &&
             EqualityComparer<string?>.Default.Equals(this.RawValue?.ToLowerInvariant(), other.RawValue?.ToLowerInvariant());
 

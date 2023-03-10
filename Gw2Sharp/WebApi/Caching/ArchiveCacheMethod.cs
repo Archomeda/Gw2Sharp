@@ -49,7 +49,7 @@ namespace Gw2Sharp.WebApi.Caching
             lock (this.operationLock)
             {
                 var versionEntry = this.archive.GetEntry(ARCHIVE_VERSION_FILENAME);
-                if (!(versionEntry is null))
+                if (versionEntry is not null)
                 {
                     using var stream = versionEntry.Open();
                     using var reader = new StreamReader(stream);
@@ -76,7 +76,7 @@ namespace Gw2Sharp.WebApi.Caching
             {
                 this.expiryCache = new Dictionary<string, DateTimeOffset>();
                 var expiryIndexEntry = this.archive.GetEntry(EXPIRY_INDEX_FILENAME);
-                if (!(expiryIndexEntry is null))
+                if (expiryIndexEntry is not null)
                 {
                     using var entryStream = expiryIndexEntry.Open();
                     using var streamReader = new StreamReader(entryStream);
@@ -160,7 +160,7 @@ namespace Gw2Sharp.WebApi.Caching
             using var entryStream = zipEntry.Open();
             using var writer = new StreamWriter(entryStream);
 
-            if (!(cacheItem.Metadata is null))
+            if (cacheItem.Metadata is not null)
             {
                 foreach (var kvp in cacheItem.Metadata)
                     writer.WriteLine($"{kvp.Key}={kvp.Value}");

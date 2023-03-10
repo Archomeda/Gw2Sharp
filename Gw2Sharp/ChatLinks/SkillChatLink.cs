@@ -32,7 +32,7 @@ namespace Gw2Sharp.ChatLinks
 
         /// <inheritdoc />
         public bool Equals(SkillChatLink? other) =>
-            !(other is null) &&
+            other is not null &&
             this.Type == other.Type &&
             this.SkillId == other.SkillId;
 

@@ -107,7 +107,7 @@ namespace Gw2Sharp.ChatLinks
 
         /// <inheritdoc />
         public bool Equals(ItemChatLink? other) =>
-            !(other is null) &&
+            other is not null &&
             this.Type == other.Type &&
             this.Quantity == other.Quantity &&
             this.ItemId == other.ItemId &&

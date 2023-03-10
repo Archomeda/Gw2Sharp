@@ -32,7 +32,7 @@ namespace Gw2Sharp.ChatLinks
 
         /// <inheritdoc />
         public bool Equals(RecipeChatLink? other) =>
-            !(other is null) &&
+            other is not null &&
             this.Type == other.Type &&
             this.RecipeId == other.RecipeId;
 

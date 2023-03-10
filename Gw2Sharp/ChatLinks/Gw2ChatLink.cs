@@ -110,9 +110,9 @@ namespace Gw2Sharp.ChatLinks
             try
             {
                 if (chatLinkString.StartsWith("[", StringComparison.OrdinalIgnoreCase))
-                    chatLinkString = chatLinkString.Substring(1);
+                    chatLinkString = chatLinkString[1..];
                 if (chatLinkString.StartsWith("&", StringComparison.OrdinalIgnoreCase))
-                    chatLinkString = chatLinkString.Substring(1);
+                    chatLinkString = chatLinkString[1..];
                 if (chatLinkString.EndsWith("]", StringComparison.OrdinalIgnoreCase))
                     chatLinkString = chatLinkString.Remove(chatLinkString.Length - 1);
 

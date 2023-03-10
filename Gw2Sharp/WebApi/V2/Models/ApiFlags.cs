@@ -143,7 +143,7 @@ namespace Gw2Sharp.WebApi.V2.Models
 
         /// <inheritdoc />
         public virtual bool Equals(ApiFlags<T>? other) =>
-            !(other is null) && this.List.SequenceEqual(other.List);
+            other is not null && this.List.SequenceEqual(other.List);
 
         /// <inheritdoc />
         public override int GetHashCode()

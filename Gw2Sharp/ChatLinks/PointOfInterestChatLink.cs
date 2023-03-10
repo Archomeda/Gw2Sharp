@@ -30,7 +30,7 @@ namespace Gw2Sharp.ChatLinks
 
         /// <inheritdoc />
         public bool Equals(PointOfInterestChatLink? other) =>
-            !(other is null) &&
+            other is not null &&
             this.Type == other.Type &&
             this.PointOfInterestId == other.PointOfInterestId;
 
