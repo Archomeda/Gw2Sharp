@@ -25,7 +25,7 @@ namespace Gw2Sharp.Tests.WebApi.Http
         {
             endpointQuery ??= new Dictionary<string, string>();
 
-            string expected = $"{baseUrl}{endpointPath}{pathSuffix}" +
+            string expected = Uri.EscapeUriString($"{baseUrl}{endpointPath}{pathSuffix}") +
                 (endpointQuery.Count > 0 ? "?" + string.Join("&", endpointQuery.Select(x => $"{Uri.EscapeDataString(x.Key)}{(x.Value != null ? $"={Uri.EscapeDataString(x.Value)}" : string.Empty)}")) : string.Empty);
             string actual = new WebApiRequestOptions
             {
