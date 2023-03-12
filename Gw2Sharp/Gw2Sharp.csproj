@@ -42,7 +42,7 @@ Check the changelog at https://github.com/Archomeda/Gw2Sharp/blob/master/CHANGEL
   <PropertyGroup Condition="'$(CI)'=='true'">
     <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
     <Deterministic>true</Deterministic>
-    <AnnotatedReferenceAssemblyVersion>[6.0.0]</AnnotatedReferenceAssemblyVersion>
+    <AnnotatedReferenceAssemblyVersion>6.0.0</AnnotatedReferenceAssemblyVersion>
   </PropertyGroup>
 
 </Project>
