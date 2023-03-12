@@ -1,4 +1,6 @@
 using System;
+using System.Text.Json.Serialization;
+using Gw2Sharp.Json.Converters;
 
 namespace Gw2Sharp.WebApi.V2.Models
 {
@@ -43,6 +45,7 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The character's total play time.
         /// </summary>
+        [JsonConverter(typeof(TimeSpanConverter))]
         public TimeSpan Age { get; set; }
 
         /// <summary>

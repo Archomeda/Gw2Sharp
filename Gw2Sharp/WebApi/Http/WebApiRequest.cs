@@ -20,11 +20,11 @@ namespace Gw2Sharp.WebApi.Http
     /// </summary>
     public class WebApiRequest : IWebApiRequest
     {
-        private static readonly ConcurrentDictionary<int, Func<MiddlewareContext, CancellationToken, Task<IWebApiResponse>>> requestCalls =
-            new ConcurrentDictionary<int, Func<MiddlewareContext, CancellationToken, Task<IWebApiResponse>>>();
+        private static readonly ConcurrentDictionary<int, Func<MiddlewareContext, CancellationToken, Task<IWebApiResponse>>> requestCalls = new();
 
         private readonly IConnection connection;
         private readonly IGw2Client gw2Client;
+        private readonly JsonSerializerOptions serializerOptions;
 
         /// <summary>
         /// The settings that are used when deserializing JSON objects.
@@ -42,9 +42,7 @@ namespace Gw2Sharp.WebApi.Http
             options.Converters.Add(new ApiObjectConverter());
             options.Converters.Add(new ApiObjectListConverter());
             options.Converters.Add(new CastableTypeConverter());
-            options.Converters.Add(new DictionaryIntKeyConverter());
             options.Converters.Add(new RenderUrlConverter(connection, client));
-            options.Converters.Add(new TimeSpanConverter());
             return options;
         }
 
@@ -63,6 +61,7 @@ namespace Gw2Sharp.WebApi.Http
 
             this.connection = connection ?? throw new ArgumentNullException(nameof(connection));
             this.gw2Client = gw2Client ?? throw new ArgumentNullException(nameof(gw2Client));
+            this.serializerOptions = GetDeserializerSettings(connection, gw2Client);
 
             string baseUrl = new Uri(url.GetLeftPart(UriPartial.Authority)).ToString();
             string endpointPath = url.AbsolutePath;
@@ -95,6 +94,7 @@ namespace Gw2Sharp.WebApi.Http
             this.Options = options ?? throw new ArgumentNullException(nameof(options));
             this.connection = connection ?? throw new ArgumentNullException(nameof(connection));
             this.gw2Client = gw2Client ?? throw new ArgumentNullException(nameof(gw2Client));
+            this.serializerOptions = GetDeserializerSettings(connection, gw2Client);
         }
 
 
@@ -109,13 +109,11 @@ namespace Gw2Sharp.WebApi.Http
         /// <inheritdoc />
         public async Task<IWebApiResponse<TResponse>> ExecuteAsync<TResponse>(CancellationToken cancellationToken = default)
         {
-            var deserializerSettings = GetDeserializerSettings(this.connection, this.gw2Client);
-
             var call = requestCalls.GetOrAdd(this.connection.MiddlewareHashCode, _ => this.GenerateRequestCall());
             var response = await call(new MiddlewareContext(this.connection, this), cancellationToken).ConfigureAwait(false);
 
             // Deserialize response
-            var obj = JsonSerializer.Deserialize<TResponse>(response.Content, deserializerSettings);
+            var obj = JsonSerializer.Deserialize<TResponse>(response.Content, this.serializerOptions);
 
             // If the type is an API v2 object, set its response info property
             switch (obj)
