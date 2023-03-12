@@ -33,6 +33,11 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// Access to Path of Fire.
         /// </summary>
-        PathOfFire
+        PathOfFire,
+
+        /// <summary>
+        /// Access to End of Dragons.
+        /// </summary>
+        EndOfDragons
     }
 }
