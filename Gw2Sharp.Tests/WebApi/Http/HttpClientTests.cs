@@ -1,58 +1,43 @@
 using System;
 using System.Collections.Generic;
 using System.Net;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Gw2Sharp.WebApi.Exceptions;
 using Gw2Sharp.WebApi.Http;
 using NSubstitute;
+using WireMock.RequestBuilders;
+using WireMock.ResponseBuilders;
+using WireMock.Server;
 using Xunit;
 
 namespace Gw2Sharp.Tests.WebApi.Http
 {
     public class HttpClientTests
     {
-        protected const string Url = "http://localhost:12345/";
-
-        protected HttpListener CreateOneTimeListener(Func<HttpListenerContext, bool> func)
-        {
-            var listener = new HttpListener();
-            new Thread(() =>
-            {
-                listener.Prefixes.Add(Url);
-                listener.Start();
-                var context = listener.GetContext();
-
-                // This is here to provide test methods the option to "cancel" the response
-                if (func(context))
-                    context.Response.Close();
-            }).Start();
-
-            while (!listener.IsListening)
-                Thread.Sleep(TimeSpan.FromMilliseconds(100));
-
-            return listener;
-        }
-
         [Fact]
         public async Task RequestTest()
         {
             string message = "Hello world";
             (string headerKey, string headerValue) = ("X-Test", "Hello world");
 
-            using var listener = this.CreateOneTimeListener(context =>
-            {
-                var buf = Encoding.UTF8.GetBytes(message);
-                context.Response.AddHeader(headerKey, headerValue);
-                context.Response.OutputStream.Write(buf, 0, buf.Length);
-                return true;
-            });
+            using var server = WireMockServer.Start();
+            server
+                .Given(Request
+                    .Create()
+                    .WithPath("/")
+                    .UsingGet())
+                .RespondWith(Response
+                    .Create()
+                    .WithStatusCode(HttpStatusCode.OK)
+                    .WithHeader(headerKey, headerValue)
+                    .WithBody(message));
+
             var client = new HttpClient();
             var request = Substitute.For<IWebApiRequest>();
             request.Options.Returns(new WebApiRequestOptions
             {
-                BaseUrl = Url,
+                BaseUrl = server.Url,
                 RequestHeaders = new Dictionary<string, string> { { headerKey, headerValue } }
             });
 
@@ -65,39 +50,47 @@ namespace Gw2Sharp.Tests.WebApi.Http
         [Fact]
         public async Task RequestCanceledTest()
         {
-            var reset = new ManualResetEvent(false);
+            using var server = WireMockServer.Start();
+            server
+                .Given(Request
+                    .Create()
+                    .WithPath("/")
+                    .UsingGet())
+                .RespondWith(Response
+                    .Create()
+                    .WithDelay(TimeSpan.FromSeconds(2))
+                    .WithStatusCode(HttpStatusCode.OK));
 
-            using var listener = this.CreateOneTimeListener(context =>
-            {
-                reset.WaitOne();
-                return false;
-            });
             var client = new HttpClient();
             var request = Substitute.For<IWebApiRequest>();
             request.Options.Returns(new WebApiRequestOptions
             {
-                BaseUrl = Url,
+                BaseUrl = server.Url,
                 RequestHeaders = new Dictionary<string, string>()
             });
 
-            var tokenSource = new CancellationTokenSource(1000);
+            var tokenSource = new CancellationTokenSource(TimeSpan.FromSeconds(1));
             await Assert.ThrowsAsync<RequestCanceledException>(() => client.RequestAsync(request, tokenSource.Token));
-            reset.Set();
         }
 
         [Fact]
         public async Task RequestUnexpectedStatusTest()
         {
-            using var listener = this.CreateOneTimeListener(context =>
-            {
-                context.Response.StatusCode = 404;
-                return true;
-            });
+            using var server = WireMockServer.Start();
+            server
+                .Given(Request
+                    .Create()
+                    .WithPath("/")
+                    .UsingGet())
+                .RespondWith(Response
+                    .Create()
+                    .WithStatusCode(HttpStatusCode.NotFound));
+
             var client = new HttpClient();
             var request = Substitute.For<IWebApiRequest>();
             request.Options.Returns(new WebApiRequestOptions
             {
-                BaseUrl = Url,
+                BaseUrl = server.Url,
                 RequestHeaders = new Dictionary<string, string>()
             });
 
