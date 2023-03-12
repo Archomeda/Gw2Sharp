@@ -7,33 +7,7 @@ on:
 
 jobs:
   test:
-    name: Test
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        os:
-          - ubuntu-latest
-          - windows-2022
-        dotnet:
-          - net6.0
-          - net5.0
-          - netcoreapp3.1
-          - net461
-        include:
-          - dotnet: net6.0
-            dotnet_version: 6.0.x
-          - dotnet: net5.0
-            dotnet_version: 5.0.x
-          - dotnet: netcoreapp3.1
-            dotnet_version: 3.1.x
-        exclude:
-          - os: ubuntu-latest
-            dotnet: net461
-    steps:
-      - uses: actions/checkout@v2
-      - name: Run dotnet test
-        run: dotnet test -c Release -f ${{ matrix.dotnet }}
+    uses: ./.github/workflows/test.yml
 
   release:
     name: Release
