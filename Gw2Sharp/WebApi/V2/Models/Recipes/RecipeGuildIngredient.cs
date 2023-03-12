@@ -1,3 +1,4 @@
+using System;
 using Gw2Sharp.WebApi.V2.Clients;
 
 namespace Gw2Sharp.WebApi.V2.Models
@@ -5,6 +6,7 @@ namespace Gw2Sharp.WebApi.V2.Models
     /// <summary>
     /// Represents a recipe ingredient from the guild.
     /// </summary>
+    [Obsolete("Deprecated since 2021-09-28. Use RecipeIngredient instead. This will be removed from Gw2Sharp starting from version 2.0.")]
     public class RecipeGuildIngredient
     {
         /// <summary>

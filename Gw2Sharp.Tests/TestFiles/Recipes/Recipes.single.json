@@ -12,19 +12,23 @@
   ],
   "ingredients": [
     {
-      "item_id": 75939,
+      "type": "Item",
+      "id": 75939,
       "count": 1
     },
     {
-      "item_id": 74218,
+      "type": "Item",
+      "id": 74218,
       "count": 1
     },
     {
-      "item_id": 76402,
+      "type": "Item",
+      "id": 76402,
       "count": 1
     },
     {
-      "item_id": 72261,
+      "type": "Item",
+      "id": 72261,
       "count": 1
     }
   ],

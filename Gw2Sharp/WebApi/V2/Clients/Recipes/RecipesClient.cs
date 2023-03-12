@@ -7,6 +7,7 @@ namespace Gw2Sharp.WebApi.V2.Clients
     /// A client of the Guild Wars 2 API v2 recipes endpoint.
     /// </summary>
     [EndpointPath("recipes")]
+    [EndpointSchemaVersion("2022-03-09T02:00:00.000Z")]
     public class RecipesClient : BaseEndpointBulkClient<Recipe, int>, IRecipesClient
     {
         private readonly IRecipesSearchClient search;
