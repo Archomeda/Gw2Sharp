@@ -23,14 +23,17 @@ jobs:
         id: version
         shell: powershell
         run: |
-          $version = $env:GITHUB_REF_NAME -match "^v(\d+\.\d+\.\d+(-[\w\d]+(\.[\w\d]+)*)?)$"
-          echo "Version derived from tag: $version"
-          echo "value=$version" >> $GITHUB_OUTPUT
+          $env:GITHUB_REF_NAME -match "^v((\d+\.\d+\.\d+)(-([\w\d]+(\.[\w\d]+)*))?)$"
+          $version = $matches[2]
+          $suffix = $matches[4]
+          echo "Version: '$version' - Suffix: '$suffix'"
+          echo "version=$version" >> $GITHUB_OUTPUT
+          echo "suffix=$suffix" >> $GITHUB_OUTPUT
       - name: Install InheritDocTool
         shell: powershell
         run: dotnet tool install --global InheritDocTool
       - name: Run dotnet build
-        run: dotnet build -c Release -p:Version=${{ steps.version.outputs.value }}
+        run: dotnet build -c Release -p:VersionPrefix=${{ steps.version.outputs.version }} -p:VersionSuffix=${{ steps.version.outputs.suffix }}
       - name: Run InheritDocTool
         shell: powershell
         run: InheritDoc -o
@@ -38,7 +41,7 @@ jobs:
         shell: powershell
         run: 7z a Gw2Sharp.zip ./Gw2Sharp/bin/Release/*
       - name: Run dotnet pack
-        run: dotnet pack Gw2Sharp -c Release --no-build --include-symbols -p:SymbolPackageFormat=snupkg -p:Version=${{ steps.version.outputs.value }} -o pack
+        run: dotnet pack Gw2Sharp -c Release --no-build --include-symbols -p:SymbolPackageFormat=snupkg -p:VersionPrefix=${{ steps.version.outputs.version }} -p:VersionSuffix=${{ steps.version.outputs.suffix }} -o pack
       - name: Create release
         uses: softprops/action-gh-release@v1
         with:
