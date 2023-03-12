@@ -10,7 +10,7 @@ jobs:
     runs-on: windows-2022
     steps:
       - name: Download NuGet packages
-        shell: powershell
+        shell: pwsh
         run: |
           $assetsUrl = "${{ github.event.release.assets_url }}"
           $assets = Invoke-WebRequest $assetsUrl | ConvertFrom-Json

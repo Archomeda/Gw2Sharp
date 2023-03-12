@@ -21,24 +21,24 @@ jobs:
           dotnet-version: ${{ matrix.dotnet_version }}
       - name: Generate version
         id: version
-        shell: powershell
+        shell: pwsh
         run: |
           $env:GITHUB_REF_NAME -match "^v((\d+\.\d+\.\d+)(-([\w\d]+(\.[\w\d]+)*))?)$"
           $version = $matches[2]
           $suffix = $matches[4]
           echo "Version: '$version' - Suffix: '$suffix'"
-          echo "version=$version" >> $GITHUB_OUTPUT
-          echo "suffix=$suffix" >> $GITHUB_OUTPUT
+          echo "version=$version" >> $env:GITHUB_OUTPUT
+          echo "suffix=$suffix" >> $env:GITHUB_OUTPUT
       - name: Install InheritDocTool
-        shell: powershell
+        shell: pwsh
         run: dotnet tool install --global InheritDocTool
       - name: Run dotnet build
         run: dotnet build -c Release -p:VersionPrefix=${{ steps.version.outputs.version }} -p:VersionSuffix=${{ steps.version.outputs.suffix }}
       - name: Run InheritDocTool
-        shell: powershell
+        shell: pwsh
         run: InheritDoc -o
       - name: Zip binaries
-        shell: powershell
+        shell: pwsh
         run: 7z a Gw2Sharp.zip ./Gw2Sharp/bin/Release/*
       - name: Run dotnet pack
         run: dotnet pack Gw2Sharp -c Release --no-build --include-symbols -p:SymbolPackageFormat=snupkg -p:VersionPrefix=${{ steps.version.outputs.version }} -p:VersionSuffix=${{ steps.version.outputs.suffix }} -o pack
