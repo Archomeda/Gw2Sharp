@@ -17,6 +17,12 @@ jobs:
       - uses: actions/setup-java@v1
         with:
           java-version: '>=11'
+      - uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: |
+            3.1.x
+            5.0.x
+            6.0.x
       - uses: Archomeda/sonarcloud-dotnet-action@v1
         with:
           sonarToken: ${{ secrets.SONAR_TOKEN }}
