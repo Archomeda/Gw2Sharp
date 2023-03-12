@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Gw2Sharp.WebApi.V2.Clients;
 
 namespace Gw2Sharp.WebApi.V2.Models
@@ -63,8 +64,15 @@ namespace Gw2Sharp.WebApi.V2.Models
         /// <summary>
         /// The recipe ingredients from the guild.
         /// If the recipe doesn't require any guild ingredients, this value is <see langword="null"/>.
+        /// <para/>
+        /// This property has been moved into <see cref="Ingredients"/> started with schema version 2022-03.09T02:00:00.000Z.
+        /// Gw2Sharp v1.x has roll-forward support, but this will be removed starting with v2.0.
         /// </summary>
-        public IReadOnlyList<RecipeGuildIngredient>? GuildIngredients { get; set; }
+        [Obsolete("Deprecated since schema version 2022-03-09T02:00:00.000Z. Use Ingredients and filter by Guild type instead. This will be removed from Gw2Sharp starting from version 2.0.")]
+        public IReadOnlyList<RecipeGuildIngredient>? GuildIngredients => this.Ingredients
+            .Where(x => x.Type.Value == RecipeIngredientType.GuildUpgrade)
+            .Select(x => new RecipeGuildIngredient { UpgradeId = x.Id, Count = x.Count })
+            .ToList();
 
         /// <summary>
         /// The output guild upgrade id.

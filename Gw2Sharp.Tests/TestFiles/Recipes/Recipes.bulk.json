@@ -13,7 +13,8 @@
     ],
     "ingredients": [
       {
-        "item_id": 73537,
+        "type": "Item",
+        "id": 73537,
         "count": 5
       }
     ],
@@ -34,19 +35,23 @@
     ],
     "ingredients": [
       {
-        "item_id": 46699,
+        "type": "Item",
+        "id": 46699,
         "count": 1
       },
       {
-        "item_id": 45883,
+        "type": "Item",
+        "id": 45883,
         "count": 1
       },
       {
-        "item_id": 45884,
+        "type": "Item",
+        "id": 45884,
         "count": 1
       },
       {
-        "item_id": 46746,
+        "type": "Item",
+        "id": 46746,
         "count": 1
       }
     ],
@@ -54,39 +59,80 @@
     "chat_link": "[&CdYcAAA=]"
   },
   {
+    "id": 13132,
     "type": "GuildDecoration",
     "output_item_id": 90083,
     "output_item_count": 1,
-    "min_rating": 200,
     "time_to_craft_ms": 1000,
     "disciplines": [
       "Scribe"
     ],
+    "min_rating": 200,
     "flags": [
       "AutoLearned"
     ],
     "ingredients": [
       {
-        "item_id": 70926,
+        "type": "Item",
+        "id": 70926,
         "count": 1
       },
       {
-        "item_id": 70426,
+        "type": "Item",
+        "id": 70426,
         "count": 4
       },
       {
-        "item_id": 75862,
+        "type": "Item",
+        "id": 75862,
         "count": 4
-      }
-    ],
-    "guild_ingredients": [
+      },
       {
-        "upgrade_id": 721,
+        "type": "GuildUpgrade",
+        "id": 721,
         "count": 8
       }
     ],
     "output_upgrade_id": 1028,
-    "id": 13132,
     "chat_link": "[&CUwzAAA=]"
+  },
+  {
+    "id": 13598,
+    "type": "Insignia",
+    "output_item_id": 96315,
+    "output_item_count": 1,
+    "time_to_craft_ms": 1000,
+    "disciplines": [
+      "Leatherworker",
+      "Armorsmith",
+      "Tailor"
+    ],
+    "min_rating": 400,
+    "flags": [
+      "LearnedFromItem"
+    ],
+    "ingredients": [
+      {
+        "type": "Item",
+        "id": 96471,
+        "count": 10
+      },
+      {
+        "type": "Item",
+        "id": 19721,
+        "count": 5
+      },
+      {
+        "type": "Item",
+        "id": 76614,
+        "count": 5
+      },
+      {
+        "type": "Currency",
+        "id": 61,
+        "count": 150
+      }
+    ],
+    "chat_link": "[&CR41AAA=]"
   }
 ]
