@@ -227,7 +227,7 @@ namespace Gw2Sharp.Tests.WebApi.V2.Clients
                 uri = builder.Uri;
             }
 
-            Assert.Equal(uri.AbsoluteUri, callInfo.ArgAt<IWebApiRequest>(0).Options.Url.AbsoluteUri);
+            Assert.Equal(uri.AbsoluteUri, callInfo.ArgAt<IWebApiRequest>(0).Options.UrlWithoutAuth.AbsoluteUri);
             var requestHeaders = callInfo.ArgAt<IWebApiRequest>(0).Options.RequestHeaders;
             Assert.Contains(new KeyValuePair<string, string>("Accept", "application/json"), requestHeaders);
             Assert.Contains(new KeyValuePair<string, string>("User-Agent", ((Gw2WebApiBaseClient)client).Connection.UserAgent), requestHeaders);

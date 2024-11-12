@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
 using Gw2Sharp.Extensions;
@@ -67,7 +68,7 @@ namespace Gw2Sharp.WebApi.Http
 
             async Task<IHttpResponseStream> ExecAsync()
             {
-                using var message = new HttpRequestMessage(HttpMethod.Get, request.Options.Url);
+                using var message = new HttpRequestMessage(HttpMethod.Get, request.Options.UrlWithoutAuth);
                 message.Headers.AddRange(request.Options.RequestHeaders);
 
                 Task<HttpResponseMessage>? task = null;
@@ -83,6 +84,24 @@ namespace Gw2Sharp.WebApi.Http
 
                     task = httpClient.SendAsync(message, cancellationToken);
                     var responseMessage = await task.ConfigureAwait(false);
+
+                    if (responseMessage.StatusCode == HttpStatusCode.NotFound &&
+                        message.Headers.Contains("Authorization")             &&
+                        message.Headers.GetValues("Authorization").First() != "Bearer")
+                    {
+                        using var newMessage = new HttpRequestMessage(HttpMethod.Get, request.Options.Url);
+                        foreach (var header in message.Headers)
+                        {
+                            if (header.Key == "Authorization")
+                                continue;
+
+                            newMessage.Headers.TryAddWithoutValidation(header.Key, header.Value);
+                        }
+
+
+                        task = httpClient.SendAsync(newMessage, cancellationToken);
+                        responseMessage = await task.ConfigureAwait(false);
+                    }
 
                     await responseMessage.Content.LoadIntoBufferAsync().ConfigureAwait(false);
 #if NET5_0_OR_GREATER

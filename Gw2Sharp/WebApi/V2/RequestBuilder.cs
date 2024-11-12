@@ -39,6 +39,7 @@ namespace Gw2Sharp.WebApi.V2
         private readonly IConnection connection;
         private readonly IGw2Client gw2Client;
         private readonly string? authorization;
+        private readonly string? token;
         private readonly string? locale;
         private readonly string userAgent;
 
@@ -59,7 +60,8 @@ namespace Gw2Sharp.WebApi.V2
             this.connection = connection;
             this.gw2Client = gw2Client;
 
-            this.authorization = endpointClient.IsAuthenticated ? $"{BEARER} {connection.AccessToken}" : null;
+            this.token = endpointClient.IsAuthenticated ? connection.AccessToken : null;
+            this.authorization = endpointClient.IsAuthenticated ? $"{BEARER} {this.token}" : null;
             this.locale = endpointClient.IsLocalized ? connection.LocaleString : null;
             this.userAgent = connection.UserAgent;
         }
@@ -133,12 +135,14 @@ namespace Gw2Sharp.WebApi.V2
 
         private IDictionary<string, string>? BuildQueryParams(IDictionary<string, string>? additionalQueryParams = null)
         {
-            if (this.queryParams.Count == 0)
-                return additionalQueryParams;
             var combinedQueryParams = new Dictionary<string, string>(this.queryParams);
+
+            if (!string.IsNullOrWhiteSpace(this.token))
+                combinedQueryParams["access_token"] = this.token;
+
             if (additionalQueryParams != null)
                 combinedQueryParams.AddRange(additionalQueryParams);
-            return combinedQueryParams;
+            return (combinedQueryParams.Count == 0) ? additionalQueryParams : combinedQueryParams;
         }
 
         private IDictionary<string, string> BuildHeaders()

@@ -64,6 +64,22 @@ namespace Gw2Sharp.WebApi.Http
             }
         }
 
+        /// <summary>
+        /// The URL without the authentication parameter.
+        /// </summary>
+        public Uri UrlWithoutAuth
+        {
+            get
+            {
+                var builder = new UriBuilder(this.BaseUrl);
+                builder.Path += this.EndpointPath;
+                if (!string.IsNullOrEmpty(this.PathSuffix))
+                    builder.Path += !this.PathSuffix.StartsWith("/", StringComparison.InvariantCulture) ? "/" : string.Empty + this.PathSuffix;
+                builder.Query = string.Join("&", this.EndpointQuery.Where(x => x.Key != "access_token").Select(x => $"{Uri.EscapeDataString(x.Key)}{(x.Value != null ? $"={Uri.EscapeDataString(x.Value)}" : "")}"));
+                return builder.Uri;
+            }
+        }
+
 #pragma warning disable CA2227 // Collection properties should be read only
         /// <summary>
         /// The request headers to use in the web request.
