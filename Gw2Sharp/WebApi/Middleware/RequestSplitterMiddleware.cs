@@ -2,8 +2,10 @@ using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.ExceptionServices;
 using System.Threading;
 using System.Threading.Tasks;
+using Gw2Sharp.WebApi.Exceptions;
 using Gw2Sharp.WebApi.Http;
 
 namespace Gw2Sharp.WebApi.Middleware
@@ -58,8 +60,24 @@ namespace Gw2Sharp.WebApi.Middleware
                 });
 
                 var partitionResponses = new List<IWebApiResponse>();
+                NotFoundException? notFoundException = null;
                 foreach (var partitionRequest in partitionRequests)
-                    partitionResponses.Add(await callNext(partitionRequest, cancellationToken).ConfigureAwait(false));
+                {
+                    try
+                    {
+                        partitionResponses.Add(await callNext(partitionRequest, cancellationToken).ConfigureAwait(false));
+                    }
+                    catch (NotFoundException ex)
+                    {
+                        // The API returns 404 if none of the requested ids in a partition are valid.
+                        // An unsplit request would only fail if none of the ids are valid at all, so mimic that.
+                        notFoundException ??= ex;
+                    }
+                }
+
+                if (partitionResponses.Count == 0 && notFoundException is not null)
+                    ExceptionDispatchInfo.Capture(notFoundException).Throw();
+
                 return partitionResponses.Merge();
             }
         }
