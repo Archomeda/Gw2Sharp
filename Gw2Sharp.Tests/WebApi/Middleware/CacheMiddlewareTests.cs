@@ -12,8 +12,10 @@ using AutoFixture.Xunit2;
 using FluentAssertions;
 using FluentAssertions.Extensions;
 using Gw2Sharp.WebApi.Caching;
+using Gw2Sharp.WebApi.Exceptions;
 using Gw2Sharp.WebApi.Http;
 using Gw2Sharp.WebApi.Middleware;
+using Gw2Sharp.WebApi.V2.Models;
 using NSubstitute;
 using Objectivity.AutoFixture.XUnit2.AutoNSubstitute.Attributes;
 using Objectivity.AutoFixture.XUnit2.Core.Attributes;
@@ -245,6 +247,48 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
         }
 
 
+        [Theory]
+        [AutoMockData]
+        public async Task ManyRequestPartiallyCachedWithOnlyInvalidMissingIdsAsyncTest(
+            [CustomizeWith(typeof(MemoryCacheMethodAutoFixture)), Frozen] MiddlewareContext context,
+            [CustomizeWith(typeof(ExpiresHeaderAutoFixture)), Frozen] IWebApiResponse response)
+        {
+            var elements = new[]
+            {
+                new Element { Id = "14", Value = "Value14" },
+                new Element { Id = "19", Value = "Value19" }
+            };
+            var options = CreateRequestOptions("ids=14,19");
+            context.Request.Options.Returns(options);
+            SetResponseContent(response, elements);
+            response.CacheState.Returns(CacheState.FromLive);
+
+            // Cache the valid ids
+            var middleware = new CacheMiddleware();
+            await middleware.OnRequestAsync(context, (r, t) => Task.FromResult(response));
+
+            // Request the cached ids together with an invalid id, for which the API returns a 404
+            options.EndpointQuery["ids"] = "14,19,999";
+            var cachedResponse = await middleware.OnRequestAsync(context, (r, t) => throw CreateNotFoundException(r.Request));
+
+            var cachedElements = JsonSerializer.Deserialize<Element[]>(cachedResponse.Content);
+            cachedElements.Should().BeEquivalentTo(elements);
+        }
+
+        [Theory]
+        [AutoMockData]
+        public async Task ManyRequestUncachedWithOnlyInvalidIdsThrowsAsyncTest(
+            [CustomizeWith(typeof(MemoryCacheMethodAutoFixture)), Frozen] MiddlewareContext context)
+        {
+            context.Request.Options.Returns(CreateRequestOptions("ids=998,999"));
+
+            var middleware = new CacheMiddleware();
+            Func<Task> act = () => middleware.OnRequestAsync(context, (r, t) => throw CreateNotFoundException(r.Request));
+
+            await act.Should().ThrowAsync<NotFoundException>();
+        }
+
+
         #region Helpers
 
         private static WebApiRequestOptions CreateRequestOptions(string queryParams = null)
@@ -257,6 +301,9 @@ namespace Gw2Sharp.Tests.WebApi.Middleware
                 options.EndpointQuery = queryParams.Split('&').Select(x => x.Split('=')).ToDictionary(x => x[0], x => x.Skip(1).FirstOrDefault());
             return options;
         }
+
+        private static NotFoundException CreateNotFoundException(IWebApiRequest request) =>
+            new NotFoundException(request, new WebApiResponse<ErrorObject>(new ErrorObject { Text = "all ids provided are invalid" }, CacheState.FromLive));
 
         private static void SetResponseContent<T>(IWebApiResponse response, T content)
         {

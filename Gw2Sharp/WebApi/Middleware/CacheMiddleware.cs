@@ -6,6 +6,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Gw2Sharp.Extensions;
 using Gw2Sharp.WebApi.Caching;
+using Gw2Sharp.WebApi.Exceptions;
 using Gw2Sharp.WebApi.Http;
 
 namespace Gw2Sharp.WebApi.Middleware
@@ -72,7 +73,7 @@ namespace Gw2Sharp.WebApi.Middleware
             var cacheIds = ids.ToDictionary(x => GetCacheId(context.Request, x), x => x);
             var cacheItems = await context.Connection.CacheMethod
                 .GetOrUpdateManyAsync(cacheCategory, cacheIds.Keys, (cacheCategory, missingIds) =>
-                    RequestManyAsync(cacheCategory, cacheIds.Where(x => missingIds.Contains(x.Key)).Select(x => x.Value), context, callNext, cancellationToken))
+                    RequestManyAsync(cacheCategory, cacheIds.Where(x => missingIds.Contains(x.Key)).Select(x => x.Value), missingIds.Count < cacheIds.Count, context, callNext, cancellationToken))
                 .ConfigureAwait(false);
 
             return cacheItems.Select(x => new WebApiResponse(x.StringItem, x.StatusCode, GetCacheState(x), x.Metadata)).Merge();
@@ -135,6 +136,7 @@ namespace Gw2Sharp.WebApi.Middleware
 
         private static async Task<IList<CacheItem>> RequestManyAsync(string cacheCategory,
             IEnumerable<string> ids,
+            bool hasCachedItems,
             MiddlewareContext context,
             Func<MiddlewareContext, CancellationToken, Task<IWebApiResponse>> callNext,
             CancellationToken cancellationToken)
@@ -142,7 +144,18 @@ namespace Gw2Sharp.WebApi.Middleware
             var newContext = new MiddlewareContext(context.Connection, context.Request.DeepCopy());
             newContext.Request.Options.EndpointQuery[context.Request.Options.BulkQueryParameterIdsName] = string.Join(",", ids);
 
-            var response = await callNext(newContext, cancellationToken).ConfigureAwait(false);
+            IWebApiResponse response;
+            try
+            {
+                response = await callNext(newContext, cancellationToken).ConfigureAwait(false);
+            }
+            catch (NotFoundException) when (hasCachedItems)
+            {
+                // The API returns 404 if none of the requested ids are valid.
+                // Since some of the originally requested ids were served from the cache,
+                // the uncached request would have been a partial success instead, so mimic that.
+                return Array.Empty<CacheItem>();
+            }
             return SplitResponseIntoIndividualCacheObjects(cacheCategory, context.Request, response);
         }
 
